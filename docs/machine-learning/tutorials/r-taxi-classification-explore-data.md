@@ -4,33 +4,33 @@ titleSuffix: SQL machine learning
 description: Untersuchen Sie Beispieldaten, und generieren Sie einige Plots als Vorbereitung für die Verwendung der binären Klassifizierung in R mit SQL Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2020
+ms.date: 10/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a0cacd4beee72cef845fa161d1a1bcd0263a7e6b
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: cba06a816e57189cb69f9680542452d2788b233e
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193686"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412531"
 ---
 # <a name="r-tutorial-explore-and-visualize-data"></a>R-Tutorial: Untersuchen und Visualisieren von Daten
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 Im zweiten Teil dieser fünfteiligen Tutorialreihe werden Sie die Beispieldaten untersuchen und einige Plots erstellen. Im späteren Verlauf erfahren Sie, wie Sie Grafikobjekte in Python serialisieren, anschließend deserialisieren und Plots erstellen.
 
-Im zweiten Teil dieser fünfteiligen Tutorialreihe überprüfen Sie die Beispieldaten und generieren dann mithilfe von [rxHistogram](/machine-learning-server/r-reference/revoscaler/rxhistogram) einige Plots über [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) und die generische [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist)-Funktion in Basis-R.
+Im zweiten Teil dieser fünfteiligen Tutorialreihe überprüfen Sie die Beispieldaten und generieren dann einige Plots mit den generischen Funktionen `barplot` und `hist` in Basis-R.
 
 Ein wichtiges Ziel dieses Artikels besteht darin, das Aufrufen von R-Funktionen von [!INCLUDE[tsql](../../includes/tsql-md.md)] in gespeicherten Prozeduren zu veranschaulichen und die Ergebnisse in Anwendungsdateiformaten zu speichern:
 
-+ Erstellen Sie eine gespeicherte Prozedur mithilfe von **rxHistogram**, um einen R-Plot als varbinary-Daten zu generieren. Verwenden Sie **bcp**, um den binären Stream in eine Bilddatei zu exportieren.
-+ Erstellen Sie mithilfe von **Hist** eine gespeicherte Prozedur, um einen Plot zu generieren. Die Ergebnisse werden als JPG- und PDF-Ausgabe gespeichert.
++ Erstellen Sie eine gespeicherte Prozedur mithilfe von `barplot`, um einen R-Plot als varbinary-Daten zu generieren. Verwenden Sie **bcp** , um den binären Stream in eine Bilddatei zu exportieren.
++ Erstellen Sie mithilfe von `hist` eine gespeicherte Prozedur, um einen Plot zu generieren. Die Ergebnisse werden als JPG- und PDF-Ausgabe gespeichert.
 
 > [!NOTE]
-> Da die Visualisierung ein leistungsfähiges Tool zum Verständnis der Datenform und -verteilung ist, bietet R zahlreiche Funktionen und Pakete zum Generieren von Histogrammen, Streudiagrammen, Boxplots und anderen Diagrammen zum Durchsuchen von Daten. R erstellt Bilder üblicherweise mithilfe eines R-Geräts für grafische Ausgaben, die Sie als **varbinary**-Datentyp für das Rendern in Anwendungen erfassen und speichern können. Sie können die Bilder auch in einem beliebigen unterstützten Dateiformat (z. B. JPG oder PDF) speichern.
+> Da die Visualisierung ein leistungsfähiges Tool zum Verständnis der Datenform und -verteilung ist, bietet R zahlreiche Funktionen und Pakete zum Generieren von Histogrammen, Streudiagrammen, Boxplots und anderen Diagrammen zum Durchsuchen von Daten. R erstellt Bilder üblicherweise mithilfe eines R-Geräts für grafische Ausgaben, die Sie als **varbinary** -Datentyp für das Rendern in Anwendungen erfassen und speichern können. Sie können die Bilder auch in einem beliebigen unterstützten Dateiformat (z. B. JPG oder PDF) speichern.
 
 In diesem Artikel führen Sie Folgendes durch:
 
@@ -51,7 +51,7 @@ In Teil fünf erfahren Sie, wie Sie die Modelle [operationalisieren](r-taxi-clas
 
 Das Entwickeln einer Data Science-Lösung bringt normalerweise die intensive Untersuchung und Visualisierung von Daten mit sich. Nehmen Sie sich zunächst ein paar Minuten Zeit, um die Beispieldaten zu überprüfen, falls Sie das noch nicht getan haben.
 
-Im ursprünglichen öffentlichen Dataset wurden die Taxi-IDs und die Fahrtendatensätze in separaten Dateien bereitgestellt. Die beiden ursprünglichen Datasets wurden in den Spalten _medallion_, _hack\_license_ und _pickup\_datetime_ zusammengefügt, damit die Beispieldaten einfacher verwendet werden können.  Die Datensätze wurden ebenso auf Stichproben reduziert, um nur 1 % der ursprünglichen Anzahl der Datensätze zu erhalten. Der auf Stichproben reduzierte Datensatz hat 1.703.957 Zeilen und 23 Spalten.
+Im ursprünglichen öffentlichen Dataset wurden die Taxi-IDs und die Fahrtendatensätze in separaten Dateien bereitgestellt. Die beiden ursprünglichen Datasets wurden in den Spalten _medallion_ , _hack\_license_ und _pickup\_datetime_ zusammengefügt, damit die Beispieldaten einfacher verwendet werden können.  Die Datensätze wurden ebenso auf Stichproben reduziert, um nur 1 % der ursprünglichen Anzahl der Datensätze zu erhalten. Der auf Stichproben reduzierte Datensatz hat 1.703.957 Zeilen und 23 Spalten.
 
 **Taxi-IDs**
   
@@ -65,11 +65,11 @@ Im ursprünglichen öffentlichen Dataset wurden die Taxi-IDs und die Fahrtendate
   
 + Jeder Fahrpreisdatensatz enthält die Zahlungsinformationen wie die Zahlungsart, der Gesamtbetrag und den Fahrtpreis.
   
-+ Die letzten drei Spalten können für verschiedene Machine Learning-Tasks verwendet werden. Die Spalte _tip\_amount_ enthält fortlaufende numerische Werte und kann als **label**-Spalte für die Regressionsanalyse verwendet werden. Die Spalte _tipped_ verfügt nur über Ja/Nein-Werte und wird für die binäre Klassifikation verwendet. Die _tip\_class_-Spalte weist mehrere **Klassenbezeichnungen** auf und kann deshalb als Bezeichnung für mehrklassige Klassifizierungsaufgaben verwendet werden.
++ Die letzten drei Spalten können für verschiedene Machine Learning-Tasks verwendet werden. Die Spalte _tip\_amount_ enthält fortlaufende numerische Werte und kann als **label** -Spalte für die Regressionsanalyse verwendet werden. Die Spalte _tipped_ verfügt nur über Ja/Nein-Werte und wird für die binäre Klassifikation verwendet. Die _tip\_class_ -Spalte weist mehrere **Klassenbezeichnungen** auf und kann deshalb als Bezeichnung für mehrklassige Klassifizierungsaufgaben verwendet werden.
   
   Diese exemplarische Vorgehensweise enthält nur die binäre Klassifizierungsaufgabe. Sie können gerne versuchen, Modelle für die anderen beiden Machine Learning-Tasks und für mehrklassige Klassifizierung zu erstellen.
   
-+ Die Werte für die Bezeichnungsspalten basieren alle auf der _tip\_amount_-Spalte und verwenden folgende Geschäftsregeln:
++ Die Werte für die Bezeichnungsspalten basieren alle auf der _tip\_amount_ -Spalte und verwenden folgende Geschäftsregeln:
   
   |Name der abgeleiteten Spalte|Regel|
   |-|-|
@@ -83,14 +83,14 @@ Im ursprünglichen öffentlichen Dataset wurden die Taxi-IDs und die Fahrtendate
 > Ab SQL Server 2019 erfordert der Isolationsmechanismus, dass Sie für das Verzeichnis, in dem die Plotdatei gespeichert ist, entsprechende Berechtigungen erteilen. Informationen zum Festlegen dieser Berechtigungen finden Sie im [Abschnitt zu Dateiberechtigungen unter „SQL Server 2019 unter Windows: Isolationsänderungen für Machine Learning Services“](../install/sql-server-machine-learning-services-2019.md#file-permissions).
 ::: moniker-end
 
-Verwenden Sie [rxHistogram](/machine-learning-server/r-reference/revoscaler/rxhistogram), eine der erweiterten R-Funktionen in [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler), um den Plot zu erstellen. In diesem Schritt wird ein Histogramm anhand der Daten aus einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfrage gezeichnet. Sie können diese Funktion in eine gespeicherte Prozedur wie **RxPlotHistogram** einschließen.
+Um den Plot zu erstellen, verwenden Sie die R-Funktion `barplot`. In diesem Schritt wird ein Histogramm anhand der Daten aus einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfrage gezeichnet. Sie können diese Funktion in eine gespeicherte Prozedur wie **RPlotHistogram** einschließen.
 
-1. Klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] im Objekt-Explorer mit der rechten Maustaste auf die Datenbank **NYCTaxi_Sample**, und wählen Sie **Neue Abfrage** aus.
+1. Klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] im Objekt-Explorer mit der rechten Maustaste auf die Datenbank **NYCTaxi_Sample** , und wählen Sie **Neue Abfrage** aus. Alternativ können Sie in Azure Data Studio im Menü **Datei** die Option **Neues Notebook** auswählen und eine Verbindung mit der Datenbank herstellen.
 
-2. Fügen Sie das folgende Skript ein, um eine gespeicherte Prozedur zu erstellen, die das Histogramm zeichnet. Dieses Beispiel heißt **RxPlotHistogram**.
+2. Fügen Sie das folgende Skript ein, um eine gespeicherte Prozedur zu erstellen, die das Histogramm zeichnet. Dieses Beispiel heißt **RPlotHistogram**.
 
    ```sql
-   CREATE PROCEDURE [dbo].[RxPlotHistogram]
+   CREATE PROCEDURE [dbo].[RPlotHistogram]
    AS
    BEGIN
      SET NOCOUNT ON;
@@ -101,8 +101,7 @@ Verwenden Sie [rxHistogram](/machine-learning-server/r-reference/revoscaler/rxhi
       image_file = tempfile();  
       jpeg(filename = image_file);  
       #Plot histogram  
-      rxHistogram(~tipped, data=InputDataSet, col=''lightgreen'',   
-      title = ''Tip Histogram'', xlab =''Tipped or not'', ylab =''Counts'');  
+      barplot(table(InputDataSet$tipped), main = "Tip Histogram", col="lightgreen", xlab="Tipped or not", ylab = "Counts", space=0)
       dev.off();  
       OutputDataSet <- data.frame(data=readBin(file(image_file, "rb"), what=raw(), n=1e6));  
       ',  
@@ -118,7 +117,7 @@ Folgende Punkte sind bei diesem Skript besonders wichtig:
   
 + Innerhalb des R-Skripts wird die Variable `image_file` definiert, um das Bild zu speichern.
 
-+ Die Funktion **rxHistogram** aus der Bibliothek RevoScaleR wird aufgerufen, um den Plot zu generieren.
++ Die `barplot`-Funktion wird aufgerufen, um den Plot zu generieren.
   
 + Das R-Gerät wird auf **off** festgelegt, da Sie diesen Befehl als externes Skript in SQL Server ausführen. Wenn Sie in R einen Zeichenbefehl für hohe Ebenen ausgeben, öffnet R in der Regel ein Grafikfenster, das als *device* bezeichnet wird. Sie können das device-Fenster deaktivieren, wenn Sie in eine Datei schreiben oder die Ausgabe anders verarbeiten.
   
@@ -131,7 +130,7 @@ Die gespeicherte Prozedur gibt das Bild als Strom von varbinary-Daten zurück, d
 1. Führen Sie die folgende Anweisung in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]aus:
   
     ```sql
-    EXEC [dbo].[RxPlotHistogram]
+    EXEC [dbo].[RPlotHistogram]
     ```
   
     **Ergebnisse**
@@ -141,7 +140,7 @@ Die gespeicherte Prozedur gibt das Bild als Strom von varbinary-Daten zurück, d
 2. Öffnen Sie eine PowerShell-Eingabeaufforderung, führen Sie den folgenden Befehl aus, und stellen Sie den erforderlichen Instanznamen, Datenbanknamen, Benutzernamen und die Anmeldeinformationen als Argumente bereit. Bei Windows-Identitäten können Sie **-U** und **-P** durch **-T** ersetzen.
   
    ```powershell
-   bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
+   bcp "exec RPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
    ```
 
    > [!NOTE]
@@ -181,13 +180,13 @@ Die gespeicherte Prozedur gibt das Bild als Strom von varbinary-Daten zurück, d
   
    ![Taxifahrten mit und ohne Trinkgeld](media/rsql-devtut-tippedornot.jpg "Taxifahrten mit und ohne Trinkgeld")  
   
-## <a name="create-a-stored-procedure-using-hist-and-multiple-output-formats"></a>Erstellen einer gespeicherten Prozedur mithilfe von Hist und mehreren Ausgabeformaten
+## <a name="create-a-stored-procedure-using-hist"></a>Erstellen einer gespeicherten Prozedur mit `hist`
 
-In der Regel generieren Data Scientists mehrere Datenvisualisierungen, um Einblicke in die Daten aus verschiedenen Perspektiven zu erhalten. In diesem Beispiel erstellen Sie eine gespeicherte Prozedur mit dem Namen **RPlotHist**, um Histogramme, Streudiagramme und andere R-Grafiken in das JPG- und PDF-Format zu schreiben.
+In der Regel generieren Data Scientists mehrere Datenvisualisierungen, um Einblicke in die Daten aus verschiedenen Perspektiven zu erhalten. In diesem Beispiel erstellen Sie eine gespeicherte Prozedur mit dem Namen **RPlotHist** , um Histogramme, Streudiagramme und andere R-Grafiken in das JPG- und PDF-Format zu schreiben.
 
-Diese gespeicherte Prozedur verwendet die **Hist**-Funktion, um das Histogramm zu erstellen, wobei die Binärdaten in beliebte Formate wie JPG, PDF und PNG exportiert werden. 
+Diese gespeicherte Prozedur verwendet die `hist`-Funktion, um das Histogramm zu erstellen, wobei die Binärdaten in beliebte Formate wie JPG, PDF und PNG exportiert werden.
 
-1. Klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] im Objekt-Explorer mit der rechten Maustaste auf die Datenbank **NYCTaxi_Sample**, und wählen Sie **Neue Abfrage** aus.
+1. Klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] im Objekt-Explorer mit der rechten Maustaste auf die Datenbank **NYCTaxi_Sample** , und wählen Sie **Neue Abfrage** aus.
 
 2. Fügen Sie das folgende Skript ein, um eine gespeicherte Prozedur zu erstellen, die das Histogramm zeichnet. Dieses Beispiel heißt **RPlotHist**.
   
@@ -255,11 +254,13 @@ Diese gespeicherte Prozedur verwendet die **Hist**-Funktion, um das Histogramm z
    END
    ```
   
+Folgende Punkte sind bei diesem Skript besonders wichtig:
+
 + Die Ausgabe der SELECT-Abfrage in der gespeicherten Prozedur wird im Standarddatenrahmen von R, `InputDataSet`, gespeichert. Anschließend können verschiedene Zeichenfunktionen von R aufgerufen werden, um die tatsächlichen Grafikdateien zu generieren. Die meisten der eingebetteten R-Skripts stellen Optionen für diese Grafikfunktionen dar, z.B. `plot` oder `hist`.
   
-+ Alle Dateien werden im lokalen Ordner C:\temp\Plots gespeichert. Der Zielordner wird durch die Argumente für das R-Skript als Teil der gespeicherten Prozedur definiert.  Sie können den Zielordner ändern, indem Sie den Wert der Variable, `mainDir`, ändern.
-
-+ Um die Dateien in einem anderen Ordner auszugeben, ändern Sie den Wert der `mainDir` -Variable im R-Skript, das in der gespeicherten Prozedur gespeichert ist. Sie können auch das Skript ändern, damit es verschiedene Formate, mehr Dateien usw. ausgibt.
++ Das R-Gerät wird auf **off** festgelegt, da Sie diesen Befehl als externes Skript in SQL Server ausführen. Wenn Sie in R einen Zeichenbefehl für hohe Ebenen ausgeben, öffnet R in der Regel ein Grafikfenster, das als *device* bezeichnet wird. Sie können das device-Fenster deaktivieren, wenn Sie in eine Datei schreiben oder die Ausgabe anders verarbeiten.
+  
++ Alle Dateien werden im lokalen Ordner C:\temp\Plots gespeichert. Der Zielordner wird durch die Argumente für das R-Skript als Teil der gespeicherten Prozedur definiert. Um die Dateien in einem anderen Ordner auszugeben, ändern Sie den Wert der `mainDir` -Variable im R-Skript, das in der gespeicherten Prozedur gespeichert ist. Sie können auch das Skript ändern, damit es verschiedene Formate, mehr Dateien usw. ausgibt.
 
 ### <a name="execute-the-stored-procedure"></a>Ausführen der gespeicherten Prozedur
 
@@ -270,7 +271,7 @@ EXEC RPlotHist
 ```
 
 **Ergebnisse**
-    
+
 ```text
 STDOUT message(s) from external script:
 [1] Creating output plot files:[1] C:\temp\plots\rHistogram_Tipped_18887f6265d4.jpg[1] 
@@ -282,13 +283,13 @@ C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
 
 Die Zahlen in den Dateinamen werden nach dem Zufallsprinzip generiert, um sicherzustellen, dass kein Fehler auftritt, weil Sie in eine bereits vorhandene Datei schreiben.
 
-### <a name="view-output"></a>Anzeigen der Ausgabe 
+### <a name="view-output"></a>Anzeigen der Ausgabe
 
 Öffnen Sie den Zielordner, und überprüfen Sie die Dateien, die vom R-Code in der gespeicherten Prozedur erstellt wurden, um den Plot anzuzeigen.
 
 1. Wechseln Sie zum in der STDOUT-Meldung angegebenen Ordner (in diesem Beispiel C:\temp\plots\).
 
-2. Öffnen Sie `rHistogram_Tipped.jpg`, um die Anzahl der Fahrten anzuzeigen, bei denen der Fahrer ein Trinkgeld erhalten hat und zum Vergleich die Fahrten, bei denen der Fahrer kein Trinkgeld erhalten hat. (Das Histogramm ähnelt dem, das Sie im vorherigen Schritt erstellt haben.)
+2. Öffnen Sie `rHistogram_Tipped.jpg`, um die Anzahl der Fahrten mit und ohne Trinkgeld anzuzeigen (dieses Histogramm ähnelt dem, das Sie im vorherigen Schritt generiert haben).
 
 3. Öffnen Sie `rHistograms_Tip_and_Fare_Amount.pdf`, um die Verteilung des Trinkgeldbetrags im Vergleich zum Fahrpreis anzuzeigen.
 

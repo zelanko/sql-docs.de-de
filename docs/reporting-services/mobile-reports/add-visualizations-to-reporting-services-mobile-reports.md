@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3379d5eb53bc255a09e255d4986eb924912e5eb3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ed45f77f509d3206340a2f52e6d3b31ac6824d87
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79447987"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907188"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Hinzufügen von Visualisierungen zu mobilen Reporting Services-Berichten
 Diagramme sind ein wesentlicher Bestandteil der Visualisierung von Daten. Erfahren Sie mehr über die Diagramme, die Sie in mobilen [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten verwenden können, um eine große Bandbreite von Szenarien abzudecken. 
@@ -28,10 +28,10 @@ Einige Eigenschaften gelten für alle, andere nur für bestimmte Diagramme. Nach
 ### <a name="number-format"></a>Das Zahlenformat
 Sie können den Zahlen in einem Diagramm in [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] eine Vielzahl von Formatierungen zuweisen: z.B. Allgemein, Währung mit oder ohne Dezimalstellen, Prozentsätze mit und ohne Dezimalstellen usw. In einem Diagramm wird das Zahlenformat sowohl auf Achsenannotationen als auch auf Datenpunkt-Popups angewendet. Zahlenformate werden für jedes Diagramm einzeln, nicht für den gesamten mobilen Bericht festgelegt. 
 
-* Wählen Sie die Registerkarte **Layout** aus, wählen Sie ein Diagramm auf der Entwurfsoberfläche aus, und klicken Sie im Bereich **Eigenschaften visueller Elemente** auf ein **Zahlenformat**, um das Zahlenformat festzulegen. 
+* Wählen Sie die Registerkarte **Layout** aus, wählen Sie ein Diagramm auf der Entwurfsoberfläche aus, und klicken Sie im Bereich **Eigenschaften visueller Elemente** auf ein **Zahlenformat** , um das Zahlenformat festzulegen. 
   
 ### <a name="legend"></a>Legende
-* Wählen Sie die Registerkarte **Layout** aus, wählen Sie ein Diagramm auf der Entwurfsoberfläche aus, und legen Sie im Bereich **Eigenschaften visueller Elemente** die Option **Legende anzeigen** auf **Ein**fest, um die Legende für ein Diagramm anzuzeigen.
+* Wählen Sie die Registerkarte **Layout** aus, wählen Sie ein Diagramm auf der Entwurfsoberfläche aus, und legen Sie im Bereich **Eigenschaften visueller Elemente** die Option **Legende anzeigen** auf **Ein** fest, um die Legende für ein Diagramm anzuzeigen.
   
 ### <a name="series"></a>Reihen
 Jede einzelne Metrik bzw. jeder Wert, die bzw. der in einem Diagramm angezeigt wird, wird als Reihe bezeichnet. Mehrere Reihen können eine gemeinsame x-Achse und eine gemeinsame y-Achse aufweisen. Reihen werden im Bereich mit den Dateneigenschaften der Datenansicht durch Auswahl von Datentabellen und Feldern definiert. Jedes Feld führt zu einer einzelnen Reihe von Datenpunkten in der Diagrammvisualisierung mit einer eigenen Farbe.  
@@ -45,9 +45,9 @@ Die Standardaggregation für numerische Felder in Diagrammen lautet „Summieren
 
 Wenn Sie einen Navigator zum Filtern Ihrer mobilen Bericht hinzufügen, können Sie entscheiden, welche Diagramme Sie filtern möchten.
 
-1. Wählen Sie die Registerkarte **Daten** aus, und wählen Sie unter **Dateneigenschaften** **Optionen**aus.
+1. Wählen Sie die Registerkarte **Daten** aus, und wählen Sie unter **Dateneigenschaften** **Optionen** aus.
 
-2. Unter **Filtered by**(Gefiltert nach) finden Sie die Navigatoren, die Sie festlegen oder löschen können.
+2. Unter **Filtered by** (Gefiltert nach) finden Sie die Navigatoren, die Sie festlegen oder löschen können.
 
 Erfahren Sie mehr über das [Hinzufügen von Navigatoren zu mobilen Reporting Services-Berichten](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md).
    
@@ -55,37 +55,37 @@ Erfahren Sie mehr über das [Hinzufügen von Navigatoren zu mobilen Reporting Se
   
 Das Zeitdiagramm ist das grundlegendste Diagramm in [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]. Die Zeitachse (und die Datumsachse) des Diagramms wird automatisch auf das erste gültige Datums-/Uhrzeitfeld in der Datentabelle festgelegt.  
 
-![mobile-report-time-chart](../../reporting-services/mobile-reports/media/mobile-report-time-chart.png)
+![Screenshot eines Zeitdiagramms in einem mobilen Bericht](../../reporting-services/mobile-reports/media/mobile-report-time-chart.png)
 
 1. Ziehen Sie ein **Zeitdiagramm** aus der Registerkarte **Layout** auf die Entwurfsoberfläche, und ändern Sie die Größe.
 
-2. Es handelt sich standardmäßig um ein gestapeltes Balkendiagramm. Sie können dies unter **Serienvisualisierung**ändern.
+2. Es handelt sich standardmäßig um ein gestapeltes Balkendiagramm. Sie können dies unter **Serienvisualisierung** ändern.
 
 3. Wenn für das Diagramm Daten erforderlich sind, die noch nicht im Bericht vorhanden sind, wählen Sie die Registerkarte **Daten** > **Daten hinzufügen** aus, um [Daten aus Excel oder einem freigegebenen Dataset](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md) abzurufen.
 
-3. Im Bereich **Dateneigenschaften** ist **SimulatedTable** für **Hauptreihe**festgelegt. Klicken Sie auf dem Pfeil im Feld, und wählen Sie anschließend Ihre Tabelle aus.
+3. Im Bereich **Dateneigenschaften** ist **SimulatedTable** für **Hauptreihe** festgelegt. Klicken Sie auf dem Pfeil im Feld, und wählen Sie anschließend Ihre Tabelle aus.
 
-5. Wenn Sie die **Datenstruktur** auf die Einstellung **By Columns** (Nach Spalten) festlegen (auf der Registerkarte **Layout** > Bereich **Eigenschaften visueller Elemente**), können Sie im Bereich **Dateneigenschaften** mehrere Spalten mit numerischen Werten auswählen.
+5. Wenn Sie die **Datenstruktur** auf die Einstellung **By Columns** (Nach Spalten) festlegen (auf der Registerkarte **Layout** > Bereich **Eigenschaften visueller Elemente** ), können Sie im Bereich **Dateneigenschaften** mehrere Spalten mit numerischen Werten auswählen.
 
-   Wenn Sie die **Datenstruktur** auf **Nach Zeilen**festlegen, können Sie im Bereich **Dateneigenschaften** ein **Namensfeld für Reihe** und eine Spalte mit numerischen Werten auswählen.
+   Wenn Sie die **Datenstruktur** auf **Nach Zeilen** festlegen, können Sie im Bereich **Dateneigenschaften** ein **Namensfeld für Reihe** und eine Spalte mit numerischen Werten auswählen.
    
 Erfahren Sie mehr über das [Gruppieren von Daten nach Spalten oder Zeilen](../../reporting-services/mobile-reports/group-data-by-columns-or-rows-in-a-mobile-report-reporting-services.md).
   
 ## <a name="category-charts"></a>Kategoriediagramme  
   
-Im Gegensatz zu einem Zeitdiagramm wird in einem Kategoriediagramm auf der x-Achse nach Feldern gruppiert, ausgenommen Datum/Uhrzeit-Feldern. Diese als *Kategoriekoordinate*bezeichnete Gruppierung wird auf Felder mit Zeichenfolgen und nicht auf numerische Felder angewendet.
+Im Gegensatz zu einem Zeitdiagramm wird in einem Kategoriediagramm auf der x-Achse nach Feldern gruppiert, ausgenommen Datum/Uhrzeit-Feldern. Diese als *Kategoriekoordinate* bezeichnete Gruppierung wird auf Felder mit Zeichenfolgen und nicht auf numerische Felder angewendet.
 
-![mobile-report-category-chart](../../reporting-services/mobile-reports/media/mobile-report-category-chart.png)   
+![Screenshot eines Kategoriediagramms in einem mobilen Bericht](../../reporting-services/mobile-reports/media/mobile-report-category-chart.png)   
 
 1. Ziehen Sie ein **Kategoriediagramm** von der Registerkarte **Layout** auf die Entwurfsoberfläche, ändern Sie die Größe, und [rufen Sie die Daten dafür ab](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md), falls erforderlich.
 
-2. Wählen Sie die Registerkarte **Daten** aus, und wählen Sie im Bereich **Dateneigenschaften** unter **Category Coordinate**(Kategoriekoordinate) eine Tabelle und ein Feld aus, nach denen gruppiert werden soll. Dieses Feld wird auf der x-Achse des sich ergebenden Diagramms angezeigt.
+2. Wählen Sie die Registerkarte **Daten** aus, und wählen Sie im Bereich **Dateneigenschaften** unter **Category Coordinate** (Kategoriekoordinate) eine Tabelle und ein Feld aus, nach denen gruppiert werden soll. Dieses Feld wird auf der x-Achse des sich ergebenden Diagramms angezeigt.
 
-3. Wählen Sie unter **Hauptreihe**die Tabelle und die numerischen Felder aus, die für jede Kategorie aggregiert werden sollen. 
+3. Wählen Sie unter **Hauptreihe** die Tabelle und die numerischen Felder aus, die für jede Kategorie aggregiert werden sollen. 
   
 ## <a name="totals-charts"></a>Diagramm mit Gesamtwerten  
 
-![mobile-report-totals-chart](../../reporting-services/mobile-reports/media/mobile-report-totals-chart.png)
+![Screenshot eines Diagramms mit Gesamtwerten in einem mobilen Bericht](../../reporting-services/mobile-reports/media/mobile-report-totals-chart.png)
   
 Das Diagramm mit Gesamtwerten bietet zweierlei Vorteile: 
 * Es stellt nicht mehrere Reihen dar, sondern lediglich die Summe oder den Gesamtwert der definierten Hauptreihe. 
@@ -95,24 +95,24 @@ Erfahren Sie mehr über das [Gruppieren von Daten nach Spalten oder Zeilen](../.
   
 ## <a name="comparison-charts"></a>Vergleichsdiagramme  
   
-Zeitdiagramme, Kategoriediagramme und Diagramme mit Gesamtwerten sind ebenfalls als *Vergleichsdiagramme*verfügbar. In einem Vergleichsdiagramm können Sie nicht nur eine Hauptreihe, sondern auch eine zweite Vergleichsreihe angeben. Die Haupt- und Vergleichsreihen können auf drei verschiedene Arten angezeigt werden.
+Zeitdiagramme, Kategoriediagramme und Diagramme mit Gesamtwerten sind ebenfalls als *Vergleichsdiagramme* verfügbar. In einem Vergleichsdiagramm können Sie nicht nur eine Hauptreihe, sondern auch eine zweite Vergleichsreihe angeben. Die Haupt- und Vergleichsreihen können auf drei verschiedene Arten angezeigt werden.
 
-![mobile-report-comparison-time-chart](../../reporting-services/mobile-reports/media/mobile-report-comparison-time-chart.png)
+![Screenshot eines zeitlichen Vergleichsdiagramms in einem mobilen Bericht](../../reporting-services/mobile-reports/media/mobile-report-comparison-time-chart.png)
 
 1. Ziehen Sie eines der **Vergleichsdiagramme** (Zeit, Kategorie oder Gesamtwerte) von der Registerkarte **Layout** auf die Entwurfsoberfläche, ändern Sie die Größe, und [rufen Sie die Daten dafür ab](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md), falls erforderlich.
 
-2. Wählen Sie im Bereich **Eigenschaften visueller Elemente** unter **Serienvisualisierung**eine der folgenden Optionen aus: 
+2. Wählen Sie im Bereich **Eigenschaften visueller Elemente** unter **Serienvisualisierung** eine der folgenden Optionen aus: 
    * Balken und Balken (dünn)
    * Linie und Balken
    * Balken und Fläche (Stufen) 
 
 Sie können in Vergleichsdiagrammen die gleichen Diagrammfarben für die Haupt- und Vergleichswerte in einer Reihe auswählen.
 
-* Legen Sie im Bereich **Eigenschaften visueller Elemente** **Farben in Vergleichsserien wiederverwenden** auf **Ein**fest.
+* Legen Sie im Bereich **Eigenschaften visueller Elemente** **Farben in Vergleichsserien wiederverwenden** auf **Ein** fest.
 
-   Wenn die Option auf **Ein**festgelegt wurde, wird die Farbpalette zwischen dem Zeichnen der Haupt- und Vergleichsreihe neu gestartet, sodass verknüpfte Werte in der Haupt- und Vergleichsreihe eine identische Farbe aufweisen. 
+   Wenn die Option auf **Ein** festgelegt wurde, wird die Farbpalette zwischen dem Zeichnen der Haupt- und Vergleichsreihe neu gestartet, sodass verknüpfte Werte in der Haupt- und Vergleichsreihe eine identische Farbe aufweisen. 
 
-   Mit der Einstellung **Aus**setzt die Farbpalette die normale Rotation fort, wenn die Hauptreihe nach der Vergleichsreihe gezeichnet wird. So wird eine möglicherweise irreführende Farbkoordination zwischen den beiden Sätzen von Reihen verhindert.  
+   Mit der Einstellung **Aus** setzt die Farbpalette die normale Rotation fort, wenn die Hauptreihe nach der Vergleichsreihe gezeichnet wird. So wird eine möglicherweise irreführende Farbkoordination zwischen den beiden Sätzen von Reihen verhindert.  
   
 ## <a name="pie-and-funnel-charts"></a>Kreis- und Trichterdiagramme  
   
@@ -120,16 +120,16 @@ Kreis-und Trichterdiagrammen gehören zu den einfachsten Visualisierungen. Sie k
 * **Kreisdiagramme** können in mobilen [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten Kreise, Ringe oder Ringe mit Gesamtwerten dargestellt werden. Kreisdiagramme eignen sich, um die relative Größe verschiedener Teile eines Ganzen anzuzeigen. Zu viele Slices machen sie schwer lesbar.
 * **Trichterdiagramme** werden häufig dazu verwendet, um Phasen in einem Prozess, z.B. dem Vertrieb, anzuzeigen.
 
-![mobile-report-funnel-chart](../../reporting-services/mobile-reports/media/mobile-report-funnel-chart.png)
+![Screenshot eines Trichterdiagramms in einem mobilen Bericht](../../reporting-services/mobile-reports/media/mobile-report-funnel-chart.png)
 
 ### <a name="structure-pie-and-funnel-chart-data-by-rows-or-by-columns"></a>Strukturieren von Kreis- und Trichterdiagrammdaten nach Zeilen oder Spalten
 1. Ziehen Sie ein **Kreis-** oder **Trichterdiagramm** von der Registerkarte **Layout** auf die Entwurfsoberfläche, ändern Sie die Größe, und [rufen Sie die Daten dafür ab](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md), falls erforderlich.
-2. Wählen Sie im Bereich **Eigenschaften visueller Elemente** unter **Datenstruktur**eine der folgenden Optionen aus:
+2. Wählen Sie im Bereich **Eigenschaften visueller Elemente** unter **Datenstruktur** eine der folgenden Optionen aus:
    * **Nach Spalten**
    * **Nach Zeilen**
-3. Wenn Sie **Nach Spalten**ausgewählt haben, wechseln Sie in die Registerkarte **Daten** , und wählen Sie im Bereich **Dateneigenschaften** unter **Hauptreihe**die Tabelle und alle Felder aus, die Sie im Kreis- oder Trichterdiagramm aggregieren möchten. Die Feldnamen werden verwendet, um die einzelnen Bereiche im resultierenden Diagramm zu bezeichnen.
+3. Wenn Sie **Nach Spalten** ausgewählt haben, wechseln Sie in die Registerkarte **Daten** , und wählen Sie im Bereich **Dateneigenschaften** unter **Hauptreihe** die Tabelle und alle Felder aus, die Sie im Kreis- oder Trichterdiagramm aggregieren möchten. Die Feldnamen werden verwendet, um die einzelnen Bereiche im resultierenden Diagramm zu bezeichnen.
 
-   Wenn Sie **Nach Zeilen**ausgewählt haben, wechseln Sie in die Registerkarte **Daten** , und wählen Sie im Bereich **Dateneigenschaften** unter **Kategoriespalte**die Tabelle und Spalte mit den Werten aus, die für die Gruppierung und Beschriftung im Kreisdiagramm verwendet werden sollen. Wählen Sie unter „Main Series Column“ (Hauptreihenspalte) ein numerisches Feld für die Werte im Diagramm aus.
+   Wenn Sie **Nach Zeilen** ausgewählt haben, wechseln Sie in die Registerkarte **Daten** , und wählen Sie im Bereich **Dateneigenschaften** unter **Kategoriespalte** die Tabelle und Spalte mit den Werten aus, die für die Gruppierung und Beschriftung im Kreisdiagramm verwendet werden sollen. Wählen Sie unter „Main Series Column“ (Hauptreihenspalte) ein numerisches Feld für die Werte im Diagramm aus.
 
 Erfahren Sie mehr über das [Gruppieren von Daten nach Spalten oder Zeilen](../../reporting-services/mobile-reports/group-data-by-columns-or-rows-in-a-mobile-report-reporting-services.md). 
 
@@ -137,14 +137,14 @@ Erfahren Sie mehr über das [Gruppieren von Daten nach Spalten oder Zeilen](../.
   
 Treemap-Diagramme zeigen Metriken an, indem sie deren Werte in Flächen und Farben von Kacheln in einem rechteckigen Raster anwenden. 
 
-![mobile-report-group-treemap](../../reporting-services/mobile-reports/media/mobile-report-group-treemap.png)
+![Screenshot einer Gruppenstrukturzuordnung (Gruppen-Treemap) in einem mobilen Bericht](../../reporting-services/mobile-reports/media/mobile-report-group-treemap.png)
 
 1. Ziehen Sie ein **Treemap-Diagramme** von der Registerkarte **Layout** auf die Entwurfsoberfläche, ändern Sie die Größe, und [rufen Sie die Daten dafür ab](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md), falls erforderlich.
 2.  Wählen Sie die Registerkarte **Daten** aus, und wählen Sie im Bereich **Dateneigenschaften** : 
 
      * Unter **Größe repräsentiert** ein numerisches Feld für die Größe der Kacheln aus.
      * Unter **Farbe repräsentiert** ein numerisches Feld für die Farbe der Kacheln aus. 
-     * [optional] **Benutzerdefinierter Mittenwert**: Sie können die Einstellung **Benutzerdefinierter Mittenwert** nur dann verwenden, wenn als Visualisierungstyp „HeatMapWithCustomCenterValue“ ausgewählt wurde.
+     * [optional] **Benutzerdefinierter Mittenwert** : Sie können die Einstellung **Benutzerdefinierter Mittenwert** nur dann verwenden, wenn als Visualisierungstyp „HeatMapWithCustomCenterValue“ ausgewählt wurde.
      
          Der Mittenwert legt die Farbe einer Kachel fest. Je näher die Metrik dem Mittenwert kommt, desto grüner ist die Kachel. Je weiter die Metrik vom Mittenwert entfernt ist, desto röter ist die Kachel.
      
@@ -155,7 +155,7 @@ Standardmäßig sind Treemap-Diagramme hierarchisch angeordnet, d.h. dass die Ka
 
 Sie können das Gruppieren deaktivieren, sodass die Kacheln nur nach Größe und Farbe angeordnet werden. 
 
-* Klicken Sie auf die Registerkarte **Layout** , und legen Sie die Einstellung **Treemap mit zwei Ebenen** auf **Aus**fest.   
+* Klicken Sie auf die Registerkarte **Layout** , und legen Sie die Einstellung **Treemap mit zwei Ebenen** auf **Aus** fest.   
 
 ## <a name="waterfall-charts"></a>Wasserfalldiagramme
 
@@ -175,15 +175,15 @@ Wasserfalldiagramme sind in folgenden Fällen eine gute Wahl:
 
 1. Ziehen Sie ein **Wasserfalldiagramm** von der Registerkarte **Layout** auf die Entwurfsoberfläche, ändern Sie die Größe, und [rufen Sie die Daten dafür ab](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md), falls erforderlich.
 
-    ![mobile-report-waterfall-chart-icon](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart-icon.png)
+    ![Screenshot eines Wasserfalldiagrammsymbols in einem mobilen Bericht](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart-icon.png)
     
-2.  Wählen Sie die Registerkarte **Daten** aus, und wählen Sie im Bereich **Dateneigenschaften** ein Kategoriefeld in den Daten für **Kategoriekoordinate**und ein numerisches Feld für **Hauptreihe**aus: 
+2.  Wählen Sie die Registerkarte **Daten** aus, und wählen Sie im Bereich **Dateneigenschaften** ein Kategoriefeld in den Daten für **Kategoriekoordinate** und ein numerisches Feld für **Hauptreihe** aus: 
 
-    ![mobile-report-waterfall-data](../../reporting-services/mobile-reports/media/mobile-report-waterfall-data.png)
+    ![Screenshot von Wasserfalldaten in einem mobilen Bericht](../../reporting-services/mobile-reports/media/mobile-report-waterfall-data.png)
     
 3. Wählen Sie die Registerkarte **Layout** aus, um das Wasserfalldiagramm in der Vorschau anzuzeigen.
 
-   ![mobile-report-waterfall-chart](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart.png)
+   ![Screenshot eines Wasserfalldiagramms in einem mobilen Bericht](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart.png)
    
    Monate mit einem Verlust, wie Februar, Juni und Juli, sind rot dargestellt. 
    Monate mit einem Gewinn, wie September, Oktober und November, sind grün dargestellt. 

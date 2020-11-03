@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a4c032315ef6fb17578ffcdfc7116f3a93293ac8
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: f0eabc247645000d95f9b9c83c17ababc47c6cc2
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862827"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793817"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>Was sind erweiterte Sicherheitsupdates für SQL Server?
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -56,7 +56,7 @@ Wenn Sie Ihre Workloads zu Azure Virtual Machines (IaaS) migrieren, haben Sie bi
 
 Azure-VMs auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter **Windows Server 2008 R2 und höher** erhält automatisch ESUs über die vorhandenen Updatekanäle von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], wenn der virtuelle Computer für [automatisierte Patches](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching) konfiguriert ist.
 
-Für Azure-VMs auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter **Windows Server 2008** oder VMs, die ***nicht* für [automatisierte Patches](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)** konfiguriert wurden, müssen Sie ESU-Patches wie im Abschnitt [Lokale oder gehostete Umgebungen](#on-premises-or-hosted-environments) beschrieben manuell herunterladen und bereitstellen.
+Für Azure-VMs auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter **Windows Server 2008** oder VMs, die **_nicht_ für [automatisierte Patches](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)** konfiguriert wurden, müssen Sie ESU-Patches wie im Abschnitt [Lokale oder gehostete Umgebungen](#on-premises-or-hosted-environments) beschrieben manuell herunterladen und bereitstellen.
 
 ### <a name="on-premises-or-hosted-environments"></a>Lokale oder gehostete Umgebungen
 Wenn Sie über Software Assurance verfügen, können Sie im Rahmen eines Enterprise Agreement (EA), Enterprise Subscription Agreement (EAS), Server & Cloud Enrollment (SCE) oder Enrollment for Education Solutions (EES) ein ESU-Abonnement (Erweiterte Sicherheitsupdates) für bis zu drei Jahre nach Ablauf des Supportzeitraums erwerben. Sie können ESUs nur für die Server erwerben, die Sie schützen müssen. ESUs können direkt bei Microsoft oder einem Microsoft-Lizenzierungspartner erworben werden. 
@@ -84,12 +84,12 @@ Führen Sie die folgenden Schritte aus, um die SQL Server-Registrierung zu erste
 1. Geben Sie im Suchfeld als Suchbegriff `SQL Server registry` ein.  
 1. Wählen Sie die von [!INCLUDE[msCoName](../../includes/msconame-md.md)] veröffentlichte Option **SQL Server-Registrierung** und dann **Erstellen** aus. 
 
-   ![Wählen des SQL Server-Registrierungsdiensts](media/sql-server-extended-security-updates/sql-server-registry-service.png)
+   ![Screenshot des Azure-Portals, in dem gezeigt wird, wie eine SQL Server Registrierung erstellt wird](media/sql-server-extended-security-updates/sql-server-registry-service.png)
 
-1. Wählen Sie unter **Projektdetails** in der Dropdownliste Ihr Abonnement aus. Wählen Sie dann entweder eine vorhandene **Ressourcengruppe** oder **Neu erstellen**, um für Ihren neuen SQL Server-Registrierungsdienst eine neue Ressourcengruppe zu erstellen. 
+1. Wählen Sie unter **Projektdetails** in der Dropdownliste Ihr Abonnement aus. Wählen Sie dann entweder eine vorhandene **Ressourcengruppe** oder **Neu erstellen** , um für Ihren neuen SQL Server-Registrierungsdienst eine neue Ressourcengruppe zu erstellen. 
 1. Geben Sie unter **Dienstdetails** einen Namen und eine Region für Ihre neue Ressource des Typs **SQL Server-Registrierung** an: 
 
-   ![Wählen des SQL Server-Registrierungsdiensts](media/sql-server-extended-security-updates/create-new-sql-server-registry.png)
+   ![Screenshot der SQL Server-Registrierung mit der Registerkarte „Grundeinstellungen“](media/sql-server-extended-security-updates/create-new-sql-server-registry.png)
 
 1. Wählen Sie **Überprüfen und erstellen** aus, um die Details Ihrer **SQL Server-Registrierung** zu überprüfen. Wählen Sie nach erfolgreicher Überprüfung **Erstellen** aus. 
 
@@ -219,8 +219,8 @@ Zum Konfigurieren der regionalen Redundanz führen Sie die folgenden Schritte au
   
    :::image type="content" source="media/sql-server-extended-security-updates/two-upload-files-for-regional-redundancy.png" alt-text="Beispieldateien für den Upload":::
 
-1. Erstellen Sie den ersten **SQL Server-Registrierungsdienst** in einer Region, und führen Sie dann eine Massenregistrierung der Instanzen in einer der CSV-Dateien in dieser Region durch. Beispiel: Erstellen Sie den ersten **SQL Server-Registrierungsdienst** in der Region **USA, Westen**, und führen Sie eine Massenregistrierung Ihrer SQL Server-Instanzen mit der Datei „upload1.csv“ durch. 
-1. Erstellen Sie den zweiten **SQL Server-Registrierungsdienst** in der zweiten Region, und führen Sie dann eine Massenregistrierung der Instanzen in der anderen CSV-Dateien in dieser Region durch. Beispiel: Erstellen Sie den zweiten **SQL Server-Registrierungsdienst** in der Region **USA, Osten**, und führen Sie eine Massenregistrierung Ihrer SQL Server-Instanzen mit der Datei „upload2.csv“ durch. 
+1. Erstellen Sie den ersten **SQL Server-Registrierungsdienst** in einer Region, und führen Sie dann eine Massenregistrierung der Instanzen in einer der CSV-Dateien in dieser Region durch. Beispiel: Erstellen Sie den ersten **SQL Server-Registrierungsdienst** in der Region **USA, Westen** , und führen Sie eine Massenregistrierung Ihrer SQL Server-Instanzen mit der Datei „upload1.csv“ durch. 
+1. Erstellen Sie den zweiten **SQL Server-Registrierungsdienst** in der zweiten Region, und führen Sie dann eine Massenregistrierung der Instanzen in der anderen CSV-Dateien in dieser Region durch. Beispiel: Erstellen Sie den zweiten **SQL Server-Registrierungsdienst** in der Region **USA, Osten** , und führen Sie eine Massenregistrierung Ihrer SQL Server-Instanzen mit der Datei „upload2.csv“ durch. 
 
 
 Sobald die Daten bei den beiden unterschiedlichen Ressourcen für die **SQL Server-Registrierung** registriert sind, können Sie je nach Dienstverfügbarkeit Sicherheitsupdates aus beiden Regionen herunterladen. 
@@ -323,7 +323,7 @@ Hinweise zur Optimierung der Leistung für [!INCLUDE[ssNoVersion](../../includes
 - [Seite zum Ende des Supports von SQL Server 2008/2008 R2](https://aka.ms/sqleos)
 - [Häufig gestellte Fragen zu erweiterten Sicherheitsupdates](https://aka.ms/sqleosfaq)
 - [Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com/security-guidance/summary)
-- [Verwalten von Windows-Updates mithilfe von Azure Automation](/azure/automation/automation-tutorial-update-management)
+- [Verwalten von Windows-Updates mithilfe von Azure Automation](/azure/automation/update-management/overview)
 - [Automatisierte Patches für SQL Server-VMs](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)
 - [Anleitung zur Migration von Microsoft-Datenbanken](https://datamigration.microsoft.com/)
 - [Azure-Migration: Optionen für die Migration per Lift & Shift Ihres aktuellen SQL Server 2008/2008 R2-Systems in eine Azure-VM](https://azure.microsoft.com/services/azure-migrate/)

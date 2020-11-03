@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 66893eb9b35ac0635600d6628c3ef0121d5d37c9
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 47964ebf5702542452227589e1426948825cc216
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891300"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678871"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Berichtsserverintegration für Power BI (Configuration Manager)
 
@@ -50,7 +50,7 @@ Führen Sie die folgenden Schritte des [!INCLUDE[ssRSnoversion](../../includes/s
 
 1. Wählen Sie die [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] -Integrationsseite aus.
 
-2. Wählen Sie **Mit Power BI registrieren**aus.
+2. Wählen Sie **Mit Power BI registrieren** aus.
 
     >[!Note]
     > Stellen Sie sicher, dass Port 443 nicht blockiert ist.
@@ -79,17 +79,17 @@ Wählen Sie auf der Seite **Power BI** in Configuration Manager die Schaltfläch
 
 Verwenden Sie die Option **Registrierung aktualisieren** , wenn die Konfiguration des Berichtsservers geändert wurde. Wenn Sie z. B. die URLs hinzufügen oder entfernen möchten, die Benutzer für die Navigation zum [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]verwenden.
 
-- Wählen Sie in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager die **Webportal-URL**aus.
+- Wählen Sie in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager die **Webportal-URL** aus.
 
-     Wählen Sie **Erweitert**aus.
+     Wählen Sie **Erweitert** aus.
 
-- Wählen Sie **Hinzufügen** aus, um eine neue HTTP-Identität für das [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] hinzuzufügen, und wählen Sie dann **OK**aus.
+- Wählen Sie **Hinzufügen** aus, um eine neue HTTP-Identität für das [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] hinzuzufügen, und wählen Sie dann **OK** aus.
 
      Das [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] -Symbol wird geändert, um die Änderung der Serverkonfiguration anzuzeigen.  ![ssrs_powebi_icon_warning](../../reporting-services/install-windows/media/ssrs-powebi-icon-warning.png "ssrs_powebi_icon_warning")
 
-- Wählen Sie auf der Seite **Power BI-Integration** die Option **Aktualisieren der Registrierung**aus.
+- Wählen Sie auf der Seite **Power BI-Integration** die Option **Aktualisieren der Registrierung** aus.
 
-     Sie werden aufgefordert, sich bei Azure AD anzumelden. Die Seite wird aktualisiert und es wird die neue URL angezeigt, die in **Umleitungs-URLs**aufgeführt ist.
+     Sie werden aufgefordert, sich bei Azure AD anzumelden. Die Seite wird aktualisiert und es wird die neue URL angezeigt, die in **Umleitungs-URLs** aufgeführt ist.
 
 ##  <a name="summary-of-the-power-bi-integration-and-pin-process"></a><a name="bkmk_integration_process"></a> Zusammenfassung der Power BI-Integration und des Anheftungsprozesses
 
@@ -125,11 +125,11 @@ In diesem Abschnitt werden die grundlegenden Schritte und die damit verbundenen 
 
 7. Es wird ein [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnement erstellt, um die geplante Aktualisierung des Berichtselements auf der Dashboardkachel zu verwalten. Das Abonnement verwendet das Sicherheitstoken, das bei der Anmeldung des Benutzers erstellt wurde.
 
-     Das Token ist für **90 Tage**gültig. Anschließend müssen sich die Benutzer neu anmelden, um ein neues Benutzertoken zu erstellen. Wenn das Token abgelaufen ist, werden die angehefteten Kacheln weiterhin im Dashboard angezeigt, aber die Daten werden nicht mehr aktualisiert.  Die für angeheftete Elemente verwendeten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements weisen einen Fehler auf, bis ein neues Benutzertoken erstellt wird. Weitere Informationen finden Sie unter [Meine Einstellungen für die Power BI-Integration (Webportal)](../my-settings-for-power-bi-integration-web-portal.md). um weitere Informationen zu erhalten.
+     Das Token ist für **90 Tage** gültig. Anschließend müssen sich die Benutzer neu anmelden, um ein neues Benutzertoken zu erstellen. Wenn das Token abgelaufen ist, werden die angehefteten Kacheln weiterhin im Dashboard angezeigt, aber die Daten werden nicht mehr aktualisiert.  Die für angeheftete Elemente verwendeten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements weisen einen Fehler auf, bis ein neues Benutzertoken erstellt wird. Weitere Informationen finden Sie unter [Meine Einstellungen für die Power BI-Integration (Webportal)](../my-settings-for-power-bi-integration-web-portal.md). um weitere Informationen zu erhalten.
 
 Wenn ein Benutzer ein Element ein zweites Mal anheftet, werden die Schritte 1 bis 4 übersprungen und stattdessen die App-ID und die URLs aus der ReportServer-Datenbank abgerufen. Der Ablauf wird dann mit Schritt 5 fortgesetzt.
 
-![ssRS-pin-to-powerbi-flow](../../reporting-services/install-windows/media/ssrs-pin-to-powerbi-flow.png)
+![Diagramm, das zeigt, was passiert, wenn ein Benutzer ein Berichtselement an ein Dashboard anheftet](../../reporting-services/install-windows/media/ssrs-pin-to-powerbi-flow.png)
 
  **Wenn ein Abonnement ausgelöst wird, um eine Dashboardkachel zu aktualisieren:**
 
@@ -143,7 +143,7 @@ Wenn ein Benutzer ein Element ein zweites Mal anheftet, werden die Schritte 1 bi
 
 5. Wenn das Token nicht gültig ist, wird ein Fehler zurückgegeben und auf dem Berichtsserver protokolliert.  Es werden keine Statusinformationen oder sonstigen Informationen an das Dashboard gesendet.
 
-![ssRS-subscription-to-powerbi-flow](../../reporting-services/install-windows/media/ssrs-subscription-to-powerbi-flow.png)
+![Diagramm, das zeigt, was passiert, wenn ein Abonnement ausgelöst wird, um eine Dashboardkachel zu aktualisieren](../../reporting-services/install-windows/media/ssrs-subscription-to-powerbi-flow.png)
 
    <iframe width="560" height="315" src="https://www.youtube.com/embed/QhPQObqmMPc" frameborder="0" allowfullscreen></iframe>
 

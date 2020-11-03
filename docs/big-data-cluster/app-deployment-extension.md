@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 01ff6844019cfed0dbfa614fee156680ecd8f38e
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 74f3306167a4c2fbc248f65e5384ea9847f48f7a
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680599"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678908"
 ---
 # <a name="how-to-use-visual-studio-code-to-deploy-applications-to-big-data-clusters-2019"></a>Verwenden von Visual Studio Code zum Bereitstellen von Anwendungen für [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -93,7 +93,7 @@ Nachdem Sie den zu verwendenden Endpunkt gefunden haben, stellen Sie eine Verbin
 
 ### <a name="app-template"></a>App-Vorlage
 
-In Visual Studio Code müssen Sie den *Arbeitsbereich öffnen*, in dem Sie die Artefakte der App speichern werden.
+In Visual Studio Code müssen Sie den *Arbeitsbereich öffnen* , in dem Sie die Artefakte der App speichern werden.
 
 Sie können eine neue App mithilfe einer unserer Vorlagen bereitstellen. Klicken Sie dazu im Bereich `App Specifications` auf die Schaltfläche `New App Template`. Sie werden aufgefordert, den Namen, die Runtime und den Speicherort der App auf Ihrem lokalen Computer anzugeben. Der Name und die Version, die Sie angeben, muss eine DNS-1035-Bezeichnung sein und aus Kleinbuchstaben, Ziffern oder Bindestrichen bestehen, mit einem Buchstaben beginnen und einem alphanumerischen Zeichen enden.
 
@@ -153,7 +153,7 @@ Sie können sich alle bereitgestellten Apps mit den folgenden Informationen in d
 
 Wenn Sie auf `Links` klicken, können Sie auf die Datei `swagger.json` Ihrer bereitgestellten App zugreifen. Dadurch können Sie eigene Clients programmieren, die Ihre App aufrufen:
 
-![Swagger](media/vs-extension/swagger.png)
+![Screenshot der VS Code-Benutzeroberfläche mit der Datei „swagger.json“](media/vs-extension/swagger.png)
 
 Weitere Informationen finden Sie unter [Nutzen von Anwendungen auf Big Data-Clustern](app-consume.md).
 

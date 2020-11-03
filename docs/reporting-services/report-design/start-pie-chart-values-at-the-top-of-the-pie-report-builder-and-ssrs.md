@@ -9,23 +9,23 @@ ms.topic: conceptual
 ms.assetid: d0e6fb59-ca4e-4d70-97cb-0ad183da21d3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dfdd7600a08a78baa0b70f2048423f1632ebe2db
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: b1158cf4a88bb491b8ed1cb492eec1c3021cb6f9
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689434"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907058"
 ---
 # <a name="start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs"></a>Beginnen der Kreisdiagrammwerte an der Kreisoberseite (Berichts-Generator und SSRS)
 Standardmäßig beginnt bei Kreisdiagrammen in paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten der erste Wert im Dataset bei 90 Grad zur Oberseite des Kreises versetzt. 
 
-![Berichts-Generator-Kreisdiagramm-beginnt-bei-90](../../reporting-services/media/report-builder-pie-chart-start-at-90.png)
+![Berichts-Generator: Screenshot eines Kreisdiagramms, dessen Dataset bei 90 Grad beginnend angezeigt wird](../../reporting-services/media/report-builder-pie-chart-start-at-90.png)
 
 *Die Diagrammwerte beginnen bei 90 Grad.*
 
 Sie können den ersten Wert aber auch ganz oben anordnen. 
 
-![Berichts-Generator-Kreisdiagramm-Beginn-oben](../../reporting-services/media/report-builder-pie-chart-start-at-top.png)
+![Berichts-Generator: Screenshot eines Kreisdiagramms, dessen Dataset bei null Grad beginnend angezeigt wird](../../reporting-services/media/report-builder-pie-chart-start-at-top.png)
 
 *Die Diagrammwerte beginnen an der Kreisoberseite.*
   
@@ -35,7 +35,7 @@ Sie können den ersten Wert aber auch ganz oben anordnen.
   
 2.  Zum Anzeigen des Bereichs **Eigenschaften** klicken Sie auf der Registerkarte **Ansicht** auf **Eigenschaften**.  
   
-3.  Ändern Sie im Bereich **Eigenschaften** unter **Benutzerdefinierte Attribute**den Eintrag **PieStartAngle** von **0** in **270**.  
+3.  Ändern Sie im Bereich **Eigenschaften** unter **Benutzerdefinierte Attribute** den Eintrag **PieStartAngle** von **0** in **270**.  
   
 4.  Klicken Sie auf **Ausführen** , um den Bericht in der Vorschau anzuzeigen.  
   

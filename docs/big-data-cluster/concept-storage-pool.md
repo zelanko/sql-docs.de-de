@@ -9,22 +9,22 @@ ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4d810220e0bd1148d4f572638c3ac67d4c3b44c0
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: e8bc204c3f93d4a4ebbd26876bc8c3e23bad8047
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257240"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914290"
 ---
-# <a name="what-is-the-storage-pool-big-data-clusters-2019"></a>Was ist der Speicherpool ([!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)])?
+# <a name="what-is-the-storage-pool-in-a-sql-server-big-data-cluster"></a>Was ist der Speicherpool in einem SQL Server-Big Data-Cluster?
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-In diesem Artikel wird die Rolle beschrieben, die der *SQL Server-Speicherpool* in einer [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]-Instanz (BDC) spielt. In den folgenden Abschnitten sind die Architektur und die Funktionalität eines SQL-Speicherpools beschrieben.
+In diesem Artikel ist die Rolle beschrieben, die der *SQL Server-Speicherpool* in einem SQL Server-Big Data-Cluster spielt. In den folgenden Abschnitten sind die Architektur und die Funktionalität eines Speicherpools beschrieben.
 
 ## <a name="storage-pool-architecture"></a>Speicherpoolarchitektur
 
-Der Speicherpool ist der lokale HDFS-Cluster (Hadoop) im SQL Server BDC-Ökosystem. Er bietet beständigen Speicher für unstrukturierte und semistrukturierte Daten. Datendateien, z. B. Parquet-Dateien oder durch Trennzeichen getrennte Textdateien, können im Speicherpool gespeichert werden. Für die beständige Speicherung wird jedem Pod im Pool ein beständiges Volume zugeordnet. Der Zugriff auf die Speicherpooldateien ist über [PolyBase](../relational-databases/polybase/polybase-guide.md) in SQL Server oder direkt mithilfe einer Apache Knox Gateway-Instanz möglich.
+Der Speicherpool ist der lokale HDFS-Cluster (Hadoop) in einem SQL Server-Big Data-Cluster. Er bietet beständigen Speicher für unstrukturierte und semistrukturierte Daten. Datendateien, z. B. Parquet-Dateien oder durch Trennzeichen getrennte Textdateien, können im Speicherpool gespeichert werden. Für die beständige Speicherung wird jedem Pod im Pool ein persistentes Volume zugeordnet. Der Zugriff auf die Speicherpooldateien ist über [PolyBase](../relational-databases/polybase/polybase-guide.md) in SQL Server oder direkt mithilfe einer Apache Knox Gateway-Instanz möglich.
 
 Ein klassisches HDFS-Setup besteht aus einer Gruppe von Standardhardwarecomputern mit zugeordnetem Speicher. Die Daten werden in Blöcken auf die Knoten verteilt, um Fehlertoleranz und die Verwendung von Parallelverarbeitung zu ermöglichen. Einer der Knoten im Cluster fungiert als Namensknoten und enthält die Metadateninformationen zu den Dateien in den Datenknoten.
 
@@ -32,7 +32,7 @@ Ein klassisches HDFS-Setup besteht aus einer Gruppe von Standardhardwarecomputer
 
 Der Speicherpool besteht aus Speicherknoten, die Mitglieder eines HDFS-Clusters sind. Er führt einen oder mehrere Kubernetes-Pods aus, wobei jeder dieser Pods die folgenden Container hostet:
 
-- Einen Hadoop-Container, der mit einem beständigen Volume (Speicher) verknüpft ist. Alle Container dieses Typs bilden zusammen den Hadoop-Cluster. In diesem Hadoop-Container befindet sich ein YARN-Knotenverwaltungsprozess, der bedarfsgesteuerte Apache Spark-Workerprozesse erstellen kann. Der Spark-Hauptknoten hostet die Container für den Hive-Metastore, den Spark-Verlauf und den YARN-Auftragsverlauf.
+- Einen Hadoop-Container, der mit einem persistenten Volume (Speicher) verknüpft ist. Alle Container dieses Typs bilden zusammen den Hadoop-Cluster. In diesem Hadoop-Container befindet sich ein YARN-Knotenverwaltungsprozess, der bedarfsgesteuerte Apache Spark-Workerprozesse erstellen kann. Der Spark-Hauptknoten hostet die Container für den Hive-Metastore, den Spark-Verlauf und den YARN-Auftragsverlauf.
 - Eine SQL Server-Instanz zum Lesen von Daten aus dem HDFS mithilfe der OpenRowSet-Technologie
 - `collectd` zum Erfassen von Metrikdaten
 - `fluentbit` zum Erfassen von Protokolldaten

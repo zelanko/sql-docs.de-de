@@ -9,18 +9,18 @@ ms.date: 10/15/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9c3374b0820233e20ee73b85947ed2b8a61847c0
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: b07b1480412dc8dd67535f58fcc4d223a9e91baa
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866815"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914319"
 ---
-# <a name="what-are-compute-pools-sql-server-big-data-clusters"></a>Was sind Computepools in Big Data-Clustern für SQL Server?
+# <a name="what-are-compute-pools-in-a-sql-server-big-data-cluster"></a>Was sind Computepools in einem Big-Data-Cluster für SQL Server?
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-In diesem Artikel ist die Rolle beschrieben, die *SQL Server-Computepools* in Big Data-Clustern für SQL Server spielen. Computepools stellen horizontal skalierbare Computeressourcen für einen Big Data-Cluster bereit. Sie werden verwendet, um Berechnungsarbeit oder Zwischenresultsets aus der SQL Server-Masterinstanz auszulagern. In den folgenden Abschnitten werden die Architektur, die Funktionen und die Nutzungsszenarios eines Computepools beschrieben.
+In diesem Artikel ist die Rolle beschrieben, die *SQL Server-Computepools* in einem Big Data-Cluster für SQL Server spielen. Computepools stellen horizontal skalierbare Computeressourcen für einen SQL Server-Big Data-Cluster bereit. Sie werden verwendet, um Berechnungsarbeit oder Zwischenresultsets aus der SQL Server-Masterinstanz auszulagern. In den folgenden Abschnitten werden die Architektur, die Funktionen und die Nutzungsszenarios eines Computepools beschrieben.
 
 Dieses fünfminütige Video enthält eine Einführung in Computepools:
 
@@ -34,7 +34,7 @@ Ein Computepool besteht aus mindestens einem Compute-Pod, der in Kubernetes ausg
 
 ## <a name="scale-out-groups"></a>Erweiterungsgruppen
 
-Ein Computepool kann als PolyBase-Erweiterungsgruppe für verteilte Abfragen über verschiedene externe Datenquellen fungieren, etwa SQL Server, Oracle, MongoDB, Teradata und HDFS. Durch Verwenden von Computepods in Kubernetes können Big Data-Cluster das Erstellen und Konfigurieren von Computepods für PolyBase-Erweiterungsgruppen automatisieren.
+Ein Computepool kann als PolyBase-Erweiterungsgruppe für verteilte Abfragen über verschiedene externe Datenquellen fungieren, etwa SQL Server, Oracle, MongoDB, Teradata und HDFS. Durch Verwenden von Computepods in Kubernetes kann in einem SQL Server-Big Data-Cluster das Erstellen und Konfigurieren von Computepods für PolyBase-Erweiterungsgruppen automatisiert werden.
 
 ## <a name="compute-pool-scenarios"></a>Computepoolszenarien
 

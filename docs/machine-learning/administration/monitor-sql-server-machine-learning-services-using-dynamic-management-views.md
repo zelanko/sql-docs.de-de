@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 09a01937611b239aeb6db1df406fc057063eb634
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 6d94fc2d85ac0012347cb55f4981a25ba107f5df
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115540"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679211"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Überwachen von SQL Server Machine Learning Services mithilfe von dynamischen Verwaltungssichten
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -168,7 +168,7 @@ WHERE object_name LIKE '%External Scripts%'
 | Leistungsindikator                   | BESCHREIBUNG |
 |---------------------------|-------------|
 | Total Executions          | Gibt die Anzahl der R-Prozesse an, die durch lokale oder Remoteaufrufe gestartet wurden. |
-| Parallel Executions       | Gibt an, wie oft ein Skript die _\@parallel_-Spezifikation enthielt, und dass [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] einen parallelen Abfrageplan generieren und verwenden konnte. |
+| Parallel Executions       | Gibt an, wie oft ein Skript die _\@parallel_ -Spezifikation enthielt, und dass [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] einen parallelen Abfrageplan generieren und verwenden konnte. |
 | Streaming Executions      | Gibt die Anzahl der Aufrufe des Streamingfeatures an. |
 | SQL CC Executions         | Gibt die Anzahl der ausgeführten externen R-Skripts an, in denen der Aufruf remote instanziiert wurde und SQL Server als Computekontext verwendet wurde. |
 | Implied Auth. Anmeldungen      | Gibt an, wie oft ein ODBC-Loopback-Aufruf mit implizierter Authentifizierung abgeschlossen wurde, d. h. dass [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] den Aufruf im Auftrag des Benutzers ausgeführt und die Skriptanforderung gesendet hat. |
@@ -251,8 +251,8 @@ Die Abfrage gibt die folgenden Spalten zurück:
 |--------------------------|--------------|
 | pool_name                | Name des Ressourcenpools. Den Namen von SQL Server-Ressourcenpools wird `SQL Server` und den Namen von externen Ressourcenpools wird `External Pool` vorangestellt. |
 | total_cpu_usage_hours    | Gibt die kumulative CPU-Auslastung in Millisekunden seit der letzten Zurücksetzung der Resource Governor-Statistiken an. |
-| read_io_completed_total  | Die Gesamtanzahl der E/A-Lesevorgänge, die seit dem Zurücksetzen der Ressourcenkontrollstatistiken abgeschlossen wurden.              |
-| write_io_completed_total | Die Gesamtanzahl der E/A-Schreibvorgänge, die seit dem Zurücksetzen der Ressourcenkontrollstatistiken abgeschlossen wurden.             |
+| read_io_completed_total  | Die Gesamtanzahl der E/A-Lesevorgänge, die seit der letzten Zurücksetzung der Resource Governor-Statistiken abgeschlossen wurden.              |
+| write_io_completed_total | Die Gesamtanzahl der E/A-Schreibvorgänge, die seit der letzten Zurücksetzung der Resource Governor-Statistiken abgeschlossen wurden.             |
 
 ## <a name="installed-packages"></a>Installierte Pakete
 

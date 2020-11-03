@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9d4e12a0322a35e96bd930c4fa6f1f852daf2bdd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a3000abfed5258f02d47148ce351a6390cb225c7
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258466"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678878"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lektion 2: Angeben von Verbindungsinformationen (Reporting Services)
 
@@ -28,7 +28,7 @@ Für diesen Bericht wird die Beispieldatenbank „AdventureWorks2016“ als Date
 
 1. Klicken Sie im Bereich **Berichtsdaten** auf **Neu** > **Datenquelle**. Wird der Bereich **Berichtsdaten** nicht angezeigt, klicken Sie im Menü **Ansicht** auf **Berichtsdaten**.
 
-    ![ssrs-table-tutorial-2-new-data-source](media/ssrs-table-tutorial-2-new-data-source.png)
+    ![Screenshot des Bereichs „Berichtsdaten“, in dem „Neu“ > „Datenquelle“ ausgewählt ist](media/ssrs-table-tutorial-2-new-data-source.png)
 
     Das Dialogfeld **Datenquelleneigenschaften** wird geöffnet mit dem Abschnitt **Allgemein**.
 
@@ -53,9 +53,9 @@ Für diesen Bericht wird die Beispieldatenbank „AdventureWorks2016“ als Date
     >
     > Weitere Informationen zu Verbindungszeichenfolgen finden Sie im Abschnitt `See also` weiter unten.
 
-6. Klicken Sie auf die Registerkarte **Anmeldeinformationen**, und wählen Sie im Abschnitt **Anmeldeinformationen ändern, mit denen eine Verbindung mit der Datenquelle hergestellt wird** das Optionsfeld **Windows-Authentifizierung verwenden (integrierte Sicherheit)** aus.
+6. Klicken Sie auf die Registerkarte **Anmeldeinformationen** , und wählen Sie im Abschnitt **Anmeldeinformationen ändern, mit denen eine Verbindung mit der Datenquelle hergestellt wird** das Optionsfeld **Windows-Authentifizierung verwenden (integrierte Sicherheit)** aus.
 
-7. Klicken Sie auf **OK**, um den Vorgang abzuschließen.
+7. Klicken Sie auf **OK** , um den Vorgang abzuschließen.
 
 Im Berichts-Designer wird die Datenquelle „AdventureWorks2016“ dem Bereich **Berichtsdaten** hinzugefügt.
 

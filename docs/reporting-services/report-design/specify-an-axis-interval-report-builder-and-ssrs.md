@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7c9ca24186a1b3b2a9fed9f1b3fa9454aa020f9b
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 6b756d7db3a41787da2a9a1a30f1c82b9a72317c
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934944"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907178"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>Angeben eines Achsenintervalls (Berichts-Generator und SSRS)
 Erfahren Sie, wie Sie die Anzahl der Bezeichnungen und Teilstriche auf der Kategorieachse (X) in einem Diagramm ändern, indem Sie das Achsenintervalls in einem [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -paginierten Bericht festlegen.
@@ -36,24 +36,24 @@ Informationen zum Festlegen des Achsenintervalls mit Beispieldaten finden Sie un
 
 In diesem Säulendiagramm ist das horizontale Bezeichnungsintervall auf „Auto“ festgelegt.
 
-![report-builder-column-chart-preview-x-axis-interval-auto](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-auto.png)
+![Berichts-Generator: Screenshot einer Vorschau eines Säulendiagramms, für das das X-Achsenintervall auf „Auto“ festgelegt ist](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-auto.png)
   
 1.  Klicken Sie mit der rechten Maustaste auf die Kategorieachse, und klicken Sie anschließend auf **Eigenschaften für horizontale Achsen**.   
 
-    ![report-builder-column-chart-x-axis-labels](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
+    ![Berichts-Generator: Screenshot eines Säulendiagramms, für das gezeigt wird, wie X-Achsenbezeichnungen festgelegt werden](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
   
-2.  Legen Sie auf der Registerkarte **Achsenoptionen** im Dialogfeld **Eigenschaften für horizontale Achsen** den Wert **1** für die Option **Intervall** fest, um jede Kategoriegruppenbezeichnung anzuzeigen. Geben Sie **2**ein, um jede zweite Kategoriegruppenbezeichnung auf der X-Achse anzuzeigen. 
+2.  Legen Sie auf der Registerkarte **Achsenoptionen** im Dialogfeld **Eigenschaften für horizontale Achsen** den Wert **1** für die Option **Intervall** fest, um jede Kategoriegruppenbezeichnung anzuzeigen. Geben Sie **2** ein, um jede zweite Kategoriegruppenbezeichnung auf der X-Achse anzuzeigen. 
 
-     ![report-builder-column-chart-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
+     ![Berichts-Generator: Screenshot eines Säulendiagramms, für das gezeigt wird, wie das X-Achsenintervall auf „1“ festgelegt wird](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-
-    Das Säulendiagramm zeigt jetzt alle Bezeichnungen für die horizontale Achse an.
-
-    ![report-builder-column-chart-preview-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-one.png)
-  
-    > [!NOTE]  
-    >  Wenn Sie ein Achsenintervall festlegen, wird die automatische Kennzeichnung deaktiviert. Wenn Sie einen Wert für das Achsenintervall angeben, kann es je nach Anzahl der Kategorien auf der Kategorieachse zu unerwartetem Kennzeichnungsverhalten kommen.  
+3. [!INCLUDE[clickOK](../../includes/clickok-md.md)]
+     
+     Das Säulendiagramm zeigt jetzt alle Bezeichnungen für die horizontale Achse an.
+     
+     ![Berichts-Generator: Screenshot des Säulendiagramms mit angezeigten X-Achsenbezeichnungen](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-one.png)
+     
+     > [!NOTE]  
+     >  Wenn Sie ein Achsenintervall festlegen, wird die automatische Kennzeichnung deaktiviert. Wenn Sie einen Wert für das Achsenintervall angeben, kann es je nach Anzahl der Kategorien auf der Kategorieachse zu unerwartetem Kennzeichnungsverhalten kommen.  
 
 ## <a name="change-the-label-interval-in-properties-pane"></a>Ändern des Bezeichnungsintervalls im Eigenschaftenbereich
 
@@ -61,15 +61,15 @@ Sie können das Bezeichnungsintervall auch im Eigenschaftenbereich festlegen.
 
 1.  Klicken Sie in der Berichtsentwurfsansicht auf das Diagramm, und wählen Sie dann die horizontalen Achsenbezeichnungen aus.
 
-3. Legen Sie im Eigenschaftenbereich „LabelInterval“ auf **1**fest.
+3. Legen Sie im Eigenschaftenbereich „LabelInterval“ auf **1** fest.
 
-    ![report-builder-column-chart-set-label-interval](../../reporting-services/media/report-builder-column-chart-set-label-interval.png)
+    ![Berichts-Generator: Screenshot des Säulendiagramms, für das gezeigt wird, wie das Bezeichnungsintervall (LabelInterval) festgelegt wird](../../reporting-services/media/report-builder-column-chart-set-label-interval.png)
 
     Das Diagramm sieht genauso aus wie in der Entwurfsansicht. 
     
 5.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.
 
-    ![report-builder-column-chart-label-interval-one-preview](../../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
+    ![Berichts-Generator: Screenshot der Säulendiagrammvorschau mit einem Bezeichnungsintervall von „1“](../../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
     
     Jetzt zeigt das Diagramm alle seine Bezeichnungen an.
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3ccffdc3beca07d53302b7a7dceff0e30bbb6331
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: eb16c276b9cc716f52e6ce73da5ec4ba3843dfbd
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891220"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678893"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Installieren des ersten Berichtsservers im SharePoint-Modus
 
@@ -86,7 +86,7 @@ ms.locfileid: "91891220"
  
  2. Starten Sie die **SharePoint 2016-Verwaltungsshell** als Administrator. 
   
-    Sie können mit der rechten Maustaste auf die **SharePoint 2016-Verwaltungsshell** klicken und **Als Administrator ausführen**auswählen.
+    Sie können mit der rechten Maustaste auf die **SharePoint 2016-Verwaltungsshell** klicken und **Als Administrator ausführen** auswählen.
 
 3. Führen Sie an der PowerShell-Eingabeaufforderung den folgenden Befehl aus.
 
@@ -105,13 +105,13 @@ ms.locfileid: "91891220"
     Get-SPServer SERVERNAME 
     ```
  
- 6. Unter **Rolle** sollte **Benutzerdefiniert**aufgeführt sein.
+ 6. Unter **Rolle** sollte **Benutzerdefiniert** aufgeführt sein.
  
  ### <a name="install-reporting-services"></a>Installieren von Reporting Services
   
 1.  Führen Sie den Installations-Assistenten für SQL Server (Setup.exe) aus.  
   
-2.  Wählen Sie links im Assistenten die Option **Installation** , und wählen Sie anschließend **Neue eigenständige SQL Server-Installation oder Hinzufügen von Funktionen zu einer vorhandenen Installation**aus.  
+2.  Wählen Sie links im Assistenten die Option **Installation** , und wählen Sie anschließend **Neue eigenständige SQL Server-Installation oder Hinzufügen von Funktionen zu einer vorhandenen Installation** aus.  
 
 3.  Falls die Seite **Product Key** angezeigt wird, geben Sie Ihren Product Key ein, oder übernehmen Sie den Standardwert der Enterprise Evaluation Edition.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "91891220"
   
     -   Wählen Sie **Weiter** aus.  
   
-7.  Möglicherweise wird die Seite **Installationsregeln** angezeigt. Überprüfen Sie alle Warnungen oder Probleme, die eine Blockierung verursachen. Wählen Sie **Weiter**aus.
+7.  Möglicherweise wird die Seite **Installationsregeln** angezeigt. Überprüfen Sie alle Warnungen oder Probleme, die eine Blockierung verursachen. Wählen Sie **Weiter** aus.
  
 8. Wählen Sie Folgendes auf der Seite **Funktionsauswahl** aus:  
   
@@ -143,7 +143,7 @@ ms.locfileid: "91891220"
   
      Wählen Sie **Weiter** aus.  
   
-     ![rs_SetupFeatureSelection_SharePoint_with_circles](../../reporting-services/install-windows/media/rs-setupfeatureselection-sharepoint-with-circles.png)
+     ![Screenshot der Seite „Funktionsauswahl“, auf der die Optionen „Reporting Services - SharePoint“ und „Reporting Services-Add-In für SharePoint-Produkte“ aktiviert sind](../../reporting-services/install-windows/media/rs-setupfeatureselection-sharepoint-with-circles.png)
   
 9. Wenn Sie Datenbank-Engine-Dienste ausgewählt haben, akzeptieren Sie die Standardinstanz von **MSSQLSERVER** auf der Seite **Instanzkonfiguration** , und klicken Sie auf **Weiter**.  
   
@@ -160,11 +160,11 @@ ms.locfileid: "91891220"
     > [!NOTE]
     > Nachdem die SQL Server-Installation abgeschlossen wurde, befolgen Sie die Anweisungen in den weiteren Abschnitten dieses Themas, um die SharePoint-Umgebung zu konfigurieren. Dies schließt die Installation des gemeinsamen Reporting Services-Dienstes und das Erstellen der Reporting Services-Dienstanwendungen ein.  
   
-     ![ssRS-2016-setup-configuration](../../reporting-services/install-windows/media/ssrs-2016-setup-configuration.png)
+     ![Screenshot des Abschnitts „Integrierter SharePoint-Modus von Reporting Services“, in dem die Option „Nur installieren“ aktiviert und hervorgehoben ist](../../reporting-services/install-windows/media/ssrs-2016-setup-configuration.png)
   
 13. Überprüfen Sie eventuell angezeigte Warnungen, und klicken Sie dann auf der Seite **Funktionskonfigurationsregeln** auf **Weiter** , wenn Sie die Konfiguration auf diese Seite beenden möchten.  
   
-14. Lesen Sie auf der Seite **Installationsbereit** die Installationszusammenfassung. Die Zusammenfassung enthält einen untergeordneten Knoten **SharePoint-Modus für Reporting Services** , für den der Wert **SharePointFilesOnlyMode**angezeigt wird. Wählen Sie **Installieren** aus.  
+14. Lesen Sie auf der Seite **Installationsbereit** die Installationszusammenfassung. Die Zusammenfassung enthält einen untergeordneten Knoten **SharePoint-Modus für Reporting Services** , für den der Wert **SharePointFilesOnlyMode** angezeigt wird. Wählen Sie **Installieren** aus.  
   
 15. Die Installation dauert mehrere Minuten. Die Seite **Abgeschlossen** wird mit einer Liste der Funktionen und dem Status der einzelnen Funktionen angezeigt. Möglicherweise werden Sie in einem Informationsdialogfeld darauf hingewiesen, dass der Computer neu gestartet werden muss.  
   
@@ -188,18 +188,18 @@ ms.locfileid: "91891220"
   
 2.  Wählen Sie die Gruppe **Microsoft SharePoint 2016-Produkte** oder **Microsoft SharePoint 2013-Produkte** aus.  
   
-3.  Klicken Sie mit der rechten Maustaste auf **SharePoint 2016-Verwaltungsshell**bzw. **SharePoint 2013-Verwaltungsshell**, und wählen Sie **Als Administrator ausführen**aus. 
+3.  Klicken Sie mit der rechten Maustaste auf **SharePoint 2016-Verwaltungsshell** bzw. **SharePoint 2013-Verwaltungsshell** , und wählen Sie **Als Administrator ausführen** aus. 
 
     > [!NOTE]
     > Die SharePoint-Befehle werden im Windows PowerShell-Standardfenster nicht erkannt. Verwenden Sie die **SharePoint-Verwaltungsshell**.  
   
-4.  Führen Sie den folgenden PowerShell-Befehl aus, um den Reporting Services SharePoint-Dienst zu installieren. Ein erfolgreicher Abschluss des Befehls zeigt eine neue Zeile in der Verwaltungsshell an. Wurde der Befehl erfolgreich ausgeführt, wird**keine Meldung** an die Verwaltungsshell zurückgegeben:  
+4.  Führen Sie den folgenden PowerShell-Befehl aus, um den Reporting Services SharePoint-Dienst zu installieren. Ein erfolgreicher Abschluss des Befehls zeigt eine neue Zeile in der Verwaltungsshell an. Wurde der Befehl erfolgreich ausgeführt, wird **keine Meldung** an die Verwaltungsshell zurückgegeben:  
   
     ```  
     Install-SPRSService  
     ```  
   
-5.  Führen Sie den folgenden PowerShell-Befehl aus, um den Reporting Services-Dienstproxy zu installieren. Ein erfolgreicher Abschluss des Befehls zeigt eine neue Zeile in der Verwaltungsshell an. Wurde der Befehl erfolgreich ausgeführt, wird**keine Meldung** an die Verwaltungsshell zurückgegeben:  
+5.  Führen Sie den folgenden PowerShell-Befehl aus, um den Reporting Services-Dienstproxy zu installieren. Ein erfolgreicher Abschluss des Befehls zeigt eine neue Zeile in der Verwaltungsshell an. Wurde der Befehl erfolgreich ausgeführt, wird **keine Meldung** an die Verwaltungsshell zurückgegeben:  
   
     ```  
     Install-SPRSServiceProxy  
@@ -249,11 +249,11 @@ ms.locfileid: "91891220"
   
      Wählen Sie ein Sicherheitskonto für den Anwendungspool aus, oder erstellen Sie es. Sie müssen ein Domänenbenutzerkonto angeben. Ein Domänenbenutzerkonto ermöglicht die Verwendung der in SharePoint verfügbaren Funktion "Verwaltetes Konto", mit der Sie Kennwörter und Kontoinformationen zentral aktualisieren können. Domänenkonten sind auch erforderlich, wenn Sie beabsichtigen, die Bereitstellung auf zusätzlichen Dienstinstanzen, die unter der gleichen Identität ausgeführt werden, zu skalieren.  
   
-6.  Im **Datenbankserver**können Sie den aktuellen Server verwenden oder einen anderen SQL Server auswählen.  
+6.  Im **Datenbankserver** können Sie den aktuellen Server verwenden oder einen anderen SQL Server auswählen.  
   
 7.  Der Standardwert von **Datenbankname** ist `ReportingService_<guid>`. Dies ist ein eindeutiger Datenbankname. Wenn Sie einen neuen Wert eingeben, geben Sie einen eindeutigen Wert ein. Dies ist die neue Datenbank, die speziell für die Dienstanwendung erstellt werden soll.  
   
-8.  Der Standardwert unter **Datenbankauthentifizierung**lautet Windows-Authentifizierung. Wenn Sie **SQL-Authentifizierung**auswählen, finden Sie in der SharePoint-Dokumentation bewährte Methoden zur Verwendung dieses Authentifizierungstyps in einer SharePoint-Bereitstellung.  
+8.  Der Standardwert unter **Datenbankauthentifizierung** lautet Windows-Authentifizierung. Wenn Sie **SQL-Authentifizierung** auswählen, finden Sie in der SharePoint-Dokumentation bewährte Methoden zur Verwendung dieses Authentifizierungstyps in einer SharePoint-Bereitstellung.  
   
 9. Wählen Sie im Abschnitt **Webanwendungszuordnungen** die Webanwendung aus, die für Zugriff von der aktuellen Reporting Services-Dienstanwendung bereitgestellt werden soll. Sie können einer Webanwendung eine Reporting Services-Dienstanwendung zuordnen. Wenn alle aktuellen Webanwendungen bereits einer Reporting Services-Dienstanwendung zugeordnet sind, wird eine Warnmeldung angezeigt.  
   
@@ -275,19 +275,19 @@ ms.locfileid: "91891220"
   
 #### <a name="to-activate-or-verify-the-power-view-site-collection-feature"></a>So aktivieren oder überprüfen Sie die Power View-Websitesammlungsfunktion  
   
-1.  Bei folgenden Schritten wird davon ausgegangen, dass die SharePoint-Website für eine Umgebung mit der **Benutzeroberflächenversion**2013 für SharePoint 2013 konfiguriert ist.  
+1.  Bei folgenden Schritten wird davon ausgegangen, dass die SharePoint-Website für eine Umgebung mit der **Benutzeroberflächenversion** 2013 für SharePoint 2013 konfiguriert ist.  
   
      Öffnen Sie die gewünschte SharePoint-Website in Ihrem Browser. Beispiel: https://\<servername>/sites/bi.  
   
 2.  Wählen Sie **Einstellungen**![SharePoint-Einstellungen](/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint-Einstellungen") aus.  
   
-3.  Wählen Sie **Websiteeinstellungen**aus.  
+3.  Wählen Sie **Websiteeinstellungen** aus.  
   
-4.  Wählen Sie in der Gruppe **Websitesammlungsverwaltung** die Option **Websitesammlungsfeatures**aus.  
+4.  Wählen Sie in der Gruppe **Websitesammlungsverwaltung** die Option **Websitesammlungsfeatures** aus.  
   
 5.  Suchen Sie **Power View-Integrationsfunktion** in der Liste.  
   
-6.  Wählen Sie **Aktivieren**aus. Der Funktionsstatus ändert sich in **Aktiv**.  
+6.  Wählen Sie **Aktivieren** aus. Der Funktionsstatus ändert sich in **Aktiv**.  
   
  Diese Prozedur wird pro Websitesammlung abgeschlossen. Weitere Informationen finden Sie unter [Aktivieren der Berichtsserver- und Power View-Integrationsfunktionen in SharePoint](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md).  
   
@@ -306,9 +306,9 @@ ms.locfileid: "91891220"
   
 -   Aktualisieren Sie den Parameter **-Account** für den Dienstproxy. Dabei muss es sich um ein verwaltetes Dienstkonto in der SharePoint-Farm handeln. Weitere Informationen finden Sie im SharePoint-Thema [Planen von Administrator- und Dienstkonten in SharePoint 2013](/SharePoint/security-for-sharepoint-server/plan-for-administrative-and-service-accounts).  
   
--   Aktualisieren Sie den **-DatabaseServer**-Parameter für die Dienstanwendung. Dieser Parameter entspricht der Instanz der Datenbank-Engine.  
+-   Aktualisieren Sie den **-DatabaseServer** -Parameter für die Dienstanwendung. Dieser Parameter entspricht der Instanz der Datenbank-Engine.  
   
--   Aktualisieren Sie den **-url**-Parameter der Website, für die die [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]-Funktion aktiviert werden soll.  
+-   Aktualisieren Sie den **-url** -Parameter der Website, für die die [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]-Funktion aktiviert werden soll.  
   
  **So verwenden Sie das Skript**  
   
@@ -417,7 +417,7 @@ Darüber hinaus muss das von der Reporting Services-Dienstanwendung verwendete S
  Die Reporting Services-Datenwarnungsfunktion sendet Warnungen in E-Mail-Nachrichten. Um E-Mails übermitteln zu können, müssen Sie unter Umständen Ihre Reporting Services-Dienstanwendung konfigurieren und die E-Mail-Übermittlungserweiterung für die Dienstanwendung ändern. Die E-Mail-Einstellungen sind erforderlich, wenn Sie beabsichtigen, die E-Mail-Übermittlungserweiterung für die Reporting Services-Abonnementfunktion zu verwenden. Weitere Informationen finden Sie unter [Configure E-mail for a Reporting Services Service Application (SharePoint 2013 and SharePoint 2016) (Konfigurieren von E-Mails für eine Reporting Services-Dienstanwendung (SharePoint 2013 und SharePoint 2016))](./configure-e-mail-for-a-reporting-services-service-application.md). 
   
 ### <a name="add-reporting-services-content-types-to-content-libraries"></a>Hinzufügen von Reporting Services-Inhaltstypen zu Inhaltsbibliotheken  
- Reporting Services stellt vordefinierte Inhaltstypen bereit, die zum Verwalten freigegebener Datenquellendateien (RSDS) und Berichts-Generator-Berichtsdefinitionsdateien (RDL) verwendet werden können. Wenn einer Bibliothek ein Inhaltstyp (**Berichts-Generator-Bericht** und **Berichtsdatenquelle**) hinzugefügt wird, wird der Befehl **Neu** aktiviert, sodass Sie neue Dokumente des betreffenden Typs erstellen können. Weitere Informationen finden Sie unter [Hinzufügen von Reporting Services-Inhaltstypen zu einer SharePoint-Bibliothek](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
+ Reporting Services stellt vordefinierte Inhaltstypen bereit, die zum Verwalten freigegebener Datenquellendateien (RSDS) und Berichts-Generator-Berichtsdefinitionsdateien (RDL) verwendet werden können. Wenn einer Bibliothek ein Inhaltstyp ( **Berichts-Generator-Bericht** und **Berichtsdatenquelle** ) hinzugefügt wird, wird der Befehl **Neu** aktiviert, sodass Sie neue Dokumente des betreffenden Typs erstellen können. Weitere Informationen finden Sie unter [Hinzufügen von Reporting Services-Inhaltstypen zu einer SharePoint-Bibliothek](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
 ### <a name="activate-the-report-server-file-sync-feature"></a>Aktivieren des Features zur Berichtsserver-Dateisynchronisierung  
  Wenn Benutzer häufig veröffentlichte Berichtselemente direkt in SharePoint-Dokumentbibliotheken hochladen, ist das Feature zur **Berichtsserver-Dateisynchronisierung** auf Websiteebene hilfreich. Die Dateisynchronisierungsfunktion synchronisiert den Berichtsserverkatalog regelmäßiger mit Elementen in Dokumentbibliotheken. Weitere Informationen finden Sie unter [Aktivieren des Features zur Berichtsserver-Dateisynchronisierung in der SharePoint-Zentraladministration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md).  

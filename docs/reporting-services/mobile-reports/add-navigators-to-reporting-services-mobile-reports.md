@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e141f50e-49a9-46c6-983c-f656013aa07c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6749853bc1717077a4d65f4f27546c0fe260cdaf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 640f8a5b04f9045f905f86ef6d34924ea849bd80
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448203"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907083"
 ---
 # <a name="add-navigators-to-reporting-services-mobile-reports"></a>Hinzufügen von Navigationen zu mobilen Reporting Services-Berichten
 In [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]fügen Sie *Navigationen* hinzu, um die Daten in Visualisierungen nach Zeit oder nach Auswahl zu filtern. 
@@ -42,7 +42,7 @@ Standardmäßig filtert die Zeitnavigation alle visuellen Elemente im Bericht, d
   
 Sie können eine Visualisierung von der Zeitnavigation trennen.   
 1. Wählen Sie diese Visualisierung und dann die Registerkarte **Daten** aus.  
-2. Wählen Sie **Optionen**in **Dateneigenschaften**aus.  
+2. Wählen Sie **Optionen** in **Dateneigenschaften** aus.  
 3. Deaktivieren Sie das Kontrollkästchen **Gefiltert nach** .  
   
    ![SSMRP_ClearTimeFilter](../../reporting-services/mobile-reports/media/ssmrp-cleartimefilter.png)  
@@ -53,25 +53,25 @@ Die Auswahlliste filtert Daten in einem mobilen Bericht, indem sie den in der Li
 
 1. Ziehen Sie die **Auswahlliste** von der Registerkarte **Layout** auf die Entwurfsoberfläche, und ändern Sie die Größe wie gewünscht.
 
-2. Wählen Sie die Registerkarte **Daten** und im Bereich **Dateneigenschaften** unter **Schlüssel**die Tabelle und die Spalte aus, die den Filter darstellt. 
+2. Wählen Sie die Registerkarte **Daten** und im Bereich **Dateneigenschaften** unter **Schlüssel** die Tabelle und die Spalte aus, die den Filter darstellt. 
 
-3. Wählen Sie unter **Beschriftungen**die Spalte mit der Beschriftung, die angezeigt wird. Die Schlüsselspalte und die Bezeichnungsspalte können identisch sein.  
+3. Wählen Sie unter **Beschriftungen** die Spalte mit der Beschriftung, die angezeigt wird. Die Schlüsselspalte und die Bezeichnungsspalte können identisch sein.  
   
    Wählen Sie im Fall von Strukturansichtsdaten eine übergeordnete Schlüsselspalte aus.  
   
-4. Nachdem Sie die Dateneigenschaften unter **Nach Auswahlliste gefilterte Tabellen**festgelegt haben, wählen Sie die zu filternden Tabellen und die Spalte, nach der gefiltert werden soll. Diese Spalte muss Werte in der Schlüsselspalte der Auswahlliste abgleichen. 
+4. Nachdem Sie die Dateneigenschaften unter **Nach Auswahlliste gefilterte Tabellen** festgelegt haben, wählen Sie die zu filternden Tabellen und die Spalte, nach der gefiltert werden soll. Diese Spalte muss Werte in der Schlüsselspalte der Auswahlliste abgleichen. 
 
 Für jede Visualisierung im mobilen Bericht, die von der Auswahlliste gefiltert werden soll, gilt Folgendes:
 
 1. Wählen Sie die Visualisierung, dann die Registerkarte **Daten** und anschließend im Bereich **Dateneigenschaften** neben dem Feldnamen **Optionen** aus.
 
-   ![mobile-report-set-selection-list](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
+   ![Screenshot der erweiterten „Optionen“ für die „Kategoriespalte“, wobei die Option „Gefiltert nach: Länder/Regionen“ aktiviert ist](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
 
-2. Wählen Sie unter **Gefiltert nach**die Auswahlliste aus.
+2. Wählen Sie unter **Gefiltert nach** die Auswahlliste aus.
 
 Wenn Sie den mobilen Bericht in der Vorschau oder im [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Webportal anzeigen und einen Wert in der Auswahlliste auswählen, werden die anderen Visualisierungen im mobilen Bericht gefiltert.
 
-![mobile-report-selection-list-filtering](../../reporting-services/mobile-reports/media/mobile-report-selection-list-filtering.png) 
+![Screenshot des mobilen Berichts, für den Washington in der Liste „Länder/Regionen“ ausgewählt ist und Städte in Washington in den zurückgegebenen Ergebnissen dargestellt sind](../../reporting-services/mobile-reports/media/mobile-report-selection-list-filtering.png) 
      
 ## <a name="scorecard-grid"></a>Scorecardraster  
   
@@ -79,9 +79,9 @@ Der Scorecardrasterfilter funktioniert sehr ähnlich wie der Auswahllistenfilter
 
 1. Ziehen Sie das **Scorecardraster** von der Registerkarte **Layout** auf die Entwurfsoberfläche, und ändern Sie die Größe wie gewünscht.
 
-2. Wählen Sie die Registerkarte **Daten** und im Bereich **Dateneigenschaften** unter **Schlüssel**die Tabelle und die Spalte aus, die den Filter darstellt. 
+2. Wählen Sie die Registerkarte **Daten** und im Bereich **Dateneigenschaften** unter **Schlüssel** die Tabelle und die Spalte aus, die den Filter darstellt. 
 
-3. Wählen Sie unter **Beschriftungen**die Spalte mit der Beschriftung, die angezeigt wird. Die Schlüsselspalte und die Bezeichnungsspalte können identisch sein.  
+3. Wählen Sie unter **Beschriftungen** die Spalte mit der Beschriftung, die angezeigt wird. Die Schlüsselspalte und die Bezeichnungsspalte können identisch sein.  
   
 4. Um einen Wertungsindikator hinzuzufügen, klicken Sie im Bereich **Datenspalten** auf **Wertung hinzufügen**.   
   
@@ -96,13 +96,13 @@ Der Scorecardrasterfilter funktioniert sehr ähnlich wie der Auswahllistenfilter
 
 7. Benennen Sie den Wertindikator, und wählen Sie anschließend die Tabellenquellspalte und die Formatierung aus.  
 
-   ![mobile-report-scorecard-grid-data-properties](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid-data-properties.png)
+   ![Screenshot mit den Optionen, die für eine neue Bewertung verfügbar sind](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid-data-properties.png)
 
-8. Nachdem Sie die Dateneigenschaften unter **Nach Auswahlliste gefilterte Tabellen**festgelegt haben, wählen Sie die zu filternden Tabellen und die Spalte, nach der gefiltert werden soll. Diese Spalte muss Werte in der Schlüsselspalte der Auswahlliste abgleichen. 
+8. Nachdem Sie die Dateneigenschaften unter **Nach Auswahlliste gefilterte Tabellen** festgelegt haben, wählen Sie die zu filternden Tabellen und die Spalte, nach der gefiltert werden soll. Diese Spalte muss Werte in der Schlüsselspalte der Auswahlliste abgleichen. 
 
 Wenn Sie den mobilen Bericht in der Vorschau oder im [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Webportal anzeigen und einen Wert im Scorecardraster auswählen, werden die anderen Visualisierungen im mobilen Bericht gefiltert.
 
-![mobile-report-scorecard-grid](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid.png)
+![Screenshot eines Scorecardrasters eines mobilen Berichts](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid.png)
     
 ## <a name="set-which-visualizations-are-filtered"></a>Festlegen der zu filternden Visualisierungen  
   
@@ -112,9 +112,9 @@ Sie können die Visualisierungen im mobilen Bericht bestimmen, die von einer Nav
 
 1. Wählen Sie die Visualisierung, dann die Registerkarte **Daten** und anschließend im Bereich **Dateneigenschaften** neben dem Feldnamen **Optionen** aus.
 
-   ![mobile-report-set-selection-list](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
+   ![Weiterer Screenshot der erweiterten „Optionen“ für die „Kategoriespalte“, wobei die Option „Gefiltert nach: Länder/Regionen“ aktiviert ist](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
 
-2. Wählen Sie unter **Gefiltert nach**die Navigation aus. Jede Visualisierung kann anhand mehrerer Navigationen gefiltert werden.
+2. Wählen Sie unter **Gefiltert nach** die Navigation aus. Jede Visualisierung kann anhand mehrerer Navigationen gefiltert werden.
   
 ## <a name="cascading-filters"></a>Kaskadierende Filter   
   

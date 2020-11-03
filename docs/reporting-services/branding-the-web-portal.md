@@ -8,12 +8,12 @@ description: In diesem Artikel erfahren Sie, wie Sie das Erscheinungsbild des We
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 55b0557f6b6cf1a80219a492d4ce79a897be22ae
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2079a44a4b9f3977ae09f83685efa122e9467a96
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888124"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907208"
 ---
 # <a name="branding-the-web-portal"></a>Branding des Webportals
 
@@ -98,8 +98,8 @@ Alle primären Schaltflächen würden dunkelgrün mit weißem Text gerendert wer
   
 Die Datei colors.json für Reporting Services ist in zwei Hauptkategorien unterteilt, deren Elemente gruppiert sind.  
   
-- **Schnittstelle**: enthält Elemente, die für das Reporting Services-Webportal spezifisch sind.  
-- **Design**: enthält Elemente, die für von Ihnen erstellte mobile Berichte spezifisch sind.  
+- **Schnittstelle** : enthält Elemente, die für das Reporting Services-Webportal spezifisch sind.  
+- **Design** : enthält Elemente, die für von Ihnen erstellte mobile Berichte spezifisch sind.  
   
 Der Schnittstellen-Abschnitt ist in folgenden Gruppierungen unterteilt.  
   
@@ -116,7 +116,7 @@ Der Schnittstellen-Abschnitt ist in folgenden Gruppierungen unterteilt.
 
 Wenn Sie sich zum ersten Mal mit Mobile Report Publisher auf einem Server anmelden, der über ein bereitgestelltes Markenpaket verfügt, wird das Design den verfügbaren Designs zugeordnet, die Sie im oberen rechten Menü der App verwenden können.  
   
-![Branding des SSRS-Publishers für mobile Berichte](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
+![Screenshot des Dialogfelds „Farbpalette auswählen“](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
   
 Dann können Sie dieses Design für alle mobilen Berichte verwenden, die Sie erstellen, auch wenn sie nicht für den gleichen Server vorgesehen sind, auf dem Sie das Design bereitgestellt haben.   
   
@@ -132,13 +132,13 @@ Um ein Markenpaket hinzuzufügen, herunterzuladen oder zu entfernen, können Sie
   
 1.  Wählen Sie das **Zahnradsymbol** in der oberen rechten Ecke aus.  
   
-2.  Wählen Sie **Siteeinstellungen**aus.  
+2.  Wählen Sie **Siteeinstellungen** aus.  
   
-    ![SSR-Menü nach Klick auf Zahnradsymbol](../reporting-services/media/ssrsgearmenu.png)  
+    ![Screenshot der Dropdownliste „Einstellungen“ mit hervorgehobener Option „Siteeinstellungen“](../reporting-services/media/ssrsgearmenu.png)  
   
 3.  Wählen Sie **Branding** aus.  
   
-    ![SSRS-Branding](../reporting-services/media/ssrsbranding.png)  
+    ![Screenshot der Seite „Siteeinstellungen“ mit ausgewählter Option „Branding“](../reporting-services/media/ssrsbranding.png) 
   
 **Zurzeit installiertes Markenpaket** zeigt entweder den Namen des Pakets an, das hochgeladen wurde, oder es zeigt „Keines“ an.  
   
@@ -150,7 +150,7 @@ Sie können das Paket auch **Herunterladen** oder **Entfernen** . Das Entfernen 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>  
-<SystemResourcePackage xmlns="https://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
+<SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
     type="UniversalBrand"  
     version="2.0.2"  
     name="Multicolored example brand"  

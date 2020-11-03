@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: 6981eea5cb4d327303755adc74d5610637eb70b0
-ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
+ms.openlocfilehash: 6625e985781f3980c44bef9b6dbd408243ac78a9
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82588256"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523850"
 ---
 # <a name="virtualize-csv-data-from-storage-pool-big-data-clusters"></a>Virtualisieren von CSV-Daten aus einem Speicherpool (Big Data-Cluster)
 
@@ -71,17 +71,17 @@ Klicken Sie auf **Weiter**.
 
 Azure Data Studio zeigt eine Vorschau der importierten Daten.
 
-![Anmeldeinformationen für die externe Datenquelle](media/data-virtualization/130-csv-preview-data.png)
+![Screenshot des Fensters „Externe Tabelle aus CSV erstellen“ mit einer Vorschau der importierten Daten](media/data-virtualization/130-csv-preview-data.png)
 
-Klicken Sie auf **Weiter**, um fortzufahren, sobald Sie die Vorschau überprüft haben.
+Klicken Sie auf **Weiter** , um fortzufahren, sobald Sie die Vorschau überprüft haben.
 
 ## <a name="modify-columns"></a>Bearbeiten von Spalten
 
 Im daraufhin angezeigten Fenster können Sie die Spalten der externen Tabelle, die erstellt werden soll, bearbeiten. Sie können Spaltennamen ändern, den Datentyp ändern und Zeilen mit NULL-Werten zulassen. 
 
-![Anmeldeinformationen für die externe Datenquelle](media/data-virtualization/140-csv-modify-columns.png)
+![Screenshot des Fensters „Externe Tabelle aus CSV erstellen“ mit Schritt 3 „Spalten ändern“](media/data-virtualization/140-csv-modify-columns.png)
 
-Klicken Sie auf **Weiter**, wenn Sie die Zielspalten überprüft haben.
+Klicken Sie auf **Weiter** , wenn Sie die Zielspalten überprüft haben.
 
 ## <a name="summary"></a>Zusammenfassung
 

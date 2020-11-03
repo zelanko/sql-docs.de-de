@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e75947d7ea4b47c7c2fef3e37cfd6b5b73b48533
-ms.sourcegitcommit: 4231364ab5bc15b74952ca5d20508b7ba9ca347e
+ms.openlocfilehash: db705ffc6bd3f7f961ea569883b77934e9689f9f
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86291147"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679202"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>Was ist SQL Server Reporting Services (SSRS)?
 
@@ -54,7 +54,7 @@ Mit diesen Quellen sind Sie ständig über neue Funktionen in SQL Server Reporti
 
 ## <a name="paginated-reports"></a>Paginierte Berichte
 
-![SSRS - paginierte Berichte](../reporting-services/media/ssrs-paginated-reports.png)
+![Bild eines paginierten Berichts auf einem Desktopbildschirm und auf einem Tablet](../reporting-services/media/ssrs-paginated-reports.png)
 
 Reporting Services ist „traditionellen“ paginierten Berichten zugeordnet, die optimal zum Drucken von Dokumenten mit festem Layout, wie z. B. PDF- und Word-Dateien, geeignet sind.
 
@@ -67,7 +67,7 @@ Diese BI-Kernarbeitslast gibt es nach wie vor, weshalb wir sie modernisiert habe
 
 ## <a name="mobile-reports"></a>Mobile Berichte
 
-![SSRS - Mobile Berichte](../reporting-services/media/ssrs-mobile-reports.png)
+![Bild eines mobilen Berichts auf einem Desktopbildschirm und auf einem Tablet](../reporting-services/media/ssrs-mobile-reports.png)
 
 Mobile Geräte haben zu einem anderen Arbeitsverhalten geführt, was bedeutet, dass Menschen von heute andere Anforderungen an Berichte haben. Die Berichtsdarstellung mit festem Layout funktioniert nicht sehr gut für Tablets und Smartphones. Eine Darstellung, die für einen breiten PC-Bildschirm konzipiert ist, ergibt nicht die optimale Darstellung auf einem kleinen Smartphonebildschirm, der nicht nur kleiner ist, sondern auch eine Ausrichtung im Hoch- oder Querformat hat.
 
@@ -79,7 +79,7 @@ Während Sie eine Visualisierung erstellen, generiert der Publisher für mobile 
 
 ## <a name="web-portal"></a>Webportal
 
-![SSRS - Webportal](../reporting-services/media/ssrs-web-portal.png)
+![Bild eines Laptops mit angezeigtem Webportal](../reporting-services/media/ssrs-web-portal.png)
 
 Benutzer des einheitlichen Modus von Reporting Services erleben ein modernes Webportal, das in den meisten modernen Browsern anzeigt wird. Sie können über das neue Portal auf all Ihre mobilen, paginierten Reporting Services-Berichte und KPIs zugreifen. KPIs können wichtige Geschäftsmetriken auf einen Blick im Browser zum Vorschein bringen, ohne dass ein Bericht geöffnet werden muss.
 

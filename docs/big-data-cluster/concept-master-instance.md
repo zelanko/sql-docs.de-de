@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f7199663209c2d9a0dc51baa0e6986f16722ef94
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 57de001599923d46139883f2f8a691f9d682abf3
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773654"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914309"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>Was ist die Masterinstanz in einem SQL Server-Big Data Cluster?
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-In diesem Artikel wird die Rolle der *SQL Server-Masterinstanz* in einem Big Data-Cluster für SQL Server 2019 beschrieben. Die Masterinstanz ist eine SQL Server-Instanz, die in einem Big Data-Cluster ausgeführt wird, um Konnektivität, Scale-Out-Abfragen, Metadaten- und Benutzerdatenbanken sowie Machine Learning-Dienste zu verwalten.
+In diesem Artikel wird die Rolle der *SQL Server-Masterinstanz* in einem SQL Server-Big Data-Cluster beschrieben. Die Masterinstanz ist eine SQL Server-Instanz, die in einem SQL Server-Big Data-Cluster ausgeführt wird, um Konnektivität, Scale-Out-Abfragen, Metadaten- und Benutzerdatenbanken sowie Machine Learning-Dienste zu verwalten.
 
 Die SQL Server-Masterinstanz bietet folgende Funktionen:
 
@@ -51,9 +51,9 @@ Als Teil eines SQL Server-Big Data-Clusters sind die Dienste für maschinelles L
 
 ### <a name="advantages-of-machine-learning-services-in-a-big-data-cluster"></a>Vorteile der Dienste für maschinelles Lernen in einem Big Data-Cluster
 
-In SQL Server 2019 lassen sich Big Data ganz einfach mit den Dimensionsdaten verknüpfen, die typischerweise in einer Unternehmensdatenbank gespeichert sind. Der Wert der Big Data vervielfacht sich, wenn diese nicht nur einem Teil der Organisation zur Verfügung stehen, sondern auch in Berichte, Dashboards und Anwendungen eingebunden werden können. Gleichzeitig können Data Scientists weiter die Tools des Spark/HDFS-Ökosystems nutzen und von einfachem Echtzeitzugriff auf die Daten in der SQL Server-Masterinstanz und in den externe Datenquellen profitieren, auf die _über_ die Masterinstanz zugegriffen werden kann.
+Über [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] lassen sich Big Data ganz einfach mit den Dimensionsdaten verknüpfen, die typischerweise in einer Unternehmensdatenbank gespeichert sind. Der Wert der Big Data vervielfacht sich, wenn diese nicht nur einem Teil der Organisation zur Verfügung stehen, sondern auch in Berichte, Dashboards und Anwendungen eingebunden werden können. Gleichzeitig können Data Scientists weiter die Tools des Spark/HDFS-Ökosystems nutzen und von einfachem Echtzeitzugriff auf die Daten in der SQL Server-Masterinstanz und in den externe Datenquellen profitieren, auf die _über_ die Masterinstanz zugegriffen werden kann.
 
-Mit [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] können Sie mit den Data Lakes Ihres Unternehmens mehr erreichen. SQL Server-Entwickler und Analysten stehen folgende Möglichkeiten offen:
+Mit [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] können Sie mit den Data Lakes Ihres Unternehmens mehr erreichen. SQL Server-Entwickler und Analysten stehen folgende Möglichkeiten offen:
 
 * Sie können Anwendungen erstellen, die Daten aus den Data Lakes des Unternehmens verwenden.
 * Sie können mithilfe von Transact-SQL-Abfragen Schlussfolgerungen aus allen Daten ziehen.

@@ -4,29 +4,29 @@ titleSuffix: SQL machine learning
 description: Im fünften Teil dieser fünfteiligen Tutorialreihe werden Sie ein eingebettetes R-Skript in gespeicherten SQL-Prozeduren mit T-SQL-Funktionen mit SQL Machine Learning operationalisieren.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2020
+ms.date: 10/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: d5132b0616dd223e195f47b1333308a920fb2572
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: e7657dcfe382ed87b31ca17e6c36d9019d1b84e2
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196272"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412516"
 ---
 # <a name="r-tutorial-run-predictions-in-sql-stored-procedures"></a>R-Tutorial: Ausführen von Vorhersagen in gespeicherten SQL-Prozeduren
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-Im fünften Teil dieser fünfteiligen Tutorialreihe erfahren Sie, wie Sie das Modell *operationalisieren*, das Sie im vorhergehenden Teil trainiert und gespeichert haben, indem Sie das Modell zur Vorhersage potenzieller Ergebnisse verwenden. Das Modell wird in einer gespeicherten Prozedur umschlossen, die direkt von anderen Anwendungen aufgerufen werden kann.
+Im fünften Teil dieser fünfteiligen Tutorialreihe erfahren Sie, wie Sie das Modell *operationalisieren* , das Sie im vorhergehenden Teil trainiert und gespeichert haben, indem Sie das Modell zur Vorhersage potenzieller Ergebnisse verwenden. Das Modell wird in einer gespeicherten Prozedur umschlossen, die direkt von anderen Anwendungen aufgerufen werden kann.
 
 In diesem Artikel werden zwei Möglichkeiten zur Durchführung der Bewertung aufgezeigt:
 
 + **Batchbewertungsmodell:** Verwenden Sie eine SELECT-Abfrage als Eingabe für die gespeicherte Prozedur. Die gespeicherte Prozedur gibt eine Tabelle mit Beobachtungen zurück, die mit den Eingabefällen übereinstimmen.
 
-+ **Einzelbewertungsmodus**: Übergeben Sie einen Satz von einzelnen Parameterwerten als Eingabe.  Die gespeicherte Prozedur gibt eine einzelne Zeile oder einen Wert zurück.
++ **Einzelbewertungsmodus** : Übergeben Sie einen Satz von einzelnen Parameterwerten als Eingabe.  Die gespeicherte Prozedur gibt eine einzelne Zeile oder einen Wert zurück.
 
 In diesem Artikel führen Sie Folgendes durch:
 
@@ -44,39 +44,39 @@ In [Teil vier](r-taxi-classification-train-model.md) haben Sie die Module gelade
 
 ## <a name="basic-scoring"></a>Grundlegende Bewertung
 
-Die gespeicherte Prozedur **RxPredict** beschreibt die grundlegende Syntax für das Umschließen eines RevoScaleR rxPredict-Aufrufs in einer gespeicherten Prozedur.
+Die gespeicherte Prozedur **RPredict** beschreibt die grundlegende Syntax für das Umschließen eines `PREDICT`-Aufrufs in einer gespeicherten Prozedur.
 
 ```sql
-CREATE PROCEDURE [dbo].[RxPredict] (@model varchar(250), @inquery nvarchar(max))
+CREATE PROCEDURE [dbo].[RPredict] (@model varchar(250), @inquery nvarchar(max))
 AS 
 BEGIN 
 
 DECLARE @lmodel2 varbinary(max) = (SELECT model FROM nyc_taxi_models WHERE name = @model);  
 EXEC sp_execute_external_script @language = N'R',
   @script = N' 
-    mod <- unserialize(as.raw(model)); 
-    print(summary(mod)) 
-    OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE); 
-    str(OutputDataSet) 
-    print(OutputDataSet) 
-    ', 
-  @input_data_1 = @inquery, 
+    mod <- unserialize(as.raw(model));
+    print(summary(mod))
+    OutputDataSet <- data.frame(predict(mod, InputDataSet, type = "response"));
+    str(OutputDataSet)
+    print(OutputDataSet)
+    ',
+  @input_data_1 = @inquery,
   @params = N'@model varbinary(max)',
   @model = @lmodel2 
-  WITH RESULT SETS ((Score float));
+  WITH RESULT SETS (("Score" float));
 END
 GO
 ```
 
 + Die SELECT-Anweisung ruft das serialisierte Modell aus der Datenbank ab und speichert das Modell in der R-Variable `mod` zur weiteren Verarbeitung mit R.
 
-+ Die neuen Fälle für die Bewertung werden aus der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfrage abgerufen, die in `@inquery` festgelegt ist, dem ersten Parameter für die gespeicherte Prozedur. Wenn die Abfragedaten gelesen werden, werden die Zeilen im Standard-Datenrahmen, `InputDataSet`, gespeichert. Dieser Datenrahmen wird der [rxPredict](/machine-learning-server/r-reference/revoscaler/rxpredict)-Funktion in [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) übergeben, die die Bewertungen generiert.
++ Die neuen Fälle für die Bewertung werden aus der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfrage abgerufen, die in `@inquery` festgelegt ist, dem ersten Parameter für die gespeicherte Prozedur. Wenn die Abfragedaten gelesen werden, werden die Zeilen im Standard-Datenrahmen, `InputDataSet`, gespeichert. Dieser Datenrahmen wird an die [PREDICT](/sql/t-sql/queries/predict-transact-sql)-Funktion übergeben, die die Bewertungen generiert.
   
-  `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
+  `OutputDataSet <- data.frame(predict(mod, InputDataSet, type = "response"));`
   
   Da ein data.frame eine einzelne Zeile enthalten kann, können Sie den gleichen Code für die Batchbewertung und die Einzelbewertung verwenden.
   
-+ Der von der `rxPredict`-Funktion zurückgegebene Wert ist ein **float**-Wert, der die Wahrscheinlichkeit darstellt, dass der Fahrer ein Trinkgeld in beliebiger Höhe erhält.
++ Der von der `PREDICT`-Funktion zurückgegebene Wert ist ein **float** -Wert, der die Wahrscheinlichkeit darstellt, dass der Fahrer ein Trinkgeld in beliebiger Höhe erhält.
 
 ## <a name="batch-scoring-a-list-of-predictions"></a>Batchbewertung (Liste von Vorhersagen)
 
@@ -101,16 +101,16 @@ Ein häufigeres Szenario ist das Generieren von Vorhersagen für mehrere Beobach
    **Bespielergebnisse**
 
    ```text
-   passenger_count   trip_time_in_secs    trip_distance  dropoff_datetime   direct_distance
-   1  283 0.7 2013-03-27 14:54:50.000   0.5427964547
-   1  289 0.7 2013-02-24 12:55:29.000   0.3797099614
-   1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
+   passenger_count   trip_time_in_secs    trip_distance  dropoff_datetime          direct_distance
+   1                 283                  0.7            2013-03-27 14:54:50.000   0.5427964547
+   1                 289                  0.7            2013-02-24 12:55:29.000   0.3797099614
+   1                 214                  0.7            2013-06-26 13:28:10.000   0.6970098661
    ```
 
-2. Erstellen Sie eine gespeicherte Prozedur mit dem Namen **RxPredictBatchOutput** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
+2. Erstellen Sie eine gespeicherte Prozedur mit dem Namen **RPredictBatchOutput** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
    ```sql
-   CREATE PROCEDURE [dbo].[RxPredictBatchOutput] (@model varchar(250), @inquery nvarchar(max))
+   CREATE PROCEDURE [dbo].[RPredictBatchOutput] (@model varchar(250), @inquery nvarchar(max))
    AS
    BEGIN
    DECLARE @lmodel2 varbinary(max) = (SELECT model FROM nyc_taxi_models WHERE name = @model);
@@ -119,7 +119,7 @@ Ein häufigeres Szenario ist das Generieren von Vorhersagen für mehrere Beobach
      @script = N'
        mod <- unserialize(as.raw(model));
        print(summary(mod))
-       OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);
+       OutputDataSet <- data.frame(predict(mod, InputDataSet, type = "response"));
        str(OutputDataSet)
        print(OutputDataSet)
      ',
@@ -138,13 +138,12 @@ Ein häufigeres Szenario ist das Generieren von Vorhersagen für mehrere Beobach
    SET @query_string='SELECT TOP 10 a.passenger_count as passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance FROM  (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample  )a   LEFT OUTER JOIN (SELECT medallion, hack_license, pickup_datetime FROM nyctaxi_sample TABLESAMPLE (70 percent) REPEATABLE (98052))b ON a.medallion=b.medallion AND a.hack_license=b.hack_license AND a.pickup_datetime=b.pickup_datetime WHERE b.medallion is null'
    
    -- Call the stored procedure for scoring and pass the input data
-   EXEC [dbo].[RxPredictBatchOutput] @model = 'RxTrainLogit_model', @inquery = @query_string;
+   EXEC [dbo].[RPredictBatchOutput] @model = 'RTrainLogit_model', @inquery = @query_string;
    ```
   
 Die gespeicherte Prozedur gibt eine Reihe von Werten zurück, die die Vorhersage für jede Fahrt der „Top 10-Fahrten“ darstellt. Bei den besten Fahrten handelt es sich jedoch um Fahrten von Einzelpersonen mit einer relativ kurzen Fahrtstrecke, für die der Fahrer wahrscheinlich kein Trinkgeld erhält.
 
 > [!TIP]
-> 
 > Anstatt nur die Ergebnisse mit Informationen wie „Trinkgeld/Kein Trinkgeld“ zurückzugeben, könnten Sie auch den Wahrscheinlichkeitswert für die Vorhersage zurückgeben und anschließend auf die Spalte _Score_ eine WHERE-Klausel anwenden, um die Bewertung als „Trinkgeld“ oder „Kein Trinkgeld“ zu kategorisieren und dabei einen Schwellenwert wie z. B. 0,5 oder 0,7 verwenden. Dieser Schritt ist nicht in der gespeicherten Prozedur enthalten, aber es wäre leicht, ihn zu implementieren.
 
 ## <a name="single-row-scoring-of-multiple-inputs"></a>Einzeilige Bewertung mehrerer Eingaben
@@ -155,10 +154,10 @@ In diesem Abschnitt erfahren Sie, wie Sie einzelne Vorhersagen mithilfe einer ge
   
 Überprüfen Sie, ob die Daten mit den Anforderungen des R-Modells übereinstimmen, wenn Sie die gespeicherte Prozedur aus einer externen Anwendung aufrufen. Sie müssen möglicherweise sicherstellen, dass die Eingabedaten in einen R-Datentyp umgewandelt oder konvertiert werden können oder den Datentyp und die Datenlänge überprüfen.
 
-1. Erstellen Sie eine gespeicherte **RxPredictSingleRow**-Prozedur
+1. Erstellen Sie die gespeicherte Prozedur **RPredictSingleRow**.
   
    ```sql
-   CREATE PROCEDURE [dbo].[RxPredictSingleRow] @model varchar(50), @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
+   CREATE PROCEDURE [dbo].[RPredictSingleRow] @model varchar(50), @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
    AS
    BEGIN
    DECLARE @inquery nvarchar(max) = N'SELECT * FROM [dbo].[fnEngineerFeatures](@passenger_count, @trip_distance, @trip_time_in_secs,  @pickup_latitude, @pickup_longitude, @dropoff_latitude, @dropoff_longitude)';
@@ -168,7 +167,7 @@ In diesem Abschnitt erfahren Sie, wie Sie einzelne Vorhersagen mithilfe einer ge
      @script = N'  
        mod <- unserialize(as.raw(model));  
        print(summary(mod));  
-       OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);  
+       OutputDataSet <- data.frame(predict(mod, InputDataSet, type = "response"));
        str(OutputDataSet);
        print(OutputDataSet); 
        ',  
@@ -180,10 +179,10 @@ In diesem Abschnitt erfahren Sie, wie Sie einzelne Vorhersagen mithilfe einer ge
 
 2. Probieren Sie es einfach aus, indem Sie die Werte manuell bereitstellen.
   
-   Öffnen Sie ein neues **Abfrage**-Fenster, und rufen Sie die gespeicherte Prozedur auf, die Werte für jeden der Parameter bereitstellt. Die Parameter stellen Funktionsspalten dar, die vom Modell verwendet werden und erforderlich sind.
+   Öffnen Sie ein neues **Abfrage** -Fenster, und rufen Sie die gespeicherte Prozedur auf, die Werte für jeden der Parameter bereitstellt. Die Parameter stellen Funktionsspalten dar, die vom Modell verwendet werden und erforderlich sind.
 
    ```sql
-   EXEC [dbo].[RxPredictSingleRow] @model = 'RxTrainLogit_model',
+   EXEC [dbo].[RPredictSingleRow] @model = 'RTrainLogit_model',
    @passenger_count = 1,
    @trip_distance = 2.5,
    @trip_time_in_secs = 631,
@@ -196,7 +195,7 @@ In diesem Abschnitt erfahren Sie, wie Sie einzelne Vorhersagen mithilfe einer ge
    Oder verwenden Sie diese kürzere Form, die für [Parameter für eine gespeicherte Prozedur](../../relational-databases/stored-procedures/specify-parameters.md) unterstützt wird:
   
    ```sql
-   EXEC [dbo].[RxPredictSingleRow] 'RxTrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
+   EXEC [dbo].[RPredictSingleRow] 'RTrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
    ```
 
 3. Die Ergebnisse geben an, dass die Wahrscheinlichkeit eines Trinkgelds für diese „Top 10-Fahrten“ sehr niedrig ist, da hier nur Einzelpersonen über eine relativ kurze Entfernung mitgefahren sind.

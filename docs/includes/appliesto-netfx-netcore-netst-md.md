@@ -1,1 +1,1 @@
-<Token>**GILT FÜR:** ![Ja](media/yes-icon.png).NET Framework ![Ja](media/yes-icon.png).NET Core ![Ja](media/yes-icon.png).NET Standard </Token>
+<Token>**GILT FÜR:** :::image type="icon" source="media/yes-icon.png":::.NET Framework :::image type="icon" source="media/yes-icon.png":::.NET Core :::image type="icon" source="media/yes-icon.png":::.NET Standard </Token>

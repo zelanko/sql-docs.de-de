@@ -5,22 +5,24 @@ description: In diesem Artikel wird beschrieben, wie Sie den PROSE Code Accelera
 author: dphansen
 ms.author: davidph
 ms.reviewer: mihaelab
-ms.date: 12/06/2018
+ms.date: 10/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-bdc
-ms.openlocfilehash: 9768c406ca94cd16e8e9075bd5247434b8359d5c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 3357757c0cca35be0b3410795cfd89ca75f34dc3
+ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725761"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92638973"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>Data Wrangling mithilfe von PROSE Code Accelerator
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Der PROSE Code Accelerator generiert lesbaren Python-Code für Ihre Data Wrangling-Aufgaben. Sie können den generierten Code reibungslos mit dem handgeschriebenen Code mischen, während Sie in Azure Data Studio in einem Notebook arbeiten. Dieser Artikel bietet eine Übersicht darüber, wie Sie den Code Accelerator verwenden können.
+Der PROSE Code Accelerator generiert lesbaren Python-Code für Ihre Data Wrangling-Aufgaben. Sie können den generierten Code mit dem handgeschriebenen Code mischen, während Sie in Azure Data Studio in einem Notebook arbeiten.
+
+Dieser Artikel bietet eine Übersicht darüber, wie Sie den Code Accelerator verwenden können.
 
  > [!NOTE]
  > „Program Synthesis using Examples“ oder PROSE ist eine Microsoft-Technologie, die mithilfe von KI visuell lesbaren Code generiert. PROSE analysiert die Absicht und die Daten eines Benutzers, generiert verschiedene Kandidatenprogramme und wählt anhand von Algorithmen zur Ermittlung von Rangfolgen das beste Programm aus. Weitere Informationen zur PROSE-Technologie finden Sie auf der [PROSE-Homepage](https://microsoft.github.io/prose/).
@@ -41,9 +43,11 @@ Eine allgemeine Übersicht über die Code Accelerator-Methoden finden Sie in der
 
 ## <a name="reading-data-from-a-file-to-a-dataframe"></a>Lesen von Daten aus einer Datei in einen Dataframe
 
-Häufig umfasst das Lesen von Dateien in einen Dataframe eine Untersuchung des Inhalts, um die richtigen Parameter zu ermitteln, die an eine Bibliothek zum Laden der Daten übergeben werden müssen. Je nach Komplexität der Datei sind zur Identifizierung der richtigen Parameter mehrere Iterationen erforderlich.
+Das Lesen von Dateien in einen Dataframe umfasst eine Untersuchung des Inhalts, um die richtigen Parameter zu ermitteln, die an eine Bibliothek zum Laden der Daten übergeben werden müssen.
 
-Der PROSE Code Accelerator löst dieses Problem, indem die Struktur der Datendatei analysiert und der Code zum Laden der Datei automatisch generiert wird. In den meisten Fällen analysiert der generierte Code die Daten richtig. Ein einigen wenigen Fällen müssen Sie den Code möglicherweise anpassen, um Ihre Anforderungen zu erfüllen.
+Je nach Komplexität der Datei sind zur Identifizierung der richtigen Parameter mehrere Iterationen erforderlich.
+
+Der PROSE Code Accelerator löst dieses Problem, indem die Struktur der Datendatei analysiert und der Code zum Laden der Datei automatisch generiert wird. Normalerweise analysiert der generierte Code die Daten richtig. Ein einigen wenigen Fällen müssen Sie den Code möglicherweise anpassen, um Ihre Anforderungen zu erfüllen.
 
 Betrachten Sie das folgenden Beispiel:
 
@@ -90,9 +94,9 @@ Code Accelerator kann Code generieren, um durch Trennzeichen getrennte Dateien, 
 
 ## <a name="fixing-data-types-in-a-dataframe"></a>Korrigieren von Datentypen in einem Dataframe
 
-Pandas- oder Pyspark-Dataframes mit falschem Datentyp kommen häufig vor. Oft sind einige nicht konforme Werte in einer Spalte die Ursache. Die Folge ist, dass Integer-Typen als Float- oder String-Typen oder Date-Typen als String-Typen gelesen werden. Der Aufwand für die manuelle Korrektur der Datentypen ist proportional zur Anzahl von Spalten.
+Pandas- oder Pyspark-Dataframes mit falschem Datentyp kommen häufiger vor. Der falsche Datentyp hat seine Ursache in einigen nicht konformen Werten in einer Spalte. Die Folge ist, dass Integer-Typen als Float- oder String-Typen oder Date-Typen als String-Typen gelesen werden. Der Aufwand für die manuelle Korrektur der Datentypen ist proportional zur Anzahl von Spalten.
 
-In solchen Situationen können Sie den `DetectTypesBuilder` verwenden. Er analysiert die Daten und generiert Code zum Korrigieren der Datentypen, statt die Datentypen im Hintergrund zu ändern. Der Code dient als Ausgangspunkt. Sie können diesen überprüfen, verwenden oder nach Bedarf ändern.
+In solchen Situationen können Sie den `DetectTypesBuilder` verwenden. Er analysiert die Daten und generiert Code, um die Datentypen zu korrigieren. Der Code dient als Ausgangspunkt. Sie können diesen überprüfen, verwenden oder nach Bedarf ändern.
 
 ```python
 import prose.codeaccelerator as cx
@@ -110,7 +114,7 @@ Weitere Informationen finden Sie in der [Dokumentation](/python/api/overview/azu
 
 ## <a name="identifying-patterns-in-strings"></a>Identifizieren von Mustern in Zeichenfolgen
 
-In einem weiteren gängigen Szenario müssen Muster in einer Spalte mit Zeichenfolgen erkannt werden, um diese zu bereinigen oder zu gruppieren. Ein Beispiel: Sie verfügen über eine Datumsspalte mit Daten in vielen verschiedenen Formaten. Um die Werte zu standardisieren, möchten Sie mithilfe von regulären Ausdrücken bedingte Anweisungen schreiben.
+p.
 
 
 |Zeile|Name                      |BirthDate      |

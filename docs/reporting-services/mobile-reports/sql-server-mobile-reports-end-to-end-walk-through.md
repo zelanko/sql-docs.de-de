@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5fc718243db6a816fb2a0593131362007facce89
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 4013c119093adda0fbb721c376eef502a7b05a38
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462354"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907248"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Mobile Berichte mit SQL Server: End-to-End-Vorgehensweise
 Exemplarische Vorgehensweise zum Erstellen mobiler Berichte für sämtliche Bildschirmgrößen mit [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] im [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Webportal und ihrer Anzeige in mobilen Power BI-Apps.
@@ -78,10 +78,10 @@ Verwenden Sie ein vorhandenes [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversi
    
 4. Geben Sie in das Feld „Name“ den Namen des Servers, auf dem Sie die Datenquelle gespeichert hat, in diesem Format ein:   
    
-   Name: https://*localhost*/ReportServer  
+   Name: https:// *localhost* /ReportServer  
    Elemente vom Typ: Datenquellen (*.rsds)  
    
-5. Klicken Sie auf **Öffnen**, und navigieren Sie zur Datenquelle, die Sie auf diesem Server erstellt haben.  
+5. Klicken Sie auf **Öffnen** , und navigieren Sie zur Datenquelle, die Sie auf diesem Server erstellt haben.  
    
 6. Wählen Sie die Datenquelle aus, und klicken Sie erneut auf **Öffnen** .    
   
@@ -105,7 +105,7 @@ Sie erstellen KPIs direkt im [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversio
    
    ![PBI_SSMRP_KPI_DatasetField](../../reporting-services/mobile-reports/media/pbi-ssmrp-kpi-datasetfield.png)  
    
-3. Klicken Sie im Feld**Datasetfeld auswählen**auf die Auslassungspunkte ( **...** ), und wählen Sie ein Dataset aus dem vorherigen Schritt aus.  
+3. Klicken Sie im Feld **Datasetfeld auswählen** auf die Auslassungspunkte ( **...** ), und wählen Sie ein Dataset aus dem vorherigen Schritt aus.  
    
    ![PBI_SSMRP_KPIPickDataset](../../reporting-services/mobile-reports/media/pbi-ssmrp-kpipickdataset.png)  
    
@@ -115,7 +115,7 @@ Sie erstellen KPIs direkt im [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversio
      
 5. Wählen Sie die gewünschte Aggregation. KPIs werden nur als eine Zahl angezeigt, sodass das Feld aggregiert wird, um diese Zahl anzuzeigen.
 
-   ![reporting-services-kpi-pick-aggregation](../../reporting-services/mobile-reports/media/reporting-services-kpi-pick-aggregation.png)
+   ![Screenshot des Abschnitts „Feld aus "AWSalesYTD" auswählen“, in dem der „Aggregation“-Abschnitt „Durchschnitt“ angezeigt wird](../../reporting-services/mobile-reports/media/reporting-services-kpi-pick-aggregation.png)
 
 6. Klicken Sie auf **OK**.
 
@@ -183,12 +183,12 @@ Beim ersten Öffnen von [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-
   
 4. Wählen Sie den Server und dann das Dataset aus, das Sie erstellt haben.  
    
-3. Zurück auf der Registerkarte **Daten** ändern Sie im Bereich **Dateneigenschaften** die Eigenschaften **Größe repräsentiert**, **Farbe repräsentiert**u. a. in Felder in Ihren eigenen Daten. 
+3. Zurück auf der Registerkarte **Daten** ändern Sie im Bereich **Dateneigenschaften** die Eigenschaften **Größe repräsentiert** , **Farbe repräsentiert** u. a. in Felder in Ihren eigenen Daten. 
    
-   *  **Größe repräsentiert**, **Farbe repräsentiert**und **Benutzerdefinierter Mittenwert** müssen Felder mit numerischen Werten sein. 
+   *  **Größe repräsentiert** , **Farbe repräsentiert** und **Benutzerdefinierter Mittenwert** müssen Felder mit numerischen Werten sein. 
    *  **Gruppieren nach** ist eine Kategorie, also ein Textfeld.
    
-   ![ssrs-mobile-report-data-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-data-properties.png)
+   ![Screenshot des Abschnitts „Dateneigenschaften“](../../reporting-services/mobile-reports/media/ssrs-mobile-report-data-properties.png)
    
 6. Wählen Sie **Vorschau** aus, um die mit Ihren Daten aktualisierte Strukturzuordnung anzuzeigen.  
 
@@ -200,19 +200,19 @@ Lassen Sie uns ein Messgerät hinzufügen, um anhand desselben Datasets den bish
 
 2. Es wird erneut mit simulierten Daten begonnen. 
 
-   Beachten Sie, dass in **Visuelle Eigenschaften**die Angaben **Höhere Werte sind besser**und **Deltabezeichnung** standardmäßig ein **Prozent von Ziel**darstellen. Standardmäßig ist **Bereichsabgrenzungen** angegeben, was Sie ändern können. Doch für den Moment war es das.
+   Beachten Sie, dass in **Visuelle Eigenschaften** die Angaben **Höhere Werte sind besser** und **Deltabezeichnung** standardmäßig ein **Prozent von Ziel** darstellen. Standardmäßig ist **Bereichsabgrenzungen** angegeben, was Sie ändern können. Doch für den Moment war es das.
 
-   ![ssrs-mobile-report-donut-visual-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-visual-properties.png)
+   ![Screenshot des „Bereiche festlegen“-Abschnitts der visuellen Eigenschaften des mobilen Berichts mit Radsymbol](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-visual-properties.png)
    
-3. Wählen Sie auf der Registerkarte **Daten** die Tabelle mit Ihren Daten, dann das Feld **Hauptwert** und das Feld aus, das Sie in **Vergleichswert**vergleichen möchten.
+3. Wählen Sie auf der Registerkarte **Daten** die Tabelle mit Ihren Daten, dann das Feld **Hauptwert** und das Feld aus, das Sie in **Vergleichswert** vergleichen möchten.
 
-4. Sie können unterschiedliche Aggregationen wählen, um eine Zahl für **Hauptwert** und eine für **Vergleichswert**zurückzugeben. Standardmäßig ist der Wert eine Summe.
+4. Sie können unterschiedliche Aggregationen wählen, um eine Zahl für **Hauptwert** und eine für **Vergleichswert** zurückzugeben. Standardmäßig ist der Wert eine Summe.
 
-   ![ssrs-mobile-report-donut-sum](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-sum.png)
+   ![Screenshot der Optionen für den „Vergleichswert“](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-sum.png)
 
 5. Wählen Sie **Vorschau** aus, um das Ergebnis zu prüfen. 
 
-   ![ssrs-mobile-report-donut-preview](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-preview.png)
+   ![Screenshot der Vorschau des mobilen Berichts mit Radsymbol](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-preview.png)
 
 ## <a name="add-a-selection-list-as-a-filter"></a>Hinzufügen einer Auswahlliste als Filter
 
@@ -220,11 +220,11 @@ Auswahllisten fungieren wie Slicer in Power BI und Excel. Wir können eine hinzu
 
 1. Ziehen Sie auf der Registerkarte **Layout** eine Auswahlliste rechts neben die Strukturzuordnung und dann die rechte untere Ecke, um sie mit einer Breite von zwei Quadraten und der Höhe des Zeichenbereichs (fünf Quadrate) zu versehen. 
 
-   ![ssrs-mobile-report-selection-list](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list.png)
+   ![Screenshot der Auswahlliste für den mobilen Bericht](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list.png)
 
-2. Legen Sie auf der Registerkarte **Daten** unter **Dateneigenschaften**die Felder **Schlüssel** und **Bezeichnungen** auf ein Feld in den Daten fest, anhand dessen Sie filtern möchten.
+2. Legen Sie auf der Registerkarte **Daten** unter **Dateneigenschaften** die Felder **Schlüssel** und **Bezeichnungen** auf ein Feld in den Daten fest, anhand dessen Sie filtern möchten.
 
-   ![ssrs-mobile-report-selection-list-data-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list-data-properties.png)
+   ![Screenshot des „Dateneigenschaften“-Abschnitts der Auswahlliste für den mobilen Bericht](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list-data-properties.png)
    
 ## <a name="create-a-mobile-report-for-phones"></a>Erstellen eines mobilen Berichts für Smartphones  
   
@@ -232,7 +232,7 @@ Nachdem Sie visuelle Elemente im Masterlayout erstellt haben, können Sie einen 
   
 1. Klicken Sie rechts oben auf das Canvas-Symbol und dann auf **Telefon**.  
   
-2. Auf der Registerkarte „Layout“ sehen Sie unter **Steuerelementinstanzen**die beiden Diagramme, die Sie erstellt haben.   
+2. Auf der Registerkarte „Layout“ sehen Sie unter **Steuerelementinstanzen** die beiden Diagramme, die Sie erstellt haben.   
   
 3. Ziehen Sie die Strukturzuordnung auf den Zeichenbereich „Telefon“ und auf eine Breite von vier Spalten und eine Höhe von drei Zeilen.  
   

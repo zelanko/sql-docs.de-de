@@ -10,13 +10,13 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 10/20/2020
-ms.openlocfilehash: f70911bbb2f7907e5fa083622ae11d9e947aa592
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.date: 10/27/2020
+ms.openlocfilehash: ce232d98e441d6ce217a2f97f6b8b1b5e130b7f3
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257877"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734638"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Versionshinweise zu SQL Server Management Studio (SSMS)
 
@@ -25,6 +25,64 @@ ms.locfileid: "92257877"
 Dieser Artikel enthält Details zu Updates, Verbesserungen und Fehlerbehebungen für die aktuellen und früheren Versionen von SSMS.
 
 ## <a name="current-ssms-release"></a>Aktuelles SSMS-Release
+
+### <a name="1871"></a>18.7.1
+
+![Herunterladen](media/download-icon.png) [SSMS 18.7 herunterladen](download-sql-server-management-studio-ssms.md)
+
+- Releasenummer: 18.7.1
+- Buildnummer: 15.0.18358.0
+- Veröffentlichungsdatum: 27. Oktober 2020
+
+[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x40a)
+
+SSMS 18.7 ist das neueste Release von SSMS mit allgemeiner Verfügbarkeit (GA). Frühere Versionen von SSMS finden Sie weiter unten im Abschnitt [Vorgängerversionen von SSMS](release-notes-ssms.md#previous-ssms-releases).
+
+#### <a name="whats-new-in-1871"></a>Neuerungen in 18.7.1
+
+[!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
+
+
+#### <a name="bug-fixes-in-1871"></a>Fehlerkorrekturen in Version 18.7.1
+
+| Neues Element | Details |
+|----------|---------|
+| Abfragespeicher | Fehler behoben, der ausgelöst wurde, wenn mit der rechten Maustaste auf den Objekt-Explorer-Knoten für Abfragespeicher geklickt wurde. |
+
+
+#### <a name="known-issues-1871"></a>Bekannte Probleme (18.7.1)
+
+| Neues Element | Details | Problemumgehung |
+|----------|---------|------------|
+| Analysis Services | Beim Herstellen einer Verbindung mit SSAS über msmdpump.dll tritt ein Fehler auf. Weitere Informationen finden Sie im [SQL Server-Benutzerfeedback](https://feedback.azure.com/forums/908035-sql-server/suggestions/40144696). | – |
+| Analysis Services | In seltenen Fällen, kann es bei der Verwendung des Upgradesetups zu einem Fehler „Objekt nicht auf die Instanz eines Objekts festgelegt“ kommen, wenn versucht wird, den DAX-Editor nach einem Upgrade von SSMS zu öffnen. | Um dieses Problem zu beheben, deinstallieren Sie SSMS, und installieren Sie es erneut. |
+| SSMS allgemein | Das neue Dialogfeld „Serverüberwachungsspezifikation“ kann den Absturz von SSMS mit einem Zugriffsverletzungsfehler bewirken. | – |
+| SSMS allgemein | SSMS-Erweiterungen, die SMO verwenden, sollten für das neue SSMS-spezifische SMO V161-Paket neu kompiliert werden. Eine Vorschauversion ist unter https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ verfügbar. </br></br> Erweiterungen, die für frühere V160-Versionen des Microsoft.SqlServer.SqlManagementObjects-Pakets kompiliert wurden, funktionieren weiterhin. | – |
+| Integration Services | Beim Im- oder Export von Paketen in Integration Services oder beim Export von Paketen in Azure-SSIS Integration Runtime gehen Skripts für Pakete verloren, die Skriptaufgaben/-komponenten enthalten. Problemumgehung: Entfernen Sie den Ordner „C:\Programme (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild“. | – |
+| Integration Services | Bei Remoteverbindungen mit den Integrationsdiensten tritt möglicherweise ein Fehler „The specified service does not exist as an installed service“ (Der angegebene Dienst ist nicht als installierter Dienst vorhanden) in neueren Betriebssystemen auf. Problemumgehung: Identifizieren Sie den Registrierungsspeicherort für die Integrationsdienste unter „Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\WOW6432Node\AppID“, und benennen Sie innerhalb dieser Strukturen für die bestimmte Version der Integrationsdienste, mit denen wir eine Verbindung herstellen möchten, den Registrierungsschlüssel „LocalService“ in „LocalService_A“ um. | N/V |
+| Objekt-Explorer | Releases von SSMS, die niedriger als 18.7 sind, besitzen einen Breaking Change im Objekt-Explorer aufgrund der Änderungen der Engine im Zusammenhang mit [Azure Synapse Analytics SQL On-Demand](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | Um den Objekt-Explorer in SSMS weiterhin mit Azure Synapse Analytics SQL On-Demand verwenden zu können, benötigen Sie SSMS 18.7 oder höher. |
+
+Bei anderen Problemen können Sie auf [SQL Server-Benutzerfeedback](https://feedback.azure.com/forums/908035-sql-server) verweisen. Außerdem können Sie so Feedback an das Produktteam übermitteln.
+
+## <a name="previous-ssms-releases"></a>Vorgängerversionen von SSMS
+
+[!INCLUDE[ssms-connect-aazure-ad](../includes/ssms-connect-azure-ad.md)]
+
+Laden Sie frühere SSMS-Versionen herunter, indem Sie im entsprechenden Abschnitt auf den Downloadlink klicken.
+
+| SSMS-Version | Buildnummer | Veröffentlichungsdatum |
+|--------------|--------------|--------------|
+| [18,7](#187) | 15.0.18357.0 | 20. Oktober 2020 |
+| [18.6](#186) | 15.0.18338.0 | 22. Juli 2020 |
+| [18.5.1](#1851) | 15.0.18333.0 | 9\. Juni 2020 |
+| [18.5](#185) | 15.0.18330.0 | 7\. April 2020 |
+| [18.4](#184) | 15.0.18206.0 | 4\. November 2019 |
+| [18.3.1](#1831) | 15.0.18183.0 | 2\. Oktober 2019 |
+| [18.2](#182) | 15.0.18142.0 | 25. Juli 2019 |
+| [18.1](#181) | 15.0.18131.0 | 11. Juni 2019 |
+| [18.0](#180) | 15.0.18118.0 | 24. April 2019 |
+| [17.9.1](#1791) | 14.0.17289.0 | 21. November 2018 |
+| [16.5.3](#1653) | 13.0.16106.4 | 30. Januar 2017 |
 
 ### <a name="187"></a>18,7
 
@@ -38,7 +96,7 @@ Dieser Artikel enthält Details zu Updates, Verbesserungen und Fehlerbehebungen 
 
 SSMS 18.7 ist das neueste Release von SSMS mit allgemeiner Verfügbarkeit (GA). Frühere Versionen von SSMS finden Sie weiter unten im Abschnitt [Vorgängerversionen von SSMS](release-notes-ssms.md#previous-ssms-releases).
 
-### <a name="whats-new-in-187"></a>Neuerungen in 18.7
+#### <a name="whats-new-in-187"></a>Neuerungen in 18.7
 
 [!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
 
@@ -53,7 +111,7 @@ SSMS 18.7 ist das neueste Release von SSMS mit allgemeiner Verfügbarkeit (GA).
 | Showplan | PREDICT-Operator wurde hinzugefügt. |
 | XEvent-Benutzeroberfläche | Funktion zum Auslagern von „Erweiterten Ereignissen“ als Skripts mittels des Namens „wait_type“ wurde hinzugefügt. Benutzer fordern die Verwendung des Werts der „map_value“-Spalte anstelle von „map_key“ im „wait_type“-Filterprädikat, weil sich der Schlüsselwert während Versionsupgrades ändern kann. Behebung: Ein Kontrollkästchen wurde hinzugefügt, und die Benutzer erhalten die Möglichkeit, entweder „map_value“ oder „map_key“ als „wait_type“-Filterprädikatwert auszuwählen. |
 
-### <a name="bug-fixes-in-187"></a>Fehlerkorrekturen in Version 18.7
+#### <a name="bug-fixes-in-187"></a>Fehlerkorrekturen in Version 18.7
 
 | Neues Element | Details |
 |----------|---------|
@@ -101,28 +159,8 @@ SSMS 18.7 ist das neueste Release von SSMS mit allgemeiner Verfügbarkeit (GA).
 | SSMS allgemein | SSMS-Erweiterungen, die SMO verwenden, sollten für das neue SSMS-spezifische SMO V161-Paket neu kompiliert werden. Eine Vorschauversion ist unter https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ verfügbar. </br></br> Erweiterungen, die für frühere V160-Versionen des Microsoft.SqlServer.SqlManagementObjects-Pakets kompiliert wurden, funktionieren weiterhin. | – |
 | Integration Services | Beim Im- oder Export von Paketen in Integration Services oder beim Export von Paketen in Azure-SSIS Integration Runtime gehen Skripts für Pakete verloren, die Skriptaufgaben/-komponenten enthalten. Problemumgehung: Entfernen Sie den Ordner „C:\Programme (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild“. | – |
 | Integration Services | Bei Remoteverbindungen mit den Integrationsdiensten tritt möglicherweise ein Fehler „The specified service does not exist as an installed service“ (Der angegebene Dienst ist nicht als installierter Dienst vorhanden) in neueren Betriebssystemen auf. Problemumgehung: Identifizieren Sie den Registrierungsspeicherort für die Integrationsdienste unter „Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\WOW6432Node\AppID“, und benennen Sie innerhalb dieser Strukturen für die bestimmte Version der Integrationsdienste, mit denen wir eine Verbindung herstellen möchten, den Registrierungsschlüssel „LocalService“ in „LocalService_A“ um. | N/V |
-| Objekt-Explorer | Releases von SSMS, die niedriger als 18.7 sind, besitzen einen Breaking Change im Objekt-Explorer aufgrund der Änderungen der Engine im Zusammenhang mit [Azure Synapse Analytics SQL On-Demand](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | Um den Objekt-Explorer in SSMS weiterhin mit Azure Synapse Analytics SQL On-Demand verwenden zu können, benötigen Sie SSMS 18.7 oder höher.
-
-Bei anderen Problemen können Sie auf [SQL Server-Benutzerfeedback](https://feedback.azure.com/forums/908035-sql-server) verweisen. Außerdem können Sie so Feedback an das Produktteam übermitteln.
-
-## <a name="previous-ssms-releases"></a>Vorgängerversionen von SSMS
-
-[!INCLUDE[ssms-connect-aazure-ad](../includes/ssms-connect-azure-ad.md)]
-
-Laden Sie frühere SSMS-Versionen herunter, indem Sie im entsprechenden Abschnitt auf den Downloadlink klicken.
-
-| SSMS-Version | Buildnummer | Veröffentlichungsdatum |
-|--------------|--------------|--------------|
-| [18.6](#186) | 15.0.18338.0 | 22. Juli 2020 |
-| [18.5.1](#1851) | 15.0.18333.0 | 9\. Juni 2020 |
-| [18.5](#185) | 15.0.18330.0 | 7\. April 2020 |
-| [18.4](#184) | 15.0.18206.0 | 4\. November 2019 |
-| [18.3.1](#1831) | 15.0.18183.0 | 2\. Oktober 2019 |
-| [18.2](#182) | 15.0.18142.0 | 25. Juli 2019 |
-| [18.1](#181) | 15.0.18131.0 | 11. Juni 2019 |
-| [18.0](#180) | 15.0.18118.0 | 24. April 2019 |
-| [17.9.1](#1791) | 14.0.17289.0 | 21. November 2018 |
-| [16.5.3](#1653) | 13.0.16106.4 | 30. Januar 2017 |
+| Objekt-Explorer | Releases von SSMS, die niedriger als 18.7 sind, besitzen einen Breaking Change im Objekt-Explorer aufgrund der Änderungen der Engine im Zusammenhang mit [Azure Synapse Analytics SQL On-Demand](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | Um den Objekt-Explorer in SSMS weiterhin mit Azure Synapse Analytics SQL On-Demand verwenden zu können, benötigen Sie SSMS 18.7 oder höher. |
+| Abfragespeicher | Nach einem Rechtsklick auf den Objekt-Explorer-Knoten für Abfragespeicher wird ein Fehler ausgelöst. | Greifen Sie direkt auf Elemente zu, indem Sie den Knoten erweitern und mit der rechten Maustaste auf einzelne untergeordnete Optionen klicken. |
 
 ### <a name="186"></a>18.6
 
@@ -134,7 +172,7 @@ Laden Sie frühere SSMS-Versionen herunter, indem Sie im entsprechenden Abschnit
 
 [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x40a)
 
-### <a name="whats-new-in-186"></a>Neuerungen in Release 18.6
+#### <a name="whats-new-in-186"></a>Neuerungen in Release 18.6
 
 | Neues Element | Details |
 |----------|---------|
@@ -147,7 +185,7 @@ Laden Sie frühere SSMS-Versionen herunter, indem Sie im entsprechenden Abschnit
 | SMO/Skripterstellung | Die Unterstützung für das Erstellen der dynamischen Datenmaskierung für [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (zuvor SQL Azure Data Warehouse) wurde hinzugefügt. |
 | SMO/Skripterstellung | Die Unterstützung zum Erstellen von Sicherheitsrichtlinien für [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (zuvor SQL Data Warehouse) wurde hinzugefügt. |
 
-### <a name="bug-fixes-in-186"></a>Fehlerkorrekturen in Version 18.6
+#### <a name="bug-fixes-in-186"></a>Fehlerkorrekturen in Version 18.6
 
 | Neues Element | Details |
 |----------|---------|
@@ -161,7 +199,7 @@ Laden Sie frühere SSMS-Versionen herunter, indem Sie im entsprechenden Abschnit
 | SSMS allgemein | Es wurde ein Problem behoben, bei dem die Datenbankeigenschaft „Größe“ die maximale Größe anstelle der tatsächlichen Größe der Datenbank für Azure SQL-Datenbank angezeigt wird. (Hinweis: Bei Data Warehouse wird weiterhin die maximale Größe angezeigt.) |
 | SSMS allgemein | Es wurden drei häufige Ursachen für Abstürze in SSMS behoben. |
 | SSMS allgemein | Es wurden einige Probleme im Zusammenhang mit dem SSMS-Verbindungsdialogfeld zum *Verwerfen* von Einträgen behoben (Server/Benutzer/Kennwörter). Weitere Informationen finden Sie im [SQL Server-Benutzerfeedback zu SSMS 18.5](https://feedback.azure.com/forums/908035/suggestions/40256401) und [SQL Server-Benutzerfeedback zu SSMS 18.4](https://feedback.azure.com/forums/908035/suggestions/40015519). |
-| SSMS allgemein | Es wurde ein Problem im Zusammenhang mit dem Dialogfeld **Statistic Properties** (Statistikeigenschaften) behoben, bei dem das Aktivieren des Kontrollkästchens **Statistiken für diese Spalten aktualisieren** und das Klicken auf **OK** keine Auswirkung hatten. Die Statistik wird nicht aktualisiert, und der Versuch, ein Skript für die Aktion zu erstellen, führt zur Meldung *Es ist keine Aktion für das Skript vorhanden* . Weitere Informationen finden Sie im [SQL Server-Benutzerfeedback](https://feedback.azure.com/forums/908035/suggestions/37799992). |
+| SSMS allgemein | Es wurde ein Problem im Zusammenhang mit dem Dialogfeld **Statistic Properties** (Statistikeigenschaften) behoben, bei dem das Aktivieren des Kontrollkästchens **Statistiken für diese Spalten aktualisieren** und das Klicken auf **OK** keine Auswirkung hatten. Die Statistik wird nicht aktualisiert, und der Versuch, ein Skript für die Aktion zu erstellen, führt zur Meldung *Es ist keine Aktion für das Skript vorhanden*. Weitere Informationen finden Sie im [SQL Server-Benutzerfeedback](https://feedback.azure.com/forums/908035/suggestions/37799992). |
 | SSMS allgemein | Behobene Probleme im Zusammenhang mit [CVE-2020-1455](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-1455). | 
 | Importieren/Exportieren einer Datenschichtanwendung | Es wurde ein Problem behoben, bei dem SSMS beim Importieren einer BACPAC-Datei einen Fehler ausgelöst hat. Weitere Informationen finden Sie im [SQL Server-Benutzerfeedback](https://feedback.azure.com/forums/908035/suggestions/40229137). |
 | Integration Services | Es wurde ein Fehler behoben, bei dem Kunden einen SQL Agent-Auftragsschritt nicht bearbeiten können, wenn die SSMS-Version 18.4 oder eine frühere Version zum Ausführen von SSIS-Paketen in Azure SQL Managed Instance verwendet werden. |
@@ -193,7 +231,7 @@ Laden Sie frühere SSMS-Versionen herunter, indem Sie im entsprechenden Abschnit
 
 [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x40a)
 
-### <a name="bug-fixes-in-1851"></a>Fehlerkorrekturen in Version 18.5.1
+#### <a name="bug-fixes-in-1851"></a>Fehlerkorrekturen in Version 18.5.1
 
 | Neues Element | Details |
 |----------|---------|
@@ -202,7 +240,7 @@ Laden Sie frühere SSMS-Versionen herunter, indem Sie im entsprechenden Abschnit
 | Analysis Services | Es wurde ein Problem behoben, das verhindert, dass Benutzer SSAS 2017 und frühere Versionen mit Zellendatenberechtigungen abfragen. |
 | SSMS allgemein | [Tabellen-Designer: Es wurde ein Problem mit Geräuschen behoben, die beim Verwenden der TAB-TASTE in einem Tabellen-Designer-Raster auftraten.](https://feedback.azure.com/forums/908035/suggestions/40318435) |
 
-### <a name="known-issues-1851"></a>Bekannte Probleme (18.5.1)
+#### <a name="known-issues-1851"></a>Bekannte Probleme (18.5.1)
 
 | Neues Element | Details | Problemumgehung |
 |----------|---------|------------|
@@ -221,7 +259,7 @@ Laden Sie frühere SSMS-Versionen herunter, indem Sie im entsprechenden Abschnit
 
 [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x40a)
 
-### <a name="whats-new-in-185"></a>Neuerungen in 18.5
+#### <a name="whats-new-in-185"></a>Neuerungen in 18.5
 
 | Neues Element | Details |
 |----------|---------|
@@ -242,7 +280,7 @@ Laden Sie frühere SSMS-Versionen herunter, indem Sie im entsprechenden Abschnit
 | SMO/Skripterstellung | [SQL-Bewertungs-API](../tools/sql-assessment-api/sql-assessment-api-overview.md): Die Felder „Plattform“, „Name“ und engineEdition fields können nun durch Trennzeichen getrennte Listen enthalten ( *Plattform* : \[*Windows* , *Linux*\]) und nicht nur reguläre Ausdrücke ( *Plattform* : *\/Windows\|Linux\/* )
 | SMO/Skripterstellung | [SQL-Bewertungs-API](../tools/sql-assessment-api/sql-assessment-api-overview.md): 13 Bewertungsregeln wurden hinzugefügt. Weitere Informationen finden Sie auf [GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-assessment-api). |
 
-### <a name="bug-fixes-in-185"></a>Fehlerkorrekturen in Version 18.5
+#### <a name="bug-fixes-in-185"></a>Fehlerkorrekturen in Version 18.5
 
 | Neues Element | Details |
 |----------|---------|
@@ -298,7 +336,7 @@ Laden Sie frühere SSMS-Versionen herunter, indem Sie im entsprechenden Abschnit
 | SMO/Skripterstellung | [SQL-Bewertung API-](../tools/sql-assessment-api/sql-assessment-api-overview.md): falscher Hilfelink in der Regel XTPHashAvgChainBuckets. |
 | XEvent-Benutzeroberfläche | Es wurde ein Problem behoben, bei dem Elemente im Raster ausgewählt wurden, wenn darauf gezeigt wurde. Weitere Informationen finden Sie im [SQL Server-Benutzerfeedback zu erweiterten Events](https://feedback.azure.com/forums/908035/suggestions/38262124) und [SQL Server-Benutzerfeedback zu SSMS 18.0](https://feedback.azure.com/forums/908035-sql-server/suggestions/37873921). |
 
-### <a name="known-issues-185"></a>Bekannte Probleme (18.5)
+#### <a name="known-issues-185"></a>Bekannte Probleme (18.5)
 
 | Neues Element | Details | Problemumgehung |
 |----------|---------|------------|
@@ -432,7 +470,7 @@ Bei anderen Problemen können Sie auf [SQL Server-Benutzerfeedback](https://feed
 
 [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x40a)
 
-### <a name="whats-new-in-182"></a>Neues in Version 18.2
+#### <a name="whats-new-in-182"></a>Neues in Version 18.2
 
 | Neues Element | Details |
 |----------|---------|
@@ -588,7 +626,7 @@ Bei anderen Problemen können Sie auf [SQL Server-Benutzerfeedback](https://feed
 |SSMS basiert auf Visual Studio 2017 Isolated Shell|Die neue Shell (SSMS basiert auf Visual Studio 2017, Version 15.9.11) enthält die neuesten Sicherheitspatches, und mit ihr werden alle Fehlerkorrekturen bei Barrierefreiheitsproblemen entsperrt.|
 |Verbesserungen für die Barrierefreiheit in SSMS| Ein Schwerpunkt lag in der Behebung von Problemen mit der Barrierefreiheit in allen Tools (SSMS, DTA und Profiler).|
 |SSMS kann jetzt in einem benutzerdefinierten Ordner installiert werden| Diese Option ist über die Befehlszeile (nützlich bei einer unbeaufsichtigten Installation) und die Setup-Benutzeroberfläche verfügbar. Übergeben Sie über die Befehlszeile dieses zusätzliche Argument an die Datei „SSMS-Setup-ENU.exe“:   SSMSInstallRoot=C:\MySSMS18  Der neue Standardspeicherort für die Installation von SSMS lautet: „%ProgramFiles(x86)%\Microsoft SQL Server Management Studio 18\Common7\IDE\ssms.exe“.  Das bedeutet nicht, dass SSMS mehrere Instanzen besitzt.|
-|SSMS kann in einer anderen Sprache als der Betriebssystemsprache installiert werden|Das Einrichten gemischter Sprachen wird nicht mehr blockiert. Sie können z. B. die deutsche Version von SSMS unter der französischen Windows-Version installieren. Stimmt die Sprache des Betriebssystems nicht mit der Sprache von SSMS überein, muss der Benutzer die Sprache folgendermaßen ändern: **Extras** > **Optionen** > **Internationale Einstellungen** . Andernfalls wird in SSMS die englische Benutzeroberfläche angezeigt.|
+|SSMS kann in einer anderen Sprache als der Betriebssystemsprache installiert werden|Das Einrichten gemischter Sprachen wird nicht mehr blockiert. Sie können z. B. die deutsche Version von SSMS unter der französischen Windows-Version installieren. Stimmt die Sprache des Betriebssystems nicht mit der Sprache von SSMS überein, muss der Benutzer die Sprache folgendermaßen ändern: **Extras** > **Optionen** > **Internationale Einstellungen**. Andernfalls wird in SSMS die englische Benutzeroberfläche angezeigt.|
 |SSMS verwendet keine gemeinsamen Komponenten mehr mit SQL Engine|Ein Schwerpunkt lag in der Vermeidung von gemeinsamen Komponenten mit SQL Engine, da dies häufig zu Wartungsproblemen (durch unbeabsichtigtes gegenseitiges Überschreiben der installierten Dateien) führte.|
 |SSMS erfordert NetFx 4.7.2 oder höher.|Wir haben die Mindestanforderung von NetFx 4.6.1 auf NetFx 4.7.2 erhöht, damit die neuen Funktionen genutzt werden können, die vom neuen Framework bereitgestellt werden.|
 |Möglichkeit zum Migrieren von SSMS-Einstellungen| Beim ersten Starten von SSMS 18 wird der Benutzer dazu aufgefordert, die Einstellungen aus 17.x zu migrieren. Die Dateien für Benutzereinstellungen werden jetzt als XML-Textdatei gespeichert, wodurch die Portabilität verbessert und eine Bearbeitung ermöglicht werden.|
@@ -599,7 +637,7 @@ Bei anderen Problemen können Sie auf [SQL Server-Benutzerfeedback](https://feed
 |Paket-IDs sind zum Entwickeln von SSMS-Erweiterungen nicht mehr erforderlich| In der Vergangenheit wurden in SSMS nur bekannte Pakete selektiv geladen, sodass Entwickler ihr eigenes Paket registrieren mussten. Das ist nicht mehr der Fall.|
 |SSMS allgemein|Die Konfigurationsoption „AUTOGROW_ALL_FILES“ wurde für Dateigruppen in SSMS bereitgestellt.|
 |SSMS allgemein|Die riskanten Optionen „Lightweightpooling“ und „Prioritätserhöhung“ wurden von der grafischen SSMS-Benutzeroberfläche entfernt. Weitere Informationen finden Sie unter [Priority boost details – and why it’s not recommended (Informationen zur Prioritätserhöhung und Gründe, die dagegen sprechen)](https://deep.data.blog/2010/01/26/priority-boost-details-and-why-its-not-recommended/).
-|SSMS allgemein|Neues Menü und Tastenkombinationen zum Erstellen von Dateien: **STRG+ALT+N** . Mit **STRG+N** wird weiterhin eine neue Abfrage erstellt.|
+|SSMS allgemein|Neues Menü und Tastenkombinationen zum Erstellen von Dateien: **STRG+ALT+N**. Mit **STRG+N** wird weiterhin eine neue Abfrage erstellt.|
 |SSMS allgemein|Das Dialogfeld **Neue Firewallregel** ermöglicht dem Benutzer nun das Angeben eines Regelnamens anstelle der automatischen Generierung.|
 |SSMS allgemein|IntelliSense im Editor wurde insbesondere für Version v140 und höher von T-SQL verbessert.|
 |SSMS allgemein|Unterstützung für UTF-8 wurde im Dialogfeld für die Sortierung auf der SSMS-Benutzeroberfläche hinzugefügt.|
@@ -623,7 +661,7 @@ Bei anderen Problemen können Sie auf [SQL Server-Benutzerfeedback](https://feed
 |Datenklassifizierung|In SMO wurde die neue Funktion „Datenklassifizierung“ hinzugefügt. Spaltenobjekt macht neue Eigenschaften verfügbar: SensitivityLabelName, SensitivityLabelId, SensitivityInformationTypeName, SensitivityInformationTypeId und IsClassified (schreibgeschützt). Weitere Informationen finden Sie unter [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../t-sql/statements/add-sensitivity-classification-transact-sql.md).|
 |Datenklassifizierung|Das neue Menüelement „Klassifizierungsbericht“ wurde dem Flyout „Datenklassifizierung“ hinzugefügt.|
 |Datenklassifizierung| Empfehlungen wurden aktualisiert.|
-|Upgrade des Datenbank-Kompatibilitätsgrads|Eine neue Option wurde unter ***Datenbankname*** > ***Tasks*** > ***Datenbankupgrade*** hinzugefügt. Mit ihr wird der neue **Abfrageoptimierungs-Assistent** gestartet, der den Benutzer durch folgende Prozesse führt: Sammeln einer Leistungsbaseline, bevor ein Upgrade des Datenbank-Kompatibilitätsgrads durchgeführt wird Durchführen eines Upgrades auf den gewünschten Datenbank-Kompatibilitätsgrad  Sammeln eines zweiten Durchlaufs von Leistungsdaten der gesamten Arbeitsauslastung Ermitteln von Regressionen der Arbeitsauslastung und Bereitstellen getesteter Empfehlungen zur Verbesserung der Arbeitsauslastungsleistung  Dies ähnelt dem unter [Verwendungsszenarios für den Abfragespeicher](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade) beschriebenen Datenbankupgrade mit Ausnahme des letzten Schritts, bei dem der Abfrageoptimierungs-Assistent sich nicht auf den letzten als funktionierend bekannten Zustand beruft, um Empfehlungen zu generieren.|
+|Upgrade des Datenbank-Kompatibilitätsgrads|Eine neue Option wurde unter **_Datenbankname_ *_ > _* _Tasks_ *_ > _* _Datenbankupgrade_ *_ hinzugefügt. Mit ihr wird der neue _* Abfrageoptimierungs-Assistent** gestartet, der den Benutzer durch folgende Prozesse führt: Sammeln einer Leistungsbaseline, bevor ein Upgrade des Datenbank-Kompatibilitätsgrads durchgeführt wird Durchführen eines Upgrades auf den gewünschten Datenbank-Kompatibilitätsgrad  Sammeln eines zweiten Durchlaufs von Leistungsdaten der gesamten Arbeitsauslastung Ermitteln von Regressionen der Arbeitsauslastung und Bereitstellen getesteter Empfehlungen zur Verbesserung der Arbeitsauslastungsleistung  Dies ähnelt dem unter [Verwendungsszenarios für den Abfragespeicher](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade) beschriebenen Datenbankupgrade mit Ausnahme des letzten Schritts, bei dem der Abfrageoptimierungs-Assistent sich nicht auf den letzten als funktionierend bekannten Zustand beruft, um Empfehlungen zu generieren.|
 |Datenschichtanwendungs-Assistent|Unterstützung für das Importieren und Exportieren von Datenschichtanwendungen mit Graphtabellen wurde hinzugefügt.|
 |Assistent zum Importieren von Flatfiles|Logik zum Benachrichtigen des Benutzers, dass der Import möglicherweise zu einer Umbenennung der Spalten geführt hat, wurde hinzugefügt.|
 |Integration Services (SSIS)|Unterstützung wurde hinzugefügt, durch die Kunden SSIS-Pakete für Azure-SSIS Integration Runtime planen können, die sich in einer Azure Government-Cloud befinden.|

@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 970b049ec7933af9fab1d213d7441f101e01f7c1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 563dc8fbbb7f866dd91f7a982813fe2e5b0a2e83
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765689"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907358"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>Datenpersistenz mit SQL Server-Big Data-Clustern in Kubernetes
 
@@ -36,7 +36,7 @@ Im Folgenden sind einige wichtige Aspekte aufgeführt, die beim Planen der Speic
 
 - Bei der Berechnung der Größenanforderungen für den Speicherpool müssen Sie den Replikationsfaktor berücksichtigen, mit dem HDFS konfiguriert ist.  Der Replikationsfaktor kann bei der Bereitstellung in der Konfigurationsdatei für die Clusterbereitstellung konfiguriert werden. Der Standardwert für die dev-test-Profile (d. h. `aks-dev-test` oder `kubeadm-dev-test`) ist 2. Für die Profile, die für Produktionsbereitstellungen empfohlen werden (d. h. `kubeadm-prod`) lautet der Standardwert 3. Als Best Practice empfehlen wir Ihnen, dass Sie Ihre Produktionsbereitstellung eines Big Data-Clusters mit einem Replikationsfaktor für HDFS von mindestens 3 konfigurieren. Der Wert des Replikationsfaktors beeinflusst die Anzahl an Instanzen im Speicherpool: Sie müssen mindestens so viele Speicherpoolinstanzen bereitstellen, dass sie dem Wert des Replikationsfaktors entsprechen. Zusätzlich müssen Sie die Speichergröße entsprechend anpassen. Berücksichtigen Sie dabei auch Daten, die in HDFS entsprechend dem Wert des Replikationsfaktors repliziert werden. Weitere Informationen zur Datenreplikation in HDFS finden Sie [hier](https://hadoop.apache.org/docs/r3.2.1/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html#Data_Replication). 
 
-- Ab SQL Server 2019 CU1 können Sie die Speicherkonfigurationseinstellungen nach der Bereitstellung nicht mehr ändern. Das bedeutet, dass sie nach der Bereitstellung weder den persistente Volumeanspruch der einzelnen Instanzen ändern, noch Skalierungsvorgänge durchführen können. Daher sollte das Speicherlayout vor der Bereitstellung eines Big Data-Clusters sorgfältig geplant werden.
+- Ab SQL Server 2019 CU1 bietet Big Data-Cluster (BDC) keine Möglichkeit, die Speicherkonfigurationseinstellung nach einer Bereitstellung zu aktualisieren. Dadurch wird verhindert, dass Sie nach einer Bereitstellung BDC-Vorgänge verwenden, um die Größe des persistenten Volumes jeder Instanz zu ändern oder einen Pool zu skalieren. Daher sollte das Speicherlayout vor der Bereitstellung eines Big Data-Clusters sorgfältig geplant werden. Allerdings können Sie die Größe eines persistenten Volumes über Kubernetes-APIs direkt erweitern. In diesem Fall werden BDC-Metadaten nicht aktualisiert, und es ergeben sich Inkonsistenzen in Bezug auf die Volumegrößen in den Metadaten des Konfigurationsclusters.
 
 - Durch die Bereitstellung als Containeranwendungen in Kubernetes und die Verwendung von Features wie zustandsbehafteten Sätzen und permanentem Speicher stellt Kubernetes sicher, dass Pods im Falle von Integritätsproblemen neu gestartet und an denselben permanenten Speicher angefügt werden. Für den Fall, dass ein Knoten ausfällt und ein Pod auf einem anderen Knoten neu gestartet werden muss, besteht jedoch ein höheres Risiko der Nichtverfügbarkeit, wenn für den fehlerhaften Knoten lokaler Speicher verwendet wird. Um dieses Risiko zu mindern, müssen Sie entweder für zusätzliche Redundanz sorgen und [Funktionen für Hochverfügbarkeit](deployment-high-availability.md) aktivieren oder redundanten Remotespeicher verwenden. Hier finden Sie eine Übersicht über die Speicheroptionen für verschiedene Komponenten in den Big Data-Clustern.
 
@@ -83,7 +83,7 @@ Im Abschnitt [Konfigurieren von Speicher](#config-samples) finden Sie weitere Be
 Azure Kubernetes Service (AKS) verfügt über [zwei integrierte Speicherklassen](/azure/aks/azure-disks-dynamic-pv/) (`default` und `managed-premium`) und einen dynamischen Anbieter für diese Klassen. Sie können eine dieser Klassen angeben oder Ihre eigene Speicherklasse zum Bereitstellen von Big Data-Clustern mit aktiviertem persistenten Speicher erstellen. Standardmäßig sind in der integrierten Clusterkonfigurationsdatei für AKS (`aks-dev-test`) permanente Speicherkonfigurationen enthalten, die die Speicherklasse `default` verwenden.
 
 > [!WARNING]
-> Persistente Volumes, die mit den integrierten Speicherklassen`default` und `managed-premium` erstellt wurden, verfügen über eine *Delete*-Rückforderungsrichtlinie. Wenn Sie also den SQL Server-Big Data-Cluster löschen, werden sowohl die persistenten Volumeansprüche als auch die persistenten Volumes gelöscht. Sie können mithilfe des `azure-disk`-Anbieters benutzerdefinierte Speicherklassen mit einer `Retain`-Rückforderungsrichtlinie erstellen, wie [hier](/azure/aks/concepts-storage/#storage-classes) beschrieben.
+> Persistente Volumes, die mit den integrierten Speicherklassen`default` und `managed-premium` erstellt wurden, verfügen über eine *Delete* -Rückforderungsrichtlinie. Wenn Sie also den SQL Server-Big Data-Cluster löschen, werden sowohl die persistenten Volumeansprüche als auch die persistenten Volumes gelöscht. Sie können mithilfe des `azure-disk`-Anbieters benutzerdefinierte Speicherklassen mit einer `Retain`-Rückforderungsrichtlinie erstellen, wie [hier](/azure/aks/concepts-storage/#storage-classes) beschrieben.
 
 ## <a name="storage-classes-for-kubeadm-clusters"></a>Speicherklassen für `kubeadm`-Cluster 
 

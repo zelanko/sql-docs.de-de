@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 700944b707416a89d16b5ce53eee471692779870
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: bd161a78bb0b5249d0ce6f802760acd2048014f6
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037650"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523971"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>Verbinden mit einem SQL-Server oder einer Azure SQL-Datenbank
 
@@ -29,19 +29,19 @@ Um mit Servern und Datenbanken arbeiten zu können, müssen Sie zuerst eine Verb
 
 1. Klicken Sie im **Objekt-Explorer** auf **Verbinden &gt; Datenbank-Engine…**.
 
-   ![connect](../media/connect-to-server/connect-db-engine.png)
+   ![Verbinden](../media/connect-to-server/connect-db-engine.png)
 
-1. Füllen Sie das Formular **Verbindung mit Server herstellen** aus, und klicken Sie auf **Verbinden**:
+1. Füllen Sie das Formular **Verbindung mit Server herstellen** aus, und klicken Sie auf **Verbinden** :
 
    ![Verbindung mit dem Server herstellen](../media/connect-to-server/connect.png)
 
 1. Wenn Sie eine Verbindung zu einem Azure SQL-Server herstellen, werden Sie möglicherweise dazu aufgefordert, sich anzumelden, um eine Firewallregel zu erstellen. Klicken Sie auf **Anmelden…**. Falls dies nicht der Fall ist, fahren Sie mit Schritt 6 fort.
 
-   ![Firewall](../media/connect-to-server/firewall-rule-sign-in.png)
+   ![Screenshot des Dialogfelds „Neue Firewallregel“ mit hervorgehobener Option „Anmelden“](../media/connect-to-server/firewall-rule-sign-in.png)
 
 1. Nachdem Sie sich angemeldet haben, wird das Formular mit Ihrer IP-Adresse ausgefüllt. Wenn sich Ihre IP-Adresse häufig ändert, kann es einfacher sein, Zugriff auf einen IP-Bereich zu gewähren. Wählen Sie also die Option aus, die für Ihre Umgebung am besten geeignet ist. 
 
-   ![Firewall](../media/connect-to-server/new-firewall-rule.png)
+   ![Screenshot des Dialogfelds „Neue Firewallregel“ mit ausgewählter Option „Meine Client-IP-Adresse hinzufügen“ und hervorgehobener Option „OK“](../media/connect-to-server/new-firewall-rule.png)
 
 1. Um eine Firewallregel zu erstellen und eine Verbindung zum Server herzustellen, klicken Sie auf **OK**.
 
@@ -56,7 +56,7 @@ Um mit Servern und Datenbanken arbeiten zu können, müssen Sie zuerst eine Verb
 ## <a name="see-also"></a>Weitere Informationen
 
 [SQL Server Management Studio (SSMS)](../sql-server-management-studio-ssms.md)  
-[Herunterladen von SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)
+[Herunterladen von SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)
 
 [Analysis Services](/analysis-services/instances/connect-from-client-applications-analysis-services)  
 [Integrationsdienste](../../integration-services/sql-server-integration-services.md)  

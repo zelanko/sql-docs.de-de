@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d21f5c3f572356a18f8567f798af8af10f58c001
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bd3a092906bf2a7d46c7f343b7edf913bdd4d9cf
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765739"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914340"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>Was sind [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
@@ -22,9 +22,7 @@ ms.locfileid: "88765739"
 
 Ab [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] können Sie mit [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] skalierbare Cluster von Containern für SQL Server, Spark und HDFS bereitstellen, die auf Kubernetes ausgeführt werden. Diese Komponenten werden nebeneinander ausgeführt, sodass Sie Big Data von Transact-SQL oder Spark lesen, schreiben und verarbeiten können, während Sie Ihre wichtigen relationalen Daten mit einem hohen Big-Data-Volumen problemlos kombinieren und analysieren können.
 
-Mit [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] wurden SQL Server-Big Data Cluster eingeführt.
-
-Sie können SQL Server-Big Data-Cluster für Folgendes verwenden:
+Verwenden Sie [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] für Folgendes:
 
 - [Bereitstellen skalierbarer Cluster](./deploy-get-started.md) aus SQL Server-, Spark- und HDFS-Containern, die auf Kubernetes ausgeführt werden 
 - Lesen, Schreiben und Verarbeiten von Big Data von Transact-SQL oder Spark
@@ -45,19 +43,19 @@ Weitere Informationen zu neuen Features und bekannten Problemen der neuesten Ver
 
 ### <a name="data-virtualization"></a>Datenvirtualisierung
 
-Mit [SQL Server-PolyBase](../relational-databases/polybase/polybase-guide.md) können [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] externe Datenquellen abfragen, ohne die Daten zu verschieben oder zu kopieren. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] führt neue Connectors für Datenquellen ein.
+Mit [PolyBase](../relational-databases/polybase/polybase-guide.md) können [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] externe Datenquellen abfragen, ohne die Daten zu verschieben oder zu kopieren. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] führt neue Connectors für Datenquellen ein.
 
 ![Datenvirtualisierung](media/big-data-cluster-overview/data-virtualization.png)
 
 ### <a name="data-lake"></a>Data Lake
 
-Ein Big-Data-Cluster für SQL Server enthält einen skalierbaren HDFS-*Speicherpool*. Dieser kann verwendet werden, um Big Data zu speichern, die möglicherweise aus mehreren externen Quellen erfasst wird. Sobald die Big Data im HDFS im Big-Data-Cluster gespeichert wurden, können Sie die Daten analysieren und abfragen und mit ihren relationalen Daten kombinieren.
+Ein Big-Data-Cluster für SQL Server enthält einen skalierbaren HDFS- *Speicherpool*. Dieser kann verwendet werden, um Big Data zu speichern, die möglicherweise aus mehreren externen Quellen erfasst wird. Sobald die Big Data im HDFS im Big-Data-Cluster gespeichert wurden, können Sie die Daten analysieren und abfragen und mit ihren relationalen Daten kombinieren.
 
 ![Data Lake](media/big-data-cluster-overview/data-lake.png)
 
 ### <a name="scale-out-data-mart"></a>Data Mart mit horizontaler Skalierung
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] bieten Rechen- und Speicherkapazitäten für die horizontale Skalierung, um die Leistung bei der Analyse beliebiger Daten zu verbessern. Daten aus einer Vielzahl von Quellen können erfasst und auf *Datenpool*-Knoten als Cache zur weiteren Analyse verteilt werden.
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] bieten Rechen- und Speicherkapazitäten für die horizontale Skalierung, um die Leistung bei der Analyse beliebiger Daten zu verbessern. Daten aus einer Vielzahl von Quellen können erfasst und auf *Datenpool* -Knoten als Cache zur weiteren Analyse verteilt werden.
 
 ![Data Mart](media/big-data-cluster-overview/data-mart.png)
 
@@ -75,7 +73,7 @@ Sie können [Azure Data Studio](../azure-data-studio/what-is.md) dazu verwenden,
 - Integrierte Codeausschnitte für allgemeine Verwaltungsaufgaben.
 - Möglichkeit zum Durchsuchen von HDFS, zum Hochladen von Dateien, zur Vorschau von Dateien und zum Erstellen von Verzeichnissen.
 - Möglichkeit zum Erstellen, Öffnen und Ausführen von Jupyter-kompatiblen Notebooks.
-- Datenvirtualisierungsassistent für eine vereinfachte Erstellung externer Datenquellen (aktiviert durch die **Datenvirtualisierungserweiterung**)
+- Datenvirtualisierungsassistent für eine vereinfachte Erstellung externer Datenquellen (aktiviert durch die **Datenvirtualisierungserweiterung** )
 
 ## <a name="architecture"></a><a id="architecture"></a> Architektur
 
@@ -96,7 +94,7 @@ In [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 ### <a name="big-data-clusters-architecture"></a>Architektur von Big-Data-Clustern
 
-Das folgende Diagramm zeigt die Komponenten eines Big-Data-Clusters für SQL Server.
+Das folgende Diagramm zeigt die Komponenten eines SQL Server-Big-Data-Clusters.
 
 ![Übersicht über die Architektur](media/big-data-cluster-overview/architecture-diagram-overview.png)
 
@@ -121,4 +119,4 @@ Der Speicherpool besteht aus den Speicherpoolpods, bestehend aus SQL Server für
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zur Bereitstellung von Big Data-Clustern für SQL Server finden Sie unter [Erste Schritte mit Big Data-Clustern für SQL Server](deploy-get-started.md).
+Weitere Informationen zum Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] finden Sie unter [Erste Schritte mit [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-get-started.md).

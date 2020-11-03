@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f1c8338fe9c477f8885839a0236f2aaaa0e9ebde
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 98134fb195b9184bb10905b4a4f8ddec48f3cb57
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890847"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496982"
 ---
 # <a name="install-report-builder"></a>Installieren des Berichts-Generators
 
@@ -37,7 +37,7 @@ ms.locfileid: "91890847"
   
 ### <a name="sharepoint-site-integrated-with-ssrsnoversion"></a>In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
   
- Wenn auf einer in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]integrierten SharePoint-Website das Menü **Neues Dokument** die Optionen **Berichts-Generator-Bericht**, **Berichts-Generator-Modell**und **Berichtsdatenquelle**nicht enthält, müssen der SharePoint-Bibliothek die entsprechenden Inhaltstypen hinzugefügt werden. Weitere Informationen finden Sie unter [Hinzufügen von Reporting Services-Inhaltstypen zu einer SharePoint-Bibliothek](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
+ Wenn auf einer in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]integrierten SharePoint-Website das Menü **Neues Dokument** die Optionen **Berichts-Generator-Bericht** , **Berichts-Generator-Modell** und **Berichtsdatenquelle** nicht enthält, müssen der SharePoint-Bibliothek die entsprechenden Inhaltstypen hinzugefügt werden. Weitere Informationen finden Sie unter [Hinzufügen von Reporting Services-Inhaltstypen zu einer SharePoint-Bibliothek](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
 
 ::: moniker-end
  
@@ -67,7 +67,7 @@ ms.locfileid: "91890847"
     > [!NOTE]  
     >  Wenn Sie den [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] mit einer Verbindung zu einem Berichtsserver verwenden möchten, geben Sie die URL zu dem Server jetzt an. Hierzu können Sie auch das Dialogfeld **Optionen** im [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] verwenden.  
   
-5.  Klicken Sie auf **Installieren**, um die Installation des [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]s abzuschließen.  
+5.  Klicken Sie auf **Installieren** , um die Installation des [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]s abzuschließen.  
   
 ## <a name="to-install-ssrbnoversion-from-a-share"></a>So installieren Sie [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] über eine Freigabe  
   
@@ -81,7 +81,7 @@ ms.locfileid: "91890847"
   
 ## <a name="to-install-ssrbnoversion-from-the-command-line"></a>So installieren Sie [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] über die Befehlszeile 
 
- Sie können auch eine Befehlszeileninstallation des [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]s ausführen und Argumente angeben, um die Installation anzupassen. Neben den systeminternen MSI-Standardparametern können Sie die vom [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] bereitgestellten benutzerdefinierten Parameter RBINSTALLDIR und REPORTSERVERURL verwenden. RBINSTALLDIR dient zum Angeben des Stamminstallationsordners für den [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Mit REPORTSERVERURL wird der Standardberichtsserver angegeben, der vom [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] zum Speichern von Berichten auf dem Server verwendet wird.  
+ Sie können auch eine Befehlszeileninstallation des [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]s ausführen und Argumente angeben, um die Installation anzupassen. Neben den systeminternen MSI-Standardparametern können Sie die benutzerdefinierten Parameter verwenden, die [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] bereitstellt: RBINSTALLDIR und RBSERVERURL. RBINSTALLDIR dient zum Angeben des Stamminstallationsordners für den [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Mit RBSERVERURL wird der Standardberichtsserver angegeben, der vom [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] zum Speichern von Berichten auf dem Server verwendet wird.  
   
  Wenn Sie eine vollständig automatische Installation ohne Eingriff über die Benutzeroberfläche durchführen möchten, geben Sie die Option **/quiet** an. Programmbedingt werden durch das Optionsflag "quiet" Installationsfehler unterdrückt. Deshalb wird bei Verwendung der Option „quiet“ die Angabe der Option **/l** empfohlen, die Protokollierung für diesen Fall angibt.   
   
@@ -91,15 +91,15 @@ ms.locfileid: "91890847"
   
 3.  Klicken Sie im Menü **Start** auf **Ausführen**.  
   
-4.  Geben Sie **Öffnen** im Feld **Öffnen**ein.  
+4.  Geben Sie **Öffnen** im Feld **Öffnen** ein.  
   
 5.  Navigieren Sie im Eingabeaufforderungsfenster zu dem Ordner, in dem Sie die Datei „ReportBuilder.msi“ gespeichert haben.  
   
 6.  Geben Sie einen Befehl mit dem folgenden Format ein:  
   
-     `msiexec/i ReportBuilder.msi /option [value] [/option [value]]`  
+     `msiexec/i ReportBuilder.msi OPTION=OptionValue [OPTION=OptionValue]`  
   
-     Bei den beiden folgenden Optionen handelt es sich um spezifische Optionen für die Installation des [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]s: RBINSTALLDIR und REPORTSERVERURL. Diese Argumente müssen nicht unbedingt in der Befehlszeile angegeben werden. Der grundlegende Befehl lautet wie folgt:  
+     Die beiden Optionen speziell für die Installation von [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] lauten: RBINSTALLDIR und RBSERVERURL. Diese Argumente müssen nicht unbedingt in der Befehlszeile angegeben werden. Der grundlegende Befehl lautet wie folgt:  
   
      `msiexec /i ReportBuilder3_x86.msi /quiet`  
   
@@ -113,7 +113,7 @@ ms.locfileid: "91890847"
   
 -   Klicken Sie auf den **Berichts-Generator** .  
   
-     Wenn der Berichtsserver nicht in der Liste vorhandener Server angezeigt wird, schließen Sie das Dialogfeld **Bericht öffnen**, und klicken Sie dann unten im Berichts-Generator **auf** Verbinden [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], um eine Verbindung mit dem Server herzustellen.  
+     Wenn der Berichtsserver nicht in der Liste vorhandener Server angezeigt wird, schließen Sie das Dialogfeld **Bericht öffnen** , und klicken Sie dann unten im Berichts-Generator **auf** Verbinden [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], um eine Verbindung mit dem Server herzustellen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Starten des Berichts-Generators](../../reporting-services/report-builder/start-report-builder.md)   

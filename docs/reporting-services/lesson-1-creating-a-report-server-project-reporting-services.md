@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6c4ed5c985340e45b46b664dc4b6a53ff70f1b1a
-ms.sourcegitcommit: 83e5cfd2654233befd95e3ff37de936f9dc8549c
+ms.openlocfilehash: ac84fb8cf355103b28fbac8f5411943aa4ee51a8
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89468345"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679054"
 ---
 # <a name="lesson-1-create-a-report-server-project-reporting-services"></a>Lektion 1: Erstellen eines Berichtsserverprojekts (Reporting Services)
 
@@ -29,11 +29,11 @@ Wenn Sie Berichte mit dem Berichts-Designer erstellen, wird ein Berichtsserverpr
   
 1. Klicken Sie im Menü **Datei** auf **Neu** > **Projekt**.  
 
-    ![ssrs-ssdt-file-01-new-project](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
+    ![Screenshot: „Datei“ > „Neu“ > „Projekt“ in Visual Studio ausgewählt](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
   
 2. Klicken Sie in der Spalte ganz links unter **Installiert** auf **Reporting Services**. In einigen Fällen ist diese Option unter **Business Intelligence**.
 
-    ![select-report-server-project-template](../reporting-services/media/lesson-1-creating-a-report-server-project-reporting-services/select-report-server-project-template.png)
+    ![Screenshot des Dialogfelds „Neues Projekt“, in dem „Reporting Services“ angezeigt wird und die „Berichtsserverprojekt“-Vorlage hervorgehoben ist](../reporting-services/media/lesson-1-creating-a-report-server-project-reporting-services/select-report-server-project-template.png)
 
     > [!IMPORTANT]
     > Wenn in Visual Studio die Option „Reporting Services“ nicht in der linken Spalte angezeigt wird, fügen Sie den Berichts-Designer hinzu, indem Sie die SQL Server Data Tools-Workload installieren. Klicken Sie im Menü **Extras** auf **Tools und Features abrufen...** , und wählen Sie **SQL Server Data Tools** aus den angezeigten Workloads aus. Wenn keine Reporting Services-Objekte in der mittleren Spalte angezeigt werden, fügen Sie die Reporting Services-Erweiterungen hinzu. Wählen Sie aus dem Menü **Extras** **Erweiterungen und Updates** > **Online** aus. Wählen Sie in der mittleren Spalte **Microsoft Reporting Services Projects** > **Download** (Microsoft SQL Server Reporting Services-Projekte > Download) aus den angezeigten Erweiterungen aus. Weitere Informationen zu SQL Server Data Tools finden Sie unter [Herunterladen und Installieren von SQL Server Data Tools (SSDT) für Visual Studio](../ssdt/download-sql-server-data-tools-ssdt.md). Wenn die vorherigen Schritte in Visual Studio 2019 nicht funktionieren, versuchen Sie, die Erweiterung [Microsoft Reporting Service Project](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio) zu installieren.
@@ -43,7 +43,7 @@ Wenn Sie Berichte mit dem Berichts-Designer erstellen, wird ein Berichtsserverpr
 
 4. Geben Sie im Textfeld **Name** „Tutorial“ als Projektnamen ein. Standardmäßig enthält das Textfeld **Speicherort** den Pfad zum Ordner „Dokumente\Visual Studio 20xx\Projects\"“. Der Berichts-Designer erstellt einen Ordner namens „Tutorial“ in diesem Pfad und das Projekt „Tutorial“ in diesem Ordner. Wenn das Projekt nicht zu einer Visual Studio-Projektmappe gehört, erstellt Visual Studio ebenfalls eine Projektmappendatei (SLN-Datei).
 
-5. Klicken Sie auf **OK**, um das Projekt zu erstellen. Das Projekt „Tutorial“ wird rechts im **Projektmappen-Explorer** aufgeführt.
+5. Klicken Sie auf **OK** , um das Projekt zu erstellen. Das Projekt „Tutorial“ wird rechts im **Projektmappen-Explorer** aufgeführt.
   
 ## <a name="creating-a-report-definition-file-rdl"></a>Erstellen einer Berichtsdefinitionsdatei (RDL)  
   
@@ -51,15 +51,15 @@ Wenn Sie Berichte mit dem Berichts-Designer erstellen, wird ein Berichtsserverpr
 
 2. Klicken Sie dann auf **Hinzufügen** > **Neues Element**.
 
-    ![ssrs_ssdt_Bericht_hinzufügen](../reporting-services/media/ssrs-ssdt-add-report.png)
+    ![Screenshot des Projektmappen-Explorers, „Berichte“ > „Hinzufügen“ > „Neues Element“ ausgewählt](../reporting-services/media/ssrs-ssdt-add-report.png)
 
 3. Klicken Sie im Fenster **Neues Element hinzufügen** auf das Symbol für **Berichte**.
 
 4. Geben Sie „Sales Orders.rdl“ in das Textfeld **Name** ein.
 
-5. Klicken Sie auf die Schaltfläche zum **Hinzufügen** im unteren rechten Bereich des Dialogfelds **Neues Element hinzufügen**, um den Vorgang abzuschließen. Der Berichts-Designer wird geöffnet, und die Berichtsdatei „Sales Orders.rdl“ wird in der Designansicht angezeigt.
+5. Klicken Sie auf die Schaltfläche zum **Hinzufügen** im unteren rechten Bereich des Dialogfelds **Neues Element hinzufügen** , um den Vorgang abzuschließen. Der Berichts-Designer wird geöffnet, und die Berichtsdatei „Sales Orders.rdl“ wird in der Designansicht angezeigt.
 
-    ![ssrs-ssdt-01-new-report-designer](media/ssrs-ssdt-01-new-report-designer.png)
+    ![Screenshot von Visual Studio mit angezeigtem Berichts-Designer und dem „Sales Orders“-Bericht in Designansicht](media/ssrs-ssdt-01-new-report-designer.png)
 
 ## <a name="next-steps"></a>Nächste Schritte
 

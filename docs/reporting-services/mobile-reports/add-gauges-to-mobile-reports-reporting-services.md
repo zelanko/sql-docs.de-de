@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 456c50650afc01fc18465b0d96f3cfeb715ddecb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 204885c83b400be7f134a7c8a5e622f3c3488797
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448280"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907308"
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>Hinzufügen von Messgeräten zu mobilen Berichten | Reporting Services
 Messgeräte sind die grundlegendsten und häufig genutzten visuellen Elemente in mobilen Berichten. Sie zeigen einen einzelnen Wert in einem Dataset an, nur den Wert oder den Wert im Vergleich mit einem Ziel.
@@ -25,7 +25,7 @@ Messgeräte sind die grundlegendsten und häufig genutzten visuellen Elemente in
   
 In Publisher für mobile Berichte von SQL Server haben alle Messgeräte mindestens eine Eigenschaft gemeinsam: einen Hauptwert in einem numerischen Feld in einer der Datentabellen des mobilen Berichts.  
 
-Alle Messgeräte außer „Zahl“ können auch einen Vergleich bzw. *Deltawert*anzeigen –die Beziehung zwischen dem Haupt- und einem Vergleichswert. Der Vergleichswert ist oft das Ziel, und das Messgerät ist eine visuelle Anzeige des Status dieses Ziels oder der Differenz zwischen tatsächlichem Wert und Ziel.
+Alle Messgeräte außer „Zahl“ können auch einen Vergleich bzw. *Deltawert* anzeigen –die Beziehung zwischen dem Haupt- und einem Vergleichswert. Der Vergleichswert ist oft das Ziel, und das Messgerät ist eine visuelle Anzeige des Status dieses Ziels oder der Differenz zwischen tatsächlichem Wert und Ziel.
 
 Messgeräte können nur einen aggregierten Wert für ihren Hauptwert und einen aggregierten Wert für ihren Vergleichswert darstellen. Messgerätaggregationen sind standardisiert –Summe, Mittelwert, Minimum, Maximum usw. Standardmäßig ist der Anzeigewert eine Summe. Damit wird die Summe aller Werte innerhalb der aktuellen gefilterten Daten angezeigt, die für das Messgerätsteuerelement verfügbar sind. 
 
@@ -43,7 +43,7 @@ Sie können Anzeigewerte filtern, indem Sie sie mit den Navigatoren des mobilen 
 
 4. [optional] Wählen Sie zum Ändern der Aggregation **Optionen** und eine andere Aggregation aus.
    
-   >**Hinweis**: Wenn Sie die Aggregation für den Hauptwert ändern, möchten Sie wahrscheinlich auch die Aggregation für den Vergleichswert ändern, obwohl Sie in einigen Fällen vielleicht Aggregationsmethoden kombinieren möchten.  
+   >**Hinweis** : Wenn Sie die Aggregation für den Hauptwert ändern, möchten Sie wahrscheinlich auch die Aggregation für den Vergleichswert ändern, obwohl Sie in einigen Fällen vielleicht Aggregationsmethoden kombinieren möchten.  
 
 ## <a name="filter-a-gauge"></a>Filtern eines Messgeräts
   
@@ -53,14 +53,14 @@ Wenn der mobile Bericht über Navigatoren verfügt, können Sie ein Messgerät z
 
 2. Wählen Sie unter „Gefiltert nach“ den Navigator, der das Messgerät filtern soll.
 
-   ![mobile-report-gauge-navigator](../../reporting-services/mobile-reports/media/mobile-report-gauge-navigator.png)
+   ![Screenshot der erweiterten „Optionen“ für den „Hauptwert“, wobei die Option „Gefiltert nach: Produktliste“ aktiviert ist](../../reporting-services/mobile-reports/media/mobile-report-gauge-navigator.png)
  
 ## <a name="set-visual-properties-for-a-gauge"></a>Festlegen visueller Eigenschaften für ein Messgerät
   
 Zusammen mit den Dateneigenschaften, die Messgerätelemente mit Datenfeldern verbinden, können Sie auch eine Reihe von funktionalen und visuellen Eigenschaften anpassen. 
 
 ### <a name="set-value-direction-high-or-low-is-better"></a>Wertrichtung festlegen: Hohe oder niedrige Werte sind besser.
-* Wählen Sie ein Messgerät, und legen Sie auf der Registerkarte **Layout** im Bereich **Eigenschaften visueller Elemente** für **Wertrichtung** entweder **Höhere Werte sind besser** oder **Niedrigere Werte sind besser**fest. 
+* Wählen Sie ein Messgerät, und legen Sie auf der Registerkarte **Layout** im Bereich **Eigenschaften visueller Elemente** für **Wertrichtung** entweder **Höhere Werte sind besser** oder **Niedrigere Werte sind besser** fest. 
 
 **Höhere Werte sind besser** färbt höhere Werte grün, um eine erwünschte Änderung zum Besseren zu kennzeichnen, oder niedrigere Werte rot, um eine unerwünschte Änderung zum Schlechteren zu kennzeichnen. 
 

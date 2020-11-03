@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8b3c37e642ba5c9d570fc754f5eca3ab0b57d24a
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 9e6dde5a520b845cac47fbfd3c4820d35958c9ba
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881917"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907258"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Karten (Berichts-Generator und SSRS)
   Um Geschäftsdaten anhand eines geografischen Hintergrunds visuell darzustellen, können Sie dem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht eine Karte hinzufügen. Welchen Kartentyp Sie auswählen sollten, hängt davon ab, was für Informationen Sie im Bericht mitteilen möchten. Sie können eine Karte hinzufügen, die nur Orte anzeigt, oder eine Blasendiagrammkarte, bei der die Blasengröße von der Anzahl der Haushalte für einen Bereich abhängt, oder eine Markerkarte, bei der das Markerformat vom gewinnbringendsten Produkt für jeden Laden abhängt, oder eine Linienkarte, die Routen zwischen Läden anzeigt.  
@@ -58,7 +58,7 @@ ms.locfileid: "84881917"
  Um Daten auf einer Karte visuell darzustellen, müssen die analytischen Daten und die räumlichen Daten miteinander in Beziehung stehen. Wenn die räumlichen Daten und die analytischen Daten aus der gleichen Quelle stammen, ist die Beziehung bekannt. Wenn die räumlichen Daten und die analytischen Daten aus unterschiedlichen Quellen kommen, müssen Sie Übereinstimmungsfelder angeben, um sie miteinander in Beziehung zu setzen.  
   
 ### <a name="spatial-data"></a>Räumliche Daten  
- Räumliche Daten bestehen aus Sätzen von Koordinaten. Als räumliche Daten aus einer Datenquelle sind ein einzelner Punkt, mehrere Punkte, eine einzelne Linie, mehrere Linien oder ein Satz von Polygonen möglich. Jeder Satz von Koordinaten definiert ein *Kartenelement*, wie z. B. ein Polygon, das den Umriss eines Landkreises darstellt, eine Linie, die eine Straße darstellt, oder einen Punkt, der die Position einer Stadt darstellt.  
+ Räumliche Daten bestehen aus Sätzen von Koordinaten. Als räumliche Daten aus einer Datenquelle sind ein einzelner Punkt, mehrere Punkte, eine einzelne Linie, mehrere Linien oder ein Satz von Polygonen möglich. Jeder Satz von Koordinaten definiert ein *Kartenelement* , wie z. B. ein Polygon, das den Umriss eines Landkreises darstellt, eine Linie, die eine Straße darstellt, oder einen Punkt, der die Position einer Stadt darstellt.  
   
  Räumliche Daten basieren auf einem der folgenden Koordinatensysteme:  
   
@@ -89,9 +89,9 @@ ms.locfileid: "84881917"
   
 -   **Eingebettete Daten.** Die Beispieldaten werden aus Kartenelementen abgerufen, die im Bericht in Kartenebenen eingebettet wurden.  
   
--   **Link zu ESRI-Shape-Datei.** Wenn die ESRI-Shape-Datei (.shp) und die Unterstützungsdatei (.dbf) verfügbar sind, werden die Beispieldaten aus der Shape-Datei geladen. Andernfalls generiert der Berichtsprozessor Beispieldaten und zeigt die Meldung **Es sind keine räumlichen Daten verfügbar**an.  
+-   **Link zu ESRI-Shape-Datei.** Wenn die ESRI-Shape-Datei (.shp) und die Unterstützungsdatei (.dbf) verfügbar sind, werden die Beispieldaten aus der Shape-Datei geladen. Andernfalls generiert der Berichtsprozessor Beispieldaten und zeigt die Meldung **Es sind keine räumlichen Daten verfügbar** an.  
   
--   **Räumliche Daten von SQL Server.** Wenn die Datenquelle verfügbar ist und die Anmeldeinformationen gültig sind, werden die Beispieldaten aus den räumlichen Daten in der Datenbank geladen. Andernfalls generiert der Berichtsprozessor Beispieldaten und zeigt die Meldung **Es sind keine räumlichen Daten verfügbar**an.  
+-   **Räumliche Daten von SQL Server.** Wenn die Datenquelle verfügbar ist und die Anmeldeinformationen gültig sind, werden die Beispieldaten aus den räumlichen Daten in der Datenbank geladen. Andernfalls generiert der Berichtsprozessor Beispieldaten und zeigt die Meldung **Es sind keine räumlichen Daten verfügbar** an.  
   
 #### <a name="embedding-spatial-data-in-the-report-definition"></a>Einbetten räumlicher Daten in die Berichtsdefinition  
  Im Gegensatz zu analytischen Daten können räumliche Daten für eine Kartenebene in die Berichtsdefinition eingebettet werden. Wenn Sie räumliche Daten einbetten, betten Sie Kartenelemente ein, die in der Kartenebene verwendet werden.  
@@ -115,7 +115,7 @@ ms.locfileid: "84881917"
  Wenn Sie Regeln für eine Ebene angeben und das Feld für analytische Daten auswählen, berechnet der Berichtsprozessor im Fall eines numerischen Datentyps automatisch Aggregatwerte für das Kartenelement mithilfe der Standardfunktion „Sum“. Wenn das Feld nicht numerisch ist, wird keine Aggregatfunktion angegeben, und die implizite Aggregatfunktion „First“ wird verwendet. Um den Standardausdruck zu ändern, ändern Sie die Optionen für die Regeln für die Ebene. Weitere Informationen finden Sie unter [Unterschiedliche Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 ### <a name="match-fields"></a>Übereinstimmungsfelder  
- Um analytische Daten mit Kartenelementen auf einer Ebene zu verknüpfen, müssen Sie *Übereinstimmungsfelder*angeben. Übereinstimmungsfelder werden verwendet, um eine Beziehung zwischen Kartenelementen und analytischen Daten zu erstellen. Sie können ein oder mehrere Felder für die Übereinstimmung verwenden; diese müssen jedoch einen eindeutigen analytischen Wert für jeden räumlichen Standort angeben.  
+ Um analytische Daten mit Kartenelementen auf einer Ebene zu verknüpfen, müssen Sie *Übereinstimmungsfelder* angeben. Übereinstimmungsfelder werden verwendet, um eine Beziehung zwischen Kartenelementen und analytischen Daten zu erstellen. Sie können ein oder mehrere Felder für die Übereinstimmung verwenden; diese müssen jedoch einen eindeutigen analytischen Wert für jeden räumlichen Standort angeben.  
   
  Beispielsweise werden für eine Blasendiagrammkarte, bei der die Größen der Blasen der Einwohnerzahl von Städten entsprechen, die folgenden Daten benötigt:  
   
@@ -138,12 +138,12 @@ ms.locfileid: "84881917"
  In diesem Beispiel reicht der Städtename allein nicht aus, um die Auffüllung eindeutig zu identifizieren. Beispielsweise gibt es in den USA viele Städte mit dem Namen Albany. Um eine bestimmte Stadt anzugeben, müssen Sie zusätzlich zum Namen der Stadt den Wert für "Area" angeben.  
   
 ##  <a name="understanding-the-map-viewport"></a><a name="Viewport"></a> Grundlegendes zum Kartenviewport  
- Nachdem Sie Kartendaten für einen Bericht angegeben haben, können Sie den Anzeigebereich der Karte einschränken, indem Sie einen *Kartenviewport*angeben. Standardmäßig ist der Viewport der gleiche Bereich wie die gesamte Karte. Um die Karte zuzuschneiden, können Sie den Mittelpunkt, die Zoomstufe sowie maximale und minimale Koordinaten angeben, die den Bereich definieren, den Sie in den Bericht einschließen möchten. Um die Anzeige der Karte im Bericht zu verbessern, können Sie die Legenden, Entfernungsskala und Farbskala außerhalb des Viewports verschieben. Die folgende Abbildung zeigt einen Viewport:  
+ Nachdem Sie Kartendaten für einen Bericht angegeben haben, können Sie den Anzeigebereich der Karte einschränken, indem Sie einen *Kartenviewport* angeben. Standardmäßig ist der Viewport der gleiche Bereich wie die gesamte Karte. Um die Karte zuzuschneiden, können Sie den Mittelpunkt, die Zoomstufe sowie maximale und minimale Koordinaten angeben, die den Bereich definieren, den Sie in den Bericht einschließen möchten. Um die Anzeige der Karte im Bericht zu verbessern, können Sie die Legenden, Entfernungsskala und Farbskala außerhalb des Viewports verschieben. Die folgende Abbildung zeigt einen Viewport:  
   
  ![rs_MapViewport](../../reporting-services/report-design/media/rs-mapviewport.gif "rs_MapViewport")  
   
 ##  <a name="adding-a-bing-map-tiles-layer"></a><a name="TileLayer"></a> Hinzufügen einer Ebene mit Bing-Kartenkacheln  
- Sie können eine Ebene für Bing-Kartenkacheln hinzufügen, die einen geografischen Hintergrund für die aktuelle vom Viewport definierte Kartenansicht bereitstellen. Um eine Kachelebene hinzuzufügen, müssen Sie als Koordinatensystem **Geografisch** und als Projektion **Mercator**eingeben. Kacheln, die mit dem Viewportmittelpunkt und der Zoomstufe übereinstimmen, die Sie auswählen, werden automatisch aus Bing Maps Web Services abgerufen.  
+ Sie können eine Ebene für Bing-Kartenkacheln hinzufügen, die einen geografischen Hintergrund für die aktuelle vom Viewport definierte Kartenansicht bereitstellen. Um eine Kachelebene hinzuzufügen, müssen Sie als Koordinatensystem **Geografisch** und als Projektion **Mercator** eingeben. Kacheln, die mit dem Viewportmittelpunkt und der Zoomstufe übereinstimmen, die Sie auswählen, werden automatisch aus Bing Maps Web Services abgerufen.  
   
  Sie können die Ebene anpassen, indem Sie die folgenden Optionen angeben:  
   
@@ -180,7 +180,7 @@ ms.locfileid: "84881917"
   
  Um mit Ebenen zu arbeiten, wählen Sie auf der Berichtsentwurfsoberfläche eine Karte zum Anzeigen des Kartenbereichs aus. Der Kartenbereich zeigt die Liste der Ebenen an, die für die Karte definiert sind. Wählen Sie mithilfe dieses Bereichs eine Ebene aus, um die Optionen zu ändern, die Zeichnungsreihenfolge von Ebenen zu ändern, eine Ebene hinzuzufügen oder den Kartenebenen-Assistenten auszuführen, eine Ebene auszublenden oder anzuzeigen sowie den Ansichtsmittelpunkt und die Zoomstufe für den Kartenviewport zu ändern. Die folgende Abbildung zeigt einen Viewport:  
   
- ![rsMapLayerZone](../../reporting-services/report-design/media/rsmaplayerzone.gif "rsMapLayerZone")  
+ ![Screenshot des Abschnitts „Kartenebenen“, in dem die Elemente Ebenensymbolleiste, Ebenensichtbarkeit, Ebenenname, Typ der räumlichen Datenquelle und Ebenentyp sowie die Optionen „Zoomfaktor anpassen“ und „Ansichtsmittelpunkt anpassen“ herausgestellt sind](../../reporting-services/report-design/media/rsmaplayerzone.gif "rsMapLayerZone")  
   
  Weitere Informationen zu Kartenebenen finden Sie unter [Hinzufügen, Ändern oder Löschen einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   

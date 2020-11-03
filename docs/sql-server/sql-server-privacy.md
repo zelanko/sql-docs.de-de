@@ -11,12 +11,12 @@ f1_keywords: ''
 helpviewer_keywords: ''
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: e9e2619cf1bfc8994481c6f310977c77a7292911
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: f8356b5c07e6d85d9359276740fdd30adc200493
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603410"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793807"
 ---
 # <a name="sql-server-privacy-supplement"></a>Ergänzende Datenschutzbestimmungen zu SQL Server
 
@@ -54,11 +54,11 @@ Informationen, die auf die Anmeldeinformationen bezogen sind, die zum Sichern vo
 |Diese Anmeldeinformationen verlassen den Computer des Benutzers nie über das Nutzungsfeedback, es sei denn, der Kunde fügt sie manuell ein. |Der Zugriff ist auf den internen Gebrauch von Microsoft ohne Zugriff von Drittanbietern begrenzt. |Benutzerfeedback: Maximal 1 Jahr.|
 |&nbsp;|&nbsp;|&nbsp;|
 
-## <a name="customer-content"></a>Kundeninhalt
+## <a name="customer-data"></a>Kundendaten
 
-Kundeninhalt bezeichnet Daten, die direkt oder indirekt in Benutzertabellen gespeichert sind. Diese Daten schließen Statistiken und Benutzerliterale in Abfragetexten ein, die in Benutzertabellen gespeichert werden können.
+Mit Kundendaten sind Daten gemeint, die direkt oder indirekt in Benutzertabellen gespeichert sind. Diese Daten schließen Statistiken und Benutzerliterale in Abfragetexten ein, die in Benutzertabellen gespeichert werden können.
 
-### <a name="examples-of-customer-content"></a>Beispiele für Kundeninhalte
+### <a name="examples-of-customer-data"></a>Beispiele für Kundendaten
 
 - Datenwerte, die in den Zeilen einer Benutzertabelle gespeichert werden.
 - Statistikobjekte, die Kopien von Werten in den Zeilen einer Benutzertabelle enthalten.
@@ -69,16 +69,16 @@ Kundeninhalt bezeichnet Daten, die direkt oder indirekt in Benutzertabellen gesp
 |Szenario  |Zugriffsbeschränkungen  |Aufbewahrungsanforderungen |
 |---------|---------|---------|
 |Diese Daten verlassen den Computer des Benutzers nie über Nutzungs- und Diagnosedaten. |- |- |
-|Absturzabbilder können Kundeninhalt enthalten und an Microsoft ausgegeben werden. |- |Absturzabbilder: Maximal 30 Tage. |
-|Benutzerfeedback, das Kundeninhalt enthält, kann mit Zustimmung der Kunden an Microsoft gesendet werden. |Der Zugriff ist auf den internen Gebrauch von Microsoft ohne Zugriff von Drittanbietern begrenzt. Microsoft kann die Daten für den ursprünglichen Kunden verfügbar machen. |Benutzerfeedback: Maximal 1 Jahr. |
+|Absturzabbilder können Kundendaten enthalten und an Microsoft gesendet werden. |- |Absturzabbilder: Maximal 30 Tage. |
+|Benutzerfeedback, das Kundendaten enthält, kann mit Zustimmung der Kunden an Microsoft gesendet werden. |Der Zugriff ist auf den internen Gebrauch von Microsoft ohne Zugriff von Drittanbietern begrenzt. Microsoft kann die Daten für den ursprünglichen Kunden verfügbar machen. |Benutzerfeedback: Maximal 1 Jahr. |
 
-## <a name="end-user-identifiable-information-euii"></a>Personenbezogene Endbenutzerinformationen (End-User Identifiable Information, EUII)
+## <a name="personal-data"></a>Personenbezogene Daten
 
 Daten, die von einem Benutzer stammen oder durch die Verwendung des Produkts erstellt wurden.
 - Auf einen individuellen Benutzer zurückführbar.
-- Enthält keinen Inhalt.
+- Enthalten keine Kundendaten.
 
-### <a name="examples-of-end-user-identifiable-information"></a>Beispiele für personenbezogene Endbenutzerinformationen
+### <a name="examples-of-personal-data"></a>Beispiele zu persönlichen Daten
 
 - Schnittstellenidentifikation Die vollständige IP-Adresse
 - Computername
@@ -92,9 +92,9 @@ Daten, die von einem Benutzer stammen oder durch die Verwendung des Produkts ers
 |Szenario  |Zugriffsbeschränkungen  |Aufbewahrungsanforderungen|
 |---------|---------|---------|
 |Diese Daten verlassen den Computer des Benutzers nie über Nutzungs- und Diagnosedaten. |- |- |
-|Absturzabbilder können personenbezogene Endbenutzerinformationen enthalten und an Microsoft ausgegeben werden. |- |Absturzabbilder: Maximal 30 Tage. |
+|Absturzabbilder können personenbezogene Daten enthalten und an Microsoft gesendet werden. |- |Absturzabbilder: Maximal 30 Tage. |
 |Die Kunden-ID kann an Microsoft ausgegeben werden, um neue Hybrid- und Cloudfeatures bereitzustellen, die Benutzer abonniert haben. |- |Zurzeit existieren solche Hybrid- oder Cloudfeatures nicht.|
-|Benutzerfeedback, das Kundeninhalt enthält, kann mit Zustimmung der Kunden an Microsoft gesendet werden.|Der Zugriff ist auf den internen Gebrauch von Microsoft ohne Zugriff von Drittanbietern begrenzt. Microsoft kann die Daten für den ursprünglichen Kunden verfügbar machen. |Benutzerfeedback: Maximal 1 Jahr. |
+|Benutzerfeedback, das Kundendaten enthält, kann mit Zustimmung der Kunden an Microsoft gesendet werden.|Der Zugriff ist auf den internen Gebrauch von Microsoft ohne Zugriff von Drittanbietern begrenzt. Microsoft kann die Daten für den ursprünglichen Kunden verfügbar machen. |Benutzerfeedback: Maximal 1 Jahr. |
 
 ## <a name="internet-based-services-data"></a>Daten zu internetbasierten Diensten
 
@@ -114,77 +114,68 @@ Daten, die gemäß der SQL Server-Lizenzbedingungen für die Bereitstellung von 
 |Szenario  |Zugriffsbeschränkungen  |Aufbewahrungsanforderungen|
 |---------|---------|---------| 
 |Können von Microsoft verwendet werden, um Features zu verbessern und bzw. oder Fehler in aktuellen Features zu beheben. |Der Zugriff ist auf den internen Gebrauch von Microsoft ohne Zugriff von Drittanbietern begrenzt. Microsoft kann die Daten für den ursprünglichen Kunden verfügbar machen.  Zum Beispiel Dashboards. |Mindestens 90 Tage bis maximal 3 Jahre. |
-|Benutzerfeedback, das Kundeninhalt enthält, kann mit Zustimmung der Kunden an Microsoft gesendet werden. |Der Zugriff ist auf den internen Gebrauch von Microsoft ohne Zugriff von Drittanbietern begrenzt. |Benutzerfeedback, das Kundeninhalt enthält, kann mit Zustimmung der Kunden an Microsoft gesendet werden. |
+|Benutzerfeedback, das Kundendaten enthält, kann mit Zustimmung der Kunden an Microsoft gesendet werden. |Der Zugriff ist auf den internen Gebrauch von Microsoft ohne Zugriff von Drittanbietern begrenzt. |Benutzerfeedback, das Kundendaten enthält, kann mit Zustimmung der Kunden an Microsoft gesendet werden. |
 |Power View und Kartenelemente von SQL Reporting Services können Daten für die Verwendung von Bing Maps freigeben. |Der Zugriff ist auf Sitzungsdaten begrenzt. |- |
 
-## <a name="organization-identifiable-information-oii"></a>Organisationsbezogene Informationen (Organization Identifiable Information, OII)
+## <a name="non-personal-data"></a>Keine personenbezogenen Daten
 
-Daten, die von einer Organisation stammen oder durch die Verwendung des Produkts erstellt wurden.
--   Bezogen auf eine Organisation.
--   Enthält keinen Inhalt.
+1. Daten, die von einer Organisation stammen oder durch die Verwendung des Produkts erstellt wurden. Sie können auf eine Organisation zurückgeführt werden und enthalten keine Kundendaten.
 
-### <a name="examples-of-organization-identifiable-information"></a>Beispiele für organisationsbezogene Informationen
--   Name der Organisation (Beispiel: Microsoft Corp.)
+   - Beispiel
+     - Name der Organisation (Beispiel: Microsoft Corp.)
 
-### <a name="permitted-usage-scenarios"></a>Szenarios für die zulässige Verwendung
-|Szenario  |Zugriffseinschränkungen  |Aufbewahrungsanforderungen|
-|---------|---------|---------|
-| Microsoft kann allgemeine Nutzungsdaten von SQL Server-Instanzen sammeln, die in Azure Virtual Machines ausgeführt werden, um Kunden innerhalb von Azure optionale Vorteile für die Verwendung von SQL Server in Azure Virtual Machines zu bieten. | Microsoft kann Daten für den Kunden z.B. über das Azure-Portal verfügbar machen, damit Kunden, die SQL Server in Azure Virtual Machines ausführen, die Vorteile von SQL Server in Azure nutzen können. </br></br>Microsoft verwendet diese Daten ohne vorherige Zustimmung des Kunden nicht für Lizenzierungsüberprüfungen. | Mindestens 90 Tage bis maximal 3 Jahre. |
+   - Szenarios für die zulässige Verwendung
 
-## <a name="system-metadata"></a>Systemmetadaten
+     |Szenario  |Zugriffsbeschränkungen  |Aufbewahrungsanforderungen|
+     |---------|---------|---------|
+     | Microsoft kann allgemeine Nutzungsdaten von SQL Server-Instanzen sammeln, die in Azure Virtual Machines ausgeführt werden, um Kunden innerhalb von Azure optionale Vorteile für die Verwendung von SQL Server in Azure Virtual Machines zu bieten. | Microsoft kann Daten für den Kunden z.B. über das Azure-Portal verfügbar machen, damit Kunden, die SQL Server in Azure Virtual Machines ausführen, die Vorteile von SQL Server in Azure nutzen können. </br></br>Microsoft verwendet diese Daten ohne vorherige Zustimmung des Kunden nicht für Lizenzierungsüberprüfungen. | Mindestens 90 Tage bis maximal 3 Jahre. |
 
-Daten, die generiert werden, während der Server ausgeführt wird.  Diese Daten enthalten keinen Kundeninhalt.
+2. Daten, die zum Beschreiben oder Konfigurieren von Servern, Datenbanken, Tabellen und anderen Ressourcen verwendet werden, die von Kunden erstellt oder bereitgestellt werden. Sie umfassen Datenbanktabellen- und Spaltennamen, aber nicht die Inhalte von Datenbankzeilen oder andere Kundendaten. Kunden sollten keine personenbezogenen Daten in solchen Feldern platzieren oder Anwendungen erstellen, mit denen personenbezogene Daten in diesen Feldern gespeichert werden. Für die unten aufgeführten Szenarios für die zulässige Verwendung wird nur die Hashform verwendet, um Verwendungsmuster zum Verbessern des Produkts zu bestimmen.
 
-### <a name="examples-of-system-metadata"></a>Beispiele für Systemmetadaten
+   - Beispiel
+      - SQL Server-Datenbanknamen
+      - Tabellen- und Spaltennamen
+      - Namen von Statistiken
 
-Folgende Daten gelten als Systemmetadaten, wenn sie keine Kundeninhalte, Objektmetadaten, Kundenzugriffssteuerungsdaten oder personenbezogene Endbenutzerinformationen enthalten:
+    - Szenarios für die zulässige Verwendung
 
-- Datenbank-GUID
-- Hash des Computernamens
-- Hash des Instanznamens
-- Anwendungsname
-- Verhaltens- oder Nutzungsdaten
-- Daten vom SQL-Programm zur Verbesserung der Benutzerfreundlichkeit (SQLCEIP)
-- Serverkonfigurationsdaten, zum Beispiel Einstellungen von „sp_configure“
-- Featurekonfigurationsdaten
-- Ereignisnamen und Fehlercodes
-- Hardwareeinstellungen und -identifizierung, z.B. OEM-Hersteller
+      > [!NOTE]
+      > Alle Metadatenwerte werden vor der Sammlung mit einem Hashwert versehen.
+      >
 
-Microsoft untersucht die Werte von Anwendungsnamen, die von anderen Programmen, die SQL Server verwenden, festgelegt wurden (z. B. SharePoint oder von Drittanbietern zusammengestellte Programme), und schließt diese Informationen in die Systemmetadaten ein, die an Microsoft gesendet werden, wenn die Nutzungsdaten aktiviert sind. Kunden sollten keine persönlichen Daten, wie z.B. personenbezogene Endbenutzerinformationen, in Systemmetadatenfelder platzieren oder Anwendungen zum Speichern von persönlichen Daten in diese Felder eingeben. 
+      |Szenario  |Zugriffsbeschränkungen  |Aufbewahrungsanforderungen|
+      |---------|---------|---------|
+      |Können von Microsoft verwendet werden, um Features zu verbessern und bzw. oder Fehler in aktuellen Features zu beheben. |Der Zugriff ist auf den internen Gebrauch von Microsoft ohne Zugriff von Drittanbietern begrenzt. |Mindestens 90 Tage bis maximal 3 Jahre.|
 
-### <a name="permitted-usage-scenarios"></a>Szenarios für die zulässige Verwendung
+3. Daten, die generiert werden, während der Server ausgeführt wird. Sie enthalten keine Kundendaten, keine personenbezogen Daten, wie in Punkt 1 oder 2 (weiter oben) aufgeführt, keine Kundenzugriffssteuerungsdaten und keine personenbezogenen Daten.
 
-|Szenario  |Zugriffseinschränkungen  |Aufbewahrungsanforderungen|
-|---------|---------|---------|
-|Können von Microsoft verwendet werden, um Features zu verbessern und bzw. oder Fehler in aktuellen Features zu beheben.|Der Zugriff ist auf den internen Gebrauch von Microsoft ohne Zugriff von Drittanbietern begrenzt. |Mindestens 90 Tage bis maximal 3 Jahre. |
-|Können verwendet werden, um dem Kunden Vorschläge zu machen.  Zum Beispiel können Sie Folgendes vorschlagen: „Ziehen Sie das Feature *X* in Betracht, da es für Ihre Verwendung des Produkts besser geeignet ist.“ |Microsoft kann die Daten für den ursprünglichen Kunden, z.B. über Dashboards, verfügbar machen. |Sicherheitsprotokolle zu Kundendaten: Mindestens 3 Jahre bis maximal 6 Jahre. |
-|Können von Microsoft für die zukünftige Produktplanung verwendet werden. |Microsoft kann diese Informationen mit anderen Hardware- und Softwareanbietern teilen, um die Ausführung derer Produkte im Zusammenspiel mit Microsoft-Software zu verbessern. |Mindestens 90 Tage bis maximal 3 Jahre.|
-|Können von Microsoft verwendet werden, um cloudbasierte Dienste bereitzustellen, die auf den ausgegebenen Nutzungs- und Diagnosedaten basieren. Zum Beispiel ein Kundendashboard, das die Verwendung von Features in allen Installationen von SQL Server in einer Organisation anzeigt. |Microsoft kann die Daten für den ursprünglichen Kunden, z.B. über Dashboards, verfügbar machen. |Mindestens 90 Tage bis maximal 3 Jahre. |
-|Benutzerfeedback, das Kundeninhalt enthält, kann mit Zustimmung der Kunden an Microsoft gesendet werden. |Der Zugriff ist auf den internen Gebrauch von Microsoft ohne Zugriff von Drittanbietern begrenzt. Microsoft kann die Daten für den ursprünglichen Kunden verfügbar machen. |Benutzerfeedback: Maximal 1 Jahr. |
-|Datenbankname und Anwendungsname werden möglicherweise verwendet, um die Datenbanken und Anwendungen bekannten Kategorien zuzuordnen, z.B. Anwendungen, die Microsoft-Software oder Software von anderen Unternehmen ausführen.|Der Zugriff ist auf den internen Gebrauch von Microsoft ohne Zugriff von Drittanbietern begrenzt.|Mindestens 90 Tage bis maximal 3 Jahre. |
+   - Beispiel
+     - Datenbank-GUID
+     - Hash des Computernamens
+     - Hash des Instanznamens
+     - Anwendungsname
+     - Verhaltens- oder Nutzungsdaten
+     - Daten vom SQL-Programm zur Verbesserung der Benutzerfreundlichkeit (SQLCEIP)
+     - Serverkonfigurationsdaten, zum Beispiel Einstellungen von „sp_configure“
+     - Featurekonfigurationsdaten
+     - Ereignisnamen und Fehlercodes
+     - Hardwareeinstellungen und -identifizierung, z.B. OEM-Hersteller
 
-## <a name="object-metadata"></a>Objektmetadaten
+   Microsoft untersucht die Werte von Anwendungsnamen, die von anderen Programmen, die SQL Server verwenden, festgelegt wurden (z. B. SharePoint oder von Drittanbietern zusammengestellte Programme), und fügt diese Informationen in Metadatenfelder ein, die an Microsoft gesendet werden, wenn die Nutzungsdaten aktiviert sind. Kunden sollten keine personenbezogenen Daten in solchen Metadatenfeldern platzieren oder Anwendungen erstellen, mit denen personenbezogene Daten in diesen Feldern gespeichert werden.
 
-Daten, die zum Beschreiben oder Konfigurieren von Servern, Datenbanken, Tabellen und anderen Ressourcen verwendet werden.  Objektmetadaten schließen Datenbanktabellen und Spaltennamen ein, aber nicht die Inhalte von Datenbankzeilen oder anderen Kundeninhalten. Kunden sollten keine persönlichen Daten, wie z.B. personenbezogene Endbenutzerinformationen, in Objektmetadatenfelder platzieren oder Anwendungen zum Speichern von persönlichen Daten in diesen Feldern erstellen. Für die unten aufgeführten Szenarios für die zulässige Verwendung wird nur die Hashform verwendet, um Verwendungsmuster zum Verbessern des Produkts zu bestimmen. 
+   - Szenarios für die zulässige Verwendung
 
-### <a name="examples-of-object-metadata"></a>Beispiele für Objektmetadaten
+     |Szenario  |Zugriffsbeschränkungen  |Aufbewahrungsanforderungen|
+     |---------|---------|---------|
+     |Können von Microsoft verwendet werden, um Features zu verbessern und bzw. oder Fehler in aktuellen Features zu beheben.|Der Zugriff ist auf den internen Gebrauch von Microsoft ohne Zugriff von Drittanbietern begrenzt. |Mindestens 90 Tage bis maximal 3 Jahre. |
+     |Können verwendet werden, um dem Kunden Vorschläge zu machen.  Zum Beispiel können Sie Folgendes vorschlagen: „Ziehen Sie das Feature *X* in Betracht, da es für Ihre Verwendung des Produkts besser geeignet ist.“ |Microsoft kann die Daten für den ursprünglichen Kunden, z.B. über Dashboards, verfügbar machen. |Sicherheitsprotokolle zu Kundendaten: Mindestens 3 Jahre bis maximal 6 Jahre. |
+     |Können von Microsoft für die zukünftige Produktplanung verwendet werden. |Microsoft kann diese Informationen mit anderen Hardware- und Softwareanbietern teilen, um die Ausführung derer Produkte im Zusammenspiel mit Microsoft-Software zu verbessern. |Mindestens 90 Tage bis maximal 3 Jahre.|
+     |Können von Microsoft verwendet werden, um cloudbasierte Dienste bereitzustellen, die auf den ausgegebenen Nutzungs- und Diagnosedaten basieren. Zum Beispiel ein Kundendashboard, das die Verwendung von Features in allen Installationen von SQL Server in einer Organisation anzeigt. |Microsoft kann die Daten für den ursprünglichen Kunden, z.B. über Dashboards, verfügbar machen. |Mindestens 90 Tage bis maximal 3 Jahre. |
+     |Benutzerfeedback, das Kundendaten enthält, kann mit Zustimmung der Kunden an Microsoft gesendet werden. |Der Zugriff ist auf den internen Gebrauch von Microsoft ohne Zugriff von Drittanbietern begrenzt. Microsoft kann die Daten für den ursprünglichen Kunden verfügbar machen. |Benutzerfeedback: Maximal 1 Jahr. |
+     |Datenbankname und Anwendungsname werden möglicherweise verwendet, um die Datenbanken und Anwendungen bekannten Kategorien zuzuordnen, z.B. Anwendungen, die Microsoft-Software oder Software von anderen Unternehmen ausführen.|Der Zugriff ist auf den internen Gebrauch von Microsoft ohne Zugriff von Drittanbietern begrenzt.|Mindestens 90 Tage bis maximal 3 Jahre. |
 
-- SQL Server-Datenbanknamen
-- Tabellen- und Spaltennamen
-- Namen von Statistiken
+## <a name="system-generated-logs-controls"></a>Steuerelemente für systemgenerierte Protokolle
 
-### <a name="permitted-usage-scenarios"></a>Szenarios für die zulässige Verwendung
-
-> [!NOTE]
-> Alle Objektmetadatenwerte werden vor der Sammlung mit einem Hashwert versehen.
->
-
-|Szenario  |Zugriffsbeschränkungen  |Aufbewahrungsanforderungen|
-|---------|---------|---------|
-|Können von Microsoft verwendet werden, um Features zu verbessern und bzw. oder Fehler in aktuellen Features zu beheben. |Der Zugriff ist auf den internen Gebrauch von Microsoft ohne Zugriff von Drittanbietern begrenzt. |Mindestens 90 Tage bis maximal 3 Jahre.|
-
-## <a name="telemetry-controls"></a>Telemetriesteuerelemente
-
-Anweisungen zum Aktivieren bzw. Deaktivieren der Telemetrie in einem Produkt finden Sie hier: https://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft.
+Anweisungen dazu, wie systemgenerierte Protokolle im Produkt aktiviert/deaktiviert werden können, finden Sie hier: [Konfigurieren der Sammlung von Nutzungs- und Diagnosedaten für SQL Server (CEIP)](usage-and-diagnostic-data-configuration-for-sql-server.md).
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

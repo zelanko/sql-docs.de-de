@@ -10,16 +10,18 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 65a7c0afc57cc29d8ec5df7beb4c3107470e2d31
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: ac26973c4d1ff8b2a9e689f3aa372d3888f939d6
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257260"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914297"
 ---
-# <a name="what-is-application-deployment-on-a-big-data-cluster"></a>Was hat es mit der Anwendungsbereitstellung in Big Data-Cluster auf sich?
+# <a name="what-is-application-deployment-on-a-sql-server-big-data-cluster"></a>Was ist Anwendungsbereitstellung in einem SQL Server-Big Data-Cluster?
 
-Es handelt sich hierbei um die Bereitstellung von Anwendungen in Big Data-Cluster durch die Bereitstellung von Schnittstellen zum Erstellen, Verwalten und Ausführen von Anwendungen. Anwendungen, die auf dem Big Data-Cluster bereitgestellt werden, profitieren von der Rechenleistung des Clusters und können auf die Daten zugreifen, die auf dem Cluster verfügbar sind. Dadurch wird die Skalierbarkeit und Leistung der Anwendungen erhöht, während die Anwendungen, in denen sich die Daten befinden, verwaltet werden. Die unterstützten Anwendungsruntimes für Big Data-Cluster in SQL Server sind R, Python, SSIS und MLeap.
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+Es handelt sich hierbei um die Bereitstellung von Anwendungen in einem SQL Server-Big Data-Cluster durch die Bereitstellung von Schnittstellen zum Erstellen, Verwalten und Ausführen von Anwendungen. Anwendungen, die in einem SQL Server-Big Data-Cluster bereitgestellt werden, profitieren von der Rechenleistung des Clusters und können auf die Daten zugreifen, die auf dem Cluster verfügbar sind. Dadurch wird die Skalierbarkeit und Leistung der Anwendungen erhöht, während die Anwendungen, in denen sich die Daten befinden, verwaltet werden. In einem [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] werden die folgenden Anwendungsruntimes unterstützt: R, Python, SSIS und MLeap.
 
 In den folgenden Abschnitten werden die Architektur und die Funktionalität der Anwendungsbereitstellung beschrieben.
 
@@ -57,7 +59,7 @@ Wenn eine Anwendung ausgeführt wird, leitet der Kubernetes-Dienst für die Anwe
 
 SQL Server 2019 CU5 umfasst die Unterstützung für die Bereitstellung von Big Data-Cluster in Red Hat OpenShift sowie ein aktualisiertes Sicherheitsmodell für Big Data-Cluster, für das keine privilegierten Container mehr erforderlich sind. Zusätzlich zu nicht privilegierten Containern werden Container standardmäßig für alle neuen Bereitstellungen unter Verwendung von SQL Server 2019 CU5 nicht als Root-Benutzer ausgeführt.
 
-Zum Zeitpunkt der Veröffentlichung von CU5 wird der Setupschritt der Anwendungen, die mit [App Deploy]()-Schnittstellen bereitgestellt wurden, weiterhin als *Root*-Benutzer ausgeführt. Dies ist erforderlich, da während des Setups zusätzliche, von der Anwendung verwendete Pakete installiert werden. Anderer Benutzercode, der als Teil der Anwendung bereitgestellt wird, wird als Benutzer mit niedrigen Berechtigungen ausgeführt. 
+Zum Zeitpunkt der Veröffentlichung von CU5 wird der Setupschritt der Anwendungen, die mit [App Deploy]()-Schnittstellen bereitgestellt wurden, weiterhin als *Root* -Benutzer ausgeführt. Dies ist erforderlich, da während des Setups zusätzliche, von der Anwendung verwendete Pakete installiert werden. Anderer Benutzercode, der als Teil der Anwendung bereitgestellt wird, wird als Benutzer mit niedrigen Berechtigungen ausgeführt. 
 
 Außerdem steht die optionale Funktion **CAP_AUDIT_WRITE** zur Verfügung, die benötigt wird, um mithilfe von Cron-Aufträgen Zeitpläne für SSIS-Anwendungen zu erstellen. Wenn die YAML-Spezifikationsdatei der Anwendung einen Zeitplan vorgibt, wird die Anwendung über einen Cron-Auftrag ausgelöst. Dafür wird diese zusätzliche Funktion benötigt.  Alternativ kann die Anwendung nach Bedarf mit dem Befehl *azdata app run* über einen Webdienstaufruf ausgelöst werden. Hierfür wird die Funktion „CAP_AUDIT_WRITE“ nicht benötigt. 
 
@@ -67,9 +69,9 @@ Außerdem steht die optionale Funktion **CAP_AUDIT_WRITE** zur Verfügung, die b
 ```yml
 ...
 allowedCapabilities:
-- SETUID
-- SETGID
-- CHOWN
+- SETUID
+- SETGID
+- CHOWN
 - SYS_PTRACE
 - AUDIT_WRITE
 ...

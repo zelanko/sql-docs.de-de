@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 113cb057-deec-40eb-abc8-f35d3900eaa6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 41895890a5528a1ddac90a4c9f9eea05d80fac93
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 36bf305d4685f18e1c6df9129716ae9de84d4f84
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448295"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907288"
 ---
 # <a name="add-parameters-to-a-mobile-report--reporting-services"></a>Hinzufügen von Parametern zu einem mobilen Bericht | Reporting Services
 Sie können einen mobilen [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]-Bericht mit Parametern erstellen, sodass Sie und die Leser des Berichts Ihre Berichte filtern können. Ein Bericht mit Parametern kann als Ziel eines [Drillthroughs aus einem Quellbericht](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md) verwendet werden. 
@@ -23,15 +23,15 @@ Beginnen Sie mit einem freigegebenen Dataset mit mindestens einem Parameter, um 
 
 Nachdem Sie einem mobilen Bericht Parameter hinzugefügt haben, erstellen Sie eine URL zum [Öffnen des Berichts mit Abfragezeichenfolgenparametern](../../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md). 
 
-1. Wählen Sie auf der oberen Leiste des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] -Webportals **Neu** > **Mobiler Bericht**aus.  
+1. Wählen Sie auf der oberen Leiste des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] -Webportals **Neu** > **Mobiler Bericht** aus.  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
      
 2. Wählen Sie in der linken oberen Ecke von **die Registerkarte** Daten [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]aus.   
   
-3. Wählen Sie in der oberen rechten Ecke **Daten hinzufügen**aus.  
+3. Wählen Sie in der oberen rechten Ecke **Daten hinzufügen** aus.  
   
-4. Wählen Sie **Berichtsserver**aus, wählen Sie anschließend einen Server aus.  
+4. Wählen Sie **Berichtsserver** aus, wählen Sie anschließend einen Server aus.  
   
 5. Navigieren Sie zu den freigegebenen Datasets auf dem Server, und wählen Sie eines, das über Parameter verfügt.  
   
@@ -49,11 +49,11 @@ Nachdem Sie einem mobilen Bericht Parameter hinzugefügt haben, erstellen Sie ei
      
 8. Wählen Sie **Vorschau** aus, um zu sehen, wie der Bericht dargestellt wird. In diesem Bericht verwendet die Auswahlliste den „Category“-Parameter.
 
-   ![sql-server-mobile-report-publisher-Selection-List-View-No-Selection](../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-view-no-selection.png) 
+   ![Screenshot der Vorschau des Berichts mit hervorgehobener Auswahlliste 1](../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-view-no-selection.png) 
    
 9. Wenn Sie einen Wert in der Auswahlliste auswählen, wird der Bericht nach diesem Wert gefiltert, in diesem Fall „Accessories“.
 
-   ![sql-server-mobile-report-publisher-Selection-List-Category-Selected](../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-category-selected.png)   
+   ![Screenshot der Vorschau des Berichts mit hervorgehobener Auswahlliste 1 und ausgewählter Option „Accessories“](../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-category-selected.png)   
   
 ### <a name="see-also"></a>Weitere Informationen  
 -  [Open a mobile report with specific query string parameters (Öffnen eines mobilen Berichts mit bestimmten Abfragezeichenfolgenparametern)](../../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md)
