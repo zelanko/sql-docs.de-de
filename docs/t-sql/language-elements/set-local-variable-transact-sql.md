@@ -19,17 +19,17 @@ ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5f27289f3363ea503e365c9398d387dcb71222b
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 49ddfeda6b720d774e2b1d7c089fb295d185e40a
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195498"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067388"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Legt die angegebene lokale Variable, die zuvor mit der Anweisung DECLARE @*local_variable* erstellt wurde, auf den angegebenen Wert fest.  
+Legt die angegebene lokale Variable, die zuvor mit der Anweisung DECLARE @ *local_variable* erstellt wurde, auf den angegebenen Wert fest.  
   
 ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,14 +63,14 @@ SET
 ```  
 Syntax für Azure Synapse Analytics und Parallel Data Warehouse:  
 ```syntaxsql
-SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression  
+SET @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expression  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argumente
 **@** _lokale_Variable_  
-Der Name einer Variablen eines beliebigen Typs mit Ausnahme von **cursor**, **text**, **ntext**, **image** oder **table**. Variablennamen müssen mit einem at-Zeichen ( **@** ) beginnen. Variablennamen müssen die Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) erfüllen.  
+Der Name einer Variablen eines beliebigen Typs mit Ausnahme von **cursor** , **text** , **ntext** , **image** oder **table**. Variablennamen müssen mit einem at-Zeichen ( **@** ) beginnen. Variablennamen müssen die Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) erfüllen.  
   
 *property_name*  
 Eigenschaft eines benutzerdefinierten Typs.  
@@ -82,9 +82,9 @@ Eigenschaft eines benutzerdefinierten Typs.
 Der Name eines benutzerdefinierten CLR-Typs (Common Language Runtime).  
   
 `{ . | :: }`  
-Gibt eine Methode für einen benutzerdefinierten CLR-Typ an. Verwenden Sie bei einer Instanzmethode (nicht statisch) einen Punkt (**.**). Verwenden Sie bei einer statischen Methode zwei Doppelpunkte(**::**). Zum Aufrufen einer Methode, Eigenschaft oder eines Felds eines CLR-benutzerdefinierten Typs müssen Sie über die EXECUTE-Berechtigung für den Typ verfügen.  
+Gibt eine Methode für einen benutzerdefinierten CLR-Typ an. Verwenden Sie bei einer Instanzmethode (nicht statisch) einen Punkt ( **.** ). Verwenden Sie bei einer statischen Methode zwei Doppelpunkte( **::** ). Zum Aufrufen einer Methode, Eigenschaft oder eines Felds eines CLR-benutzerdefinierten Typs müssen Sie über die EXECUTE-Berechtigung für den Typ verfügen.  
   
-_Methodenname_ **(** _Argument_ [ **,** ... *n*] **)**  
+_Methodenname_ **(** _Argument_ [ **,** ... *n* ] **)**  
 Methode eines benutzerdefinierten Typs, die ein oder mehrere Argumente umfassen kann, um den Status einer Instanz eines Typs zu ändern. Statische Methoden müssen öffentlich sein.  
   
 **@** _SQLCLR_lokale_Variable_  
@@ -169,7 +169,7 @@ READ ONLY
 Verhindert, dass Updates über diesen Cursor erfolgen. Auf den Cursor kann nicht in einer WHERE CURRENT OF-Klausel in einer UPDATE- oder DELETE-Anweisung verwiesen werden. Diese Option überschreibt die Standardeinstellung, nach der ein Cursor aktualisiert werden kann. Dieses Schlüsselwort unterscheidet sich vom vorherigen READ_ONLY durch das Leerzeichen zwischen READ und ONLY anstelle eines Unterstriches.  
   
 `UPDATE [OF column_name[ ,... n ] ]`  
-Definiert aktualisierbare Spalten innerhalb des Cursors. Wenn OF *column_name* [**,**...*n*] angegeben wird, können nur in den aufgeführten Spalten Änderungen vorgenommen werden. Wenn keine Liste angegeben wird, können alle Spalten aktualisiert werden, es sei denn, der Cursor wurde mit der Option READ ONLY definiert.  
+Definiert aktualisierbare Spalten innerhalb des Cursors. Wenn OF *column_name* [ **,**... *n* ] angegeben wird, können nur in den aufgeführten Spalten Änderungen vorgenommen werden. Wenn keine Liste angegeben wird, können alle Spalten aktualisiert werden, es sei denn, der Cursor wurde mit der Option READ ONLY definiert.  
   
 ## <a name="remarks"></a>Bemerkungen  
 Nach dem Deklarieren einer Variablen wird diese auf NULL initialisiert. Verwenden Sie die SET-Anweisung, um einer deklarierten Variablen einen anderen Wert als NULL zuzuweisen. Die SET-Anweisung, die der Variablen einen Wert zuweist, gibt einen einzelnen Wert zurück. Wenn Sie mehrere Variablen initialisieren, verwenden Sie eine separate SET-Anweisung für jede lokale Variable.  

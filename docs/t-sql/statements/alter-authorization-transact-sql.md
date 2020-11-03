@@ -27,12 +27,12 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae54518c8ff2d7a7ad4b6f55dd3b16ce9d0528eb
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: 5ada149941022761d0135adff7b1b65db592cc48
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529443"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067455"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -121,6 +121,7 @@ ALTER AUTHORIZATION ON
     | [ schema_name. ] object_name    
 }    
 ```    
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
     
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -132,7 +133,7 @@ ALTER AUTHORIZATION ON
 |OBJECT|**GILT FÜR:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|    
 |ASSEMBLY|**GILT FÜR:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
 |ASYMMETRIC KEY|**GILT FÜR:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|AVAILABILITY GROUP |**GILT FÜR**: SQL Server 2012 und höher.|
+|AVAILABILITY GROUP |**GILT FÜR** : SQL Server 2012 und höher.|
 |CERTIFICATE|**GILT FÜR:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
 |CONTRACT|**GILT FÜR:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.|    
 |DATABASE|**GILT FÜR:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Weitere Informationen finden Sie weiter unten im Abschnitt [ALTER AUTHORIZATION für Datenbanken](#AlterDB).|    
@@ -179,7 +180,7 @@ ALTER AUTHORIZATION ON
  Beachten Sie dabei außerdem Folgendes:    
     
 > [!IMPORTANT]    
->  Die einzig zuverlässige Möglichkeit, den Besitzer eines Objekts zu finden, besteht darin, die **sys.objects**-Katalogsicht abzufragen. Die einzige zuverlässige Möglichkeit, den Besitzer eines Typs zu finden, besteht in der Verwendung der TYPEPROPERTY-Funktion.    
+>  Die einzig zuverlässige Möglichkeit, den Besitzer eines Objekts zu finden, besteht darin, die **sys.objects** -Katalogsicht abzufragen. Die einzige zuverlässige Möglichkeit, den Besitzer eines Typs zu finden, besteht in der Verwendung der TYPEPROPERTY-Funktion.    
     
 ## <a name="special-cases-and-conditions"></a>Spezialfälle und Bedingungen    
  In der folgenden Tabelle sind Spezialfälle, Ausnahmen und Bedingungen aufgeführt, die beim Ändern der Autorisierung gelten.    
@@ -257,7 +258,7 @@ ON d.owner_sid = sl.sid;
   
 ### <a name="best-practice"></a>Bewährte Methode  
   
-Statt Azure AD-Benutzer als einzelne Datenbankbesitzer zu verwenden, verwenden Sie eine Azure AD-Gruppe als Mitglied der festen Datenbankrolle **db_owner**. In den folgenden Schritten wird gezeigt, wie ein deaktivierter Anmeldename als Datenbankbesitzer und eine Azure Active Directory-Gruppe (`mydbogroup`) als Mitglied der **db_owner**-Rolle konfiguriert wird. 
+Statt Azure AD-Benutzer als einzelne Datenbankbesitzer zu verwenden, verwenden Sie eine Azure AD-Gruppe als Mitglied der festen Datenbankrolle **db_owner**. In den folgenden Schritten wird gezeigt, wie ein deaktivierter Anmeldename als Datenbankbesitzer und eine Azure Active Directory-Gruppe (`mydbogroup`) als Mitglied der **db_owner** -Rolle konfiguriert wird. 
 
 1.  Melden Sie sich als Azure AD-Administrator bei SQL Server an, und ändern Sie den Datenbankbesitzer in einen deaktivierten Anmeldenamen für die SQL Server-Authentifizierung. Führen Sie über die Benutzerdatenbank z.B. Folgendes aus:  
   ```sql    
@@ -274,7 +275,7 @@ Statt Azure AD-Benutzer als einzelne Datenbankbesitzer zu verwenden, verwenden S
   ALTER ROLE db_owner ADD MEMBER mydbogroup;  
   ```    
   
-Nun können die `mydbogroup`-Mitglieder die Datenbank als Mitglieder der **db_owner**-Rolle zentral verwalten.  
+Nun können die `mydbogroup`-Mitglieder die Datenbank als Mitglieder der **db_owner** -Rolle zentral verwalten.  
 - Wenn Mitglieder dieser Gruppe aus der Azure AD-Gruppe entfernt werden, verlieren sie automatisch die DBO-Berechtigungen für diese Datenbank.  
 - Auch wenn neue Mitglieder zur `mydbogroup`-Azure AD-Gruppe hinzugefügt werden, erhalten sie automatisch DBO-Zugriff auf diese Datenbank.  
   
@@ -333,7 +334,7 @@ GO
 ### <a name="d-transfer-ownership-of-an-endpoint-to-a-sql-server-login"></a>D: Übertragen des Besitzes für einen Endpunkt an einen SQL Server-Anmeldenamen    
  Im folgenden Beispiel wird der Besitz des `CantabSalesServer1`-Endpunkts auf `JaePak` übertragen. Da es sich bei dem Endpunkt um ein sicherungsfähiges Element auf Serverebene handelt, kann der Endpunkt nur an einen Prinzipal auf Serverebene übertragen werden.    
     
-**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.    
+**Gilt für** :  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.    
     
 ```sql    
 ALTER AUTHORIZATION ON ENDPOINT::CantabSalesServer1 TO JaePak;    

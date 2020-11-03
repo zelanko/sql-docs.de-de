@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0116bfc2b0b87ca6079c2c25fe63d40ec12f0273
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: e81bbff1dd2eedace6ac7a5e535db9e9689157e8
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890910"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734676"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers (DTA)
 
@@ -51,7 +51,7 @@ ms.locfileid: "91890910"
   
 1.  Optimieren Sie eine Datenbank mithilfe der GUI des Datenbankoptimierungsratgebers oder des Befehlszeilen-Hilfsprogramms **dta** . Weitere Informationen finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Wenn Sie eine vorhandene Optimierungssitzung verwenden möchten, lassen Sie diesen Schritt aus, und fahren Sie mit Schritt 2 fort.  
   
-2.  Starten Sie die grafische Benutzeroberfläche des Datenbankoptimierungsratgebers. Weitere Informationen finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Wenn Sie Optimierungsempfehlungen für eine vorhandene Optimierungssitzung anzeigen möchten, öffnen Sie die Sitzung, indem Sie im Fenster **Sitzungsmonitor**auf den Sitzungsnamen doppelklicken.  
+2.  Starten Sie die grafische Benutzeroberfläche des Datenbankoptimierungsratgebers. Weitere Informationen finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Wenn Sie Optimierungsempfehlungen für eine vorhandene Optimierungssitzung anzeigen möchten, öffnen Sie die Sitzung, indem Sie im Fenster **Sitzungsmonitor** auf den Sitzungsnamen doppelklicken.  
   
      Wenn die neue Optimierungssitzung fertig gestellt ist oder das Programm die vorhandene Sitzung geladen hat, wird die Seite **Empfehlungen** angezeigt.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "91890910"
   
 1.  Optimieren Sie eine Datenbank mithilfe der GUI des Datenbankoptimierungsratgebers oder des Befehlszeilen-Hilfsprogramms **dta** . Weitere Informationen finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Wenn Sie eine vorhandene Optimierungssitzung verwenden möchten, lassen Sie diesen Schritt aus, und fahren Sie mit Schritt 2 fort.  
   
-2.  Starten Sie die grafische Benutzeroberfläche des Datenbankoptimierungsratgebers. Weitere Informationen finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Wenn Sie Optimierungszusammenfassungen und -berichte für eine vorhandene Optimierungssitzung anzeigen möchten, öffnen Sie die Sitzung, indem Sie in **Sitzungsmonitor**auf den Sitzungsnamen doppelklicken.  
+2.  Starten Sie die grafische Benutzeroberfläche des Datenbankoptimierungsratgebers. Weitere Informationen finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Wenn Sie Optimierungszusammenfassungen und -berichte für eine vorhandene Optimierungssitzung anzeigen möchten, öffnen Sie die Sitzung, indem Sie in **Sitzungsmonitor** auf den Sitzungsnamen doppelklicken.  
   
 3.  Wenn die neue Optimierungssitzung fertig gestellt ist oder das Programm die vorhandene Sitzung geladen hat, klicken Sie auf die Registerkarte **Berichte** .  
   
@@ -92,11 +92,11 @@ ms.locfileid: "91890910"
   
 1.  Optimieren Sie eine Datenbank über die grafische Benutzeroberfläche des Datenbankoptimierungsratgebers oder das Eingabeaufforderungs-Hilfsprogramm **dta** . Weitere Informationen finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Wenn Sie eine vorhandene Optimierungssitzung verwenden möchten, lassen Sie diesen Schritt aus, und fahren Sie mit Schritt 2 fort.  
   
-2.  Starten Sie die grafische Benutzeroberfläche des Datenbankoptimierungsratgebers. Weitere Informationen finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Wenn Sie Optimierungsempfehlungen für eine vorhandene Optimierungssitzung implementieren möchten, öffnen Sie diese, indem Sie in **Sitzungsmonitor**auf den Namen der Sitzung doppelklicken.  
+2.  Starten Sie die grafische Benutzeroberfläche des Datenbankoptimierungsratgebers. Weitere Informationen finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Wenn Sie Optimierungsempfehlungen für eine vorhandene Optimierungssitzung implementieren möchten, öffnen Sie diese, indem Sie in **Sitzungsmonitor** auf den Namen der Sitzung doppelklicken.  
   
 3.  Klicken Sie nach dem Beenden der neuen Optimierungssitzung oder dem Laden der vorhandenen Sitzung durch das Tool im Menü **Aktionen** auf **Empfehlungen anwenden** .  
   
-4.  Wählen Sie im Dialogfeld **Empfehlungen anwenden** entweder **Jetzt anwenden** oder **Spätere Ausführung planen**aus. Wenn Sie **Spätere Ausführung planen**auswählen, müssen Sie auch das entsprechende Datum und die Uhrzeit angeben.  
+4.  Wählen Sie im Dialogfeld **Empfehlungen anwenden** entweder **Jetzt anwenden** oder **Spätere Ausführung planen** aus. Wenn Sie **Spätere Ausführung planen** auswählen, müssen Sie auch das entsprechende Datum und die Uhrzeit angeben.  
   
 5.  Klicken Sie auf **OK** , um die Empfehlungen anzuwenden.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "91890910"
   
 3.  Klicken Sie im Menü **Aktionen** auf **Empfehlungen bewerten**. Eine neue Optimierungssitzung wird für Sie erstellt.  
   
-4.  Geben Sie in **Sitzungsname**den neuen Sitzungsnamen ein. Um die physische Datenbankentwurfsstruktur-Konfiguration, die Sie gerade auswerten, anzuzeigen, wählen Sie im Bereich **Beschreibung** im unteren Bereich des Anwendungsfensters des Datenbankoptimierungsratgebers **Klicken Sie hier, um den Konfigurationsabschnitt anzuzeigen** aus.  
+4.  Geben Sie in **Sitzungsname** den neuen Sitzungsnamen ein. Um die physische Datenbankentwurfsstruktur-Konfiguration, die Sie gerade auswerten, anzuzeigen, wählen Sie im Bereich **Beschreibung** im unteren Bereich des Anwendungsfensters des Datenbankoptimierungsratgebers **Klicken Sie hier, um den Konfigurationsabschnitt anzuzeigen** aus.  
   
 5.  Klicken Sie auf der Symbolleiste auf die Schaltfläche **Analyse starten** . Wenn der Datenbankoptimierungsratgeber die Analyse abgeschlossen hat, können Sie die Ergebnisse auf der Registerkarte **Empfehlungen** anzeigen.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "91890910"
   
 3.  Öffnen Sie die in Schritt 2 erstellte XML-Datei in dem von Ihnen bevorzugten XML-Editor, Text-Editor oder in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Scrollen Sie zum **Configuration** -Element. Kopieren Sie den **Configuration** -Elementabschnitt und fügen Sie ihn in eine XML-Eingabedateivorlage hinter dem **TuningOptions** -Element ein. Speichern Sie diese XML-Eingabedatei.  
   
-4.  Geben Sie in der neuen XML-Eingabedatei, die Sie in Schritt 3 erstellt haben, Optimierungsoptionen für das **TuningOptions**-Element an. Bearbeiten Sie den **Configuration**-Elementabschnitt (fügen Sie die physischen Entwurfsstrukturen hinzu oder löschen Sie sie, je nachdem, wie Sie Ihre Analyse ausführen möchten). Speichern Sie die Datei, und überprüfen Sie sie mithilfe des XML-Schemas des Datenbankoptimierungsratgebers. Informationen zum Bearbeiten dieser XML-Datei finden Sie unter [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
+4.  Geben Sie in der neuen XML-Eingabedatei, die Sie in Schritt 3 erstellt haben, Optimierungsoptionen für das **TuningOptions** -Element an. Bearbeiten Sie den **Configuration** -Elementabschnitt (fügen Sie die physischen Entwurfsstrukturen hinzu oder löschen Sie sie, je nachdem, wie Sie Ihre Analyse ausführen möchten). Speichern Sie die Datei, und überprüfen Sie sie mithilfe des XML-Schemas des Datenbankoptimierungsratgebers. Informationen zum Bearbeiten dieser XML-Datei finden Sie unter [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
 5.  Verwenden Sie die in Schritt 4 erstellte XML-Datei als Eingabewert für das Befehlszeilen-Hilfsprogramm **dta** . Informationen zur Verwendung von XML-Eingabedateien mit diesem Tool finden Sie im Abschnitt "Optimieren einer Datenbank mithilfe des dta-Hilfsprogramms" in [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
@@ -176,7 +176,7 @@ ms.locfileid: "91890910"
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
     ```  
   
-     Das XML-Schema des Datenbankoptimierungsratgebers ist auch online unter [https://schemas.microsoft.com/sqlserver/2004/07/dta](https://schemas.microsoft.com/sqlserver/2004/07/dta) verfügbar.  
+     Das XML-Schema des Datenbankoptimierungsratgebers ist auch online unter [https://schemas.microsoft.com/sqlserver/2004/07/dta/](https://schemas.microsoft.com/sqlserver/2004/07/dta/) verfügbar.  
   
 6.  Nach dem Erstellen einer Arbeitsauslastung und einer XML-Eingabedatei können Sie die Eingabedatei an das Befehlszeilen-Hilfsprogramm **dta** zur Analyse übergeben. Stellen Sie sicher, dass Sie einen XML-Ausgabedateinamen für das **-ox** -Argument des Hilfsprogramms angeben. Auf diese Weise wird eine XML-Ausgabedatei mit einer empfohlenen Konfiguration erstellt, die im **Configuration** -Element angegeben ist. Wenn Sie den Datenbankoptimierungsratgeber zum Überprüfen einer weiteren, auf der Ausgabe basierenden hypothetischen Konfiguration ausführen möchten, kopieren Sie den **Configuration** -Elementinhalt aus der Ausgabedatei und fügen Sie ihn in eine neue oder in Ihre ursprüngliche XML-Eingabedatei ein. Informationen zum Verwenden einer XML-Eingabedatei mit dem Hilfsprogramm **dta** finden Sie im Abschnitt "Optimieren einer Datenbank mithilfe des dta-Hilfsprogramms" in [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
@@ -203,7 +203,7 @@ ms.locfileid: "91890910"
 4.  Durch Doppelklicken auf den Namen einer Optimierungssitzung werden die Informationen in den Datenbankoptimierungsratgeber geladen. Nachdem die Sitzungsinformationen geladen wurden, können Sie eine beliebige der Registerkarten mit Informationen zur Optimierungssitzung auswählen.  
   
 ### <a name="evaluate-existing-tuning-sessions-as-hypothetical-configurations"></a>Auswerten vorhandener Optimierungssitzungen als hypothetische Konfigurationen  
- Führen Sie die folgenden Schritte aus, um eine vorhandene Optimierungssitzung auszuwerten. Das Auswerten einer vorhandenen Optimierungssitzung umfasst das Anzeigen und Bearbeiten der zugehörigen Empfehlungen und die anschließende erneute Optimierung. Wenn Sie beispielsweise nur Indizes für **table1**erstellen möchten, können Sie die Erstellung indizierter Sichten und die Partitionierung aus einer vorhandenen Optimierungsempfehlung löschen. Anschließend erstellt der Datenbankoptimierungsratgeber eine neue Optimierungssitzung und optimiert die Arbeitsauslastung für die Datenbanken auf Grundlage der bearbeiteten Empfehlungen als hypothetischer Konfiguration. Das bedeutet, dass der Datenbankoptimierungsratgeber die Arbeitsauslastung für die Datenbanken so optimiert, als wären die bearbeiteten Empfehlungen implementiert worden. Auf diese Weise steht Ihnen eine begrenzte Was-wäre-wenn-Analyse zur Verfügung. Es handelt sich deshalb nur um eine begrenzte Was-wäre-wenn-Analyse, weil Sie bei Verwendung der grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers nur einen Teil einer vorhandenen Empfehlung auswählen können. Geben Sie eine vollständige neue hypothetische Konfiguration an, die nicht Teil einer vorherigen Optimierungssitzung ist, um eine umfassende Was-wäre-wenn-Analyse auszuführen. Sie müssen die XML-Eingabedatei des Datenbankoptimierungsratgebers zusammen mit dem Befehlszeilenprogramm **dta** verwenden.  
+ Führen Sie die folgenden Schritte aus, um eine vorhandene Optimierungssitzung auszuwerten. Das Auswerten einer vorhandenen Optimierungssitzung umfasst das Anzeigen und Bearbeiten der zugehörigen Empfehlungen und die anschließende erneute Optimierung. Wenn Sie beispielsweise nur Indizes für **table1** erstellen möchten, können Sie die Erstellung indizierter Sichten und die Partitionierung aus einer vorhandenen Optimierungsempfehlung löschen. Anschließend erstellt der Datenbankoptimierungsratgeber eine neue Optimierungssitzung und optimiert die Arbeitsauslastung für die Datenbanken auf Grundlage der bearbeiteten Empfehlungen als hypothetischer Konfiguration. Das bedeutet, dass der Datenbankoptimierungsratgeber die Arbeitsauslastung für die Datenbanken so optimiert, als wären die bearbeiteten Empfehlungen implementiert worden. Auf diese Weise steht Ihnen eine begrenzte Was-wäre-wenn-Analyse zur Verfügung. Es handelt sich deshalb nur um eine begrenzte Was-wäre-wenn-Analyse, weil Sie bei Verwendung der grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers nur einen Teil einer vorhandenen Empfehlung auswählen können. Geben Sie eine vollständige neue hypothetische Konfiguration an, die nicht Teil einer vorherigen Optimierungssitzung ist, um eine umfassende Was-wäre-wenn-Analyse auszuführen. Sie müssen die XML-Eingabedatei des Datenbankoptimierungsratgebers zusammen mit dem Befehlszeilenprogramm **dta** verwenden.  
   
 ##### <a name="to-evaluate-an-existing-tuning-session"></a>So werten Sie eine vorhandene Optimierungssitzung aus  
   
@@ -217,11 +217,11 @@ ms.locfileid: "91890910"
   
 5.  Wenn Sie sich nicht sicher sind, ob Sie bestimmte Empfehlungen implementieren sollten, deaktivieren Sie diese.  
   
-6.  Klicken Sie im Menü **Aktionen** auf **Empfehlungen bewerten**. Der Datenbankoptimierungsratgeber erstellt eine neue Optimierungssitzung, die die bearbeiteten Empfehlungen als eine hypothetische Konfiguration verwendet. Um die hypothetische Konfiguration in XML anzuzeigen, wählen Sie die Option **Klicken Sie hier, um den Konfigurationsabschnitt anzuzeigen**aus.  
+6.  Klicken Sie im Menü **Aktionen** auf **Empfehlungen bewerten**. Der Datenbankoptimierungsratgeber erstellt eine neue Optimierungssitzung, die die bearbeiteten Empfehlungen als eine hypothetische Konfiguration verwendet. Um die hypothetische Konfiguration in XML anzuzeigen, wählen Sie die Option **Klicken Sie hier, um den Konfigurationsabschnitt anzuzeigen** aus.  
   
-7.  Geben Sie auf der Registerkarte **Allgemein** einen Namen im Feld **Sitzungsname**ein, und stellen Sie sicher, dass die richtige **Arbeitsauslastung** angegeben ist.  
+7.  Geben Sie auf der Registerkarte **Allgemein** einen Namen im Feld **Sitzungsname** ein, und stellen Sie sicher, dass die richtige **Arbeitsauslastung** angegeben ist.  
   
-8.  Legen Sie auf der Registerkarte **Optimierungsoptionen** eine Optimierungszeit oder eine beliebige andere der **Erweiterten Optionen**fest.  
+8.  Legen Sie auf der Registerkarte **Optimierungsoptionen** eine Optimierungszeit oder eine beliebige andere der **Erweiterten Optionen** fest.  
   
 9. Klicken Sie auf der Symbolleiste auf die Schaltfläche **Analyse starten** . Der Datenbankoptimierungsratgeber beginnt mit der Optimierung der Datenbanken auf Grundlage der hypothetischen Konfiguration. Nachdem der Datenbankoptimierungsratgeber den Vorgang beendet hat, können Sie die Ergebnisse dieser Sitzung wie für jede andere Sitzung anzeigen.  
   
@@ -234,7 +234,7 @@ ms.locfileid: "91890910"
   
 2.  Klicken Sie im Menü **Aktionen** auf **Sitzung klonen**.  
   
-3.  Geben Sie auf der Registerkarte **Allgemein** einen Namen im Feld **Sitzungsname**ein, und stellen Sie sicher, dass die richtige **Arbeitsauslastung** angegeben ist.  
+3.  Geben Sie auf der Registerkarte **Allgemein** einen Namen im Feld **Sitzungsname** ein, und stellen Sie sicher, dass die richtige **Arbeitsauslastung** angegeben ist.  
   
 4.  Auf der Registerkarte **Optimierungsoptionen** können Sie eine Optimierungszeit, die vom Datenbankoptimierungsratgeber ggf. zu erstellenden physischen Entwurfsstrukturen sowie die zu vernachlässigenden Empfehlungen angeben.  
   
@@ -245,7 +245,7 @@ ms.locfileid: "91890910"
 ##  <a name="user-interface-descriptions"></a><a name="UI"></a> Benutzeroberflächenbeschreibungen  
   
 ### <a name="sessions-monitor"></a>Sitzungsmonitor  
- Der**Sitzungsmonitor** zeigt Informationen zu Sitzungen an, die im Datenbankoptimierungsratgeber geöffnet sind. Wählen Sie einen Sitzungsnamen in **Sitzungsmonitor**aus, um Informationen zur Sitzung im Eigenschaftenfenster anzuzeigen.  
+ Der **Sitzungsmonitor** zeigt Informationen zu Sitzungen an, die im Datenbankoptimierungsratgeber geöffnet sind. Wählen Sie einen Sitzungsnamen in **Sitzungsmonitor** aus, um Informationen zur Sitzung im Eigenschaftenfenster anzuzeigen.  
   
 ### <a name="recommendations-tab"></a>Empfehlungen (Registerkarte)  
  Die Registerkarte **Empfehlungen** wird angezeigt, nachdem der Datenbankoptimierungsratgeber die Analyse einer Arbeitsauslastung abgeschlossen hat. Der Raster enthält die Empfehlungen für jedes berücksichtigte Objekt. Sofern Partitionsempfehlungen vorliegen, werden diese im oberen Raster angezeigt und die Indexempfehlungen im unteren Raster. Die Raster werden nicht angezeigt, wenn keine Empfehlungen vorhanden sind.  
@@ -282,7 +282,7 @@ ms.locfileid: "91890910"
  Empfohlene Aktion zur Steigerung der Leistung. Mögliche Werte sind <localizedText>Create</localizedText> und <localizedText>Drop</localizedText>.  
   
  **Empfehlungsziel**  
- Der Index oder die Sicht, auf den/die sich die Empfehlung bezieht. Das Symbol in dieser Spalte steht für die Empfehlung, den Wert unter **Empfehlungsziel**zu löschen oder hinzuzufügen.  
+ Der Index oder die Sicht, auf den/die sich die Empfehlung bezieht. Das Symbol in dieser Spalte steht für die Empfehlung, den Wert unter **Empfehlungsziel** zu löschen oder hinzuzufügen.  
   
  **Details**  
  Eine Beschreibung der Werts unter **Empfehlungsziel**. Mögliche Werte sind: „clustered“, „indexed view“ oder leer, was einen nicht gruppierten Index impliziert. Gibt auch an, ob der Index eindeutig ist.  

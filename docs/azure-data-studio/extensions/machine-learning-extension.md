@@ -9,16 +9,16 @@ ms.author: davidph
 ms.reviewer: sstein
 ms.custom: ''
 ms.date: 05/19/2020
-ms.openlocfilehash: 77cb3141a27fa8e68f8cdfb556784cc63fd07543
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 163f5efca97e99609cbdbaae8f713c4576cc4e0b
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725145"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035976"
 ---
 # <a name="machine-learning-extension-for-azure-data-studio-preview"></a>Machine Learning-Erweiterung für Azure Data Studio (Vorschau)
 
-Mit der Machine-Learning-Erweiterung für [Azure Data Studio](../what-is.md) können Sie Pakete verwalten, Machine Learning-Modelle importieren, Vorhersagen treffen und Notebooks erstellen, um Experimente für Ihre SQL-Datenbanken durchzuführen. Diese Erweiterung befindet sich zurzeit in der Vorschau.
+Mit der Machine-Learning-Erweiterung für [Azure Data Studio](../what-is-azure-data-studio.md) können Sie Pakete verwalten, Machine Learning-Modelle importieren, Vorhersagen treffen und Notebooks erstellen, um Experimente für Ihre SQL-Datenbanken durchzuführen. Diese Erweiterung befindet sich zurzeit in der Vorschau.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -107,7 +107,7 @@ Führen Sie die folgenden Schritte aus, um die Machine-Learning-Erweiterung in A
 
 1. Wählen Sie im Menü auf der linken Seite unter **Allgemein** die Option **Machine Learning** aus.
 
-Öffnen Sie die Links unter **Nächste Schritte**, und informieren Sie sich darüber, wie Sie mit der Machine-Learning-Erweiterung Pakete verwalten, Vorhersagen treffen und Modellen in Ihre Datenbank importieren.
+Öffnen Sie die Links unter **Nächste Schritte** , und informieren Sie sich darüber, wie Sie mit der Machine-Learning-Erweiterung Pakete verwalten, Vorhersagen treffen und Modellen in Ihre Datenbank importieren.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

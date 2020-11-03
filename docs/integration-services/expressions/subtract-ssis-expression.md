@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f0615678e5c6613b5b709f711dc3f2cf9e7dfa8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6d4235e64f59814075a5d0d57e24d5345b9876a0
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425362"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243685"
 ---
 # <a name="--subtract-ssis-expression"></a>- (Subtrahieren) (SSIS-Ausdruck)
 
@@ -44,10 +44,9 @@ numeric_expression1 - numeric_expression2
  Die Ergebnistypen werden von den Datentypen der beiden Argumente bestimmt. Weitere Informationen finden Sie unter [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
 ## <a name="remarks"></a>Hinweise  
- Schließen Sie den unären Minusausdruck in Klammern ein, um sicherzustellen, dass der Ausdruck in der richtigen Reihenfolge ausgewertet wird.  
-  
-## <a name="remarks"></a>Hinweise  
- Wenn einer der Operanden NULL ist, ist das Ergebnis NULL.  
+ - Schließen Sie den unären Minusausdruck in Klammern ein, um sicherzustellen, dass der Ausdruck in der richtigen Reihenfolge ausgewertet wird.  
+
+ - Wenn einer der Operanden NULL ist, ist das Ergebnis NULL.  
   
 ## <a name="expression-examples"></a>Beispiele für Ausdrücke  
  In diesem Beispiel werden numerische Literale subtrahiert.  

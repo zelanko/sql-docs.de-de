@@ -29,12 +29,12 @@ ms.assetid: 509b9462-819b-4c45-baae-3d2d90d14a1c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest'
-ms.openlocfilehash: 1944728a05db49a194b2c1f070695fd16ee095d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 06776d309042483f879dd3d31d9f6bae62119037
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479007"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067490"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asa-pdw](../../includes/applies-to-version/sql-asa-pdw.md)]
@@ -71,6 +71,7 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
         ENCRYPTION BY PASSWORD ='encryption_password'   
       )   
 ```  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -78,18 +79,18 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  *certname*  
  Der Name des Zertifikats für die Sicherung.
 
- TO FILE = '*path_to_file*'  
+ TO FILE = ' *path_to_file* '  
  Gibt den vollständigen Pfad einschließlich des Dateinamens zu der Datei an, in der das Zertifikat gespeichert werden soll. Dieser Pfad kann ein lokaler Pfad oder ein UNC-Pfad zu einer Netzwerkadresse sein. Wenn nur ein Dateiname angegeben ist, wird die Datei im Standardordner für Benutzerdaten der Instanz gespeichert (entweder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-DATA-Ordner oder nicht). Für SQL Server Express LocalDB entspricht der standardmäßige Benutzerdatenordner der Instanz dem von der Umgebungsvariable `%USERPROFILE%` angegebenen Pfad für das Konto, das die Instanz erstellt hat.  
 
  WITH PRIVATE KEY gibt an, dass der private Schlüssel des Zertifikats in einer Datei gespeichert werden muss. Diese Klausel ist optional.
 
- FILE = '*path_to_private_key_file*'  
+ FILE = ' *path_to_private_key_file* '  
  Gibt den vollständigen Pfad einschließlich des Dateinamens zu der Datei an, in der der private Schlüssel gespeichert werden soll. Dieser Pfad kann ein lokaler Pfad oder ein UNC-Pfad zu einer Netzwerkadresse sein. Wenn nur ein Dateiname angegeben ist, wird die Datei im Standardordner für Benutzerdaten der Instanz gespeichert (entweder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-DATA-Ordner oder nicht). Für SQL Server Express LocalDB entspricht der standardmäßige Benutzerdatenordner der Instanz dem von der Umgebungsvariable `%USERPROFILE%` angegebenen Pfad für das Konto, das die Instanz erstellt hat.  
 
- ENCRYPTION BY PASSWORD = '*encryption_password*'  
+ ENCRYPTION BY PASSWORD = ' *encryption_password* '  
  Das Kennwort, das zum Verschlüsseln des privaten Schlüssels verwendet wird, bevor der Schlüssel in die Sicherungsdatei geschrieben wird. Das Kennwort unterliegt Komplexitätsüberprüfungen.  
   
- DECRYPTION BY PASSWORD = '*decryption_password*'  
+ DECRYPTION BY PASSWORD = ' *decryption_password* '  
  Das Kennwort, das zum Entschlüsseln des privaten Schlüssels verwendet wird, bevor der Schlüssel gesichert wird. Dieses Argument ist nicht erforderlich, wenn das Zertifikat mit dem Hauptschlüssel verschlüsselt ist. 
   
 ## <a name="remarks"></a>Hinweise  

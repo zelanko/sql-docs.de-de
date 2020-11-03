@@ -11,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: efec53ef-3e5a-4b76-b71d-a0cf9e11ac00
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c0eb92cb3370343345a487b16852ec05dddf338a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 617f7b5132f6df2cd8acd02579512b880ece4ff2
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495284"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243639"
 ---
 # <a name="catalogenvironment_references-ssisdb-database"></a>catalog.environment_references (SSISDB-Datenbank)
 
@@ -38,8 +38,10 @@ ms.locfileid: "88495284"
 |last_validation_time|**datatimeoffset(7)**|Der Zeitpunkt der letzten Überprüfung.|  
   
 ## <a name="remarks"></a>Hinweise  
- In dieser Sicht wird eine Zeile für jeden Umgebungsverweis im Katalog angezeigt.  
+- In dieser Sicht wird eine Zeile für jeden Umgebungsverweis im Katalog angezeigt.  
   
+- Ein Projekt kann über relative oder absolute Umgebungsverweise verfügen. Relative Verweise verweisen mit dem Namen auf die Umgebung und erfordern, dass sich diese im gleichen Ordner wie das Projekt befindet. Absolute Verweise verweisen mit Name und Ordner auf die Umgebung und verweisen möglicherweise auf Umgebungen, die sich in einem anderen Ordner als das Projekt befinden. Ein Projekt kann auf mehrere Umgebungen verweisen.  
+
 ## <a name="permissions"></a>Berechtigungen  
  Diese Sicht erfordert eine der folgenden Berechtigungen:  
   
@@ -51,8 +53,4 @@ ms.locfileid: "88495284"
   
 > [!NOTE]  
 >  Wenn Sie über die READ-Berechtigung für ein Projekt verfügen, verfügen Sie auch über die READ-Berechtigung für alle Pakete und Umgebungsverweise, die diesem Projekt zugeordnet sind. Sicherheit auf Zeilenebene wird erzwungen. Es werden nur Zeilen angezeigt, zu deren Anzeige Sie berechtigt sind.  
-  
-## <a name="remarks"></a>Bemerkungen  
- Ein Projekt kann über relative oder absolute Umgebungsverweise verfügen. Relative Verweise verweisen mit dem Namen auf die Umgebung und erfordern, dass sich diese im gleichen Ordner wie das Projekt befindet. Absolute Verweise verweisen mit Name und Ordner auf die Umgebung und verweisen möglicherweise auf Umgebungen, die sich in einem anderen Ordner als das Projekt befinden. Ein Projekt kann auf mehrere Umgebungen verweisen.  
-  
   

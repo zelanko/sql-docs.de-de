@@ -28,12 +28,12 @@ ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ae27e25e16022aa1ec497188bee7fde68a9bca3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3d4799b962fd1c8b6084443f5d83fa171fe4b0a1
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88458822"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067422"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
@@ -112,6 +112,7 @@ CREATE CERTIFICATE certificate_name
 <date_options> ::=  
     START_DATE ='datetime' | EXPIRY_DATE ='datetime'  
 ```  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -125,7 +126,7 @@ CREATE CERTIFICATE certificate_name
  ASSEMBLY *assembly_name*  
  Gibt eine signierte Assembly an, die bereits in die Datenbank geladen wurde.  
   
- [ EXECUTABLE ] FILE = '*path_to_file*'  
+ [ EXECUTABLE ] FILE = ' *path_to_file* '  
  Gibt den vollständigen Pfad einschließlich des Dateinamens zur DER-codierten Datei an, die das Zertifikat enthält. Falls die EXECUTABLE-Option verwendet wird, handelt es sich bei der Datei um eine DLL-Datei, die mit dem Zertifikat signiert wurde. *path_to_file* kann ein lokaler Pfad oder ein UNC-Pfad zu einem Netzwerkspeicherort sein. Die Datei wird im Sicherheitskontext des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienstkontos ausgeführt. Dieses Konto muss über die erforderlichen Dateisystemberechtigungen verfügen.  
 
 > [!IMPORTANT]
@@ -133,35 +134,35 @@ CREATE CERTIFICATE certificate_name
   
  BINARY = *asn_encoded_certificate*  
  Mit ASN verschlüsselte Zertifikatbytes, die als binäre Konstante angegeben sind.  
- **Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
+ **Gilt für** :  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
  WITH PRIVATE KEY  
  Gibt an, dass der private Schlüssel des Zertifikats in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladen wird. Diese Klausel ist ungültig, wenn das Zertifikat aus einer Assembly erstellt wird. Verwenden Sie [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md), um den privaten Schlüssel eines aus einer Assembly erstellten Zertifikats zu laden.  
   
- FILE ='*path_to_private_key*'  
+ FILE =' *path_to_private_key* '  
  Gibt den vollständigen Pfad einschließlich des Dateinamens für den privaten Schlüssel an. *path_to_private_key* kann ein lokaler Pfad oder ein UNC-Pfad zu einem Netzwerkspeicherort sein. Die Datei wird im Sicherheitskontext des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienstkontos ausgeführt. Dieses Konto muss über die erforderlichen Dateisystemberechtigungen verfügen.  
   
 > [!IMPORTANT]  
 > Diese Option ist weder in einer eigenständigen Datenbank noch in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] verfügbar.  
   
  BINARY = *private_key_bits*  
- **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Gilt für** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Private Schlüsselbits, die als binäre Konstante angegeben sind. Diese Bits können in verschlüsselter Form vorhanden sein. Bei Verschlüsselung muss der Benutzer ein Entschlüsselungskennwort bereitstellen. Kennwortrichtlinienüberprüfungen werden für dieses Kennwort nicht ausgeführt. Die privaten Schlüsselbits müssen in einem PVK-Dateiformat vorliegen.  
   
- DECRYPTION BY PASSWORD = '*key_password*'  
+ DECRYPTION BY PASSWORD = ' *key_password* '  
  Gibt das Kennwort an, das zum Entschlüsseln eines privaten Schlüssels erforderlich ist, der aus einer Datei abgerufen wird. Diese Klausel ist optional, wenn der private Schlüssel nicht durch ein Kennwort geschützt ist. Das Speichern eines privaten Schlüssels in einer Datei ohne Kennwortschutz wird nicht empfohlen. Falls zwar ein Kennwort erforderlich ist, jedoch keins angegeben wurde, löst die Anweisung einen Fehler aus.  
   
- ENCRYPTION BY PASSWORD = '*password*'  
+ ENCRYPTION BY PASSWORD = ' *password* '  
  Gibt das Kennwort an, mit dem der private Schlüssel verschlüsselt werden soll. Verwenden Sie diese Option nur, wenn Sie das Zertifikat mit einem Kennwort verschlüsseln möchten. Falls diese Klausel ausgelassen wird, wird der private Schlüssel mit dem Datenbank-Hauptschlüssel verschlüsselt. *password* muss den Anforderungen der Windows-Kennwortrichtlinien des Computers entsprechen, auf dem die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird. Weitere Informationen finden Sie unter [Password Policy](../../relational-databases/security/password-policy.md).  
   
- SUBJECT = '*certificate_subject_name*'  
+ SUBJECT = ' *certificate_subject_name* '  
  Der Begriff *subject* (Betreff) bezieht sich auf ein Feld in den Metadaten des Zertifikats, wie es im X.509-Standard definiert ist. Er sollte nicht länger als 64 Zeichen sein. Diese Beschränkung wird für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter Linux erzwungen. Der Antragsteller kann für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter Windows bis zu 128 Zeichen lang sein. Betreffe mit mehr als 128 Zeichen werden abgeschnitten, wenn sie im Katalog gespeichert werden. In den BLOB-Daten (Binary Large Object), die das Zertifikat enthalten, ist jedoch der vollständige Name des Antragstellers gespeichert.  
   
- START_DATE = '*datetime*'  
+ START_DATE = ' *datetime* '  
  Das Datum, an dem das Zertifikat gültig wird. Falls nicht anders angegeben, wird das aktuelle Datum für START_DATE festgelegt. START_DATE ist in UTC-Zeit und kann in jedem Format angegeben werden, das in ein Datum und eine Uhrzeit konvertiert werden kann.  
   
- EXPIRY_DATE = '*datetime*'  
+ EXPIRY_DATE = ' *datetime* '  
  Das Datum, an dem das Zertifikat abläuft. Falls nicht anders angegeben, wird EXPIRY_DATE auf das Datum ein Jahr nach START_DATE festgelegt. EXPIRY_DATE ist in UTC-Zeit und kann in jedem Format angegeben werden, das in ein Datum und eine Uhrzeit konvertiert werden kann. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker überprüft das Ablaufdatum. Bei der Sicherung mit Verschlüsselung unter Verwendung von Zertifikaten wird ebenfalls das Ablaufdatum überprüft, und es wird verhindert, dass eine Sicherung mit einem abgelaufenen Zertifikat erstellt wird. Wiederherstellungen mit einem abgelaufenen Zertifikat sind aber möglich. Der Ablauf wird jedoch nicht erzwungen, wenn das Zertifikat für die die Datenbankverschlüsselung oder die Always Encrypted-Funktion verwendet wird.  
   
  ACTIVE FOR BEGIN_DIALOG = { **ON** | OFF }  
