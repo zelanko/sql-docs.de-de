@@ -21,12 +21,12 @@ ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 783452973a10a8f692b7fe3a3406665a2ed0eb86
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e9f566216c0dfd9f30a35c9472db433ad71e2f3c
+ms.sourcegitcommit: f888ac94c7b5f6b6f138ab75719dadca04e8284a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544674"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93294390"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "89544674"
  Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
 
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|Eindeutige Sicherungssatz-ID, die den Sicherungssatz identifiziert. Identität, Primärschlüssel.|  
 |**backup_set_uuid**|**uniqueidentifier**|Eindeutige Sicherungssatz-ID, die den Sicherungssatz identifiziert.|  
@@ -56,7 +56,7 @@ ms.locfileid: "89544674"
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Hauptversionsnummer. Kann den Wert NULL haben.|  
 |**software_minor_version**|**tinyint**|Nebenversionsnummer von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Kann den Wert NULL haben.|  
 |**software_build_version**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Buildnummer. Kann den Wert NULL haben.|  
-|**time_zone**|**smallint**|Unterschied zwischen der Ortszeit (am Standort, an dem der Sicherungsvorgang stattfindet) und der UTC (Coordinated Universal Time, Koordinierte Weltzeit) in 15-Minuten-Intervallen. Die Werte können zwischen -48 und +48 (einschließlich) liegen. Durch den Wert 127 wird angegeben, dass die Abweichung nicht bekannt ist. So entspricht z. B. der Wert -20 der Eastern Standard Time (EST) bzw. einer Zeit, die fünf Stunden nach der UTC liegt. Kann den Wert NULL haben.|  
+|**time_zone**|**smallint**|Der Unterschied zwischen der Ortszeit (in der der Sicherungs Vorgang stattfindet) und der koordinierten Weltzeit (UTC) in 15-Minuten-Intervallen zum Zeitpunkt, zu dem der Sicherungs Vorgang gestartet wurde. Die Werte können zwischen -48 und +48 (einschließlich) liegen. Durch den Wert 127 wird angegeben, dass die Abweichung nicht bekannt ist. So entspricht z. B. der Wert -20 der Eastern Standard Time (EST) bzw. einer Zeit, die fünf Stunden nach der UTC liegt. Kann den Wert NULL haben.|  
 |**mtf_minor_version**|**tinyint**|Nebenversionsnummer von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format. Kann den Wert NULL haben.|  
 |**first_lsn**|**numeric(25,0)**|Protokollfolgenummer des ersten oder ältesten Protokolldatensatzes im Sicherungssatz. Kann den Wert NULL haben.|  
 |**last_lsn**|**numeric(25,0)**|Protokollfolgenummer des nächsten Protokolldatensatzes nach dem Sicherungssatz. Kann den Wert NULL haben.|  
@@ -92,7 +92,7 @@ ms.locfileid: "89544674"
 |**is_copy_only**|**bit**|1 = Eine Kopiesicherung. Weitere Informationen finden Sie unter [Kopiesicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).|  
 |**first_recovery_fork_guid**|**uniqueidentifier**|ID des ersten Wiederherstellungs-Verzweigungspunkts. Dies entspricht **FirstRecoveryForkID** von RESTORE HEADERONLY.<br /><br /> Für Datensicherungen **first_recovery_fork_guid** **last_recovery_fork_guid**.|  
 |**last_recovery_fork_guid**|**uniqueidentifier**|ID des letzten Wiederherstellungs-Verzweigungspunkts. Dies entspricht wieder **herstellungsforkid** von RESTORE HEADERONLY.<br /><br /> Für Datensicherungen **first_recovery_fork_guid** **last_recovery_fork_guid**.|  
-|**fork_point_lsn**|**numeric(25,0)**|Wenn **first_recovery_fork_guid** nicht gleich **last_recovery_fork_guid**ist, ist dies die Protokoll Folge Nummer des Verzweigungs Punkts. Andernfalls ist der Wert NULL.|  
+|**fork_point_lsn**|**numeric(25,0)**|Wenn **first_recovery_fork_guid** nicht gleich **last_recovery_fork_guid** ist, ist dies die Protokoll Folge Nummer des Verzweigungs Punkts. Andernfalls ist der Wert NULL.|  
 |**database_guid**|**uniqueidentifier**|Eindeutige ID für die Datenbank. Dies entspricht **BindingId** von RESTORE HEADERONLY. Wenn die Datenbank wiederhergestellt wird, wird ein neuer Wert zugewiesen.|  
 |**family_guid**|**uniqueidentifier**|Eindeutige ID der ursprünglichen Datenbank zum Zeitpunkt der Erstellung. Dieser Wert bleibt unverändert, wenn die Datenbank wiederhergestellt wird, und zwar auch dann, wenn sie mit einem anderen Namen wiederhergestellt wird.|  
 |**differential_base_lsn**|**numeric(25,0)**|Basis-LSN für differenzielle Sicherungen. Bei einer Einzel basierten differenziellen Sicherung Änderungen mit LSNs, die größer oder gleich **differential_base_lsn** sind, sind in der differenziellen Sicherung enthalten.<br /><br /> Bei einem multibasierten differenziellen Wert ist der Wert NULL, und die Basis-LSN muss auf Dateiebene bestimmt werden (siehe [Backup File &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)).<br /><br /> Bei nicht differenziellen Sicherungstypen ist der Wert immer NULL.|  
