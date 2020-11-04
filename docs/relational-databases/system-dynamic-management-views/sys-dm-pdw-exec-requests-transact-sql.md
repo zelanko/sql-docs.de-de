@@ -13,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f62aebfe079ed8a701301ca7d5d3a5c70127407a
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+ms.openlocfilehash: 8816e2ca5872da55193fab016a459a461359c742
+ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92678905"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93328584"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -41,11 +41,11 @@ ms.locfileid: "92678905"
 |database_id|**int**|Der Bezeichner der vom expliziten Kontext verwendeten Datenbank (z. b. DB_X verwenden).|Weitere Informationen finden Sie unter ID in [sys. Datenbanken &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |command|**nvarchar(4000)**|Enthält den vollständigen Text der Anforderung, wie er vom Benutzer gesendet wurde.|Jeder gültige Abfrage-oder Anforderungs Text. Abfragen, die länger als 4000 Bytes sind, werden abgeschnitten.|  
 |resource_class|**nvarchar (20)**|Die für diese Anforderung verwendete Arbeits Auslastungs Gruppe. |Statische Ressourcenklassen</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Dynamische Ressourcenklassen</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
-|importance|**nvarchar(128)**|Die Wichtigkeits Einstellung, die die Anforderung an ausgeführt hat.  Dies ist die relative Wichtigkeit einer Anforderung in dieser Arbeits Auslastungs Gruppe und zwischen Arbeits Auslastungs Gruppen für freigegebene Ressourcen.  Die in der Klassifizierung angegebene Wichtigkeit überschreibt die Wichtigkeits Einstellung der Arbeits Auslastungs Gruppe.</br>Gilt für: Azure SQL Data Warehouse|NULL</br>niedrig</br>below_normal</br>Normal (Standard)</br>above_normal</br>high|
-|group_name|**sysname** |Bei Anforderungen, die Ressourcen verwenden, ist group_name der Name der Arbeits Auslastungs Gruppe, unter der die Anforderung ausgeführt wird.  Wenn die Anforderung keine Ressourcen verwendet, ist group_name NULL.</br>Gilt für: Azure SQL Data Warehouse|
+|importance|**nvarchar(128)**|Die Wichtigkeits Einstellung, die die Anforderung an ausgeführt hat.  Dies ist die relative Wichtigkeit einer Anforderung in dieser Arbeits Auslastungs Gruppe und zwischen Arbeits Auslastungs Gruppen für freigegebene Ressourcen.  Die in der Klassifizierung angegebene Wichtigkeit überschreibt die Wichtigkeits Einstellung der Arbeits Auslastungs Gruppe.</br>Gilt für: Azure Synapse Analytics|NULL</br>niedrig</br>below_normal</br>Normal (Standard)</br>above_normal</br>high|
+|group_name|**sysname** |Bei Anforderungen, die Ressourcen verwenden, ist group_name der Name der Arbeits Auslastungs Gruppe, unter der die Anforderung ausgeführt wird.  Wenn die Anforderung keine Ressourcen verwendet, ist group_name NULL.</br>Gilt für: Azure Synapse Analytics|
 |classifier_name|**sysname**|Für Anforderungen, die Ressourcen verwenden, den Namen des Klassifizierers, der zum Zuweisen von Ressourcen und Wichtigkeit verwendet wird.||
-|resource_allocation_percentage|**Dezimalzahl (5, 2)**|Die prozentuale Menge der Ressourcen, die der Anforderung zugeordnet sind.</br>Gilt für: Azure SQL Data Warehouse|
-|result_cache_hit|**int**|Erläutert, ob für eine abgeschlossene Abfrage der resultsetcache verwendet wurde.  </br>Gilt für: Azure SQL Data Warehouse| 1 = resultsetcache-Treffer </br> 0 = resultsetcache-Fehler </br> Negative ganzzahlige Werte = Gründe für das Zwischenspeichern von Resultsets.  Weitere Informationen finden Sie im Abschnitt "Hinweise".|
+|resource_allocation_percentage|**Dezimalzahl (5, 2)**|Die prozentuale Menge der Ressourcen, die der Anforderung zugeordnet sind.</br>Gilt für: Azure Synapse Analytics|
+|result_cache_hit|**int**|Erläutert, ob für eine abgeschlossene Abfrage der resultsetcache verwendet wurde.  </br>Gilt für: Azure Synapse Analytics| 1 = resultsetcache-Treffer </br> 0 = resultsetcache-Fehler </br> Negative ganzzahlige Werte = Gründe für das Zwischenspeichern von Resultsets.  Weitere Informationen finden Sie im Abschnitt "Hinweise".|
 |client_correlation_id|**nvarchar(255)**|Optionaler benutzerdefinierter Name für eine Client Sitzung.  Um für eine Sitzung festzulegen, wenden Sie sp_set_session_context ' client_correlation_id ', ' <CorrelationIDName> ' an.  Führen `SELECT SESSION_CONTEXT(N'client_correlation_id')` Sie aus, um den Wert abzurufen.|
 ||||
 
@@ -81,4 +81,4 @@ Der negative ganzzahlige Wert in der result_cache_hit-Spalte ist ein Bitmapwert 
   
 ## <a name="see-also"></a>Weitere Informationen
 
- [SQL Data Warehouse und parallele Data Warehouse dynamischen Verwaltungs Sichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)
+ [Azure Synapse Analytics und parallele Data Warehouse dynamische Verwaltungs Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)

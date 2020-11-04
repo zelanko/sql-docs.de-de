@@ -21,12 +21,12 @@ ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e9f566216c0dfd9f30a35c9472db433ad71e2f3c
-ms.sourcegitcommit: f888ac94c7b5f6b6f138ab75719dadca04e8284a
+ms.openlocfilehash: 84c61b1e6517bc98e8acb32a8215f2dad853d7e5
+ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93294390"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93328595"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "93294390"
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Hauptversionsnummer. Kann den Wert NULL haben.|  
 |**software_minor_version**|**tinyint**|Nebenversionsnummer von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Kann den Wert NULL haben.|  
 |**software_build_version**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Buildnummer. Kann den Wert NULL haben.|  
-|**time_zone**|**smallint**|Der Unterschied zwischen der Ortszeit (in der der Sicherungs Vorgang stattfindet) und der koordinierten Weltzeit (UTC) in 15-Minuten-Intervallen zum Zeitpunkt, zu dem der Sicherungs Vorgang gestartet wurde. Die Werte können zwischen -48 und +48 (einschließlich) liegen. Durch den Wert 127 wird angegeben, dass die Abweichung nicht bekannt ist. So entspricht z. B. der Wert -20 der Eastern Standard Time (EST) bzw. einer Zeit, die fünf Stunden nach der UTC liegt. Kann den Wert NULL haben.|  
+|**time_zone**|**smallint**|Der Unterschied zwischen der Ortszeit (in der der Sicherungs Vorgang stattfindet) und der koordinierten Weltzeit (UTC) in 15-Minuten-Intervallen unter Verwendung der Zeitzoneninformationen zu dem Zeitpunkt, zu dem der Sicherungs Vorgang gestartet wurde. Die Werte können zwischen -48 und +48 (einschließlich) liegen. Durch den Wert 127 wird angegeben, dass die Abweichung nicht bekannt ist. So entspricht z. B. der Wert -20 der Eastern Standard Time (EST) bzw. einer Zeit, die fünf Stunden nach der UTC liegt. Kann den Wert NULL haben.|  
 |**mtf_minor_version**|**tinyint**|Nebenversionsnummer von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format. Kann den Wert NULL haben.|  
 |**first_lsn**|**numeric(25,0)**|Protokollfolgenummer des ersten oder ältesten Protokolldatensatzes im Sicherungssatz. Kann den Wert NULL haben.|  
 |**last_lsn**|**numeric(25,0)**|Protokollfolgenummer des nächsten Protokolldatensatzes nach dem Sicherungssatz. Kann den Wert NULL haben.|  
