@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b1a185ef8fe998a614de8ca56451966894a461f4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9ea62e350628099685b372362a3d6d075a90367b
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549940"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364831"
 ---
 # <a name="sp_columns_ex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,15 +45,15 @@ sp_columns_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @table_server = ] 'table_server'` Der Name des Verbindungs Servers, für den Spalten Informationen zurückgegeben werden sollen. *table_server* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @table_server = ] 'table_server'` Der Name des Verbindungs Servers, für den Spalten Informationen zurückgegeben werden sollen. *table_server* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @table_name = ] 'table_name'` Der Name der Tabelle, für die Spalten Informationen zurückgegeben werden sollen. *table_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @table_name = ] 'table_name'` Der Name der Tabelle, für die Spalten Informationen zurückgegeben werden sollen. *table_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
-`[ @table_schema = ] 'table_schema'` Der Schema Name der Tabelle, für die Spalten Informationen zurückgegeben werden sollen. *TABLE_SCHEMA* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @table_schema = ] 'table_schema'` Der Schema Name der Tabelle, für die Spalten Informationen zurückgegeben werden sollen. *TABLE_SCHEMA* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
-`[ @table_catalog = ] 'table_catalog'` Der Katalog Name der Tabelle, für die Spalten Informationen zurückgegeben werden sollen. *TABLE_CATALOG* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @table_catalog = ] 'table_catalog'` Der Katalog Name der Tabelle, für die Spalten Informationen zurückgegeben werden sollen. *TABLE_CATALOG* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
-`[ @column_name = ] 'column'` Der Name der Daten Bank Spalte, für die Informationen bereitgestellt werden sollen. *Column* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @column_name = ] 'column'` Der Name der Daten Bank Spalte, für die Informationen bereitgestellt werden sollen. *Column* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 `[ @ODBCVer = ] 'ODBCVer'` Die verwendete ODBC-Version. *ODBCVer* ist vom Datentyp **int**. der Standardwert ist 2. Dieser gibt ODBC, Version 2, an. Gültige Werte sind 2 oder 3. Informationen zu den Verhaltensunterschieden zwischen den Versionen 2 und 3 finden Sie in der SQLColumns-Spezifikation von ODBC.  
   
@@ -62,9 +62,9 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Der Name des Qualifizierers für die Tabelle oder Sicht. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Benennung für Tabellen (_Qualifizierer_)**.** _Besitzer_**.** _Name_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte dem Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar. Dieses Feld kann den Wert NULL annehmen.|  
+|**TABLE_CAT**|**sysname**|Der Name des Qualifizierers für die Tabelle oder Sicht. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Benennung für Tabellen ( _Qualifizierer_ ) **.** _Besitzer_**.** _Name_ ). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte dem Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar. Dieses Feld kann den Wert NULL annehmen.|  
 |**TABLE_SCHEM**|**sysname**|Der Name des Besitzers der Tabelle oder Sicht. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Namen des Datenbankbenutzers dar, der die Tabelle erstellt hat. Dieses Feld gibt immer einen Wert zurück.|  
 |**TABLE_NAME**|**sysname**|Der Name der Tabelle oder Sicht. Dieses Feld gibt immer einen Wert zurück.|  
 |**COLUMN_NAME**|**sysname**|Der Spaltenname für jede Spalte der zurückgegebenen **table_name** . Dieses Feld gibt immer einen Wert zurück.|  
@@ -86,16 +86,15 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
  Weitere Informationen finden Sie in der Microsoft ODBC-Dokumentation.  
   
-## <a name="remarks"></a>Hinweise  
- **sp_columns_ex** wird ausgeführt, indem das COLUMNS-Rowset der **IDBSchemaRowset** -Schnittstelle des OLE DB Anbieters abgefragt wird, der *table_server*entspricht. Die Parameter *table_name*, *TABLE_SCHEMA*, *TABLE_CATALOG*und *Column* werden an diese Schnittstelle übermittelt, um die zurückgegebenen Zeilen einzuschränken.  
+## <a name="remarks"></a>Bemerkungen  
+- **sp_columns_ex** wird ausgeführt, indem das COLUMNS-Rowset der **IDBSchemaRowset** -Schnittstelle des OLE DB Anbieters abgefragt wird, der *table_server* entspricht. Die Parameter *table_name* , *TABLE_SCHEMA* , *TABLE_CATALOG* und *Column* werden an diese Schnittstelle übermittelt, um die zurückgegebenen Zeilen einzuschränken.  
   
- **sp_columns_ex** gibt ein leeres Resultset zurück, wenn der OLE DB Anbieter des angegebenen Verbindungs Servers das COLUMNS-Rowset der **IDBSchemaRowset** -Schnittstelle nicht unterstützt.  
+- **sp_columns_ex** gibt ein leeres Resultset zurück, wenn der OLE DB Anbieter des angegebenen Verbindungs Servers das COLUMNS-Rowset der **IDBSchemaRowset** -Schnittstelle nicht unterstützt.  
+  
+- **sp_columns_ex** befolgt die Anforderungen für Begrenzungs Bezeichner. Weitere Informationen finden Sie unter [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert SELECT-Berechtigung für das Schema.  
-  
-## <a name="remarks"></a>Hinweise  
- **sp_columns_ex** befolgt die Anforderungen für Begrenzungs Bezeichner. Weitere Informationen finden Sie unter [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md).  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird der Datentyp der `JobTitle`-Spalte der `HumanResources.Employee`-Tabelle in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank auf dem `Seattle1`-Verbindungsserver zurückgegeben.  

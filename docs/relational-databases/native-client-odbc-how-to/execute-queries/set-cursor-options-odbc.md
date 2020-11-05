@@ -14,12 +14,12 @@ ms.assetid: 0e72b48a-fc5a-4656-8cf5-39f57d8c1565
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2622fc28743da2e2eed4224e7a2f0eb21c09e665
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d1cf4610efc2ea021b8cd9260f463af079d28dc9
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423780"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364828"
 ---
 # <a name="set-cursor-options-odbc"></a>Festlegen von Cursoroptionen (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,10 @@ ms.locfileid: "88423780"
   
  Sie können den Typ des verwendeten Cursors entweder durch Festlegen von SQL_ATTR_CURSOR_TYPE und SQL_ATTR_CONCURRENCY oder durch Festlegen von SQL_ATTR_CURSOR_SENSITIVITY und SQL_ATTR_CURSOR_SCROLLABLE steuern. Sie sollten die zwei Methoden zur Angabe des Cursorverhaltens nicht kombinieren.  
   
-## <a name="example"></a>Beispiel  
+## <a name="examples"></a>Beispiele  
+
+### <a name="a-set-a-dynamic-cursor"></a>A. Festlegen eines dynamischen Cursors
+
  Im folgenden Beispiel werden ein Anweisungshandle zugeordnet, ein dynamischer Cursortyp mit vollständiger Parallelität mit Zeilenversionsverwaltung festgelegt und anschließend eine SELECT-Anweisung ausgeführt.  
   
 ```  
@@ -48,7 +51,7 @@ retcode = SQLSetStmtAttr(hstmt1, SQL_ATTR_CONCURRENCY, SQLPOINTER)SQL_CONCUR_ROW
 retcode = SQLExecDirect(hstmt1, SELECT au_lname FROM authors", SQL_NTS);  
 ```  
   
-## <a name="example"></a>Beispiel  
+### <a name="b-set-a-scrollable-sensitive-cursor"></a>B. Festlegen eines scrollbaren, sensiblen Cursors
  Im folgenden Beispiel werden ein Anweisungshandle zugeordnet, ein bildlauffähiger Sensitivcursor festgelegt und anschließend eine SELECT-Anweisung ausgeführt.  
   
 ```  

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_database_copies (Azure SQL-Datenbank)
-title: sys. dm_database_copies (Azure SQL-Datenbank) | Microsoft-Dokumentation
+title: sys.dm_database_copies (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.service: sql-database
@@ -20,22 +20,22 @@ ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 178fda9bb96fc84acd1527f172c6a6728a1ec22e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: acdb347af36812095df03f61ae9f118493496e51
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543922"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364772"
 ---
 # <a name="sysdm_database_copies-azure-sql-database"></a>sys.dm_database_copies (Azure SQL-Datenbank)
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
   Gibt Informationen über das Kopieren der Datenbank zurück.  
   
-Verwenden Sie zum Zurückgeben von Informationen über georeplikationsverknüpfungen die Sichten [sys. geo_replication_links](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md) oder [sys. dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (verfügbar in SQL-Datenbank V12).
+Verwenden Sie die [sys.geo_replication_links](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md) -oder [sys.dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) Sichten (in SQL-Datenbank V12 verfügbar), um Informationen zu den Links für die georeplikation zurückzugeben.
   
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Die ID der aktuellen Datenbank in der `sys.databases`-Sicht.|  
 |**start_date**|**datetimeoffset**|Die UTC-Zeit in einem regionalen [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Datencenter, zu der das Kopieren der Datenbank initiiert wurde.|  
@@ -59,7 +59,7 @@ Verwenden Sie zum Zurückgeben von Informationen über georeplikationsverknüpfu
 ## <a name="permissions"></a>Berechtigungen  
  Diese Ansicht ist nur in der **Master** -Datenbank für den Prinzipal Anmelde Namen auf Serverebene verfügbar.  
   
-## <a name="remarks"></a>Hinweise  
- Sie können die **sys. dm_database_copies** -Sicht in der **Master** -Datenbank der Quell-oder Ziel [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Server verwenden. Wenn das Kopieren der Datenbank erfolgreich abgeschlossen und die neue Datenbank online geschaltet wird, wird die Zeile in der **sys. dm_database_copies** -Sicht automatisch entfernt.  
+## <a name="remarks"></a>Bemerkungen  
+ Sie können die **sys.dm_database_copies** Ansicht in der **Master** -Datenbank der Quell-oder Ziel [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Server verwenden. Wenn das Kopieren der Datenbank erfolgreich abgeschlossen wurde und die neue Datenbank online geschaltet wird, wird die Zeile in der **sys.dm_database_copies** Ansicht automatisch entfernt.  
   
   

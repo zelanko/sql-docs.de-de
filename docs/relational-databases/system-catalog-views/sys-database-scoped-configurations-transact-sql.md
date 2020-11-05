@@ -1,6 +1,6 @@
 ---
-description: sys. database_scoped_configurations (Transact-SQL)
-title: sys. database_scoped_configurations (Transact-SQL) | Microsoft-Dokumentation
+description: sys.database_scoped_configurations (Transact-SQL)
+title: sys.database_scoped_configurations (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/14/2018
 ms.prod: sql
@@ -15,18 +15,20 @@ f1_keywords:
 - sys.database_scoped_configurations_TSQL
 helpviewer_keywords:
 - sys.database_scoped_configurations catalog view
+dev_langs:
+- TSQL
 ms.assetid: 8899310a-3464-4d38-9f2f-88396c4e7dc2
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||= azure-sqldw-latest
-ms.openlocfilehash: 85b57b65e79dbe72c039f694f0fd3977847230b7
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: ad4e9036670f90f126ad9c1f693de43ff9660517
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88900981"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364652"
 ---
-# <a name="sysdatabase_scoped_configurations-transact-sql"></a>sys. database_scoped_configurations (Transact-SQL)
+# <a name="sysdatabase_scoped_configurations-transact-sql"></a>sys.database_scoped_configurations (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-addw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
@@ -44,9 +46,9 @@ Enthält eine Zeile pro Konfiguration.
 
 Erfordert die Mitgliedschaft in der **public** -Rolle.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Wenn NULL als Wert für **value_for_secondary**zurückgegeben wird, bedeutet dies, dass das sekundäre Replikat auf Primary festgelegt ist.
+Wenn NULL als Wert für **value_for_secondary** zurückgegeben wird, bedeutet dies, dass das sekundäre Replikat auf Primary festgelegt ist.
  
 Die datenbankweit gültigen Konfigurationseinstellungen werden mit der Datenbank übertragen. Dies bedeutet, dass die vorhandenen Konfigurationseinstellungen bei der Wiederherstellung oder dem Anfügen einer bestimmten Datenbank erhalten bleiben.
 

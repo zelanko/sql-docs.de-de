@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f1a924af8d72239e3d185e27c491ecd48d9f38ad
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bc1d2d3dc8b9763d19410b2a9773fb7766d22140
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547423"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364741"
 ---
 # <a name="sp_reinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,32 +41,35 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **all**.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert **all**.  
   
-`[ @subscriber = ] 'subscriber'` Der Name des Abonnenten. *Subscriber* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **all**.  
+`[ @subscriber = ] 'subscriber'` Der Name des Abonnenten. *Subscriber* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert **all**.  
   
-`[ @subscriber_db = ] 'subscriber_db'` Der Name der Abonnenten Datenbank. *subscriber_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **all**.  
+`[ @subscriber_db = ] 'subscriber_db'` Der Name der Abonnenten Datenbank. *subscriber_db* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert **all**.  
   
-`[ @upload_first = ] 'upload_first'` Gibt an, ob Änderungen auf dem Abonnenten hochgeladen werden, bevor das Abonnement erneut initialisiert wird. *upload_first* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false. **True**gibt an, dass Änderungen hochgeladen werden, bevor das Abonnement erneut initialisiert wird. **False**gibt an, dass Änderungen nicht hochgeladen werden.  
+`[ @upload_first = ] 'upload_first'` Gibt an, ob Änderungen auf dem Abonnenten hochgeladen werden, bevor das Abonnement erneut initialisiert wird. *upload_first* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false. **True** gibt an, dass Änderungen hochgeladen werden, bevor das Abonnement erneut initialisiert wird. **False** gibt an, dass Änderungen nicht hochgeladen werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_reinitmergesubscription** wird bei der Mergereplikation verwendet.  
   
  **sp_reinitmergesubscription** können vom Verleger aufgerufen werden, um Mergeabonnements erneut zu initialisieren. Wir empfehlen auch die erneute Ausführung des Momentaufnahme-Agents.  
   
  Wenn Sie einen parametrisierten Filter hinzufügen, löschen oder ändern, können ausstehende Änderungen auf dem Abonnenten während der erneuten Initialisierung nicht auf den Verleger hochgeladen werden. Wenn Sie ausstehende Änderungen hochladen möchten, sollten Sie vor dem Ändern des Filters alle Abonnements synchronisieren.  
   
-## <a name="example"></a>Beispiel  
+## <a name="examples"></a>Beispiele  
+
+### <a name="a-reinitialize-the-push-subscription-and-lose-pending-changes"></a>A. Erneutes Initialisieren des Pushabonnements und Verlust von ausstehenden Änderungen
+
  [!code-sql[HowTo#sp_reinitmergepushsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergesubscripti_1.sql)]  
   
-## <a name="example"></a>Beispiel  
+### <a name="b-reinitialize-the-push-subscription-and-upload-pending-changes"></a>B. Erneutes Initialisieren des Pushabonnements und Hochladen von ausstehenden Änderungen
  [!code-sql[HowTo#sp_reinitmergepushsubwithupload](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergesubscripti_2.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_reinitmergesubscription**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_reinitmergesubscription** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erneutes Initialisieren von Abonnements](../../relational-databases/replication/reinitialize-subscriptions.md)   
