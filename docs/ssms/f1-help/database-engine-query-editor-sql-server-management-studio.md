@@ -6,13 +6,13 @@ ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
-- sql13.swb.tsqlquery.f1
-- sql13.swb.tsqlresults.f1
 - sql13.swb.query.advanced.f1
 - sql13.swb.query.ansi.f1
 - sql13.swb.query.general.f1
-- sql13.swb.query.general.f1
+- sql13.swb.query.grid.f1
 - sql13.swb.sqleditors.multiserverresultssettings
+- sql13.swb.tsqlquery.f1
+- sql13.swb.tsqlresults.f1
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -43,12 +43,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019, contperfq1
 ms.date: 08/28/2020
-ms.openlocfilehash: 219ebb8a431b997951b22d443877dfb751665384
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+ms.openlocfilehash: 7450a77549d05dab5a024b39be6d2b4aef6c09de
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344066"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364839"
 ---
 # <a name="sql-server-management-studio-ssms-query-editor"></a>SSMS-Abfrage-Editor (SQL Server Management Studio)
 
@@ -70,7 +70,7 @@ Sie können den Abfrage-Editor verwenden, um Skripts mit Transact-SQL-Anweisunge
 
 Wenn der Abfrage-Editor geöffnet ist, wird die SQL-Editor-Symbolleiste mit den folgenden Schaltflächen angezeigt.
 
-Sie können die SQL-Editor-Symbolleiste auch hinzufügen, indem Sie im Menü **Ansicht** nacheinander **Symbolleisten**und **SQL-Editor**auswählen. Wenn Sie die SQL-Editor-Symbolleiste hinzufügen, ohne dass ein Fenster des Abfrage-Editors geöffnet ist, steht keine der Schaltflächen zur Verfügung.
+Sie können die SQL-Editor-Symbolleiste auch hinzufügen, indem Sie im Menü **Ansicht** nacheinander **Symbolleisten** und **SQL-Editor** auswählen. Wenn Sie die SQL-Editor-Symbolleiste hinzufügen, ohne dass ein Fenster des Abfrage-Editors geöffnet ist, steht keine der Schaltflächen zur Verfügung.
 
 ![Editor-Symbolleiste](media/database-engine-query-editor-sql-server-management-studio/editor-toolbar.png)
 
@@ -158,7 +158,7 @@ Sie können Ergebnisse auch in einem Raster zurückgeben, indem Sie die Tastenko
 
 ### <a name="results-to-file-using-the-editor-toolbar"></a>Zurückgeben von Ergebnissen in einer Datei über die Editor-Symbolleiste
 
-Wenn die Abfrage ausgeführt wird, wird das Dialogfeld **Ergebnisse speichern** geöffnet. Wählen Sie unter **Speichern in**den Ordner aus, in dem Sie die Datei speichern möchten. Geben Sie unter **Dateiname** den Namen der Datei ein, und klicken Sie dann auf **Speichern**, um die Abfrageergebnisse als **Berichtsdatei** mit der Dateierweiterung „.rpt“ zu speichern. Wählen Sie den Pfeil nach unten auf der Schaltfläche **Speichern** und dann die Option **Mit Codierung speichern** aus.
+Wenn die Abfrage ausgeführt wird, wird das Dialogfeld **Ergebnisse speichern** geöffnet. Wählen Sie unter **Speichern in** den Ordner aus, in dem Sie die Datei speichern möchten. Geben Sie unter **Dateiname** den Namen der Datei ein, und klicken Sie dann auf **Speichern** , um die Abfrageergebnisse als **Berichtsdatei** mit der Dateierweiterung „.rpt“ zu speichern. Wählen Sie den Pfeil nach unten auf der Schaltfläche **Speichern** und dann die Option **Mit Codierung speichern** aus.
 
 Sie können Ergebnisse auch im Dateiformat zurückgeben, indem Sie die Tastenkombination STRG+UMSCHALT+F drücken oder das [Kontextmenü](#results-using-the-context-menu) verwenden.
 
@@ -188,7 +188,7 @@ Verschiebt durch das Hinzufügen von Leerzeichen am Zeilenanfang den Text der Ze
 
 ## <a name="context-menu"></a>Kontextmenü
 
-Sie können auf das Kontextmenü zugreifen, indem Sie an einer beliebigen Stelle im Abfrage-Editor *mit der rechten Maustaste klicken*. Die Optionen im Kontextmenü entsprechen denen in der SQL-Editor-Symbolleiste. Über das Kontextmenü erhalten Sie dieselben Optionen wie **Verbinden** und **Ausführen**, es werden aber auch weitere Optionen wie **Codeausschnitt einfügen** oder **Umschließen mit** aufgeführt.
+Sie können auf das Kontextmenü zugreifen, indem Sie an einer beliebigen Stelle im Abfrage-Editor *mit der rechten Maustaste klicken*. Die Optionen im Kontextmenü entsprechen denen in der SQL-Editor-Symbolleiste. Über das Kontextmenü erhalten Sie dieselben Optionen wie **Verbinden** und **Ausführen** , es werden aber auch weitere Optionen wie **Codeausschnitt einfügen** oder **Umschließen mit** aufgeführt.
 
 ![Optionen](media/database-engine-query-editor-sql-server-management-studio/context-menu.png)
 
@@ -206,13 +206,13 @@ Ein Codeausschnitt zum Umschließen ist eine Vorlage, die Sie beim Einschließen
 
 Im Kontextmenü gibt es mehr **Verbindungsoptionen** als bei Symbolleistenoptionen in SSMS.
 
-- **Verbinden**: Öffnet das Dialogfeld „Verbindung mit Server herstellen“. Mithilfe dieses Dialogfelds können Sie eine Verbindung mit einem Server herstellen.
+- **Verbinden** : Öffnet das Dialogfeld „Verbindung mit Server herstellen“. Mithilfe dieses Dialogfelds können Sie eine Verbindung mit einem Server herstellen.
 
-- **Trennen**: Trennt den aktuellen Abfrage-Editor vom Server.
+- **Trennen** : Trennt den aktuellen Abfrage-Editor vom Server.
 
-- **Alle Abfragen trennen**: Trennt die Verbindung sämtlicher Abfragen.
+- **Alle Abfragen trennen** : Trennt die Verbindung sämtlicher Abfragen.
 
-- **Verbindung ändern**: Öffnet das Dialogfeld „Verbindung mit Server herstellen“. Mithilfe dieses Dialogfelds können Sie eine Verbindung mit einem anderen Server herstellen.
+- **Verbindung ändern** : Öffnet das Dialogfeld „Verbindung mit Server herstellen“. Mithilfe dieses Dialogfelds können Sie eine Verbindung mit einem anderen Server herstellen.
 
 ### <a name="open-server-in-object-explorer-using-the-context-menu"></a>Öffnen eines Servers im Objekt-Explorer über das Kontextmenü
 
@@ -260,11 +260,11 @@ Schließt das Fenster **Clientstatistiken** ein, das Statistiken zu der Abfrage,
 
 Sie können die gewünschten Optionen für *Ergebnisse* über das Kontextmenü auswählen.
 
-- **Ergebnisse in Text**: Gibt die Abfrageergebnisse im Fenster **Ergebnisse** als Text zurück.
+- **Ergebnisse in Text** : Gibt die Abfrageergebnisse im Fenster **Ergebnisse** als Text zurück.
 
-- **Ergebnisse in Raster**: Gibt die Abfrageergebnisse im Fenster **Ergebnisse** in Form eines oder mehrerer Raster zurück.
+- **Ergebnisse in Raster** : Gibt die Abfrageergebnisse im Fenster **Ergebnisse** in Form eines oder mehrerer Raster zurück.
 
-- **Ergebnisse in Datei**: Wenn die Abfrage ausgeführt wird, wird das Dialogfeld **Ergebnisse speichern** geöffnet. Wählen Sie unter **Speichern in**den Ordner aus, in dem Sie die Datei speichern möchten. Geben Sie unter **Dateiname** den Namen der Datei ein, und wählen Sie dann **Speichern** aus, um die Abfrageergebnisse als **Berichtsdatei** mit der Dateierweiterung „.rpt“ zu speichern. Wählen Sie den Pfeil nach unten auf der Schaltfläche **Speichern** und dann die Option **Mit Codierung speichern** aus.
+- **Ergebnisse in Datei** : Wenn die Abfrage ausgeführt wird, wird das Dialogfeld **Ergebnisse speichern** geöffnet. Wählen Sie unter **Speichern in** den Ordner aus, in dem Sie die Datei speichern möchten. Geben Sie unter **Dateiname** den Namen der Datei ein, und wählen Sie dann **Speichern** aus, um die Abfrageergebnisse als **Berichtsdatei** mit der Dateierweiterung „.rpt“ zu speichern. Wählen Sie den Pfeil nach unten auf der Schaltfläche **Speichern** und dann die Option **Mit Codierung speichern** aus.
 
 ### <a name="properties-window-using-the-context-menu"></a>Eigenschaftenfenster über das Kontextmenü
 
