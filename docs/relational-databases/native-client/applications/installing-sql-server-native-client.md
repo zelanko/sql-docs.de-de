@@ -22,12 +22,12 @@ helpviewer_keywords:
 - removing SQL Server Native Client
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8a3047db0cedf165016257961ea9c27474a941ef
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 0537a9fc955cdd27a243ec020199122260db2890
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892330"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384826"
 ---
 # <a name="installing-sql-server-native-client"></a>Installieren von SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "91892330"
  
  Es ist kein SQL Server 2016 Native Client vorhanden. Weitere Informationen finden Sie unter [SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client.md). 
  
-Sie können sqlncli.msi auch von der SQL Server 2012 Feature Pack-Webseite herunterladen. Wenn Sie die neueste Version des SQL Server Native Client herunterladen möchten, besuchen Sie das [Microsoft® SQL Server® 2012 Feature Pack](https://www.microsoft.com/download/confirmation.aspx?id=29065). Wenn eine frühere Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client vor SQL Server 2012 auch auf dem Computer installiert ist, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wird Native Client 11,0 parallel zur früheren Version installiert.  
+Sie können sqlncli.msi auch von der SQL Server 2012 Feature Pack-Webseite herunterladen. Wenn Sie die neueste Version des SQL Server Native Client herunterladen möchten, besuchen Sie das [Microsoft® SQL Server® 2012 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56041). Wenn eine frühere Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client vor SQL Server 2012 auch auf dem Computer installiert ist, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wird Native Client 11,0 parallel zur früheren Version installiert.  
   
  Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Dateien (sqlncli11.dll, sqlnclir11.rll und s11ch_sqlncli.chm) werden in folgendem Verzeichnis installiert:  
   

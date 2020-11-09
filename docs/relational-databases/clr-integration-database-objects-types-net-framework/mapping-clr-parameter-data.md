@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 911b56023ea78ec75e605a39a39b705724101dee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 59cc4c80781f899701f872bd1e8cdd1eea823358
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719938"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384737"
 ---
 # <a name="mapping-clr-parameter-data"></a>Zuordnen von CLR-Parameterdaten
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,13 +48,13 @@ ms.locfileid: "85719938"
 |**date**|**SqlDateTime**|**DateTime, NULL-Werte zulassen\<DateTime>**|  
 |**datetime**|**SqlDateTime**|**DateTime, NULL-Werte zulassen\<DateTime>**|  
 |**datetime2**|Keine|**DateTime, NULL-Werte zulassen\<DateTime>**|  
-|**DateTimeOffset**|**None**|**DateTimeOffset, NULL-Werte zulassen\<DateTimeOffset>**|  
+|**DATETIMEOFFSET**|**None**|**DateTimeOffset, NULL-Werte zulassen\<DateTimeOffset>**|  
 |**decimal**|**SqlDecimal**|**Decimal, NULL-Werte zulassen\<Decimal>**|  
 |**float**|**SqlDouble**|**Double, NULL-Werte zulassen\<Double>**|  
-|**geography**|**SqlGeography**<br /><br /> **SqlGeography** wird in Microsoft.SqlServer.Types.dll definiert, das mit SQL Server installiert wird und aus dem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676)heruntergeladen werden kann.|Keine|  
-|**geometry**|**SqlGeometry**<br /><br /> **SqlGeometry** wird in Microsoft.SqlServer.Types.dll definiert, das mit SQL Server installiert wird und aus dem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676)heruntergeladen werden kann.|Keine|  
-|**hierarchyid**|**SqlHierarchyId**<br /><br /> **SqlHierarchyId** wird in Microsoft.SqlServer.Types.dll definiert, das mit SQL Server installiert wird und aus dem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676)heruntergeladen werden kann.|Keine|  
-|**Bild**|Keine|Keine|  
+|**geography**|**SqlGeography**<br /><br /> **SqlGeography** wird in Microsoft.SqlServer.Types.dll definiert, das mit SQL Server installiert wird und aus dem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Feature Pack](https://www.microsoft.com/download/details.aspx?id=100430)heruntergeladen werden kann.|Keine|  
+|**geometry**|**SqlGeometry**<br /><br /> **SqlGeometry** wird in Microsoft.SqlServer.Types.dll definiert, das mit SQL Server installiert wird und aus dem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Feature Pack](https://www.microsoft.com/download/details.aspx?id=100430)heruntergeladen werden kann.|Keine|  
+|**hierarchyid**|**SqlHierarchyId**<br /><br /> **SqlHierarchyId** wird in Microsoft.SqlServer.Types.dll definiert, das mit SQL Server installiert wird und aus dem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Feature Pack](https://www.microsoft.com/download/details.aspx?id=100430)heruntergeladen werden kann.|Keine|  
+|**image**|Keine|Keine|  
 |**int**|**SqlInt32**|**Int32, NULL-Werte zulassen\<Int32>**|  
 |**money**|**SqlMoney**|**Decimal, NULL-Werte zulassen\<Decimal>**|  
 |**nchar**|**SqlChars, SqlString**|**String, Char[]**|  
@@ -62,7 +62,7 @@ ms.locfileid: "85719938"
 |**numeric**|**SqlDecimal**|**Decimal, NULL-Werte zulassen\<Decimal>**|  
 |**nvarchar**|**SqlChars, SqlString**<br /><br /> **SqlChars** eignet sich besser für die Datenübertragung und den Zugriff, und **SqlString** ist eine bessere Entsprechung für die Durchführung von Zeichen folgen Vorgängen.|**String, Char[]**|  
 |**nvarchar (1), nchar (1)**|**SqlChars, SqlString**|**Char, String, Char [], Nullable\<char>**|  
-|**real**|**SqlSingle** (der Bereich von **SqlSingle**ist jedoch größer als **real**).|**Single, Nullable\<Single>**|  
+|**real**|**SqlSingle** (der Bereich von **SqlSingle** ist jedoch größer als **real** ).|**Single, Nullable\<Single>**|  
 |**rowversion**|Keine|**Byte []**|  
 |**smallint**|**SqlInt16**|**Int16, NULL-Werte zulassen\<Int16>**|  
 |**smallmoney**|**SqlMoney**|**Decimal, NULL-Werte zulassen\<Decimal>**|  
@@ -80,9 +80,9 @@ ms.locfileid: "85719938"
 |**xml**|**SQLXML**|Keine|  
   
 ## <a name="automatic-data-type-conversion-with-out-parameters"></a>Automatische Datentypkonvertierung mit Out-Parametern  
- Eine CLR-Methode kann Informationen an den aufrufenden Code bzw. das aufrufende Programm zurückgeben, indem Sie einen Eingabeparameter mit dem **out** -Modifizierer (Microsoft Visual c#) oder ** \<Out()> ByRef** (Microsoft Visual Basic) kennzeichnet, wenn der Eingabeparameter ein CLR-Datentyp im **System ist. der Data. SqlTypes** -Namespace, und das aufrufende Programm gibt seinen äquivalenten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp als Eingabeparameter an. eine Typkonvertierung erfolgt automatisch, wenn die CLR-Methode den-Datentyp zurückgibt.  
+ Eine CLR-Methode kann Informationen an den aufrufenden Code bzw. das aufrufende Programm zurückgeben, indem Sie einen Eingabeparameter mit dem **out** -Modifizierer (Microsoft Visual c#) oder **\<Out()> ByRef** (Microsoft Visual Basic) kennzeichnet, wenn der Eingabeparameter ein CLR-Datentyp im **System ist. der Data. SqlTypes** -Namespace, und das aufrufende Programm gibt seinen äquivalenten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp als Eingabeparameter an. eine Typkonvertierung erfolgt automatisch, wenn die CLR-Methode den-Datentyp zurückgibt.  
   
- Beispielsweise verfügt die folgende gespeicherte CLR-Prozedur über einen Eingabeparameter des **SqlInt32** CLR-Datentyps, der mit **out** (c#) oder ** \<Out()> ByRef** (Visual Basic) gekennzeichnet ist:  
+ Beispielsweise verfügt die folgende gespeicherte CLR-Prozedur über einen Eingabeparameter des **SqlInt32** CLR-Datentyps, der mit **out** (c#) oder **\<Out()> ByRef** (Visual Basic) gekennzeichnet ist:  
   
 ```csharp  
 [Microsoft.SqlServer.Server.SqlProcedure]  
@@ -121,7 +121,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
   
 |Aktualisierter Inhalt|  
 |---------------------|  
-|Der Zuordnungstabelle wurden die Typen **SqlGeography**, **SqlGeometry**und **SqlHierarchyId** hinzugefügt.|  
+|Der Zuordnungstabelle wurden die Typen **SqlGeography** , **SqlGeometry** und **SqlHierarchyId** hinzugefügt.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server-Datentypen in .NET Framework](../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  

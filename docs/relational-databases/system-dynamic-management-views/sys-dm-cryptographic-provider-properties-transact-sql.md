@@ -1,6 +1,6 @@
 ---
 description: sys.dm_cryptographic_provider_properties (Transact-SQL)
-title: sys. dm_cryptographic_provider_properties (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_cryptographic_provider_properties (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 024b0095-6766-4189-a39a-d316c5ec2874
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1e8ff6159cea1f6ca723ed83a73f045f5746967c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 419793e94cc85a8dba1e29f4b79694820518eaad
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542350"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384661"
 ---
 # <a name="sysdm_cryptographic_provider_properties-transact-sql"></a>sys.dm_cryptographic_provider_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,12 +32,12 @@ ms.locfileid: "89542350"
   Gibt Informationen über registrierte Kryptografieanbieter zurück.  
   
  
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |provider_id|**int**|ID des Kryptografieanbieters.|  
 |guid|**uniqueidentifier**|Eindeutige Anbieter-GUID.|  
-|provider_version|**nvarchar(256)**|Version des Anbieters im Format '*aa.bb.cccc.dd*'.|  
-|sqlcrypt_version|**nvarchar(256)**|Hauptversionsnummer der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cryptographic API im Format '*aa.bb.cccc.dd*'.|  
+|provider_version|**nvarchar(256)**|Version des Anbieters im Format ' *aa.bb.cccc.dd* '.|  
+|sqlcrypt_version|**nvarchar(256)**|Hauptversionsnummer der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cryptographic API im Format ' *aa.bb.cccc.dd* '.|  
 |friendly_name|**nvarchar (2048)**|Vom Anbieter bereitgestellter Name.|  
 |authentication_type|**nvarchar(256)**|WINDOWS, BASIC oder OTHER.|  
 |symmetric_key_support|**tinyint**|0 (nicht unterstützt)<br /><br /> 1 (unterstützt)|  
@@ -49,8 +49,8 @@ ms.locfileid: "89542350"
 |symmetric_key_import|**tinyint**|0 (nicht unterstützt)<br /><br /> 1 (unterstützt)|  
 |symmetric_key_persistance|**tinyint**|0 (nicht unterstützt)<br /><br /> 1 (unterstützt)|  
   
-## <a name="remarks"></a>Hinweise  
- Die sys.dm_cryptographic_provider_properties-Sicht ist öffentlich sichtbar.  
+## <a name="permissions"></a>Berechtigungen  
+ Die **sys.dm_cryptographic_provider_properties** Ansicht ist für die öffentliche sichtbar.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Sicherheitskatalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
