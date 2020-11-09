@@ -25,7 +25,7 @@ ms.locfileid: "88498599"
   
  Diese Liste schließt keine veralteten Objekte ein.  
   
- Die Liste der Datenbankobjekte, die die semantische Suche unterstützen, finden Sie unter [Semantic Search DDL, Functions, Stored Procedures, and Views](../../relational-databases/search/semantic-search-ddl-functions-stored-procedures-and-views.md).  
+ Die Liste der Datenbankobjekte, die die semantische Suche unterstützen, finden Sie unter [Semantische Such-DDL, Funktionen, gespeicherte Prozeduren und Sichten](../../relational-databases/search/semantic-search-ddl-functions-stored-procedures-and-views.md).  
   
 ##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a> Transact-SQL-DDL-Anweisungen (Data Definition Language, Datendefinitionssprache)  
   

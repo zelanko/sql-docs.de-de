@@ -96,7 +96,7 @@ Um zu vermeiden, dass nur noch wenig Speicherplatz vorhanden ist, erfolgt die K�
 > Die Protokollkürzung verringert nicht die Größe einer physischen Protokolldatei. Sie müssen zum Reduzieren der physischen Größe einer physischen Protokolldatei die Protokolldatei verkleinern. Informationen zum Verkleinern der Größe der physischen Protokolldatei finden Sie unter [Verwalten der Größe der Transaktionsprotokolldatei](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
 > Berücksichtigen Sie jedoch die [Faktoren, die die Protokollkürzung verzögern können](#FactorsThatDelayTruncation). Wenn der Speicherplatz nach einer Protokollverkleinerung wieder benötigt wird, vergrößert sich das Transaktionsprotokoll wieder und führt bei der Protokollvergrößerung infolgedessen zu einem Leistungsoverhead.
   
-##  <a name="factors-that-can-delay-log-truncation"></a><a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
+##  <a name="factors-that-can-delay-log-truncation"></a><a name="FactorsThatDelayTruncation"></a> Faktoren, die die Protokollkürzung verzögern können  
  Bleiben Protokolldatensätze lange aktiv, verzögert sich die Transaktionsprotokollkürzung. Dabei kann sich das Transaktionsprotokoll auffüllen, wie bereits oben erwähnt wurde.  
   
 > [!IMPORTANT]
@@ -124,7 +124,7 @@ Um zu vermeiden, dass nur noch wenig Speicherplatz vorhanden ist, erfolgt die K�
 |16|XTP_CHECKPOINT|Es muss ein In-Memory OLTP-Prüfpunkt ausgeführt werden. Für speicheroptimierte Tabellen wird ein automatischer Prüfpunkt erstellt, wenn die Transaktionsprotokolldatei seit dem letzten Prüfpunkt größer als 1,5 GB geworden ist (bezieht sich sowohl auf datenträgerbasierte als auch auf speicheroptimierte Tabellen).<br /> Weitere Informationen finden Sie unter [Prüfpunktvorgang für speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md) und [Protokollierungs- und Prüfpunktprozess für speicheroptimierte Tabellen] (https://blogs.msdn.microsoft.com/sqlcat/2016/05/20/logging-and-checkpoint-process-for-memory-optimized-tables-2/)
   
 ##  <a name="operations-that-can-be-minimally-logged"></a><a name="MinimallyLogged"></a> Vorgänge, für die eine minimale Protokollierung verfügbar ist  
-Bei der*minimalen Protokollierung* werden nur die Informationen protokolliert, die zum Wiederherstellen der Transaktion ohne Unterstützung der Zeitpunktwiederherstellung erforderlich sind. In diesem Thema werden die Vorgänge aufgeführt, die unter dem massenprotokollierten [Wiederherstellungsmodell](../backup-restore/recovery-models-sql-server.md) minimal protokolliert werden (sowie unter dem einfachen Wiederherstellungsmodell, es sei denn, es wird eine Sicherung ausgeführt).  
+Bei der *minimalen Protokollierung* werden nur die Informationen protokolliert, die zum Wiederherstellen der Transaktion ohne Unterstützung der Zeitpunktwiederherstellung erforderlich sind. In diesem Thema werden die Vorgänge aufgeführt, die unter dem massenprotokollierten [Wiederherstellungsmodell](../backup-restore/recovery-models-sql-server.md) minimal protokolliert werden (sowie unter dem einfachen Wiederherstellungsmodell, es sei denn, es wird eine Sicherung ausgeführt).  
   
 > [!NOTE]
 > Die minimale Protokollierung wird für speicheroptimierte Tabellen nicht unterstützt.  
@@ -144,10 +144,10 @@ Wenn die Transaktionsreplikation aktiviert ist, werden `SELECT INTO`-Vorgänge a
   
 -   Teilupdates von Datentypen für hohe Werte mithilfe der `.WRITE`-Klausel in der [UPDATE](../../t-sql/queries/update-transact-sql.md)-Anweisung beim Einfügen oder Anfügen neuer Daten. Beachten Sie, dass die minimale Protokollierung nicht verwendet wird, wenn vorhandene Werte aktualisiert werden. Weitere Informationen zu Datentypen für hohe Werte finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
--   [WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) -Anweisung und [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) -Anweisung beim Einfügen oder Anfügen neuer Daten an die Datentypspalten **text**, **ntext**und **image** . Beachten Sie, dass die minimale Protokollierung nicht verwendet wird, wenn vorhandene Werte aktualisiert werden.  
+-   [WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) -Anweisung und [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) -Anweisung beim Einfügen oder Anfügen neuer Daten an die Datentypspalten **text** , **ntext** und **image** . Beachten Sie, dass die minimale Protokollierung nicht verwendet wird, wenn vorhandene Werte aktualisiert werden.  
   
     > [!WARNING]
-    > Die `WRITETEXT`- und die `UPDATETEXT`-Anweisung sind **veraltet**, sollten also in neuen Anwendungen nicht mehr verwendet werden.  
+    > Die `WRITETEXT`- und die `UPDATETEXT`-Anweisung sind **veraltet** , sollten also in neuen Anwendungen nicht mehr verwendet werden.  
   
 -   Wenn für die Datenbank das einfache oder massenprotokollierte Wiederherstellungsmodell festgelegt ist, werden einige Index-DDL-Vorgänge minimal protokolliert, unabhängig davon, ob der Vorgang offline oder online ausgeführt wird. Die minimal protokollierten Indexvorgänge sind nachfolgend aufgeführt:  
   
