@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 06/01/2020
-ms.openlocfilehash: 678d985daf2ca3130fbf7eb3b052718c3cc898ab
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: 8137ca8f37254bab94dfaae6d9c8072c293a81ff
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746190"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243389"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Tutorial: Hinzufügen des Beispielwidgets für die *fünf langsamsten Abfragen* zum Datenbankdashboard
 
@@ -30,7 +30,7 @@ Azure Data Studio enthält mehrere integrierte Erkenntniswidgets. Dieses Tutoria
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Für dieses Tutorial ist die SQL Server- oder Azure SQL-Datenbank *TutorialDB* erforderlich. Um die *TutorialDB*-Datenbank zu erstellen, führen Sie eine der folgenden Schnellstartanleitungen vollständig aus:
+Für dieses Tutorial ist die SQL Server- oder Azure SQL-Datenbank *TutorialDB* erforderlich. Um die *TutorialDB* -Datenbank zu erstellen, führen Sie eine der folgenden Schnellstartanleitungen vollständig aus:
 
 * [Herstellen einer Verbindung mit und Abfragen von SQL Server mithilfe von [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 
@@ -40,9 +40,9 @@ Für dieses Tutorial ist die SQL Server- oder Azure SQL-Datenbank *TutorialDB* e
 
 Das Widget in diesem Beispiel erfordert die Aktivierung des *Abfragespeichers*.
 
-1. Klicken Sie mit der rechten Maustaste auf die Datenbank **TutorialDB** (in der Randleiste **SERVER**), und wählen Sie **Neue Abfrage** aus.
+1. Klicken Sie mit der rechten Maustaste auf die Datenbank **TutorialDB** (in der Randleiste **SERVER** ), und wählen Sie **Neue Abfrage** aus.
 
-2. Fügen Sie die folgende Transact-SQL-Anweisung (T-SQL) in den Abfrage-Editor ein, und klicken Sie auf **Ausführen**:
+2. Fügen Sie die folgende Transact-SQL-Anweisung (T-SQL) in den Abfrage-Editor ein, und klicken Sie auf **Ausführen** :
 
    ```sql
     ALTER DATABASE TutorialDB SET QUERY_STORE = ON
@@ -52,13 +52,13 @@ Das Widget in diesem Beispiel erfordert die Aktivierung des *Abfragespeichers*.
 
 Um das *Widget für langsame Abfragen* zu Ihrem Dashboard hinzuzufügen, bearbeiten Sie die Einstellung *dashboard.database.widgets* in Ihrer Datei *Benutzereinstellungen*.
 
-1. Öffnen Sie die *Benutzereinstellungen*, indem Sie **STRG+UMSCHALT+P** drücken, um die *Befehlspalette* zu öffnen.
+1. Öffnen Sie die *Benutzereinstellungen* , indem Sie **STRG+UMSCHALT+P** drücken, um die *Befehlspalette* zu öffnen.
 
 2. Geben Sie *Einstellungen* in das Suchfeld ein, und wählen Sie Folgendes aus: **Einstellungen: Benutzereinstellungen öffnen**.
 
    ![Befehl „Benutzereinstellungen öffnen“](./media/tutorial-qds-sql-server/open-user-settings.png)
 
-3. Geben Sie *Dashboard* in das Feld „Einstellungssuche“ ein, suchen Sie nach **dashboard.database.widgets**, und klicken Sie dann auf *In settings.json bearbeiten*.
+3. Geben Sie *Dashboard* in das Feld „Einstellungssuche“ ein, suchen Sie nach **dashboard.database.widgets** , und klicken Sie dann auf *In settings.json bearbeiten*.
 
    ![Sucheinstellungen](./media/tutorial-qds-sql-server/search-settings.png)
 
@@ -98,9 +98,9 @@ Um das *Widget für langsame Abfragen* zu Ihrem Dashboard hinzuzufügen, bearbei
    ]
    ```
 
-5. Drücken Sie **STRG+S**, um die geänderten **Benutzereinstellungen** zu speichern.
+5. Drücken Sie **STRG+S** , um die geänderten **Benutzereinstellungen** zu speichern.
 
-6. Öffnen Sie das *Datenbankdashboard*, indem Sie in der Randleiste **SERVER** zu **TutorialDB** navigieren, mit der rechten Maustaste klicken und **Verwalten** auswählen.
+6. Öffnen Sie das *Datenbankdashboard* , indem Sie in der Randleiste **SERVER** zu **TutorialDB** navigieren, mit der rechten Maustaste klicken und **Verwalten** auswählen.
 
    ![Öffnen des Dashboards](./media/tutorial-qds-sql-server/insight-open-dashboard.png)
 
@@ -120,7 +120,7 @@ Um das *Widget für langsame Abfragen* zu Ihrem Dashboard hinzuzufügen, bearbei
 
 ## <a name="view-the-query-plan"></a>Anzeigen des Abfrageplans
 
-1. Klicken Sie mit der rechten Maustaste auf die Datenbank **TutorialDB**, und wählen Sie *Verwalten* aus.
+1. Klicken Sie mit der rechten Maustaste auf die Datenbank **TutorialDB** , und wählen Sie *Verwalten* aus.
 
 2. Wenn Sie über das *langsame Abfragewidget* weitere Informationen zu einem Erkenntniswidget anzeigen möchten, klicken Sie in der oberen rechten Ecke auf die drei Auslassungspunkte ( **...** ), und wählen Sie **Details anzeigen** aus.
 
@@ -136,7 +136,7 @@ Um das *Widget für langsame Abfragen* zu Ihrem Dashboard hinzuzufügen, bearbei
 
 5. Sehen Sie sich den Ausführungsplan der Abfrage an:
 
-   ![Showplan](./media/tutorial-qds-sql-server/showplan.png)
+   ![Screenshot: Ausführungsplan für die Abfrage](./media/tutorial-qds-sql-server/showplan.png)
 
 ## <a name="next-steps"></a>Nächste Schritte
 

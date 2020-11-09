@@ -8,17 +8,17 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
-ms.date: 09/22/2020
-ms.openlocfilehash: c6e4dd8869c9f26adb34c5acb965241ff9a2198e
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+ms.date: 10/29/2020
+ms.openlocfilehash: 0c77b957f14401aec3130fa5fa4f78f0d34de9b5
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098699"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067202"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Kusto-Erweiterung (KQL) für Azure Data Studio (Vorschau)
 
-Die Kusto-Erweiterung (KQL) für [Azure Data Studio](../what-is.md) ermöglicht es Ihnen, eine Verbindung zu [Azure Data Explorer](/azure/data-explorer/data-explorer-overview)-Clustern herzustellen und sie abzufragen.
+Die Kusto-Erweiterung (KQL) für [Azure Data Studio](../what-is-azure-data-studio.md) ermöglicht es Ihnen, eine Verbindung zu [Azure Data Explorer](/azure/data-explorer/data-explorer-overview)-Clustern herzustellen und sie abzufragen.
 
 Benutzer können KQL-Abfragen schreiben und ausführen und Notebooks mit dem [Kusto-Kernel](../notebooks/notebooks-kusto-kernel.md) vollständig mit IntelliSense erstellen.
 
@@ -55,9 +55,9 @@ Führen Sie die folgenden Schritte aus, um die Kusto-Erweiterung (KQL) in Azure 
 
 Suchen Sie im [Azure-Portal](https://ms.portal.azure.com/#home) nach Ihrem Azure Data Explorer-Cluster und dann nach dem URI für den Cluster.
 
-:::image type="content" source="media/kusto-extension/kusto-extension-adx-cluster-uri.png" alt-text="Kusto-Erweiterung":::
+:::image type="content" source="media/kusto-extension/kusto-extension-adx-cluster-uri.png" alt-text="URI":::
 
-Sie können jedoch auch sofort mit dem *help.kusto.windows.net*-Cluster loslegen.
+Sie können jedoch auch sofort mit dem *help.kusto.windows.net* -Cluster loslegen.
 
 Für diesen Artikel werden zu Beispielzwecken die Daten aus dem help.kusto.windows.net-Cluster verwendet.
 
@@ -68,7 +68,7 @@ Befolgen Sie die folgenden Schritte, um einen Azure Data Explorer-Cluster einzur
 1. Klicken Sie im Bereich **Verbindungen** auf **Neue Verbindung**.
 
 2. Geben Sie im Feld **Verbindungsdetails** die erforderlichen Informationen ein.
-    1. Wählen Sie für **Verbindungstyp**die Option *Kusto*aus.
+    1. Wählen Sie für **Verbindungstyp** die Option *Kusto* aus.
     2. Geben Sie unter **Cluster** Ihren Azure Data Explorer-Cluster ein.
 
         > [!Note]
@@ -82,7 +82,7 @@ Befolgen Sie die folgenden Schritte, um einen Azure Data Explorer-Cluster einzur
     7. Lassen Sie das Feld **Name (optional)** leer.
         1. Sie können dieses Feld nutzen, um Ihrem Server einen Alias zuzuweisen.
 
-    :::image type="content" source="media/kusto-extension/kusto-extension-connection-details.png" alt-text="Kusto-Erweiterung":::
+    :::image type="content" source="media/kusto-extension/kusto-extension-connection-details.png" alt-text="Verbindungsdetails":::
 
 ## <a name="how-to-query-an-azure-data-explorer-database-in-azure-data-studio"></a>Abfragen einer Azure Data Explorer-Datenbank in Azure Data Studio
 
@@ -120,23 +120,21 @@ Führen Sie die folgenden Schritte aus, um die Einstellungen für die Kusto-Erwe
 
 Die Erweiterungseinstellungen sehen wie folgt aus:
 
-:::image type="content" source="media/kusto-extension/kusto-extension-settings.png" alt-text="Kusto-Erweiterung":::
+:::image type="content" source="media/kusto-extension/kusto-extension-settings.png" alt-text="Einstellungen für die Kusto-Erweiterung (KQL)":::
 
 ## <a name="sanddance-visualization"></a>SandDance-Visualisierung
 
-Die [SandDance-Erweiterung](sanddance-extension.md) in Kombination mit der Kusto-Erweiterung (KQL) in Azure Data Studio bringt eine umfangreiche interaktive Visualisierung mit sich. Klicken Sie im Resultset der KQL-Abfrage auf die Schaltfläche **Schnellansicht**, um [SandDance](https://sanddance.js.org/) zu starten.
+Die [SandDance-Erweiterung](sanddance-extension.md) in Kombination mit der Kusto-Erweiterung (KQL) in Azure Data Studio bringt eine umfangreiche interaktive Visualisierung mit sich. Klicken Sie im Resultset der KQL-Abfrage auf die Schaltfläche **Schnellansicht** , um [SandDance](https://sanddance.js.org/) zu starten.
 
-:::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="Kusto-Erweiterung":::
+:::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="SandDance-Visualisierung":::
 
 ## <a name="known-issues"></a>Bekannte Probleme
 
 | Details | Problemumgehung |
 |---------|------------|
-| [Das Verbindungs-Viewlet von Kusto funktioniert nach erneutem Laden nicht](https://github.com/microsoft/azuredatastudio/issues/12475). | N/V |
-| [Die Verbindung kann nicht automatisch wiederhergestellt werden](https://github.com/microsoft/azuredatastudio/issues/11830). | Trennen Sie die Verbindung, und stellen Sie erneut eine Verbindung mit Azure Data Explorer her. |
-| [Für aktualisierten Kusto-Cluster ist keine ordnungsgemäße Verbindungswiederherstellung möglich.](https://github.com/microsoft/azuredatastudio/issues/11824) | Trennen Sie die Verbindung, und stellen Sie erneut eine Verbindung mit Azure Data Explorer her. |
-| [Bei Verbindung mit einem Cluster sollte das Clusterdashboard anstelle der Datenbank angezeigt werden.](https://github.com/microsoft/azuredatastudio/issues/12549) | N/V |
-| Für jede Tabelle in Ihrem Azure Data-Cluster gibt es nur eine Option, die Top 1000 auszuwählen (**SELECT TOP 1000**) anstelle von zehn zufälligen Elementen (**TAKE 10**). | N/V |
+| [In einem Kusto-Notebook wird der Änderungsvorgang für eine Datenbankverbindung für eine gespeicherte Aliasverbindung nach einem Fehler bei der Codezellenausführung unterbrochen.](https://github.com/microsoft/azuredatastudio/issues/12384) | Schließen Sie das Notebook, öffnen Sie es wieder, und stellen Sie dann eine Verbindung mit dem richtigen Cluster mit der Datenbank her. |
+| [In einem Kusto-Notebook funktioniert das Ändern einer Datenbankverbindung für eine nicht gespeicherte Aliasverbindung nicht.](https://github.com/microsoft/azuredatastudio/issues/12843) |Erstellen Sie über das Verbindungs-Viewlet eine neue Verbindung, und speichern Sie sie mit einem Alias. Erstellen Sie dann ein neues Notebook, und stellen Sie eine Verbindung mit der neu gespeicherten Verbindung her. | 
+| [In einem Kusto-Notebook werden beim Erstellen einer neuen ADX-Verbindung keine Einträge in der Dropdownliste für Datenbanken angezeigt.](https://github.com/microsoft/azuredatastudio/issues/12666) | Erstellen Sie über das Verbindungs-Viewlet eine neue Verbindung, und speichern Sie sie mit einem Alias. Erstellen Sie dann ein neues Notebook, und stellen Sie eine Verbindung mit der neu gespeicherten Verbindung her. |
 
 Sie können eine [Featureanforderung](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=) senden, um Feedback für das Produktteam bereitzustellen.  
 Sie können einen [Fehlerbericht](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=bug_report.md&title=) senden, um Feedback für das Produktteam bereitzustellen.

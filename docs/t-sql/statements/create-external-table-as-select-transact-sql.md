@@ -21,12 +21,12 @@ ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: bbb0773d4c89b7b9879b0ff250e9ffaf6e465654
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 1085686f4c83198a043855e701ec2ef38d17541f
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024352"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496946"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -61,31 +61,31 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 ```
 
 ## <a name="arguments"></a>Argumente
- **[ [ *Datenbankname* . [ *Schemaname* ] . ] | *Schemaname* . ] *Tabellenname***: Dies ist der ein- bis dreiteilige Name der Tabelle, die in der Datenbank erstellt werden soll. Bei einer externen Tabelle werden nur die Metadaten der Tabelle in der relationalen Datenbank gespeichert. 
+ **[ [ *Datenbankname* . [ *Schemaname* ] . ] | *Schemaname* . ] *Tabellenname*** : Dies ist der ein- bis dreiteilige Name der Tabelle, die in der Datenbank erstellt werden soll. Bei einer externen Tabelle werden nur die Metadaten der Tabelle in der relationalen Datenbank gespeichert. 
 
- **LOCATION =  '*HDFS-Ordner*'** : Gibt an, wohin die Ergebnisse der SELECT-Anweisung in der externen Datenquelle geschrieben werden sollen. Der Speicherort ist ein Ordnername und kann wahlweise einen Pfad enthalten, der relativ zum Stammordner des Hadoop-Clusters oder der Azure Blob Storage-Instanz ist. PolyBase erstellt den Pfad und den Ordner, wenn diese nicht bereits vorhanden sind.
+ **LOCATION =  ' *HDFS-Ordner* '** : Gibt an, wohin die Ergebnisse der SELECT-Anweisung in der externen Datenquelle geschrieben werden sollen. Der Speicherort ist ein Ordnername und kann wahlweise einen Pfad enthalten, der relativ zum Stammordner des Hadoop-Clusters oder der Azure Blob Storage-Instanz ist. PolyBase erstellt den Pfad und den Ordner, wenn diese nicht bereits vorhanden sind.
 
 Die externen Dateien mit dem Namen *QueryID_date_time_ID.format* werden in *hdfs_folder* geschrieben, wobei *ID* ein inkrementeller Bezeichner ist und *format* das Format der exportierten Daten. Beispiel : QID776_20160130_182739_0.orc.
 
- **DATA_SOURCE = *Name_der_externen_Datenquelle***: Gibt den Namen eines externen Datenquellenobjekts an. Dieses enthält den Speicherort, in dem die externen Daten gespeichert sind oder gespeichert werden sollen. Der Speicherort ist entweder ein Hadoop-Cluster oder eine Azure Blob Storage-Instanz. Verwenden Sie zum Erstellen einer externen Datenquelle [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md).
+ **DATA_SOURCE = *Name_der_externen_Datenquelle*** : Gibt den Namen eines externen Datenquellenobjekts an. Dieses enthält den Speicherort, in dem die externen Daten gespeichert sind oder gespeichert werden sollen. Der Speicherort ist entweder ein Hadoop-Cluster oder eine Azure Blob Storage-Instanz. Verwenden Sie zum Erstellen einer externen Datenquelle [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
- **FILE_FORMAT = *Name_des_externen_Dateiformats***: Gibt den Namen des externen Dateiformatobjekts an, in dem das Format für die externe Datendatei enthalten ist. Verwenden Sie zum Erstellen eines externen Dateiformats [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md).
+ **FILE_FORMAT = *Name_des_externen_Dateiformats*** : Gibt den Namen des externen Dateiformatobjekts an, in dem das Format für die externe Datendatei enthalten ist. Verwenden Sie zum Erstellen eines externen Dateiformats [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md).
 
  Zu dem Zeitpunkt der Ausführung der CREATE EXTERNAL TABLE AS SELECT-Anweisung werden keine **REJECT-Optionen** angewendet. Stattdessen werden sie hier angegeben, damit die Datenbank sie später beim Importieren von Daten aus der externen Tabelle verwenden kann. Wenn die CREATE TABLE AS SELECT-Anweisung später Daten aus der externen Tabelle auswählt, verwendet die Datenbank die REJECT-Optionen, um die Anzahl oder den Prozentsatz an Zeilen zu bestimmen, für die ein Importfehler auftreten kann, bevor der Importvorgang beendet wird.
 
-   - **REJECT_VALUE = *Ablehnungswert***: Gibt die Anzahl oder den Prozentsatz an Zeilen an, für die ein Importfehler auftreten kann, bevor die Datenbank den Importvorgang anhält.
+   - **REJECT_VALUE = *Ablehnungswert*** : Gibt die Anzahl oder den Prozentsatz an Zeilen an, für die ein Importfehler auftreten kann, bevor die Datenbank den Importvorgang anhält.
 
-   - **REJECT_TYPE = **value** | percentage**: Gibt an, ob die REJECT_VALUE-Option als Literalwert oder Prozentsatz angegeben ist.
+   - **REJECT_TYPE = **value** | percentage** : Gibt an, ob die REJECT_VALUE-Option als Literalwert oder Prozentsatz angegeben ist.
 
-      - **value**: Wird verwendet, wenn REJECT_VALUE ist ein Literalwert ist, kein Prozentsatz. Die Datenbank beendet das Importieren von Zeilen aus der externen Datendatei, wenn die Anzahl der fehlerhaften Zeilen den Wert von *reject_value* überschreitet.
+      - **value** : Wird verwendet, wenn REJECT_VALUE ist ein Literalwert ist, kein Prozentsatz. Die Datenbank beendet das Importieren von Zeilen aus der externen Datendatei, wenn die Anzahl der fehlerhaften Zeilen den Wert von *reject_value* überschreitet.
 
         Gilt beispielsweise „REJECT_VALUE = 5“ und „REJECT_TYPE = value“, dann beendet die Datenbank den Zeilenimport, nachdem fünf Zeilen nicht importiert werden konnten.
 
-      - **percentage**: Wird verwendet, wenn REJECT_VALUE ein Prozentsatz ist, kein Literalwert. Die Datenbank beendet das Importieren von Zeilen aus der externen Datendatei, wenn der *Prozentsatz* der fehlerhaften Zeilen den Prozentsatz von *reject_value* überschreitet. Der Prozentsatz der fehlerhaften Zeilen wird in Intervallen berechnet.
+      - **percentage** : Wird verwendet, wenn REJECT_VALUE ein Prozentsatz ist, kein Literalwert. Die Datenbank beendet das Importieren von Zeilen aus der externen Datendatei, wenn der *Prozentsatz* der fehlerhaften Zeilen den Prozentsatz von *reject_value* überschreitet. Der Prozentsatz der fehlerhaften Zeilen wird in Intervallen berechnet.
 
-   - **REJECT_SAMPLE_VALUE = *Ablehnungswert***: Ist erforderlich, wenn „REJECT_TYPE = percentage“ angegeben ist. Dieser Wert gibt die Anzahl von Zeilen für einen Importversuch an, bevor die Datenbank den Prozentsatz der fehlerhaften Zeilen neu berechnet.
+   - **REJECT_SAMPLE_VALUE = *Ablehnungswert*** : Ist erforderlich, wenn „REJECT_TYPE = percentage“ angegeben ist. Dieser Wert gibt die Anzahl von Zeilen für einen Importversuch an, bevor die Datenbank den Prozentsatz der fehlerhaften Zeilen neu berechnet.
 
-      Gilt beispielsweise REJECT_SAMPLE_VALUE = 1000, dann berechnet die Datenbank den Prozentsatz fehlerhafter Zeilen nach dem Importversuch von 1000 Zeilen aus der externen Datendatei. Ist der Prozentsatz fehlerhafter Zeilen kleiner als *reject_value*, führt die Datenbank einen erneuten Ladeversuch von 1000 Zeilen aus. Nach jedem weiteren Importversuch von 1000 Zeilen berechnet die Datenbank den Prozentsatz fehlerhafter Zeilen neu.
+      Gilt beispielsweise REJECT_SAMPLE_VALUE = 1000, dann berechnet die Datenbank den Prozentsatz fehlerhafter Zeilen nach dem Importversuch von 1000 Zeilen aus der externen Datendatei. Ist der Prozentsatz fehlerhafter Zeilen kleiner als *reject_value* , führt die Datenbank einen erneuten Ladeversuch von 1000 Zeilen aus. Nach jedem weiteren Importversuch von 1000 Zeilen berechnet die Datenbank den Prozentsatz fehlerhafter Zeilen neu.
 
      > [!NOTE]
      >  Da die Datenbank den Prozentsatz fehlerhafter Zeilen in Intervallen berechnet, kann der tatsächliche Prozentsatz fehlerhafter Zeilen den *Ablehnungswert* überschreiten.
@@ -100,7 +100,7 @@ Die externen Dateien mit dem Namen *QueryID_date_time_ID.format* werden in *hdfs
      - Der Prozentsatz fehlerhafter Zeilen wird mit 50 % neu berechnet. Der Prozentsatz fehlerhafter Zeilen hat den REJECT-Wert von 30 % überschritten.
      - Nach dem Ladeversuch von 200 Zeilen schlägt der Ladevorgang mit 50 % fehlerhaften Zeilen fehl. Dieser Prozentsatz liegt über dem angegebenen Grenzwert von 30 %.
 
- **WITH *Allgemeiner Tabellenausdruck***: Gibt ein temporäres benanntes Resultset an, das als allgemeiner Tabellenausdruck (CTE, Common Table Expression) bezeichnet wird. Weitere Informationen finden Sie unter [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md). 
+ **WITH *Allgemeiner Tabellenausdruck*** : Gibt ein temporäres benanntes Resultset an, das als allgemeiner Tabellenausdruck (CTE, Common Table Expression) bezeichnet wird. Weitere Informationen finden Sie unter [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md). 
 
  **SELECT \<select_criteria>** füllt die neue Tabelle mit den Ergebnissen einer SELECT-Anweisung auf. *Select_criteria* ist der Hauptteil der SELECT-Anweisung, der bestimmt, welche Daten in die neue Tabelle kopiert werden sollen. Informationen zu SELECT-Anweisungen finden Sie unter [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).
 
@@ -108,9 +108,9 @@ Die externen Dateien mit dem Namen *QueryID_date_time_ID.format* werden in *hdfs
 
  *Datenbankbenutzer* benötigen sämtliche folgenden Berechtigungen oder Mitgliedschaften, um diesen Befehl ausführen zu können:
 
-- **ALTER SCHEMA**-Berechtigung für das lokale Schema, das die neue Tabelle oder Mitgliedschaft in der festen Datenbankrolle **db_ddladmin** enthält
-- **CREATE TABLE**-Berechtigung oder -Mitgliedschaft in der festen Datenbankrolle **db_ddladmin**
-- **SELECT**-Berechtigung für alle Objekte, auf die in *select_criteria* verwiesen wird
+- **ALTER SCHEMA** -Berechtigung für das lokale Schema, das die neue Tabelle oder Mitgliedschaft in der festen Datenbankrolle **db_ddladmin** enthält
+- **CREATE TABLE** -Berechtigung oder -Mitgliedschaft in der festen Datenbankrolle **db_ddladmin**
+- **SELECT** -Berechtigung für alle Objekte, auf die in *select_criteria* verwiesen wird
 
  Eine Anmeldung erfordert alle folgenden Berechtigungen:
 
@@ -136,7 +136,7 @@ Die externen Dateien mit dem Namen *QueryID_date_time_ID.format* werden in *hdfs
 
  Der Name und die Definition der externen Tabelle werden in den Metadaten der Datenbank gespeichert. Die Daten werden in der externen Datenquelle gespeichert.
 
- Die externen Dateien heißen *QueryID_date_time_ID.format*, wobei *ID* ein inkrementeller Bezeichner ist und *Format* das Format der exportierten Daten. Beispiel : QID776_20160130_182739_0.orc.
+ Die externen Dateien heißen *QueryID_date_time_ID.format* , wobei *ID* ein inkrementeller Bezeichner ist und *Format* das Format der exportierten Daten. Beispiel : QID776_20160130_182739_0.orc.
 
  Die CREATE EXTERNAL TABLE AS SELECT-Anweisung erstellt immer eine nicht partitionierte Tabelle, selbst wenn die Quelltabelle partitioniert ist.
 
@@ -175,7 +175,7 @@ Eine CREATE EXTERNAL TABLE AS SELECT-Anweisung in Parquet- oder ORC-Dateien füh
 - /r
 - /n
 
-Um CREATE EXTERNAL TABLE AS SELECT-Anweisungen mit diesen Zeichen zu verwenden, müssen Sie die Daten zunächst in durch Trennzeichen getrennte Textdateien kopieren. Dort können Sie die Daten mit einem externen Tool in Parquet- oder ORC-Daten umwandeln.
+Wenn Sie CREATE EXTERNAL TABLE AS SELECT mit diesen Zeichen verwenden möchten, müssen Sie zunächst die CREATE EXTERNAL TABLE AS SELECT-Anweisung ausführen, um die Daten in durch Trennzeichen getrennte Textdateien zu exportieren. Diese können Sie dann mit einem externen Tool in Parquetdateien oder ORC-Dateien konvertieren.
 
 ## <a name="locking"></a>Sperren
  Akzeptiert eine gemeinsame Sperre für das SCHEMARESOLUTION-Objekt.

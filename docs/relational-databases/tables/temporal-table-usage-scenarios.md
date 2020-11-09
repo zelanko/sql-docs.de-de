@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 53d2ea62bebcce1df978a8b4e539c56408a9f673
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 7e87d77eec096191c00a0ff7d68cd40dca713926
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809194"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243579"
 ---
 # <a name="temporal-table-usage-scenarios"></a>Verwendungsszenarios für temporale Tabellen
 
@@ -33,7 +33,7 @@ Temporale Tabellen mit Systemversionsverwaltung ermöglichen es Ihnen, Datenübe
 Das folgende Diagramm zeigt ein Szenario mit einer Mitarbeitertabelle (Employee) mit dem Datenbeispiel, einschließlich der Versionen für Zeilen mit aktuellen Daten (blau markiert) und mit Verlaufsdaten (grau markiert).
 Der rechte Bereich des Diagramms stellt die Zeilenversionen auf einer Zeitachse dar, und zeigt, welche Zeilen Sie mit verschiedenen Abfragetypen für die temporale Tabelle mit oder ohne SYSTEM_TIME-Klausel auswählen.
 
-![TemporalUsageScenario1](../../relational-databases/tables/media/temporalusagescenario1.png "TemporalUsageScenario1")
+![Diagramm: Erstes Verwendungsszenario für temporale Tabellen](../../relational-databases/tables/media/temporalusagescenario1.png "TemporalUsageScenario1")
 
 ### <a name="enabling-system-versioning-on-a-new-table-for-data-audit"></a>Aktivieren der Systemversionsverwaltung für eine neue Tabelle zur Datenüberwachung
 
@@ -175,7 +175,7 @@ Beispiele für reale Szenarien, die gut in diese Kategorie passen, sind u. a. di
 
 Das folgende Diagramm zeigt ein vereinfachtes Datenmodell für die Bestandsverwaltung:
 
-![TemporalUsageInMemory](../../relational-databases/tables/media/temporalusageinmemory.png "TemporalUsageInMemory")
+![Diagramm: Vereinfachtes Datenmodell für die Lagerverwaltung](../../relational-databases/tables/media/temporalusageinmemory.png "TemporalUsageInMemory")
 
 Das folgende Codebeispiel erstellt ProductInventory als eine temporale In-Memory-Tabelle mit Systemversionsverwaltung und mit einem gruppierten Columnstore-Index für die Verlaufstabelle (der tatsächlich den standardmäßig erstellten Zeilenspeicherindex ersetzt):
 
@@ -261,7 +261,7 @@ END;
 
 Die gespeicherte Prozedur „spUpdateInventory“ fügt entweder ein neues Produkt im Bestand ein oder aktualisiert die Produktmenge für den jeweiligen Standort. Die Geschäftslogik ist sehr einfach und konzentriert sich auf die Verwaltung des aktuellen Zustands, der dauerhaft akkurat ist, indem der Wert im Mengenfeld durch eine Tabellenaktualisierung erhöht/verringert wird, während Tabellen mit Systemversionsverwaltung den Daten wie im folgenden Diagramm dargestellt Verlaufsdimensionen transparent hinzufügen.
 
-![TemporalUsageInMemory2b](../../relational-databases/tables/media/temporalusageinmemory2b.png "TemporalUsageInMemory2b")
+![Diagramm: Verwendung temporaler Tabellen mit aktueller In-Memory-Nutzung und historischer Nutzung in gruppiertem Columnstore](../../relational-databases/tables/media/temporalusageinmemory2b.png "TemporalUsageInMemory2b")
 
 Die Abfrage des aktuellen Zustands kann effizient aus dem nativ kompilierten Modul durchgeführt werden:
 
@@ -295,7 +295,7 @@ SELECT * FROM vw_GetProductInventoryHistory
 
 Das folgende Diagramm zeigt den Datenverlauf für ein Produkt, der problemlos durch den Import der obigen Ansicht in Power Query, Power BI oder ähnlichen Business-Intelligence-Tools gerendert werden kann:
 
-![ProductHistoryOverTime](../../relational-databases/tables/media/producthistoryovertime.png "ProductHistoryOverTime")
+![Diagramm: Datenverlauf für ein Produkt](../../relational-databases/tables/media/producthistoryovertime.png "ProductHistoryOverTime")
 
 Temporale Tabellen können in diesem Szenario verwendet werden, um andere Arten von Zeitreiseanalysen durchzuführen, z. B. Rekonstruktion des Bestandszustands ab (AS OF) einem bestimmten Zeitpunkt in der Vergangenheit oder Vergleich von Momentaufnahmen, die sich auf verschiedene Momente beziehen.
 
@@ -348,7 +348,7 @@ SELECT * FROM vw_ProductInventoryDetails
 
 Das folgende Bild zeigt den Ausführungsplan, der für die SELECT-Abfrage generiert wurde. Dies veranschaulicht, dass die gesamte Komplexität im Umgangs mit temporalen Beziehungen vollständig von der SQL Server-Engine übernommen wird:
 
-![ASOFExecutionPlan](../../relational-databases/tables/media/asofexecutionplan.png "ASOFExecutionPlan")
+![Diagramm, das den für die SELECT-Abfrage generierten Ausführungsplan zeigt und veranschaulicht, dass die Komplexität der Verarbeitung von temporalen Beziehungen vollständig von der SQL Server-Engine übernommen wird](../../relational-databases/tables/media/asofexecutionplan.png "ASOFExecutionPlan")
 
 Verwenden Sie den folgenden Code, um den Status des Produktbestands zwischen zwei Zeitpunkten (vor einem Tag und vor einem Monat) zu vergleichen:
 
@@ -390,7 +390,7 @@ CREATE TABLE [dbo].[Product]
 
 Das folgende Diagramm zeigt die Verkaufszahlen im Verlauf der Zeit:
 
-![TemporalAnomalyDetection](../../relational-databases/tables/media/temporalanomalydetection.png "TemporalAnomalyDetection")
+![Diagramm: Käufe im Zeitverlauf](../../relational-databases/tables/media/temporalanomalydetection.png "TemporalAnomalyDetection")
 
 Angenommen die Anzahl der erworbenen Produkte weist an typischen Tagen kleine Abweichungen auf, so identifiziert die folgende Abfrage Singleton-Ausreißer – Proben, die sich im Vergleich zu ihren unmittelbaren Nachbarn erheblich unterscheiden (2x), während umgebende Proben nicht maßgeblich abweichen (weniger als 20 %):
 
@@ -466,7 +466,7 @@ Nach dem Erstellen ist während des Data Warehouse-Prozesses kein zusätzlicher 
 
 Die folgende Abbildung zeigt, wie Sie temporale Tabellen in einem einfachen Szenario mit 2 SCDs (DimLocation und DimProduct) und einer Faktentabelle verwenden können.
 
-![TemporalSCD](../../relational-databases/tables/media/temporalscd.png "TemporalSCD")
+![Diagramm, das zeigt, wie temporale Tabellen in einem einfachen Szenario mit zwei SCDs (DimLocation und DimProduct) und einer Faktentabelle verwendet werden können](../../relational-databases/tables/media/temporalscd.png "TemporalSCD")
 
 Um die obigen SCDs in Berichten verwenden zu können, müssen Sie die Abfragen effektiv anpassen. Sie können beispielsweise den Gesamtumsatz und die durchschnittliche Anzahl der verkauften Produkte pro Kopf in den letzten sechs Monaten berechnen. Beachten Sie, dass für beide Metriken eine Korrelation der Daten aus der Faktentabelle und den Dimensionen erforderlich ist, die ihre Attribute geändert haben könnten, die wichtig für die Analyse sind (DimLocation.NumOfCustomers, DimProduct.UnitPrice). Mit der folgenden Abfrage werden die erforderlichen Metriken ordnungsgemäß berechnet:
 
@@ -539,13 +539,13 @@ Diese gespeicherte Prozedur nimmt @EmployeeID und @versionNumber als Eingabepara
 
 Das folgende Bild zeigt den Zustand der Zeile vor und nach dem Prozeduraufruf. Das rote Rechteck markiert die aktuelle Zeilenversion, die falsch ist; das grüne Rechteck kennzeichnet die richtige Version aus dem Verlauf.
 
-![TemporalUsageRepair1](../../relational-databases/tables/media/temporalusagerepair1.png "TemporalUsageRepair1")
+![Screenshot: Zeile vor und nach dem Prozeduraufruf](../../relational-databases/tables/media/temporalusagerepair1.png "TemporalUsageRepair1")
 
 ```sql
 EXEC sp_RepairEmployeeRecord @EmployeeID = 1, @versionNumber = 1
 ```
 
-![TemporalUsageRepair2](../../relational-databases/tables/media/temporalusagerepair2.png "TemporalUsageRepair2")
+![Screenshot: Korrigierte Zeile](../../relational-databases/tables/media/temporalusagerepair2.png "TemporalUsageRepair2")
 
 Diese gespeicherte Reparaturprozedur kann so definiert werden, dass anstelle einer Zeilenversion ein genauer Zeitstempel akzeptiert wird. Die Zeile wird auf eine beliebige Version wiederhergestellt, die zum angegebenen Zeitpunkt aktiv war (d. h. AS OF-Zeitpunkt).
 
@@ -567,11 +567,11 @@ UPDATE Employee
 
 Beim gleichen Datenbeispiel veranschaulicht das folgende Bild das Reparaturszenario mit einer Zeitbedingung. Hervorgehoben sind der @asOf-Parameter, die ausgewählte Zeile im Verlauf, die zum angegebenen Zeitpunkt aktiv war, und die neue Zeilenversion in der aktuellen Tabelle nach der Reparatur:
 
-![TemporalUsageRepair3](../../relational-databases/tables/media/temporalusagerepair3.png "TemporalUsageRepair3")
+![Screenshot: Reparaturszenario mit Zeitbedingung](../../relational-databases/tables/media/temporalusagerepair3.png "TemporalUsageRepair3")
 
 Datenkorrektur kann Teil des automatischen Datenladevorgangs in Data Warehousing- und Berichterstattungssystemen werden. Wenn ein neu aktualisierter Wert nicht korrekt ist, ist die Wiederherstellung der vorherigen Version aus dem Verlauf für viele Szenarien oftmals ausreichend. Das folgende Diagramm zeigt, wie dieser Vorgang automatisiert werden kann:
 
-![TemporalUsageRepair4](../../relational-databases/tables/media/temporalusagerepair4.png "TemporalUsageRepair4")
+![Diagramm, das zeigt, wie der Prozess automatisiert werden kann](../../relational-databases/tables/media/temporalusagerepair4.png "TemporalUsageRepair4")
 
 ## <a name="next-steps"></a>Nächste Schritte
 

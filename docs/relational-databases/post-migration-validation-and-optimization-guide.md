@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 5324b953f70a9f0f64a4988c50ae02d1653d94f5
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 01b629b65c7f8ab1571aa53a944a8525bd09a0b0
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891130"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235453"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Handbuch für die Überprüfung und Optimierung nach der Migration
 
@@ -32,7 +32,7 @@ Im Folgenden sind einige der häufigsten Leistungsszenarios aufgelistet, die nac
 
 ## <a name="query-regressions-due-to-change-in-ce-version"></a><a name="CEUpgrade"></a> Abfrageregressionen aufgrund einer Änderung in der CE-Version
 
-**Gilt für: Migration von ** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+**Gilt für: Migration von** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 Wenn Sie von einer älteren [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Version zu [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] oder neuer migrieren und ein Upgrade auf den aktuellen [Datenbankkompatibilitätsgrad](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) durchführen, kann es bei einer Arbeitsauslastung womöglich zu einem Leistungsrückgang kommen.
 
@@ -44,7 +44,7 @@ Weitere Informationen zu Änderungen des Abfrageoptimierers, der in [!INCLUDE[ss
 
 Ändern Sie den [Datenbank-Kompatibilitätsgrad](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) auf die Quellversion, und befolgen Sie den empfohlenen Upgradeworkflow wie in folgendem Bild gezeigt:
 
-![query-store-usage-5](../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
+![Diagramm: Empfohlener Upgradeworkflow](../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
 
 Weitere Informationen zu diesem Thema finden Sie unter [Aufrechterhalten einer stabilen Leistung während des Upgrades auf SQL Server 2016](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade).
 
@@ -94,7 +94,7 @@ Falsche oder fehlende Indizes führt zu zusätzlicher Eingabe/Ausgabe, wegen der
 > [!NOTE]
 > Bei Migrationen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird dieses Szenario bei einer Migration auf eine neuere, unveränderte Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nicht berücksichtigt, wenn das Problem auf dem Quell-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bereits bestand.
 
-Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer kann nur Informationen berücksichtigen, die zum Zeitpunkt der Kompilierung bekannt sind. Wenn eine Arbeitsauslastung Prädikate nutzt, die nur zum Zeitpunkt der Ausführung bekannt sein können, erhöht sich das Risiko einer schlechten Planauswahl. Für einen qualitativ noch hochwertigeren Plan zu erhalten, müssen Prädikate **SARGable**, oder „**S**earch **Arg**ument**able**“ sein.
+Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer kann nur Informationen berücksichtigen, die zum Zeitpunkt der Kompilierung bekannt sind. Wenn eine Arbeitsauslastung Prädikate nutzt, die nur zum Zeitpunkt der Ausführung bekannt sein können, erhöht sich das Risiko einer schlechten Planauswahl. Für einen qualitativ noch hochwertigeren Plan zu erhalten, müssen Prädikate **SARGable** , oder „ **S** earch **Arg** ument **able** “ sein.
 
 Einige Beispiele für nicht SARGable-Prädikate sind:
 -   Implizite Datenkonvertierungen wie VARCHAR, NVARCHAR oder INT zu VARCHAR. Suchen Sie in den tatsächlichen Ausführungsplänen nach CONVERT_IMPLICIT-Laufzeitwarnungen. Das Konvertieren von einem Typ in einen anderen kann auch zu einem Genauigkeitsverlust führen.

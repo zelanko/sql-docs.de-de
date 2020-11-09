@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft-Dokumentation
 description: Erstellen von Datenbanksyntax für SQL Server, Azure SQL-Datenbank, Azure Synapse Analytics und Analytics Platform System
 ms.custom: references_regions
-ms.date: 09/29/2020
+ms.date: 10/30/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 211ed452674eb5cfc8d33d648fbefc66913ba4bd
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: e66c5801b3a927b28f355e450be9d31c796e78dc
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496917"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235397"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -176,9 +176,9 @@ CREATE DATABASE database_snapshot_name
 
 *database_name* Der Name der neuen Datenbank. Datenbanknamen müssen innerhalb einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eindeutig sein und den Regeln für [Bezeichnern](../../relational-databases/databases/database-identifiers.md) entsprechen.
 
-*database_name* darf maximal 128 Zeichen lang sein, wenn kein logischer Name für die Protokolldatei angegeben wurde. Wenn kein logischer Name angegeben ist, generiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Werte *logical_file_name* und *os_file_name* für das Protokoll durch Anfügen eines Suffixes an *database_name* . Dadurch wird *database_name* auf 123 Zeichen beschränkt, sodass der generierte logische Protokolldateiname nicht länger als 128 Zeichen ist.
+*database_name* darf maximal 128 Zeichen lang sein, wenn kein logischer Name für die Protokolldatei angegeben wurde. Wenn kein logischer Name angegeben ist, generiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Werte *logical_file_name* und *os_file_name* für das Protokoll durch Anfügen eines Suffixes an *database_name*. Dadurch wird *database_name* auf 123 Zeichen beschränkt, sodass der generierte logische Protokolldateiname nicht länger als 128 Zeichen ist.
 
-Wenn der Datendateiname nicht angegeben ist, verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*database_name* sowohl als *logical_file_name* als auch als *os_file_name* . Der Standardpfad wird aus der Registrierung abgerufen. Der Standardpfad kann über die **Servereigenschaften (Seite Datenbankeinstellungen)** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] geändert werden. Zum Ändern des Standardpfads muss [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet werden.
+Wenn der Datendateiname nicht angegeben ist, verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*database_name* sowohl als *logical_file_name* als auch als *os_file_name*. Der Standardpfad wird aus der Registrierung abgerufen. Der Standardpfad kann über die **Servereigenschaften (Seite Datenbankeinstellungen)** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] geändert werden. Zum Ändern des Standardpfads muss [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet werden.
 
 CONTAINMENT = { NONE | PARTIAL }
 
@@ -979,7 +979,7 @@ CATALOG_COLLATION gibt die Standardsortierung für den Metadatenkatalog an. *DAT
 BACKUP_STORAGE_REDUNDANCY gibt an, wie die Zeitpunktwiederherstellung und LTR-Sicherungen (Long-Term Retention, Langzeitaufbewahrung) für eine Datenbank repliziert werden. Die Geowiederherstellung und die Wiederherstellung nach regionalen Ausfällen sind nur verfügbar, wenn die Datenbank mit der Sicherungsspeicherredundanz GEO erstellt wird. Mit T-SQL erstellte Datenbanken verwenden georedundanten Sicherungsspeicher, sofern nichts anderes angegeben wird. 
 
 > [!IMPORTANT]
-> Die Option BACKUP_STORAGE_REDUNDANCY für Azure SQL-Datenbank ist derzeit nur in der Azure-Region „Asien, Südosten“ als Public Preview verfügbar.  
+> Die Option BACKUP_STORAGE_REDUNDANCY für Azure SQL-Datenbank ist derzeit nur in der Azure-Region „Brasilien, Süden“ in der Public Preview und in „Asien, Südosten“ allgemein verfügbar.  
 
 EDITION gibt die Dienstebene der Datenbank an.
 
@@ -1548,7 +1548,7 @@ WITH (
 
 *database_name* Der Name der neuen Datenbank. Weitere Informationen zu zulässigen Datenbanknamen finden Sie unter „Object Naming Rules“ (Regeln für die Objektbenennung) und „Reserved Database Names“ (Reservierte Datenbanknamen) in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
-AUTOGROW = ON | **OFF** Gibt an, ob die Parameter *replicated_size* , *distributed_size* und *log_size* für diese Datenbank automatisch je nach Bedarf über ihre angegebenen Größen hinweg vergrößert werden. Der Standardwert lautet **OFF** .
+AUTOGROW = ON | **OFF** Gibt an, ob die Parameter *replicated_size* , *distributed_size* und *log_size* für diese Datenbank automatisch je nach Bedarf über ihre angegebenen Größen hinweg vergrößert werden. Der Standardwert lautet **OFF**.
 
 Wenn AUTOGROW auf ON festgelegt ist, vergrößern sich *replicated_size* , *distributed_size* und *log_size* nach Bedarf (nicht in Blöcken der zuerst angegebenen Größe) bei jeder Dateneingabe, jedem Update oder anderen Aktionen, die mehr Speicherplatz als den bereits zugewiesenen erfordern.
 
@@ -1568,7 +1568,7 @@ Wenn AUTOGROW auf ON festgelegt ist, können sich verteilte Tabellen über diese
 
 Wenn AUTOGROW auf OFF festgelegt ist, wird ein Fehler zurückgegeben, wenn ein Benutzer versucht, eine neue verteilte Tabelle zu erstellen, Daten in eine bestehende verteilte Tabelle einzufügen oder eine bestehende verteilte Tabelle auf eine Weise zu aktualisieren, durch die die Größe über *distributed_size* hinweg steigen würde.
 
-*log_size* [ GB ] Eine positive Zahl. Die Größe (als ganze Zahl oder Dezimalzahl Gigabytes) für das Transaktionsprotokoll *auf der gesamten Appliance* .
+*log_size* [ GB ] Eine positive Zahl. Die Größe (als ganze Zahl oder Dezimalzahl Gigabytes) für das Transaktionsprotokoll *auf der gesamten Appliance*.
 
 Die minimalen und maximalen Anforderungen für *log_size* finden Sie unter „Minimum and Maximum Values“ (Minimale und maximale Werte) in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
@@ -1578,7 +1578,7 @@ Wenn AUTOGROW auf OFF festgelegt ist, wird an den Benutzer ein Fehler zurückgeg
 
 ## <a name="permissions"></a>Berechtigungen
 
-Erfordert die `CREATE ANY DATABASE`-Berechtigung in der Masterdatenbank oder die Mitgliedschaft in der festen Serverrolle **sysadmin** .
+Erfordert die `CREATE ANY DATABASE`-Berechtigung in der Masterdatenbank oder die Mitgliedschaft in der festen Serverrolle **sysadmin**.
 
 Im folgenden Beispiel wird dem Datenbankbenutzer Fay die Berechtigung zum Erstellen einer Datenbank erteilt.
 
@@ -1601,7 +1601,7 @@ Informationen zu minimalen und maximalen Einschränkungen für Datenbanken finde
 
 Bei der Erstellung der Datenbank muss genügend freier Speicherplatz *auf jedem Computeknoten* verfügbar sein, um den kombinierten Gesamtspeicherplatz der folgenden Größen zuzuweisen:
 
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank mit Tabellen mit einer Größe von *replicated_table_size* .
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank mit Tabellen mit einer Größe von *replicated_table_size*.
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank mit Tabellen mit einer Größe von ( *distributed_table_size* / Anzahl von Computeknoten).
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Protokolle mit einer Größe von ( *log_size* / Anzahl von Computeknoten).
 

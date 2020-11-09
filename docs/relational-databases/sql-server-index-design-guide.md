@@ -23,12 +23,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2dbc06494347c3c69798b5c45e779e0ebda6238
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: e982f8a8a2ee42c1ac2d84529a29842f8c4b4577
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810440"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235555"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Leitfaden zur Architektur und zum Design von SQL Server-Indizes
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,7 +62,7 @@ Weitere Informationen zu Volltextindizes finden Sie unter [Auffüllen von Vollte
     
  Das Auswählen der richtigen Indizes für eine Datenbank und ihre Arbeitsauslastung ist ein komplexer Vorgang, bei dem ein ausgewogenes Verhältnis zwischen gewünschter Abfragegeschwindigkeit und vertretbaren Updatekosten erzielt werden muss. Schmale Indizes (Indizes mit wenigen Spalten im Indexschlüssel) erfordern weniger Speicherplatz und Wartungsaufwand. Breite Indizes decken jedoch eine größere Anzahl an Abfragen ab. Möglicherweise müssen Sie mit verschiedenen Entwürfen experimentieren, bevor Sie den effizientesten Index ermitteln. Indizes können ohne Auswirkungen auf das Datenbankschema oder den Anwendungsentwurf hinzugefügt, geändert und gelöscht werden. Daher sollten Sie in jedem Fall mit verschiedenen Indizes experimentieren.  
   
- Der Abfrageoptimierer von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wählt in der Mehrzahl der Fälle zuverlässig den effektivsten Index aus. Indexentwurfsstrategie sollte sein, dem Abfrageoptimierer eine Vielzahl von Indizes zur Auswahl bereitzustellen und sich darauf zu verlassen, dass dieser die richtige Entscheidung trifft. Auf diese Weise wird die Analysezeit verkürzt und ein gutes Leistungsverhalten in vielen unterschiedlichen Situationen erzielt. Wenn Sie anzeigen möchten, welche Indizes der Abfrageoptimierer für eine bestimmte Abfrage verwendet, wählen Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]die Option **Tatsächlichen Ausführungsplan einschließen** aus dem Menü **Abfrage**aus.  
+ Der Abfrageoptimierer von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wählt in der Mehrzahl der Fälle zuverlässig den effektivsten Index aus. Indexentwurfsstrategie sollte sein, dem Abfrageoptimierer eine Vielzahl von Indizes zur Auswahl bereitzustellen und sich darauf zu verlassen, dass dieser die richtige Entscheidung trifft. Auf diese Weise wird die Analysezeit verkürzt und ein gutes Leistungsverhalten in vielen unterschiedlichen Situationen erzielt. Wenn Sie anzeigen möchten, welche Indizes der Abfrageoptimierer für eine bestimmte Abfrage verwendet, wählen Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]die Option **Tatsächlichen Ausführungsplan einschließen** aus dem Menü **Abfrage** aus.  
   
  Setzen Sie Indexverwendung aber nicht stets mit gutem Leistungsverhalten bzw. gute Leistung mit effizienter Indexverwendung gleich. Würde durch die Verwendung eines Indexes in jedem Fall die beste Leistung erzielt, so wäre die Arbeit des Abfrageoptimierers sehr einfach. Tatsächlich kann die Auswahl eines falschen Indexes eine Leistung bewirken, die nicht optimal ist. Daher besteht die Aufgabe des Abfrageoptimierers darin, einen Index oder eine Kombination aus Indizes nur dann auszuwählen, wenn die Leistung verbessert wird, und den indizierten Abruf zu vermeiden, wenn die Leistung negativ beeinflusst wird.  
 
@@ -107,7 +107,7 @@ Weitere Informationen zu Volltextindizes finden Sie unter [Auffüllen von Vollte
   
 -   Erstellen Sie nicht gruppierte Indizes für die Spalten, die häufig in Prädikaten und Joinbedingungen in Abfragen verwendet werden. Dies sind Ihre SARGable<sup>1</sup>-Spalten. Sie sollten jedoch keine unnötigen Spalten hinzufügen. Wenn Sie zu viele Indexspalten hinzufügen, kann sich dies negativ auf den Speicherplatz und die Indexverwaltungsleistung auswirken.  
   
--   Abdeckende Indizes können die Abfrageleistung steigern, weil alle Daten im Index selbst enthalten sind, die die Anforderungen der Abfrage erfüllen. Auf diese Weise muss nur auf die Indexseiten und nicht auf die Datenseiten der Tabelle oder des gruppierten Indexes verwiesen werden, um die abgefragten Daten abzurufen, wodurch der Umfang der E/A-Operationen des Datenträgers verringert wird. Eine Abfrage der Spalten **a** und **b** für eine Tabelle, die einen zusammengesetzten Index besitzt, der für die Spalten **a**, **b**und **c** erstellt wurde, kann die angegebenen Daten ausschließlich aus dem Index abrufen.  
+-   Abdeckende Indizes können die Abfrageleistung steigern, weil alle Daten im Index selbst enthalten sind, die die Anforderungen der Abfrage erfüllen. Auf diese Weise muss nur auf die Indexseiten und nicht auf die Datenseiten der Tabelle oder des gruppierten Indexes verwiesen werden, um die abgefragten Daten abzurufen, wodurch der Umfang der E/A-Operationen des Datenträgers verringert wird. Eine Abfrage der Spalten **a** und **b** für eine Tabelle, die einen zusammengesetzten Index besitzt, der für die Spalten **a** , **b** und **c** erstellt wurde, kann die angegebenen Daten ausschließlich aus dem Index abrufen.  
 
     > [!IMPORTANT]
     > Abdeckende Indizes sind die Bezeichnung für einen [nicht gruppierten Index](#nonclustered-index-architecture), der ein oder mehrere ähnliche Abfrageergebnisse direkt ohne Zugriff auf seine Basistabelle auflöst, und ohne dass Suchen erforderlich sind.
@@ -118,14 +118,14 @@ Weitere Informationen zu Volltextindizes finden Sie unter [Auffüllen von Vollte
   
 -   Werten Sie den Abfragetyp sowie die Art der Verwendung von Spalten in der Abfrage aus. Eine Spalte, die in einem Abfragetyp für genaue Übereinstimmung verwendet wird, ist z. B. ein guter Kandidat für einen nicht gruppierten oder gruppierten Index.
 
-<a name="sargable"></a><sup>1</sup> Der Begriff „SARGable“ in relationalen Datenbanken bezieht sich auf ein suchargumentfähiges Prädikat (**S**earch **ARG**ument-**able**), das mithilfe eines Indexes die Ausführung der Abfrage beschleunigen kann.
+<a name="sargable"></a><sup>1</sup> Der Begriff „SARGable“ in relationalen Datenbanken bezieht sich auf ein suchargumentfähiges Prädikat ( **S** earch **ARG** ument- **able** ), das mithilfe eines Indexes die Ausführung der Abfrage beschleunigen kann.
   
 ### <a name="column-considerations"></a>Überlegungen zu Spalten  
  Beachten Sie beim Entwerfen eines Indexes die folgenden Spaltenrichtlinien:  
   
 -   Wählen Sie für gruppierte Indizes einen kurzen Indexschlüssel aus. Gruppierte Indizes bieten darüber hinaus den Vorteil, dass sie für eindeutige oder Nicht-NULL-Spalten erstellt werden.  
   
--   Die Datentypen **ntext**, **text**, **image**, **varchar(max)** , **nvarchar(max)** und **varbinary(max)** können nicht als Indexschlüsselspalten angegeben werden. **varchar(max)** , **nvarchar(max)** , **varbinary(max)** und **xml** -Datentypen können jedoch als Nichtschlüssel-Indexspalten in einen nicht gruppierten Index aufgenommen werden. Weitere Informationen finden Sie im Abschnitt [Index mit eingeschlossenen Spalten](#Included_Columns)in diesem Handbuch.  
+-   Die Datentypen **ntext** , **text** , **image** , **varchar(max)** , **nvarchar(max)** und **varbinary(max)** können nicht als Indexschlüsselspalten angegeben werden. **varchar(max)** , **nvarchar(max)** , **varbinary(max)** und **xml** -Datentypen können jedoch als Nichtschlüssel-Indexspalten in einen nicht gruppierten Index aufgenommen werden. Weitere Informationen finden Sie im Abschnitt [Index mit eingeschlossenen Spalten](#Included_Columns)in diesem Handbuch.  
   
 -   Ein **xml** -Datentyp kann nur in einem XML-Index eine Schlüsselspalte sein. Weitere Informationen finden Sie unter [XML-Indizes &#40;SQL Server&#41;](../relational-databases/xml/xml-indexes-sql-server.md). Mit SQL Server 2012 SP1 wird ein neuer XML-Indextyp eingeführt, der als selektiver XML-Index bezeichnet wird. Durch diesen neuen Index kann die Abfrageleistung bei Daten verbessert werden, die als XML in SQL Server gespeichert sind. Das sorgt für eine schnellere Indizierung großer XML-Datenmengen und für höhere Skalierbarkeit, indem die Speicherkosten des Indexes gesenkt werden. Weitere Informationen finden Sie unter [Selektive XML-Indizes &#40;SXI&#41;](../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
@@ -192,7 +192,7 @@ ORDER BY RejectedQty DESC, ProductID ASC;
   
  Der folgende Ausführungsplan für diese Abfrage zeigt, dass der Abfrageoptimierer einen SORT-Operator verwendet hat, um das Resultset in der durch die ORDER BY-Klausel angegebenen Reihenfolge zurückzugeben.  
   
- ![IndexSort1](../relational-databases/media/indexsort1.gif)
+ ![Diagramm für einen Ausführungsplan für diese Abfrage, das zeigt, dass der Abfrageoptimierer einen SORT-Operator verwendet hat, um das Resultset in der durch die ORDER BY-Klausel festgelegten Reihenfolge zurückzugeben](../relational-databases/media/indexsort1.gif)
   
  Falls ein Index mit Schlüsselspalten erstellt wird, die mit jenen in der ORDER BY-Klausel in der Abfrage übereinstimmen, kann der SORT-Operator im Abfrageplan gelöscht werden, wodurch der Abfrageplan effizienter wird.  
   
@@ -204,7 +204,7 @@ ON Purchasing.PurchaseOrderDetail
   
  Nachdem die Abfrage erneut ausgeführt wurde, zeigt folgender Ausführungsplan, dass der SORT-Operator gelöscht wurde und der neu erstellte nicht gruppierte Index verwendet wird.  
   
- ![InsertSort2](../relational-databases/media/insertsort2.gif)
+ ![Diagramm für einen Ausführungsplan, das zeigt, dass der SORT-Operator entfernt wurde und der neu erstellte nicht gruppierte Index verwendet wird](../relational-databases/media/insertsort2.gif)
   
  [!INCLUDE[ssDE](../includes/ssde-md.md)] bewegt sich in beide Richtungen gleichermaßen effizient. Ein als `(RejectedQty DESC, ProductID ASC)` definierter Index kann nach wie vor für eine Abfrage verwendet werden, in der die Sortierreihenfolge der Spalten in der ORDER BY-Klausel reserviert sind. Eine Abfrage mit der ORDER BY-Klausel `ORDER BY RejectedQty ASC, ProductID DESC` kann den Index beispielsweise verwenden.  
   
@@ -316,13 +316,13 @@ Wenn der gruppierte Index nicht mit der `UNIQUE`-Eigenschaft erstellt wird, füg
   
  Gruppierte Indizes besitzen eine Zeile in [sys.partitions](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md), wobei **index_id** = 1 für jede Partition, die vom Index verwendet wird. Standardmäßig besitzt ein gruppierter Index eine Partition. Wenn ein gruppierter Index über mehrere Partitionen verfügt, besitzt jede Partition eine B-Struktur, die die Daten für diese bestimmte Partition enthält. Wenn ein gruppierter Index z. B. vier Partitionen besitzt, sind vier B-Strukturen vorhanden, eine in jeder Partition.  
   
- Abhängig von den Datentypen im gruppierten Index weist jede gruppierte Indexstruktur eine oder mehrere Zuordnungseinheiten auf, in denen die Daten für eine bestimmte Partition gespeichert und verwaltet werden. Jeder gruppierte Index weist mindestens eine IN_ROW_DATA-Zuordnungseinheit pro Partition auf. Der gruppierte Index besitzt außerdem eine *LOB_DATA*-Zuordnungseinheit pro Partition, wenn LOB-Spalten (Large Object) vorhanden sind. Außerdem ist eine *ROW_OVERFLOW_DATA*-Zuordnungseinheit pro Partition vorhanden, wenn der Index Spalten variabler Länge aufweist, die die Zeilengrößenbeschränkung von 8.060 Byte übersteigen.  
+ Abhängig von den Datentypen im gruppierten Index weist jede gruppierte Indexstruktur eine oder mehrere Zuordnungseinheiten auf, in denen die Daten für eine bestimmte Partition gespeichert und verwaltet werden. Jeder gruppierte Index weist mindestens eine IN_ROW_DATA-Zuordnungseinheit pro Partition auf. Der gruppierte Index besitzt außerdem eine *LOB_DATA* -Zuordnungseinheit pro Partition, wenn LOB-Spalten (Large Object) vorhanden sind. Außerdem ist eine *ROW_OVERFLOW_DATA* -Zuordnungseinheit pro Partition vorhanden, wenn der Index Spalten variabler Länge aufweist, die die Zeilengrößenbeschränkung von 8.060 Byte übersteigen.  
   
  Die Seiten in der Datenkette und die darin enthaltenen Zeilen werden anhand des Werts des Schlüssels des gruppierten Indexes angeordnet. Jede Einfügung wird an der Position vorgenommen, die der Schlüsselwert der eingefügten Zeile in der Reihenfolge vorhandener Zeilen einnimmt.  
   
  Die folgende Abbildung veranschaulicht die Struktur eines gruppierten Indexes in einer einzelnen Partition.  
  
- ![bokind2](../relational-databases/media/bokind2.gif)  
+ ![Diagramm: Struktur eines gruppierten Index in einer einzelnen Partition](../relational-databases/media/bokind2.gif)  
   
 ### <a name="query-considerations"></a>Überlegungen zu Abfragen  
  Bevor Sie gruppierte Indizes erstellen, sollten Sie sich überlegen, wie der Zugriff auf die Daten erfolgt. Einen gruppierten Index können Sie für Abfragen verwenden, die die folgenden Aktionen durchführen:  
@@ -349,7 +349,7 @@ Wenn der gruppierte Index nicht mit der `UNIQUE`-Eigenschaft erstellt wird, füg
     > [!TIP]
     > Wenn dies nicht anders angegeben ist, erstellt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] beim Erstellen einer [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md)-Einschränkung einen [gruppierten Index](#Clustered), um diese Einschränkung zu unterstützen.
     > Obwohl ein *[uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md)* -Datentyp verwendet werden kann, um Eindeutigkeit als PRIMARY KEY zu erzwingen, handelt es sich dabei nicht um einen effizienten Gruppierungsschlüssel.
-    > Wenn Sie einen *uniqueidentifier*-Datentyp als PRIMARY KEY verwenden, wird empfohlen, diesen als nicht gruppierten Index zu erstellen und eine andere Spalte (z.B. `IDENTITY`) zu verwenden, um den gruppierten Index zu erstellen.   
+    > Wenn Sie einen *uniqueidentifier* -Datentyp als PRIMARY KEY verwenden, wird empfohlen, diesen als nicht gruppierten Index zu erstellen und eine andere Spalte (z.B. `IDENTITY`) zu verwenden, um den gruppierten Index zu erstellen.   
   
 -   Der Zugriff auf sie erfolgt sequenziell.  
   
@@ -391,11 +391,11 @@ Zeilenlokatoren in nicht gruppierten Indexzeilen bestehen entweder aus Zeigern, 
   
 Nicht gruppierte Indizes verfügen in [sys.partitions](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) für jede vom Index verwendete Partition über eine Zeile, deren **index_id** >1 ist. Standardmäßig besitzen nicht gruppierte Indizes nur eine Partition. Wenn ein nicht gruppierter Index mehrere Partitionen besitzt, weist jede Partition eine B-Baumstruktur auf, die die Indexzeilen der entsprechenden Partition enthält. Wenn ein nicht gruppierter Index beispielsweise vier Partitionen besitzt, gibt es vier B-Baumstrukturen – jeweils eine in jeder Partition.  
   
-Abhängig von den Datentypen des nicht gruppierten Indexes erhält jede Struktur mindestens eine Zuordnungseinheit, in der die Daten einer bestimmten Partition gespeichert und verwaltet werden. Jeder nicht gruppierte Index besitzt also eine *IN_ROW_DATA*-Zuordnungseinheit pro Partition, die die B-Strukturseiten des Indexes speichert. Außerdem besitzt der nicht gruppierte Index eine *LOB_DATA*-Zuordnungseinheit, wenn er LOB-Spalten (Large Object) enthält. Darüber hinaus besitzt er eine *ROW_OVERFLOW_DATA*-Zuordnungseinheit pro Partition, wenn er Spalten variabler Länge enthält, die die Zeilengrößenbeschränkung von 8.060 Byte überschreiten.  
+Abhängig von den Datentypen des nicht gruppierten Indexes erhält jede Struktur mindestens eine Zuordnungseinheit, in der die Daten einer bestimmten Partition gespeichert und verwaltet werden. Jeder nicht gruppierte Index besitzt also eine *IN_ROW_DATA* -Zuordnungseinheit pro Partition, die die B-Strukturseiten des Indexes speichert. Außerdem besitzt der nicht gruppierte Index eine *LOB_DATA* -Zuordnungseinheit, wenn er LOB-Spalten (Large Object) enthält. Darüber hinaus besitzt er eine *ROW_OVERFLOW_DATA* -Zuordnungseinheit pro Partition, wenn er Spalten variabler Länge enthält, die die Zeilengrößenbeschränkung von 8.060 Byte überschreiten.  
   
 Die folgende Abbildung veranschaulicht die Struktur eines gruppierten Indexes einer einzigen Partition.  
 
-![bokind1a](../relational-databases/media/bokind1a.gif)  
+![Diagramm: Struktur eines nicht gruppierten Index in einer einzelnen Partition](../relational-databases/media/bokind1a.gif)  
   
 ### <a name="database-considerations"></a>Überlegungen zu Datenbanken  
  Berücksichtigen Sie beim Entwerfen nicht gruppierter Indizes die Merkmale der jeweiligen Datenbank.  
@@ -476,11 +476,11 @@ Wenn Sie nicht gruppierte Indizes mit eingeschlossenen Spalten entwerfen, sollte
   
 -   Nichtschlüsselspalten können nur für nicht gruppierte Indizes für Tabellen oder indizierte Sichten definiert werden.  
   
--   Mit Ausnahme von **text**, **ntext**und **image**sind alle Datentypen zulässig.  
+-   Mit Ausnahme von **text** , **ntext** und **image** sind alle Datentypen zulässig.  
   
 -   Bei berechneten Spalten, die deterministisch und präzise oder unpräzise sind, kann es sich um eingeschlossene Spalten handeln. Weitere Informationen finden Sie unter [Indexes on Computed Columns](../relational-databases/indexes/indexes-on-computed-columns.md).  
   
--   Ebenso wie Schlüsselspalten können berechnete Spalten, die aus **image**, **ntext**und **text** -Datentypen abgeleitet werden, Nichtschlüsselspalten (eingeschlossene Spalten) sein, wenn der Datentyp der berechneten Spalte als Nichtschlüssel-Indexspalte zulässig ist.  
+-   Ebenso wie Schlüsselspalten können berechnete Spalten, die aus **image** , **ntext** und **text** -Datentypen abgeleitet werden, Nichtschlüsselspalten (eingeschlossene Spalten) sein, wenn der Datentyp der berechneten Spalte als Nichtschlüssel-Indexspalte zulässig ist.  
   
 -   Spaltennamen dürfen nicht sowohl in der INCLUDE-Liste als auch in der Schlüsselspaltenliste angegeben werden.  
   
@@ -503,7 +503,7 @@ Wenn Sie nicht gruppierte Indizes mit eingeschlossenen Spalten entwerfen, sollte
   
     -   Ändern der NULL-Zulässigkeit der Spalte von NOT NULL in NULL.  
   
-    -   Vergrößern der Länge von **varchar**-, **nvarchar**- oder **varbinary** -Spalten.  
+    -   Vergrößern der Länge von **varchar** -, **nvarchar** - oder **varbinary** -Spalten.  
   
         > [!NOTE]  
         >  Diese Einschränkungen hinsichtlich der Spaltenänderung gelten für Indexschlüsselspalten.  
@@ -567,7 +567,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
 ##  <a name="filtered-index-design-guidelines"></a><a name="Filtered"></a> Richtlinien für den Entwurf gefilterter Indizes  
  Ein gefilterter Index ist ein optimierter nicht gruppierter Index, der sich besonders für Abfragen eignet, bei denen aus einer fest definierten Teilmenge von Daten ausgewählt wird. Dieser verwendet ein Filterprädikat, um einen Teil der Zeilen in der Tabelle zu indizieren. Mit einem sorgfältig entworfenen gefilterten Index können im Gegensatz zu Tabellenindizes die Abfrageleistung verbessert und der Aufwand für die Indexverwaltung und -speicherung reduziert werden.  
   
-**Gilt für**: [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+**Gilt für** : [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
  Gefilterte Indizes können gegenüber Tabellenindizes folgende Vorteile bieten:  
   
@@ -821,7 +821,7 @@ Weitere Informationen finden Sie unter [Columnstore indexes - Design Guidance (L
 
 Alle speicheroptimierten Tabellen müssen mindestens einen Index enthalten, da die Zeilen durch die Indizes miteinander verbunden werden. Für eine speicheroptimierte Tabelle wird jeder Index auch speicheroptimiert. Hashindizes zählen zu den möglichen Typen von Indizes in einer speicheroptimierten Tabelle. Weitere Informationen zu finden Sie unter [Indizes für speicheroptimierte Tabellen](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
 
-**Gilt für**: [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+**Gilt für** : [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
 
 ### <a name="hash-index-architecture"></a>Architektur von Hashindizes
 Ein Hashindex besteht aus einem Array von Zeigern. Jedes Element des Arrays wird als Hashbucket bezeichnet.
@@ -913,7 +913,7 @@ Wenn die älteren Versionen später nicht mehr erforderlich sind, durchsucht ein
 
 Nicht gruppierte Indizes zählen zu den möglichen Typen von Indizes in einer speicheroptimierten Tabelle. Weitere Informationen zu finden Sie unter [Indizes für speicheroptimierte Tabellen](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
 
-**Gilt für**: [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+**Gilt für** : [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
 
 ### <a name="in-memory-nonclustered-index-architecture"></a>Architektur nicht gruppierter In-Memory-Indizes
 

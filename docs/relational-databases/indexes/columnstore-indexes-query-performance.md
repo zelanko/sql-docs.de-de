@@ -12,12 +12,12 @@ ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2e5fe98b5ec7d6fc141b41869e0caef7f6cb665
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a7e2aaa0e01a5ca5295bc9f315c44cd7358b1d9f
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408796"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036110"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Columnstore-Indizes: Abfrageleistung
 
@@ -95,7 +95,7 @@ ms.locfileid: "88408796"
  Weitere Informationen zu Zeilengruppen finden Sie unter [Entwurfsleitfäden für Columnstore-Indizes](../../relational-databases/sql-server-index-design-guide.md#columnstore_index).    
     
 ### <a name="batch-mode-execution"></a>Batchmodusausführung    
- Bei der Batchmodusausführung handelt es sich um die gemeinsame Verarbeitung eines Zeilensatzes, in der Regel bis zu 900 Zeilen, aus Gründen der Ausführungseffizienz. Die Abfrage `SELECT SUM (Sales) FROM SalesData` aggregiert beispielsweise den Gesamtumsatz aus der Tabelle „SalesData“. Bei der Batchmodusausführung berechnet die Abfrageausführungs-Engine das Aggregat in Gruppen von 900 Werten. Dadurch werden Metadaten, Zugriffskosten und andere Aufwandsarten auf alle Zeilen in einem Batch verteilt, anstatt die Kosten für jede Zeile zu zahlen, wodurch der Codepfad erheblich reduziert wird. Bei der Batchmodusverarbeitung kommen, sofern möglich, komprimierte Daten zum Einsatz. Zugleich werden einige der Exchange-Operatoren beseitigt, die bei der Zeilenmodusverarbeitung verwendet werden. Dies beschleunigt die Ausführung von Analyseabfragen in beträchtlichem Maße.    
+ Bei der [Batchmodusausführung](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) handelt es sich um die gemeinsame Verarbeitung eines Rowsets, in der Regel bis zu 900 Zeilen, aus Gründen der Ausführungseffizienz. Die Abfrage `SELECT SUM (Sales) FROM SalesData` aggregiert beispielsweise den Gesamtumsatz aus der Tabelle „SalesData“. Bei der Batchmodusausführung berechnet die Abfrageausführungs-Engine das Aggregat in Gruppen von 900 Werten. Dadurch werden Metadaten, Zugriffskosten und andere Aufwandsarten auf alle Zeilen in einem Batch verteilt, anstatt die Kosten für jede Zeile zu zahlen, wodurch der Codepfad erheblich reduziert wird. Bei der Batchmodusverarbeitung kommen, sofern möglich, komprimierte Daten zum Einsatz. Zugleich werden einige der Exchange-Operatoren beseitigt, die bei der Zeilenmodusverarbeitung verwendet werden. Dies beschleunigt die Ausführung von Analyseabfragen in beträchtlichem Maße.    
     
  Nicht alle Abfrageausführungsoperatoren können im Batchmodus ausgeführt werden. DML-Vorgänge, wie z. B. Einfügen, Löschen oder Aktualisieren, werden z. B. Zeile für Zeile ausgeführt. Batchmodusoperatoren richten sich an Operatoren, um die Abfrageleistung wie Scan, Join, Aggregate, Sort und so weiter zu beschleunigen. Da der Columnstore-Index in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] eingeführt wurde, gibt es eine nachhaltige Initiative, um die Operatoren zu erweitern, die im Batchmodus ausgeführt werden können. Die folgende Tabelle führt die Operatoren auf, die im Batchmodus gemäß der Produktversion ausgeführt werden.    
     
@@ -119,6 +119,8 @@ ms.locfileid: "88408796"
 |Window Aggregates||Nicht verfügbar|Nicht verfügbar|ja|Neuer Operator in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|    
     
 <sup>1</sup> Gilt für [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium-Tarife, Standard-Tarife (S3 und höher), alle vCore-Tarife sowie [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].    
+
+Weitere Informationen finden Sie im [Handbuch zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution).
     
 ### <a name="aggregate-pushdown"></a>Aggregatweitergabe    
  Ein normaler Ausführungspfad zur Aggregatberechnung, um die qualifizierenden Zeilen aus dem SCAN-Knoten abzurufen und die Werte im Batchmodus zu aggregieren. Dadurch wird eine gute Leistung bereitgestellt. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] kann der Aggregatvorgang jedoch mittels Push an den SCAN-Knoten weitergegeben werden, um die Leistung der Aggregatberechnung in erheblichem Maße zusätzlich zur Ausführung im Batchmodus zu verbessern, sofern folgende Bedingungen erfüllt sind: 

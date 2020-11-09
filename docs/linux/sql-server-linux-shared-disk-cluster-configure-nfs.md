@@ -9,12 +9,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 06cd2218a2a194ab3345fc9ed00ae40e17f0141d
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 218c4685b7305a1442f85e9b10da7144c6189ea3
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784884"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235657"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Konfigurieren einer Failoverclusterinstanz (NFS): SQL Server für Linux
 
@@ -36,7 +36,7 @@ Beachten Sie beim Konfigurieren des Ordners/der Ordner, die auf dem NFS-Server f
 
 Stellen Sie sicher, dass Ihre Sicherheitsstandards für den Zugriff erzwungen werden. Achten Sie beim Konfigurieren des Ordners darauf, dass nur die an der FCI beteiligten Server den NFS-Ordner sehen können. Unten ist als Beispiel eine angepasste „/etc/exports“-Datei auf einer Linux-basierten NFS-Lösung zu sehen. Der Ordner ist auf FCIN1 und FCIN2 beschränkt.
 
-![05-nfsacl][1]
+![Screenshot: Beispiel für eine angepasste Version von /etc/exports auf einer Linux-basierten NFS-Lösung, bei der der Ordner auf FCIN1 und FCIN2 beschränkt ist][1]
 
 ## <a name="instructions"></a>Instructions
 
@@ -132,7 +132,7 @@ Stellen Sie sicher, dass Ihre Sicherheitsstandards für den Zugriff erzwungen we
     mount
     ```
 
-    ![10-mountnoswitches][2]
+    ![Screenshot: mount-Befehl und Antwort darauf ohne Wechsel][2]
 
    * Wechseln Sie zum mssql-Benutzer. Wenn dies erfolgreich war, erhalten Sie keine Bestätigung.
 
@@ -228,7 +228,7 @@ Stellen Sie sicher, dass Ihre Sicherheitsstandards für den Zugriff erzwungen we
 
    * Erstellen Sie eine Datenbank in diesem Ordner, um dies zu testen. Im folgenden Beispiel wird „sqlcmd“ verwendet, um eine Datenbank zu erstellen, den Kontext zu wechseln und zu überprüfen, ob die Dateien auf der Betriebssystemebene vorhanden sind. Anschließend wird der temporäre Speicherort gelöscht. Sie können SSMS verwenden.
 
-    ![15-createtestdatabase][4]
+    ![Screenshot: sqlcmd-Befehl und Antwort darauf][4]
  
    * Heben Sie die Einbindung der Freigabe auf. 
 

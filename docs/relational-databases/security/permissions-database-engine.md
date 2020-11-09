@@ -2,7 +2,7 @@
 title: Berechtigungen (Datenbank-Engine) | Microsoft-Dokumentation
 description: Anhand dieser vollständigen Liste von SQL Server-Berechtigungen erfahren Sie, welche Berechtigungen für die Plattformen gelten, die Sie verwenden.
 ms.custom: ''
-ms.date: 01/03/2017
+ms.date: 10/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - security [SQL Server], permissions
 - naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
-author: VanMSFT
-ms.author: vanto
+author: AndreasWolter
+ms.author: anwolter
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42c08d58ed1f5688d66ff6e903c27ba360d6a2d0
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 5da1bad65cf04093be339e1f2e55bddd30efffbf
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081949"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243631"
 ---
 # <a name="permissions-database-engine"></a>Berechtigungen (Datenbank-Engine)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "92081949"
 Jedes sicherungsfähige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Element hat zugeordnete Berechtigungen, die einem Prinzipal erteilt werden können. [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Berechtigungen im Datenbankmodul werden sowohl auf dem Serverlevel, das den Anmeldeinformationen und Serverrollen zugewiesen ist, als auch auf dem Datenbanklevel verwaltet, das den Datenbankbenutzer und Datenbankrollen zugewiesen ist. Das Model für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] wendet dieses System auch auf die Datenbankberechtigungen an. Die Berechtigungen auf Serverebene sind jedoch nicht verfügbar. Dieses Thema bietet eine vollständige Liste der Berechtigungen. Eine typische Implementierung der Berechtigungen finden Sie unter [Erste Schritte mit Berechtigungen für die Datenbank-Engine](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
 Die Gesamtzahl der Berechtigungen für [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] beträgt 248. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] macht 254 Berechtigungen verfügbar. Die meisten Berechtigungen – jedoch nicht alle – gelten für alle Plattformen. Zum Beispiel können für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] keine Berechtigungen auf Serverebene erteilt werden, und einige Berechtigungen sind nur für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] sinnvoll.
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] macht 238 Berechtigungen verfügbar. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] macht 230 Berechtigungen verfügbar. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] macht 219 Berechtigungen verfügbar. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] macht 214 Berechtigungen verfügbar. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] macht 195 Berechtigungen verfügbar. Im Thema [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) wird angegeben, welche Themen in den aktuellsten Versionen neu sind.
+Neue Berechtigungen werden nach und nach in neuen Releases eingeführt. [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] macht 238 Berechtigungen verfügbar. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] macht 230 Berechtigungen verfügbar. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] macht 219 Berechtigungen verfügbar. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] macht 214 Berechtigungen verfügbar. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] macht 195 Berechtigungen verfügbar. In dem Artikel [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) wird erläutert, welche Berechtigungen in aktuellen Versionen jeweils neu sind.
 
 Sobald Sie sich mit den Berechtigungen vertraut gemacht haben, verwenden Sie die Anweisungen [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md)und [DENY](../../t-sql/statements/deny-transact-sql.md) , um Berechtigungen auf Serverebene auf Anmeldungen und Berechtigungen auf Datenbankebene auf Benutzer anzuwenden. Beispiel:   
 ```sql
@@ -364,7 +364,7 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
 ##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a> Zusammenfassung des Algorithmus zur Berechtigungsprüfung  
- Die Prüfung von Berechtigungen kann sehr komplex sein. Der Algorithmus für die Berechtigungsprüfung umfasst überlappende Gruppenmitgliedschaften und Besitzverkettung, explizite und implizite Berechtigungen und kann von den Berechtigungen für sicherungsfähige Klassen, in denen die sicherungsfähige Entität enthalten ist, beeinflusst werden. Die allgemeine Vorgehensweise des Algorithmus besteht darin, alle relevanten Berechtigungen zu sammeln. Wenn keine blockierende DENY-Anweisung gefunden wird, sucht der Algorithmus nach einer GRANT-Anweisung mit ausreichenden Zugriffsberechtigungen. Der Algorithmus enthält drei wesentliche Elemente, den **Sicherheitskontext**, den **Berechtigungsbereich**und die **erforderlichen Berechtigung**.  
+ Die Prüfung von Berechtigungen kann sehr komplex sein. Der Algorithmus für die Berechtigungsprüfung umfasst überlappende Gruppenmitgliedschaften und Besitzverkettung, explizite und implizite Berechtigungen und kann von den Berechtigungen für sicherungsfähige Klassen, in denen die sicherungsfähige Entität enthalten ist, beeinflusst werden. Die allgemeine Vorgehensweise des Algorithmus besteht darin, alle relevanten Berechtigungen zu sammeln. Wenn keine blockierende DENY-Anweisung gefunden wird, sucht der Algorithmus nach einer GRANT-Anweisung mit ausreichenden Zugriffsberechtigungen. Der Algorithmus enthält drei wesentliche Elemente, den **Sicherheitskontext** , den **Berechtigungsbereich** und die **erforderlichen Berechtigung**.  
   
 > [!NOTE]  
 >  Berechtigungen können nicht für sa, dbo, den Entitätsbesitzer, information_schema, sys oder für den Benutzer selbst erteilt, verweigert oder aufgehoben werden.  
@@ -406,7 +406,7 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
   
 3.  Aggregieren der Identitäten, die dem Aufrufer zum Erstellen des **Sicherheitskontexts** zugeordnet sind, auf Server- und Datenbankebene sowie auf Ebene des signierten Moduls.  
   
-4.  Sammeln aller Berechtigungen, die für diesen **Berechtigungsbereich**erteilt oder verweigert wurden, in diesem **Sicherheitskontext**. Die Berechtigung kann explizit als GRANT, GRANT WITH GRANT oder DENY angegeben werden; oder die Berechtigungen können als implizite oder abdeckende GRANT-Berechtigung oder DENY-Berechtigung angegeben werden. Die CONTROL-Berechtigung für ein Schema impliziert z. B. CONTROL für eine Tabelle. CONTROL für eine Tabelle impliziert SELECT. Wenn CONTROL für das Schema erteilt wurde, wird folglich SELECT für die Tabelle erteilt. Wenn CONTROL für die Tabelle verweigert wurde, wird SELECT für die Tabelle verweigert.  
+4.  Sammeln aller Berechtigungen, die für diesen **Berechtigungsbereich** erteilt oder verweigert wurden, in diesem **Sicherheitskontext**. Die Berechtigung kann explizit als GRANT, GRANT WITH GRANT oder DENY angegeben werden; oder die Berechtigungen können als implizite oder abdeckende GRANT-Berechtigung oder DENY-Berechtigung angegeben werden. Die CONTROL-Berechtigung für ein Schema impliziert z. B. CONTROL für eine Tabelle. CONTROL für eine Tabelle impliziert SELECT. Wenn CONTROL für das Schema erteilt wurde, wird folglich SELECT für die Tabelle erteilt. Wenn CONTROL für die Tabelle verweigert wurde, wird SELECT für die Tabelle verweigert.  
   
     > [!NOTE]  
     >  Durch eine GRANT-Berechtigung auf Spaltenebene wird eine DENY-Berechtigung auf Objektebene überschrieben.  
@@ -415,7 +415,7 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
   
 6.  Die Berechtigungsprüfung ist nicht bestanden, wenn die **erforderlichen Berechtigung** für eine der Identitäten im **Sicherheitskontext** der Objekte im **Berechtigungsbereich** direkt oder implizit verweigert werden.  
   
-7.  Die Berechtigungsprüfung ist bestanden, wenn die **erforderlichen Berechtigung** nicht verweigert wurde, und die **erforderlichen Berechtigung** für eine der Identitäten im **Sicherheitskontext** eines beliebigen Objekts im **Berechtigungsbereich**direkt oder implizit eine GRANT-Berechtigung oder GRANT WITH GRANT-Berechtigung enthält.  
+7.  Die Berechtigungsprüfung ist bestanden, wenn die **erforderlichen Berechtigung** nicht verweigert wurde, und die **erforderlichen Berechtigung** für eine der Identitäten im **Sicherheitskontext** eines beliebigen Objekts im **Berechtigungsbereich** direkt oder implizit eine GRANT-Berechtigung oder GRANT WITH GRANT-Berechtigung enthält.  
 
 ## <a name="special-considerations-for-column-level-permissions"></a>Spezielle Aspekte für Berechtigungen auf Spaltenebene
 

@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: f99d6e50aed43273dbcaa659f95a8bb8a1fe73d3
-ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
+ms.openlocfilehash: 0069e1fc2a6991df71291fd377aaa76e10f23256
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/27/2020
-ms.locfileid: "92638983"
+ms.locfileid: "92734627"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +53,13 @@ DBCC FREESYSTEMCACHE
 ## <a name="arguments"></a>Argumente
 ( 'ALL' [, _pool\_name_ ] )  
 ALL gibt alle unterstützten Caches an.  
-_pool\_name_ gibt einen Cache für den Resource Governor-Poolcache an. Nur diesem Pool zugeordnete Einträge werden freigegeben.  
+_pool\_name_ gibt einen Resource Governor-Poolcache an. Nur diesem Pool zugeordnete Einträge werden freigegeben. Führen Sie den folgenden Befehl aus, um die verfügbaren Poolnamen aufzulisten:
+
+```sql
+SELECT name FROM sys.dm_os_memory_clerks
+```
+
+Die meisten, aber nicht alle Caches können mithilfe dieses Befehls einzeln freigegeben werden.
   
 MARK_IN_USE_FOR_REMOVAL  
 Gibt zurzeit verwendete Einträge asynchron aus den jeweiligen Caches nach ihrer Verwendung frei. Nach der Ausführung von DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL im Cache neu erstellte Einträge sind nicht betroffen.  
@@ -62,7 +68,7 @@ NO_INFOMSGS
 Alle Informationsmeldungen werden unterdrückt.  
   
 ## <a name="remarks"></a>Bemerkungen  
-Durch das Ausführen von DBCC FREESYSTEMCACHE wird der Plancache für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gelöscht. Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll enthält für jeden geleerten Cachespeicher im Plancache folgende Infomeldung: 
+Durch das Ausführen von DBCC FREESYSTEMCACHE wird der Plancache für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gelöscht. Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll enthält für jeden geleerten Cachespeicher im Plancache die folgende Informationsmeldung:
 
 >`SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to 'DBCC FREEPROCCACHE' or 'DBCC FREESYSTEMCACHE' operations.`
 

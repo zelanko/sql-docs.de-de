@@ -12,12 +12,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 322f977207bb593ddc6a4c8c78fae7621bd2aad4
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 7d1c849a1828664fa24d8e2473dfe9c692c048cd
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810681"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243605"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Verwalten der Beibehaltung von Verlaufsdaten in temporalen Tabellen mit Systemversionsverwaltung
 
@@ -66,13 +66,13 @@ Mit Stretch Database können Sie für einige oder alle Ihrer temporalen Verlaufs
 > [!NOTE]
 > Stretch Database migriert Daten zu Azure. Daher benötigen Sie ein Azure-Konto und ein Abonnement für die Abrechnung. Melden Sie sich für eine [einmonatige kostenlose Testversion](https://azure.microsoft.com/pricing/free-trial/) an, um ein kostenloses Azure-Testkonto zu erhalten.
 
-Sie können eine temporale Verlaufstabelle für Stretch mit dem Stretch-Assistenten oder Transact-SQL konfigurieren, und Sie können eine temporale Verlaufstabelle für Stretch aktivieren, wenn die Systemversionsverwaltung auf **ON**festgelegt ist. Ein Stretching der aktuellen Tabelle ist nicht zulässig, da es nicht sinnvoll ist, für die aktuelle Tabelle ein Stretching durchzuführen.
+Sie können eine temporale Verlaufstabelle für Stretch mit dem Stretch-Assistenten oder Transact-SQL konfigurieren, und Sie können eine temporale Verlaufstabelle für Stretch aktivieren, wenn die Systemversionsverwaltung auf **ON** festgelegt ist. Ein Stretching der aktuellen Tabelle ist nicht zulässig, da es nicht sinnvoll ist, für die aktuelle Tabelle ein Stretching durchzuführen.
 
 ### <a name="using-the-stretch-wizard-to-stretch-the-entire-history-table"></a>Verwenden des Stretch-Assistenten für ein Stretching der gesamten Verlaufstabelle
 
 Die einfachste Methode für Anfänger ist, den Stretch-Assistenten zu verwenden, um Stretch für die gesamte Datenbank zu aktivieren. Wählen Sie dann die temporale Verlaufstabelle im Stretch-Assistenten aus (in diesem Beispiel wird davon ausgegangen, dass Sie die Department-Tabelle als eine temporale Tabelle mit Systemversionsverwaltung in einer ansonsten leeren Datenbank konfiguriert haben). In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]können Sie nicht mit der rechten Maustaste auf die temporale Verlaufstabelle selbst klicken und dann auf „Stretch“ klicken.
 
-1. Klicken Sie mit der rechten Maustaste auf die Datenbank, und zeigen Sie auf **Aufgaben**, zeigen Sie auf **Stretch**, und klicken Sie dann auf **Aktivieren** , um den Assistenten zu starten.
+1. Klicken Sie mit der rechten Maustaste auf die Datenbank, und zeigen Sie auf **Aufgaben** , zeigen Sie auf **Stretch** , und klicken Sie dann auf **Aktivieren** , um den Assistenten zu starten.
 2. Aktivieren Sie im Fenster **Tabellen auswählen** das Kontrollkästchen für die temporale Verlaufstabelle, und klicken Sie auf „Weiter“.
 
     ![Auswählen der Verlaufstabelle auf der Seite „Tabellen auswählen“](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "Auswählen der Verlaufstabelle auf der Seite „Tabellen auswählen“")
@@ -82,7 +82,7 @@ Die einfachste Methode für Anfänger ist, den Stretch-Assistenten zu verwenden,
 4. Geben Sie im Fenster **Sichere Anmeldeinformationen** ein Kennwort für den Datenbankhauptschlüssel an, um Ihre Anmeldeinformationen für die SQL Server-Quelldatenbank zu schützen, und klicken Sie dann auf „Weiter“.
 
     ![Seite „Sichere Anmeldeinformationen“ des Stretch Database-Assistenten](../../relational-databases/tables/media/stretch-wizard-6.png "Seite „Sichere Anmeldeinformationen“ des Stretch Database-Assistenten")
-5. Geben Sie im Fenster **IP-Adresse auswählen** den IP-Adressbereich für Ihre SQL Server-Instanz an, um Ihrem Azure-Server die Kommunikation mit SQL Server zu ermöglichen (bei Auswahl eines vorhandenen Servers, für den bereits eine Firewallregel vorhanden ist, klicken Sie hier einfach auf „Weiter“, um die vorhandene Firewallregel zu verwenden). Klicken Sie zunächst auf **Weiter** und dann auf **Fertig stellen**, um Stretch Database zu aktivieren und ein Stretching für die temporale Verlaufstabelle durchzuführen.
+5. Geben Sie im Fenster **IP-Adresse auswählen** den IP-Adressbereich für Ihre SQL Server-Instanz an, um Ihrem Azure-Server die Kommunikation mit SQL Server zu ermöglichen (bei Auswahl eines vorhandenen Servers, für den bereits eine Firewallregel vorhanden ist, klicken Sie hier einfach auf „Weiter“, um die vorhandene Firewallregel zu verwenden). Klicken Sie zunächst auf **Weiter** und dann auf **Fertig stellen** , um Stretch Database zu aktivieren und ein Stretching für die temporale Verlaufstabelle durchzuführen.
 
     ![Seite „IP-Adresse auswählen“ des Stretch Database-Assistenten](../../relational-databases/tables/media/stretch-wizard-7.png "Seite „IP-Adresse auswählen“ des Stretch Database-Assistenten")
 6. Überprüfen Sie nach Abschluss des Assistenten, ob die Datenbank erfolgreich für Stretch aktiviert wurde. Beachten Sie die Symbole im Objekt-Explorer, die angeben, dass für die Datenbank ein Stretching durchgeführt wurde.
@@ -180,7 +180,7 @@ Mit einer Partitionierungskonfigurationsaufgabe wird die erste Partitionierungsk
 
 Die folgende Abbildung zeigt die erste Partitionierungskonfiguration, mit der Daten von 6 Monaten beibehalten werden.
 
-![Partitionierung](../../relational-databases/tables/media/partitioning.png "Partitionierung")
+![Diagramm: Anfängliche Partitionierungskonfiguration, bei der die Daten sechs Monate lang aufbewahrt werden](../../relational-databases/tables/media/partitioning.png "Partitionierung")
 
 > [!NOTE]
 > Unter „Überlegungen zur Leistung bei der Tabellenpartitionierung“ weiter unten finden Sie Informationen zu Leistungseinbußen bei der Verwendung von RANGE LEFT oder RANGE RIGHT beim Konfigurieren der Partitionierung.
@@ -189,7 +189,7 @@ Beachten Sie, dass die untere bzw. die obere Grenze bei der ersten bzw. der letz
 
 Die folgende Abbildung veranschaulicht die Aufgabe für die wiederholte Partitionswartung (die genauen Schritte werden im Folgenden erläutert).
 
-![Partitionierung2](../../relational-databases/tables/media/partitioning2.png "Partitionierung2")
+![Diagramm: Regelmäßige Partitionswartungstasks](../../relational-databases/tables/media/partitioning2.png "Partitionierung2")
 
 Die genauen Schritte für die Aufgabe für die wiederholte Partitionswartung:
 
@@ -323,7 +323,7 @@ Es ist äußerst wichtig, MERGE und SPLIT RANGE-Vorgänge durchzuführen, um das
 
 Lassen Sie uns zuerst visuell die Bedeutung der Optionen RANGE LEFT und RANGE RIGHT erläutern:
 
-![Partitionierung3](../../relational-databases/tables/media/partitioning3.png "Partitionierung3")
+![Diagramm: Optionen RANGE LEFT und RANGE RIGHT](../../relational-databases/tables/media/partitioning3.png "Partitionierung3")
 
 Beim Definieren einer Partitionsfunktion als RANGE LEFT sind die angegebenen Werte die oberen Grenzen der Partitionen. Wenn Sie RANGE RIGHT verwenden, sind die angegebenen Werte die unteren Grenzen der Partitionen. Wenn Sie den MERGE RANGE-Vorgang verwenden, um eine Grenze aus der Definition der Partitionsfunktion zu entfernen, entfernt die zugrunde liegende Implementierung auch die Partition, die die Grenze enthält. Wenn diese Partition nicht leer ist, werden Daten in die Partition verschoben, die das Ergebnis des MERGE RANGE-Vorgangs ist.
 
@@ -336,7 +336,7 @@ Im Szenario mit gleitendem Fenster entfernen wir immer die unterste Partitionsgr
 
 ## <a name="using-custom-cleanup-script-approach"></a>Verwenden des Ansatzes mit einem benutzerdefiniertem Bereinigungsskript
 
-In Fällen, in denen Stretch Database und Tabellenpartitionierung keine geeigneten Optionen sind, besteht der dritte Ansatz darin, die Daten mit einem benutzerdefinierten Bereinigungsskript aus der Verlaufstabelle zu löschen. Das Löschen von Daten aus einer Verlaufstabelle ist nur möglich, wenn **SYSTEM_VERSIONING = OFF**gilt. Um Dateninkonsistenz zu vermeiden, führen Sie die Bereinigung während des Wartungsfensters (wenn Arbeitsauslastungen, bei denen Daten geändert werden, nicht aktiv sind) oder innerhalb einer Transaktion (sodass andere Arbeitsauslastungen blockiert sind) durch. Dieser Vorgang erfordert die **CONTROL** -Berechtigung für aktuelle Tabellen und Verlaufstabellen.
+In Fällen, in denen Stretch Database und Tabellenpartitionierung keine geeigneten Optionen sind, besteht der dritte Ansatz darin, die Daten mit einem benutzerdefinierten Bereinigungsskript aus der Verlaufstabelle zu löschen. Das Löschen von Daten aus einer Verlaufstabelle ist nur möglich, wenn **SYSTEM_VERSIONING = OFF** gilt. Um Dateninkonsistenz zu vermeiden, führen Sie die Bereinigung während des Wartungsfensters (wenn Arbeitsauslastungen, bei denen Daten geändert werden, nicht aktiv sind) oder innerhalb einer Transaktion (sodass andere Arbeitsauslastungen blockiert sind) durch. Dieser Vorgang erfordert die **CONTROL** -Berechtigung für aktuelle Tabellen und Verlaufstabellen.
 
 Um reguläre Anwendungen und Benutzerabfragen in möglichst geringem Umfang zu blockieren, löschen Sie Daten in kleineren Blöcken mit einer Verzögerung, wenn Sie das Bereinigungsskript innerhalb einer Transaktion ausführen. Es gibt zwar keine optimale Größe für jeden zu löschenden Datenblock für alle Szenarios, aber das Löschen von mehr als 10.000 Zeilen in einer einzigen Transaktion kann erhebliche Auswirkungen haben.
 
@@ -344,7 +344,7 @@ Die Bereinigungslogik ist für jede temporale Tabelle identisch, sodass relativ 
 
 Das folgende Diagramm veranschaulicht, wie Ihre Bereinigungslogik für eine einzelne Tabelle strukturiert sein sollte, um die Auswirkungen auf die aktiven Arbeitsauslastungen zu verringern.
 
-![CustomCleanUpScriptDiagram](../../relational-databases/tables/media/customcleanupscriptdiagram.png "CustomCleanUpScriptDiagram")
+![Diagramm, das zeigt, wie die Bereinigungslogik für eine einzelne Tabelle strukturiert sein sollte, um die Auswirkungen auf die aktiven Arbeitsauslastungen zu verringern](../../relational-databases/tables/media/customcleanupscriptdiagram.png "CustomCleanUpScriptDiagram")
 
 Im Folgenden finden Sie einige allgemeine Richtlinien für die Implementierung des Prozesses. Planen Sie eine tägliche Ausführung der Bereinigungslogik, und wenden Sie sie auf alle temporalen Tabellen an, für die eine Datenbereinigung erforderlich ist. Verwenden Sie den SQL Server-Agent oder ein anderes Tool, um diesen Prozess zu planen:
 

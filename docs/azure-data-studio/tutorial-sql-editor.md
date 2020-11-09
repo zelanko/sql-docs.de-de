@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: bd604ea3ad643aa7f70d0be2a1ee7727810b6705
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: e2c200bc57bc62a54a9850e85e13b9c9f15c49f0
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745710"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243379"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---azure-data-studio"></a>Tutorial: Verwenden des Transact-SQL-Editors zum Erstellen von Datenbankobjekten – Azure Data Studio
 
@@ -30,7 +30,7 @@ In diesem Tutorial lernen, wie Sie [!INCLUDE[name-sos-short](../includes/name-so
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Für dieses Tutorial ist die SQL Server- oder Azure SQL-Datenbank *TutorialDB* erforderlich. Um die *TutorialDB*-Datenbank zu erstellen, führen Sie eine der folgenden Schnellstartanleitungen vollständig aus:
+Für dieses Tutorial ist die SQL Server- oder Azure SQL-Datenbank *TutorialDB* erforderlich. Um die *TutorialDB* -Datenbank zu erstellen, führen Sie eine der folgenden Schnellstartanleitungen vollständig aus:
 
 - [Herstellen einer Verbindung mit und Abfragen von SQL Server mithilfe von [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 - [Herstellen einer Verbindung mit und Abfragen von Azure SQL-Datenbank mithilfe von [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
@@ -40,9 +40,9 @@ Für dieses Tutorial ist die SQL Server- oder Azure SQL-Datenbank *TutorialDB* e
 
 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] bietet ein Suchwidget, mit dem sich Datenbankobjekte schnell finden lassen. Die Ergebnisliste bietet ein Kontextmenü für allgemeine Aufgaben in Bezug auf das ausgewählte Objekt, wie z.B. *Daten bearbeiten* für eine Tabelle.
 
-1. Öffnen Sie die Randleiste SERVER (**STRG+G**), erweitern Sie **Datenbanken**, und wählen Sie **TutorialDB** aus. 
+1. Öffnen Sie die Randleiste SERVER ( **STRG+G** ), erweitern Sie **Datenbanken** , und wählen Sie **TutorialDB** aus. 
 
-1. Öffnen Sie das *TutorialDB-Dashboard*, indem Sie mir der rechten Maustaste auf **TutorialDB** klicken und im Kontextmenü **Verwalten** auswählen:
+1. Öffnen Sie das *TutorialDB-Dashboard* , indem Sie mir der rechten Maustaste auf **TutorialDB** klicken und im Kontextmenü **Verwalten** auswählen:
 
    ![Kontextmenü – Verwalten](./media/tutorial-sql-editor/insight-open-dashboard.png)
 
@@ -53,7 +53,7 @@ Für dieses Tutorial ist die SQL Server- oder Azure SQL-Datenbank *TutorialDB* e
 
    ![Widget für die Schnellsuche](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. Bearbeiten Sie die Spalte **Email** in der ersten Zeile. Geben Sie *orlando0\@adventure-works.com* ein, und drücken Sie die **EINGABETASTE**, um die Änderung zu speichern.
+1. Bearbeiten Sie die Spalte **Email** in der ersten Zeile. Geben Sie *orlando0\@adventure-works.com* ein, und drücken Sie die **EINGABETASTE** , um die Änderung zu speichern.
 
    ![Bearbeiten von Daten](./media/tutorial-sql-editor/edit-data.png)
 
@@ -64,16 +64,16 @@ Azure Data Studio bietet viele integrierte T-SQL-Codeausschnitte zum schnellen E
 
 1. Öffnen Sie einen neuen Abfrage-Editor, indem Sie **STRG+N** drücken.
 
-2. Geben Sie im Editor **sql** ein, navigieren Sie mit der NACH-UNTEN-TASTE nach unten zu **sqlCreateStoredProcedure**, und drücken Sie die *TAB-TASTE* (oder die *EINGABETASTE*), um den Codeausschnitt mit der gespeicherten Prozedur zu laden.
+2. Geben Sie im Editor **sql** ein, navigieren Sie mit der NACH-UNTEN-TASTE nach unten zu **sqlCreateStoredProcedure** , und drücken Sie die *TAB-TASTE* (oder die *EINGABETASTE* ), um den Codeausschnitt mit der gespeicherten Prozedur zu laden.
 
-   ![Liste mit Codeausschnitten](./media/tutorial-sql-editor/snippet-list.png)
+   ![Screenshot: Abfrage-Editor, in dem „sql“ eingegeben wurde, mit hervorgehobener Option sqlCreateStoredProcedure](./media/tutorial-sql-editor/snippet-list.png)
 
-3. Der Codeausschnitt mit der gespeicherten Prozedur verfügt zur schnellen Bearbeitung über zwei Felder: *StoredProcedureName* und *SchemaName*. Wählen Sie *StoredProcedureName* aus, klicken Sie mit der rechten Maustaste, und wählen Sie **Alle Vorkommen ändern** aus. Geben Sie jetzt *getCustomer* ein – alle *StoredProcedureName*-Einträge ändern sich zu *getCustomer*.
+3. Der Codeausschnitt mit der gespeicherten Prozedur verfügt zur schnellen Bearbeitung über zwei Felder: *StoredProcedureName* und *SchemaName*. Wählen Sie *StoredProcedureName* aus, klicken Sie mit der rechten Maustaste, und wählen Sie **Alle Vorkommen ändern** aus. Geben Sie jetzt *getCustomer* ein – alle *StoredProcedureName* -Einträge ändern sich zu *getCustomer*.
 
-   ![Codeausschnitt](./media/tutorial-sql-editor/snippet.png)
+   ![Screenshot: Abfrage-Editor mit hervorgehobener Option „Change All Occurrences“ (Alle Vorkommen ändern)](./media/tutorial-sql-editor/snippet.png)
 
 5. Ändern aller Vorkommen von *SchemaName* zu *dbo*. 
-6. Der Codeausschnitt enthält Platzhalterparameter und Text, der aktualisiert werden muss. Die *EXECUTE*-Anweisung enthält auch Platzhaltertext, da noch nicht bekannt ist, wie viele Parameter in der Prozedur enthalten sein werden. Aktualisieren Sie den Codeausschnitt für dieses Tutorial so, dass er wie der folgende Code aussieht:
+6. Der Codeausschnitt enthält Platzhalterparameter und Text, der aktualisiert werden muss. Die *EXECUTE* -Anweisung enthält auch Platzhaltertext, da noch nicht bekannt ist, wie viele Parameter in der Prozedur enthalten sein werden. Aktualisieren Sie den Codeausschnitt für dieses Tutorial so, dass er wie der folgende Code aussieht:
 
     ```sql
     -- Create a new stored procedure called 'getCustomer' in schema 'dbo'
@@ -117,7 +117,7 @@ Azure Data Studio bietet die Möglichkeit, mithilfe des Features „Definition e
 
 1. Öffnen Sie einen neuen Editor, indem Sie **STRG+N** drücken. 
 
-2. Geben Sie im Editor *sql* ein, navigieren Sie mit der NACH-UNTEN-TASTE nach unten zu *sqlCreateStoredProcedure*, und drücken Sie die *TAB-TASTE* (oder die *EINGABETASTE*), um den Codeausschnitt mit der gespeicherten Prozedur zu laden.
+2. Geben Sie im Editor *sql* ein, navigieren Sie mit der NACH-UNTEN-TASTE nach unten zu *sqlCreateStoredProcedure* , und drücken Sie die *TAB-TASTE* (oder die *EINGABETASTE* ), um den Codeausschnitt mit der gespeicherten Prozedur zu laden.
 3. Geben Sie *setCustomer* als *StoredProcedureName* und *dbo* als *SchemaName* ein.
 
 3. Ersetzen Sie die @param-Platzhalter durch die folgende Parameterdefinition:
@@ -131,7 +131,7 @@ Azure Data Studio bietet die Möglichkeit, mithilfe des Features „Definition e
    INSERT INTO dbo.Customers
    ```
 
-5. Klicken Sie in der Zeile *INSERT*, die Sie gerade eingefügt haben, mit der rechten Maustaste auf **dbo.Customers**, und wählen Sie **Definition einsehen** aus.
+5. Klicken Sie in der Zeile *INSERT* , die Sie gerade eingefügt haben, mit der rechten Maustaste auf **dbo.Customers** , und wählen Sie **Definition einsehen** aus.
 
    ![Definition einsehen](./media/tutorial-sql-editor/peek-definition.png)
 
@@ -181,9 +181,9 @@ Azure Data Studio bietet die Möglichkeit, mithilfe des Features „Definition e
 
 ## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>Verwenden von „Abfrageergebnisse als JSON speichern“ zum Testen der gespeicherten Prozedur „setCustomer“
 
-Die im vorherigen Abschnitt erstellte gespeicherte Prozedur *setCustomer* erfordert JSON-Daten für die Übergabe an den *\@json_val*-Parameter. In diesem Abschnitt wird erläutert, wie Sie ordnungsgemäß formatierte JSON-Daten zum Übergeben an den Parameter erhalten, damit Sie die gespeicherte Prozedur testen können.
+Die im vorherigen Abschnitt erstellte gespeicherte Prozedur *setCustomer* erfordert JSON-Daten für die Übergabe an den *\@json_val* -Parameter. In diesem Abschnitt wird erläutert, wie Sie ordnungsgemäß formatierte JSON-Daten zum Übergeben an den Parameter erhalten, damit Sie die gespeicherte Prozedur testen können.
 
-1. Klicken Sie in der Randleiste **SERVER** mit der rechten Maustaste auf die Tabelle *dbo.Customers*, und klicken Sie auf **SELECT TOP 1000 Rows**.
+1. Klicken Sie in der Randleiste **SERVER** mit der rechten Maustaste auf die Tabelle *dbo.Customers* , und klicken Sie auf **SELECT TOP 1000 Rows**.
 
 2. Wählen Sie in der Ergebnisansicht die erste Zeile aus, stellen Sie sicher, dass die gesamte Zeile ausgewählt ist (klicken Sie auf die Nummer 1 in der Spalte ganz links), und wählen Sie **Als JSON speichern** aus.  
 3. Ändern Sie den Ordner in einen leicht zu merkenden Speicherort (beispielsweise den Desktop), damit Sie die Datei später löschen können, und klicken Sie auf **Speicherort**. Die JSON-formatierte Datei wird geöffnet.

@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 562063245f2c8aaf5204385be20e6687554d5d46
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: f54f2fdce030f477a9e203daa837287dff86f107
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300191"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043854"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -493,7 +493,7 @@ Gibt die datenbankbezogenen Anmeldeinformationen für die Authentifizierung mit 
 
 Zusätzliche Hinweise und Anweisungen für das Erstellen der Anmeldeinformationen:
 
-- Wenn Sie Daten aus Azure Storage in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] laden möchten, verwenden Sie einen Azure Storage-Schlüssel.
+- Verwenden Sie zum Laden von Daten aus Azure Storage in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] eine Shared Access Signature (ein SAS-Token).
 - `CREDENTIAL` ist nur erforderlich, wenn die Daten gesichert wurden. `CREDENTIAL` ist für Datasets, die den anonymen Zugriff zulassen, nicht erforderlich.
 - Wenn `TYPE` = `BLOB_STORAGE`, müssen die Anmeldeinformationen mithilfe von `SHARED ACCESS SIGNATURE` als Identität erstellt werden. Darüber hinaus sollte das SAS-Token wie folgt konfiguriert werden:
   - Schließen Sie bei der Konfiguration als Geheimnis das führende `?` aus.

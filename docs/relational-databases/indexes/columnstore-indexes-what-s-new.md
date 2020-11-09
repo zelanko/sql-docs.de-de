@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 678d3b76d33babe7e2097eafefcd21ff78702f84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c93781a1eb3e18c4eb623f33d294274f02db4f9a
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408636"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036111"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Columnstore-Indizes - Neuigkeiten
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,25 +29,26 @@ ms.locfileid: "88408636"
 ## <a name="feature-summary-for-product-releases"></a>Zusammenfassung der Funktionen für Produktversionen  
  In dieser Tabelle sind die wichtigsten Funktionen für Columnstore-Indizes sowie die Produkte zusammengefasst, in denen sie verfügbar sind.  
 
-|Columnstore-Index-Funktion|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
-|-------------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
-|Batchmodusausführung für Multithread-Abfragen|ja|ja|ja|ja|ja|ja| 
-|Batchmodusausführung für Singlethread-Abfragen|||ja|ja|ja|ja|  
-|Option für die Archivierungskomprimierung||ja|ja|ja|ja|ja|  
-|Momentaufnahmeisolation und Read Commited-Momentaufnahmeisolation|||ja|ja|ja|ja| 
-|Geben Sie den Columnstore-Index bei der Erstellung einer Tabelle an.|||ja|ja|ja|ja|  
-|Always On unterstützt Columnstore-Indizes.|ja|ja|ja|ja|ja|ja| 
-|Lesbare sekundäre Always On-Datenbanken unterstützen schreibgeschützte nicht gruppierte Columnstore-Indizes.|ja|ja|ja|ja|ja|ja|  
-|Lesbare sekundäre Always On-Datenbanken unterstützen aktualisierbare Columnstore-Indizes.|||ja|ja|||  
-|Schreibgeschützter nicht gruppierter Columnstore-Index auf Heap- oder B-Struktur|ja|ja|ja<sup>1</sup>|ja<sup>1</sup>|ja<sup>1</sup>|ja<sup>1</sup>|  
-|Aktualisierbarer nicht gruppierter Columnstore-Index auf Heap- oder B-Struktur|||ja|ja|ja|ja|  
-|Zusätzliche B-Strukturindizes sind für eine Heap- oder B-Struktur mit einem nicht gruppierten Columnstore-Index zulässig|ja|ja|ja|ja|ja|ja|  
-|Aktualisierbarer gruppierter Columnstore-Index||ja|ja|ja|ja|ja|  
-|B-Strukturindex in einem gruppierten Columnstore-Index|||ja|ja|ja|ja|  
-|Columnstore-Index für eine speicheroptimierte Tabelle|||ja|ja|ja|ja|  
-|Die Definition von nicht gruppierten Columnstore-Indizes unterstützt gefilterte Bedingungen.|||ja|ja|ja|ja|  
-|Option für die Komprimierungsverzögerung von Columnstore-Indizes in `CREATE TABLE` und `ALTER TABLE`|||ja|ja|ja|ja|
-|Der Columnstore-Index kann über eine nicht permanent berechnete Spalte verfügen.||||ja|||   
+|Columnstore-Index-Funktion|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
+|-------------------------------|---------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
+|Batchmodusausführung für Multithread-Abfragen|ja|ja|ja|ja|ja|ja|ja| 
+|Batchmodusausführung für Singlethread-Abfragen|||ja|ja|ja|ja|ja|  
+|Option für die Archivierungskomprimierung||ja|ja|ja|ja|ja|ja|  
+|Momentaufnahmeisolation und Read Commited-Momentaufnahmeisolation|||ja|ja|ja|ja|ja| 
+|Geben Sie den Columnstore-Index bei der Erstellung einer Tabelle an.|||ja|ja|ja|ja|ja|  
+|Always On unterstützt Columnstore-Indizes.|ja|ja|ja|ja|ja|ja|ja| 
+|Lesbare sekundäre Always On-Datenbanken unterstützen schreibgeschützte nicht gruppierte Columnstore-Indizes.|ja|ja|ja|ja|ja|ja|ja|  
+|Lesbare sekundäre Always On-Datenbanken unterstützen aktualisierbare Columnstore-Indizes.|||ja||ja|||  
+|Schreibgeschützter nicht gruppierter Columnstore-Index auf Heap- oder B-Struktur|ja|ja|ja<sup>1</sup>|ja<sup>1</sup>|ja<sup>1</sup>|ja<sup>1</sup>|ja<sup>1</sup>|  
+|Aktualisierbarer nicht gruppierter Columnstore-Index auf Heap- oder B-Struktur|||ja|ja|ja|ja|ja|  
+|Zusätzliche B-Strukturindizes sind für eine Heap- oder B-Struktur mit einem nicht gruppierten Columnstore-Index zulässig|ja|ja|ja|ja|ja|ja|ja|  
+|Aktualisierbarer gruppierter Columnstore-Index||ja|ja|ja||ja|ja|  
+|B-Strukturindex in einem gruppierten Columnstore-Index|||ja|ja||ja|ja|  
+|Columnstore-Index für eine speicheroptimierte Tabelle|||ja|ja||ja|ja|  
+|Die Definition von nicht gruppierten Columnstore-Indizes unterstützt gefilterte Bedingungen.|||ja|ja|ja|ja|ja|  
+|Option für die Komprimierungsverzögerung von Columnstore-Indizes in `CREATE TABLE` und `ALTER TABLE`|||ja|ja|ja|ja|ja|
+|Der Columnstore-Index kann über eine nicht permanent berechnete Spalte verfügen.||||ja|ja|||   
+|Unterstützung des Tupelverschiebungsvorgangs durch Zusammenführungstask im Hintergrund||||||ja|ja|ja|
   
  <sup>1</sup> Speichern Sie den Index in einer schreibgeschützten Dateigruppe, um einen schreibgeschützten nicht gruppierten Columnstore-Index zu erstellen.  
  
@@ -58,13 +59,13 @@ ms.locfileid: "88408636"
  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] fügt diese neuen Funktionen hinzu.
 
 ### <a name="functional"></a>Funktionen
-- Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wird der Tupelverschiebungsvorgang von einem Mergetask im Hintergrund unterstützt, der automatisch kleinere OPEN-Deltazeilengruppen komprimiert, die für einen bestimmten Zeitraum vorhanden waren (wie durch einen internen Schwellenwert festgelegt), oder COMPRESSED-Zeilengruppen mergt, aus denen eine große Anzahl von Zeilen gelöscht wurde. Zuvor war ein Vorgang zum Neuorganisieren eines Index erforderlich, um Zeilengruppen mit teilweise gelöschten Daten zusammenzuführen. Dies verbessert die Qualität des Columnstore-Index im Lauf der Zeit. 
+- Seit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wird der Tupelverschiebungsvorgang von einem Zusammenführungstask im Hintergrund unterstützt. Dieser komprimiert automatisch kleinere OPEN-Deltazeilengruppen, die für einen bestimmten durch einen internen Schwellenwert definierten Zeitraum vorhanden waren, oder führt COMPRESSED-Zeilengruppen zusammen, aus denen eine große Anzahl von Zeilen gelöscht wurde. Zuvor war ein Vorgang zum Neuorganisieren eines Index erforderlich, um Zeilengruppen mit teilweise gelöschten Daten zusammenzuführen. Dies verbessert die Qualität des Columnstore-Index im Lauf der Zeit. 
 
-## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] fügt diese neuen Funktionen hinzu.
+## [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 
+ [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] fügt diese neuen Funktionen hinzu.
 
 ### <a name="functional"></a>Funktionen
-- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] unterstützt nichtpersistierte berechnete Spalten in gruppierten Columnstore-Indexen. Persistierte berechnete Spalten werden in gruppierten Columnstore-Indizes nicht unterstützt. Sie können keinen nicht gruppierten Index für einen Columnstore-Index erstellen, der berechnete Spalten umfasst. 
+- [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] unterstützt nichtpersistierte berechnete Spalten in gruppierten Columnstore-Indexen. Persistierte berechnete Spalten werden in gruppierten Columnstore-Indizes nicht unterstützt. Sie können keinen nicht gruppierten Index für einen Columnstore-Index erstellen, der berechnete Spalten umfasst. 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] fügt wichtige Verbesserungen hinzu, um die Leistung und Flexibilität von Columnstore-Indizes zu erhöhen. Dies verbessert die Data Warehouse-Szenarios und ermöglicht operative Echtzeitanalysen.  

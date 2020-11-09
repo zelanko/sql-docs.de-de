@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f076f67c09d28ff4725587e3470d56e81b1c9aef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8c7e51f31643e61d5847395a92dae50c7ee5eaeb
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883817"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524005"
 ---
 # <a name="advanced-merge-replication-conflict---resolving-in-logical-record"></a>Erweiterte Konflikte in Mergereplikationen – Lösen von Konflikten in logischen Datensätzen
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "85883817"
   
  ![Logischer Datensatz für drei Tabellen mit Werten](../../../relational-databases/replication/merge/media/logical-records-05.gif "Logischer Datensatz für drei Tabellen mit Werten")  
   
- Ein Konflikt wird erkannt, wenn zwei Benutzer Werte für den logischen Customer2-Datensatz in den **Customers**-, **Orders**- bzw. **OrderItems** -Tabellen ändern. Bei diesem Beispiel kommt es zu Änderungen durch eine UPDATE-Anweisung, der Konflikt würde aber auch erkannt werden, wenn die Änderungen durch eine INSERT- oder DELETE-Anweisung zustande gekommen wären.  
+ Ein Konflikt wird erkannt, wenn zwei Benutzer Werte für den logischen Customer2-Datensatz in den **Customers** -, **Orders** - bzw. **OrderItems** -Tabellen ändern. Bei diesem Beispiel kommt es zu Änderungen durch eine UPDATE-Anweisung, der Konflikt würde aber auch erkannt werden, wenn die Änderungen durch eine INSERT- oder DELETE-Anweisung zustande gekommen wären.  
   
 ## <a name="conflict-resolution"></a>Konfliktlösung  
  Standardmäßig verwendet die Mergereplikation zum Lösen von Konflikten eine prioritätsbasierte Logik. Wenn eine Änderung, die zu einem Konflikt führt, in zwei Abonnentendatenbanken vorgenommen wird, hat die Änderung für den Abonnenten mit der höheren Abonnementpriorität Vorrang. Ist die Priorität bei beiden Abonnements identisch, erhält die Änderung den Vorzug, die den Verleger zuerst erreicht. Bei der Erkennung auf Zeilen- und Spaltenebene wird die unterlegene Zeile immer durch die gesamte Gewinnerzeile überschrieben.  
@@ -55,56 +55,56 @@ ms.locfileid: "85883817"
 ### <a name="row-or-column-level-detection-row-level-resolution"></a>Erkennung auf Zeilen- oder Spaltenebene, Lösung auf Zeilenebene  
  In diesem Beispiel ist die Veröffentlichung wie folgt konfiguriert:  
   
--   Für**column_tracking** ist TRUE oder FALSE festgelegt.  
+-   Für **column_tracking** ist TRUE oder FALSE festgelegt.  
   
--   Für**logical_record_level_conflict_detection** ist FALSE festgelegt.  
+-   Für **logical_record_level_conflict_detection** ist FALSE festgelegt.  
   
--   Für**logical_record_level_conflict_resolution** ist FALSE festgelegt.  
+-   Für **logical_record_level_conflict_resolution** ist FALSE festgelegt.  
   
  In diesem Fall erfolgt die Erkennung auf der Zeilen- oder Spaltenebene, und die Lösung erfolgt auf der Zeilenebene. Diese Einstellungen werden verwendet, um davon zu profitieren, dass alle Änderungen eines logischen Datensatzes als Einheit repliziert werden, ohne dass dazu eine Konflikterkennung oder -lösung auf der Ebene des logischen Datensatzes erfolgt.  
   
 ### <a name="column-level-detection-logical-record-resolution"></a>Erkennung auf Spaltenebene, Lösung auf der Ebene des logischen Datensatzes  
  In diesem Beispiel ist die Veröffentlichung wie folgt konfiguriert:  
   
--   Für**column_tracking** ist TRUE festgelegt.  
+-   Für **column_tracking** ist TRUE festgelegt.  
   
--   Für**logical_record_level_conflict_detection** ist FALSE festgelegt.  
+-   Für **logical_record_level_conflict_detection** ist FALSE festgelegt.  
   
--   Für**logical_record_level_conflict_resolution** ist TRUE festgelegt.  
+-   Für **logical_record_level_conflict_resolution** ist TRUE festgelegt.  
   
  Ein Verleger und ein Abonnent beginnen mit demselben Datensatz, und zwischen den **orders** - und **customers** -Tabellen ist ein logischer Datensatz definiert. Der Verleger ändert die **custcol1** -Spalte in der **customers** -Tabelle und die **ordercol1** -Spalte in der **orders** -Tabelle. Der Abonnent ändert die **custcol1** -Spalte in derselben Zeile der **customers** -Tabelle und die **ordercol2** -Spalte in derselben Zeile der **orders** -Tabelle. Die Änderungen an derselben Spalte in der **customer** -Tabelle führen zu einem Konflikt, aus den Änderungen an der **orders** -Tabelle ergibt sich jedoch kein Konflikt.  
   
  Da die Konflikte auf der Ebene des logischen Datensatzes gelöst werden, ersetzen während der Replikationsverarbeitung die Gewinneränderungen, die auf dem Verleger vorgenommen wurden, die Änderungen, die an den Tabellen auf dem Abonnenten erfolgt sind.  
   
- ![Reihe von Tabellen mit Änderungen an verknüpften Zeilen](../../../relational-databases/replication/merge/media/logical-records-06.gif "Reihe von Tabellen mit Änderungen an verknüpften Zeilen")  
+ ![Erste Reihe von Tabellen mit Änderungen an verknüpften Zeilen](../../../relational-databases/replication/merge/media/logical-records-06.gif "Reihe von Tabellen mit Änderungen an verknüpften Zeilen")  
   
 ### <a name="row-level-detection-logical-record-resolution"></a>Erkennung auf Zeilenebene, Lösung auf der Ebene des logischen Datensatzes  
  In diesem Beispiel ist die Veröffentlichung wie folgt konfiguriert:  
   
--   Für**column_tracking** ist FALSE festgelegt.  
+-   Für **column_tracking** ist FALSE festgelegt.  
   
--   Für**logical_record_level_conflict_detection** ist FALSE festgelegt.  
+-   Für **logical_record_level_conflict_detection** ist FALSE festgelegt.  
   
--   Für**logical_record_level_conflict_resolution** ist TRUE festgelegt.  
+-   Für **logical_record_level_conflict_resolution** ist TRUE festgelegt.  
   
  Ein Verleger und ein Abonnent beginnen mit demselben Datensatz. Der Verleger ändert die **custcol1** -Spalte in der **customers** -Tabelle. Der Abonnent ändert die **custcol2** -Spalte in der **customers** -Tabelle und die **ordercol2** -Spalte in der **orders** -Tabelle. Die Änderungen an derselben Spalte in der **customers** -Tabelle führen zu einem Konflikt, während sich aus den Änderungen des Abonnenten an der **orders** -Tabelle kein Konflikt ergibt.  
   
  Da die Konflikte auf der Ebene des logischen Datensatzes gelöst werden, ersetzen während der Synchronisierung die Gewinneränderungen, die auf dem Verleger vorgenommen wurden, die Änderungen, die an den Tabellen auf dem Abonnenten erfolgt sind.  
   
- ![Reihe von Tabellen mit Änderungen an verknüpften Zeilen](../../../relational-databases/replication/merge/media/logical-records-07.gif "Reihe von Tabellen mit Änderungen an verknüpften Zeilen")  
+ ![Zweite Reihe von Tabellen mit Änderungen an verknüpften Zeilen](../../../relational-databases/replication/merge/media/logical-records-07.gif "Reihe von Tabellen mit Änderungen an verknüpften Zeilen")  
   
 ### <a name="logical-record-detection-logical-record-resolution"></a>Erkennung auf der Ebene des logischen Datensatzes, Lösung auf der Ebene des logischen Datensatzes  
  In diesem Beispiel ist die Veröffentlichung wie folgt konfiguriert:  
   
--   Für**logical_record_level_conflict_detection** ist TRUE festgelegt.  
+-   Für **logical_record_level_conflict_detection** ist TRUE festgelegt.  
   
--   Für**logical_record_level_conflict_resolution** ist TRUE festgelegt.  
+-   Für **logical_record_level_conflict_resolution** ist TRUE festgelegt.  
   
- Ein Verleger und ein Abonnent beginnen mit demselben Datensatz. Der Verleger ändert die **custcol1** -Spalte in der **customers** -Tabelle. Der Abonnent ändert die **ordercol1** -Spalte in der **orders** -Tabelle. Es sind keine Änderungen an identischen Zeilen oder Spalten vorgenommen worden, da aber die Änderungen für **custid**=1 im selben logischen Datensatz erfolgt sind, werden die Änderungen auf der Ebene des logischen Datensatzes als Konflikt erkannt.  
+ Ein Verleger und ein Abonnent beginnen mit demselben Datensatz. Der Verleger ändert die **custcol1** -Spalte in der **customers** -Tabelle. Der Abonnent ändert die **ordercol1** -Spalte in der **orders** -Tabelle. Es sind keine Änderungen an identischen Zeilen oder Spalten vorgenommen worden, da aber die Änderungen für **custid** =1 im selben logischen Datensatz erfolgt sind, werden die Änderungen auf der Ebene des logischen Datensatzes als Konflikt erkannt.  
   
  Da die Konflikte auch auf der Ebene des logischen Datensatzes gelöst werden, ersetzt während der Synchronisierung die Gewinneränderung, die auf dem Verleger vorgenommen wurde, die Änderung, die an den Tabellen auf dem Abonnenten erfolgt ist.  
   
- ![Reihe von Tabellen mit Änderungen an verknüpften Zeilen](../../../relational-databases/replication/merge/media/logical-records-08.gif "Reihe von Tabellen mit Änderungen an verknüpften Zeilen")  
+ ![Dritte Reihe von Tabellen mit Änderungen an verknüpften Zeilen](../../../relational-databases/replication/merge/media/logical-records-08.gif "Reihe von Tabellen mit Änderungen an verknüpften Zeilen")  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)  

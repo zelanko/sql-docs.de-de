@@ -2,7 +2,7 @@
 description: Festlegen oder Ändern der Datenbanksortierung
 title: Festlegen oder Ändern der Datenbanksortierung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 10/11/2019
+ms.date: 10/27/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -14,12 +14,12 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32f5807bffcb74b3ca2c7c15ec294154530a9ad5
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 9ea1926c2e54135277dd486976dda7ebe4ae6086
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193460"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907376"
 ---
 # <a name="set-or-change-the-database-collation"></a>Festlegen oder Ändern der Datenbanksortierung
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "92193460"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
--   Nur-Unicode-Sortierungen unter Windows, können nur mit der COLLATE-Klausel verwendet werden, um auf Spalten- und Ausdrucksebene Sortierungen auf die Datentypen **nchar**, **nvarchar**und **ntext** anzuwenden. Sie können nicht mit der COLLATE-Klausel verwendet werden, um die Sortierung einer Datenbank oder Serverinstanz zu ändern.  
+-   Nur-Unicode-Sortierungen unter Windows, können nur mit der COLLATE-Klausel verwendet werden, um auf Spalten- und Ausdrucksebene Sortierungen auf die Datentypen **nchar** , **nvarchar** und **ntext** anzuwenden. Sie können nicht mit der COLLATE-Klausel verwendet werden, um die Sortierung einer Datenbank oder Serverinstanz zu ändern.  
   
 -   Wenn die angegebene Sortierung oder die Sortierung des Objekts, auf das verwiesen wird, eine Codepage verwendet, die nicht von Windows unterstützt wird, zeigt [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Fehler an.  
 
@@ -60,13 +60,39 @@ Die Namen der unterstützten Sortierungen finden Sie unter [Name der Windows-Sor
   
 Das Ändern der Datenbanksortierung ändert Folgendes:  
   
--   Alle **char**-, **varchar**-, **text**-, **nchar**-, **nvarchar**- und **ntext** -Spalten in Systemtabellen erhalten die neue Sortierung.  
+-   Alle **char** -, **varchar** -, **text** -, **nchar** -, **nvarchar** - und **ntext** -Spalten in Systemtabellen erhalten die neue Sortierung.  
   
--   Sämtliche vorhandene **char**-, **varchar**-, **text**-, **nchar**-, **nvarchar**- und **ntext** -Parameter und skalare Rückgabewerte für gespeicherte Prozeduren und benutzerdefinierte Funktionen erhalten die neue Sortierung.  
+-   Sämtliche vorhandene **char** -, **varchar** -, **text** -, **nchar** -, **nvarchar** - und **ntext** -Parameter und skalare Rückgabewerte für gespeicherte Prozeduren und benutzerdefinierte Funktionen erhalten die neue Sortierung.  
   
--   Die Systemdatentypen **char**, **varchar**, **text**, **nchar**oder **nvarchar**oder **ntext** sowie alle benutzerdefinierten Datentypen, die auf Systemdatentypen basieren, erhalten die neue Standardsortierung.  
+-   Die Systemdatentypen **char** , **varchar** , **text** , **nchar** oder **nvarchar** oder **ntext** sowie alle benutzerdefinierten Datentypen, die auf Systemdatentypen basieren, erhalten die neue Standardsortierung.  
   
 Sie können die Sortierung neuer Objekte, die in einer Benutzerdatenbank erstellt werden, mithilfe der `COLLATE`-Klausel der [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)-Anweisung ändern. Diese Anweisung **ändert jedoch nicht** die Sortierung der Spalten in vorhandenen benutzerdefinierten Tabellen. Letztere können mithilfe der `COLLATE`-Klausel der [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)-Anweisung geändert werden.  
+
+> [!IMPORTANT]
+> Durch das Ändern der Sortierung einer Datenbank oder einzelner Spalten **werden nicht** die zugrunde liegenden Daten geändert, die bereits in vorhandenen Tabellen gespeichert sind. Wenn Ihre Anwendung nicht explizit für die Datenkonvertierung und den Vergleich zwischen verschiedenen Sortierungen zuständig ist, wird empfohlen, dass Sie die in der Datenbank vorhandenen Daten in die neue Sortierung übertragen. Dadurch entfällt das Risiko, dass Anwendungen Daten möglicherweise falsch ändern, was zu falschen Ergebnissen oder einem stillen Datenverlust führen kann.   
+
+Wenn die Sortierung einer Datenbank geändert wird, erben nur neue Tabellen standardmäßig die neue Datenbanksortierung. Es gibt einige Alternativen zum Konvertieren vorhandener Daten in die neue Sortierung:
+-  Konvertieren Sie die Daten direkt. Informationen zum Konvertieren der Sortierung einer Spalte in einer vorhandenen Tabelle finden Sie unter [Festlegen oder Ändern der Spaltensortierung](../../relational-databases/collations/set-or-change-the-column-collation.md). Dieser Vorgang ist leicht zu implementieren, kann jedoch bei großen Tabellen und ausgelasteten Anwendungen zu einem Blockierproblem führen. Das folgende Beispiel zeigt eine direkte Konvertierung der `MyString`-Spalte in eine neue Sortierung:
+
+   ```sql
+   ALTER TABLE dbo.MyTable
+   ALTER COLUMN MyString VARCHAR(50) COLLATE Latin1_General_100_CI_AI_SC_UTF8;
+   ```
+
+-  Kopieren Sie die Daten in neue Tabellen, die die neue Sortierung verwenden, und ersetzen Sie die ursprünglichen Tabellen in derselben Datenbank. Erstellen Sie eine neue Tabelle in der aktuellen Datenbank, die die Datenbanksortierung erbt, kopieren Sie die Daten von der alten Tabelle in die neue Tabelle, löschen Sie die ursprüngliche Tabelle, und ändern Sie den Namen der neuen Tabelle in den der ursprünglichen. Hierbei handelt es sich um einen schnelleren Vorgang als eine direkte Konvertierung, der allerdings zu einer Herausforderung werden kann, wenn komplexe Schemas mit Abhängigkeiten wie Fremdschlüsseleinschränkungen, Primärschlüsseleinschränkungen und Triggern beteiligt sind. Darüber hinaus ist vor der endgültigen Trennung eine abschließende Datensynchronisierung zwischen der ursprünglichen und der neuen Tabelle erforderlich, wenn die Daten weiterhin von Anwendungen geändert werden. Das folgende Beispiel zeigt eine Konvertierung der `MyString`-Spalte in eine neue Sortierung durch Kopieren und Ersetzen:
+
+   ```sql
+   CREATE TABLE dbo.MyTable2 (MyString VARCHAR(50) COLLATE Latin1_General_100_CI_AI_SC_UTF8); 
+   
+   INSERT INTO dbo.MyTable2 
+   SELECT * FROM dbo.MyTable; 
+   
+   DROP TABLE dbo.MyTable; 
+   
+   EXEC sp_rename 'dbo.MyTable2', 'dbo.MyTable’;
+   ```
+
+-  Kopieren Sie die Daten in eine neue Datenbank, die die neue Sortierung verwendet, und ersetzen Sie die ursprüngliche Datenbank. Erstellen Sie eine neue Datenbank mit der neuen Sortierung, und übertragen Sie die Daten aus der ursprünglichen Datenbank mithilfe von Tools wie den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] oder dem Import/Export-Assistenten im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Dies ist ein einfacherer Ansatz für komplexe Schemas. Darüber hinaus ist vor der endgültigen Trennung eine abschließende Datensynchronisierung zwischen der ursprünglichen und der neuen Datenbank erforderlich, wenn die Daten weiterhin von Anwendungen geändert werden.
   
 ###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
@@ -79,11 +105,11 @@ Sie können die Sortierung neuer Objekte, die in einer Benutzerdatenbank erstell
   
 #### <a name="to-set-or-change-the-database-collation"></a>So legen Sie die Datenbanksortierung oder ändern sie  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]her, erweitern Sie diese Instanz und dann **Datenbanken**.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]her, erweitern Sie diese Instanz und dann **Datenbanken**.  
   
 2.  Wenn Sie eine neue Datenbank erstellen, klicken mit der rechten Maustaste auf **Datenbanken** , und klicken Sie anschließend auf **Neue Datenbank**. Wenn Sie die Standardsortierung nicht möchten, klicken auf die Seite **Optionen** , und wählen aus der Dropdownliste **Sortierung** eine Sortierung aus.  
   
-     Wenn eine Datenbank bereits vorhanden ist, können Sie alternativ mit der rechten Maustaste auf die Datenbank klicken, die geändert werden soll, und auf **Eigenschaften**klicken. Klicken Sie auf die Seite **Optionen** , und wählen Sie aus der Dropdownliste **Sortierung** eine Sortierung aus.  
+     Wenn eine Datenbank bereits vorhanden ist, können Sie alternativ mit der rechten Maustaste auf die Datenbank klicken, die geändert werden soll, und auf **Eigenschaften** klicken. Klicken Sie auf die Seite **Optionen** , und wählen Sie aus der Dropdownliste **Sortierung** eine Sortierung aus.  
   
 3.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   

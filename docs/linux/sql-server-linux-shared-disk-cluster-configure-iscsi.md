@@ -9,12 +9,12 @@ ms.date: 06/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 32ff32e3d342d63e6de7976213bf4a48ec915778
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: b929bd76f77f021fbc1821811beb7e86be8edd2e
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784914"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235671"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>SQL Server für Linux: Konfigurieren einer Failoverclusterinstanz mit iSCSI
 
@@ -47,7 +47,7 @@ Weitere Informationen zum iSCSI-Initiator für die unterstützten Verteilungen f
     ```bash
     sudo iscsiadm -m iface -I iSCSINIC -o new
     ```
-    ![7-setiscsinetwork][6]
+    ![Screenshot: iface-Befehl und Antwort darauf][6]
  
 2.  Bearbeiten Sie `/var/lib/iscsi/ifaces/iSCSIIfaceName`. Stellen Sie sicher, dass die folgenden Werte vollständig ausgefüllt sind:
 
@@ -58,7 +58,7 @@ Weitere Informationen zum iSCSI-Initiator für die unterstützten Verteilungen f
 
     Sehen Sie sich folgendes Beispiel an:
 
-    ![iSCSITargetSettings][2]
+    ![Screenshot: Datei, in der die Werte vollständig ausgefüllt sind][2]
 
 3.  Suchen Sie das iSCSI-Ziel.
 
@@ -68,7 +68,7 @@ Weitere Informationen zum iSCSI-Initiator für die unterstützten Verteilungen f
 
      \<iSCSINetName> ist der eindeutige bzw. der Anzeigename des Netzwerks, \<TargetIPAddress> ist die IP-Adresse des iSCSI-Ziels, und \<TargetPort> ist der Port des iSCSI-Ziels. 
 
-    ![iSCSITargetResults][3]
+    ![Screenshot: discovery-Befehl und Antwort darauf][3]
 
  
 4.  Melden Sie sich beim Zielserver an.
@@ -95,7 +95,7 @@ Weitere Informationen zum iSCSI-Initiator für die unterstützten Verteilungen f
     ```bash
     sudo grep "Attached SCSI" /var/log/messages
     ```
-    ![30-iSCSIattachedDisks][7]
+    ![Screenshot: grep-Befehl und Antwort darauf mit den angefügten SCSI-Datenträgern][7]
 
 7.  Erstellen Sie ein physisches Volume auf dem iSCSI-Datenträger.
 
@@ -197,7 +197,7 @@ Weitere Informationen zum iSCSI-Initiator für die unterstützten Verteilungen f
         ls /var/opt/mssql/data
         ```
     
-        ![45-CopyMove][8]
+        ![Screenshot: ls-Befehl und Antwort darauf][8]
 
    * Geben Sie `exit` ein, um zum Root-Benutzer zurück zu wechseln.
 
@@ -321,7 +321,7 @@ Weitere Informationen zum iSCSI-Initiator für die unterstützten Verteilungen f
 
    *    Erstellen Sie eine Datenbank in diesem Ordner, um dies zu testen. Im folgenden Beispiel wird „sqlcmd“ verwendet, um eine Datenbank zu erstellen, den Kontext zu wechseln und zu überprüfen, ob die Dateien auf der Betriebssystemebene vorhanden sind. Anschließend wird der temporäre Speicherort gelöscht. Sie können SSMS verwenden.
   
-        ![50-ExampleCreateSSMS][9]
+        ![Screenshot: sqlcmd-Befehl und Antwort darauf][9]
 
    *    Heben Sie die Einbindung der Freigabe auf. 
 
@@ -355,7 +355,7 @@ Weitere Informationen zum iSCSI-Initiator für die unterstützten Verteilungen f
 
     \<ListOfVGsNotUsedByPacemaker> ist die Liste der Volumegruppen aus der Ausgabe von Schritt 20, die nicht von der Failoverclusterinstanz verwendet wird. Setzen Sie sie in Anführungszeichen, und trennen Sie sie durch Kommas. Ein entsprechendes Beispiel ist nachfolgend dargestellt.
 
-    ![55-ListOfVGs][11]
+    ![Screenshot: Beispielwert für volume_list][11]
 
 17. Wenn Linux gestartet wird, wird das Dateisystem eingebunden. Erstellen Sie das Image für das Stammdateisystem neu, um sicherzustellen, dass nur Pacemaker den iSCSI-Datenträger einbinden kann. 
 

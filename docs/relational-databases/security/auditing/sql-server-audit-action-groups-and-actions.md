@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: DavidTrigano
 ms.author: datrigan
-ms.openlocfilehash: 68943b7b57794d779656ca8537a7c59d4f486db8
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 51f971caef999424e002a49ab357e33fd1f0657a
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301896"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243571"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server Audit-Aktionsgruppen und -Aktionen
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "86301896"
 |BATCH_STARTED_GROUP|Dieses Ereignis wird ausgelöst, wenn die Ausführung von Batchtexten, gespeicherten Prozeduren oder Transaktionverwaltungsvorgänge begonnen wird. Es wird vor der Ausführung ausgelöst und überwacht den gesamten Text des Batches oder der gespeicherten Prozedur, so wie er vom Client übermittelt wird. **Hinzugefügt in SQL Server 2019.**|  
 |BROKER_LOGIN_GROUP|Das Ereignis wird für Berichtsüberwachungsmeldungen zur Service Broker-Transportsicherheit ausgelöst. Entspricht der [Audit Broker Login Event Class](../../../relational-databases/event-classes/audit-broker-login-event-class.md).|  
 |DATABASE_CHANGE_GROUP|Das Ereignis wird ausgelöst, wenn eine Datenbank erstellt, geändert oder gelöscht wird. Das Ereignis wird immer dann ausgelöst, wenn eine Datenbank erstellt, geändert oder gelöscht wird. Entspricht der [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md).|  
-|DATABASE_LOGOUT_GROUP|Das Ereignis wird ausgelöst, wenn sich der Benutzer einer eigenständigen Datenbank von einer Datenbank abmeldet.|  
+|DATABASE_LOGOUT_GROUP|Dieses Ereignis wird ausgelöst, wenn sich ein Benutzer einer eigenständigen Datenbank von einer Datenbank abmeldet. Es entspricht der [Ereignisklasse Audit Logout](../../../relational-databases/event-classes/audit-logout-event-class.md).|  
 |DATABASE_MIRRORING_LOGIN_GROUP|Das Ereignis wird für Berichtsüberwachungsmeldungen zur Transportsicherheit der Datenbankspiegelung ausgelöst. Entspricht der [Audit Database Mirroring Login Event Class](../../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md).|  
 |DATABASE_OBJECT_ACCESS_GROUP|Das Ereignis wird jedes Mal ausgelöst, wenn auf Datenbankobjekte, z. B. Nachrichtentyp, Assembly, Vertrag, zugegriffen wird. Dieses Ereignis wird für jeden Zugriff auf eine Datenbank ausgelöst. Hinweis: Dies kann zu großen Überwachungsdatensätzen führen.<br /><br /> Entspricht der [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md).|  
 |DATABASE_OBJECT_CHANGE_GROUP|Das Ereignis wird ausgelöst, wenn eine CREATE-, ALTER- oder DROP-Anweisung für Datenbankobjekte, z. B. Schemas, ausgeführt wird. Dieses Ereignis wird immer dann ausgelöst, wenn ein Datenbankobjekt erstellt, geändert oder gelöscht wird. Hinweis: Dies kann zu einer sehr großen Anzahl an Überwachungsdatensätzen führen.<br /><br /> Entspricht der [Audit Database Object Management Event Class](../../../relational-databases/event-classes/audit-database-object-management-event-class.md).|  
@@ -141,7 +141,7 @@ ms.locfileid: "86301896"
 |BATCH_COMPLETED_GROUP|Dieses Ereignis wird ausgelöst, wenn die Ausführung von Batchtexten, gespeicherten Prozeduren oder Transaktionverwaltungsvorgänge abgeschlossen wird. Es wird nach Abschluss des Batches ausgelöst und überwacht den gesamten Text des Batches oder der gespeicherten Prozedur, so wie er vom Client übermittelt wird, einschließlich des Ergebnisses.|  
 |BATCH_STARTED_GROUP|Dieses Ereignis wird ausgelöst, wenn die Ausführung von Batchtexten, gespeicherten Prozeduren oder Transaktionverwaltungsvorgänge begonnen wird. Es wird vor der Ausführung ausgelöst und überwacht den gesamten Text des Batches oder der gespeicherten Prozedur, so wie er vom Client übermittelt wird.|  
 |DATABASE_CHANGE_GROUP|Das Ereignis wird ausgelöst, wenn eine Datenbank erstellt, geändert oder gelöscht wird. Entspricht der [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md).|  
-|DATABASE_LOGOUT_GROUP|Das Ereignis wird ausgelöst, wenn sich der Benutzer einer eigenständigen Datenbank von einer Datenbank abmeldet. Entspricht der [Audit Backup/Restore-Ereignisklasse](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md).|  
+|DATABASE_LOGOUT_GROUP|Das Ereignis wird ausgelöst, wenn sich der Benutzer einer eigenständigen Datenbank von einer Datenbank abmeldet.|  
 |DATABASE_OBJECT_ACCESS_GROUP|Das Ereignis wird immer dann ausgelöst, wenn auf Datenbankobjekte, z. B. Zertifikate und asymmetrische Schlüssel, zugegriffen wird. Entspricht der [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md).|  
 |DATABASE_OBJECT_CHANGE_GROUP|Das Ereignis wird ausgelöst, wenn eine CREATE-, ALTER- oder DROP-Anweisung für Datenbankobjekte, z. B. Schemas, ausgeführt wird. Entspricht der [Audit Database Object Management Event Class](../../../relational-databases/event-classes/audit-database-object-management-event-class.md).|  
 |DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP|Das Ereignis wird ausgelöst, wenn der Besitzer für Objekte im Datenbankbereich geändert wird. Entspricht der [Audit Database Object Take Ownership Event Class](../../../relational-databases/event-classes/audit-database-object-take-ownership-event-class.md).|  
