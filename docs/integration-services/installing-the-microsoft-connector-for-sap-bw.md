@@ -11,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 3bfb9023-9597-4f59-9085-4b9057e7702e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cf97184a0d96fd63bd84d3eeff570e96fae5fe0c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3244ffbd690d7f2ea79862eb1963df60607ac2d6
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88345826"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384631"
 ---
 # <a name="installing-the-microsoft-connector-for-sap-bw"></a>Installieren von Microsoft Connector für SAP BW
 
 [!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  Der [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector für SAP BW für SQL Server 2016 ist eine Komponente des SQL Server 2016 Feature Pack. Zum Installieren des Connector für SAP BW und der zugehörigen Dokumentation laden Sie das Installationsprogramm von der [SQL Server 2016 Feature Pack-Webseite](https://go.microsoft.com/fwlink/?LinkId=746297)herunter, und führen Sie es aus.  
+  Der [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector für SAP BW für SQL Server 2016 ist eine Komponente des SQL Server 2016 Feature Pack. Zum Installieren des Connector für SAP BW und der zugehörigen Dokumentation laden Sie das Installationsprogramm von der [SQL Server 2016 Feature Pack-Webseite](https://www.microsoft.com/download/details.aspx?id=56833)herunter, und führen Sie es aus.  
 
 > [!IMPORTANT]
 > Microsoft hat keine Einsicht in die Updatebereitstellung für die SAP BW-Connectors. Der Quellcode der SAP BW-Komponenten ist kein Eigentum von Microsoft, da diese von einem Drittanbieter entwickelt wurden. Aus diesem Grund kann Microsoft selbst keine Updates bereitstellen. Die neuesten SAP-Konnektivitätskomponenten können Sie bei Microsoft-ISV-Partnern wie [Theobald Software](https://theobald-software.com/en/xtract-is-productinfo.html) erwerben. Die ISV-Partner von Microsoft haben ihre SAP-Konnektivitätskomponenten für SSIS hinsichtlich einer Installation in Azure angepasst.

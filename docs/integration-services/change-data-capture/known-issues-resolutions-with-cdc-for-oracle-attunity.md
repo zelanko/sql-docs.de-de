@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 899a00273fbccb1e68e6690556e81bb3f0bde05c
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: ad867768d72d9e03b7d76761bd371dd369c7161b
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523905"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384729"
 ---
 # <a name="known-errors-and-resolutions-with-change-data-capture-for-oracle-by-attunity"></a>Bekannte Fehler und Lösungen bei Change Data Capture für Oracle von Attunity
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
@@ -74,9 +74,9 @@ Bevor Sie allzu viel Zeit für Problembehandlung aufwenden, achten Sie darauf, d
 - Die CDC für Oracle-Instanz hängt beim Start und erfasst keine Änderungen. Der Oracle-Serverarbeitsspeicher vergrößert sich, bis kein Arbeitsspeicher mehr vorhanden ist oder ein Absturz auftritt.
 - [2672759](https://support.microsoft.com/kb/2672759): Fehlermeldung beim Verwenden des Change Data Capture Service für Oracle von Attunity: „ORA-00600: internal error code“ („ORA-00600: interner Fehlercode“). Fügen Sie Nachverfolgung auf der SOURCE-Ebene hinzu, und überprüfen Sie, ob der gleiche ORA-00600-Fehler auftritt. Behoben durch den Download eines Oracle-Patches.
 - Mehrere Partitionen
-    - Wenn Sie mehr als 10 Partitionen in einer Oracle-Tabelle verwenden, kann die CDC-Instanz nicht alle Änderungen in der Tabelle erfassen. Wenn die Oracle-Tabelle mit mehr als 10 Partitionen definiert wurde, werden nur die Änderungen aus den letzten 10 Partitionen erfasst. Korrigiert in der _Service Pack 1-Version für SQL Server 2012_ . Weitere Informationen finden Sie auf der [Downloadseite für das SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580). 
+    - Wenn Sie mehr als 10 Partitionen in einer Oracle-Tabelle verwenden, kann die CDC-Instanz nicht alle Änderungen in der Tabelle erfassen. Wenn die Oracle-Tabelle mit mehr als 10 Partitionen definiert wurde, werden nur die Änderungen aus den letzten 10 Partitionen erfasst. Korrigiert in der _Service Pack 1-Version für SQL Server 2012_. Weitere Informationen finden Sie auf der [Downloadseite für das SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35575). 
 - Änderungen gehen verloren
-    - Die Ereigniserfassung kann in einer Endlosschleife münden und die Erfassung neuer Datenänderungen beenden (zusammenhängend mit Oracle-Fehler 5623813). Wenn die CDC-Instanz in einer Oracle RAC-Umgebung beendet oder fortgesetzt wird, können Änderungen übersprungen/verloren werden. Dies bedeutet, dass in der SQL Server Change Data Capture wichtige Zeilen fehlen, sodass es zu Datenverlust im Data Warehouse oder dem abonnierenden System kommt. Korrigiert in der _Service Pack 1-Version für SQL Server 2012_ . Weitere Informationen finden Sie auf der [Downloadseite für das SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580)
+    - Die Ereigniserfassung kann in einer Endlosschleife münden und die Erfassung neuer Datenänderungen beenden (zusammenhängend mit Oracle-Fehler 5623813). Wenn die CDC-Instanz in einer Oracle RAC-Umgebung beendet oder fortgesetzt wird, können Änderungen übersprungen/verloren werden. Dies bedeutet, dass in der SQL Server Change Data Capture wichtige Zeilen fehlen, sodass es zu Datenverlust im Data Warehouse oder dem abonnierenden System kommt. Korrigiert in der _Service Pack 1-Version für SQL Server 2012_. Weitere Informationen finden Sie auf der [Downloadseite für das SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35575)
 - Doppelte Breite für Spalten in SQL
     - Beim Erstellen einer CDC für Oracle-Instanz in den Skripts, die für SQL Server ausgeführt werden, wird die Länge einer Spalte mit einem Datentyp variabler Breite in SQL Server-Tabellen, die im Skript erstellt werden, verdoppelt. Wenn Sie beispielsweise versuchen, Änderungen in einer VARCHAR2(10)-Spalte in einer Oracle-Tabelle nachzuverfolgen, ist die entsprechende SQL Server-Tabelle im Bereitstellungsskript NVARCHAR(20). Behoben in _Kumulatives Update 2 für SQL Server 2012 SP1_ und _Kumulatives Update 5 für SQL Server 2012_ , wie in KB [2769673](https://support.microsoft.com/kb/2769673) beschrieben. 
 - DDL-Daten werden abgeschnitten

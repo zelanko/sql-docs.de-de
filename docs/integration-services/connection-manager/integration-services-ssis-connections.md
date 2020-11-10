@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3b101ac6ab904543ab3e5a558ce2d50030df5adf
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: aac745594f2dcd23974cc91cb0f9c57ebff91f29
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91720784"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384901"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services-Verbindungen (SSIS)
 
@@ -74,7 +74,7 @@ ms.locfileid: "91720784"
 ### <a name="package-level-and-project-level-connection-managers"></a>Verbindungs-Manager auf Paket- und Projektebene
 Ein Verbindungs-Manager kann auf Paketebene oder auf Projektebene erstellt werden. Ein auf Projektebene erstellter Verbindungs-Manager ist für alle Pakete im Projekt verfügbar. Ein auf Paketebene erstellter Verbindungs-Manager ist nur für das betreffende Paket verfügbar.  
   
- Auf Projektebene erstellte Verbindungs-Manager werden anstelle von Datenquellen verwendet, um Verbindungen mit Quellen freizugeben. Damit ein Verbindungs-Manager auf Projektebene hinzugefügt werden kann, muss das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt das Projektbereitstellungsmodell verwenden. Wenn ein Projekt für die Verwendung des Modells konfiguriert wurde, wird der Ordner **Verbindungs-Manager** im **Projektmappen-Explorer**angezeigt, und der Ordner **Datenquellen** wird aus dem **Projektmappen-Explorer**entfernt.  
+ Auf Projektebene erstellte Verbindungs-Manager werden anstelle von Datenquellen verwendet, um Verbindungen mit Quellen freizugeben. Damit ein Verbindungs-Manager auf Projektebene hinzugefügt werden kann, muss das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt das Projektbereitstellungsmodell verwenden. Wenn ein Projekt für die Verwendung des Modells konfiguriert wurde, wird der Ordner **Verbindungs-Manager** im **Projektmappen-Explorer** angezeigt, und der Ordner **Datenquellen** wird aus dem **Projektmappen-Explorer** entfernt.  
   
 > [!NOTE]  
 >  Wenn Sie Datenquellen im Paket verwenden möchten, müssen Sie das Projekt in das Paketbereitstellungsmodell konvertieren.  
@@ -115,7 +115,7 @@ Ein Verbindungs-Manager kann auf Paketebene oder auf Projektebene erstellt werde
 |type|BESCHREIBUNG|Thema|  
 |----------|-----------------|-----------|  
 |ORACLE|Stellt eine Verbindung mit einem Oracle-\<version info\>-Server her.|Der Oracle-Verbindungs-Manager ist die Verbindungs-Manager-Komponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connectors für Oracle von Attunity. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connector für Oracle von Attunity enthält auch eine Quelle und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors for Oracle and Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=55179).|  
-|SAPBI|Stellt eine Verbindung mit einem System mit SAP NetWeaver BI, Version 7 her.|Der SAP BI-Verbindungs-Manager ist die Verbindungs-Manager-Komponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connectors für SAP BI. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connector für SAP BI enthält auch eine Quelle und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=30440).|  
+|SAPBI|Stellt eine Verbindung mit einem System mit SAP NetWeaver BI, Version 7 her.|Der SAP BI-Verbindungs-Manager ist die Verbindungs-Manager-Komponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connectors für SAP BI. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connector für SAP BI enthält auch eine Quelle und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44277).|  
 |TERADATA|Stellt eine Verbindung mit einem Teradata-\<version info\>-Server her.|Der Teradata-Verbindungs-Manager ist die Verbindungs-Manager-Komponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connectors für Teradata von Attunity. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connector für Teradata von Attunity enthält auch eine Quelle und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors for Oracle and Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=55179).|  
   
 ### <a name="custom-connection-managers"></a>Benutzerdefinierte Verbindungs-Manager  
@@ -126,12 +126,12 @@ Ein Verbindungs-Manager kann auf Paketebene oder auf Projektebene erstellt werde
   
  Um die Verbindungs-Manager beim Erstellen eines Pakets automatisch zu erstellen und zu konfigurieren, können Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistenten verwenden. Dieser Assistent hilft Ihnen auch, die Quellen und Ziele zu erstellen und zu konfigurieren, die die Verbindungs-Manager verwenden. Weitere Informationen finden Sie unter [Create Packages in SQL Server Data Tools](../../integration-services/create-packages-in-sql-server-data-tools.md).  
   
- Um manuell einen neuen Verbindungs-Manager zu erstellen und ihn einem vorhandenen Paket hinzuzufügen, verwenden Sie den Bereich **Verbindungs-Manager** auf den Registerkarten **Ablaufsteuerung**, **Datenfluss**und **Ereignishandler** des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers. Im Bereich **Verbindungs-Manager** wählen Sie in einem Dialogfeld des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers den Typ des Verbindungs-Managers zum Erstellen und dann zum Festlegen der Eigenschaften des Verbindungs-Managers aus. Weitere Informationen finden Sie im Abschnitt "Verwenden des Verbindungs-Manager-Bereichs" weiter unten in diesem Thema.  
+ Um manuell einen neuen Verbindungs-Manager zu erstellen und ihn einem vorhandenen Paket hinzuzufügen, verwenden Sie den Bereich **Verbindungs-Manager** auf den Registerkarten **Ablaufsteuerung** , **Datenfluss** und **Ereignishandler** des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers. Im Bereich **Verbindungs-Manager** wählen Sie in einem Dialogfeld des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers den Typ des Verbindungs-Managers zum Erstellen und dann zum Festlegen der Eigenschaften des Verbindungs-Managers aus. Weitere Informationen finden Sie im Abschnitt "Verwenden des Verbindungs-Manager-Bereichs" weiter unten in diesem Thema.  
   
  Nachdem der Verbindungs-Manager einem Paket hinzugefügt wurde, können Sie ihn in Tasks, Foreach-Schleifencontainern, Quellen, Transformationen und Zielen verwenden. Weitere Informationen finden Sie unter [Integration Services-Tasks](../../integration-services/control-flow/integration-services-tasks.md), [Foreach-Schleifencontainer](../../integration-services/control-flow/foreach-loop-container.md), und [Datenfluss](../../integration-services/data-flow/data-flow.md).  
   
 ### <a name="using-the-connection-managers-area"></a>Verwenden des Verbindungs-Manager-Bereichs  
- Sie können Verbindungs-Manager erstellen, während die Registerkarte **Ablaufsteuerung**, **Datenfluss**oder **Ereignishandler** des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers aktiviert ist.  
+ Sie können Verbindungs-Manager erstellen, während die Registerkarte **Ablaufsteuerung** , **Datenfluss** oder **Ereignishandler** des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers aktiviert ist.  
   
  Im folgenden Diagramm wird der Bereich **Verbindungs-Manager** auf der Registerkarte **Ablaufsteuerung** des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers angezeigt.  
   
@@ -191,7 +191,7 @@ Ein Verbindungs-Manager kann auf Paketebene oder auf Projektebene erstellt werde
   
      Der Bereich **Verbindungs-Manager** enthält eine Liste mit den hinzugefügten Verbindungs-Managern.  
   
-5.  Klicken Sie wahlweise mit der rechten Maustaste auf den Verbindungs-Manager, klicken Sie auf **Umbenennen**, und ändern Sie anschließend den Standardnamen des Verbindungs-Managers.  
+5.  Klicken Sie wahlweise mit der rechten Maustaste auf den Verbindungs-Manager, klicken Sie auf **Umbenennen** , und ändern Sie anschließend den Standardnamen des Verbindungs-Managers.  
   
 6.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
@@ -199,7 +199,7 @@ Ein Verbindungs-Manager kann auf Paketebene oder auf Projektebene erstellt werde
   
 1.  Öffnen Sie das [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]-Projekt in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-2.  Klicken Sie im **Projektmappen-Explorer**mit der rechten Maustaste auf **Verbindungs-Manager**, und klicken Sie auf **Neuer Verbindungs-Manager**.  
+2.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **Verbindungs-Manager** , und klicken Sie auf **Neuer Verbindungs-Manager**.  
   
 3.  Wählen Sie im Dialogfeld **SSIS-Verbindungs-Manager hinzufügen** den Typ des Verbindungs-Managers aus, und klicken Sie dann auf **Hinzufügen**.  
   
@@ -225,9 +225,9 @@ Ein Verbindungs-Manager kann auf Paketebene oder auf Projektebene erstellt werde
     |[SQL Server Compact Edition-Verbindungs-Manager](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[Verbindungs-Manager-Editor für SQL Server Compact Edition &#40;Seite „Verbindung“&#41;](./sql-server-compact-edition-connection-manager.md)<br /><br /> [Verbindungs-Manager-Editor für SQL Server Compact Edition &#40;Seite „Alle“&#41;](./sql-server-compact-edition-connection-manager.md)|  
     |[WMI-Verbindungs-Manager](../../integration-services/connection-manager/wmi-connection-manager.md)|[WMI-Verbindungs-Manager-Editor](./wmi-connection-manager.md)|  
   
-     Der Verbindungs-Manager, den Sie hinzugefügt haben, wird unter dem Knoten **Verbindungs-Manager** im **Projektmappen-Explorer**angezeigt. Er wird auch auf der Registerkarte **Verbindungs-Manager** im Fenster **SSIS-Designer** für alle Pakete im Projekt angezeigt. Der Name des Verbindungs-Managers auf dieser Registerkarte enthält **(project)** als Präfix, um diesen Verbindungs-Manager auf Projektebene von den Verbindungs-Managern auf Paketebene zu unterscheiden.  
+     Der Verbindungs-Manager, den Sie hinzugefügt haben, wird unter dem Knoten **Verbindungs-Manager** im **Projektmappen-Explorer** angezeigt. Er wird auch auf der Registerkarte **Verbindungs-Manager** im Fenster **SSIS-Designer** für alle Pakete im Projekt angezeigt. Der Name des Verbindungs-Managers auf dieser Registerkarte enthält **(project)** als Präfix, um diesen Verbindungs-Manager auf Projektebene von den Verbindungs-Managern auf Paketebene zu unterscheiden.  
   
-4.  Klicken Sie optional mit der rechten Maustaste auf den Verbindungs-Manager im Fenster des **Projektmappen-Explorer** unter dem Knoten **Verbindungs-Manager** , bzw. klicken Sie auf der Registerkarte **Verbindungs-Manager** des Fensters **SSIS-Designer** auf **Umbenennen**, und ändern Sie anschließend den Standardnamen des Verbindungs-Managers.  
+4.  Klicken Sie optional mit der rechten Maustaste auf den Verbindungs-Manager im Fenster des **Projektmappen-Explorer** unter dem Knoten **Verbindungs-Manager** , bzw. klicken Sie auf der Registerkarte **Verbindungs-Manager** des Fensters **SSIS-Designer** auf **Umbenennen** , und ändern Sie anschließend den Standardnamen des Verbindungs-Managers.  
   
     > [!NOTE]  
     >  Auf der Registerkarte **Verbindungs-Manager** des Fensters **SSIS-Designer** kann das Präfix **(project)** im Namen des Verbindungs-Managers nicht überschrieben werden. Dies ist beabsichtigt.  
@@ -239,7 +239,7 @@ Im Dialogfeld **SSIS-Verbindungs-Manager hinzufügen** können Sie den Verbindun
   
 #### <a name="options"></a>Tastatur  
  **Typ des Verbindungs-Managers**  
- Wählen Sie einen Verbindungstyp aus, und klicken Sie anschließend auf **Hinzufügen**, oder doppelklicken Sie auf einen Verbindungstyp, um mithilfe des Editors für den jeweiligen Verbindungstyp die Eigenschaften der Verbindung anzugeben.  
+ Wählen Sie einen Verbindungstyp aus, und klicken Sie anschließend auf **Hinzufügen** , oder doppelklicken Sie auf einen Verbindungstyp, um mithilfe des Editors für den jeweiligen Verbindungstyp die Eigenschaften der Verbindung anzugeben.  
   
  **Add (Hinzufügen)**  
  Geben Sie mithilfe des Editors für den jeweiligen Verbindungstyp die Eigenschaften der Verbindung an.  
@@ -273,7 +273,7 @@ Im Dialogfeld **SSIS-Verbindungs-Manager hinzufügen** können Sie den Verbindun
   
 ###  <a name="delete-a-shared-connection-manager-project-level-connection-manager"></a><a name="DeleteProjectLevel"></a> Löschen eines gemeinsam genutzten Verbindungs-Managers (Verbindungs-Manager auf Projektebene)  
   
-1.  Klicken Sie mit der rechten Maustaste auf den Verbindungs-Manager unter dem Knoten **Verbindungs-Manager** im Fenster des **Projektmappen-Explorers** , und klicken Sie anschließend auf **Löschen**, um einen Verbindungs-Manager auf Projektebene zu löschen. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] zeigt die folgende Warnmeldung an:  
+1.  Klicken Sie mit der rechten Maustaste auf den Verbindungs-Manager unter dem Knoten **Verbindungs-Manager** im Fenster des **Projektmappen-Explorers** , und klicken Sie anschließend auf **Löschen** , um einen Verbindungs-Manager auf Projektebene zu löschen. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] zeigt die folgende Warnmeldung an:  
   
     > [!WARNING]  
     >  Wenn Sie einen Verbindungs-Manager auf Projektebene löschen, könnten Pakete, die den Verbindungs-Manager verwenden, nicht ausgeführt werden. Dieser Vorgang lässt sich nicht rückgängig machen. Möchten Sie den Verbindungs-Manager löschen?  

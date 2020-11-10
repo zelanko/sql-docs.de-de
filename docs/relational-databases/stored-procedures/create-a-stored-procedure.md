@@ -15,12 +15,12 @@ ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dde2beed868314f315bf51e9fa8174ba01b09e3e
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 5da64e544211e29491ce4270c91ae527bda923de
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332659"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364762"
 ---
 # <a name="create-a-stored-procedure"></a>Erstellen einer gespeicherten Prozedur
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +28,6 @@ ms.locfileid: "87332659"
 
 In diesem Thema wird das Erstellen einer gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung CREATE PROCEDURE beschrieben.  
   
-##  <a name="Top"></a>   
 -   **Vorbereitungen:**  [Berechtigungen](#Permissions)  
   
 -   **So erstellen Sie eine Prozedur mithilfe von:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
@@ -46,11 +45,11 @@ In diesem Thema wird das Erstellen einer gespeicherten [!INCLUDE[tsql](../../inc
 ###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So erstellen Sie eine Prozedur im Objekt-Explorer**  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und erweitern Sie dann diese Instanz.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und erweitern Sie dann diese Instanz.  
   
-2.  Erweitern Sie **Datenbanken**, erweitern Sie die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank, und erweitern Sie dann **Programmierbarkeit**.  
+2.  Erweitern Sie **Datenbanken** , erweitern Sie die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank, und erweitern Sie dann **Programmierbarkeit**.  
   
-3.  Klicken Sie mit der rechten Maustaste auf **Gespeicherte Prozeduren**, und klicken Sie dann auf **Neue gespeicherte Prozedur**.  
+3.  Klicken Sie mit der rechten Maustaste auf **Gespeicherte Prozeduren** , und klicken Sie dann auf **Neue gespeicherte Prozedur**.  
   
 4.  Klicken Sie im Menü **Abfrage** auf **Werte für Vorlagenparameter angeben**.  
   
@@ -63,15 +62,15 @@ In diesem Thema wird das Erstellen einer gespeicherten [!INCLUDE[tsql](../../inc
     |BESCHREIBUNG|Gibt Mitarbeiterdaten zurück.|  
     |Prozedurname|HumanResources.uspGetEmployeesTest|  
     |@Param1|@LastName|  
-    |@Datatype_For_Param1|**nvarchar**(50)|  
+    |@Datatype_For_Param1|**nvarchar** (50)|  
     |Default_Value_For_Param1|NULL|  
     |@Param2|@FirstName|  
-    |@Datatype_For_Param2|**nvarchar**(50)|  
+    |@Datatype_For_Param2|**nvarchar** (50)|  
     |Default_Value_For_Param2|NULL|  
   
 6.  Klicken Sie auf **OK**.  
   
-7.  Ersetzen Sie im **Abfrage-Editor**die SELECT-Anweisung durch die folgende Anweisung:  
+7.  Ersetzen Sie im **Abfrage-Editor** die SELECT-Anweisung durch die folgende Anweisung:  
   
     ```sql  
     SELECT FirstName, LastName, Department  
@@ -84,9 +83,9 @@ In diesem Thema wird das Erstellen einer gespeicherten [!INCLUDE[tsql](../../inc
   
 9. Zum Erstellen der Prozedur klicken Sie im Menü **Abfrage** auf **Ausführen**. Die Prozedur wird als Objekt in der Datenbank erstellt.  
   
-10. Damit die Prozedur im Objekt-Explorer angezeigt wird, klicken Sie mit der rechten Maustaste auf **Gespeicherte Prozeduren** und wählen **Aktualisieren**aus.  
+10. Damit die Prozedur im Objekt-Explorer angezeigt wird, klicken Sie mit der rechten Maustaste auf **Gespeicherte Prozeduren** und wählen **Aktualisieren** aus.  
   
-11. Um die Prozedur auszuführen, klicken Sie im Objekt-Explorer mit der rechten Maustaste auf den Namen **HumanResources.uspGetEmployeesTest** der gespeicherten Prozedur, und wählen Sie **Gespeicherte Prozedur ausführen**aus.  
+11. Um die Prozedur auszuführen, klicken Sie im Objekt-Explorer mit der rechten Maustaste auf den Namen **HumanResources.uspGetEmployeesTest** der gespeicherten Prozedur, und wählen Sie **Gespeicherte Prozedur ausführen** aus.  
   
 12. Geben Sie im Fenster **Prozedur ausführen** den Wert „Margheim“ für den Parameter @LastName und den Wert „Diane“ für den Parameter @FirstName ein.  
   
@@ -132,7 +131,6 @@ In diesem Thema wird das Erstellen einer gespeicherten [!INCLUDE[tsql](../../inc
   
     ```  
   
-##  <a name="PowerShellProcedure"></a>   
 ## <a name="see-also"></a>Weitere Informationen  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   

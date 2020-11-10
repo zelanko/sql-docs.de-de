@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0306e266f48259d0a7cc68a455116ec5a5ce847f
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 19b4d69708405a3c70ffaacd0f9d81e995f4aba8
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196484"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384622"
 ---
 # <a name="cdc-flow-components"></a>CDC-Flusskomponenten
 
@@ -44,7 +44,7 @@ ms.locfileid: "92196484"
 ## <a name="installation"></a>Installation  
  In diesem Abschnitt werden die Installationsverfahren für die CDC-Komponenten für Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]beschrieben.  
   
- Die CDC-Komponenten für SSIS werden mit MicrosoftÂ® Change Data Capture Designer und Service für Oracle von Attunity für Microsoft SQL ServerÂ® in einem Paket bereitgestellt. Dieser Download ist Teil des SQL Server Feature Packs. Laden Sie die Komponenten des Feature Packs von der [SQL Server 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=746297)-Webseite herunter.  
+ Die CDC-Komponenten für SSIS werden mit MicrosoftÂ® Change Data Capture Designer und Service für Oracle von Attunity für Microsoft SQL ServerÂ® in einem Paket bereitgestellt. Dieser Download ist Teil des SQL Server Feature Packs. Laden Sie die Komponenten des Feature Packs von der [SQL Server 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56833)-Webseite herunter.  
   
 ### <a name="version-support"></a>Versionsunterstützung
 
@@ -84,7 +84,7 @@ Nach der Installation der Komponenten wird eine Meldung angezeigt. Klicken Sie a
   
  ![Paketablaufsteuerung für Trickle-Feed-Verarbeitung](../../integration-services/data-flow/media/tricklefeedprocessing.gif "Paketablaufsteuerung für Trickle-Feed-Verarbeitung")  
   
- Diese [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Ablaufsteuerung enthält zwei CDC-Steuerungstasks und den Datenflusstask. Der erste Task mit dem Namen **Get CDC Processing Range** legt den LSN-Bereich für die Änderungen fest, die im Datenflusstask mit dem Namen **Process Changes**verarbeitet werden. Dieser Bereich wird auf Grundlage dessen festgelegt, was während der letzten Paketausführung verarbeitet und in einem permanenten Speicher gespeichert wurde.  
+ Diese [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Ablaufsteuerung enthält zwei CDC-Steuerungstasks und den Datenflusstask. Der erste Task mit dem Namen **Get CDC Processing Range** legt den LSN-Bereich für die Änderungen fest, die im Datenflusstask mit dem Namen **Process Changes** verarbeitet werden. Dieser Bereich wird auf Grundlage dessen festgelegt, was während der letzten Paketausführung verarbeitet und in einem permanenten Speicher gespeichert wurde.  
   
  Weitere Informationen zur Verwendung der CDC-Steuerungstasks finden Sie unter [CDC-Steuerungstask](../../integration-services/control-flow/cdc-control-task.md) und [CDC-Steuerungstask-Editor](../control-flow/cdc-control-task.md).  
   
@@ -145,7 +145,7 @@ Nach der Installation der Komponenten wird eine Meldung angezeigt. Klicken Sie a
  Trickle-Feed-Updatepakete erfordern Zugriff auf die CDC-Funktionen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Dieser Zugriff wird standardmäßig Mitgliedern der festen Datenbankrolle **db_owner** gewährt. Da **db_owner** eine Rolle mit umfassenden Berechtigungen ist, wird empfohlen, jeder Aufzeichnungsinstanz bei ihrer Definition in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] eine Gatingsicherheitsrolle zuzuordnen, die es dem SSIS-CDC-Paket ermöglicht, die Änderungen von einem Benutzer mit sehr viel geringeren Berechtigungen verarbeiten zu lassen.  
   
 ### <a name="access-to-cdc-database-current-lsn"></a>Zugriff auf die aktuelle LSN der CDC-Datenbank  
- Die CDC-Steuerungstaskvorgänge zum Markieren der Start-LSN für die Änderungsverarbeitung müssen in der Lage sein, die aktuelle LSN der CDC-Datenbank zu finden. Die Komponenten finden die LSN mit der **sp_replincrementlsn**-Prozedur der master-Datenbank. Die Ausführungsberechtigung für diese Prozedur muss dem Anmeldenamen zugewiesen werden, der zum Herstellen einer Verbindung mit der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC-Datenbank verwendet wird.  
+ Die CDC-Steuerungstaskvorgänge zum Markieren der Start-LSN für die Änderungsverarbeitung müssen in der Lage sein, die aktuelle LSN der CDC-Datenbank zu finden. Die Komponenten finden die LSN mit der **sp_replincrementlsn** -Prozedur der master-Datenbank. Die Ausführungsberechtigung für diese Prozedur muss dem Anmeldenamen zugewiesen werden, der zum Herstellen einer Verbindung mit der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC-Datenbank verwendet wird.  
   
 ### <a name="access-to-cdc-states-table"></a>Zugriff auf die CDC-Statustabelle  
  Die CDC-Statustabelle dient zum automatischen Beibehalten von CDC-Status, bei denen es erforderlich ist, dass sie von dem zum Herstellen einer Verbindung mit der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC-Datenbank verwendeten Anmeldenamen aktualisiert werden können. Da diese Tabelle vom SSIS-Entwickler erstellt wird, kann der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Systemadministrator als ein Benutzer festgelegt werden, der zum Erstellen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbanken sowie zum Ausführen von administrativen Tasks und Wartungstasks autorisiert ist. Ein [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Systemadministrator, der mit CDC-fähigen Datenbanken arbeitet, muss zudem über entsprechende Kenntnisse in der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC-Technologie und -Implementierung verfügen.  
@@ -181,7 +181,7 @@ Nach der Installation der Komponenten wird eine Meldung angezeigt. Klicken Sie a
 |2- ILEND (Initial-Load-Ended)|Der Status bei erfolgreicher Beendigung des anfänglich geladenen Pakets. Dieser Schritt erfolgt nach dem Aufruf des CDC-Steuerungstasks durch den MarkInitialLoadEnd-Vorgang.<br /><br /> Weitere Informationen zu CDC-Steuerungstaskvorgängen finden Sie unter [CDC-Steuerungstask](../../integration-services/control-flow/cdc-control-task.md).|  
 |3-ILUPDATE (Initial Load Update)|Der Status nach der ersten Ausführung des Updatepakets nach dem anfänglichen Ladevorgang, während der anfängliche Verarbeitungsbereich noch verarbeitet wird. Dieser Schritt erfolgt nach dem Aufruf des CDC-Steuerungstasks durch den **GetProcessingRange** -Vorgang.<br /><br /> Wenn die **_$reprocessing** -Spalte verwendet wird, wird sie auf 1 festgelegt, um anzugeben, dass das Paket möglicherweise Zeilen erneut verarbeitet, die bereits im Ziel vorhanden sind.<br /><br /> Weitere Informationen zu CDC-Steuerungstaskvorgängen finden Sie unter [CDC-Steuerungstask](../../integration-services/control-flow/cdc-control-task.md).|  
 |4-TFEND (Trickle-Feed-Update-Ended)|Der für reguläre CDC-Ausführungen erwartete Status. Er gibt an, dass die vorherige Ausführung erfolgreich abgeschlossen wurde und eine neue Ausführung mit einem neuen Verarbeitungsbereich gestartet werden kann.|  
-|5-TFSTART (Trickle-Feed-Update-Started)|Der Status bei nachfolgenden Ausführungen des Updatepakets nach dem Aufruf des CDC-Steuerungstasks durch den **GetProcessingRange** -Vorgang.<br /><br /> Er gibt an, dass eine reguläre CDC-Ausführung gestartet, aber noch nicht einwandfrei beendet wurde (**MarkProcessedRange**).<br /><br /> Weitere Informationen zu CDC-Steuerungstaskvorgängen finden Sie unter [CDC-Steuerungstask](../../integration-services/control-flow/cdc-control-task.md).|  
+|5-TFSTART (Trickle-Feed-Update-Started)|Der Status bei nachfolgenden Ausführungen des Updatepakets nach dem Aufruf des CDC-Steuerungstasks durch den **GetProcessingRange** -Vorgang.<br /><br /> Er gibt an, dass eine reguläre CDC-Ausführung gestartet, aber noch nicht einwandfrei beendet wurde ( **MarkProcessedRange** ).<br /><br /> Weitere Informationen zu CDC-Steuerungstaskvorgängen finden Sie unter [CDC-Steuerungstask](../../integration-services/control-flow/cdc-control-task.md).|  
 |6-TFREDO (Reprocessing-Trickle-Feed-Updates)|Der Status bei einem **GetProcessingRange** -Vorgang, der nach TFSTART stattfindet. Er gibt an, dass die vorherige Ausführung nicht erfolgreich abgeschlossen wurde.<br /><br /> Wenn die __$reprocessing-Spalte verwendet wird, wird sie auf 1 festgelegt, um anzugeben, dass das Paket möglicherweise Zeilen erneut verarbeitet, die bereits im Ziel vorhanden sind.|  
 |7-FEHLER|Die CDC-Gruppe befindet sich in einem Fehlerstatus.|  
   

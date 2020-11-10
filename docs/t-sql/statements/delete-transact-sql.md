@@ -26,12 +26,12 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0de7a61b92599b82aabc0f0197c02098c7758384
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: 7e074f54cb4d31616abced2e0b555c068728ec6c
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300516"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384811"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 
@@ -168,7 +168,7 @@ DELETE
   
  Es gibt zwei Formen von Löschoperationen, die darauf basieren, was in der WHERE-Klausel angegeben wird:  
   
--   Gesuchte Löschungen geben eine Suchbedingung an, um die zu löschenden Zeilen zu kennzeichnen. Zum Beispiel WHERE *column_name* = *value* .  
+-   Gesuchte Löschungen geben eine Suchbedingung an, um die zu löschenden Zeilen zu kennzeichnen. Zum Beispiel WHERE *column_name* = *value*.  
   
 -   Positionierte Löschungen verwenden die CURRENT OF-Klausel, um einen Cursor anzugeben. Die Löschoperation wird an der aktuellen Position des Cursors ausgeführt. Dies kann genauer sein als eine gesuchte DELETE-Anweisung, die eine WHERE *search_condition* -Klausel zur Qualifizierung der zu löschenden Zeilen verwendet. Eine gesuchte DELETE-Anweisung löscht mehrere Zeilen, wenn die Suchbedingung nicht eindeutig eine einzelne Zeile identifiziert.  
   
@@ -406,7 +406,7 @@ GO
 DELETE FROM OPENDATASOURCE('SQLNCLI',  
     'Data Source= <server_name>; Integrated Security=SSPI')  
     .AdventureWorks2012.HumanResources.Department   
-WHERE DepartmentID = 17;'  
+WHERE DepartmentID = 17;
 ```  
   
 ###  <a name="capturing-the-results-of-the-delete-statement"></a><a name="CaptureResults"></a> Erfassen der Ergebnisse der DELETE-Anweisung  
