@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 45cfba1078dbe72e09f760f24fc0c9f47c0c0b1f
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 756dd29442fe224f5e0518066cbbfdcbf2ba5ea6
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891020"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364672"
 ---
 # <a name="manage-partition-wizard"></a>Assistent zum Verwalten von Partitionen 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,13 +37,13 @@ ms.locfileid: "91891020"
   
 ### <a name="to-start-the-manage-partition-wizard"></a>So starten Sie den Assistenten zum Verwalten von Partitionen  
   
--   Wählen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]die Datenbank aus, klicken Sie mit der rechten Maustaste auf die Tabelle, für die Sie Partitionen erstellen möchten, zeigen Sie auf **Speicher**, und klicken Sie anschließend auf **Partition verwalten**.  
+-   Wählen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]die Datenbank aus, klicken Sie mit der rechten Maustaste auf die Tabelle, für die Sie Partitionen erstellen möchten, zeigen Sie auf **Speicher** , und klicken Sie anschließend auf **Partition verwalten**.  
   
      **Note** Wenn **Partition verwalten** nicht verfügbar ist, haben Sie möglicherweise eine Tabelle ohne Partitionen ausgewählt. Klicken Sie im Untermenü **Speicher** auf **Partition erstellen** , und erstellen Sie mit dem **Assistenten zum Erstellen von Partitionen** Partitionen in der Tabelle.  
   
  Allgemeine Informationen zu Partitionen und Indizes finden Sie unter [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
- Dieser Abschnitt stellt die Informationen bereit, die zum Verwalten, Ändern und Implementieren von Partitionen mit dem **Assistenten zum Verwalten von Partitionen**erforderlich sind.  
+ Dieser Abschnitt stellt die Informationen bereit, die zum Verwalten, Ändern und Implementieren von Partitionen mit dem **Assistenten zum Verwalten von Partitionen** erforderlich sind.  
   
 ##  <a name="in-this-section"></a><a name="Top"></a> In diesem Abschnitt  
  Die folgenden Abschnitte stellen Hilfe für die Seiten des **Assistenten zum Verwalten von Partitionen** bereit.  
@@ -72,12 +72,12 @@ ms.locfileid: "91891020"
   
  Mithilfe des Assistenten können Sie die Stagingtabelle mit der gleichen Partitionsspalte, Tabelle und Spaltenstruktur sowie Indizes entwerfen. Die neue Tabelle wird in der Dateigruppe gespeichert, in der sich auch die Quellpartition befindet.  
   
- Wählen Sie **Stagingtabelle für den Partitionswechsel erstellen**, um eine Stagingtabelle zum Einfügen und Auslagern von Partitionsdaten zu erstellen.  
+ Wählen Sie **Stagingtabelle für den Partitionswechsel erstellen** , um eine Stagingtabelle zum Einfügen und Auslagern von Partitionsdaten zu erstellen.  
   
 ### <a name="sliding-window-scenario"></a>Szenario mit gleitendem Fenster  
  Um die Partitionen in einem flexiblen Fenster zu verwalten, wählen Sie **Partitionierte Daten in einem Szenario mit gleitendem Fenster verwalten**.  
   
-## <a name="ui-element-list"></a>Liste der Benutzeroberflächenelemente  
+### <a name="ui-element-list"></a>Liste der Benutzeroberflächenelemente  
  **Stagingtabelle für den Partitionswechsel erstellen**  
  Erstellt eine Stagingtabelle für die Daten, die Sie aus der vorhandenen partitionierten Tabelle auslagern bzw. darin einfügen.  
   
@@ -95,24 +95,24 @@ ms.locfileid: "91891020"
 ##  <a name="select-partition-switching-in-options-page"></a><a name="SwitchIn"></a> Partitionseinfügeoptionen auswählen (Seite)  
  Auf der Seite **Partitionseinfügeoptionen auswählen** können Sie die Stagingtabelle erstellen, die Sie in die partitionierte Tabelle einfügen.  
   
-## <a name="ui-element-list"></a>Liste der Benutzeroberflächenelemente  
+### <a name="ui-element-list"></a>Liste der Benutzeroberflächenelemente  
  **Alle Partitionen anzeigen**  
  Wählen Sie diese Option zum Anzeigen aller Partitionen aus, einschließlich der Partitionen, die sich gegenwärtig in der partitionierten Tabelle befinden.  
   
  **Partitionsschema**  
- Zeigt den Partitionsnamen, **Linke Begrenzung**, **Rechte Begrenzung**, **Dateigruppe**und **Zeilenanzahl** der Partitionen an, die Sie ausgewählt haben.  
+ Zeigt den Partitionsnamen, **Linke Begrenzung** , **Rechte Begrenzung** , **Dateigruppe** und **Zeilenanzahl** der Partitionen an, die Sie ausgewählt haben.  
   
  **Einzufügende Tabelle**  
- Wählen Sie die Stagingtabelle aus, die die Partition enthält, die Sie der partitionierten Tabelle hinzufügen möchten. Sie müssen diese Stagingtabelle erstellen, bevor Sie Partitionen mit dem Assistenten zum **Verwalten von Partitionen**einfügen können.  
+ Wählen Sie die Stagingtabelle aus, die die Partition enthält, die Sie der partitionierten Tabelle hinzufügen möchten. Sie müssen diese Stagingtabelle erstellen, bevor Sie Partitionen mit dem Assistenten zum **Verwalten von Partitionen** einfügen können.  
   
  ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
   
 ##  <a name="select-partition-switching-out-options-page"></a><a name="SwitchOut"></a> Partitionsauslagerungsoptionen auswählen (Seite)  
  Auf der Seite **Partitionsauslagerungsoptionen auswählen** können Sie die Partition und die Stagingtabelle für die partitionierten Daten auswählen, die aus der partitionierten Tabelle ausgelagert werden.  
   
-## <a name="ui-element-list"></a>Liste der Benutzeroberflächenelemente  
+### <a name="ui-element-list"></a>Liste der Benutzeroberflächenelemente  
  **Partitionsschema**  
- Zeigt den Partitionsnamen, **Linke Begrenzung**, **Rechte Begrenzung**, **Dateigruppe**und **Zeilenanzahl** der Partitionen an, die Sie ausgewählt haben.  
+ Zeigt den Partitionsnamen, **Linke Begrenzung** , **Rechte Begrenzung** , **Dateigruppe** und **Zeilenanzahl** der Partitionen an, die Sie ausgewählt haben.  
   
  **Tabelle auslagern**  
  Wählen Sie eine neue oder vorhandene Tabelle aus, in die Sie die Daten auslagern.  
@@ -132,7 +132,7 @@ ms.locfileid: "91891020"
   
  Sie können auch in der Stagingtabelle die gleichen Indizes erstellen, die in der Quellpartition vorhanden ist. Die Stagingtabelle enthält automatisch eine Einschränkung auf Grundlage der Elemente der Quellpartition. Diese Einschränkung wird i. d. R. aus dem Begrenzungswert der Quellpartition generiert.  
   
-## <a name="ui-element-list"></a>Liste der Benutzeroberflächenelemente  
+### <a name="ui-element-list"></a>Liste der Benutzeroberflächenelemente  
  **Stagingtabellenname**  
  Erstellen Sie einen Namen für die Stagingtabelle, oder übernehmen Sie den im Eingabefeld angezeigten Standardnamen.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "91891020"
  Bei Abschluss des Assistenten wird im Abfrage-Editor ein Skript zum Ändern der Partitionen in der Tabelle erstellt. Wählen Sie **Skript erstellen** aus, wenn Sie das Skript überprüfen möchten, und führen Sie das Skript dann manuell aus.  
   
  **Skript in Datei schreiben**  
- Generiert das Skript in einer SQL-Datei. Geben Sie entweder **Unicode** oder **ANSI-Text**an. Klicken Sie auf **Durchsuchen**, um einen Namen und einen Speicherort für die Datei anzugeben.  
+ Generiert das Skript in einer SQL-Datei. Geben Sie entweder **Unicode** oder **ANSI-Text** an. Klicken Sie auf **Durchsuchen** , um einen Namen und einen Speicherort für die Datei anzugeben.  
   
  **Skript in Zwischenablage schreiben**  
  Speichert das Skript in die Zwischenablage.  
@@ -164,7 +164,7 @@ ms.locfileid: "91891020"
   
 ### <a name="run-immediately"></a>Sofort ausführen  
  **Run immediately**  
- Wenn Sie auf **Weiter** oder **Fertig stellen**klicken, schließt der Assistent die Änderungen an den Partitionen ab.  
+ Wenn Sie auf **Weiter** oder **Fertig stellen** klicken, schließt der Assistent die Änderungen an den Partitionen ab.  
   
 ### <a name="schedule"></a>Zeitplan  
  Wählen Sie diese Option aus, um die Tabellenpartitionen zu einem geplanten Datum und einer geplanten Uhrzeit zu ändern.  
@@ -260,14 +260,14 @@ ms.locfileid: "91891020"
 ##  <a name="summary-page"></a><a name="Summary"></a> Seite "Zusammenfassung"  
  Mithilfe der Seite **Zusammenfassung** können Sie die Optionen überprüfen, die Sie auf den vorherigen Seiten ausgewählt haben.  
   
-## <a name="ui-element-list"></a>Liste der Benutzeroberflächenelemente  
+### <a name="ui-element-list"></a>Liste der Benutzeroberflächenelemente  
  **Überprüfen Sie Ihre Auswahl**  
  Zeigt die auf den einzelnen Seiten des Assistenten getroffene Auswahl an. Klicken Sie auf einen Knoten, um diesen zu erweitern und die ausgewählten Optionen anzuzeigen.  
   
  ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
   
 ##  <a name="progress-page"></a><a name="Progress"></a> Status (Seite)  
- Auf der Seite **Status** können Sie Statusinformationen zu den Aktionen im **Assistenten zum Verwalten von Partitionen**anzeigen. Je nach den im Assistenten ausgewählten Optionen enthält die Seite **Status** eine oder mehrere Aktionen. Im oberen Feld werden der Gesamtstatus des Assistenten und die Anzahl der empfangenen Status-, Fehler- und Warnmeldungen angezeigt.  
+ Auf der Seite **Status** können Sie Statusinformationen zu den Aktionen im **Assistenten zum Verwalten von Partitionen** anzeigen. Je nach den im Assistenten ausgewählten Optionen enthält die Seite **Status** eine oder mehrere Aktionen. Im oberen Feld werden der Gesamtstatus des Assistenten und die Anzahl der empfangenen Status-, Fehler- und Warnmeldungen angezeigt.  
   
 ### <a name="options"></a>Tastatur  
  **Details**  
@@ -277,7 +277,7 @@ ms.locfileid: "91891020"
  Gibt den Typ und den Namen jeder Aktion an.  
   
  **Status**  
- Gibt an, ob für die Aktion des Assistenten insgesamt der Wert **Erfolg** oder der Wert **Fehler**zurückgegeben wurde.  
+ Gibt an, ob für die Aktion des Assistenten insgesamt der Wert **Erfolg** oder der Wert **Fehler** zurückgegeben wurde.  
   
  **Meldung**  
  Stellt alle vom Prozess zurückgegebenen Fehler- oder Warnmeldungen bereit.  
