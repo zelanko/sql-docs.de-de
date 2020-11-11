@@ -10,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/05/2019
-ms.openlocfilehash: b44e664d75735a6283d12f218b904fbdd07ad481
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 1af364896504dff41ab01095a69e8f581e792096
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396534"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243705"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Neues in SQL Server Reporting Services (SSRS)
 
@@ -29,7 +29,7 @@ Weitere Informationen zu Power BI-Berichtsserver finden Sie unter [Was ist der P
 
 ## <a name="sql-server-2019-reporting-services"></a>SQL Server 2019 Reporting Services
 
-**Herunterladen** ![Herunterladen](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "Download verfügbar ist")
+**Herunterladen** :::image type="icon" source="https://docs.microsoft.com/analysis-services/analysis-services/media/download.png":::
 
 [SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122) steht im Microsoft Download Center bereit.
 
@@ -67,7 +67,7 @@ Die kürzlich veröffentlichte Version des Berichts-Generators ist vollständig 
 
 ## <a name="sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services
 
-**Herunterladen** ![Herunterladen](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "Download verfügbar ist")
+**Herunterladen** :::image type="icon" source="https://docs.microsoft.com/analysis-services/analysis-services/media/download.png":::
 
 Laden Sie SQL Server 2017 Reporting Services im **[Microsoft Download Center herunter](https://www.microsoft.com/download/details.aspx?id=55252)** .
 
@@ -117,7 +117,7 @@ Zum Erstellen mobiler Berichte ist [!INCLUDE[SS_MobileReptPub_Short](../includes
 
 Weitere Informationen zum [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]finden Sie unter [Webportal (einheitlicher SSRS-Modus)](../reporting-services/web-portal-ssrs-native-mode.md).  
 
-![ssRSPortal](../reporting-services/media/ssrsportal.png "SSRS-Portal")  
+![Screenshot: SQL Server Reporting Services-Portal](../reporting-services/media/ssrsportal.png "SSRS-Portal")  
 
 #### <a name="custom-branding-for-the-ssrswebportal-non-markdown"></a>Benutzerdefiniertes Branding für [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
@@ -129,7 +129,7 @@ Weitere Informationen zum benutzerdefinierten Branding finden Sie unter [Brandin
 
 Sie können direkt im [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] KPIs im Kontext mit dem aktuellen Ordner erstellen. Wenn Sie KPIs erstellen, können Sie Datasetfelder wählen und deren Werte zusammenfassen. Sie können auch verwandte Inhalte auswählen, um per Drillthrough zu weiteren Details zu gelangen.
 
-![ssrs-webportal-kpi](../reporting-services/media/ssrs-webportal-kpi.png)
+![Screenshot: „KPIS“ im SQL Server Reporting Services-Portal](../reporting-services/media/ssrs-webportal-kpi.png)
 
 Weitere Informationen finden Sie unter [Working with KPIs in the web portal (Arbeiten mit KPIs im Webportal)](https://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb).
 
@@ -194,13 +194,13 @@ Weitere Informationen zur Browserunterstützung von finden Sie unter [Browserunt
 
 ![Hinweis](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Hinweis") Die Aktualisierung wird über [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Abonnements verwaltet, und nachdem das Element angeheftet wurde, können Sie das Abonnement bearbeiten und einen anderen Aktualisierungszeitplan konfigurieren.
 
-![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
+![Screenshot: Dialogfeld „An Power BI-Dashboard anheften“](../reporting-services/media/ssrs-pin-to-powerbi.png) 
 
 Weitere Informationen finden Sie unter [Power BI Report Server Integration (Configuration Manager) (Integration von Power BI-Berichtsserver (Configuration Manager))](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) und [Pin Reporting Services items to Power BI Dashboards (Anheften von Reporting Services-Elementen an Power BI-Dashboards)](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).  
 
 **PowerPoint-Rendering und -Export:** Das Microsoft PowerPoint-Format (PPTX) ist eine neue [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]-Renderingerweiterung. Sie können Berichte im PPTX-Format über die üblichen Anwendungen exportieren: Berichts-Generator, Berichts-Designer (in SSDT) und [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. Für das Beispiel zeigt die folgende Abbildung das Exportmenü des [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]s. 
 
-![ssrs-export-powerpoint](../reporting-services/media/ssrs-export-powerpoint.png) 
+![Screenshot: Export-Dropdownmenü, in dem die Option „PowerPoint“ hervorgehoben ist](../reporting-services/media/ssrs-export-powerpoint.png) 
 
 Sie können auch das PPTX-Format für die Abonnementausgabe auswählen und den Zugriff auf die Berichtsserver-URL zum Rendern und Exportieren eines Berichts verwenden. Der folgende URL-Befehl in Ihrem Browser exportiert z. B. einen Bericht von einer benannten Instanz des Berichtsservers.  
 
@@ -214,13 +214,13 @@ Weitere Informationen finden Sie unter [Exportieren von Berichten über URL-Zugr
 
 Weitere Informationen finden Sie unter [Aktivieren und Deaktivieren des clientseitigen Drucks für Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).
 
-![ssrs-pdf-printing](../reporting-services/media/ssrs-pdf-printing.png)
+![Screenshot: Dialogfeld „Drucken“](../reporting-services/media/ssrs-pdf-printing.png)
 
 ### <a name="subscription-improvements"></a>Abonnementverbesserungen  
 
 |Funktion|Unterstützter Servermodus|  
 |-------------|---------------------------|  
-|**Aktivieren und Deaktivieren von Abonnements**. Neue Optionen der Benutzeroberfläche ermöglichen ein schnelles Deaktivieren und Aktivieren von Abonnements. Die deaktivierten Abonnements behalten ihre anderen Konfigurationseigenschaften, z. B. den Zeitplan, bei und können leicht aktiviert werden.<br /><br /> ![ssrs-enable-disable-subscriptions](../reporting-services/media/ssrs-enable-disable-subscriptions.png)<br /><br /> Weitere Informationen finden Sie unter [Deaktivieren oder Anhalten der Berichts- und Abonnementverarbeitung](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).|Einheitlicher Modus|  
+|**Aktivieren und Deaktivieren von Abonnements**. Neue Optionen der Benutzeroberfläche ermöglichen ein schnelles Deaktivieren und Aktivieren von Abonnements. Die deaktivierten Abonnements behalten ihre anderen Konfigurationseigenschaften, z. B. den Zeitplan, bei und können leicht aktiviert werden.<br /><br /> ![Screenshot: Optionen „Aktivieren“, „Deaktivieren“ und „Löschen“](../reporting-services/media/ssrs-enable-disable-subscriptions.png)<br /><br /> Weitere Informationen finden Sie unter [Deaktivieren oder Anhalten der Berichts- und Abonnementverarbeitung](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).|Einheitlicher Modus|  
 |**Abonnementbeschreibung**. Wenn Sie ein neues Abonnement erstellen, können Sie jetzt eine Beschreibung des Berichts als Teil der Abonnementeigenschaften einbeziehen. Die Beschreibung ist auf der Seite zur Abonnementzusammenfassung enthalten.|SharePoint- und einheitlicher Modus|  
 |**Ändern des Abonnementbesitzers**. Verbesserte Benutzeroberfläche zum schnellen Ändern des Besitzers eines Abonnements. Bei früheren Versionen von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] konnten Administratoren die Abonnementbesitzer mithilfe eines Skripts ändern. Ab Version [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] können Sie Abonnementbesitzer über die Benutzeroberfläche oder ein Skript ändern. Das Ändern des Abonnementbesitzers ist eine häufige Verwaltungsaufgabe, wenn Benutzer Ihr Unternehmen verlassen oder eine andere Funktion übernehmen.|SharePoint- und einheitlicher Modus|  
 |**Freigegebene Anmeldeinformationen für Dateifreigabeabonnements**. Es gibt jetzt zwei Workflows mit [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dateifreigabeabonnements:<br /><br /> In diesem Release kann Ihr [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Administrator nun ein einzelnes Dateifreigabekonto konfigurieren, das für mehrere Abonnements verwendet wird. Die Konfiguration des Dateifreigabekontos erfolgt im Konfigurations-Manager von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im einheitlichen Modus unter **Ein Dateifreigabekonto angeben**. Benutzer wählen auf der Konfigurationsseite für das Abonnement die Option **Dateifreigabekonto verwenden** aus.<br /><br /> Sie können einzelne Abonnements mit spezifischen Anmeldeinformationen für die Zieldateifreigabe konfigurieren.<br /><br /> Sie können beide Ansätze auch kombinieren, sodass einige Dateifreigabeabonnements das zentrale Dateifreigabekonto verwenden, während andere Abonnements bestimmte Anmeldeinformationen nutzen.|Einheitlicher Modus|

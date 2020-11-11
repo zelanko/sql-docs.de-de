@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3446eb921f0a731a571f2ad5e7a6f275612f2776
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f4802ee3beb72e34ed2b85e8857ac69c61557018
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245647"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043708"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines KPIs zu einem Bericht (Berichts-Generator)
 In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)]-Tutorial fügen Sie eine Leistungskennzahl (Key Performance Indicator; KPI) einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]-Bericht hinzu.  
@@ -23,7 +23,7 @@ KPIs sind für Unternehmen bedeutende, messbare Werte. In diesem Szenario ist di
   
 Die folgende Abbildung ähnelt dem Bericht, den Sie erstellen werden.  
   
-![Berichts-Generator-KPI-Bericht](../reporting-services/media/report-builder-kpi-report.png)
+![Screenshot: KPI-Bericht im Berichts-Generator](../reporting-services/media/report-builder-kpi-report.png)
     
 > [!NOTE]  
 > In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst: ein Verfahren zum Erstellen des Datasets und ein Verfahren zum Erstellen einer Tabelle. Im ersten Tutorial dieser Reihe erhalten Sie ausführliche Anweisungen zum Navigieren zu einem Berichtsserver, Auswählen einer Datenquelle, Erstellen eines Datasets und Ausführen des Assistenten: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
@@ -125,7 +125,7 @@ Der Tabellen- oder Matrix-Assistent stellt ein erstes Design für die Darstellun
   
     Bei der Ausführung des Berichts werden in der Tabelle jedes Datum, alle Aufträge für jedes Datum sowie alle Produkte, Mengen und Umsatzsummen für jeden Auftrag angezeigt.  
   
-7.  Vergewissern Sie sich auf der Seite „Layout auswählen“, dass unter **Optionen**die Option **Teil- und Gesamtergebnisse anzeigen** ausgewählt ist.  
+7.  Vergewissern Sie sich auf der Seite „Layout auswählen“, dass unter **Optionen** die Option **Teil- und Gesamtergebnisse anzeigen** ausgewählt ist.  
   
 8.  Überprüfen Sie, ob **Als Block, Teilergebnis unterhalb** ausgewählt ist.  
   
@@ -139,13 +139,13 @@ Der Tabellen- oder Matrix-Assistent stellt ein erstes Design für die Darstellun
   
       Die Tabelle wird der Entwurfsoberfläche hinzugefügt. Die Tabelle enthält fünf Spalten und fünf Zeilen. Der Bereich „Zeilengruppen“ umfasst drei Zeilengruppen: SalesDate, Subcategory und Details. Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden. Der Bereich „Spaltengruppen“ ist leer.  
       
-      ![Berichts-Generator-KPI-Zeilengruppen](../reporting-services/media/report-builder-kpi-row-groups.png)
+      ![Screenshot von Zeilengruppen](../reporting-services/media/report-builder-kpi-row-groups.png)
   
 12. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
 Für jedes an einem bestimmten Datum verkaufte Produkt werden in der Tabelle der Produktname, die verkaufte Menge und der Gesamtumsatz angezeigt. Die Daten sind zuerst nach Verkaufsdatum und dann nach Unterkategorie organisiert. 
 
-![Berichts-Generator-KPI-einfache-Tabelle](../reporting-services/media/report-builder-kpi-basic-table.png)
+![Screenshot: einfache KPI-Tabelle im Berichts-Generator](../reporting-services/media/report-builder-kpi-basic-table.png)
     
 ### <a name="format-dates-and-currency"></a>Formatieren von Datumsangaben und Währung
 Erweitern Sie die Spalten, und legen Sie das Format für die Datums- und Währungsangaben fest.
@@ -160,7 +160,7 @@ Erweitern Sie die Spalten, und legen Sie das Format für die Datums- und Währun
 
    Wenn Sie das Gebietsschema „Deutsch (Deutschland)“ verwenden, lautet der Standardbeispieltext [12.345,00€]. Falls kein Beispielwert für die Währung angezeigt wird, klicken Sie in der Gruppe **Zahlen** auf **Platzhalterformate** > **Beispielwerte**.
     
-    ![Berichts-Generator-Schaltfläche-Platzhalterwert](../reporting-services/media/report-builder-placeholder-value-button.png)
+    ![Screenshot: Option „Beispielwerte“ im Berichts-Generator ausgewählt](../reporting-services/media/report-builder-placeholder-value-button.png)
 
 5. (Optional) Klicken Sie auf der Registerkarte **Stamm** in der Gruppe **Zahl** zweimal auf die Schaltfläche **Dezimalstellen verringern** , um volle Dollarbeträge ohne Centangaben anzuzeigen.
 
@@ -172,7 +172,7 @@ Erweitern Sie die Spalten, und legen Sie das Format für die Datums- und Währun
 
 12. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
  
-![Berichts-Generator-KPI-Zahlen-formatieren](../reporting-services/media/report-builder-kpi-format-numbers.png)
+![Screenshot: KPI-Bericht mit formatierten Zahlen im Berichts-Generator](../reporting-services/media/report-builder-kpi-format-numbers.png)
 
 ## <a name="3-use-background-colors-to-display-a-kpi"></a><a name="BackgroundColors"></a>3. Anzeigen eines KPI mithilfe von Hintergrundfarben  
 Hintergrundfarben können für einen Ausdruck festgelegt werden, der beim Ausführen des Berichts ausgewertet wird.  
@@ -181,9 +181,9 @@ Hintergrundfarben können für einen Ausdruck festgelegt werden, der beim Ausfü
   
 1.  Klicken Sie in der Tabelle mit der rechten Maustaste die `[Sum(Sales)]` -Zelle (die Teilergebniszeile mit dem Umsatz für eine Unterkategorie), und klicken Sie anschließend auf **Textfeldeigenschaften**. 
 
-    Stellen Sie sicher, dass Sie die Zelle (und nicht den darin enthaltenen Text) ausgewählt haben, um die **Textfeldeigenschaften**anzuzeigen. 
+    Stellen Sie sicher, dass Sie die Zelle (und nicht den darin enthaltenen Text) ausgewählt haben, um die **Textfeldeigenschaften** anzuzeigen. 
     
-    ![Berichts-Generator-Textfeldeigenschaften](../reporting-services/media/report-builder-text-box-properties.png)
+    ![Screenshot der Option „Textfeldeigenschaften“ im Berichts-Generator](../reporting-services/media/report-builder-text-box-properties.png)
   
 2.  Klicken Sie auf der Registerkarte **Ausfüllen** auf die Schaltfläche **fx** neben der Option **Füllfarbe** , und geben Sie den folgenden Ausdruck in das Feld **Ausdruck festlegen für: BackgroundColor** ein:  
   
@@ -197,7 +197,7 @@ Hintergrundfarben können für einen Ausdruck festgelegt werden, der beim Ausfü
   
 In der Teilergebniszeile, die den Umsatz für eine Unterkategorie anzeigt, ist die Hintergrundfarbe der Zelle abhängig vom Wert der Umsatzsumme rot, gelb oder grün.  
 
-![Berichts-Generator-KPI-Farben](../reporting-services/media/report-builder-kpi-colors.png)
+![Screenshot: KPI-Bericht im Berichts-Generator mit Farben in bestimmten Zellen](../reporting-services/media/report-builder-kpi-colors.png)
   
 ## <a name="4-display-a-kpi-by-using-a-gauge"></a><a name="Gauge"></a>4. Anzeigen eines KPI mit einem Messgerät  
 Ein Messgerät stellt einen einzelnen Wert in einem Dataset dar. In diesem Tutorial wird ein horizontales lineares Messgerät verwendet, da es aufgrund seiner Form und Einfachheit auch dann leicht zu lesen ist, wenn es klein ist und innerhalb einer Tabellenzelle verwendet wird. Weitere Informationen finden Sie unter [Messgeräte &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
@@ -208,13 +208,13 @@ Ein Messgerät stellt einen einzelnen Wert in einem Dataset dar. In diesem Tutor
   
 2.  Klicken Sie in der Tabelle mit der rechten Maustaste auf den Spaltenziehpunkt für die Spalte „Sales“ (Vertrieb) und anschließend auf **Spalte einfügen** > **Rechts**. Eine neue Spalte wird der Tabelle hinzugefügt.  
 
-    ![Berichts-Generator-KPI-Spalte-einfügen](../reporting-services/media/report-builder-kpi-insert-column.png)
+    ![Screenshot: Einfügen einer Spalte in den KPI-Bericht des Berichts-Generators](../reporting-services/media/report-builder-kpi-insert-column.png)
   
 3.  Geben Sie in der Spaltenüberschrift **Lineare KPI** ein.  
   
 4.  Klicken Sie auf der Registerkarte **Einfügen** auf **Datenvisualisierungen** > **Messgerät** und anschließend außerhalb der Tabelle auf die Entwurfsoberfläche.   
   
-5.  Wählen Sie im Dialogfeld **Messgerättyp auswählen** den ersten linearen Messgerättyp ( **Horizontal**) aus.  
+5.  Wählen Sie im Dialogfeld **Messgerättyp auswählen** den ersten linearen Messgerättyp ( **Horizontal** ) aus.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -224,7 +224,7 @@ Ein Messgerät stellt einen einzelnen Wert in einem Dataset dar. In diesem Tutor
   
     Wenn Sie das `Sales` -Feld auf dem Messgerät ablegen, wird es in der Liste **Werte** hinzugefügt und anhand der integrierten Sum-Funktion aggregiert.  
    
-    ![Berichts-Generator-KPI-Sales-Feld-ziehen](../reporting-services/media/report-builder-kpi-drag-sales-field.png)
+    ![Screenshot: Ziehen des Felds „Sales“ in einen KPI-Bericht des Berichts-Generators](../reporting-services/media/report-builder-kpi-drag-sales-field.png)
    
 9. Klicken Sie im Bereich **Messgerätdaten** auf den Pfeil neben **LinearPointer1** > **Pointer Properties** (Zeigereigenschaften).  
   
@@ -252,7 +252,7 @@ Ein Messgerät stellt einen einzelnen Wert in einem Dataset dar. In diesem Tutor
   
     Die horizontale Länge der grünen Leiste im Messgerät ändert sich je nach Wert der KPI.  
   
-![Berichts-Generator-KPI-linear](../reporting-services/media/report-builder-linear-kpi.png) 
+![Screenshot: eine lineare KPI-Spalte, die dem KPI-Bericht des Berichts-Generators hinzugefügt wurde](../reporting-services/media/report-builder-linear-kpi.png) 
   
 ## <a name="5-display-a-kpi-by-using-an-indicator"></a><a name="Indicator"></a>5. Anzeigen eines KPI mit einem Indikator  
 Indikatoren sind kleine einfache Messgeräte, die Datenwerte auf einen Blick darstellen. Aufgrund ihrer Größe und Einfachheit werden Indikatoren oft in Tabellen und Matrizen verwendet. Weitere Informationen finden Sie unter [Indikatoren (Berichts-Generator und SSRS)](../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
@@ -269,7 +269,7 @@ Indikatoren sind kleine einfache Messgeräte, die Datenwerte auf einen Blick dar
   
 5.  Doppelklicken Sie auf der Registerkarte **Einfügen** unter **Datenvisualisierungen** auf **Indikator**.  
   
-6.  Wählen Sie im Dialogfeld **Indikatortyp auswählen** unter **Formen**den ersten Formtyp **3 Ampeln (ohne Rand)** aus.  
+6.  Wählen Sie im Dialogfeld **Indikatortyp auswählen** unter **Formen** den ersten Formtyp **3 Ampeln (ohne Rand)** aus.  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -279,7 +279,7 @@ Indikatoren sind kleine einfache Messgeräte, die Datenwerte auf einen Blick dar
   
 9. Wählen Sie auf der Registerkarte **Werte und Status** im Feld **Wert** **[Sum(Sales)]** aus. Ändern Sie keine weiteren Optionen.  
   
-    Standardmäßig findet eine Datensynchronisierung im Datenbereich statt, und der Wert **Tablix1**, der Name des Tabellendatenbereichs im Bericht, wird im Feld **Synchronisierungsbereich** angezeigt.  
+    Standardmäßig findet eine Datensynchronisierung im Datenbereich statt, und der Wert **Tablix1** , der Name des Tabellendatenbereichs im Bericht, wird im Feld **Synchronisierungsbereich** angezeigt.  
   
     In diesem Bericht können Sie auch den Bereich eines Indikators ändern, der in der Zelle für das Teilergebnis der Unterkategorie eingefügt wurde, um das Feld "SalesDate" zu synchronisieren.  
   
@@ -287,7 +287,7 @@ Indikatoren sind kleine einfache Messgeräte, die Datenwerte auf einen Blick dar
 
 11. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
 
-![Berichts-Generator-KPI-Ampel](../reporting-services/media/report-builder-kpi-stoplight.png)
+![Screenshot: Spalte mit einem Ampel-KPI im KPI-Bericht des Berichts-Generators](../reporting-services/media/report-builder-kpi-stoplight.png)
   
 ## <a name="6-add-a-report-title"></a><a name="Title"></a>6. Hinzufügen eines Berichtstitels  
 Ein Berichtstitel wird oben im Bericht angezeigt. Sie können den Berichtstitel in eine Berichtskopfzeile einfügen oder, wenn der Bericht keine Kopfzeile enthält, in einem Textfeld am oberen Rand des Berichtshauptteils. In diesem Abschnitt verwenden Sie das Textfeld, das automatisch am oberen Rand des Berichtshauptteils platziert wird.  
@@ -298,9 +298,9 @@ Sie können die Textdarstellung weiter verbessern, indem Sie verschiedene Schrif
   
 1.  Klicken Sie auf der Entwurfsoberfläche auf **Zum Hinzufügen eines Titels klicken**.  
   
-2.  Geben Sie **Produktvertriebs-KPI**ein, und klicken Sie in den Bereich außerhalb des Textfelds.  
+2.  Geben Sie **Produktvertriebs-KPI** ein, und klicken Sie in den Bereich außerhalb des Textfelds.  
   
-3.  Klicken Sie optional mit der rechten Maustaste auf das Textfeld mit dem Eintrag **Product Sales KPI**, klicken Sie auf **Textfeldeigenschaften**, und wählen Sie auf der Registerkarte „Schriftart“ andere Schriftschnitte, Größen und Farben aus.  
+3.  Klicken Sie optional mit der rechten Maustaste auf das Textfeld mit dem Eintrag **Product Sales KPI** , klicken Sie auf **Textfeldeigenschaften** , und wählen Sie auf der Registerkarte „Schriftart“ andere Schriftschnitte, Größen und Farben aus.  
   
 4.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
@@ -317,7 +317,7 @@ Speichern Sie den Bericht auf einem Berichtsserver oder auf Ihrem Computer. Wenn
   
     Die Meldung "Verbindung mit Berichtsserver wird hergestellt" wird angezeigt. Nachdem die Verbindung hergestellt wurde, sehen Sie den Inhalt des Berichtsordners, den der Berichtsserveradministrator als Standardspeicherort für Berichte angegeben hat.  
   
-4.  Ersetzen Sie im Feld **Name**den Standardnamen durch **Produktumsatz-KPI**.  
+4.  Ersetzen Sie im Feld **Name** den Standardnamen durch **Produktumsatz-KPI**.  
   
 5.  Klicken Sie auf **Speichern**.  
   
@@ -327,12 +327,12 @@ Der Bericht wird auf dem Berichtsserver gespeichert. Der Name des Berichtsserver
   
 1.  Klicken Sie auf die Schaltfläche **Berichts-Generator** und anschließend auf **Speichern unter**.  
   
-2.  Klicken Sie auf **Desktop**, **Eigene Dokumente**oder **Computer**, und navigieren Sie zu dem Ordner, in dem Sie den Bericht speichern möchten.  
+2.  Klicken Sie auf **Desktop** , **Eigene Dokumente** oder **Computer** , und navigieren Sie zu dem Ordner, in dem Sie den Bericht speichern möchten.  
   
 > [!NOTE]  
-> Wenn Sie keinen Zugriff auf einen Berichtsserver haben, klicken Sie auf **Desktop**&gt; **Eigene Dokumente**oder **Arbeitsplatz** , und speichern Sie den Bericht auf dem Computer.  
+> Wenn Sie keinen Zugriff auf einen Berichtsserver haben, klicken Sie auf **Desktop** &gt; **Eigene Dokumente** oder **Arbeitsplatz** , und speichern Sie den Bericht auf dem Computer.  
   
-1.  Ersetzen Sie im Feld **Name**den Standardnamen durch **Produktumsatz-KPI**.  
+1.  Ersetzen Sie im Feld **Name** den Standardnamen durch **Produktumsatz-KPI**.  
   
 2.  Klicken Sie auf **Speichern**.  
   

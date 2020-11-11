@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0d37e617ef7dcb4c63b7d2239881cc6cb96c7c2f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 695b6d02494430b134ce46ac14d802443b41046b
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243601"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243789"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>Arbeiten mit freigegebenen Datasets (Webportal)
 
@@ -30,9 +30,9 @@ Sie können Folgendes tun, um ein neues freigegebenes Dataset zu erstellen.
   
 1.  Wählen Sie in der Menüleiste „Neu“ aus.  
   
-2.  Wählen Sie **Dataset**aus.  
+2.  Wählen Sie **Dataset** aus.  
   
-    ![SSRS-Dataset-NeuesDataset](../reporting-services/media/ssrsdataset-newdataset.png)  
+    ![Screenshot: Dropdownliste „Neu“, Option „Dataset“ hervorgehoben](../reporting-services/media/ssrsdataset-newdataset.png)  
   
 3.  Entweder wird jetzt der Berichts-Generator gestartet, oder Sie werden aufgefordert, ihn herunterzuladen.  
   
@@ -51,17 +51,17 @@ Sie können Sie Folgendes tun, um ein vorhandenes freigegebenes Dataset zu verwa
   
 1.  Klicken Sie auf die **Auslassungspunkte (...)** für das Dataset, das Sie verwalten möchten.  
   
-    ![SSRS-Dataset-Auslassungspunkte](../reporting-services/media/ssrsdataset-ellipse.png)  
+    ![Screenshot: Benutzer klickt beim Dataset auf die Auslassungspunkte](../reporting-services/media/ssrsdataset-ellipse.png)  
   
 2.  Wählen Sie **Verwalten** aus, womit Sie auf den Bearbeitungsbildschirm gelangen.  
   
-    ![SSRS-Dataset-Verwalten](../reporting-services/media/ssrsdataset-manage.png)  
+    ![Screenshot: Nach einem Klick auf die Auslassungspunkte ist die Option „Verwalten“ hervorgehoben.](../reporting-services/media/ssrsdataset-manage.png)  
   
 ## <a name="properties"></a>Eigenschaften
   
-Im Eigenschaftenbildschirm können Sie den **Namen** und die **Beschreibung** des Datasets ändern. Sie können es auch **Löschen**, **Verschieben**, **Im Berichts-Generator bearbeiten**, **Herunterladen** oder **Ersetzen**.  
+Im Eigenschaftenbildschirm können Sie den **Namen** und die **Beschreibung** des Datasets ändern. Sie können es auch **Löschen** , **Verschieben** , **Im Berichts-Generator bearbeiten** , **Herunterladen** oder **Ersetzen**.  
   
-![SSRS-Dataset-Eigenschaften](../reporting-services/media/ssrsdataset-properties.png)  
+![Screenshot: Bildschirm „Eigenschaften“ des Dialogfelds „Company Sales bearbeiten“](../reporting-services/media/ssrsdataset-properties.png)  
   
 ## <a name="caching"></a>Caching
   
@@ -71,17 +71,17 @@ Wenn es um das Zwischenspeichern von Daten für ein Dataset geht, stehen Ihnen O
   
 2.  **Cache copies of this report and use them when available** (Kopien dieses Berichts zwischenspeichern und wenn verfügbar verwenden), platzierte eine temporäre Kopie der Daten in einen Cache für die Verwendung mit Elementen, die dieses Dataset verwenden. Die Zwischenspeicherung erhöht in der Regel die Leistung, da die Daten aus dem Cache zurückgegeben werden und die Datasetabfrage nicht erneut ausgeführt werden muss.  
   
-![SSRS-Dataset-Zwischenspeichern1](../reporting-services/media/ssrsdataset-caching1.png)  
+![Screenshot: Bildschirm „Caching“ des Dialogfelds „Company Sales bearbeiten“, wobei die Option „Diesen Bericht immer mit den neuesten Daten ausführen“ ausgewählt ist](../reporting-services/media/ssrsdataset-caching1.png)  
   
 Die Wahl von **Kopien dieses Berichts zwischenspeichern und wenn verfügbar verwenden** bieten Ihnen einige zusätzliche Optionen.  
   
-![SSRS-Dataset-Zwischenspeichern2](../reporting-services/media/ssrsdataset-caching2.png)  
+![Screenshot: Bildschirm „Caching“ des Dialogfelds „Company Sales bearbeiten“, wobei die Option „Kopien von diesem Bericht zwischenspeichern und bei Verfügbarkeit verwenden“ ausgewählt ist](../reporting-services/media/ssrsdataset-caching2.png)  
   
 ### <a name="cache-expiration"></a>Cacheablauf  
   
 Sie können steuern, ob der Cache für das freigegebene Dataset nach einer bestimmten Zeitspanne ablaufen soll, oder ob Sie es bevorzugen würden, dies laut einem Zeitplan zu tun. Sie können einen freigegebenen Zeitplan verwenden  
   
-![SSRS-Dataset-Zwischenspeichern3](../reporting-services/media/ssrsdataset-caching3.png)  
+![Screenshot: Option „Cache läuft ab nach Zeitplan“ ausgewählt](../reporting-services/media/ssrsdataset-caching3.png)  
   
 > [!NOTE]
 > Das Festlegen einer Ablaufzeit aktualisiert nicht den Cache. Ohne einen Cacheaktualisierungsplan werden die Daten bei der nächsten Ausführung des Datasets aktualisiert.  
@@ -94,11 +94,11 @@ Die Standardrollenzuweisungen, mit denen Sie freigegebene Datasets für Cacheakt
   
 Nachdem Sie die obenstehende Option zum Zwischenspeichern angewendet haben, können Sie einen Cacheaktualisierungsplan definieren. Wählen Sie den Link **Manage Refresh Plans** (Aktualisierungspläne verwalten), der angezeigt wird, nachdem Sie die Cacheeinstellungen anwenden. Dadurch gelangen Sie auf die Seite „Cacheaktualisierungsplan“.   
   
-Wählen Sie **Neuer Cacheaktualisierungsplan**, um einen neuen Cacheplan zu erstellen. Sie können einen Namen für den Plan eingeben und einen Zeitplan angeben. Falls das Dataset über definierte Parameter verfügt, werden Ihnen diese aufgelistet angezeigt, und es wird Ihnen möglich sein, Werte bereitzustellen, sofern sie nicht als schreibgeschützt gekennzeichnet sind.  
+Wählen Sie **Neuer Cacheaktualisierungsplan** , um einen neuen Cacheplan zu erstellen. Sie können einen Namen für den Plan eingeben und einen Zeitplan angeben. Falls das Dataset über definierte Parameter verfügt, werden Ihnen diese aufgelistet angezeigt, und es wird Ihnen möglich sein, Werte bereitzustellen, sofern sie nicht als schreibgeschützt gekennzeichnet sind.  
   
-Sobald Sie fertig sind, können Sie **Cacheaktualisierungsplan erstellen**auswählen.  
+Sobald Sie fertig sind, können Sie **Cacheaktualisierungsplan erstellen** auswählen.  
   
-![SSRS-Dataset-Zwischenspeichern4](../reporting-services/media/ssrsdataset-caching4.png)  
+![Screenshot: Dialogfeld „Company Sales bearbeiten“ mit der Option „Cacheaktualisierungsplan erstellen“](../reporting-services/media/ssrsdataset-caching4.png)  
   
 > [!NOTE]
 > SQL Server-Agent muss ausgeführt werden, um einen Cacheaktualisierungsplan zu erstellen.  

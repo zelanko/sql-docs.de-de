@@ -10,12 +10,12 @@ ms.date: 09/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 073776c042c0a0da136347c8e1658603b755208f
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: 51286acc7f963b8d680bd81121cc22bab1c1a0a6
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92378405"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364382"
 ---
 # <a name="troubleshooting-big-data-clusters-bdc-with-notebooks"></a>Problembehandlung für Big Data-Cluster (BDC) mit Notebooks
 
@@ -104,4 +104,3 @@ Eine Reihe von Notebooks zum Beheben bekannter Probleme und Zustände eines SQL�
 ## <a name="next-steps"></a>Nächste Schritte
 
 Weitere Informationen zu Big Data-Clustern finden Sie unter [Was sind [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?](big-data-cluster-overview.md).
-

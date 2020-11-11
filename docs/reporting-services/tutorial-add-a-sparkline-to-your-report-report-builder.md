@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fe0d52f55905721002a1590f54ada84d7732f2a0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a60dfa5cf08b11789fde744f41a2c139f922d286
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245657"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043795"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator)
 
@@ -22,7 +22,7 @@ In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)]-Tutorial er
   
 Sparklines und Datenbalken sind einfache, kleine Diagramme, die zahlreiche Informationen auf wenig Raum vermitteln, häufig in Form von Tabellen und Matrizen in paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Berichten. Die folgende Abbildung zeigt einen Bericht, der mit dem Bericht vergleichbar ist, den Sie erstellen werden.  
   
-![Berichts-Generator-Sparkline-fertig](../reporting-services/media/report-builder-sparkline-final.png)  
+![Screenshot: Sparkline des Berichts-Generators](../reporting-services/media/report-builder-sparkline-final.png)  
      
 Geschätzte Zeit zum Bearbeiten dieses Tutorials: 30 Minuten  
   
@@ -44,15 +44,15 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
 4.  Klicken Sie auf der Seite **Dataset auswählen** auf **Dataset erstellen** > **Weiter**. Die Seite **Verbindung mit einer Datenquelle auswählen** wird geöffnet.  
   
     > [!NOTE]  
-    > Für dieses Tutorial sind keine bestimmten Daten erforderlich. Es wird lediglich eine Verbindung mit einer SQL Server-Datenbank benötigt. Wenn unter **Datenquellenverbindungen**bereits eine Datenquellenverbindung aufgeführt ist, können Sie sie auswählen und zu Schritt 10 wechseln. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung (Berichts-Generator)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > Für dieses Tutorial sind keine bestimmten Daten erforderlich. Es wird lediglich eine Verbindung mit einer SQL Server-Datenbank benötigt. Wenn unter **Datenquellenverbindungen** bereits eine Datenquellenverbindung aufgeführt ist, können Sie sie auswählen und zu Schritt 10 wechseln. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung (Berichts-Generator)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  Klicken Sie auf **Neu**. Das Dialogfeld **Datenquelleneigenschaften** wird angezeigt.  
   
-6.  Geben Sie im Feld **Name**den Namen **Product Sales**für die Datenquelle ein.  
+6.  Geben Sie im Feld **Name** den Namen **Product Sales** für die Datenquelle ein.  
   
-7.  Vergewissern Sie sich, dass unter **Verbindungstyp auswählen**die Option **Microsoft SQL Server** ausgewählt ist.  
+7.  Vergewissern Sie sich, dass unter **Verbindungstyp auswählen** die Option **Microsoft SQL Server** ausgewählt ist.  
   
-8.  Geben Sie für **Verbindungszeichenfolge**den folgenden Text ein:  
+8.  Geben Sie für **Verbindungszeichenfolge** den folgenden Text ein:  
   
     `Data Source\=<servername>`  
   
@@ -64,7 +64,7 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
   
     Nun wird wieder die Seite **Verbindung mit einer Datenquelle auswählen** angezeigt.  
   
-11. Klicken Sie auf **Verbindung testen**, um sicherzustellen, dass die Verbindung mit der Datenquelle hergestellt werden kann.  
+11. Klicken Sie auf **Verbindung testen** , um sicherzustellen, dass die Verbindung mit der Datenquelle hergestellt werden kann.  
   
     Die Meldung "Die Verbindung wurde erfolgreich hergestellt" wird angezeigt.  
   
@@ -121,7 +121,7 @@ In einem Bericht können Sie ein freigegebenes Dataset mit einer vordefinierten 
   
 4.  Klicken Sie auf der Symbolleiste des Abfrage-Designers auf „Ausführen“ ( **!** ).  
   
-    Die Abfrage wird ausgeführt, und das Resultset für die Felder **SalesDate**, **Subcategory**, **Product**, **Sales**und **Quantity**wird angezeigt.  
+    Die Abfrage wird ausgeführt, und das Resultset für die Felder **SalesDate** , **Subcategory** , **Product** , **Sales** und **Quantity** wird angezeigt.  
   
 5.  Klicken Sie auf **Weiter**.  
   
@@ -133,11 +133,11 @@ In einem Bericht können Sie ein freigegebenes Dataset mit einer vordefinierten 
   
 8.  Ziehen Sie **SalesDate** in **Spaltengruppen**.  
 
-    ![Berichts-Generator-Sparkline-Felder-anordnen](../reporting-services/media/report-builder-sparkline-arrange-fields.png)
+    ![Screenshot: Sortieren von Feldern](../reporting-services/media/report-builder-sparkline-arrange-fields.png)
   
 9. Klicken Sie auf **Weiter**.  
   
-10. Vergewissern Sie sich auf der Seite **Layout auswählen** , dass unter **Optionen**die Option **Teil- und Gesamtergebnisse anzeigen** ausgewählt ist.  
+10. Vergewissern Sie sich auf der Seite **Layout auswählen** , dass unter **Optionen** die Option **Teil- und Gesamtergebnisse anzeigen** ausgewählt ist.  
   
     Im Vorschaubereich des Assistenten wird eine Tabelle mit drei Zeilen angezeigt. Bei der Ausführung des Berichts wird jede Zeile wie folgt angezeigt:  
   
@@ -147,7 +147,7 @@ In einem Bericht können Sie ein freigegebenes Dataset mit einer vordefinierten 
   
     *  Die dritte Zeile erscheint einmal, damit Gesamtsummen in der Tabelle angezeigt werden.  
     
-    ![Berichts-Generator-Sparkline-Layout-auswählen](../reporting-services/media/report-builder-sparkline-choose-layout.png)
+    ![Screenshot: Auswählen eines Layouts](../reporting-services/media/report-builder-sparkline-choose-layout.png)
   
 11. Klicken Sie auf **Weiter**.  
   
@@ -157,7 +157,7 @@ In einem Bericht können Sie ein freigegebenes Dataset mit einer vordefinierten 
   
     Betrachten Sie den Gruppierungsbereich. Wenn der Gruppierungsbereich nicht angezeigt wird, klicken Sie im Menü **Ansicht** auf **Gruppierung**. Im Zeilengruppenbereich wird eine Zeilengruppe angezeigt: **Product**. Im Spaltengruppenbereich wird eine Spaltengruppe angezeigt: **SalesDate**. Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden.  
     
-    ![Berichts-Generator-Sparkline-Gruppierungsbereich](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
+    ![Screenshot: Gruppierungsbereich im Berichts-Generator](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
   
 15. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
 
@@ -168,15 +168,15 @@ Die Zusammenfassungsdaten für das Feld **Sales** werden standardmäßig als ein
   
 2.  Klicken Sie auf die Zelle in der zweiten Zeile (unter der Zeile mit den Spaltenüberschriften) in der Spalte **SalesDate** . Halten Sie die STRG-Taste gedrückt, und wählen Sie alle Zellen mit `[Sum(Sales)]`aus. 
 
-    ![Berichts-Generator-Sum-Sales-markieren](../reporting-services/media/report-builder-select-sum-sales.png) 
+    ![Screenshot: Auswählen des Gesamtumsatzes](../reporting-services/media/report-builder-select-sum-sales.png) 
   
 3.  Klicken Sie auf der Registerkarte **Home** in der Gruppe **Zahl** auf **Währung**. Die Zellen ändern sich, um die formatierte Währung anzuzeigen.  
 
-    ![Berichts-Generator-Platzhalter-Währung](../reporting-services/media/report-builder-placeholder-currency.png)
+    ![Screenshot: Die Umsatzsumme wurde durch Platzhalterwährungswerte ersetzt.](../reporting-services/media/report-builder-placeholder-currency.png)
   
-    Wenn Sie das Gebietsschema „Deutsch (Deutschland)“ verwenden, lautet der Standardbeispieltext [**12,345.00€**]. Falls kein Beispielwährungswert angezeigt wird, klicken Sie in der Gruppe **Zahlen** auf **Platzhalterformate** > **Beispielwerte**.  
+    Wenn Sie das Gebietsschema „Deutsch (Deutschland)“ verwenden, lautet der Standardbeispieltext [ **12,345.00€** ]. Falls kein Beispielwährungswert angezeigt wird, klicken Sie in der Gruppe **Zahlen** auf **Platzhalterformate** > **Beispielwerte**.  
     
-    ![Berichts-Generator-Schaltfläche-Platzhalterwert](../reporting-services/media/report-builder-placeholder-value-button.png)
+    ![Screenshot: Option „Beispielwerte“ ausgewählt](../reporting-services/media/report-builder-placeholder-value-button.png)
    
 ### <a name="2b-optional-format-data-as-dates"></a><a name="FormatDates"></a>2b. Formatieren von Daten als Datumsangaben (optional)  
 Im Feld **SalesDate** werden standardmäßig sowohl Datums- als auch Zeitangaben angezeigt. Durch entsprechende Formatierung kann auch nur das Datum angezeigt werden.  
@@ -197,13 +197,13 @@ Die Werte für **SalesDate** werden im Standarddatumsformat angezeigt und die zu
   
 2.  Wählen Sie die Summenspalte in der Tabelle aus.  
   
-3.  Führen Sie einen Rechtsklick aus, zeigen Sie auf **Spalte einfügen**, und klicken Sie anschließend auf **Links**.  
+3.  Führen Sie einen Rechtsklick aus, zeigen Sie auf **Spalte einfügen** , und klicken Sie anschließend auf **Links**.  
 
-    ![Berichts-Generator-Spalte-links-hinzufügen](../reporting-services/media/report-builder-add-column-left.png)
+    ![Screenshot: Einfügen einer Spalte links](../reporting-services/media/report-builder-add-column-left.png)
   
 4.  Klicken Sie in der neuen Spalte mit der Maustaste in die Zelle in der `[Product]`-Zeile und anschließend auf **Einfügen** > **Sparkline**.  
 
-    ![Berichts-Generator-Sparkline-einfügen](../reporting-services/media/report-builder-insert-sparkline.png)
+    ![Screenshot: Einfügen einer Sparkline](../reporting-services/media/report-builder-insert-sparkline.png)
   
 5.  Stellen Sie sicher, dass die erste Sparkline in der Zeile **Spalte** im Dialogfeld **Sparklinetyp auswählen** ausgewählt wurde, und klicken Sie anschließend auf **OK**.  
   
@@ -211,7 +211,7 @@ Die Werte für **SalesDate** werden im Standarddatumsformat angezeigt und die zu
   
 7.  Klicken Sie im Wertefeld auf das Pluszeichen (+) und anschließend auf **Sales**. 
 
-    ![Berichts-Generator-Sparkline-Werte](../reporting-services/media/report-builder-sparkline-values.png) 
+    ![Screenshot: Hinzufügen von Werten zu einer Sparkline im Berichts-Generator ](../reporting-services/media/report-builder-sparkline-values.png) 
   
     Die Werte im Feld **Sales** sind nun die Werte für die Sparkline.  
   
@@ -223,7 +223,7 @@ Die Werte für **SalesDate** werden im Standarddatumsformat angezeigt und die zu
   
     Außerdem entspricht die maximale Balkenlänge der jeweiligen Höhe der Zeile. Dies ist ebenfalls irreführend, da die größten Werte der jeweiligen Zeilen nicht identisch sind: Der größte Wert für Budget Movie-Maker beträgt USD 10.400, für Slim Digital jedoch USD 26.576 – mehr als das Doppelte. Dennoch sind die größten Balken in diesen zwei Zeilen etwa gleich hoch. Alle Sparklines müssen dieselbe Skala verwenden.  
   
-     ![Berichts-Generator-Sparkline-falsch-ausgerichtet](../reporting-services/media/report-builder-sparkline-misaligned.png)
+     ![Screenshot: Sparkline im Berichts-Generator, die nicht richtig ausgerichtet ist](../reporting-services/media/report-builder-sparkline-misaligned.png)
   
 ## <a name="4-align-the-sparklines-vertically-and-horizontally"></a><a name="AlignSparklines"></a>4. Vertikales und horizontales Ausrichten der Sparklines  
 Sparklines sind schwierig zu lesen, wenn nicht durchgängig der gleiche Maßstab verwendet wird. Sowohl die horizontale als auch die vertikale Achse muss mit dem Rest übereinstimmen.  
@@ -250,7 +250,7 @@ Sparklines sind schwierig zu lesen, wenn nicht durchgängig der gleiche Maßstab
   
 Nun sind alle Balken in jeder Sparkline und an den Balken der anderen Sparklines ausgerichtet, und die Höhen stehen in einem Verhältnis zueinander.  
   
-![Berichts-Generator-Sparkline-ausgerichtet](../reporting-services/media/report-builder-sparkline-aligned.png)
+![Screenshot: Sparkline im Berichts-Generator, die richtig ausgerichtet ist](../reporting-services/media/report-builder-sparkline-aligned.png)
   
 ## <a name="7-optional-change-column-widths"></a><a name="Width"></a>7. Ändern der Spaltenbreite (optional)  
 Standardmäßig enthält jede Zelle in einer Tabelle ein Textfeld. Textfelder werden beim Rendern der Seite entsprechend dem anzuzeigenden Text vertikal erweitert. Im gerenderten Bericht werden alle Zeilen auf die Höhe des größten gerenderten Textfelds in der Zeile vergrößert. Die Höhe der Zeile auf der Entwurfsoberfläche hat keinen Einfluss auf die Höhe der Zeile im gerenderten Bericht.  
@@ -276,13 +276,13 @@ Die Darstellung des Texts kann weiter verbessert werden, indem andere Schriftsch
   
 1.  Klicken Sie auf der Entwurfsoberfläche auf **Zum Hinzufügen eines Titels klicken**.  
   
-2.  Geben Sie **Sales by Date**ein, und klicken Sie in den Bereich außerhalb des Textfelds.  
+2.  Geben Sie **Sales by Date** ein, und klicken Sie in den Bereich außerhalb des Textfelds.  
   
-3.  Wählen Sie das Textfeld aus, das **Product Sales**enthält.  
+3.  Wählen Sie das Textfeld aus, das **Product Sales** enthält.  
   
 4.  Wählen Sie auf der Registerkarte „Home“ in der Gruppe **Schriftart** für **Farbe** die Option **Blaugrün** aus.  
   
-7.  Wählen Sie **Fett**aus.  
+7.  Wählen Sie **Fett** aus.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -299,7 +299,7 @@ Speichern Sie den Bericht auf einem Berichtsserver oder auf Ihrem Computer. Wenn
   
     Die Meldung "Verbindung mit Berichtsserver wird hergestellt" wird angezeigt. Nachdem die Verbindung hergestellt wurde, sehen Sie den Inhalt des Berichtsordners, den der Berichtsserveradministrator als Standardspeicherort für Berichte angegeben hat.  
   
-4.  Ersetzen Sie im Feld **Name**den Standardnamen durch **Product Sales**.  
+4.  Ersetzen Sie im Feld **Name** den Standardnamen durch **Product Sales**.  
   
 5.  Klicken Sie auf **Speichern**.  
   
@@ -309,9 +309,9 @@ Der Bericht wird auf dem Berichtsserver gespeichert. Der Name des Berichtsserver
   
 1.  Klicken Sie auf die Schaltfläche **Berichts-Generator** und anschließend auf **Speichern unter**.  
   
-2.  Klicken Sie auf **Desktop**, **Eigene Dokumente**oder **Computer**, und navigieren Sie zu dem Ordner, in dem Sie den Bericht speichern möchten.  
+2.  Klicken Sie auf **Desktop** , **Eigene Dokumente** oder **Computer** , und navigieren Sie zu dem Ordner, in dem Sie den Bericht speichern möchten.  
   
-3.  Ersetzen Sie im Feld **Name**den Standardnamen durch **Product Sales**.  
+3.  Ersetzen Sie im Feld **Name** den Standardnamen durch **Product Sales**.  
   
 4.  Klicken Sie auf **Speichern**.  
   

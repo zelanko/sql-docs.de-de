@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ebb428a12bc75f3c61793918dde0594da531ed2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: db1efab37a24e49dcf9eac774809ec788831b037
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248539"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043817"
 ---
 # <a name="tutorial-introducing-expressions"></a>Tutorial: Einführung in Ausdrücke
 In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] -Tutorial verwenden Sie Ausdrücke mit allgemeinen Funktionen und Operatoren zum Erstellen von leistungsstarken und flexiblen [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginierten Berichten. 
@@ -25,7 +25,7 @@ Der Bericht ist ein gebänderter Bericht mit abwechselnd in weiß und einer Farb
   
 Diese Abbildung zeigt einen Bericht, der mit dem Bericht vergleichbar ist, den Sie erstellen werden.  
   
-![Berichts-Generator-Ausdruck-Tutorial-in-Browser](../reporting-services/media/report-builder-expression-tutorial-in-browser.png) 
+![Screenshot: Bericht des Berichts-Generators, der Ausdrücke verwendet](../reporting-services/media/report-builder-expression-tutorial-in-browser.png) 
   
 Geschätzte Zeit zum Bearbeiten dieses Tutorials: 30 Minuten  
   
@@ -52,7 +52,7 @@ In diesem Abschnitt erstellen Sie einen Tabellenbericht, eine Datenquelle und ei
   
 4.  Klicken Sie auf der Seite **Dataset auswählen** auf **Dataset erstellen** > **Weiter**.  
   
-6.  Wählen Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** eine Datenquelle vom Typ **SQL Server**aus. Wählen Sie in der Liste eine Datenquelle aus, oder navigieren Sie zum Berichtsserver, um eine Datenquelle auszuwählen.  
+6.  Wählen Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** eine Datenquelle vom Typ **SQL Server** aus. Wählen Sie in der Liste eine Datenquelle aus, oder navigieren Sie zum Berichtsserver, um eine Datenquelle auszuwählen.  
 
     > [!NOTE]  
     > Welche Datenquelle Sie auswählen, ist unwichtig, solange Sie über ausreichende Berechtigungen verfügen. Aus der Datenquelle werden keine Daten abgerufen. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung (Berichts-Generator)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
@@ -92,7 +92,7 @@ In diesem Abschnitt erstellen Sie einen Tabellenbericht, eine Datenquelle und ei
   
 10. Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** ( **!** ). Das Resultset zeigt 23 Datenzeilen mit den folgenden Spalten an: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase und LastPurchase.  
 
-    ![Berichts-Generator-Ausdruck-Tutorial-Abfrage-als-Text](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
+    ![Screenshot: Schritt „Abfrage entwerfen“ im Assistenten für neue Tabellen oder Matrizen](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
 11. Klicken Sie auf **Weiter**.  
   
@@ -113,13 +113,13 @@ In diesem Abschnitt erstellen Sie einen Tabellenbericht, eine Datenquelle und ei
   
     Sum wird nicht länger auf YTDPurchase angewendet.  
     
-    ![Berichts-Generator-Ausdruck-nicht-Sum](../reporting-services/media/report-builder-expression-not-sum.png)
+    ![Screenshot: Liste „Werte“, in der die Option „Summe“ zum Löschen ausgewählt ist](../reporting-services/media/report-builder-expression-not-sum.png)
   
 15. Klicken Sie auf **Weiter**.  
   
 16. Behalten Sie auf der Seite **Layout auswählen** alle Standardeinstellungen bei, und klicken Sie auf **Weiter**.  
 
-    ![Berichts-Generator-Ausdruck-Tutorial-Layout-auswählen](../reporting-services/media/report-builder-expression-tutorial-choose-layout.png)
+    ![Screenshot: Schritt „Layout auswählen“ im Assistenten für neue Tabellen und Matrizen](../reporting-services/media/report-builder-expression-tutorial-choose-layout.png)
   
 17. Klicken Sie auf **Fertig stellen**.  
   
@@ -141,34 +141,34 @@ In diesem Abschnitt erstellen Sie einen Tabellenbericht, eine Datenquelle und ei
   
 2.  Klicken Sie mit der rechten Maustaste auf **DataSet1** und anschließend auf **Dataseteigenschaften**.  
 
-    ![Berichts-Generator-Ausdruck-Tutorial-Dataset-umbenennen](../reporting-services/media/report-builder-expression-tutorial-rename-dataset.png)
+    ![Screenshot: Zugreifen auf die Dataseteigenschaften im Berichts-Generator](../reporting-services/media/report-builder-expression-tutorial-rename-dataset.png)
   
 3.  Geben Sie im Feld **Name** Folgendes ein: **Ausdrücke**  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="3-display-first-initial-and-last-name"></a><a name="Concatenate"></a>3. Anzeigen des Anfangsbuchstabens des Vornamens und des Nachnamens  
-In diesem Abschnitt verwenden Sie die **Left** -Funktion und den Operator zum **Verketten** (**&**) in einem Ausdruck, der zu einem Anfangsbuchstaben des Vornamens und dem Nachnamen ausgewertet wird. Sie können den Ausdruck Schritt für Schritt erstellen oder diesen Teil der Prozedur überspringen und den Ausdruck aus dem Tutorial in das Dialogfeld **Ausdruck** kopieren und einfügen.   
+In diesem Abschnitt verwenden Sie die **Left** -Funktion und den Operator zum **Verketten** ( **&** ) in einem Ausdruck, der zu einem Anfangsbuchstaben des Vornamens und dem Nachnamen ausgewertet wird. Sie können den Ausdruck Schritt für Schritt erstellen oder diesen Teil der Prozedur überspringen und den Ausdruck aus dem Tutorial in das Dialogfeld **Ausdruck** kopieren und einfügen.   
   
-1.  Klicken Sie mit der rechten Maustaste auf die Spalte **StateProvince** , zeigen Sie auf **Spalte einfügen**und klicken Sie auf **Links**.  
+1.  Klicken Sie mit der rechten Maustaste auf die Spalte **StateProvince** , zeigen Sie auf **Spalte einfügen** und klicken Sie auf **Links**.  
   
     Links von der Spalte **StateProvince** wird eine neue Spalte hinzugefügt. 
     
-    ![Berichts-Generator-Ausdruck-Tutorial-Spalte-einfügen](../reporting-services/media/report-builder-expression-tutorial-insert-column.png) 
+    ![Screenshot: Einfügen einer Spalte links in einem Bericht](../reporting-services/media/report-builder-expression-tutorial-insert-column.png) 
   
-2.  Klicken Sie auf den Titel der neuen Spalte, und geben Sie **Name**ein.  
+2.  Klicken Sie auf den Titel der neuen Spalte, und geben Sie **Name** ein.  
   
 3.  Klicken Sie mit der rechten Maustaste in die Datenzelle der Spalte **Name** und klicken Sie auf **Ausdruck**.  
 
-    ![Berichts-Generator-Ausdruck-Tutorial-Ausdruck-einfügen](../reporting-services/media/report-builder-expression-tutorial-insert-expression.png)
+    ![Screenshot: Einfügen eines Ausdrucks in einen Bericht](../reporting-services/media/report-builder-expression-tutorial-insert-expression.png)
   
-4.  Erweitern Sie im Dialogfeld **Ausdruck** die Option **Allgemeine Funktionen**und klicken Sie anschließend auf **Text**.  
+4.  Erweitern Sie im Dialogfeld **Ausdruck** die Option **Allgemeine Funktionen** und klicken Sie anschließend auf **Text**.  
   
 5.  Doppelklicken Sie in der Liste **Element** auf **Left**.  
   
     Die Funktion **Left** wird dem Ausdruck hinzugefügt.  
     
-    ![Berichts-Generator-Ausdruck-Tutorial-left-Funktion](../reporting-services/media/report-builder-expression-tutorial-left-function.png)
+    ![Screenshot: Hinzufügen einer Left-Funktion zu einem Ausdruck](../reporting-services/media/report-builder-expression-tutorial-left-function.png)
   
 6.  Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)** .  
   
@@ -186,7 +186,7 @@ In diesem Abschnitt verwenden Sie die **Left** -Funktion und den Operator zum **
   
     Der vollständige Ausdruck lautet wie folgt: `=Left(Fields!FirstName.Value, 1) &". "& Fields!LastName.Value`.  
     
-    ![Berichts-Generator-Ausdruck-Tutorial-vollständiger-Namensausdruck](../reporting-services/media/report-builder-expression-tutorial-complete-name-expression.png)
+    ![Screenshot: Hinzufügen eines LastName-Werts zu einem Ausdruck](../reporting-services/media/report-builder-expression-tutorial-complete-name-expression.png)
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -199,19 +199,19 @@ In diesem Abschnitt formatieren Sie die Spalte **Last Purchase** , die Datumsang
   
 1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zurückzukehren.  
   
-2.  Klicken Sie auf die Datenzelle in der Spalte **Letzter Kauf**, und klicken Sie auf der Registerkarte **Stamm** im Abschnitt **Zahl** auf **Datum**.  
+2.  Klicken Sie auf die Datenzelle in der Spalte **Letzter Kauf** , und klicken Sie auf der Registerkarte **Stamm** im Abschnitt **Zahl** auf **Datum**.  
 
-    ![Berichts-Generator-Ausdruck-Tutorial-Datumsformat](../reporting-services/media/report-builder-expression-tutorial-date-format.png)
+    ![Screenshot: Festlegen der Spalte „Last Purchase“ auf „Datum“](../reporting-services/media/report-builder-expression-tutorial-date-format.png)
   
-3.  Klicken Sie im Abschnitt **Zahl** auf den Pfeil neben **Platzhalterformate** , und wählen Sie **Beispielwerte**aus. 
+3.  Klicken Sie im Abschnitt **Zahl** auf den Pfeil neben **Platzhalterformate** , und wählen Sie **Beispielwerte** aus. 
 
-    ![Berichts-Generator-Ausdruck-Tutorial-Beispielwerte](../reporting-services/media/report-builder-expression-tutorial-sample-values.png)
+    ![Screenshot: Option „Beispielwerte“ im Berichts-Generator](../reporting-services/media/report-builder-expression-tutorial-sample-values.png)
 
     Jetzt sehen Sie ein Beispiel für die Formatierung, die Sie ausgewählt haben. 
   
 ### <a name="to-format-the-currency-column"></a>So formatieren Sie die Währungsspalte
 
-- Wählen Sie die Datenzelle in der Spalte **YTDPurchase** aus, und wählen Sie im Abschnitt **Zahl** **Währungssymbol**aus.
+- Wählen Sie die Datenzelle in der Spalte **YTDPurchase** aus, und wählen Sie im Abschnitt **Zahl** **Währungssymbol** aus.
  
 ### <a name="to-format-the-column-headers"></a>So formatieren Sie die Spaltenheader
 
@@ -219,13 +219,13 @@ In diesem Abschnitt formatieren Sie die Spalte **Last Purchase** , die Datumsang
 
 2. Klicken Sie auf der Registerkarte **Stamm** im Abschnitt **Absatz** auf **Links**. 
 
-    ![Berichts-Generator-Ausdruck-Tutorial-Header-formatieren](../reporting-services/media/report-builder-expression-tutorial-format-headings.png)
+    ![Screenshot: Formatieren von Überschriften im Berichts-Generator](../reporting-services/media/report-builder-expression-tutorial-format-headings.png)
 
 3. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen. 
 
 So sieht der vorläufige Bericht mit den formatierten Datumsangaben und Spaltenheadern sowie der formatierten Währung aus.
 
-![Berichts-Generator-Ausdruck-Tutorial-Vorschau-formatiert](../reporting-services/media/report-builder-expression-tutorial-preview-formatted.png)
+![Screenshot: Vorschau des formatierten Berichts](../reporting-services/media/report-builder-expression-tutorial-preview-formatted.png)
 
   
 ## <a name="4-use-color-to-display-gender"></a><a name="Gender"></a>4. Verwenden von Farben für die Differenzierung nach Geschlechtern  
@@ -236,11 +236,11 @@ Um bei der Erstellung eines gebänderten Berichts die Farbe beizubehalten, die S
  
 ### <a name="to-add-an-mf-column"></a>So fügen die Spalte „M/W“ hinzu  
   
-1.  Klicken Sie mit der rechten Maustaste auf die Spalte **Name** , zeigen Sie auf **Spalte einfügen**und klicken Sie anschließend auf **Links**.  
+1.  Klicken Sie mit der rechten Maustaste auf die Spalte **Name** , zeigen Sie auf **Spalte einfügen** und klicken Sie anschließend auf **Links**.  
   
     Links von der Spalte **Name** wird eine neue Spalte hinzugefügt.  
   
-2.  Klicken Sie auf den Titel der neuen Spalte, und geben Sie **M/W**(männlich/weiblich) ein.  
+2.  Klicken Sie auf den Titel der neuen Spalte, und geben Sie **M/W** (männlich/weiblich) ein.  
   
 ### <a name="to-add-a-rectangle"></a>So fügen Sie ein Rechteck hinzu  
   
@@ -248,11 +248,11 @@ Um bei der Erstellung eines gebänderten Berichts die Farbe beizubehalten, die S
   
      Der Zelle wird ein Rechteck hinzugefügt.  
      
-     ![Berichts-Generator-Ausdruck-Tutorial-Rechteck-einfügen](../reporting-services/media/report-builder-expression-tutorial-insert-rectangle.png)
+     ![Screenshot: Einfügen eines Rechtecks](../reporting-services/media/report-builder-expression-tutorial-insert-rectangle.png)
   
 2. Ziehen Sie den Spaltenunterteiler zwischen die Spalten **M/W** und **Name** , um die **M/W** -Spalte schmaler zu gestalten.
 
-    ![Berichts-Generator-Ausdruck-Tutorial-Spalte-verengen](../reporting-services/media/report-builder-expression-tutorial-narrow-column.png)
+    ![Screenshot: Verschmälern einer Spalte](../reporting-services/media/report-builder-expression-tutorial-narrow-column.png)
   
 ### <a name="to-use-color-to-show-gender"></a>So verwenden Sie Farben für die Anzeige des Geschlechts  
   
@@ -270,9 +270,9 @@ Um bei der Erstellung eines gebänderten Berichts die Farbe beizubehalten, die S
   
 7.  Geben Sie **="Male",** (einschließlich des Kommas) ein.
 
-8. Klicken Sie in der Liste **Kategorie** auf **Konstanten**, und klicken Sie im Feld **Werte** auf **Kornblumenblau**.
+8. Klicken Sie in der Liste **Kategorie** auf **Konstanten** , und klicken Sie im Feld **Werte** auf **Kornblumenblau**.
 
-    ![Berichts-Generator-Ausdruck-Tutorial-Farbausdruck-Kornblumenblau](../reporting-services/media/report-builder-expression-tutorial-color-expression-cornflower-blue.png)
+    ![Screenshot: Verwenden einer Farbe zur Darstellung eines Geschlechts](../reporting-services/media/report-builder-expression-tutorial-color-expression-cornflower-blue.png)
 
 9. Geben Sie nach dem Ausdruck ein Komma ein. 
   
@@ -280,19 +280,19 @@ Um bei der Erstellung eines gebänderten Berichts die Farbe beizubehalten, die S
   
 7.  Geben Sie **="Female",** (einschließlich des Kommas) ein. 
 
-8. Klicken Sie in der Liste **Kategorie** auf **Konstanten**, und klicken Sie im Feld **Werte** auf **Tomatenrot**.
+8. Klicken Sie in der Liste **Kategorie** auf **Konstanten** , und klicken Sie im Feld **Werte** auf **Tomatenrot**.
 
 13. Geben Sie dahinter eine schließende Klammer **)** ein. 
   
     Der vollständige Ausdruck lautet wie folgt: `=Switch(Fields!Gender.Value ="Male", "CornflowerBlue",Fields!Gender.Value ="Female","Tomato")`.  
     
-    ![Berichts-Generator-Ausdruck-Tutorial-Farbausdruck-vollständig](../reporting-services/media/report-builder-expression-tutorial-color-expression-complete.png)
+    ![Screenshot: vollständiger Ausdruck im Dialogfeld „Ausdruck“](../reporting-services/media/report-builder-expression-tutorial-color-expression-complete.png)
   
-12. Klicken Sie auf **OK**und dann noch einmal auf **OK** , um das Dialogfeld **Rechteckeigenschaften** zu schließen.  
+12. Klicken Sie auf **OK** und dann noch einmal auf **OK** , um das Dialogfeld **Rechteckeigenschaften** zu schließen.  
   
 14. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
 
-    ![Berichts-Generator-Ausdruck-Tutorial-Vorschau-M-W-Spalte](../reporting-services/media/report-builder-expression-tutorial-preview-m-f-column.png)
+    ![Screenshot: Vorschau der Spalte „M/F“](../reporting-services/media/report-builder-expression-tutorial-preview-m-f-column.png)
 
 ### <a name="to-format-the-color-rectangles"></a>So formatieren Sie die Farbrechtecke
 
@@ -304,11 +304,11 @@ Um bei der Erstellung eines gebänderten Berichts die Farbe beizubehalten, die S
     - BorderStyle = Solid
     - BorderWidth = 5pt
     
-    ![Berichts-Generator-Ausdruck-Tutorial-M-W-Spalte-formatieren](../reporting-services/media/report-builder-expression-tutorial-format-m-f-column.png)
+    ![Screenshot: Formatieren der Farbrechtecke in der Spalte „M/F“](../reporting-services/media/report-builder-expression-tutorial-format-m-f-column.png)
 
 18. Klicken Sie auf **Ausführen** , um erneut eine Vorschau des Berichts anzuzeigen. Jetzt sind die Farbblöcke weiß eingerahmt.
 
-    ![Berichts-Generator-Ausdruck-Tutorial-Vorschau-formatierte-M-W-Spalte](../reporting-services/media/report-builder-expression-tutorial-preview-formatted-m-f-column.png)  
+    ![Screenshot: Vorschau, bei der die Rechtecke in der Spalte „M/F“ formatiert sind](../reporting-services/media/report-builder-expression-tutorial-preview-formatted-m-f-column.png)  
   
 ## <a name="5-look-up-the-countryregion-name"></a><a name="Lookup"></a>5. Suchen des CountryRegion-Namens  
 In diesem Abschnitt erstellen Sie das CountryRegion-Dataset und verwenden die **Lookup** -Funktion, um den Namen des Lands/der Region anstelle des Bezeichners des Lands/der Region anzuzeigen.  
@@ -358,7 +358,7 @@ In diesem Abschnitt erstellen Sie das CountryRegion-Dataset und verwenden die **
   
 ### <a name="to-look-up-values-in-the-countryregion-dataset"></a>So schlagen Sie Werte im CountryRegion-Dataset nach  
   
-1.  Klicken Sie auf den Spaltenheader **Country Region ID** und löschen Sie den Text **ID**, sodass nur noch **Country Region** angezeigt wird.  
+1.  Klicken Sie auf den Spaltenheader **Country Region ID** und löschen Sie den Text **ID** , sodass nur noch **Country Region** angezeigt wird.  
   
 2.  Klicken Sie mit der rechten Maustaste in die Datenzelle der Spalte **Country Region** und klicken Sie auf **Ausdruck**.  
   
@@ -366,7 +366,7 @@ In diesem Abschnitt erstellen Sie das CountryRegion-Dataset und verwenden die **
   
     Der verbleibende Ausdruck lautet: `=`  
   
-4.  Erweitern Sie im Dialogfeld **Ausdruck** die Option **Allgemeine Funktionen** , klicken Sie anschließend auf **Sonstiges**, und doppelklicken Sie in der Liste **Elemente** auf **Suchen**.  
+4.  Erweitern Sie im Dialogfeld **Ausdruck** die Option **Allgemeine Funktionen** , klicken Sie anschließend auf **Sonstiges** , und doppelklicken Sie in der Liste **Elemente** auf **Suchen**.  
   
 6.  Klicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)** , und doppelklicken Sie in der Liste **Werte** auf **CountryRegionID**.  
   
@@ -387,15 +387,15 @@ In diesem Abschnitt fügen Sie eine Spalte hinzu und verwenden anschließend die
   
 1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zurückzukehren.  
   
-2.  Klicken Sie mit der rechten Maustaste auf **Last Purchase** , zeigen Sie auf **Spalte einfügen**und klicken Sie auf **Rechts**.  
+2.  Klicken Sie mit der rechten Maustaste auf **Last Purchase** , zeigen Sie auf **Spalte einfügen** und klicken Sie auf **Rechts**.  
   
     Rechts von der Spalte **Letzter Kauf** wird eine neue Spalte hinzugefügt.  
   
-3.  Geben Sie in der Spaltenüberschrift **Vor (n) Tagen**ein  
+3.  Geben Sie in der Spaltenüberschrift **Vor (n) Tagen** ein  
   
 4.  Klicken Sie mit der rechten Maustaste in die Datenzelle der Spalte **Vor (n) Tagen** und klicken Sie auf **Ausdruck**.  
   
-5.  Erweitern Sie im Dialogfeld **Ausdruck** die Option **Allgemeine Funktionen**, und klicken Sie anschließend auf **Datum & Uhrzeit**.  
+5.  Erweitern Sie im Dialogfeld **Ausdruck** die Option **Allgemeine Funktionen** , und klicken Sie anschließend auf **Datum & Uhrzeit**.  
   
 6.  Doppelklicken Sie in der Liste **Elemente** auf **DateDiff**.  
   
@@ -405,7 +405,7 @@ In diesem Abschnitt fügen Sie eine Spalte hinzu und verwenden anschließend die
   
 11. Geben Sie unmittelbar hinter `Fields!LastPurchase.Value`ein Komma **,** ein. 
   
-13. Klicken Sie in der Liste **Kategorie** erneut auf **Datum/Uhrzeit**, und doppelklicken Sie in der Liste **Elemente** auf **Jetzt**.  
+13. Klicken Sie in der Liste **Kategorie** erneut auf **Datum/Uhrzeit** , und doppelklicken Sie in der Liste **Elemente** auf **Jetzt**.  
   
     > [!WARNING]  
     > In Produktionsberichten dürfen Sie nicht die **Now** -Funktion in Ausdrücken verwenden, die beim Rendern des Berichts mehrmals ausgewertet werden (z.B. in den Detailzeilen eines Berichts). Der Wert von **Now** ändert sich von Zeile zu Zeile, und die verschiedenen Werte wirken sich auf die Auswertungsergebnisse der Ausdrücke aus, was zu inkonsistenten Resultaten führt. Verwenden Sie stattdessen die globale Variable `ExecutionTime` , die von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] bereitgestellt wird.  
@@ -414,7 +414,7 @@ In diesem Abschnitt fügen Sie eine Spalte hinzu und verwenden anschließend die
   
     Der vollständige Ausdruck lautet wie folgt: `=DateDiff("d", Fields!LastPurchase.Value, Now)`.  
     
-    ![Berichts-Generator-Ausdruck-Tutorial-Datum-letzter-Einkauf](../reporting-services/media/report-builder-expression-tutorial-date-since-last-purchase.png)
+    ![Screenshot: vollständiger Ausdruck für das Datum seit dem letzten Kauf](../reporting-services/media/report-builder-expression-tutorial-date-since-last-purchase.png)
   
 17. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
 
@@ -427,31 +427,31 @@ Das Konfigurieren des Indikators und seiner Zustände erfordert viele Schritte. 
   
 ### <a name="to-add-the--or---avg-sales-column"></a>So fügen Sie die Spalte "+/- durchschnittl. Käufe" hinzu  
   
-1.  Klicken Sie mit der rechten Maustaste auf **YTD Purchase** , zeigen Sie auf **Spalte einfügen**und klicken Sie auf **Rechts**.  
+1.  Klicken Sie mit der rechten Maustaste auf **YTD Purchase** , zeigen Sie auf **Spalte einfügen** und klicken Sie auf **Rechts**.  
   
     Rechts von der Spalte **YTD Purchase** wird eine neue Spalte hinzugefügt.  
   
-2.  Klicken Sie auf den Spaltenheader, und geben Sie **+/- durchschnittl. Umsatz**ein.  
+2.  Klicken Sie auf den Spaltenheader, und geben Sie **+/- durchschnittl. Umsatz** ein.  
   
 ### <a name="to-add-an-indicator"></a>So fügen Sie einen Indikator hinzu  
   
-1.  Klicken Sie auf der Registerkarte **Einfügen** auf **Indikator**und anschließend in die Datenzelle der Spalte **+/- durchschnittl. Umsatz** .  
+1.  Klicken Sie auf der Registerkarte **Einfügen** auf **Indikator** und anschließend in die Datenzelle der Spalte **+/- durchschnittl. Umsatz** .  
   
     Das Dialogfeld **Indikatortyp auswählen** wird geöffnet.  
   
 2.  Klicken Sie in der Gruppe **Direktional** der Symbolsätze auf den Satz mit den drei grauen Pfeilen.  
 
-    ![Berichts-Generator-Ausdruck-Tutorial-Indikator-auswählen](../reporting-services/media/report-builder-expression-tutorial-select-indicator.png)
+    ![Screenshot: Hinzufügen eines Indikators](../reporting-services/media/report-builder-expression-tutorial-select-indicator.png)
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### <a name="to-configure-the-indicator"></a>So konfigurieren Sie den Indikator  
   
-1.  Klicken Sie mit der rechten Maustaste auf den Indikator, anschließend auf **Indikatoreigenschaften**und schließlich auf **Wert und Status**.  
+1.  Klicken Sie mit der rechten Maustaste auf den Indikator, anschließend auf **Indikatoreigenschaften** und schließlich auf **Wert und Status**.  
   
 2.  Klicken Sie auf die Ausdrucksschaltfläche **fx** neben dem Textfeld **Wert** .  
   
-3.  Erweitern Sie im Dialogfeld **Ausdruck** die Option **Allgemeine Funktionen**, und klicken Sie anschließend auf **Mathematisch**.  
+3.  Erweitern Sie im Dialogfeld **Ausdruck** die Option **Allgemeine Funktionen** , und klicken Sie anschließend auf **Mathematisch**.  
   
 4.  Doppelklicken Sie in der Liste **Element** auf **Round**.  
   
@@ -459,7 +459,7 @@ Das Konfigurieren des Indikators und seiner Zustände erfordert viele Schritte. 
   
 7.  Geben Sie unmittelbar hinter `Fields!YTDPurchase.Value`ein Minuszeichen  **-** ein. 
   
-9. Erweitern Sie erneut die **Allgemeinen Funktionen** , klicken Sie auf **Aggregat**, und doppelklicken Sie in der Liste **Element** auf **Avg**.  
+9. Erweitern Sie erneut die **Allgemeinen Funktionen** , klicken Sie auf **Aggregat** , und doppelklicken Sie in der Liste **Element** auf **Avg**.  
   
 11. Klicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)** , und doppelklicken Sie in der Liste **Werte** auf **YTDPurchase**.  
   
@@ -469,13 +469,13 @@ Das Konfigurieren des Indikators und seiner Zustände erfordert viele Schritte. 
   
 15. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-16. Wählen Sie als **Maßeinheit für Status** **Numerisch**aus.  
+16. Wählen Sie als **Maßeinheit für Status** **Numerisch** aus.  
   
 17. Klicken Sie in der Reihe mit dem Pfeil nach unten auf die Schaltfläche **fx** rechts neben dem Textfeld für den **Start** -Wert.  
 
-    ![Berichts-Generator-Ausdruck-Tutorial-Indikator-starten](../reporting-services/media/report-builder-expression-tutorial-indicator-start.png)
+    ![Screenshot: Auswählen der Schaltfläche „fx“ neben dem Textfeld „Start“](../reporting-services/media/report-builder-expression-tutorial-indicator-start.png)
   
-18. Erweitern Sie im Dialogfeld **Ausdruck** die Option **Allgemeine Funktionen**, und klicken Sie anschließend auf **Mathematisch**.  
+18. Erweitern Sie im Dialogfeld **Ausdruck** die Option **Allgemeine Funktionen** , und klicken Sie anschließend auf **Mathematisch**.  
   
 19. Doppelklicken Sie in der Liste **Element** auf **Round**.  
   
@@ -483,7 +483,7 @@ Das Konfigurieren des Indikators und seiner Zustände erfordert viele Schritte. 
   
 22. Geben Sie unmittelbar hinter `Fields!YTDPurchase.Value`ein Minuszeichen  **-** ein. 
   
-24. Erweitern Sie erneut die **Allgemeinen Funktionen** , klicken Sie auf **Aggregat**, und doppelklicken Sie in der Liste **Element** auf **Avg**.  
+24. Erweitern Sie erneut die **Allgemeinen Funktionen** , klicken Sie auf **Aggregat** , und doppelklicken Sie in der Liste **Element** auf **Avg**.  
   
 26. Klicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)** , und doppelklicken Sie in der Liste **Werte** auf **YTDPurchase**.  
   
@@ -493,15 +493,15 @@ Das Konfigurieren des Indikators und seiner Zustände erfordert viele Schritte. 
   
 30. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-31. Geben Sie im Textfeld **Ende** den Wert **0**ein  
+31. Geben Sie im Textfeld **Ende** den Wert **0** ein  
   
 32. Klicken Sie auf die Zeile mit dem horizontalen Pfeil, und klicken Sie auf **Löschen**.  
 
-    ![Berichts-Generator-Ausdruck-Tutorial-Indikatorstatus-löschen](../reporting-services/media/report-builder-expression-tutorial-delete-indicator-state.png)
+    ![Screenshot: Löschen eines Indikators](../reporting-services/media/report-builder-expression-tutorial-delete-indicator-state.png)
     
     Nun gibt es nur noch zwei Pfeile, die nach oben und nach unten zeigen.
   
-33. Geben Sie in der Zeile mit dem nach oben zeigenden Pfeil im Feld **Start** den Wert **0**ein  
+33. Geben Sie in der Zeile mit dem nach oben zeigenden Pfeil im Feld **Start** den Wert **0** ein  
   
 34. Klicken Sie auf die Schaltfläche **fx** rechts neben dem Textfeld für den **Ende** -Wert.  
   
@@ -513,7 +513,7 @@ Das Konfigurieren des Indikators und seiner Zustände erfordert viele Schritte. 
   
 38. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
 
-    ![Berichts-Generator-Ausdruck-Tutorial-Vorschauindikator](../reporting-services/media/report-builder-expression-tutorial-preview-indicator.png)
+    ![Screenshot: Vorschau mit der Spalte „+ or - AVG Sales“, einschließlich aller neuen Indikatoren](../reporting-services/media/report-builder-expression-tutorial-preview-indicator.png)
   
 ## <a name="8-make-a-banded-report"></a><a name="GreenBar"></a>8. Erstellen eines gebänderten Berichts  
 Erstellen Sie einen Parameter, damit die Leser des Berichts die Farbe bestimmen können, die abwechselnd auf die Zeilen im Bericht angewendet wird und diesen zu eine gebänderten Bericht machen.  
@@ -524,19 +524,19 @@ Erstellen Sie einen Parameter, damit die Leser des Berichts die Farbe bestimmen 
   
 2.  Klicken Sie im Bereich **Berichtsdaten** mit der rechten Maustaste auf **Parameter** und anschließend auf **Parameter hinzufügen**.  
 
-    ![Berichts-Generator-Ausdruck-Tutorial-Parameter-hinzufügen](../reporting-services/media/report-builder-expression-tutorial-add-parameter.png)
+    ![Screenshot: Hinzufügen eines Parameters](../reporting-services/media/report-builder-expression-tutorial-add-parameter.png)
   
     Das Dialogfeld **Berichtsparametereigenschaften** wird geöffnet.  
   
-3.  Geben Sie in die **Eingabeaufforderung** **Farbe auswählen**ein  
+3.  Geben Sie in die **Eingabeaufforderung** **Farbe auswählen** ein  
   
-4.  Geben Sie in **Name** **Spaltenfarbe**ein  
+4.  Geben Sie in **Name** **Spaltenfarbe** ein  
   
 5.  Klicken Sie auf der Registerkarte **Verfügbare Werte** auf die Option **Werte angeben**.  
   
 7.  Klicken Sie auf **Hinzufügen**.  
   
-8.  Geben Sie im Feld **Bezeichnung** **Gelb**ein.  
+8.  Geben Sie im Feld **Bezeichnung** **Gelb** ein.  
   
 9. Geben Sie im Feld **Wert** Folgendes ein: **Gelb**  
   
@@ -558,7 +558,7 @@ Erstellen Sie einen Parameter, damit die Leser des Berichts die Farbe bestimmen 
   
 18. Geben Sie im Feld **Wert** Folgendes ein: **Rosa**  
 
-    ![Berichts-Generator-Ausdruck-Tutorial-verfügbare-Parameter](../reporting-services/media/report-builder-expression-tutorial-parameter-available.png)
+    ![Screenshot: Dialogfeld „Berichtsparametereigenschaften“, auf dem der Schritt „Choose the available values for this parameter“ (Wählen Sie die verfügbaren Werte für diesen Parameter aus) anzeigt wird](../reporting-services/media/report-builder-expression-tutorial-parameter-available.png)
   
 19. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -566,7 +566,7 @@ Erstellen Sie einen Parameter, damit die Leser des Berichts die Farbe bestimmen 
   
 1.   Wählen Sie die gesamte Zelle in der Datenzeile mit Ausnahme der Zelle in der **M/W** -Spalte aus, die eine eigene Hintergrundfarbe aufweist.  
 
-     ![Berichts-Generator-Ausdruck-Tutorial-gebändert-auswählen](../reporting-services/media/report-builder-expression-tutorial-select-banded.png)
+     ![Screenshot: in einer Datenzeile ausgewählte Zellen](../reporting-services/media/report-builder-expression-tutorial-select-banded.png)
   
 4.  Klicken Sie im Bereich „Eigenschaften“ auf **BackgroundColor**. 
 
@@ -576,13 +576,13 @@ Erstellen Sie einen Parameter, damit die Leser des Berichts die Farbe bestimmen 
   
 5.  Klicken Sie auf den Pfeil nach unten und anschließend auf **Ausdruck**.  
 
-    ![Berichts-Generator-Ausdruck-Tutorial-Eigenschaft-gebänderte-Farben](../reporting-services/media/report-builder-expression-tutorial-banded-color-property.png)
+    ![Screenshot: Zuweisen einer BackgroundColor-Eigenschaft zu einem Ausdruck im Feld „Eigenschaften“](../reporting-services/media/report-builder-expression-tutorial-banded-color-property.png)
   
-6.  Erweitern Sie im Dialogfeld **Ausdruck** die Option **Allgemeine Funktionen**, und klicken Sie anschließend auf **Programmfluss**.  
+6.  Erweitern Sie im Dialogfeld **Ausdruck** die Option **Allgemeine Funktionen** , und klicken Sie anschließend auf **Programmfluss**.  
   
 7.  Doppelklicken Sie in der Liste **Element** auf **IIf**.  
   
-8.  Klicken Sie unter **Allgemeine Funktionen**auf **Verschiedenes**, und doppelklicken Sie in der Liste **Element** auf **RowNumber**.  
+8.  Klicken Sie unter **Allgemeine Funktionen** auf **Verschiedenes** , und doppelklicken Sie in der Liste **Element** auf **RowNumber**.  
 
 9. Geben Sie unmittelbar hinter **RowNumber(** **Nothing) MOD 2,** ein.
   
@@ -592,7 +592,7 @@ Erstellen Sie einen Parameter, damit die Leser des Berichts die Farbe bestimmen 
   
     Der vollständige Ausdruck lautet wie folgt: `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, "White")`.  
     
-    ![Berichts-Generator-Ausdruck-Tutorial-Ausdruck-gebänderte-Farben](../reporting-services/media/report-builder-expression-tutorial-banded-color-expressn.png)
+    ![Screenshot: vollständiger gebänderter Farbausdruck](../reporting-services/media/report-builder-expression-tutorial-banded-color-expressn.png)
   
 24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -604,13 +604,13 @@ Erstellen Sie einen Parameter, damit die Leser des Berichts die Farbe bestimmen 
   
 3.  Wählen Sie in der Liste **Farbe** eine Farbe für die nicht weißen Bänder im Bericht aus.  
     
-    ![Berichts-Generator-Ausdruck-Tutorial-Farbe-auswählen](../reporting-services/media/report-builder-expression-tutorial-select-color.png)
+    ![Screenshot: Auswählen einer Farbe für Bänder, die nicht weiß sind](../reporting-services/media/report-builder-expression-tutorial-select-color.png)
   
 4.  Klicken Sie auf **Bericht anzeigen**.  
   
     Der Bericht wird gerendert und die abwechselnden Zeilen weisen den gewünschten Hintergrund auf. 
     
-    ![Berichts-Generator-Ausdruck-Tutorial-Vorschau-gebändert](../reporting-services/media/report-builder-expression-tutorial-preview-banded.png) 
+    ![Screenshot: Vorschau mit Zeilen in alternativen Farben](../reporting-services/media/report-builder-expression-tutorial-preview-banded.png) 
   
 ## <a name="optional-add-a-report-title"></a><a name="Title"></a>Hinzufügen eines Berichtstitels (optional)  
 Hinzufügen eines Titels zu einem Bericht  
@@ -619,7 +619,7 @@ Hinzufügen eines Titels zu einem Bericht
   
 1.  Klicken Sie auf der Entwurfsoberfläche auf **Zum Hinzufügen eines Titels klicken**.  
   
-2.  Geben Sie **Sales Comparison Summary**(Übersicht über den Umsatzvergleich) ein, und wählen Sie dann den Text aus.  
+2.  Geben Sie **Sales Comparison Summary** (Übersicht über den Umsatzvergleich) ein, und wählen Sie dann den Text aus.  
   
 3.  Legen Sie auf der Registerkarte **Stamm** im Feld **Schriftart** Folgendes fest:
 
@@ -652,7 +652,7 @@ Der Bericht wird auf dem Berichtsserver gespeichert. Der Name des Berichtsserver
 
 Die Leser Ihres Berichts können den Bericht nun im [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Webportal anzeigen.
 
-![Berichts-Generator-Ausdruck-Tutorial-endgültige-Version-im-Browser](../reporting-services/media/report-builder-expression-tutorial-final-in-browser.png)
+![Screenshot: neuer vollständiger Bericht, in dem alle Ausdrücke sichtbar sind](../reporting-services/media/report-builder-expression-tutorial-final-in-browser.png)
 
    
 ## <a name="see-also"></a>Weitere Informationen  

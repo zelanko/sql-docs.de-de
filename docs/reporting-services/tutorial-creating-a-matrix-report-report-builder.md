@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4891a25815d1efb14f230cbab9bcaaa75cad0a16
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a0b49b2cf9ac1e131e74ba39c1430492823e39e5
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247449"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043792"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: Erstellen eines Matrixberichts (Berichts-Generator)
 Dieses Tutorial zeigt Ihnen die Erstellung eines [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginierten Berichts mit einer Matrix von Beispielumsatzdaten in geschachtelten Zeilen- und Spaltengruppen. 
 
 Sie erstellen außerdem eine angrenzende Spaltengruppe, formatieren Spalten und drehen Text. Die folgende Abbildung zeigt einen Bericht, der mit dem Bericht vergleichbar ist, den Sie erstellen werden.  
   
-![Berichts-Generator-Matrix-Tutorial](../reporting-services/media/report-builder-matrix-tutorial.png)
+![Screenshot: Matrixbericht im Berichts-Generator](../reporting-services/media/report-builder-matrix-tutorial.png)
    
 Geschätzte Zeit zum Bearbeiten dieses Tutorials: 20 Minuten  
   
@@ -120,11 +120,11 @@ Stellen Sie mithilfe des Assistenten einen Startentwurf für die Anzeige von Dat
   
     In Schritt 5 und 6 werden die Daten angegeben, die in den Matrixdatenzellen angezeigt werden sollen.
     
-    ![Berichts-Generator-Anordnen von Feldern-Berichts-Assistent](../reporting-services/media/report-builder-arrange-fields-report-wizard.png)  
+    ![Screenshot: Berichts-Assistent „Felder anordnen“ im Berichts-Generator](../reporting-services/media/report-builder-arrange-fields-report-wizard.png)  
   
 7.  Klicken Sie auf **Weiter**.  
   
-8.  Vergewissern Sie sich auf der Seite „Layout auswählen“, dass unter **Optionen**die Option **Teil- und Gesamtergebnisse anzeigen** ausgewählt ist.  
+8.  Vergewissern Sie sich auf der Seite „Layout auswählen“, dass unter **Optionen** die Option **Teil- und Gesamtergebnisse anzeigen** ausgewählt ist.  
   
 9. Überprüfen Sie, ob **Als Block, Teilergebnis unterhalb** ausgewählt ist.  
   
@@ -136,7 +136,7 @@ Stellen Sie mithilfe des Assistenten einen Startentwurf für die Anzeige von Dat
   
     Die Matrix wird der Entwurfsoberfläche hinzugefügt. Im Zeilengruppenbereich werden zwei Zeilengruppen angezeigt: Territory und SalesDate. Im Bereich Spaltengruppen werden zwei Spaltengruppen angezeigt: SubCategory und Product. Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden.  
     
-    ![Berichts-Generator-Zeilengruppen-und-Spaltengruppen](../reporting-services/media/report-builder-row-and-column-groups.png)
+    ![Screenshot: „Zeilengruppen“ und „Spaltengruppen“ im Berichts-Generator](../reporting-services/media/report-builder-row-and-column-groups.png)
   
 14. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
@@ -144,7 +144,7 @@ Stellen Sie mithilfe des Assistenten einen Startentwurf für die Anzeige von Dat
 
 14. Erweitern Sie eine Unterkategorie. Sie können sehen, dass der Bericht schnell sehr breit wird.
 
-![Berichts-Generator-Matrix-erweitern](../reporting-services/media/report-builder-expand-matrix.png)
+![Screenshot: erweiterter Matrixbericht im Berichts-Generator](../reporting-services/media/report-builder-expand-matrix.png)
   
 ## <a name="3-format-data"></a><a name="FormatData"></a>3. Formatieren von Daten  
 Standardmäßig wird in den Zusammenfassungsdaten für das Feld Sales eine allgemeine Zahl angezeigt, wohingegen im Feld SalesDate sowohl Datums- als auch Uhrzeitangaben angezeigt werden. In diesem Abschnitt formatieren Sie das Feld „Sales“, um die Zahl als Währung anzuzeigen und das Feld „SalesDate“, um nur das Datum anzuzeigen. Ändern Sie die Einstellung der Option **Platzhalterformate** , um formatierte Textfelder und Platzhaltertext als Beispielwerte anzuzeigen.  
@@ -157,9 +157,9 @@ Standardmäßig wird in den Zusammenfassungsdaten für das Feld Sales eine allge
   
 3.  Klicken Sie auf der Registerkarte **Start** unter **Number** (Zahl) auf  > **Currency** (Währung). Die Zellen ändern sich, um die formatierte Währung anzuzeigen.  
   
-    Wenn Sie das Gebietsschema „Deutsch (Deutschland)“ verwenden, lautet der Standardbeispieltext [**12,345.00€**]. Falls kein Beispielwährungswert angezeigt wird, klicken Sie in der Gruppe **Zahlen** auf **Platzhalterformate** > **Beispielwerte**.  
+    Wenn Sie das Gebietsschema „Deutsch (Deutschland)“ verwenden, lautet der Standardbeispieltext [ **12,345.00€** ]. Falls kein Beispielwährungswert angezeigt wird, klicken Sie in der Gruppe **Zahlen** auf **Platzhalterformate** > **Beispielwerte**.  
     
-    ![Berichts-Generator-Platzhalter-Werte](../reporting-services/media/report-builder-placeholder-value.png)
+    ![Screenshot: Option „Beispielwerte“ im Berichts-Generator](../reporting-services/media/report-builder-placeholder-value.png)
   
 4.  Klicken Sie auf die Zelle, die `[SalesDate]`enthält.  
   
@@ -180,7 +180,7 @@ In diesem Abschnitt fügen Sie eine Spaltengruppe hinzu, die an die Spaltengrupp
   
 1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zurückzukehren.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Zelle, die `[Subcategory]`enthält, zeigen Sie auf **Gruppe hinzufügen**und klicken Sie anschließend auf **Angrenzend rechts**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Zelle, die `[Subcategory]`enthält, zeigen Sie auf **Gruppe hinzufügen** und klicken Sie anschließend auf **Angrenzend rechts**.  
   
     Das Dialogfeld **Tablix-Gruppe** wird geöffnet.  
   
@@ -212,10 +212,10 @@ In diesem Abschnitt fügen Sie eine Spaltengruppe hinzu, die an die Spaltengrupp
   
 Der Bericht enthält Spalten mit der Bezeichnung "Montag" und "Dienstag". Das Dataset enthält nur Daten für diese zwei Tage.  
 
-![Berichts-Generator-Matrix-Wochentage](../reporting-services/media/report-builder-matrix-weekdays.png)
+![Screenshot: Wochentage im Matrixbericht im Berichts-Generator](../reporting-services/media/report-builder-matrix-weekdays.png)
   
 > [!NOTE]  
-> Wenn die Daten andere Tage einschließen würden, würde der Bericht auch Spalten für diese Tage enthalten. Jede Spalte besitzt die Spaltenüberschrift **Sales**und den Gesamtumsatz nach Gebiet.  
+> Wenn die Daten andere Tage einschließen würden, würde der Bericht auch Spalten für diese Tage enthalten. Jede Spalte besitzt die Spaltenüberschrift **Sales** und den Gesamtumsatz nach Gebiet.  
   
 ## <a name="5-change-column-widths"></a><a name="Width"></a>5. Ändern der Spaltenbreite  
 Ein Bericht, der eine Matrix enthält, wird bei der Ausführung normalerweise horizontal und vertikal erweitert. Die Steuerung der horizontalen Erweiterung ist besonders wichtig, wenn Sie beabsichtigen, den Bericht in Formate wie z. B. Microsoft Word oder Adobe PDF zu exportieren, die für gedruckte Berichte verwendet werden. Wenn sich der Bericht horizontal über mehrere Seiten erstreckt, ist der gedruckte Bericht schwer verständlich. Um die horizontale Erweiterung zu minimieren, können Sie die Breite der Spalten so anpassen, dass die Daten darin ohne Zeilenumbruch angezeigt werden. Sie können auch Spalten umbenennen, damit ihre Titel der Breite entsprechen, die zum Anzeigen der Daten erforderlich ist.  
@@ -224,7 +224,7 @@ Ein Bericht, der eine Matrix enthält, wird bei der Ausführung normalerweise ho
   
 1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zurückzukehren.  
   
-2.  Wählen Sie den Text in der Spalte „Quantity“ ganz links aus, und geben Sie anschließend **QTY**ein.  
+2.  Wählen Sie den Text in der Spalte „Quantity“ ganz links aus, und geben Sie anschließend **QTY** ein.  
   
     Der Spaltentitel lautet nun QTY.  
   
@@ -234,7 +234,7 @@ Ein Bericht, der eine Matrix enthält, wird bei der Ausführung normalerweise ho
   
     Die grauen Balken oberhalb und neben der Tabelle stellen die Spalten- und Zeilenhandles dar.  
     
-    ![Berichts-Generator-Spaltenhandles](../reporting-services/media/report-builder-column-handles.png)
+    ![Screenshot: Spalten- und Zeilenhandles im Matrixbericht im Berichts-Generator](../reporting-services/media/report-builder-column-handles.png)
   
 5.  Wenn Sie die Größe der QTY-Spalte ganz links ändern möchten, zeigen Sie auf die Linien zwischen den Spaltenhandles, damit stammt dem Cursor ein Doppelpfeil angezeigt wird. Ziehen Sie die Spalte nach links bis zu einer Breite von ca. 1,3 cm.  
   
@@ -276,15 +276,15 @@ Ein Berichtstitel wird oben im Bericht angezeigt. Sie können den Berichtstitel 
   
 1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zurückzukehren.  
   
-2.  Wählen Sie das Textfeld am Anfang des Berichtstexts, das **Zum Hinzufügen eines Titels klicken**enthält, und drücken Sie anschließend die ENTF-TASTE.  
+2.  Wählen Sie das Textfeld am Anfang des Berichtstexts, das **Zum Hinzufügen eines Titels klicken** enthält, und drücken Sie anschließend die ENTF-TASTE.  
   
 3.  Klicken sie auf der Registerkarte **Einfügen** auf **Kopfzeile** > **Kopfzeile hinzufügen**.  
   
     Am Anfang des Berichtstexts wird eine Kopfzeile hinzugefügt.  
   
-4.  Klicken Sie auf der Registerkarte **Einfügen** auf **Textfeld**und ziehen Sie anschließend ein Textfeld in den Berichtskopf. Erweitern Sie das Textfeld auf eine Länge von etwa 15 cm und eine Höhe von etwa 2 cm, und platzieren Sie es links neben der Berichtskopfzeile.  
+4.  Klicken Sie auf der Registerkarte **Einfügen** auf **Textfeld** und ziehen Sie anschließend ein Textfeld in den Berichtskopf. Erweitern Sie das Textfeld auf eine Länge von etwa 15 cm und eine Höhe von etwa 2 cm, und platzieren Sie es links neben der Berichtskopfzeile.  
   
-5.  Geben Sie im Textfeld **Umsatz nach Territory, Subcategory und Tag**ein.  
+5.  Geben Sie im Textfeld **Umsatz nach Territory, Subcategory und Tag** ein.  
   
 6.  Markieren Sie den Text, den Sie eingegeben haben, und nehmen Sie anschließend unter **Stamm** > **Schriftart** folgende Einstellungen vor:
     * **Größe 24 pt**
@@ -309,7 +309,7 @@ Speichern Sie in diesem Lernprogramm den Bericht auf einem Berichtsserver. Wenn 
   
     Die Meldung "Verbindung mit Berichtsserver wird hergestellt" wird angezeigt. Nachdem die Verbindung hergestellt wurde, sehen Sie den Inhalt des Berichtsordners, den der Berichtsserveradministrator als Standardspeicherort für Berichte angegeben hat.  
   
-4.  Ersetzen Sie im Feld **Name**den Standardnamen durch **SalesByTerritorySubcategory**.  
+4.  Ersetzen Sie im Feld **Name** den Standardnamen durch **SalesByTerritorySubcategory**.  
   
 5.  Klicken Sie auf **Speichern**.  
   
@@ -319,9 +319,9 @@ Der Bericht wird auf dem Berichtsserver gespeichert. Der Name des Berichtsserver
   
 1.  Klicken Sie auf die Schaltfläche **Berichts-Generator** und anschließend auf **Speichern unter**.  
   
-2.  Klicken Sie auf **Desktop**, **Meine Dokumente**oder **Arbeitsplatz**, und navigieren Sie anschließend zu dem Ordner, in dem Sie den Bericht speichern möchten.  
+2.  Klicken Sie auf **Desktop** , **Meine Dokumente** oder **Arbeitsplatz** , und navigieren Sie anschließend zu dem Ordner, in dem Sie den Bericht speichern möchten.  
   
-3.  Ersetzen Sie im Feld **Name**den Standardnamen durch **SalesByTerritorySubcategory**.  
+3.  Ersetzen Sie im Feld **Name** den Standardnamen durch **SalesByTerritorySubcategory**.  
   
 4.  Klicken Sie auf **Speichern**.  
   
@@ -336,17 +336,17 @@ In einem Textfeld kann Text auch horizontal und vertikal (von oben nach unten) a
   
 2.  Klicken Sie auf die Zelle, die „[Territory]“ enthält. `[Territory].` 
 
-    >**Hinweis**: Wählen Sie die Zelle aus, nicht den Text. Die Eigenschaft „WritingMode“t ist nur für die Zelle verfügbar.
+    >**Hinweis** : Wählen Sie die Zelle aus, nicht den Text. Die Eigenschaft „WritingMode“t ist nur für die Zelle verfügbar.
     
-     ![Berichts-Generator-Auswählen-der-Zelle-Territory](../reporting-services/media/report-builder-select-territory-cell.png)
+     ![Screenshot: Zelle „Territory“ (Gebiet) im Matrixbericht im Berichts-Generator](../reporting-services/media/report-builder-select-territory-cell.png)
   
 3.  Suchen Sie im Fensterbereich die Eigenschaft „WritingMode“ und ändern Sie den Schreibmodus von **Default** auf **Rotate270**.  
   
     Wenn der Eigenschaftenbereich nicht geöffnet ist, klicken Sie auf die Registerkarte **Ansicht** des Menübands und aktivieren Sie das Kontrollkästchen **Eigenschaften**.  
   
-4.  Vergewissern Sie sich, dass die „CanGrow“-Eigenschaft auf **True**festgelegt wurde.  
+4.  Vergewissern Sie sich, dass die „CanGrow“-Eigenschaft auf **True** festgelegt wurde.  
   
-5.  Klicken Sie auf der Registerkarte **Home** in der Gruppe **Absatz** auf die Schaltflächen **Mitte** und **Zentriert**, um den Text sowohl vertikal als auch horizontal im Mittelpunkt der Zelle zu platzieren.  
+5.  Klicken Sie auf der Registerkarte **Home** in der Gruppe **Absatz** auf die Schaltflächen **Mitte** und **Zentriert** , um den Text sowohl vertikal als auch horizontal im Mittelpunkt der Zelle zu platzieren.  
  
 6. Ändern Sie die Breite der Spalte "Territory" auf ca. 1,3 cm, und löschen Sie den Spaltentitel.  
 6.  Klicken Sie auf **Ausführen** , um den Bericht in der Vorschau anzuzeigen.  

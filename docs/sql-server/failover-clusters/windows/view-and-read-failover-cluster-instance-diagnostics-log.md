@@ -10,16 +10,16 @@ ms.topic: how-to
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 811b996732dac0f8c6bc0c71e9c8976dc3244085
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 06148ae5d10db159745a7eb55be06735efa49531
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114623"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364713"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Anzeigen und Lesen des Failoverclusterinstanz-Diagnoseprotokolls
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Alle kritischen Fehler und Warnungsereignisse für die Ressourcen-DLL von SQL Server werden in das Windows-Ereignisprotokoll geschrieben. Ein Ausführungsprotokoll mit für SQL Server spezifischen Diagnoseinformationen wird von der gespeicherten Systemprozedur [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) erfasst und in die Protokolldateien der SQL Server-Failoverclusterdiagnose (auch als *SQLDIAG*-Protokolle bezeichnet) geschrieben.  
+  Alle kritischen Fehler und Warnungsereignisse für die Ressourcen-DLL von SQL Server werden in das Windows-Ereignisprotokoll geschrieben. Ein Ausführungsprotokoll mit für SQL Server spezifischen Diagnoseinformationen wird von der gespeicherten Systemprozedur [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) erfasst und in die Protokolldateien der SQL Server-Failoverclusterdiagnose (auch als *SQLDIAG* -Protokolle bezeichnet) geschrieben.  
   
 -   **Vorbereitungen:**  [Empfehlungen](#Recommendations), [Sicherheit](#Security)  
   
@@ -37,16 +37,16 @@ ms.locfileid: "91114623"
 ###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
- Die VIEW SERVER STATE-Berechtigung ist erforderlich, um **fn_xe_file_target_read_file**auszuführen.  
+ Die VIEW SERVER STATE-Berechtigung ist erforderlich, um **fn_xe_file_target_read_file** auszuführen.  
   
  Öffnen von SQL Server Management Studio als Administrator  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So zeigen Sie die Diagnoseprotokolldateien an:**  
   
-1.  Wählen Sie im Menü **Datei** die Option **Öffnen**, **Datei**, und wählen Sie die anzuzeigende Diagnoseprotokolldatei an.  
+1.  Wählen Sie im Menü **Datei** die Option **Öffnen** , **Datei** , und wählen Sie die anzuzeigende Diagnoseprotokolldatei an.  
   
-2.  Die Ereignisse werden als Zeilen im rechten Bereich angezeigt. Standardmäßig werden nur die Spalten **name**und **timestamp** angezeigt.  
+2.  Die Ereignisse werden als Zeilen im rechten Bereich angezeigt. Standardmäßig werden nur die Spalten **name** und **timestamp** angezeigt.  
   
      Dadurch wird außerdem das Menü **ExtendedEvents** aktiviert.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "91114623"
   
 4.  Sie können die Ereignisdaten mithilfe des Menüs **ExtendedEvents** und der Option **Filter** filtern und sortieren.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="view-diagnostic-log-files-with-transact-sql"></a><a name="TsqlProcedure"></a> Anzeigen von Diagnoseprotokolldateien mit Transact-SQL  
  **So zeigen Sie die Diagnoseprotokolldateien an:**  
   
  Um alle Protokollelemente in der SQLDIAG-Protokolldatei anzuzeigen, verwenden Sie die folgende Abfrage:  
@@ -88,8 +88,8 @@ ORDER BY Time;
 > [!NOTE]  
 >  Sie können die Ergebnisse nach bestimmten Komponenten oder Status filtern, indem Sie die WHERE-Klausel verwenden.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlConfigure"></a> Verwenden von Transact-SQL  
- **So konfigurieren Sie die Diagnoseprotokolleigenschaften**  
+##  <a name="configure-diagnostic-log-properties-with-transact-sql"></a><a name="TsqlConfigure"></a> Konfigurieren von Diagnoseprotokolleigenschaften mit Transact-SQL  
+ **So konfigurieren Sie die Diagnoseprotokolleigenschaften:**  
   
 > [!NOTE]  
 >  Ein Beispiel für diese Prozedur finden Sie weiter unten in diesem Abschnitt unter [Beispiel (Transact-SQL)](#TsqlExample).  

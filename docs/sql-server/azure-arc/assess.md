@@ -7,12 +7,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 459a49a4f2ed41b8e9d95c805431ff2c29a770fa
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: c6f2a0989cb13253ef4a6a26e013a6b8c7a84ded
+ms.sourcegitcommit: f888ac94c7b5f6b6f138ab75719dadca04e8284a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92258002"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93294379"
 ---
 # <a name="configure-sql-assessment-on-an-azure-arc-enabled-sql-server-instance"></a>Konfigurieren der SQL-Bewertung für eine Azure Arc-fähige SQL Server-Instanz
 
@@ -37,11 +37,22 @@ Die SQL-Bewertung bietet eine Möglichkeit, Ihre Konfiguration von SQL Server zu
    > [!div class="mx-imgBorder"]
    > [ ![Screenshot des Bildschirms „Umgebungsintegrität“ einer SQL Server-Ressource mit Azure Arc-Aktivierung](media/assess/sql-assessment-heading-sql-server-arc.png) ](media/assess/sql-assessment-heading-sql-server-arc.png#lightbox)
 
-1. Geben Sie ein Arbeitsverzeichnis auf dem Computer für die Datensammlung an. Standardmäßig wird `C:\sql_assessment\work_dir` verwendet. Während der Sammlung und Analyse werden die Daten vorrübergehend in diesem Ordner gespeichert. Wenn der Ordner nicht vorhanden ist, wird er automatisch erstellt.
+> [!IMPORTANT]
+> Wenn die MMA-Erweiterung nicht installiert ist, können Sie die bedarfsgesteuerte SQL-Bewertung nicht initiieren.
 
-1. Wählen Sie **Konfigurationsskript laden** aus. Kopieren Sie das heruntergeladene Skript auf den Zielcomputer.
+2. Wählen Sie den Kontotyp aus. Wenn Sie über ein verwaltetes Dienstkonto verfügen, können Sie die SQL-Bewertung direkt über das Portal initiieren. Geben Sie den Kontonamen an.
 
-1. Öffnen Sie eine Administratoreninstanz von **powershell.exe** , und führen Sie einen der folgenden Codeblöcke aus:
+> [!NOTE]
+> Wenn Sie ein *verwaltetes Dienstkonto* angeben, wird die Schaltfläche **Configure SQL Assessment** (SQL-Bewertung konfigurieren) aktiviert, damit Sie die Bewertung durch Bereitstellen einer benutzerdefinierten Skripterweiterung ( *CustomScriptExtension* ) über das Portal initiieren können. Da jeweils nur eine *benutzerdefinierte Skripterweiterung* bereitgestellt werden kann, wird die Skripterweiterung für die SQL-Bewertung automatisch nach der Ausführung entfernt. Wenn Sie bereits eine andere *benutzerdefinierte Skripterweiterung* auf dem Hostcomputer bereitgestellt haben, wird die Schaltfläche **SQL-Bewertung konfigurieren** nicht aktiviert.
+
+3. Geben Sie ein Arbeitsverzeichnis auf dem Computer an, auf dem die Datensammlung erfolgt, wenn Sie das Standardverzeichnis ändern möchten. Standardmäßig wird `C:\sql_assessment\work_dir` verwendet. Während der Sammlung und Analyse werden die Daten vorrübergehend in diesem Ordner gespeichert. Wenn der Ordner nicht vorhanden ist, wird er automatisch erstellt.
+
+4. Wenn Sie die SQL-Bewertung über das Portal initiieren, indem Sie auf **SQL-Bewertung konfigurieren** klicken, wird ein Standardbereitstellungspopup angezeigt.
+
+> [!div class="mx-imgBorder"]
+   > [ ![Screenshot: Bereitstellung der benutzerdefinierten Skripterweiterung](media/assess/sql-assessment-custom-script-deployment.png) ](media/assess/sql-assessment-custom-script-deployment.png#lightbox)
+
+5. Wenn Sie die SQL-Bewertung lieber auf dem Zielcomputer initiieren möchten, klicken Sie auf **Konfigurationsskript laden** , kopieren Sie das heruntergeladene Skript auf den Zielcomputer, und führen Sie einen der folgenden Codeblöcke in einer Administratorinstanz von **powershell.exe** aus:
 
    * _Domänenkonto:_  Sie werden zur Eingabe von Benutzerkonto und Kennwort aufgefordert.
 
@@ -61,7 +72,7 @@ Die SQL-Bewertung bietet eine Möglichkeit, Ihre Konfiguration von SQL Server zu
 > Das Skript plant eine Aufgabe mit dem Namen *SQLAssessment* , die die Datensammlung auslöst. Diese Aufgabe wird innerhalb einer Stunde nach dem Ausführen des Skripts ausgeführt. Anschließend wird sie alle sieben Tage wiederholt.
 
 > [!TIP]
-> Sie können die Aufgabe so ändern, dass sie an einem anderen Datum und einer anderen Uhrzeit ausgeführt wird, und Sie können auch eine sofortige Ausführung erzwingen. Suchen Sie in der Aufgabenplanungsbibliothek nach **Microsoft** > **Operations Management Suite** > **AOI\*\*\***  > **Bewertungen** > **SQLAssessment** .
+> Sie können den Task so ändern, dass sie an einem anderen Datum und einer anderen Uhrzeit ausgeführt wird. Sie können auch eine sofortige Ausführung erzwingen. Suchen Sie in der Aufgabenplanungsbibliothek nach **Microsoft** > **Operations Management Suite** > **AOI\*\*\***  > **Bewertungen** > **SQLAssessment**.
 
 ## <a name="view-sql-assessment-results"></a>Anzeigen der Ergebnisse der SQL-Bewertung
 

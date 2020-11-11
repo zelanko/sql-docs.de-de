@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8c790f63ddec2a30d1381459b37b4cfdf9088389
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 22d4a311d38d32fad4910960007223edbe2f9b70
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255583"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364462"
 ---
 # <a name="report-builder-functions---lookupset-function"></a>Funktionen des Berichts-Generators: LookupSet-Funktion
   Gibt den Satz der übereinstimmenden Werte für den angegebenen Namen aus einem Dataset mit Name-Wert-Paaren zurück.  
@@ -31,24 +31,24 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>Parameter  
  *source_expression*  
- (**Variant**) Ein Ausdruck, der im aktuellen Bereich ausgewertet wird und den zu suchenden Namen oder Schlüssel angibt. Beispiel: `=Fields!ID.Value`.  
+ ( **Variant** ) Ein Ausdruck, der im aktuellen Bereich ausgewertet wird und den zu suchenden Namen oder Schlüssel angibt. Beispiel: `=Fields!ID.Value`.  
   
  *destination_expression*  
- (**Variant**) Ein Ausdruck, der für jede Zeile in einem Dataset ausgewertet wird, und der den Namen oder den Schlüssel für die Übereinstimmung angibt. Beispiel: `=Fields!CustomerID.Value`.  
+ ( **Variant** ) Ein Ausdruck, der für jede Zeile in einem Dataset ausgewertet wird, und der den Namen oder den Schlüssel für die Übereinstimmung angibt. Beispiel: `=Fields!CustomerID.Value`.  
   
  *result_expression*  
- (**Variant**) Ein Ausdruck, der für die Zeile im Dataset ausgewertet wird, für die *source_expression* = *destination_expression*gilt, und der den abzurufenden Wert angibt. Beispiel: `=Fields!PhoneNumber.Value`.  
+ ( **Variant** ) Ein Ausdruck, der für die Zeile im Dataset ausgewertet wird, für die *source_expression* = *destination_expression* gilt, und der den abzurufenden Wert angibt. Beispiel: `=Fields!PhoneNumber.Value`.  
   
  *Dataset (dataset)*  
  Eine Konstante, die den Namen eines Datasets im Bericht angibt. Beispiel: "ContactInformation".  
   
 ## <a name="return"></a>Rückgabewert  
- Gibt einen Wert vom Typ **VariantArray**zurück; gibt **Nothing** zurück, wenn keine Übereinstimmung vorhanden ist.  
+ Gibt einen Wert vom Typ **VariantArray** zurück; gibt **Nothing** zurück, wenn keine Übereinstimmung vorhanden ist.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Rufen Sie für ein Name/Wert-Paar, für das eine 1:n-Beziehung vorhanden ist, mithilfe von **LookupSet** einen Satz von Werten aus dem angegebenen Dataset ab. Beispiel: Für einen Kundenbezeichner in einer Tabelle können Sie alle zugeordneten Telefonnummern dieses Kunden aus einem Dataset, das nicht an den Datenbereich gebunden ist, mithilfe von **LookupSet** abrufen.  
   
- Mit**LookupSet** wird Folgendes ausgeführt:  
+ Mit **LookupSet** wird Folgendes ausgeführt:  
   
 -   Der Quellausdruck wird im aktuellen Bereich ausgewertet.  
   
@@ -86,16 +86,18 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
  Weitere Informationen finden Sie in der [Aggregatfunktionsreferenz (Berichts-Generator und SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md) und unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen (Berichts-Generator und SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
-## <a name="example"></a>Beispiel  
- Nehmen Sie im folgenden Beispiel an, dass die Tabelle an ein Dataset gebunden ist, das einen Vertriebsgebietbezeichner "TerritoryGroupID" enthält. Ein separates Dataset mit dem Namen "Stores" enthält die Liste aller Läden in einem Gebiet und schließt den Gebietsbezeichner "ID" sowie den Namen des Ladens "StoreName" ein.  
+## <a name="examples"></a>Beispiele
+
+ Nehmen Sie in den folgenden Beispielen an, dass die Tabelle an ein Dataset gebunden ist, das einen Vertriebsgebietsbezeichner „TerritoryGroupID“ enthält. Ein separates Dataset mit dem Namen "Stores" enthält die Liste aller Läden in einem Gebiet und schließt den Gebietsbezeichner "ID" sowie den Namen des Ladens "StoreName" ein.  
   
+### <a name="a-use-lookupset"></a>A. Verwenden von LookupSet  
  Im folgenden Ausdruck vergleicht **LookupSet** für jede Zeile im Dataset „Stores“ den Wert TerritoryGroupID mit „ID“. Für jede Übereinstimmung wird dem Resultset der Wert des Felds "StoreName" für diese Zeile hinzugefügt.  
   
 ```  
 =LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores")  
 ```  
   
-## <a name="example"></a>Beispiel  
+### <a name="b-use-join-to-create-a-result-list"></a>B. Verwenden einer Verknüpfung zum Erstellen einer Ergebnisliste 
  Da **LookupSet** eine Sammlung von Objekten zurückgibt, können Sie den Ergebnisausdruck nicht direkt in einem Textfeld anzeigen. Sie können die Werte der Objekte in der Sammlung als Zeichenfolge verketten.  
   
  Verwenden Sie die [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Funktion **Join** , um aus einem Satz von Objekten eine Zeichenfolge mit Trennzeichen zu erstellen. Verwenden Sie ein Komma als Trennzeichen, um die Objekte an einer einzelnen Zeile zu kombinieren. In einigen Renderern könnten Sie einen [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Zeilenvorschub (`vbCrLF`) als Trennzeichen verwenden, um jeden Wert auf einer neuen Zeile aufzulisten.  
@@ -106,7 +108,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 =Join(LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores"),",")  
 ```  
   
-## <a name="example"></a>Beispiel  
+### <a name="c-add-code-to-generate-html"></a>C. Hinzufügen von Code zum Generieren von HTML
  Für Textfelder, die nur wenige Male gerendert werden, könnten Sie wahlweise benutzerdefinierten Code hinzufügen, um HTML-Code zum Anzeigen von Werten in einem Textfeld zu generieren. HTML-Code in einem Textfeld erfordert zusätzliche Verarbeitung, deshalb ist dies nicht empfehlenswert für ein Textfeld, das Tausende Male gerendert wird.  
   
  Kopieren Sie die folgenden [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Funktionen in einen Codeblock in einer Berichtsdefinition. **MakeList** erstellt aus dem Objektarray, das in *result_expression* zurückgegeben wird, mithilfe von HTML-Tags eine ungeordnete Liste. **Length** gibt die Anzahl der Elemente im Objektarray zurück.  
@@ -138,7 +140,7 @@ Function Length(ByVal items as Object()) as Integer
 End Function  
 ```  
   
-## <a name="example"></a>Beispiel  
+### <a name="d-call-the-function"></a>D: Aufrufen der Funktion
  Um den HTML-Code zu generieren, müssen Sie die Funktion aufrufen. Fügen Sie den folgenden Ausdruck in die Value-Eigenschaft für das Textfeld ein, und legen Sie den Markuptyp für den Text auf HTML fest. Weitere Informationen finden Sie unter [Hinzufügen von HTML in einem Bericht (Berichts-Generator und SSRS)](../../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md).  
   
 ```  

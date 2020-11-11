@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6f71447f2e0f83c87d9b48a464a99dbbb7a1d4c9
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 833efefc3cf79e6a4939a46e15fd80acb493f541
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248119"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243801"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Tutorial: Formatieren von Text (Berichts-Generator)
 
@@ -22,7 +22,7 @@ In diesem Tutorial formatieren Sie in einem paginierten [!INCLUDE[ssRSnoversion_
 
 Nach dem Einrichten des leeren Berichts mit der Datenquelle und dem Dataset können Sie die Formate auswählen, mit denen Sie sich vertraut machen möchten. Die folgende Abbildung zeigt einen Bericht, der mit dem Bericht vergleichbar ist, den Sie erstellen werden.  
   
-![Bericht-Erstellen-Format-Bericht](../reporting-services/media/report-build-format-report.png) 
+![Screenshot: formatierter Bericht im Berichts-Generator](../reporting-services/media/report-build-format-report.png) 
   
 In einem Schritt machen Sie absichtlich einen Fehler, um dadurch erkennen zu können, warum es sich um einen Fehler handelt. Anschließend beheben Sie den Fehler, um den gewünschten Effekt zu erreichen.  
     
@@ -58,7 +58,7 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
 4.  Überprüfen Sie, ob der Verbindungstyp Microsoft SQL Server ist, und geben Sie anschließend im Feld **Verbindungszeichenfolge** Folgendes ein: `Data Source = <servername>`  
   
     > [!NOTE]  
-    > Der Ausdruck `<servername>`, z.B. „Report001“, bezeichnet einen Computer, auf dem eine Instanz der SQL Server-Datenbank-Engine installiert ist. Für dieses Tutorial sind keine bestimmten Daten erforderlich. Es wird lediglich eine Verbindung mit einer Datenbank vom SQL Server benötigt. Wenn unter **Datenquellenverbindungen**bereits eine Datenquellenverbindung aufgeführt ist, können Sie sie auswählen und zum nächsten Schritt übergehen, nämlich „So erstellen Sie ein Dataset“. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung (Berichts-Generator)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > Der Ausdruck `<servername>`, z.B. „Report001“, bezeichnet einen Computer, auf dem eine Instanz der SQL Server-Datenbank-Engine installiert ist. Für dieses Tutorial sind keine bestimmten Daten erforderlich. Es wird lediglich eine Verbindung mit einer Datenbank vom SQL Server benötigt. Wenn unter **Datenquellenverbindungen** bereits eine Datenquellenverbindung aufgeführt ist, können Sie sie auswählen und zum nächsten Schritt übergehen, nämlich „So erstellen Sie ein Dataset“. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung (Berichts-Generator)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -66,7 +66,7 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
   
 1.  Klicken Sie im Bereich „Berichtsdaten“ auf **Neu** > **Dataset**.  
   
-2.  Vergewissern Sie sich, dass die Datenquelle **TextDataSource**ist.  
+2.  Vergewissern Sie sich, dass die Datenquelle **TextDataSource** ist.  
   
 3.  Geben Sie im Feld **Name** Folgendes ein: **TextDataset.**  
   
@@ -131,13 +131,13 @@ Wenn Sie möchten, dass ein Feld aus dem Dataset in einem Bericht erscheint, wer
   
 2.  Klicken Sie auf **Ausführen**.  
   
-    Es wird nur ein Datensatz angezeigt ( **Fernando Ross**), der nach alphabetischer Sortierung der erste Datensatz in der Abfrage ist. Die anderen Datensätze in diesem Feld werden nicht erneut angezeigt.  
+    Es wird nur ein Datensatz angezeigt ( **Fernando Ross** ), der nach alphabetischer Sortierung der erste Datensatz in der Abfrage ist. Die anderen Datensätze in diesem Feld werden nicht erneut angezeigt.  
   
 3.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zurückzukehren.  
   
 4.  Wählen Sie den Ausdruck `<Expr>` im Textfeld aus.  
   
-5.  Im Eigenschaftenbereich für die **Value** -Eigenschaft wird Folgendes angezeigt (wenn der Bereich nicht angezeigt wird, wählen Sie auf der Registerkarte **Ansicht** die Option **Eigenschaften**aus):  
+5.  Im Eigenschaftenbereich für die **Value** -Eigenschaft wird Folgendes angezeigt (wenn der Bereich nicht angezeigt wird, wählen Sie auf der Registerkarte **Ansicht** die Option **Eigenschaften** aus):  
   
     ```  
     =First(Fields!FullName.Value, "TextDataSet")  
@@ -182,9 +182,9 @@ Erstellen Sie diese Tabelle, damit Sie Hyperlinks und den gedrehten Text an eine
   
 2.  Klicken Sie auf der Seite **Dataset auswählen** des Assistenten für neue Tabellen oder Matrizen auf **Vorhandenes Dataset in diesem Bericht oder einem freigegebenen Dataset auswählen** > **TextDataset (in diesem Bericht)** > **Weiter**.  
   
-3.  Ziehen Sie auf der Seite **Felder anordnen** die Felder **Territory**, **LinkText**und **Product** nach **Zeilengruppen**, ziehen Sie das Feld **Sales** nach **Werte**, und klicken Sie anschließend auf **Weiter**.  
+3.  Ziehen Sie auf der Seite **Felder anordnen** die Felder **Territory** , **LinkText** und **Product** nach **Zeilengruppen** , ziehen Sie das Feld **Sales** nach **Werte** , und klicken Sie anschließend auf **Weiter**.  
 
-    ![Berichts-Generator-Text-Felder-anordnen](../reporting-services/media/report-builder-text-arrange-fields.png)
+    ![Screenshot: Anordnen von Textfeldern im Berichts-Generator](../reporting-services/media/report-builder-text-arrange-fields.png)
   
 4.  Deaktivieren Sie auf der Seite **Layout auswählen** das Kontrollkästchen **Gruppen erweitern/reduzieren** , damit die vollständige Tabelle angezeigt wird, und klicken Sie anschließend auf **Weiter**. 
   
@@ -194,7 +194,7 @@ Erstellen Sie diese Tabelle, damit Sie Hyperlinks und den gedrehten Text an eine
   
     Die Tabelle sieht einwandfrei aus, enthält jedoch zwei Ergebniszeilen. Die **LinkText** -Spalte benötigt keine Ergebniszeilen.  
     
-    ![Berichts-Generator-Format-2-Gesamtwerte](../reporting-services/media/report-builder-format-2-totals.png)
+    ![Screenshot: zwei Gesamtbeträge im Bericht im Berichts-Generator](../reporting-services/media/report-builder-format-2-totals.png)
   
 8.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zurückzukehren.  
   
@@ -202,13 +202,13 @@ Erstellen Sie diese Tabelle, damit Sie Hyperlinks und den gedrehten Text an eine
   
 11. Wenn diese drei Zellen ausgewählt sind, klicken Sie mit der rechten Maustaste auf eine der Zellen, und klicken Sie anschließend auf **Zeile löschen**.  
 
-    ![Berichts-Generator-Format-löschen-Zeilen](../reporting-services/media/report-builder-format-delete-rows.png)
+    ![Screenshot: Löschen von Zeilen aus einem Bericht im Berichts-Generator](../reporting-services/media/report-builder-format-delete-rows.png)
   
 12. Klicken Sie auf **Ausführen**.  
 
     Jetzt ist es nur eine „Gesamt“-Zeile vorhanden.
     
-    ![Berichts-Generator-Format-eine-Gesamt](../reporting-services/media/report-builder-format-one-total.png)
+    ![Screenshot: ein Gesamtbetrag im Bericht im Berichts-Generator](../reporting-services/media/report-builder-format-one-total.png)
   
 ## <a name="add-a-hyperlink-to-the-report"></a><a name="AddHyperlink"></a>Hinzufügen eines Links zum Bericht  
 In diesem Abschnitt fügen Sie dem Text in der Tabelle aus dem vorherigen Abschnitt einen Link hinzu.  
@@ -225,13 +225,13 @@ In diesem Abschnitt fügen Sie dem Text in der Tabelle aus dem vorherigen Abschn
   
 7.  Wählen Sie `[LinkText]`aus.  
   
-8.  Klicken Sie auf der Registerkarte **Home** > **Schriftart** auf die Einstellung **Unterstreichen**, und ändern Sie die **Farbe** in **Blau**.  
+8.  Klicken Sie auf der Registerkarte **Home** > **Schriftart** auf die Einstellung **Unterstreichen** , und ändern Sie die **Farbe** in **Blau**.  
   
 9. Klicken Sie auf **Ausführen**.  
   
     Der Text sieht nun wie ein Link aus.  
     
-    ![Berichts-Generator-Format-Hyperlink](../reporting-services/media/report-builder-format-hyperlink.png)
+    ![Screenshot: verlinkter Text im Bericht im Berichts-Generator](../reporting-services/media/report-builder-format-hyperlink.png)
   
 10. Klicken Sie auf einen Link. Wenn der Computer mit dem Internet verbunden ist, wird vom Browser ein Hilfethema zu Berichts-Generator geöffnet.  
   
@@ -251,15 +251,15 @@ In diesem Abschnitt drehen Sie Text in der Tabelle aus den vorherigen Abschnitte
     > [!NOTE]  
     > Wenn die Eigenschaften im Eigenschaftenbereich in Kategorien angeordnet sind, befindet sich WritingMode in der Kategorie **Lokalisierung** . Stellen Sie sicher, dass Sie die Zelle und nicht den Text ausgewählt haben. WritingMode ist eine Eigenschaft des Textfeldes, nicht des Texts.  
 
-    ![Berichts-Generator-Auswählen-der-Zelle-Territory](../reporting-services/media/report-builder-select-territory-cell.png)
+    ![Screenshot: Feld „Territory“ (Gebiet) im Bericht im Berichts-Generator](../reporting-services/media/report-builder-select-territory-cell.png)
    
-6.  Klicken Sie auf der Registerkarte **Home** in der Gruppe **Absatz** auf die Schaltflächen **Mitte** und **Zentriert**, um den Text sowohl vertikal als auch horizontal im Mittelpunkt der Zelle zu platzieren.  
+6.  Klicken Sie auf der Registerkarte **Home** in der Gruppe **Absatz** auf die Schaltflächen **Mitte** und **Zentriert** , um den Text sowohl vertikal als auch horizontal im Mittelpunkt der Zelle zu platzieren.  
   
 8.  Klicken Sie auf ( **!** ).  
   
 Nun verläuft der Text in der `[Territory]` -Zelle in den Zellen vertikal von unten nach oben.  
 
-![Berichts-Generator-Format-270 Grad-drehen](../reporting-services/media/report-builder-format-rotate-270.png)
+![Screenshot: Territory-Werte um 270 Grad gedreht](../reporting-services/media/report-builder-format-rotate-270.png)
 
 ## <a name="format-currency"></a><a name="FormatCurrency"></a>Formatieren von Währung  
   
@@ -269,9 +269,9 @@ Nun verläuft der Text in der `[Territory]` -Zelle in den Zellen vertikal von un
   
 3.  Klicken Sie auf der Registerkarte **Home** unter **Zahl** auf die Schaltfläche **Währung**.  
   
-4.  (Optional) Wenn Sie das Gebietsschema „Deutsch (Deutschland)“ verwenden, lautet der Standardbeispieltext [**12.345,00€**]. Falls kein Beispielwährungswert angezeigt wird, klicken Sie in der Gruppe **Zahlen** auf **Platzhalterformate** > **Beispielwerte**.  
+4.  (Optional) Wenn Sie das Gebietsschema „Deutsch (Deutschland)“ verwenden, lautet der Standardbeispieltext [ **12.345,00€** ]. Falls kein Beispielwährungswert angezeigt wird, klicken Sie in der Gruppe **Zahlen** auf **Platzhalterformate** > **Beispielwerte**.  
 
-    ![Berichts-Generator-Schaltfläche-Platzhalterwert](../reporting-services/media/report-builder-placeholder-value-button.png)
+    ![Screenshot: Option „Beispielwerte“ im Berichts-Generator](../reporting-services/media/report-builder-placeholder-value-button.png)
   
 5.  (Optional) Klicken Sie auf der Registerkarte **Stamm** in der Gruppe **Zahl** zweimal auf die Schaltfläche **Dezimalstellen verringern** , um volle Dollarbeträge ohne Centangaben anzuzeigen.  
   
@@ -279,7 +279,7 @@ Nun verläuft der Text in der `[Territory]` -Zelle in den Zellen vertikal von un
   
 Im Bericht werden nun formatierte Daten angezeigt, und die Lesbarkeit wurde verbessert.  
 
-![Bericht-Erstellen-Format-Bericht](../reporting-services/media/report-build-format-report.png)
+![Screenshot: neu formatiertes Berichtsformat im Berichts-Generator](../reporting-services/media/report-build-format-report.png)
     
 ## <a name="displaying-text-with-html-formatting"></a><a name="FormatHTML"></a>Anzeigen von Text mit HTML-Formatierung  
   
@@ -313,7 +313,7 @@ Im Bericht werden nun formatierte Daten angezeigt, und die Lesbarkeit wurde verb
   
     Dies ist eine Eigenschaft des Texts (nicht des Textfelds). Daher kann in einem Textfeld eine Mischung aus Nur-Text und Text, die HTML-Tags als Formatvorlagen verwenden.  
   
-6.  Klicken Sie auf der Seite **Allgemein** unter **Markuptyp**auf **HTML - HTML-Tags als Formate interpretieren**.  
+6.  Klicken Sie auf der Seite **Allgemein** unter **Markuptyp** auf **HTML - HTML-Tags als Formate interpretieren**.  
   
 7.  Klicken Sie auf **OK**.  
   
@@ -321,7 +321,7 @@ Im Bericht werden nun formatierte Daten angezeigt, und die Lesbarkeit wurde verb
   
 Der Text im Textfeld wird als Überschrift, Absatz und Aufzählung angezeigt.  
   
-![Berichts-Generator-Format-HTML](../reporting-services/media/report-builder-format-html.png)
+![Screenshot: formatierter Text in einem Bericht im Berichts-Generator](../reporting-services/media/report-builder-format-html.png)
 
 ## <a name="save-the-report"></a><a name="Save"></a>Speichern des Berichts  
 Sie können Berichte auf einem Berichtsserver, in einer SharePoint-Bibliothek oder auf dem Computer speichern.  
@@ -338,7 +338,7 @@ Speichern Sie in diesem Lernprogramm den Bericht auf einem Berichtsserver. Wenn 
   
     Die Meldung "Verbindung mit Berichtsserver wird hergestellt" wird angezeigt. Nachdem die Verbindung hergestellt wurde, sehen Sie den Inhalt des Berichtsordners, den der Berichtsserveradministrator als Standardspeicherort für Berichte angegeben hat.  
   
-4.  Ersetzen Sie in **Name**den Standardnamen durch einen Namen Ihrer Wahl.
+4.  Ersetzen Sie in **Name** den Standardnamen durch einen Namen Ihrer Wahl.
 
 5.  Klicken Sie auf **Speichern**.  
   
@@ -348,9 +348,9 @@ Der Bericht wird auf dem Berichtsserver gespeichert. Der Name des Berichtsserver
   
 1.  Klicken Sie auf die Schaltfläche **Berichts-Generator** und anschließend auf **Speichern unter**.  
   
-2.  Klicken Sie auf **Desktop**, **Meine Dokumente**oder **Arbeitsplatz**, und navigieren Sie anschließend zu dem Ordner, in dem Sie den Bericht speichern möchten.  
+2.  Klicken Sie auf **Desktop** , **Meine Dokumente** oder **Arbeitsplatz** , und navigieren Sie anschließend zu dem Ordner, in dem Sie den Bericht speichern möchten.  
   
-3.  Ersetzen Sie in **Name**den Standardnamen durch einen Namen Ihrer Wahl. 
+3.  Ersetzen Sie in **Name** den Standardnamen durch einen Namen Ihrer Wahl. 
   
 4.  Klicken Sie auf **Speichern**.  
 

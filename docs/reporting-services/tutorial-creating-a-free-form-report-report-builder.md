@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6b189c494f887faca2b6d3d4bb00253992470132
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a3a4bada590dc9bea822aadffd102b49e75d10cf
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247459"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043829"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: Erstellen eines Freiformberichts (Berichts-Generator)
 In diesem Tutorial erfahren Sie, wie Sie einen paginierten Bericht erstellen, der wie ein Newslettern funktioniert. Jede Seite zeigt statischen Text, zusammenfassende Visualisierungen und detaillierte Beispielumsatzdaten an.
 
-![Berichts-Generator-Freiformbericht-vollständig](../reporting-services/media/report-builder-free-form-report-complete.png)
+![Screenshot eines Freiformberichts im Berichts-Generator](../reporting-services/media/report-builder-free-form-report-complete.png)
 
 Im Bericht werden Informationen nach Gebiet gruppiert und der Name des Vertriebsmanagers für das Gebiet sowie ausführliche und zusammenfassende Umsatzdaten angezeigt. Der Listendatenbereich wird als Grundlage für den formfreien Bericht verwendet. Anschließend werden folgende Objekte hinzugefügt: ein dekoratives Panel mit einem Bild, statischer Text mit eingefügten Daten, eine Tabelle zum Anzeigen ausführlicher Informationen und optional Kreis- und Säulendiagramme zum Anzeigen zusammenfassender Informationen.  
   
@@ -57,7 +57,7 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
   
     **\<servername>** , z. B. Report001, bezeichnet einen Computer, auf dem eine Instanz der SQL Server-Datenbank-Engine installiert ist. Da die Daten für diesen Bericht nicht aus einer SQL Server-Datenbank extrahiert werden, muss der Name einer Datenbank nicht eingeschlossen werden. Die Standarddatenbank auf dem angegebenen Server wird nur verwendet, um die Abfrage zu analysieren.  
   
-5.  Klicken Sie auf **Anmeldeinformationen**und geben Sie die zur Verbindung mit der Instanz der SQL Server-Datenbank-Engine benötigten Anmeldeinformationen ein.  
+5.  Klicken Sie auf **Anmeldeinformationen** und geben Sie die zur Verbindung mit der Instanz der SQL Server-Datenbank-Engine benötigten Anmeldeinformationen ein.  
   
 6.  Klicken Sie auf **OK**.  
   
@@ -67,7 +67,7 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
   
 2.  Geben Sie im Feld **Name** Folgendes ein: **ListDataset**.  
   
-3.  Klicken Sie auf **Ein in den eigenen Bericht eingebettetes Dataset verwenden**und überprüfen Sie, ob **ListDataSource**die Datenquelle ist.  
+3.  Klicken Sie auf **Ein in den eigenen Bericht eingebettetes Dataset verwenden** und überprüfen Sie, ob **ListDataSource** die Datenquelle ist.  
   
 4.  Überprüfen Sie, ob der Abfragetyp **Text** ausgewählt ist, und klicken Sie anschließend auf **Abfrage-Designer**.  
   
@@ -112,7 +112,7 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
   
     Bei den Abfrageergebnissen handelt es sich um die Daten, die im Bericht angezeigt werden können.  
   
-    ![Berichts-Generator-Freiform-Tutorial-Daten](../reporting-services/media/report-builder-free-form-tutorial-data.png) 
+    ![Screenshot des Abfrage-Designers, auf dem die Daten aufgelistet werden, die im Freiformbericht des Berichts-Generators angezeigt werden können.](../reporting-services/media/report-builder-free-form-tutorial-data.png) 
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -125,16 +125,16 @@ In diesem Abschnitt verwenden Sie eine Liste, um die Umsatzdaten für Vertriebsg
   
 1.  Navigieren Sie auf der Registerkarte **Einfügen** zu **Datenbereiche** > **Liste**. 
 
-2. Klicken Sie auf den Berichtstext (zwischen dem Titel- und dem Fußzeilenbereich), und ziehen Sie ihn in das Listenfeld. Passen Sie die Größe des Listenfeldes auf eine Höhe von 17,8 cm und eine Breite von 15,9 cm an. Geben Sie im Bereich **Eigenschaften** unter **Position**die Werte für **Width** und **Height** ein, um die exakte Größe zu erzielen.
+2. Klicken Sie auf den Berichtstext (zwischen dem Titel- und dem Fußzeilenbereich), und ziehen Sie ihn in das Listenfeld. Passen Sie die Größe des Listenfeldes auf eine Höhe von 17,8 cm und eine Breite von 15,9 cm an. Geben Sie im Bereich **Eigenschaften** unter **Position** die Werte für **Width** und **Height** ein, um die exakte Größe zu erzielen.
   
     > [!NOTE]  
     > Für diesen Bericht werden als Papierformat Letter (21,6 x 28) und Ränder mit einer Breite von ca. 2,5 cm verwendet. Ein Listenfeld, das höher als 22,9 cm oder breiter als 16,5 cm ist, kann zu leeren Seiten führen.  
   
 2.  Klicken Sie in das Listenfeld, klicken Sie mit der rechten Maustaste auf den oberen Rand der Liste und anschließend auf **Tablix-Eigenschaften**.  
   
-    ![Berichts-Generator-Freiform-Tablix-Eigenschaften](../reporting-services/media/report-builder-free-form-tablix-properties.png) 
+    ![Screenshot der Option „Tablix-Eigenschaften“ für den Freiformbericht des Berichts-Generators](../reporting-services/media/report-builder-free-form-tablix-properties.png) 
   
-3.  Wählen Sie in der Dropdownliste **Datasetname** die Option **ListDataset**aus.  
+3.  Wählen Sie in der Dropdownliste **Datasetname** die Option **ListDataset** aus.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -146,9 +146,9 @@ In diesem Abschnitt verwenden Sie eine Liste, um die Umsatzdaten für Vertriebsg
   
 ### <a name="to-add-a-new-row-group-and-to-delete-the-details-group"></a>So fügen Sie eine neue Zeilengruppe hinzu und löschen die Detailgruppe  
   
-1.  Klicken Sie im Bereich „Zeilengruppen“ mit der rechten Maustaste auf die Gruppe „Details“, zeigen Sie auf **Gruppe hinzufügen**, und klicken Sie anschließend auf **Übergeordnete Gruppe**.  
+1.  Klicken Sie im Bereich „Zeilengruppen“ mit der rechten Maustaste auf die Gruppe „Details“, zeigen Sie auf **Gruppe hinzufügen** , und klicken Sie anschließend auf **Übergeordnete Gruppe**.  
   
-    ![Berichts-Generator-Freiform-Übergeordnete Gruppe-hinzufügen](../reporting-services/media/report-builder-free-form-add-parent-group.png)  
+    ![Screenshot: Hinzufügen einer übergeordneten Gruppe zu einem Freiformbericht im Berichts-Generator](../reporting-services/media/report-builder-free-form-add-parent-group.png)  
   
 2.  Wählen Sie in der Liste **Gruppieren nach**`[Territory].`  
   
@@ -158,13 +158,13 @@ In diesem Abschnitt verwenden Sie eine Liste, um die Umsatzdaten für Vertriebsg
   
 4.  Klicken Sie mit der rechten Maustaste in der Liste auf die Spalte „Territory“, und klicken Sie anschließend auf **Spalten löschen**.  
   
-    ![Berichts-Generator-Freiform-Spalten-löschen](../reporting-services/media/report-builder-free-form-delete-columns.png)
+    ![Screenshot: Löschen einer Spalte aus dem Freiformbericht des Berichts-Generators](../reporting-services/media/report-builder-free-form-delete-columns.png)
   
 5.  Klicken Sie auf **Nur Spalten löschen**.  
   
-6.  Klicken Sie im Bereich „Zeilengruppen“ mit der rechten Maustaste auf die Gruppe **Details**, und klicken Sie anschließend auf **Gruppe löschen**.  
+6.  Klicken Sie im Bereich „Zeilengruppen“ mit der rechten Maustaste auf die Gruppe **Details** , und klicken Sie anschließend auf **Gruppe löschen**.  
    
-7.  Wählen Sie **Nur Gruppe löschen**aus.  
+7.  Wählen Sie **Nur Gruppe löschen** aus.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -173,15 +173,15 @@ Ein Vorteil von Listendatenbereichen besteht darin, dass Berichtselemente wie z.
   
 ### <a name="to-add-graphic-elements-to-the-report"></a>So fügen Sie dem Bericht grafische Elemente hinzu  
   
-1.  Wählen Sie auf der Registerkarte **Einfügen** die Option **Rechteck**aus. 
+1.  Wählen Sie auf der Registerkarte **Einfügen** die Option **Rechteck** aus. 
 
-2. Klicken Sie in die obere linke Ecke der Liste, und ziehen Sie das Rechteck, um die Höhe auf 17,8 cm und die Breite auf 8,9 cm festzulegen. Auch hier können Sie die Werte **Width** und **Height**im Bereich **Eigenschaften** unter **Position**eingeben, um die exakte Größe zu erzielen.
+2. Klicken Sie in die obere linke Ecke der Liste, und ziehen Sie das Rechteck, um die Höhe auf 17,8 cm und die Breite auf 8,9 cm festzulegen. Auch hier können Sie die Werte **Width** und **Height** im Bereich **Eigenschaften** unter **Position** eingeben, um die exakte Größe zu erzielen.
   
 2.  Klicken Sie mit der rechten Maustaste auf das Rechteck, und klicken Sie anschließend auf **Rechteckeigenschaften**.  
   
 3.  Klicken Sie auf die Registerkarte **Ausfüllen** .  
   
-4.  Wählen Sie unter **Füllfarbe**die Option **Hellgrau**aus.  
+4.  Wählen Sie unter **Füllfarbe** die Option **Hellgrau** aus.  
    
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -189,7 +189,7 @@ Ein Vorteil von Listendatenbereichen besteht darin, dass Berichtselemente wie z.
   
 Die linke Seite des Berichts enthält nun eine vertikale Grafik, die aus einem dunkelgrauen Rechteck besteht, wie in der folgenden Abbildung dargestellt.  
   
-![Berichts-Generator-Freiform-Grau-Rechteck](../reporting-services/media/report-builder-free-form-gray-rectangle.png)
+![Screenshot des Berichts-Generators, auf dem eine vertikale Grafik zu sehen ist, die aus einem hellgrauen Rechteck besteht.](../reporting-services/media/report-builder-free-form-gray-rectangle.png)
  
 ## <a name="4-add-free-form-text"></a><a name="Text"></a>4. Hinzufügen von Freitext  
 Sie können Textfelder hinzufügen, um statischen Text anzuzeigen, der auf jeder Berichtsseite sowie in allen Datenfeldern wiederholt wird.  
@@ -206,11 +206,11 @@ Sie können Textfelder hinzufügen, um statischen Text anzuzeigen, der auf jeder
   
 4.  Ziehen Sie das `[Territory]` -Feld aus ListDataSet in den Bereich „Berichtsdaten“ in das Textfeld, und platzieren Sie es hinter „Newsletter for “.  
   
-    ![Berichts-Generator-Freiform-Territory-Feld](../reporting-services/media/report-builder-free-form-territory-field.png)
+    ![Screenshot: Ziehen eines Territory-Felds in den Freiformbericht des Berichts-Generators](../reporting-services/media/report-builder-free-form-territory-field.png)
   
 5.  Wählen Sie den Text und das `[Territory]` -Feld aus.  
   
-6.  Klicken Sie auf die Registerkarte **Start**, und wählen Sie unter **Schriftart** Folgendes aus: 
+6.  Klicken Sie auf die Registerkarte **Start** , und wählen Sie unter **Schriftart** Folgendes aus: 
   
     *  **Segoe Semibold**
     *  **20 pt**
@@ -222,7 +222,7 @@ Sie können Textfelder hinzufügen, um statischen Text anzuzeigen, der auf jeder
    
 11. Wählen Sie den Text aus, den Sie in den vorherigen Schritten hinzugefügt haben.
   
-12. Klicken Sie auf die Registerkarte **Start**, und wählen Sie unter **Schriftart** Folgendes aus: 
+12. Klicken Sie auf die Registerkarte **Start** , und wählen Sie unter **Schriftart** Folgendes aus: 
   
     *  **Segoe Semibold**
     *  **16 pt**
@@ -239,19 +239,19 @@ Sie können Textfelder hinzufügen, um statischen Text anzuzeigen, der auf jeder
   
 16. Wählen Sie den gerade eingegebenen Text aus.  
   
-17.  Klicken Sie auf die Registerkarte **Start**, und wählen Sie unter **Schriftart** Folgendes aus: 
+17.  Klicken Sie auf die Registerkarte **Start** , und wählen Sie unter **Schriftart** Folgendes aus: 
   
       *  **Segoe UI**
       *  **10 pt**
       *  **Schwarz**  
  
-20. Platzieren Sie den Cursor im Textfeld unter dem bedeutungslosen Text, und geben Sie **Glückwünsche zum Gesamtumsatz von**mit einem anschließenden Leerzeichen ein, um den Text von dem Feld zu trennen, das Sie im nächsten Schritt hinzufügen. 
+20. Platzieren Sie den Cursor im Textfeld unter dem bedeutungslosen Text, und geben Sie **Glückwünsche zum Gesamtumsatz von** mit einem anschließenden Leerzeichen ein, um den Text von dem Feld zu trennen, das Sie im nächsten Schritt hinzufügen. 
   
 21. Ziehen Sie das Feld „Sales“ in das Textfeld, platzieren Sie es hinter dem im vorherigen Schritt eingegebenen Text, und geben Sie anschließend ein Ausrufezeichen (!) ein.  
 
 25. Wählen Sie den Text und das Feld aus, den bzw. das Sie gerade hinzugefügt haben.  
   
-17.  Klicken Sie auf die Registerkarte **Start**, und wählen Sie unter **Schriftart** Folgendes aus: 
+17.  Klicken Sie auf die Registerkarte **Start** , und wählen Sie unter **Schriftart** Folgendes aus: 
   
       *  **Segoe Semibold**
       *  **16 pt**
@@ -267,21 +267,21 @@ Sie können Textfelder hinzufügen, um statischen Text anzuzeigen, der auf jeder
   
 24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    ![Berichts-Generator-Freiform-Textfeld](../reporting-services/media/report-builder-free-form-text-box.png)
+    ![Screenshot eines Textfelds im Freiformbericht des Berichts-Generators](../reporting-services/media/report-builder-free-form-text-box.png)
  
-29. Klicken Sie auf der Registerkarte **Start**, während `[Sum(Sales)]` noch ausgewählt ist, auf die Gruppe **Number** (Zahl) und dann auf **Currency** (Währung).  
+29. Klicken Sie auf der Registerkarte **Start** , während `[Sum(Sales)]` noch ausgewählt ist, auf die Gruppe **Number** (Zahl) und dann auf **Currency** (Währung).  
   
 30. Klicken Sie mit der rechten Maustaste auf das Textfeld mit dem Text „Zum Hinzufügen eines Titels klicken“, und klicken Sie anschließend auf **Löschen**.  
   
 31. Wählen Sie das Listenfeld aus. Wählen Sie die zwei Pfeile mit zwei Spitzen aus, und verschieben Sie das Listenfeld an den Anfang der Seite.  
 
-    ![Berichts-Generator-Listenfeld-verschieben](../reporting-services/media/report-builder-drag-list.png)
+    ![Screenshot: Ziehen einer Liste in den Freiformbericht des Berichts-Generators](../reporting-services/media/report-builder-drag-list.png)
   
 32. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
 Im Bericht wird statischer Text angezeigt, und jede Berichtsseite enthält Daten, die sich auf ein Gebiet beziehen. Umsatz wird als Währung formatiert.  
   
-![Berichts-Generator-Newsletterseite-Vorschau](../reporting-services/media/report-builder-newsletter-page-preview.png)
+![Screenshot: Vorschau der Seite „Newsletter“ im Freiformbericht des Berichts-Generators](../reporting-services/media/report-builder-newsletter-page-preview.png)
   
 ## <a name="5-add-a-table-to-show-sales-details"></a><a name="Table"></a>5. Hinzufügen einer Tabelle, die Umsatzdetails anzeigt  
 Fügen Sie dem formfreien Bericht mithilfe des Assistenten für neue Tabellen und Matrizen eine Tabelle hinzu. Nach Fertigstellung des Assistenten wird manuell eine Zeile für Summen hinzugefügt.  
@@ -313,11 +313,11 @@ Fügen Sie dem formfreien Bericht mithilfe des Assistenten für neue Tabellen un
   
 12. Klicken Sie, während die Tabelle ausgewählt ist, im Bereich **Zeilengruppe** mit der rechten Maustaste auf **Details** > **Gesamtergebnis** > **Nach**.  
   
-    ![Berichts-Generator-Freiform-Tabelle-Gesamtergebnis](../reporting-services/media/report-builder-free-form-table-totals.png)
+    ![Screenshot: Hinzufügen von Gesamtwerten zum Freiformbericht des Berichts-Generators](../reporting-services/media/report-builder-free-form-table-totals.png)
   
-13. Wählen Sie die Zelle in der Product-Spalte aus, und geben Sie **Gesamtergebnis**ein.
+13. Wählen Sie die Zelle in der Product-Spalte aus, und geben Sie **Gesamtergebnis** ein.
 
-    ![Berichts-Generator-Freiform-Eingeben-Gesamteergebnis](../reporting-services/media/report-builder-free-form-type-total.png)
+    ![Screenshot: Zelle der Spalte „Product“, in die das Wort „Total“ eingegeben wurde](../reporting-services/media/report-builder-free-form-type-total.png)
 
 12. Wählen Sie das Feld [SalesDate] aus. Ändern Sie auf der Registerkarte **Start** unter **Number** die Option **Default** (Standard) in **Date** (Datum).
 
@@ -327,7 +327,7 @@ Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.
   
 Im Bericht wird eine Tabelle mit Umsatzdetails und Gesamtbeträgen angezeigt.  
   
-![Berichts-Generator-Freiform-mit-Tabelle](../reporting-services/media/report-builder-free-form-with-table.png)
+![Screenshot: Tabellenvorschau im Freiformbericht des Berichts-Generators](../reporting-services/media/report-builder-free-form-with-table.png)
    
 ## <a name="6-save-the-report"></a><a name="Save"></a>6. Speichern des Berichts  
 Sie können Berichte auf einem Berichtsserver, in einer SharePoint-Bibliothek oder auf dem Computer speichern.  
@@ -344,7 +344,7 @@ Speichern Sie in diesem Lernprogramm den Bericht auf einem Berichtsserver. Wenn 
   
     Die Meldung "Verbindung mit Berichtsserver wird hergestellt" wird angezeigt. Nachdem die Verbindung hergestellt wurde, sehen Sie den Inhalt des Berichtsordners, den der Berichtsserveradministrator als Standardspeicherort für Berichte angegeben hat.  
   
-4.  Ersetzen Sie in **Name**den Standardnamen durch **SalesInformationByTerritory**.  
+4.  Ersetzen Sie in **Name** den Standardnamen durch **SalesInformationByTerritory**.  
   
 5.  Klicken Sie auf **Speichern**.  
   
@@ -354,9 +354,9 @@ Der Bericht wird auf dem Berichtsserver gespeichert. Der Name des Berichtsserver
   
 1.  Klicken Sie auf die Schaltfläche **Berichts-Generator** und anschließend auf **Speichern unter**.  
   
-2.  Klicken Sie auf **Desktop**, **Meine Dokumente**oder **Arbeitsplatz**, und navigieren Sie anschließend zu dem Ordner, in dem Sie den Bericht speichern möchten.  
+2.  Klicken Sie auf **Desktop** , **Meine Dokumente** oder **Arbeitsplatz** , und navigieren Sie anschließend zu dem Ordner, in dem Sie den Bericht speichern möchten.  
   
-3.  Ersetzen Sie in **Name**den Standardnamen durch **SalesInformationByTerritory**.  
+3.  Ersetzen Sie in **Name** den Standardnamen durch **SalesInformationByTerritory**.  
   
 4.  Klicken Sie auf **Speichern**.  
   
@@ -372,8 +372,8 @@ Fügen Sie eine Zeile hinzu, um den Leitartikel und die Details des Berichts zu 
 3.  Zeichnen Sie eine Linie unter dem Textfeld, das Sie in Lektion 4 hinzugefügt haben.  
   
 4.  Klicken Sie auf die Linie, und wählen Sie anschließend auf der Registerkarte **Start** im Bereich **Border** (Rahmen) Folgendes aus:
-     * Wählen Sie als**Stärke** **3** pt aus.
-     * Wählen Sie für**Farbe** **Tomate**aus.  
+     * Wählen Sie als **Stärke** **3** pt aus.
+     * Wählen Sie für **Farbe** **Tomate** aus.  
   
 ## <a name="8-optional-add-summary-data-visualizations"></a><a name="Visualization"></a>8. Hinzufügen von Zusammenfassungsdatenvisualisierungen (optional)  
 Mit Rechtecken kann das Rendern des Berichts beeinflusst werden. Platzieren Sie in einem Rechteck ein Kreis- und ein Säulendiagramm, um sicherzustellen, dass der Bericht wunschgemäß gerendert wird.  
@@ -384,7 +384,7 @@ Mit Rechtecken kann das Rendern des Berichts beeinflusst werden. Platzieren Sie 
   
 2.  Klicken Sie auf der Registerkarte **Einfügen** auf **Berichtselemente** >  **Rechteck**. Ziehen Sie das Rechteck in das Listenfeld rechts neben der Tabelle, um die Breite auf etwa 5,7 cm und die Höhe auf etwa 20 cm anzupassen.  
   
-3.  Wählen Sie das neue Rechteck aus und geben Sie für **BorderColor**„LightGrey“, für **BorderStyle**„Solid“ und für **BorderWidth**„2pt“ ein. 
+3.  Wählen Sie das neue Rechteck aus und geben Sie für **BorderColor** „LightGrey“, für **BorderStyle** „Solid“ und für **BorderWidth** „2pt“ ein. 
 
 4. Richten Sie den oberen Bereich des Rechtecks und der Tabelle aus.  
   
@@ -398,7 +398,7 @@ Mit Rechtecken kann das Rendern des Berichts beeinflusst werden. Platzieren Sie 
   
 4.  Ziehen Sie auf der Seite „Diagrammfelder anordnen“ das Feld „Product“ in **Kategorien**.  
   
-5.  Ziehen Sie „Quantity“ in das Feld **Werte**, und klicken Sie anschließend auf **Weiter**.  
+5.  Ziehen Sie „Quantity“ in das Feld **Werte** , und klicken Sie anschließend auf **Weiter**.  
   
 6.  Klicken Sie auf **Fertig stellen**.  
   
@@ -415,21 +415,21 @@ Mit Rechtecken kann das Rendern des Berichts beeinflusst werden. Platzieren Sie 
 
 13. Klicken Sie mit der rechten Maustaste auf die Legende, und klicken Sie anschließend auf **Legendeneigenschaften**.
 
-14. Wählen Sie auf der Registerkarte **Allgemein** unter **Legendenposition**den mittleren Punkt am unteren Rand aus. 
+14. Wählen Sie auf der Registerkarte **Allgemein** unter **Legendenposition** den mittleren Punkt am unteren Rand aus. 
   
 15. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
 
 16. Ziehen Sie bei Bedarf den Diagrammbereich, um ihn zu vergrößern.
 
-     ![Berichts-Generator-Freiform-Kreisdiagramm](../reporting-services/media/report-builder-free-form-pie.png)
+     ![Screenshot: Kreisdiagramm, das dem Freiformbericht des Berichts-Generators hinzugefügt werden soll](../reporting-services/media/report-builder-free-form-pie.png)
   
 ## <a name="to-add-a-column-chart"></a>So fügen Sie einem Bericht ein Säulendiagramm hinzu  
   
 1.  Klicken Sie auf der Registerkarte **Einfügen** auf **Datenvisualisierungen** > **Diagramm** > **Diagramm-Assistent**.  
   
-2.  Klicken Sie auf der Seite **Dataset auswählen** auf **ListDataset**und anschließend auf **Weiter**.  
+2.  Klicken Sie auf der Seite **Dataset auswählen** auf **ListDataset** und anschließend auf **Weiter**.  
   
-3.  Klicken Sie auf **Spalte**und anschließend auf **Weiter**.  
+3.  Klicken Sie auf **Spalte** und anschließend auf **Weiter**.  
   
 4.  Ziehen Sie auf der Seite **Diagrammfelder anordnen** das Feld „Product“ in **Kategorien**.  
   
@@ -457,7 +457,7 @@ Mit Rechtecken kann das Rendern des Berichts beeinflusst werden. Platzieren Sie 
     > [!NOTE]  
     > Das Entfernen der Legende trägt zur Lesbarkeit des Diagramms bei, wenn es sich um ein kleines Diagramm handelt.  
   
-    ![Berichts-Generator-Freiform-Spalte](../reporting-services/media/report-builder-free-form-column.png)
+    ![Screenshot: Säulendiagramm, das dem Freiformbericht des Berichts-Generators hinzugefügt werden soll](../reporting-services/media/report-builder-free-form-column.png)
 
 12. Wählen Sie die Diagrammachse aus, und klicken Sie auf der Registerkarte **Home** > **Nummer** > **Währung**.
 
@@ -470,13 +470,13 @@ Sie können Rechtecke als Container für andere Elemente auf einer Berichtsseite
   
     Im Eigenschaftenbereich zeigt die **Name** -Eigenschaft den Namen des Rechtecks an.  
   
-    ![Berichts-Generator-Freiform-Rechteck-Name](../reporting-services/media/report-builder-free-form-rectangle-name.png) 
+    ![Screenshot: Abrufen der Eigenschaft „Name“ im Freiformbericht des Berichts-Generators](../reporting-services/media/report-builder-free-form-rectangle-name.png) 
   
 2.  Klicken Sie auf das Kreisdiagramm.  
   
 3.  Überprüfen Sie im Bereich **Eigenschaften** , ob die **Parent** -Eigenschaft den Namen des Rechtecks enthält.  
   
-     ![Berichts-Generator-Freiform-Kreisdiagramm-Parent](../reporting-services/media/report-builder-free-form-pie-parent.png) 
+     ![Screenshot: Abrufen der Eigenschaft „Parent“ im Freiformbericht des Berichts-Generators](../reporting-services/media/report-builder-free-form-pie-parent.png) 
   
 4.  Klicken Sie auf das Säulendiagramm, und wiederholen Sie Schritt 3.  
   

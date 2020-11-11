@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 10/27/2020
-ms.openlocfilehash: ce232d98e441d6ce217a2f97f6b8b1b5e130b7f3
-ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
+ms.openlocfilehash: fbfe0f98d5a61033bdc17e7c974e3859814ce4cc
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92734638"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364782"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Versionshinweise zu SQL Server Management Studio (SSMS)
 
@@ -123,7 +123,7 @@ SSMS 18.7 ist das neueste Release von SSMS mit allgemeiner Verfügbarkeit (GA).
 | Analysis Services | Ein Problem wurde behoben, das zu einem Fehler führen konnte, wenn versucht wurde, eine Verbindung mit SSAS über „msmdpump.dll“ herzustellen. Weitere Informationen finden Sie unter [SQL Server-Benutzerfeedback](https://feedback.azure.com/forums/908035-sql-server/suggestions/40144696). |
 | Sichern und Wiederherstellen | Ein Problem wurde behoben, bei dem durch die Auswahl von „Verbindungseigenschaften anzeigen“ ein SMO-Fehler auftrat, dass die HostDistribution-Eigenschaft für SQL 2016 und früher fehlt. |
 | Datenbank-Designer | Ein Problem wurde behoben, das zu einem Absturz von SSMS beim Verarbeiten von Dezimalzahlen führte. |
-| Datenbankdiagramme | Ein Problem wurde behoben, das zum Absturz oder Aufhängen von SSMS führen konnte, wenn Datendiagramme verwendet wurden, bei denen das Dialogfeld „Tabelle hinzufügen“ nicht ordnungsgemäß angezeigt wurde. |
+| Datenbankdiagramme | Ein Problem wurde behoben, das zum Absturz oder Aufhängen von SSMS führen konnte, wenn Datenbankdiagramme verwendet wurden, bei denen das Dialogfeld „Tabelle hinzufügen“ nicht ordnungsgemäß angezeigt wurde. |
 | Datenbankspiegelung | Ein Problem wurde behoben, das zum Fehlschlagen der Spiegelkonfiguration führte. Weitere Informationen finden Sie unter [SQL Server-Benutzerfeedback](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897281). |
 | SSMS allgemein | Ein Problem wurde behoben, bei dem das Herstellen einer Verbindung mit einer Azure SQL-Datenbank mehrere Sekunden dauern konnte (SQL-Anmeldung bei einer Benutzerdatenbank). |
 | SSMS allgemein | Ein Problem wurde behoben, bei dem SSMS die erfasste Deadlocks (XDL-Dateien) nicht verarbeitete/anzeigte. |
@@ -164,7 +164,7 @@ SSMS 18.7 ist das neueste Release von SSMS mit allgemeiner Verfügbarkeit (GA).
 
 ### <a name="186"></a>18.6
 
-![Herunterladen](media/download-icon.png) [SSMS 18.6 herunterladen](https://go.microsoft.com/fwlink/?linkid=2146265)
+![Herunterladen](media/download-icon.png) [SSMS 18.6 herunterladen](https://go.microsoft.com/fwlink/?linkid=2135491)
 
 - Releasenummer: 18.6
 - Buildnummer: 15.0.18338.0

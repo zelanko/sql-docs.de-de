@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 450e625fba58eaa6ff1d9e9fe13065bf934a633b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 23796da12c2b987dfad6f023d40e9975cb301e28
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245687"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043774"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator)
 In diesem Tutorial erstellen Sie einen paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht mit einem Säulendiagramm, das eine Datenreihe in Form mehrerer nach Kategorie gruppierter Säulen erstellt. 
@@ -27,7 +27,7 @@ Säulendiagramme sind für Folgendes nützlich:
   
 In der folgenden Abbildung sehen Sie das zu erstellende Säulendiagramm mit einem gleitenden Durchschnitt:  
   
-![report-builder-column-chart-tutorial](../reporting-services/media/report-builder-column-chart-tutorial.png)    
+![Screenshot: Säulendiagramm im Berichts-Generator](../reporting-services/media/report-builder-column-chart-tutorial.png)    
 > [!NOTE]  
 > In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Im ersten Tutorial dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Auswählen einer Datenquelle sowie zum Erstellen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
@@ -54,7 +54,7 @@ In diesem Abschnitt verwenden Sie den Diagramm-Assistenten, um ein eingebettetes
   
 3.  Klicken Sie im rechten Bereich auf **Diagramm-Assistent**.  
   
-4.  Klicken Sie auf der Seite **Dataset auswählen**auf **Dataset erstellen**und anschließend auf **Weiter**.  
+4.  Klicken Sie auf der Seite **Dataset auswählen** auf **Dataset erstellen** und anschließend auf **Weiter**.  
   
 5.  Wählen Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** eine vorhandene Datenquelle aus, oder navigieren Sie zum Berichtsserver, und wählen Sie eine Datenquelle aus. Klicken Sie anschließend auf **Weiter**. Möglicherweise müssen Benutzername und Kennwort eingegeben werden.  
   
@@ -105,13 +105,13 @@ Sie können aus mehreren vordefinierten Diagrammtypen auswählen und anschließe
   
     Das Diagramm wird der Entwurfsoberfläche hinzugefügt. Beachten Sie, dass das neue Säulendiagramm nur aussagekräftige Daten zeigt. Die Legende enthält Sales Date A, Sales Date B usw., um Ihnen einen Überblick zu übermitteln, wie Ihr Bericht aussehen wird. 
     
-    ![Berichts-Generator-Säulendiagramm-1-Entwurfsansicht](../reporting-services/media/report-builder-column-chart-1-design-view.png)
+    ![Screenshot: Säulendiagramm im Berichts-Generator in der Designansicht](../reporting-services/media/report-builder-column-chart-1-design-view.png)
   
 7.  Klicken Sie auf das Diagramm, um die Diagrammziehpunkte anzuzeigen. Ziehen Sie die rechte untere Ecke des Diagramms, um das Diagramm zu vergrößern. Die Berichtsentwurfsoberfläche wird vergrößert, um genügend Platz für das Diagramm zu bieten.  
   
 8.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
 
-    ![Berichts-Generator-Säulendiagramm-1-Vorschau](../reporting-services/media/report-builder-column-chart-1-preview.png)
+    ![Screenshot: Vorschau eines Säulendiagramms im Berichts-Generator](../reporting-services/media/report-builder-column-chart-1-preview.png)
 
 Beachten Sie, dass im Diagramm nicht jede Kategorie auf der horizontalen Achse beschriftet ist. Standardmäßig werden nur Bezeichnungen aufgenommen, die neben die Achse passen. 
   
@@ -122,9 +122,9 @@ Standardmäßig werden die Werte auf der horizontalen Achse in einem allgemeinen
   
 2.  Klicken Sie mit der rechten Maustaste auf die horizontale Achse und anschließend auf **Eigenschaften für horizontale Achsen**.  
   
-3.  Klicken Sie auf **Nummer** , und wählen Sie unter **Kategorie**die Option **Datum**aus.  
+3.  Klicken Sie auf **Nummer** , und wählen Sie unter **Kategorie** die Option **Datum** aus.  
   
-5.  Wählen Sie im Feld **Typ** die Option **31. Jan. 2000**aus.  
+5.  Wählen Sie im Feld **Typ** die Option **31. Jan. 2000** aus.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -132,7 +132,7 @@ Standardmäßig werden die Werte auf der horizontalen Achse in einem allgemeinen
   
 Das Datum wird im ausgewählten Datumsformat angezeigt. Im Diagramm wird immer noch nicht jede Kategorie auf der horizontalen Achse beschriftet. 
 
-![Berichts-Generator-Säulendiagramm-2-Vorschau](../reporting-services/media/report-builder-column-chart-2-preview.png)
+![Screenshot: Säulendiagramm im Berichts-Generator mit Datumsformat](../reporting-services/media/report-builder-column-chart-2-preview.png)
   
 Sie können die Bezeichnungsanzeige anpassen, indem Sie die Bezeichnungen drehen und das Intervall angeben.  
   
@@ -144,21 +144,21 @@ Sie können die Bezeichnungsanzeige anpassen, indem Sie die Bezeichnungen drehen
   
 3.  Klicken Sie mit der rechten Maustaste auf die horizontale Achse und anschließend auf **Eigenschaften für horizontale Achsen**.  
   
-5.  Wählen Sie auf der Registerkarte **Bezeichnungen** unter **Optionen für automatische Anpassung von Achsenbezeichnungen ändern** **Automatische Anpassung deaktivieren**aus.  
+5.  Wählen Sie auf der Registerkarte **Bezeichnungen** unter **Optionen für automatische Anpassung von Achsenbezeichnungen ändern** **Automatische Anpassung deaktivieren** aus.  
   
-7.  Wählen Sie in **Drehwinkel für Bezeichnungen**den Wert **-90**aus.  
+7.  Wählen Sie in **Drehwinkel für Bezeichnungen** den Wert **-90** aus.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
     Der Beispieltext für die horizontale Achse wird um 90 Grad gedreht.  
     
-    ![Berichts-Generator-Säulendiagramm-Rotieren-der-X-Achse](../reporting-services/media/report-builder-column-chart-rotate-x-axis.png)
+    ![Screenshot: Säulendiagramm im Berichts-Generator mit rotiertem x-Achsentext in der Designansicht](../reporting-services/media/report-builder-column-chart-rotate-x-axis.png)
   
 9. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
 Im Diagramm werden die Bezeichnungen gedreht.  
 
-![Berichts-Generator-Säulendiagramm-1-Rotieren-der-X-Achse-Vorschau](../reporting-services/media/report-builder-column-chart-rotate-x-axis-preview.png)
+![Screenshot: Vorschau eines Säulendiagramms im Berichts-Generator mit rotiertem x-Achsentext](../reporting-services/media/report-builder-column-chart-rotate-x-axis-preview.png)
   
 ## <a name="5-move-the-legend"></a><a name="Legend"></a>5. Verschieben der Legende  
 Die Legende wird automatisch auf Basis der Kategorie- und Reihendaten erstellt. Sie können die Legende unter den Diagrammbereich eines Säulendiagramms verschieben.  
@@ -167,13 +167,13 @@ Die Legende wird automatisch auf Basis der Kategorie- und Reihendaten erstellt. 
   
 2.  Klicken Sie mit der rechten Maustaste auf die Legende des Diagramms und anschließend auf **Legendeneigenschaften**.  
   
-3.  Wählen Sie unter **Layout und Position**eine andere Position aus. Wählen Sie z.B. die Option unten in der Mitte aus.  
+3.  Wählen Sie unter **Layout und Position** eine andere Position aus. Wählen Sie z.B. die Option unten in der Mitte aus.  
   
     Wenn Sie die Legende über oder unter einem Diagramm platzieren, ändert sich das Layout der Legende von vertikal zu horizontal. Im Feld **Layout** können Sie ein anderes Layout auswählen.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  (Optional) Da es nur eine Kategorie in diesem Tutorial gibt, benötigt das Diagramm keine Legende. Klicken Sie mit der rechten Maustaste auf die Legende und anschließend auf **Legende löschen**, um sie zu entfernen.  
+5.  (Optional) Da es nur eine Kategorie in diesem Tutorial gibt, benötigt das Diagramm keine Legende. Klicken Sie mit der rechten Maustaste auf die Legende und anschließend auf **Legende löschen** , um sie zu entfernen.  
   
 6.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
@@ -181,7 +181,7 @@ Die Legende wird automatisch auf Basis der Kategorie- und Reihendaten erstellt. 
     
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
   
-2.  Markieren Sie am oberen Diagrammrand den Text **Diagrammtitel** , und geben Sie anschließend den Text **Store Sales Order Totals**ein.  
+2.  Markieren Sie am oberen Diagrammrand den Text **Diagrammtitel** , und geben Sie anschließend den Text **Store Sales Order Totals** ein.  
   
 3.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
@@ -214,7 +214,7 @@ Standardmäßig werden die Werte auf der vertikalen Achse in einem allgemeinen F
   
 12. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
 
-    ![Berichts-Generator-Säulendiagramm-Format-Y-Achse](../reporting-services/media/report-builder-column-chart-format-y-axis.png)
+    ![Screenshot: Vorschau eines Säulendiagramms im Berichts-Generator mit korrekt beschrifteter y-Achse](../reporting-services/media/report-builder-column-chart-format-y-axis.png)
     
 ## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8. Anzeigen aller Bezeichnungen auf der horizontalen Achse (x-Achse)
 
@@ -226,13 +226,13 @@ Sie sehen, dass nur einige der Bezeichnungen auf der X-Achse angezeigt werden. I
 
 3. Legen Sie im Eigenschaftenbereich LabelInterval auf 1 fest.
 
-    ![report-builder-column-chart-set-label-interval](../reporting-services/media/report-builder-column-chart-set-label-interval.png)
+    ![Screenshot: Festlegen des Beschriftungsintervalls für das Säulendiagramm im Berichts-Generator](../reporting-services/media/report-builder-column-chart-set-label-interval.png)
 
     Das Diagramm sieht genauso aus wie in der Entwurfsansicht. 
     
 5.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.
 
-    ![report-builder-column-chart-label-interval-one-preview](../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
+    ![Screenshot: Vorschau eines Säulendiagramms im Berichts-Generator mit auf 1 festgelegtem Beschriftungsintervall](../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
     
     Jetzt zeigt das Diagramm alle seine Bezeichnungen an.
   
@@ -246,13 +246,13 @@ Ein gleitender Durchschnitt ist ein Mittelwert der Daten in der Reihe, die über
   
 3.  Klicken Sie mit der rechten Maustaste auf das Feld **[Sum(Sales)]** im Bereich **Werte** und anschließend auf **Berechnete Reihe hinzufügen**.  
 
-     ![Berichts-Generator-Säulendiagramm-Hinzufügen-von-berechneter-Reihe](../reporting-services/media/report-builder-column-chart-add-calculated-series.png)
+     ![Screenshot: Hinzufügen einer berechneten Reihe zum Säulendiagramm im Berichts-Generator](../reporting-services/media/report-builder-column-chart-add-calculated-series.png)
   
-4.  Überprüfen Sie in **Formel**, ob **Gleitender Durchschnitt** ausgewählt ist.  
+4.  Überprüfen Sie in **Formel** , ob **Gleitender Durchschnitt** ausgewählt ist.  
   
-5.  Wählen Sie in **Formelparameter festlegen**für **Zeitraum**den Wert **4**aus.  
+5.  Wählen Sie in **Formelparameter festlegen** für **Zeitraum** den Wert **4** aus.  
   
-6.  Wählen Sie auf der Registerkarte **Rahmen** unter **Linienstärke** **3 pt**aus.  
+6.  Wählen Sie auf der Registerkarte **Rahmen** unter **Linienstärke** **3 pt** aus.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -260,7 +260,7 @@ Ein gleitender Durchschnitt ist ein Mittelwert der Daten in der Reihe, die über
   
 Im Diagramm wird eine Linie angezeigt, die den gleitenden Durchschnitt für den Gesamtumsatz nach Datum darstellt – gemittelt über jeweils vier Datumsangaben. Erfahren Sie mehr über das [Hinzufügen eines gleitenden Durchschnitts zu einem Diagramm (Berichts-Generator und SSRS)](../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md). 
 
-![Berichts-Generator-Säulendiagramm-gleitender-Durchschnitt](../reporting-services/media/report-builder-column-chart-moving-average.png)
+![Screenshot: Säulendiagramm im Berichts-Generator mit gleitendem Durchschnitt](../reporting-services/media/report-builder-column-chart-moving-average.png)
   
 ## <a name="10-add-a-report-title"></a><a name="Title"></a>10. Hinzufügen eines Berichtstitels  
   
@@ -268,7 +268,7 @@ Im Diagramm wird eine Linie angezeigt, die den gleitenden Durchschnitt für den 
   
 2.  Klicken Sie auf der Entwurfsoberfläche auf **Zum Hinzufügen eines Titels klicken**.  
   
-3.  Geben Sie **Umsatzdiagramm**ein, drücken Sie die EINGABETASTE, und geben Sie anschließend **Januar bis Dezember 2015**ein:  
+3.  Geben Sie **Umsatzdiagramm** ein, drücken Sie die EINGABETASTE, und geben Sie anschließend **Januar bis Dezember 2015** ein:  
   
     **Umsatzdiagramm**  
   
@@ -294,7 +294,7 @@ Im Diagramm wird eine Linie angezeigt, die den gleitenden Durchschnitt für den 
 
     Sie können ihn entweder auf Ihrem Computer oder auf dem Berichtsserver speichern.
   
-3.  Geben Sie im Feld **Name**den Text **Sales Order Column Chart**ein.  
+3.  Geben Sie im Feld **Name** den Text **Sales Order Column Chart** ein.  
   
 4.  Klicken Sie auf **Speichern**.  
   

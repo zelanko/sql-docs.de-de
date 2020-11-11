@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5d936933b96c8d7f5c4c2830707b4a6bb4d9fe2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4efd72f1c2d6f9098e2af4840483d38d4749d264
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243552"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243745"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>Arbeiten mit Abonnements (Webportal)
 
@@ -30,7 +30,7 @@ Bevor Sie ein neues Abonnement erstellen können, müssen Sie sicherstellen, das
 ![Verwalten von Abonnements](../reporting-services/media/working-with-subscriptions-web-portal/ssrs-manage-subscriptions.png)  
 Sie können die Seite „Abonnements“ aufrufen, indem Sie zuerst auf die **Auslassungspunkte (...)** eines Berichts und dann auf **Verwalten** und **Abonnements** klicken.  
   
-Sie können auf der Seite „Abonnements“ ein neues Abonnement erstellen, indem Sie **+ Neues Abonnement**auswählen. Sie können vorhandene Abonnements auch bearbeiten oder die von Ihnen ausgewählten Abonnements löschen.  
+Sie können auf der Seite „Abonnements“ ein neues Abonnement erstellen, indem Sie **+ Neues Abonnement** auswählen. Sie können vorhandene Abonnements auch bearbeiten oder die von Ihnen ausgewählten Abonnements löschen.  
   
 Diese Seite stellt auch den Ergebnisstatus des Abonnements bereit, der in der Spalte **Ergebnis** zu finden ist. Wenn für ein Abonnement ein Fehler auftritt,überprüfen Sie die Ergebnisspalte zunächst auf die Fehlermeldung. 
 
@@ -42,9 +42,9 @@ Mithilfe der Seite Neues Abonnement oder Abonnement bearbeiten können Sie ein n
 Abonnements werden nur für Berichte unterstützt, die unbeaufsichtigt ausgeführt werden können. Der Bericht muss zumindest gespeicherte oder gar keine Anmeldeinformationen verwenden. Wenn der Bericht Parameter verwendet, muss ein Standardwert angegeben werden. Abonnements können inaktiv werden, wenn die Berichtsausführungseinstellungen geändert oder die von den Parametereigenschaften verwendeten Standardwerte entfernt werden. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md).  
   
 ## <a name="type-of-subscription"></a>Abonnementtyp  
-Können Sie zwischen einem **Standardabonnement** und einem **datengesteuerten Abonnement**wählen.  
+Können Sie zwischen einem **Standardabonnement** und einem **datengesteuerten Abonnement** wählen.  
   
-![ssRSWebPortal-subscriptions3](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions3.png)  
+![Screenshot: Abschnitt „Abonnementtyp“](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions3.png)  
    
 Ein datengesteuertes Abonnement fragt bei jeder Ausführung eine Abonnentendatenbank nach Abonnementinformationen ab. Datengesteuerte Abonnements verwenden die Abfrageergebnisse, um die Empfänger des Abonnements, Übermittlungseinstellungen und Berichtsparameterwerte zu bestimmen. Zur Laufzeit führt der Berichtsserver eine Abfrage aus, um die für das Abonnement verwendeten Einstellungen abzurufen.   
   
@@ -57,7 +57,7 @@ Wählen Sie die Übermittlungserweiterung aus, die zum Verteilen des Berichts ve
   
 Die Verfügbarkeit einer Übermittlungserweiterung hängt davon ab, ob sie auf dem Berichtsserver installiert und konfiguriert ist. Die Berichtsserver-E-Mail-Erweiterung ist die Standardübermittlungserweiterung. Sie muss jedoch konfiguriert werden, bevor Sie sie verwenden können. Die Dateifreigabeübermittlung erfordert keine Konfiguration. Sie müssen jedoch einen freigegebenen Ordner definieren, bevor Sie sie verwenden können.  
   
-![ssRSWebPortal-subscriptions2](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions2.png)  
+![Screenshot: Bereiche „Ziel“ und „Übermittlungsoptionen“ (Windows-Dateifreigabe)](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions2.png)  
   
 Abhängig von der ausgewählten Übermittlungserweiterung werden die folgenden Einstellungen angezeigt:  
   
@@ -68,7 +68,7 @@ Abhängig von der ausgewählten Übermittlungserweiterung werden die folgenden E
 ## <a name="data-driven-subscription-dataset"></a>Dataset eines datengesteuerten Abonnements  
 Für ein datengesteuertes Abonnement müssen Sie das für das Abonnement verwendete Dataset definieren. Wählen Sie **Dataset bearbeiten** aus, um diese Informationen bereitstellen.  
   
-![ssRSWebPortal-subscriptions4](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions4.png)  
+![Screenshot: Bereich „Dataset“](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions4.png)  
   
 Sie müssen zuerst eine **Datenquelle** für die Abfrage bereitstellen. Dies kann entweder eine freigegebene Datenquelle sein, Sie können aber alternativ auch eine benutzerdefinierte Datenquelle angeben.  
   
@@ -80,9 +80,9 @@ Die besten Ergebnisse erzielen Sie, wenn Sie die Abfrage zunächst in SQL Server
   
 -   Die Zeilen im Resultset bestimmen die Anzahl von Berichtsübermittlungen, die generiert werden. Wenn der Resultset 10.000 Zeilen enthält, generiert der Berichtsserver 10.000 Benachrichtigungen und Übermittlungen.  
   
-![ssRSWebPortal-subscriptions5](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions5.png)  
+![Screenshot: Bereich „Abfrage“](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions5.png)  
   
-Sie können anschließend die Abfrage überprüfen. Sie können auch ein **Abfragetimeout**definieren.  
+Sie können anschließend die Abfrage überprüfen. Sie können auch ein **Abfragetimeout** definieren.  
   
 Nachdem die Abfrage erstellt wurde, können Sie dann die Werte den benötigten Feldern zuweisen. Sie können die Daten manuell eingeben oder ein Feld aus dem Dataset auswählen, das Sie erstellt haben. 
 

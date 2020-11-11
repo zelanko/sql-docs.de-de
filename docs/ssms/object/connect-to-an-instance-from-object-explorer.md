@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bd161a78bb0b5249d0ce6f802760acd2048014f6
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: de873f30e435a1513e8e642cf5e3a97641e147d6
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523971"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243741"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>Verbinden mit einem SQL-Server oder einer Azure SQL-Datenbank
 
@@ -47,7 +47,7 @@ Um mit Servern und Datenbanken arbeiten zu können, müssen Sie zuerst eine Verb
 
 1. Nach der Verbindungsherstellung wird der Server im **Objekt-Explorer** angezeigt:
 
-   ![connected](../media/connect-to-server/connected.png)
+   ![Screenshot: Objekt-Explorer, der anzeigt, dass die Verbindung mit dem Server erfolgreich hergestellt wurde](../media/connect-to-server/connected.png)
 
 ## <a name="next-steps"></a>Nächste Schritte
 

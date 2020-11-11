@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b07d50a9f885d6440f9cfd0a5bb47b3017d5f114
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 1ebe16bd9b9474b892346ec2a8dd6f25254c6d0b
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935408"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243761"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>Arbeiten mit paginierten Berichten (Webportal)
 
@@ -28,9 +28,9 @@ Sie können Folgendes tun, um ein neues freigegebenes Dataset zu erstellen.
   
 1.  Wählen Sie in der Menüleiste „Neu“ aus.  
   
-2.  Wählen Sie **Paginierter Bericht**aus.  
+2.  Wählen Sie **Paginierter Bericht** aus.  
   
-    ![ssRSWebPortal-new-report](../reporting-services/media/ssrswebportal-new-report.png)  
+    ![Screenshot: Dropdownmenü „Neu“, in dem die Option „Paginierter Bericht“ hervorgehoben ist](../reporting-services/media/ssrswebportal-new-report.png)  
   
 3.  Entweder wird jetzt der Berichts-Generator gestartet, oder Sie werden aufgefordert, ihn herunterzuladen.  
   
@@ -45,28 +45,28 @@ Beim Verwalten eines vorhandenen paginierten Berichts haben Sie verschiedene Mö
   
 1.  Klicken Sie auf die **Auslassungspunkte (...)** für das Dataset, das Sie verwalten möchten.  
       
-    ![ssRSWebPortal-manage-report1](../reporting-services/media/ssrswebportal-manage-report1.png)  
+    ![Screenshot: Benutzer klickt beim Dataset auf die Auslassungspunkte](../reporting-services/media/ssrswebportal-manage-report1.png)  
   
 2.  Wählen Sie **Verwalten** aus, womit Sie auf den Bearbeitungsbildschirm gelangen.  
     
-    ![ssRSWebPortal-manage-report2](../reporting-services/media/ssrswebportal-manage-report2.png)  
+    ![Screenshot: Nach einem Klick auf die Auslassungspunkte ist die Option „Verwalten“ hervorgehoben.](../reporting-services/media/ssrswebportal-manage-report2.png)  
   
 ## <a name="properties"></a>Eigenschaften  
   
-Im Eigenschaftenbildschirm können Sie den **Namen** und die **Beschreibung** des paginierten Berichts ändern. Außerdem stehen Ihnen folgende Optionen zur Verfügung: **Löschen**, **Verschieben**, **Verknüpften Bericht erstellen**, **Im Berichts-Generator bearbeiten**, **Herunterladen** oder **Ersetzen**.  
+Im Eigenschaftenbildschirm können Sie den **Namen** und die **Beschreibung** des paginierten Berichts ändern. Außerdem stehen Ihnen folgende Optionen zur Verfügung: **Löschen** , **Verschieben** , **Verknüpften Bericht erstellen** , **Im Berichts-Generator bearbeiten** , **Herunterladen** oder **Ersetzen**.  
     
-![ssRSWebPortal-report-properties](../reporting-services/media/ssrswebportal-report-properties.png)  
+![Screenshot: Bildschirm „Eigenschaften“ des Dialogfelds „Edit Company Sales“ (Company Sales bearbeiten)](../reporting-services/media/ssrswebportal-report-properties.png)  
    
 ## <a name="parameters"></a>Parameter  
   
 Sie können vorhandene Parameter eines paginierten Berichts ändern. Um einen neuen Parameter hinzuzufügen, müssen Sie den Bericht im Berichts-Generator oder in SQL Server Data Tools bearbeiten.  
   
-![ssRSWebPortal-report-parameters](../reporting-services/media/ssrswebportal-report-parameters.png)  
+![Screenshot: Bildschirm „Parameter“ des Dialogfelds „Company Sales bearbeiten“](../reporting-services/media/ssrswebportal-report-parameters.png)  
    
 ## <a name="data-source"></a>Data source  
 Sie können auf eine freigegebene Datenquelle verweisen oder Verbindungsinformationen für eine benutzerdefinierte Datenquelle eingeben.  
   
-![ssRSWebPortal-report-datasource](../reporting-services/media/ssrswebportal-report-datasource.png)  
+![Screenshot: Bildschirm „Datenquellen“ des Dialogfelds „Company Sales bearbeiten“](../reporting-services/media/ssrswebportal-report-datasource.png)  
   
 Die folgenden Optionen können beim Angeben einer benutzerdefinierten Datenquelle verwendet werden.  
   
@@ -122,7 +122,7 @@ Bevor Sie diese Option verwenden können, müssen Sie für den Berichtsserver da
 ## <a name="subscriptions"></a>Abonnements  
 Ein Reporting Services-Abonnement ist eine Konfiguration zur Übermittlung eines Berichts zu einem bestimmten Zeitpunkt oder als Reaktion auf ein Ereignis, und zwar in einem von Ihnen angegebenen Dateiformat. Speichern Sie beispielsweise jeden Donnerstag den Bericht MonthlySales.rdl als Microsoft Word-Dokument in eine Dateifreigabe. Sie können Abonnements verwenden, um die Übermittlung eines Berichts mit einem spezifischen Satz an Berichtsparameterwerten zeitlich festzulegen und zu automatisieren. Weitere Informationen finden Sie unter [Arbeiten mit Abonnements](working-with-subscriptions-web-portal.md).
   
-![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
+![Screenshot: Bildschirm „Abonnements“ des Dialogfelds „Company Sales bearbeiten“](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
 ## <a name="dependent-items"></a>Abhängige Elemente  
 Verwenden Sie die Seite „Abhängige Elemente“, um eine Liste der Elemente anzuzeigen, die auf diesen Bericht verweisen. Das Symbol für den jeweiligen Elementtyp gibt an, worum es sich dabei handelt. Sie können für jedes Element auf die **Auslassungspunkte (…)** klicken, um das entsprechende Element zu verwalten.  
@@ -136,11 +136,11 @@ Zum Zwischenspeichern von Daten für einen paginierten Bericht stehen Ihnen mehr
   
 3.  **Diesen Bericht immer für vorher generierte Momentaufnahmen ausführen** : Wenn Sie diese Option auswählen, werden das Layout und die Daten eines Berichts für einen angegebenen Zeitraum zwischengespeichert. Sie können einen Bericht als Berichtsmomentaufnahme ausführen, um zu verhindern, dass der Bericht zu willkürlichen Zeiten ausgeführt wird (z.B. während einer geplanten Sicherung). Die Momentaufnahme kann nach einem festgelegten Zeitplan aktualisiert werden. [Weitere Informationen]  
   
-![ssRSWebPortal-report-caching1](../reporting-services/media/ssrswebportal-report-caching1.png)  
+![Screenshot: Bildschirm „Caching“ des Dialogfelds „Company Sales bearbeiten“, wobei die Option „Diesen Bericht immer mit den neuesten Daten ausführen“ ausgewählt ist](../reporting-services/media/ssrswebportal-report-caching1.png)  
    
 Die Wahl von **Kopien dieses Berichts zwischenspeichern und wenn verfügbar verwenden** bieten Ihnen einige zusätzliche Optionen.  
   
-![ssRSWebPortal-report-caching2](../reporting-services/media/ssrswebportal-report-caching2.png)  
+![Screenshot: Bildschirm „Caching“ des Dialogfelds „Company Sales bearbeiten“, wobei die Option „Kopien von diesem Bericht zwischenspeichern und bei Verfügbarkeit verwenden“ ausgewählt ist](../reporting-services/media/ssrswebportal-report-caching2.png)  
 
 Weitere Informationen finden Sie unter [Arbeiten mit Momentaufnahmen](working-with-snapshots-web-portal.md).
   
@@ -159,11 +159,11 @@ Die folgenden Standardrollenzuweisungen ermöglichen es Ihnen, paginierte Berich
   
 Nachdem Sie die obenstehende Option zum Zwischenspeichern angewendet haben, können Sie einen Cacheaktualisierungsplan definieren. Wählen Sie den Link **Manage Refresh Plans** (Aktualisierungspläne verwalten), der angezeigt wird, nachdem Sie die Cacheeinstellungen anwenden. Dadurch gelangen Sie auf die Seite „Cacheaktualisierungsplan“.   
   
-Wählen Sie **Neuer Cacheaktualisierungsplan**, um einen neuen Cacheplan zu erstellen. Sie können einen Namen für den Plan eingeben und einen Zeitplan angeben. Falls das Dataset über definierte Parameter verfügt, werden Ihnen diese aufgelistet angezeigt, und es wird Ihnen möglich sein, Werte bereitzustellen, sofern sie nicht als schreibgeschützt gekennzeichnet sind.  
+Wählen Sie **Neuer Cacheaktualisierungsplan** , um einen neuen Cacheplan zu erstellen. Sie können einen Namen für den Plan eingeben und einen Zeitplan angeben. Falls das Dataset über definierte Parameter verfügt, werden Ihnen diese aufgelistet angezeigt, und es wird Ihnen möglich sein, Werte bereitzustellen, sofern sie nicht als schreibgeschützt gekennzeichnet sind.  
   
-Sobald Sie fertig sind, können Sie **Cacheaktualisierungsplan erstellen**auswählen.  
+Sobald Sie fertig sind, können Sie **Cacheaktualisierungsplan erstellen** auswählen.  
   
-![ssRSWebPortal-report-caching3](../reporting-services/media/ssrswebportal-report-caching3.png)  
+![Screenshot: Dialogfeld „Company Sales bearbeiten“ mit der Option „Cacheaktualisierungsplan erstellen“](../reporting-services/media/ssrswebportal-report-caching3.png)  
   
 > [!NOTE]
 > SQL Server-Agent muss ausgeführt werden, um einen Cacheaktualisierungsplan zu erstellen.  

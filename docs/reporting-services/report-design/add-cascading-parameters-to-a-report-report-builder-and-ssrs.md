@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3335665e1e7e7212c6521e6c6c654a1eb5ee04ba
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: fba193af6ef9f76c50f33ffa45a7bc668a0edead
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85035042"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364662"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Hinzufügen von kaskadierenden Parametern zu einem Bericht (Berichts-Generator und SSRS)
   Kaskadierende Parameter ermöglichen das Verwalten großer Berichtsdatenmengen. Sie können einen Satz von abhängigen Parametern definieren, sodass die Liste der Werte für einen Parameter von dem Wert abhängt, der in einem anderen Parameter ausgewählt wurde. Der erste Parameter ist beispielsweise unabhängig und stellt eine Liste von Produktkategorien dar. Wenn der Benutzer eine Kategorie auswählt, hängt der zweite Parameter vom Wert des ersten Parameters ab. Seine Werte werden mit einer Liste von Unterkategorien innerhalb der ausgewählten Kategorie aktualisiert. Wenn der Benutzer den Bericht anzeigt, werden die Berichtsdaten mit den Parameterwerten für die Kategorie und die Unterkategorien gefiltert.  
@@ -32,13 +32,13 @@ ms.locfileid: "85035042"
   
 1.  Klicken Sie im Berichtsdatenbereich mit der rechten Maustaste auf eine Datenquelle, und klicken Sie anschließend auf **Dataset hinzufügen**.  
   
-2.  Geben Sie unter **Name**den Namen des Datasets ein.  
+2.  Geben Sie unter **Name** den Namen des Datasets ein.  
   
-3.  Wählen Sie in **Datenquelle**den Namen der Datenquelle aus, oder klicken Sie auf **Neu** , um eine Datenquelle zu erstellen.  
+3.  Wählen Sie in **Datenquelle** den Namen der Datenquelle aus, oder klicken Sie auf **Neu** , um eine Datenquelle zu erstellen.  
   
-4.  Wählen Sie in **Abfragetyp**den Abfragetyp für die ausgewählte Datenquelle aus. In diesem Thema wird angenommen, dass der Abfragetyp **Text** ausgewählt wurde.  
+4.  Wählen Sie in **Abfragetyp** den Abfragetyp für die ausgewählte Datenquelle aus. In diesem Thema wird angenommen, dass der Abfragetyp **Text** ausgewählt wurde.  
   
-5.  Geben Sie in **Abfrage**die Abfrage ein, mit der die Daten für diesen Bericht abgerufen werden sollen. Die Abfrage muss die folgenden Teile enthalten:  
+5.  Geben Sie in **Abfrage** die Abfrage ein, mit der die Daten für diesen Bericht abgerufen werden sollen. Die Abfrage muss die folgenden Teile enthalten:  
   
     1.  Eine Liste mit Datenquellenfeldern. In einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung gibt beispielsweise die SELECT-Anweisung eine Liste mit den Namen aller Datenbankspalten aus einer bestimmten Tabelle oder Sicht an.  
   
@@ -57,13 +57,13 @@ ms.locfileid: "85035042"
   
 1.  Klicken Sie im Berichtsdatenbereich mit der rechten Maustaste auf eine Datenquelle, und klicken Sie anschließend auf **Dataset hinzufügen**.  
   
-2.  Geben Sie unter **Name**den Namen des Datasets ein.  
+2.  Geben Sie unter **Name** den Namen des Datasets ein.  
   
-3.  Vergewissern Sie sich, dass der Name in **Datenquelle**dem Namen der Datenquelle entspricht, die in Schritt 1 ausgewählt wurde.  
+3.  Vergewissern Sie sich, dass der Name in **Datenquelle** dem Namen der Datenquelle entspricht, die in Schritt 1 ausgewählt wurde.  
   
-4.  Wählen Sie in **Abfragetyp**den Abfragetyp für die ausgewählte Datenquelle aus. In diesem Thema wird angenommen, dass der Abfragetyp **Text** ausgewählt wurde.  
+4.  Wählen Sie in **Abfragetyp** den Abfragetyp für die ausgewählte Datenquelle aus. In diesem Thema wird angenommen, dass der Abfragetyp **Text** ausgewählt wurde.  
   
-5.  Geben Sie in **Abfrage**die Abfrage ein, mit der Werte für diesen Parameter abgerufen werden sollen. Abfragen für unabhängige Parameter enthalten normalerweise keine Abfrageparameter. Wenn Sie z. B. eine Abfrage für einen Parameter erstellen möchten, der alle Kategoriewerte bereitstellt, können Sie eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung wie die Folgende verwenden:  
+5.  Geben Sie in **Abfrage** die Abfrage ein, mit der Werte für diesen Parameter abgerufen werden sollen. Abfragen für unabhängige Parameter enthalten normalerweise keine Abfrageparameter. Wenn Sie z. B. eine Abfrage für einen Parameter erstellen möchten, der alle Kategoriewerte bereitstellt, können Sie eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung wie die Folgende verwenden:  
   
     ```  
     SELECT DISTINCT <column name> FROM <table>  
@@ -81,13 +81,13 @@ ms.locfileid: "85035042"
   
 1.  Klicken Sie im Berichtsdatenbereich im Ordner „Parameter“ mit der rechten Maustaste auf den ersten Parameter, und klicken Sie anschließend auf **Parametereigenschaften**.  
   
-2.  Vergewissern Sie sich, dass in **Name**der korrekte Name des Parameters angegeben ist.  
+2.  Vergewissern Sie sich, dass in **Name** der korrekte Name des Parameters angegeben ist.  
   
 3.  Klicken Sie auf **Verfügbare Werte**.  
   
 4.  Klicken Sie auf **Werte aus Abfrage abrufen**. Es werden drei Felder angezeigt.  
   
-5.  Klicken Sie in **Dataset**in der Dropdownliste auf den Namen des Datasets, das Sie in der vorherigen Prozedur erstellt haben.  
+5.  Klicken Sie in **Dataset** in der Dropdownliste auf den Namen des Datasets, das Sie in der vorherigen Prozedur erstellt haben.  
   
 6.  Klicken Sie im Feld **Wert** auf den Namen des Felds, das den Parameterwert bereitstellt.  
   
@@ -101,13 +101,13 @@ ms.locfileid: "85035042"
   
 1.  Klicken Sie im Berichtsdatenbereich mit der rechten Maustaste auf eine Datenquelle, und klicken Sie anschließend auf **Dataset hinzufügen**.  
   
-2.  Geben Sie unter **Name**den Namen des Datasets ein.  
+2.  Geben Sie unter **Name** den Namen des Datasets ein.  
   
-3.  Vergewissern Sie sich, dass der Name in **Datenquelle**dem Namen der Datenquelle entspricht, die in Schritt 1 ausgewählt wurde.  
+3.  Vergewissern Sie sich, dass der Name in **Datenquelle** dem Namen der Datenquelle entspricht, die in Schritt 1 ausgewählt wurde.  
   
-4.  Wählen Sie in **Abfragetyp**den Abfragetyp für die ausgewählte Datenquelle aus. In diesem Thema wird angenommen, dass der Abfragetyp **Text** ausgewählt wurde.  
+4.  Wählen Sie in **Abfragetyp** den Abfragetyp für die ausgewählte Datenquelle aus. In diesem Thema wird angenommen, dass der Abfragetyp **Text** ausgewählt wurde.  
   
-5.  Geben Sie in **Abfrage**die Abfrage ein, mit der Werte für diesen Parameter abgerufen werden sollen. Abfragen für abhängige Parameter enthalten normalerweise Abfrageparameter für jeden Parameter, von dem der betreffende Parameter abhängig ist. Wenn Sie beispielsweise eine Abfrage für einen Parameter erstellen möchten, der alle Unterkategoriewerte (abhängiger Parameter) für eine Kategorie (unabhängiger Parameter) bereitstellt, können Sie eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung wie die Folgende verwenden:  
+5.  Geben Sie in **Abfrage** die Abfrage ein, mit der Werte für diesen Parameter abgerufen werden sollen. Abfragen für abhängige Parameter enthalten normalerweise Abfrageparameter für jeden Parameter, von dem der betreffende Parameter abhängig ist. Wenn Sie beispielsweise eine Abfrage für einen Parameter erstellen möchten, der alle Unterkategoriewerte (abhängiger Parameter) für eine Kategorie (unabhängiger Parameter) bereitstellt, können Sie eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung wie die Folgende verwenden:  
   
     ```  
     SELECT DISTINCT Subcategory FROM <table>   
@@ -120,17 +120,17 @@ ms.locfileid: "85035042"
   
  Anschließend legen Sie die Eigenschaften des zweiten Parameters fest, um mit diesem Dataset zur Laufzeit die verfügbaren Werte aufzufüllen.  
   
-## <a name="to-set-available-values-for-a-report-parameter"></a>So legen Sie verfügbare Werte für einen Berichtsparameter fest  
+## <a name="to-set-available-values-for-the-second-parameter"></a>So legen Sie verfügbare Werte für den zweiten Parameter fest  
   
 1.  Klicken Sie im Berichtsdatenbereich im Ordner „Parameter“ mit der rechten Maustaste auf den ersten Parameter, und klicken Sie anschließend auf **Parametereigenschaften**.  
   
-2.  Vergewissern Sie sich, dass in **Name**der korrekte Name des Parameters angegeben ist.  
+2.  Vergewissern Sie sich, dass in **Name** der korrekte Name des Parameters angegeben ist.  
   
 3.  Klicken Sie auf **Verfügbare Werte**.  
   
 4.  Klicken Sie auf **Werte aus Abfrage abrufen**.  
   
-5.  Klicken Sie in **Dataset**in der Dropdownliste auf den Namen des Datasets, das Sie in der vorherigen Prozedur erstellt haben.  
+5.  Klicken Sie in **Dataset** in der Dropdownliste auf den Namen des Datasets, das Sie in der vorherigen Prozedur erstellt haben.  
   
 6.  Klicken Sie im Feld **Wert** auf den Namen des Felds, das den Parameterwert bereitstellt.  
   

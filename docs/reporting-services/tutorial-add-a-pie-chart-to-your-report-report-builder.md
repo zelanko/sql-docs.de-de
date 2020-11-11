@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 55cf0d48ebe4cec7063089c1ec025dd4b34bce1b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a924e8e6ed7a19904ddc9c8cded38683b849edeb
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245667"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043743"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)
 In diesem Tutorial erstellen Sie ein Kreisdiagramm in einem paginierten Reporting Services-Bericht. Sie fügen Prozentsätze hinzu und kombinieren kleine Slices zu einem einzelnen Slice.
@@ -23,7 +23,7 @@ Kreis- und Ringdiagramme zeigen Daten als Teile des Ganzen an. Sie haben keine A
 
 Diese Abbildung zeigt das Kreisdiagramm, das Sie erstellen. 
  
-![Berichts-Generator-Kreisdiagramm-fertig](../reporting-services/media/report-builder-pie-chart-final.png)
+![Screenshot: Kreisdiagramm im Berichts-Generator](../reporting-services/media/report-builder-pie-chart-final.png)
   
 Wenn in einem Kreisdiagramm zu viele Datenpunkte vorhanden sind, können die Datenpunktbezeichnungen zu überfüllt sein, um sie zu lesen. Erwägen Sie in diesem Fall eine Anzahl von kleinen Slices zu einem größeren Slice zu kombinieren. Kreisdiagramme sind besser lesbar, wenn Sie die Daten bereits zu einer kleineren Anzahl von Datenpunkten aggregiert haben.  
  
@@ -49,7 +49,7 @@ In diesem Abschnitt verwenden Sie den Diagramm-Assistenten, um ein eingebettetes
   
 3.  Klicken Sie im rechten Bereich auf **Diagramm-Assistent**.  
   
-4.  Klicken Sie auf der Seite **Dataset auswählen** auf **Dataset erstellen**und anschließend auf **Weiter**.  
+4.  Klicken Sie auf der Seite **Dataset auswählen** auf **Dataset erstellen** und anschließend auf **Weiter**.  
   
 5.  Wählen Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** eine vorhandene Datenquelle aus, oder navigieren Sie zum Berichtsserver, und wählen Sie eine Datenquelle aus. Klicken Sie anschließend auf **Weiter**. Möglicherweise müssen Benutzername und Kennwort eingegeben werden.  
   
@@ -82,7 +82,7 @@ In diesem Abschnitt verwenden Sie den Diagramm-Assistenten, um ein eingebettetes
 Sie können aus einer Vielzahl vordefinierter Diagrammtypen auswählen.  
 
   
-1.  Klicken Sie auf der Seite **Diagrammtyp auswählen** auf **Kreis**und anschließend auf **Weiter**. Die Seite **Diagrammfelder anordnen** wird geöffnet.  
+1.  Klicken Sie auf der Seite **Diagrammtyp auswählen** auf **Kreis** und anschließend auf **Weiter**. Die Seite **Diagrammfelder anordnen** wird geöffnet.  
   
     Ziehen Sie auf der Seite **Diagrammfelder anordnen** das Feld „Product“ in den Bereich **Kategorien** . Kategorien definieren die Anzahl von Slices im Kreisdiagramm. In diesem Beispiel werden acht Slices verwendet, eines für jedes Produkt.  
   
@@ -94,7 +94,7 @@ Sie können aus einer Vielzahl vordefinierter Diagrammtypen auswählen.
   
     Das Diagramm wird der Entwurfsoberfläche hinzugefügt. Die tatsächlichen Werte des Diagramms werden nicht angezeigt – es wird Product 1, Product 2 usw. angezeigt, um einen Überblick zu übermitteln, wie das Diagramm aussehen wird.  
     
-    ![Berichts-Generator-Kreisdiagramm-erster-Entwurf](../reporting-services/media/report-builder-pie-chart-first-design.png)
+    ![Screenshot: Kreisdiagramm im Berichts-Generator in der Designansicht](../reporting-services/media/report-builder-pie-chart-first-design.png)
   
 6.  Klicken Sie auf das Diagramm, um die Diagrammziehpunkte anzuzeigen. Ziehen Sie an der unteren rechten Ecke des Diagramms, um es zu vergrößern. Die Berichtsentwurfsoberfläche wird ebenso vergrößert, um genügend Platz für das Diagramm zu bieten.  
   
@@ -102,7 +102,7 @@ Sie können aus einer Vielzahl vordefinierter Diagrammtypen auswählen.
   
 Im Bericht wird das Kreisdiagramm mit acht Slices angezeigt, eines für jedes Produkt. Nun können Sie die tatsächlichen Produkte sehen, und die Größe der Slices stellt den Umsatz für das jeweilige Produkt dar. Drei der Slices sind relativ dünn.  
 
-![Berichts-Generator-Kreisdiagramm-erste-Vorschau](../reporting-services/media/report-builder-pie-chart-first-preview.png)
+![Screenshot: Vorschau eines Kreisdiagramms im Berichts-Generator](../reporting-services/media/report-builder-pie-chart-first-preview.png)
   
 ## <a name="3-display-percentages-in-each-slice"></a><a name="Percentages"></a>3. Anzeigen von Prozentsätzen in jedem Slice  
 Sie können für jeden Slice des Kreisdiagramms den Prozentsatz des Slices im Vergleich zum gesamten Kreis anzeigen.  
@@ -114,14 +114,14 @@ Sie können für jeden Slice des Kreisdiagramms den Prozentsatz des Slices im Ve
   
 3.  Klicken Sie mit der rechten Maustaste auf eine Bezeichnung, und klicken Sie anschließend auf **Reihenbezeichnungseigenschaften**.  
   
-4.  Geben Sie **#PERCENT** für die Option **Bezeichnungsdaten**ein.  
+4.  Geben Sie **#PERCENT** für die Option **Bezeichnungsdaten** ein.  
     
 5.  (Optional) Wenn Sie die Anzahl von Dezimalstellen in der Bezeichnung angeben möchten, tippen Sie im Feld **Bezeichnungsdaten** nach **#PERCENT****{Pn}** ein, wobei *n* die Anzahl der anzuzeigenden Dezimalstellen darstellt. Geben Sie z.B. **#PERCENT{P0}** ein, um keine Dezimalstellen anzuzeigen.  
 
-6.  Die UseValueAsLabel-Eigenschaft muss zum Anzeigen von Werten als Prozentsätze auf "False" festgelegt werden. Klicken Sie auf **Ja** , wenn Sie im Dialogfeld **Aktion bestätigen**zum Festlegen dieses Werts aufgefordert werden.  
+6.  Die UseValueAsLabel-Eigenschaft muss zum Anzeigen von Werten als Prozentsätze auf "False" festgelegt werden. Klicken Sie auf **Ja** , wenn Sie im Dialogfeld **Aktion bestätigen** zum Festlegen dieses Werts aufgefordert werden.  
   
     > [!NOTE]  
-    > Die Option**Zahlenformat** im Dialogfeld **Reihenbezeichnungseigenschaften** hat beim Formatieren von Prozentwerten keinen Einfluss auf das Format. Hierdurch werden die Bezeichnungen als Prozentwerte formatiert, die eigentlichen Prozentwerte der einzelnen Slices eines Kreisdiagramms werden jedoch nicht berechnet.  
+    > Die Option **Zahlenformat** im Dialogfeld **Reihenbezeichnungseigenschaften** hat beim Formatieren von Prozentwerten keinen Einfluss auf das Format. Hierdurch werden die Bezeichnungen als Prozentwerte formatiert, die eigentlichen Prozentwerte der einzelnen Slices eines Kreisdiagramms werden jedoch nicht berechnet.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -129,7 +129,7 @@ Sie können für jeden Slice des Kreisdiagramms den Prozentsatz des Slices im Ve
   
 Im Bericht wird der Prozentsatz am gesamten Kreis für jeden Kreisslice angezeigt.  
 
-![Berichts-Generator-Kreisdiagramm-Vorschau-Prozente](../reporting-services/media/report-builder-pie-chart-preview-percents.png)
+![Screenshot: Vorschau eines Kreisdiagramms im Berichts-Generator mit Prozentwerten in den einzelnen Segmenten](../reporting-services/media/report-builder-pie-chart-preview-percents.png)
   
 ## <a name="4-combine-small-slices-into-one-slice"></a><a name="CombineSlices"></a>4. Kombinieren von kleinen Slices zu einem Slice  
 Drei der Slices im Kreis sind relativ klein. Sie können mehrere kleine Slices zu einem größeren „Other“-Slice kombinieren, durch das alle drei Slices dargestellt werden.  
@@ -142,19 +142,19 @@ Drei der Slices im Kreis sind relativ klein. Sie können mehrere kleine Slices z
   
 4.  Erweitern Sie im Abschnitt **Allgemein** den Knoten **CustomAttributes** .  
   
-5.  Legen Sie die Eigenschaft **CollectedStyle** auf **SingleSlice**fest.  
+5.  Legen Sie die Eigenschaft **CollectedStyle** auf **SingleSlice** fest.  
 
-    ![Berichts-Generator-Kreisdiagramm-einzelne-Slice-Eigenschaft](../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
+    ![Screenshot: Festlegen einer Eigenschaft für ein einzelnes Segment des Kreisdiagramms im Berichts-Generator](../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
  
 6.  Vergewissern Sie sich, dass die **CollectedThreshold** -Eigenschaft auf 5 festgelegt ist.  
   
-7.  Vergewissern Sie sich, dass die **CollectedThresholdUsePercent** -Eigenschaft auf **TRUE**festgelegt ist.  
+7.  Vergewissern Sie sich, dass die **CollectedThresholdUsePercent** -Eigenschaft auf **TRUE** festgelegt ist.  
   
 8.  Klicken Sie auf der Registerkarte **Stamm** auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
 In der Legende wird die Kategorie „Other“ jetzt angezeigt. Im neuen Kreisslice werden alle Slices, die kleiner als 5 % waren, zu einem Slice kombiniert, das 6 % des gesamten Kreises darstellt.  
 
-![Berichts-Generator-Kreisdiagramm-beginnt-bei-90](../reporting-services/media/report-builder-pie-chart-start-at-90.png)
+![Screenshot: Kreisdiagramm im Berichts-Generator beginnt von der Diagrammspitze aus bei 90 Grad](../reporting-services/media/report-builder-pie-chart-start-at-90.png)
  
 ## <a name="5-start-pie-chart-values-at-the-top"></a><a name="DrawingEffect"></a>5. Beginnen der Kreisdiagrammwerte bei 0° 
 
@@ -166,13 +166,13 @@ In diesem Abschnitt reduzieren wir diesen Versatz auf 0°.
 
 2. Wählen Sie den Kreis selbst aus.
 
-3. Ändern Sie im Bereich „Eigenschaften“ unter **Benutzerdefinierte Attribute**den Eintrag PieStartAngle von **0** in **270**.
+3. Ändern Sie im Bereich „Eigenschaften“ unter **Benutzerdefinierte Attribute** den Eintrag PieStartAngle von **0** in **270**.
 
 4. Klicken Sie auf **Ausführen** , um den Bericht in der Vorschau anzuzeigen.
 
 Jetzt sind die Segmente des Kreisdiagramms in alphabetischer Reihenfolge, beginnend am oberen Ende und endend mit dem Segment „Other“.
 
-![Berichts-Generator-Kreisdiagramm-Beginn-oben](../reporting-services/media/report-builder-pie-chart-start-at-top.png)
+![Screenshot: Kreisdiagramm im Berichts-Generator beginnt oben](../reporting-services/media/report-builder-pie-chart-start-at-top.png)
   
 ## <a name="6-add-a-report-title"></a><a name="Title"></a>6. Hinzufügen eines Berichtstitels  
   
@@ -182,13 +182,13 @@ Da das Kreisdiagramm die einzige Visualisierung im Bericht ist, muss für das Di
 
 2. Klicken Sie auf der Entwurfsoberfläche auf **Zum Hinzufügen eines Titels klicken**.  
   
-2.  Geben Sie wie folgt **Kamera- und Camcorderumsatz**ein, drücken Sie die EINGABETASTE, und geben Sie anschließend **Als Prozentsatz des Gesamtumsatzes**ein:  
+2.  Geben Sie wie folgt **Kamera- und Camcorderumsatz** ein, drücken Sie die EINGABETASTE, und geben Sie anschließend **Als Prozentsatz des Gesamtumsatzes** ein:  
   
     **Kamera- und Camcorderumsatz**  
   
     **Als Prozentsatz des Gesamtumsatzes**  
   
-3.  Wählen Sie **Kamera- und Camcorderumsatz**, und klicken Sie auf der Registerkarte **Stamm** im Abschnitt **Schriftart** auf **Fett**.  
+3.  Wählen Sie **Kamera- und Camcorderumsatz** , und klicken Sie auf der Registerkarte **Stamm** im Abschnitt **Schriftart** auf **Fett**.  
   
 4.  Markieren Sie **As a Percentage of Total Sales** (Als Prozentsatz des Gesamtumsatzes), und legen Sie auf der Registerkarte **Stamm** im Abschnitt **Schriftart** den Schriftgrad auf **10** fest.  
   
@@ -206,7 +206,7 @@ Da das Kreisdiagramm die einzige Visualisierung im Bericht ist, muss für das Di
   
 2.  Klicken Sie im Menü **Datei** auf **Speichern**.  
   
-3.  Geben Sie im Feld **Name**den Namen **Umsatz-Kreisdiagramm**ein.  
+3.  Geben Sie im Feld **Name** den Namen **Umsatz-Kreisdiagramm** ein.  
   
 4.  Klicken Sie auf **Speichern**.  
   

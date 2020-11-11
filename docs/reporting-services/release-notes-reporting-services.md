@@ -1,7 +1,7 @@
 ---
 title: Versionshinweise für Reporting Services 2017 und höher | Microsoft-Dokumentation
 description: Hier erhalten Sie weitere Informationen zu den Änderungen in SQL Server Reporting Services (SSRS), Version 2017 und höher.
-ms.date: 08/31/2020
+ms.date: 10/11/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -10,12 +10,12 @@ ms.reviewer: maggies
 author: casualoak
 ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: a3b1984133387f1cbf5405f0c90b4532e56e776b
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: a20939e77c29566c890450d828cff441366c6f00
+ms.sourcegitcommit: dc3ea1696b8a4332934568439aed6cce4e9737eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89282392"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93244662"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>Versionshinweise für SQL Server Reporting Services (SSRS) 2017 und höher
 
@@ -54,6 +54,7 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 ## <a name="sql-server-2019-reporting-services"></a>SQL Server 2019 Reporting Services
 
 ## <a name="15075454810-20200831"></a>15.0.7545.4810, 31.08.2020 
+*(Produktversion: 15.0.1102.861)*
 
 | Behobenes Problem | Details |
 | :---------- | :------ |
@@ -72,6 +73,7 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 | Beim Befehlszeilen-Upgrade ist das EULA-Flag nicht mehr erforderlich  | &nbsp; |
 
 ## <a name="150724337714-20191101"></a>15.0.7243.37714, 1. November 2019
+*(Produktversion: 15.0.1102.675)*
 
 Erste Veröffentlichung
 

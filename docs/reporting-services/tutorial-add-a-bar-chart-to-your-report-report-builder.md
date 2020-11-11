@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1d650fd4b93df758ccaa39d716cf122c66adf7ab
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 57dd6f4472c64ee37190d5149ef354d5829e1266
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245697"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043725"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)
 In diesem Tutorial verwenden Sie einen Assistenten in [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)], um ein Kreisdiagramm in einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]-Bericht zu erstellen. Anschließend fügen Sie einen Filter hinzu und erweitern das Diagramm. 
@@ -27,7 +27,7 @@ In einem Balkendiagramm werden Kategoriedaten horizontal angezeigt. Diese Darste
   
 Die folgende Abbildung zeigt das zu erstellende Balkendiagramm mit den Umsätzen der fünf besten Vertriebsmitarbeiter für die Jahre 2014 und 2015 vom niedrigsten bis zum höchsten Umsatz im Jahr 2015.  
   
-![Berichts-Generator-Balkendiagramm](../reporting-services/media/report-builder-bar-chart.png) 
+![Screenshot: Balkendiagramm im Berichts-Generator](../reporting-services/media/report-builder-bar-chart.png) 
   
  
 > [!NOTE]  
@@ -56,7 +56,7 @@ Darin erstellen Sie ein eingebettetes Dataset, wählen eine freigegebene Datenqu
   
 3.  Klicken Sie im rechten Bereich auf **Diagramm-Assistent**.  
   
-4.  Klicken Sie auf der Seite **Dataset auswählen** auf **Dataset erstellen**und anschließend auf **Weiter**.  
+4.  Klicken Sie auf der Seite **Dataset auswählen** auf **Dataset erstellen** und anschließend auf **Weiter**.  
   
 5.  Wählen Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** eine vorhandene Datenquelle aus, oder navigieren Sie zum Berichtsserver, und wählen Sie eine Datenquelle aus. Klicken Sie anschließend auf **Weiter**. Möglicherweise müssen Benutzername und Kennwort eingegeben werden.  
   
@@ -92,7 +92,7 @@ Darin erstellen Sie ein eingebettetes Dataset, wählen eine freigegebene Datenqu
  
 1.  Das Säulendiagramm ist der Standarddiagrammtyp der Seite **Diagrammtyp auswählen** .  
   
-2.  Klicken Sie auf **Balken**und anschließend auf **Weiter**.  
+2.  Klicken Sie auf **Balken** und anschließend auf **Weiter**.  
   
     Auf der Seite **Diagrammfelder anordnen** stehen im Bereich **Verfügbare Felder** vier Felder zur Verfügung: FirstName, LastName, SalesYear2015 und SalesYear2014.  
   
@@ -121,7 +121,7 @@ Standardmäßig werden auf der vertikalen Achse nur einige der Werte angezeigt. 
   
 2.  Klicken Sie mit der rechten Maustaste auf die vertikale Achse, und klicken Sie anschließend auf **Eigenschaften für vertikale Achsen**.  
   
-3.  Geben Sie unter **Achsenbereich und -intervall**im Feld **Intervall** den Wert **1**ein.  
+3.  Geben Sie unter **Achsenbereich und -intervall** im Feld **Intervall** den Wert **1** ein.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -167,7 +167,7 @@ Beim Sortieren der Daten eines Diagramms wird die Reihenfolge der Werte auf der 
   
 4.  Klicken Sie auf **Sortierung**. Auf der Seite **Ändern Sie die Sortieroptionen** wird eine Liste mit Sortierausdrücken angezeigt. Standardmäßig enthält diese Liste einen einzelnen Sortierungsausdruck, der dem ursprünglichen Kategoriegruppenausdruck entspricht.  
   
-5.  Klicken Sie unter **Sortieren nach**auf **[SalesYear2015]** .  
+5.  Klicken Sie unter **Sortieren nach** auf **[SalesYear2015]** .  
   
 6.  Wählen Sie in der Liste **Reihenfolge** **A bis Z** aus, sodass die Namen in der Reihenfolge vom höchsten bis zum niedrigsten Umsatz im Jahr 2015 angezeigt werden.
   
@@ -186,9 +186,9 @@ Um die Lesbarkeit der Diagrammwerte zu verbessern, können Sie gegebenenfalls di
   
 2.  Klicken Sie mit der rechten Maustaste auf die Legende des Diagramms.  
   
-3.  Wählen Sie **Legendeneigenschaften**aus.  
+3.  Wählen Sie **Legendeneigenschaften** aus.  
   
-4.  Wählen Sie unter **Legendenposition**eine andere Position aus. Legen Sie z. B. eine Position unten in der Mitte fest.  
+4.  Wählen Sie unter **Legendenposition** eine andere Position aus. Legen Sie z. B. eine Position unten in der Mitte fest.  
   
     Wenn Sie die Legende über oder unter einem Diagramm platzieren, ändert sich das Layout der Legende von vertikal zu horizontal. In der Dropdownliste **Layout** können Sie ein anderes Layout auswählen.  
   
@@ -200,7 +200,7 @@ Um die Lesbarkeit der Diagrammwerte zu verbessern, können Sie gegebenenfalls di
   
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
   
-2.  Markieren Sie am oberen Diagrammrand den Text **Diagrammtitel**, und geben Sie anschließend Folgendes ein: **Umsätze für 2014 und 2015**.  
+2.  Markieren Sie am oberen Diagrammrand den Text **Diagrammtitel** , und geben Sie anschließend Folgendes ein: **Umsätze für 2014 und 2015**.  
   
 3.  Legen Sie bei ausgewähltem Titel im Bereich „Eigenschaften“ folgende Werte fest: **Farbe** auf **Schwarz** und **Schriftgrad** auf **12 pt**. 
   
@@ -223,7 +223,7 @@ Standardmäßig werden die Werte auf der horizontalen Achse in einem allgemeinen
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
 
-8.  Klicken Sie mit der rechten Maustaste auf die horizontale Achse, und wählen Sie **Achsentitel anzeigen**aus.
+8.  Klicken Sie mit der rechten Maustaste auf die horizontale Achse, und wählen Sie **Achsentitel anzeigen** aus.
   
 7.  Geben Sie im Feld **Achsentitel** den Text **Sales in thousands** ein, und drücken Sie die EINGABETASTE.  
 
@@ -248,11 +248,11 @@ Sie können dem Diagramm einen Filter hinzufügen, um anzugeben, welche Daten de
   
 6.  Geben Sie unter **Ausdruck** **[Sum(SalesYear2015)]** ein. Dadurch wird der zugrunde liegende Ausdruck `=Sum(Fields!SalesYear2015.Value)`erstellt, der durch Klicken auf die Schaltfläche **fx** angezeigt wird.  
   
-7.  Überprüfen Sie, ob der Datentyp gleich **Text**ist.  
+7.  Überprüfen Sie, ob der Datentyp gleich **Text** ist.  
   
-8.  Wählen Sie in **Operator**in der Dropdownliste den Eintrag **Erste N** aus.  
+8.  Wählen Sie in **Operator** in der Dropdownliste den Eintrag **Erste N** aus.  
   
-9. Geben Sie unter **Wert**den folgenden Ausdruck ein: **=5**  
+9. Geben Sie unter **Wert** den folgenden Ausdruck ein: **=5**  
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -266,15 +266,15 @@ Im Diagramm werden die Namen der fünf besten Vertriebsmitarbeiter gemäß den U
   
 1.  Klicken Sie auf der Entwurfsoberfläche auf **Zum Hinzufügen eines Titels klicken**.  
   
-2.  Geben Sie **Umsatz-Balkendiagramm**ein, drücken Sie die EINGABETASTE, und geben Sie anschließend **Top Five-Verkaufsschlager 2015**ein, was anschließend in etwa wie folgt aussehen sollte:  
+2.  Geben Sie **Umsatz-Balkendiagramm** ein, drücken Sie die EINGABETASTE, und geben Sie anschließend **Top Five-Verkaufsschlager 2015** ein, was anschließend in etwa wie folgt aussehen sollte:  
   
     **Umsatz-Balkendiagramm**  
   
     **Top Five-Verkaufsschlager 2015**  
   
-3.  Markieren Sie **Umsatz-Balkendiagramm**, und klicken Sie auf die Schaltfläche **Fett** .  
+3.  Markieren Sie **Umsatz-Balkendiagramm** , und klicken Sie auf die Schaltfläche **Fett** .  
   
-4.  Markieren Sie **Top Five-Verkaufsschlager 2015**, und legen Sie auf der Registerkarte **Stamm** im Abschnitt **Schriftart** den Schriftgrad auf **10**fest.  
+4.  Markieren Sie **Top Five-Verkaufsschlager 2015** , und legen Sie auf der Registerkarte **Stamm** im Abschnitt **Schriftart** den Schriftgrad auf **10** fest.  
   
 5.  (Optional) Das Textfeld „Titel“ muss ggf. vergrößert werden, damit die beiden Textzeilen hineinpassen, und der obere Rand des Balkendiagramms muss heruntergezogen werden, um die beiden Textzeilen aufzunehmen.  
   
@@ -288,7 +288,7 @@ Im Diagramm werden die Namen der fünf besten Vertriebsmitarbeiter gemäß den U
   
 2.  Klicken Sie auf **Datei** > **Speichern als**.  
   
-3.  Geben Sie im Feld **Name**die Zeichenfolge **Umsatz-Balkendiagramm**ein.  
+3.  Geben Sie im Feld **Name** die Zeichenfolge **Umsatz-Balkendiagramm** ein.  
 
     Sie können ihn entweder auf Ihrem Computer oder auf dem Berichtsserver speichern.
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4592e5b2bc35da9c2887e0c2552dc33cd3cecd5e
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 301d77a972da39f4e3e046e5e983206e9a1ba5c9
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987380"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243762"
 ---
 # <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>Das Webportal eines Berichtsservers (einheitlicher SSRS-Modus)
 
@@ -22,7 +22,7 @@ ms.locfileid: "91987380"
 
 Beim Webportal des Reporting Services-Berichtsservers handelt es sich um eine webbasierte Anwendung. Sie können in dem Portal Berichte, mobile Berichte sowie KPIs abrufen und durch die Elemente in Ihrer Berichtsserverinstanz navigieren. Sie können das Webportal auch dazu verwenden, eine einzelne Berichtsserverinstanz zu verwalten.
 
-![SSRS-Portal](../reporting-services/media/ssrsportal.png)
+![Screenshot des SQL Server Reporting Services-Portals](../reporting-services/media/ssrsportal.png)
 
 ## <a name="what-is-the-web-portal"></a>Was ist das Webportal?
 
@@ -86,15 +86,15 @@ Das Webportal gruppiert Elemente in verschiedene Kategorien. Die folgenden Kateg
 
 Sie können steuern, was angezeigt werden soll, indem Sie oben rechts **View** (Ansicht) auswählen. Wenn Sie „Show Hidden“ (Ausgeblendete anzeigen) auswählen, werden diese Elemente in einer helleren Farbe angezeigt.
 
-![SSRS-WebPortal-Ansicht](../reporting-services/media/ssrswebportal-view.png)
+![Screenshot: Dropdownmenü unter „Ansicht“, in dem die Option „Ausgeblendete Elemente anzeigen“ ausgewählt ist](../reporting-services/media/ssrswebportal-view.png)
 
-![SSRS-WebPortal-ausgeblendet](../reporting-services/media/ssrswebportal-hidden.png)
+![Screenshot der nicht verfügbaren Option „Paginierte Berichte“](../reporting-services/media/ssrswebportal-hidden.png)
 
 ### <a name="power-bi-desktop-reports-and-excel-workbooks"></a>Power BI Desktop-Berichte und Excel-Arbeitsmappen
 
 Sie können Berechtigungen für Power BI Desktop-Berichte und Excel-Arbeitsmappen hochladen, organisieren und verwalten. Sie werden innerhalb des Webportals gruppiert.
 
-![SSRS-WebPortal-Ansicht-PBI-und-Excel](../reporting-services/media/ssrswebportal-view-pbi-and-excel.png)
+![Screenshot der Bereiche „Power BI Desktop-Berichte“ und „Excel-Arbeitsmappen“](../reporting-services/media/ssrswebportal-view-pbi-and-excel.png)
 
 Die Dateien werden innerhalb von Reporting Services gespeichert, ähnlich wie andere Ressourcendateien. Wenn Sie eines dieser Elemente auswählen, wird es lokal auf Ihrem Desktop heruntergeladen. Sie können Ihre Änderungen speichern, indem Sie sie erneut auf den Berichtsserver hochladen.
 
@@ -102,7 +102,7 @@ Die Dateien werden innerhalb von Reporting Services gespeichert, ähnlich wie an
 
 Wenn Sie einen Suchbegriff eingeben, werden Ihnen alle Elemente angezeigt, auf die Sie Zugriff haben. Die Ergebnisse werden in KPIs, Berichte, Datasets und andere Elemente kategorisiert. Sie können dann mit den Ergebnissen interagieren und diese zu Ihren Favoriten hinzufügen.
 
-![SSRS-WebPortal-Suche](../reporting-services/media/ssrswebportal-search.png)
+![Screenshot: SQL Server Reporting Services-Portal, auf dem das Textfeld „Suche“ hervorgehoben ist](../reporting-services/media/ssrswebportal-search.png)
 
 ## <a name="web-portal-tasks"></a>Webportal-Aufgaben
 

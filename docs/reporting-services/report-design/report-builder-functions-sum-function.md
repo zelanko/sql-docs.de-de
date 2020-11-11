@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2b45a024-398d-43b8-9948-b8b23fb674c9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 22db409b3c5e485db27cb828f1769ecdb001b5c8
-ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
+ms.openlocfilehash: fe8a7c4948b811a97c2f6973a04227543a496991
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84681429"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364422"
 ---
 # <a name="report-builder-functions---sum-function"></a>Funktionen des Berichts-Generators: Sum-Funktion
   Gibt die Summe aller numerischen Werte ungleich NULL aus dem angegebenen Ausdruck im Kontext des festgelegten Bereichs ausgewertet zurück.  
@@ -31,37 +31,39 @@ Sum(expression, scope, recursive)
   
 #### <a name="parameters"></a>Parameter  
  *expression*  
- (**Integer** oder **Float**) Der Ausdruck, für den die Aggregation ausgeführt werden soll.  
+ ( **Integer** oder **Float** ) Der Ausdruck, für den die Aggregation ausgeführt werden soll.  
   
  *scope*  
- (**Zeichenfolge**) Optional. Der Name eines Datasets, einer Gruppe oder eines Datenbereichs mit den Berichtselementen, auf die die Aggregatfunktion anzuwenden ist. Wenn *scope* nicht angegeben ist, wird der aktuelle Bereich verwendet.  
+ ( **Zeichenfolge** ) Optional. Der Name eines Datasets, einer Gruppe oder eines Datenbereichs mit den Berichtselementen, auf die die Aggregatfunktion anzuwenden ist. Wenn *scope* nicht angegeben ist, wird der aktuelle Bereich verwendet.  
   
  *recursive*  
- (**Enumerationstyp**) Optional. **Simple** (Standard) oder **RdlRecursive**. Gibt an, ob die Aggregation rekursiv auszuführen ist.  
+ ( **Enumerationstyp** ) Optional. **Simple** (Standard) oder **RdlRecursive**. Gibt an, ob die Aggregation rekursiv auszuführen ist.  
   
 ## <a name="return-type"></a>Rückgabetyp  
  Gibt für Dezimalausdrücke einen Wert vom Typ **Decimal** und für alle anderen Ausdrücke einen Wert vom Typ **Double** zurück.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die im Ausdruck angegebene Gruppe von Daten muss über den gleichen Datentyp verfügen. Um Daten mit mehreren numerischen Datentypen in den gleichen Datentyp zu konvertieren, verwenden Sie Konvertierungsfunktionen wie **CInt**, **CDbl** oder **CDec**. Weitere Informationen finden Sie unter [Funktionen für die Typkonvertierung](https://go.microsoft.com/fwlink/?LinkId=96142).  
+ Die im Ausdruck angegebene Gruppe von Daten muss über den gleichen Datentyp verfügen. Um Daten mit mehreren numerischen Datentypen in den gleichen Datentyp zu konvertieren, verwenden Sie Konvertierungsfunktionen wie **CInt** , **CDbl** oder **CDec**. Weitere Informationen finden Sie unter [Funktionen für die Typkonvertierung](https://go.microsoft.com/fwlink/?LinkId=96142).  
   
  Der Wert des *scope* -Objekts muss eine Zeichenfolgenkonstante sein und darf kein Ausdruck sein. Für äußere Aggregate oder Aggregate, die keine anderen Aggregate angeben, muss das *scope* -Objekt auf den aktuellen Bereich oder einen enthaltenen Bereich verweisen. Bei Aggregaten von Aggregaten können geschachtelte Aggregate einen untergeordneten Bereich angeben.  
   
- Das*Expression* -Objekt kann Aufrufe von geschachtelten Aggregatfunktionen enthalten. Dabei gelten folgende Ausnahmen und Bedingungen:  
+ Das *Expression* -Objekt kann Aufrufe von geschachtelten Aggregatfunktionen enthalten. Dabei gelten folgende Ausnahmen und Bedingungen:  
   
--   Das*Scope* -Objekt für geschachtelte Aggregate muss dem Bereich des äußeren Aggregats entsprechen oder darin enthalten sein. In allen eindeutigen Bereichen des Ausdrucks muss ein Bereich eine untergeordnete Beziehung zu allen anderen Bereichen haben.  
+-   Das *Scope* -Objekt für geschachtelte Aggregate muss dem Bereich des äußeren Aggregats entsprechen oder darin enthalten sein. In allen eindeutigen Bereichen des Ausdrucks muss ein Bereich eine untergeordnete Beziehung zu allen anderen Bereichen haben.  
   
--   Das*Scope* -Objekt für geschachtelte Aggregate darf nicht der Name eines Datasets sein.  
+-   Das *Scope* -Objekt für geschachtelte Aggregate darf nicht der Name eines Datasets sein.  
   
--   Das*Expression* -Objekt darf die Funktionen **First**, **Last**, **Previous**oder **RunningValue** nicht enthalten.  
+-   Das *Expression* -Objekt darf die Funktionen **First** , **Last** , **Previous** oder **RunningValue** nicht enthalten.  
   
--   Das*Expression* -Objekt darf keine geschachtelten Aggregate enthalten, die ein *recursive*-Objekt angeben.  
+-   Das *Expression* -Objekt darf keine geschachtelten Aggregate enthalten, die ein *recursive* -Objekt angeben.  
   
  Weitere Informationen finden Sie in der [Aggregatfunktionsreferenz (Berichts-Generator und SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md) und unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen (Berichts-Generator und SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
  Weitere Informationen zu rekursiven Aggregaten finden Sie unter [Creating Recursive Hierarchy Groups (Report Builder and SSRS) (Erstellen von rekursiven Hierarchiegruppen (Berichts-Generator und SSRS))](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
-## <a name="example"></a>Beispiel  
+## <a name="examples"></a>Beispiele  
+
+### <a name="a-sum-of-line-item-totals"></a>A. Summe von Einzelposten 
  Die beiden folgenden Codebeispiele stellen eine Summe der Einzelposten-Gesamtbeträge in der Gruppe bzw. im Datenbereich `Order` bereit.  
   
 ```  
@@ -70,7 +72,7 @@ Sum(expression, scope, recursive)
 =Sum(CDbl(Fields!LineTotal.Value), "Order")  
 ```  
   
-## <a name="example"></a>Beispiel  
+### <a name="b-maximum-value-from-all-nested-regions"></a>B. Maximalwert aus allen geschachtelten Regionen 
  In einem Matrixdatenbereich mit den geschachtelten Zeilengruppen "Kategorie" und "Unterkategorie" und den geschachtelten Spaltengruppen "Jahr" und "Quartal" wertet der folgende Ausdruck in einer Zelle, die zu den innersten Zeilen- und Spaltengruppen gehört, den maximalen Wert der Quartale für alle Unterkategorien aus.  
   
 ```  

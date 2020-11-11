@@ -2,7 +2,7 @@
 title: Versionshinweise für Microsoft ODBC Driver for SQL Server für Windows
 description: In diesem Artikel mit Versionshinweisen werden die Änderungen in jedem Release von Microsoft ODBC Driver for SQL Server unter Windows beschrieben.
 ms.custom: ''
-ms.date: 07/29/2020
+ms.date: 10/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,12 +12,12 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: d066353c17822781c264388d284949b7b43391de
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 6c19be21aebb6a8480fb51f396530e6843ac2861
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87898819"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043813"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Versionshinweise für Microsoft ODBC Driver for SQL Server für Windows
 
@@ -169,6 +169,7 @@ Für den x86-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink
 | Modus für die Azure Active Directory-Authentifizierung mit einer (systemweit und benutzerseitig zugewiesenen) verwalteten Identität | Siehe [Using Azure Active Directory with the ODBC Driver (Verwenden von Azure Active Directory mit dem ODBC-Treiber)](../using-azure-active-directory.md) |
 | Übermitteln von Eingabeparametern für Always Encrypted-Spalten | Siehe [Limitations of the ODBC driver when using Always Encrypted (Einschränkungen des ODBC-Treibers bei Verwendung von Always Encrypted)](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted) |
 | Verteilte XA-Transaktionen | Siehe [Using XA Transactions (Verwenden von XA-Transaktionen)](../use-xa-with-dtc.md) |
+| Aktualisierte Version des Visual C++ Redistributable | Die Runtimeabhängigkeit wurde auf das Visual C++ 2017 Redistributable ([x64-Download](https://aka.ms/vs/15/release/vc_redist.x64.exe), [x86-Download](https://aka.ms/vs/15/release/vc_redist.x86.exe)) aktualisiert. |
 | Fehlerbehebungen. | Siehe [Fehlerbehebungen](../bug-fixes.md) |
 | &nbsp; | &nbsp; |
 

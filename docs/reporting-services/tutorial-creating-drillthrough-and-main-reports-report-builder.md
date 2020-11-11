@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ce825906ef6282cd722f91b1c0dbf76463a7c821
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 0e5d34588bef3022f340d6a52dded1b03aad30d0
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87238394"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364642"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Erstellen von Drillthrough- und Hauptberichten (Berichts-Generator)
 In diesem Tutorial erfahren Sie, wie Sie zwei Arten von paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Berichten erstellen: einen Drillthroughbericht und einen Hauptbericht. Die in diesen Berichten verwendeten Beispielvertriebsdaten werden aus einem Analysis Services-Cube abgerufen. 
@@ -37,7 +37,7 @@ Sie benötigen Zugriff auf eine Instanz von [!INCLUDE[ssASnoversion](../includes
 Weitere Informationen zu den allgemeinen Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="1-create-a-drillthrough-report-from-the-table-or-matrix-wizard"></a><a name="DMatrixAndDataset"></a>1. Erstellen eines Drillthroughberichts mit dem Tabellen- oder Matrix-Assistenten  
-Erstellen Sie im Dialogfeld „Erste Schritte“ mit dem **Tabellen- oder Matrix-Assistenten**einen Matrixbericht. Im Assistenten stehen zwei Modi zur Auswahl: Berichtsentwurf und Entwurf von freigegebenen Datasets. In diesem Lernprogramm verwenden Sie den Berichtsentwurfsmodus.  
+Erstellen Sie im Dialogfeld „Erste Schritte“ mit dem **Tabellen- oder Matrix-Assistenten** einen Matrixbericht. Im Assistenten stehen zwei Modi zur Auswahl: Berichtsentwurf und Entwurf von freigegebenen Datasets. In diesem Lernprogramm verwenden Sie den Berichtsentwurfsmodus.  
   
 #### <a name="to-create-a-new-report"></a>So erstellen Sie einen neuen Bericht  
   
@@ -56,19 +56,19 @@ Eine Datenverbindung enthält die erforderlichen Informationen zum Herstellen ei
   
 #### <a name="to-create-an-embedded-data-source"></a>So erstellen Sie eine eingebettete Datenquelle  
   
-1.  Klicken Sie auf der Seite **Dataset auswählen** auf **Dataset erstellen**und anschließend auf **Weiter**. Die Seite **Verbindung mit einer Datenquelle auswählen** wird geöffnet.  
+1.  Klicken Sie auf der Seite **Dataset auswählen** auf **Dataset erstellen** und anschließend auf **Weiter**. Die Seite **Verbindung mit einer Datenquelle auswählen** wird geöffnet.  
   
 2.  Klicken Sie auf **Neu**. Das Dialogfeld **Datenquelleneigenschaften** wird angezeigt.  
   
-3.  Geben Sie im Feld **Name**als Name für die Datenquelle **Online and Reseller Sales Detail** ein.  
+3.  Geben Sie im Feld **Name** als Name für die Datenquelle **Online and Reseller Sales Detail** ein.  
   
-4.  Wählen Sie unter **Verbindungstyp auswählen**die Option **Microsoft SQL Server Analysis Services**aus, und klicken Sie anschließend auf **Erstellen**.  
+4.  Wählen Sie unter **Verbindungstyp auswählen** die Option **Microsoft SQL Server Analysis Services** aus, und klicken Sie anschließend auf **Erstellen**.  
   
-5.  Vergewissern Sie sich, dass unter **Datenquelle**die Option **Microsoft SQL Server Analysis Services (AdomdClient)** ausgewählt ist.  
+5.  Vergewissern Sie sich, dass unter **Datenquelle** die Option **Microsoft SQL Server Analysis Services (AdomdClient)** ausgewählt ist.  
   
-6.  Geben Sie unter **Servername**den Namen eines Servers ein, auf dem eine Instanz von Analysis Services installiert ist.  
+6.  Geben Sie unter **Servername** den Namen eines Servers ein, auf dem eine Instanz von Analysis Services installiert ist.  
   
-7.  Wählen Sie unter **Datenbanknamen eingeben oder auswählen**den Contoso-Cube aus.  
+7.  Wählen Sie unter **Datenbanknamen eingeben oder auswählen** den Contoso-Cube aus.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -89,7 +89,7 @@ Eine Datenverbindung enthält die erforderlichen Informationen zum Herstellen ei
   
     Die Seite **Verbindung mit einer Datenquelle auswählen** wird angezeigt.  
   
-12. Klicken Sie auf **Verbindung testen**, um sicherzustellen, dass die Verbindung mit der Datenquelle hergestellt werden kann.  
+12. Klicken Sie auf **Verbindung testen** , um sicherzustellen, dass die Verbindung mit der Datenquelle hergestellt werden kann.  
   
     Die Meldung **Die Verbindung wurde erfolgreich hergestellt** wird angezeigt.  
   
@@ -119,13 +119,13 @@ In einem Bericht können Sie ein freigegebenes Dataset mit einer vordefinierten 
   
 4.  Klicken Sie zum Öffnen der Liste **Filterausdruck** auf den Abwärtspfeil in der Spalte **Filterausdruck** .  
   
-5.  Erweitern Sie in der Filterausdruckliste den Eintrag **All Channel**, klicken Sie auf **Online**, auf **Reseller**und anschließend auf **OK**.  
+5.  Erweitern Sie in der Filterausdruckliste den Eintrag **All Channel** , klicken Sie auf **Online** , auf **Reseller** und anschließend auf **OK**.  
   
     Die Abfrage enthält nun einen Filter, um nur die folgenden Vertriebswege einzuschließen: Online und Wiederverkäufer.  
   
 6.  Erweitern Sie die Dimension „Sales Territory“, und ziehen Sie anschließend „Sales Territory Group“ in die Spalte **Hierarchie** unter **Channel Name**.  
   
-7.  Öffnen Sie die Liste **Filterausdruck** , erweitern Sie **All Sales Territory**, klicken Sie auf **North America**, und klicken Sie anschließend auf **OK**.  
+7.  Öffnen Sie die Liste **Filterausdruck** , erweitern Sie **All Sales Territory** , klicken Sie auf **North America** , und klicken Sie anschließend auf **OK**.  
   
     Die Abfrage enthält nun einen Filter, um nur den Vertrieb in Nordamerika einzubeziehen.  
   
@@ -135,7 +135,7 @@ In einem Bericht können Sie ein freigegebenes Dataset mit einer vordefinierten 
   
 9. Klicken Sie zum Öffnen der Liste **Filterausdruck** auf den Abwärtspfeil in der Spalte **Filterausdruck** .  
   
-10. Erweitern Sie in der Filterausdruckliste den Eintrag **All Date**, klicken Sie auf **Year 2009**, und klicken Sie anschließend auf **OK**.  
+10. Erweitern Sie in der Filterausdruckliste den Eintrag **All Date** , klicken Sie auf **Year 2009** , und klicken Sie anschließend auf **OK**.  
   
     Die Abfrage enthält nun einen Filter, um nur das Kalenderjahr 2009 einzubeziehen.  
   
@@ -143,7 +143,7 @@ In einem Bericht können Sie ein freigegebenes Dataset mit einer vordefinierten 
   
 1.  Erweitern Sie die Dimension „Product“, und ziehen Sie anschließend das Element „Product Category Name“ in die Spalte **Hierarchie** unter **Calendar Year**.  
   
-2.  Öffnen Sie die Liste **Filterausdruck** , klicken Sie auf **All Products**, und klicken Sie anschließend auf **OK**.  
+2.  Öffnen Sie die Liste **Filterausdruck** , klicken Sie auf **All Products** , und klicken Sie anschließend auf **OK**.  
   
 3.  Klicken Sie auf das Kontrollkästchen **Parameter** . Die Abfrage enthält nun den Parameter „ProductProductCategoryName“.  
   
@@ -158,7 +158,7 @@ In einem Bericht können Sie ein freigegebenes Dataset mit einer vordefinierten 
   
 3.  Ziehen Sie „Product Subcategory Name“ aus der Dimension „Product“ in den Datenbereich, und legen Sie es rechts neben „Product Category Name“ ab.  
   
-4.  Erweitern Sie im Bereich „Metadaten“ zuerst den Eintrag **Measure**und anschließend „Sales“.  
+4.  Erweitern Sie im Bereich „Metadaten“ zuerst den Eintrag **Measure** und anschließend „Sales“.  
   
 5.  Ziehen Sie das Measure „Sales Amount“ in den Datenbereich, und legen Sie es rechts neben „Product Subcategory Name“ ab.  
   
@@ -166,12 +166,12 @@ In einem Bericht können Sie ein freigegebenes Dataset mit einer vordefinierten 
   
 7.  Klicken Sie auf **Weiter**.  
   
-## <a name="1c-organize-data-into-groups"></a><a name="DLayout"></a>1c. Gruppieren von Daten  
+## <a name="1c-organize-drillthrough-report-data-into-groups"></a><a name="DLayout"></a>1c. Organisieren von Drillthroughberichtsdaten in Gruppen  
 Durch das Auswählen von Feldern für die Datengruppierung entwerfen Sie eine Matrix mit Zeilen und Spalten, in denen Detaildaten und aggregierte Daten angezeigt werden.  
   
 #### <a name="to-organize-data-into-groups"></a>So gruppieren Sie Daten  
   
-1.  Klicken Sie auf **Entwurf**, um zur Entwurfsansicht zu wechseln.  
+1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zu wechseln.  
   
 2.  Ziehen Sie „Product_Subcategory_Name“ auf der Seite **Felder anordnen** in **Zeilengruppen**.  
   
@@ -186,18 +186,18 @@ Durch das Auswählen von Feldern für die Datengruppierung entwerfen Sie eine Ma
   
     Öffnen Sie die Dropdownliste, um die anderen verfügbaren Aggregatfunktionen anzuzeigen (ändern Sie die Aggregatfunktion nicht).  
   
-5.  Ziehen Sie Sales_Return_Amount in **Werte**, und fügen Sie dieses Feld unter `[Sum(Sales_Amount)]`ein.  
+5.  Ziehen Sie Sales_Return_Amount in **Werte** , und fügen Sie dieses Feld unter `[Sum(Sales_Amount)]`ein.  
   
     In Schritt 4 und 5 werden die Daten angegeben, die in der Matrix angezeigt werden sollen.  
   
 6.  Klicken Sie auf **Weiter**.  
   
-## <a name="1d-add-subtotals-and-totals"></a><a name="DTotals"></a>1d. Hinzufügen von Teilergebnissen und Summen  
+## <a name="1d-add-drillthrough-report-subtotals-and-totals"></a><a name="DTotals"></a>1d. Hinzufügen von Zwischen- und Gesamtsummen für Drillthroughberichte  
 Nachdem Sie Gruppen erstellt haben, können Sie Zeilen hinzufügen und formatieren, in denen Aggregatwerte für die Felder angezeigt werden. Sie können auch auswählen, ob alle Daten angezeigt werden oder der Benutzer gruppierte Daten interaktiv erweitern und reduzieren kann.  
   
 #### <a name="to-add-subtotals-and-totals"></a>So fügen Sie Teilergebnisse und Summen hinzu  
   
-1.  Vergewissern Sie sich auf der Seite **Layout auswählen** , dass unter **Optionen**die Option **Teil- und Gesamtergebnisse anzeigen** ausgewählt ist.  
+1.  Vergewissern Sie sich auf der Seite **Layout auswählen** , dass unter **Optionen** die Option **Teil- und Gesamtergebnisse anzeigen** ausgewählt ist.  
   
     Im Vorschaubereich des Assistenten wird eine Matrix mit vier Zeilen angezeigt.  
   
@@ -214,7 +214,7 @@ Nachdem Sie Gruppen erstellt haben, können Sie Zeilen hinzufügen und formatier
   
 #### <a name="to-format-data-as-currency"></a>So formatieren Sie Daten als Währung  
   
-1.  Klicken Sie auf **Entwurf**, um zur Entwurfsansicht zu wechseln.  
+1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zu wechseln.  
   
 2.  Um mehrere Zellen in einem Schritt auszuwählen und zu formatieren, drücken Sie die STRG-TASTE, und wählen Sie dann die Zellen aus, die die numerischen Vertriebsdaten enthalten.  
   
@@ -225,13 +225,13 @@ Statt Umsätze und Umsatzrenditen als Währungswerte anzuzeigen, zeigt der Beric
   
 #### <a name="to-add-sparklines-to-columns"></a>So fügen Sie Sparklines zu Spalten hinzu  
   
-1.  Klicken Sie auf **Entwurf**, um zur Entwurfsansicht zu wechseln.  
+1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zu wechseln.  
   
-2.  Klicken Sie in der Gesamtergebnisgruppe der Matrix mit der rechten Maustaste auf die Spalte **Sales Amount** , zeigen Sie auf **Spalte einfügen**, und klicken Sie anschließend auf **Rechts**.  
+2.  Klicken Sie in der Gesamtergebnisgruppe der Matrix mit der rechten Maustaste auf die Spalte **Sales Amount** , zeigen Sie auf **Spalte einfügen** , und klicken Sie anschließend auf **Rechts**.  
   
-    Rechts von **Sales Amount**wird eine leere Spalte eingefügt.  
+    Rechts von **Sales Amount** wird eine leere Spalte eingefügt.  
   
-3.  Klicken Sie im Menüband auf **Rechteck**und anschließend auf die leere Zelle rechts von der Zelle `[Sum(Sales_Amount)]` in der Zeilengruppe [Product_Subcategory].  
+3.  Klicken Sie im Menüband auf **Rechteck** und anschließend auf die leere Zelle rechts von der Zelle `[Sum(Sales_Amount)]` in der Zeilengruppe [Product_Subcategory].  
   
 4.  Klicken Sie im Menüband auf das Symbol **Sparkline** und anschließend auf die Zelle, in der das Rechteck hinzugefügt wurde.  
   
@@ -251,14 +251,14 @@ Statt Umsätze und Umsatzrenditen als Währungswerte anzuzeigen, zeigt der Beric
   
 12. Klicken Sie im Bereich Diagrammdaten auf das Symbol **Feld hinzufügen** und anschließend auf Sales_Return_Amount.  
   
-13. Klicken Sie auf **Ausführen**, um den Bericht in der Vorschau anzuzeigen.  
+13. Klicken Sie auf **Ausführen** , um den Bericht in der Vorschau anzuzeigen.  
   
 ## <a name="4-add-report-title-with-product-category-name"></a><a name="DReportTitle"></a>4. Hinzufügen des Berichtstitels mit dem Namen der Produktkategorie  
 Ein Berichtstitel wird oben im Bericht angezeigt. Sie können den Berichtstitel in eine Berichtskopfzeile einfügen oder, wenn der Bericht keine Kopfzeile enthält, in einem Textfeld am oberen Rand des Berichtshauptteils. In diesem Lernprogramm verwenden Sie das Textfeld, das automatisch am oberen Rand des Berichtshauptteils platziert wird.  
   
 #### <a name="to-add-a-report-title"></a>So fügen Sie einen Berichtstitel hinzu  
   
-1.  Klicken Sie auf **Entwurf**, um zur Entwurfsansicht zu wechseln.  
+1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zu wechseln.  
   
 2.  Klicken Sie auf der Entwurfsoberfläche auf **Zum Hinzufügen eines Titels klicken**.  
   
@@ -268,7 +268,7 @@ Ein Berichtstitel wird oben im Bericht angezeigt. Sie können den Berichtstitel 
   
 5.  Klicken Sie auf die Schaltfläche **(fx)** rechts neben der Liste **Wert** .  
   
-6.  Klicken Sie im Dialogfeld **Ausdruck** im Bereich Kategorie auf **Dataset**und anschließend der Liste **Werte** auf `First(Product_Category_Name)`.  
+6.  Klicken Sie im Dialogfeld **Ausdruck** im Bereich Kategorie auf **Dataset** und anschließend der Liste **Werte** auf `First(Product_Category_Name)`.  
   
     Das Feld **Ausdruck** enthält den folgenden Ausdruck:  
   
@@ -276,11 +276,11 @@ Ein Berichtstitel wird oben im Bericht angezeigt. Sie können den Berichtstitel 
     =First(Fields!Product_Category_Name.Value, "DataSet1")  
     ```  
   
-7.  Klicken Sie auf **Ausführen**, um den Bericht in der Vorschau anzuzeigen.  
+7.  Klicken Sie auf **Ausführen** , um den Bericht in der Vorschau anzuzeigen.  
   
 Der Berichtstitel enthält den Namen der ersten Produktkategorie. Später, nachdem Sie diesen Bericht als Drillthroughbericht ausgeführt haben, ändert sich der Name der Produktkategorie dynamisch entsprechend dem Namen der Produktkategorie, auf die im Hauptbericht geklickt wurde.  
   
-## <a name="5-update-parameter-properties"></a><a name="DParameter"></a>5. Aktualisieren von Parametereigenschaften  
+## <a name="5-set-hidden-parameter-property"></a><a name="DParameter"></a>5. Festlegen der Parametereigenschaft „Ausgeblendet“  
 Standardmäßig sind Parameter sichtbar, was für diesen Bericht ungeeignet ist. Sie werden die Parametereigenschaften für den Drillthroughbericht aktualisieren.  
   
 #### <a name="to-hide-a-parameter"></a>So blenden Sie einen Parameter aus  
@@ -294,7 +294,7 @@ Standardmäßig sind Parameter sichtbar, was für diesen Bericht ungeeignet ist.
   
 3.  Klicken Sie auf der Registerkarte **Allgemein** auf **Ausgeblendet**.  
   
-4.  Geben Sie im Feld **Eingabeaufforderung** den Text **Product Category**ein.  
+4.  Geben Sie im Feld **Eingabeaufforderung** den Text **Product Category** ein.  
   
     > [!NOTE]  
     > Da der Parameter verborgen ist, wird diese Eingabeaufforderung nie verwendet.  
@@ -325,7 +325,7 @@ Sie können den Bericht in einer SharePoint-Bibliothek, auf einem Berichtsserver
   
 4.  Klicken Sie auf **Speichern**.  
   
-    Unter**Letzte Sites und Server** werden die Bibliotheken auf der SharePoint-Website aufgeführt.  
+    Unter **Letzte Sites und Server** werden die Bibliotheken auf der SharePoint-Website aufgeführt.  
   
 5.  Navigieren Sie zu der Bibliothek, in der Sie den Bericht speichern werden.  
   
@@ -337,7 +337,7 @@ Sie können den Bericht in einer SharePoint-Bibliothek, auf einem Berichtsserver
 7.  Klicken Sie auf **Speichern**.  
   
 ## <a name="1-create-the-main-report-from-the-table-or-matrix-wizard"></a><a name="MMatrixAndDataset"></a>1. Erstellen des Hauptberichts mit dem Tabellen- oder Matrix-Assistenten  
-Erstellen Sie im Dialogfeld **Erste Schritte** mit dem **Tabellen- oder Matrix-Assistenten**einen Matrixbericht.  
+Erstellen Sie im Dialogfeld **Erste Schritte** mit dem **Tabellen- oder Matrix-Assistenten** einen Matrixbericht.  
   
 #### <a name="to-create-the-main-report"></a>So erstellen Sie den Hauptbericht  
   
@@ -349,24 +349,24 @@ Erstellen Sie im Dialogfeld **Erste Schritte** mit dem **Tabellen- oder Matrix-A
  
 2.  Überprüfen Sie im Dialogfeld **Erste Schritte** , dass **Neuer Bericht** ausgewählt ist, und klicken Sie anschließend auf **Tabellen- oder Matrix-Assistent**.  
   
-## <a name="1a-specify-a-data-connection"></a><a name="MConnection"></a>1a. Angeben einer Datenverbindung  
+## <a name="1a-add-embedded-data-source"></a><a name="MConnection"></a>1a. Hinzufügen von eingebetteten Datenquellen  
 Sie werden dem Hauptbericht eine eingebettete Datenquelle hinzufügen.  
   
 #### <a name="to-create-an-embedded-data-source"></a>So erstellen Sie eine eingebettete Datenquelle  
   
-1.  Klicken Sie auf der Seite **Dataset auswählen** auf **Dataset erstellen**und anschließend auf **Weiter**.  
+1.  Klicken Sie auf der Seite **Dataset auswählen** auf **Dataset erstellen** und anschließend auf **Weiter**.  
   
 2.  Klicken Sie auf **Neu**.  
   
-3.  Geben Sie im Feld **Name**als Name für die Datenquelle **Online and Reseller Sales Main** ein.  
+3.  Geben Sie im Feld **Name** als Name für die Datenquelle **Online and Reseller Sales Main** ein.  
   
-4.  Wählen Sie unter **Verbindungstyp auswählen**die Option **Microsoft SQL Server Analysis Services**aus, und klicken Sie anschließend auf **Erstellen**.  
+4.  Wählen Sie unter **Verbindungstyp auswählen** die Option **Microsoft SQL Server Analysis Services** aus, und klicken Sie anschließend auf **Erstellen**.  
   
-5.  Vergewissern Sie sich, dass unter **Datenquelle**die Option **Microsoft SQL Server Analysis Services (AdomdClient)** ausgewählt ist.  
+5.  Vergewissern Sie sich, dass unter **Datenquelle** die Option **Microsoft SQL Server Analysis Services (AdomdClient)** ausgewählt ist.  
   
-6.  Geben Sie unter **Servername**den Namen eines Servers ein, auf dem eine Instanz von [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] installiert ist.  
+6.  Geben Sie unter **Servername** den Namen eines Servers ein, auf dem eine Instanz von [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] installiert ist.  
   
-7.  Wählen Sie unter **Datenbanknamen eingeben oder auswählen**den Contoso-Cube aus.  
+7.  Wählen Sie unter **Datenbanknamen eingeben oder auswählen** den Contoso-Cube aus.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -382,13 +382,13 @@ Sie werden dem Hauptbericht eine eingebettete Datenquelle hinzufügen.
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-12. Klicken Sie auf **Verbindung testen**, um sicherzustellen, dass die Verbindung mit der Datenquelle hergestellt werden kann.  
+12. Klicken Sie auf **Verbindung testen** , um sicherzustellen, dass die Verbindung mit der Datenquelle hergestellt werden kann.  
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 14. Klicken Sie auf **Weiter**.  
   
-## <a name="1b-create-an-mdx-query"></a><a name="MMDXQuery"></a>1b. Erstellen einer MDX-Abfrage  
+## <a name="1b-create-embedded-dataset"></a><a name="MMDXQuery"></a>1b. Erstellen eines eingebetteten Datasets  
 Erstellen Sie als Nächstes ein eingebettetes Dataset. Hierzu erstellen Sie mit dem Abfrage-Designer Filter, Parameter und berechnete Elemente sowie das Dataset selbst.  
   
 #### <a name="to-create-query-filters"></a>So erstellen Sie Abfragefilter  
@@ -410,13 +410,13 @@ Erstellen Sie als Nächstes ein eingebettetes Dataset. Hierzu erstellen Sie mit 
   
 4.  Klicken Sie zum Öffnen der Liste **Filterausdruck** auf den Abwärtspfeil in der Spalte **Filterausdruck** .  
   
-5.  Erweitern Sie in der Filterausdruckliste den Eintrag **All Channel**, klicken Sie auf **Online** und **Reseller**und anschließend auf **OK**.  
+5.  Erweitern Sie in der Filterausdruckliste den Eintrag **All Channel** , klicken Sie auf **Online** und **Reseller** und anschließend auf **OK**.  
   
     Die Abfrage enthält nun einen Filter, um nur die folgenden Vertriebswege einzuschließen: Online und Wiederverkäufer.  
   
 6.  Erweitern Sie die Dimension „Sales Territory“, und ziehen Sie anschließend „Sales Territory Group“ in die Spalte **Hierarchie** unter **Channel Name**.  
   
-7.  Öffnen Sie die Liste **Filterausdruck** , erweitern Sie **All Sales Territory**, klicken Sie auf **North America**, und klicken Sie anschließend auf **OK**.  
+7.  Öffnen Sie die Liste **Filterausdruck** , erweitern Sie **All Sales Territory** , klicken Sie auf **North America** , und klicken Sie anschließend auf **OK**.  
   
     Die Abfrage enthält nun einen Filter, um nur den Vertrieb in Nordamerika einzubeziehen.  
   
@@ -426,7 +426,7 @@ Erstellen Sie als Nächstes ein eingebettetes Dataset. Hierzu erstellen Sie mit 
   
 9. Klicken Sie zum Öffnen der Liste **Filterausdruck** auf den Abwärtspfeil in der Spalte **Filterausdruck** .  
   
-10. Erweitern Sie in der Filterausdruckliste den Eintrag **All Date**, klicken Sie auf **Year 2009**, und klicken Sie anschließend auf **OK**.  
+10. Erweitern Sie in der Filterausdruckliste den Eintrag **All Date** , klicken Sie auf **Year 2009** , und klicken Sie anschließend auf **OK**.  
   
     Die Abfrage enthält nun einen Filter, um nur das Kalenderjahr 2009 einzubeziehen.  
   
@@ -434,7 +434,7 @@ Erstellen Sie als Nächstes ein eingebettetes Dataset. Hierzu erstellen Sie mit 
   
 1.  Erweitern Sie die Dimension „Product“, und ziehen Sie anschließend das Element „Product Category Name“ in die Spalte **Hierarchie** unter **Sales Territory Group**.  
   
-2.  Öffnen Sie die Liste **Filterausdruck** , klicken Sie auf **All Products**, und klicken Sie anschließend auf **OK**.  
+2.  Öffnen Sie die Liste **Filterausdruck** , klicken Sie auf **All Products** , und klicken Sie anschließend auf **OK**.  
   
 3.  Klicken Sie auf das Kontrollkästchen **Parameter** . Die Abfrage enthält nun den Parameter „ProductProductCategoryName“.  
   
@@ -452,13 +452,13 @@ Erstellen Sie als Nächstes ein eingebettetes Dataset. Hierzu erstellen Sie mit 
     [Measures].[Sales Quantity] - [Measures].[Sales Return Quantity]  
     ```  
   
-4.  Geben Sie im Feld „Name“ die Zeichenfolge **Net QTY**ein, und klicken Sie anschließend auf **OK**.  
+4.  Geben Sie im Feld „Name“ die Zeichenfolge **Net QTY** ein, und klicken Sie anschließend auf **OK**.  
   
     Im Bereich Berechnete Elemente wird das berechnete Element **Net QTY** aufgeführt.  
   
-5.  Klicken Sie mit der rechten Maustaste auf **Berechnete Elemente**, und klicken Sie anschließend auf **Neues berechnetes Element**.  
+5.  Klicken Sie mit der rechten Maustaste auf **Berechnete Elemente** , und klicken Sie anschließend auf **Neues berechnetes Element**.  
   
-6.  Erweitern Sie im Bereich Metadaten zuerst den Eintrag **Measures**und anschließend „Sales“.  
+6.  Erweitern Sie im Bereich Metadaten zuerst den Eintrag **Measures** und anschließend „Sales“.  
   
 7.  Ziehen Sie das Measure „Sales Amount“ in das Feld **Ausdruck** , geben Sie das Subtraktionszeichen (-) ein, und ziehen Sie anschließend das Measure „Sales Return Amount“ in das Feld **Ausdruck** ; platzieren Sie es hinter dem Subtraktionszeichen (-).  
   
@@ -468,7 +468,7 @@ Erstellen Sie als Nächstes ein eingebettetes Dataset. Hierzu erstellen Sie mit 
     [Measures].[Sales Amount] - [Measures].[Sales Return Amount]  
     ```  
   
-8.  Geben Sie im Feld **Name** den Text  **Net Sales**ein, und klicken Sie anschließend auf **OK**. Im Bereich Berechnete Elemente wird das berechnete Element **Net Sales** aufgeführt.  
+8.  Geben Sie im Feld **Name** den Text  **Net Sales** ein, und klicken Sie anschließend auf **OK**. Im Bereich Berechnete Elemente wird das berechnete Element **Net Sales** aufgeführt.  
   
 ### <a name="to-create-the-dataset"></a><a name="MSkip"></a>So erstellen Sie das Dataset  
   
@@ -476,7 +476,7 @@ Erstellen Sie als Nächstes ein eingebettetes Dataset. Hierzu erstellen Sie mit 
   
 2.  Ziehen Sie „Product Category Name“ aus der Dimension „Product“ in den Datenbereich, und legen Sie es rechts neben „Channel Name“ ab.  
   
-3.  Ziehen Sie aus **Berechnete Elemente**das Element `Net QTY` in den Datenbereich, und legen Sie es rechts neben „Product Category Name“ ab.  
+3.  Ziehen Sie aus **Berechnete Elemente** das Element `Net QTY` in den Datenbereich, und legen Sie es rechts neben „Product Category Name“ ab.  
   
 4.  Ziehen Sie aus Berechnete Elemente das Element „Net Sales“ in den Datenbereich, und legen Sie es rechts neben `Net QTY`ab.  
   
@@ -486,7 +486,7 @@ Erstellen Sie als Nächstes ein eingebettetes Dataset. Hierzu erstellen Sie mit 
   
 6.  Klicken Sie auf **Weiter**.  
   
-## <a name="1c-organize-data-into-groups"></a><a name="MLayout"></a>1c. Gruppieren von Daten  
+## <a name="1c-organize-main-report-data-into-groups"></a><a name="MLayout"></a>1c. Organisieren von Hauptberichtsdaten in Gruppen  
 Durch das Auswählen von Feldern für die Datengruppierung entwerfen Sie eine Matrix mit Zeilen und Spalten, in denen Detaildaten und aggregierte Daten angezeigt werden.  
   
 #### <a name="to-organize-data-into-groups"></a>So gruppieren Sie Daten  
@@ -505,12 +505,12 @@ Durch das Auswählen von Feldern für die Datengruppierung entwerfen Sie eine Ma
   
     In Schritt 3 und 4 werden die Daten angegeben, die in der Matrix angezeigt werden sollen.  
   
-## <a name="1d-add-subtotals-and-totals"></a><a name="MTotals"></a>1d. Hinzufügen von Teilergebnissen und Summen  
+## <a name="1d-add-main-report-subtotals-and-totals"></a><a name="MTotals"></a>1d. Hinzufügen von Zwischen- und Gesamtsummen für den Hauptbericht  
 Sie können in Berichten Teil- und Gesamtergebnisse anzeigen. Die Daten im Hauptbericht zeigen einen Indikator an; Sie werden die Gesamtsumme nach Abschluss des Assistenten entfernen.  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>So fügen Sie Teilergebnisse und Gesamtsummen hinzu  
   
-1.  Vergewissern Sie sich auf der Seite **Layout auswählen** , dass unter **Optionen**die Option **Teil- und Gesamtergebnisse anzeigen** ausgewählt ist.  
+1.  Vergewissern Sie sich auf der Seite **Layout auswählen** , dass unter **Optionen** die Option **Teil- und Gesamtergebnisse anzeigen** ausgewählt ist.  
   
     Im Vorschaubereich des Assistenten wird eine Matrix mit vier Zeilen angezeigt.  Wenn Sie den Bericht ausführen, wird jede Zeile folgendermaßen angezeigt: Die erste Zeile ist die Spaltengruppe, die zweite Zeile enthält die Spaltenüberschriften, die dritte Zeile enthält die Produktkategoriedaten (`[Sum(Net_ QTY)]` und `[Sum(Net_Sales)]`), und die vierte Zeile enthält die Ergebnisse.  
   
@@ -518,39 +518,39 @@ Sie können in Berichten Teil- und Gesamtergebnisse anzeigen. Die Daten im Haupt
   
 3.  Klicken Sie auf **Fertig stellen**.  
   
-3.  Klicken Sie auf **Ausführen**, um den Bericht in der Vorschau anzuzeigen.  
+3.  Klicken Sie auf **Ausführen** , um den Bericht in der Vorschau anzuzeigen.  
   
 ## <a name="2-remove-the-grand-total-row"></a><a name="MGrandTotal"></a>2. Entfernen der Gesamtergebniszeile  
 Die Datenwerte werden als Indikatorzustände angezeigt, einschließlich der Spaltengruppenergebnisse. Entfernen Sie die Zeile, in der das Gesamtergebnis angezeigt wird.  
   
 #### <a name="to-remove-the-grand-total-row"></a>So entfernen Sie die Gesamtergebniszeile  
   
-1.  Klicken Sie auf **Entwurf**, um zur Entwurfsansicht zu wechseln.  
+1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zu wechseln.  
   
 2.  Klicken Sie auf die Ergebniszeile (die letzte Zeile in der Matrix), klicken Sie mit der rechten Maustaste, und klicken Sie anschließend auf **Zeilen löschen**.  
   
-3.  Klicken Sie auf **Ausführen**, um den Bericht in der Vorschau anzuzeigen.  
+3.  Klicken Sie auf **Ausführen** , um den Bericht in der Vorschau anzuzeigen.  
   
 ## <a name="3-configure-text-box-action-for-drillthrough"></a><a name="MDrillthrough"></a>3. Konfigurieren der Textfeldaktion für den Drillthrough  
 Um den Drillthrough zu aktivieren, geben Sie eine Aktion für ein Textfeld im Hauptbericht an.  
   
 #### <a name="to-enable-an-action"></a>So aktivieren Sie eine Aktion  
   
-1.  Klicken Sie auf **Entwurf**, um zur Entwurfsansicht zu wechseln.  
+1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zu wechseln.  
   
 2.  Klicken Sie mit der rechten Maustaste auf die Zelle, die Product_Category_Name enthält, und klicken Sie anschließend auf **Textfeldeigenschaften**.  
   
 3.  Klicken Sie auf die Registerkarte **Aktion** .  
   
-4.  Wählen Sie **Gehe zu Bericht**aus.  
+4.  Wählen Sie **Gehe zu Bericht** aus.  
   
-5.  Klicken Sie unter **Bericht angeben**auf **Durchsuchen**, und suchen Sie anschließend den Drillthroughbericht mit der Bezeichnung ResellerVSOnlineDrillthrough.  
+5.  Klicken Sie unter **Bericht angeben** auf **Durchsuchen** , und suchen Sie anschließend den Drillthroughbericht mit der Bezeichnung ResellerVSOnlineDrillthrough.  
   
 6.  Wenn Sie einen Parameter zur Ausführung des Drillthroughberichts hinzufügen möchten, klicken Sie auf **Hinzufügen**.  
   
 7.  Wählen Sie in der Liste **Name** den Eintrag ProductProductCategoryName aus.  
   
-8.  Geben Sie im Feld **Wert**die Zeichenfolge `[Product_Category_Name.UniqueName]`ein.  
+8.  Geben Sie im Feld **Wert** die Zeichenfolge `[Product_Category_Name.UniqueName]`ein.  
   
     Product_Category_Name ist ein Feld im Dataset.  
   
@@ -565,13 +565,13 @@ Um den Drillthrough zu aktivieren, geben Sie eine Aktion für ein Textfeld im Ha
   
 2.  Klicken Sie auf die Registerkarte **Schriftart** .  
   
-3.  Wählen Sie in der Liste **Effekte** die Option **Unterstrichen**aus.  
+3.  Wählen Sie in der Liste **Effekte** die Option **Unterstrichen** aus.  
   
-4.  Wählen Sie in der Liste **Farbe** die Option **Blau**aus.  
+4.  Wählen Sie in der Liste **Farbe** die Option **Blau** aus.  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  Klicken Sie auf **Ausführen**, um den Bericht in der Vorschau anzuzeigen.  
+6.  Klicken Sie auf **Ausführen** , um den Bericht in der Vorschau anzuzeigen.  
   
 Die Produktkategorienamen weisen das übliche Linkformat (blau und unterstrichen) auf.  
   
@@ -580,7 +580,7 @@ Verwenden Sie Indikatoren, um den Status von Mengen und Umsätzen für Online- u
   
 #### <a name="to-add-an-indicator-for-net-qty-values"></a>So fügen Sie einen Indikator für Netto-QTY-Werte hinzu  
   
-1.  Klicken Sie auf **Entwurf**, um zur Entwurfsansicht zu wechseln.  
+1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zu wechseln.  
   
 2.  Klicken Sie im Menüband auf das Symbol **Rechteck** , und klicken Sie anschließend in die Zelle `[Sum(Net QTY)]` in der Zeilengruppe `[Product_Category_Name]` in der Spaltengruppe `Channel_Name` .  
   
@@ -604,9 +604,9 @@ Verwenden Sie Indikatoren, um den Status von Mengen und Umsätzen für Online- u
   
 5.  Wiederholen Sie die Schritte 1 bis 4 für die Zelle `[Sum(Net_Sales)]` in der Zeilengruppe `[Product_Category_Name]` innerhalb von **Gesamt**.  
   
-6.  Klicken Sie auf **Ausführen**, um den Bericht in der Vorschau anzuzeigen.  
+6.  Klicken Sie auf **Ausführen** , um den Bericht in der Vorschau anzuzeigen.  
   
-## <a name="5-update-parameter-properties"></a><a name="MParameter"></a>5. Aktualisieren von Parametereigenschaften  
+## <a name="5-set-internal-parameter-property"></a><a name="MParameter"></a>5. Festlegen der Parametereigenschaft „Intern“  
 Standardmäßig werden Parameter angezeigt, was für diesen Bericht nicht angemessen ist. Sie werden die Parametereigenschaften aktualisieren, um den Parameter zu einem internen Parameter zu machen.  
   
 #### <a name="to-make-the-parameter-internal"></a>So machen Sie den Parameter zu einem internen Parameter  
@@ -634,14 +634,14 @@ Hinzufügen eines Titels zum Hauptbericht
   
 4.  Wählen Sie auf der Registerkarte **Stamm** des Menübands in der Gruppe Schriftart die Schriftart **Times New Roman** , die Größe **16 pt** und die Schriftschnitte **Fett** und **Kursiv** aus.  
   
-5.  Klicken Sie auf **Ausführen**, um den Bericht in der Vorschau anzuzeigen.  
+5.  Klicken Sie auf **Ausführen** , um den Bericht in der Vorschau anzuzeigen.  
   
 ## <a name="7-save-the-main-report-to-a-sharepoint-library"></a><a name="MSave"></a>7. Speichern des Hauptberichts in einer SharePoint-Bibliothek  
 Speichern Sie den Hauptbericht in einer SharePoint-Bibliothek.  
   
 #### <a name="to-save-the-report"></a>So speichern Sie den Bericht  
   
-1.  Klicken Sie auf **Entwurf**, um zur Entwurfsansicht zu wechseln.  
+1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zu wechseln.  
   
 2.  Klicken Sie über die Schaltfläche Berichts-Generator auf **Speichern**.  
   
@@ -655,7 +655,7 @@ Speichern Sie den Hauptbericht in einer SharePoint-Bibliothek.
   
 5.  Navigieren Sie zu der Bibliothek, in der Sie den Bericht speichern möchten.  
   
-6.  Ersetzen Sie unter **Name**den Standardnamen durch **ResellerVSOnlineMain**.  
+6.  Ersetzen Sie unter **Name** den Standardnamen durch **ResellerVSOnlineMain**.  
   
     > [!IMPORTANT]  
     > Speichern Sie den Hauptbericht an demselben Speicherort, an dem Sie den Drillthroughbericht gespeichert haben. Wenn Sie den Hauptbericht und die Drillthroughberichte an unterschiedlichen Speicherorten oder Bibliotheken speichern möchten, überprüfen Sie, dass die Aktion **Gehe zu Bericht** im Hauptbericht auf den korrekten Speicherort des Drillthroughberichts verweist.  

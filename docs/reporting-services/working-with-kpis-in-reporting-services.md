@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.date: 07/02/2017
-ms.openlocfilehash: b92f19c74e5b5e3215836e174bf895f7cb61c36b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: e661fee4e9b5afe5f78cae444ff8d6574a536bb9
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247439"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243779"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Arbeiten mit KPIs in Reporting Services
 
@@ -36,7 +36,7 @@ Mit KPIs in SQL Server Reporting Services können Sie einfach Antworten für die
 
 Eine KPI wird nur die erste Zeile der Daten aus einem freigegebenen Dataset verwenden. Stellen Sie sicher, dass sich die Daten, die Sie verwenden möchten, in dieser ersten Zeile befinden. Um ein freigegebenes Dataset zu erstellen, können Sie entweder den Berichts-Generator oder SQL Server Data Tools verwenden.  
   
-> **Hinweis**: Das Dataset muss sich nicht im selben Ordner wie der KPI befinden.  
+> **Hinweis** : Das Dataset muss sich nicht im selben Ordner wie der KPI befinden.  
   
 ## <a name="placement-of-kpis"></a>Platzierung von KPIs  
   
@@ -45,11 +45,11 @@ KPIs können in einem beliebigen Ordner auf Ihrem Berichtsserver erstellt werden
   
 Nachdem Sie den Speicherort der KPI bestimmt haben, wechseln Sie zu dem Ordner, und wählen Sie **Neu** > **KPI** im oberen Menü aus.  
   
-![rsCreateKPI1](../reporting-services/media/rscreatekpi1.png)  
+![Screenshot: Dropdownliste „Neu“, wobei die Option „KPI“ hervorgehoben ist](../reporting-services/media/rscreatekpi1.png)  
   
 Dies zeigt Ihnen den Bildschirm **Neue KPI** an.  
   
-![rsCreateKPI2](../reporting-services/media/rscreatekpi2.png)  
+![Screenshot: Bildschirm „Neue KPI“](../reporting-services/media/rscreatekpi2.png)  
   
 Sie können entweder statische Werte zuweisen oder Daten aus einem freigegebenen Dataset verwenden. Wenn Sie eine neue KPI erstellen, wird diese mit zufälligen manuellen Daten aufgefüllt.  
   
@@ -62,45 +62,45 @@ Sie können entweder statische Werte zuweisen oder Daten aus einem freigegebenen
 | Trendsatz | Für Diagrammvisualisierungen verwendete durch Komma getrennte numerische Werte. Dies kann auch für eine Spalte eines Dataset mit Werten festgelegt werden, die den Trend darstellen. |
 | Verwandte Inhalte | Hier können Sie einen Drillthroughlink angeben. Dieser Link kann entweder ein mobiler Bericht sein, der im Portal veröffentlicht wurde, oder eine benutzerdefinierte URL. |
   
-> **Warnung**: Bei der Verwendung des Wordwerts für das **Status** -Feld zur Entwurfszeit, sollten Sie den Zahlenwert verwenden, wenn Sie ein Dataset aktualisieren. Wenn Sie ein Dataset mit dem Wortwert anstelle des Zahlenwerts aktualisieren, könnten die KPIs auf Ihrem Server beschädigt werden.  
+> **Warnung** : Bei der Verwendung des Wordwerts für das **Status** -Feld zur Entwurfszeit, sollten Sie den Zahlenwert verwenden, wenn Sie ein Dataset aktualisieren. Wenn Sie ein Dataset mit dem Wortwert anstelle des Zahlenwerts aktualisieren, könnten die KPIs auf Ihrem Server beschädigt werden.  
 >
-> **Hinweis**: Die Felder **Wert**, **Ziel** und **Status** können nur einen Wert aus der ersten Zeile des Ergebnisses eines Datasets auswählen. Das Feld **Trendsatz** kann jedoch wählen, welche Spalte den Trend widerspiegelt.  
+> **Hinweis** : Die Felder **Wert** , **Ziel** und **Status** können nur einen Wert aus der ersten Zeile des Ergebnisses eines Datasets auswählen. Das Feld **Trendsatz** kann jedoch wählen, welche Spalte den Trend widerspiegelt.  
   
 Um Daten aus einem freigegebenen Dataset zu verwenden, können Sie die folgenden Schritte durchführen.
   
-1. Ändern Sie das Dropdownfeld des Felds von **Manuell festlegen**oder **Nicht festgelegt**auf **Datasetfeld**.  
+1. Ändern Sie das Dropdownfeld des Felds von **Manuell festlegen** oder **Nicht festgelegt** auf **Datasetfeld**.  
   
-    ![rsCreateKPI3](../reporting-services/media/rscreatekpi3.png)  
+    ![Screenshot: Option unter „Wert“ auf „Datasetfeld“ und „Datasetfeld auswählen“ auf „Nicht festgelegt“ festgelegt](../reporting-services/media/rscreatekpi3.png)  
   
 2. Klicken Sie im Datenfeld auf die **Auslassungspunkte (…)** . Hierdurch erscheint der Bildschirm **Wählen Sie ein Dataset** .  
   
-    ![rsCreateKPI4](../reporting-services/media/rscreatekpi4.png)  
+    ![Screenshot: Abschnitt „Pick a Dataset“ (Dataset auswählen), in dem die Option „Finance_KPI“ ausgewählt ist](../reporting-services/media/rscreatekpi4.png)  
   
 3. Wählen Sie das Dataset aus, das die Daten enthält, die Sie anzeigen möchten.  
   
 4. Wählen Sie das Feld aus, das Sie verwenden möchten. Klicken Sie auf **OK**.  
   
-    ![rsCreateKPI5](../reporting-services/media/rscreatekpi5.png)  
+    ![Screenshot: Feld „Pick a Field from Finance_KPI“ (Feld aus Finance_KPI auswählen), wobei die Option „Sum_Amount“ ausgewählt ist](../reporting-services/media/rscreatekpi5.png)  
   
 5. Ändern Sie das **Wertformat** , damit es mit dem Format Ihres Werts übereinstimmt. In diesem Beispiel ist der Wert einer Währung.  
   
-    ![rsCreateKPI6](../reporting-services/media/rscreatekpi6.png)  
+    ![Screenshot: KPI-Vorschau, in der „Wertformat“ auf „Währung“ festgelegt ist](../reporting-services/media/rscreatekpi6.png)  
   
 6. Wählen Sie **Übernehmen**.  
   
-    ![rsCreateKPI7](../reporting-services/media/rscreatekpi7.png)
+    ![Screenshot: KPIs und Datasets mit zwei Elementen](../reporting-services/media/rscreatekpi7.png)
 
 ## <a name="configuring-related-content"></a>Konfigurieren verwandter Inhalte
 
 Wenn Sie sich für die Option **Mobiler Bericht** entscheiden, können Sie in einem zweiten Feld das Ziel auswählen.
 
-   ![Mobilgerätebericht](media/rscreatekpi-related-content-mobile-report.png)
+   ![Screenshot: Option „Verwandte Inhalte“ auf „Mobiler Bericht“ und Option „Mobilen Bericht auswählen“ auf „Nicht festgelegt“ festgelegt](media/rscreatekpi-related-content-mobile-report.png)
 
 Wenn Sie nun im Portal auf den KPI klicken, wird im Dropdown für verwandte Inhalte eine Miniaturansicht des mobilen Berichts angezeigt. Mit einem Klick auf die Miniaturansicht gelangen Sie direkt zum Bericht.
 
 Sie können auch eine benutzerdefinierte URL angeben. Diese kann zu einer beliebigen Sache führen, z. B. zu einer Website, zu eine SharePoint-Website oder zu einem SSRS-Bericht (so könnten Sie hartcodierte Parameter weitergeben).
 
-![Benutzerdefinierte URL](media/rscreatekpi-related-content-custom-url.png)
+![Screenshot: Option „Verwandte Inhalte“ auf „Benutzerdefinierte URL“ und Option „URL eingeben“ auf „http://“ festgelegt](media/rscreatekpi-related-content-custom-url.png)
 
 Wenn Sie nun auf den KPI klicken, wird die URL als verwandter Inhalt angezeigt.
 
@@ -112,11 +112,11 @@ Um eine KPI zu entfernen, können Sie die folgenden Schritte durchführen.
   
 1. Klicken Sie bei der KPI, die Sie entfernen möchten, auf die **Auslassungspunkte (…)** . Wählen Sie **Verwalten** aus.  
   
-    ![rsRemoveKPI1](../reporting-services/media/rsremovekpi1.png)  
+    ![Screenshot: Nach einem Klick auf die Auslassungspunkte eines KPI ist die Option „VERWALTEN“ hervorgehoben.](../reporting-services/media/rsremovekpi1.png)  
   
 2. Klicken Sie auf **Löschen**. Wählen Sie **Löschen** erneut im Bestätigungsdialogfeld aus.  
   
-    ![rsRemoveKPI2](../reporting-services/media/rsremovekpi2.png)  
+    ![Screenshot: Option „Löschen“](../reporting-services/media/rsremovekpi2.png)  
   
 ## <a name="refreshing-a-kpi"></a>Aktualisieren einer KPI  
   
