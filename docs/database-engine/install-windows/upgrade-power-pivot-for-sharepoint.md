@@ -23,7 +23,7 @@ ms.locfileid: "91670183"
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
-  Dieser Artikel fasst die Schritte zusammen, die erforderlich sind, um ein Upgrade einer Bereitstellung von [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] auf [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] durchzuführen. Die jeweiligen Schritte hängen von der SharePoint-Version ab, unter der die Umgebung gerade ausgeführt wird, und umfassen das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Add-In (**spPowerPivot.msi**).  
+  Dieser Artikel fasst die Schritte zusammen, die erforderlich sind, um ein Upgrade einer Bereitstellung von [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] auf [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] durchzuführen. Die jeweiligen Schritte hängen von der SharePoint-Version ab, unter der die Umgebung gerade ausgeführt wird, und umfassen das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Add-In ( **spPowerPivot.msi** ).  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 | SharePoint 2013  
   
@@ -57,7 +57,7 @@ ms.locfileid: "91670183"
   
 -   Die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstools gehören zu den freigegebenen Funktionen von SQL Server. Alle freigegebenen Funktionen führen gleichzeitig ein Upgrade durch. Wenn Sie während eines Upgradevorgangs andere SQL Server-Instanzen oder -Funktionen auswählen, die ein Upgrade für freigegebene Funktionen erfordern, wird für das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool ebenfalls ein Upgrade durchgeführt. Wenn für das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool ein Upgrade durchgeführt wird, für die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Instanz jedoch nicht, können Probleme auftreten. Weitere Informationen zu gemeinsamen Features von SQL Server finden Sie unter [Aktualisieren auf SQL Server 2016 mithilfe des Installations-Assistenten &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
--   Das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Add-In (**spPowerPivot.msi**) wird parallel zu den Vorgängerversionen installiert. Das [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Add-In wird z.B. im Ordner `c:\Program Files\Microsoft SQL Server\130\Tools\PowerPivotTools`installiert.  
+-   Das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Add-In ( **spPowerPivot.msi** ) wird parallel zu den Vorgängerversionen installiert. Das [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Add-In wird z.B. im Ordner `c:\Program Files\Microsoft SQL Server\130\Tools\PowerPivotTools`installiert.  
   
 ##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> Voraussetzungen  
  **Berechtigungen**  
@@ -93,7 +93,7 @@ ms.locfileid: "91670183"
   
 2.  Starten Sie den Server neu.  
   
-3.  Führen Sie das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Add-In (**spPowerPivot.msi**) auf jedem Server in der SharePoint 2013-Farm aus, um die Datenanbieter zu installieren. Eine Ausnahme bilden Server, auf denen der SQL Server-Setup-Assistent ausgeführt wurde, da die Datenanbieter dadurch ebenfalls aktualisiert werden. Weitere Informationen finden Sie unter [Herunterladen von Microsoft SQL Server 2014 Power Pivot für Microsoft SharePoint 2013](https://www.microsoft.com/download/details.aspx?id=42300) und [Installieren oder Deinstallieren von Power Pivot für SharePoint-Add-Ins (SharePoint 2013)](/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
+3.  Führen Sie das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Add-In ( **spPowerPivot.msi** ) auf jedem Server in der SharePoint 2013-Farm aus, um die Datenanbieter zu installieren. Eine Ausnahme bilden Server, auf denen der SQL Server-Setup-Assistent ausgeführt wurde, da die Datenanbieter dadurch ebenfalls aktualisiert werden. Weitere Informationen finden Sie unter [Herunterladen von Microsoft SQL Server 2014 Power Pivot für Microsoft SharePoint 2013](https://www.microsoft.com/download/details.aspx?id=42300) und [Installieren oder Deinstallieren von Power Pivot für SharePoint-Add-Ins (SharePoint 2013)](/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
   
 4.  **Führen Sie das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint 2013“** für einen der SharePoint-Anwendungsserver aus, um die SharePoint-Farm mit den aktualisierten Lösungsdateien zu konfigurieren, die vom Add-In installiert werden. Die SharePoint-Zentraladministration kann für diesen Schritt nicht verwendet werden. Weitere Informationen finden Sie unter  
   
@@ -103,11 +103,11 @@ ms.locfileid: "91670183"
   
          oder  
   
-         Zeigen Sie im **Startmenü** auf **Alle Programme**, und klicken Sie dann auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Konfigurationstools**und auf das **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint 2013“** . Beachten Sie, dass dieses Tool nur aufgeführt ist, wenn [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] auf dem lokalen Server installiert ist.  
+         Zeigen Sie im **Startmenü** auf **Alle Programme** , und klicken Sie dann auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Konfigurationstools** und auf das **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint 2013“** . Beachten Sie, dass dieses Tool nur aufgeführt ist, wenn [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] auf dem lokalen Server installiert ist.  
   
-    2.  Beim Starten überprüft das Konfigurationstool den Upgradestatus der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Farmlösung und der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Webanwendungslösungen. Wenn frühere Versionen dieser Lösungen erkannt werden, wird folgende Meldung angezeigt: „**Neuere Versionen der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Lösungsdateien wurden erkannt. Wählen Sie die Upgradeoption, um ein Upgrade für die Farm durchzuführen**.“ Klicken Sie auf **OK** , um die Systemüberprüfungsmeldung zu schließen.  
+    2.  Beim Starten überprüft das Konfigurationstool den Upgradestatus der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Farmlösung und der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Webanwendungslösungen. Wenn frühere Versionen dieser Lösungen erkannt werden, wird folgende Meldung angezeigt: „ **Neuere Versionen der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Lösungsdateien wurden erkannt. Wählen Sie die Upgradeoption, um ein Upgrade für die Farm durchzuführen**.“ Klicken Sie auf **OK** , um die Systemüberprüfungsmeldung zu schließen.  
   
-    3.  Klicken Sie auf **Funktionen, Dienste, Anwendungen und Lösungen aktualisieren**und dann auf **OK**.  
+    3.  Klicken Sie auf **Funktionen, Dienste, Anwendungen und Lösungen aktualisieren** und dann auf **OK**.  
   
     4.  Überprüfen Sie die Aktionen in der linken Taskliste, und schließen Sie alle aus, die nicht vom Tool ausgeführt werden sollen. Alle Aktionen sind standardmäßig eingeschlossen. Um eine Aktion zu entfernen, wählen Sie sie in der linken Taskliste aus, und deaktivieren Sie dann auf der Seite **Parameter** das Kontrollkästchen **Diese Aktion in Taskliste einschließen** .  
   
@@ -120,13 +120,13 @@ ms.locfileid: "91670183"
     6.  Klicken Sie auf **Überprüfen** , um zu überprüfen, ob jede Aktion gültig ist. Wenn **Überprüfen** nicht verfügbar ist, bedeutet das, dass alle Aktionen für das System gültig sind. Wenn **Überprüfen** verfügbar ist, haben Sie möglicherweise einen Eingabewert (z. B. den Excel-Dienstanwendungsnamen) geändert, oder das Tool hat ermittelt, dass eine bestimmte Aktion nicht ausgeführt werden kann. Wenn eine Aktion nicht ausgeführt werden kann, müssen Sie sie ausschließen oder die zugrunde liegenden Bedingungen korrigieren, aufgrund derer die Aktion als ungültig gekennzeichnet wird.  
   
         > [!IMPORTANT]  
-        >  Die erste Aktion, **Farmlösung aktualisieren**, muss immer zuerst verarbeitet werden. Sie registriert die PowerShell-Cmdlets, die zur Serverkonfiguration verwendet werden. Wenn Sie für diese Aktion einen Fehler erhalten, fahren Sie nicht fort. Verwenden Sie stattdessen die vom Fehler zurückgegebenen Informationen, um das Problem vor dem Verarbeiten weiterer Aktionen in der Taskliste zu diagnostizieren und zu lösen.  
+        >  Die erste Aktion, **Farmlösung aktualisieren** , muss immer zuerst verarbeitet werden. Sie registriert die PowerShell-Cmdlets, die zur Serverkonfiguration verwendet werden. Wenn Sie für diese Aktion einen Fehler erhalten, fahren Sie nicht fort. Verwenden Sie stattdessen die vom Fehler zurückgegebenen Informationen, um das Problem vor dem Verarbeiten weiterer Aktionen in der Taskliste zu diagnostizieren und zu lösen.  
   
-    7.  Klicken Sie auf **Ausführen** , um alle Aktionen auszuführen, die für diesen Task gültig sind. **Ausführen** ist nur verfügbar, nachdem die Überprüfung erfolgreich war. Wenn Sie auf **Ausführen** klicken, wird die folgende Warnung angezeigt und erinnert Sie, dass Aktionen im Batchmodus verarbeitet werden: „**All of the configuration settings that are flagged as valid in the tool will be applied to the SharePoint farm. Möchten Sie den Vorgang fortsetzen?** “.  
+    7.  Klicken Sie auf **Ausführen** , um alle Aktionen auszuführen, die für diesen Task gültig sind. **Ausführen** ist nur verfügbar, nachdem die Überprüfung erfolgreich war. Wenn Sie auf **Ausführen** klicken, wird die folgende Warnung angezeigt und erinnert Sie, dass Aktionen im Batchmodus verarbeitet werden: „ **All of the configuration settings that are flagged as valid in the tool will be applied to the SharePoint farm. Möchten Sie den Vorgang fortsetzen?** “.  
   
     8.  Klicken Sie zum Fortsetzen des Vorgangs auf **Ja** .  
   
-    9. Die Aktualisierung von Lösungen und Funktionen in der Farm kann mehrere Minuten dauern. Während dieser Zeit treten bei Verbindungsanforderungen für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Daten mit folgenden Meldungen vergleichbare **Fehler** auf: „**Die Daten konnten nicht aktualisiert werden**“ oder „**Fehler bei dem Versuch, die angeforderte Aktion auszuführen. Wiederholen Sie den Vorgang**.“ Nach dem Upgrade ist der Server verfügbar, und diese Fehler treten nicht mehr auf.  
+    9. Die Aktualisierung von Lösungen und Funktionen in der Farm kann mehrere Minuten dauern. Während dieser Zeit treten bei Verbindungsanforderungen für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Daten mit folgenden Meldungen vergleichbare **Fehler** auf: „ **Die Daten konnten nicht aktualisiert werden** “ oder „ **Fehler bei dem Versuch, die angeforderte Aktion auszuführen. Wiederholen Sie den Vorgang**.“ Nach dem Upgrade ist der Server verfügbar, und diese Fehler treten nicht mehr auf.  
   
      Weitere Informationen finden Sie unter  
   
@@ -153,13 +153,13 @@ ms.locfileid: "91670183"
     Get-Service | where {$_.displayname -like "*SharePoint*"}  
     ```  
   
-3.  Überprüfen Sie, ob die **SharePoint**-Dienste **SQL Server Analysis Services** und **SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Systemdienst** in der SharePoint-Zentraladministration gestartet wurden, oder verwenden Sie den folgenden PowerShell-Befehl:  
+3.  Überprüfen Sie, ob die **SharePoint** -Dienste **SQL Server Analysis Services** und **SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Systemdienst** in der SharePoint-Zentraladministration gestartet wurden, oder verwenden Sie den folgenden PowerShell-Befehl:  
   
     ```  
     get-SPserviceinstance | where {$_.typename -like "*sql*"}  
     ```  
   
-4.  Überprüfen Sie, ob der **Windows**-Dienst **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** ausgeführt wird.  
+4.  Überprüfen Sie, ob der **Windows** -Dienst **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** ausgeführt wird.  
   
     ```  
     Get-Service | where {$_.displayname -like "*powerpivot*"}  
@@ -171,11 +171,11 @@ ms.locfileid: "91670183"
   
 7.  **Führen Sie das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool** auf dem ersten SharePoint-Anwendungsserver aus, auf dem der SQL Server Analysis Services-Dienst ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) ausgeführt wird, um ein Upgrade für die Lösungen und Webdienste in SharePoint durchzuführen. Die Zentraladministration kann für diesen Schritt nicht verwendet werden.  
   
-    1.  Zeigen Sie im **Startmenü** auf **Alle Programme**, klicken Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]und **Konfigurationstools**, und klicken Sie dann auf **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool**. Beachten Sie, dass dieses Tool nur aufgeführt ist, wenn [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] auf dem lokalen Server installiert ist.  
+    1.  Zeigen Sie im **Startmenü** auf **Alle Programme** , klicken Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]und **Konfigurationstools** , und klicken Sie dann auf **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool**. Beachten Sie, dass dieses Tool nur aufgeführt ist, wenn [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] auf dem lokalen Server installiert ist.  
   
     2.  Beim Starten überprüft das Konfigurationstool den Upgradestatus der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Farmlösung und der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Webanwendungslösungen. Wenn frühere Versionen dieser Lösungen erkannt werden, wird folgende Meldung angezeigt: „Neuere Versionen der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Lösungsdateien wurden erkannt. Wählen Sie die Upgradeoption, um ein Upgrade für die Farm durchzuführen.“ Klicken Sie auf **OK** , um die Meldung zu schließen.  
   
-    3.  Klicken Sie auf **Funktionen, Dienste, Anwendungen und Lösungen aktualisieren**, und klicken Sie dann auf **OK** , um fortzufahren.  
+    3.  Klicken Sie auf **Funktionen, Dienste, Anwendungen und Lösungen aktualisieren** , und klicken Sie dann auf **OK** , um fortzufahren.  
   
     4.  Die folgende Warnung wird angezeigt: „Workbooks in the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Management Dashboard are about to be upgraded to the latest version. Alle an vorhandenen Arbeitsmappen vorgenommenen Anpassungen gehen verloren. Möchten Sie den Vorgang fortsetzen?“  
   
@@ -196,7 +196,7 @@ ms.locfileid: "91670183"
     7.  Klicken Sie auf **Überprüfen** , um zu überprüfen, ob jede Aktion gültig ist. Wenn **Überprüfen** nicht verfügbar ist, bedeutet das, dass alle Aktionen für das System gültig sind. Wenn **Überprüfen** verfügbar ist, haben Sie möglicherweise einen Eingabewert (z. B. den Excel-Dienstanwendungsnamen) geändert, oder das Tool hat ermittelt, dass eine bestimmte Aktion nicht ausgeführt werden kann. Wenn eine Aktion nicht ausgeführt werden kann, müssen Sie sie ausschließen oder die zugrunde liegenden Bedingungen korrigieren, aufgrund derer die Aktion als ungültig gekennzeichnet wird.  
   
         > [!IMPORTANT]  
-        >  Die erste Aktion, **Farmlösung aktualisieren**, muss immer zuerst verarbeitet werden. Sie registriert die PowerShell-Cmdlets, die zur Serverkonfiguration verwendet werden. Wenn Sie für diese Aktion einen Fehler erhalten, fahren Sie nicht fort. Verwenden Sie stattdessen die vom Fehler zurückgegebenen Informationen, um das Problem vor dem Verarbeiten weiterer Aktionen in der Taskliste zu diagnostizieren und zu lösen.  
+        >  Die erste Aktion, **Farmlösung aktualisieren** , muss immer zuerst verarbeitet werden. Sie registriert die PowerShell-Cmdlets, die zur Serverkonfiguration verwendet werden. Wenn Sie für diese Aktion einen Fehler erhalten, fahren Sie nicht fort. Verwenden Sie stattdessen die vom Fehler zurückgegebenen Informationen, um das Problem vor dem Verarbeiten weiterer Aktionen in der Taskliste zu diagnostizieren und zu lösen.  
   
     8.  Klicken Sie auf **Ausführen** , um alle Aktionen auszuführen, die für diesen Task gültig sind. **Ausführen** ist nur verfügbar, nachdem die Überprüfung erfolgreich war. Wenn Sie auf **Ausführen** klicken, wird die folgende Warnung angezeigt und erinnert Sie, dass Aktionen im Batchmodus verarbeitet werden: „All of the configuration settings that are flagged as valid in the tool will be applied to the SharePoint farm. Möchten Sie den Vorgang fortsetzen?“  
   
@@ -222,13 +222,13 @@ ms.locfileid: "91670183"
   
     2.  Überprüfen Sie vorhandene Bereitstellungen auf die folgenden Informationen: **Typ** ist „Zurückziehung“ oder „Bereitstellung“, **Datei** ist „powerpivotwebapp.wsp“ oder „powerpivotfarm.wsp“.  
   
-    3.  Kopieren Sie bei Bereitstellungen oder Zurückziehungen von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Lösungen den GUID-Wert für **JobId**, und fügen Sie ihn in den folgenden Befehl ein (verwenden Sie zum Kopieren der GUID die Befehle zum Markieren, Kopieren und Einfügen im Bearbeitungsmenü der Shell):  
+    3.  Kopieren Sie bei Bereitstellungen oder Zurückziehungen von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Lösungen den GUID-Wert für **JobId** , und fügen Sie ihn in den folgenden Befehl ein (verwenden Sie zum Kopieren der GUID die Befehle zum Markieren, Kopieren und Einfügen im Bearbeitungsmenü der Shell):  
   
         ```  
         Stsadm -o canceldeployment -id "<GUID>"  
         ```  
   
-    4.  Wiederholen Sie den Task im Konfigurationstool, indem Sie auf **Überprüfen** und **Ausführen**klicken.  
+    4.  Wiederholen Sie den Task im Konfigurationstool, indem Sie auf **Überprüfen** und **Ausführen** klicken.  
   
      Überprüfen Sie bei allen anderen Fehlern die ULS-Protokolle. Weitere Informationen finden Sie unter [Konfigurieren und Anzeigen der SharePoint-Protokolldateien und -Diagnoseprotokollierung &#40;Power Pivot für SharePoint&#41;](/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging).  
   
@@ -253,11 +253,11 @@ Get-PowerPivotSystemService
 ### <a name="verify-the-version-of-the-analysis-services-windows-service"></a>Überprüfen der Version des Analysis Services-Windows-Diensts  
  Wenn Sie nur einige [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Server in einer SharePoint 2010-Farm aktualisiert haben, ist die Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] auf nicht aktualisierten Servern älter als die in der Farm erwartete Version. Sie müssen alle Server auf die gleiche Version aktualisieren, um sie verwenden zu können. Verwenden Sie eine der folgenden Methoden, um die Version des SQL Server Analysis Services-Windows-Diensts ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) auf jedem Computer zu überprüfen.  
   
- **Windows-Datei-Explorer**:  
+ **Windows-Datei-Explorer** :  
   
 1.  Navigieren Sie zum Ordner **Bin** der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Instanz. Beispiel: `C:\Program Files\Microsoft SQL Server\MSAS13.POWERPIVOT\OLAP\bin`.  
   
-2.  Klicken Sie mit der rechten Maustaste auf `msmdsrv.exe`, und wählen Sie **Eigenschaften**aus.  
+2.  Klicken Sie mit der rechten Maustaste auf `msmdsrv.exe`, und wählen Sie **Eigenschaften** aus.  
   
 3.  Klicken Sie auf **Details**.  
   
@@ -331,7 +331,7 @@ Get-PowerPivotSystemService
   
 2.  Starten Sie das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool.  
   
-3.  Klicken Sie auf **Funktionen, Dienste, Anwendungen und Lösungen aktualisieren**und dann auf **OK**.  
+3.  Klicken Sie auf **Funktionen, Dienste, Anwendungen und Lösungen aktualisieren** und dann auf **OK**.  
   
 4.  Überprüfen Sie die im Upgradetask enthaltenen Maßnahmen, und klicken Sie dann auf **Überprüfen**.  
   

@@ -186,8 +186,8 @@ object_id   TableName                   index_id    IndexName                   
 2. Erweitern Sie den Ordner **Tabellen** .
 3. Erweitern Sie die Tabelle, in der Sie die Fragmentierung eines Indexes überprüfen möchten.
 4. Erweitern Sie den Ordner **Indizes** .
-5. Klicken Sie mit der rechten Maustaste auf den Index, für den Sie die Fragmentierung überprüfen möchten, und wählen Sie **Eigenschaften**aus.
-6. Wählen Sie unter **Seite auswählen**die Option **Fragmentierung**aus.
+5. Klicken Sie mit der rechten Maustaste auf den Index, für den Sie die Fragmentierung überprüfen möchten, und wählen Sie **Eigenschaften** aus.
+6. Wählen Sie unter **Seite auswählen** die Option **Fragmentierung** aus.
 
 Die folgenden Informationen sind auf der Seite **Fragmentierung** verfügbar:
 
@@ -199,7 +199,7 @@ Die folgenden Informationen sind auf der Seite **Fragmentierung** verfügbar:
 |**Tiefe**|Die Anzahl von Ebenen im Index, einschließlich der Blattebene.|
 |**Weitergeleitete Datensätze**|Anzahl der Datensätze in einem Heap, die Weiterleitungszeiger auf einen anderen Datenspeicherort besitzen. (Dieser Status tritt während eines Updates auf, wenn nicht genügend Speicherplatz vorhanden ist, um die neue Zeile am ursprünglichen Speicherort zu speichern.)|
 |**Inaktive Zeilen**|Anzahl der Zeilen, die als gelöscht markiert sind, aber noch nicht entfernt wurden. Diese Zeilen werden von einem Bereinigungsthread entfernt, wenn der Server nicht ausgelastet ist. Dieser Wert schließt keine Zeilen ein, die aufgrund einer ausstehenden Momentaufnahme-Isolationstransaktion beibehalten werden.|
-|**Indextyp**|Der Indextyp. Mögliche Werte sind **Gruppierter Index**, **Nicht gruppierter Index**und **Primär-XML**. Tabellen können auch als Heap gespeichert werden (ohne Indizes). Dann kann aber diese Seite Indexeigenschaften nicht geöffnet werden.|
+|**Indextyp**|Der Indextyp. Mögliche Werte sind **Gruppierter Index** , **Nicht gruppierter Index** und **Primär-XML**. Tabellen können auch als Heap gespeichert werden (ohne Indizes). Dann kann aber diese Seite Indexeigenschaften nicht geöffnet werden.|
 |**Zeilen auf Blattebene**|Die Anzahl von Zeilen auf Blattebene.|
 |**Maximale Zeilengröße**|Maximale Größe von Zeilen auf Blattebene.|
 |**Minimale Zeilengröße**|Minimale Größe von Zeilen auf Blattebene.|
@@ -256,7 +256,7 @@ Erfordert die `ALTER`-Berechtigung für die Tabelle oder Sicht. Der Benutzer mus
 2. Erweitern Sie den Ordner **Tabellen** .
 3. Erweitern Sie die Tabelle, in der Sie einen Index neu organisieren möchten.
 4. Erweitern Sie den Ordner **Indizes** .
-5. Klicken Sie mit der rechten Maustaste auf den Index, den Sie neu organisieren möchten, und wählen Sie **Neu organisieren**aus.
+5. Klicken Sie mit der rechten Maustaste auf den Index, den Sie neu organisieren möchten, und wählen Sie **Neu organisieren** aus.
 6. Vergewissern Sie sich im Dialogfeld **Indizes neu organisieren** , dass der richtige Index im Raster **Neu zu organisierende Indizes** ausgewählt ist, und klicken Sie auf **OK**.
 7. Aktivieren Sie das Kontrollkästchen **Spaltendaten großer Objekte komprimieren** , um anzugeben, dass alle Seiten mit umfangreichen Objektdaten (Large Object, LOB) komprimiert werden sollen.
 8. Klicken Sie auf **OK**.
@@ -266,8 +266,8 @@ Erfordert die `ALTER`-Berechtigung für die Tabelle oder Sicht. Der Benutzer mus
 1. Erweitern Sie im Objekt-Explorer die Datenbank mit der Tabelle, in der Sie die Indizes neu organisieren möchten.
 2. Erweitern Sie den Ordner **Tabellen** .
 3. Erweitern Sie die Tabelle, in der Sie die Indizes neu organisieren möchten.
-4. Klicken Sie mit der rechten Maustaste auf den Ordner **Indizes** , und wählen Sie **Alle neu organisieren**aus.
-5. Vergewissern Sie sich im Dialogfeld **Index neu organisieren** , dass die richtigen Indizes im Raster **Neu zu organisierende Indizes**ausgewählt sind. Um einen Index aus dem Raster **Neu zu organisierende Indizes** zu entfernen, wählen Sie den Index aus, und drücken Sie die ENTF-Taste.
+4. Klicken Sie mit der rechten Maustaste auf den Ordner **Indizes** , und wählen Sie **Alle neu organisieren** aus.
+5. Vergewissern Sie sich im Dialogfeld **Index neu organisieren** , dass die richtigen Indizes im Raster **Neu zu organisierende Indizes** ausgewählt sind. Um einen Index aus dem Raster **Neu zu organisierende Indizes** zu entfernen, wählen Sie den Index aus, und drücken Sie die ENTF-Taste.
 6. Aktivieren Sie das Kontrollkästchen **Spaltendaten großer Objekte komprimieren** , um anzugeben, dass alle Seiten mit umfangreichen Objektdaten (Large Object, LOB) komprimiert werden sollen.
 7. Klicken Sie auf **OK**.
 

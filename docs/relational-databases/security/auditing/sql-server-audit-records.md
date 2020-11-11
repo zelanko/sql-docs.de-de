@@ -24,7 +24,7 @@ ms.locfileid: "91868549"
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Die Funktion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit ermöglicht es, Ereignisgruppen und Ereignisse auf Serverebene und auf Datenbankebene zu überwachen. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Überwachungen bestehen aus null oder mehr Überwachungsaktionselementen, die in einem *Überwachungsziel*aufgezeichnet werden. Beim Überwachungsziel kann es sich um eine Binärdatei, das Windows-Sicherheitsereignisprotokoll oder das Windows-Anwendungsereignisprotokoll handeln. Die an das Ziel gesendeten Datensätze können die in der folgenden Tabelle beschriebenen Elemente enthalten:  
+ Überwachungen bestehen aus null oder mehr Überwachungsaktionselementen, die in einem *Überwachungsziel* aufgezeichnet werden. Beim Überwachungsziel kann es sich um eine Binärdatei, das Windows-Sicherheitsereignisprotokoll oder das Windows-Anwendungsereignisprotokoll handeln. Die an das Ziel gesendeten Datensätze können die in der folgenden Tabelle beschriebenen Elemente enthalten:  
   
 |Spaltenname|BESCHREIBUNG|type|Immer verfügbar|  
 |-----------------|-----------------|----------|----------------------|  
@@ -68,7 +68,7 @@ ms.locfileid: "91868549"
   
 -   Dieser Prozess wird wiederholt, bis alle Daten aufgezeichnet wurden.  
   
- Sie können die Daten verbinden, indem Sie die Zeilen sequenziell mit dem Wert **sequence_no** und den Spalten **event_Time**, **action_id** sowie **session_id** lesen, um die Aktion zu identifizieren.  
+ Sie können die Daten verbinden, indem Sie die Zeilen sequenziell mit dem Wert **sequence_no** und den Spalten **event_Time** , **action_id** sowie **session_id** lesen, um die Aktion zu identifizieren.  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-server-audit-transact-sql.md)  
