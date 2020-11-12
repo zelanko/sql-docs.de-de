@@ -341,16 +341,10 @@
           href: ../machine-learning/security/create-a-login-for-sqlrusergroup.md
     - name: Leistung
       items:
-        - name: R
+        - name: Leistung von R-Code
           items:
-            - name: Übersicht über die Leistungsoptimierung in R
-              href: ../machine-learning/r/sql-server-r-services-performance-tuning.md
-            - name: Leistungsoptimierung für die Serverkonfiguration
-              href: ../machine-learning/r/sql-server-configuration-r-services.md
-            - name: Leistungsoptimierung – Datenoptimierung in R
+            - name: Datenoptimierung in R
               href: ../machine-learning/r/r-and-data-optimization-r-services.md
-            - name: Leistungsoptimierung für Ergebnisse in R
-              href: ../machine-learning/r/performance-case-study-r-services.md
             - name: Verwenden von R-Code-Profilerstellungsfunktionen
               href: ../machine-learning/r/using-r-code-profiling-functions.md
 - name: Verweis
