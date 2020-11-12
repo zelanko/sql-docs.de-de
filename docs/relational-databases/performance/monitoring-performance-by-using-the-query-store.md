@@ -15,12 +15,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 5b3a9151d07599661445eb3dfa20c9ef432e0719
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4cccda1a792b8c006b758c3788d910e745e94989
+ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243431"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94418023"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Leistungsüberwachung mit dem Abfragespeicher
 
@@ -50,7 +50,7 @@ Informationen zum Betrieb des Abfragespeichers in Azure [!INCLUDE[ssSDS](../../i
 
 ### <a name="use-transact-sql-statements"></a>Verwenden von Transact-SQL-Anweisungen
 
-Verwenden Sie die Anweisung **ALTER DATABASE**, um den Abfragespeicher für eine bestimmte Datenbank zu aktivieren. Beispiel:
+Verwenden Sie die Anweisung **ALTER DATABASE** , um den Abfragespeicher für eine bestimmte Datenbank zu aktivieren. Beispiel:
 
 ```sql
 SET QUERY_STORE = ON (OPERATION_MODE = READ_WRITE);
@@ -59,7 +59,7 @@ SET QUERY_STORE = ON (OPERATION_MODE = READ_WRITE);
 Weitere Syntaxoptionen im Zusammenhang mit dem Abfragespeicher finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).
 
 > [!NOTE]
-> Der Abfragespeicher kann für die **master**- oder **tempdb**-Datenbank nicht aktiviert werden.
+> Der Abfragespeicher kann für die **master** - oder **tempdb** -Datenbank nicht aktiviert werden.
 
 > [!IMPORTANT]
 > Informationen zum Aktivieren des Abfragespeichers und dazu, wie Sie ihn an Ihre Arbeitsauslastung angepasst halten, finden Sie unter [Bewährte Methoden für den Abfragespeicher](../../relational-databases/performance/best-practice-with-the-query-store.md#Configure).
@@ -93,9 +93,9 @@ Häufige Szenarios für die Verwendung des Abfragespeichers:
 
 Der Abfragespeicher enthält drei Speicher:
 
-- einen **Planspeicher**, der die Informationen zum Ausführungsplan speichert
-- einen **Speicher für Laufzeitstatistiken**, der die Informationen zum Ausführungsstatistiken speichert
-- einen **Speicher für Wartestatistiken**, der die Informationen zum Wartestatistiken speichert
+- einen **Planspeicher** , der die Informationen zum Ausführungsplan speichert
+- einen **Speicher für Laufzeitstatistiken** , der die Informationen zum Ausführungsstatistiken speichert
+- einen **Speicher für Wartestatistiken** , der die Informationen zum Wartestatistiken speichert
 
 Die Anzahl der eindeutigen Pläne, die für eine Abfrage gespeichert werden können, wird durch die Konfigurationsoption **max_plans_per_query** begrenzt. Zum Verbessern der Leistung werden diese Informationen asynchron in die Speicher geschrieben. Um die Speicherverwendung zu minimieren, werden die statistischen Daten zur Laufzeitausführung im Speicher für Laufzeitstatistiken über ein festes Zeitintervall aggregiert. Die Informationen in diesen Speichern können durch Abfragen der Katalogsichten für den Abfragespeicher angezeigt werden.
 
@@ -122,7 +122,7 @@ Wählen Sie einen Plan aus, um die grafische Darstellung des Abfrageplans anzuze
 
 ![SQL Server 2016: Zurückgestellte Abfragen im Objekt-Explorer in SSMS](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "SQL Server 2016: Zurückgestellte Abfragen im Objekt-Explorer in SSMS")
 
-Wählen Sie eine Abfrage und einen Plan aus, und klicken Sie anschließend auf **Plan erzwingen**, um einen Plan zu erzwingen. Sie können nur Pläne erzwingen, die mit dem Abfrageplanfeature gespeichert wurden und sich noch im Abfrageplancache befinden.
+Wählen Sie eine Abfrage und einen Plan aus, und klicken Sie anschließend auf **Plan erzwingen** , um einen Plan zu erzwingen. Sie können nur Pläne erzwingen, die mit dem Abfrageplanfeature gespeichert wurden und sich noch im Abfrageplancache befinden.
 
 ## <a name="finding-waiting-queries"></a><a name="Waiting"></a> Suchen von Wartestatistiken zu Abfragen
 
@@ -233,7 +233,7 @@ Gespeicherte Prozeduren ermöglichen das Konfigurieren des Abfragespeichers.
 :::row-end:::
 :::row:::
     :::column:::
-        [sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)
+        [sp_query_store_remove_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)
     :::column-end:::
     :::column:::
         [sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)
@@ -241,11 +241,13 @@ Gespeicherte Prozeduren ermöglichen das Konfigurieren des Abfragespeichers.
 :::row-end:::
 :::row:::
     :::column:::
-        sp_query_store_consistency_check &#40;Transct-SQL&#41;
+        sp_query_store_consistency_check &#40;Transact-SQL&#41;<sup>1</sup>
     :::column-end:::
     :::column:::
     :::column-end:::
 :::row-end:::
+
+<sup>1</sup> In extremen Szenarien kann der Abfragespeicher aufgrund interner Fehler in den Zustand FEHLER geraten. Falls dies eintritt, kann der Abfragespeicher ab SQL Server 2017 (14.x) wiederhergestellt werden, indem in der betroffenen Datenbank die gespeicherte Prozedur sp_query_store_consistency_check ausgeführt wird. Weitere Einzelheiten finden Sie unter [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) in der Beschreibung der Spalte actual_state_desc.
 
 ## <a name="key-usage-scenarios"></a><a name="Scenarios"></a> Wichtige Verwendungsszenarien
 
@@ -383,8 +385,8 @@ Sie können eine eigene Prozedur mit abweichender Logik für das Bereinigen von 
 
 Im Beispiel oben wird die erweiterte gespeicherte Prozedur **sp_query_store_remove_query** verwendet, um nicht benötigte Daten zu entfernen. Sie können auch Folgendes verwenden:
 
-- **sp_query_store_reset_exec_stats**, um Laufzeitstatistiken für einen bestimmten Plan zu löschen.
-- **sp_query_store_remove_plan**, um einen einzelnen Plan zu entfernen.
+- **sp_query_store_reset_exec_stats** , um Laufzeitstatistiken für einen bestimmten Plan zu löschen.
+- **sp_query_store_remove_plan** , um einen einzelnen Plan zu entfernen.
 
 ### <a name="performance-auditing-and-troubleshooting"></a><a name="Peformance"></a> Leistungsüberwachung und Problembehandlung
 
