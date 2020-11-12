@@ -1,6 +1,6 @@
 ---
 title: CLR-Integration und Transaktionen | Microsoft-Dokumentation
-description: Der System. Transactions-Namespace stellt ein Transaktions Framework bereit, das vollständig in die ADO.net-und SQL Server CLR-Integration integriert ist.
+description: Für CLR-Integration und-Transaktionen arbeiten System. Transactions und ADO.net zusammen, um die Verwendung lokaler und verteilter Transaktionen in verwalteten Anwendungen zu erweitern und zu vereinfachen.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 381d206e-06e2-48d0-8206-295fcf06ac98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7c93aec2d5246073073fefaaaf4b21d3d542416a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bd65fce2f2a2bdf2ce25f4811063f7f9d56d2e15
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737660"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521133"
 ---
 # <a name="clr-integration-and-transactions"></a>CLR-Integration und Transaktionen
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

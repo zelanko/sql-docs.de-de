@@ -12,12 +12,12 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 671ae0d9578c81d56c3324f73a4240152594dd49
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 5fa8a1df313af5473de9c49137166a6c2ac50589
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194432"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521101"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>Hosten einer MDS-Datenbank auf einer verwalteten Instanz
 
@@ -100,19 +100,19 @@ Mit dieser Aktion wird Folgendes installiert:
    - Ein Windows PowerShell-Snap-in
    - Ordner und Dateien für Webanwendungen und-Dienste.
 
-   ![MDS-SQLServer2019-config-Mi-sqlfeatureselection](../master-data-services/media/mds-sqlserver2019-config-mi-sqlfeatureselection.png "MDS-SQLServer2019-config-MI_SQLFeatureSelection")  
+   ![Screenshot der Seite "Funktionsauswahl"](../master-data-services/media/mds-sqlserver2019-config-mi-sqlfeatureselection.png "MDS-SQLServer2019-config-MI_SQLFeatureSelection")  
 
 ### <a name="set-up-the-database-and-website"></a>Einrichten der Datenbank und der Website
 
 1. Verbinden Sie den Azure-Virtual Network, um sicherzustellen, dass Sie eine Verbindung mit der verwalteten Instanz herstellen können.
 
-   ![MDS-SQLServer2019-config-Mi-P2SVPNConnect](../master-data-services/media/mds-sqlserver2019-config-mi-p2svpnconnect.png "MDS-SQLServer2019-config-MI_P2SVPNConnect")
+   ![Screenshot des Test-Mi-VPN, das eine Verbindung mit dem Azure-Virtual Network herstellt.](../master-data-services/media/mds-sqlserver2019-config-mi-p2svpnconnect.png "MDS-SQLServer2019-config-MI_P2SVPNConnect")
 
 1. Öffnen Sie das, [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] und wählen Sie dann im linken Bereich **Daten Bank Konfiguration** aus.
 
-1. Wählen Sie **Datenbank erstellen** , um den **Assistenten zum Erstellen einer Datenbank**zu öffnen. Wählen Sie **Weiter** aus.
+1. Wählen Sie **Datenbank erstellen** , um den **Assistenten zum Erstellen einer Datenbank** zu öffnen. Wählen Sie **Weiter** aus.
 
-1. Füllen Sie auf der Seite **Daten Bank Server** das Feld **SQL Server Instanz** aus, und wählen Sie dann den **Authentifizierungstyp**aus. Wählen Sie **Verbindung testen** aus, um zu bestätigen, dass Sie Ihre Anmelde Informationen zum Herstellen einer Verbindung mit der Datenbank über den ausgewählten Authentifizierungstyp verwenden Wählen Sie **Weiter** aus.
+1. Füllen Sie auf der Seite **Daten Bank Server** das Feld **SQL Server Instanz** aus, und wählen Sie dann den **Authentifizierungstyp** aus. Wählen Sie **Verbindung testen** aus, um zu bestätigen, dass Sie Ihre Anmelde Informationen zum Herstellen einer Verbindung mit der Datenbank über den ausgewählten Authentifizierungstyp verwenden Wählen Sie **Weiter** aus.
 
    > [!NOTE]
    > - Eine SQL Server-Instanz sieht wie folgt aus `xxxxxxx.xxxxxxx.database.windows.net` :.
@@ -121,40 +121,40 @@ Mit dieser Aktion wird Folgendes installiert:
 
    Ihre Authentifizierung muss die Regel **"sysadmin"** für verwaltete Instanzen enthalten.
 
-   ![MDS-SQLServer2019-config-Mi-anatedbconnect](../master-data-services/media/mds-sqlserver2019-config-mi-createdbconnect.png "MDS-SQLServer2019-config-MI_CreateDBConnect")  
+   ![Screenshot der Seite "Daten Bank Server" des Assistenten zum Erstellen einer Datenbank.](../master-data-services/media/mds-sqlserver2019-config-mi-createdbconnect.png "MDS-SQLServer2019-config-MI_CreateDBConnect")  
 
-1. Geben Sie im Feld **Datenbankname** einen Namen ein. Um eine Windows-Sortierung auszuwählen, deaktivieren Sie optional das Kontrollkästchen **SQL Server Standardsortierung** , und wählen Sie mindestens eine der verfügbaren Optionen aus. Beispielsweise wird die **Groß-/Kleinschreibung**beachtet. Wählen Sie **Weiter** aus.
+1. Geben Sie im Feld **Datenbankname** einen Namen ein. Um eine Windows-Sortierung auszuwählen, deaktivieren Sie optional das Kontrollkästchen **SQL Server Standardsortierung** , und wählen Sie mindestens eine der verfügbaren Optionen aus. Beispielsweise wird die **Groß-/Kleinschreibung** beachtet. Wählen Sie **Weiter** aus.
 
-   ![MDS-SQLServer2019-config-Mi-kreateddbname](../master-data-services/media/mds-sqlserver2019-config-mi-createddbname.png "MDS-SQLServer2019-config-MI_CreatedDBName")
+   ![Screenshot der Seite "Datenbank" des Assistenten zum Erstellen einer Datenbank.](../master-data-services/media/mds-sqlserver2019-config-mi-createddbname.png "MDS-SQLServer2019-config-MI_CreatedDBName")
 
 1. Geben Sie im Feld **Benutzername** das Windows-Konto des Standard-Super Benutzers für an [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] . Ein Administrator hat Zugriff auf alle Funktionsbereiche und kann alle Modelle hinzufügen, löschen und aktualisieren.
 
-   ![MDS-SQLServer2019-config-Mi-buildsername](../master-data-services/media/mds-sqlserver2019-config-mi-createdbusername.png "MDS-SQLServer2019-config-MI_createDBUserName")
+   ![Screenshot der Seite "Administrator Konto" des Assistenten zum Erstellen einer Datenbank.](../master-data-services/media/mds-sqlserver2019-config-mi-createdbusername.png "MDS-SQLServer2019-config-MI_createDBUserName")
 
 1. Wählen Sie **weiter** aus, um eine Zusammenfassung der Einstellungen für die [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Datenbank anzuzeigen. Klicken Sie erneut auf  **weiter** , um die Datenbank zu erstellen. Die Seite Status **und fertig** Stellung wird angezeigt.
 
-1. Nachdem die Datenbank erstellt und konfiguriert wurde, klicken Sie auf **Fertig**stellen.
+1. Nachdem die Datenbank erstellt und konfiguriert wurde, klicken Sie auf **Fertig** stellen.
 
-   Weitere Informationen zu den Einstellungen im Assistenten zum **Erstellen einer Datenbank**finden Sie unter [Assistent zum Erstellen einer Datenbank &#40;[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md).
+   Weitere Informationen zu den Einstellungen im Assistenten zum **Erstellen einer Datenbank** finden Sie unter [Assistent zum Erstellen einer Datenbank &#40;[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md).
 
-1. Wählen Sie auf der Seite **Daten Bank Konfiguration** in der die Option [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] **Datenbank auswählen**aus.
+1. Wählen Sie auf der Seite **Daten Bank Konfiguration** in der die Option [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] **Datenbank auswählen** aus.
 
-1. Wählen Sie **verbinden**, wählen Sie die Datenbank aus, [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] und klicken Sie dann auf **OK**
+1. Wählen Sie **verbinden** , wählen Sie die Datenbank aus, [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] und klicken Sie dann auf **OK**
 
-   ![MDS-SQLServer2019-config-Mi-connectdbname](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "MDS-SQLServer2019-config-MI_connectDBName")
+   ![Screenshot des Dialog Felds "Verbindung mit Datenbank herstellen".](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "MDS-SQLServer2019-config-MI_connectDBName")
 
 1. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]Wählen Sie in im linken Bereich **Webkonfiguration** aus.
 
-1. Wählen Sie im Listenfeld **Website** die Option **Standard Website**aus, und wählen Sie dann **Erstellen** aus, um eine Webanwendung zu erstellen.
+1. Wählen Sie im Listenfeld **Website** die Option **Standard Website** aus, und wählen Sie dann **Erstellen** aus, um eine Webanwendung zu erstellen.
 
-   ![MDS-SQLServer2019-config-Mi-webconfiguration](../master-data-services/media/mds-sqlserver2019-config-mi-webconfiguration.png "MDS-SQLServer2019-config-MI_WebConfiguration")
+   ![Screenshot des Dialog Felds "Konfigurations-Manager für Master Data Services".](../master-data-services/media/mds-sqlserver2019-config-mi-webconfiguration.png "MDS-SQLServer2019-config-MI_WebConfiguration")
 
    > [!NOTE]
-   > Wenn Sie **Standard Website**auswählen, müssen Sie eine Webanwendung separat erstellen. Wenn Sie im Listenfeld **neue Website erstellen** auswählen, wird die Anwendung automatisch erstellt.
+   > Wenn Sie **Standard Website** auswählen, müssen Sie eine Webanwendung separat erstellen. Wenn Sie im Listenfeld **neue Website erstellen** auswählen, wird die Anwendung automatisch erstellt.
 
 1. Geben Sie im Abschnitt **Anwendungs Pool** einen anderen Benutzernamen ein, geben Sie das Kennwort ein, und klicken Sie dann auf **OK**.
 
-   ![MDS-SQLServer2019-config-Mi-conatewebapplication](../master-data-services/media/mds-sqlserver2019-config-mi-createwebapplication.png "MDS-SQLServer2019-config-MI_CreateWebApplication")
+   ![Screenshot des Dialog Felds "Anwendungs Verwaltung".](../master-data-services/media/mds-sqlserver2019-config-mi-createwebapplication.png "MDS-SQLServer2019-config-MI_CreateWebApplication")
 
    > [!NOTE]
    > Stellen Sie sicher, dass der Benutzer mit der Active Directory integrierten Authentifizierung, die Sie kürzlich erstellt haben, auf die Datenbank zugreifen kann. Alternativ dazu können Sie die Verbindung später ändern `web.config` .
@@ -167,7 +167,7 @@ Mit dieser Aktion wird Folgendes installiert:
 
    Die Einrichtung der Website ist abgeschlossen. Auf der Seite **Webkonfiguration** werden nun die von Ihnen ausgewählte Website, die von Ihnen erstellte Webanwendung und die der Anwendung zugeordnete [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Datenbank angezeigt.
 
-   ![MDS-SQLServer2019-config-Mi-webconfigselectdb](../master-data-services/media/mds-sqlserver2019-config-mi-webconfigselectdb.png "MDS-SQLServer2019-config-MI_WebConfigSelectDB")
+   ![Screenshot des Webkonfigurations Abschnitts.](../master-data-services/media/mds-sqlserver2019-config-mi-webconfigselectdb.png "MDS-SQLServer2019-config-MI_WebConfigSelectDB")
 
 1. Wählen Sie **Übernehmen**. Die Meldung zum **vervollständigen der Konfiguration** wird angezeigt. Wählen Sie im Meldungs Feld **OK** aus, um die-Webanwendung zu starten. Die Website Adresse lautet `http://server name/web application/` .
 
@@ -206,29 +206,29 @@ Installieren Sie das **kumulative Update SQL Server 2019**. [!INCLUDE[ssMDSshort
 ### <a name="upgrade-sql-server"></a>Aktualisieren von SQL Server
 
 Möglicherweise wird der folgende Fehler angezeigt: `The client version is incompatible with the database version` nach der Installation des **kumulativen Updates SQL Server 2019**.
-![MDS-SQLServer2019-config-Mi-upgradebug page](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbpage.png "MDS-SQLServer2019-config-MI_UpgradeDBPage")
+![Screenshot des Master Data Services Fehlers.](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbpage.png "MDS-SQLServer2019-config-MI_UpgradeDBPage")
 
 Um dieses Problem zu beheben, müssen Sie die Datenbankversion aktualisieren:
 
 1. Öffnen [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] Sie das, und wählen Sie dann im linken Bereich  **Daten Bank Konfiguration** aus.
 
-1. Wählen Sie auf der Seite **Daten Bank Konfiguration** in der die Option [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] **Datenbank auswählen**aus.
+1. Wählen Sie auf der Seite **Daten Bank Konfiguration** in der die Option [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] **Datenbank auswählen** aus.
 
-1. Wählen [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Sie die Datenbank aus, die Sie der Webanwendung zugeordnet haben. Wählen Sie **verbinden**aus, und klicken Sie dann auf **OK**.
+1. Wählen [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Sie die Datenbank aus, die Sie der Webanwendung zugeordnet haben. Wählen Sie **verbinden** aus, und klicken Sie dann auf **OK**.
 
-   ![MDS-SQLServer2019-config-Mi-connectdbname](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "MDS-SQLServer2019-config-MI_ConnectDBName")
+   ![Screenshot des Dialog Felds "Verbindung mit einer Master Data Service-Datenbank herstellen".](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "MDS-SQLServer2019-config-MI_ConnectDBName")
 
 1. Wählen Sie **Datenbank aktualisieren...** .
 
-   ![MDS-SQLServer2019-config-Mi-selectupgrade DB](../master-data-services/media/mds-sqlserver2019-config-mi-selectupgradedb.png "MDS-SQLServer2019-config-MI_SelectUpgradeDB")
+   ![Screenshot der Option "Datenbank aktualisieren".](../master-data-services/media/mds-sqlserver2019-config-mi-selectupgradedb.png "MDS-SQLServer2019-config-MI_SelectUpgradeDB")
 
 1. Klicken Sie im Assistenten zum Aktualisieren von Datenbanken auf der **Willkommens** Seite auf weiter und auf der Seite **Upgradeüberprüfung** auf **weiter** .
 
-   ![MDS-SQLServer2019-config-Mi-upgradebug-Assistent](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbwizard.png "MDS-SQLServer2019-config-MI_UpgradeDBWizard")
+   ![Screenshot der Seite "Upgradeüberprüfung" des Assistenten zum Aktualisieren von Datenbanken](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbwizard.png "MDS-SQLServer2019-config-MI_UpgradeDBWizard")
 
 1. Wählen Sie **Fertig** stellen aus, nachdem alle Aufgaben abgeschlossen sind.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 
 - [Master Data Services-Datenbank](../master-data-services/master-data-services-database.md)
 - [Master Data Manager-Webanwendung [Master Data Services]](../master-data-services/master-data-manager-web-application.md)
