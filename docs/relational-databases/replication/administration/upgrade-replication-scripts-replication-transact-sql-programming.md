@@ -21,12 +21,12 @@ ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b08199f3cbc0d0ae87b5902600188908dac6615d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 31850fe7f9ecf78af666faced53f552646de672a
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923440"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364689"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>Aktualisieren von Replikationsskripts (Replikationsprogrammierung mit Transact-SQL)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,31 +37,31 @@ ms.locfileid: "86923440"
   
  Diese Sicherheitsverbesserungen, die Ihnen mehr Kontrolle über Berechtigungen bieten, indem Sie explizit die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Konten angeben können, unter denen Replikations-Agentaufträge ausgeführt werden, wirken sich auf die folgenden gespeicherten Prozeduren in vorhandenen Skripts aus:  
   
--   **sp_addpublication_snapshot**:  
+-   **sp_addpublication_snapshot** :  
   
      Sie sollten nun die Windows-Anmeldeinformationen in Form von `@job_login` und `@job_password` angeben, wenn Sie [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) ausführen, um den Auftrag zu erstellen, unter dem der Momentaufnahmen-Agent auf dem Verteiler ausgeführt wird.  
   
--   **sp_addpushsubscription_agent**:  
+-   **sp_addpushsubscription_agent** :  
   
      Sie sollten nun [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) ausführen, um explizit einen Auftrag hinzuzufügen, und die Windows-Anmeldeinformationen (`@job_login` und `@job_password`) angeben, unter denen der Auftrag des Verteilungs-Agents auf dem Verteiler ausgeführt wird. In Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]wurde dieser Vorgang automatisch beim Erstellen eines Pushabonnements ausgeführt.  
   
--   **sp_addmergepushsubscription_agent**:  
+-   **sp_addmergepushsubscription_agent** :  
   
      Sie sollten nun [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) ausführen, um explizit einen Auftrag hinzuzufügen, und die Windows-Anmeldeinformationen (`@job_login` und `@job_password`) angeben, unter denen der Auftrag des Merge-Agents auf dem Verteiler ausgeführt wird. In Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]wurde dieser Vorgang automatisch beim Erstellen eines Pushabonnements ausgeführt.  
   
--   **sp_addpullsubscription_agent**:  
+-   **sp_addpullsubscription_agent** :  
   
      Sie sollten nun die Windows-Anmeldeinformationen in Form von `@job_login` und `@job_password` angeben, wenn Sie [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) ausführen, um den Auftrag zu erstellen, unter dem der Verteilungs-Agent auf dem Abonnenten ausgeführt wird.  
   
--   **sp_addmergepullsubscription_agent**:  
+-   **sp_addmergepullsubscription_agent** :  
   
      Geben Sie nun die Windows-Anmeldeinformationen als `@job_login` und `@job_password` beim Ausführen von [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) an, um den Auftrag zu erstellen, unter dem der Merge-Agent auf dem Abonnenten ausgeführt wird.  
   
--   **sp_addlogreader_agent**:  
+-   **sp_addlogreader_agent** :  
   
      Sie sollten nun [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) ausführen, um den Auftrag manuell hinzuzufügen, und die Windows-Anmeldeinformationen anzugeben, unter denen der Protokolllese-Agent auf dem Verteiler ausgeführt wird. In Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]wurde dieser Vorgang automatisch beim Erstellen einer Transaktionsveröffentlichung ausgeführt.  
   
--   **sp_addqreader_agent**:  
+-   **sp_addqreader_agent** :  
   
      Sie sollten nun [sp_addqreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md) ausführen, um den Auftrag manuell hinzuzufügen, und die Windows-Anmeldeinformationen anzugeben, unter denen der Warteschlangenlese-Agent auf dem Verteiler ausgeführt wird. In Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]wurde dieser Vorgang automatisch beim Erstellen einer Transaktionsveröffentlichung mit Unterstützung des verzögerten Aktualisierens ausgeführt.  
   
@@ -112,38 +112,41 @@ ms.locfileid: "86923440"
   
     -   Führen Sie für ein Pushabonnement [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) auf dem Verleger aus. Geben Sie `@subscriber`, `@subscriber_db`, `@publication` und die Windows-Anmeldeinformationen, unter denen der Merge-Agent auf dem Verteiler ausgeführt wird, für `@job_name` und `@job_password` sowie einen Zeitplan für diesen Agent-Auftrag an. Weitere Informationen finden Sie unter [Angeben von Synchronisierungszeitplänen](../../../relational-databases/replication/specify-synchronization-schedules.md). Dies geschieht nach der Ausführung von [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Weitere Informationen finden Sie unter [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md).  
   
-## <a name="example"></a>Beispiel  
+## <a name="examples"></a>Beispiele  
+
+### <a name="a-sql-server-2000-script-to-create-a-transactional-publication"></a>A. SQL Server 2000-Skript zum Erstellen einer Transaktionsveröffentlichung
+
  Im folgenden Beispiel wird ein [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] -Skript dargestellt, mit dem eine Transaktionsveröffentlichung für die Product-Tabelle erstellt wird. Diese Veröffentlichung unterstützt sofortige Updates mit Updates über eine Warteschlange als Failover. Standardparameter wurden zwecks besserer Lesbarkeit entfernt.  
   
  [!code-sql[HowTo#sp_createtranpub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_1.sql)]  
   
-## <a name="example"></a>Beispiel  
+### <a name="b-sql-server-2005-and-later-script-to-create-a-transactional-publication"></a>B. Skript zum Erstellen einer Transaktionsveröffentlichung für SQL Server 2005 und höher
  Im folgenden Beispiel wird die Aktualisierung des vorherigen Skripts dargestellt, mit dem eine Transaktionsveröffentlichung erstellt wird, damit es unter [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] und späteren Versionen erfolgreich ausgeführt werden kann. Diese Veröffentlichung unterstützt sofortige Updates mit Updates über eine Warteschlange als Failover. Standardwerte für neue Parameter wurden explizit deklariert.  
   
 > [!NOTE]  
->  Windows-Anmeldeinformationen werden zur Laufzeit mithilfe von **sqlcmd** -Skriptvariablen angegeben.  
+>   Windows-Anmeldeinformationen werden zur Laufzeit mithilfe von **sqlcmd** -Skriptvariablen angegeben.  
   
  [!code-sql[HowTo#sp_createtranpub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_2.sql)]  
   
-## <a name="example"></a>Beispiel  
+### <a name="c-sql-server-2000-script-to-create-a-merge-publication"></a>C. SQL Server 2000-Skript zum Erstellen einer Mergeveröffentlichung
  Im folgenden Beispiel wird ein [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] -Skript dargestellt, mit dem eine Mergeveröffentlichung für die Customers-Tabelle erstellt wird. Standardparameter wurden zwecks besserer Lesbarkeit entfernt.  
   
  [!code-sql[HowTo#sp_createmergepub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_3.sql)]  
   
-## <a name="example"></a>Beispiel  
+### <a name="d-sql-server-2005-and-later-script-to-create-a-merge-publication"></a>D: Skript für SQL Server 2005 und höher zum Erstellen einer Mergeveröffentlichung
  Im folgenden Beispiel wird das vorherige Skript dargestellt, mit dem eine Mergeveröffentlichung erstellt wird und das aktualisiert wurde, damit es unter [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] und späteren Versionen erfolgreich ausgeführt werden kann. Standardwerte für neue Parameter wurden explizit deklariert.  
   
 > [!NOTE]  
->  Windows-Anmeldeinformationen werden zur Laufzeit mithilfe von **sqlcmd** -Skriptvariablen angegeben.  
+>   Windows-Anmeldeinformationen werden zur Laufzeit mithilfe von **sqlcmd** -Skriptvariablen angegeben.  
   
  [!code-sql[HowTo#sp_createmergepub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_4.sql)]  
   
-## <a name="example"></a>Beispiel  
+### <a name="e-sql-server-2000-script-to-create-a-push-subscription-to-a-transactional-publication"></a>E. SQL Server 2000-Skript zum Erstellen eines Pushabonnements für eine Transaktionsveröffentlichung
  Im folgenden Beispiel wird ein [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] -Skript dargestellt, mit dem ein Pushabonnement für eine Transaktionsveröffentlichung erstellt wird. Standardparameter wurden zwecks besserer Lesbarkeit entfernt.  
   
  [!code-sql[HowTo#sp_createtranpushsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_5.sql)]  
   
-## <a name="example"></a>Beispiel  
+### <a name="f-sql-server-2005-and-later-script-to-create-a-push-subscription-to-a-transactional-publication"></a>F. Skript für SQL Server 2005 und höher zum Erstellen eines Pushabonnements für eine Transaktionsveröffentlichung
  Im folgenden Beispiel wird die Aktualisierung des vorherigen Skripts dargestellt, mit dem ein Pushabonnement für eine Transaktionsveröffentlichung erstellt wird und das aktualisiert wurde, damit es unter [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] und späteren Versionen erfolgreich ausgeführt werden kann. Standardwerte für neue Parameter wurden explizit deklariert.  
   
 > [!NOTE]  
@@ -151,42 +154,42 @@ ms.locfileid: "86923440"
   
  [!code-sql[HowTo#sp_createtranpushsub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_6.sql)]  
   
-## <a name="example"></a>Beispiel  
+### <a name="g-sql-server-2000-script-to-create-a-push-subscription-to-a-merge-publication"></a>G. SQL Server 2000-Skript zum Erstellen eines Pushabonnements für eine Mergeveröffentlichung
  Im folgenden Beispiel wird ein [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] -Skript dargestellt, mit dem ein Pushabonnement für eine Mergeveröffentlichung erstellt wird. Standardparameter wurden zwecks besserer Lesbarkeit entfernt.  
   
  [!code-sql[HowTo#sp_createmergepushsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_7.sql)]  
   
-## <a name="example"></a>Beispiel  
+### <a name="h-sql-server-2005-and-later-script-to-create-a-push-subscription-to-a-merge-publication"></a>H. Skript für SQL Server 2005 und höher zum Erstellen eines Pushabonnements für eine Mergeveröffentlichung
  Im folgenden Beispiel wird die Aktualisierung des vorherigen Skripts dargestellt, mit dem ein Pushabonnement für eine Mergeveröffentlichung erstellt wird und das aktualisiert wurde, damit es unter [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] und späteren Versionen erfolgreich ausgeführt werden kann. Standardwerte für neue Parameter wurden explizit deklariert.  
   
 > [!NOTE]  
->  Windows-Anmeldeinformationen werden zur Laufzeit mithilfe von **sqlcmd** -Skriptvariablen angegeben.  
+>   Windows-Anmeldeinformationen werden zur Laufzeit mithilfe von **sqlcmd** -Skriptvariablen angegeben.  
   
  [!code-sql[HowTo#sp_createmergepushsub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_8.sql)]  
   
-## <a name="example"></a>Beispiel  
+### <a name="i-sql-server-2000-script-to-create-a-pull-subscription-to-a-transactional-publication"></a>I. SQL Server 2000-Skript zum Erstellen eines Pullabonnements für eine Transaktionsveröffentlichung
  Im folgenden Beispiel wird ein [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] -Skript dargestellt, mit dem ein Pullabonnement für eine Transaktionsveröffentlichung erstellt wird. Standardparameter wurden zwecks besserer Lesbarkeit entfernt.  
   
  [!code-sql[HowTo#sp_createmergepushsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_7.sql)]  
   
-## <a name="example"></a>Beispiel  
+### <a name="j-sql-server-2005-and-later-script-to-create-a-pull-subscription-to-a-transactional-publication"></a>J. Skript für SQL Server 2005 und höher zum Erstellen eines Pullabonnements für eine Transaktionsveröffentlichung
  Im folgenden Beispiel wird die Aktualisierung des vorherigen Skripts dargestellt, mit dem ein Pullabonnement für eine Transaktionsveröffentlichung erstellt wird und das aktualisiert wurde, damit es unter [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] und späteren Versionen erfolgreich ausgeführt werden kann. Standardwerte für neue Parameter wurden explizit deklariert.  
   
 > [!NOTE]  
->  Windows-Anmeldeinformationen werden zur Laufzeit mithilfe von **sqlcmd** -Skriptvariablen angegeben.  
+>   Windows-Anmeldeinformationen werden zur Laufzeit mithilfe von **sqlcmd** -Skriptvariablen angegeben.  
   
  [!code-sql[HowTo#sp_createtranpullsub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_9.sql)]  
   
-## <a name="example"></a>Beispiel  
+### <a name="k-sql-server-2000-script-to-create-a-pull-subscription-to-a-merge-publication"></a>K. SQL Server 2000-Skript zum Erstellen eines Pullabonnements für eine Mergeveröffentlichung
  Im folgenden Beispiel wird ein [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] -Skript dargestellt, mit dem ein Pullabonnement für eine Mergeveröffentlichung erstellt wird. Standardparameter wurden zwecks besserer Lesbarkeit entfernt.  
   
  [!code-sql[HowTo#sp_createmergepullsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_10.sql)]  
   
-## <a name="example"></a>Beispiel  
+### <a name="l-sql-server-2005-and-later-script-to-create-a-pull-subscription-to-a-merge-publication"></a>L. Skript für SQL Server 2005 und höher zum Erstellen eines Pullabonnements für eine Mergeveröffentlichung
  Im folgenden Beispiel wird die Aktualisierung des vorherigen Skripts dargestellt, mit dem ein Pullabonnement für eine Mergeveröffentlichung erstellt wird und das aktualisiert wurde, damit es unter [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] und späteren Versionen erfolgreich ausgeführt werden kann. Standardwerte für neue Parameter wurden explizit deklariert.  
   
 > [!NOTE]  
->  Windows-Anmeldeinformationen werden zur Laufzeit mithilfe von **sqlcmd** -Skriptvariablen angegeben.  
+>   Windows-Anmeldeinformationen werden zur Laufzeit mithilfe von **sqlcmd** -Skriptvariablen angegeben.  
   
  [!code-sql[HowTo#sp_createmergepullsub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_11.sql)]  
   

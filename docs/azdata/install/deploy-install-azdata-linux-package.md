@@ -8,12 +8,12 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2f248978e09be4670d702805873a5ae6f4f7c9de
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 4508db56c0246f181f9244fe0a3b853a3e91eb24
+ms.sourcegitcommit: 4b7ecc080795c5f90322d60df5c0550884f48140
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257463"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94334449"
 ---
 # <a name="install-azure-data-cli-azdata-with-apt"></a>Installieren von [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] mit apt
 
@@ -28,7 +28,7 @@ Für Linux-Distributionen mit `apt` gibt es ein Paket für die `azdata-cli`. Das
 ## <a name="install-with-apt"></a>Installieren mit apt
 
 >[!IMPORTANT]
-> Das RPM-Paket von `azdata-cli` ist vom Python 3-Paket abhängig. Auf Ihrem System handelt es sich dabei möglicherweise um eine ältere Python-Version als die erforderliche *Version 3.6.x* . Sollte dies ein Problem für Sie darstellen, ersetzen Sie das Python 3-Paket, oder führen Sie die Anweisungen zur manuellen Installation mit [`pip`](../install/deploy-install-azdata-pip.md) aus.
+> Das RPM-Paket von `azdata-cli` ist vom Python 3-Paket abhängig. Auf Ihrem System handelt es sich dabei möglicherweise um eine ältere Python-Version als die erforderliche *Version 3.6.x*. Sollte dies ein Problem für Sie darstellen, ersetzen Sie das Python 3-Paket, oder führen Sie die Anweisungen zur manuellen Installation mit [`pip`](../install/deploy-install-azdata-pip.md) aus.
 
 1. Installieren Sie die für die Installation von `azdata-cli` erforderlichen Abhängigkeiten.
 
@@ -62,7 +62,7 @@ Für Linux-Distributionen mit `apt` gibt es ein Paket für die `azdata-cli`. Das
    Führen Sie für Ubuntu 20.04-Clients den folgenden Befehl aus:
 
     ```bash
-    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/20.04/prod.list)
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/20.04/prod.list)"
     ```
 
 4. Installieren von `azdata-cli`.

@@ -11,12 +11,12 @@ ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bdfedbb3a60a27ec53744b2b4a6919a5be9510fd
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 0879c9399a21300fdbbfd735685d8a049a52b14f
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91986128"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384674"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Anmerkungen zu dieser Version von SQL Server 2012 Service Pack
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ Die Service Packs sind ausschließlich online und nicht auf dem Installationsmed
 - **Verbesserte Prozedur zum Cleanup des Verteilungs-Agents:** Aufgrund einer zu großen Verteilungsdatenbank kam es zu Blockierungen und Deadlocks. Im Rahmen einer verbesserten Cleanup-Prozedur sollen einige davon beseitigt werden. 
 - **Dynamische Skalierung des Speicherobjekts:** Partitionieren Sie Speicherobjekte dynamisch auf der Grundlage der Anzahl von Knoten und Kernen, um sie auf moderner Hardware zu skalieren. Mithilfe der dynamischen Promotion sollen potentielle Engpässe vermieden und threadsichere Speicherobjekte automatisch partitioniert werden. Unpartitionierte Speicherobjekte können dynamisch höher gestuft werden, um anhand der Knoten partitioniert zu werden. Die Anzahl der Partitionen entspricht der Anzahl der NUMA-Knoten. Speicherobjekte, die anhand der Knoten partitioniert werden, können noch höher gestuft werden, um anhand der CPU partitioniert zu werden. Dabei entspricht die Anzahl der Partitionen der Anzahl der CPU.
 - **Aktivieren Sie > 8TB for Buffer Pool (> 8TB für Pufferpool):** Aktivieren Sie 128-TB virtuellen Adressraum für die Verwendung des Pufferpools.
-- **Cleanup der Änderungsnachverfolgung**: Verbesserte Leistung und Effizienz des Cleanup der Änderungsnachverfolgung für Nebentabellen bei der Änderungsnachverfolgung. 
+- **Cleanup der Änderungsnachverfolgung** : Verbesserte Leistung und Effizienz des Cleanup der Änderungsnachverfolgung für Nebentabellen bei der Änderungsnachverfolgung. 
 
 ### <a name="supportability-and-diagnostics-improvements"></a>Verbesserungen der Unterstützung und Diagnose
 - **Unterstützung von vollständigen Speicherabbildungen für Replikations-Agents:** Wenn Replikations-Agents derzeit auf Ausnahmefehler stoßen, erstellen sie standardmäßig ein Miniabbild der Ausnahmesymptome. Standardmäßig sind bei Ausnahmefehlern komplexe Problembehandlungsvorgänge erforderlich. Mit SP4 wird ein neuer Registrierungsschlüssel eingeführt, der die Erstellung eines vollständigen Speicherabbilds für Replikations-Agents unterstützt.
@@ -56,7 +56,7 @@ Die Service Packs sind ausschließlich online und nicht auf dem Installationsmed
 - **Neue DMF zum Ersetzen des DBCC INPUTBUFFER:** Eine neue dynamische Verwaltungsfunktion, sys.dm_input_buffer, die session_id als Parameter verwendet, wird eingeführt, um den DBCC INPUTBUFFER zu ersetzen.
 - **Erweiterung für XEvents zum Lesen von Routingfehlern für eine Verfügbarkeitsgruppe:** Derzeit wird read_only_rout_fail XEvent nur ausgelöst, wenn zwar eine Routingliste besteht, jedoch zu keinem der Server auf dieser Liste eine Verbindung hergestellt werden kann. Diese Verbesserung beinhaltet zusätzliche Informationen zur Unterstützung bei der Problembehandlung und Erweiterungen zu den Codepunkten, bei denen XEvent ausgelöst wird. 
 - **Verbesserte Handhabung von Service Broker mit Failover einer Verfügbarkeitsgruppe:** Wenn Service Broker für Datenbanken der Verfügbarkeitsgruppe derzeit aktiviert ist, bleiben bei einem Failover der Verfügbarkeitsgruppe alle Service Broker-Verbindungen, die dem primären Replikat entstammen, geöffnet. Mit dieser Verbesserung werden all diese offenen Verbindungen während eines Failover der Verfügbarkeitsgruppe geschlossen.
-- **Partitionierung mit der automatischen Soft-NUMA**: Mit der Version SQL 2014 SP2 wird die Partitionierung mit der automatischen [Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md) eingeführt, wenn das Ablaufverfolgungsflag 8079 auf Serverebene aktiviert ist. Wenn das Ablaufverfolgungsflag 8079 beim Starten aktiviert ist, fragt SQL Server 2014 SP2 das Hardwarelayout ab und konfiguriert soft-NUMA automatisch auf Systemen, die mindestens acht CPU pro NUMA-Knoten vermelden. Die automatische soft-NUMA ist Hyperthread-fähig (HT/logischer Prozessor). Durch die Partitionierung und Erstellung von weiteren Knoten wird die Hintergrundverarbeitung skaliert, indem die Anzahl von Listenern, Skalierungen sowie Netzwerk- und Verschlüsselungsfunktionen erhöht wird. Wir empfehlen Ihnen, die Leistung der Arbeitsauslastung mit der automatischen soft-NUMA vor der Aktivierung im Rahmen der Produktion zunächst zu testen.
+- **Partitionierung mit der automatischen Soft-NUMA** : Mit der Version SQL 2014 SP2 wird die Partitionierung mit der automatischen [Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md) eingeführt, wenn das Ablaufverfolgungsflag 8079 auf Serverebene aktiviert ist. Wenn das Ablaufverfolgungsflag 8079 beim Starten aktiviert ist, fragt SQL Server 2014 SP2 das Hardwarelayout ab und konfiguriert soft-NUMA automatisch auf Systemen, die mindestens acht CPU pro NUMA-Knoten vermelden. Die automatische soft-NUMA ist Hyperthread-fähig (HT/logischer Prozessor). Durch die Partitionierung und Erstellung von weiteren Knoten wird die Hintergrundverarbeitung skaliert, indem die Anzahl von Listenern, Skalierungen sowie Netzwerk- und Verschlüsselungsfunktionen erhöht wird. Wir empfehlen Ihnen, die Leistung der Arbeitsauslastung mit der automatischen soft-NUMA vor der Aktivierung im Rahmen der Produktion zunächst zu testen.
 
 ## <a name="service-pack-3-release-notes"></a>Versionsanmerkungen zu Service Pack 3
 
@@ -69,7 +69,7 @@ Genauere Informationen zum Identifizieren des Speicherorts und Namens der basier
 ## <a name="service-pack-2-release-notes"></a>Versionsanmerkungen zu Service Pack 2
   
 ### <a name="download-pages"></a>Downloadseiten 
-- [SQL Server 2012 SP2 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=401008)
+- [SQL Server 2012 SP2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=43340)
 - [SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)
 
 Identifizieren Sie anhand der unten stehenden Tabelle und entsprechend der derzeit installierten Version den Speicherort und den Namen der herunterzuladenden Datei. Downloadseiten enthalten Systemanforderungen und grundlegende Installationsanweisungen.  
@@ -82,13 +82,13 @@ Identifizieren Sie anhand der unten stehenden Tabelle und entsprechend der derze
 |32-Bit-Version nur der Client- und Verwaltbarkeitstools für SQL Server 2012 (einschließlich SQL Server 2012 Management Studio)|Upgrade der Client- und Verwaltbarkeitstools auf die 32-Bit-Version von SQL Server 2012 SP2|**SQLEXPRWT_** <arch> **_** <lang> **.msi** von der [Downloadseite für SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
 |Eine 32-Bit-Version von SQL Server 2012 Management Studio Express|Upgrade auf die 32-Bit-Version von SQL Server 2012 SP2 Management Studio Express|**SQLManagementStudio_** <arch> **_** <lang> **.msi** von der [Downloadseite für SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
 |32-Bit-Version einer beliebigen Edition von SQL Server 2012 und 32-Bit-Version der Client- und Verwaltbarkeitstools (einschließlich SQL Server 2012 RTM Management Studio)|Upgrade aller Produkte auf die 32-Bit-Version von SQL Server 2012 SP2|**SQLEXPRADV_** <arch> **_** <lang> **.msi** von der [Downloadseite für SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|32-Bit-Version eines oder mehrerer Tools des [Microsoft SQL Server 2012 RTM Feature Pack](https://www.microsoft.com/download/details.aspx?id=29065) oder des [Microsoft SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266)|Upgrade der Tools auf die 32-Bit-Version des Microsoft SQL Server 2012 SP2 Feature Pack|Eines oder mehrere Tools von der [Downloadseite für Microsoft SQL Server 2012 SP2 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=401008)|  
+|32-Bit-Version eines oder mehrerer Tools des [Microsoft SQL Server 2012 RTM Feature Pack](https://www.microsoft.com/download/details.aspx?id=56041) oder des [Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35575)|Upgrade der Tools auf die 32-Bit-Version des Microsoft SQL Server 2012 SP2 Feature Pack|Eines oder mehrere Tools von der [Downloadseite für Microsoft SQL Server 2012 SP2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=43340)|  
 |64-Bit-Installationen:|||  
 |64-Bit-Version einer beliebigen Edition von SQL Server 2012|Upgrade auf die 64-Bit-Version von SQL Server 2012 SP2|SQLServer2012SP2-KB2958429-<arch>-<langid>.exe von der [Downloadseite für SQL Server 2012 SP2](https://go.microsoft.com/fwlink/?LinkID=401006)|  
 |64-Bit-Version von SQL Server 2012 RTM Express|Upgrade auf die 64-Bit-Version von SQL Server 2012 SP2|**SQLEXPR_** <arch> **_** <lang> **.msi** von der [Downloadseite für SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
 |64-Bit-Version ausschließlich der Client- und Verwaltbarkeitstools für SQL Server 2012 (einschließlich SQL Server 2012 Management Studio)|Upgrade der Client- und Verwaltbarkeitstools auf die 64-Bit-Version von SQL Server 2012 SP2|**SQLEXPRWT_** <arch> **_** <lang> **.msi** von der [Downloadseite für SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
 |64-Bit-Version von SQL Server 2012 Management Studio Express|Upgrade auf die 64-Bit-Version von SQL Server 2012 SP2 Management Studio Express|**SQLManagementStudio_** <arch> **_** <lang> **.msi** von der [Downloadseite für SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|64-Bit-Version eines oder mehrerer Tools des [Microsoft SQL Server 2012 RTM Feature Pack](https://www.microsoft.com/download/details.aspx?id=29065) oder des [Microsoft SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266)|Upgrade der Tools auf die 64-Bit-Version des Microsoft SQL Server 2012 SP2 Feature Pack|Eines oder mehrere Tools von der [Downloadseite für Microsoft SQL Server 2012 SP2 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=401008)|   
+|64-Bit-Version eines oder mehrerer Tools des [Microsoft SQL Server 2012 RTM Feature Pack](https://www.microsoft.com/download/details.aspx?id=56041) oder des [Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35575)|Upgrade der Tools auf die 64-Bit-Version des Microsoft SQL Server 2012 SP2 Feature Pack|Eines oder mehrere Tools von der [Downloadseite für Microsoft SQL Server 2012 SP2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=43340)|   
 
 
 ## <a name="service-pack-1-release-notes"></a>Versionsanmerkungen zu Service Pack 1
@@ -108,7 +108,7 @@ Bestimmen Sie mithilfe der folgenden Tabelle, welche Datei heruntergeladen und i
 |32-Bit-Version nur der Client- und Verwaltbarkeitstools für SQL Server 2012 (einschließlich SQL Server 2012 Management Studio)|Upgrade der Client- und Verwaltbarkeitstools auf die 32-Bit-Version von SQL Server 2012 SP1|SQLManagementStudio_x86_ENU.exe über [diesen Link](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
 |Eine 32-Bit-Version von SQL Server 2012 Management Studio Express|Upgrade auf die 32-Bit-Version von SQL Server 2012 SP1 Management Studio Express|SQLManagementStudio_x86_ENU.exe über [diesen Link](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
 |32-Bit-Version einer beliebigen Edition von SQL Server 2012 **und** 32-Bit-Version der Client- und Verwaltbarkeitstools (einschließlich SQL Server 2012 RTM Management Studio)|Upgrade aller Produkte auf die 32-Bit-Version von SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x86-ENU.exe über [diesen Link](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
-|32-Bit-Version von mindestens einem Tool aus dem [Feature Pack für Microsoft SQL Server 2012 RTM](https://www.microsoft.com/download/details.aspx?id=44272)|Upgrade der Tools auf die 32-Bit-Version des Feature Packs für Microsoft SQL Server 2012 SP1|Mindestens eine Datei aus dem [Feature Pack für Microsoft SQL Server 2012 SP1](https://go.microsoft.com/fwlink/p/?LinkID=268266)|  
+|32-Bit-Version von mindestens einem Tool aus dem [Feature Pack für Microsoft SQL Server 2012 RTM](https://www.microsoft.com/download/details.aspx?id=44272)|Upgrade der Tools auf die 32-Bit-Version des Feature Packs für Microsoft SQL Server 2012 SP1|Mindestens eine Datei aus dem [Feature Pack für Microsoft SQL Server 2012 SP1](https://www.microsoft.com/download/details.aspx?id=35575)|  
 |Keine 32-Bit-Installation von SQL Server 2012|Installation von Server 2012 in der 32-Bit-Version einschließlich SP1 (neue Instanz mit vorinstalliertem SP1)|SQLServer2012SP1-FullSlipstream-x86-ENU.exe **und** SQLServer2012SP1-FullSlipstream-x86-ENU.box über [diesen Link](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Keine 32-Bit-Installation von SQL Server 2012 Management Studio|Installation von SQL Server 2012 Management Studio in der 32-Bit-Version einschließlich SP1|SQLManagementStudio_x86_ENU.exe über [diesen Link](https://go.microsoft.com/fwlink/p/?LinkId=267905)|  
 |Keine 32-Bit-Version von SQL Server 2012 RTM Express|Installation von SQL Server 2012 Express in der 32-Bit-Version einschließlich SP1|SQLEXPR32_x86_ENU.exe über [diesen Link](https://go.microsoft.com/fwlink/p/?LinkId=267905)|  
@@ -119,7 +119,7 @@ Bestimmen Sie mithilfe der folgenden Tabelle, welche Datei heruntergeladen und i
 |64-Bit-Version ausschließlich der Client- und Verwaltbarkeitstools für SQL Server 2012 (einschließlich SQL Server 2012 Management Studio)|Upgrade der Client- und Verwaltbarkeitstools auf die 64-Bit-Version von SQL Server 2012 SP1|SQLManagementStudio_x64_ENU.exe über [diesen Link](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
 |64-Bit-Version von SQL Server 2012 Management Studio Express|Upgrade auf die 64-Bit-Version von SQL Server 2012 SP1 Management Studio Express|SQLManagementStudio_x64_ENU.exe über [diesen Link](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
 |64-Bit-Version einer beliebigen Edition von SQL Server 2012 **und** 64-Bit-Version der Client- und Verwaltbarkeitstools (einschließlich SQL Server 2012 RTM Management Studio)|Upgrade aller Produkte auf die 64-Bit-Version von SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x64-ENU.exe über [diesen Link](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
-|64-Bit-Version von mindestens einem Tool aus dem [Feature Pack für Microsoft SQL Server 2012 RTM](https://www.microsoft.com/download/details.aspx?id=44272)|Upgrade der Tools auf die 64-Bit-Version des Feature Packs für Microsoft SQL Server 2012 SP1|Mindestens eine Datei aus dem [Feature Pack für Microsoft SQL Server 2012 SP1](https://go.microsoft.com/fwlink/p/?LinkID=268266)|  
+|64-Bit-Version von mindestens einem Tool aus dem [Feature Pack für Microsoft SQL Server 2012 RTM](https://www.microsoft.com/download/details.aspx?id=44272)|Upgrade der Tools auf die 64-Bit-Version des Feature Packs für Microsoft SQL Server 2012 SP1|Mindestens eine Datei aus dem [Feature Pack für Microsoft SQL Server 2012 SP1](https://www.microsoft.com/download/details.aspx?id=35575)|  
 |Keine 64-Bit-Installation von SQL Server 2012|Installation von Server 2012 in der 64-Bit-Version einschließlich SP1 (neue Instanz mit vorinstalliertem SP1)|SQLServer2012SP1-FullSlipstream-x64-ENU.exe **und** SQLServer2012SP1-FullSlipstream-x64-ENU.box über [diesen Link](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Keine 64-Bit-Installation von SQL Server 2012 Management Studio|Installation von SQL Server 2012 Management Studio in der 64-Bit-Version einschließlich SP1|SQLManagementStudio_x64_ENU.exe über [diesen Link](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
 |Keine 64-Bit-Version von SQL Server 2012 RTM Express|Installation von SQL Server 2012 Express in der 64-Bit-Version einschließlich SP1|SQLEXPR_x64_ENU.exe über [diesen Link](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
@@ -149,7 +149,7 @@ Eine vollständige Liste von Fehlern und bekannten Problemen, die in diesem Serv
 #### <a name="to-use-powerpivot-for-excel-with-excel-2013-you-must-use-the-add-in-that-is-installed-with-excel"></a>Zur Verwendung von PowerPivot für Excel mit Excel 2013 müssen Sie das mit Excel installierte Add-In verwenden  
 **Problem:** Bei Office 2010 ist PowerPivot für Excel ein eigenständiges Add-In, das von [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx) heruntergeladen werden kann. Alternativ kann es auch vom [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=29074)heruntergeladen werden. Beachten Sie, dass zwei Versionen des PowerPivot-Add-Ins als Download verfügbar sind: Eine, die im Lieferumfang von SQL Server 2008 R2 enthalten ist, und eine andere, die im Lieferumfang von SQL Server 2012 enthalten ist. Im Falle von Office 2013 ist PowerPivot für Excel jedoch im Lieferumfang von Office enthalten und wird zusammen mit Excel installiert. Während die SQL Server 2008 R2- und SQL Server 2012-Versionen von PowerPivot für Excel 2010 nicht mit Excel 2013 kompatibel sind, können Sie weiterhin PowerPivot für Excel 2010 auf dem Clientcomputer installieren, wenn Sie Excel 2010 parallel zu Excel 2013 ausführen möchten. Da die beiden Excel-Versionen gleichzeitig vorhanden sein können, gilt dies auch für die entsprechenden PowerPivot-Add-Ins.  
   
-**Problemumgehung:** Aktivieren Sie das COM-Add-In, um PowerPivot für Excel 2013 zu verwenden. Wählen Sie in Excel 2013 **Datei** | **Optionen** | **Add-Ins**aus. Wählen Sie im Dropdownfeld **Verwalten** die Option **COM-Add-Ins** aus, und klicken Sie auf **Ausführen**. Wählen Sie unter **COM-Add-Ins**die Option **Microsoft Office PowerPivot für Excel 2013** aus, und klicken Sie auf **OK**.  
+**Problemumgehung:** Aktivieren Sie das COM-Add-In, um PowerPivot für Excel 2013 zu verwenden. Wählen Sie in Excel 2013 **Datei** | **Optionen** | **Add-Ins** aus. Wählen Sie im Dropdownfeld **Verwalten** die Option **COM-Add-Ins** aus, und klicken Sie auf **Ausführen**. Wählen Sie unter **COM-Add-Ins** die Option **Microsoft Office PowerPivot für Excel 2013** aus, und klicken Sie auf **OK**.  
   
 ### <a name="reporting-services"></a>Reporting Services  
   
@@ -175,19 +175,19 @@ Die internen Fehlerdetails enthalten eine mit der folgenden vergleichbare Meldun
   
 -   "Der Wert 'SharePoint Principal' wird für die User Identity-Eigenschaft der Verbindungszeichenfolge nicht unterstützt."  
   
-**Problemumgehung:** Installieren Sie das Installationspaket für PowerPivot für SharePoint 2013 (**spPowerPivot.msi**) unter SharePoint Server 2013. Das Installationspaket ist als Teil des [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Packs verfügbar. Das Feature Pack kann vom [!INCLUDE[msCoName](../includes/msconame-md.md)] Download Center unter [SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266)heruntergeladen werden.  
+**Problemumgehung:** Installieren Sie das Installationspaket für PowerPivot für SharePoint 2013 ( **spPowerPivot.msi** ) unter SharePoint Server 2013. Das Installationspaket ist als Teil des [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Packs verfügbar. Das Feature Pack kann vom [!INCLUDE[msCoName](../includes/msconame-md.md)] Download Center unter [SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35575)heruntergeladen werden.  
   
 #### <a name="power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>Power View-Blätter in einer PowerPivot-Arbeitsmappe werden nach einer geplanten Datenaktualisierung gelöscht  
 **Problem:** Wenn Sie im PowerPivot-Add-In für SharePoint **Scheduled Data Refresh** (Geplante Datenaktualisierung) für eine Power View-Arbeitsmappe verwenden, werden alle Power View-Blätter gelöscht.  
   
-**Problemumgehung**: Erstellen Sie eine PowerPivot-Arbeitsmappe, die nur das Datenmodell enthält, um **Scheduled Data Refresh** (Geplante Datenaktualisierung) mit Power View-Arbeitsmappen zu verwenden. Erstellen Sie eine separate Arbeitsmappe mit Excel-Tabellen und Power View-Blättern, die mit der PowerPivot-Arbeitsmappe verknüpft ist, in der das Datenmodell enthalten ist. Nur die PowerPivot-Arbeitsmappe mit dem Datenmodell sollte für die geplante Datenaktualisierung verwendet werden.  
+**Problemumgehung** : Erstellen Sie eine PowerPivot-Arbeitsmappe, die nur das Datenmodell enthält, um **Scheduled Data Refresh** (Geplante Datenaktualisierung) mit Power View-Arbeitsmappen zu verwenden. Erstellen Sie eine separate Arbeitsmappe mit Excel-Tabellen und Power View-Blättern, die mit der PowerPivot-Arbeitsmappe verknüpft ist, in der das Datenmodell enthalten ist. Nur die PowerPivot-Arbeitsmappe mit dem Datenmodell sollte für die geplante Datenaktualisierung verwendet werden.  
   
 ### <a name="data-quality-services"></a>Data Quality Services  
   
 #### <a name="dqs-available-in-the-incorrect-edition-of-sql-server-2012"></a>DQS ist in der falschen Edition von SQL Server 2012 verfügbar  
 **Problem:** Im [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] RTM-Release ist die Data Quality Services-Funktion (DQS) in SQL Server-Editionen verfügbar, die nicht Enterprise, Business Intelligence oder Developer sind. Nach der Installation von SQL Server 2012 SP1 ist DQS in allen Editionen außer Enterprise, Business Intelligence und Developer nicht verfügbar.  
   
-**Problemumgehung**: Wenn Sie DQS in einer nicht unterstützten Edition verwenden, führen Sie entweder ein Upgrade auf eine unterstützte Edition aus, oder entfernen Sie die Abhängigkeit von dieser Funktion aus den Anwendungen.  
+**Problemumgehung** : Wenn Sie DQS in einer nicht unterstützten Edition verwenden, führen Sie entweder ein Upgrade auf eine unterstützte Edition aus, oder entfernen Sie die Abhängigkeit von dieser Funktion aus den Anwendungen.  
   
 ### <a name="sql-server-express"></a>SQL Server Express  
   
@@ -201,7 +201,7 @@ Die SQL Server 2012 Express Service Pack 1 (SP1)-Version umfasst anstelle von SQ
   
 **Problemumgehung:** So aktualisieren Sie die CDC-Komponenten auf die neueste Version:  
   
-1.  Laden Sie die MSI-Dateien für den Change Data Capture Service für Oracle von Attunity von der [Downloadseite für das SQL Server 2012 SP1-Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266)herunter.  
+1.  Laden Sie die MSI-Dateien für den Change Data Capture Service für Oracle von Attunity von der [Downloadseite für das SQL Server 2012 SP1-Feature Pack](https://www.microsoft.com/download/details.aspx?id=35575)herunter.  
   
 2.  Führen Sie die MSI-Datei aus.  
   

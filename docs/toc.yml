@@ -2731,10 +2731,10 @@
           items:
             - name: Was sind Spracherweiterungen?
               href: language-extensions/language-extensions-overview.md
+            - name: Was ist die Java-Spracherweiterung?
+              href: language-extensions/java-overview.md
             - name: Neuigkeiten
               href: language-extensions/language-extensions-whats-new.md
-            - name: Java-Spracherweiterung (Übersicht)
-              href: language-extensions/java-overview.md
         - name: Installieren
           items:
             - name: Installieren von Spracherweiterungen unter Windows

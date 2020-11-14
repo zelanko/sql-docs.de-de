@@ -12,12 +12,12 @@ ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ba6987367e72ed544df13216b31aebe85af500e2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fae846be15fd8606315aa0e66efeb25c745ff98a
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866283"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384539"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>Verfügbarkeit des Reporting Services-Add-Ins für SharePoint-Produkte
 
@@ -33,7 +33,7 @@ Das SSRS-Add-In ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[s
   
  Die [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] -Version des Add-Ins ist auch im Installations-Assistenten für [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] verfügbar:  
   
--   Wählen Sie im Setup-Assistenten auf der Seite **Funktionsauswahl** die Option **Reporting Services-Add-In für SharePoint-Produkte**aus.  
+-   Wählen Sie im Setup-Assistenten auf der Seite **Funktionsauswahl** die Option **Reporting Services-Add-In für SharePoint-Produkte** aus.  
   
 -   Bei einer Installation über die Eingabeaufforderung verwenden Sie die Option **RS_SHPWFE** , um das Add-In zu installieren. Weitere Informationen zu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Installationen über die Eingabeaufforderung finden Sie unter [Installieren des SharePoint-Modus und einheitlichen Modus von Reporting Services über die Eingabeaufforderung](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md).  
   
@@ -44,7 +44,7 @@ Das SSRS-Add-In ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[s
   
  Die [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] -Version des Add-Ins ist auch im Installations-Assistenten für [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] verfügbar:  
   
--   Wählen Sie im Setup-Assistenten auf der Seite **Funktionsauswahl** die Option **Reporting Services-Add-In für SharePoint-Produkte**aus.  
+-   Wählen Sie im Setup-Assistenten auf der Seite **Funktionsauswahl** die Option **Reporting Services-Add-In für SharePoint-Produkte** aus.  
   
 -   Bei einer Installation über die Eingabeaufforderung verwenden Sie die Option **RS_SHPWFE** , um das Add-In zu installieren. Weitere Informationen zu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Installationen über die Eingabeaufforderung finden Sie unter [Installieren des SharePoint-Modus und einheitlichen Modus von Reporting Services über die Eingabeaufforderung](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md).  
   
@@ -59,7 +59,7 @@ Das SSRS-Add-In ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[s
 
 ##  <a name="sssql11-reporting-services-add-in-for-sharepoint-2010-products"></a><a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Reporting Services-Add-In für SharePoint 2010-Produkte
 
-Das Add-In kann im SQL Server 2016-Release als Teil des SQL Server-Installations-Assistenten auf der Seite mit der Funktionsauswahl installiert werden. Wenn Sie das Add-In herunterladen und separat installieren möchten, steht die aktuelle Version dieser Datei online im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center unter [Microsoft® SQL Server® 2012 Reporting Services-Add-In für Microsoft® SharePoint®-Technologien 2010](https://go.microsoft.com/fwlink/?LinkID=207242) zur Verfügung.
+Das Add-In kann im SQL Server 2016-Release als Teil des SQL Server-Installations-Assistenten auf der Seite mit der Funktionsauswahl installiert werden. Wenn Sie das Add-In herunterladen und separat installieren möchten, steht die aktuelle Version dieser Datei online im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center unter [Microsoft® SQL Server® 2012 Reporting Services-Add-In für Microsoft® SharePoint®-Technologien 2010](https://www.microsoft.com/download/details.aspx?id=56052) zur Verfügung.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

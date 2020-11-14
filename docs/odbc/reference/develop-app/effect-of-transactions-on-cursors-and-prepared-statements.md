@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 523e22a2-7b53-4c25-97c1-ef0284aec76e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 248865b70115a64f73ce93dbd966dac94db61a0a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 495bb8455c3e13b88d2d3ae6b400c5c0f2167604
+ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482973"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631676"
 ---
 # <a name="effect-of-transactions-on-cursors-and-prepared-statements"></a>Auswirkungen von Transaktionen auf Cursor und vorbereitete Anweisungen
-Das Ausführen eines Commits oder Rollbacks einer Transaktion hat die folgenden Auswirkungen auf Cursor und Zugriffs Pläne:  
+Ein Commit oder Rollback einer Transaktion hat einen der folgenden Auswirkungen auf Cursor und Zugriffs Pläne:  
   
 -   Alle Cursor werden geschlossen, und Zugriffs Pläne für vorbereitete Anweisungen für diese Verbindung werden gelöscht.  
   
--   Alle Cursor werden geschlossen, und Zugriffs Pläne für vorbereitete Anweisungen für diese Verbindung bleiben intakt.  
+-   Alle Cursor werden geschlossen, und Zugriffs Pläne für vorbereitete Anweisungen für diese Verbindung bleiben intakt, oder 
   
 -   Alle Cursor bleiben geöffnet, und Zugriffs Pläne für vorbereitete Anweisungen für diese Verbindung bleiben intakt.  
   

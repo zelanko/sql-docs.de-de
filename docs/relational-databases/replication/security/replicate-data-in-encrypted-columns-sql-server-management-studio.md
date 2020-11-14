@@ -16,12 +16,12 @@ ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1a119275f9508c69ab5c250e2a5a6e487d1b6502
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 820837717d2651c1be08ae4be4c88cc8e2ac7c11
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920956"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364685"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>Replizieren von Daten in verschlüsselten Spalten (SQL Server Management Studio)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -76,14 +76,16 @@ ms.locfileid: "86920956"
   
 11. Führen Sie [CLOSE SYMMETRIC KEY](../../../t-sql/statements/close-symmetric-key-transact-sql.md) aus, um den Schlüssel zu schließen.  
   
-## <a name="example"></a>Beispiel  
+## <a name="examples"></a>Beispiele
+
+### <a name="a-create-keys-in-the-publication-database"></a>A. Erstellen von Schlüsseln in der Veröffentlichungsdatenbank
  In diesem Beispiel werden ein symmetrischer Schlüssel, ein Zertifikat zum Sichern des symmetrischen Schlüssels und ein Hauptschlüssel erstellt. Diese Schlüssel werden in der Veröffentlichungsdatenbank erstellt. Sie werden dann verwendet, um eine verschlüsselte Spalte (EncryptedCreditCardApprovalCode) in der `SalesOrderHeader` -Tabelle zu erstellen. Diese Spalte wird in der AdvWorksSalesOrdersMerge-Veröffentlichung anstelle der nicht verschlüsselten CreditCardApprovalCode-Spalte veröffentlicht. Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, muss die Datei an einem sicheren Ort gespeichert werden, um unberechtigten Zugriff zu vermeiden.  
   
  [!code-sql[HowTo#sp_PublishEncryptedColumn](../../../relational-databases/replication/codesnippet/tsql/replicate-data-in-encryp_1.sql)]  
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/replicate-data-in-encryp_2.sql)]  
   
-## <a name="example"></a>Beispiel  
+### <a name="b-create-keys-in-the-subscription-database"></a>B. Erstellen von Schlüsseln in der Abonnementdatenbank
  In diesem Beispiel wird derselbe symmetrische Schlüssel in der Abonnementdatenbank mithilfe derselben Werte für ALGORITHM, KEY_SOURCE und IDENTITY_VALUE aus dem ersten Beispiel neu erstellt. Bei diesem Beispiel wird davon ausgegangen, dass Sie bereits ein Abonnement der AdvWorksSalesOrdersMerge-Veröffentlichung initialisiert haben, um die verschlüsselte Spalte zu replizieren. Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, muss die Datei während des Speicherns und des Transports gesichert werden, um unberechtigten Zugriff zu vermeiden.  
   
  [!code-sql[HowTo#sp_SubscriberEncryptedColumn](../../../relational-databases/replication/codesnippet/tsql/replicate-data-in-encryp_3.sql)]  

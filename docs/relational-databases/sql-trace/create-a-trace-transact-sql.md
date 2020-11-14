@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fb19a7e3dc1ef6c1fc2bcc1c1416c79b2a6c5e4c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ff2970bf4d450c425f169be7b2bb72c24db7d2d0
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88402576"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364792"
 ---
 # <a name="create-a-trace-transact-sql"></a>Erstellen einer Ablaufverfolgung (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "88402576"
   
 ### <a name="to-create-a-trace"></a>So erstellen Sie eine Ablaufverfolgung  
   
-1.  Führen Sie **sp_trace_create** mit den notwendigen Parametern aus, um eine neue Ablaufverfolgung zu erstellen. Der Status der neuen Ablaufverfolgung besagt, dass sie beendet ist (*Status* ist **0**).  
+1.  Führen Sie **sp_trace_create** mit den notwendigen Parametern aus, um eine neue Ablaufverfolgung zu erstellen. Der Status der neuen Ablaufverfolgung besagt, dass sie beendet ist ( *Status* ist **0** ).  
   
 2.  Führen Sie **sp_trace_setevent** mit den notwendigen Parametern aus, um die zu verfolgenden Ereignisse und Spalten auszuwählen.  
   
@@ -36,11 +36,13 @@ ms.locfileid: "88402576"
      **sp_trace_setevent** und **sp_trace_setfilter** können nur für vorhandene, beendete Ablaufverfolgungen ausgeführt werden.  
   
     > [!IMPORTANT]  
-    >  Im Gegensatz zu regulären gespeicherten Prozeduren werden die Parameter für alle gespeicherten Prozeduren von SQL Server Profiler (<strong>sp_trace_*xx*</strong>) genau eingegeben und unterstützen die automatische Datentypkonvertierung nicht. Wenn diese Parameter nicht mit den richtigen Datentypen für Eingabeparameter aufgerufen werden, wie in der Argumentbeschreibung angegeben, gibt die gespeicherte Prozedur einen Fehler zurück.  
+    >  Im Gegensatz zu regulären gespeicherten Prozeduren werden die Parameter für alle gespeicherten Prozeduren von SQL Server Profiler ( <strong>sp_trace_ *xx*</strong>) genau eingegeben und unterstützen die automatische Datentypkonvertierung nicht. Wenn diese Parameter nicht mit den richtigen Datentypen für Eingabeparameter aufgerufen werden, wie in der Argumentbeschreibung angegeben, gibt die gespeicherte Prozedur einen Fehler zurück.  
   
-## <a name="example"></a>Beispiel  
+## <a name="examples"></a>Beispiele
+
  Im folgenden Code wird das Erstellen einer Ablaufverfolgung mit [!INCLUDE[tsql](../../includes/tsql-md.md)]veranschaulicht. Der Code ist in drei Abschnitte unterteilt: Erstellen der Ablaufverfolgung, Auffüllen der Ablaufverfolgungsdatei und Beenden der Ablaufverfolgung. Passen Sie die Ablaufverfolgung an, indem Sie die Ereignisse hinzufügen, die Sie aufzeichnen möchten. Die Liste der Ereignisse und Spalten finden Sie unter [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)veranschaulicht.  
   
+### <a name="a-create-a-trace"></a>A. Erstellen einer Ablaufverfolgung
  Mit dem folgenden Code wird eine Ablaufverfolgung erstellt, anschließend werden dieser Ereignisse hinzugefügt, und sie wird gestartet.  
   
 ```  
@@ -73,7 +75,7 @@ GO
   
 ```  
   
-## <a name="example"></a>Beispiel  
+### <a name="b-populate-the-trace-file"></a>B. Auffüllen der Ablaufverfolgungsdatei
  Nachdem nun die Ablaufverfolgung erstellt und gestartet worden ist, führen Sie den folgenden Code aus, um die Ablaufverfolgung mit Aktivität aufzufüllen.  
   
 ```  
@@ -84,7 +86,7 @@ GO
   
 ```  
   
-## <a name="example"></a>Beispiel  
+### <a name="c-stop-the-trace"></a>C. Beenden Sie die Ablaufverfolgung
  Die Ablaufverfolgung kann jederzeit beendet und neu gestartet werden. Führen Sie in diesem Beispiel den folgenden Code aus, um die Ablaufverfolgung zu beenden und zu schließen und die Ablaufverfolgungsdefinition zu löschen.  
   
 ```  
@@ -100,7 +102,7 @@ EXEC sp_trace_setstatus @TraceID, 2
   
 ```  
   
-## <a name="example"></a>Beispiel  
+### <a name="d-examine-the-trace-file"></a>D: Überprüfen der Ablaufverfolgungsdatei
  Öffnen Sie zum Untersuchen der Ablaufverfolgungsdatei die Datei SampleTrace.trc mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ## <a name="see-also"></a>Weitere Informationen  

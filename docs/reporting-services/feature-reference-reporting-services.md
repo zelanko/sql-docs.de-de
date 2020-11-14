@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b0b603e2abb775383083942f93279c8c117a3829
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: ec66d95c2d9be3fde855d5b312fb1ac3882259e4
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891490"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384709"
 ---
 # <a name="feature-reference-reporting-services"></a>Funktionsreferenz (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] enthält zahlreiche Tools und Anwendungen, die Sie zum Erstellen, Verwalten und Anzeigen von Berichten verwenden können. Dieser Abschnitt enthält Themen zu den einzelnen Dialogfeldern, Webseiten und Assistenten dieser Tools und Anwendungen.  
@@ -40,7 +40,7 @@ ms.locfileid: "91891490"
  [Konzepte von Reporting Services (SSRS)](../reporting-services/reporting-services-concepts-ssrs.md)   
  [Reporting Services-Berichte (SSRS)](../reporting-services/reports/reporting-services-reports-ssrs.md)   
  [Berichtsdatasets &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)   
- [Erste Schritte mit dem Berichts-Generator](https://www.microsoft.com/download/en/details.aspx?id=29072)   
+ [Erste Schritte mit dem Berichts-Generator](https://www.databasejournal.com/features/mssql/sql-server-report-builder-3.0.html)   
  [Entwerfen und Implementieren von Berichten mit Berichts-Generator 1.0](https://go.microsoft.com/fwlink/?LinkId=142601)  
   
   

@@ -1,1 +1,1 @@
-SQL On-Demand (Vorschauversion) in Azure Synapse Analytics
+Serverloser SQL-Pool (Vorschauversion) in Azure Synapse Analytics
