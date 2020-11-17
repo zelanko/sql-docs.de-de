@@ -14,19 +14,19 @@ helpviewer_keywords:
 - AlwaysOn [SQL Server], see Availability Groups [SQL Server]
 - Availability Groups [SQL Server]
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: e236378f9b555e599cd560e377e94a929be0ffbc
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6c6b5290db30ce42df920bac56cf38d8c130039a
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726617"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584827"
 ---
 # <a name="always-on-availability-groups-a-high-availability-and-disaster-recovery-solution"></a>Always On-Verfügbarkeitsgruppen: eine Hochverfügbarkeits- und Notfallwiederherstellungslösung
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  Die Funktion [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ist eine Lösung für hohe Verfügbarkeit und Notfallwiederherstellung, die eine Alternative zur Datenbankspiegelung auf Unternehmensebene bietet. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]wurden in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] eingeführt und maximieren die Verfügbarkeit einer Gruppe von Benutzerdatenbanken für ein Unternehmen. Eine *Verfügbarkeitsgruppe* unterstützt eine Failoverumgebung für einen diskreten Satz von Benutzerdatenbanken (als *Verfügbarkeitsdatenbanken*bezeichnet), die zusammen ein Failover ausführen. Eine Verfügbarkeitsgruppe unterstützt einen Satz primärer Datenbanken mit Lese-/Schreibzugriff und einen bis acht Sätze entsprechender sekundärer Datenbanken. Optional können sekundäre Datenbanken für schreibgeschützten Zugriff und/oder einige Sicherungsvorgänge verfügbar gemacht werden.  
+  Die Funktion [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ist eine Lösung für hohe Verfügbarkeit und Notfallwiederherstellung, die eine Alternative zur Datenbankspiegelung auf Unternehmensebene bietet. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]wurden in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] eingeführt und maximieren die Verfügbarkeit einer Gruppe von Benutzerdatenbanken für ein Unternehmen. Eine *Verfügbarkeitsgruppe* unterstützt eine Failoverumgebung für einen diskreten Satz von Benutzerdatenbanken (als *Verfügbarkeitsdatenbanken* bezeichnet), die zusammen ein Failover ausführen. Eine Verfügbarkeitsgruppe unterstützt einen Satz primärer Datenbanken mit Lese-/Schreibzugriff und einen bis acht Sätze entsprechender sekundärer Datenbanken. Optional können sekundäre Datenbanken für schreibgeschützten Zugriff und/oder einige Sicherungsvorgänge verfügbar gemacht werden.  
   
  Eine Verfügbarkeitsgruppe führt auf der Ebene eines Verfügbarkeitsreplikats ein Failover aus. Failover werden nicht durch Datenbankprobleme verursacht, z. B., wenn eine Datenbank aufgrund eines Verlusts einer Datendatei, des Löschens einer Datenbank oder der Beschädigung eines Transaktionsprotokolls, verdächtig wird.  
  

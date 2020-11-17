@@ -15,14 +15,14 @@ helpviewer_keywords:
 - readable secondary replicas
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 3208f04a990bc7cc07cfc8b1672e7534074bec70
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 82a8d9f4e787fd419e31e637775e33a4cf71f36d
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724601"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584862"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Auslagern von schreibgeschützten Arbeitsauslastungen auf ein sekundäres Replikat einer Always On-Verfügbarkeitsgruppe
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -70,11 +70,11 @@ ms.locfileid: "91724601"
   
 -   **Verfügbarkeitsgruppenlistener**  
   
-     Um schreibgeschütztes Routing zu unterstützen, muss eine Verfügbarkeitsgruppe einen [Verfügbarkeitsgruppenlistener](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)besitzen. Der schreibgeschützte Client muss die eigenen Verbindungsanforderungen an diesen Listener weiterleiten, und in der Verbindungszeichenfolge des Clients muss der Anwendungszweck als "schreibgeschützt" angegeben sein. Es muss sich also um *Verbindungsanforderungen für beabsichtigte Lesevorgänge*handeln.  
+     Um schreibgeschütztes Routing zu unterstützen, muss eine Verfügbarkeitsgruppe einen [Verfügbarkeitsgruppenlistener](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)besitzen. Der schreibgeschützte Client muss die eigenen Verbindungsanforderungen an diesen Listener weiterleiten, und in der Verbindungszeichenfolge des Clients muss der Anwendungszweck als "schreibgeschützt" angegeben sein. Es muss sich also um *Verbindungsanforderungen für beabsichtigte Lesevorgänge* handeln.  
   
 -   **Schreibgeschütztes Routing**  
   
-     Als*schreibgeschütztes Routing* wird die Fähigkeit von SQL Server bezeichnet, eingehende Verbindungsanforderungen für beabsichtigte Lesevorgänge, die an einen Verfügbarkeitsgruppenlistener gerichtet sind, an ein verfügbares lesbares sekundäres Replikat weiterzuleiten. Für schreibgeschütztes Routing gelten folgende Voraussetzungen:  
+     Als *schreibgeschütztes Routing* wird die Fähigkeit von SQL Server bezeichnet, eingehende Verbindungsanforderungen für beabsichtigte Lesevorgänge, die an einen Verfügbarkeitsgruppenlistener gerichtet sind, an ein verfügbares lesbares sekundäres Replikat weiterzuleiten. Für schreibgeschütztes Routing gelten folgende Voraussetzungen:  
   
     -   Zur Unterstützung von schreibgeschütztem Routing muss für lesbare sekundäre Replikate eine URL für schreibgeschütztes Routing angegeben werden. Diese URL wird nur wirksam, wenn das lokale Replikat unter der sekundären Rolle ausgeführt wird. Die URL für schreibgeschütztes Routing muss nach Bedarf replikatweise angegeben werden. Jede URL für schreibgeschütztes Routing wird zum Weiterleiten von Verbindungsanforderungen für beabsichtigte Lesevorgänge an ein bestimmtes lesbares sekundäres Replikat verwendet. In der Regel wird jedem lesbaren sekundären Replikat eine URL für schreibgeschütztes Routing zugewiesen.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "91724601"
 ###  <a name="indexing"></a><a name="bkmk_Indexing"></a> Indizierung  
  Um schreibgeschützte Arbeitsauslastungen auf den lesbaren sekundären Replikaten zu optimieren, können Sie ggf. Indizes in den Tabellen der sekundären Datenbanken erstellen. Da Sie keine Schema- oder Datenänderungen auf den sekundären Datenbanken vornehmen können, erstellen Sie Indizes in den primären Datenbanken, und lassen Sie die Übertragung der Änderungen auf die sekundäre Datenbank mittels REDO-Prozess zu.  
   
- Zur Überwachung der Indexverwendung auf einem sekundären Replikat fragen Sie die Spalten **user_seeks**, **user_scans**und **user_lookups** der dynamischen Verwaltungssicht [sys.dm_db_index_usage_stats](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md) ab.  
+ Zur Überwachung der Indexverwendung auf einem sekundären Replikat fragen Sie die Spalten **user_seeks**, **user_scans** und **user_lookups** der dynamischen Verwaltungssicht [sys.dm_db_index_usage_stats](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md) ab.  
   
 ###  <a name="statistics-for-read-only-access-databases"></a><a name="Read-OnlyStats"></a> Statistiken für Datenbanken mit schreibgeschütztem Zugriff  
  Statistiken zu Spalten von Tabellen und indizierten Sichten werden verwendet, um Abfragepläne zu optimieren. Bei Verfügbarkeitsgruppen werden Statistiken, die in den primären Datenbanken erstellt und verwaltet werden, automatisch in den sekundären Datenbanken beibehalten, wenn die Transaktionsprotokoll-Datensätze angewendet werden. Für die schreibgeschützte Arbeitsauslastung in den sekundären Datenbanken sind jedoch möglicherweise andere Statistiken als die erforderlich, die in den primären Datenbanken erstellt werden. Da sekundäre Datenbanken jedoch auf schreibgeschützten Zugriff beschränkt sind, können für die sekundären Datenbanken keine Statistiken erstellt werden.  
@@ -185,7 +185,7 @@ ms.locfileid: "91724601"
   
 ####  <a name="limitations-and-restrictions"></a><a name="StatsLimitationsRestrictions"></a> Einschränkungen  
   
--   Da temporäre Statistiken in **tempdb**gespeichert werden, werden durch einen Neustart des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Diensts alle temporären Statistiken entfernt.  
+-   Da temporäre Statistiken in **tempdb** gespeichert werden, werden durch einen Neustart des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Diensts alle temporären Statistiken entfernt.  
   
 -   Das Suffix „_readonly_database_statistic“ ist für von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]generierte Statistiken reserviert. Sie können dieses Suffix nicht verwenden, wenn Sie Statistiken in einer primären Datenbank erstellen. Weitere Informationen finden Sie unter [Verwalten von Statistiken für Tabellen in SQL Data Warehouse](../../../relational-databases/statistics/statistics.md).  
   
@@ -207,9 +207,9 @@ GO
   
 -   Bei datenträgerbasierten Tabellen können lesbare sekundäre Replikate aus zwei Gründen Speicherplatz in **tempdb** beanspruchen:  
   
-    -   In der Momentaufnahme-Isolationsstufe werden Zeilenversionen in **tempdb**kopiert.  
+    -   In der Momentaufnahme-Isolationsstufe werden Zeilenversionen in **tempdb** kopiert.  
   
-    -   Temporäre Statistiken für sekundäre Datenbanken werden in **tempdb**erstellt und verwaltet. Die temporären Statistiken können einen leichten Anstieg der Größe von **tempdb**verursachen. Weitere Informationen finden Sie unter [Statistiken für Datenbanken mit schreibgeschütztem Zugriff](#Read-OnlyStats)später in diesem Abschnitt.  
+    -   Temporäre Statistiken für sekundäre Datenbanken werden in **tempdb** erstellt und verwaltet. Die temporären Statistiken können einen leichten Anstieg der Größe von **tempdb** verursachen. Weitere Informationen finden Sie unter [Statistiken für Datenbanken mit schreibgeschütztem Zugriff](#Read-OnlyStats)später in diesem Abschnitt.  
   
 -   Wenn Sie für eines oder mehrere sekundäre Replikate Lesezugriff konfigurieren, wird von den primären Datenbanken für gelöschte, geänderte oder eingefügte Datenzeilen beim Speichern von Zeigern auf Zeilenversionen in den sekundären Datenbanken für datenträgerbasierte Tabellen ein Mehraufwand von 14 Bytes verursacht. Dieser Mehraufwand von 14 Bytes geht auf die sekundären Datenbanken über. Da der Mehraufwand von 14 Bytes auf die Datenzeilen übertragen wird, können Seitenteilungen auftreten.  
   

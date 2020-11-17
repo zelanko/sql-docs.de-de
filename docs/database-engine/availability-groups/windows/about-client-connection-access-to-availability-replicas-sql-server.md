@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: fc0568a32bae1f9c31fe4d20ff6ae2139d325acd
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 12d7db7b49c15954240843b13d750ea1d64503f3
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724613"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584907"
 ---
 # <a name="types-of-client-connections-to-replicas-within-an-always-on-availability-group"></a>Typen von Clientverbindungen zu Replikaten in einer Always On-Verfügbarkeitsgruppe
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "91724613"
  Informationen darüber, wie Sie die Verfügbarkeitsgruppe konfigurieren müssen, damit diese Clientverbindungen zu ihren Replikaten akzeptiert, finden Sie unter [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
 ### <a name="example-connection-access-configuration"></a>Beispiel für Verbindungszugriffskonfiguration  
- Abhängig von der unterschiedlichen Konfiguration von Verfügbarkeitsreplikaten für den Verbindungszugriff kann sich die Unterstützung für Clientverbindungen nach dem Failover einer Verfügbarkeitsgruppe ändern. Betrachten Sie z. B. eine Verfügbarkeitsgruppe, für die die Berichterstellung auf sekundären Remotereplikaten mit asynchronem Commit ausgeführt wird. Für alle schreibgeschützten Anwendungen für die Datenbanken in dieser Verfügbarkeitsgruppe ist die **Anwendungszweck** -Verbindungseigenschaft auf **ReadOnly**festgelegt, damit alle schreibgeschützten Verbindungen Verbindungen für beabsichtigte Lesevorgänge sind.  
+ Abhängig von der unterschiedlichen Konfiguration von Verfügbarkeitsreplikaten für den Verbindungszugriff kann sich die Unterstützung für Clientverbindungen nach dem Failover einer Verfügbarkeitsgruppe ändern. Betrachten Sie z. B. eine Verfügbarkeitsgruppe, für die die Berichterstellung auf sekundären Remotereplikaten mit asynchronem Commit ausgeführt wird. Für alle schreibgeschützten Anwendungen für die Datenbanken in dieser Verfügbarkeitsgruppe ist die **Anwendungszweck** -Verbindungseigenschaft auf **ReadOnly** festgelegt, damit alle schreibgeschützten Verbindungen Verbindungen für beabsichtigte Lesevorgänge sind.  
   
  Diese Beispielverfügbarkeitsgruppe besitzt zwei Replikate mit synchronem Commit im Hauptrechencenter und zwei Replikate mit asynchronem Commit an einem Satellitenstandort. Für die primäre Rolle sind alle Replikate für Lese-/Schreibzugriff konfiguriert, wodurch Verbindungen für beabsichtigte Lesevorgänge zum primären Replikat in allen Situationen verhindert werden. Die sekundäre Rolle mit synchronem Commit verwendet die Standard-Verbindungszugriffskonfiguration ("keine"), die alle Clientverbindungen unter der sekundären Rolle verhindert.  Im Gegensatz dazu werden die Replikate mit asynchronem Commit konfiguriert, um Verbindungen für beabsichtigte Lesevorgänge unter der sekundären Rolle zuzulassen. In der folgenden Tabelle wird diese Beispielkonfiguration zusammengefasst:  
   

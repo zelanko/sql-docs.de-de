@@ -1,15 +1,11 @@
 ---
+title: CREATE XML INDEX (Transact-SQL)
 description: CREATE XML INDEX (Transact-SQL)
-title: CREATE XML INDEX (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
-- XML_TSQL
 - CREATE_XML_INDEX_TSQL
 - XML INDEX
 - CREATE_XML_TSQL
@@ -17,7 +13,6 @@ f1_keywords:
 - CREATE XML
 - CREATE XML INDEX
 - XML_INDEX_TSQL
-- FOR_XML_TSQL
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -28,12 +23,15 @@ helpviewer_keywords:
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a1ca67466a58dea0b374d9da14e66de64ba02d81
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 08/10/2017
+ms.openlocfilehash: bd8f6e580290a0b10c833f9ee94158c69eb09229
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300505"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674218"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -77,23 +75,23 @@ CREATE [ PRIMARY ] XML INDEX index_name
 
 ## <a name="arguments"></a>Argumente
  [PRIMARY] XML  
- Erstellt einen XML-Index für die angegebene **xml** -Spalte. Wenn PRIMARY angegeben ist, wird ein gruppierter Index mit dem gruppierten Schlüssel erstellt, der aus dem Gruppierungsschlüssel der Benutzertabelle und dem Bezeichner für einen XML-Knoten besteht. Jede Tabelle kann bis zu 249 XML-Indizes enthalten. Beachten Sie beim Erstellen eines XML-Indexes Folgendes:  
+ Erstellt einen XML-Index für die angegebene **xml**-Spalte. Wenn PRIMARY angegeben ist, wird ein gruppierter Index mit dem gruppierten Schlüssel erstellt, der aus dem Gruppierungsschlüssel der Benutzertabelle und dem Bezeichner für einen XML-Knoten besteht. Jede Tabelle kann bis zu 249 XML-Indizes enthalten. Beachten Sie beim Erstellen eines XML-Indexes Folgendes:  
   
 -   Für den Primärschlüssel der Benutzertabelle muss ein gruppierter Index vorhanden sein.  
   
 -   Der Gruppierungsschlüssel der Benutzertabelle ist auf 15 Spalten begrenzt.  
   
--   Für jede **xml** -Spalte in einer Tabelle können ein primärer XML-Index und mehrere sekundäre XML-Indizes vorhanden sein.  
+-   Für jede **xml**-Spalte in einer Tabelle können ein primärer XML-Index und mehrere sekundäre XML-Indizes vorhanden sein.  
   
--   Für eine **xml** -Spalte muss ein primärer XML-Index vorhanden sein, bevor ein sekundärer XML-Index für die Spalte erstellt werden kann.  
+-   Für eine **xml**-Spalte muss ein primärer XML-Index vorhanden sein, bevor ein sekundärer XML-Index für die Spalte erstellt werden kann.  
   
--   Ein XML-Index kann nur für eine einzige **xml** -Spalte erstellt werden. Sie können keinen XML-Index für eine Nicht- **xml** -Spalte erstellen. Außerdem können Sie keinen relationalen Index für eine **xml** -Spalte erstellen.  
+-   Ein XML-Index kann nur für eine einzige **xml**-Spalte erstellt werden. Sie können keinen XML-Index für eine Nicht-**xml**-Spalte erstellen. Außerdem können Sie keinen relationalen Index für eine **xml**-Spalte erstellen.  
   
--   Sie können weder einen primären noch einen sekundären XML-Index für eine **xml** -Spalte in einer Sicht, für eine Tabellenwertvariable mit **xml** -Spalten oder für Variablen des Typs **xml** erstellen.  
+-   Sie können weder einen primären noch einen sekundären XML-Index für eine **xml**-Spalte in einer Sicht, für eine Tabellenwertvariable mit **xml**-Spalten oder für Variablen des Typs **xml** erstellen.  
   
--   Sie können keinen primären XML-Index für eine berechnete **xml** -Spalte erstellen.  
+-   Sie können keinen primären XML-Index für eine berechnete **xml**-Spalte erstellen.  
   
--   Die SET-Optionseinstellungen müssen mit den Einstellungen übereinstimmen, die für indizierte Sichten und berechnete Spaltenindizes erforderlich sind. Insbesondere muss die Option ARITHABORT auf ON festgelegt sein, wenn ein XML-Index erstellt und Werte in der **xml** -Spalte eingefügt, gelöscht oder aktualisiert werden.  
+-   Die SET-Optionseinstellungen müssen mit den Einstellungen übereinstimmen, die für indizierte Sichten und berechnete Spaltenindizes erforderlich sind. Insbesondere muss die Option ARITHABORT auf ON festgelegt sein, wenn ein XML-Index erstellt und Werte in der **xml**-Spalte eingefügt, gelöscht oder aktualisiert werden.  
   
  Weitere Informationen finden Sie unter [XML-Indizes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
   
@@ -103,7 +101,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  Primäre XML-Indexnamen dürfen nicht mit den folgenden Zeichen beginnen: **#** , **##** , **@** oder **@@** .  
   
  *xml_column_name*  
- Gibt die **xml** -Spalte an, auf der der Index basiert. Für eine einzige XML-Indexdefinition kann nur eine **xml** -Spalte angegeben werden. Allerdings können für eine **xml** -Spalte mehrere sekundäre XML-Indizes erstellt werden.  
+ Gibt die **xml**-Spalte an, auf der der Index basiert. Für eine einzige XML-Indexdefinition kann nur eine **xml**-Spalte angegeben werden. Allerdings können für eine **xml**-Spalte mehrere sekundäre XML-Indizes erstellt werden.  
   
  USING XML INDEX *xml_index_name*  
  Gibt den primären XML-Index an, der beim Erstellen eines sekundären XML-Indexes verwendet werden soll.  
@@ -146,7 +144,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  OFF oder *fillfactor* ist nicht angegeben  
  Die Zwischenebenenseiten sind nahezu vollständig aufgefüllt. Allerdings ist ausreichend Speicherplatz vorhanden, um mindestens eine Zeile in der maximal für den Index möglichen Größe aufzunehmen, wenn der Schlüsselsatz auf den Zwischenseiten berücksichtigt wird.  
   
- Die Option PAD_INDEX ist nur dann hilfreich, wenn FILLFACTOR angegeben ist, da PAD_INDEX den durch FILLFACTOR angegebenen Prozentsatz verwendet. Wenn der für FILLFACTOR angegebene Prozentsatz nicht groß genug ist, um eine Zeile aufzunehmen, überschreibt [!INCLUDE[ssDE](../../includes/ssde-md.md)] diesen Prozentsatz intern, um das Minimum zuzulassen. Auf jeder Zwischenindexseite befinden sich unabhängig vom angegebenen *fillfactor* -Wert nie weniger als zwei Zeilen.  
+ Die Option PAD_INDEX ist nur dann hilfreich, wenn FILLFACTOR angegeben ist, da PAD_INDEX den durch FILLFACTOR angegebenen Prozentsatz verwendet. Wenn der für FILLFACTOR angegebene Prozentsatz nicht groß genug ist, um eine Zeile aufzunehmen, überschreibt [!INCLUDE[ssDE](../../includes/ssde-md.md)] diesen Prozentsatz intern, um das Minimum zuzulassen. Auf jeder Zwischenindexseite befinden sich unabhängig vom angegebenen *fillfactor*-Wert nie weniger als zwei Zeilen.  
   
  FILLFACTOR **=** _fillfactor_  
  Gibt einen Prozentsatz an, der angibt, wie weit das [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Blattebene jeder Indexseite während der Indexerstellung oder -neuerstellung füllen soll. *fillfactor* muss ein ganzzahliger Wert zwischen 1 und 100 sein. Die Standardeinstellung ist 0. Wenn *fillfactor* 100 oder 0 entspricht, werden von [!INCLUDE[ssDE](../../includes/ssde-md.md)] Indizes mit vollständig aufgefüllten Blattseiten erstellt.  
@@ -235,7 +233,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
 >  Parallele Indexvorgänge sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen für den SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 ## <a name="remarks"></a>Bemerkungen  
- Berechnete Spalten, die von **xml** -Datentypen abgeleitet wurden, können als Schlüsselspalten oder als eingeschlossene Nichtschlüsselspalten indiziert werden, vorausgesetzt, der Datentyp der berechneten Spalte ist als Indexschlüsselspalte oder -nichtschlüsselspalte zulässig. Sie können keinen primären XML-Index für eine berechnete **xml** -Spalte erstellen.  
+ Berechnete Spalten, die von **xml**-Datentypen abgeleitet wurden, können als Schlüsselspalten oder als eingeschlossene Nichtschlüsselspalten indiziert werden, vorausgesetzt, der Datentyp der berechneten Spalte ist als Indexschlüsselspalte oder -nichtschlüsselspalte zulässig. Sie können keinen primären XML-Index für eine berechnete **xml**-Spalte erstellen.  
   
  Zum Anzeigen von Informationen zu XML-Indizes verwenden Sie die Katalogsicht [sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md).  
   

@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2c56b8595955caef35d5ff1e591eed417a831a48
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: febd24b17458a37a6ff12c8b17f55527311a0aee
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726561"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584777"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services mit Always On-Verfügbarkeitsgruppen
 
@@ -57,11 +57,11 @@ ms.locfileid: "91726561"
   
 5.  Ändern Sie im Dialogfeld **Eigenschaften des Verfügbarkeitsreplikats** den Verbindungszugriff für die sekundäre Rolle wie folgt:  
   
-    -   Wählen Sie in der Dropdownliste **Lesbare sekundäre Rolle** den Eintrag **Nur beabsichtigte Lesevorgänge**aus.  
+    -   Wählen Sie in der Dropdownliste **Lesbare sekundäre Rolle** den Eintrag **Nur beabsichtigte Lesevorgänge** aus.  
   
-    -   Wählen Sie in der Dropdownliste **Verbindungen in primärer Rolle** den Eintrag **Alle Verbindungen zulassen**aus. Dies ist die Standardoption.  
+    -   Wählen Sie in der Dropdownliste **Verbindungen in primärer Rolle** den Eintrag **Alle Verbindungen zulassen** aus. Dies ist die Standardoption.  
   
-    -   Optional können Sie in der Dropdownliste **Verfügbarkeitsmodus** den Eintrag **Synchroner Commit**auswählen. Dieser Schritt ist nicht erforderlich, jedoch wird durch das Festlegen dieser Option Datenparität zwischen dem primären und sekundären Replikat sichergestellt.  
+    -   Optional können Sie in der Dropdownliste **Verfügbarkeitsmodus** den Eintrag **Synchroner Commit** auswählen. Dieser Schritt ist nicht erforderlich, jedoch wird durch das Festlegen dieser Option Datenparität zwischen dem primären und sekundären Replikat sichergestellt.  
   
          Diese Eigenschaft ist auch eine Voraussetzung für geplantes Failover. Wenn Sie zu Testzwecken ein geplantes manuelles Failover ausführen möchten, legen Sie für das primäre und das sekundäre Replikat **Verfügbarkeitsmodus** auf **Synchroner Commit** fest.  
   
@@ -122,13 +122,13 @@ ms.locfileid: "91726561"
 ##  <a name="create-an-analysis-services-data-source-using-an-always-on-availability-database"></a><a name="bkmk_ssasAODB"></a> Erstellen einer Analysis Services-Datenquelle mithilfe einer Always On-Verfügbarkeitsdatenbank  
  In diesem Abschnitt wird das Erstellen einer Analysis Services-Datenquelle beschrieben, die eine Verbindung mit einer Datenbank in einer Verfügbarkeitsgruppe herstellt. Sie können mithilfe dieser Anweisungen eine Verbindung mit einem primären Replikat (Standard) oder einem lesbaren sekundären Replikat konfigurieren, das Sie mit Schritten in einem vorherigen Abschnitt konfiguriert haben. Always On-Konfigurationseinstellungen sowie die im Client festgelegten Verbindungseigenschaften bestimmen, ob ein primäres oder sekundäres Replikat verwendet wird.  
   
-1.  Klicken Sie in [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]in einem Analysis Services-Projekt für mehrdimensionale und Data Mining-Modelle mit der rechten Maustaste auf **Datenquellen** , und wählen Sie **Neue Datenquelle**aus. Klicken Sie auf **Neu** , um eine neue Datenquelle zu erstellen.  
+1.  Klicken Sie in [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]in einem Analysis Services-Projekt für mehrdimensionale und Data Mining-Modelle mit der rechten Maustaste auf **Datenquellen** , und wählen Sie **Neue Datenquelle** aus. Klicken Sie auf **Neu** , um eine neue Datenquelle zu erstellen.  
   
-     Alternativ können Sie für ein tabellarisches Modellprojekt auf das Menü „Modell“ und anschließend auf **Aus Datenquelle importieren**klicken.  
+     Alternativ können Sie für ein tabellarisches Modellprojekt auf das Menü „Modell“ und anschließend auf **Aus Datenquelle importieren** klicken.  
   
 2.  Wählen Sie im Verbindungs-Manager unter "Anbieter" einen Anbieter aus, der das TDS (Tabular Data Stream)-Protokoll unterstützt. Dieses Protokoll wird von SQL Server Native Client 11.0 unterstützt.  
   
-3.  Geben Sie im Verbindungs-Manager unter „Servername“ den Namen des *Verfügbarkeitsgruppenlisteners*ein, und wählen Sie anschließend eine Datenbank aus, die in der Gruppe verfügbar ist.  
+3.  Geben Sie im Verbindungs-Manager unter „Servername“ den Namen des *Verfügbarkeitsgruppenlisteners* ein, und wählen Sie anschließend eine Datenbank aus, die in der Gruppe verfügbar ist.  
   
      Der Verfügbarkeitsgruppenlistener leitet für Lese-/Schreibanforderungen eine Clientverbindung an ein primäres Replikat um. Wenn Sie in der Verbindungszeichenfolge beabsichtigte Lesevorgänge angeben, erfolgt die Umleitung an ein sekundäres Replikat. Da sich Replikatrollen während eines Failovers (bei dem das primäre Replikat zum sekundären Replikat und das sekundäre Replikat zum primären Replikat wird) ändern, sollten Sie immer den Listener angeben, damit die Clientverbindung entsprechend umgeleitet wird.  
   
@@ -138,15 +138,15 @@ ms.locfileid: "91726561"
   
      Legen Sie **Anwendungszweck** auf **READONLY** fest, wenn Sie eine schreibgeschützte Clientverbindung mit einem sekundären Replikat konfigurieren. Behalten Sie andernfalls die Standardeinstellung **READWRITE** bei, um die Verbindung an das primäre Replikat umzuleiten.  
   
-5.  Wählen Sie in „Identitätswechselinformationen“ die Option **Bestimmter Windows-Benutzername und bestimmtes Kennwort**aus, und geben Sie dann ein Windows-Domänenbenutzerkonto ein, das mindestens über **db_datareader** -Berechtigungen für die Datenbank verfügt.  
+5.  Wählen Sie in „Identitätswechselinformationen“ die Option **Bestimmter Windows-Benutzername und bestimmtes Kennwort** aus, und geben Sie dann ein Windows-Domänenbenutzerkonto ein, das mindestens über **db_datareader** -Berechtigungen für die Datenbank verfügt.  
   
-     Lassen Sie die Optionen **Anmeldeinformationen des aktuellen Benutzers** und **Erben**unbedingt deaktiviert. Sie können **Dienstkonto**auswählen, jedoch nur, wenn dieses Konto über Leseberechtigungen für die Datenbank verfügt.  
+     Lassen Sie die Optionen **Anmeldeinformationen des aktuellen Benutzers** und **Erben** unbedingt deaktiviert. Sie können **Dienstkonto** auswählen, jedoch nur, wenn dieses Konto über Leseberechtigungen für die Datenbank verfügt.  
   
      Stellen Sie die Datenquelle fertig, und schließen Sie den Datenquellen-Assistenten.  
   
 6.  Fügen Sie der Verbindungszeichenfolge **MultiSubnetFailover=Yes** hinzu, damit der aktive Server schneller erkannt wird und schneller eine Verbindung mit ihm hergestellt wird. Weitere Informationen zu dieser Eigenschaft finden Sie unter [SQL Server Native Client-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
-     Diese Eigenschaft wird im Eigenschaftenraster nicht angezeigt. Klicken Sie mit der rechten Maustaste auf die Datenquelle, und wählen Sie **Code anzeigen**aus, um die Eigenschaft hinzuzufügen. Fügen Sie der Verbindungszeichenfolge `MultiSubnetFailover=Yes` hinzu.  
+     Diese Eigenschaft wird im Eigenschaftenraster nicht angezeigt. Klicken Sie mit der rechten Maustaste auf die Datenquelle, und wählen Sie **Code anzeigen** aus, um die Eigenschaft hinzuzufügen. Fügen Sie der Verbindungszeichenfolge `MultiSubnetFailover=Yes` hinzu.  
   
  Die Datenquelle ist jetzt definiert. Sie können jetzt ein Modell erstellen, wobei Sie mit der Datenquellensicht beginnen. Für tabellarische Modelle beginnen Sie mit dem Erstellen von Beziehungen. Wenn Daten aus der Verfügbarkeitsdatenbank abgerufen werden müssen (wenn Sie z. B. die Lösung verarbeiten oder bereitstellen möchten), können Sie die Konfiguration testen, um zu überprüfen, ob Zugriff auf Daten aus dem sekundären Replikat erfolgt.  
   
@@ -167,7 +167,7 @@ ms.locfileid: "91726561"
   
 4.  Stellen Sie die Lösung bereit, und beenden Sie nach Abschluss der Bereitstellung die Ablaufverfolgung.  
   
-     Im Ablaufverfolgungsfenster sollten Ereignisse aus der Anwendung **Microsoft SQL Server Analysis Services**angezeigt werden. Es sollten **SELECT** -Anweisungen angezeigt werden, mit denen Daten aus einer Datenbank auf der Serverinstanz abgerufen werden, die das sekundäre Replikat hostet. Dies bedeutet, dass die Verbindung mit dem sekundären Replikat über den Listener hergestellt wurde.  
+     Im Ablaufverfolgungsfenster sollten Ereignisse aus der Anwendung **Microsoft SQL Server Analysis Services** angezeigt werden. Es sollten **SELECT** -Anweisungen angezeigt werden, mit denen Daten aus einer Datenbank auf der Serverinstanz abgerufen werden, die das sekundäre Replikat hostet. Dies bedeutet, dass die Verbindung mit dem sekundären Replikat über den Listener hergestellt wurde.  
   
 #### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>Schritt 2: Ausführen eines geplanten Failovers zum Testen der Konfiguration  
   
@@ -194,7 +194,7 @@ ms.locfileid: "91726561"
   
     -   Erweitern Sie in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]die Verfügbarkeitsgruppen, um die Bezeichnungen für das primäre und sekundäre Replikat anzuzeigen. Die Instanz, die zuvor ein primäres Replikat war, sollte jetzt ein sekundäres Replikat sein.  
   
-    -   Zeigen Sie das Dashboard an, um zu bestimmen, ob Integritätsprobleme gefunden wurden. Klicken Sie mit der rechten Maustaste auf die Verfügbarkeitsgruppe, und wählen Sie **Dashboard anzeigen**aus.  
+    -   Zeigen Sie das Dashboard an, um zu bestimmen, ob Integritätsprobleme gefunden wurden. Klicken Sie mit der rechten Maustaste auf die Verfügbarkeitsgruppe, und wählen Sie **Dashboard anzeigen** aus.  
   
 8.  Warten Sie ein oder zwei Minuten lang, bis das Failover auf dem Back-End abgeschlossen wurde.  
   
@@ -216,7 +216,7 @@ ms.locfileid: "91726561"
   
  Wenn Sie eine Verbindung ausschließlich für den Zugriff auf ein lesbares sekundäres Replikat konfiguriert haben, müssen Sie jetzt eine neue Verbindung als READWRITE-Verbindung mit dem primären Replikat konfigurieren.  
   
- Erstellen Sie hierzu in einem Analysis Services-Modell eine zusätzliche Datenquelle, um die Lese-/Schreibverbindung zu unterstützen. Wenn Sie die zusätzliche Datenquelle erstellen, verwenden Sie den gleichen Listenernamen und die gleiche Datenbank, die Sie in der schreibgeschützten Verbindung angegeben haben. Behalten Sie jedoch die Standardeinstellung bei, die READWRITE-Verbindungen unterstützt, statt **Anwendungszweck**zu ändern. Jetzt können Sie der Datenquelle neue Fakten- oder Dimensionstabellen hinzufügen, die auf der Datenquelle mit Lese-/Schreibzugriff basieren, und dann für die neuen Tabellen Rückschreiben aktivieren.  
+ Erstellen Sie hierzu in einem Analysis Services-Modell eine zusätzliche Datenquelle, um die Lese-/Schreibverbindung zu unterstützen. Wenn Sie die zusätzliche Datenquelle erstellen, verwenden Sie den gleichen Listenernamen und die gleiche Datenbank, die Sie in der schreibgeschützten Verbindung angegeben haben. Behalten Sie jedoch die Standardeinstellung bei, die READWRITE-Verbindungen unterstützt, statt **Anwendungszweck** zu ändern. Jetzt können Sie der Datenquelle neue Fakten- oder Dimensionstabellen hinzufügen, die auf der Datenquelle mit Lese-/Schreibzugriff basieren, und dann für die neuen Tabellen Rückschreiben aktivieren.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   

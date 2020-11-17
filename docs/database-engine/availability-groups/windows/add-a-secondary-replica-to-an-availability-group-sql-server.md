@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], configuring
 ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 19a57b83244e8d38d2bc8f0caa03720b4422ece4
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 53d138f5273ef07174d1e926fe628f9e73146297
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724591"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584872"
 ---
 # <a name="add-a-secondary-replica-to-an-always-on-availability-group"></a>Hinzufügen eines sekundären Replikats zu einer Always On-Verfügbarkeitsgruppe
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "91724591"
 ##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell  
  **So fügen Sie ein Replikat hinzu**  
   
-1.  Wechseln Sie mit**cd**in das Verzeichnis der Serverinstanz, die das primäre Replikat hostet.  
+1.  Wechseln Sie mit **cd** in das Verzeichnis der Serverinstanz, die das primäre Replikat hostet.  
   
 2.  Verwenden Sie das **New-SqlAvailabilityReplica** -Cmdlet.  
   

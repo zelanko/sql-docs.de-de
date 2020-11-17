@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover modes
 - Availability Groups [SQL Server], configuring
 ms.assetid: 619a826f-8e65-48eb-8c34-39497d238279
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 07b77c85c882d8755e1717a5cfe8ce49df9ae275
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ffd564df011932a0b40c0eff2426049fc3f6c315
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727991"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584555"
 ---
 # <a name="change-the-failover-mode-for-a-replica-within-an-always-on-availability-group"></a>Ändern des Failovermodus für ein Replikat in einer Always On-Verfügbarkeitsgruppe
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "91727991"
   
 Weitere Informationen zu diesen Parametern finden Sie unter [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md).  
   
-Im folgenden Beispiel, eingegeben im primären Replikat der *MyAG* -Verfügbarkeitsgruppe, wird der Failovermodus für das Verfügbarkeitsreplikat, das sich auf der Standardserverinstanz auf dem Computer *COMPUTER01*befindet, in automatisches Failover geändert.  
+Im folgenden Beispiel, eingegeben im primären Replikat der *MyAG* -Verfügbarkeitsgruppe, wird der Failovermodus für das Verfügbarkeitsreplikat, das sich auf der Standardserverinstanz auf dem Computer *COMPUTER01* befindet, in automatisches Failover geändert.  
   
 ```sql
 ALTER AVAILABILITY GROUP MyAG MODIFY REPLICA ON 'COMPUTER01' WITH  
@@ -82,7 +82,7 @@ ALTER AVAILABILITY GROUP MyAG MODIFY REPLICA ON 'COMPUTER01' WITH
 ##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell  
  **So ändern Sie den Failovermodus eines Verfügbarkeitsreplikats**  
   
-1.  Wechseln Sie mit**cd**in das Verzeichnis der Serverinstanz, die das primäre Replikat hostet.  
+1.  Wechseln Sie mit **cd** in das Verzeichnis der Serverinstanz, die das primäre Replikat hostet.  
   
 2.  Verwenden Sie das Cmdlet **Set-SqlAvailabilityReplica** mit dem Parameter **FailoverMode** . Wenn Sie ein Replikat auf automatisches Failover festlegen, müssen Sie möglicherweise den Parameter **AvailabilityMode** verwenden, um das Replikat in den Verfügbarkeitsmodus mit synchronem Commit zu ändern.  
   

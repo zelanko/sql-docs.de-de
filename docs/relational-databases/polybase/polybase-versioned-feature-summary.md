@@ -2,7 +2,7 @@
 description: Features und Einschränkungen von PolyBase
 title: Features und Einschränkungen von PolyBase | Microsoft-Dokumentation
 descriptions: This article summarizes PolyBase features available for SQL Server products and services. It lists T-SQL operators supported for pushdown and known limitations.
-ms.date: 09/24/2018
+ms.date: 11/13/2020
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d3d6021b34f5804f33cd784bc9b7fd38c7eb1f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ce4c3624600741d900d51dc832ab4a685c28107a
+ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427992"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631746"
 ---
 # <a name="polybase-features-and-limitations"></a>Features und Einschränkungen von PolyBase
 
@@ -38,7 +38,7 @@ In dieser Tabelle werden die wichtigsten Features für PolyBase sowie die Produk
 |Daten aus Azure Blob Storage importieren|Ja|Nein|Ja|Ja|
 |Daten aus Azure Blob Storage exportieren|Ja|Nein|Ja|Ja|  
 |Daten aus Azure Data Lake Store importieren|Nein|Nein|Ja|Nein|
-|Daten aus Azure Data Lake Store exportieren|Nein|Nein|Ja|Nein|
+|Daten für Azure Data Lake Store exportieren|Nein|Nein|Ja|Nein|
 |PolyBase-Abfragen über Microsoft BI-Tools ausführen|Ja|Nein|Ja|Ja|
 
 ## <a name="pushdown-computation-supported-by-t-sql-operators"></a>Von der Weitergabeberechnung unterstützte T-SQL-Operatoren

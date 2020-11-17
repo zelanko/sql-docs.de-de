@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], wizards
 - Availability Groups [SQL Server], databases
 ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 117819e6a2fdf05bbb2ae2b1745c3450501ee0e8
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5823518103647ccc39958af4d309a6d171f4412c
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115719"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584706"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group-with-the-availability-group-wizard"></a>Hinzufügen einer Datenbank zu einer Always On-Verfügbarkeitsgruppe mit dem Assistenten für Verfügbarkeitsgruppen
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "91115719"
   
          Aktivieren Sie diese Option, wenn Ihre Umgebung die Anforderungen zum automatischen Starten der anfänglichen Datensynchronisierung erfüllt. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Voraussetzungen, Einschränkungen und Empfehlungen](#Prerequisites).  
   
-         Wenn Sie **Vollständig**auswählen, versucht der Assistent, nach der Erstellung der Verfügbarkeitsgruppe alle primären Datenbanken und ihre Transaktionsprotokolle auf einer Netzwerkfreigabe zu sichern und die Sicherungen auf allen Serverinstanzen wiederherzustellen, die ein sekundäres Replikat hosten. Der Assistent verknüpft anschließend alle sekundären Datenbanken mit der Verfügbarkeitsgruppe.  
+         Wenn Sie **Vollständig** auswählen, versucht der Assistent, nach der Erstellung der Verfügbarkeitsgruppe alle primären Datenbanken und ihre Transaktionsprotokolle auf einer Netzwerkfreigabe zu sichern und die Sicherungen auf allen Serverinstanzen wiederherzustellen, die ein sekundäres Replikat hosten. Der Assistent verknüpft anschließend alle sekundären Datenbanken mit der Verfügbarkeitsgruppe.  
   
          Legen Sie im Feld zum **Angeben eines freigegebenen Netzwerkspeicherorts, auf den von allen Replikaten zugegriffen werden kann** , eine Sicherungsfreigabe fest, für die alle Serverinstanzen, die Replikate hosten, Lese-/Schreibzugriff besitzen. Die Protokollsicherungen sind Teil der Protokollsicherungskette. Speichern Sie die Protokollsicherungsdateien ordnungsgemäß.  
   

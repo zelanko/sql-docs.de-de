@@ -16,14 +16,14 @@ helpviewer_keywords:
 - automated backup preference
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 4a9f6aea0fe042752c5443d1de9b200494f57828
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 69311c69270a45880d6802c8b3b3a9f350eab37a
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895418"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584904"
 ---
 # <a name="offload-supported-backups-to-secondary-replicas-of-an-availability-group"></a>Auslagern von unterstützten Sicherungen auf sekundäre Replikate einer Verfügbarkeitsgruppe
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "85895418"
   
      Bei sämtlichen Protokollsicherungen von Replikaten (primär oder sekundär) wird ungeachtet ihres Verfügbarkeitsmodus (mit synchronem Commit oder mit asynchronem Commit) eine konsistente Protokollkette sichergestellt.  
   
--   Zum Sichern einer sekundären Datenbank muss ein sekundäres Replikat mit dem primären Replikat kommunizieren können und den Status **SYNCHRONIZED** oder **SYNCHRONIZING**aufweisen.  
+-   Zum Sichern einer sekundären Datenbank muss ein sekundäres Replikat mit dem primären Replikat kommunizieren können und den Status **SYNCHRONIZED** oder **SYNCHRONIZING** aufweisen.  
 
 In einer verteilten Verfügbarkeitsgruppe können Sicherungen auf dem sekundären Replikat durchgeführt werden, das sich in derselben Verfügbarkeitsgruppe wie das primäre Replikat befindet oder auf dem primären Replikat jeder sekundären Verfügbarkeitsgruppe. Sicherungen können nicht auf einem sekundären Replikat in einer sekundären Verfügbarkeitsgruppe durchgeführt werden, da sekundäre Replikate nur mit dem primären Replikat ihrer eigenen Verfügbarkeitsgruppe kommunizieren. Nur für Replikate, die direkt mit dem globalen primären Replikat kommunizieren, können Sicherungsvorgänge durchgeführt werden.
 
