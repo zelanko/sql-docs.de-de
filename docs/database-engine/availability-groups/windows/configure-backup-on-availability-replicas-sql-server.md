@@ -16,14 +16,14 @@ helpviewer_keywords:
 - automated backup preference
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: ebe23aa1fb252ce19f887b225527c3ec7a3339c6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 1d9a6dc56f0c61e454d368215cb37f4a2f5602c2
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726462"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584497"
 ---
 # <a name="configure-backups-on-secondary-replicas-of-an-always-on-availability-group"></a>Konfigurieren von Sicherungen auf sekundären Replikaten von Always On-Verfügbarkeitsgruppen
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -114,7 +114,7 @@ ms.locfileid: "91726462"
   
      Verwenden Sie zum Hinzufügen eines Verfügbarkeitsreplikats zu einer Verfügbarkeitsgruppe das Cmdlet **New-SqlAvailabilityReplica** . Verwenden Sie zum Ändern eines vorhandenen Verfügbarkeitsreplikats das Cmdlet **Set-SqlAvailabilityReplica** . In beiden Fällen geben Sie den **BackupPriority**_n_ -Parameter (BackupPriority) an, wobei *n* für einen Wert zwischen 0 und 100 steht.  
   
-     Beispielsweise legt der folgende Befehl die Sicherungspriorität des Verfügbarkeitsreplikats `MyReplica` auf **60**fest.  
+     Beispielsweise legt der folgende Befehl die Sicherungspriorität des Verfügbarkeitsreplikats `MyReplica` auf **60** fest.  
   
     ```  
     Set-SqlAvailabilityReplica -BackupPriority 60 `  
@@ -143,9 +143,9 @@ ms.locfileid: "91726462"
      Gibt an, dass Sicherungsaufträge die Rolle der Verfügbarkeitsreplikate ignorieren sollen, wenn sie das Replikat zum Durchführen der Sicherungen auswählen. Hinweis: Sicherungsaufträge können andere Faktoren auswerten, wie z. B. die Sicherungspriorität jedes Verfügbarkeitsreplikats in Verbindung mit seinem Betriebszustand und Verbindungsstatus.  
   
     > [!IMPORTANT]  
-    >  **AutomatedBackupPreference**wird nicht erzwungen. Die Interpretation dieser Voreinstellung hängt von der Logik ab, die Sie ggf. per Skript in Sicherungsaufträge für die Datenbanken in einer bestimmten Verfügbarkeitsgruppe eingefügt haben. Die Voreinstellung für die automatisierte Sicherung hat keine Auswirkungen auf Ad-hoc-Sicherungen. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Nachverfolgung: Nach dem Konfigurieren einer Sicherung auf sekundären Replikaten](#FollowUp) .  
+    >  **AutomatedBackupPreference** wird nicht erzwungen. Die Interpretation dieser Voreinstellung hängt von der Logik ab, die Sie ggf. per Skript in Sicherungsaufträge für die Datenbanken in einer bestimmten Verfügbarkeitsgruppe eingefügt haben. Die Voreinstellung für die automatisierte Sicherung hat keine Auswirkungen auf Ad-hoc-Sicherungen. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Nachverfolgung: Nach dem Konfigurieren einer Sicherung auf sekundären Replikaten](#FollowUp) .  
   
-     Beispielsweise legt der folgende Befehl die **AutomatedBackupPreference** -Eigenschaft der Verfügbarkeitsgruppe `MyAg` auf **SecondaryOnly**fest. Automatisierte Sicherungen der Datenbanken in dieser Verfügbarkeitsgruppe treten nie auf dem primären Replikat auf, sondern werden an das sekundäre Replikat mit der höchsten Sicherungspriorität umgeleitet.  
+     Beispielsweise legt der folgende Befehl die **AutomatedBackupPreference** -Eigenschaft der Verfügbarkeitsgruppe `MyAg` auf **SecondaryOnly** fest. Automatisierte Sicherungen der Datenbanken in dieser Verfügbarkeitsgruppe treten nie auf dem primären Replikat auf, sondern werden an das sekundäre Replikat mit der höchsten Sicherungspriorität umgeleitet.  
   
     ```  
     Set-SqlAvailabilityGroup `  
@@ -178,7 +178,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
  Indem Sie für einen Sicherungsauftrag ein Skript mit dieser Logik erstellen, können Sie die Ausführung des Auftrags auf jedem Verfügbarkeitsreplikat nach demselben Zeitplan vorsehen. Jeder dieser Aufträge greift auf die gleichen Daten zurück, um zu bestimmen, welcher Auftrag auszuführen ist. Folglich wechselt eigentlich nur einer der geplanten Aufträge in den Sicherungsstatus.  Bei einem Failover muss kein Skript oder Auftrag geändert werden. Auch bei der Neukonfiguration einer Verfügbarkeitsgruppe zum Hinzufügen eines Verfügbarkeitsreplikats ist zum Verwalten des Sicherungsauftrags nur das Kopieren oder Planen des Sicherungsauftrags erforderlich. Wenn Sie ein Verfügbarkeitsreplikat entfernen, löschen Sie einfach den Sicherungsauftrag von der Serverinstanz, die dieses Replikat gehostet hat.  
   
 > [!TIP]  
->  Wenn Sie einen bestimmten Sicherungsauftrag mithilfe des[Wartungsplanungs-Assistenten](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)erstellen, verfügt der Auftrag automatisch über die Skripterstellungslogik, durch die die **sys.fn_hadr_backup_is_preferred_replica** -Funktion aufgerufen und überprüft wird. Der Sicherungsauftrag gibt jedoch nicht die Nachricht „Dies ist nicht das bevorzugte Replikat...“ zurück. Stellen Sie sicher, dass Sie die Aufträge für jede Verfügbarkeitsdatenbank auf jeder Serverinstanz erstellen, die ein Verfügbarkeitsreplikat für die Verfügbarkeitsgruppe hostet.  
+>  Wenn Sie einen bestimmten Sicherungsauftrag mithilfe des [Wartungsplanungs-Assistenten](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)erstellen, verfügt der Auftrag automatisch über die Skripterstellungslogik, durch die die **sys.fn_hadr_backup_is_preferred_replica** -Funktion aufgerufen und überprüft wird. Der Sicherungsauftrag gibt jedoch nicht die Nachricht „Dies ist nicht das bevorzugte Replikat...“ zurück. Stellen Sie sicher, dass Sie die Aufträge für jede Verfügbarkeitsdatenbank auf jeder Serverinstanz erstellen, die ein Verfügbarkeitsreplikat für die Verfügbarkeitsgruppe hostet.  
   
 ##  <a name="to-obtain-information-about-backup-preference-settings"></a><a name="ForInfoAboutBuPref"></a> So rufen Sie Informationen zu Sicherungseinstellungen ab  
  Folgendes ist hilfreich zum Abrufen von Informationen, die für eine Sicherung auf sekundären Replikaten relevant sind.  

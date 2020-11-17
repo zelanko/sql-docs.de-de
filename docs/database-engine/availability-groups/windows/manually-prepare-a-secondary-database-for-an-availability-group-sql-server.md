@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], databases
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: aaf5b4f4c8e93d3f36ddbd4768ebf2e453112fae
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 114a47009a1920ba3068f97701c785fa4666040e
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726369"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584188"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>Vorbereiten einer sekundären Datenbank auf eine Always On-Verfügbarkeitsgruppe
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -230,11 +230,11 @@ In diesem Thema wird erläutert, wie eine Datenbank in [!INCLUDE[ssnoversion](..
 ##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell  
  **So bereiten Sie eine sekundäre Datenbank vor**  
   
-1.  Wenn Sie eine aktuelle Sicherung der primären Datenbank erstellen müssen, wechseln Sie mit**cd**in das Verzeichnis der Serverinstanz, die das primäre Replikat hostet.  
+1.  Wenn Sie eine aktuelle Sicherung der primären Datenbank erstellen müssen, wechseln Sie mit **cd** in das Verzeichnis der Serverinstanz, die das primäre Replikat hostet.  
   
 2.  Verwenden Sie das Cmdlet **Backup-SqlDatabase** , um jede Sicherung zu erstellen.  
   
-3.  Wechseln Sie mit**cd**in das Verzeichnis der Serverinstanz, die das sekundäre Replikat hostet.  
+3.  Wechseln Sie mit **cd** in das Verzeichnis der Serverinstanz, die das sekundäre Replikat hostet.  
   
 4.  Stellen Sie die Datenbank und die Protokollsicherungen aller primären Datenbanken mit dem Cmdlet **restore-SqlDatabase** wieder her, und geben Sie dabei den Wiederherstellungsparameter **NoRecovery** an. Wenn sich die Dateipfade zwischen den Computern unterscheiden, die das primäre Replikat und das sekundäre Zielreplikat hosten, verwenden Sie ebenfalls den Wiederherstellungsparameter **RelocateFile** .  
   

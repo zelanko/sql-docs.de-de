@@ -13,19 +13,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover modes
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 99155a11cfa3b8837dfec41a9163db6b9c56a925
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 7cd148979886048bad16bc706d19b020d114377f
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727901"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584252"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Failover und Failovermodi (Always On-Verfügbarkeitsgruppen)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  Im Kontext einer Verfügbarkeitsgruppe können die primäre und die sekundäre Rolle von Verfügbarkeitsreplikaten normalerweise im Rahmen des so genannten *Failovers*ausgetauscht werden. Failover können in drei Formen auftreten: automatisches Failover (ohne Datenverlust), geplantes manuelles Failover (ohne Datenverlust) und erzwungenes manuelles Failover (mit möglichem Datenverlust), welches in der Regel *erzwungenes Failover*genannt wird. Beim automatischen und geplanten manuellen Failover bleiben alle Daten erhalten. Eine Verfügbarkeitsgruppe führt ein Failover auf der Ebene des Verfügbarkeitsreplikats aus. Das heißt, eine Verfügbarkeitsgruppe führt ein Failover auf eines ihrer sekundären Replikate (das aktuelle *Failoverziel*) aus.  
+  Im Kontext einer Verfügbarkeitsgruppe können die primäre und die sekundäre Rolle von Verfügbarkeitsreplikaten normalerweise im Rahmen des so genannten *Failovers* ausgetauscht werden. Failover können in drei Formen auftreten: automatisches Failover (ohne Datenverlust), geplantes manuelles Failover (ohne Datenverlust) und erzwungenes manuelles Failover (mit möglichem Datenverlust), welches in der Regel *erzwungenes Failover* genannt wird. Beim automatischen und geplanten manuellen Failover bleiben alle Daten erhalten. Eine Verfügbarkeitsgruppe führt ein Failover auf der Ebene des Verfügbarkeitsreplikats aus. Das heißt, eine Verfügbarkeitsgruppe führt ein Failover auf eines ihrer sekundären Replikate (das aktuelle *Failoverziel*) aus.  
   
 > [!NOTE]  
 >   Wenn [Integritätserkennung aus Datenbankebene](../../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md) nicht konfiguriert ist, führen Probleme auf Datenbankebene (z. B. wenn eine Datenbank aufgrund des Verlusts einer Datendatei fehlerverdächtig wird, eine Datenbank gelöscht oder ein Transaktionsprotokoll beschädigt wird) nicht zum Failover einer Verfügbarkeitsgruppe.  
@@ -62,7 +62,7 @@ ms.locfileid: "91727901"
  Beim Verlust des primären Replikats tritt automatisch ein Failover statt. Automatisches Failover wird nur unterstützt, wenn das aktuelle primäre Replikat und ein sekundäres Replikat so konfiguriert sind, dass der Failovermodus auf AUTOMATIC festgelegt ist und das sekundäre Replikat derzeit synchronisiert wird.  Wenn der Failovermodus entweder des primären oder des sekundären Replikats MANUAL ist, kann kein automatisches Failover auftreten.  
   
  Geplantes manuelles Failover (ohne Datenverlust)  
- Ein geplantes manuelles Failover oder *manuelles Failover*ist ein Failover, das in der Regel von einem Datenbankadministrator zu administrativen Zwecken initiiert wird. Ein geplantes manuelles Failover wird nur unterstützt, wenn sowohl das primäre Replikat als auch das sekundäre Replikat für den Modus mit synchronem Commit konfiguriert sind und das primäre und sekundäre Replikat derzeit synchronisiert werden (im Status SYNCHRONIZED). Wenn das sekundäre Zielreplikat synchronisiert ist, ist ein manuelles Failover (ohne Datenverlust) selbst bei einem Absturz des primären Replikats möglich, da die sekundären Datenbanken für ein Failover bereit sind. Ein Datenbankadministrator initiiert manuell ein manuelles Failover.  
+ Ein geplantes manuelles Failover oder *manuelles Failover* ist ein Failover, das in der Regel von einem Datenbankadministrator zu administrativen Zwecken initiiert wird. Ein geplantes manuelles Failover wird nur unterstützt, wenn sowohl das primäre Replikat als auch das sekundäre Replikat für den Modus mit synchronem Commit konfiguriert sind und das primäre und sekundäre Replikat derzeit synchronisiert werden (im Status SYNCHRONIZED). Wenn das sekundäre Zielreplikat synchronisiert ist, ist ein manuelles Failover (ohne Datenverlust) selbst bei einem Absturz des primären Replikats möglich, da die sekundären Datenbanken für ein Failover bereit sind. Ein Datenbankadministrator initiiert manuell ein manuelles Failover.  
   
  Erzwungenes Failover (mit möglichem Datenverlust)  
  Ein Failover, das von einem Datenbankadministrator initiiert werden kann, wenn kein sekundäres Replikat mit dem primären Replikat SYNCHRONISIERT ist oder das primäre Replikat nicht ausgeführt wird und kein sekundäres Replikat für ein Failover bereit ist. Ein erzwungenes Failover birgt das Risiko möglicher Datenverluste und sollte nur für die Notfallwiederherstellung verwendet werden. Erzwungenes Failover ist auch als erzwungenes manuelles Failover bekannt, da es nur manuell initiiert werden kann. Dies ist der einzige Failovertyp, der im Verfügbarkeitsmodus für asynchrone Commits unterstützt wird.  

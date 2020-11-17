@@ -10,14 +10,14 @@ ms.topic: end-user-help
 f1_keywords:
 - sql13.swb.addreplicawizard.enterpasswords.f1
 ms.assetid: e69207a0-c5c4-44e4-ae9a-4afbb67251d1
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 334b5783bf85683403cfc12e736e6c8f2bd1761f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 4ab6d424bfa1ff70ada91956e4552032843ff28b
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116170"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584268"
 ---
 # <a name="enter-passwords-page-add-replica-wizard-for-always-on-availability-groups"></a>Seite zum Eingeben der Kennwörter (Assistent zum Hinzufügen von Replikaten) für Always On-Verfügbarkeitsgruppen
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -35,12 +35,12 @@ ms.locfileid: "91116170"
  Zeigt die Datenbankgröße an, wenn die Größe für den Assistenten verfügbar ist.  
   
  **Status**  
- Gibt an, dass für Datenbanken, die über einen Datenbank-Hauptschlüssel verfügen, ein **Kennwort erforderlich** ist. Klicken Sie nach dem Eingeben der Kennwörter für die Datenbank-Hauptschlüssel in der **Kennwörter** -Spalte auf **Aktualisieren**. Wenn Sie die Kennwörter richtig eingegeben haben, wird in der **Status** -Spalte **Kennwort eingegeben**angezeigt.  
+ Gibt an, dass für Datenbanken, die über einen Datenbank-Hauptschlüssel verfügen, ein **Kennwort erforderlich** ist. Klicken Sie nach dem Eingeben der Kennwörter für die Datenbank-Hauptschlüssel in der **Kennwörter** -Spalte auf **Aktualisieren**. Wenn Sie die Kennwörter richtig eingegeben haben, wird in der **Status** -Spalte **Kennwort eingegeben** angezeigt.  
   
- Die Spalte **Status** gibt **Kein Kennwort erforderlich**für Datenbanken an, die über keinen Datenbank-Hauptschlüssel verfügen.  
+ Die Spalte **Status** gibt **Kein Kennwort erforderlich** für Datenbanken an, die über keinen Datenbank-Hauptschlüssel verfügen.  
   
  **Kennwort**  
- Wenn die Spalte **Status** **Kennwort erforderlich**angibt, geben Sie das Kennwort für den Datenbank-Hauptschlüssel ein.  
+ Wenn die Spalte **Status** **Kennwort erforderlich** angibt, geben Sie das Kennwort für den Datenbank-Hauptschlüssel ein.  
   
  **Aktualisieren**  
  Klicken Sie, um das Raster zu aktualisieren. Dies ist nützlich, nachdem Sie die erforderlichen Kennwörter eingegeben haben.  
