@@ -1,6 +1,6 @@
 ---
-title: Laden von Daten in Azure Synapse Analytics mit SQL Server Integration Services (SSIS) | Microsoft-Dokumentation
-description: In diesem Artikel wird erläutert, wie ein SQL Server Integration Services-Paket (SSIS) erstellt wird, um Daten aus einer Vielzahl von Datenquellen in Azure Synapse Analytics zu verschieben.
+title: Laden von Daten in Azure Synapse Analytics mit SQL Server Integration Services (SSIS)
+description: In diesem Artikel wird erläutert, wie ein SQL Server Integration Services-Paket (SSIS) erstellt wird, um Daten aus einer Vielzahl von Datenquellen in einen dedizierten SQL-Pool in Azure Synapse Analytics zu verschieben.
 documentationcenter: NA
 ms.prod: sql
 ms.prod_service: integration-services
@@ -10,20 +10,18 @@ ms.custom: loading
 ms.date: 08/09/2018
 ms.author: chugu
 author: chugugrace
-ms.openlocfilehash: 3cd591bd087170e6f5a6329c4411b2674d19b4f3
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 7b582e5722b19db3569aaa0f154f5b78864a2838
+ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192500"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93328506"
 ---
-# <a name="load-data-into-azure-synapse-analytics-with-sql-server-integration-services-ssis"></a>Laden von Daten in Azure Synapse Analytics mit SQL Server Integration Services (SSIS)
+# <a name="load-data-into-a-dedicated-sql-pool-in-azure-synapse-analytics-with-sql-server-integration-services-ssis"></a>Laden von Daten in einen dedizierten SQL-Pool in Azure Synapse Analytics mit SQL Server Integration Services (SSIS)
 
-[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[asa](../includes/applies-to-version/asa.md)]
 
-
-
-Erstellen Sie ein SQL Server Integration Services-Paket (SSIS), um Daten in [Azure Synapse Analytics](/azure/sql-data-warehouse/index) zu verschieben. Sie können die Daten optional umstrukturieren, transformieren und bereinigen, während diese den SSIS-Datenfluss durchlaufen.
+Erstellen Sie ein SQL Server Integration Services-Paket (SSIS), um Daten in einen dedizierten SQL-Pool in Azure Synapse Analytics](/azure/sql-data-warehouse/index) zu verschieben. Sie können die Daten optional umstrukturieren, transformieren und bereinigen, während diese den SSIS-Datenfluss durchlaufen.
 
 Dieser Artikel enthält Anleitungen für folgende Aktionen:
 
@@ -41,8 +39,8 @@ Eine ausführliche Einführung in SSIS würde den Rahmen dieses Artikels sprenge
 
 - [Erstellen eines einfachen ETL-Pakets](ssis-how-to-create-an-etl-package.md)
 
-## <a name="options-for-loading-data-into-sql-data-warehouse-with-ssis"></a>Optionen zum Laden von Daten in SQL Data Warehouse mithilfe von SSIS
-SQL Server Integration Services (SSIS) ist eine vielseitige Gruppe von Tools, die eine große Bandbreite an Optionen bereitstellen, um eine Verbindung mit SQL Data Warehouse herzustellen und Daten zu laden.
+## <a name="options-for-loading-data-into-azure-synapse-analytics-with-ssis"></a>Optionen zum Laden von Daten in Azure Synapse Analytics mit SSIS
+SQL Server Integration Services (SSIS) ist eine vielseitige Gruppe von Tools, die eine große Bandbreite an Optionen bereitstellen, um eine Verbindung mit Azure Synapse Analytics herzustellen und Daten zu laden.
 
 1. Die bevorzugte Methode, die die beste Leistung bietet, ist das Erstellen eines Pakets, das den [Azure SQL DW Upload-Task](control-flow/azure-sql-dw-upload-task.md) zum Laden der Daten verwendet. Dieser Task beinhaltet die Informationen von Quelle und Ziel. Es wird davon ausgegangen, dass Ihre Quelldaten lokal in durch Trennzeichen getrennten Textdateien gespeichert sind.
 
@@ -54,7 +52,7 @@ Zum Abschließen dieses Tutorials benötigen Sie Folgendes:
 1. **SQL Server Integration Services (SSIS)** . SSIS ist eine Komponente von SQL Server und erfordert eine lizenzierte Version oder die Entwickler- oder Evaluierungsversion von SQL Server. Informationen darüber, wie Sie eine Evaluierungsversion von SQL Server erhalten, finden Sie im [Evaluation Center für SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm).
 2. **Visual Studio** (optional). Visual Studio Community Edition können Sie kostenlos unter [Visual Studio Community][Visual Studio Community] abrufen. Wenn Sie Visual Studio nicht installieren möchten, können Sie auch nur SQL Server Data Tools (SSDT) installieren. Mit SSDT wird auch eine Version von Visual Studio mit eingeschränkter Funktionalität installiert.
 3. **SQL Server Data Tools for Visual Studio (SSDT)** . Informationen zum Installieren von SQL Server Data Tools für Visual Studio finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)].
-4. **Eine Azure Synapse Analytics-Datenbank und Berechtigungen**. In diesem Tutorial stellen Sie eine Verbindung mit einer SQL Data Warehouse-Instanz her und laden Daten in diese. Sie benötigen Berechtigungen für eine Verbindung, zum Erstellen einer Tabelle und zum Laden von Daten.
+4. **Eine Azure Synapse Analytics-Datenbank und Berechtigungen**. In diesem Tutorial wird eine Verbindung mit einem dedizierten SQL-Pool in einer Instanz von Azure Synapse Analytics hergestellt, und Daten werden geladen. Sie benötigen Berechtigungen für eine Verbindung, zum Erstellen einer Tabelle und zum Laden von Daten.
 
 ## <a name="create-a-new-integration-services-project"></a>Erstellen eines neuen SQL Server Integration Services-Projekts
 1. Starten Sie Visual Studio.
@@ -80,7 +78,7 @@ Um mit dem Tutorial mit dieser Option fortzufahren, benötigen Sie Folgendes:
 
 - Das [Microsoft SQL Server Integration Services-Feature Pack für Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]. Der SQL DW Upload-Task ist eine Komponente des Feature Packs.
 
-- Ein [Azure Blob Storage](/azure/storage/)-Konto. Der SQL DW Upload-Task lädt Daten von Azure Blob Storage in Azure Synapse Analytics. Sie können Dateien laden, die sich bereits in Blob Storage befinden, oder Sie können Dateien von Ihrem Computer laden. Wenn Sie Dateien von Ihrem Computer auswählen, lädt der SQL DW Upload-Task diese zunächst für den Stagingprozess in Blob Storage und erst anschließend in SQL Data Warehouse.
+- Ein [Azure Blob Storage](https://docs.microsoft.com/azure/storage/)-Konto. Der SQL DW Upload-Task lädt Daten von Azure Blob Storage in Azure Synapse Analytics. Sie können Dateien laden, die sich bereits in Blob Storage befinden, oder Sie können Dateien von Ihrem Computer laden. Wenn Sie Dateien von Ihrem Computer auswählen, lädt der SQL DW Upload-Task diese zunächst für den Stagingprozess in Blob Storage und erst anschließend in Ihren dedizierten SQL-Pool.
 
 ### <a name="add-and-configure-the-sql-dw-upload-task"></a>Hinzufügen und Konfigurieren des SQL DW Upload-Tasks
 
@@ -98,7 +96,7 @@ Sie können für eine präzisere Steuerung ein Paket, das die vom SQL DW Upload-
 
 1. Verwenden Sie den Task „Azure-Blob hochladen“ zum Bereitstellen von Eingabedaten in den Azure Blob Storage. Laden Sie das [Microsoft SQL Server Integration Services Feature Pack für Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure] herunter, um den Task „Azure Blob Upload“ nutzen zu können.
 
-2. Starten Sie dann mithilfe des SSIS-Tasks „SQL ausführen“ ein PolyBase-Skript, das die Daten in SQL Data Warehouse lädt. Ein Beispiel, mit dem Daten von Azure Blob Storage in SQL Data Warehouse geladen werden (jedoch ohne SSIS), finden Sie unter [Tutorial: Laden von Daten in Azure Synapse Analytics](/azure/sql-data-warehouse/load-data-wideworldimportersdw).
+2. Starten Sie dann mithilfe des SSIS-Tasks „SQL ausführen“ ein PolyBase-Skript, das die Daten in Ihren dedizierten SQL-Pool lädt. Ein Beispiel, in dem Daten von Azure Blob Storage in Ihren dedizierten SQL-Pool geladen werden (jedoch ohne SSIS), finden Sie unter [Tutorial: Laden von Daten in Azure Synapse Analytics](/azure/sql-data-warehouse/load-data-wideworldimportersdw).
 
 ## <a name="option-2---use-a-source-and-destination"></a>Option 2: Verwenden einer Quelle und eines Ziels
 
@@ -106,7 +104,7 @@ Die zweite Möglichkeit besteht aus einem normalen Paket, das einen Datenflussta
 
 In diesem Tutorial wird SQL Server als Datenquelle verwendet. SQL Server wird auf einem lokalen Computer oder auf einem virtuellen Azure-Computer ausgeführt.
 
-Um eine Verbindung zu SQL Server und SQL Data Warehouse herzustellen, können Sie den ADO.NET-Verbindungs-Manager und dazu Quelle und Ziel verwenden. Alternativ können Sie den OLE DB-Verbindungs-Manager mit Quelle und Ziel verwenden. Dieses Tutorial verwendet ADO NET, da darin die wenigsten Konfigurationsoptionen enthalten sind. OLE DB stellt möglicherweise eine geringfügig bessere Leistung als ADO .NET bereit.
+Um eine Verbindung mit SQL Server und einem dedizierten SQL-Pool herzustellen, können Sie den ADO.NET-Verbindungs-Manager und dazu Quelle und Ziel verwenden. Alternativ können Sie den OLE DB-Verbindungs-Manager mit Quelle und Ziel verwenden. Dieses Tutorial verwendet ADO NET, da darin die wenigsten Konfigurationsoptionen enthalten sind. OLE DB stellt möglicherweise eine geringfügig bessere Leistung als ADO .NET bereit.
 
 Um das Verfahren abzukürzen, können Sie den SQL Server-Import/Export-Assistenten verwenden, um das einfache Paket zu erstellen. Speichern Sie das Paket anschließend, und öffnen Sie es in Visual Studio oder SSDT, um es anzuzeigen und anzupassen. Weitere Informationen finden Sie unter [Importieren und Exportieren von Daten mit dem SQL Server-Import/Export-Assistenten](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
 
@@ -114,9 +112,9 @@ Um das Verfahren abzukürzen, können Sie den SQL Server-Import/Export-Assistent
 
 Um mit dem Tutorial mit dieser Option fortzufahren, benötigen Sie Folgendes:
 
-1. **Beispieldaten**. Dieses Tutorial verwendet als Quelldaten zum Laden in SQL Data Warehouse Beispieldaten, die in der AdventureWorks-Beispieldatenbank in SQL Server gespeichert sind. Die AdventureWorks-Beispieldatenbank können Sie unter [AdventureWorks-Beispieldatenbanken][AdventureWorks 2014 Sample Databases] abrufen.
+1. **Beispieldaten**. Dieses Tutorial verwendet als Quelldaten zum Laden in einen dedizierten SQL-Pool Beispieldaten, die in der AdventureWorks-Beispieldatenbank in SQL Server gespeichert sind. Die AdventureWorks-Beispieldatenbank können Sie unter [AdventureWorks-Beispieldatenbanken][AdventureWorks 2014 Sample Databases] abrufen.
 
-2. **Eine Firewallregel**. Sie müssen eine Firewallregel für SQL Data Warehouse mit der IP-Adresse Ihres lokalen Computers erstellen, bevor Sie Daten in SQL Data Warehouse hochladen können.
+2. **Eine Firewallregel**. Sie müssen eine Firewallregel auf Ihrem dedizierten SQL-Pool mit der IP-Adresse Ihres lokalen Computers erstellen, bevor Sie Daten in den dedizierten SQL-Pool hochladen können.
 
 ### <a name="create-the-basic-data-flow"></a>Erstellen des grundlegenden Datenflusses
 1. Ziehen Sie einen Datenflusstask aus der Toolbox in die Mitte der Entwurfsoberfläche (auf der Registerkarte **Ablaufsteuerung**).
@@ -175,9 +173,9 @@ Um mit dem Tutorial mit dieser Option fortzufahren, benötigen Sie Folgendes:
 3. Klicken Sie im Dialogfeld **ADO.NET-Verbindungs-Manager konfigurieren** auf die Schaltfläche **Neu**, um das Dialogfeld **Verbindungs-Manager** zu öffnen, und erstellen Sie eine neue Datenverbindung.
 4. Führen Sie im Dialogfeld **Verbindungs-Manager** folgende Schritte durch:
    1. Wählen Sie als **Anbieter** den SqlClient-Datenanbieter aus.
-   2. Geben Sie für **Servername** den Namen von SQL Data Warehouse an.
+   2. Geben Sie für **Servername** den Namen des dedizierten SQL-Pools ein.
    3. Wählen Sie im Abschnitt **Beim Server anmelden** die Option **SQL Server-Authentifizierung verwenden** aus, und geben Sie die Authentifizierungsinformationen ein.
-   4. Wählen Sie im Abschnitt **Mit Datenbank verbinden** eine vorhandene SQL Data Warehouse-Datenbank aus.
+   4. Wählen Sie im Abschnitt **Mit Datenbank verbinden** eine vorhandene Datenbank des dedizierten SQL-Pools aus.
    5. Klicken Sie auf **Verbindung testen**.
    6. Klicken Sie im Dialogfeld, in dem die Ergebnisse des Verbindungstests gemeldet werden, auf **OK**, um zum Dialogfeld **Verbindungs-Manager** zurückzukehren.
    7. Klicken Sie im Dialogfeld **Verbindungs-Manager** auf **OK**, um zum Dialogfeld **ADO.NET-Verbindungs-Manager konfigurieren** zurückzukehren.
@@ -188,8 +186,8 @@ Um mit dem Tutorial mit dieser Option fortzufahren, benötigen Sie Folgendes:
 7. Führen Sie im Dialogfeld **Tabelle erstellen** die folgenden Schritte aus:
    
    1. Ändern Sie den Namen der Zieltabelle in **SalesOrderDetail**.
-   2. Entfernen Sie die Spalte **rowguid**. Der Datentyp **uniqueidentifier** wird nicht in SQL Data Warehouse unterstützt.
-   3. Ändern Sie den Datentyp der Spalte **LineTotal** in **money**. Der Datentyp **decimal** wird nicht in SQL Data Warehouse unterstützt. Informationen zu unterstützten Datentypen finden Sie unter [CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)][CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)].
+   2. Entfernen Sie die Spalte **rowguid**. Der Datentyp **uniqueidentifier** wird nicht im dedizierten SQL-Pool unterstützt.
+   3. Ändern Sie den Datentyp der Spalte **LineTotal** in **money**. Der Datentyp **decimal** wird nicht im dedizierten SQL-Pool unterstützt. Informationen zu unterstützten Datentypen finden Sie unter [CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)][CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)].
       
        ![Screenshot des Dialogfelds „Tabelle erstellen“ mit Code zum Erstellen einer Tabelle namens SalesOrderDetail mit LineTotal als money-Spalte und ohne ROWGUID-Spalte][12b]
    4. Klicken Sie auf **OK**, um die Tabelle zu erstellen und zum **ADO.NET-Ziel-Editor** zurückzukehren.
