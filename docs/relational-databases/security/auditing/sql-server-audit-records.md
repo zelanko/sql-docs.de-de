@@ -68,7 +68,7 @@ ms.locfileid: "91868549"
   
 -   Dieser Prozess wird wiederholt, bis alle Daten aufgezeichnet wurden.  
   
- Sie können die Daten verbinden, indem Sie die Zeilen sequenziell mit dem Wert **sequence_no** und den Spalten **event_Time** , **action_id** sowie **session_id** lesen, um die Aktion zu identifizieren.  
+ Sie können die Daten verbinden, indem Sie die Zeilen sequenziell mit dem Wert **sequence_no** und den Spalten **event_Time**, **action_id** sowie **session_id** lesen, um die Aktion zu identifizieren.  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-server-audit-transact-sql.md)  

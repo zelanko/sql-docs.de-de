@@ -18,14 +18,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], wizards
 - Availability Groups [SQL Server], configuring
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: d5010c559ffc7e1f89ebce87129c0b16a6853753
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: a64554a84bc8e238a48058e3d9c925a5c2809057
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882402"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583400"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Verwenden des Assistenten für Failover-Verfügbarkeitsgruppen (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "85882402"
   
 2.  Erweitern Sie den Knoten **Hohe Verfügbarkeit (immer aktiviert)** und den Knoten **Verfügbarkeitsgruppen** .  
   
-3.  Um den Assistenten für das Failover von Verfügbarkeitsgruppen zu starten, klicken Sie mit der rechten Maustaste auf die Verfügbarkeitsgruppe, für die ein Failover ausgeführt werden soll, und wählen **Failover**aus.  
+3.  Um den Assistenten für das Failover von Verfügbarkeitsgruppen zu starten, klicken Sie mit der rechten Maustaste auf die Verfügbarkeitsgruppe, für die ein Failover ausgeführt werden soll, und wählen **Failover** aus.  
   
 4.  Welche Informationen auf der Seite **Einführung** angezeigt werden, hängt davon ab, ob ein sekundäres Replikat für ein geplantes Failover geeignet ist. Wenn diese Seite den Text "**Geplantes Failover für diese Verfügbarkeitsgruppe ausführen**" enthält, dann können Sie ein Failover für die Verfügbarkeitsgruppe ohne Datenverlust durchführen.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "85882402"
   
 6.  Stellen Sie auf der Seite **Verbindung mit Replikat herstellen** eine Verbindung mit dem Failoverziel her. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Seite 'Verbindung mit Replikat herstellen'](#ConnectToReplica).  
   
-7.  Wenn Sie ein erzwungenes Failover ausführen, zeigt der Assistent die Seite **Potenziellen Datenverlust bestätigen** an. Um mit dem Failover fortzufahren, müssen Sie **Hier klicken, um Failover mit potenziellem Datenverlust zu bestätigen**auswählen. Weitere Informationen finden Sie nachfolgend in diesem Thema unter[Seite 'Potenziellen Datenverlust bestätigen'](#ConfirmPotentialDataLoss).  
+7.  Wenn Sie ein erzwungenes Failover ausführen, zeigt der Assistent die Seite **Potenziellen Datenverlust bestätigen** an. Um mit dem Failover fortzufahren, müssen Sie **Hier klicken, um Failover mit potenziellem Datenverlust zu bestätigen** auswählen. Weitere Informationen finden Sie nachfolgend in diesem Thema unter[Seite 'Potenziellen Datenverlust bestätigen'](#ConfirmPotentialDataLoss).  
   
 8.  Überprüfen Sie auf der Seite **Zusammenfassung** die Auswirkungen eines Failovers zum ausgewählten sekundären Replikat.  
   

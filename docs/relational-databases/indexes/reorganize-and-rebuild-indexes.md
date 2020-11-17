@@ -199,7 +199,7 @@ Die folgenden Informationen sind auf der Seite **Fragmentierung** verfügbar:
 |**Tiefe**|Die Anzahl von Ebenen im Index, einschließlich der Blattebene.|
 |**Weitergeleitete Datensätze**|Anzahl der Datensätze in einem Heap, die Weiterleitungszeiger auf einen anderen Datenspeicherort besitzen. (Dieser Status tritt während eines Updates auf, wenn nicht genügend Speicherplatz vorhanden ist, um die neue Zeile am ursprünglichen Speicherort zu speichern.)|
 |**Inaktive Zeilen**|Anzahl der Zeilen, die als gelöscht markiert sind, aber noch nicht entfernt wurden. Diese Zeilen werden von einem Bereinigungsthread entfernt, wenn der Server nicht ausgelastet ist. Dieser Wert schließt keine Zeilen ein, die aufgrund einer ausstehenden Momentaufnahme-Isolationstransaktion beibehalten werden.|
-|**Indextyp**|Der Indextyp. Mögliche Werte sind **Gruppierter Index** , **Nicht gruppierter Index** und **Primär-XML**. Tabellen können auch als Heap gespeichert werden (ohne Indizes). Dann kann aber diese Seite Indexeigenschaften nicht geöffnet werden.|
+|**Indextyp**|Der Indextyp. Mögliche Werte sind **Gruppierter Index**, **Nicht gruppierter Index** und **Primär-XML**. Tabellen können auch als Heap gespeichert werden (ohne Indizes). Dann kann aber diese Seite Indexeigenschaften nicht geöffnet werden.|
 |**Zeilen auf Blattebene**|Die Anzahl von Zeilen auf Blattebene.|
 |**Maximale Zeilengröße**|Maximale Größe von Zeilen auf Blattebene.|
 |**Minimale Zeilengröße**|Minimale Größe von Zeilen auf Blattebene.|

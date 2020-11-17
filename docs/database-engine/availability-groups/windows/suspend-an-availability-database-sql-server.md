@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], suspending a database
 - Availability Groups [SQL Server], databases
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 6e6dc21e1fb7e61b6d2b68524ea16c5b072003cc
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6550c409ee45e3287c6edf691fe9d5993e531a5a
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670873"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583790"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Anhalten einer Verfügbarkeitsdatenbank (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -108,7 +108,7 @@ ms.locfileid: "91670873"
 ##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell  
  **So halten Sie eine Datenbank an**  
   
-1.  Wechseln Sie mit**cd**in das Verzeichnis der Serverinstanz, die das Replikat hostet, dessen Datenbank Sie anhalten möchten. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Voraussetzungen](#Prerequisites).  
+1.  Wechseln Sie mit **cd** in das Verzeichnis der Serverinstanz, die das Replikat hostet, dessen Datenbank Sie anhalten möchten. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Voraussetzungen](#Prerequisites).  
   
 2.  Verwenden Sie das Cmdlet **Suspend-SqlAvailabilityDatabase** , um die Verfügbarkeitsgruppe anzuhalten.  
   

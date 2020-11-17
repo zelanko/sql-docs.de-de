@@ -6,15 +6,15 @@ ms.technology: azure-data-studio
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-ms.reviewer: alayu, jrasnick
+ms.reviewer: maghan, jrasnick
 ms.custom: seodec18; seo-lt-2019
 ms.date: 10/15/2020
-ms.openlocfilehash: 526349f9e6ca186b8555d52f76f3663c0862503c
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+ms.openlocfilehash: 1b0fe9ee55f9e0e1243ea72e8160b39a95876a55
+ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793697"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570926"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-a-dedicated-sql-pool-in-azure-synapse-analytics"></a>Schnellstart: Verwenden von Azure Data Studio zum Verbinden mit und Abfragen von Daten mithilfe eines dedizierten SQL-Pools in Azure Synapse Analytics
 
@@ -42,7 +42,7 @@ Verwenden Sie Azure Data Studio, um eine Verbindung mit Ihrem Azure Synapse Anal
 
    |   Einstellung    | Vorgeschlagener Wert | BESCHREIBUNG |
    |--------------|-----------------|-------------| 
-   | **Servername** | Der vollqualifizierte Servername | Beispielsweise sollte der Name ähnlich wie hier aussehen: **sqlpoolservername.database.windows.net** . |
+   | **Servername** | Der vollqualifizierte Servername | Beispielsweise sollte der Name ähnlich wie hier aussehen: **sqlpoolservername.database.windows.net**. |
    | **Authentifizierung** | SQL-Anmeldung| In diesem Tutorial wird SQL-Authentifizierung verwendet. |
    | **Benutzername** | Das Serveradministratorkonto | Hierbei handelt es sich um das Konto, das Sie beim Erstellen des Servers angegeben haben. |
    | **Kennwort (SQL-Anmeldung)** | Das Kennwort für das Serveradministratorkonto | Hierbei handelt es sich um das Kennwort, das Sie beim Erstellen des Servers angegeben haben. |
@@ -77,7 +77,7 @@ Verwenden Sie Azure Data Studio, um eine Verbindung mit Ihrem Azure Synapse Anal
 
 Der Abfrage-Editor ist immer noch mit der Datenbank *master* verbunden, aber wir möchten eine Tabelle in der Datenbank *TutorialDB* erstellen. 
 
-1. Ändern Sie den Verbindungskontext in **TutorialDB** :
+1. Ändern Sie den Verbindungskontext in **TutorialDB**:
 
 2. Fügen Sie den folgenden Codeausschnitt in den Abfrage-Editor ein, und wählen Sie **Ausführen** aus:
 
@@ -118,7 +118,7 @@ Der Abfrage-Editor ist immer noch mit der Datenbank *master* verbunden, aber wir
       SELECT 4, N'Janet', N'United States', N'janet1@adventure-works.com'
    ```
 
-    :::image type="content" source="media/quickstart-sql-dw/create-rows.png" alt-text="Erstellen einer Tabelle in der TutorialDB-Datenbank":::
+    :::image type="content" source="media/quickstart-sql-dw/create-rows.png" alt-text="Erstellen von Zeilen in der Tabelle":::
 
 ## <a name="view-the-result"></a>Anzeigen des Ergebnisses
 
@@ -131,7 +131,7 @@ Der Abfrage-Editor ist immer noch mit der Datenbank *master* verbunden, aber wir
 
 2. Die Abfrageergebnisse werden angezeigt:
 
-    :::image type="content" source="media/quickstart-sql-dw/view-results.png" alt-text="Erstellen einer Tabelle in der TutorialDB-Datenbank":::
+    :::image type="content" source="media/quickstart-sql-dw/view-results.png" alt-text="Ansicht der Ergebnisse":::
 
 
 ## <a name="clean-up-resources"></a>Bereinigen von Ressourcen

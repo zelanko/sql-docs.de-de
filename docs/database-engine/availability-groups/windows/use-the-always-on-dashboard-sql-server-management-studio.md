@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 - Availability Groups [SQL Server], dashboard
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 6b63ae0e77cc521d6d882eab340cbfa3b761e41d
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 80b7f3e83af181676f09a6dc38b3652ae6142c89
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670383"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583662"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Verwenden des Dashboards „AlwaysOn-Verfügbarkeitsgruppen“ (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -59,9 +59,9 @@ ms.locfileid: "91670383"
   
 1.  Klicken Sie im Menü **Extras** auf **Optionen**.  
   
-2.  Um das Dashboard automatisch zu aktualisieren, wählen Sie im Dialogfeld **Optionen** den Befehl **Automatische Aktualisierung aktivieren**aus, geben Sie das Aktualisierungsintervall in Sekunden ein, und geben Sie dann die Häufigkeit ein, mit der der Verbindungsversuch wiederholt werden soll.  
+2.  Um das Dashboard automatisch zu aktualisieren, wählen Sie im Dialogfeld **Optionen** den Befehl **Automatische Aktualisierung aktivieren** aus, geben Sie das Aktualisierungsintervall in Sekunden ein, und geben Sie dann die Häufigkeit ein, mit der der Verbindungsversuch wiederholt werden soll.  
   
-3.  Zum Aktivieren einer benutzerdefinierten Richtlinie wählen Sie **Benutzerdefinierte Always On-Richtlinie aktivieren**aus.  
+3.  Zum Aktivieren einer benutzerdefinierten Richtlinie wählen Sie **Benutzerdefinierte Always On-Richtlinie aktivieren** aus.  
   
 ##  <a name="availability-group-summary"></a>Zusammenfassung zu Verfügbarkeitsgruppen  
  Im Verfügbarkeitsgruppen-Bildschirm wird eine Zusammenfassungszeile für jede Verfügbarkeitsgruppe angezeigt, für die die verbundene Serverinstanz ein Replikat hostet. In diesem Bereich werden die folgenden Spalten angezeigt.  
@@ -253,7 +253,7 @@ Im Bereich **Verfügbarkeitsreplikat** werden die folgenden Spalten angezeigt:
  Eine Liste aller Always On-Richtlinienprobleme finden sie unter [Always On-Richtlinien für Betriebsprobleme mit Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Angehalten**  
- Gibt an, ob der Status der Datenbank **Angehalten** oder **Fortgesetzt**lautet. Dieser Wert wird standardmäßig ausgeblendet.  
+ Gibt an, ob der Status der Datenbank **Angehalten** oder **Fortgesetzt** lautet. Dieser Wert wird standardmäßig ausgeblendet.  
   
  **Ursache für das Anhalten**  
  Gibt die Ursache für den Status "Angehalten" an. Dieser Wert wird standardmäßig ausgeblendet.  

@@ -1,7 +1,7 @@
 ---
 title: Einbinden von ADLS Gen2 für HDFS-Tiering
 titleSuffix: How to mount ADLS Gen2
-description: In diesem Artikel wird beschrieben, wie Sie HDFS-Tiering konfigurieren, um ein externes Azure Data Lake Storage-Dateisystem auf einem SQL Server 2019-Big Data-Cluster in HDFS einzubinden.
+description: Dieser Artikel enthält ein Beispiel für die Konfiguration von HDFS-Tiering mit einer Azure Data Lake Storage Gen2-Datenquelle.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 06/29/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b0206ca193e6c03624c0d40d0c66e7474b00a7a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a4bfb894112f071cc7a628146265ede17b3f0a14
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730652"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521037"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Einbinden von ADLS Gen2 für HDFS-Tiering in einen Big Data-Cluster
 
@@ -43,7 +43,7 @@ Im folgenden Abschnitt wird beschrieben, wie Sie Azure Data Lake Storage Gen2 zu
 
 Um OAuth-Anmeldeinformationen zum Einbinden zu verwenden, müssen Sie die folgenden Schritte ausführen:
 
-1. Wechseln Sie zum [Azure-Portal](https://portal.azure.com).
+1. [Navigieren Sie zum Azure-Portal](https://portal.azure.com).
 1. Rufen Sie Azure Active Directory auf. Dieser Dienst sollte Ihnen in der linken Navigationsleiste angezeigt werden.
 1. Klicken Sie in der rechten Navigationsleiste auf „App-Registrierungen“, und erstellen Sie eine neue Registrierung.
 1. Erstellen Sie eine Web-App, und befolgen Sie die Anweisungen des Assistenten. **Merken Sie sich den Namen der App, die Sie hier erstellen**. Sie müssen diesen Namen Ihrem ADLS-Konto als autorisierter Benutzer hinzufügen. Notieren Sie sich auch die Anwendungsclient-ID, die in der Übersicht angezeigt wird, wenn Sie die App auswählen.

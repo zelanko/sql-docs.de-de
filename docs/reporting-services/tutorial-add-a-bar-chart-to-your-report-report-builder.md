@@ -1,6 +1,6 @@
 ---
 title: 'Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation'
-description: Hier erfahren Sie mehr über das Erstellen eines paginierten Reporting Services-Berichts mit einem Säulendiagramm, das eine Reihe senkrechter Balken enthält, die nach Kategorie gruppiert sind.
+description: Erfahren Sie, wie Sie mit einem Assistenten im Berichts-Generator in einem paginierten Reporting Services-Bericht ein Balkendiagramm erstellen.
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 57dd6f4472c64ee37190d5149ef354d5829e1266
-ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
+ms.openlocfilehash: 9b18950488cb0fed336feb3df61e5a4e66b56603
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93043725"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521120"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)
 In diesem Tutorial verwenden Sie einen Assistenten in [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)], um ein Kreisdiagramm in einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]-Bericht zu erstellen. Anschließend fügen Sie einen Filter hinzu und erweitern das Diagramm. 
@@ -200,7 +200,7 @@ Um die Lesbarkeit der Diagrammwerte zu verbessern, können Sie gegebenenfalls di
   
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
   
-2.  Markieren Sie am oberen Diagrammrand den Text **Diagrammtitel** , und geben Sie anschließend Folgendes ein: **Umsätze für 2014 und 2015**.  
+2.  Markieren Sie am oberen Diagrammrand den Text **Diagrammtitel**, und geben Sie anschließend Folgendes ein: **Umsätze für 2014 und 2015**.  
   
 3.  Legen Sie bei ausgewähltem Titel im Bereich „Eigenschaften“ folgende Werte fest: **Farbe** auf **Schwarz** und **Schriftgrad** auf **12 pt**. 
   
@@ -272,9 +272,9 @@ Im Diagramm werden die Namen der fünf besten Vertriebsmitarbeiter gemäß den U
   
     **Top Five-Verkaufsschlager 2015**  
   
-3.  Markieren Sie **Umsatz-Balkendiagramm** , und klicken Sie auf die Schaltfläche **Fett** .  
+3.  Markieren Sie **Umsatz-Balkendiagramm**, und klicken Sie auf die Schaltfläche **Fett** .  
   
-4.  Markieren Sie **Top Five-Verkaufsschlager 2015** , und legen Sie auf der Registerkarte **Stamm** im Abschnitt **Schriftart** den Schriftgrad auf **10** fest.  
+4.  Markieren Sie **Top Five-Verkaufsschlager 2015**, und legen Sie auf der Registerkarte **Stamm** im Abschnitt **Schriftart** den Schriftgrad auf **10** fest.  
   
 5.  (Optional) Das Textfeld „Titel“ muss ggf. vergrößert werden, damit die beiden Textzeilen hineinpassen, und der obere Rand des Balkendiagramms muss heruntergezogen werden, um die beiden Textzeilen aufzunehmen.  
   

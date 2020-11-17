@@ -4,33 +4,34 @@ titleSuffix: ''
 description: Erfahren Sie mehr über die Neuerungen in SQL Server-Spracherweiterungen, mit denen die Integration zwischen externen Sprachen und der Datenplattform ausgebaut, erweitert und vertieft wird.
 author: dphansen
 ms.author: davidph
-ms.date: 11/05/2019
+ms.date: 11/09/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1583ab8c54d16d7bcf129e401c2e540fabb342b3
-ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
+ms.openlocfilehash: 0b1f7aec4b3581a8604fad68518a36ac8ecc14dd
+ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155096"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94417997"
 ---
 # <a name="whats-new-in-sql-server-language-extensions"></a>Neuerungen bei SQL Server-Spracherweiterungen
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
 
 SQL Server werden in jedem Release Funktionen für [Spracherweiterungen](language-extensions-overview.md) hinzugefügt, während wir die Integration zwischen externen Sprachen und der Datenplattform kontinuierlich ausbauen, erweitern und vertiefen.
 
-## <a name="new-python-and-r-language-extensions-in-sql-server-2019"></a>Neue Sprachenerweiterungen für Python und R in SQL Server 2019
+## <a name="sql-server-2019"></a>SQL Server 2019
 
-+ Für [Python unter Windows](../machine-learning/install/custom-runtime-python.md) steht eine benutzerdefinierte Runtime zur Verfügung. Informationen zur Installation unter Linux finden Sie unter [Installieren einer benutzerdefinierten Python-Laufzeit für SQL Server unter Linux](../machine-learning/install/custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true).
+Informationen zu den neuen Möglichkeiten von [Spracherweiterungen](language-extensions-overview.md) in SQL Server 2019 finden Sie nachstehend. Weitere Informationen zu allen Features in diesem Release finden Sie unter [Neuerungen in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) und [Versionshinweise für SQL Server 2019](../sql-server/sql-server-version-15-release-notes.md).
 
-+ Für [R unter Windows](../machine-learning/install/custom-runtime-r.md) steht eine benutzerdefinierte Runtime zur Verfügung. Informationen zur Installation unter Linux finden Sie unter [Installieren einer benutzerdefinierten R-Laufzeit für SQL Server unter Linux](../machine-learning/install/custom-runtime-r.md?view=sql-server-linux-ver15&preserve-view=true).
+### <a name="new-python-and-r-language-extensions"></a>Neue Spracherweiterungen für Python und R
 
+- Über Spracherweiterungen steht eine [benutzerdefinierte Python-Runtime](../machine-learning/install/custom-runtime-python.md) zur Verfügung. Weitere Informationen finden Sie unter [Installieren einer benutzerdefinierten Python-Runtime unter Windows](../machine-learning/install/custom-runtime-python.md?view=sql-server-ver15&preserve-view=true) oder [Installieren einer benutzerdefinierten Python-Runtime unter Linux](../machine-learning/install/custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true).
 
-## <a name="new-java-language-extension-in-sql-server-2019"></a>Neue Java-Sprachenerweiterung in SQL Server 2019
+- Über Spracherweiterungen steht eine [benutzerdefinierte R-Runtime](../machine-learning/install/custom-runtime-r.md) zur Verfügung. Weitere Informationen finden Sie unter [Installieren einer benutzerdefinierten R-Runtime unter Windows](../machine-learning/install/custom-runtime-r.md?view=sql-server-ver15&preserve-view=true) oder [Installieren einer benutzerdefinierten R-Runtime unter Linux](../machine-learning/install/custom-runtime-r.md?view=sql-server-linux-ver15&preserve-view=true).
 
-Weitere Informationen zu allen Features in diesem Release finden Sie unter [Neuerungen in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) und [Versionshinweise für SQL Server 2019](../sql-server/sql-server-version-15-release-notes.md).
+### <a name="new-java-language-extension"></a>Neue Java-Spracherweiterung
 
 - Die Standard-Java-Runtime unter Windows und Linux heißt Open Zulu JRE und ist in der [Installation von SQL Server-Spracherweiterungen unter Windows](install/windows-java.md) und der [Installation von SQL Server-Spracherweiterungen unter Linux](../linux/sql-server-linux-setup-language-extensions-java.md) enthalten.
 - Unterstützte [Java-Datentypen](how-to/java-to-sql-data-types.md).

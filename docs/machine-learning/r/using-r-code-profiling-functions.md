@@ -3,22 +3,22 @@ title: Verbessern der Leistung durch Verwenden von R-Code-Profilerstellungsfunkt
 description: Sammeln Sie hilfreiche Informationen zum Verbessern der Leistung und zum Erzielen schnellerer Ergebnisse für R-Berechnungen unter SQL Server mithilfe von R-Profilerstellungsfunktionen. Die *rprof*-Funktion sammelt Informationen zu internen Funktionsaufrufen und gibt diese zurück.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 12/12/2018
+ms.date: 10/30/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e65171fa0222c0c581f692bede727dc4366c9c53
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: d15f31dc2c289df910b06de8cb1f48647dbde33c
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180437"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384749"
 ---
 # <a name="use-r-code-profiling-functions-to-improve-performance"></a>Verwenden von R-Code-Profilerstellungsfunktionen
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Neben SQL Server-Ressourcen und Tools zum Überwachen von R-Skriptausführung können Sie auch Leistungstools von anderen R-Paketen verwenden, um weitere Informationen zu internen Funktionsaufrufen zu erhalten. 
+In diesem Artikel werden Leistungstools beschrieben, die von R-Paketen bereitgestellt werden, um Informationen zu internen Funktionsaufrufen abzurufen. Anhand dieser Informationen können Sie die Leistung Ihres Codes verbessern.
 
 > [!TIP]
 > Dieser Artikel enthält grundlegende Ressourcen, die Ihnen den Einstieg erleichtern. Als Anleitung wird der Abschnitt *Performance* in [„Advanced R“ von Hadley Wickham](http://adv-r.had.co.nz) empfohlen.
@@ -59,9 +59,11 @@ help("Sys.time")
 
 ## <a name="debugging-and-profiling-in-r"></a>Debuggen und Profilerstellung in R
 
-Die Dokumentation für Microsoft R Open, die standardmäßig installiert ist, enthält ein Handbuch zum Entwickeln von Erweiterungen für die R-Sprache, in dem [Profilerstellung und Debuggen](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging) im Detail erläutert werden. Sie finden dieselbe Dokumentation auf Ihrem Computer im Verzeichnis C:\Programme\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\doc\manual.
+Die Dokumentation für Microsoft R Open, die standardmäßig installiert ist, enthält ein Handbuch zum Entwickeln von Erweiterungen für die R-Sprache, in dem [Profilerstellung und Debuggen](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging) im Detail erläutert werden.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="next-steps"></a>Nächste Schritte
 
-+ [utils R-Paket](https://www.rdocumentation.org/packages/utils/versions/3.5.1)
-+ [„Advanced R“ von Hadley Wickham](http://adv-r.had.co.nz)
++ Weitere Informationen zum Optimieren von R-Skripts in SQL Server finden Sie unter [Leistungs- und Datenoptimierung für R](r-and-data-optimization-r-services.md).
++ Ausführlichere Informationen zur Leistungsoptimierung in SQL Server finden Sie unter [Leistungscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database).
++ Weitere Informationen zum Paket „utils“ finden Sie unter [Das R-Paket „utils“](https://www.rdocumentation.org/packages/utils/versions/3.5.1).
++ Ausführliche Erörterungen der Programmierung in R finden Sie unter [„Advanced R“ von Hadley Wickham](http://adv-r.had.co.nz).

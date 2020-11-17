@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 - Availability Groups [SQL Server]
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: e7ee1430cd764c02c05f2bf3f8f935d397a6155a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: cc56fad8481141cb208b8fb218c281d12c1e3027
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894167"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583732"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>Überwachen von Verfügbarkeitsgruppen anhand der Details im Objekt-Explorer
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "85894167"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So überwachen Sie Verfügbarkeitsgruppen, Verfügbarkeitsreplikate und Verfügbarkeitsdatenbanken**  
   
-1.  Klicken Sie im Menü **Ansicht**auf **Details zum Objekt-Explorer** , oder drücken Sie F7.  
+1.  Klicken Sie im Menü **Ansicht** auf **Details zum Objekt-Explorer** , oder drücken Sie F7.  
   
 2.  Stellen Sie im Objekt-Explorer eine Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] her, auf der Sie eine Verfügbarkeitsgruppe überwachen möchten, und klicken Sie auf den Servernamen, um die Serverstruktur zu erweitern.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "85894167"
  Im Detailbildschirm **Verfügbarkeitsgruppen** werden die folgenden Spalten angezeigt:  
   
  **Name**  
- Führt die Listenerordner **Verfügbarkeitsreplikate**, **Verfügbarkeitsdatenbanken**und **Verfügbarkeitsgruppe** der ausgewählten Verfügbarkeitsgruppe auf.  
+ Führt die Listenerordner **Verfügbarkeitsreplikate**, **Verfügbarkeitsdatenbanken** und **Verfügbarkeitsgruppe** der ausgewählten Verfügbarkeitsgruppe auf.  
   
 ##  <a name="availability-replica-details"></a><a name="AvReplicaDetails"></a> Verfügbarkeitsreplikatdetails  
  Im Detailbildschirm **Verfügbarkeitsreplikat** werden die folgenden Spalten angezeigt:  

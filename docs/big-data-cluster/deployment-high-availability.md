@@ -9,12 +9,12 @@ ms.date: 09/18/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 17aaed99c8adb73b88a2d81482fcdefc7d8f68fd
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 08645672c1aa8b7b980b4ffe86b4029a691fa1cf
+ms.sourcegitcommit: 275fd02d60d26f4e66f6fc45a1638c2e7cedede7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990018"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94447106"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Bereitstellen von Big Data-Clustern in SQL Server mit Hochverfügbarkeit
 
@@ -211,6 +211,8 @@ Bekannte Probleme und Einschränkungen bei eigenständigen Verfügbarkeitsgruppe
 - Sie müssen sicherstellen, dass die [erforderlichen Zertifikate](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md) sowohl in der SQL Server-Masterinstanz als auch in der enthaltenen Verfügbarkeitsgruppen-Masterinstanz wiederhergestellt werden, um eine TDE-fähige Datenbank erfolgreich über eine Sicherung wiederherzustellen, die auf einem anderen Server erstellt wurde. [Hier](https://www.sqlshack.com/restoring-transparent-data-encryption-tde-enabled-databases-on-a-different-server/) finden Sie ein Beispiel zur Sicherung und Wiederherstellung der Zertifikate.
 - Für bestimmte Vorgänge wie das Ausführen von Serverkonfigurationseinstellungen mit `sp_configure` ist eine Verbindung mit der `master`-Datenbank der SQL Server-Instanz erforderlich, nicht mit der Verfügbarkeitsgruppe `master`. Der entsprechende primäre Endpunkt kann nicht verwendet werden. Befolgen Sie die [Anweisungen](#instance-connect), um einen Endpunkt verfügbar zu machen, eine Verbindung mit der SQL Server-Instanz herzustellen und `sp_configure` auszuführen. Sie können die SQL-Authentifizierung nur verwenden, wenn Sie den Endpunkt manuell verfügbar machen, um eine Verbindung mit der `master`-Datenbank der SQL Server-Instanz herzustellen.
 - Obwohl die enthaltene msdb-Datenbank in der Verfügbarkeitsgruppe enthalten ist und die SQL-Agent-Aufträge darin repliziert werden, werden die Aufträge nur auf dem primären Replikat nach Zeitplan ausgeführt.
+- Das Feature „Replikation“ wird für enthaltene Verfügbarkeitsgruppen nicht unterstützt. SQL Server-Instanzen, die Teil einer enthaltenen Verfügbarkeitsgruppe sind, können nicht als Verteiler oder Herausgeber fungieren, weder auf Instanzebene noch auf Ebene der enthaltenen Verfügbarkeitsgruppe.
+- Das Hinzufügen von Dateigruppen beim Erstellen der Datenbank wird nicht unterstützt. Um dieses Problem zu umgehen, können Sie zuerst die Datenbank erstellen und dann eine ALTER DATABASE-Anweisung ausführen, um beliebige Dateigruppen hinzuzufügen.
 - Datenbanken, die vor SQL Server 2019 CU2 aufgrund von anderen Workflows als `CREATE DATABASE` und `RESTORE DATABASE`, z. B. `CREATE DATABASE FROM SNAPSHOT`, erstellt wurden, werden nicht automatisch zur Verfügbarkeitsgruppe hinzugefügt. [Stellen Sie eine Verbindung mit der Instanz her](#instance-connect), und fügen Sie die Datenbank manuell zur Verfügbarkeitsgruppe hinzu.
 
 ## <a name="next-steps"></a>Nächste Schritte

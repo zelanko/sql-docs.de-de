@@ -6,21 +6,23 @@ ms.prod_service: sql-tools
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
-author: pensivebrian
-ms.author: broneill
-ms.reviewer: drswkier; sstein
-ms.date: 09/29/2020
-ms.openlocfilehash: c4a7fb02521a20dffa95c45cc8a345c243c4ae0e
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+author: dzsquared
+ms.author: drskwier
+ms.reviewer: maghan; sstein
+ms.date: 11/4/2020
+ms.openlocfilehash: ee78b145965c17ff0a496611c6506d23df1a31a3
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005540"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384499"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
 **SqlPackage.exe** ist ein Befehlszeilen-Hilfsprogramm, das die folgenden Aufgaben bei der Datenbankentwicklung automatisiert:  
   
+- [Version](#version): Gibt die Buildnummer der SqlPackage-Anwendung zurück.  In Version 18.6 hinzugefügt.
+
 - [Extract:](#extract-parameters-and-properties) Erstellt eine Datenbankmomentaufnahme (DACPAC-Datei) von einer SQL Server- oder Azure SQL-Livedatenbank.  
   
 - [Veröffentlichen](#publish-parameters-properties-and-sqlcmd-variables): Aktualisiert ein Datenbankschema inkrementell, sodass dieses dem Schema einer DACPAC-Quelldatei entspricht Wenn die Datenbank auf dem Server nicht vorhanden ist, wird sie durch den Veröffentlichungsvorgang erstellt. Andernfalls wird eine vorhandene Datenbank aktualisiert.  
@@ -69,7 +71,10 @@ Erstellen Sie ein SQL-Skript, das die Unterschiede der zwei DACPAC-Dateien gener
 sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_version.dacpac" /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /TargetDatabaseName:"Contoso.Database" /OutputPath:"C:\sqlpackageoutput\output.sql"
  ```
 
-Mit dem folgenden Befehl wird die sqlpackage-Version angezeigt:
+
+## <a name="version"></a>Version
+
+Zeigt die Version von SqlPackage als Buildnummer.  Kann in interaktiven Eingabeaufforderungen und [automatisierten Pipelines](sqlpackage-pipelines.md)verwendet werden.
 
 ```
 sqlpackage.exe /Version
@@ -81,7 +86,7 @@ Durch eine SqlPackage.exe-Extract-Aktion wird ein Schema einer Livedatenbank aus
 
 ### <a name="help-for-the-extract-action"></a>Hilfe zur Extract-Aktion
 
-|Parameter|Kurzform|Wert|BESCHREIBUNG|
+|Parameter|Kurzform|Wert|Beschreibung|
 |---|---|---|---|
 |**/Action:**|**/a**|Extract|Gibt die auszuführende Aktion an. |
 |**/AccessToken:**|**/at**|{string}| Gibt das Zugriffstoken für die tokenbasierte Authentifizierung an, das beim Herstellen einer Verbindung mit der Zieldatenbank verwendet werden soll. |
@@ -132,7 +137,7 @@ Eine Veröffentlichungsaktion von "SqlPackage.exe" aktualisiert inkrementell das
 
 ### <a name="help-for-publish-action"></a>Hilfe zur Publish-Aktion
 
-|Parameter|Kurzform|Wert|BESCHREIBUNG|
+|Parameter|Kurzform|Wert|Beschreibung|
 |---|---|---|---|
 |**/Action:**|**/a**|Veröffentlichen|Gibt die auszuführende Aktion an. |
 |**/AccessToken:**|**/at**|{string}| Gibt das Zugriffstoken für die tokenbasierte Authentifizierung an, das beim Herstellen einer Verbindung mit der Zieldatenbank verwendet werden soll. |
@@ -280,7 +285,7 @@ Durch eine SqlPackage.exe-Exportaktion wird eine Livedatenbank aus SQL Server bz
   
 ### <a name="help-for-export-action"></a>Hilfe zur Export-Aktion
 
-|Parameter|Kurzform|Wert|BESCHREIBUNG|
+|Parameter|Kurzform|Wert|Beschreibung|
 |---|---|---|---|
 |**/Action:**|**/a**|Exportieren|Gibt die auszuführende Aktion an. |
 |**/AccessToken:**|**/at**|{string}| Gibt das Zugriffstoken für die tokenbasierte Authentifizierung an, das beim Herstellen einer Verbindung mit der Zieldatenbank verwendet werden soll. |
@@ -321,7 +326,7 @@ Durch eine SqlPackage.exe-Importaktion werden das Schema und die Tabellendaten a
   
 ### <a name="help-for-command-actions"></a>Hilfe zu Befehlsaktionen
 
-|Parameter|Kurzform|Wert|BESCHREIBUNG|
+|Parameter|Kurzform|Wert|Beschreibung|
 |---|---|---|---|
 |**/Action:**|**/a**|Importieren|Gibt die auszuführende Aktion an. |
 |**/AccessToken:**|**/at**|{string}| Gibt das Zugriffstoken für die tokenbasierte Authentifizierung an, das beim Herstellen einer Verbindung mit der Zieldatenbank verwendet werden soll. |
@@ -363,7 +368,7 @@ Durch eine **SqlPackage.exe**-Berichtsaktion wird ein XML-Bericht der Änderunge
   
 ### <a name="help-for-deployreport-action"></a>Hilfe zur DeployReport-Aktion
 
-|Parameter|Kurzform|Wert|BESCHREIBUNG|
+|Parameter|Kurzform|Wert|Beschreibung|
 |---|---|---|---|
 |**/Action:**|**/a**|DeployReport|Gibt die auszuführende Aktion an. |
 |**/AccessToken:**|**/at**|{string}| Gibt das Zugriffstoken für die tokenbasierte Authentifizierung an, das beim Herstellen einer Verbindung mit der Zieldatenbank verwendet werden soll. |
@@ -499,7 +504,7 @@ Durch eine **SqlPackage.exe**-Berichtsaktion wird ein XML-Bericht der Änderunge
   
 ### <a name="help-for-driftreport-action"></a>Hilfe zur DriftReport-Aktion
 
-|Parameter|Kurzform|Wert|BESCHREIBUNG|
+|Parameter|Kurzform|Wert|Beschreibung|
 |---|---|---|---|
 |**/Action:**|**/a**|DriftReport|Gibt die auszuführende Aktion an. |
 |**/AccessToken:**|**/at**|{string}| Gibt das Zugriffstoken für die tokenbasierte Authentifizierung an, das beim Herstellen einer Verbindung mit der Zieldatenbank verwendet werden soll. |
@@ -526,7 +531,7 @@ Durch eine **SqlPackage.exe**-Skriptaktion wird ein inkrementelles Transact-SQL-
   
 ### <a name="help-for-the-script-action"></a>Hilfe zur Script-Aktion
 
-|Parameter|Kurzform|Wert|BESCHREIBUNG|
+|Parameter|Kurzform|Wert|Beschreibung|
 |---|---|---|---|
 |**/Action:**|**/a**|Skript|Gibt die auszuführende Aktion an. |
 |**/AccessToken:**|**/at**|{string}| Gibt das Zugriffstoken für die tokenbasierte Authentifizierung an, das beim Herstellen einer Verbindung mit der Zieldatenbank verwendet werden soll. |

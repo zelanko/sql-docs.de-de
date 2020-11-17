@@ -12,14 +12,14 @@ f1_keywords:
 - sql13.swb.addreplicawizard.specifyreplicas.f1
 - sql13.swb.newagwizard.specifyreplicas.f1
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: ea049ce576949df930aabafafb67adf56fe96c5c
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 404d2afc78765adebb191c49fb58f6d390516a6c
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671095"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583880"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Seite „Replikate angeben“ (Assistent für neue Verfügbarkeitsgruppen: Assistent zum Hinzufügen von Replikaten)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "91671095"
   
 -   Wenn jede Serverinstanz unter einem Domänendienstkonto ausgeführt wird, d. h, wenn in der Spalte **SQL Server-Dienstkonto** ein Domänendienstkonto für jede Serverinstanz angezeigt wird, klicken Sie auf **Weiter**.  
   
--   Wenn eine Serverinstanz unter einem Nicht-Domänendienstkonto ausgeführt wird, müssen Sie eine manuelle Änderung an der Serverinstanz vornehmen, bevor Sie den Assistenten fortsetzen können. In diesem Fall wird durch Klicken auf **Weiter** ein Warndialogfeld aufgerufen. Klicken Sie auf **Nein**, um zur Registerkarte**Endpunkte** zurückzukehren. Während Sie den Assistenten auf der Seite **Replikate angeben** belassen, nehmen Sie eine der folgenden Änderungen an jeder Serverinstanz vor, für in der Spalte **SQL Server-Dienstkonto** ein Nicht-Domänendienstkonto angezeigt wird:  
+-   Wenn eine Serverinstanz unter einem Nicht-Domänendienstkonto ausgeführt wird, müssen Sie eine manuelle Änderung an der Serverinstanz vornehmen, bevor Sie den Assistenten fortsetzen können. In diesem Fall wird durch Klicken auf **Weiter** ein Warndialogfeld aufgerufen. Klicken Sie auf **Nein**, um zur Registerkarte **Endpunkte** zurückzukehren. Während Sie den Assistenten auf der Seite **Replikate angeben** belassen, nehmen Sie eine der folgenden Änderungen an jeder Serverinstanz vor, für in der Spalte **SQL Server-Dienstkonto** ein Nicht-Domänendienstkonto angezeigt wird:  
   
     -   Verwenden Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Konfigurations-Manager zum Ändern des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Dienstkontos in ein Domänenkonto. Weitere Informationen finden Sie unter [Ändern des Dienststartkontos für SQL Server &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/scm-services-change-the-service-startup-account.md).  
   
@@ -166,10 +166,10 @@ ms.locfileid: "91671095"
   
  Wenn **Statische IP** als Netzwerkmodus ausgewählt wird (Standardauswahl), werden in einem Raster die Spalten **Subnetz** und **IP-Adresse** sowie die zugehörigen Schaltflächen **Hinzufügen** und **Entfernen** angezeigt. Das Raster ist leer, bis Sie das erste Subnetz hinzufügen.  
   
- Spalte**Subnetz**  
+ Spalte **Subnetz**  
  Zeigt die Subnetzadresse an, die Sie für alle Subnetze ausgewählt haben, die Sie für den Listener hinzugefügt haben.  
   
- Spalte**IP-Adresse**  
+ Spalte **IP-Adresse**  
  Zeigt die IPv4- oder IPv6-Adresse an, die Sie für ein bestimmtes Subnetz angegeben haben.  
   
  **Add (Hinzufügen)**  

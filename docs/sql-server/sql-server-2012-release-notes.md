@@ -13,12 +13,12 @@ ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f07d5ea10fbb762b46dcf47fb15e9acdfe8404a9
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: caca5016c6d461af5cd665ae0ada144cd5fd1c2e
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111148"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384666"
 ---
 # <a name="sql-server-2012-release-notes"></a>Versionsanmerkungen zu SQL Server 2012
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -133,9 +133,9 @@ Nachfolgend wird das Verhalten der erforderlichen Installationskomponenten beim 
   
         2.  Erweitern Sie auf der Oberfläche **Funktionen auswählen** den Eintrag **.NET Framework 3.5.1-Funktionen** .  
   
-        3.  Nachdem Sie **.NET Framework 3.5.1-Funktionen**erweitert haben, werden zwei Kontrollkästchen angezeigt. Ein Kontrollkästchen bezieht sich auf .NET Framework 3.5.1 und ein weiteres auf die WCF-Aktivierung. Wählen Sie **.NET Framework 3.5.1**aus, und klicken Sie anschließend auf **Weiter**. Die .NET Framework 3.5.1-Funktionen können nur zusammen mit den erforderlichen Rollendiensten und -funktionen installiert werden.  
+        3.  Nachdem Sie **.NET Framework 3.5.1-Funktionen** erweitert haben, werden zwei Kontrollkästchen angezeigt. Ein Kontrollkästchen bezieht sich auf .NET Framework 3.5.1 und ein weiteres auf die WCF-Aktivierung. Wählen Sie **.NET Framework 3.5.1** aus, und klicken Sie anschließend auf **Weiter**. Die .NET Framework 3.5.1-Funktionen können nur zusammen mit den erforderlichen Rollendiensten und -funktionen installiert werden.  
   
-        4.  Überprüfen Sie unter **Installationsauswahl bestätigen**Ihre Auswahl, und klicken Sie auf „Installieren“.  
+        4.  Überprüfen Sie unter **Installationsauswahl bestätigen** Ihre Auswahl, und klicken Sie auf „Installieren“.  
   
         5.  Warten Sie, bis die Installation abgeschlossen ist, und klicken Sie dann auf **Schließen**.  
   
@@ -154,9 +154,9 @@ Nachfolgend wird das Verhalten der erforderlichen Installationskomponenten beim 
   
         **Aktivieren Sie .NET Framework 3.5 SP1 unter Windows 7 SP1 mit der folgenden Methode:**  
   
-        1.  Klicken Sie auf **Start** | **Systemsteuerung** | **Programme**und dann auf **Windows-Funktionen aktivieren oder deaktivieren**. Wenn Sie zum Eingeben eines Administratorkennworts oder zu einer Bestätigung aufgefordert werden, geben Sie das Kennwort ein, oder nehmen Sie die Bestätigung vor.  
+        1.  Klicken Sie auf **Start** | **Systemsteuerung** | **Programme** und dann auf **Windows-Funktionen aktivieren oder deaktivieren**. Wenn Sie zum Eingeben eines Administratorkennworts oder zu einer Bestätigung aufgefordert werden, geben Sie das Kennwort ein, oder nehmen Sie die Bestätigung vor.  
   
-        2.  Aktivieren Sie das Kontrollkästchen neben der Funktion, um **Microsoft .NET Framework 3.5.1**zu aktivieren. Um eine Windows-Funktion zu deaktivieren, deaktivieren Sie das Kontrollkästchen.  
+        2.  Aktivieren Sie das Kontrollkästchen neben der Funktion, um **Microsoft .NET Framework 3.5.1** zu aktivieren. Um eine Windows-Funktion zu deaktivieren, deaktivieren Sie das Kontrollkästchen.  
   
         3.  Klicken Sie auf **OK**.  
   
@@ -630,7 +630,7 @@ Verbindungen von SQL Server 2012 Reporting Services mit Microsoft SQL Server PDW
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="90-streaminsight"></a><a name="SI"></a>9.0 StreamInsight  
-SQL Server 2012 enthält StreamInsight 2.0. StreamInsight 2.0 erfordert eine Microsoft SQL Server 2012-Lizenz sowie .NET Framework 4.0. Die Software umfasst eine Reihe von Leistungsverbesserungen und Programmfehlerbehebungen. Weitere Informationen finden Sie in den [Versionsanmerkungen zu Microsoft StreamInsight 2.0](https://social.technet.microsoft.com/wiki/contents/articles/6539.aspx). Um StreamInsight 2.0 separat herunterzuladen, besuchen Sie die [Microsoft StreamInsight 2.0-Downloadseite](https://go.microsoft.com/fwlink/?LinkId=241593) im Microsoft Download Center.  
+SQL Server 2012 enthält StreamInsight 2.1. StreamInsight 2.1 erfordert eine Microsoft SQL Server 2012-Lizenz sowie .NET Framework 4.0. Die Software umfasst eine Reihe von Leistungsverbesserungen und Programmfehlerbehebungen. Weitere Informationen finden Sie in den [Versionsanmerkungen zu Microsoft StreamInsight 2.1](https://social.technet.microsoft.com/wiki/contents/articles/6539.aspx). Um StreamInsight 2.1 separat herunterzuladen, besuchen Sie im Microsoft Download Center die [Seite zum Download von Microsoft StreamInsight 2.1](https://www.microsoft.com/download/details.aspx?id=30149).  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   

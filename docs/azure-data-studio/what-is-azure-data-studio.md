@@ -9,16 +9,16 @@ ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 10/20/2020
-ms.openlocfilehash: 6ea5bc72ee2f4b5bf421f73a27a85d80a421e00f
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: 669379b4db1bd2c975875c443fe6a80e38926a5c
+ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036680"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570877"
 ---
 # <a name="what-is-azure-data-studio"></a>Was ist Azure Data Studio?
 
-Azure Data Studio ist ein plattformübergreifendes Datenbanktool für Datenexperten, das die Microsoft-Produktfamilie der lokalen und cloudbasierten Datenplattformen unter Windows, macOS und Linux nutzt.
+Azure Data Studio ist ein plattformübergreifendes Datenbanktool für Datenexperten, das die lokalen und cloudbasierten Datenplattformen unter Windows, macOS und Linux nutzt.
 
 Azure Data Studio bietet eine moderne Editor-Benutzeroberfläche mit IntelliSense, Codeausschnitten und Integration der Quellcodeverwaltung sowie ein integriertes Terminal. Das Tool wurde speziell für die Bedürfnisse der Benutzer von Datenplattformen konzipiert und bietet eine integrierte Diagrammdarstellung von Abfrageresultsets sowie anpassbare Dashboards.
 
@@ -57,7 +57,7 @@ Informationen zum Erstellen von Erweiterungen finden Sie unter [Erstellen von Er
 
 ## <a name="feature-comparison-with-sql-server-management-studio-ssms"></a>Featurevergleich mit SQL Server Management Studio (SSMS)
 
-**Verwenden Sie Azure Data Studio in folgenden Fällen** :
+**Verwenden Sie Azure Data Studio in folgenden Fällen**:
 
 - Sie verbringen einen Großteil Ihrer Zeit mit der Bearbeitung oder Ausführung von Abfragen.
 - Sie benötigen eine Funktion, mit der Sie Resultsets schnell visualisieren und in Diagrammen darstellen können.
@@ -66,7 +66,7 @@ Informationen zum Erstellen von Erweiterungen finden Sie unter [Erstellen von Er
 - Sie müssen keine detaillierten administrativen oder plattformbezogenen Konfiguration durchführen.
 - Sie verwenden macOS oder Linux.
 
-**Verwenden Sie SQL Server Management Studio in folgenden Fällen** :
+**Verwenden Sie SQL Server Management Studio in folgenden Fällen**:
 
 - Sie führen komplexe administrative Konfigurationen oder Plattformkonfigurationen durch.
 - Die Sicherheitsverwaltung, einschließlich der Benutzerverwaltung, der Sicherheitsrisikobewertung und der Konfiguration von Sicherheitsfeatures, gehört zu Ihren Aufgaben.

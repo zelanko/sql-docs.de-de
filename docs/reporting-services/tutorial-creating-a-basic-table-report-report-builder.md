@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bffaef60422d47484968ad30b5bc8d625549a74e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: bc7e78fb2b4101df84c2d54162d62ec8b95f6aab
+ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247469"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94418007"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)
 In diesem Lernprogramm erfahren Sie, wie Sie auf Grundlage von Beispielumsatzdaten einen einfachen Tabellenbericht erstellen. Die folgende Abbildung zeigt den Bericht, den Sie erstellen.  
@@ -49,13 +49,13 @@ In diesem Lernprogramm verwenden Sie eine eingebettete Datenquelle. Weitere Info
   
 ### <a name="to-create-an-embedded-data-source"></a>So erstellen Sie eine eingebettete Datenquelle  
   
-1.  Klicken Sie auf der Seite **Dataset auswählen** auf **Dataset erstellen**und anschließend auf **Weiter**. Die Seite **Verbindung mit einer Datenquelle auswählen** wird geöffnet.  
+1.  Klicken Sie auf der Seite **Dataset auswählen** auf **Dataset erstellen** und anschließend auf **Weiter**. Die Seite **Verbindung mit einer Datenquelle auswählen** wird geöffnet.  
   
 2.  Klicken Sie auf **Neu**. Das Dialogfeld **Datenquelleneigenschaften** wird angezeigt.  
   
-3.  Geben Sie im Feld **Name**den Namen **Product_Sales** für die Datenquelle ein.  
+3.  Geben Sie im Feld **Name** den Namen **Product_Sales** für die Datenquelle ein.  
   
-4.  Vergewissern Sie sich, dass unter **Verbindungstyp auswählen**die Option **Microsoft SQL Server** ausgewählt ist.  
+4.  Vergewissern Sie sich, dass unter **Verbindungstyp auswählen** die Option **Microsoft SQL Server** ausgewählt ist.  
   
 5.  Geben Sie im Feld **Verbindungszeichenfolge** den folgenden Text ein, wobei \<servername> der Name einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz ist:  
   
@@ -165,7 +165,7 @@ Nachdem Sie Gruppen erstellt haben, können Sie Zeilen hinzufügen und formatier
   
 ### <a name="to-add-subtotals-and-totals"></a>So fügen Sie Teilergebnisse und Summen hinzu  
   
-1.  Vergewissern Sie sich auf der Seite **Layout auswählen** , dass unter **Optionen**die Option **Teil- und Gesamtergebnisse anzeigen** ausgewählt ist.  
+1.  Vergewissern Sie sich auf der Seite **Layout auswählen** , dass unter **Optionen** die Option **Teil- und Gesamtergebnisse anzeigen** ausgewählt ist.  
   
 2.  Überprüfen Sie, ob **Als Block, Teilergebnis unterhalb** ausgewählt ist.  
   
@@ -175,7 +175,7 @@ Nachdem Sie Gruppen erstellt haben, können Sie Zeilen hinzufügen und formatier
   
     2.  Die zweite Zeile wird einmal für jedes Zeilenelement im Verkaufsauftrag wiederholt. In dieser Zeile werden Produktname, Bestellmenge und Zeilensumme angezeigt.  
   
-    3.  Die dritte Zeile wird einmal für jeden Verkaufsauftrag wiederholt. In dieser Zeile werden die Teilergebnisse für jeden Auftrag angezeigt.  
+    3.  Die dritte Zeile wird einmal für jede Auftragskategorie wiederholt. In dieser Zeile werden die Teilergebnisse je Kategorie angezeigt.  
   
     4.  Die vierte Zeile wird einmal für jedes Bestelldatum wiederholt. In ihr werden Zwischensummen pro Tag angezeigt.  
   
@@ -213,7 +213,7 @@ Im Feld „SalesDate“ werden standardmäßig sowohl Datum als auch Uhrzeit ang
   
 2.  Klicken Sie auf die Zelle, die `[SalesDate]`enthält.  
   
-3.  Klicken Sie auf dem Menüband auf der Registerkarte **Stamm** in der Gruppe **Zahl** auf den Pfeil und wählen Sie **Datum**aus.  
+3.  Klicken Sie auf dem Menüband auf der Registerkarte **Stamm** in der Gruppe **Zahl** auf den Pfeil und wählen Sie **Datum** aus.  
   
     In der Zelle wird das Beispieldatum **[31.01.2000]** angezeigt. Wenn Sie kein Beispieldatum sehen, klicken Sie auf der Registerkarte **Home** in der Gruppe **Zahl** auf den Pfeil neben dem Symbol **Platzhalterformate** und wählen Sie **Beispielwerte** aus.  
   
@@ -233,7 +233,7 @@ Die "SalesDate"-Werte werden im Standarddatumsformat angezeigt.
   
 4.  Prüfen Sie im Bereich Kategorie, ob **Datum** gewählt ist.  
   
-5.  Wählen Sie im Bereich **Typ** die Option **31. Januar 2000**aus.  
+5.  Wählen Sie im Bereich **Typ** die Option **31. Januar 2000** aus.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -269,17 +269,17 @@ Die Darstellung des Texts kann weiter verbessert werden, indem andere Schriftsch
   
 1.  Klicken Sie auf der Entwurfsoberfläche auf **Zum Hinzufügen eines Titels klicken**.  
   
-2.  Geben Sie **Product Sales**ein, und klicken Sie anschließend außerhalb des Textfelds.  
+2.  Geben Sie **Product Sales** ein, und klicken Sie anschließend außerhalb des Textfelds.  
   
 3.  Klicken Sie mit der rechten Maustaste auf das Textfeld, das **Product Sales** enthält, und klicken Sie auf **Textfeldeigenschaften**.  
   
 4.  Klicken Sie im Dialogfeld **Textfeldeigenschaften** auf **Schriftart**.  
   
-5.  Wählen Sie in der Liste **Schriftgrad** den Eintrag **18pt**aus.  
+5.  Wählen Sie in der Liste **Schriftgrad** den Eintrag **18pt** aus.  
   
-6.  Wählen Sie in der Liste **Farbe** die Option **Kornblumenblau**aus.  
+6.  Wählen Sie in der Liste **Farbe** die Option **Kornblumenblau** aus.  
   
-7.  Wählen Sie **Fett**aus.  
+7.  Wählen Sie **Fett** aus.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -306,7 +306,7 @@ Der Bericht wird auf dem Berichtsserver gespeichert. Der Name des Berichtsserver
   
 1.  Klicken Sie auf **Datei** > **Speichern als**.  
   
-2.  Klicken Sie auf **Desktop**, **Eigene Dokumente**oder **Computer**, und navigieren Sie zu dem Ordner, in dem Sie den Bericht speichern möchten.  
+2.  Klicken Sie auf **Desktop**, **Eigene Dokumente** oder **Computer**, und navigieren Sie zu dem Ordner, in dem Sie den Bericht speichern möchten.  
   
 3.  In **Name**, ersetzen Sie **Unbenannt** durch **Product Sales**.  
   
@@ -323,7 +323,7 @@ In diesem Lernprogramm exportieren Sie den Bericht nach Excel, und Sie legen ein
   
 2.  Klicken Sie auf die Entwurfsoberfläche außerhalb des Berichts.  
   
-3.  Suchen Sie im Bereich Eigenschaften nach der InitialPageName-Eigenschaft und geben Sie **Product Sales Excel**ein.  
+3.  Suchen Sie im Bereich Eigenschaften nach der InitialPageName-Eigenschaft und geben Sie **Product Sales Excel** ein.  
   
     > [!NOTE]  
     > Klicken Sie auf der Registerkarte **Ansicht** auf **Eigenschaften**, falls der Bereich "Eigenschaften" nicht angezeigt wird.  
@@ -339,7 +339,7 @@ In diesem Lernprogramm exportieren Sie den Bericht nach Excel, und Sie legen ein
   
 3.  Navigieren Sie im Dialogfeld **Speichern unter** zu dem Verzeichnis, in dem die Datei gespeichert werden soll.  
   
-4.  Geben Sie im Textfeld **Dateiname** den Namen **Product_Sales_Excel**ein.  
+4.  Geben Sie im Textfeld **Dateiname** den Namen **Product_Sales_Excel** ein.  
   
 5.  Vergewissern Sie sich, dass der Dateityp **Excel (\*.xlsx)** ist.  
   
@@ -349,7 +349,7 @@ In diesem Lernprogramm exportieren Sie den Bericht nach Excel, und Sie legen ein
   
 1.  Öffnen Sie den Ordner, in dem Sie die Arbeitsmappe speichern, und doppelklicken Sie auf **Product_Sales_Excel.xlsx**.  
   
-2.  Überprüfen Sie, ob der Name des Arbeitsmappenregisters **Product Sales Excel**lautet.  
+2.  Überprüfen Sie, ob der Name des Arbeitsmappenregisters **Product Sales Excel** lautet.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
 Damit ist die exemplarische Vorgehensweise für das Erstellen eines einfachen Tabellenberichts abgeschlossen. Weitere Informationen zu Tabellen finden Sie unter [Tabellen, Matrizen und Listen (Berichts-Generator und SSRS)](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  

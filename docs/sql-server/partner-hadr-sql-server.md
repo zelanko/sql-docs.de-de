@@ -1,6 +1,6 @@
 ---
 title: 'SQL Server: Partner für Hochverfügbarkeit und Notfallwiederherstellung'
-description: Liste mit Partnerunternehmen, die Lösungen zur Überwachung von SQL Server anbieten.
+description: Listen von Partnerunternehmen mit Lösungen zur Ermöglichung von Hochverfügbarkeit und Notfallwiederherstellung für Ihre SQL Server-Dienste.
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.date: 09/17/2017
@@ -8,12 +8,12 @@ ms.prod: sql
 ms.technology: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: dd40556746f729d0a64b9eebf6550c774d267126
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.openlocfilehash: 46a9fe5630f832d5d9d2bf57f94c25b30a301083
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235617"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521058"
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>SQL Server: Partner für Hochverfügbarkeit und Notfallwiederherstellung
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
