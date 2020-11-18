@@ -3,7 +3,7 @@ title: Installieren von SSMA-Komponenten auf SQL Server (oracleto SQL) | Microso
 description: Erfahren Sie, wie Sie das SSMA-Erweiterungspaket und Oracle-Anbieter auf dem Computer installieren, auf dem SQL Server ausgeführt wird, um die Oracle-Datenbankkonvertierung
 ms.prod: sql
 ms.custom: ''
-ms.date: 07/14/2020
+ms.date: 11/16/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7acabfac10c3eb6e7afa1fbfbb2f546b0ae4137d
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 64850d1a701491f0dc5817576a568fdc3ebc2483
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006433"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870100"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>Installieren von SSMA-Komponenten auf SQL Server (oracleto SQL)
 
@@ -26,7 +26,7 @@ Zusätzlich zur Installation von SSMA müssen Sie auch Komponenten auf dem Compu
 
 ## <a name="ssma-for-oracle-extension-pack"></a>SSMA für Oracle-Erweiterungspaket
 
-Das SSMA-Erweiterungspaket fügt der angegebenen Instanz von die Datenbanken **sysdb** und **ssmatesterdb** hinzu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Die Datenbank **sysdb** enthält die Tabellen und gespeicherten Prozeduren, die zum Migrieren von Daten und benutzerdefinierten Funktionen erforderlich sind, die Oracle-Systemfunktionen emulieren. Die **ssmatesterdb** -Datenbank enthält die Tabellen und Prozeduren, die für die Tester-Komponente erforderlich sind.
+Das SSMA-Erweiterungspaket stellt erweiterte gespeicherte Prozeduren bereit und fügt die Datenbanken **sysdb** und **ssmatesterdb** zur angegebenen Instanz von hinzu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Erweiterte gespeicherte Prozeduren stellen Funktionen bereit, die zum Emulieren von Features und behaiov von Oracle erforderlich sind, während die **sysdb** -Datenbank die zum Migrieren der Daten erforderlichen Tabellen und gespeicherten Prozeduren enthält Die **ssmatesterdb** -Datenbank enthält die Tabellen und Prozeduren, die von der Tester-Komponente (sofern installiert) benötigt werden.
 
 Beim Migrieren von Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden von SSMA außerdem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agentaufträge erstellt, wenn die serverseitige Daten Migrations-Engine zum Migrieren der Daten verwendet wird.
 
@@ -52,13 +52,13 @@ Sie können das Erweiterungspaket jederzeit installieren, bevor Sie Daten zu mig
 
 So installieren Sie das Erweiterungspaket:
 
-1. Kopieren Sie **SSMAforOracleExtensionPack_*n*. msi** (wobei *n* die Buildnummer ist) auf den Computer, auf dem ausgeführt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
-2. Doppelklicken Sie auf **SSMAforOracleExtensionPack_*n*. msi**.
-3. Wählen Sie auf der Seite **Willkommen** die Option **Weiter** aus.
+1. Kopieren Sie **SSMAforOracleExtensionPack_ *n*. msi** (wobei *n* die Buildnummer ist) auf den Computer, auf dem ausgeführt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+2. Doppelklicken Sie auf **SSMAforOracleExtensionPack_ *n*. msi**.
+3. Klicken Sie auf der Seite **Willkommen** auf **Weiter**.
 4. Lesen Sie auf der Seite **Endbenutzer-Lizenzvertrag** den Lizenzvertrag. Wenn Sie zustimmen, aktivieren Sie **die Option Ich akzeptiere die Vereinbarung** , und klicken Sie dann auf **weiter**.
-5. Wählen Sie auf der Seite Setuptyp **auswählen** die Option **typisch**aus.
-6. Wählen Sie auf der Seite **bereit zum Installieren** die Option **Installieren**aus.
-7. Wählen Sie auf der Seite **der erste Schritt der Installation ist abgeschlossen** die Option **weiter**aus.
+5. Wählen Sie auf der Seite Setuptyp **auswählen** die Option **typisch** aus.
+6. Wählen Sie auf der Seite **bereit zum Installieren** die Option **Installieren** aus.
+7. Wählen Sie auf der Seite **der erste Schritt der Installation ist abgeschlossen** die Option **weiter** aus.
   
    Ein neues Dialogfeld wird angezeigt. Wählen Sie den Typ des Erweiterungspakets aus.
   
@@ -75,7 +75,7 @@ So installieren Sie das Erweiterungspaket:
 
    Die Windows-Authentifizierung verwendet Ihre Windows-Anmelde Informationen, um sich bei der Instanz von anzumelden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Wenn Sie Server Authentifizierung auswählen, müssen Sie einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmelde Namen und ein Kennwort eingeben.
 
-10. Im nächsten Schritt müssen Sie das Kennwort für einen Hauptschlüssel festlegen, der zum Verschlüsseln vertraulicher Daten verwendet wird, die während der serverseitigen Datenmigration in der Erweiterungspaket-Datenbank gespeichert werden. Geben **Sie ein**sicheres Kennwort ein, und klicken Sie auf
+10. Im nächsten Schritt müssen Sie das Kennwort für einen Hauptschlüssel festlegen, der zum Verschlüsseln vertraulicher Daten verwendet wird, die während der serverseitigen Datenmigration in der Erweiterungspaket-Datenbank gespeichert werden. Geben **Sie ein** sicheres Kennwort ein, und klicken Sie auf
 
 11. Wählen Sie auf der nächsten Seite **Utilities Database *n* installieren aus, und installieren Sie Extension Pack-Bibliotheken**, wobei *n* die Versionsnummer ist. Wenn Sie das Tester-Feature verwenden möchten, aktivieren Sie das Kontrollkästchen **Tester Datenbank installieren** , und klicken Sie dann auf **weiter**.
 
@@ -83,7 +83,7 @@ So installieren Sie das Erweiterungspaket:
 
     Wenn die Option zum **Installieren von Tester Database** aktiviert ist, wird die **ssmatesterdb** -Datenbank erstellt.
 
-12. Sobald die Installation fertiggestellt ist, wird eine Eingabeaufforderung angezeigt, in der Sie gefragt werden, ob Sie die hilfsprogrammdatenbank auf einer anderen Instanz von installieren möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , wählen Sie **Ja**aus, und klicken Sie dann auf **weiter**, um den Assistenten zu beenden, und **Wählen Sie** dann **Beenden**
+12. Sobald die Installation fertiggestellt ist, wird eine Eingabeaufforderung angezeigt, in der Sie gefragt werden, ob Sie die hilfsprogrammdatenbank auf einer anderen Instanz von installieren möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , wählen Sie **Ja** aus, und klicken Sie dann auf **weiter**, um den Assistenten zu beenden, und **Wählen Sie** dann **Beenden**
 
 13. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Führen Sie in oder mit dem `sqlcmd` Hilfsprogramm das folgende Skript aus, um CLR zu aktivieren:
 
@@ -103,6 +103,12 @@ So installieren Sie das Erweiterungspaket:
 Nachdem Sie das Erweiterungspaket installiert haben, wird eine **ssma_oracle. bcp _migration_packages** -Tabelle in der **sysdb** -Datenbank angezeigt.
 
 Jedes Mal, wenn Sie Daten zu migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , erstellt SSMA einen- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Auftrag. Diese Aufträge werden **ssma_oracle Daten Migrationspaket {GUID}** benannt und sind im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Knoten Agent von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] im Ordner Aufträge sichtbar.
+
+Außerdem werden der **Master** -Datenbank die folgenden erweiterten gespeicherten Prozeduren hinzugefügt:
+
+- `xp_ora2ms_exec2`
+- `xp_ora2ms_exec2_ex`
+- `xp_ora2ms_versioninfo2`
 
 ## <a name="see-also"></a>Siehe auch
 

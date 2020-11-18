@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5eb5801d-f0c3-4127-97c0-0b1ef49f4844
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9372a12b6ebaa47096c4ad8b6429db61b00a6188
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: d0ac703c8ea155f33ecb713b98a26f0c39b5a695
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987456"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870072"
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>Herstellen einer Verbindung mit der DB2-Datenbank (DB2ToSQL)
 
@@ -41,7 +41,7 @@ Wenn Sie eine Verbindung mit einer Datenbank herstellen, liest SSMA die Metadate
 
 **Zum Herstellen einer Verbindung mit DB2**
 
-1. Wählen Sie im Menü **Datei** die Option **mit DB2 verbinden**aus.
+1. Wählen Sie im Menü **Datei** die Option **mit DB2 verbinden** aus.
 
    Wenn Sie zuvor eine Verbindung mit DB2 hergestellt haben, wird der Befehls Name **erneut eine Verbindung mit DB2 herstellen**.
 
@@ -49,11 +49,11 @@ Wenn Sie eine Verbindung mit einer Datenbank herstellen, liest SSMA die Metadate
 
 3. Im Feld " **Manager** " können Sie entweder **DB2 für zOS**, **DB2 für LUW** oder **DB2 für i** auswählen.
 
-4. Wählen Sie im Feld **Modus** entweder den **Standard Modus**oder den **Verbindungs Zeichen folgen Modus**aus.
+4. Wählen Sie im Feld **Modus** entweder den **Standard Modus** oder den **Verbindungs Zeichen folgen Modus** aus.
 
    Verwenden Sie den Standardmodus, um den Servernamen und den Port anzugeben. Verwenden Sie den Dienstnamen Modus, um den DB2-Dienstnamen manuell anzugeben. Verwenden Sie den Verbindungs Zeichen folgen Modus, um eine vollständige Verbindungs Zeichenfolge
 
-5. Wenn Sie den **Standard Modus**auswählen, geben Sie die folgenden Werte an:
+5. Wenn Sie den **Standard Modus** auswählen, geben Sie die folgenden Werte an:
 
    - Geben Sie im Feld **Server Name** den Namen oder die IP-Adresse des Datenbankservers ein, oder wählen Sie ihn aus.
    - Wenn der Datenbankserver nicht für die Annahme von Verbindungen über den Standardport (1521) konfiguriert ist, geben Sie im Feld **Serverport** die Portnummer ein, die für DB2-Verbindungen verwendet wird.
@@ -62,7 +62,7 @@ Wenn Sie eine Verbindung mit einer Datenbank herstellen, liest SSMA die Metadate
    - Geben Sie im Feld **Benutzername** ein DB2-Konto ein, das über die erforderlichen Berechtigungen verfügt.
    - Geben Sie im Feld **Kennwort** das Kennwort für den angegebenen Benutzernamen ein.
 
-6. Wenn Sie den **Verbindungs Zeichen folgen Modus**auswählen, geben Sie im Feld **Verbindungs Zeichenfolge** eine Verbindungs Zeichenfolge an.
+6. Wenn Sie den **Verbindungs Zeichen folgen Modus** auswählen, geben Sie im Feld **Verbindungs Zeichenfolge** eine Verbindungs Zeichenfolge an.
 
    Das folgende Beispiel zeigt eine OLE DB Verbindungs Zeichenfolge:
 
@@ -86,7 +86,7 @@ Metadaten über die DB2-Datenbank werden nicht automatisch aktualisiert. Bei den
 
 1. Stellen Sie sicher, dass Sie mit der Datenbank verbunden sind.
 2. Aktivieren Sie im DB2-metadatenexplorer das Kontrollkästchen neben jedem Schema oder Datenbankobjekt, das Sie aktualisieren möchten.
-3. Klicken Sie mit der rechten Maustaste auf **Schemas**oder das einzelne Schema oder Datenbankobjekt, und wählen Sie dann **aus Datenbank aktualisieren aus**.
+3. Klicken Sie mit der rechten Maustaste auf **Schemas** oder das einzelne Schema oder Datenbankobjekt, und wählen Sie dann **aus Datenbank aktualisieren aus**.
 
    Wenn Sie nicht über eine aktive Verbindung verfügen, zeigt SSMA das Dialogfeld **mit DB2 verbinden an** , sodass Sie eine Verbindung herstellen können.
   
@@ -101,7 +101,7 @@ Metadaten über die DB2-Datenbank werden nicht automatisch aktualisiert. Bei den
 
 ## <a name="next-step"></a>Nächster Schritt
 
-- Der nächste Schritt des Migrations Vorgangs besteht darin, eine [Verbindung mit SQL Server](./connecting-to-sql-server-db2etosql.md)herzustellen.
+- Der nächste Schritt des Migrations Vorgangs besteht darin, eine [Verbindung mit SQL Server](./connecting-to-sql-server-db2tosql.md)herzustellen.
 
 ## <a name="see-also"></a>Weitere Informationen
 

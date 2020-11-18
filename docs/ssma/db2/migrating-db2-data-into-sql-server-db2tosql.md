@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5b833a97fceeaf09b5eb6ffb86ac3abeb06e6bb0
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 2f3ca5b9f222e52b7913d5688b6e8c6adfbd526d
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987916"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869718"
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>Migrieren von DB2-Daten in SQL Server (DB2ToSQL)
 Nachdem Sie die konvertierten Objekte mit erfolgreich synchronisiert haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , können Sie Daten von DB2 zu migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -38,7 +38,7 @@ Nachdem Sie die konvertierten Objekte mit erfolgreich synchronisiert haben [!INC
   
 -   Wählen Sie im Dialogfeld **Projekteinstellungen** die Option **Client seitiges Daten Migrations** Modul aus, um die Datenmigration auf Clientseite zu initiieren.  
   
--   In den **Projekteinstellungen**ist die Option **Client seitiges Daten Migrations** Modul festgelegt.  
+-   In den **Projekteinstellungen** ist die Option **Client seitiges Daten Migrations** Modul festgelegt.  
   
     > [!NOTE]  
     > Die **Client seitige Daten Migrations-Engine** befindet sich in der SSMA-Anwendung und ist daher nicht von der Verfügbarkeit des Erweiterungspakets abhängig.  
@@ -52,7 +52,7 @@ Nachdem Sie die konvertierten Objekte mit erfolgreich synchronisiert haben [!INC
 ## <a name="migrating-data-to-sql-server"></a>Migrieren von Daten zu SQL Server  
 Beim Migrieren von Daten handelt es sich um einen Massen Ladevorgang, mit dem Daten Zeilen aus DB2-Tabellen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabellen in Transaktionen verschoben werden. Die Anzahl der Zeilen, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in jeder Transaktion geladen werden, wird in den Projekteinstellungen konfiguriert.  
   
-Stellen Sie sicher, dass der Ausgabebereich angezeigt wird, um Migrations Meldungen anzuzeigen. Wählen Sie andernfalls im Menü **Ansicht** die Option **Ausgabe**aus.  
+Stellen Sie sicher, dass der Ausgabebereich angezeigt wird, um Migrations Meldungen anzuzeigen. Wählen Sie andernfalls im Menü **Ansicht** die Option **Ausgabe** aus.  
   
 **So migrieren Sie Daten**  
   
@@ -72,7 +72,7 @@ Stellen Sie sicher, dass der Ausgabebereich angezeigt wird, um Migrations Meldun
   
     **Client seitige Daten Migration:**  
   
-    -   Wählen Sie zum Ausführen der **Client seitigen Datenmigration**im Dialogfeld **Projekteinstellungen** die Option **Client seitiges Daten Migrations** Modul aus.  
+    -   Wählen Sie zum Ausführen der **Client seitigen Datenmigration** im Dialogfeld **Projekteinstellungen** die Option **Client seitiges Daten Migrations** Modul aus.  
   
     **Server seitige Daten Migration:**  
   
@@ -82,7 +82,7 @@ Stellen Sie sicher, dass der Ausgabebereich angezeigt wird, um Migrations Meldun
   
         2.  Der SQL Server-Agent-Dienst wird auf der-Instanz ausgeführt SQL Server.  
   
-    -   Wählen Sie zum Durchführen der **serverseitigen Datenmigration**im Dialogfeld **Projekteinstellungen** die Option **serverseitiges Datenmigrations-Engine** aus.  
+    -   Wählen Sie zum Durchführen der **serverseitigen Datenmigration** im Dialogfeld **Projekteinstellungen** die Option **serverseitiges Datenmigrations-Engine** aus.  
   
 4.  Klicken Sie mit der rechten Maustaste auf **Schemas** in DB2 Metadata Explorer, und klicken Sie dann auf **Daten migrieren**. Sie können auch Daten für einzelne Objekte oder Objektkategorien migrieren: Klicken Sie mit der rechten Maustaste auf das Objekt oder seinen übergeordneten Ordner. Wählen Sie die Option **Daten migrieren** aus.  
   
@@ -91,7 +91,7 @@ Stellen Sie sicher, dass der Ausgabebereich angezeigt wird, um Migrations Meldun
   
 5.  Geben Sie im Dialogfeld **mit DB2 verbinden** die Anmelde Informationen für die Verbindung ein, und klicken Sie dann auf **verbinden**. Weitere Informationen zum Herstellen einer Verbindung mit DB2 finden Sie unter [Herstellen einer Verbindung mit DB2 Database &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
   
-    Geben Sie zum Herstellen einer Verbindung mit der Zieldatenbank [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Dialogfeld **mit SQL Server verbinden** die Anmelde Informationen für die Verbindung ein, und klicken Sie auf **verbinden**. Weitere Informationen zum Herstellen einer Verbindung mit finden Sie unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Herstellen einer Verbindung mit SQL Server](./connecting-to-sql-server-db2etosql.md)  
+    Geben Sie zum Herstellen einer Verbindung mit der Zieldatenbank [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Dialogfeld **mit SQL Server verbinden** die Anmelde Informationen für die Verbindung ein, und klicken Sie auf **verbinden**. Weitere Informationen zum Herstellen einer Verbindung mit finden Sie unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Herstellen einer Verbindung mit SQL Server](./connecting-to-sql-server-db2tosql.md)  
   
     Nachrichten werden im **Ausgabe** Bereich angezeigt. Wenn die Migration beendet ist, wird der **Daten Migrationsbericht** angezeigt. Wenn keine Daten migriert wurden, klicken Sie auf die Zeile, die die Fehler enthält, und klicken Sie dann auf **Details**. Wenn Sie den Bericht fertiggestellt haben, klicken Sie auf **Schließen**. Weitere Informationen zum Daten Migrationsbericht finden Sie unter [Daten Migrationsbericht (SSMA Common)](../sybase/data-migration-report-sybasetosql.md) .  
   

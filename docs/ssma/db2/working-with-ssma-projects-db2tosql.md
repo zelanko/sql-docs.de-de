@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2dbcef29550276241cb638b6224914e43e2e88ec
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: f56387f8081ce14c68d355327c2829bf6e33c8cc
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988462"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869478"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>Arbeiten mit SSMA-Projekten (DB2ToSQL)
 Wenn Sie DB2-Datenbanken zu migrieren möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , erstellen Sie zunächst ein SSMA-Projekt. Das Projekt ist eine Datei, die die folgenden Informationen enthält:  
@@ -28,7 +28,7 @@ Wenn Sie DB2-Datenbanken zu migrieren möchten [!INCLUDE[ssNoVersion](../../incl
   
 -   Projekteinstellungen.  
   
-Wenn Sie ein Projekt öffnen, wird es von DB2 und getrennt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Auf diese Weise können Sie offline arbeiten. Weitere Informationen zum erneuten Herstellen einer Verbindung mit finden Sie unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Herstellen einer Verbindung mit SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md).  
+Wenn Sie ein Projekt öffnen, wird es von DB2 und getrennt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Auf diese Weise können Sie offline arbeiten. Weitere Informationen zum erneuten Herstellen einer Verbindung mit finden Sie unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Herstellen einer Verbindung mit SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2tosql.md).  
   
 ## <a name="reviewing-default-project-settings"></a>Überprüfen der Standard Projekteinstellungen  
 SSMA enthält mehrere Einstellungen zum wandeln und Laden von Datenbankobjekten, zum Migrieren von Daten und zum Synchronisieren von SSMA mit DB2 und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Die Standardeinstellungen sind für viele Benutzer geeignet. Bevor Sie jedoch ein neues SSMA-Projekt erstellen, sollten Sie die Einstellungen überprüfen. Wenn Sie möchten, können Sie die Standardeinstellungen ändern, die für alle neuen Projekte verwendet werden.  
@@ -92,7 +92,7 @@ Wenn Sie ein Projekt speichern, behält SSMA die Projekteinstellungen und option
   
     Wenn sich Schemas im Projekt geändert haben oder nicht konvertiert wurden, werden Sie von SSMA aufgefordert, Metadaten zu laden und zu speichern. Wenn Sie Metadaten laden und speichern, können Sie offline arbeiten. Außerdem können Sie eine komplette Projektdatei an andere Personen senden, z. b. technische Supportmitarbeiter. Wenn Sie zum Speichern von Metadaten aufgefordert werden, gehen Sie wie folgt vor:  
   
-    1.  Aktivieren Sie für jedes Schema, das den Status **fehlender Metadaten**anzeigt, das Kontrollkästchen neben dem Datenbanknamen.  
+    1.  Aktivieren Sie für jedes Schema, das den Status **fehlender Metadaten** anzeigt, das Kontrollkästchen neben dem Datenbanknamen.  
   
         Das Speichern von Metadaten kann einige Minuten dauern. Wenn Sie noch keine Metadaten speichern möchten, aktivieren Sie keine Kontrollkästchen.  
   
@@ -109,9 +109,9 @@ Wenn Sie ein Projekt öffnen, wird es von DB2 und von getrennt [!INCLUDE[ssNoVer
   
     -   Zeigen Sie im Menü **Datei** auf **zuletzt verwendete Projekte**, und klicken Sie dann auf das Projekt, das Sie öffnen möchten.  
   
-    -   Wählen Sie im Menü **Datei** die Option **Projekt öffnen**aus, suchen Sie die Projektdatei. o2ssproj, wählen Sie die Datei aus, und klicken Sie dann auf **Öffnen**.  
+    -   Wählen Sie im Menü **Datei** die Option **Projekt öffnen** aus, suchen Sie die Projektdatei. o2ssproj, wählen Sie die Datei aus, und klicken Sie dann auf **Öffnen**.  
   
-2.  Um erneut eine Verbindung mit DB2 herzustellen, klicken Sie im Menü **Datei** auf **Verbindung mit DB2 wieder**herstellen.  
+2.  Um erneut eine Verbindung mit DB2 herzustellen, klicken Sie im Menü **Datei** auf **Verbindung mit DB2 wieder** herstellen.  
   
 3.  Um erneut eine Verbindung mit herzustellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , klicken Sie im Menü **Datei** auf **Verbindung wiederherstellen, um SQL Server**.  
   
@@ -121,4 +121,4 @@ Der nächste Schritt des Migrations Vorgangs besteht darin, eine [Verbindung mit
 ## <a name="see-also"></a>Weitere Informationen  
 [Migrieren von DB2-Datenbanken zu SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
 [Herstellen einer Verbindung mit der DB2-Datenbank &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
-[Herstellen einer Verbindung mit SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
+[Herstellen einer Verbindung mit SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2tosql.md)  
