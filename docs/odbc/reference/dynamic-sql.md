@@ -2,7 +2,7 @@
 description: Dynamische SQL-Anweisungen
 title: Dynamisches SQL | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/03/2020
+ms.date: 11/16/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: de711543748a91015a9aa0d4cb8aadb011744306
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 86164b1bc5d98475d4e2f0980ce433d33e5d858f
+ms.sourcegitcommit: a2182276ba00c48dc1475b9c7dfa45179d4416dc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494581"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94704175"
 ---
 # <a name="dynamic-sql"></a>Dynamische SQL-Anweisungen
 Obwohl statisches SQL in vielen Situationen gut funktioniert, gibt es eine Klasse von Anwendungen, in denen der Datenzugriff nicht im Voraus bestimmt werden kann. Angenommen, eine Kalkulations Tabelle ermöglicht einem Benutzer die Eingabe einer Abfrage, die von der Tabelle dann an das DBMS gesendet wird, um Daten abzurufen. Der Inhalt dieser Abfrage kann dem Programmierer offensichtlich nicht bekannt sein, wenn das Tabellen Kalkulations Programm geschrieben wird.  
@@ -32,7 +32,7 @@ Obwohl statisches SQL in vielen Situationen gut funktioniert, gibt es eine Klass
   
  Die einfachste Möglichkeit, eine dynamische SQL-Anweisung auszuführen, ist mit einer EXECUTE IMMEDIATE-Anweisung. Diese Anweisung übergibt die SQL-Anweisung für die Kompilierung und Ausführung an das DBMS.  
   
- Ein Nachteil der EXECUTE IMMEDIATE-Anweisung besteht darin, dass das DBMS jeden der fünf Schritte zum Verarbeiten einer SQL-Anweisung jedes Mal durchlaufen muss, wenn die Anweisung ausgeführt wird. Der Aufwand für diesen Prozess kann signifikant sein, wenn viele-Anweisungen dynamisch ausgeführt werden, und es ist verschwenderisch, wenn diese Anweisungen ähnlich sind. Um diese Situation zu beheben, bietet dynamisches SQL eine optimierte Form der Ausführung mit der Bezeichnung vorbereitete Ausführung, die die folgenden Schritte verwendet:  
+ Ein Nachteil der EXECUTE IMMEDIATE-Anweisung besteht darin, dass das DBMS jeden der [fünf Schritte zum Verarbeiten einer SQL-Anweisung](processing-a-sql-statement.md) jedes Mal durchlaufen muss, wenn die Anweisung ausgeführt wird. Der Aufwand für diesen Prozess kann signifikant sein, wenn viele-Anweisungen dynamisch ausgeführt werden, und es ist verschwenderisch, wenn diese Anweisungen ähnlich sind. Um diese Situation zu beheben, bietet dynamisches SQL eine optimierte Form der Ausführung mit der Bezeichnung vorbereitete Ausführung, die die folgenden Schritte verwendet:  
   
 1.  Das Programm erstellt eine SQL-Anweisung in einem Puffer, genau wie bei der EXECUTE IMMEDIATE-Anweisung. Anstelle von Host Variablen kann ein Fragezeichen (?) an beliebiger Stelle im Anweisungs Text eine Konstante ersetzen, um anzugeben, dass ein Wert für die Konstante später bereitgestellt wird. Das Fragezeichen wird als Parameter Markierung bezeichnet.  
   
