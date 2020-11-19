@@ -8,17 +8,40 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 10/14/2020
-ms.openlocfilehash: c75105ddf77c62dd6c871b679dce32ec08c5364c
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.date: 11/12/2020
+ms.openlocfilehash: a45b17b98ae8c8d398eee18c7678a119cb32a4f7
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059188"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584803"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Versionshinweise für Azure Data Studio
 
 **[Neuestes Release herunterladen und installieren](./download-azure-data-studio.md)**
+
+## <a name="november-2020"></a>November 2020
+
+12. November 2020 &nbsp; / &nbsp; Version: 1.24.0
+
+&nbsp;
+
+| Change | Details |
+| ------ | ------- |
+| Fehlerbehebungen | Eine vollständige [Liste der Fehlerbehebungen und Issues finden Sie auf GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2020+Release%22+is%3Aclosed). |
+| Verbindungsdialogfeld | Neue Suchregisterkarte zum Verbindungsdialogfeld hinzugefügt. |
+| Update für Erweiterung(en) | Update für Postgres-Erweiterung veröffentlicht. |
+| Neue Notebookfeatures | Neue Features für SQL zur Notebookunterstützung hinzugefügt. <br/> Neue Features zur Unterstützung für Notebookparameter hinzugefügt. <br/>  Neue Features zum Ergebnisstreaming für SQL-Notebooks hinzugefügt. |
+| Python-Installation | PROSE-Paket wurde aus der Python-Standardinstallation entfernt. |
+
+### <a name="known-issues-1240"></a>Bekannte Probleme (1.24.0)
+
+| Neues Element | Details | Problemumgehung |
+|----------|---------|------------|
+| Azure Arc-Erweiterung | [Bekanntes Problem:](https://github.com/microsoft/azuredatastudio/issues/13319) Die Schaltfläche „Skript in Notebook schreiben“ für Arc MIAA & PG-Bereitstellungen führt vor der Skripterstellung für das Notebook keine Feldüberprüfung aus. Das bedeutet Folgendes: Wenn ein Benutzer ein falsches Kennwort in das Kennwortbestätigungsfeld eingibt, entsteht möglicherweise ein Notebook mit einem falschen Kennwortwert.| Die Schaltfläche „Bereitstellen“ funktioniert erwartungsgemäß. Daher sollten Benutzer diese Schaltfläche verwenden. |
+| Objekt-Explorer | ADS-Releases vor 1.24.0 weisen aufgrund von Änderungen der Engine im Zusammenhang mit [Azure Synapse Analytics SQL On-Demand](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview) einen Breaking Change im Objekt-Explorer auf. | Um den Objekt-Explorer in Azure Data Studio weiterhin mit Azure Synapse Analytics SQL On-Demand verwenden zu können, müssen Sie Azure Data Studio 1.24.0 oder höher verwenden. |
+
+Unter [Azure Data Studio-Feedback](https://github.com/microsoft/azuredatastudio) können Sie Lösungen für andere bekannte Probleme finden und Feedback an das Produktteam übermitteln.
 
 ## <a name="october-2020"></a>Oktober 2020
 

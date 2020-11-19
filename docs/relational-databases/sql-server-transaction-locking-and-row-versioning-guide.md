@@ -20,12 +20,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70358a9ba4fc5cb9d9b326119b488efe6af3a9f5
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 07c59ceb0ec51d4d9fd357fcc154892091c3caaf
+ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868191"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631766"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Handbuch zu Transaktionssperren und Zeilenversionsverwaltung
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -550,7 +550,7 @@ GO
   
 -   Bereich stellt den Sperrmodus dar, der den Bereich zwischen zwei aufeinander folgenden Indexeinträgen schützt.  
 -   Zeile stellt den Sperrmodus dar, der den Indexeintrag schützt.  
--   Modus stellt den kombinierten Sperrmodus dar, der verwendet wird. Schlüsselbereichssperrmodi setzen sich aus zwei Teilen zusammen. Der erste gibt den Sperrtyp wieder, der zum Sperren des Indexbereichs (Range*T*) verwendet wird, und der zweite gibt den Sperrtyp wieder, der zum Sperren eines bestimmten Schlüssels (*K*) verwendet wird. Die beiden Teile sind durch einen Bindestrich (-) miteinander verbunden, beispielsweise Range*T*-*K*.  
+-   Modus stellt den kombinierten Sperrmodus dar, der verwendet wird. Schlüsselbereichssperrmodi setzen sich aus zwei Teilen zusammen. Der erste gibt den Sperrtyp wieder, der zum Sperren des Indexbereichs (Range *T*) verwendet wird, und der zweite gibt den Sperrtyp wieder, der zum Sperren eines bestimmten Schlüssels (*K*) verwendet wird. Die beiden Teile sind durch einen Bindestrich (-) miteinander verbunden, beispielsweise Range *T*-*K*.  
   
     |Range|Zeile|Mode|BESCHREIBUNG|  
     |-----------|---------|----------|-----------------|  
@@ -912,7 +912,7 @@ GO
 #### <a name="deadlock-extended-event"></a><a name="deadlock_xevent"></a> Erweitertes Deadlock-Ereignis
 Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] sollte das erweiterte Ereignis `xml_deadlock_report` (xEvent) anstelle der Ereignisklasse des Deadlock-Graphen in der SQL-Ablaufverfolgung oder in SQL Server Profiler verwendet werden.
 
-Ebenfalls ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] erfasst die ***system\_health***-Sitzung bei Auftreten eines Deadlock bereits alle `xml_deadlock_report`-xEvents, die den Deadlockgraphen enthalten. Da die *system\_health*-Sitzung standardmäßig aktiviert ist, ist es nicht erforderlich, eine eigene xEvent-Sitzung zu konfigurieren, um Deadlockinformationen erfassen. 
+Ebenfalls ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] erfasst die **_system\_health_* _-Sitzung bei Auftreten eines Deadlock bereits alle `xml_deadlock_report`-xEvents, die den Deadlockgraphen enthalten. Da die _system\_health*-Sitzung standardmäßig aktiviert ist, ist es nicht erforderlich, eine eigene xEvent-Sitzung zu konfigurieren, um Deadlockinformationen erfassen. 
 
 Der in der Regel erfasste Deadlock Graph verfügt über drei unterschiedliche Knoten:
 -   **victim-list:** Prozessbezeichner des Deadlockopfers.

@@ -107,7 +107,7 @@ Führen Sie die folgenden Schritte aus, um die Machine-Learning-Erweiterung in A
 
 1. Wählen Sie im Menü auf der linken Seite unter **Allgemein** die Option **Machine Learning** aus.
 
-Öffnen Sie die Links unter **Nächste Schritte** , und informieren Sie sich darüber, wie Sie mit der Machine-Learning-Erweiterung Pakete verwalten, Vorhersagen treffen und Modellen in Ihre Datenbank importieren.
+Öffnen Sie die Links unter **Nächste Schritte**, und informieren Sie sich darüber, wie Sie mit der Machine-Learning-Erweiterung Pakete verwalten, Vorhersagen treffen und Modellen in Ihre Datenbank importieren.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
