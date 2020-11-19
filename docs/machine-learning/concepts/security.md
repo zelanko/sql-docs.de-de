@@ -7,15 +7,14 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 ms.custom: contperfq1, seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f51998b722748bdfe51b773e251de88c8cac07a2
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: eb5ab3d1f6408bb63d194b964626bf303ba9e249
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956516"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870005"
 ---
 # <a name="security-architecture-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>Sicherheitsarchitektur für das Erweiterbarkeitsframework in SQL Server Machine Learning Services
 
@@ -77,7 +76,7 @@ Aus diesem Grund müssen alle externen Skripts, die von einem Remoteclient initi
 
 ## <a name="services-used-in-external-processing-launchpad"></a>In der externen Verarbeitung verwendete Dienste (Launchpad)
 
-Das Erweiterbarkeitsframework fügt einen neuen NT-Dienst zur [Liste der Dienste](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) in einer SQL Server-Installation hinzu: [**SQL Server-Launchpad (MSSSQLSERVER)** ](extensibility-framework.md#launchpad).
+Das Erweiterbarkeitsframework fügt einen neuen NT-Dienst zur [Liste der Dienste](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) in einer SQL Server-Installation hinzu: [**SQL Server-Launchpad (MSSSQLSERVER)**](extensibility-framework.md#launchpad).
 
 Die Datenbank-Engine verwendet den SQL Server-**Launchpad**-Dienst, um eine externe Skriptsitzung als separaten Prozess zu instanziieren. 
 Der Prozess wird mit einem Konto mit geringen Rechten ausgeführt. Dieses Konto unterscheidet sich von SQL Server, Launchpad und der Benutzeridentität, unter der die gespeicherte Prozedur oder Hostabfrage ausgeführt wurde. Die Ausführung von Skripts in einem separaten Prozess unter einem Konto mit niedrigen Berechtigungen ist die Grundlage des Sicherheits- und Isolationsmodells für externe Skripts in SQL Server.
@@ -93,7 +92,7 @@ SQL Server verwaltet außerdem die Zuordnung der Identität des aufrufenden Benu
 
 ## <a name="services-used-in-external-processing-launchpad"></a>In der externen Verarbeitung verwendete Dienste (Launchpad)
 
-Das Erweiterbarkeitsframework fügt einen neuen NT-Dienst zur [Liste der Dienste](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) in einer SQL Server-Installation hinzu: [**SQL Server-Launchpad (MSSSQLSERVER)** ](extensibility-framework.md#launchpad).
+Das Erweiterbarkeitsframework fügt einen neuen NT-Dienst zur [Liste der Dienste](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) in einer SQL Server-Installation hinzu: [**SQL Server-Launchpad (MSSSQLSERVER)**](extensibility-framework.md#launchpad).
 
 Die Datenbank-Engine verwendet den SQL Server-**Launchpad**-Dienst, um eine externe Skriptsitzung als separaten Prozess zu instanziieren. 
 Der Prozess wird mit der Launchpad-Benutzeridentität ausgeführt, weist jedoch die Einschränkung auf, dass er sich in einer AppContainer-Instanz befindet. Die Ausführung von Skripts in einem separaten Prozess unter einer AppContainer-Instanz ist die Grundlage des Sicherheits- und Isolationsmodells für externe Skripts in SQL Server.
@@ -129,7 +128,7 @@ Weitere Informationen finden Sie unter [Erweiterbarkeitsarchitektur in SQL Serve
 
 + Die Größe des Benutzerkontenpools ist statisch und der Standardwert ist 20, wodurch 20 gleichzeitige Sitzungen unterstützt werden. Die Anzahl der externen Laufzeitsitzungen, die gleichzeitig gestartet werden können, ist durch die Größe dieses Benutzerkontenpools beschränkt. 
 
-+ Workerkontonamen im Pool weisen das Format „SQLInstanzname*nn*“ auf. Auf einer Standardinstanz beispielsweise enthält **SQLRUserGroup** Konten mit den Namen MSSQLSERVER01, MSSQLSERVER02 und so weiter bis zu MSSQLSERVER20.
++ Workerkontonamen im Pool weisen das Format „SQLInstanzname *nn*“ auf. Auf einer Standardinstanz beispielsweise enthält **SQLRUserGroup** Konten mit den Namen MSSQLSERVER01, MSSQLSERVER02 und so weiter bis zu MSSQLSERVER20.
 
 Für parallel ausgeführte Aufgaben sind keine zusätzlichen Konten erforderlich. Wenn ein Benutzer beispielsweise eine Bewertungstask ausführt, die parallel verarbeitet wird, wird für alle Threads das gleiche Workerkonto wiederverwendet. Wenn Sie beabsichtigen, die Machine Learning-Funktion intensiv zu nutzen, können Sie die Anzahl der Konten erhöhen, die für die Ausführung externer Skripts verwendet werden. Weitere Informationen finden Sie unter [Skalieren der gleichzeitige Ausführung externer Skripts in SQL Server-Machine Learning Services](../../machine-learning/administration/scale-concurrent-execution-external-scripts.md).
 

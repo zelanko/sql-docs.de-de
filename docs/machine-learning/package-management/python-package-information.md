@@ -8,14 +8,13 @@ ms.date: 06/03/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e088597a52a9f220c0aecb62c66df085b287955
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 9bb55bf9bac934f78b0a309663ced729a8ef6534
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115503"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869809"
 ---
 # <a name="get-python-package-information"></a>Abrufen von Paketinformationen für Python
 
@@ -78,7 +77,7 @@ Weitere Informationen zur Variablen `sys.path`, und wie sie zum Festlegen des Su
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 > [!NOTE]
-> Versuchen Sie nicht, Python-Pakete direkt in der SQL-Paketbibliothek mithilfe von **pip** oder ähnlichen Methoden zu installieren. Verwenden Sie stattdessen **sqlmlutils** , um Pakete in einer SQL-Instanz zu installieren. Weitere Informationen finden Sie unter [Installieren von Python-Paketen mit sqlmlutils](install-additional-python-packages-on-sql-server.md).
+> Versuchen Sie nicht, Python-Pakete direkt in der SQL-Paketbibliothek mithilfe von **pip** oder ähnlichen Methoden zu installieren. Verwenden Sie stattdessen **sqlmlutils**, um Pakete in einer SQL-Instanz zu installieren. Weitere Informationen finden Sie unter [Installieren von Python-Paketen mit sqlmlutils](install-additional-python-packages-on-sql-server.md).
 ::: moniker-end
 
 ## <a name="default-microsoft-python-packages"></a>Microsoft Python-Standardpakete
