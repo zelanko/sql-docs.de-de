@@ -17,20 +17,20 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: markingmyname
 ms.author: maghan
 ms.custom: contperfq4
-ms.openlocfilehash: 375d0b39fe0f898961d1386445b3b8e3f2945ee4
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: a294cbfbb165e6cc37f931cdd5d3a40406713f86
+ms.sourcegitcommit: 275fd02d60d26f4e66f6fc45a1638c2e7cedede7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363300"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94447117"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  In diesem Artikel wird beschrieben, wie Sie die Serverkonfigurationsoption **Max. Grad an Parallelität (MAXDOP)** in SQL Server mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] konfigurieren. Wenn eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem Computer mit mehreren Mikroprozessoren oder CPUs ausgeführt wird, wird der Grad an Parallelität erkannt, also die Anzahl von Prozessoren, die für die Ausführung einer einzelnen Anweisung eingesetzt werden. Dies gilt für jede Ausführung eines parallelen Plans. Mithilfe der Option **Max. Grad an Parallelität** kann die Anzahl der Prozessoren beschränkt werden, die bei der Ausführung paralleler Pläne verwendet werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] berücksichtigt die Ausführung paralleler Pläne für Abfragen, DDL-Indizierungsvorgänge (Data Definition Language, DDL), parallele Einfügevorgänge, Onlineausführung von ALTER COLUMN, parallele Sammlung von Statistiken sowie die statische und keysetgesteuerte Cursorauffüllung.
+  In diesem Artikel wird beschrieben, wie Sie die Serverkonfigurationsoption **Max. Grad an Parallelität (MAXDOP)** in SQL Server mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] konfigurieren. Wenn eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem Computer mit mehreren Mikroprozessoren oder CPUs ausgeführt wird, erkennt die [!INCLUDE[ssde_md](../../includes/ssde_md.md)], ob Parallelität verwendet werden kann. Mit dem Grad der Parallelität wird die Anzahl der Prozessoren festgelegt, die zur Ausführung einer einzelnen Anweisung für jede Ausführung paralleler Pläne verwendet werden. Mithilfe der Option **Max. Grad an Parallelität** kann die Anzahl der Prozessoren beschränkt werden, die bei der Ausführung paralleler Pläne verwendet werden. Weitere Informationen zu den durch den **maximalen Grad an Parallelität (MAXDOP)** festgelegten Grenzwert finden Sie im Abschnitt [Einschränkungen](#Restrictions) auf dieser Seite. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] berücksichtigt die Ausführung paralleler Pläne für Abfragen, DDL-Indizierungsvorgänge (Data Definition Language, DDL), parallele Einfügevorgänge, Onlineausführung von ALTER COLUMN, parallele Sammlung von Statistiken sowie die statische und keysetgesteuerte Cursorauffüllung.
 
 > [!NOTE]
-> Mit [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] wurden automatische Empfehlungen zum Festlegen der MAXDOP-Serverkonfigurationsoption während des Installationsvorgangs eingeführt. Auf der Setupbenutzeroberfläche können Sie entweder die empfohlenen Einstellungen übernehmen oder Ihren eigenen Wert eingeben. Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine – Seite „MaxDOP“](../../sql-server/install/instance-configuration.md#maxdop).
+> Mit [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] wurden automatische Empfehlungen zum Festlegen der MAXDOP-Serverkonfigurationsoption während des Installationsvorgangs basierend auf der Anzahl der verfügbaren Prozessoren eingeführt. Auf der Setupbenutzeroberfläche können Sie entweder die empfohlenen Einstellungen übernehmen oder Ihren eigenen Wert eingeben. Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine – Seite „MaxDOP“](../../sql-server/install/instance-configuration.md#maxdop).
 
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
@@ -91,7 +91,7 @@ Verwenden Sie von **bis** die folgenden Richtlinien beim Konfigurieren des Serve
   
 #### <a name="to-configure-the-max-degree-of-parallelism-option"></a>So konfigurieren Sie die Option Max. Grad an Parallelität  
   
-1.  Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf einen Server, und wählen Sie **Eigenschaften**aus.  
+1.  Klicken Sie im **Objekt-Explorer** mit der rechten Maustaste auf einen Server, und wählen Sie **Eigenschaften** aus.  
   
 2.  Klicken Sie auf den **Erweitert** -Knoten.  
   

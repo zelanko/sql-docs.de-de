@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: 6d3a6d83b14c401ca6fc7ff6c773ef9565662a0f
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 11ac66182122cba239634cdf07f4b6683d2479cb
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115447"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674170"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Editionen und unterstützte Funktionen von SQL Server 2017 unter Linux
 
@@ -210,6 +210,7 @@ Informationen über die Features von Integration Services (SSIS), die von den ei
 |Planarer und geodätischer Datentyp|Ja|Ja|Ja|Ja| 
 |Erweiterte räumliche Bibliotheken|Ja|Ja|Ja|Ja|   
 |Importieren/Exportieren räumlicher Industriestandard-Datenformate|Ja|Ja|Ja|Ja|   
+
 ## <a name="unsupported-features--services"></a><a name="Unsupported"></a> Nicht unterstützte Features und Dienste
 
 Die folgenden Features und Dienste stehen in SQL Server 2017 für Linux nicht zur Verfügung. Die Unterstützung dieser Features wird im Laufe der Zeit ausgeweitet.
@@ -225,6 +226,7 @@ Die folgenden Features und Dienste stehen in SQL Server 2017 für Linux nicht zu
 | &nbsp; | Dateitabelle, FILESTREAM |
 | &nbsp; | CLR-Assemblys mit festgelegter EXTERNAL_ACCESS- oder UNSAFE-Berechtigung |
 | &nbsp; | Pufferpoolerweiterung |
+| &nbsp; | Sicherung über URLs: Seitenblob<sup>1</sup>|
 | **SQL Server-Agent** |  Subsysteme: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
 | &nbsp; | Alerts |
 | &nbsp; | Protokolllese-Agent |
@@ -241,6 +243,8 @@ Die folgenden Features und Dienste stehen in SQL Server 2017 für Linux nicht zu
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master Data Services |
   
+<sup>1</sup> Die URL-Sicherung wird für Blockblobs unterstützt, wobei die [Shared Access Signature](../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS) verwendet wird.
+
 ## <a name="next-steps"></a>Nächste Schritte
  [Editionen und unterstützte Funktionen von SQL Server 2019 – Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [Editionen und unterstützte Funktionen von SQL Server 2017 – Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  

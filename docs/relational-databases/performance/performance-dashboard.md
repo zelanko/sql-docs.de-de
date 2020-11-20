@@ -2,7 +2,7 @@
 title: Leistungsdashboard | Microsoft-Dokumentation
 description: Hier erfahren Sie mehr über das Leistungsdashboard von SQL Server Management Studio, das schnellere Erkenntnisse über SQL Server und Azure SQL Managed Instance bietet.
 ms.custom: ''
-ms.date: 12/14/2019
+ms.date: 11/13/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -15,12 +15,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 61abc33a31948bca020f4a6cf7c9539ae0546af5
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 45b657be3cef9267431892eeced327e966b97b7d
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863376"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674185"
 ---
 # <a name="performance-dashboard"></a>Leistungsdashboard
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -78,8 +78,9 @@ Der Bericht **Wartevorgänge** filtert alle Wartezeiten im Leerlauf und Ruhezust
 
 Die Berichte **Ressourcenintensive Abfragen** werden zurückgesetzt, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet wird, da die Daten in den zugrunde liegenden DMVs gelöscht werden. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] gibt es ausführliche Informationen zu ressourcenintensiven Abfragen im Abfragespeicher. 
 
+
 > [!NOTE]
-> Das Leistungsdashboard wurde für [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415) erstmals als eigenständiger Download freigegeben und später für [SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29063) aktualisiert.
+> Das Leistungsdashboard wurde für [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415) erstmals als eigenständiger Download freigegeben und später für [SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29063) aktualisiert. Obwohl der SQL Server Management Studio-Berichtsrenderer keinen Zwischenablagezugriff auf den Text unterstützt, der in den Berichten enthalten ist, kann auf den Text über eigenständige Berichte zugegriffen werden.  Laden Sie die eigenständigen Berichte herunter, wenn Sie Abfragetext aus diesen Berichten kopieren müssen.
 
 ## <a name="permissions"></a>Berechtigungen  
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden die Berechtigungen `VIEW SERVER STATE` und `ALTER TRACE` benötigt. In [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] ist die Berechtigung `VIEW DATABASE STATE` in der Datenbank erforderlich.

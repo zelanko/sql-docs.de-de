@@ -1,27 +1,28 @@
 ---
+title: SQL-Ablaufverfolgung
 description: SQL-Ablaufverfolgung
-title: SQL-Ablaufverfolgung | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7368f8e10c38008836d86d7dea14d2ab8add4a93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 11/27/2018
+ms.openlocfilehash: 4ea8d31c58758c7513a3d958ee02f0e5d9f4c5d4
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455327"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584996"
 ---
 # <a name="sql-trace"></a>SQL-Ablaufverfolgung
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Bei der SQL-Ablaufverfolgung werden Ereignisse gesammelt, wenn sie Instanzen von in der Ablaufverfolgungsdefinition aufgeführten Ereignisklassen sind. Diese Ereignisse können aus der Ablaufverfolgung herausgefiltert oder für ihr Ziel in Warteschlangen eingereiht werden. Bei dem Ziel kann es sich um eine Datei oder um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) handeln, die die Ablaufverfolgungsinformationen in Anwendungen verwenden können, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwalten.  
-  
+
 > [!IMPORTANT]
 > Die SQL-Ablaufverfolgung und [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] sind veraltet. Der *Microsoft.SqlServer.Management.Trace*-Namespace, der die Objekte für die Microsoft SQL Server-Ablaufverfolgung und -Wiedergabe enthält, ist ebenfalls veraltet. 
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
@@ -76,20 +77,20 @@ Die SQL-Ablaufverfolgung verwendet Datenspalten in der Ablaufverfolgungsausgabe,
   
 |Datenspalte|Spaltennummer|BESCHREIBUNG|  
 |-----------------|-------------------|-----------------|  
-|**ApplicationName**|10|Der Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem Namen des Programms.|  
-|**BigintData1**|52|Ein Wert (Datentyp**bigint** ), der von der Ereignisklasse abhängt, die in der Ablaufverfolgung angegeben ist.|  
-|**BigintData2**|53|Ein Wert (Datentyp**bigint** ), der von der Ereignisklasse abhängt, die in der Ablaufverfolgung angegeben ist.|  
-|**Binärdaten**|2|Der binäre Wert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wird.|  
-|**ClientProcessID**|9|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn die Clientprozess-ID durch den Client bereitgestellt wird.|  
+|\* **ApplicationName**|10|Der Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem Namen des Programms.|  
+|**BigintData1**|52|Ein Wert (Datentyp **bigint** ), der von der Ereignisklasse abhängt, die in der Ablaufverfolgung angegeben ist.|  
+|**BigintData2**|53|Ein Wert (Datentyp **bigint** ), der von der Ereignisklasse abhängt, die in der Ablaufverfolgung angegeben ist.|  
+|\* **Binärdaten**|2|Der binäre Wert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wird.|  
+|\* **ClientProcessID**|9|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn die Clientprozess-ID durch den Client bereitgestellt wird.|  
 |**ColumnPermissions**|44|Gibt an, ob eine Spaltenberechtigung festgelegt wurde. Sie können den Text der Anweisung analysieren, um zu bestimmen, welche Berechtigungen auf welche Spalten angewendet wurden.|  
-|**CPU**|18|Die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|  
+|\* **CPU**|18|Die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|  
 |**Datenbank-ID**|3|Die ID der Datenbank, die durch die USE *database_name* -Anweisung angegeben wurde, bzw. die ID der Standarddatenbank, wenn für eine bestimmte Instanz keine USE *database_name*-Anweisung ausgegeben wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt den Namen der Datenbank an, wenn die **ServerName** -Datenspalte in der Ablaufverfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|  
 |**DatabaseName**|35|Der Name der Datenbank, in der die Benutzeranweisung ausgeführt wird.|  
 |**DBUserName**|40|Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Benutzername des Clients.|  
-|**Duration**|13|Die Dauer (in Millisekunden) des Ereignisses.<br /><br /> Der Server meldet die Dauer eines Ereignisses in Mikrosekunden (ein Millionstel oder 10<sup>-6</sup>einer Sekunde) und den Umfang der vom Ereignis verbrauchten CPU-Zeit in Millisekunden (ein Tausendstel oder 10<sup>-3</sup>einer Sekunde). In [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt die grafische Benutzeroberfläche die **Duration** -Spalte standardmäßig in Millisekunden an. Wird jedoch eine Ablaufverfolgung entweder in einer Datei oder in einer Datenbanktabelle gespeichert, wird der Wert der **Duration** -Spalte in Mikrosekunden aufgezeichnet.|  
-|**EndTime**|15|Die Beendigungszeit des Ereignisses. Diese Spalte wird nicht für Ereignisklassen, die auf ein startendes Ereignis verweisen, wie z. B. **SQL:BatchStarting** oder **SP:Starting**, aufgefüllt.|  
-|**Fehler**|31|Die Fehlernummer eines Ereignisses. Dies ist häufig die in **sysmessages**gespeicherte Fehlernummer.|  
-|**EventClass**|27|Der Typ der aufgezeichneten Ereignisklasse.|  
+|\* **Duration**|13|Die Dauer (in Millisekunden) des Ereignisses.<br /><br /> Der Server meldet die Dauer eines Ereignisses in Mikrosekunden (ein Millionstel oder 10<sup>-6</sup>einer Sekunde) und den Umfang der vom Ereignis verbrauchten CPU-Zeit in Millisekunden (ein Tausendstel oder 10<sup>-3</sup>einer Sekunde). In [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt die grafische Benutzeroberfläche die **Duration** -Spalte standardmäßig in Millisekunden an. Wird jedoch eine Ablaufverfolgung entweder in einer Datei oder in einer Datenbanktabelle gespeichert, wird der Wert der **Duration** -Spalte in Mikrosekunden aufgezeichnet.|  
+|\* **EndTime**|15|Die Beendigungszeit des Ereignisses. Diese Spalte wird nicht für Ereignisklassen, die auf ein startendes Ereignis verweisen, wie z. B. **SQL:BatchStarting** oder **SP:Starting**, aufgefüllt.|  
+|**Fehler**|31|Die Fehlernummer eines Ereignisses. Dies ist häufig die in **sysmessages** gespeicherte Fehlernummer.|  
+|\* **EventClass**|27|Der Typ der aufgezeichneten Ereignisklasse.|  
 |**EventSequence**|51|Die Sequenznummer für dieses Ereignis.|  
 |**EventSubClass**|21|Der Typ der Ereignisunterklasse, der weitere Informationen zu jeder Ereignisklasse bereitstellt. Beispielsweise repräsentieren Ereignisunterklassenwerte für die **Execution Warnings** -Ereignisklasse den Typ der Ausführungswarnung:<br /><br /> **1** = Abfragewartezeit. Die Abfrage muss auf Ressourcen warten (z. B. Arbeitsspeicher), bevor sie ausgeführt werden kann.<br /><br /> **2** = Timeout der Abfrage. Bei der Abfrage ist beim Warten auf Ressourcen, die für das Fortfahren notwendig waren, ein Timeout eingetreten. Diese Datenspalte wird nicht für alle Ereignisklassen aufgefüllt.|  
 |**GUID**|54|Ein GUID-Wert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung angegeben ist.|  
@@ -102,50 +103,50 @@ Die SQL-Ablaufverfolgung verwendet Datenspalten in der Ablaufverfolgungsausgabe,
 |**IsSystem**|60|Gibt an, ob das Ereignis bei einem Systemprozess oder einem Benutzerprozess aufgetreten ist:<br /><br /> **1** = System<br /><br /> **0** = Benutzer|  
 |**LineNumber**|5|Enthält die Nummer der Zeile mit dem Fehler. Für Ereignisse, an denen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen beteiligt sind, wie z. B. **SP:StmtStarting**, enthält der Wert von **LineNumber** die Zeilennummer der Anweisung in der gespeicherten Prozedur oder dem Batch.|  
 |**LinkedServerName**|45|Name des Verbindungsservers|  
-|**LoginName**|11|Anmeldename des Benutzers (Anmeldung der SQL Server-Sicherheit oder Windows-Anmeldeinformationen im Format DOMAIN\Username).|  
+|\* **LoginName**|11|Anmeldename des Benutzers (Anmeldung der SQL Server-Sicherheit oder Windows-Anmeldeinformationen im Format DOMAIN\Username).|  
 |**LoginSid**|41|Die Sicherheits-ID (SID) des angemeldeten Benutzers. Sie finden diese Informationen in der **sys.server_principals** -Sicht der **master** -Datenbank. Jede Anmeldung am Server weist eine eindeutige ID auf.|  
 |**MethodName**|47|Der Name der OLE DB-Methode.|  
 |**Mode**|32|Die ganze Zahl, die von verschiedenen Ereignissen verwendet wird, um einen Status zu beschreiben, den das Ereignis anfordert oder den es empfangen hat.|  
 |**NestLevel**|29|Ganze Zahl, die die von @@NESTLEVEL zurückgegebenen Daten darstellt.|  
 |**NTDomainName**|7|Die Microsoft Windows-Domäne, der der Benutzer angehört.|  
-|**NTUserName**|6|Der Windows-Benutzername.|  
+|\* **NTUserName**|6|Der Windows-Benutzername.|  
 |**ObjectID**|22|Die vom System zugewiesene ID des Objekts.|  
 |**ObjectID2**|56|Die ID des verbundenen Objekts bzw. der verbundenen Entität, soweit verfügbar.|  
 |**ObjectName**|34|Der Name des Objekts, auf das verwiesen wird.|  
-|**ObjectType**|28|Der Wert, der den Typ des am Ereignis beteiligten Objekts darstellt. Dieser Wert entspricht der **type** -Spalte in **sysobjects**.|  
+|\*\***ObjectType**|28|Der Wert, der den Typ des am Ereignis beteiligten Objekts darstellt. Dieser Wert entspricht der **type** -Spalte in **sysobjects**.|  
 |**Offset**|61|Der Startoffset der Anweisung in der gespeicherten Prozedur oder dem Batch.|  
 |**OwnerID**|58|Nur für Sperrereignisse. Der Typ des Objekts, das eine Sperre aufweist.|  
 |**OwnerName**|37|Der Datenbank-Benutzername des Objektbesitzers.|  
 |**ParentName**|59|Der Name des Schemas, in dem sich dieses Objekt befindet.|  
 |**Berechtigungen**|19|Der ganzzahlige Wert, der den Typ der überprüften Berechtigungen darstellt. Gültige Werte:<br /><br /> **1** = SELECT ALL<br /><br /> **2** = UPDATE ALL<br /><br /> **4** = REFERENCES ALL<br /><br /> **8** = INSERT<br /><br /> **16** = DELETE<br /><br /> **32** = EXECUTE (nur Prozeduren)<br /><br /> **4096** = SELECT ANY (mindestens eine Spalte)<br /><br /> **8192** = UPDATE ANY<br /><br /> **16384** = REFERENCES ANY|  
 |**ProviderName**|46|Der Name des OLE DB-Anbieters.|  
-|**Reads**|16|Die Anzahl der Lesevorgänge auf dem logischen Datenträger, die vom Server aufgrund dieses Ereignisses ausgeführt werden. Hierzu zählen alle Lesevorgänge aus Tabellen und Puffern während der Ausführung der Anweisung.|  
+|\* **Reads**|16|Die Anzahl der Lesevorgänge auf dem logischen Datenträger, die vom Server aufgrund dieses Ereignisses ausgeführt werden. Hierzu zählen alle Lesevorgänge aus Tabellen und Puffern während der Ausführung der Anweisung.|  
 |**RequestID**|49|Die ID der Anforderung, die die Anweisung enthält.|  
 |**RoleName**|38|Der Name der Anwendungsrolle, die aktiviert wird.|  
 |**RowCounts**|48|Die Anzahl der Zeilen im Batch.|  
 |**ServerName**|26|Der Name der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , für die eine Ablaufverfolgung erfolgt.|  
-|**SessionLoginName**|64|Anmeldename des Benutzers, der die Sitzung geöffnet hat. Wenn Sie beispielsweise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **verwenden, um eine Verbindung mit** herzustellen, und eine Anweisung als **Login2**ausführen, zeigt **SessionLoginName** den Wert **Login1**an und **LoginName** den Wert **Login2**. In dieser Datenspalte werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - und Windows-Anmeldenamen angezeigt.|  
+|**SessionLoginName**|64|Anmeldename des Benutzers, der die Sitzung geöffnet hat. Wenn Sie beispielsweise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **verwenden, um eine Verbindung mit** herzustellen, und eine Anweisung als **Login2** ausführen, zeigt **SessionLoginName** den Wert **Login1** an und **LoginName** den Wert **Login2**. In dieser Datenspalte werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - und Windows-Anmeldenamen angezeigt.|  
 |**Severity**|20|Der Schweregrad des Ausnahmeereignisses.|  
 |**SourceDatabaseID**|62|Die ID der Datenbank, in der die Quelle des Objekts vorhanden ist.|  
-|**SPID**|12|Die Serverprozess-ID (SPID), die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem Prozess zugewiesen wurde, der diesem Client zugeordnet ist.|  
+|\* **SPID**|12|Die Serverprozess-ID (SPID), die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem Prozess zugewiesen wurde, der diesem Client zugeordnet ist.|  
 |**SqlHandle**|63|64-Bit-Hash, der auf dem Text einer Ad-hoc-Abfrage oder der Datenbank- und Objekt-ID eines SQL-Objekts basiert. Dieser Wert kann an **sys.dm_exec_sql_text()** übergeben werden, um den dazugehörigen SQL-Text abzurufen.|  
-|**StartTime**|14|Der Zeitpunkt, zu dem das Ereignis begonnen hat, falls verfügbar.|  
+|\* **StartTime**|14|Der Zeitpunkt, zu dem das Ereignis begonnen hat, falls verfügbar.|  
 |**State**|30|Der Fehlerstatuscode.|  
 |**Erfolgreich**|23|Gibt an, ob das Ereignis erfolgreich war. Mögliche Werte:<br /><br /> **1** = Erfolg<br /><br /> **0** = Fehler<br /><br /> Eine **1** bedeutet z. B. eine erfolgreiche Berechtigungsüberprüfung, und **0** bedeutet einen Fehler bei dieser Überprüfung.|  
 |**TargetLoginName**|42|Für Aktionen, die auf einen Anmeldenamen abzielen (z. B. das Hinzufügen eines neuen Anmeldenamens), der Anmeldename, auf den abgezielt wird.|  
 |**TargetLoginSid**|43|Für Aktionen, die auf einen Anmeldenamen abzielen (z. B. das Hinzufügen eines neuen Anmeldenamens), die SID, auf die abgezielt wird.|  
 |**TargetUserName**|39|Für Aktionen, die auf einen Datenbankbenutzer abzielen (z. B. das Erteilen von Berechtigungen für einen Benutzer), der Name des Benutzers.|  
-|**TextData**|1|Der Textwert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wird. Wenn Sie jedoch für eine parametrisierte Abfrage eine Ablaufverfolgung ausführen, werden in der **TextData** -Spalte die Variablen nicht mit Datenwerten angezeigt.|  
+|\* **TextData**|1|Der Textwert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wird. Wenn Sie jedoch für eine parametrisierte Abfrage eine Ablaufverfolgung ausführen, werden in der **TextData** -Spalte die Variablen nicht mit Datenwerten angezeigt.|  
 |**TransactionID**|4|Die vom System zugewiesene ID der Transaktion.|  
 |**Typ**|57|Der ganzzahlige Wert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wird.|  
-|**Writes**|17|Die Anzahl physischer Schreibvorgänge auf dem Datenträger, die vom Server aufgrund des Ereignisses ausgeführt werden.|  
+|\* **Writes**|17|Die Anzahl physischer Schreibvorgänge auf dem Datenträger, die vom Server aufgrund des Ereignisses ausgeführt werden.|  
 |**XactSequence**|50|Ein Token zur Beschreibung der aktuellen Transaktion.|  
-  
- *Diese Datenspalten werden standardmäßig für alle Ereignisse aufgefüllt.  
-  
- \*\* Weitere Informationen zur Datenspalte **ObjectType** finden Sie unter [ObjectType (Spalte für Ablaufverfolgungsereignisse)](../../relational-databases/event-classes/objecttype-trace-event-column.md).  
-  
-## <a name="sql-trace-tasks"></a>Tasks der SQL-Ablaufverfolgung  
+
+\* Diese Datenspalten werden standardmäßig für alle Ereignisse aufgefüllt.
+
+\*\* Weitere Informationen zur Datenspalte **ObjectType** finden Sie unter [ObjectType (Spalte für Ablaufverfolgungsereignisse)](../../relational-databases/event-classes/objecttype-trace-event-column.md).
+
+## <a name="sql-trace-tasks"></a>Tasks der SQL-Ablaufverfolgung
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  

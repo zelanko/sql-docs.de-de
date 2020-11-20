@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 80f1dedefc2808da0c32eaee2d559496defca051
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: fdabd19b81a880c0969cc6359c703cd156a03fab
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115797"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521102"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Erste Schritte mit dem Protokollversand unter Linux
 
@@ -20,8 +20,7 @@ ms.locfileid: "92115797"
 
 Der SQL Server-Protokollversand ist eine Hochverfügbarkeitskonfiguration, bei der eine Datenbank von einem primären Server auf einem oder mehreren sekundären Servern repliziert wird. Kurz gesagt, wird eine Sicherung der Quelldatenbank auf dem sekundären Server wiederhergestellt. Der primäre Server erstellt dann regelmäßig Transaktionsprotokollsicherungen, die von den sekundären Servern wiederhergestellt werden, wobei die sekundäre Kopie der Datenbank aktualisiert wird. 
 
-  ![Protokollversand](https://preview.ibb.co/hr5Ri5/logshipping.png)
-
+  ![Das Diagramm zeigt den Workflow für den Protokollversand.](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
 Wie in dieser Abbildung gezeigt, umfasst eine Protokollversandsitzung die folgenden Schritte:
 

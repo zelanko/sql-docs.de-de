@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: 1c196ea3219f4bdbad2e4001240f754b106e3917
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: f208b424272644f3d66146014401a1343f00e576
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115421"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674197"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Editionen und unterstützte Funktionen von SQL Server 2019 unter Linux
 
@@ -225,6 +225,7 @@ Die folgenden Features und Dienste stehen für SQL Server 2019 für Linux nicht 
 | &nbsp; | Dateitabelle, FILESTREAM |
 | &nbsp; | CLR-Assemblys mit festgelegter EXTERNAL_ACCESS- oder UNSAFE-Berechtigung |
 | &nbsp; | Pufferpoolerweiterung |
+| &nbsp; | Sicherung über URLs: Seitenblob<sup>2</sup> |
 | **SQL Server-Agent** |  Subsysteme: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
 | &nbsp; | Alerts |
 | &nbsp; | Managed Backup |
@@ -241,7 +242,9 @@ Die folgenden Features und Dienste stehen für SQL Server 2019 für Linux nicht 
 | &nbsp; | Master Data Services |
 
 <sup>1</sup> SQL Server r wird in SQL Server unterstützt, aber SQL Server R Services als separates Paket wird nicht unterstützt.
-  
+
+<sup>2</sup> Die URL-Sicherung wird für Blockblobs unterstützt, wobei die [Shared Access Signature](../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS) verwendet wird.
+
 ## <a name="next-steps"></a>Nächste Schritte
  [Editionen und unterstützten Funktionen von SQL Server 2017 – Linux](sql-server-linux-editions-and-components-2017.md)  
  [Editionen und unterstützte Funktionen von SQL Server 2019 – Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  

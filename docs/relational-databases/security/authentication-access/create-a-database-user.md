@@ -25,12 +25,12 @@ ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f74a4cb83db387bf0251a3dc6be7c07c06d8dce2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c18c98192c2806f0b946e5025127151c68009682
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005690"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521177"
 ---
 # <a name="create-a-database-user"></a>Erstellen eines Datenbankbenutzers
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "86005690"
 ##  <a name="understanding-the-types-of-users"></a><a name="Understanding"></a> Grundlegendes zu den Benutzertypen  
  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] bietet sechs Optionen für die Erstellung eines Datenbankbenutzers. Die folgenden Grafik zeigt die sechs Optionen im grünen Kasten, und gibt an, wofür sie stehen.  
   
- ![Benutzertypen](../../../relational-databases/security/authentication-access/media/typesofusers.png "Benutzertypen")  
+ ![Diagramm, in dem die verschiedenen Benutzertypen erläutert werden](../../../relational-databases/security/authentication-access/media/typesofusers.png "Benutzertypen")  
   
 ### <a name="selecting-the-type-of-user"></a>Auswählen des Benutzertypen  
  **Anmeldenamen oder Benutzer, der keinem Anmeldenamen zugeordnet ist**  
@@ -51,9 +51,9 @@ ms.locfileid: "86005690"
   
  Erstellen Sie einen **Windows-Benutzer** oder einen **SQL-Benutzer mit Kennwort**, falls die Person oder Gruppe, die Zugriff auf die Datenbank benötigt, über keinen Anmeldenamen verfügt, und wenn sie nur Zugriff auf eine oder einige wenige Datenbanken benötigen. Auch als eigenständiger Datenbankbenutzer bezeichnet, ist er keinem Anmeldenamen in der Masterdatenbank zugeordnet. Das ist eine hervorragende Wahl, wenn Sie die Möglichkeit haben möchten, Ihre Datenbank einfach zwischen Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]zu verschieben. Um diese Option in [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]verwenden zu können, muss ein Administrator zunächst eigenständige Datenbanken für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]aktivieren, und die Datenbanken müssen für die Verwendung dieser Funktion aktiviert sein. Weitere Informationen finden Sie unter [Eigenständige Datenbankbenutzer - machen Sie Ihre Datenbank portabel](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
-> **WICHTIG!** Beim Herstellen einer Verbindung als ein eigenständigen Datenbankbenutzer, müssen Sie den Namen der Datenbank als Teil der Verbindungszeichenfolge bereitstellen. Klicken Sie im Dialogfeld [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]Verbinden mit **auf** Optionen **, und klicken Sie dann auf die Registerkarte**Verbindungseigenschaften **, um die Datenbank in** anzugeben.  
+> **WICHTIG!** Beim Herstellen einer Verbindung als ein eigenständigen Datenbankbenutzer, müssen Sie den Namen der Datenbank als Teil der Verbindungszeichenfolge bereitstellen. Klicken Sie im Dialogfeld [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]Verbinden mit **auf** Optionen **, und klicken Sie dann auf die Registerkarte** Verbindungseigenschaften **, um die Datenbank in** anzugeben.  
   
- Wählen Sie **SQL-Benutzer mit Kennwort** oder einen **SQL-Benutzer mit Anmeldename** basierend auf einer **SQL Server-Authentifizierungsanmeldung**aus, wenn die Person, die die Verbindung herstellt, keine Authentifizierung mit Windows ausführen kann. Dies ist häufig der Fall, wenn Personen außerhalb Ihrer Organisation (z.B. Kunden) sich mit Ihrem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]verbinden.  
+ Wählen Sie **SQL-Benutzer mit Kennwort** oder einen **SQL-Benutzer mit Anmeldename** basierend auf einer **SQL Server-Authentifizierungsanmeldung** aus, wenn die Person, die die Verbindung herstellt, keine Authentifizierung mit Windows ausführen kann. Dies ist häufig der Fall, wenn Personen außerhalb Ihrer Organisation (z.B. Kunden) sich mit Ihrem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]verbinden.  
   
 > **TIPP:** Für Personen innerhalb Ihrer Organisation ist die Windows-Authentifizierung eine bessere Wahl, da sie sich kein zusätzliches Kennwort merken müssen, und weil die Windows-Authentifizierung zusätzliche Sicherheitsfeatures, wie z.B. Kerberos bietet.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "86005690"
      Geben Sie die Standardsprache des Benutzers ein.  
   
      **Standardschema**  
-     Geben Sie das Schema ein, das die Objekte besitzen wird, die von diesem Benutzer erstellt werden. Klicken Sie alternativ auf die Auslassungspunkte **(…)** , um das Dialogfeld **Schema auswählen** zu öffnen. **Standardschema** ist verfügbar, wenn Sie entweder **SQL-Benutzer mit Anmeldename**, **SQL-Benutzer ohne Anmeldename**oder **Windows-Benutzer** aus der Liste **Benutzertyp** auswählen.  
+     Geben Sie das Schema ein, das die Objekte besitzen wird, die von diesem Benutzer erstellt werden. Klicken Sie alternativ auf die Auslassungspunkte **(…)** , um das Dialogfeld **Schema auswählen** zu öffnen. **Standardschema** ist verfügbar, wenn Sie entweder **SQL-Benutzer mit Anmeldename**, **SQL-Benutzer ohne Anmeldename** oder **Windows-Benutzer** aus der Liste **Benutzertyp** auswählen.  
   
      **Zertifikatsname**  
      Geben Sie das Zertifikat ein, das für den Datenbankbenutzer verwendet werden soll. Klicken Sie alternativ auf die Auslassungspunkte **(…)** , um das Dialogfeld **Zertifikat auswählen** zu öffnen. **Zertifikatname** ist verfügbar, wenn Sie die Option **Benutzer, der einem Zertifikat zugeordnet ist** aus der Liste **Benutzertyp** auswählen.  
@@ -118,9 +118,9 @@ ms.locfileid: "86005690"
 ### <a name="additional-options"></a>Zusätzliche Optionen  
  Im Dialogfeld **Datenbankbenutzer – Neu** sind auch Optionen auf vier zusätzlichen Seiten verfügbar: **Schemas im Besitz**, **Mitgliedschaft**, **Sicherungsfähige Elemente** und **Erweiterte Eigenschaften**.  
   
--   Auf der Seite **Schemas im Besitz** werden alle möglichen Schemas aufgelistet, die dem neuen Datenbankbenutzer gehören können. Aktivieren oder deaktivieren Sie unter **Schemas im Besitz dieses Benutzers**die Kontrollkästchen, die sich neben den Schemas befinden, um einem Datenbankbenutzer Schemas hinzuzufügen oder diese von diesem zu entfernen.  
+-   Auf der Seite **Schemas im Besitz** werden alle möglichen Schemas aufgelistet, die dem neuen Datenbankbenutzer gehören können. Aktivieren oder deaktivieren Sie unter **Schemas im Besitz dieses Benutzers** die Kontrollkästchen, die sich neben den Schemas befinden, um einem Datenbankbenutzer Schemas hinzuzufügen oder diese von diesem zu entfernen.  
   
--   Auf der Seite **Mitgliedschaft** werden alle möglichen Datenbank-Mitgliedschaftsrollen aufgelistet, die dem neuen Datenbankbenutzer gehören können. Aktivieren oder deaktivieren Sie unter **Mitgliedschaft in Datenbankrolle**die Kontrollkästchen, die sich neben den Rollen befinden, um einem Datenbankbenutzer Rollen hinzuzufügen oder diese von diesem zu entfernen.  
+-   Auf der Seite **Mitgliedschaft** werden alle möglichen Datenbank-Mitgliedschaftsrollen aufgelistet, die dem neuen Datenbankbenutzer gehören können. Aktivieren oder deaktivieren Sie unter **Mitgliedschaft in Datenbankrolle** die Kontrollkästchen, die sich neben den Rollen befinden, um einem Datenbankbenutzer Rollen hinzuzufügen oder diese von diesem zu entfernen.  
   
 -   Auf der Seite **Sicherungsfähige Elemente** werden alle möglichen sicherungsfähigen Elemente und die Berechtigungen für diese sicherungsfähigen Elemente aufgelistet, die für die Anmeldung gewährt werden können.  
   

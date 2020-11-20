@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/07/2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 599f0edf2a62413aaa44ccaff191bfac034aa3d9
-ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
+ms.openlocfilehash: eb38c37dcb5a570364675fece213c8c6868173ec
+ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94418020"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570947"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>Hinzufügen von Funktionen zu einer Instanz von SQL Server (Setup)
 
@@ -44,7 +44,7 @@ Bevor Sie den Vorgang fortsetzen, lesen Sie die Artikel unter [Planen einer SQL 
 
 #### <a name="to-add-features-to-an-instance-of-sscurrent"></a>Informationen zum Hinzufügen einer Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
 
-1. Legen Sie das SQL Server-Installationsmedium ein. Doppelklicken Sie im Stammordner auf setup.exe. Bei einer Installation über eine Netzwerkfreigabe navigieren Sie zum Stammordner der Freigabe, und doppelklicken Sie auf setup.exe. Wenn das Dialogfeld zum Einrichten von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] angezeigt wird, klicken Sie auf **OK** , um die erforderlichen Komponenten zu installieren. Wählen Sie dann **Abbrechen** , um die Installation von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] abzubrechen.  
+1. Legen Sie das SQL Server-Installationsmedium ein. Doppelklicken Sie im Stammordner auf setup.exe. Bei einer Installation über eine Netzwerkfreigabe navigieren Sie zum Stammordner der Freigabe, und doppelklicken Sie auf setup.exe. Wenn das Dialogfeld zum Einrichten von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] angezeigt wird, klicken Sie auf **OK**, um die erforderlichen Komponenten zu installieren. Wählen Sie dann **Abbrechen**, um die Installation von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] abzubrechen.  
 
 2. Das SQL Server-Installationscenter wird vom Installations-Assistenten gestartet. Um einer vorhandenen Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] eine neue Funktion hinzuzufügen, klicken Sie im linken Navigationsbereich auf **Installation** und anschließend auf **Neue eigenständige SQL Server-Installation oder Hinzufügen von Funktionen zu einer vorhandenen Installation**.
 
@@ -56,13 +56,13 @@ Bevor Sie den Vorgang fortsetzen, lesen Sie die Artikel unter [Planen einer SQL 
 
 6. Die Systemkonfigurationsprüfung überprüft den Systemstatus des Computers, bevor Setup fortgesetzt wird.  
 
-7. Wählen Sie auf der Seite „Installationstyp“ die Option **Funktionen zu einer vorhandenen [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Instanz hinzufügen** , und wählen Sie dann die Instanz aus, die Sie aktualisieren möchten.
+7. Wählen Sie auf der Seite „Installationstyp“ die Option **Funktionen zu einer vorhandenen [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Instanz hinzufügen**, und wählen Sie dann die Instanz aus, die Sie aktualisieren möchten.
 
 8. Wählen Sie auf der Seite Funktionsauswahl die Komponenten für die Installation aus. Nach Auswahl des Funktionsnamens wird im rechten Bereich eine Beschreibung für die einzelnen Komponentengruppen angezeigt. Sie können jede beliebige Kombination von Kontrollkästchen aktivieren. Weitere Informationen finden Sie unter [Editionen und unterstützte Funktionen von SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md). Jede Komponente kann in einer bestimmten Instanz von SQL Server nur einmal installiert werden. Wenn Sie mehrere Komponenten installieren möchten, müssen Sie eine zusätzliche Instanz von SQL Server installieren.
 
     Die erforderlichen Komponenten für die ausgewählten Funktionen werden im rechten Bereich angezeigt. SQL Server-Setup installiert die erforderlichen Komponenten, die nicht bereits während des im weiteren Verlauf dieser Prozedur beschriebenen Installationsschritts installiert werden.
 
-    Die Systemkonfigurationsprüfung überprüft den Systemstatus des Computers, bevor Setup fortgesetzt wird. Wählen Sie **Weiter** aus, um fortzufahren.
+    Die Systemkonfigurationsprüfung überprüft den Systemstatus des Computers, bevor Setup fortgesetzt wird. Wählen Sie **Weiter** aus, um den Vorgang fortzusetzen.
 
 9. Auf der Seite Erforderlicher Speicherplatz wird der für die angegebenen Funktionen erforderliche Speicherplatz berechnet, und die Anforderungen werden mit dem Speicherplatz verglichen, der auf dem Computer verfügbar ist, auf dem Setup ausgeführt wird.
 
@@ -140,7 +140,7 @@ Bevor Sie den Vorgang fortsetzen, lesen Sie die Artikel unter [Planen einer SQL 
 
 24. Während der Installation wird auf der Seite Installationsstatus der Status angegeben, sodass Sie während der Installation den Installationsstatus überwachen können.  
 
-25. Nach der Installation bietet die Seite Abgeschlossen einen Link zur zusammenfassenden Protokolldatei für die Installation und andere wichtige Hinweise. Klicken Sie auf **Schließen** , um die Installation von SQL Server abzuschließen.
+25. Nach der Installation bietet die Seite Abgeschlossen einen Link zur zusammenfassenden Protokolldatei für die Installation und andere wichtige Hinweise. Klicken Sie auf **Schließen**, um die Installation von SQL Server abzuschließen.
 
 26. Starten Sie den Computer neu, falls Sie dazu aufgefordert werden. Nachdem das Setup abgeschlossen ist, sollten Sie unbedingt die vom Installations-Assistenten ausgegebene Meldung lesen. Weitere Informationen finden Sie unter [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
