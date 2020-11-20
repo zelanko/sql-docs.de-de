@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 6882700208e165464261f236cadd00b30503b81f
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: e6242699ac8a4079ddd2811c016ba8a1969e448e
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379578"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947949"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Konfigurieren von Windows Server Update Services (WSUS) in Analytics Platform System
 In diesen Anweisungen werden die Schritte zum Verwenden des Konfigurations-Assistenten für Windows Server Update Services (WSUS) zum Konfigurieren von WSUS für Analytics Platform System erläutert. Sie müssen WSUS konfigurieren, bevor Sie Software Updates auf das Gerät anwenden können. WSUS ist bereits auf dem virtuellen VMM-Computer des Geräts installiert.  
@@ -39,7 +39,7 @@ Zum Konfigurieren von WSUS müssen Sie folgende Schritte ausführen:
   
 ## <a name="to-configure-windows-server-update-services-wsus"></a>So konfigurieren Sie Windows Server Update Services (WSUS)  
   
-1.  Melden Sie sich bei der **Verwaltungskonsole**an. Überprüfen Sie auf der Registerkarte **Appliance State** , ob die Spalten **Cluster** und **Netzwerk** für alle Knoten grün (oder **na**) angezeigt werden. Überprüfen Sie die Status Indikatoren für alle Knoten im **Gerätezustand**.  
+1.  Melden Sie sich bei der **Verwaltungskonsole** an. Überprüfen Sie auf der Registerkarte **Appliance State** , ob die Spalten **Cluster** und **Netzwerk** für alle Knoten grün (oder **na**) angezeigt werden. Überprüfen Sie die Status Indikatoren für alle Knoten im **Gerätezustand**.  
   
     -   Es ist sicher, mit grünen oder na-Indikatoren fortzufahren.  
   
@@ -53,7 +53,7 @@ Zum Konfigurieren von WSUS müssen Sie folgende Schritte ausführen:
   
     #### <a name="to-launch-the-configuration-wizard"></a>So starten Sie den Konfigurations-Assistenten  
   
-    1.  Klicken Sie im **Server-Manager-Dashboard**im **Menü Extras** auf **Windows Server Update Services**.  
+    1.  Klicken Sie im **Server-Manager-Dashboard** im **Menü Extras** auf **Windows Server Update Services**.  
   
     2.  Erweitern Sie im linken Bereich des Fensters " **Update Dienste** " den Knoten Server für die Verwaltung virtueller Computer (**_appliance_domain_-VMM**), und klicken Sie dann auf **Optionen**.  
   
@@ -69,7 +69,7 @@ Zum Konfigurieren von WSUS müssen Sie folgende Schritte ausführen:
   
         ![WSUS – Vorbereitungen](./media/configure-windows-server-update-services-wsus/WSUS_Wiz2.png "WSUS_Wiz2")  
   
-    6.  Wählen Sie auf der Seite **Microsoft Update Verbesserungsprogramm beitreten** die Option **Ja, ich möchte am Microsoft Update Verbesserungsprogramm teilnehmen**aus, und klicken Sie dann auf **weiter**.  
+    6.  Wählen Sie auf der Seite **Microsoft Update Verbesserungsprogramm beitreten** die Option **Ja, ich möchte am Microsoft Update Verbesserungsprogramm teilnehmen** aus, und klicken Sie dann auf **weiter**.  
   
         ![WSUS – Verbesserungsprogramm](./media/configure-windows-server-update-services-wsus/WSUS_Wiz3.png "WSUS_Wiz3")  
   
@@ -97,7 +97,7 @@ Zum Konfigurieren von WSUS müssen Sie folgende Schritte ausführen:
   
         ![WSUS – Upstreamserversynchronisierung von WSUS SSL](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4c.png "WSUS_Wiz4c")  
   
-    3.  Falls es sich um einen Replikatserver handelt, aktivieren Sie das Kontrollkästchen **Dies ist ein Replikat des Upstreamservers**. **Wenn Sie Update Informationen synchronisieren** , können Sie sowohl SSL verwenden als auch **ein Replikat des Upstreamservers**auswählen.  
+    3.  Falls es sich um einen Replikatserver handelt, aktivieren Sie das Kontrollkästchen **Dies ist ein Replikat des Upstreamservers**. **Wenn Sie Update Informationen synchronisieren** , können Sie sowohl SSL verwenden als auch **ein Replikat des Upstreamservers** auswählen.  
   
         ![WSUS – Upstreamserverreplikat](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4d.png "WSUS_Wiz4d")  
   
@@ -131,7 +131,7 @@ Zum Konfigurieren von WSUS müssen Sie folgende Schritte ausführen:
   
     Wählen Sie **Updates nur in diesen Sprachen herunterladen aus**.  
   
-    Wählen Sie **Englisch**aus, und klicken Sie dann auf **weiter**.  
+    Wählen Sie **Englisch** aus, und klicken Sie dann auf **weiter**.  
   
     ![Auswählen von Sprachen](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseLanguages.png "SQL_Server_PDW_WSUSChooseLanguages")  
   
@@ -145,7 +145,7 @@ Zum Konfigurieren von WSUS müssen Sie folgende Schritte ausführen:
   
     Deaktivieren Sie alle ausgewählten Updates.  
   
-    Wählen Sie **SQL Server 2012**, **SQL Server 2014**, **Windows Server 2012 R2**und **System Center 2012 R2-Virtual Machine Manager**aus, und klicken Sie dann auf **weiter**.  
+    Wählen Sie **SQL Server 2012**, **SQL Server 2014**, **Windows Server 2012 R2**, **System Center 2012 R2-Virtual Machine Manager**, **Windows Server 2016** und **System Center 2016-Virtual Machine Manager** aus, und klicken Sie dann auf **weiter**.  
   
 9. Wählen Sie Klassifizierungen aus.  
   
@@ -154,19 +154,19 @@ Zum Konfigurieren von WSUS müssen Sie folgende Schritte ausführen:
   
     Deaktivieren Sie alle zuvor ausgewählten Updates.  
   
-    Wählen Sie **wichtige Updates** und **Sicherheitsupdates** für die Updates aus, die für die Analytics Platform System-Appliance synchronisiert werden sollen, und klicken Sie dann auf **weiter**.  
+    Wählen Sie **wichtige Updates**, **Sicherheitsupdates** und Updaterollups für die Updates aus, die für die Analytics Platform System-Appliance synchronisiert werden sollen, und klicken Sie dann auf **Update Rollups** **weiter**.  
   
     ![Auswählen von Klassifizierungen](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
   
 10. Konfigurieren Sie den Synchronisierungs Zeitplan.  
   
-    Wählen Sie **manuell synchronisieren**aus, und klicken Sie dann auf **weiter**.  
+    Wählen Sie **manuell synchronisieren** aus, und klicken Sie dann auf **weiter**.  
   
     ![Festlegen des Synchronisierungszeitplans](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSyncSchedule.png "SQL_Server_PDW_WSUSSyncSchedule")  
   
 11. Anfängliche Synchronisierung starten.  
   
-    Wählen Sie **anfängliche Synchronisierung starten**aus, und klicken Sie auf **weiter**.  
+    Wählen Sie **anfängliche Synchronisierung starten** aus, und klicken Sie auf **weiter**.  
   
 12. Fertig  
   
@@ -196,7 +196,7 @@ Nach dem Konfigurieren von WSUS für Analytics Platform System besteht der näch
   
     ![Ändern Sie die Mitgliedschaft aller PDW-Computer.](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChangeMembership.png "SQL_Server_PDW_WSUSChangeMembership")  
   
-5.  Wählen Sie die neue Computergruppe aus, die Sie erstellt haben, indem Sie auf das Kontrollkästchen und dann auf **OK**klicken.  
+5.  Wählen Sie die neue Computergruppe aus, die Sie erstellt haben, indem Sie auf das Kontrollkästchen und dann auf **OK** klicken.  
   
     ![Festlegen der Mitgliedschaft in Computergruppe](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSetComputerGroupMembership.png "SQL_Server_PDW_WSUSSetComputerGroupMembership")  
   

@@ -9,17 +9,17 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 2b24d55720d6db5997bfa85c2621f0e8d58c5f95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e5f336c3c2c475523d2081bcf01189e67b77fe19
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401191"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947915"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>Herunterladen und Anwenden von Microsoft-Updates für Analytics Platform System
 In diesem Thema wird erläutert, wie Sie Updates aus dem Microsoft Update Katalog in Windows Server Update Services (WSUS) herunterladen und diese Updates auf die Analytics Platform System Appliance-Server anwenden. In Microsoft Update werden alle anwendbaren Updates für Windows und SQL Server installiert. WSUS ist auf dem virtuellen VMM-Computer des Geräts installiert.  
   
-## <a name="before-you-begin"></a><a name="TOP"></a>Bevor Sie beginnen  
+## <a name="before-you-begin"></a><a name="TOP"></a>Vorbereitungen  
   
 > [!WARNING]  
 > Versuchen Sie nicht, Updates anzuwenden, wenn Ihr Gerät oder eine Appliance-Komponente ausgefallen ist oder sich in einem failoverzustand befindet. Wenden Sie sich in diesem Fall an den Support.  
@@ -55,7 +55,7 @@ Bevor Sie diese Schritte ausführen, müssen Sie folgende Schritte ausführen:
   
 1.  Melden Sie sich als Domänen Administrator bei der virtuellen VMM-Maschine an.  
   
-2.  Klicken Sie **im Server-Manager-Dashboard**im **Menü Extras** auf **Windows Server Update Services** (**WSUS. msc**).  
+2.  Klicken Sie **im Server-Manager-Dashboard** im **Menü Extras** auf **Windows Server Update Services** (**WSUS. msc**).  
   
 3.  Klicken Sie in der WSUS-Verwaltungskonsole auf **synchronierungen**.  
   
@@ -63,9 +63,11 @@ Bevor Sie diese Schritte ausführen, müssen Sie folgende Schritte ausführen:
   
 #### <a name="approve-microsoft-updates-in-wsus"></a>Genehmigen von Microsoft-Updates in WSUS  
   
-1.  Klicken Sie im linken Bereich der WSUS-Konsole auf **alle Updates**.  
+1. Ablehnen Sie alle Updaterollups, die nicht von **System Center** stammen.
+
+2. Klicken Sie im linken Bereich der WSUS-Konsole auf **alle Updates**.  
   
-2.  Klicken Sie im Bereich **alle Updates** auf das Dropdown Menü **Genehmigung** , und legen Sie **Genehmigung** auf **alle außer abgelehnt**fest. Klicken Sie auf das Dropdown Menü **Status** , und legen Sie **Status** auf **beliebig**fest. Klicken Sie auf **Aktualisieren**.  
+3.  Klicken Sie im Bereich **alle Updates** auf das Dropdown Menü **Genehmigung** , und legen Sie **Genehmigung** auf **alle außer abgelehnt** fest. Klicken Sie auf das Dropdown Menü **Status** , und legen Sie **Status** auf **beliebig** fest. Klicken Sie auf **Aktualisieren**.  
   
     Klicken Sie mit der rechten Maustaste auf die Spalte **Titel** , und wählen Sie **Dateistatus** aus, um den Dateistatus nach dem Download zu überprüfen  
   
@@ -73,19 +75,19 @@ Bevor Sie diese Schritte ausführen, müssen Sie folgende Schritte ausführen:
   
     ![Wählen Sie alle Updates aus, und ändern Sie den Status in 'Beliebig'.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectAllUpdates.png "SQL_Server_PDW_WSUSSelectAllUpdates")  
   
-3.  Wählen Sie alle Updates aus, und klicken Sie dann im rechten Bereich auf den Link **genehmigen** .  
+4.  Wählen Sie alle Updates aus, und klicken Sie dann im rechten Bereich auf den Link **genehmigen** .  
   
-    Sie können auch mit der rechten Maustaste auf die ausgewählten Updates klicken und dann auf **genehmigen**klicken. Möglicherweise werden Sie aufgefordert, die Microsoft-Software-Lizenzbedingungen zu akzeptieren. Wenn dies der Fall ist, klicken Sie im Fenster auf **akzeptieren** , um fortzufahren.  
+    Sie können auch mit der rechten Maustaste auf die ausgewählten Updates klicken und dann auf **genehmigen** klicken. Möglicherweise werden Sie aufgefordert, die Microsoft-Software-Lizenzbedingungen zu akzeptieren. Wenn dies der Fall ist, klicken Sie im Fenster auf **akzeptieren** , um fortzufahren.  
   
     ![Wählen Sie alle zutreffenden Updates aus, und klicken Sie auf 'Genehmigen'.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprove.png "SQL_Server_PDW_WSUSSelectApprove")  
   
-4.  Wählen Sie die Geräteserver Gruppe aus, die Sie unter [Konfigurieren von Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md)erstellt haben.  
+5.  Wählen Sie die Geräteserver Gruppe aus, die Sie unter [Konfigurieren von Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md)erstellt haben.  
   
-5.  Klicken Sie auf **Für die Installation genehmigt**und anschließend auf **OK**.  
+6.  Klicken Sie auf **Für die Installation genehmigt** und anschließend auf **OK**.  
   
     ![Genehmigen Sie Updates für die Computergruppe.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprovalType.png "SQL_Server_PDW_WSUSSelectApprovalType")  
   
-6.  Klicken Sie im Dialogfeld **Genehmigungs** Status auf **Schließen**, wenn der Genehmigungs Vorgang abgeschlossen ist.  
+7.  Klicken Sie im Dialogfeld **Genehmigungs** Status auf **Schließen**, wenn der Genehmigungs Vorgang abgeschlossen ist.  
   
     ![Schließen Sie das Fenster nach dem Genehmigen der Updates.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSCloseApprovalProgressWindow.png "SQL_Server_PDW_WSUSCloseApprovalProgressWindow")  
   
@@ -107,7 +109,7 @@ Bevor Sie diese Schritte ausführen, müssen Sie folgende Schritte ausführen:
   
 1.  Öffnen Sie zunächst das [Gerät überwachen mithilfe der Verwaltungskonsole &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md), klicken Sie auf die Registerkarte **Appliance State** , und vergewissern Sie sich, dass die Spalten **Cluster** und **Netzwerk** für alle Knoten grün (oder Na) angezeigt werden. Wenn in einer dieser Spalten Warnungen vorhanden sind, ist das Gerät möglicherweise nicht in der Lage, Updates ordnungsgemäß zu installieren. Beheben Sie alle vorhandenen Warnungen in den **Cluster** -und **Netzwerk** Spalten, bevor Sie fortfahren.  
   
-2.  Melden Sie sich beim _<domain_name _ **-Knoten>-HST01** als Fabric-Domänen Administrator an.  
+2.  Melden Sie sich beim _<domain_name_ **-Knoten>-HST01** als Fabric-Domänen Administrator an.  
   
 3.  Führen Sie das Update Programm aus, um alle für WSUS genehmigten Updates anzuwenden. Anweisungen hierzu finden Sie unter [Ausführen des Aktualisierungs Programms](#RunUpdateWizard) .  
   
@@ -123,11 +125,11 @@ Bevor Sie diese Schritte ausführen, müssen Sie folgende Schritte ausführen:
   
 5.  Wählen Sie im Dropdown Menü **Status** **einen beliebigen** aus, und klicken Sie auf **Aktualisieren**.  
   
-6.  Erweitern **Sie Update Services** *<appliance name>*,-VMM, **Updates**und **alle Updates**, *<appliance name>* wobei der Name der Anwendung ist.  
+6.  Erweitern Sie **Update Services**, *<appliance name>* -VMM, **Updates** und **alle Updates**, wobei der *<appliance name>* Name der Anwendung ist.  
   
-7.  Legen Sie im Fenster **alle Updates** die **Genehmigung** auf **alle außer abgelehnt**fest.  
+7.  Legen Sie im Fenster **alle Updates** die **Genehmigung** auf **alle außer abgelehnt** fest.  
   
-8.  Legen Sie im Fenster **alle Updates** den **Status** auf **failed oder erforderlich**fest.  
+8.  Legen Sie im Fenster **alle Updates** den **Status** auf **failed oder erforderlich** fest.  
   
 9. Klicken Sie auf **Aktualisieren**.  
   
@@ -147,7 +149,7 @@ Befolgen Sie diese Anweisungen, um das Programm zum Aktualisieren von Analytics-
   
 1.  Stellen Sie sicher, dass Sie beim Knoten HST01 als Fabric-Domänen Administrator angemeldet sind.  
   
-2.  Öffnen Sie ein Eingabe Aufforderungs Fenster, und geben Sie die folgenden Befehle ein. Ersetzen *<parameter>* Sie dies durch die angegebenen Informationen.  
+2.  Öffnen Sie ein Eingabe Aufforderungs Fenster, und geben Sie die folgenden Befehle ein. Ersetzen Sie dies *<parameter>* durch die angegebenen Informationen.  
   
 **So führen Sie den Microsoft Update aus:**  
   

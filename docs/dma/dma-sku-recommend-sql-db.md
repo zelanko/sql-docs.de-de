@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: a5ebfaaf303a354124f3668b65716cd65bdb8043
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 035273939e2141b8497b5b0c38762fd7b7d47564
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727771"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947930"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Ermitteln der richtigen Azure SQL-Datenbank/verwaltete Instanz-SKU für Ihre lokale Datenbank
 
@@ -42,6 +42,8 @@ Im folgenden finden Sie Anweisungen zum Bestimmen der SKU-Empfehlungen und zum B
 
 - Laden Sie die neueste Version von [DMA](https://aka.ms/get-dma)herunter, und installieren Sie Sie. Wenn Sie bereits über eine frühere Version des Tools verfügen, öffnen Sie Sie, und Sie werden aufgefordert, DMA zu aktualisieren.
 - Stellen Sie sicher, dass auf Ihrem Computer [PowerShell Version 5,1](https://www.microsoft.com/download/details.aspx?id=54616) oder höher angegeben ist, die zum Ausführen aller Skripts erforderlich ist. Informationen dazu, wie Sie herausfinden, welche Version von PowerShell auf Ihrem Computer installiert ist, finden Sie im Artikel [herunterladen und Installieren von Windows PowerShell 5,1](/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
+  > [!NOTE]
+  > Zum Sammeln von Computer Informationen verwendet das datensammlungsskript das Get-WmiObject-Cmdlet, das in PowerShell 6 als veraltet markiert wurde. Zum Ausführen dieses Skripts in PowerShell 6 oder 7 müssen Sie die WMI-Cmdlets durch die neueren CIM-Cmdlets ersetzen.
 - Stellen Sie sicher, dass auf Ihrem Computer das Azure PowerShell-Modul installiert ist. Weitere Informationen finden Sie im Artikel [Installieren des Azure PowerShell Moduls](/powershell/azure/install-az-ps?view=azps-1.8.0).
 - Vergewissern Sie sich, dass die PowerShell-Datei **SkuRecommendationDataCollectionScript.ps1**, die für die Erfassung der Leistungsindikatoren erforderlich ist, im DMA-Ordner installiert ist.
 - Stellen Sie sicher, dass der Computer, auf dem Sie diesen Prozess ausführen, über Administrator Berechtigungen für den Computer verfügt, auf dem die Datenbanken gehostet werden.
@@ -69,7 +71,7 @@ Diese Aufgabe muss nicht für jede Datenbank einzeln durchgeführt werden. Die v
      -ComputerName Foobar1
      -OutputFilePath D:\counters2.csv
      -CollectionTimeInSeconds 2400
-     -DbConnectionString "Server=localhost;Initial Catalog=master;Integrated Security=SSPI;"
+     -DbConnectionString Server=localhost;Initial Catalog=master;Integrated Security=SSPI;
     ```
 
     Nachdem der Befehl ausgeführt wurde, gibt der Prozess eine Datei mit Leistungsindikatoren an den von Ihnen angegebenen Speicherort aus. Sie können diese Datei als Eingabe für den nächsten Teil des Prozesses verwenden, der SKU-Empfehlungen für Optionen für Einzel Datenbanken und verwaltete Instanzen bereitstellt.
@@ -210,7 +212,7 @@ Um Bereitstellungs Informationen einzugeben und Änderungen an den Empfehlungen 
 
 2. Überprüfen Sie die Empfehlungen für jede Datenbank, und ändern Sie den Tarif, die computeebene und die maximale Datengröße nach Bedarf. Stellen Sie sicher, dass Sie alle Datenbanken deaktivieren, die Sie zurzeit nicht bereitstellen möchten.
 
-3. Wählen Sie **Bereitstellungs Skript generieren**aus, speichern Sie das Skript, und führen Sie es dann in PowerShell aus.
+3. Wählen Sie **Bereitstellungs Skript generieren** aus, speichern Sie das Skript, und führen Sie es dann in PowerShell aus.
 
     Dieser Prozess sollte alle Datenbanken erstellen, die Sie auf der HTML-Seite ausgewählt haben.
 
