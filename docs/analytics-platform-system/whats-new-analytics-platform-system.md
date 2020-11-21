@@ -9,17 +9,27 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 5e0193fb7e749b7127d59743557e58cb049e734c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 25bc830bcf2582d7630829ccb3c369fdd434c094
+ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778469"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95011809"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Neues in Analytics Platform System, ein Data Warehouse für horizontales Skalieren
 Weitere Informationen finden Sie unter What es New in the latest Appliance Updates for Microsoft Analytics Platform System (APS). APS ist eine lokale Appliance für horizontales Skalieren, die MPP SQL Server parallele Data Warehouse hostet. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.7"></a>
+## <a name="aps-cu77"></a>APS Cu 7.7
+Veröffentlichungsdatum-2020
+
+### <a name="scvmm2016"></a>SCVMM2016
+APS Cu 7.7 Software aktualisiert VMM-VM auf Windows Server 2016 und installiert SCVMM2016. SCVMM 2012 R2, das zurzeit verwendet wird, hat das Ende des Lebenszyklus von Juli 2022. Das neuere SCVMM muss unterstützt werden, um Cu 7.7 zu einem obligatorischen Upgrade zu führen. Kunden müssen so bald wie möglich ein Upgrade auf Cu 7.7 durchführen.
+
+### <a name="ssis-destination-adapter-for-sql-server-2019-as-target"></a>SSIS-Ziel Adapter für SQL Server 2019 als Ziel
+Der neue APS SSIS-Ziel Adapter, der SQL Server 2019 als Bereitstellungs Ziel unterstützt, kann von der [Download Website](https://www.microsoft.com/download/details.aspx?id=57472)heruntergeladen werden.
+
 <a name="h2-aps-cu7.6"></a>
 ## <a name="aps-cu76"></a>APS CU7.6
 Veröffentlichungsdatum-2020
@@ -87,7 +97,7 @@ Weitere Informationen finden Sie unter [Konfigurieren von TLS 1.2 auf APS](confi
 ### <a name="hadoop-encryption-zone-support-for-polybase"></a>Unterstützung von Hadoop-Verschlüsselungs Zonen für polybase
 Polybase kann jetzt mit Hadoop-Verschlüsselungs Zonen kommunizieren. Siehe APS-Konfigurationsänderungen, die zum [Konfigurieren der Hadoop-Sicherheit](polybase-configure-hadoop-security.md#encryptionzone)erforderlich sind.
 
-### <a name="insert-select-maxdop-options"></a>INSERT-SELECT (MAXDOP-Optionen)
+### <a name="insert-select-maxdop-options"></a>Insert-Select MAXDOP-Optionen
 Wir haben einen [Funktions Schalter](appliance-feature-switch.md) hinzugefügt, mit dem Sie MAXDOP-Einstellungen für INSERT-SELECT-Vorgänge über 1 auswählen können. Sie können jetzt die MAXDOP-Einstellung auf 0, 1, 2 oder 4 festlegen. Der Standardwert ist 1.
 
 > [!IMPORTANT]  
@@ -140,7 +150,7 @@ Durch die Verwendung von Katalog Objekten für Metadatenaufrufe anstelle von SMO
 ### <a name="bug-fixes"></a>Behebung von Programmfehlern
 Wir haben ein Upgrade auf SQL Server 2016 SP2 Cu2 mit APS Cu 7.1 durchgeführt. Das Upgrade korrigiert einige Probleme, die unten beschrieben werden.
 
-| Titel | Beschreibung |
+| Titel | BESCHREIBUNG |
 |:---|:---|
 | **Möglicher Deadlock von tupelbewegsvorgang** |Das Upgrade korrigiert eine langfristige Möglichkeit eines Deadlocks in einer verteilten Transaktion und einem tupelverschiebungshintergrundthread. Nach der Installation von Cu 7.1 können Kunden, die TF634 verwendet haben, um den tupelverschiebungsvorgang als SQL Server Startparameter oder globales Ablaufverfolgungsflag zu unterbinden | 
 | **Bestimmte Verzögerung/führende Abfrage schlägt fehl** |Bestimmte Abfragen in CCI-Tabellen mit in der Fehlermeldung gedebuggten Funktionen mit verzögertem verzögertem Rückstand | 
@@ -164,7 +174,7 @@ Die Abfrage Hinweise Hash und Order Group werden jetzt unterstützt. Weitere Inf
 APS AU7 führt einen Funktions Wechsel in [Configuration Manager](launch-the-configuration-manager.md)ein. Autostatus Abled und dmsprocessstopmessagetimeoutinseconds sind nun konfigurierbare Optionen, die von Administratoren geändert werden können.
 
 ### <a name="known-issues"></a>Bekannte Probleme
-Mit APS AU7 Software wird ein Intel BIOS-Update bereitgestellt, das ein Problem behebt, das als *spekulativer Ausführungs Seitenkanal-Angriffe*beschrieben wird. Die Angriffe zielen darauf ab, was als *Spectre-und Meltdown-Sicherheits*Risiken bezeichnet werden. Obwohl das BIOS-Update zusammen mit APS verpackt ist, wird es manuell installiert und nicht als Teil der APS AU7 Software Installation.
+Mit APS AU7 Software wird ein Intel BIOS-Update bereitgestellt, das ein Problem behebt, das als *spekulativer Ausführungs Seitenkanal-Angriffe* beschrieben wird. Die Angriffe zielen darauf ab, was als *Spectre-und Meltdown-Sicherheits* Risiken bezeichnet werden. Obwohl das BIOS-Update zusammen mit APS verpackt ist, wird es manuell installiert und nicht als Teil der APS AU7 Software Installation.
 
 Microsoft rät allen Kunden, das aktualisierte BIOS zu installieren. Microsoft hat die Auswirkungen von Kernel-VMS (Virtual Address Shadowings, Kvas), Kernel Page Table deretion (kpti) und indirekter Verzweigungs Entschärfung (IBP) für verschiedene SQL-Arbeits Auslastungen in verschiedenen Umgebungen gemessen. Die Messungen haben bei einigen Arbeits Auslastungen eine erhebliche Beeinträchtigung festgestellt. Basierend auf den Ergebnissen wird empfohlen, dass Sie die Leistungs Auswirkung der Aktivierung von BIOS-Updates testen, bevor Sie Sie in einer Produktionsumgebung bereitstellen. Weitere [Informationen finden Sie unter SQL Server Anleitung.](https://support.microsoft.com/help/4073225/guidance-protect-sql-server-against-spectre-meltdown)
 
