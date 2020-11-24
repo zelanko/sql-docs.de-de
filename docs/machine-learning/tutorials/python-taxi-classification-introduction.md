@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 1fc4ea656830eb779b80b22a15a74dfd799781aa
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7b8e0e8df7bd2a5453299751df682e0c33502c25
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178573"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94585072"
 ---
 # <a name="python-tutorial-predict-nyc-taxi-fares-with-binary-classification"></a>Python-Tutorial: Vorhersagen von Taxi-Fahrpreisen in New York City mit binärer Klassifizierung
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -29,7 +29,7 @@ In dieser fünfteiligen Tutorialreihe für SQL-Programmierer erfahren Sie mehr �
 ::: moniker-end
 
 ::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
-In dieser fünfteiligen Tutorialreihe für SQL-Programmierer erfahren Sie mehr über die Python-Integration in [Machine Learning Services in Azure SQL Managed Instance (Vorschauversion)](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+In dieser fünfteiligen Tutorialreihe für SQL-Programmierer erfahren Sie mehr über die Python-Integration in [Machine Learning Services in Azure SQL Managed Instance ](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
 In diesem Tutorial erstellen Sie eine Python-basierte Machine Learning-Lösung mithilfe einer Beispieldatenbank auf SQL Server und stellen sie bereit. Sie verwenden dazu T-SQL, Azure Data Studio oder SQL Server Management Studio und eine Datenbankinstanz mit maschinellem Lernen mit SQL und Python-Sprachunterstützung.

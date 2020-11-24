@@ -9,12 +9,12 @@ ms.date: 10/19/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: db774314d8d10774cbc2bd2b483b17d149695979
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 02fbb46968d51bc4dbe730fcc7d575793063bcff
+ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257140"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631686"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Versionshinweise zu Big Data-Clustern für SQL Server 2019
 
@@ -112,8 +112,9 @@ Diese Version enthält kleinere Fehlerkorrekturen und Verbesserungen. In den fol
 
 - [Verwalten des Zugriffs auf Big Data-Cluster im Active Directory-Modus](manage-user-access.md)
 - [Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] im Active Directory-Modus](active-directory-deploy.md)
-- [Bereitstellen von Big Data-Clustern in SQL Server mit Hochverfügbarkeit](deployment-high-availability.md)
-- [Konfigurieren eines Big Data-Clusters in SQL Server](configure-cluster.md)
+- [Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in AKS im Active Directory-Modus](active-directory-deployment-aks.md)
+- [Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] mit Hochverfügbarkeit](deployment-high-availability.md)
+- [Konfigurieren von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](configure-cluster.md)
 - [Konfigurieren von Apache Spark und Apache Hadoop in Big Data-Clustern](configure-spark-hdfs.md)
 - [Konfigurationseigenschaften der SQL Server-Masterinstanz](reference-config-master-instance.md)
 - [Konfigurationseigenschaften von Apache Spark und Apache Hadoop (HDFS)](reference-config-spark-hadoop.md)
@@ -207,7 +208,7 @@ Mit der allgemeinen Vertriebsversion 1 für SQL Server 2019 (GDR1) wird die allg
 
 - **Problem und Kundenbeeinträchtigung:** Während eines Upgrades gibt `sparkhead` den Fehler 404 zurück.
 
-- **Problemumgehung** : Stellen Sie vor dem Durchführen eines Upgrades von BDC sicher, dass keine aktiven Livy-Sitzungen oder -Batchaufträge vorhanden sind. Folgen Sie den unter [Upgrade von einem unterstützten Release](deployment-upgrade.md#upgrade-from-supported-release) angegebenen Anweisungen, um dies zu vermeiden. 
+- **Problemumgehung**: Stellen Sie vor dem Durchführen eines Upgrades von BDC sicher, dass keine aktiven Livy-Sitzungen oder -Batchaufträge vorhanden sind. Folgen Sie den unter [Upgrade von einem unterstützten Release](deployment-upgrade.md#upgrade-from-supported-release) angegebenen Anweisungen, um dies zu vermeiden. 
 
    Wenn Livy während des Upgradevorgangs den Fehler 404 zurückgibt, starten Sie den Livy-Server auf beiden `sparkhead`-Knoten neu. Beispiel:
 
@@ -221,16 +222,16 @@ Mit der allgemeinen Vertriebsversion 1 für SQL Server 2019 (GDR1) wird die allg
 
 - **Problem und Kundenbeeinträchtigung:** Während der Bereitstellung eines Big Data-Clusters generiert der Workflow eine Reihe von [Dienstkonten](active-directory-objects.md). Abhängig von der auf dem Domänencontroller festgelegten Kennwortablaufrichtlinie können die Kennwörter für diese Konten ablaufen (der Standardwert lautet 42 Tage). Derzeit gibt es keinen Mechanismus zum Rotieren von Anmeldeinformationen für alle Konten im BDC, sodass der Cluster nicht mehr funktionsfähig ist, sobald das Ablaufdatum erreicht ist.
 
-- **Problemumgehung** : Aktualisieren Sie die Ablaufrichtlinie für die BDC-Dienstkonten auf dem Domänencontroller in „Kennwort läuft nie ab“. Eine vollständige Liste dieser Konten finden Sie unter [Automatisch generierte Active Directory-Objekte](active-directory-objects.md). Sie können diese Aktion vor oder nach der Ablaufzeit ausführen. Im letzteren Fall aktiviert Active Directory die abgelaufenen Kennwörter erneut.
+- **Problemumgehung**: Aktualisieren Sie die Ablaufrichtlinie für die BDC-Dienstkonten auf dem Domänencontroller in „Kennwort läuft nie ab“. Eine vollständige Liste dieser Konten finden Sie unter [Automatisch generierte Active Directory-Objekte](active-directory-objects.md). Sie können diese Aktion vor oder nach der Ablaufzeit ausführen. Im letzteren Fall aktiviert Active Directory die abgelaufenen Kennwörter erneut.
 
 ### <a name="credentials-for-accessing-services-through-gateway-endpoint"></a>Anmeldeinformationen für den Zugriff auf Dienste über den Gatewayendpunkt
 
 - **Betroffene Releases:** Neue Cluster, die ab CU5 bereitgestellt werden.
 
-- **Problem und Kundenbeeinträchtigung:** Bei neuen Big Data-Clustern, die mithilfe von SQL Server 2019 CU5 bereitgestellt werden, ist der Gatewaybenutzername nicht **Root** . Wenn mithilfe der Anwendung mit den falschen Anmeldeinformationen eine Verbindung mit dem Gatewayendpunkt hergestellt wird, wird ein Authentifizierungsfehler angezeigt. Diese Änderung entsteht durch Ausführung von Anwendungen innerhalb des Big Data-Clusters, bei dem es sich nicht einen Root-Benutzer handelt. Ab SQL Server 2019 CU5 ist ein anderes Standardverhalten festgelegt: Wenn Sie mithilfe von CU5 einen neuen Big Data-Cluster bereitstellen, basiert der Benutzername des Gatewayendpunkts auf dem Wert, der von der Umgebungsvariablen **AZDATA_USERNAME** übergeben wird. Es handelt sich hierbei um denselben Benutzernamen, der für den Controller und die SQL Server-Endpunkte verwendet wird. Dies betrifft nur neue Bereitstellungen. Bestehende Big Data-Cluster mit einem der vorherigen Releases verwenden weiterhin **Root** . Es hat keine Auswirkungen auf die Anmeldeinformationen, wenn der Cluster für die Active Directory-Authentifizierung konfiguriert ist. 
+- **Problem und Kundenbeeinträchtigung:** Bei neuen Big Data-Clustern, die mithilfe von SQL Server 2019 CU5 bereitgestellt werden, ist der Gatewaybenutzername nicht **Root**. Wenn mithilfe der Anwendung mit den falschen Anmeldeinformationen eine Verbindung mit dem Gatewayendpunkt hergestellt wird, wird ein Authentifizierungsfehler angezeigt. Diese Änderung entsteht durch Ausführung von Anwendungen innerhalb des Big Data-Clusters, bei dem es sich nicht einen Root-Benutzer handelt. Ab SQL Server 2019 CU5 ist ein anderes Standardverhalten festgelegt: Wenn Sie mithilfe von CU5 einen neuen Big Data-Cluster bereitstellen, basiert der Benutzername des Gatewayendpunkts auf dem Wert, der von der Umgebungsvariablen **AZDATA_USERNAME** übergeben wird. Es handelt sich hierbei um denselben Benutzernamen, der für den Controller und die SQL Server-Endpunkte verwendet wird. Dies betrifft nur neue Bereitstellungen. Bestehende Big Data-Cluster mit einem der vorherigen Releases verwenden weiterhin **Root**. Es hat keine Auswirkungen auf die Anmeldeinformationen, wenn der Cluster für die Active Directory-Authentifizierung konfiguriert ist. 
 
-- **Problemumgehung** : Azure Data Studio verarbeitet die Änderung der Anmeldeinformationen transparent für die Verbindung, die über das Gateway hergestellt wurde, um die HDFS-Suche im Objekt-Explorer zu ermöglichen. Sie müssen das [neueste Azure Data Studio-Release](../azure-data-studio/download-azure-data-studio.md) installieren, das die erforderlichen Änderungen enthält, die diesen Anwendungsfall berücksichtigen.
-In anderen Szenarios, in denen Sie Anmeldeinformationen für den Zugriff auf den Dienst über das Gateway angeben müssen (z. B. Anmelden mit [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] oder Zugreifen auf Webdashboards für Spark), müssen Sie sicherstellen, dass die richtigen Anmeldeinformationen verwendet werden. Wenn Sie auf einen vorhandenen Cluster abzielen, der vor CU5 bereitgestellt wurde, verwenden Sie weiterhin den **Root** -Benutzernamen, um eine Verbindung mit dem Gateway herzustellen, auch nachdem Sie den Cluster auf CU5 aktualisiert haben. Wenn Sie einen neuen Cluster mithilfe des CU5-Builds bereitstellen, melden Sie sich mithilfe des Benutzernamens an, der zur Umgebungsvariablen **AZDATA_USERNAME** gehört.
+- **Problemumgehung**: Azure Data Studio verarbeitet die Änderung der Anmeldeinformationen transparent für die Verbindung, die über das Gateway hergestellt wurde, um die HDFS-Suche im Objekt-Explorer zu ermöglichen. Sie müssen das [neueste Azure Data Studio-Release](../azure-data-studio/download-azure-data-studio.md) installieren, das die erforderlichen Änderungen enthält, die diesen Anwendungsfall berücksichtigen.
+In anderen Szenarios, in denen Sie Anmeldeinformationen für den Zugriff auf den Dienst über das Gateway angeben müssen (z. B. Anmelden mit [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] oder Zugreifen auf Webdashboards für Spark), müssen Sie sicherstellen, dass die richtigen Anmeldeinformationen verwendet werden. Wenn Sie auf einen vorhandenen Cluster abzielen, der vor CU5 bereitgestellt wurde, verwenden Sie weiterhin den **Root**-Benutzernamen, um eine Verbindung mit dem Gateway herzustellen, auch nachdem Sie den Cluster auf CU5 aktualisiert haben. Wenn Sie einen neuen Cluster mithilfe des CU5-Builds bereitstellen, melden Sie sich mithilfe des Benutzernamens an, der zur Umgebungsvariablen **AZDATA_USERNAME** gehört.
 
 ### <a name="pods-and-nodes-metrics-not-being-collected"></a>Metriken für Pods und Knoten werden nicht erfasst
 
@@ -238,15 +239,15 @@ In anderen Szenarios, in denen Sie Anmeldeinformationen für den Zugriff auf den
 
 - **Problem und Kundenbeeinträchtigung:** Aufgrund eines Sicherheitsfixes im Zusammenhang mit der API, die `telegraf` verwendet hat, um Pod- und Hostknotenmetriken zu sammeln, stellen Kunden möglicherweise fest, dass die Metriken nicht erfasst werden. Dies ist sowohl in neuen als auch in bestehenden Bereitstellungen von Big Data-Cluster möglich (nach dem Upgrade auf CU5). Aufgrund des Fixes verlangt Telegraf nun ein Dienstkonto mit Rollenberechtigungen für den gesamten Cluster. Bei der Bereitstellung wird versucht, das erforderliche Dienstkonto und die Clusterrolle zu erstellen, aber wenn der Benutzer, der den Cluster bereitstellt oder das Upgrade durchführt, nicht die erforderlichen Berechtigungen hat, wird die Bereitstellung bzw. das Upgrade mit einer Warnung fortgesetzt und erfolgreich abgeschlossen. Allerdings werden dabei keine Pod- und Knotenmetriken gesammelt.
 
-- **Problemumgehung** : Sie können einen Administrator bitten, die Rolle und das Dienstkonto zu erstellen (vor oder nach der Bereitstellung bzw. dem Upgrade). Big Data-Cluster verwendet diese dann. [In diesem Artikel wird](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection) beschrieben, wie Sie die erforderlichen Artefakte erstellen.
+- **Problemumgehung**: Sie können einen Administrator bitten, die Rolle und das Dienstkonto zu erstellen (vor oder nach der Bereitstellung bzw. dem Upgrade). Big Data-Cluster verwendet diese dann. [In diesem Artikel wird](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection) beschrieben, wie Sie die erforderlichen Artefakte erstellen.
 
 ### <a name="azdata-bdc-copy-logs-command-failure"></a>Fehler beim Befehl `azdata bdc copy-logs`
 
-- **Betroffene Releases** : [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]-Version *20.0.0*
+- **Betroffene Releases**: [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]-Version *20.0.0*
 
 - **Problem und Kundenbeeinträchtigung:** Bei der Implementierung des Befehls *copy-logs* wird davon ausgegangen, dass das Clienttool `kubectl` auf dem Clientcomputer installiert ist, von dem der Befehl gesendet wird. Wenn Sie den Befehl für eine auf OpenShift installierte Big Data-Cluster-Instanz ausführen, wird von Clients, auf denen nur das Tool `oc` installiert ist, der folgende Fehler ausgegeben: *An error occurred while collecting the logs: [WinError 2] The system cannot find the file specified* (Beim Sammeln der Protokolle ist ein Fehler aufgetreten: [WinError 2] Die angegebene Datei wurde nicht gefunden).
 
-- **Problemumgehung** : Installieren Sie das Tool `kubectl` auf demselben Clientcomputer, und führen Sie den Befehl `azdata bdc copy-logs` noch mal aus. Informationen zum Installieren von `kubectl` finden Sie [unter diesem Link](deploy-big-data-tools.md).
+- **Problemumgehung**: Installieren Sie das Tool `kubectl` auf demselben Clientcomputer, und führen Sie den Befehl `azdata bdc copy-logs` noch mal aus. Informationen zum Installieren von `kubectl` finden Sie [unter diesem Link](deploy-big-data-tools.md).
 
 ### <a name="deployment-with-private-repository"></a>Bereitstellung mit privatem Repository
 
@@ -254,7 +255,7 @@ In anderen Szenarios, in denen Sie Anmeldeinformationen für den Zugriff auf den
 
 - **Problem und Kundenbeeinträchtigung:** Beim Upgrade aus einem privaten Repository müssen bestimmte Anforderungen erfüllt werden.
 
-- **Problemumgehung** : Wenn Sie ein privates Repository verwenden, um die Images für die Bereitstellung oder das Upgrade eines BDC vorab abzurufen, stellen Sie sicher, dass sich die aktuellen Buildimages sowie die Zielbuildimages im privaten Repository befinden. Dadurch kann bei Bedarf ein Rollback durchgeführt werden. Wenn Sie die Anmeldeinformationen des privaten Repositorys seit der ursprünglichen Bereitstellung geändert haben, müssen Sie zudem den entsprechenden geheimen Schlüssel in Kubernetes aktualisieren, bevor Sie das Upgrade durchführen. [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] bietet keine Unterstützung für das Aktualisieren der Anmeldeinformationen über die Umgebungsvariablen `AZDATA_PASSWORD` und `AZDATA_USERNAME`. Aktualisieren Sie den geheimen Schlüssel mithilfe von [`kubectl edit secrets`](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret). 
+- **Problemumgehung**: Wenn Sie ein privates Repository verwenden, um die Images für die Bereitstellung oder das Upgrade eines BDC vorab abzurufen, stellen Sie sicher, dass sich die aktuellen Buildimages sowie die Zielbuildimages im privaten Repository befinden. Dadurch kann bei Bedarf ein Rollback durchgeführt werden. Wenn Sie die Anmeldeinformationen des privaten Repositorys seit der ursprünglichen Bereitstellung geändert haben, müssen Sie zudem den entsprechenden geheimen Schlüssel in Kubernetes aktualisieren, bevor Sie das Upgrade durchführen. [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] bietet keine Unterstützung für das Aktualisieren der Anmeldeinformationen über die Umgebungsvariablen `AZDATA_PASSWORD` und `AZDATA_USERNAME`. Aktualisieren Sie den geheimen Schlüssel mithilfe von [`kubectl edit secrets`](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret). 
 
 Ein Upgrade unter Verwendung unterschiedlicher privater Repositorys für den aktuellen Build und den Zielbuild wird nicht unterstützt.
 
@@ -279,7 +280,7 @@ Ein Upgrade unter Verwendung unterschiedlicher privater Repositorys für den akt
 
    Dieser Fehler tritt eher auf, wenn Sie das Upgrade des BDC in Azure Kubernetes Service (AKS) durchführen.
 
-- **Problemumgehung** : Erhöhen Sie den Timeoutwert für das Upgrade. 
+- **Problemumgehung**: Erhöhen Sie den Timeoutwert für das Upgrade. 
 
    Bearbeiten Sie die Konfigurationszuordnung für Upgrades, um die Timeoutwerte für Upgrades zu erhöhen. So bearbeiten Sie die Konfigurationszuordnung für Upgrades:
 
@@ -345,7 +346,7 @@ Ein Upgrade unter Verwendung unterschiedlicher privater Repositorys für den akt
    - Zookeeper-Pods oder Prozesse einzelner Zookeeper-Instanzen werden mehrmals neu gestartet.
    - Wenn die Netzwerkkonnektivität zwischen `sparkhead`- und Zookeeper-Pods unzuverlässig ist.
 
-- **Problemumgehung** : Beide Livy-Server müssen neu gestartet werden.
+- **Problemumgehung**: Beide Livy-Server müssen neu gestartet werden.
 
    ```bash
    kubectl -n <clustername> exec sparkhead-0 -c hadoop-livy-sparkhistory supervisorctl restart livy
@@ -359,7 +360,7 @@ Ein Upgrade unter Verwendung unterschiedlicher privater Repositorys für den akt
 
 - **Problem und Kundenbeeinträchtigung:** Sie können den primären Endpunkt, der zum Herstellen einer Verbindung mit Datenbanken in Verfügbarkeitsgruppen (Listener) zur Verfügung gestellt wird, nicht zum Erstellen arbeitsspeicheroptimierter Tabellen verwenden.
 
-- **Problemumgehung** : [Stellen Sie eine Verbindung mit der SQL Server-Instanz her](deployment-high-availability.md#instance-connect), stellen Sie einen Endpunkt zur Verfügung, stellen Sie eine Verbindung mit der SQL Server-Datenbank her, und erstellen Sie die arbeitsspeicheroptimierten Tabellen in der mit der neuen Verbindung erstellten Sitzung, um arbeitsspeicheroptimierte Tabellen zu erstellen, wenn die SQL Server-Masterinstanz sich in einer Verfügbarkeitsgruppe befindet.
+- **Problemumgehung**: [Stellen Sie eine Verbindung mit der SQL Server-Instanz her](deployment-high-availability.md#instance-connect), stellen Sie einen Endpunkt zur Verfügung, stellen Sie eine Verbindung mit der SQL Server-Datenbank her, und erstellen Sie die arbeitsspeicheroptimierten Tabellen in der mit der neuen Verbindung erstellten Sitzung, um arbeitsspeicheroptimierte Tabellen zu erstellen, wenn die SQL Server-Masterinstanz sich in einer Verfügbarkeitsgruppe befindet.
 
 ### <a name="insert-to-external-tables-active-directory-authentication-mode"></a>Einfügen in externe Tabellen im Active Directory-Authentifizierungsmodus
 
@@ -370,13 +371,13 @@ Ein Upgrade unter Verwendung unterschiedlicher privater Repositorys für den akt
    Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "SQLNCLI11". Only domain logins can be used to query Kerberized storage pool.
    ```
 
-- **Problemumgehung** : Passen Sie die Abfrage auf einer der folgenden Weisen an. Verknüpfen Sie die Speicherpooltabelle mit einer lokalen Tabelle, oder fügen Sie zunächst in die lokale Tabelle ein, und lesen Sie dann aus der lokalen Tabelle, um etwas in den Datenpool einzufügen.
+- **Problemumgehung**: Passen Sie die Abfrage auf einer der folgenden Weisen an. Verknüpfen Sie die Speicherpooltabelle mit einer lokalen Tabelle, oder fügen Sie zunächst in die lokale Tabelle ein, und lesen Sie dann aus der lokalen Tabelle, um etwas in den Datenpool einzufügen.
 
 ### <a name="transparent-data-encryption-capabilities-can-not-be-used-with-databases-that-are-part-of-the-availability-group-in-the-sql-server-master-instance"></a>Transparent Data Encryption-Funktionen können nicht mit Datenbanken verwendet werden, die Teil der Verfügbarkeitsgruppe in der SQL Server-Masterinstanz sind.
 
 - **Problem und Kundenbeeinträchtigung:** In Hochverfügbarkeitskonfigurationen können Datenbanken mit aktivierter Verschlüsselung nach einem Failover nicht verwendet werden, da sich die für die Verschlüsselung verwendeten Hauptschlüssel auf den einzelnen Replikaten unterscheiden. 
 
-- **Problemumgehung** : Für dieses Szenario gibt es keine Problemumgehung. Es wird empfohlen, die Verschlüsselung in dieser Konfiguration erst zu aktivieren, wenn ein Fix vorhanden ist.
+- **Problemumgehung**: Für dieses Szenario gibt es keine Problemumgehung. Es wird empfohlen, die Verschlüsselung in dieser Konfiguration erst zu aktivieren, wenn ein Fix vorhanden ist.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 1e5e4a4856b91cd717e9498fb96567ecd6c70ca6
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 2dab1d48ca2aa98e4a70a08bac492366f2632b79
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192640"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584957"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>NYC Taxi-Demodaten für Python- und R-Tutorials in SQL Server
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 In diesem Artikel wird beschrieben, wie eine Beispieldatenbank mit öffentlichen Daten von der [New York City Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) eingerichtet wird. Diese Daten werden in verschiedenen R- und Python-Tutorials für datenbankinterne Analysen unter SQL Server verwendet. Damit der Beispielcode schneller ausgeführt werden kann, haben wir ein repräsentatives 1 %-Sampling der Daten erstellt. In unserem System ist die Datenbanksicherungsdatei etwas größer als 90 MB, wobei sich in der primären Datentabelle 1,7 Millionen Datensätze befinden.
 
-Für diese Übung benötigen Sie [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md?view=sql-server-2017) oder ein anderes Tool zum Wiederherstellen einer Datenbanksicherungsdatei sowie zum Ausführen von T-SQL-Abfragen.
+Für diese Übung benötigen Sie [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md?view=sql-server-2017&preserve-view=true) oder ein anderes Tool zum Wiederherstellen einer Datenbanksicherungsdatei sowie zum Ausführen von T-SQL-Abfragen.
 
 Dieses Dataset wird in folgenden Tutorials und Schnellstarts verwendet:
 
@@ -41,7 +41,7 @@ Die Dateigröße beträgt ungefähr 90 MB.
 
 ::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
 >[!NOTE]
->Zur Wiederherstellung der Beispieldatenbank für [Machine Learning Services in Azure SQL Managed Instance (Vorschau)](/azure/azure-sql/managed-instance/machine-learning-services-overview) befolgen Sie die Anweisungen in [Schnellstart: Wiederherstellen einer Datenbank in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/restore-sample-database-quickstart) mithilfe der BAK-Datei der Demodatenbank für Taxifahrten in New York City: [https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak).
+>Zur Wiederherstellung der Beispieldatenbank für [Machine Learning Services in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview) befolgen Sie die Anweisungen im [Schnellstart: Wiederherstellen einer Datenbank in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/restore-sample-database-quickstart) mithilfe der BAK-Datei der Demodatenbank für Taxifahrten in New York City: [https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak).
 ::: moniker-end
 
 1. Klicken Sie auf [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), um die Datenbanksicherungsdatei herunterzuladen.

@@ -7,15 +7,14 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 053639f8ff25d50e7cad9c05d82cfcac6a0ee071
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: b7be2d8a11a63c1330e721f893e0ec3e945d8b5d
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956527"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870028"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Erweiterbarkeitsarchitektur in SQL Server-Machine Learning Services 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -46,15 +45,15 @@ Ein externes Skript kann durch Aufrufen einer gespeicherten Prozedur ausgeführt
 
 Die Architektur ist so konzipiert, dass externe Skripts in einem separaten Prozess von SQL Server ausgeführt werden, jedoch mit Komponenten, die intern die Kette von Anforderungen für Daten und Vorgänge auf SQL Server verwalten. Abhängig von der Version von SQL Server enthalten die unterstützten Spracherweiterungen [R](extension-r.md), [Python](extension-python.md) und Sprachen von Drittanbietern wie Java und .NET.
 
-  ***Komponentenarchitektur unter Windows:***
+  ***Komponentenarchitektur unter Windows:** _
   
   ![Windows-Komponentenarchitektur](../media/generic-architecture-windows.png "Komponentenarchitektur")
   
-  ***Komponentenarchitektur unter Linux:***
+  _*_Komponentenarchitektur unter Linux:_*_
 
   ![Linux-Komponentenarchitektur](../media/generic-architecture-linux.png "Komponentenarchitektur")
   
-Zu den Komponenten gehören ein **Launchpaddienst**, der zum Aufrufen externer Runtimes und bibliotheksspezifischer Logik zum Laden von Interpretern und Bibliotheken verwendet wird. Das Startprogramm lädt eine Language Runtime sowie alle proprietären Module. Wenn der Code z. B. RevoScaleR-Funktionen enthält, wird ein RevoScaleR-Interpreter geladen. **BxlServer** und **SQL Satellite** verwalten die Kommunikation mit SQL Server und die Datenübertragung. 
+Zu den Komponenten gehören ein _ *Launchpaddienst**, der zum Aufrufen externer Runtimes und bibliotheksspezifischer Logik zum Laden von Interpretern und Bibliotheken verwendet wird. Das Startprogramm lädt eine Language Runtime sowie alle proprietären Module. Wenn der Code z. B. RevoScaleR-Funktionen enthält, wird ein RevoScaleR-Interpreter geladen. **BxlServer** und **SQL Satellite** verwalten die Kommunikation mit SQL Server und die Datenübertragung. 
 
 Unter Linux verwendet SQL einen **launchpadd**-Dienst, um mit einem separaten Launchpad-Prozess für jeden Benutzer zu kommunizieren.
 

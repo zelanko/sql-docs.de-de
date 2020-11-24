@@ -5,16 +5,16 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 09/20/2020
 ms.topic: how-to
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a625684b3196fc246b2753fc7b7e38b3e603f6e
-ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
+ms.openlocfilehash: 2a37b086804a8fabe3719db0744b49345d69e6b8
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155061"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674138"
 ---
 # <a name="install-a-python-custom-runtime-for-sql-server"></a>Installieren einer benutzerdefinierten Python-Laufzeit für SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -30,16 +30,11 @@ In diesem Artikel wird beschrieben, wie Sie eine benutzerdefinierte Laufzeit zum
 > [!NOTE]
 > In diesem Artikel wird beschrieben, wie Sie eine benutzerdefinierte Laufzeit für Python unter Windows installieren. Informationen zur Installation unter Linux finden Sie unter [Installieren einer benutzerdefinierten Python-Laufzeit für SQL Server unter Linux](custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true).
 
-
-
 ## <a name="pre-install-checklist"></a>Prüfliste vor der Installation
 
 Vor der Installation einer benutzerdefinierten Python-Laufzeit müssen Sie Folgendes installieren:
 
-+ [SQL Server 2019 für Windows CU3 oder höher](../../database-engine/install-windows/install-sql-server.md).
-
-  > [!NOTE]
-  > Die benutzerdefinierte Python-Laufzeit erfordert das kumulative Update (CU) 3 oder höher für SQL Server 2019.
++ [SQL Server 2019, kumulatives Update 3 für Windows](../../database-engine/install-windows/install-sql-server.md)
 
 + [SQL Server-Spracherweiterungen unter Windows mit dem Erweiterbarkeitsframework](../../language-extensions/install/windows-java.md).
 
@@ -302,7 +297,7 @@ GO
 
 ## <a name="enable-external-script-execution-in-sql-server"></a>Aktivieren der externen Skriptausführung in SQL Server
 
-Ein externes Skript in Python kann über die gespeicherte Prozedur [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) ausgeführt werden, die für SQL Server ausgeführt wird. 
+Ein externes Skript in Python kann über die gespeicherte Prozedur [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) ausgeführt werden, die für SQL Server ausgeführt wird. 
 
 Um externe Skripts zu aktivieren, führen Sie die folgenden SQL-Befehle mit [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) aus, während eine Verbindung mit SQL Server besteht.
 

@@ -2,7 +2,7 @@
 title: Neuerungen in SQL Server-Machine Learning Services
 titleSuffix: ''
 description: Ankündigungen neuer Funktionen für die verschiedenen Versionen von SQL Server-Machine Learning Services und SQL Server 2016 R Services.
-ms.date: 11/04/2019
+ms.date: 11/17/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
@@ -10,17 +10,17 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 287b0fd536e5d3a6c76e8ef3760702da061a90ec
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 8d0da76c639048e9479afd575b584275a9bb51c6
+ms.sourcegitcommit: d2dba862814c60f00b16d4e412bf673b2c0dee5f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195062"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94810510"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Neuerungen in SQL Server-Machine Learning Services
 [!INCLUDE [SQL Server 2016 and later](../includes/applies-to-version/sqlserver2016.md)]
 
-Funktionen für maschinelles Lernen werden SQL Server in jedem Release hinzugefügt, während wir die Integration zwischen der Datenplattform, erweiterten Analysen und Data Science weiter ausbauen, erweitern und vertiefen. 
+In diesem Artikel wird beschrieben, welche neuen Funktionen und Features in den einzelnen Versionen von [SQL Server Machine Learning Services](sql-server-machine-learning-services.md) enthalten sind. Funktionen für maschinelles Lernen werden SQL Server in jedem Release hinzugefügt, während wir die Integration zwischen der Datenplattform, erweiterten Analysen und Data Science weiter ausbauen, erweitern und vertiefen. 
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2019"></a>Neues in SQL Server 2019

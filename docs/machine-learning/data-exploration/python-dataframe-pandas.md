@@ -2,19 +2,19 @@
 title: Einfügen von Daten aus einer SQL-Tabelle in einen Python-Pandas-Datenrahmen
 titleSuffix: SQL machine learning
 description: In diesem Artikel erfahren Sie, wie Sie Daten aus einer SQL-Tabelle lesen und mithilfe von Python in einen Pandas-Datenrahmen einfügen können.
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.date: 07/23/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 549507edaeec804776e830864bc93526e22eaea0
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 041291804f6fbefe4832398b7c56b2ab97940008
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956840"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870239"
 ---
 # <a name="insert-data-from-a-sql-table-into-a-python-pandas-dataframe"></a>Einfügen von Daten aus einer SQL-Tabelle in einen Python-Pandas-Datenrahmen
 [!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -24,15 +24,15 @@ In diesem Artikel wird beschrieben, wie SQL-Daten mithilfe des [pyodbc](../../co
 ## <a name="prerequisites"></a>Voraussetzungen
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-* SQL Server. Informationen zur Installation finden Sie unter [SQL Server für Windows](../../database-engine/install-windows/install-sql-server.md) oder [SQL Server für Linux](../../linux/sql-server-linux-overview.md).
+* [SQL Server für Windows](../../database-engine/install-windows/install-sql-server.md) oder [für Linux](../../linux/sql-server-linux-overview.md)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-* Azure SQL-Datenbank. Informationen zur Registrierung finden Sie unter [Azure SQL-Datenbank](/azure/sql-database/sql-database-get-started-portal).
+* [Azure SQL-Datenbank](/azure/sql-database/sql-database-get-started-portal)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-* Azure SQL Managed Instance. Informationen zur Registrierung finden Sie unter [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/instance-create-quickstart).
+* [Verwaltete Azure SQL-Datenbank-Instanz](/azure/azure-sql/managed-instance/instance-create-quickstart)
 
 * [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) zum Wiederherstellen der Beispieldatenbank in Azure SQL Managed Instance
 ::: moniker-end
@@ -70,8 +70,8 @@ Verwenden Sie das folgende Skript, um Daten aus der Tabelle „Person.CountryReg
 
 So erstellen Sie ein neues Notebook
 
-1. Klicken Sie in Azure Data Studio auf **Datei**, und wählen Sie **Neues Notebook** aus.
-2. Wählen Sie im Notebook einen Kernel **Python3** aus, und klicken Sie dann auf **+code**.
+1. Klicken Sie in Azure Data Studio auf **Datei** und dann auf **Neues Notebook**.
+2. Wählen Sie im Notebook den Kernel **Python3** aus, und klicken Sie dann auf **+code**.
 3. Fügen Sie den Code in das Notebook ein, und klicken Sie auf **Alle ausführen**.
 
 ```python

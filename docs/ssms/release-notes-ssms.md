@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 10/27/2020
-ms.openlocfilehash: c2139f53771ed50a5ce01cc9fb4c3c64bfd14692
-ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
+ms.openlocfilehash: eb3fa0a07e9a0b5e7cf1bc1c7564fdb7b0d82a62
+ms.sourcegitcommit: a2182276ba00c48dc1475b9c7dfa45179d4416dc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94570967"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94704195"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Versionshinweise zu SQL Server Management Studio (SSMS)
 
@@ -58,6 +58,7 @@ SSMS 18.7 ist das neueste Release von SSMS mit allgemeiner Verfügbarkeit (GA).
 | Analysis Services | In seltenen Fällen, kann es bei der Verwendung des Upgradesetups zu einem Fehler „Objekt nicht auf die Instanz eines Objekts festgelegt“ kommen, wenn versucht wird, den DAX-Editor nach einem Upgrade von SSMS zu öffnen. | Um dieses Problem zu beheben, deinstallieren Sie SSMS, und installieren Sie es erneut. |
 | SSMS allgemein | Das neue Dialogfeld „Serverüberwachungsspezifikation“ kann den Absturz von SSMS mit einem Zugriffsverletzungsfehler bewirken. | – |
 | SSMS allgemein | SSMS-Erweiterungen, die SMO verwenden, sollten für das neue SSMS-spezifische SMO V161-Paket neu kompiliert werden. Eine Vorschauversion ist unter https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ verfügbar. </br></br> Erweiterungen, die für frühere V160-Versionen des Microsoft.SqlServer.SqlManagementObjects-Pakets kompiliert wurden, funktionieren weiterhin. | – |
+| Assistent zum Generieren von Skripts | Der Assistent löst einen Fehler aus, wenn Sie versuchen, Datenbankobjekte in SQL Server 2014 und höher aufzulisten. Weitere Informationen finden Sie im [SQL Server-Benutzerfeedback](https://feedback.azure.com/forums/908035-sql-server/suggestions/41885587). | Verwenden Sie SSMS 18.6, um Objekte im Assistenten zum Generieren von Skripts für SQL 2014 und höher auszuwählen. |
 | Integration Services | Beim Im- oder Export von Paketen in Integration Services oder beim Export von Paketen in Azure-SSIS Integration Runtime gehen Skripts für Pakete verloren, die Skriptaufgaben/-komponenten enthalten. Problemumgehung: Entfernen Sie den Ordner „C:\Programme (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild“. | – |
 | Integration Services | Bei Remoteverbindungen mit den Integrationsdiensten tritt möglicherweise ein Fehler „The specified service does not exist as an installed service“ (Der angegebene Dienst ist nicht als installierter Dienst vorhanden) in neueren Betriebssystemen auf. Problemumgehung: Identifizieren Sie den Registrierungsspeicherort für die Integrationsdienste unter „Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\WOW6432Node\AppID“, und benennen Sie innerhalb dieser Strukturen für die bestimmte Version der Integrationsdienste, mit denen wir eine Verbindung herstellen möchten, den Registrierungsschlüssel „LocalService“ in „LocalService_A“ um. | N/V |
 | Objekt-Explorer | Releases von SSMS, die niedriger als 18.7 sind, besitzen einen Breaking Change im Objekt-Explorer aufgrund der Änderungen der Engine im Zusammenhang mit [Azure Synapse Analytics SQL On-Demand](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | Um den Objekt-Explorer in SSMS weiterhin mit Azure Synapse Analytics SQL On-Demand verwenden zu können, müssen Sie SSMS 18.7 oder höher verwenden. |
@@ -157,6 +158,7 @@ SSMS 18.7 ist das neueste Release von SSMS mit allgemeiner Verfügbarkeit (GA).
 | Analysis Services | In seltenen Fällen, kann es bei der Verwendung des Upgradesetups zu einem Fehler „Objekt nicht auf die Instanz eines Objekts festgelegt“ kommen, wenn versucht wird, den DAX-Editor nach einem Upgrade von SSMS zu öffnen. | Um dieses Problem zu beheben, deinstallieren Sie SSMS, und installieren Sie es erneut. |
 | SSMS allgemein | Das neue Dialogfeld „Serverüberwachungsspezifikation“ kann den Absturz von SSMS mit einem Zugriffsverletzungsfehler bewirken. | – |
 | SSMS allgemein | SSMS-Erweiterungen, die SMO verwenden, sollten für das neue SSMS-spezifische SMO V161-Paket neu kompiliert werden. Eine Vorschauversion ist unter https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ verfügbar. </br></br> Erweiterungen, die für frühere V160-Versionen des Microsoft.SqlServer.SqlManagementObjects-Pakets kompiliert wurden, funktionieren weiterhin. | – |
+| Assistent zum Generieren von Skripts | Der Assistent löst einen Fehler aus, wenn Sie versuchen, Datenbankobjekte in SQL Server 2014 und höher aufzulisten. Weitere Informationen finden Sie im [SQL Server-Benutzerfeedback](https://feedback.azure.com/forums/908035-sql-server/suggestions/41885587). | Verwenden Sie SSMS 18.6, um Objekte im Assistenten zum Generieren von Skripts für SQL 2014 und höher auszuwählen. |
 | Integration Services | Beim Im- oder Export von Paketen in Integration Services oder beim Export von Paketen in Azure-SSIS Integration Runtime gehen Skripts für Pakete verloren, die Skriptaufgaben/-komponenten enthalten. Problemumgehung: Entfernen Sie den Ordner „C:\Programme (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild“. | – |
 | Integration Services | Bei Remoteverbindungen mit den Integrationsdiensten tritt möglicherweise ein Fehler „The specified service does not exist as an installed service“ (Der angegebene Dienst ist nicht als installierter Dienst vorhanden) in neueren Betriebssystemen auf. Problemumgehung: Identifizieren Sie den Registrierungsspeicherort für die Integrationsdienste unter „Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\WOW6432Node\AppID“, und benennen Sie innerhalb dieser Strukturen für die bestimmte Version der Integrationsdienste, mit denen wir eine Verbindung herstellen möchten, den Registrierungsschlüssel „LocalService“ in „LocalService_A“ um. | N/V |
 | Objekt-Explorer | Releases von SSMS, die niedriger als 18.7 sind, besitzen einen Breaking Change im Objekt-Explorer aufgrund der Änderungen der Engine im Zusammenhang mit [Azure Synapse Analytics SQL On-Demand](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | Um den Objekt-Explorer in SSMS weiterhin mit Azure Synapse Analytics SQL On-Demand verwenden zu können, benötigen Sie SSMS 18.7 oder höher. |

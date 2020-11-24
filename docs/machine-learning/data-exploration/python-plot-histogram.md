@@ -2,19 +2,19 @@
 title: Zeichnen eines Histogramms für das Durchsuchen von Daten mit Python
 titleSuffix: SQL machine learning
 description: Hier erfahren Sie, wie Sie ein Histogramm zum Visualisieren von Daten mithilfe von Python erstellen.
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.date: 07/14/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: c1f30230b00258b5f5f662a99c2d75c29ea7ba8d
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: ee708d473e29cd36fe02e18e95eb71c0505dfdd7
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956794"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870148"
 ---
 # <a name="plot-histograms-in-python"></a>Anzeigen von Histogrammen in Python 
 [!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -24,20 +24,20 @@ In diesem Artikel wird beschrieben, wie Sie Daten mithilfe des Python-Pakets [pa
 ## <a name="prerequisites"></a>Voraussetzungen:
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-* SQL Server. Informationen zur Installation finden Sie unter [Installationsleitfaden für SQL Server](../../database-engine/install-windows/install-sql-server.md) oder [SQL Server unter Linux](../../linux/sql-server-linux-overview.md).
+* [SQL Server für Windows](../../database-engine/install-windows/install-sql-server.md) oder [für Linux](../../linux/sql-server-linux-overview.md)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-* Azure SQL-Datenbank. Informationen zur Registrierung finden Sie unter [Azure SQL-Datenbank](/azure/sql-database/sql-database-get-started-portal).
+* [Azure SQL-Datenbank](/azure/sql-database/sql-database-get-started-portal)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-* Azure SQL Managed Instance. Informationen zur Registrierung finden Sie unter [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/instance-create-quickstart).
+* [Verwaltete Azure SQL-Datenbank-Instanz](/azure/azure-sql/managed-instance/instance-create-quickstart)
 
 * [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) zum Wiederherstellen der Beispieldatenbank in Azure SQL Managed Instance
 ::: moniker-end
 
-* Azure Data Studio. Informationen zur Installation finden Sie unter [Was ist Azure Data Studio?](../../azure-data-studio/what-is.md).
+* Azure Data Studio. Informationen zur Installation finden Sie unter [Azure Data Studio](../../azure-data-studio/what-is.md).
 
 * [Wiederherstellen einer Data Warehouse-Beispieldatenbank](../../samples/adventureworks-install-configure.md), um die in diesem Artikel verwendeten Beispieldaten zu erhalten
 
