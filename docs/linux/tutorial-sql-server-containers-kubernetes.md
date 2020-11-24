@@ -9,12 +9,12 @@ ms.date: 09/01/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c8563738c8d1465c6573ca2a92f0839f54c8e29c
-ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
+ms.openlocfilehash: db9b5c98bd073fcf92f7fd93a24c551f5bca0804
+ms.sourcegitcommit: d2dba862814c60f00b16d4e412bf673b2c0dee5f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155110"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94810520"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Bereitstellen eines SQL Server-Containers in Kubernetes mit Azure Kubernetes Service
 
@@ -66,7 +66,7 @@ Erstellen Sie ein Systemadministratorkennwort im Kubernetes-Cluster. Kubernetes 
 
 Mit dem folgenden Befehl wird ein Kennwort für das Systemadministratorkonto erstellt:
 
-   ```azurecli
+   ```console
    kubectl create secret generic mssql --from-literal=SA_PASSWORD="MyC0m9l&xP@ssw0rd"
    ```  
 
@@ -111,7 +111,7 @@ Konfigurieren Sie ein [persistentes Volume](https://kubernetes.io/docs/concepts/
 
 1. Erstellen Sie einen Anspruch auf ein permanentes Volume in Kubernetes.
 
-   ```azurecli
+   ```console
    kubectl apply -f <Path to pvc.yaml file>
    ```
 
@@ -123,7 +123,7 @@ Konfigurieren Sie ein [persistentes Volume](https://kubernetes.io/docs/concepts/
 
 1. Überprüfen Sie den Anspruch auf persistente Volumes.
 
-   ```azurecli
+   ```console
    kubectl describe pvc <PersistentVolumeClaim>
    ```
 
@@ -131,7 +131,7 @@ Konfigurieren Sie ein [persistentes Volume](https://kubernetes.io/docs/concepts/
 
    Im vorherigen Schritt wurde der Anspruch auf persistente Volumes `mssql-data` genannt. Führen Sie den folgenden Befehl aus, um die Metadaten über den Anspruch auf permanente Volumes anzuzeigen:
 
-   ```azurecli
+   ```console
    kubectl describe pvc mssql-data
    ```
 
@@ -145,7 +145,7 @@ Konfigurieren Sie ein [persistentes Volume](https://kubernetes.io/docs/concepts/
 
 1. Überprüfen Sie das persistente Volume.
 
-   ```azurecli
+   ```console
    kubectl describe pv
    ```
 
@@ -244,7 +244,7 @@ In diesem Schritt erstellen Sie ein Manifest, um den Container zu beschreiben, d
 
 1. Erstellen Sie die Bereitstellung.
 
-   ```azurecli
+   ```console
    kubectl apply -f <Path to sqldeployment.yaml file>
    ```
 
@@ -265,7 +265,7 @@ In diesem Schritt erstellen Sie ein Manifest, um den Container zu beschreiben, d
 
 1. Überprüfen Sie, ob die Dienste ausgeführt werden. Führen Sie den folgenden Befehl aus:
 
-   ```azurecli
+   ```console
    kubectl get services 
    ```
 
@@ -281,13 +281,13 @@ In diesem Schritt erstellen Sie ein Manifest, um den Container zu beschreiben, d
 
 1. Sie können auch überprüfen, ob der Container als Nicht-Root ausgeführt wird, indem Sie den folgenden Befehl ausführen:
 
-    ```azurecli
+    ```console
     kubectl.exe exec <name of SQL POD> -it -- /bin/bash 
     ```
 
     Wenn Sie dann „whoami“ ausführen, sollte der Benutzername als „mssql“ angezeigt werden. Also als Nicht-Root-Benutzer.
 
-    ```azurecli
+    ```console
     whoami
     ```
 
@@ -320,7 +320,7 @@ Sie können den Pod löschen, um die Fehler und Wiederherstellung zu überprüfe
 
 1. Listen Sie den Pod auf, der SQL Server ausführt.
 
-   ```azurecli
+   ```console
    kubectl get pods
    ```
 
@@ -328,7 +328,7 @@ Sie können den Pod löschen, um die Fehler und Wiederherstellung zu überprüfe
 
 1. Löschen Sie den Pod.
 
-   ```azurecli
+   ```console
    kubectl delete pod mssql-deployment-0
    ```
 

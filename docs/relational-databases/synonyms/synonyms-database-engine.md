@@ -16,12 +16,12 @@ ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3cc5d297364c5f2967536f94fde15441e4e21524
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 74f5c5dcf2f2e1891daca22d70ebb9d9f1d9119f
+ms.sourcegitcommit: a49a66dbda0cb16049e092b49c8318ac3865af3c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551525"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94983114"
 ---
 # <a name="synonyms-database-engine"></a>Synonyme (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "89551525"
   
 -   Ein Synonym stellt eine Abstraktionsschicht bereit, die eine Clientanwendung vor Änderungen schützt, die am Namen oder Speicherort des Basisobjekts vorgenommen werden.  
   
-Nehmen Sie z. B. die **Employee** -Tabelle von [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], die auf dem Server **Server1**gespeichert ist. Eine Clientanwendung müsste, um von einem anderen Server, **Server2**, auf diese Tabelle zu verweisen, den vierteiligen Namen **Server1.AdventureWorks.Person.Employee**verwenden. Die Clientanwendung müsste außerdem geändert werden, wenn sich der Speicherort der Tabelle ändert, z. B. in einen anderen Server.  
+Nehmen Sie z. B. die **Employee** -Tabelle von [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], die auf dem Server **Server1** gespeichert ist. Eine Clientanwendung müsste, um von einem anderen Server, **Server2**, auf diese Tabelle zu verweisen, den vierteiligen Namen **Server1.AdventureWorks.Person.Employee** verwenden. Die Clientanwendung müsste außerdem geändert werden, wenn sich der Speicherort der Tabelle ändert, z. B. in einen anderen Server.  
   
-Um diese beiden Probleme zu vermeiden, können Sie das Synonym **EmpTable**auf **Server2** für die **Employee** -Tabelle auf **Server1**erstellen. Nun muss die Clientanwendung nur den einteiligen Namen **EmpTable**verwenden, um auf die **Employee** -Tabelle zu verweisen. Wenn sich außerdem der Speicherort der **Employee** -Tabelle ändert, müssen Sie das Synonym **EmpTable**ändern, um auf den neuen Speicherort der **Employee** -Tabelle zu verweisen. Da es keine ALTER SYNONYM-Anweisung gibt, müssen Sie zuerst das Synonym **EmpTable**löschen und anschließend mit dem gleichen Namen neu erstellen, aber das Synonym auf den neuen Speicherort der **Employee**-Tabelle verweisen lassen.  
+Um diese beiden Probleme zu vermeiden, können Sie das Synonym **EmpTable** auf **Server2** für die **Employee** -Tabelle auf **Server1** erstellen. Nun muss die Clientanwendung nur den einteiligen Namen **EmpTable** verwenden, um auf die **Employee** -Tabelle zu verweisen. Wenn sich außerdem der Speicherort der **Employee** -Tabelle ändert, müssen Sie das Synonym **EmpTable** ändern, um auf den neuen Speicherort der **Employee** -Tabelle zu verweisen. Da es keine ALTER SYNONYM-Anweisung gibt, müssen Sie zuerst das Synonym **EmpTable** löschen und anschließend mit dem gleichen Namen neu erstellen, aber das Synonym auf den neuen Speicherort der **Employee**-Tabelle verweisen lassen.  
   
 Ein Synonym gehört zu einem Schema, und der Name eines Schemas muss wie andere Objekte in einem Schema eindeutig sein. Sie können Synonyme für die folgenden Datenbankobjekte erstellen:  
 
@@ -53,8 +53,6 @@ Ein Synonym gehört zu einem Schema, und der Name eines Schemas muss wie andere 
     :::column-end:::
     :::column:::
         Assembly-Tabellenwertfunktion (CLR)
-
-        Assemblyaggregatfunktion (CLR)
 
         Assemblyaggregatfunktion (CLR)
 
@@ -78,10 +76,10 @@ Die Bindung zwischen einem Synonym und dem zugehörigen Basisobjekt erfolgt nur 
 Verweise auf Synonyme sind nicht schemagebunden. Deshalb kann ein Synonym jederzeit gelöscht werden. Durch das Löschen eines Synonyms besteht jedoch die Gefahr, dass Verweise auf das gelöschte Synonym zurückbleiben. Diese Verweise werden erst zur Laufzeit gefunden.  
   
 ## <a name="synonyms-and-schemas"></a>Synonyme und Schemas  
-Wenn Sie über ein Standardschema verfügen, das nicht Ihnen gehört, und Sie ein Synonym erstellen möchten, müssen Sie den Synonymnamen mit dem Namen eines Schemas, das Ihnen gehört, qualifizieren. Angenommen, Ihnen gehört ein Schema **x**, aber **y** ist Ihr Standardschema und Sie verwenden die CREATE SYNONYM-Anweisung. In diesem Fall müssen Sie dem Namen des Synonyms das Schema **x**als Präfix voranstellen, anstatt dem Synonym einen einteiligen Namen zu geben. Weitere Informationen zum Erstellen von Synonymen finden Sie unter [CREATE SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md)gespeichert ist.  
+Wenn Sie über ein Standardschema verfügen, das nicht Ihnen gehört, und Sie ein Synonym erstellen möchten, müssen Sie den Synonymnamen mit dem Namen eines Schemas, das Ihnen gehört, qualifizieren. Angenommen, Ihnen gehört ein Schema **x**, aber **y** ist Ihr Standardschema und Sie verwenden die CREATE SYNONYM-Anweisung. In diesem Fall müssen Sie dem Namen des Synonyms das Schema **x** als Präfix voranstellen, anstatt dem Synonym einen einteiligen Namen zu geben. Weitere Informationen zum Erstellen von Synonymen finden Sie unter [CREATE SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md)gespeichert ist.  
   
 ## <a name="granting-permissions-on-a-synonym"></a>Erteilen von Berechtigungen für Synonyme  
-Nur Besitzer eines Synonyms, Mitglieder der Rollen **db_owner**oder **db_ddladmin** können Berechtigungen für ein Synonym erteilen.  
+Nur Besitzer eines Synonyms, Mitglieder der Rollen **db_owner** oder **db_ddladmin** können Berechtigungen für ein Synonym erteilen.  
   
 Sie können eine `GRANT`-, `DENY`-, `REVOKE`-Anweisung für alle oder eine beliebige Anzahl der folgenden Berechtigungen für ein Synonym ausführen:  
 
