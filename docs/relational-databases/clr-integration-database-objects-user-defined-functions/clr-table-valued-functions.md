@@ -1,5 +1,5 @@
 ---
-title: CLR-Tabellenwert Funktionen | Microsoft-Dokumentation
+title: CLR-Table-Valued Funktionen | Microsoft-Dokumentation
 description: Eine Tabellenwert Funktion gibt eine Tabelle zurück. In SQL Server CLR-Integration können Sie Tabellenwert Funktionen in verwaltetem Code schreiben.
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca80594050e73bf20ecfd589f18a5eca43e4dbde
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4295ca970e503ad1785846d63e5ed479923f4303
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727905"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125288"
 ---
 # <a name="clr-table-valued-functions"></a>CLR-Tabellenwertfunktionen
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "85727905"
  Ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]verfügt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über erweiterte Funktionalität für Tabellenwertfunktionen, sodass Sie eine Tabellenwertfunktion in jeder beliebigen verwalteten Sprache definieren können. Daten werden von einer Tabellenwertfunktion durch ein **IEnumerable** -Objekt oder **IEnumerator** -Objekt zurückgegeben.  
   
 > [!NOTE]  
->  Bei Tabellenwertfunktionen können die Spalten des zurückgegebenen Tabellentyps keine timestamp-Spalten oder Spalten mit Nicht-Unicode-Zeichenfolgendatentypen enthalten (z. B. **char**, **varchar**und **text**). Die NOT NULL-Einschränkung wird nicht unterstützt  
+>  Bei Tabellenwertfunktionen können die Spalten des zurückgegebenen Tabellentyps keine timestamp-Spalten oder Spalten mit Nicht-Unicode-Zeichenfolgendatentypen enthalten (z. B. **char**, **varchar** und **text**). Die NOT NULL-Einschränkung wird nicht unterstützt  
   
- Weitere Informationen zu CLR-Tabellenwert Funktionen finden Sie unter mssqltips [Einführung in SQL Server CLR-Tabellenwert Funktionen!](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/)  
+ Weitere Informationen zu CLR-Table-Valued Funktionen finden Sie unter mssqltips [Einführung in SQL Server CLR-Tabellenwert Funktionen!](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/)  
   
 ## <a name="differences-between-transact-sql-and-clr-table-valued-functions"></a>Unterschiede zwischen Transact-SQL- und CLR-Tabellenwertfunktionen  
  [!INCLUDE[tsql](../../includes/tsql-md.md)]-Tabellenwertfunktionen materialisieren die Ergebnisse des Funktionsaufrufs in einer Zwischentabelle. Da sie eine Zwischentabelle verwenden, können sie Einschränkungen und eindeutige Indizes der Ergebnisse unterstützen. Diese Funktionen können äußerst nützlich sein, wenn umfassende Ergebnisse zurückgegeben werden.  
@@ -99,7 +99,8 @@ public class TabularEventLog
     [SqlFunction(FillRowMethodName = "FillRow")]  
     public static IEnumerable InitMethod(String logname)  
     {  
-        return new EventLog(logname).Entries;    }  
+        return new EventLog(logname).Entries;
+    }  
   
     public static void FillRow(Object obj, out SqlDateTime timeWritten, out SqlChars message, out SqlChars category, out long instanceId)  
     {  

@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4df36b6012cd6cbe0f2570bb678ebff02fa21dd5
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 92511a835a8a9a6f899f7597900fec6707f6dada
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195804"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129420"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services-Installation und -Konfiguration
 
@@ -74,13 +74,13 @@ Wenn Sie Änderungen an der Installation von [!INCLUDE[ssCurrent_md](../includes
   
      ![Symbol für das Server-Manager in der Windows Server 2012-Taskleiste](../master-data-services/media/mds-windowsservertaskbar-servermanagericon.png "Symbol für das Server-Manager in der Windows Server 2012-Taskleiste")  
   
-5.  Klicken Sie im **Server-Manager**im Menü **Verwalten** auf **Rollen und Features hinzufügen** .  
+5.  Klicken Sie im **Server-Manager** im Menü **Verwalten** auf **Rollen und Features hinzufügen** .  
    
      ![Menübefehl "Rollen und Features hinzufügen" in Server Verwaltung](../master-data-services/media/mds-servermanagerdashboard-addrolesfeaturesmenu.png "Menübefehl "Rollen und Features hinzufügen" in Server Verwaltung")  
   
-6.  Akzeptieren Sie auf der Seite **Installationstyp** des **Assistenten zum Hinzufügen von Rollen und Features**den Standardwert (**Rollenbasierte oder featurebasierte Installation**), und klicken sie auf **Weiter**.  
+6.  Akzeptieren Sie auf der Seite **Installationstyp** des **Assistenten zum Hinzufügen von Rollen und Features** den Standardwert (**Rollenbasierte oder featurebasierte Installation**), und klicken sie auf **Weiter**.  
   
-7.  Klicken Sie auf **Einen Server aus dem Serverpool auswählen**und anschließend auf den Server, auf dem Sie [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]installiert haben.  
+7.  Klicken Sie auf **Einen Server aus dem Serverpool auswählen** und anschließend auf den Server, auf dem Sie [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]installiert haben.  
   
      ![mds_AddRolesFeaturesWizard_ServerSelectionPage](../master-data-services/media/mds-addrolesfeatureswizard-serverselectionpage.png) 
   
@@ -90,7 +90,7 @@ Wenn Sie Änderungen an der Installation von [!INCLUDE[ssCurrent_md](../includes
    
 9. Bestätigen Sie auf der Seite **Funktionen**, dass die folgenden Funktionen ausgewählt sind, und klicken Sie dann auf **Weiter**. Diese Funktionen werden für [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] unter [!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)] benötigt.
   
-    |Funktionen|Funktionen|  
+    |Features|Features|  
     |--------------|--------------|  
     |![mds_AddRolesFeaturesWizard_FeaturesPage](../master-data-services/media/mds-addrolesfeatureswizard-featurespage.png)|![mds_AddRolesFeaturesWizard_FeaturesPage_WindowsProcActive](../master-data-services/media/mds-addrolesfeatureswizard-featurespage-windowsprocactive.png)|  
 
@@ -126,7 +126,7 @@ Wenn Sie Änderungen an der Installation von [!INCLUDE[ssCurrent_md](../includes
   
 1.  Starten Sie den [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], und klicken im linken Bereich auf **Datenbankkonfiguration** .  
   
-2.  Klicken Sie auf **Datenbank erstellen**und anschließend im **Datenbank erstellen (Assistent)** auf **Weiter**.  
+2.  Klicken Sie auf **Datenbank erstellen** und anschließend im **Datenbank erstellen (Assistent)** auf **Weiter**.  
   
 3.  Geben Sie auf der Seite **Daten Bank Server** die SQL Server Instanz an. 
 
@@ -174,16 +174,16 @@ Wenn Sie Änderungen an der Installation von [!INCLUDE[ssCurrent_md](../includes
   
 9. Klicken Sie im [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]im linken Bereich auf **Webkonfiguration** .  
   
-10. Klicken Sie im Listenfeld **Website** auf **Standardwebsite**und anschließend auf **Erstellen** , um eine Webanwendung zu erstellen.  
+10. Klicken Sie im Listenfeld **Website** auf **Standardwebsite** und anschließend auf **Erstellen** , um eine Webanwendung zu erstellen.  
   
     > [!NOTE]  
-    >  Wenn Sie **Standardwebsite**auswählen, müssen Sie eine Webanwendung erstellen. Wenn Sie die Option **Neue Website erstellen** im Listenfeld auswählen, wird die Anwendung automatisch erstellt.  
+    >  Wenn Sie **Standardwebsite** auswählen, müssen Sie eine Webanwendung erstellen. Wenn Sie die Option **Neue Website erstellen** im Listenfeld auswählen, wird die Anwendung automatisch erstellt.  
 
      ![mds_2016ConfigManager_WebConfig](../master-data-services/media/mds-2016configmanager-webconfig.png)  
   
 11. Führen Sie im Abschnitt **Anwendungspool** einen der folgenden Schritte aus.  
   
-    -   Geben Sie denselben Benutzernamen ein, den Sie in Schritt 5 für das **Administratorkonto**der Datenbank eingegeben haben. Geben Sie zudem das Kennwort ein, und klicken Sie auf **OK**.  
+    -   Geben Sie denselben Benutzernamen ein, den Sie in Schritt 5 für das **Administratorkonto** der Datenbank eingegeben haben. Geben Sie zudem das Kennwort ein, und klicken Sie auf **OK**.  
   
          **Noch**  
   
@@ -194,6 +194,9 @@ Wenn Sie Änderungen an der Installation von [!INCLUDE[ssCurrent_md](../includes
         ![mds_2016ConfigManager_WebConfig_CreateWebApplication](../master-data-services/media/mds-2016configmanager-webconfig-createwebapplication.png)   
   
      Weitere Informationen zum Dialogfeld **Webanwendung erstellen** finden Sie unter [Webanwendung erstellen (Dialogfeld) &#40;Konfigurations-Manager für Master Data Services&#41;](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md).  
+
+    > [!NOTE] 
+    >  Wenn Ihre Domäne [2020 LDAP-kanalbindung und LDAP-Signierungs Anforderungen für Windows](https://support.microsoft.com/en-us/help/4520412/2020-ldap-channel-binding-and-ldap-signing-requirements-for-windows)implementiert. Das Problem "die Anmelde Informationen konnten in Active Directory nicht überprüft werden" wird angezeigt. Wenn Sie ein Domänen Konto verwenden, um einen Anwendungs Pool zu erstellen. Verwenden Sie für die Problem Umgehung anstelle des Domänen Benutzers einen **lokalen Computerbenutzer**. Dadurch kann die Überprüfung der Anmelde Informationen mit Active Directory umgangen werden. Nachdem Sie die Webanwendung erstellt haben, können Sie die Identität in **Internetinformationsdienste (IIS)-Manager** in Domänen Benutzer ändern.
   
 12. Klicken Sie auf der Seite **Webkonfiguration** im Feld **Webanwendung** auf die Anwendung, die Sie erstellt haben, und anschließend im Abschnitt **Zuordnen einer Anwendung zu einer Datenbank** auf  **Auswählen** .  
   
