@@ -21,12 +21,12 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f979bc7b5dd8a3a3e67c499480003c45a8c4ebd
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 0c7d02931ab25c1400fbb256fc86d14464826114
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92255777"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947925"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ Die folgenden Dateiformate werden unterstützt:
   
 - Durch Trennzeichen getrennter Text  
   
-- Hive RCFile  
+- Hive RCFile: Gilt nicht für Azure Synapse Analytics
   
 - Hive ORC
   
@@ -146,7 +146,7 @@ Gibt das Format der externen Daten an.
 - ORC  
   Gibt ein ORC-Format (ORC = Optimized Row Columnar) an. Für diese Option ist auf dem externen Hadoop-Cluster Hive Version 0.11 oder höher erforderlich. In Hadoop bietet das ORC-Dateiformat eine bessere Komprimierung und Leistung als das RCFILE-Dateiformat.
 
-- RCFILE (in Kombination mit SERDE_METHOD = *SERDE_method* ) Gibt ein RcFile-Format (RcFile = Record Columnar file) an. Für diese Option müssen Sie eine Hive Serializer- und Hive Deserializer-Methode (SerDe) angeben. Diese Anforderung ist auch gegeben, wenn Sie in Hadoop Hive/HiveQL zum Abfragen von RC-Dateien verwenden. Beachten Sie, dass bei der SerDe-Methode die Groß-/Kleinschreibung beachtet werden muss.
+- RCFILE (in Kombination mit SERDE_METHOD = *SERDE_method*) Gibt ein RcFile-Format (RcFile = Record Columnar file) an. Für diese Option müssen Sie eine Hive Serializer- und Hive Deserializer-Methode (SerDe) angeben. Diese Anforderung ist auch gegeben, wenn Sie in Hadoop Hive/HiveQL zum Abfragen von RC-Dateien verwenden. Beachten Sie, dass bei der SerDe-Methode die Groß-/Kleinschreibung beachtet werden muss.
 
   Beispiele für die Angabe von RCFile mit den zwei von PolyBase unterstützten SerDe-Methoden.
 
@@ -253,11 +253,11 @@ Gibt ein benutzerdefiniertes Format für alle Datums- und Zeitdaten an, die in e
 > [!IMPORTANT]
 > Die Angabe eines benutzerdefinierten Werts für `DATE_FORMAT` überschreibt alle Standardtypformate. Das bedeutet, dass in allen datetime-, date- und time-Zellen in Ihren Dateien dieselben Datumsformate verwendet werden. Mit überschriebenem `DATE_FORMAT` können Datums- und Uhrzeitwerte nicht in unterschiedlichen Formaten vorliegen.
 
-In der folgenden Tabelle finden Sie **Beispiele für Datumsformate** :
+In der folgenden Tabelle finden Sie **Beispiele für Datumsformate**:
   
 Hinweise zur Tabelle:  
   
--   Jahr, Monat und Tag können verschiedene Formate und Reihenfolgen aufweisen. Die Tabelle enthält nur das Format **JMT** . Ein Monat kann eine oder zwei Ziffern oder drei Zeichen umfassen. Ein Tag kann eine oder zwei Ziffern umfassen. Ein Jahr kann zwei oder vier Ziffern umfassen.
+-   Jahr, Monat und Tag können verschiedene Formate und Reihenfolgen aufweisen. Die Tabelle enthält nur das Format **JMT**. Ein Monat kann eine oder zwei Ziffern oder drei Zeichen umfassen. Ein Tag kann eine oder zwei Ziffern umfassen. Ein Jahr kann zwei oder vier Ziffern umfassen.
   
 -   Millisekunden (fffffff) sind nicht erforderlich.
   

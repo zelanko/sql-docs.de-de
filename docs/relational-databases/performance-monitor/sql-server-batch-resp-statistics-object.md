@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b28b0d8af863c21f4764f5c7126fca20b18c1ab1
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 155ff6d21fdb0a40e042463b809c1ed14bbe70df
+ms.sourcegitcommit: a49a66dbda0cb16049e092b49c8318ac3865af3c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458150"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94983161"
 ---
 # <a name="sql-server-batch-resp-statistics-object"></a>SQL Server, Statistiken zu Batchantworten (Objekt)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,9 +51,9 @@ Jeder Leistungsindikator in dem Objekt enthält die folgenden Instanzen:
   
 |Element|BESCHREIBUNG|  
 |----------|-----------------|  
-|**CPU-Zeit: Anforderungen**|Die von der CPU für die Anforderung erforderliche Zeit.|  
+|**CPU-Zeit: Anforderungen**|Die Anzahl der auf der CPU-Zeit basierenden Anforderungen|  
 |**CPU-Zeit: Gesamt(ms)**|Die von der CPU für den Batch erforderliche Gesamtzeit.|  
-|**Verstrichene Zeit: Anforderungen**|Die für die Anforderung verstrichene Zeit.|  
+|**Verstrichene Zeit: Anforderungen**|Die Anzahl der Anforderungen basierend auf der verstrichenen Zeit|  
 |**Verstrichene Zeit: Gesamt(ms)**|Die für den Batch verstrichene Zeit.|  
 
 ## <a name="see-also"></a>Weitere Informationen
