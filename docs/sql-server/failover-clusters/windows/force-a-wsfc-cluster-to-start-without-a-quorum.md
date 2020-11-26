@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: bb5f71421506c381e576a429cceff4597d258448
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: c1de5f07aa692b0d268d3e41a1b8dda554ea0280
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91986016"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121073"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Erzwingen des Starts eines Clusters ohne Quorum
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -89,7 +89,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
   
 1.  Stellen Sie mittels Remotedesktop eine Verbindung mit dem gewünschten Clusterknoten her, um dessen Onlineschaltung zu erzwingen.  
   
-2.  Starten Sie mit **Als Administrator ausführen**eine Eingabeaufforderung mit erweiterten Berechtigungen.  
+2.  Starten Sie mit **Als Administrator ausführen** eine Eingabeaufforderung mit erweiterten Berechtigungen.  
   
 3.  Stellen Sie mithilfe von **net.exe** sicher, dass der lokale Clusterdienst beendet wurde.  
   

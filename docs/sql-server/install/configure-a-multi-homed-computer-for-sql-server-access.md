@@ -12,14 +12,14 @@ helpviewer_keywords:
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 74f365ec21285609055d8ecc04690787f5870802
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 336822b6ad2ff420c987e42c033e2efae20c2536
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894904"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127539"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Konfigurieren eines mehrfach vernetzten Computers für SQL Server-Zugriff
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "85894904"
   
 #### <a name="to-determine-the-ip-addresses-available-on-the-computer"></a>So bestimmen Sie die verfügbaren IP-Adressen des Computers  
   
-1.  Klicken Sie auf dem Computer, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist, auf **Start**und dann auf **Ausführen**, geben Sie **cmd** ein, und [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
+1.  Klicken Sie auf dem Computer, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist, auf **Start** und dann auf **Ausführen**, geben Sie **cmd** ein, und [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
   
 2.  Geben Sie im Eingabeaufforderungsfenster **ipconfig** ein, und drücken Sie die EINGABETASTE, um die auf diesem Computer verfügbaren IP-Adressen aufzulisten.  
   
@@ -72,9 +72,9 @@ ms.locfileid: "85894904"
   
 2.  Erweitern Sie im Konsolenbereich im **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager** den Abschnitt **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Netzwerkkonfiguration** und anschließend **Protokolle für \<instance name>** . Doppelklicken Sie dann auf **TCP/IP**.  
   
-3.  Im Dialogfeld **TCP/IP-Eigenschaften** auf der Registerkarte **IP-Adressen** werden mehrere IP-Adressen im Format **IP1**, **IP2**und bis zu **IPAll**angezeigt. Eine dieser Angaben ist die IP-Adresse des Loopbackadapters (127.0.0.1). Für alle IP-Adressen, die auf dem Computer konfiguriert wurden, werden zusätzliche IP-Adressen angezeigt.  
+3.  Im Dialogfeld **TCP/IP-Eigenschaften** auf der Registerkarte **IP-Adressen** werden mehrere IP-Adressen im Format **IP1**, **IP2** und bis zu **IPAll** angezeigt. Eine dieser Angaben ist die IP-Adresse des Loopbackadapters (127.0.0.1). Für alle IP-Adressen, die auf dem Computer konfiguriert wurden, werden zusätzliche IP-Adressen angezeigt.  
   
-4.  Wenn das Dialogfeld **Dynamische TCP-Ports** für eine IP-Adresse eine **0**enthält, weist dies darauf hin, dass das [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf dynamischen Ports lauscht. In diesem Beispiel werden feste Ports anstatt dynamischer Ports, die sich bei einem Neustart ändern können, verwendet. Löschen Sie daher die 0, wenn das Dialogfeld **Dynamische TCP-Ports** eine **0**enthält.  
+4.  Wenn das Dialogfeld **Dynamische TCP-Ports** für eine IP-Adresse eine **0** enthält, weist dies darauf hin, dass das [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf dynamischen Ports lauscht. In diesem Beispiel werden feste Ports anstatt dynamischer Ports, die sich bei einem Neustart ändern können, verwendet. Löschen Sie daher die 0, wenn das Dialogfeld **Dynamische TCP-Ports** eine **0** enthält.  
   
 5.  Notieren Sie den TCP-Port, der für jede IP-Adresse aufgelistet ist, die Sie konfigurieren möchten. Für dieses Beispiel wird angenommen, dass beide IP-Adressen den Standardport 1433 überwachen.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "85894904"
   
 1.  Melden Sie sich als Administrator auf dem Computer an, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist.  
   
-2.  Klicken Sie auf **Start**und dann auf **Ausführen**, geben Sie **wf.msc**ein, und klicken Sie auf **OK**.  
+2.  Klicken Sie auf **Start** und dann auf **Ausführen**, geben Sie **wf.msc** ein, und klicken Sie auf **OK**.  
   
 3.  Klicken Sie im Dialogfeld **Benutzerkontensteuerung** auf **Weiter** , um unter Verwendung der Administratoranmeldeinformationen das Snap-In der Windows-Firewall mit erweiterter Sicherheit zu öffnen.  
   
@@ -95,22 +95,22 @@ ms.locfileid: "85894904"
   
 5.  Klicken Sie im linken Bereich auf **Eingehende Regeln**.  
   
-6.  Klicken Sie mit der rechten Maustaste auf **Eingehende Regeln**, und klicken Sie anschließend auf **Neue Regel** , um den **Assistenten für neue eingehende Regel**zu öffnen.  
+6.  Klicken Sie mit der rechten Maustaste auf **Eingehende Regeln**, und klicken Sie anschließend auf **Neue Regel** , um den **Assistenten für neue eingehende Regel** zu öffnen.  
   
-7.  Sie können eine Regel für das Programm [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellen. Da in diesem Beispiel jedoch ein fester Port verwendet wird, wählen Sie **Port**aus, und klicken Sie anschließend auf **Weiter**.  
+7.  Sie können eine Regel für das Programm [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellen. Da in diesem Beispiel jedoch ein fester Port verwendet wird, wählen Sie **Port** aus, und klicken Sie anschließend auf **Weiter**.  
   
-8.  Wählen Sie auf der Seite **Protokolle und Ports** die Option **TCP**aus.  
+8.  Wählen Sie auf der Seite **Protokolle und Ports** die Option **TCP** aus.  
   
-9. Wählen Sie **Angegebene lokale Ports**aus. Geben Sie die durch Kommas getrennten Portnummern ein, und klicken Sie anschließend auf **Weiter**. In diesem Beispiel konfigurieren Sie den Standardport, geben Sie daher **1433**ein.  
+9. Wählen Sie **Angegebene lokale Ports** aus. Geben Sie die durch Kommas getrennten Portnummern ein, und klicken Sie anschließend auf **Weiter**. In diesem Beispiel konfigurieren Sie den Standardport, geben Sie daher **1433** ein.  
   
-10. Überprüfen Sie die Optionen auf der Seite **Aktion** . In diesem Beispiel verwenden Sie nicht die Firewall, um sichere Verbindungen zu gewährleisten. Klicken Sie daher auf **Verbindung zulassen**und anschließend auf **Weiter**.  
+10. Überprüfen Sie die Optionen auf der Seite **Aktion** . In diesem Beispiel verwenden Sie nicht die Firewall, um sichere Verbindungen zu gewährleisten. Klicken Sie daher auf **Verbindung zulassen** und anschließend auf **Weiter**.  
   
     > [!NOTE]  
     >  Möglicherweise sind für die Umgebung sichere Verbindungen erforderlich. Wenn Sie eine der Optionen für sichere Verbindungen auswählen, müssen Sie möglicherweise ein Zertifikat und die Option **Verschlüsselung erzwingen** konfigurieren. Weitere Informationen zu sicheren Verbindungen finden Sie unter [Aktivieren von verschlüsselten Verbindungen mit der Datenbank-Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)[Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine & #40; SQL Server-Konfigurations-Manager & #41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 11. Wählen Sie auf der Seite **Profil** mindestens ein Profil für die Regel aus. Wenn Sie mit Firewallprofilen nicht vertraut sind, klicken Sie im Firewallprogramm auf den Link **Weitere Informationen zu Profilen** .  
   
-    -   Wenn der Computer ein Server und nur dann verfügbar ist, wenn er mit einer Domäne verbunden ist, wählen Sie **Domäne**aus, und klicken Sie anschließend auf **Weiter**.  
+    -   Wenn der Computer ein Server und nur dann verfügbar ist, wenn er mit einer Domäne verbunden ist, wählen Sie **Domäne** aus, und klicken Sie anschließend auf **Weiter**.  
   
     -   Wenn es sich bei dem Computer um ein mobiles Gerät (z. B. um einen Laptop) handelt, verwendet er wahrscheinlich mehrere Profile, um eine Verbindung mit unterschiedlichen Netzwerken herzustellen. Bei einem mobilen Computer können Sie unterschiedliche Zugriffsmöglichkeiten für verschiedene Profile konfigurieren. Zum Beispiel können Sie einen Zugriff gewähren, wenn der Computer das Domänenprofil verwendet, und verweigern, wenn er das öffentliche Profil verwendet.  
   
@@ -122,17 +122,17 @@ ms.locfileid: "85894904"
   
 #### <a name="to-configure-the-firewall-rule-for-a-specific-ip-addresses"></a>So konfigurieren Sie die Firewallregel für eine bestimmte IP-Adresse  
   
-1.  Klicken Sie in der **Windows-Firewall mit erweiterter Sicherheit** auf der Seite **Eingehende Regeln**mit der rechten Maustaste auf die Regel, die Sie gerade erstellt haben, und klicken Sie anschließend auf **Eigenschaften**.  
+1.  Klicken Sie in der **Windows-Firewall mit erweiterter Sicherheit** auf der Seite **Eingehende Regeln** mit der rechten Maustaste auf die Regel, die Sie gerade erstellt haben, und klicken Sie anschließend auf **Eigenschaften**.  
   
 2.  Wählen Sie im Dialogfeld **Regeleigenschaften** die Registerkarte **Bereich** aus.  
   
-3.  Wählen Sie im Bereich **Lokale IP-Adresse** die Option **Diese IP-Adressen**aus, und klicken Sie dann auf **Hinzufügen**.  
+3.  Wählen Sie im Bereich **Lokale IP-Adresse** die Option **Diese IP-Adressen** aus, und klicken Sie dann auf **Hinzufügen**.  
   
-4.  Wählen Sie im Dialogfeld **IP-Adresse** die Option **Diese IP-Adresse oder Subnetz**aus, und geben Sie anschließend eine der IP-Adressen ein, die Sie konfigurieren möchten.  
+4.  Wählen Sie im Dialogfeld **IP-Adresse** die Option **Diese IP-Adresse oder Subnetz** aus, und geben Sie anschließend eine der IP-Adressen ein, die Sie konfigurieren möchten.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-6.  Wählen Sie im Bereich **Remote-IP-Adresse** die Option **Diese IP-Adressen**aus, und klicken Sie anschließend auf **Hinzufügen**.  
+6.  Wählen Sie im Bereich **Remote-IP-Adresse** die Option **Diese IP-Adressen** aus, und klicken Sie anschließend auf **Hinzufügen**.  
   
 7.  Verwenden Sie das Dialogfeld **IP-Adresse** , um die Konnektivität für die ausgewählte IP-Adresse des Computers zu konfigurieren. Sie können Verbindungen zu angegebenen IP-Adressen, Bereichen von IP-Adressen, ganzen Subnetzen oder bestimmten Computern aktivieren. Um diese Option ordnungsgemäß zu konfigurieren, müssen Sie sich mit dem Netzwerk gut auskennen. Informationen über das Netzwerk erhalten Sie vom Netzwerkadministrator.  
   

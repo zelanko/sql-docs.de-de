@@ -11,10 +11,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
 ms.openlocfilehash: cba06a816e57189cb69f9680542452d2788b233e
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92412531"
 ---
 # <a name="r-tutorial-explore-and-visualize-data"></a>R-Tutorial: Untersuchen und Visualisieren von Daten
@@ -26,11 +26,11 @@ Im zweiten Teil dieser fünfteiligen Tutorialreihe überprüfen Sie die Beispiel
 
 Ein wichtiges Ziel dieses Artikels besteht darin, das Aufrufen von R-Funktionen von [!INCLUDE[tsql](../../includes/tsql-md.md)] in gespeicherten Prozeduren zu veranschaulichen und die Ergebnisse in Anwendungsdateiformaten zu speichern:
 
-+ Erstellen Sie eine gespeicherte Prozedur mithilfe von `barplot`, um einen R-Plot als varbinary-Daten zu generieren. Verwenden Sie **bcp** , um den binären Stream in eine Bilddatei zu exportieren.
++ Erstellen Sie eine gespeicherte Prozedur mithilfe von `barplot`, um einen R-Plot als varbinary-Daten zu generieren. Verwenden Sie **bcp**, um den binären Stream in eine Bilddatei zu exportieren.
 + Erstellen Sie mithilfe von `hist` eine gespeicherte Prozedur, um einen Plot zu generieren. Die Ergebnisse werden als JPG- und PDF-Ausgabe gespeichert.
 
 > [!NOTE]
-> Da die Visualisierung ein leistungsfähiges Tool zum Verständnis der Datenform und -verteilung ist, bietet R zahlreiche Funktionen und Pakete zum Generieren von Histogrammen, Streudiagrammen, Boxplots und anderen Diagrammen zum Durchsuchen von Daten. R erstellt Bilder üblicherweise mithilfe eines R-Geräts für grafische Ausgaben, die Sie als **varbinary** -Datentyp für das Rendern in Anwendungen erfassen und speichern können. Sie können die Bilder auch in einem beliebigen unterstützten Dateiformat (z. B. JPG oder PDF) speichern.
+> Da die Visualisierung ein leistungsfähiges Tool zum Verständnis der Datenform und -verteilung ist, bietet R zahlreiche Funktionen und Pakete zum Generieren von Histogrammen, Streudiagrammen, Boxplots und anderen Diagrammen zum Durchsuchen von Daten. R erstellt Bilder üblicherweise mithilfe eines R-Geräts für grafische Ausgaben, die Sie als **varbinary**-Datentyp für das Rendern in Anwendungen erfassen und speichern können. Sie können die Bilder auch in einem beliebigen unterstützten Dateiformat (z. B. JPG oder PDF) speichern.
 
 In diesem Artikel führen Sie Folgendes durch:
 
@@ -51,7 +51,7 @@ In Teil fünf erfahren Sie, wie Sie die Modelle [operationalisieren](r-taxi-clas
 
 Das Entwickeln einer Data Science-Lösung bringt normalerweise die intensive Untersuchung und Visualisierung von Daten mit sich. Nehmen Sie sich zunächst ein paar Minuten Zeit, um die Beispieldaten zu überprüfen, falls Sie das noch nicht getan haben.
 
-Im ursprünglichen öffentlichen Dataset wurden die Taxi-IDs und die Fahrtendatensätze in separaten Dateien bereitgestellt. Die beiden ursprünglichen Datasets wurden in den Spalten _medallion_ , _hack\_license_ und _pickup\_datetime_ zusammengefügt, damit die Beispieldaten einfacher verwendet werden können.  Die Datensätze wurden ebenso auf Stichproben reduziert, um nur 1 % der ursprünglichen Anzahl der Datensätze zu erhalten. Der auf Stichproben reduzierte Datensatz hat 1.703.957 Zeilen und 23 Spalten.
+Im ursprünglichen öffentlichen Dataset wurden die Taxi-IDs und die Fahrtendatensätze in separaten Dateien bereitgestellt. Die beiden ursprünglichen Datasets wurden in den Spalten _medallion_, _hack\_license_ und _pickup\_datetime_ zusammengefügt, damit die Beispieldaten einfacher verwendet werden können.  Die Datensätze wurden ebenso auf Stichproben reduziert, um nur 1 % der ursprünglichen Anzahl der Datensätze zu erhalten. Der auf Stichproben reduzierte Datensatz hat 1.703.957 Zeilen und 23 Spalten.
 
 **Taxi-IDs**
   
@@ -65,11 +65,11 @@ Im ursprünglichen öffentlichen Dataset wurden die Taxi-IDs und die Fahrtendate
   
 + Jeder Fahrpreisdatensatz enthält die Zahlungsinformationen wie die Zahlungsart, der Gesamtbetrag und den Fahrtpreis.
   
-+ Die letzten drei Spalten können für verschiedene Machine Learning-Tasks verwendet werden. Die Spalte _tip\_amount_ enthält fortlaufende numerische Werte und kann als **label** -Spalte für die Regressionsanalyse verwendet werden. Die Spalte _tipped_ verfügt nur über Ja/Nein-Werte und wird für die binäre Klassifikation verwendet. Die _tip\_class_ -Spalte weist mehrere **Klassenbezeichnungen** auf und kann deshalb als Bezeichnung für mehrklassige Klassifizierungsaufgaben verwendet werden.
++ Die letzten drei Spalten können für verschiedene Machine Learning-Tasks verwendet werden. Die Spalte _tip\_amount_ enthält fortlaufende numerische Werte und kann als **label**-Spalte für die Regressionsanalyse verwendet werden. Die Spalte _tipped_ verfügt nur über Ja/Nein-Werte und wird für die binäre Klassifikation verwendet. Die _tip\_class_-Spalte weist mehrere **Klassenbezeichnungen** auf und kann deshalb als Bezeichnung für mehrklassige Klassifizierungsaufgaben verwendet werden.
   
   Diese exemplarische Vorgehensweise enthält nur die binäre Klassifizierungsaufgabe. Sie können gerne versuchen, Modelle für die anderen beiden Machine Learning-Tasks und für mehrklassige Klassifizierung zu erstellen.
   
-+ Die Werte für die Bezeichnungsspalten basieren alle auf der _tip\_amount_ -Spalte und verwenden folgende Geschäftsregeln:
++ Die Werte für die Bezeichnungsspalten basieren alle auf der _tip\_amount_-Spalte und verwenden folgende Geschäftsregeln:
   
   |Name der abgeleiteten Spalte|Regel|
   |-|-|
@@ -85,7 +85,7 @@ Im ursprünglichen öffentlichen Dataset wurden die Taxi-IDs und die Fahrtendate
 
 Um den Plot zu erstellen, verwenden Sie die R-Funktion `barplot`. In diesem Schritt wird ein Histogramm anhand der Daten aus einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfrage gezeichnet. Sie können diese Funktion in eine gespeicherte Prozedur wie **RPlotHistogram** einschließen.
 
-1. Klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] im Objekt-Explorer mit der rechten Maustaste auf die Datenbank **NYCTaxi_Sample** , und wählen Sie **Neue Abfrage** aus. Alternativ können Sie in Azure Data Studio im Menü **Datei** die Option **Neues Notebook** auswählen und eine Verbindung mit der Datenbank herstellen.
+1. Klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] im Objekt-Explorer mit der rechten Maustaste auf die Datenbank **NYCTaxi_Sample**, und wählen Sie **Neue Abfrage** aus. Alternativ können Sie in Azure Data Studio im Menü **Datei** die Option **Neues Notebook** auswählen und eine Verbindung mit der Datenbank herstellen.
 
 2. Fügen Sie das folgende Skript ein, um eine gespeicherte Prozedur zu erstellen, die das Histogramm zeichnet. Dieses Beispiel heißt **RPlotHistogram**.
 
@@ -182,11 +182,11 @@ Die gespeicherte Prozedur gibt das Bild als Strom von varbinary-Daten zurück, d
   
 ## <a name="create-a-stored-procedure-using-hist"></a>Erstellen einer gespeicherten Prozedur mit `hist`
 
-In der Regel generieren Data Scientists mehrere Datenvisualisierungen, um Einblicke in die Daten aus verschiedenen Perspektiven zu erhalten. In diesem Beispiel erstellen Sie eine gespeicherte Prozedur mit dem Namen **RPlotHist** , um Histogramme, Streudiagramme und andere R-Grafiken in das JPG- und PDF-Format zu schreiben.
+In der Regel generieren Data Scientists mehrere Datenvisualisierungen, um Einblicke in die Daten aus verschiedenen Perspektiven zu erhalten. In diesem Beispiel erstellen Sie eine gespeicherte Prozedur mit dem Namen **RPlotHist**, um Histogramme, Streudiagramme und andere R-Grafiken in das JPG- und PDF-Format zu schreiben.
 
 Diese gespeicherte Prozedur verwendet die `hist`-Funktion, um das Histogramm zu erstellen, wobei die Binärdaten in beliebte Formate wie JPG, PDF und PNG exportiert werden.
 
-1. Klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] im Objekt-Explorer mit der rechten Maustaste auf die Datenbank **NYCTaxi_Sample** , und wählen Sie **Neue Abfrage** aus.
+1. Klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] im Objekt-Explorer mit der rechten Maustaste auf die Datenbank **NYCTaxi_Sample**, und wählen Sie **Neue Abfrage** aus.
 
 2. Fügen Sie das folgende Skript ein, um eine gespeicherte Prozedur zu erstellen, die das Histogramm zeichnet. Dieses Beispiel heißt **RPlotHist**.
   

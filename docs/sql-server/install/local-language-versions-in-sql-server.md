@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 20b99363-0490-4aa3-9a3d-262f827d81e8
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: cfeaf90e3765b108c66cd86fc184b9fcdef8a029
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 4731dbd80cfefbb3f151c8f749127e37e869e8a3
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894319"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96120906"
 ---
 # <a name="local-language-versions-in-sql-server"></a>Lokale Sprachversionen in SQL Server
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "85894319"
   
 2.  Öffnen Sie in der Systemsteuerung **Regions- und Sprachoptionen**.  
   
-3.  Wählen Sie auf der Registerkarte **Sprachen** für **Sprache für Menüs und Dialogfelder**einen Wert aus der Liste aus.  
+3.  Wählen Sie auf der Registerkarte **Sprachen** für **Sprache für Menüs und Dialogfelder** einen Wert aus der Liste aus.  
   
      Diese Einstellung hat Auswirkungen auf die Sprache der Benutzeroberfläche von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie muss daher Ihrer lokalisierten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entsprechen.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "85894319"
   
 2.  Öffnen Sie in der Systemsteuerung **Regions- und Sprachoptionen**.  
   
-3.  Wählen Sie auf der Registerkarte **Regionale Einstellungen** für **Wählen Sie ein Element, um dessen Einstellungen anzuzeigen**einen Wert aus der Liste aus.  
+3.  Wählen Sie auf der Registerkarte **Regionale Einstellungen** für **Wählen Sie ein Element, um dessen Einstellungen anzuzeigen** einen Wert aus der Liste aus.  
   
      Diese Einstellung betrifft die länderspezifische Datumsformatierung.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "85894319"
   
 2.  Öffnen Sie in der Systemsteuerung **Regions- und Sprachoptionen**.  
   
-3.  Wählen Sie auf der Registerkarte **Erweitert** für **Wählen Sie die Sprachversion der Programme aus, die Unicode nicht unterstützen**einen Wert aus der Liste aus.  
+3.  Wählen Sie auf der Registerkarte **Erweitert** für **Wählen Sie die Sprachversion der Programme aus, die Unicode nicht unterstützen** einen Wert aus der Liste aus.  
   
      Diese Einstellung ermöglicht es dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup, die beste Standardsortierung für Ihre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation auszuwählen.  
   

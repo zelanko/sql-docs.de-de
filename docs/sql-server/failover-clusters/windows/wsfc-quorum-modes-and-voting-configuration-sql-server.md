@@ -12,14 +12,14 @@ helpviewer_keywords:
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 3144f53bed98c5f5ec92d26a1e72254b6adda25e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d900bbc6b8183e4a903886878cf61ce68ac39573
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895142"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127521"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC-Quorummodi und Abstimmungskonfiguration (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "85895142"
 ##  <a name="cluster-health-detection-by-quorum"></a><a name="ClusterHealthDetectionbyQuorum"></a> Clusterzustandserkennung von Quorum  
  Jeder Knoten in einem WSFC-Cluster nimmt an regelmäßiger getakteter Kommunikation teil, um den Integritätsstatus des Knotens für die anderen Knoten freizugeben. Bei nicht reagierenden Knoten wird der Status als fehlerhaft betrachtet.  
   
- Ein *Quorum* knotensatz wird aus der Mehrheit der Abstimmungsknoten und -zeugen im WSFC-Cluster gebildet. Die allgemeine Integrität und der Status eines WSFC-Clusters wird mithilfe einer regelmäßigen *Quorumabstimmung*ermittelt.  Das Vorhandensein eines Quorums bedeutet, dass der Cluster fehlerfrei ist und die Fehlertoleranz auf Knotenebene bereitstellen kann.  
+ Ein *Quorum* knotensatz wird aus der Mehrheit der Abstimmungsknoten und -zeugen im WSFC-Cluster gebildet. Die allgemeine Integrität und der Status eines WSFC-Clusters wird mithilfe einer regelmäßigen *Quorumabstimmung* ermittelt.  Das Vorhandensein eines Quorums bedeutet, dass der Cluster fehlerfrei ist und die Fehlertoleranz auf Knotenebene bereitstellen kann.  
   
  Die Abwesenheit eines Quorums gibt an, dass der Cluster nicht fehlerfrei ist.  Der Gesamtzustand des WSFC-Clusters muss aufrechterhalten werden, um sicherzustellen, dass fehlerfreie sekundäre Knoten für das Failover von Primärknoten verfügbar sind.  Wenn die Quorumabstimmung negativ ausfällt, wird der WSFC-Cluster als Vorsichtsmaßnahme in den Offlinezustand versetzt.  Dies führt auch dazu, dass alle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanzen, die beim Cluster registriert sind, beendet werden.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "85895142"
 >  Beim Verwenden einer asymmetrische Speicherkonfiguration für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]sollten Sie den Knotenmehrheit-Quorummodus generell verwenden, wenn Sie über eine ungerade Zahl von Abstimmungsknoten verfügen, oder den Quorummodus Knoten- und Dateifreigabemehrheit, wenn Sie über eine gerade Zahl von Abstimmungsknoten verfügen.  
   
 ##  <a name="voting-and-non-voting-nodes"></a><a name="VotingandNonVotingNodes"></a> Abstimmungsknoten und Nicht-Abstimmungsknoten  
- Standardmäßig wird jeder Knoten im WSFC-Cluster als Mitglied des Clusterquorums einbezogen. Jeder Knoten verfügt bei der Ermittlung des Gesamtclusterzustands über eine (1) Stimme, und jeder Knoten versucht ununterbrochen, ein Quorum zu erzielen.  Die Quorumdiskussion hat zu diesem Zeitpunkt eine sorgfältige Qualifizierung des Satzes an WSFC-Clusterknoten durchgeführt, die als *Abstimmungsknoten*über den Clusterzustand abstimmen.  
+ Standardmäßig wird jeder Knoten im WSFC-Cluster als Mitglied des Clusterquorums einbezogen. Jeder Knoten verfügt bei der Ermittlung des Gesamtclusterzustands über eine (1) Stimme, und jeder Knoten versucht ununterbrochen, ein Quorum zu erzielen.  Die Quorumdiskussion hat zu diesem Zeitpunkt eine sorgfältige Qualifizierung des Satzes an WSFC-Clusterknoten durchgeführt, die als *Abstimmungsknoten* über den Clusterzustand abstimmen.  
   
  Kein einzelner Knoten in einem WSFC-Cluster kann definitiv bestimmen, dass der Cluster als Ganzes fehlerfrei oder nicht fehlerfrei ist.  Aus Sicht der einzelnen Knoten können einige andere Knoten jederzeit offline sein, sich in einem Failoverprozess befinden oder aufgrund eines Netzwerkkommunikationsfehlers nicht reagieren.  Eine Hauptfunktion der Quorumabstimmung ist die Ermittlung, ob der scheinbare Status der einzelnen Knoten im WSFC-Cluster tatsächlich dem Ist-Zustand dieser Knoten entspricht.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "85895142"
   
  Wenn ein Knoten in einem anderen Subnetz für eine Quorumabstimmung jedoch als nicht reagierend angesehen wird, während der Knoten eigentlich online und auch sonst fehlerfrei ist, liegt dies in den meisten Fällen an einem Netzwerkkommunikationsfehler zwischen Subnetzen.  Je nach Clustertopologie, Quorummodus und Konfiguration der Failoverrichtlinien kann bei dem Netzwerkkommunikationsfehler ggf. mehr als ein Satz (oder eine Teilmenge) mit Abstimmungsknoten erstellt werden.  
   
- Wenn mehr als eine Teilmenge mit Abstimmungsknoten selbständig ein Quorum erzielen kann, wird dies als *Split-Brain-Szenario*bezeichnet.  Bei solch einem Szenario kann es vorkommen, dass sich die Knoten in den einzelnen Quoren unterschiedlich verhalten und in Konflikt miteinander stehen.  
+ Wenn mehr als eine Teilmenge mit Abstimmungsknoten selbständig ein Quorum erzielen kann, wird dies als *Split-Brain-Szenario* bezeichnet.  Bei solch einem Szenario kann es vorkommen, dass sich die Knoten in den einzelnen Quoren unterschiedlich verhalten und in Konflikt miteinander stehen.  
   
 > [!NOTE]  
 >  Das Split-Brain-Szenario ist nur möglich, wenn ein Systemadministrator manuell einen erzwungenen Quorumvorgang ausführt, oder in sehr seltenen Fällen bei einem erzwungenen Failover, bei dem der Quorumknotensatz explizit unterteilt wird.  

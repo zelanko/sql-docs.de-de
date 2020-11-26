@@ -12,14 +12,14 @@ helpviewer_keywords:
 - failover clustering, troubleshooting
 - cluster troubleshooting
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: f9c54984eb8d1c94176929579043f979aa518672
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 75090ce180ff6e71796c9363e39768f09ec3f91b
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988299"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121101"
 ---
 # <a name="failover-cluster-troubleshooting"></a>Problembehandlung bei Failoverclustern
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ Failoverclustering wird mit einer integrierten Schutzvorrichtung geliefert, um b
   
 #### <a name="how-to-revalidate-your-cluster"></a>So validieren Sie Ihren Cluster erneut  
   
-1.  Stellen Sie im Failovercluster-Snap-In in der Konsolenstruktur sicher, dass **Failover-Clusterverwaltung** ausgewählt ist, und klicken Sie dann unter **Verwaltung**auf **Konfiguration überprüfen**.  
+1.  Stellen Sie im Failovercluster-Snap-In in der Konsolenstruktur sicher, dass **Failover-Clusterverwaltung** ausgewählt ist, und klicken Sie dann unter **Verwaltung** auf **Konfiguration überprüfen**.  
   
 2.  Befolgen Sie die Anleitung im Assistenten, um die Server und Tests anzugeben und die Tests auszuführen. Die Seite **Zusammenfassung** wird angezeigt, nachdem die Tests ausgeführt wurden.  
   
@@ -49,7 +49,7 @@ Failoverclustering wird mit einer integrierten Schutzvorrichtung geliefert, um b
   
 4.  Zum Anzeigen von Hilfethemen, mit deren Hilfe Sie die Ergebnisse interpretieren können, klicken Sie auf **Weitere Informationen über Clustervalidierungstests**.  
   
- Zum Anzeigen von Hilfethemen über die Clustervalidierung nach Schließen des Assistenten klicken Sie im Failovercluster-Snap-In nacheinander auf **Hilfe**, **Hilfethemen**und die Registerkarte **Inhalt** . Erweitern Sie die Inhalte für die Failoverclusterhilfe, und klicken Sie auf **Konfiguration des Failoverclusters**überprüfen.  Nachdem der Validierungs-Assistent abgeschlossen ist, zeigt der **Zusammenfassungsbericht** die Ergebnisse an. Alle Tests müssen entweder mit einem grünen Häkchen oder in einigen Fällen mit einem gelben Dreieck (Warnung) bestanden werden. Wenn Sie nach Problembereichen suchen (rote X oder gelbe Fragezeichen), klicken Sie in dem Teil des Berichts, der die Testergebnisse zusammenfasst, zum Anzeigen der Details auf einen einzelnen Test. Alle Probleme mit rotem X müssen gelöst werden, bevor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Probleme behandelt werden.  
+ Zum Anzeigen von Hilfethemen über die Clustervalidierung nach Schließen des Assistenten klicken Sie im Failovercluster-Snap-In nacheinander auf **Hilfe**, **Hilfethemen** und die Registerkarte **Inhalt** . Erweitern Sie die Inhalte für die Failoverclusterhilfe, und klicken Sie auf **Konfiguration des Failoverclusters** überprüfen.  Nachdem der Validierungs-Assistent abgeschlossen ist, zeigt der **Zusammenfassungsbericht** die Ergebnisse an. Alle Tests müssen entweder mit einem grünen Häkchen oder in einigen Fällen mit einem gelben Dreieck (Warnung) bestanden werden. Wenn Sie nach Problembereichen suchen (rote X oder gelbe Fragezeichen), klicken Sie in dem Teil des Berichts, der die Testergebnisse zusammenfasst, zum Anzeigen der Details auf einen einzelnen Test. Alle Probleme mit rotem X müssen gelöst werden, bevor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Probleme behandelt werden.  
   
  **Installieren von Updates**  
   
@@ -129,7 +129,7 @@ Failoverclustering wird mit einer integrierten Schutzvorrichtung geliefert, um b
   
 1.  Ermitteln Sie mithilfe der Clusterverwaltung den Knoten, auf dem die Gruppe mit der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt wird. In diesem Beispiel ist es **Knoten A**.  
   
-2.  Starten Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienst auf diesem Computer mithilfe von **net start**. Weitere Informationen zum Verwenden von **net start**finden Sie unter [Manuelles Starten von SQL Server](https://msdn.microsoft.com/library/ms191193\(v=sql.105\).aspx).  
+2.  Starten Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienst auf diesem Computer mithilfe von **net start**. Weitere Informationen zum Verwenden von **net start** finden Sie unter [Manuelles Starten von SQL Server](https://msdn.microsoft.com/library/ms191193\(v=sql.105\).aspx).  
   
 3.  Starten Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]SQL Server-Konfigurations-Manager auf **Knoten A**. Zeigen Sie den Pipenamen an, der vom Server überwacht wird. Dieser sollte in etwa so aussehen: \\\\.\\$$\VIRTSQL\pipe\sql\query.  
   
@@ -172,7 +172,7 @@ Failoverclustering wird mit einer integrierten Schutzvorrichtung geliefert, um b
   
 2.  Erweitern Sie im linken Bereich der Computerverwaltung den Knoten **Dienste und Anwendungen**, und klicken Sie dann auf **Dienste**.  
   
-3.  Klicken Sie im rechten Bereich der Computerverwaltung mit der rechten Maustaste auf **Distributed Transaction Coordinator**, und wählen Sie **Eigenschaften**aus.  
+3.  Klicken Sie im rechten Bereich der Computerverwaltung mit der rechten Maustaste auf **Distributed Transaction Coordinator**, und wählen Sie **Eigenschaften** aus.  
   
 4.  Klicken Sie im Fenster **Distributed Transaction Coordinator** auf die Registerkarte **Allgemein** , und klicken Sie dann auf **Beenden** , um den Dienst zu beenden.  
   
