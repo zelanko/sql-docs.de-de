@@ -40,6 +40,39 @@
           href: ../connect/ado-net/appcontext-switches.md
         - name: Suchen von zusätzlichen Informationen
           href: ../connect/ado-net/find-additional-sqlclient-driver-information.md
+    - name: Datentypzuordnungen in ADO.NET
+      href: ../connect/ado-net/data-type-mappings-ado-net.md
+      items:
+        - name: SQL Server-Datentypzuordnungen
+          href: ../connect/ado-net/sql-server-data-type-mappings.md
+        - name: Gleitkommazahlen
+          href: ../connect/ado-net/floating-point-numbers.md
+    - name: Abrufen und Ändern von Daten in ADO.NET
+      href: ../connect/ado-net/retrieving-modifying-data.md
+      items:
+        - name: Herstellen einer Verbindung mit einer Datenquelle
+          href: ../connect/ado-net/connecting-to-data-source.md
+          items:
+            - name: Herstellen von Verbindungen
+              href: ../connect/ado-net/establishing-connection.md
+            - name: Verbindungsereignisse
+              href: ../connect/ado-net/connection-events.md
+        - name: Verbindungszeichenfolgen
+          href: ../connect/ado-net/connection-strings.md
+          items:
+            - name: Verbindungszeichenfolgen-Generatoren
+              href: ../connect/ado-net/connection-string-builders.md
+            - name: Verbindungszeichenfolgen und Konfigurationsdateien
+              href: ../connect/ado-net/connection-strings-and-configuration-files.md
+            - name: Verbindungszeichenfolgen-Syntax
+              href: ../connect/ado-net/connection-string-syntax.md
+            - name: Schützen von Verbindungsinformationen
+              href: ../connect/ado-net/protecting-connection-information.md
+        - name: Verbindungspooling
+          href: ../connect/ado-net/connection-pooling.md
+          items:
+            - name: SQL Server-Verbindungspooling (ADO.NET)
+              href: ../connect/ado-net/sql-server-connection-pooling.md
     - name: SQL Server und ADO.NET
       href: ../connect/ado-net/sql/index.md
       items:
