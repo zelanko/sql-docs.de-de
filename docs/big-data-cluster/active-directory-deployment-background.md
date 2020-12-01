@@ -9,20 +9,20 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a2b95ef0934c1eb01944df562c4c34cd73d8e0d0
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 144b769ce42b192099678cda4cfe6fb2935c1c2f
+ms.sourcegitcommit: af663bdca0df8a1f34a14667390662f6f0e17766
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257340"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94924167"
 ---
 # <a name="deploy-multiple-big-data-clusters-2019-in-the-same-active-directory-domain"></a>Bereitstellen mehrerer [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in derselben Active Directory-Domäne
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-In diesem Artikel werden die Neuerungen im fünften kumulativen Update (Cumulative Update 5, CU5) für SQL Server 2019 erläutert, die die Bereitstellung mehrerer SQL Server 2019-Big Data-Cluster in der gleichen Active Directory-Domäne (AD) sowie die Integration mit derselben ermöglichen.
+In diesem Artikel werden die Neuerungen im fünften kumulativen Update (Cumulative Update 2019, CU5) für SQL Server 2019 erläutert, die die Bereitstellung mehrerer SQL Server 2019-Big Data-Cluster in der gleichen Active Directory-Domäne (AD) sowie die Integration in dieselbe ermöglichen.
 
-Vor CU5 bestanden zwei Probleme, die die Bereitstellung mehrerer Big Data-Cluster (BDCs) in einer einzigen AD-Domäne verhinderten.
+Vor SQL Server 2019 CU5 gab es zwei Probleme, die die Bereitstellung mehrerer Big Data-Cluster in einer AD-Domäne verhinderten.
 
 - Namenskonflikt in Bezug auf Dienstprinzipalnamen und die DNS-Domäne
 - Namen von Kontoprinzipalen in der Domäne
@@ -35,11 +35,11 @@ Der zur Bereitstellungszeit angegebene Domänenname wird als AD-DNS-Domäne verw
 
 ### <a name="domain-account-principal-names"></a>Namen von Kontoprinzipalen in der Domäne
 
-Während einer Bereitstellung eines BDC in einer Active Directory-Domäne werden mehrere Kontoprinzipale für Dienste generiert, die im BDC ausgeführt werden. Dabei handelt es sich im Wesentlichen um AD-Benutzerkonten. Vor CU5 waren die Namen für diese Konten nicht über Cluster hinweg eindeutig. Dies zeigte sich, wenn der gleiche Benutzerkontoname für einen bestimmten Dienst im BDC in zwei verschiedenen Clustern erstellt werden sollte. Der zuletzt bereitgestellte Cluster erzeugte einen Konflikt in AD und konnte nicht erstellt werden.
+Während einer Bereitstellung eines BDC in einer Active Directory-Domäne werden mehrere Kontoprinzipale für Dienste generiert, die im BDC ausgeführt werden. Dabei handelt es sich im Wesentlichen um AD-Benutzerkonten. Vor SQL Server 2019 CU5 waren die Namen dieser Konten unter Clustern nicht eindeutig. Dies zeigte sich, wenn der gleiche Benutzerkontoname für einen bestimmten Dienst im BDC in zwei verschiedenen Clustern erstellt werden sollte. Der zuletzt bereitgestellte Cluster erzeugte einen Konflikt in AD und konnte nicht erstellt werden.
 
 ## <a name="resolution-for-collisions"></a>Lösungen für Namenskonflikte
 
-### <a name="solution-to-solve-the-problem-with-spns-and-dns-domain---cu5"></a>Lösung: Namenskonflikt in Bezug auf SPNs und die DNS-Domäne – CU5
+### <a name="solution-to-solve-the-problem-with-spns-and-dns-domain---sql-2019-cu5"></a>Lösung des Problems mit Dienstprinzipalnamen und DNS-Domäne – SQL Server 2019 CU5
 
 Da sich die SPNs zwischen zwei Clustern unterscheiden müssen, muss sich auch der zur Bereitstellungszeit übergegebene DNS-Domänenname unterscheiden. Mit der neu in der Bereitstellungskonfigurationsdatei eingeführten Einstellung `subdomain` können Sie von nun an unterschiedliche DNS-Namen angeben. Wenn sich die Unterdomäne zwischen zwei Clustern unterscheidet und die interne Kommunikation über diese Unterdomäne erfolgen kann, enthalten die SPNs die Unterdomäne, wodurch die erforderliche Eindeutigkeit erreicht wird.
 
@@ -63,7 +63,7 @@ Die Unterdomäne gilt nur für das DNS. Daher lautet der Name des neuen LDAP-Ben
 
 ## <a name="semantics"></a>Semantik
 
-Nachstehend finden Sie eine Übersicht über die Semantik der Parameter, die in CU5 für mehrere, in einer einzelnen Domäne bereitgestellte Cluster hinzugefügt wurden:
+Nachstehend finden Sie eine Übersicht über die Semantik der Parameter, die in SQL Server 2019 CU5 für mehrere, in einer einzelnen Domäne bereitgestellte Cluster hinzugefügt wurden:
 
 ### `subdomain`
 
@@ -138,7 +138,7 @@ Im Folgenden finden Sie ein Beispiel für die Endpunktspezifikation für Endpunk
 
 Dies ist nicht verpflichtend, jedoch empfehlenswert. Separate Organisationseinheiten für separate Cluster erleichtern Ihnen die Verwaltung der generierten Benutzerkonten.
 
-### <a name="how-to-revert-back-to-the-pre-cu5-behavior"></a>Wie kann das Verhalten vor CU5 wiederhergestellt werden?
+### <a name="how-to-revert-back-to-the-pre-cu5-behavior-in-sql-2019"></a>Wie kann in SQL Server 2019 das Verhalten vor CU5 wiederhergestellt werden?
 
 Möglicherweise gibt es Szenarios, in denen Sie den neu eingeführten Parameter `subdomain` nicht unterstützen können, beispielsweise wenn Sie ein Release vor CU5 bereitstellen müssen und die [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] bereits aktualisiert haben. Dies ist zwar sehr unwahrscheinlich, wenn Sie das Verhalten vor dem CU5-Release jedoch wiederherstellen müssen, können Sie im Active Directory-Abschnitt von `control.json` den Parameter `useSubdomain` auf `false` festlegen.
 

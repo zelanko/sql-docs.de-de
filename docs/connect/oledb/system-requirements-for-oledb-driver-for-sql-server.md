@@ -16,11 +16,11 @@ helpviewer_keywords:
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: c86f62f98e81ce3c4fdd86e1e79e8f73e1422851
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861809"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127977"
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>Systemanforderungen für den OLE DB-Treiber für SQL Server
 
@@ -42,7 +42,7 @@ Eine Liste der Betriebssysteme, von denen der OLE DB-Treiber für SQL Server unt
 
 ## <a name="azure-active-directory-authentication-requirements"></a>Azure Active Directory-Authentifizierungsanforderungen  
 
-Stellen Sie sicher, dass die [Active Directory-Authentifizierungsbibliothek für SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072) installiert wurde, wenn Sie die Azure Active Directory-Authentifizierungsmethoden mit Versionen des OLE DB-Treibers für SQL Server ***vor Version 18.3*** verwenden. (Version 18.3 enthält die Abhängigkeit als Teil des Installationspakets.) ADAL ist für die anderen Authentifizierungsmethoden oder OLE DB-Vorgänge nicht erforderlich. Weitere Informationen finden Sie unter [Verwenden von Azure Active Directory](features/using-azure-active-directory.md).
+Stellen Sie sicher, dass die [Active Directory-Authentifizierungsbibliothek für SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072) installiert wurde, wenn Sie die Azure Active Directory-Authentifizierungsmethoden mit Versionen des OLE DB-Treibers für SQL Server **vor Version 18.3** verwenden. (Version 18.3 enthält die Abhängigkeit als Teil des Installationspakets.) ADAL ist für die anderen Authentifizierungsmethoden oder OLE DB-Vorgänge nicht erforderlich. Weitere Informationen finden Sie unter [Verwenden von Azure Active Directory](features/using-azure-active-directory.md).
 
 ## <a name="sql-server-requirements"></a>SQL Server-Anforderungen  
 
@@ -56,7 +56,7 @@ Die englische Sprachversion des OLE DB-Treibers für SQL Server wird von allen 
 
 Für Upgrades:  
 
-* Englischsprachige Versionen des OLE DB-Treibers für SQL Server können auf eine beliebige lokalisierte Version des OLE DB-Treibers für SQL Server aktualisiert werden.  
+Englischsprachige Versionen des OLE DB-Treibers für SQL Server können in eine beliebige lokalisierte Version des OLE DB-Treibers für SQL Server geändert werden.  
 * Lokalisierte Versionen des OLE DB-Treibers für SQL Server können auf lokalisierte Versionen des OLE DB-Treibers für SQL Server in derselben Sprache aktualisiert werden.  
 * Die lokalisierte Version des OLE DB-Treibers für SQL Server kann auf die englischsprachige Version des OLE DB-Treibers für SQL Server aktualisiert werden.  
 * Lokalisierte Versionen des OLE DB-Treibers für SQL Server können nicht auf lokalisierte Versionen des OLE DB-Treibers für SQL Server in einer anderen lokalisierten Sprache aktualisiert werden.  

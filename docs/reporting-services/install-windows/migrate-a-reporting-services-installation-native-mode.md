@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/01/2020
-ms.openlocfilehash: d45e00b7d99f87ec3edc9bdd123d5392412dcf73
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: ae3932611181f99b71d72bc2365967a19c968b9c
+ms.sourcegitcommit: f2bdebed3efa55a2b7e64de9d6d9d9b1c85f479e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934844"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96125015"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrieren einer Reporting Services-Installation (einheitlicher Modus)
 
@@ -132,7 +132,7 @@ Weitere Informationen zu Änderungen in Microsoft SQL Server Reporting Services 
   
     2. Rswebapplication.config  
   
-    3. Rssvrpolicy.config  
+    3. Rssrvpolicy.config  
   
     4. Rsmgrpolicy.config  
   
@@ -144,7 +144,7 @@ Weitere Informationen zu Änderungen in Microsoft SQL Server Reporting Services 
 
 ## <a name="install-sql-server-reporting-services"></a><a name="bkmk_install_ssrs"></a> Installieren von SQL Server Reporting Services
 
- Installieren Sie eine neue Berichtsserverinstanz im Dateimodus, um sie so konfigurieren zu können, dass Nichtstandardwerte verwendet werden. Verwenden Sie bei der Befehlszeileninstallation das **FilesOnly**-Argument. Wählen Sie im Installations-Assistenten die Option **Server installieren, jedoch nicht konfigurieren**aus.  
+ Installieren Sie eine neue Berichtsserverinstanz im Dateimodus, um sie so konfigurieren zu können, dass Nichtstandardwerte verwendet werden. Verwenden Sie bei der Befehlszeileninstallation das **FilesOnly**-Argument. Wählen Sie im Installations-Assistenten die Option **Server installieren, jedoch nicht konfigurieren** aus.  
   
  Klicken Sie auf einen der folgenden Links, um Anweisungen zum Installieren einer neuen Instanz von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]anzuzeigen.  
   

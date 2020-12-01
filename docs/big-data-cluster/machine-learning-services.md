@@ -4,16 +4,16 @@ titleSuffix: SQL Server Big Data Clusters
 description: Hier erfahren Sie, wie Sie Python- und R-Skripts auf der Masterinstanz eines SQL Server-Big Data-Clusters mit Machine Learning Services ausführen können.
 author: dphansen
 ms.author: davidph
-ms.date: 04/30/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-bdc
-ms.openlocfilehash: a14258c15ac1af1445b201f7b999dbec1682555d
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: aa71450a1c16c9239a0dc74403a1989b5a9a1986
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196920"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947965"
 ---
 # <a name="run-python-and-r-scripts-with-machine-learning-services-on-sql-server-big-data-clusters"></a>Ausführen von Python- und R-Skripts mit Machine Learning Services auf SQL Server-Big Data-Clustern
 
@@ -22,7 +22,7 @@ ms.locfileid: "86196920"
 Sie können Python- und R-Skripts auf der Masterinstanz eines [SQL Server-Big Data-Clusters](big-data-cluster-overview.md) mit [Machine Learning Services](../machine-learning/index.yml) ausführen.
 
 > [!NOTE]
-> Sie können mit den [SQL Server-Spracherweiterungen](../language-extensions/language-extensions-overview.md) auch Java-Code auf der Masterinstanz ausführen. Wenn Sie die folgenden Schritte befolgen, werden auch die Spracherweiterungen aktiviert.
+> Sie können Java-Code auch mithilfe der [Java-Spracherweiterung](../language-extensions/java-overview.md) in der Masterinstanz von SQL Server-Big Data-Cluster ausführen. Wenn Sie die folgenden Schritte ausführen, werden auch die [SQL Server-Spracherweiterungen](../language-extensions/language-extensions-overview.md) aktiviert.
 
 ## <a name="enable-machine-learning-services"></a>Aktivieren von Machine Learning Services
 

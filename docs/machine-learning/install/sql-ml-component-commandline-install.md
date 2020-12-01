@@ -3,18 +3,18 @@ title: Installation über die Eingabeaufforderung
 description: Führen Sie die SQL Server-Einrichtung über die Befehlszeile aus, um einer SQL Server-Datenbank-Engine-Instanz Machine Learning Services mit Python und R hinzuzufügen.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 10/12/2020
+ms.date: 11/25/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cd9e1e261790c301ceac8198a76fbe2906c8ccf6
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 8e32b14682c7813dd911b52e80249cf6af7ebaac
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956764"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96122765"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-from-the-command-line"></a>Installieren von SQL Server Machine Learning Services mit R und Python über die Befehlszeile
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -37,9 +37,9 @@ Dieser Artikel enthält Anweisungen zum Installieren von [SQL Server Machine Lea
 
 ## <a name="command-line-arguments"></a>Befehlszeilenargumente
 
-Das Argument FEATURES ist ebenso erforderlich wie Lizenzbedingungen. 
+Das Argument **FEATURES** ist ebenso wie Lizenzierungsbedingungen erforderlich. 
 
-Wenn Sie über die Eingabeaufforderung installieren, unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des /Q-Parameters den vollständigen stillen Modus oder mithilfe des /QS-Parameters den einfachen stillen Modus. Mithilfe des /QS-Schalters wird nur der Fortschritt angezeigt, es sind jedoch keine Eingaben möglich. Außerdem werden beim Auftreten von Fehlern keine Fehlermeldungen angezeigt. Der /QS-Parameter wird nur unterstützt, wenn /Action=install angegeben wurde.
+Wenn Sie über die Eingabeaufforderung installieren, unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des Parameters **/Q** den vollständigen stillen Modus oder mithilfe des Parameters **/QS** den einfachen stillen Modus. Mithilfe des Schalters **/QS** wird nur der Fortschritt angezeigt, es sind jedoch keine Eingaben möglich. Außerdem werden beim Auftreten von Fehlern keine Fehlermeldungen angezeigt. Der Parameter **/QS** wird nur unterstützt, wenn **/Action=install** angegeben wurde.
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 | Argumente | BESCHREIBUNG |

@@ -1,7 +1,7 @@
 ---
 title: Lebenszyklus der SqlClient-Treiberunterstützung
 description: Seite mit Informationen zum Support-Lebenszyklus des Produkts
-ms.date: 09/08/2020
+ms.date: 11/19/2020
 dev_langs:
 - csharp
 - vb
@@ -12,13 +12,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.reviewer: v-kaywon
-ms.openlocfilehash: 5b9b461454db98de77ed6003477b7a02114067eb
-ms.sourcegitcommit: 71a334c5120a1bc3809d7657294fe44f6c909282
+ms.reviewer: v-jizho2
+ms.openlocfilehash: 30155a584de4e22692601a1dcf9551a67d4f580f
+ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89614595"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95011795"
 ---
 # <a name="sqlclient-driver-support-lifecycle"></a>Lebenszyklus der SqlClient-Treiberunterstützung
 
@@ -36,6 +36,7 @@ Neue stabile Releases werden alle sechs Monate beginnend mit Version 1.2 mit zw
 
 | Version | Offizielles Veröffentlichungsdatum | Aktuelle Patchversion | Veröffentlichungsdatum für Patch | Supportebene  | Supportende |
 | -- | -- | -- | -- | -- | -- |
+| 2.1 | 19. November 2020 | 2.1.0 | 19. November 2020 | Aktuell | |
 | 2.0 | 16. Juni 2020 | 2.0.1 | 25. August 2020 | Aktuell | |
 | 1.1 | 20. November 2019 | 1.1.3 | 15. Mai 2020 | LTS | 21. November 2022 |
 | 1.0 | 28. August 2019 | 1.0.19269.1 | 26. September 2019 | Aktuell | 20. Februar 2020 |
@@ -52,6 +53,7 @@ Aktuelle Releases werden bis zu drei Monate nach nachfolgenden aktuellen oder LT
 
 |Datenbankversion&nbsp;&#8594;<br />&#8595; Treiberversion|Azure SQL-Datenbank|Azure Synapse Analytics|Verwaltete Azure SQL-Instanz|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|
 |---|---|---|---|---|---|---|---|---|
+|2.1|Ja|Ja|Ja|Ja|Ja|Ja|Ja|Ja|
 |2.0|Ja|Ja|Ja|Ja|Ja|Ja|Ja|Ja|
 |1.1|Ja|Ja|Ja|Ja|Ja|Ja|Ja|Ja|
 |1.0|Ja|Ja|Ja|Ja|Ja|Ja|Ja|Ja|

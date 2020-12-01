@@ -2,20 +2,20 @@
 title: Was sind erweiterte Sicherheitsupdates?
 description: Erfahren Sie, wie Sie die SQL Server-Registrierung verwenden, um erweiterte Sicherheitsupdates für Ihre SQL Server-Produkte, deren Support und Lebensdauer ausläuft, wie z. B. SQL Server 2008 und SQL Server 2008 R2, zu erhalten.
 ms.custom: ''
-ms.date: 12/09/2019
+ms.date: 11/24/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f0eabc247645000d95f9b9c83c17ababc47c6cc2
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+ms.openlocfilehash: f3a337395be09743be335dd01ac80caf9dc98be0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793817"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96121281"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>Was sind erweiterte Sicherheitsupdates für SQL Server?
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -86,7 +86,7 @@ Führen Sie die folgenden Schritte aus, um die SQL Server-Registrierung zu erste
 
    ![Screenshot des Azure-Portals, in dem gezeigt wird, wie eine SQL Server Registrierung erstellt wird](media/sql-server-extended-security-updates/sql-server-registry-service.png)
 
-1. Wählen Sie unter **Projektdetails** in der Dropdownliste Ihr Abonnement aus. Wählen Sie dann entweder eine vorhandene **Ressourcengruppe** oder **Neu erstellen** , um für Ihren neuen SQL Server-Registrierungsdienst eine neue Ressourcengruppe zu erstellen. 
+1. Wählen Sie unter **Projektdetails** in der Dropdownliste Ihr Abonnement aus. Wählen Sie dann entweder eine vorhandene **Ressourcengruppe** oder **Neu erstellen**, um für Ihren neuen SQL Server-Registrierungsdienst eine neue Ressourcengruppe zu erstellen. 
 1. Geben Sie unter **Dienstdetails** einen Namen und eine Region für Ihre neue Ressource des Typs **SQL Server-Registrierung** an: 
 
    ![Screenshot der SQL Server-Registrierung mit der Registerkarte „Grundeinstellungen“](media/sql-server-extended-security-updates/create-new-sql-server-registry.png)
@@ -207,6 +207,39 @@ Gehen Sie zum Herunterladen von ESUs wie folgt vor:
 
 1. Laden Sie Sicherheitsupdates hier herunter, sobald sie verfügbar sind. 
 
+## <a name="supported-regions-and-data-residency"></a>Unterstützte Regionen und Datenresidenz
+
+Der Dienst **SQL Server-Registrierung** (Vorschau) ist in bestimmten Azure-Regionen verfügbar. In der folgenden Tabelle werden die unterstützten Regionen und zugehörigen Typen von Datenresidenz gezeigt.
+
+| **Region** | **Datenresidenz** |
+|:--|:--|
+|Australien (Osten)|geografischer Raum|
+|Australien, Südosten|geografischer Raum|
+|Kanada, Mitte|geografischer Raum|
+|Frankreich, Mitte|geografischer Raum|
+|Japan, Osten|geografischer Raum|
+|Japan, Westen|geografischer Raum|
+|Korea, Mitte|geografischer Raum|
+|Korea, Süden|geografischer Raum|
+|USA Nord Mitte|geografischer Raum|
+|Nordeuropa|geografischer Raum|
+|USA Süd Mitte|geografischer Raum|
+|Asien, Südosten|Eine Region|
+|Indien (Süden)|geografischer Raum|
+|Südafrika, Norden|geografischer Raum|
+|UK, Süden|geografischer Raum|
+|UK, Westen|geografischer Raum|
+|USA (Westen)|geografischer Raum|
+|East US|geografischer Raum|
+|USA (Mitte)|geografischer Raum|
+|Asien, Osten|geografischer Raum|
+|Europa, Westen|geografischer Raum|
+|USA, Westen-Mitte|geografischer Raum|
+|USA, Westen 2|geografischer Raum|
+|USA (Ost) 2|geografischer Raum|
+
+In den Regionen mit geografischer Residenz verwaltet der SQL-Registrierungsdienst Datensicherungen in einem georedundanten Speicherkonto (GRS).  In den Regionen mit Residenz in einer einzelnen Region verwaltet der SQL-Registrierungsdienst Datensicherungen in einem zonenredundanten Speicherkonto (GRS). Weitere Informationen finden Sie im [Trust Center](https://azuredatacentermap.azurewebsites.net/).
+
 ## <a name="configure-regional-redundancy"></a>Konfigurieren der regionalen Redundanz 
 
 Kunden, die regionale Redundanz für ihre **SQL Server-Registrierung** benötigen, können Registrierungsdaten in zwei verschiedenen Regionen erstellen. Dann können die Kunden Sicherheitsupdates aus beiden Regionen basierend auf der Verfügbarkeit des **SQL Server-Registrierungsdiensts** herunterladen. 
@@ -219,8 +252,8 @@ Zum Konfigurieren der regionalen Redundanz führen Sie die folgenden Schritte au
   
    :::image type="content" source="media/sql-server-extended-security-updates/two-upload-files-for-regional-redundancy.png" alt-text="Beispieldateien für den Upload":::
 
-1. Erstellen Sie den ersten **SQL Server-Registrierungsdienst** in einer Region, und führen Sie dann eine Massenregistrierung der Instanzen in einer der CSV-Dateien in dieser Region durch. Beispiel: Erstellen Sie den ersten **SQL Server-Registrierungsdienst** in der Region **USA, Westen** , und führen Sie eine Massenregistrierung Ihrer SQL Server-Instanzen mit der Datei „upload1.csv“ durch. 
-1. Erstellen Sie den zweiten **SQL Server-Registrierungsdienst** in der zweiten Region, und führen Sie dann eine Massenregistrierung der Instanzen in der anderen CSV-Dateien in dieser Region durch. Beispiel: Erstellen Sie den zweiten **SQL Server-Registrierungsdienst** in der Region **USA, Osten** , und führen Sie eine Massenregistrierung Ihrer SQL Server-Instanzen mit der Datei „upload2.csv“ durch. 
+1. Erstellen Sie den ersten **SQL Server-Registrierungsdienst** in einer Region, und führen Sie dann eine Massenregistrierung der Instanzen in einer der CSV-Dateien in dieser Region durch. Beispiel: Erstellen Sie den ersten **SQL Server-Registrierungsdienst** in der Region **USA, Westen**, und führen Sie eine Massenregistrierung Ihrer SQL Server-Instanzen mit der Datei „upload1.csv“ durch. 
+1. Erstellen Sie den zweiten **SQL Server-Registrierungsdienst** in der zweiten Region, und führen Sie dann eine Massenregistrierung der Instanzen in der anderen CSV-Dateien in dieser Region durch. Beispiel: Erstellen Sie den zweiten **SQL Server-Registrierungsdienst** in der Region **USA, Osten**, und führen Sie eine Massenregistrierung Ihrer SQL Server-Instanzen mit der Datei „upload2.csv“ durch. 
 
 
 Sobald die Daten bei den beiden unterschiedlichen Ressourcen für die **SQL Server-Registrierung** registriert sind, können Sie je nach Dienstverfügbarkeit Sicherheitsupdates aus beiden Regionen herunterladen. 
