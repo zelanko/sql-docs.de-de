@@ -13,23 +13,23 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c08303bd13b96089ac2b9e0f82c83a992ec83e63
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 1038b37cf97fed506d8503ceafb94a7bdabb0b2d
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038296"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419831"
 ---
 # <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Stellt Informationen zu gruppierten columnstore--Indizes auf Segment Basis bereit, damit Administratoren Entscheidungen zur Systemverwaltung in treffen können [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . **sys.pdw_nodes_column_store_row_groups** verfügt über eine Spalte für die Gesamtanzahl der physisch gespeicherten Zeilen (einschließlich der als gelöscht markierten Zeilen) und eine Spalte für die Anzahl der Zeilen, die als gelöscht markiert sind. Verwenden Sie **sys.pdw_nodes_column_store_row_groups** , um zu bestimmen, welche Zeilen Gruppen einen hohen Prozentsatz gelöschter Zeilen aufweisen und neu erstellt werden sollten.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID der zugrunde liegenden Tabelle. Dabei handelt es sich um die physische Tabelle auf dem Computeknoten, nicht um die object_id für die logische Tabelle auf dem Steuerelement Knoten. Beispielsweise stimmt object_id nicht mit dem object_id in sys. Tables.<br /><br /> Verwenden Sie sys.pdw_index_mappings, um mit sys. Tables zu verknüpfen.|  
 |**index_id**|**int**|ID des gruppierten columnstore--Indexes in *object_id* Tabelle.|  
-|**partition_number**|**int**|ID der Tabellen Partition, die Zeilen Gruppen *row_group_id*enthält. Sie können *partition_number* verwenden, um diese DMV mit sys. Partitions zu verknüpfen.|  
+|**partition_number**|**int**|ID der Tabellen Partition, die Zeilen Gruppen *row_group_id* enthält. Sie können *partition_number* verwenden, um diese DMV mit sys. Partitions zu verknüpfen.|  
 |**row_group_id**|**int**|ID dieser Zeilen Gruppe. Diese ist innerhalb der Partition eindeutig.|  
 |**dellta_store_hobt_id**|**bigint**|Die hobt_id für Deltazeilengruppen oder NULL, wenn der Zeilengruppentyp nicht Delta ist. Eine Deltazeilengruppe ist eine Zeilengruppe mit Lese-/Schreibzugriff, die neue Datensätze akzeptiert. Eine Delta Zeilen Gruppe hat den **offenen** Status. Eine Deltazeilengruppe befindet sich weiterhin im rowstore-Format und wurde nicht in das columnstore-Format komprimiert.|  
 |**state**|**tinyint**|Die der state_description zugeordnete ID.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
@@ -40,14 +40,14 @@ ms.locfileid: "92038296"
 |**pdw_node_id**|**int**|Eindeutige ID eines [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Knotens.|  
 |**distribution_id**|**int**|Eindeutige ID der Verteilung.|
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Gibt eine Zeile für jede columnstore-Zeilengruppe für jede Tabelle zurück, die über einen gruppierten oder nicht gruppierten columnstore-Index verfügt.  
   
  Verwenden Sie **sys.pdw_nodes_column_store_row_groups** , um die Anzahl der Zeilen, die in der Zeilen Gruppe enthalten sind, und die Größe der Zeilen Gruppe zu bestimmen.  
   
  Wenn die Anzahl der gelöschten Zeilen in einer Zeilengruppe auf einen hohen Prozentsatz der Gesamtzeilen ansteigt, wird die Tabelle weniger effizient. Erstellen Sie den columnstore-Index neu, um die Tabellengröße zu verringern und die Datenträger-E/A zu reduzieren, die zum Lesen der Tabelle erforderlich ist. Verwenden Sie die **Rebuild** -Option der **Alter Index** -Anweisung, um den columnstore--Index neu zu erstellen.  
   
- Der aktualisierbare columnstore-fügt zunächst neue Daten in eine **geöffnete** Zeilen Gruppe ein, die im rowstore-Format vorliegt, und wird manchmal auch als Delta Tabelle bezeichnet.  Wenn eine offene Zeilen Gruppe voll ist, ändert sich der Status in " **geschlossen**". Eine geschlossene Zeilen Gruppe wird vom tupelverschiebungsvorgang im columnstore--Format komprimiert, und der Status ändert sich in **komprimiert**.  Die Tupelverschiebungsfunktion ist ein Hintergrundprozess, der regelmäßig aktiv wird und überprüft, ob geschlossene Zeilengruppen vorhanden sind, die in eine columnstore-Zeilengruppe komprimiert werden können.  Die Tupelverschiebungsfunktion gibt außerdem alle Zeilengruppen frei, in denen alle Zeilen gelöscht wurden. Die zugeordneten Zeilen Gruppen **werden als veraltet**markiert. Verwenden Sie die Option **reorganisieren** der **Alter Index** -Anweisung, um den tupelverschiebungsvorgang sofort auszuführen.  
+ Der aktualisierbare columnstore-fügt zunächst neue Daten in eine **geöffnete** Zeilen Gruppe ein, die im rowstore-Format vorliegt, und wird manchmal auch als Delta Tabelle bezeichnet.  Wenn eine offene Zeilen Gruppe voll ist, ändert sich der Status in " **geschlossen**". Eine geschlossene Zeilen Gruppe wird vom tupelverschiebungsvorgang im columnstore--Format komprimiert, und der Status ändert sich in **komprimiert**.  Die Tupelverschiebungsfunktion ist ein Hintergrundprozess, der regelmäßig aktiv wird und überprüft, ob geschlossene Zeilengruppen vorhanden sind, die in eine columnstore-Zeilengruppe komprimiert werden können.  Die Tupelverschiebungsfunktion gibt außerdem alle Zeilengruppen frei, in denen alle Zeilen gelöscht wurden. Die zugeordneten Zeilen Gruppen **werden als veraltet** markiert. Verwenden Sie die Option **reorganisieren** der **Alter Index** -Anweisung, um den tupelverschiebungsvorgang sofort auszuführen.  
   
  Wenn eine columnstore-Zeilengruppe aufgefüllt wurde, wird sie komprimiert und akzeptiert keine neuen Zeilen mehr. Wenn aus einer komprimierten Gruppe Zeilen gelöscht werden, verbleiben sie zwar, werden aber als gelöscht gekennzeichnet. Updates einer komprimierten Gruppe werden als Löschvorgang für die komprimierte Gruppe und als Einfügevorgang für eine offene Gruppe implementiert.  
   
@@ -76,6 +76,7 @@ JOIN sys.pdw_nodes_indexes AS NI
 JOIN sys.pdw_nodes_column_store_row_groups AS CSRowGroups  
     ON CSRowGroups.object_id = NI.object_id   
     AND CSRowGroups.pdw_node_id = NI.pdw_node_id  
+    AND CSRowGroups.distribution_id = NI.distribution_id
     AND CSRowGroups.index_id = NI.index_id      
 WHERE total_rows > 0
 --WHERE t.name = '<table_name>'   
