@@ -13,14 +13,14 @@ helpviewer_keywords:
 - online restores [SQL Server], full recovery model
 - restore sequences [SQL Server], online
 ms.assetid: 0dbeda81-1464-44ba-9011-914900096368
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 75c16bab2ed7f8f46ee05af3dedf533530f07f08
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ce68e817070765a6f84a12c518e71de221734b34
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737786"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96126993"
 ---
 # <a name="example-online-restore-of-a-read-write-file-full-recovery-model"></a>Beispiel: Onlinewiederherstellung einer Datei mit Lese-/Schreibzugriff (vollständiges Wiederherstellungsmodell)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "85737786"
   
 3.  Onlinewiederherstellung von Protokollsicherungen.  
   
-     Der Administrator stellt alle seit der wiederhergestellten Dateisicherung erstellten Protokollsicherungen bis zur letzten Protokollsicherung (der in Schritt 2 erstellten Sicherung*log_backup3*) wieder her. Nach dem Wiederherstellen der letzten Protokollsicherung wird die Datenbank wiederhergestellt.  
+     Der Administrator stellt alle seit der wiederhergestellten Dateisicherung erstellten Protokollsicherungen bis zur letzten Protokollsicherung (der in Schritt 2 erstellten Sicherung *log_backup3*) wieder her. Nach dem Wiederherstellen der letzten Protokollsicherung wird die Datenbank wiederhergestellt.  
   
     ```  
     RESTORE LOG adb FROM log_backup1 WITH NORECOVERY;  

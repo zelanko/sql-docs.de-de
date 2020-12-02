@@ -27,11 +27,11 @@ ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: d405c656af3265d09340ceeef42ac0423efd6a85
-ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92734621"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128098"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +62,7 @@ ALTER PARTITION FUNCTION partition_function_name()
 Der Name der Partitionsfunktion, die geändert werden soll.  
   
 SPLIT RANGE ( *boundary_value* )  
-Fügt der Partitionsfunktion eine Partition hinzu. *boundary_value* bestimmt den Bereich der neuen Partition und muss von den vorhandenen Begrenzungsbereichen der Partitionsfunktion abweichen. Basierend auf *boundary_value* teilt [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen der vorhandenen Bereiche in zwei Bereiche auf. Von diesen beiden Bereichen ist der mit dem neuen *boundary_value* -Wert die neue Partition.  
+Fügt der Partitionsfunktion eine Partition hinzu. *boundary_value* bestimmt den Bereich der neuen Partition und muss von den vorhandenen Begrenzungsbereichen der Partitionsfunktion abweichen. Basierend auf *boundary_value* teilt [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen der vorhandenen Bereiche in zwei Bereiche auf. Von diesen beiden Bereichen ist der mit dem neuen *boundary_value*-Wert die neue Partition.  
   
 Eine Dateigruppe muss online vorhanden sein. Außerdem muss das Partitionsschema, das die Partitionsfunktion verwendet, um die neue Partition aufzunehmen, die Dateigruppe als NEXT USED markieren. Eine CREATE PARTITION SCHEME-Anweisung weist Dateigruppen zu Partitionen zu. Die CREATE PARTITION FUNCTION-Anweisung erstellt weniger Partitionen als Dateigruppen zu deren Aufnahme. Eine CREATE PARTITION SCHEME-Anweisung legt möglicherweise mehr Dateigruppen an, als notwendig. In diesem Fall bleiben dann nicht zugewiesene Dateigruppen übrig. Das Partitionsschema markiert außerdem eine der Dateigruppen als NEXT USED. Diese Dateigruppe nimmt die neue Partition auf. Wenn keine Dateigruppen vorhanden sind, die vom Partitionsschema als NEXT USED markiert werden, müssen Sie eine ALTER PARTITION SCHEME-Anweisung verwenden. 
 
@@ -73,8 +73,8 @@ Wenn Sie alle Partitionen in derselben Dateigruppe erstellen, wird diese Dateigr
 > [!NOTE]  
 >  Einschränkungen im Zusammenhang mit dem Columnstore-Index: Wenn ein Columnstore-Index für die Tabelle vorhanden ist, können nur leere Partitionen aufgeteilt werden. Vor dem Ausführen dieses Vorgangs müssen Sie den Columnstore-Index löschen oder deaktivieren.  
   
-MERGE [ RANGE ( *boundary_value* ) ]  
-Löscht eine Partition und führt alle in der Partition vorhandenen Werte in der verbleibenden Partition zusammen. RANGE ( *boundary_value* ) muss ein vorhandener Begrenzungswert der Partition sein, die gelöscht werden soll. Dieses Argument entfernt die Dateigruppe, in der *boundary_value* ursprünglich vorhanden war, aus dem Partitionsschema, wenn sie nicht von einer verbleibenden Partition verwendet wird, oder wird mit der NEXT USED-Eigenschaft markiert. Die zusammengeführte Partition ist in der Dateigruppe vorhanden, die anfänglich *boundary_value* nicht enthielt. *boundary_value* ist ein konstanter Ausdruck, der auf Variablen (einschließlich Variablen eines benutzerdefinierten Typs) oder Funktionen (einschließlich benutzerdefinierter Funktionen) verweisen kann. Er kann nicht auf einen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Ausdruck verweisen. *boundary_value* muss entweder mit dem Datentyp der zugehörigen Partitionierungsspalte übereinstimmen oder implizit in diesen konvertierbar sein. Sie können *boundary_value* auch während der impliziten Konvertierung nicht so abschneiden, dass dessen Größe und Dezimalstellen mit denen des entsprechenden *input_parameter_type* -Werts nicht übereinstimmen.  
+MERGE [ RANGE ( *boundary_value*) ]  
+Löscht eine Partition und führt alle in der Partition vorhandenen Werte in der verbleibenden Partition zusammen. RANGE (*boundary_value*) muss ein vorhandener Begrenzungswert der Partition sein, die gelöscht werden soll. Dieses Argument entfernt die Dateigruppe, in der *boundary_value* ursprünglich vorhanden war, aus dem Partitionsschema, wenn sie nicht von einer verbleibenden Partition verwendet wird, oder wird mit der NEXT USED-Eigenschaft markiert. Die zusammengeführte Partition ist in der Dateigruppe vorhanden, die anfänglich *boundary_value* nicht enthielt. *boundary_value* ist ein konstanter Ausdruck, der auf Variablen (einschließlich Variablen eines benutzerdefinierten Typs) oder Funktionen (einschließlich benutzerdefinierter Funktionen) verweisen kann. Er kann nicht auf einen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Ausdruck verweisen. *boundary_value* muss entweder mit dem Datentyp der zugehörigen Partitionierungsspalte übereinstimmen oder implizit in diesen konvertierbar sein. Sie können *boundary_value* auch während der impliziten Konvertierung nicht so abschneiden, dass dessen Größe und Dezimalstellen mit denen des entsprechenden *input_parameter_type*-Werts nicht übereinstimmen.  
   
 > [!NOTE]  
 >  Einschränkungen für einen columnstore-Index: Zwei nicht leere Partitionen, die einen columnstore-Index enthalten, können nicht zusammengeführt werden. Vor dem Ausführen dieses Vorgangs müssen Sie den Columnstore-Index löschen oder deaktivieren.  

@@ -21,11 +21,11 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9f8c0860bb5ef874a6095b993478fa9cbc117fc4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475536"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127777"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Auswählen einer Sprache beim Erstellen eines Volltextindex
 
@@ -72,7 +72,7 @@ ms.locfileid: "88475536"
  Beim Erstellen eines Volltextindex müssen Sie für jede Spalte einen gültigen Sprachennamen angeben. Wenn ein Sprachenname gültig ist, von der Katalogsicht [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) jedoch nicht zurückgegeben wird, greift die Volltextsuche, falls vorhanden, auf einen ähnlichen Sprachennamen der jeweiligen Sprachengruppe zurück. Andernfalls verwendet die Volltextsuche die neutrale Wörtertrennung. Dieses Verhalten kann sich ggf. auf die Genauigkeit der Rückrufe auswirken. Es ist daher sehr zu empfehlen, dass Sie beim Erstellen eines Volltextindex für jede Spalte einen gültigen und verfügbaren Sprachennamen angeben.  
   
 > [!NOTE]  
->  Die LCID wird für alle Datentypen verwendet, die für die Volltextindizierung geeignet sind (z.&nbsp;B. **char** oder **nchar**). Auch wenn die Sortierreihenfolge einer Spalte vom Typ **char**, **varchar**oder **text** auf eine andere Sprache als die von der LCID vorgegebenen festgelegt ist, wird die LCID während der Volltextindizierung und -abfrage dieser Spalten trotzdem verwendet.  
+>  Die LCID wird für alle Datentypen verwendet, die für die Volltextindizierung geeignet sind (z.&nbsp;B. **char** oder **nchar**). Auch wenn die Sortierreihenfolge einer Spalte vom Typ **char**, **varchar** oder **text** auf eine andere Sprache als die von der LCID vorgegebenen festgelegt ist, wird die LCID während der Volltextindizierung und -abfrage dieser Spalten trotzdem verwendet.  
   
   
 ##  <a name="word-breaking"></a><a name="breaking"></a> Worttrennung  
@@ -101,7 +101,7 @@ ms.locfileid: "88475536"
   
   
 ##  <a name="stemming"></a><a name="stemming"></a> Wortstammerkennung  
- Ein weiterer Aspekt, den Sie beim Wählen der Spaltensprache berücksichtigen sollten, ist die Wortstammerkennung. Als*Wortstammerkennung* wird bei Volltextabfragen die Suche nach allen Flexionsformen eines Worts in einer bestimmten Sprache bezeichnet. Wenn Sie zum Verarbeiten mehrerer Sprachen eine generische Wörtertrennung verwenden, funktioniert die Wortstammerkennung nur für die Sprache, die für die Spalte angegeben ist, jedoch nicht für andere in der Spalte enthaltene Sprachen. Die Wortstammerkennung für Deutsch funktioniert beispielsweise nicht für Englisch oder Spanisch usw. Dies kann sich je nach Sprache, die Sie zur Abfragezeit auswählen, auf Rückrufvorgänge auswirken.  
+ Ein weiterer Aspekt, den Sie beim Wählen der Spaltensprache berücksichtigen sollten, ist die Wortstammerkennung. Als *Wortstammerkennung* wird bei Volltextabfragen die Suche nach allen Flexionsformen eines Worts in einer bestimmten Sprache bezeichnet. Wenn Sie zum Verarbeiten mehrerer Sprachen eine generische Wörtertrennung verwenden, funktioniert die Wortstammerkennung nur für die Sprache, die für die Spalte angegeben ist, jedoch nicht für andere in der Spalte enthaltene Sprachen. Die Wortstammerkennung für Deutsch funktioniert beispielsweise nicht für Englisch oder Spanisch usw. Dies kann sich je nach Sprache, die Sie zur Abfragezeit auswählen, auf Rückrufvorgänge auswirken.  
   
   
 ##  <a name="effect-of-column-type-on-full-text-search"></a><a name="type"></a> Auswirkung des Spaltentyps auf Volltextsuche  

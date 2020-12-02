@@ -15,11 +15,11 @@ ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: e1f2398e59fb7a0fee48f2d4c4e4a171c6044ca7
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807081"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127425"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Maximale Anzahl von Arbeitsthreads
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ Der Standardwert für **Max. Anzahl von Arbeitsthreads** ist 0. Auf diese Weise 
   
 -   Threadpools erleichtern das Optimieren der Leistung, wenn sehr viele Clients eine Verbindung mit dem Server herstellen. Üblicherweise wird ein separater Betriebssystemthread für jede Abfrageanforderung erstellt. Wenn jedoch bei Hunderten von Verbindungen mit dem Server weiterhin ein Thread pro Abfrageanforderung verwendet wird, kann dabei eine große Menge an Systemressourcen verbraucht werden. Die Option **Max. Anzahl von Arbeitsthreads** ermöglicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das Erstellen eines Pools mit Arbeitsthreads, der eine große Anzahl von Abfrageanforderungen versorgen kann und so zur Verbesserung der Leistung beiträgt.  
   
--   Die folgende Tabelle zeigt die automatisch konfigurierte Anzahl von maximalen Arbeitsthreads (bei einem Wert von 0) auf der Basis verschiedener Kombinationen aus CPUs, Computerarchitektur und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Versionen. Folgende Formel wird verwendet: ***Standardwert für maximale Anzahl von Workern* + ((* logische CPUs* – 4) * *Worker pro CPU*)**.  
+-   Die folgende Tabelle zeigt die automatisch konfigurierte Anzahl von maximalen Arbeitsthreads (bei einem Wert von 0) auf der Basis verschiedener Kombinationen aus CPUs, Computerarchitektur und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Versionen. Folgende Formel wird verwendet: **_Standardwert für maximale Anzahl von Workern_ + ((* logische CPUs* – 4) * *Worker pro CPU*)**.  
   
     |Anzahl von CPUs|32-Bit-Computer (bis [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])|64-Bit-Computer (bis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1)|64-Bit-Computer (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|   
     |------------|------------|------------|------------|  

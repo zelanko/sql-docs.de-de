@@ -18,11 +18,11 @@ ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3bce4cae8fc71c93487f65a726bb42f58618d5a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457440"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127322"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>Massenladen von Daten mithilfe des SQL Server-Ziels
 
@@ -37,13 +37,13 @@ ms.locfileid: "88457440"
   
 2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
   
-3.  Klicken Sie auf die Registerkarte **Datenfluss** , und ziehen Sie dann aus dem Bereich **Toolbox**das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ziel auf die Entwurfsoberfläche.  
+3.  Klicken Sie auf die Registerkarte **Datenfluss** , und ziehen Sie dann aus dem Bereich **Toolbox** das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ziel auf die Entwurfsoberfläche.  
   
 4.  Verbinden Sie das Ziel mit einer Quelle oder einer vorherigen Transformation im Datenfluss, indem Sie einen Konnektor auf das Ziel ziehen.  
   
 5.  Doppelklicken Sie auf das Ziel.  
   
-6.  Wählen Sie im Dialogfeld **Ziel-Editor für SQL**auf der Seite **Verbindungs-Manager** einen vorhandenen OLE SQL-Verbindungs-Manager aus, oder klicken Sie auf **Neu** , um einen neuen Verbindungs-Manager zu erstellen. Weitere Informationen finden Sie unter [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+6.  Wählen Sie im Dialogfeld **Ziel-Editor für SQL** auf der Seite **Verbindungs-Manager** einen vorhandenen OLE SQL-Verbindungs-Manager aus, oder klicken Sie auf **Neu** , um einen neuen Verbindungs-Manager zu erstellen. Weitere Informationen finden Sie unter [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
 7.  Führen Sie eine der folgenden Aktionen aus, um die Tabelle oder die Sicht anzugeben, in die die Daten geladen werden sollen:  
   
@@ -59,7 +59,7 @@ ms.locfileid: "88457440"
     > [!NOTE]  
     >  Vom Ziel werden automatisch gleichnamige Spalten zugeordnet.  
   
-9. Klicken Sie auf **Erweitert** , und legen Sie die Optionen für das Massenladen fest: **Identität beibehalten**, **NULL-Werte beibehalten**, **Tabellensperre**, **Einschränkungen überprüfen**und **Trigger auslösen**.  
+9. Klicken Sie auf **Erweitert** , und legen Sie die Optionen für das Massenladen fest: **Identität beibehalten**, **NULL-Werte beibehalten**, **Tabellensperre**, **Einschränkungen überprüfen** und **Trigger auslösen**.  
   
      Optional können Sie die erste und letzte einzufügende Eingabezeile, die maximal zulässige Anzahl von Fehlern, nach der der Einfügevorgang beendet wird, sowie die Spalten, nach der der Einfügevorgang sortiert wird, angeben.  
   

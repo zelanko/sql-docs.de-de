@@ -23,11 +23,11 @@ ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: ff8efe5476597a85a26034cc278730c2d867ddae
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300236"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126216"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  Ein oder mehrere Parameter im benutzerdefinierten Aggregat. Der Wert eines Parameters muss vom Benutzer angegeben werden, wenn die Aggregatfunktion ausgeführt wird. Geben Sie einen Parameternamen an, der mit dem Zeichen **@** beginnt. Der Parametername muss den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen. Parameter gelten lokal in der jeweiligen Funktion.  
   
  *system_scalar_type*  
- Einer der skalaren Systemdatentypen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um den Wert des Eingabeparameters oder Rückgabewerts zu speichern. Alle skalaren Datentypen, außer **text** , **ntext** und **image** , können als Parameter für ein benutzerdefiniertes Aggregat verwendet werden. Nicht skalare Typen, wie beispielsweise **cursor** und **table** , können nicht angegeben werden.  
+ Einer der skalaren Systemdatentypen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um den Wert des Eingabeparameters oder Rückgabewerts zu speichern. Alle skalaren Datentypen, außer **text**, **ntext** und **image**, können als Parameter für ein benutzerdefiniertes Aggregat verwendet werden. Nicht skalare Typen, wie beispielsweise **cursor** und **table**, können nicht angegeben werden.  
   
  *udt_schema_name*  
  Der Name des Schemas, zu dem der CLR-benutzerdefinierte Typ gehört. Wenn der Name des Schemas nicht angegeben ist, verweist [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf *udt_type_name* in der folgenden Reihenfolge:  

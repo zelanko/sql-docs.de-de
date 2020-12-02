@@ -14,11 +14,11 @@ ms.assetid: e04148b8-f6dd-4c50-a5ef-c650b71dbf4d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 3265e970fbad572e09527dedcb35397d811daefa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470323"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127896"
 ---
 # <a name="delete-a-policy-based-management-condition"></a>Löschen einer Bedingung der richtlinienbasierten Verwaltung
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,15 +45,15 @@ ms.locfileid: "88470323"
   
 #### <a name="to-delete-a-condition"></a>So löschen Sie eine Bedingung  
   
-1.  Klicken Sie im **Objekt-Explorer**auf das Pluszeichen, um den Server zu erweitern, in dem die zu löschende Bedingung enthalten ist.  
+1.  Klicken Sie im **Objekt-Explorer** auf das Pluszeichen, um den Server zu erweitern, in dem die zu löschende Bedingung enthalten ist.  
   
 2.  Klicken Sie auf das Pluszeichen, um den Ordner **Verwaltung** zu erweitern.  
   
-3.  Klicken Sie auf das Pluszeichen, um **Richtlinienverwaltung**zu erweitern.  
+3.  Klicken Sie auf das Pluszeichen, um **Richtlinienverwaltung** zu erweitern.  
   
 4.  Klicken Sie auf das Pluszeichen, um den Ordner **Bedingungen** zu erweitern.  
   
-5.  Klicken Sie mit der rechten Maustaste auf die Bedingung, die Sie löschen möchten, und wählen Sie **Löschen**aus.  
+5.  Klicken Sie mit der rechten Maustaste auf die Bedingung, die Sie löschen möchten, und wählen Sie **Löschen** aus.  
   
 6.  Stellen Sie im Dialogfeld **Objekt löschen** sicher, dass die richtige Bedingung ausgewählt ist, und klicken Sie dann auf **OK**.  
 

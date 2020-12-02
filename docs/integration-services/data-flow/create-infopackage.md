@@ -12,11 +12,11 @@ ms.assetid: 9cd4a848-409f-4681-a390-1c49a2aadbd7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38c7183853dcac7043672d5e4a622362af08c10b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457372"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127284"
 ---
 # <a name="create-infopackage"></a>InfoPackage erstellen
 
@@ -25,7 +25,7 @@ ms.locfileid: "88457372"
 
   Verwenden Sie das Dialogfeld **InfoPackage erstellen** , um ein neues InfoPackage im SAP NetWeaver BW-System zu erstellen.  
   
- Sie können das Dialogfeld **InfoPackage erstellen** auf der Seite **Verbindungs-Manager** im **Ziel-Editor für SAP BW**öffnen. Weitere Informationen zum SAP BW-Ziel finden Sie unter [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
+ Sie können das Dialogfeld **InfoPackage erstellen** auf der Seite **Verbindungs-Manager** im **Ziel-Editor für SAP BW** öffnen. Weitere Informationen zum SAP BW-Ziel finden Sie unter [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
   
 > [!IMPORTANT]  
 >  Die Dokumentation für Microsoft Connector 1.1 for SAP BW setzt Kenntnisse der SAP NetWeaver BW-Umgebung voraus. Weitere Informationen zu SAP NetWeaver BW oder Informationen zur Konfiguration von SAP NetWeaver BW-Objekten und -Prozessen finden Sie in der SAP-Dokumentation.  
@@ -36,9 +36,9 @@ ms.locfileid: "88457372"
   
 2.  Doppelklicken Sie auf der Registerkarte **Datenfluss** auf das SAP BW-Ziel.  
   
-3.  Klicken Sie im **Ziel-Editor für SAP BW**auf **Verbindungs-Manager** , um die Seite **Verbindungs-Manager** des Editors zu öffnen.  
+3.  Klicken Sie im **Ziel-Editor für SAP BW** auf **Verbindungs-Manager** , um die Seite **Verbindungs-Manager** des Editors zu öffnen.  
   
-4.  Wählen Sie auf der Seite **Verbindungs-Manager** im Gruppenfeld **SAP BW-Objekte erstellen** die Option **InfoPackage**aus, und klicken Sie dann auf **Erstellen**.  
+4.  Wählen Sie auf der Seite **Verbindungs-Manager** im Gruppenfeld **SAP BW-Objekte erstellen** die Option **InfoPackage** aus, und klicken Sie dann auf **Erstellen**.  
   
 ## <a name="options"></a>Tastatur  
  **InfoSource**  

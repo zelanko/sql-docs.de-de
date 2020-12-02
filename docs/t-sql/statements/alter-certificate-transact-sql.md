@@ -25,11 +25,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
 ms.openlocfilehash: faee93b7e3185b11f2c603c0017f88f51f21f232
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067476"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128144"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
 
@@ -89,20 +89,20 @@ ALTER CERTIFICATE certificate_name
   
  WITH PRIVATE KEY: Gibt an, dass der private Schlüssel des Zertifikats in SQL Server geladen wird.
 
- FILE =' *path_to_private_key* '  
+ FILE ='*path_to_private_key*'  
  Gibt den vollständigen Pfad einschließlich des Dateinamens für den privaten Schlüssel an. Dieser Parameter kann ein lokaler Pfad oder ein UNC-Pfad zu einem Netzwerkspeicherort sein. Auf diese Datei wird im Sicherheitskontext des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienstkontos zugegriffen. Wenn Sie diese Option verwenden, stellen Sie sicher, dass das Dienstkonto Zugriff auf die angegebene Datei hat.
  
  Wird nur ein Dateiname angegeben, wird die Datei in den Standardordner für Benutzerdaten für die Instanz gespeichert. Bei diesem Ordner kann es sich (muss aber nicht) um den Ordner „[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA“ handeln. Für SQL Server Express LocalDB entspricht der Standardordner für Benutzerdaten für die Instanz dem von der Umgebungsvariable `%USERPROFILE%` angegebenen Pfad für das Konto, mit dem die Instanz erstellt wurde.  
   
- BINARY = ' *private_key_bits* '  
- **Gilt für** :  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
+ BINARY = '*private_key_bits*'  
+ **Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
  Private Schlüsselbits, die als binäre Konstante angegeben sind. Diese Bits können in verschlüsselter Form vorhanden sein. Bei Verschlüsselung muss der Benutzer ein Entschlüsselungskennwort bereitstellen. Kennwortrichtlinienüberprüfungen werden für dieses Kennwort nicht ausgeführt. Die privaten Schlüsselbits müssen in einem PVK-Dateiformat vorliegen.  
   
- DECRYPTION BY PASSWORD = ' *current_password* '  
+ DECRYPTION BY PASSWORD = '*current_password*'  
  Gibt das zum Entschlüsseln des privaten Schlüssels erforderliche Kennwort an.  
   
- ENCRYPTION BY PASSWORD = ' *new_password* '  
+ ENCRYPTION BY PASSWORD = '*new_password*'  
  Gibt das Kennwort an, mit dem der private Schlüssel des Zertifikats in der Datenbank verschlüsselt wird. *new_password* muss den Anforderungen der Windows-Kennwortrichtlinien des Computers entsprechen, auf dem die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird. Weitere Informationen finden Sie unter [Password Policy](../../relational-databases/security/password-policy.md).  
   
  ACTIVE FOR BEGIN_DIALOG **=** { ON | OFF }  

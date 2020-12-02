@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 6dbdad85561116fb3dd6a3c003bb7bf9967c00b1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783115"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127802"
 ---
 # <a name="specify-synchronization-schedules"></a>Angeben von Synchronisierungszeitplänen
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -87,13 +87,13 @@ ms.locfileid: "85783115"
   
 6.  Wählen Sie im Dialogfeld **Eigenschaften des Auftragszeitplans** einen Wert aus der Dropdownliste **Zeitplantyp** aus:  
   
-    -   Um eine fortlaufende Ausführung des Agents anzugeben, wählen Sie **Automatisch starten, wenn der SQL Server-Agent startet**aus.  
+    -   Um eine fortlaufende Ausführung des Agents anzugeben, wählen Sie **Automatisch starten, wenn der SQL Server-Agent startet** aus.  
   
-    -   Um eine Ausführung des Agents nach einem Zeitplan anzugeben, wählen Sie **Wiederholt**aus.  
+    -   Um eine Ausführung des Agents nach einem Zeitplan anzugeben, wählen Sie **Wiederholt** aus.  
   
-    -   Um eine bedarfsgesteuerte Ausführung des Agents anzugeben, wählen Sie **Einmal**aus.  
+    -   Um eine bedarfsgesteuerte Ausführung des Agents anzugeben, wählen Sie **Einmal** aus.  
   
-7.  Geben Sie bei der Auswahl von **Wiederholt**einen Zeitplan für den Agent an.  
+7.  Geben Sie bei der Auswahl von **Wiederholt** einen Zeitplan für den Agent an.  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -109,13 +109,13 @@ ms.locfileid: "85783115"
   
 5.  Wählen Sie im Dialogfeld **Eigenschaften des Auftragszeitplans** einen Wert aus der Dropdownliste **Zeitplantyp** aus:  
   
-    -   Um eine fortlaufende Ausführung des Agents anzugeben, wählen Sie **Automatisch starten, wenn der SQL Server-Agent startet**aus.  
+    -   Um eine fortlaufende Ausführung des Agents anzugeben, wählen Sie **Automatisch starten, wenn der SQL Server-Agent startet** aus.  
   
-    -   Um eine Ausführung des Agents nach einem Zeitplan anzugeben, wählen Sie **Wiederholt**aus.  
+    -   Um eine Ausführung des Agents nach einem Zeitplan anzugeben, wählen Sie **Wiederholt** aus.  
   
-    -   Um eine bedarfsgesteuerte Ausführung des Agents anzugeben, wählen Sie **Einmal**aus.  
+    -   Um eine bedarfsgesteuerte Ausführung des Agents anzugeben, wählen Sie **Einmal** aus.  
   
-6.  Geben Sie bei der Auswahl von **Wiederholt**einen Zeitplan für den Agent an.  
+6.  Geben Sie bei der Auswahl von **Wiederholt** einen Zeitplan für den Agent an.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -131,13 +131,13 @@ ms.locfileid: "85783115"
   
 5.  Wählen Sie im Dialogfeld **Eigenschaften des Auftragszeitplans** einen Wert aus der Dropdownliste **Zeitplantyp** aus:  
   
-    -   Um eine fortlaufende Ausführung des Agents anzugeben, wählen Sie **Automatisch starten, wenn der SQL Server-Agent startet**aus.  
+    -   Um eine fortlaufende Ausführung des Agents anzugeben, wählen Sie **Automatisch starten, wenn der SQL Server-Agent startet** aus.  
   
-    -   Um eine Ausführung des Agents nach einem Zeitplan anzugeben, wählen Sie **Wiederholt**aus.  
+    -   Um eine Ausführung des Agents nach einem Zeitplan anzugeben, wählen Sie **Wiederholt** aus.  
   
-    -   Um eine bedarfsgesteuerte Ausführung des Agents anzugeben, wählen Sie **Einmal**aus.  
+    -   Um eine bedarfsgesteuerte Ausführung des Agents anzugeben, wählen Sie **Einmal** aus.  
   
-6.  Geben Sie bei der Auswahl von **Wiederholt**einen Zeitplan für den Agent an.  
+6.  Geben Sie bei der Auswahl von **Wiederholt** einen Zeitplan für den Agent an.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

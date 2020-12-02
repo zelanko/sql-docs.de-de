@@ -14,11 +14,11 @@ ms.assetid: bea09522-ff47-4037-ab55-a98ea7c10099
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 79e16f9a39e235f7ceed5a77e55d03f4c5efed72
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88381186"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127868"
 ---
 # <a name="evaluate-a-policy-based-management-policy-on-a-schedule"></a>Auswerten einer Richtlinie der richtlinienbasierten Verwaltung nach einem Zeitplan
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,19 +45,19 @@ ms.locfileid: "88381186"
   
 #### <a name="to-evaluate-a-policy-on-a-schedule"></a>So werten Sie eine Richtlinie nach einem Zeitplan aus  
   
-1.  Klicken Sie im **Objekt-Explorer**auf das Pluszeichen, um den Server zu erweitern, in dem der auszuwertende Richtlinienzeitplan enthalten ist.  
+1.  Klicken Sie im **Objekt-Explorer** auf das Pluszeichen, um den Server zu erweitern, in dem der auszuwertende Richtlinienzeitplan enthalten ist.  
   
 2.  Klicken Sie auf das Pluszeichen, um den Ordner **Verwaltung** zu erweitern.  
   
-3.  Klicken Sie auf das Pluszeichen, um **Richtlinienverwaltung**zu erweitern.  
+3.  Klicken Sie auf das Pluszeichen, um **Richtlinienverwaltung** zu erweitern.  
   
 4.  Klicken Sie auf das Pluszeichen, um den Ordner **Richtlinien** zu erweitern.  
   
-5.  Klicken Sie mit der rechten Maustaste auf die Richtlinie, deren Zeitplan Sie auswerten möchten, und wählen Sie **Eigenschaften**aus.  
+5.  Klicken Sie mit der rechten Maustaste auf die Richtlinie, deren Zeitplan Sie auswerten möchten, und wählen Sie **Eigenschaften** aus.  
   
 6.  Klicken Sie im Dialogfeld **Richtlinie öffnen**_Richtlinienname_ in der Liste **Auswertungsmodus** auf die Option **Nach Zeitplan**.  
   
-7.  Klicken Sie unter **Zeitplan**auf **Auswählen** , um einen vorhandenen Zeitplan anzugeben, oder klicken Sie auf **Neu** , um einen neuen Zeitplan zu erstellen.  
+7.  Klicken Sie unter **Zeitplan** auf **Auswählen** , um einen vorhandenen Zeitplan anzugeben, oder klicken Sie auf **Neu** , um einen neuen Zeitplan zu erstellen.  
   
 8.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   

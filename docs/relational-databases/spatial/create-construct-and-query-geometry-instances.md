@@ -15,11 +15,11 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ddc0df0e6949ed429d415940fe9fda4263d3190a
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006349"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127710"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Erstellen, Aufbauen und Abfragen von geometry-Instanzen
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -206,7 +206,7 @@ ms.locfileid: "92006349"
   
   
 ###  <a name="dimension"></a><a name="dimension"></a> Dimension  
- Eine nicht leere **geometry** -Instanz kann null-, ein- oder zweidimensional sein. Nulldimensionale **Geometrien**, wie z.B. **Point** und **MultiPoint**, haben weder Länge noch Fläche. Eindimensionale Objekte, wie z.B. **LineString, CircularString, CompoundCurve**und **MultiLineString**, haben Länge. Zweidimensionale Instanzen, z.B. **Polygon**, **CurvePolygon**und **MultiPolygon**, haben Fläche und Länge. Für leere Instanzen wird als Dimension -1 ausgegeben, und für eine **GeometryCollection** -Auflistung wird eine Fläche ausgegeben, die vom Typ der darin enthaltenen Elemente abhängt.  
+ Eine nicht leere **geometry** -Instanz kann null-, ein- oder zweidimensional sein. Nulldimensionale **Geometrien**, wie z.B. **Point** und **MultiPoint**, haben weder Länge noch Fläche. Eindimensionale Objekte, wie z.B. **LineString, CircularString, CompoundCurve** und **MultiLineString**, haben Länge. Zweidimensionale Instanzen, z.B. **Polygon**, **CurvePolygon** und **MultiPolygon**, haben Fläche und Länge. Für leere Instanzen wird als Dimension -1 ausgegeben, und für eine **GeometryCollection** -Auflistung wird eine Fläche ausgegeben, die vom Typ der darin enthaltenen Elemente abhängt.  
   
  **So geben Sie die Dimension einer Instanz zurück**  
  [STDimension](../../t-sql/spatial-geometry/stdimension-geometry-data-type.md)  
@@ -242,11 +242,11 @@ ms.locfileid: "92006349"
 ###  <a name="boundary-interior-and-exterior"></a><a name="boundary"></a> Begrenzung, Innenbereich und Außenbereich  
  Unter dem *Innenbereich* einer **geometry** -Instanz wird der von der Instanz belegte Bereich und unter dem *Außenbereich* wird der nicht von der Instanz bedeckte Bereich verstanden.  
   
- Die*Begrenzung* wird vom OGC wie folgt definiert:  
+ Die *Begrenzung* wird vom OGC wie folgt definiert:  
   
 -   **Point** - und **MultiPoint** -Instanzen haben keine Begrenzung.  
   
--   Die Begrenzung von**LineString** - und **MultiLineString** boundaries are formed by the start points - und end points, removing those that occur an even number of times.  
+-   Die Begrenzung von **LineString** - und **MultiLineString** boundaries are formed by the start points - und end points, removing those that occur an even number of times.  
   
 ```sql  
 DECLARE @g geometry;  
@@ -266,13 +266,13 @@ SELECT @g.STBoundary().ToString();
  [STBoundary](../../t-sql/spatial-geometry/stboundary-geometry-data-type.md)  
    
 ###  <a name="envelope"></a><a name="envelope"></a> Umschlag  
- Der *Umschlag* einer **geometry** -Instanz, auch *umgebendes Feld*genannt, ist das an den Achsen ausgerichtete Rechteck, das durch die minimalen und maximalen Koordinaten (X,Y) der Instanz gebildet wird.  
+ Der *Umschlag* einer **geometry** -Instanz, auch *umgebendes Feld* genannt, ist das an den Achsen ausgerichtete Rechteck, das durch die minimalen und maximalen Koordinaten (X,Y) der Instanz gebildet wird.  
   
  **So geben Sie den Umschlag einer Instanz zurück**  
  [STEnvelope](../../t-sql/spatial-geometry/stenvelope-geometry-data-type.md)  
   
 ###  <a name="closure"></a><a name="closure"></a> Abgeschlossenheit  
- Eine _geschlossene_**geometry**-Instanz ist eine Abbildung, deren Ausgangs- und Endpunkt identisch ist. Alle**Polygon** -Instanzen gelten als geschlossen. Alle**Point** -Instanzen gelten als nicht geschlossen.  
+ Eine _geschlossene_**geometry**-Instanz ist eine Abbildung, deren Ausgangs- und Endpunkt identisch ist. Alle **Polygon** -Instanzen gelten als geschlossen. Alle **Point** -Instanzen gelten als nicht geschlossen.  
   
  Ein Ring ist eine einfache, geschlossene **LineString** -Instanz.  
   

@@ -12,11 +12,11 @@ ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9cb9336b7999373b1f6af5bb5327a35f77fdbe7e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495884"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127232"
 ---
 # <a name="create-new-infoobject"></a>Neues InfoObject erstellen
 
@@ -25,7 +25,7 @@ ms.locfileid: "88495884"
 
   Verwenden Sie das Dialogfeld **Neues InfoObject erstellen** , um ein neues InfoObject im SAP NetWeaver BW-System zu erstellen.  
   
- Sie können das Dialogfeld **InfoObject erstellen** über die Seite **Verbindungs-Manager** im **Ziel-Editor für SAP BW**öffnen. Weitere Informationen zum SAP BW-Ziel finden Sie unter [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
+ Sie können das Dialogfeld **InfoObject erstellen** über die Seite **Verbindungs-Manager** im **Ziel-Editor für SAP BW** öffnen. Weitere Informationen zum SAP BW-Ziel finden Sie unter [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
   
 > [!IMPORTANT]  
 >  Die Dokumentation für Microsoft Connector 1.1 for SAP BW setzt Kenntnisse der SAP NetWeaver BW-Umgebung voraus. Weitere Informationen zu SAP NetWeaver BW oder Informationen zur Konfiguration von SAP NetWeaver BW-Objekten und -Prozessen finden Sie in der SAP-Dokumentation.  
@@ -36,23 +36,23 @@ ms.locfileid: "88495884"
   
 2.  Doppelklicken Sie auf der Registerkarte **Datenfluss** auf das SAP BW-Ziel.  
   
-3.  Klicken Sie im **Ziel-Editor für SAP BW**auf **Verbindungs-Manager** , um die Seite **Verbindungs-Manager** des Editors zu öffnen.  
+3.  Klicken Sie im **Ziel-Editor für SAP BW** auf **Verbindungs-Manager** , um die Seite **Verbindungs-Manager** des Editors zu öffnen.  
   
 4.  Führen Sie auf der Seite **Verbindungs-Manager** im Gruppenfeld **SAP BW-Objekte erstellen** einen der folgenden Schritte aus, um ein InfoObject zu erstellen:  
   
-    1.  Um ein InfoObject direkt zu erstellen, wählen Sie **InfoObject**aus, und klicken Sie dann auf **Erstellen** , um das Dialogfeld **Neues InfoObject erstellen** zu öffnen.  
+    1.  Um ein InfoObject direkt zu erstellen, wählen Sie **InfoObject** aus, und klicken Sie dann auf **Erstellen** , um das Dialogfeld **Neues InfoObject erstellen** zu öffnen.  
   
-    2.  Um ein InfoObject beim Erstellen eines InfoCube anzulegen, wählen Sie **InfoCube**aus und klicken dann auf **Erstellen**. Wählen Sie im Dialogfeld **InfoCube für Transaktionsdaten erstellen** in der Spalte **IObject** für eine der Zeilen in der Liste **Erstellen** aus, um das Dialogfeld **Neues InfoObject erstellen** zu öffnen.  
-  
-        > [!NOTE]  
-        >  Jede Zeile in der Tabelle stellt eine Spalte im Datenfluss des Pakets dar.  
-  
-    3.  Um ein InfoObject zu erstellen, während eine InfoSouce für Transaktionsdaten erstellt wird, wählen Sie **InfoSource**aus und klicken dann auf **Erstellen**. Wählen Sie im Dialogfeld **InfoSource erstellen** die Option **Transaktionsdaten**aus, und klicken Sie dann auf **OK**. Wählen Sie im Dialogfeld **InfoSource für Transaktionsdaten erstellen** in der Spalte **IObject** für eine der Zeilen in der Liste **Erstellen** aus, um das Dialogfeld **Neues InfoObject erstellen** zu öffnen.  
+    2.  Um ein InfoObject beim Erstellen eines InfoCube anzulegen, wählen Sie **InfoCube** aus und klicken dann auf **Erstellen**. Wählen Sie im Dialogfeld **InfoCube für Transaktionsdaten erstellen** in der Spalte **IObject** für eine der Zeilen in der Liste **Erstellen** aus, um das Dialogfeld **Neues InfoObject erstellen** zu öffnen.  
   
         > [!NOTE]  
         >  Jede Zeile in der Tabelle stellt eine Spalte im Datenfluss des Pakets dar.  
   
-    4.  Um ein InfoObject zu erstellen, während eine InfoSouce für Masterdaten erstellt wird, wählen Sie **InfoSource**aus und klicken dann auf **Erstellen**. Wählen Sie im Dialogfeld **InfoSource erstellen** die Option **Masterdaten**aus, und klicken Sie dann auf **OK**. Klicken Sie im Dialogfeld **InfoSource für Masterdaten erstellen** auf **Neu** , um das Dialogfeld **Neues InfoObject erstellen** zu öffnen.  
+    3.  Um ein InfoObject zu erstellen, während eine InfoSouce für Transaktionsdaten erstellt wird, wählen Sie **InfoSource** aus und klicken dann auf **Erstellen**. Wählen Sie im Dialogfeld **InfoSource erstellen** die Option **Transaktionsdaten** aus, und klicken Sie dann auf **OK**. Wählen Sie im Dialogfeld **InfoSource für Transaktionsdaten erstellen** in der Spalte **IObject** für eine der Zeilen in der Liste **Erstellen** aus, um das Dialogfeld **Neues InfoObject erstellen** zu öffnen.  
+  
+        > [!NOTE]  
+        >  Jede Zeile in der Tabelle stellt eine Spalte im Datenfluss des Pakets dar.  
+  
+    4.  Um ein InfoObject zu erstellen, während eine InfoSouce für Masterdaten erstellt wird, wählen Sie **InfoSource** aus und klicken dann auf **Erstellen**. Wählen Sie im Dialogfeld **InfoSource erstellen** die Option **Masterdaten** aus, und klicken Sie dann auf **OK**. Klicken Sie im Dialogfeld **InfoSource für Masterdaten erstellen** auf **Neu** , um das Dialogfeld **Neues InfoObject erstellen** zu öffnen.  
   
  Sie können das Dialogfeld **Neues InfoObject erstellen** auch öffnen, indem Sie im Abschnitt **Attribute** des Dialogfelds **Neues InfoObject erstellen** auf **Neu** klicken.  
   

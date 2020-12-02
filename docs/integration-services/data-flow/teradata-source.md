@@ -11,11 +11,11 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5b4e64c2d7ada0db923f1aa623576e7b2994d8e6
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194702"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127949"
 ---
 # <a name="connect-to-the-teradata-source"></a>Stellen Sie eine Verbindung mit der Teradata-Quelle her.
 
@@ -51,7 +51,7 @@ Die benutzerdefinierten Eigenschaften der Teradata-Quelle sind in der folgenden 
 |DefaultCodePage|Integer|Die zu verwendende Codepage, wenn die Datenquelle keine Informationen zur Codepage enthält. Diese Eigenschaft befindet sich im Bereich **Erweiterter Editor**.|
 |DetailedTracingLevel|Ganze Zahl (Enumeration)|Wählen Sie für die erweiterte Ablaufverfolgung eine der folgenden Optionen aus: <br> *Off*: Keine erweiterte Protokollierung. <br> *General*: Bei dieser Ablaufverfolgung werden treiberspezifische Aktivitäten protokolliert. <br> *CLI*: Bei dieser Ablaufverfolgung werden CLIv2-spezifische Aktivitäten protokolliert. <br> *Notify Method*: Aktivitäten im Zusammenhang mit der Benachrichtigung werden protokolliert. <br> *Common Library*: Die Ablaufverfolgung von Aktivitäten in der opCommon-Bibliothek wird protokolliert. <br> *All*: Die gesamte vorherige Ablaufverfolgung von Aktivitäten wird protokolliert. <br> Die Protokolldatei mit der erweiterten Ablaufverfolgung wird in der `DetailedTracingFile`-Eigenschaft definiert. <br> Die `DetailedTracingFile`-Eigenschaft muss festgelegt werden, wenn die Option nicht *Off* ist. Diese Eigenschaft befindet sich im Bereich **Erweiterter Editor**.|
 |DetailedTracingFile|String|Der Pfad der Protokolldatei, die automatisch erzeugt wird, wenn *DetailedTracingLevel* nicht *Off* ist. Diese Eigenschaft befindet sich im Bereich **Erweiterter Editor**.|
-|DiscardLargeRow|Boolean|Der Standardwert ist *False*. Große Zeilen (mit mehr als 64 KB) werden verworfen, wenn der Wert *True*ist.|
+|DiscardLargeRow|Boolean|Der Standardwert ist *False*. Große Zeilen (mit mehr als 64 KB) werden verworfen, wenn der Wert *True* ist.|
 |ExtendedStringColumnsAllocation|Boolean|*Maximal Transfer Character Allocation Factor* wird verwendet, wenn der Wert *True* ist. <br> Dieser Wert muss auf *True* festgelegt werden, wenn die Eigenschaft `Export Width Table ID` der Teradata-Datenbank auf *Maximal Defaults* festgelegt ist. <br> Der Standardwert ist *False*.|
 |JobMaxRowSize|Integer|Die maximale Zeilenlänge kann unterstützt werden. Dieser Wert wird benötigt, wenn der `DiscardLargeRow`-Wert *True* ist.<br>Gültige Werte: <br>*64* (Standardwert): Zeilenlängen von 2 Bytes können unterstützt werden. <br>*1024*: Zeilenlängen von 4 Bytes können unterstützt werden.|
 |MaxSessions|Integer|Die maximale Anzahl der angemeldeten Sitzungen. Dieser Wert muss größer als 0 (null) sein. Der Standardwert ist eine Sitzung für jede verfügbare AMP-Instanz (Access Module Processor).|
@@ -99,7 +99,7 @@ Wählen Sie im Bereich **Verbindungs-Manager** die Instanz des Teradata-Verbindu
 
 **Neu**
 
-* Wählen Sie **Neu**aus. Der Bereich **Teradata-Verbindungs-Manager-Editor** wird geöffnet. Erstellen Sie in diesem Bereich einen neuen Verbindungs-Manager.
+* Wählen Sie **Neu** aus. Der Bereich **Teradata-Verbindungs-Manager-Editor** wird geöffnet. Erstellen Sie in diesem Bereich einen neuen Verbindungs-Manager.
 
 **Datenzugriffsmodus**
 

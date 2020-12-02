@@ -16,11 +16,11 @@ ms.assetid: c4c15abe-0fe9-441d-9d42-6572e264869c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 240df782e2175d22d9f00e38427c39a2b7115213
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459044"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128159"
 ---
 # <a name="envelopeaggregate-geometry-data-type"></a>EnvelopeAggregate (geometry-Datentyp)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +52,7 @@ EnvelopeAggregate ( geometry_operand )
  Diese Methode ignoriert **null** -Eingaben.  
   
 > [!NOTE]  
->  Diese Methode gibt **null** zurück, wenn alle eingegebenen Werte **null**sind.  
+>  Diese Methode gibt **null** zurück, wenn alle eingegebenen Werte **null** sind.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird ein Begrenzungsrahmen für einen Satz von Objekten in der Variablenspalte einer Tabelle zurückgegeben.  

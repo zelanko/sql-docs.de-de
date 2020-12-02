@@ -23,11 +23,11 @@ ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: eac401156014952142c39851b1e703605997c245
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549409"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127999"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -79,7 +79,7 @@ Der Name der Spalte, die im Volltextindex berücksichtigt wird. Es können nur S
 CREATE FULLTEXT INDEX ON *table_name* (*column_name1* […], *column_name2* […]) …  
   
 TYPE COLUMN *type_column_name*       
-Gibt den Namen der Tabellenspalte *type_column_name* an, die den Dokumenttyp für ein Dokument vom Typ **varbinary(max)** oder **image** enthält. Diese Spalte, als Typspalte bezeichnet, enthält eine vom Benutzer angegebene Dateierweiterung (.doc, .pdf, .xls usw.) Die Typspalte muss vom Typ **char**, **nchar**, **varchar**oder **nvarchar**sein.  
+Gibt den Namen der Tabellenspalte *type_column_name* an, die den Dokumenttyp für ein Dokument vom Typ **varbinary(max)** oder **image** enthält. Diese Spalte, als Typspalte bezeichnet, enthält eine vom Benutzer angegebene Dateierweiterung (.doc, .pdf, .xls usw.) Die Typspalte muss vom Typ **char**, **nchar**, **varchar** oder **nvarchar** sein.  
   
 Geben Sie TYPE COLUMN *type_column_name* nur an, wenn *column_name* eine Spalte vom Typ **varbinary(max)** oder **image** angibt, in der Daten als Binärdaten gespeichert sind. Andernfalls gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler zurück.  
   

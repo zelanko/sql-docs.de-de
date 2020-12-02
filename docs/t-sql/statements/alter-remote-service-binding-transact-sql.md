@@ -21,11 +21,11 @@ ms.assetid: ee620b4a-9375-4eaa-a016-69916c9e1e68
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 47c4e18c28a5377fa487e0d4d4e8b9be4cf58acc
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688251"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128060"
 ---
 # <a name="alter-remote-service-binding-transact-sql"></a>ALTER REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ ALTER REMOTE SERVICE BINDING binding_name
  Gibt an, ob die anonyme Authentifizierung bei der Kommunikation mit dem Remotedienst verwendet wird. Ist ANONYMOUS = ON, wird die anonyme Authentifizierung verwendet und die Anmeldeinformationen des lokalen Benutzers werden nicht an den Remotedienst übertragen. Ist ANONYMOUS = OFF, werden Benutzeranmeldeinformationen übertragen. Wird diese Klausel nicht angegeben, ist die Standardeinstellung OFF.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Der öffentliche Schlüssel des Zertifikats, das *user_name*zugeordnet ist, wird zur Authentifizierung von Nachrichten an den Remotedienst und zur Verschlüsselung eines Sitzungsschlüssels verwendet, der dann zur Verschlüsselung der Konversation verwendet wird. Das Zertifikat für *user_name* muss dem Zertifikat für eine Anmeldung in der Datenbank entsprechen, die als Host für den Remotedienst dient.  
+ Der öffentliche Schlüssel des Zertifikats, das *user_name* zugeordnet ist, wird zur Authentifizierung von Nachrichten an den Remotedienst und zur Verschlüsselung eines Sitzungsschlüssels verwendet, der dann zur Verschlüsselung der Konversation verwendet wird. Das Zertifikat für *user_name* muss dem Zertifikat für eine Anmeldung in der Datenbank entsprechen, die als Host für den Remotedienst dient.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Die Berechtigung zum Ändern einer Remotedienstbindung erhalten standardmäßig Besitzer der Remotedienstbindung, Mitglieder der festen Datenbankrolle **db_owner** und Mitglieder der festen Serverrolle **sysadmin**.  

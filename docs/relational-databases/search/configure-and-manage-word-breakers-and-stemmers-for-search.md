@@ -23,11 +23,11 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 7a33d02cb6ca1cbc100a458d254cf962d2d0d34b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482292"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127788"
 ---
 # <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,7 +73,7 @@ Wenn Sie eine Wörtertrennung hinzufügen, entfernen oder ändern, müssen Sie d
 ##  <a name="set-the-default-full-text-language-option"></a><a name="default"></a> Festlegen der Option für die Volltext-Standardsprache  
  Bei einer lokalisierten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wird die Option [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] default full-text language **vom** -Setup auf die Sprache des Servers festgelegt, falls eine geeignete Übereinstimmung vorhanden ist. Bei einer nicht lokalisierten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wird Englisch für die Option **Standard-Volltextsprache** verwendet.  
   
- Beim Erstellen oder Ändern eines Volltextindexes können Sie für jede volltextindizierte Spalte eine andere Sprache angeben. Ist für eine Spalte keine Sprache angegeben, wird standardmäßig der Wert der Konfigurationsoption **Volltext-Standardsprache**verwendet.  
+ Beim Erstellen oder Ändern eines Volltextindexes können Sie für jede volltextindizierte Spalte eine andere Sprache angeben. Ist für eine Spalte keine Sprache angegeben, wird standardmäßig der Wert der Konfigurationsoption **Volltext-Standardsprache** verwendet.  
   
 > [!NOTE]  
 >  Alle Spalten, die in einer einzelnen Klausel für eine Volltextabfragefunktion aufgelistet sind, müssen dieselbe Sprache verwenden, sofern nicht die LANGUAGE-Option in der Abfrage angegeben ist. Die Sprache der volltextindizierten Spalte, auf die sich die Abfrage bezieht, bestimmt die linguistische Analyse, die mit Argumenten der Volltext-Abfrageprädikate ([CONTAINS](../../t-sql/queries/contains-transact-sql.md) und [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)) und -Funktionen ([CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) und [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)) ausgeführt wird.  

@@ -39,11 +39,11 @@ ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a3339b5c4e7b54ce26f0760b22d0f0fed1a931b5
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688439"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128012"
 ---
 # <a name="create-remote-service-binding-transact-sql"></a>CREATE REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -81,7 +81,7 @@ CREATE REMOTE SERVICE BINDING binding_name
  Gibt an, ob die anonyme Authentifizierung bei der Kommunikation mit dem Remotedienst verwendet wird. Wenn ANONYMOUS = ON angegeben ist, wird die anonyme Authentifizierung verwendet, und Vorgänge in der Remotedatenbank erscheinen als Mitglieder der festen Datenbankrolle **public**. Wenn ANONYMOUS = OFF angegeben ist, finden Vorgänge in der Remotedatenbank als bestimmte Benutzer dieser Datenbank statt. Wird diese Klausel nicht angegeben, ist die Standardeinstellung OFF.  
   
 ## <a name="remarks"></a>Bemerkungen  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] verwendet eine Remotedienstbindung, um nach dem für eine neue Konversation zu verwendenden Zertifikat zu suchen. Der öffentliche Schlüssel des Zertifikats, das *user_name*zugeordnet ist, wird zur Authentifizierung von Nachrichten an den Remotedienst und zur Verschlüsselung eines Sitzungsschlüssels verwendet, der dann zur Verschlüsselung der Konversation verwendet wird. Das Zertifikat für *user_name* muss dem Zertifikat für einen Benutzer in der Datenbank entsprechen, die als Host für den Remotedienst dient.  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] verwendet eine Remotedienstbindung, um nach dem für eine neue Konversation zu verwendenden Zertifikat zu suchen. Der öffentliche Schlüssel des Zertifikats, das *user_name* zugeordnet ist, wird zur Authentifizierung von Nachrichten an den Remotedienst und zur Verschlüsselung eines Sitzungsschlüssels verwendet, der dann zur Verschlüsselung der Konversation verwendet wird. Das Zertifikat für *user_name* muss dem Zertifikat für einen Benutzer in der Datenbank entsprechen, die als Host für den Remotedienst dient.  
   
  Eine Remotedienstbindung wird nur zum Initiieren von Diensten benötigt, die mit Zieldiensten außerhalb der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz kommunizieren. Eine Datenbank, die als Host für einen initiierenden Dienst dient, muss Remotedienstbindungen für alle Zieldienste außerhalb der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz enthalten. Eine Datenbank, die als Host für einen Zieldienst dient, muss keine Remotedienstbindungen für die initiierenden Dienste enthalten, die mit dem Zieldienst kommunizieren. Wenn sich der Initiator- und der Zieldienst in der gleichen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] befinden, ist keine Dienstbindung erforderlich. Wenn hingegen eine Remotedienstbindung vorhanden ist, in der *service_name* für TO SERVICE dem Namen des lokalen Diensts entspricht, verwendet [!INCLUDE[ssSB](../../includes/sssb-md.md)] die Bindung.  
   

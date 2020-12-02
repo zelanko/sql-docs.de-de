@@ -20,11 +20,11 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e00a786dfb9d9ffe55274822b276a2d2497efd82
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192758"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127178"
 ---
 # <a name="excel-source"></a>Excel-Quelle
 
@@ -66,11 +66,11 @@ ms.locfileid: "92192758"
   Mithilfe des Knotens **Verbindungs-Manager** im Dialogfeld **Quellen-Editor für Excel** können Sie eine [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] -Arbeitsmappe für die Quelle auswählen. Die Excel-Quelle liest Daten aus einem Arbeitsblatt oder dem benannten Bereich einer vorhandenen Arbeitsmappe.  
   
 > [!NOTE]  
->  Die **CommandTimeout** -Eigenschaft der Excel-Quelle ist nicht im **Quellen-Editor für Excel**verfügbar, kann jedoch mit dem Dialogfeld **Erweiterter Editor**festgelegt werden. Weitere Informationen zu dieser Eigenschaft finden Sie im Abschnitt Excel-Quelle von [Excel Custom Properties](../../integration-services/data-flow/excel-custom-properties.md).  
+>  Die **CommandTimeout** -Eigenschaft der Excel-Quelle ist nicht im **Quellen-Editor für Excel** verfügbar, kann jedoch mit dem Dialogfeld **Erweiterter Editor** festgelegt werden. Weitere Informationen zu dieser Eigenschaft finden Sie im Abschnitt Excel-Quelle von [Excel Custom Properties](../../integration-services/data-flow/excel-custom-properties.md).  
   
 ### <a name="static-options"></a>Statische Optionen  
  **Teilcache**  
- Wählen Sie einen vorhandenen Excel-Verbindungs-Manager aus der Liste aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
+ Wählen Sie einen vorhandenen Excel-Verbindungs-Manager aus der Liste aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu** klicken.  
   
  **Neu**  
  Erstellen Sie mithilfe des Dialogfelds **Excel-Verbindungs-Manager** eine neue Verbindung.  
@@ -100,7 +100,7 @@ ms.locfileid: "92192758"
   
 #### <a name="data-access-mode--sql-command"></a>Datenzugriffsmodus = SQL-Befehl  
  **SQL-Befehlstext**  
- Geben Sie den Text der SQL-Abfrage ein, und erstellen Sie die Abfrage, indem Sie auf **Abfrage erstellen**klicken. Wahlweise können Sie auch nach der Datei mit dem Abfragetext suchen, indem Sie auf **Durchsuchen**klicken.  
+ Geben Sie den Text der SQL-Abfrage ein, und erstellen Sie die Abfrage, indem Sie auf **Abfrage erstellen** klicken. Wahlweise können Sie auch nach der Datei mit dem Abfragetext suchen, indem Sie auf **Durchsuchen** klicken.  
   
  **Parameter**  
  Wenn Sie eine parametrisierte Abfrage eingeben und im Abfragetext ? als Parameterplatzhalter verwenden, können Sie den Paketvariablen mithilfe des Dialogfelds **Abfrageparameter festlegen** Abfrageeingabeparameter zuordnen.  
@@ -139,7 +139,7 @@ ms.locfileid: "92192758"
  Zeigt den Namen der Datenquelle an.  
   
  **Spalte**  
- Zeigt die externen (Quell-)Spalten an, die im Dialogfeld **Quellen-Editor für Excel** auf der Seite **Verbindungs-Manager**ausgewählt wurden.  
+ Zeigt die externen (Quell-)Spalten an, die im Dialogfeld **Quellen-Editor für Excel** auf der Seite **Verbindungs-Manager** ausgewählt wurden.  
   
  **Fehler**  
  Gibt an, was bei Auftreten eines Fehlers geschehen soll: den Fehler ignorieren, die Zeile umleiten oder die Komponente mit einem Fehler abbrechen.  

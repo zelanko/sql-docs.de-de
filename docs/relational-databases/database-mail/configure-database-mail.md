@@ -41,11 +41,11 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: daf9915e1aff8cf800fbc68929e7efdd6f95f4a2
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192592"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126914"
 ---
 # <a name="configure-database-mail"></a>Konfigurieren des Datenbank-E-Mail-Features
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "92192592"
  Verwenden Sie die Option **DatabaseMail XPs** , um Datenbank-E-Mail auf diesem Server zu aktivieren. Weitere Informationen finden Sie im Referenzthema [Database Mail XPs (Serverkonfigurationsoption)](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) .  
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
- Zum Aktivieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker in einer Datenbank ist eine Datenbanksperrung erforderlich. Wurde Service Broker in **msdb**deaktiviert, müssen Sie zum Aktivieren von Datenbank-E-Mails zuerst den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent beenden, damit Service Broker die erforderliche Sperre abrufen kann.  
+ Zum Aktivieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker in einer Datenbank ist eine Datenbanksperrung erforderlich. Wurde Service Broker in **msdb** deaktiviert, müssen Sie zum Aktivieren von Datenbank-E-Mails zuerst den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent beenden, damit Service Broker die erforderliche Sperre abrufen kann.  
   
 ###  <a name="security"></a><a name="Security"></a> Sicherheit  
  Sie müssen zum Konfigurieren von Datenbank-E-Mails ein Mitglied der festen Serverrolle **sysadmin** sein. Zum Senden von Datenbank-E-Mail muss der Benutzer ein Mitglied der **DatabaseMailUserRole** -Datenbankrolle in der **msdb** -Datenbank sein.  
@@ -116,7 +116,7 @@ ms.locfileid: "92192592"
  Geben Sie auf der Seite **Konfigurationsaufgabe auswählen** die Aufgabe an, die Sie bei jeder Verwendung des Assistenten ausführen. Wenn Sie Ihre Entscheidung vor dem Beenden des Assistenten ändern, können Sie mithilfe der Schaltfläche **Zurück** zu dieser Seite zurückkehren und eine andere Aufgabe auswählen.  
   
 > [!NOTE]  
->  Wenn die Datenbank-E-Mail nicht aktiviert wurde, wird folgende Meldung angezeigt: **Die Datenbank-E-Mail-Funktion ist nicht verfügbar.  Möchten Sie dieses Feature aktivieren?** Die Auswahl von **Ja**entspricht der Aktivierung von Datenbank-E-Mails mit der [Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) -Option der gespeicherten Systemprozedur **sp_configure** .  
+>  Wenn die Datenbank-E-Mail nicht aktiviert wurde, wird folgende Meldung angezeigt: **Die Datenbank-E-Mail-Funktion ist nicht verfügbar.  Möchten Sie dieses Feature aktivieren?** Die Auswahl von **Ja** entspricht der Aktivierung von Datenbank-E-Mails mit der [Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) -Option der gespeicherten Systemprozedur **sp_configure** .  
   
  **Datenbank-E-Mail durch Ausführen der folgenden Aufgaben einrichten**  
  Führt alle Aufgaben durch, die zum ersten Einrichten der Datenbank-E-Mails erforderlich sind. Diese Option umfasst alle anderen drei Optionen.  
@@ -447,15 +447,15 @@ ms.locfileid: "92192592"
 ##  <a name="using-templates"></a><a name="Template"></a> Vorlagen  
  **So erstellen Sie ein Datenbank-E-Mail-Konfigurationsskript**  
   
-1.  Wählen Sie im Menü **Ansicht** den **Vorlagen-Explorer**aus.  
+1.  Wählen Sie im Menü **Ansicht** den **Vorlagen-Explorer** aus.  
   
 2.  Erweitern Sie im Fenster **Vorlagen-Explorer** den Ordner **Database Mail** .  
   
 3.  Doppelklicken Sie auf **Simple Database Mail Configuration**. Die Vorlage wird in einem neuen Abfragefenster geöffnet.  
   
-4.  Wählen Sie im Menü **Abfrage** die Option **Werte für Vorlagenparameter angeben**aus. Das Fenster **Vorlagenparameter ersetzen** wird geöffnet.  
+4.  Wählen Sie im Menü **Abfrage** die Option **Werte für Vorlagenparameter angeben** aus. Das Fenster **Vorlagenparameter ersetzen** wird geöffnet.  
   
-5.  Geben Sie die Werte für **profile_name**, **account_name**, **SMTP_servername**, **email_address**und **display_name**ein. SQL Server Management Studio füllt die Vorlage mit den von Ihnen angegebenen Werten aus.  
+5.  Geben Sie die Werte für **profile_name**, **account_name**, **SMTP_servername**, **email_address** und **display_name** ein. SQL Server Management Studio füllt die Vorlage mit den von Ihnen angegebenen Werten aus.  
   
 6.  Führen Sie das Skript aus, damit die Konfiguration erstellt wird.  
   

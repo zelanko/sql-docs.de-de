@@ -21,11 +21,11 @@ ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b70fe92da0c7efb0e59dbc89505ad623cad64432
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196454"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127244"
 ---
 # <a name="data-mining-model-training-destination"></a>Ziel des Data Mining-Modelltrainings
 
@@ -65,10 +65,10 @@ ms.locfileid: "92196454"
  Erstellen Sie mithilfe des Dialogfelds **Analysis Services-Verbindungs-Manager hinzufügen** eine neue Verbindung.  
   
  **Miningstruktur**  
- Wählen Sie eine Struktur aus der Liste der verfügbaren Miningstrukturen, oder erstellen Sie durch Klicken auf **Neu**eine neue Struktur.  
+ Wählen Sie eine Struktur aus der Liste der verfügbaren Miningstrukturen, oder erstellen Sie durch Klicken auf **Neu** eine neue Struktur.  
   
  **Neu**  
- Erstellen Sie mithilfe von **Data Mining-Assistent**eine neue Miningstruktur und ein Miningmodell.  
+ Erstellen Sie mithilfe von **Data Mining-Assistent** eine neue Miningstruktur und ein Miningmodell.  
   
  **Miningmodelle**  
  Zeigt die Liste der mit der ausgewählten Miningstruktur verknüpften Miningmodelle an.  

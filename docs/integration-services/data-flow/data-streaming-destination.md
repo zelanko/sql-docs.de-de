@@ -14,11 +14,11 @@ ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 34f4ba8e001f43d4c29379dac0de36b595163679
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430902"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127226"
 ---
 # <a name="data-streaming-destination"></a>Konfigurieren des Datenstreamingziels
 
@@ -37,7 +37,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 ## <a name="data-feed-publishing-components"></a>Datenfeedveröffentlichungs-Komponenten  
  Die Datenfeedveröffentlichungs-Komponenten beinhalten Folgendes: den OLE DB-Anbieter für SSIS, das Datenstreamingziel und den SSIS-Assistenten für das Veröffentlichen von Paketen (SSIS Package Publish Wizard). Der Assistent ermöglicht es Ihnen, ein SSIS-Paket als SQL-Ansicht in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankinstanz zu veröffentlichen. Der Assistent unterstützt Sie bei der Erstellung eines Verbindungsservers, der den OLE DB-Anbieter für SSIS verwendet, und einer SQL-Ansicht, die eine Abfrage auf dem Verbindungsserver darstellt. Führen Sie die Ansicht aus, um Ergebnisse auf dem SSIS-Paket als tabellarisches Dataset abzufragen.  
   
- Erweitern Sie in SQL Server Management Studio die **Serverobjekte**, die **Verbindungsserver**und die **Anbieter**, und vergewissern Sie sich, dass die **SSISOLEDB** -Anbieter angezeigt werden. So stellen Sie sicher, dass der SSISOLEDB-Anbieter installiert ist. Führen Sie einen Doppelklick auf **SSISOLEDB**aus, aktivieren Sie **InProcess zulassen** , falls es nicht aktiviert ist, und klicken Sie auf **OK**.  
+ Erweitern Sie in SQL Server Management Studio die **Serverobjekte**, die **Verbindungsserver** und die **Anbieter**, und vergewissern Sie sich, dass die **SSISOLEDB** -Anbieter angezeigt werden. So stellen Sie sicher, dass der SSISOLEDB-Anbieter installiert ist. Führen Sie einen Doppelklick auf **SSISOLEDB** aus, aktivieren Sie **InProcess zulassen** , falls es nicht aktiviert ist, und klicken Sie auf **OK**.  
   
 ## <a name="publish-an-ssis-package-as-a-sql-view"></a>Veröffentlichen eines SSIS-Pakets als eine SQL-Ansicht  
  Das folgende Verfahren beschreibt die Schritte zum Veröffentlichen eines SSIS-Pakets als eine SQL-Ansicht.  
@@ -54,9 +54,9 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 >  Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Veröffentlichen eines SSIS-Pakets als eine SQL-Ansicht](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md).  
 
 ## <a name="configure-data-streaming-destination"></a>Konfigurieren des Datenstreamingziels
-  Konfigurieren Sie das Datenstreamingziel mithilfe des Dialogfelds **Erweiterter Editor für das Datenstreamingziel** . Öffnen Sie das Dialogfeld, indem Sie auf die Komponente doppelklicken oder indem Sie im Datenfluss-Designer mit der rechten Maustaste auf die Komponente und anschließend auf **Bearbeiten**klicken.  
+  Konfigurieren Sie das Datenstreamingziel mithilfe des Dialogfelds **Erweiterter Editor für das Datenstreamingziel** . Öffnen Sie das Dialogfeld, indem Sie auf die Komponente doppelklicken oder indem Sie im Datenfluss-Designer mit der rechten Maustaste auf die Komponente und anschließend auf **Bearbeiten** klicken.  
   
- Dieses Dialogfeld enthält drei Registerkarten: **Komponenteneigenschaften**, **Eingabespalten**und **Eingabe- und Ausgabeeigenschaften**.  
+ Dieses Dialogfeld enthält drei Registerkarten: **Komponenteneigenschaften**, **Eingabespalten** und **Eingabe- und Ausgabeeigenschaften**.  
   
 ## <a name="component-properties-tab"></a>Registerkarte „Komponenteneigenschaften“  
  Auf dieser Registerkarte können die folgenden Elemente bearbeitet werden:  

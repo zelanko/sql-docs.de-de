@@ -15,11 +15,11 @@ ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ae8fa8bb0aae6700d1082e52385c7d162c193b84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430612"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127153"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ (Bitweises NOT) (SSIS-Ausdruck)
 
@@ -38,10 +38,10 @@ ms.locfileid: "88430612"
   
 ## <a name="arguments"></a>Argumente  
  *integer_expression*  
- Ein beliebiger gültiger Ausdruck eines integer-Datentyps. *integer*_*expression* ist eine ganze Zahl, die für die bitweise Operation in eine binäre Zahl transformiert wird. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  
+ Ein beliebiger gültiger Ausdruck eines integer-Datentyps. *integer* _ *expression* ist eine ganze Zahl, die für die bitweise Operation in eine binäre Zahl transformiert wird. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ## <a name="result-types"></a>Ergebnistypen  
- Gibt den Datentyp von *integer_expression*zurück.  
+ Gibt den Datentyp von *integer_expression* zurück.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Keine  

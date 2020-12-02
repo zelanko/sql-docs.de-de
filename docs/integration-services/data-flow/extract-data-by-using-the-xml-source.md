@@ -16,11 +16,11 @@ ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f3cd306d2cf6097fdb5e178f92e41d45de198783
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430832"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127171"
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>Extrahieren von Daten mithilfe der XML-Quelle
 
@@ -35,11 +35,11 @@ ms.locfileid: "88430832"
   
 2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
   
-3.  Klicken Sie auf die Registerkarte **Datenfluss** , und ziehen Sie dann aus **Toolbox**die XML-Quelle auf die Entwurfsoberfläche.  
+3.  Klicken Sie auf die Registerkarte **Datenfluss** , und ziehen Sie dann aus **Toolbox** die XML-Quelle auf die Entwurfsoberfläche.  
   
 4.  Doppelklicken Sie auf die XML-Quelle.  
   
-5.  Wählen Sie im Bereich **Quellen-Editor für XML**auf der Seite **Verbindungs-Manager** einen Datenzugriffsmodus aus:  
+5.  Wählen Sie im Bereich **Quellen-Editor für XML** auf der Seite **Verbindungs-Manager** einen Datenzugriffsmodus aus:  
   
     -   Für den Zugriffsmodus **XML-Dateispeicherort** klicken Sie auf **Durchsuchen** , und suchen Sie den Ordner, der die XML-Datei enthält.  
   
