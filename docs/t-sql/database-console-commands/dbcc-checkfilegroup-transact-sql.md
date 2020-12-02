@@ -27,11 +27,11 @@ ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 4b7a386f058a442a984ba45b3be58bba5e9bb2e1
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116148"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128619"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -143,7 +143,7 @@ Nach Ausführung des DBCC CHECKFILEGROUP-Befehls wird eine Meldung im [!INCLUDE[
 |5|Ein unbekannter Fehler ist aufgetreten, der den DBCC-Befehl beendet hat.|  
   
 ## <a name="error-reporting"></a>Fehlerberichterstellung  
-Eine Minidumpdatei (SQLDUMP*nnnn*.txt) wird jedes Mal im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verzeichnis LOG erstellt, wenn DBCC CHECKFILEGROUP einen Fehler durch eine Beschädigung erkennt. Falls die Funktionen zur Verwendung der Datensammlung und zur Fehlerberichterstellung für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz aktiviert sind, wird die Datei automatisch an [!INCLUDE[msCoName](../../includes/msconame-md.md)] weitergeleitet. Die gesammelten Daten werden zur Verbesserung der Funktionalität von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet.
+Eine Minidumpdatei (SQLDUMP *nnnn*.txt) wird jedes Mal im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verzeichnis LOG erstellt, wenn DBCC CHECKFILEGROUP einen Fehler durch eine Beschädigung erkennt. Falls die Funktionen zur Verwendung der Datensammlung und zur Fehlerberichterstellung für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz aktiviert sind, wird die Datei automatisch an [!INCLUDE[msCoName](../../includes/msconame-md.md)] weitergeleitet. Die gesammelten Daten werden zur Verbesserung der Funktionalität von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet.
 Die Sicherungsdatei enthält die Ergebnisse des DBCC CHECKFILEGROUP-Befehls sowie eine zusätzliche Diagnoseausgabe. Die Datei verfügt über eingeschränkte, besitzverwaltete Zugriffssteuerungslisten (Discretionary Access Control List, DACL). Der Zugriff ist auf das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienstkonto und Mitglieder der **sysadmin**-Rolle beschränkt. Die **sysadmin**-Rolle enthält standardmäßig alle Mitglieder der Windows-Gruppe VORDEFINIERT\Administratoren und der Gruppe lokaler Administratoren. Ein Fehler bei der Datensammlung verursacht keinen Fehler des DBCC-Befehls.
   
 ## <a name="resolving-errors"></a>Auflösen von Fehlern  

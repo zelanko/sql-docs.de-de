@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ad7cb3cdba7b9b20a28362b8570cc6e2fc0b04d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473073"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128752"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>Hinzufügen von Spalten zu einer Tabelle (Datenbank-Engine)
 
@@ -45,7 +45,7 @@ Erfordert die ALTER-Berechtigung für die Tabelle.
 
 ### <a name="to-insert-columns-into-a-table-with-table-designer"></a>So fügen Sie mit dem Tabellen-Designer Spalten in eine Tabelle ein
 
-1. Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf die Tabelle, der Sie Spalten hinzufügen möchten, und klicken Sie dann auf **Entwerfen**.
+1. Klicken Sie im **Objekt-Explorer** mit der rechten Maustaste auf die Tabelle, der Sie Spalten hinzufügen möchten, und klicken Sie dann auf **Entwerfen**.
 2. Klicken Sie auf die leere Zelle in der Spalte **Spaltenname** .
 3. Geben Sie den Spaltennamen in die Zelle ein. Der Spaltenname muss angegeben werden.
 4. Drücken Sie die TAB-TASTE, um zu der Zelle **Datentyp** zu gelangen, und wählen Sie in der Dropdownliste einen Datentyp aus.
@@ -53,7 +53,7 @@ Erfordert die ALTER-Berechtigung für die Tabelle.
    Dieser Wert ist obligatorisch. Wenn Sie keinen Wert auswählen, wird der Standardwert verwendet.
 
    > [!NOTE]
-   >  Sie können den Standardwert im Dialogfeld **Optionen** unter **Datenbanktools**ändern.
+   >  Sie können den Standardwert im Dialogfeld **Optionen** unter **Datenbanktools** ändern.
 
 5. Definieren Sie auf der Registerkarte **Spalteneigenschaften** weitere Spalteneigenschaften.
 

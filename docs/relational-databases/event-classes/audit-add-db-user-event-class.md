@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b953d49716cb6a99879ebc94c750fc1e765916e8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88385336"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128788"
 ---
 # <a name="audit-add-db-user-event-class"></a>Audit Add DB User-Ereignisklasse
 
 [!INCLUDE [sql-asdb.md](../../includes/applies-to-version/sql-asdb.md)]
 
-   Die **Audit Add DB User**-Ereignisklasse tritt auf, wenn ein Anmeldename als Datenbankbenutzer in einer Datenbank hinzugefügt oder entfernt wird. Diese Ereignisklasse wird für die gespeicherten Prozeduren **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**und **sp_dropuser** verwendet.  
+   Die **Audit Add DB User**-Ereignisklasse tritt auf, wenn ein Anmeldename als Datenbankbenutzer in einer Datenbank hinzugefügt oder entfernt wird. Diese Ereignisklasse wird für die gespeicherten Prozeduren **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser** und **sp_dropuser** verwendet.  
   
  Es kann sein, dass diese Ereignisklasse in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt wird. Es wird empfohlen, stattdessen die **Audit Database Principal Management** -Ereignisklasse zu verwenden.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "88385336"
 |**NTUserName**|**nvarchar**|Windows-Benutzername.|6|Ja|  
 |**OwnerName**|**nvarchar**|Datenbank-Benutzername des Objektbesitzers.|37|Ja|  
 |**RequestID**|**int**|Die ID der Anforderung, die die Anweisung enthält.|49|Ja|  
-|**RoleName**|**nvarchar**|Der Name der Datenbankrolle, deren Mitgliedschaft geändert wird (falls **sp_adduser**verwendet wird).|38|Ja|  
+|**RoleName**|**nvarchar**|Der Name der Datenbankrolle, deren Mitgliedschaft geändert wird (falls **sp_adduser** verwendet wird).|38|Ja|  
 |**ServerName**|**nvarchar**|Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, für die eine Ablaufverfolgung ausgeführt wird.|26||  
 |**SessionLoginName**|**Nvarchar**|Der Anmeldename des Benutzers, der die Sitzung gestartet hat. Wenn Sie z. B. mit Login1 eine Verbindung zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen und mit Login2 eine Anweisung ausführen, zeigt **SessionLoginName** Login1 an, und **LoginName** zeigt Login2 an. Diese Spalte zeigt sowohl den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch den Windows-Anmeldenamen an.|64|Ja|  
 |**SPID**|**int**|Die ID der Sitzung, in der das Ereignis aufgetreten ist.|12|Ja|  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - expiration [SQL Server]
 - database backups [SQL Server], expiration dates
 ms.assetid: 76e814df-6487-4893-9f09-7759f1863a5c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d932e7551ade740f47b6bc3026fc086aaaf3d6e4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 2fbf2f28d4f3bb0befb5271f51ea6462ec667334
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759071"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129074"
 ---
 # <a name="set-the-expiration-date-on-a-backup-sql-server"></a>Festlegen des Ablaufdatums für eine Sicherung (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,11 +58,11 @@ ms.locfileid: "85759071"
   
 3.  Klicken Sie mit der rechten Maustaste auf die Datenbank, zeigen Sie auf **Tasks**, und klicken Sie dann auf **Sichern**. Das Dialogfeld **Datenbank sichern** wird angezeigt.  
   
-4.  Geben Sie auf der Seite **Allgemein** für **Sicherungssatz läuft ab**ein Ablaufdatum an, um anzugeben, wann der Sicherungssatz durch eine andere Sicherung überschrieben werden kann:  
+4.  Geben Sie auf der Seite **Allgemein** für **Sicherungssatz läuft ab** ein Ablaufdatum an, um anzugeben, wann der Sicherungssatz durch eine andere Sicherung überschrieben werden kann:  
   
     -   Wenn der Sicherungssatz nach einer bestimmten Anzahl von Tagen ablaufen soll, klicken Sie auf **Nach** (die Standardoption), und geben Sie an, nach wie vielen Tagen der Sicherungssatz abläuft. Dieser Wert kann zwischen 0 und 99999 Tagen liegen. Ein Wert von 0 Tagen bedeutet, dass der Sicherungssatz nicht abläuft.  
   
-         Der Standardwert wird im Dialogfeld **Servereigenschaften** (Seite **Datenbankeinstellungen** ) über die Option**Standardbeibehaltung für Sicherungsmedien (in Tagen)** festgelegt. Klicken Sie hierzu mit der rechten Maustaste auf den Servernamen im Objekt-Explorer, und wählen Sie Eigenschaften aus. Wählen Sie anschließend die Seite **Datenbankeinstellungen** aus.  
+         Der Standardwert wird im Dialogfeld **Servereigenschaften** (Seite **Datenbankeinstellungen** ) über die Option **Standardbeibehaltung für Sicherungsmedien (in Tagen)** festgelegt. Klicken Sie hierzu mit der rechten Maustaste auf den Servernamen im Objekt-Explorer, und wählen Sie Eigenschaften aus. Wählen Sie anschließend die Seite **Datenbankeinstellungen** aus.  
   
     -   Zum Speichern des Sicherungssatzes an einem bestimmten Datum klicken Sie auf **Am**. Geben Sie das Datum ein, an dem der Sicherungssatz abläuft.  
   

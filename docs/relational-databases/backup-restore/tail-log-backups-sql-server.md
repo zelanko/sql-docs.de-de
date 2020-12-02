@@ -16,14 +16,14 @@ helpviewer_keywords:
 - tail-log backups
 - backups [SQL Server], tail-log backups
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: fa48e2e96c5066ee2a2bd5d2757a3ae8f669225b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 546029b8615745c64d62da49af5299893d4d7c15
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631366"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129027"
 ---
 # <a name="tail-log-backups-sql-server"></a>Protokollfragmentsicherungen (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,9 +52,9 @@ ms.locfileid: "85631366"
 |CONTINUE_AFTER_ERROR|Verwenden Sie CONTINUE_AFTER_ERROR nur dann, wenn Sie das Fragment einer beschädigten Datenbank sichern.<br /><br /> Wenn Sie das Protokollfragment in einer beschädigten Datenbank sichern, sind einige der Metadaten, die normalerweise in Protokollsicherungen erfasst werden, eventuell nicht verfügbar. Weitere Informationen finden Sie in diesem Thema unter [Sicherungen des Protokollfragments mit unvollständigen Sicherungsmetadaten](#IncompleteMetadata).|  
   
 ##  <a name="tail-log-backups-that-have-incomplete-backup-metadata"></a><a name="IncompleteMetadata"></a> Sicherungen des Protokollfragments mit unvollständigen Sicherungsmetadaten  
- Eine Protokollfragmentsicherung erfasst das Protokollfragment selbst dann, wenn die Datenbank offline geschaltet oder beschädigt ist oder wenn Datendateien fehlen. Dies kann zu unvollständigen Metadaten aus den Wiederherstellungsinformationsbefehlen und aus **msdb**führen. In diesem Fall sind jedoch nur die Metadaten unvollständig; das erfasste Protokoll ist vollständig und kann verwendet werden.  
+ Eine Protokollfragmentsicherung erfasst das Protokollfragment selbst dann, wenn die Datenbank offline geschaltet oder beschädigt ist oder wenn Datendateien fehlen. Dies kann zu unvollständigen Metadaten aus den Wiederherstellungsinformationsbefehlen und aus **msdb** führen. In diesem Fall sind jedoch nur die Metadaten unvollständig; das erfasste Protokoll ist vollständig und kann verwendet werden.  
   
- Enthält eine Sicherung des Protokollfragments unvollständige Metadaten, wird der Eintrag [has_incomplete_metadata](../../relational-databases/system-tables/backupset-transact-sql.md) in der **backupset** -Tabelle auf **1**festgelegt. Auch in der Ausgabe von [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)ist **HasIncompleteMetadata** auf **1**festgelegt.  
+ Enthält eine Sicherung des Protokollfragments unvollständige Metadaten, wird der Eintrag [has_incomplete_metadata](../../relational-databases/system-tables/backupset-transact-sql.md) in der **backupset** -Tabelle auf **1** festgelegt. Auch in der Ausgabe von [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)ist **HasIncompleteMetadata** auf **1** festgelegt.  
   
  Wenn die Metadaten in einer Sicherung des Protokollfragments unvollständig sind, fehlt in der [backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md) -Tabelle ein Großteil der Informationen zu den Dateigruppen zum Zeitpunkt der Sicherung des Protokollfragments. Die meisten Spalten der **backupfilegroup** -Tabelle sind dann NULL, und nur die folgenden Spalten sind dann sinnvoll:  
   

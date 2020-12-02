@@ -16,14 +16,14 @@ helpviewer_keywords:
 - database backups [SQL Server], viewing content
 - backing up databases [SQL Server], viewing content
 ms.assetid: cd6674a2-ca55-4b5a-a971-878ba001821e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 5b424852e69f38d82e7b912629b6ec7d15c7dd12
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 55a8f43eeb7a426044de7b38cd143cdbf77ea4ad
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85746612"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96128918"
 ---
 # <a name="view-the-contents-of-a-backup-tape-or-file-sql-server"></a>Anzeigen der Inhalte eines Sicherungsbands oder einer Sicherungsdatei (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "85746612"
   
 4.  Klicken Sie auf der Seite **Allgemein** im Abschnitt **Ziel** auf **Datenträger** oder auf **Band**. Suchen Sie im Listenfeld **Sichern auf** nach der gewünschten Datenträgerdatei oder dem gewünschten Band.  
   
-     Falls die Datenträgerdatei oder das Band nicht im Listenfeld angezeigt wird, klicken Sie auf **Hinzufügen**. Wählen Sie einen Dateinamen oder ein Bandlaufwerk aus. Klicken Sie auf **OK** , um ihn bzw. es dem Listenfeld **Sichern auf**hinzuzufügen.  
+     Falls die Datenträgerdatei oder das Band nicht im Listenfeld angezeigt wird, klicken Sie auf **Hinzufügen**. Wählen Sie einen Dateinamen oder ein Bandlaufwerk aus. Klicken Sie auf **OK** , um ihn bzw. es dem Listenfeld **Sichern auf** hinzuzufügen.  
   
 5.  Wählen Sie im Listenfeld **Sichern auf** den Pfad des Datenträgers oder Bandlaufwerkes aus, den/das Sie anzeigen möchten, und klicken Sie auf **Inhalt**. Das Dialogfeld **Medieninhalt** wird geöffnet.  
   

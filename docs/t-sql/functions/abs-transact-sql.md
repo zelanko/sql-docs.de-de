@@ -23,11 +23,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bb8aca979735819200d8b03c2c2f77a30f2c8398
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115614"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128584"
 ---
 # <a name="abs-transact-sql"></a>ABS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ ABS ( numeric_expression )
 Ein Ausdruck der genauen numerischen oder ungefähren numerischen Datentypkategorie.
   
 ## <a name="return-types"></a>Rückgabetypen  
-Gibt denselben Typ wie *Numerischer Ausdruck*zurück.
+Gibt denselben Typ wie *Numerischer Ausdruck* zurück.
   
 ## <a name="examples"></a>Beispiele  
 In diesem Beispiel werden die Ergebnisse dargestellt, die zurückgegeben werden, wenn die `ABS`-Funktion auf drei verschiedene Zahlen angewendet wird.

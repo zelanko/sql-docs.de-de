@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2709846194c14dc08653efa761edd6660620872a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485374"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128652"
 ---
 # <a name="create-nested-triggers"></a>Erstellen von geschachtelten Triggern
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,13 +62,13 @@ AS
   
      Diese Rekursion tritt auf, wenn ein Trigger ausgelöst wird und eine Aktion ausführt, die das erneute Auslösen desselben Triggers verursacht. Eine Anwendung aktualisiert z. B. die **T3**-Tabelle, wodurch der **Trig3** -Trigger ausgelöst wird. **Trig3** aktualisiert **T3** erneut, sodass der **Trig3** -Trigger erneut ausgelöst wird.  
   
-     Die direkte Rekursion kann auch auftreten, wenn derselbe Trigger erneut aufgerufen wird, jedoch erst nach dem Aufruf eines weiteren Triggers, der einen anderen Typ aufweist (AFTER oder INSTEAD OF). Mit anderen Worten: Die direkte Rekursion eines INSTEAD OF-Triggers kann auftreten, wenn derselbe INSTEAD OF-Trigger ein zweites Mal aufgerufen wird, auch wenn zwischendurch mindestens ein AFTER-Trigger aufgerufen wird. Auf gleiche Weise kann die direkte Rekursion eines AFTER-Triggers auftreten, wenn derselbe AFTER-Trigger ein zweites Mal aufgerufen wird, auch wenn zwischendurch mindestens ein INSTEAD OF-Trigger aufgerufen wird. Beispielsweise aktualisiert eine Anwendung Tabelle **T4**. Durch dieses Update wird das Auslösen von INSTEAD OF-Trigger **Trig4** verursacht. **Trig4** aktualisiert Tabelle **T5**. Durch dieses Update wird das Auslösen von AFTER-Trigger **Trig5** verursacht. **Trig5** aktualisiert wiederum Tabelle **T4**. Dieses Update verursacht erneut das Auslösen von INSTEAD OF-Trigger **Trig4** . Diese Kette von Ereignissen wird als direkte Rekursion für **Trig4**betrachtet.  
+     Die direkte Rekursion kann auch auftreten, wenn derselbe Trigger erneut aufgerufen wird, jedoch erst nach dem Aufruf eines weiteren Triggers, der einen anderen Typ aufweist (AFTER oder INSTEAD OF). Mit anderen Worten: Die direkte Rekursion eines INSTEAD OF-Triggers kann auftreten, wenn derselbe INSTEAD OF-Trigger ein zweites Mal aufgerufen wird, auch wenn zwischendurch mindestens ein AFTER-Trigger aufgerufen wird. Auf gleiche Weise kann die direkte Rekursion eines AFTER-Triggers auftreten, wenn derselbe AFTER-Trigger ein zweites Mal aufgerufen wird, auch wenn zwischendurch mindestens ein INSTEAD OF-Trigger aufgerufen wird. Beispielsweise aktualisiert eine Anwendung Tabelle **T4**. Durch dieses Update wird das Auslösen von INSTEAD OF-Trigger **Trig4** verursacht. **Trig4** aktualisiert Tabelle **T5**. Durch dieses Update wird das Auslösen von AFTER-Trigger **Trig5** verursacht. **Trig5** aktualisiert wiederum Tabelle **T4**. Dieses Update verursacht erneut das Auslösen von INSTEAD OF-Trigger **Trig4** . Diese Kette von Ereignissen wird als direkte Rekursion für **Trig4** betrachtet.  
   
 -   Indirekte Rekursion  
   
      Diese Rekursion tritt auf, wenn ein Trigger ausgelöst wird, der eine Aktion ausführt, die das Auslösen eines anderen Triggers des gleichen Typs verursacht (AFTER oder INSTEAD OF). Dieser zweite Trigger führt eine Aktion aus, die das erneute Auslösen des ursprünglichen Triggers bewirkt. Mit anderen Worten: Die indirekte Rekursion tritt auf, wenn ein INSTEAD OF-Trigger ein zweites Mal aufgerufen wird, jedoch erst, wenn in der Zwischenzeit ein anderer INSTEAD OF-Trigger aufgerufen wird. Die indirekte Rekursion kann gleichermaßen auftreten, wenn ein AFTER-Trigger ein zweites Mal aufgerufen wird, jedoch erst, wenn in der Zwischenzeit ein anderer AFTER-Trigger aufgerufen wird. Beispielsweise aktualisiert eine Anwendung Tabelle **T1**. Durch dieses Update wird das Auslösen von AFTER-Trigger **Trig1** verursacht. **Trig1** aktualisiert Tabelle **T2**. Dieses Update verursacht wiederum das Auslösen von AFTER-Trigger **Trig2** . **Trig2** aktualisiert nun wiederum Tabelle **T1** , wodurch der AFTER-Trigger **Trig1** erneut ausgelöst wird.  
   
- Es wird nur die direkte Rekursion von AFTER-Triggern verhindert, wenn die Datenbankoption RECURSIVE_TRIGGERS auf OFF festgelegt ist. Sie müssen auch die **Geschachtelte Trigger** -Serveroption auf **0**festlegen, um die indirekte Rekursion von AFTER-Triggern zu deaktivieren.  
+ Es wird nur die direkte Rekursion von AFTER-Triggern verhindert, wenn die Datenbankoption RECURSIVE_TRIGGERS auf OFF festgelegt ist. Sie müssen auch die **Geschachtelte Trigger** -Serveroption auf **0** festlegen, um die indirekte Rekursion von AFTER-Triggern zu deaktivieren.  
   
 ## <a name="examples"></a>Beispiele  
  Das folgende Beispiel zeigt die Verwendung rekursiver Trigger zum Auflösen einer auf sich selbst verweisenden Beziehung (auch als transitiver Abschluss bezeichnet). Die `emp_mgr` -Tabelle definiert z. B. Folgendes:  

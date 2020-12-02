@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 87a05942a1061db1f074266d0b5df3b1797f5e73
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006132"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128660"
 ---
 # <a name="rename-tables-database-engine"></a>Umbenennen von Tabellen (Datenbank-Engine)
 
@@ -64,7 +64,7 @@ Verwenden Sie die T-SQL-Anweisung [RENAME OBJECT](../../t-sql/statements/rename-
   
 1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Tabelle, die umbenannt werden soll, und wählen Sie im Kontextmenü **Entwerfen** aus.  
   
-2.  Wählen Sie im Menü **Ansicht** die Option **Eigenschaften**aus.  
+2.  Wählen Sie im Menü **Ansicht** die Option **Eigenschaften** aus.  
   
 3.  Geben Sie im Fenster **Eigenschaften** im Feld **Name** einen neuen Namen für die Tabelle ein.  
   

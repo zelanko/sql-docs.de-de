@@ -11,14 +11,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.restoredb.options.f1
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: f68337ee44e052c838b29d0051631c7be495a478
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 244b815a0e670cd0e697c037c62d66cc78159d81
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737722"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129101"
 ---
 # <a name="restore-database-options-page"></a>Datenbank wiederherstellen (Seite Optionen)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "85737722"
  Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von replizierten Datenbanken](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
   
  **Zugriff auf die wiederhergestellte Datenbank einschränken (WITH RESTRICTED_USER)**  
- Macht die wiederhergestellte Datenbank nur Mitgliedern von **db_owner**, **dbcreator** oder **sysadmin**verfügbar.  
+ Macht die wiederhergestellte Datenbank nur Mitgliedern von **db_owner**, **dbcreator** oder **sysadmin** verfügbar.  
   
  Das Auswählen dieser Option entspricht der Verwendung der Option RESTRICTED_USER in einer RESTORE-Anweisung.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "85737722"
  Zum Bestimmen des Status der Datenbank nach dem Wiederherstellungsvorgang müssen Sie eine der Optionen des Bereichs **Wiederherstellungsstatus** angeben.  
   
  **RESTORE WITH RECOVERY**  
- Stellt die Datenbank nach der Wiederherstellung der im Raster **Wiederherzustellende Sicherungssätze**auf der Seite [Allgemein](../../relational-databases/backup-restore/restore-database-general-page.md)ausgewählten letzten Sicherung wieder her. Dies ist die Standardoption und entspricht der Angabe von WITH RECOVERY in einer [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md)-Anweisung ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
+ Stellt die Datenbank nach der Wiederherstellung der im Raster **Wiederherzustellende Sicherungssätze** auf der Seite [Allgemein](../../relational-databases/backup-restore/restore-database-general-page.md)ausgewählten letzten Sicherung wieder her. Dies ist die Standardoption und entspricht der Angabe von WITH RECOVERY in einer [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md)-Anweisung ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
   
 > [!NOTE]  
 >  Wählen Sie diese Option beim vollständigen Wiederherstellungsmodell oder beim massenprotokollierten Wiederherstellungsmodell nur dann aus, wenn Sie alle Protokolldateien jetzt wiederherstellen.  

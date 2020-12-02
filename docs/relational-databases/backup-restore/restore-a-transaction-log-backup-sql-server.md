@@ -18,14 +18,14 @@ helpviewer_keywords:
 - restoring transaction logs [SQL Server], restoring backups
 - transaction log restores [SQL Server], SQL Server Management Studio
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: ffd2fd146d585b49579910d5876ba5268e4237f7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6c983279a1fe317b2e7975b972e5471b9724b65d
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717957"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129109"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Wiederherstellen einer Transaktionsprotokollsicherung (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -127,7 +127,7 @@ ms.locfileid: "85717957"
   
          Stellen Sie für die Datenbank den Zustand zum Zeitpunkt einer zuvor markierten Transaktion wieder her. Nach Auswahl dieser Option wird das Dialogfeld **Markierte Transaktion auswählen** geöffnet, in dem ein Raster mit den in den ausgewählten Transaktionsprotokollsicherungen verfügbaren markierten Transaktionen angezeigt wird.  
   
-         Standardmäßig erfolgt die Wiederherstellung bis zur markierten Transaktion (die jedoch nicht eingeschlossen wird). Um die markierte Transaktion ebenfalls wiederherzustellen, wählen Sie **Markierte Transaktion einschließen**aus.  
+         Standardmäßig erfolgt die Wiederherstellung bis zur markierten Transaktion (die jedoch nicht eingeschlossen wird). Um die markierte Transaktion ebenfalls wiederherzustellen, wählen Sie **Markierte Transaktion einschließen** aus.  
   
          In der folgenden Tabelle werden die Spaltenheader des Rasters aufgelistet und deren Werte beschrieben.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "85717957"
   
     -   **Zugriff auf die wiederhergestellte Datenbank einschränken (WITH RESTRICTED_USER)**  
   
-         Macht die wiederhergestellte Datenbank nur Mitgliedern von **db_owner**, **dbcreator** oder **sysadmin**verfügbar.  
+         Macht die wiederhergestellte Datenbank nur Mitgliedern von **db_owner**, **dbcreator** oder **sysadmin** verfügbar.  
   
          Das Überprüfen dieser Option entspricht der Verwendung der Option **RESTRICTED_USER** in einer [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE** -Anweisung.  
   

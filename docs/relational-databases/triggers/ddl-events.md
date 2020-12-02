@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 25cdef293ced7b58ea41f71f78a1046c6b5dd0ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463797"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128635"
 ---
 # <a name="ddl-events"></a>DDL-Ereignisse
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -197,7 +197,7 @@ ms.locfileid: "88463797"
         CREATE_FULLTEXT_CATALOG (gilt für die CREATE FULLTEXT CATALOG-Anweisung und **sp_fulltextcatalog** , wenn *create* angegeben wird.)
     :::column-end:::
     :::column:::
-        ALTER_FULLTEXT_CATALOG (gilt für die ALTER FULLTEXT CATALOG-Anweisung und **sp_fulltextcatalog** , wenn *start_incremental*, *start_full*, *Stop*oder *Rebuild* angegeben wird, und für **sp_fulltext_database** , wenn *enable* angegeben wird.)
+        ALTER_FULLTEXT_CATALOG (gilt für die ALTER FULLTEXT CATALOG-Anweisung und **sp_fulltextcatalog** , wenn *start_incremental*, *start_full*, *Stop* oder *Rebuild* angegeben wird, und für **sp_fulltext_database** , wenn *enable* angegeben wird.)
     :::column-end:::
     :::column:::
         DROP_FULLTEXT_CATALOG (gilt für die DROP FULLTEXT CATALOG-Anweisung und **sp_fulltextcatalog** , wenn *drop* angegeben wird.)
@@ -208,7 +208,7 @@ ms.locfileid: "88463797"
         CREATE_FULLTEXT_INDEX (gilt für die CREATE FULLTEXT INDEX-Anweisung und **sp_fulltexttable** , wenn *create* angegeben wird.)
     :::column-end:::
     :::column:::
-        ALTER_FULLTEXT_INDEX (gilt für die ALTER FULLTEXT INDEX-Anweisung und **sp_fulltextcatalog** , wenn *start_full*, *start_incremental*oder *stop* angegeben wird, sowie für **sp_fulltext_column**und **sp_fulltext_table** , wenn eine andere Aktion als *create* oder *drop* angegeben wird.)
+        ALTER_FULLTEXT_INDEX (gilt für die ALTER FULLTEXT INDEX-Anweisung und **sp_fulltextcatalog** , wenn *start_full*, *start_incremental* oder *stop* angegeben wird, sowie für **sp_fulltext_column** und **sp_fulltext_table** , wenn eine andere Aktion als *create* oder *drop* angegeben wird.)
     :::column-end:::
     :::column:::
         DROP_FULLTEXT_INDEX (gilt für die DROP FULLTEXT INDEX-Anweisung und **sp_fulltexttable** , wenn *drop* angegeben wird.)
@@ -355,13 +355,13 @@ ms.locfileid: "88463797"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_ROLE (gilt für die CREATE ROLE-Anweisung, **sp_addrole**und **sp_addgroup**.)
+        CREATE_ROLE (gilt für die CREATE ROLE-Anweisung, **sp_addrole** und **sp_addgroup**.)
     :::column-end:::
     :::column:::
         ALTER_ROLE
     :::column-end:::
     :::column:::
-        DROP_ROLE (gilt für die DROP ROLE-Anweisung, **sp_droprole**und **sp_dropgroup**.)
+        DROP_ROLE (gilt für die DROP ROLE-Anweisung, **sp_droprole** und **sp_dropgroup**.)
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -407,7 +407,7 @@ ms.locfileid: "88463797"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_SCHEMA (gilt für die CREATE SCHEMA-Anweisung, **sp_addrole**, **sp_adduser**, **sp_addgroup**und **sp_grantdbaccess**.)
+        CREATE_SCHEMA (gilt für die CREATE SCHEMA-Anweisung, **sp_addrole**, **sp_adduser**, **sp_addgroup** und **sp_grantdbaccess**.)
     :::column-end:::
     :::column:::
         ALTER_SCHEMA (gilt für die ALTER SCHEMA-Anweisung und **sp_changeobjectowner**.)
@@ -568,13 +568,13 @@ ms.locfileid: "88463797"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_USER (gilt für die CREATE USER-Anweisung, **sp_adduser**und **sp_grantdbaccess**.)
+        CREATE_USER (gilt für die CREATE USER-Anweisung, **sp_adduser** und **sp_grantdbaccess**.)
     :::column-end:::
     :::column:::
         ALTER_USER (gilt für die ALTER USER-Anweisung und **sp_change_users_login**.)
     :::column-end:::
     :::column:::
-        DROP_USER (gilt für die DROP USER-Anweisung, **sp_dropuser**und **sp_revokedbaccess**.)
+        DROP_USER (gilt für die DROP USER-Anweisung, **sp_dropuser** und **sp_revokedbaccess**.)
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -724,13 +724,13 @@ ms.locfileid: "88463797"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_LOGIN (gilt für die CREATE LOGIN-Anweisung, **sp_addlogin**, **sp_grantlogin**, **xp_grantlogin**und **sp_denylogin** bei Verwendung für einen nicht vorhandenen Anmeldenamen, der implizit erstellt werden muss.)
+        CREATE_LOGIN (gilt für die CREATE LOGIN-Anweisung, **sp_addlogin**, **sp_grantlogin**, **xp_grantlogin** und **sp_denylogin** bei Verwendung für einen nicht vorhandenen Anmeldenamen, der implizit erstellt werden muss.)
     :::column-end:::
     :::column:::
-        ALTER_LOGIN (gilt für die ALTER LOGIN-Anweisung, **sp_defaultdb**, **sp_defaultlanguage**, **sp_password**und **sp_change_users_login** , wenn *Auto_Fix* angegeben wird.)
+        ALTER_LOGIN (gilt für die ALTER LOGIN-Anweisung, **sp_defaultdb**, **sp_defaultlanguage**, **sp_password** und **sp_change_users_login** , wenn *Auto_Fix* angegeben wird.)
     :::column-end:::
     :::column:::
-        DROP_LOGIN (gilt für die DROP LOGIN-Anweisung, **sp_droplogin**, **sp_revokelogin**und **xp_revokelogin**.)
+        DROP_LOGIN (gilt für die DROP LOGIN-Anweisung, **sp_droplogin**, **sp_revokelogin** und **xp_revokelogin**.)
     :::column-end:::
 :::row-end:::  
 :::row:::

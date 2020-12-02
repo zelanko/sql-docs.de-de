@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: dfc040c4157cfd44a27a0b05a3bef42a1591aa2e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446387"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128642"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Verwalten und Überwachen von Change Data Capture (SQL Server)
 
@@ -173,7 +173,7 @@ Mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datensam
     GO  
     ```  
   
-3. Erweitern Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]die Option **Verwaltung**und dann die Option **Datensammlung**. Klicken Sie mit der rechten Maustaste auf **CDC Performance Data Collector**, und klicken Sie dann auf **Datensammlungssatz starten**.  
+3. Erweitern Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]die Option **Verwaltung** und dann die Option **Datensammlung**. Klicken Sie mit der rechten Maustaste auf **CDC Performance Data Collector**, und klicken Sie dann auf **Datensammlungssatz starten**.  
   
 4. Greifen Sie in dem Data Warehouse, das Sie in Schritt 1 konfiguriert haben, auf die Tabelle custom_snapshots.cdc_log_scan_data zu. Diese Tabelle stellt eine Verlaufs-Momentaufnahme der Daten von Protokollscansitzungen bereit. Sie können diese Daten verwenden, um die Latenzzeit, den Durchsatz und andere Leistungskennzahlen in Abhängigkeit der Zeit zu analysieren.  
 
