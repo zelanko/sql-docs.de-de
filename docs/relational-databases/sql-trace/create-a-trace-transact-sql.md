@@ -15,11 +15,11 @@ ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ff2970bf4d450c425f169be7b2bb72c24db7d2d0
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364792"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130179"
 ---
 # <a name="create-a-trace-transact-sql"></a>Erstellen einer Ablaufverfolgung (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "93364792"
   
 ### <a name="to-create-a-trace"></a>So erstellen Sie eine Ablaufverfolgung  
   
-1.  Führen Sie **sp_trace_create** mit den notwendigen Parametern aus, um eine neue Ablaufverfolgung zu erstellen. Der Status der neuen Ablaufverfolgung besagt, dass sie beendet ist ( *Status* ist **0** ).  
+1.  Führen Sie **sp_trace_create** mit den notwendigen Parametern aus, um eine neue Ablaufverfolgung zu erstellen. Der Status der neuen Ablaufverfolgung besagt, dass sie beendet ist (*Status* ist **0**).  
   
 2.  Führen Sie **sp_trace_setevent** mit den notwendigen Parametern aus, um die zu verfolgenden Ereignisse und Spalten auszuwählen.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "93364792"
      **sp_trace_setevent** und **sp_trace_setfilter** können nur für vorhandene, beendete Ablaufverfolgungen ausgeführt werden.  
   
     > [!IMPORTANT]  
-    >  Im Gegensatz zu regulären gespeicherten Prozeduren werden die Parameter für alle gespeicherten Prozeduren von SQL Server Profiler ( <strong>sp_trace_ *xx*</strong>) genau eingegeben und unterstützen die automatische Datentypkonvertierung nicht. Wenn diese Parameter nicht mit den richtigen Datentypen für Eingabeparameter aufgerufen werden, wie in der Argumentbeschreibung angegeben, gibt die gespeicherte Prozedur einen Fehler zurück.  
+    >  Im Gegensatz zu regulären gespeicherten Prozeduren werden die Parameter für alle gespeicherten Prozeduren von SQL Server Profiler (<strong>sp_trace_ *xx*</strong>) genau eingegeben und unterstützen die automatische Datentypkonvertierung nicht. Wenn diese Parameter nicht mit den richtigen Datentypen für Eingabeparameter aufgerufen werden, wie in der Argumentbeschreibung angegeben, gibt die gespeicherte Prozedur einen Fehler zurück.  
   
 ## <a name="examples"></a>Beispiele
 

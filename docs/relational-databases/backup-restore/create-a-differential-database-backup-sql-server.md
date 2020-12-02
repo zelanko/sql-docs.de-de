@@ -14,14 +14,14 @@ helpviewer_keywords:
 - backing up databases [SQL Server], full differential backups
 - backups [SQL Server], creating
 ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 9ba56e83a427d5a760ac40ca8d81c6a2f85cc685
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5362d3ddde85b21c5450a162fff0fdc5f23cda7f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728466"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130467"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>Erstellen einer differenziellen Datenbanksicherung (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -80,12 +80,12 @@ ms.locfileid: "85728466"
   
      Sie können für jedes Wiederherstellungsmodell (vollständig, massenprotokolliert oder einfach) eine differenzielle Sicherung ausführen.  
   
-5.  Wählen Sie im Listenfeld **Sicherungstyp** die Option **Differenziell**aus.  
+5.  Wählen Sie im Listenfeld **Sicherungstyp** die Option **Differenziell** aus.  
   
     > [!IMPORTANT]  
-    >  Stellen Sie sicher, dass das Kontrollkästchen**Kopiesicherung** deaktiviert ist, wenn **Differenziell** ausgewählt ist.  
+    >  Stellen Sie sicher, dass das Kontrollkästchen **Kopiesicherung** deaktiviert ist, wenn **Differenziell** ausgewählt ist.  
   
-6.  Klicken Sie unter **Sicherungskomponente**auf **Datenbank**.  
+6.  Klicken Sie unter **Sicherungskomponente** auf **Datenbank**.  
   
 7.  Akzeptieren Sie entweder den im Textfeld **Name** vorgeschlagenen Standardnamen für den Sicherungssatz, oder geben Sie einen anderen Namen für den Sicherungssatz ein.  
   
@@ -95,11 +95,11 @@ ms.locfileid: "85728466"
   
     -   Wenn der Sicherungssatz nach einer bestimmten Anzahl von Tagen ablaufen soll, klicken Sie auf **Nach** (die Standardoption), und geben Sie an, nach wie vielen Tagen der Sicherungssatz abläuft. Dieser Wert kann zwischen 0 und 99999 Tagen liegen. Ein Wert von 0 Tagen bedeutet, dass der Sicherungssatz nicht abläuft.  
   
-         Der Standardwert wird im Dialogfeld **Servereigenschaften** (Seite **Datenbankeinstellungen** ) über die Option**Standardbeibehaltung für Sicherungsmedien (in Tagen)** festgelegt. Klicken Sie hierzu mit der rechten Maustaste auf den Servernamen im Objekt-Explorer, und wählen Sie Eigenschaften aus. Wählen Sie anschließend die Seite **Datenbankeinstellungen** aus.  
+         Der Standardwert wird im Dialogfeld **Servereigenschaften** (Seite **Datenbankeinstellungen** ) über die Option **Standardbeibehaltung für Sicherungsmedien (in Tagen)** festgelegt. Klicken Sie hierzu mit der rechten Maustaste auf den Servernamen im Objekt-Explorer, und wählen Sie Eigenschaften aus. Wählen Sie anschließend die Seite **Datenbankeinstellungen** aus.  
   
     -   Zum Speichern des Sicherungssatzes an einem bestimmten Datum klicken Sie auf **Am**. Geben Sie das Datum ein, an dem der Sicherungssatz abläuft.  
   
-10. Wählen Sie den Sicherungszieltyp aus, indem Sie auf **Datenträger** oder **Band**klicken. Um den Pfad für bis zu 64 Datenträger oder Bandlaufwerke auszuwählen, die insgesamt einen einzigen Mediensatz enthalten, klicken Sie auf **Hinzufügen**. Die ausgewählten Pfade werden im Listenfeld **Sichern auf** angezeigt.  
+10. Wählen Sie den Sicherungszieltyp aus, indem Sie auf **Datenträger** oder **Band** klicken. Um den Pfad für bis zu 64 Datenträger oder Bandlaufwerke auszuwählen, die insgesamt einen einzigen Mediensatz enthalten, klicken Sie auf **Hinzufügen**. Die ausgewählten Pfade werden im Listenfeld **Sichern auf** angezeigt.  
   
      Um einen Sicherungsziel zu entfernen, wählen Sie ihn aus, und klicken Sie auf **Entfernen**. Zum Anzeigen des Inhalts eines Sicherungsziels wählen Sie es aus, und klicken Sie auf **Inhalt**.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "85728466"
     > [!NOTE]  
     >  Die Optionen im Abschnitt **Transaktionsprotokoll** sind inaktiv, es sei denn, Sie sichern ein Transaktionsprotokoll (wie im Abschnitt **Sicherungstyp** der Seite **Allgemein** angegeben).  
   
-15. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] und höheren Versionen wird die [Sicherungskomprimierung](../../relational-databases/backup-restore/backup-compression-sql-server.md). Ob eine Sicherung standardmäßig komprimiert wird, ist abhängig vom Wert der Serverkonfigurationsoption **backup-compression default** . Sie können jedoch unabhängig von der aktuellen Standardeinstellung auf Serverebene eine Sicherung komprimieren, indem Sie die Option **Sicherung komprimieren**aktivieren, oder die Komprimierung verhindern, indem Sie die Option **Sicherung nicht komprimieren**aktivieren.  
+15. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] und höheren Versionen wird die [Sicherungskomprimierung](../../relational-databases/backup-restore/backup-compression-sql-server.md). Ob eine Sicherung standardmäßig komprimiert wird, ist abhängig vom Wert der Serverkonfigurationsoption **backup-compression default** . Sie können jedoch unabhängig von der aktuellen Standardeinstellung auf Serverebene eine Sicherung komprimieren, indem Sie die Option **Sicherung komprimieren** aktivieren, oder die Komprimierung verhindern, indem Sie die Option **Sicherung nicht komprimieren** aktivieren.  
   
      **So zeigen Sie die aktuelle Standardeinstellung für die Sicherungskomprimierung (Option "backup compression default") an**  
   

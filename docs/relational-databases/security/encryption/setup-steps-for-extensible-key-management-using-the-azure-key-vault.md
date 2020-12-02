@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: Rupp29
 ms.author: arupp
-ms.openlocfilehash: e3b12ed6d4f28ce04c1ceac5960ae564368d9a9a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 4df1fb243b2e811b216b03ec453164ae1a00b1af
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866605"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130209"
 ---
 # <a name="set-up-sql-server-tde-extensible-key-management-by-using-azure-key-vault"></a>Einrichten der erweiterbaren Schlüsselverwaltung für SQL Server-TDE mit Azure Key Vault
 
@@ -243,7 +243,7 @@ Der hier erstellte Schlüsseltresor und der hier erstellte Schlüssel werden von
     Sie können andere Benutzer und andere Anwendungen autorisieren, Ihren Schlüsseltresor zu verwenden.  In unserem Beispiel verwenden wir den Dienstprinzipal, den Sie in [Schritt 1: Einrichten eines Azure AD-Dienstprinzipals](#step-1-set-up-an-azure-ad-service-principal) erstellt haben, um die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz zu autorisieren.  
   
     > [!IMPORTANT]
-    > Der Azure AD-Dienstprinzipal muss mindestens über die Berechtigungen *Abrufen*, *Auflisten*,*Schlüssel packen*und *Schlüssel entpacken* für den Schlüsseltresor verfügen.  
+    > Der Azure AD-Dienstprinzipal muss mindestens über die Berechtigungen *Abrufen*, *Auflisten*,*Schlüssel packen* und *Schlüssel entpacken* für den Schlüsseltresor verfügen.  
   
     Wie im folgenden Befehl gezeigt, verwenden Sie die **App-ID (Client)** aus [Schritt 1: Einrichten eines Azure AD-Dienstprinzipals](#step-1-set-up-an-azure-ad-service-principal) für den `ServicePrincipalName`-Parameter. `Set-AzKeyVaultAccessPolicy` wird lautlos ausgeführt und gibt bei erfolgreicher Ausführung keinen Wert zurück.  
   
@@ -466,7 +466,7 @@ Einen Hinweis zu den minimal erforderlichen Berechtigungsstufen für jede Aktion
 1. Ändern Sie die neue Anmeldung, und ordnen Sie die EKM-Anmeldeinformationen der neuen Anmeldung zu.
 
      ```sql  
-    --Now drop the credential mapping from the original association
+    --Now add the credential mapping to the new Login
     ALTER LOGIN TDE_Login
     ADD CREDENTIAL sysadmin_ekm_cred;
     ```  

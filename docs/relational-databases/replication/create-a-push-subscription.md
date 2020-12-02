@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 4710900a9a33de2be669ddf1204080068aad0220
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869251"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131023"
 ---
 # <a name="create-a-push-subscription"></a>Erstellen eines Pushabonnements
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -93,7 +93,7 @@ Sie können Pushabonnements mithilfe von gespeicherten Replikationsprozeduren pr
   
 1. Überprüfen Sie für die Veröffentlichungsdatenbank auf dem Verleger, ob die Veröffentlichung Pushabonnements unterstützt, indem Sie [sp_helppublication](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md) ausführen.  
   
-   - Wenn der Wert von **allow_push** **1**ist, werden Pushabonnements unterstützt.  
+   - Wenn der Wert von **allow_push** **1** ist, werden Pushabonnements unterstützt.  
   
    - Wenn der Wert von **allow_push** **0** ist, führen Sie [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) aus. Legen Sie **allow_push** für **\@property** und **true** für **\@value** fest.  
   
@@ -119,7 +119,7 @@ Sie können Pushabonnements mithilfe von gespeicherten Replikationsprozeduren pr
   
 1. Überprüfen Sie für die Veröffentlichungsdatenbank auf dem Verleger, ob die Veröffentlichung Pushabonnements unterstützt, indem Sie [sp_helpmergepublication](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) ausführen.  
   
-   - Wenn der Wert von **allow_push** **1**ist, werden Pushabonnements von der Veröffentlichung unterstützt.  
+   - Wenn der Wert von **allow_push** **1** ist, werden Pushabonnements von der Veröffentlichung unterstützt.  
   
    - Wenn der Wert von **allow_push** nicht **1** ist, führen Sie [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) aus. Legen Sie **allow_push** für **\@property** und **true** für **\@value** fest.  
   
@@ -172,7 +172,7 @@ Sie können Pushabonnements mithilfe von gespeicherten Replikationsprozeduren pr
   
 2. Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransPublication> -Klasse, indem Sie die Verlegerverbindung aus Schritt 1 verwenden. Geben Sie <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>und <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>an.  
   
-3. Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Wenn diese Methode **false**zurückgibt, sind entweder die in Schritt 2 angegebenen Eigenschaften falsch definiert, oder die Veröffentlichung ist auf dem Server nicht vorhanden.  
+3. Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Wenn diese Methode **false** zurückgibt, sind entweder die in Schritt 2 angegebenen Eigenschaften falsch definiert, oder die Veröffentlichung ist auf dem Server nicht vorhanden.  
   
 4. Führen Sie ein bitweises logisches AND ( **&** in Visual C# und **And** in Visual Basic) zwischen der <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> -Eigenschaft und <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Falls das Ergebnis <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>lautet, legen Sie für <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> das Ergebnis eines bitweisen logischen OR ( **|** in Visual C# und **Or** in Visual Basic) zwischen <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> und <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Rufen Sie dann <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> auf, um Pushabonnements zu aktivieren.  
   
@@ -197,7 +197,7 @@ Sie können Pushabonnements mithilfe von gespeicherten Replikationsprozeduren pr
      > [!NOTE]
      > <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> muss nicht festgelegt werden, wenn das Abonnement von einem Mitglied der festen Serverrolle **sysadmin** erstellt wurde. Die Verwendung dieser Eigenschaft wird jedoch empfohlen. In diesem Fall nimmt der Agent die Identität des SQL Server-Agent-Kontos an. Weitere Informationen finden Sie unter [Sicherheitsmodell des Replikations-Agents](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
-   - (Optional) Den Wert **true** (Standard) für <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> , um einen Agentauftrag zu erstellen, mit dem das Abonnement synchronisiert wird. Wenn Sie **false**angeben, kann das Abonnement nur programmgesteuert synchronisiert werden.  
+   - (Optional) Den Wert **true** (Standard) für <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> , um einen Agentauftrag zu erstellen, mit dem das Abonnement synchronisiert wird. Wenn Sie **false** angeben, kann das Abonnement nur programmgesteuert synchronisiert werden.  
   
    - (Optional) Legen Sie die Felder <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> und <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> oder <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> von <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> fest, wenn Sie die SQL Server-Authentifizierung zum Herstellen einer Verbindung mit dem Abonnenten verwenden.  
   
@@ -212,7 +212,7 @@ Sie können Pushabonnements mithilfe von gespeicherten Replikationsprozeduren pr
   
 2. Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePublication> -Klasse, indem Sie die Verlegerverbindung aus Schritt 1 verwenden. Geben Sie <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>und <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>an.  
   
-3. Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Wenn diese Methode **false**zurückgibt, sind entweder die in Schritt 2 angegebenen Eigenschaften falsch definiert, oder die Veröffentlichung ist auf dem Server nicht vorhanden.  
+3. Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Wenn diese Methode **false** zurückgibt, sind entweder die in Schritt 2 angegebenen Eigenschaften falsch definiert, oder die Veröffentlichung ist auf dem Server nicht vorhanden.  
   
 4. Führen Sie ein bitweises logisches AND ( **&** in Visual C# und **And** in Visual Basic) zwischen der <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> -Eigenschaft und <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Falls das Ergebnis <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>lautet, legen Sie für <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> das Ergebnis eines bitweisen logischen OR ( **|** in Visual C# und **Or** in Visual Basic) zwischen <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> und <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Rufen Sie dann <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> auf, um Pushabonnements zu aktivieren.  
   
@@ -235,7 +235,7 @@ Sie können Pushabonnements mithilfe von gespeicherten Replikationsprozeduren pr
      > [!NOTE]
      > <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> muss nicht festgelegt werden, wenn das Abonnement von einem Mitglied der festen Serverrolle **sysadmin** erstellt wurde. Die Verwendung dieser Eigenschaft wird jedoch empfohlen. In diesem Fall nimmt der Agent die Identität des SQL Server-Agent-Kontos an. Weitere Informationen finden Sie unter [Sicherheitsmodell des Replikations-Agents](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
-   - (Optional) Den Wert **true** (Standard) für <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> , um einen Agentauftrag zu erstellen, mit dem das Abonnement synchronisiert wird. Wenn Sie **false**angeben, kann das Abonnement nur programmgesteuert synchronisiert werden.  
+   - (Optional) Den Wert **true** (Standard) für <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> , um einen Agentauftrag zu erstellen, mit dem das Abonnement synchronisiert wird. Wenn Sie **false** angeben, kann das Abonnement nur programmgesteuert synchronisiert werden.  
   
    - (Optional) Legen Sie die Felder <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> und <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> oder <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> von <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> fest, wenn Sie die SQL Server-Authentifizierung zum Herstellen einer Verbindung mit dem Abonnenten verwenden.  
   

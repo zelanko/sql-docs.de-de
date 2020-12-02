@@ -18,11 +18,11 @@ ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ca689a290e266c3e8476034ba0c8e7ec4737cef4
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724291"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130724"
 ---
 # <a name="advanced-editor"></a>Erweiterter Editor
 
@@ -45,7 +45,7 @@ ms.locfileid: "91724291"
   
 -   **Eingabe- und Ausgabeeigenschaften** – verwenden Sie diese Registerkarte, um Eingabe- und Ausgabeeigenschaften festzulegen. Sie können mithilfe dieser Registerkarte auch Ausgaben hinzufügen und entfernen, Spalten für Ein- und Ausgaben auswählen oder entfernen und Eigenschaften für Ein- und Ausgaben festlegen.  
   
- Die angezeigten Eigenschaften variieren je nach Komponente. Weitere Informationen zu den Eigenschaften, die in **Erweiterter Editor**angezeigt werden können, finden Sie unter folgenden Themen:  
+ Die angezeigten Eigenschaften variieren je nach Komponente. Weitere Informationen zu den Eigenschaften, die in **Erweiterter Editor** angezeigt werden können, finden Sie unter folgenden Themen:  
   
 -   [Common Properties](./data-flow/set-the-properties-of-a-data-flow-component.md)  
   

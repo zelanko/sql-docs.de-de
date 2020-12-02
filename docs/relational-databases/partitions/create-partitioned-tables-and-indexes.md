@@ -31,11 +31,11 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a22807e98d887504cb1700e7bc3497984b699059
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482533"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130223"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Erstellen partitionierter Tabellen und Indizes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -89,11 +89,11 @@ ms.locfileid: "88482533"
   
 #### <a name="to-create-new-filegroups-for-a-partitioned-table"></a>So erstellen Sie neue Dateigruppen für eine partitionierte Tabelle  
   
-1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Datenbank, in der Sie eine partitionierte Tabelle erstellen möchten und wählen Sie **Eigenschaften**aus.  
+1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Datenbank, in der Sie eine partitionierte Tabelle erstellen möchten und wählen Sie **Eigenschaften** aus.  
   
 2.  Klicken Sie im Dialogfeld **Datenbankeigenschaften -** *database_name* unter **Seite auswählen** auf die Option **Dateigruppen**.  
   
-3.  Klicken Sie unter **Zeilen**auf **Hinzufügen**. Geben Sie in der neuen Zeile den Dateigruppennamen ein.  
+3.  Klicken Sie unter **Zeilen** auf **Hinzufügen**. Geben Sie in der neuen Zeile den Dateigruppennamen ein.  
   
     > [!WARNING]  
     >  Zusätzlich zu der Anzahl der für die Begrenzungswerte angegebenen Dateigruppen müssen Sie beim Erstellen von Partitionen stets über eine weitere Dateigruppe verfügen.  
@@ -102,9 +102,9 @@ ms.locfileid: "88482533"
   
 5.  Klicken Sie auf **OK**.  
   
-6.  Wählen Sie unter **Seite auswählen**die Option **Dateien**aus.  
+6.  Wählen Sie unter **Seite auswählen** die Option **Dateien** aus.  
   
-7.  Klicken Sie unter **Zeilen**auf **Hinzufügen**. Geben Sie in der neuen Zeile einen Dateinamen ein, und wählen Sie eine Dateigruppe aus.  
+7.  Klicken Sie unter **Zeilen** auf **Hinzufügen**. Geben Sie in der neuen Zeile einen Dateinamen ein, und wählen Sie eine Dateigruppe aus.  
   
 8.  Fügen Sie weiter Zeilen hinzu, bis Sie mindestens eine Datei für jede Dateigruppe erstellt haben.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "88482533"
   
 1.  Klicken Sie mit der rechten Maustaste auf die Tabelle, die Sie partitionieren möchten, zeigen Sie auf **Speicher**, und klicken Sie dann auf **Partition erstellen...**.  
   
-2.  Klicken Sie im **Assistent zum Erstellen von Partitionen**auf der Seite **Willkommen beim Assistenten zum Erstellen von Partitionen** auf **Weiter**.  
+2.  Klicken Sie im **Assistent zum Erstellen von Partitionen** auf der Seite **Willkommen beim Assistenten zum Erstellen von Partitionen** auf **Weiter**.  
   
 3.  Wählen Sie auf der Seite **Partitionierungsspalte auswählen** im Raster **Verfügbare Partitionierungsspalten** die Spalte aus, an der Sie die Tabelle partitionieren möchten. Im Raster **Verfügbare Partitionierungsspalten** werden nur Spalten mit Datentypen angezeigt, die zum Partitionieren von Daten verwendet werden können. Wenn Sie eine berechnete Spalte als Partitionierungsspalte auswählen, muss die Spalte als persistente berechnete Spalte gekennzeichnet sein.  
   
@@ -130,22 +130,22 @@ ms.locfileid: "88482533"
   
      Nach der Auswahl der Partitionierungsspalte und beliebiger anderer Optionen klicken Sie auf **Weiter**.  
   
-4.  Klicken Sie auf der Seite **Partitionsfunktion auswählen** unter **Partitionsfunktion auswählen**auf **Neue Partitionsfunktion** oder **Vorhandene Partitionsfunktion**. Wenn Sie **Neue Partitionsfunktion**auswählen, geben Sie den Namen der Funktion ein. Wenn Sie **Vorhandene Partitionsfunktion**auswählen, wählen Sie in der Liste den Namen der Funktion aus, die Sie verwenden möchten. Die Option **Vorhandene Partitionsfunktion** ist nicht verfügbar, wenn die Datenbank keine anderen Partitionsfunktionen enthält.  
+4.  Klicken Sie auf der Seite **Partitionsfunktion auswählen** unter **Partitionsfunktion auswählen** auf **Neue Partitionsfunktion** oder **Vorhandene Partitionsfunktion**. Wenn Sie **Neue Partitionsfunktion** auswählen, geben Sie den Namen der Funktion ein. Wenn Sie **Vorhandene Partitionsfunktion** auswählen, wählen Sie in der Liste den Namen der Funktion aus, die Sie verwenden möchten. Die Option **Vorhandene Partitionsfunktion** ist nicht verfügbar, wenn die Datenbank keine anderen Partitionsfunktionen enthält.  
   
      Nach Fertigstellen dieser Seite klicken Sie auf **Weiter**.  
   
-5.  Klicken Sie auf der Seite **Partitionsschema auswählen** unter **Partitionsschema auswählen**auf **Neues Partitionsschema** oder **Vorhandenes Partitionsschema**. Wenn Sie **Neues Partitionsschema**auswählen, geben Sie den Namen des Schemas ein. Wenn Sie **Vorhandenes Partitionsschema**auswählen, wählen Sie in der Liste den Namen des Schemas aus, die Sie verwenden möchten. Die Option **Vorhandenes Partitionsschema** ist nicht verfügbar, wenn die Datenbank keine anderen Partitionsschemas enthält.  
+5.  Klicken Sie auf der Seite **Partitionsschema auswählen** unter **Partitionsschema auswählen** auf **Neues Partitionsschema** oder **Vorhandenes Partitionsschema**. Wenn Sie **Neues Partitionsschema** auswählen, geben Sie den Namen des Schemas ein. Wenn Sie **Vorhandenes Partitionsschema** auswählen, wählen Sie in der Liste den Namen des Schemas aus, die Sie verwenden möchten. Die Option **Vorhandenes Partitionsschema** ist nicht verfügbar, wenn die Datenbank keine anderen Partitionsschemas enthält.  
   
      Nach Fertigstellen dieser Seite klicken Sie auf **Weiter**.  
   
-6.  Wählen Sie auf der Seite **Partitionen zuordnen** unter **Bereich**entweder **Linke Begrenzung** oder **Rechte Begrenzung** aus, um anzugeben, ob der höchste oder niedrigste umgebende Wert in jeder Dateigruppe enthalten sein soll, die Sie erstellen. Zusätzlich zu der Anzahl der für die Begrenzungswerte angegebenen Dateigruppen müssen Sie beim Erstellen von Partitionen stets eine weitere Dateigruppe eingeben.  
+6.  Wählen Sie auf der Seite **Partitionen zuordnen** unter **Bereich** entweder **Linke Begrenzung** oder **Rechte Begrenzung** aus, um anzugeben, ob der höchste oder niedrigste umgebende Wert in jeder Dateigruppe enthalten sein soll, die Sie erstellen. Zusätzlich zu der Anzahl der für die Begrenzungswerte angegebenen Dateigruppen müssen Sie beim Erstellen von Partitionen stets eine weitere Dateigruppe eingeben.  
   
-     Wählen Sie im Raster **Wählen Sie Dateigruppen aus, und geben Sie Begrenzungswerte an** unter **Dateigruppe**die Dateigruppe aus, in die Sie die Daten partitionieren möchten. Geben Sie unter **Begrenzung**den Begrenzungswert für jede Dateigruppe ein. Wenn der Begrenzungswert leer bleibt, ordnet die Partitionsfunktion die gesamte Tabelle oder den gesamten Index mithilfe eines einzigen Partitionsfunktionsnamens zu.  
+     Wählen Sie im Raster **Wählen Sie Dateigruppen aus, und geben Sie Begrenzungswerte an** unter **Dateigruppe** die Dateigruppe aus, in die Sie die Daten partitionieren möchten. Geben Sie unter **Begrenzung** den Begrenzungswert für jede Dateigruppe ein. Wenn der Begrenzungswert leer bleibt, ordnet die Partitionsfunktion die gesamte Tabelle oder den gesamten Index mithilfe eines einzigen Partitionsfunktionsnamens zu.  
   
      Die folgenden zusätzlichen Optionen sind auf dieser Seite verfügbar:  
   
      **Begrenzungen festlegen...**  
-     Öffnet das Dialogfeld **Begrenzungswerte festlegen** , um die Begrenzungswerte und Datumsbereiche für die Partitionen auszuwählen. Diese Option ist nur verfügbar, wenn Sie eine Partitionierungsspalte ausgewählt haben, die einen der folgenden Datentypen enthält: **date**, **datetime**, **smalldatetime**, **datetime2**oder **datetimeoffset**.  
+     Öffnet das Dialogfeld **Begrenzungswerte festlegen** , um die Begrenzungswerte und Datumsbereiche für die Partitionen auszuwählen. Diese Option ist nur verfügbar, wenn Sie eine Partitionierungsspalte ausgewählt haben, die einen der folgenden Datentypen enthält: **date**, **datetime**, **smalldatetime**, **datetime2** oder **datetimeoffset**.  
   
      **Schätzungsspeicher**  
      Schätzt die Zeilenanzahl sowie den zum Speichern erforderlichen und verfügbaren Speicherplatz für jede für die Partitionen angegebene Dateigruppe. Diese Werte werden im Raster als schreibgeschützte Werte angezeigt.  
@@ -165,10 +165,10 @@ ms.locfileid: "88482533"
   
 7.  Geben Sie auf der Seite **Ausgabeoption auswählen** an, wie Sie die partitionierte Tabelle fertigstellen möchten. Wählen Sie **Skript erstellen** aus, um ein auf den vorherigen Seiten im Assistenten basierendes SQL-Skript zu erstellen. Wählen Sie **Sofort ausführen** aus, um die neue partitionierte Tabelle zu erstellen, nachdem Sie alle verbleibenden Seiten im Assistenten vervollständigt haben. Wählen Sie **Zeitplan** aus, um die neue partitionierte Tabelle zu einer vorher bestimmten Zeit für die Zukunft zu erstellen.  
   
-     Wenn Sie **Skript erstellen**auswählen, sind die folgenden Optionen unter **Skriptoptionen**verfügbar:  
+     Wenn Sie **Skript erstellen** auswählen, sind die folgenden Optionen unter **Skriptoptionen** verfügbar:  
   
      **Skript in Datei schreiben**  
-     Generiert das Skript als SQL-Datei. Geben Sie in das Dialogfeld **Dateiname** einen Dateinamen und einen Speicherort ein, oder klicken Sie auf **Durchsuchen** , um das Dialogfeld **Speicherort der Skriptdatei** zu öffnen. Wählen Sie in **Speichern unter** **Unicode-Text** oder **ANSI-Text**aus.  
+     Generiert das Skript als SQL-Datei. Geben Sie in das Dialogfeld **Dateiname** einen Dateinamen und einen Speicherort ein, oder klicken Sie auf **Durchsuchen** , um das Dialogfeld **Speicherort der Skriptdatei** zu öffnen. Wählen Sie in **Speichern unter** **Unicode-Text** oder **ANSI-Text** aus.  
   
      **Skript in Zwischenablage schreiben**  
      Speichert das Skript in der Zwischenablage.  
@@ -176,7 +176,7 @@ ms.locfileid: "88482533"
      **Skript in Fenster "Neue Abfrage" schreiben**  
      Generiert das Skript in einem neuen Abfrage-Editor-Fenster. Dies ist die Standardauswahl.  
   
-     Wenn Sie **Zeitplan**auswählen, klicken Sie auf **Zeitplan ändern**.  
+     Wenn Sie **Zeitplan** auswählen, klicken Sie auf **Zeitplan ändern**.  
   
     1.  Geben Sie im Dialogfeld **Neuer Auftragszeitplan** im Feld **Name** den Namen des Auftragszeitplans ein.  
   
@@ -192,39 +192,39 @@ ms.locfileid: "88482533"
   
     3.  Aktivieren oder deaktivieren Sie das Kontrollkästchen **Aktiviert** , um den Zeitplan zu aktivieren oder zu deaktivieren.  
   
-    4.  Wenn Sie **Wiederholt**auswählen:  
+    4.  Wenn Sie **Wiederholt** auswählen:  
   
-        1.  Geben Sie unter **Häufigkeit**in der Liste **Tritt auf** die Häufigkeit des Vorkommens an:  
+        1.  Geben Sie unter **Häufigkeit** in der Liste **Tritt auf** die Häufigkeit des Vorkommens an:  
   
-            -   Wenn Sie im Dialogfeld **Wiederholen alle**die Option **Täglich** auswählen, geben Sie ein, wie oft der Auftragszeitplan wiederholt wird (in Tagen).  
+            -   Wenn Sie im Dialogfeld **Wiederholen alle** die Option **Täglich** auswählen, geben Sie ein, wie oft der Auftragszeitplan wiederholt wird (in Tagen).  
   
-            -   Wenn Sie im Dialogfeld **Wiederholen alle**die Option **Wöchentlich** auswählen, geben Sie ein, wie oft der Auftragszeitplan wiederholt wird (in Wochen). Wählen Sie den Tag oder die Tage der Woche aus, an denen der Auftragszeitplan ausgeführt wird.  
+            -   Wenn Sie im Dialogfeld **Wiederholen alle** die Option **Wöchentlich** auswählen, geben Sie ein, wie oft der Auftragszeitplan wiederholt wird (in Wochen). Wählen Sie den Tag oder die Tage der Woche aus, an denen der Auftragszeitplan ausgeführt wird.  
   
-            -   Wenn Sie **Monatlich**auswählen, wählen Sie **Tag** oder **Am**aus.  
+            -   Wenn Sie **Monatlich** auswählen, wählen Sie **Tag** oder **Am** aus.  
   
-                -   Wenn Sie **Tag**auswählen, geben Sie das Datum ein, an dem der Auftragszeitplan ausgeführt wird, und wie oft der Auftragszeitplan wiederholt werden soll (in Monaten). Wenn Sie beispielsweise möchten, dass der Auftragszeitplan jeden zweiten Monat am 15. ausgeführt wird, wählen Sie **Tag** aus, und geben Sie in das erste Feld „15“ und in das zweite Feld „2“ ein. Beachten Sie, dass die größte im zweiten Feld zulässige Zahl „99“ ist.  
+                -   Wenn Sie **Tag** auswählen, geben Sie das Datum ein, an dem der Auftragszeitplan ausgeführt wird, und wie oft der Auftragszeitplan wiederholt werden soll (in Monaten). Wenn Sie beispielsweise möchten, dass der Auftragszeitplan jeden zweiten Monat am 15. ausgeführt wird, wählen Sie **Tag** aus, und geben Sie in das erste Feld „15“ und in das zweite Feld „2“ ein. Beachten Sie, dass die größte im zweiten Feld zulässige Zahl „99“ ist.  
   
-                -   Wenn Sie **Am**auswählen, geben Sie den spezifischen Tag der Woche im Monat an, an dem der Auftragszeitplan ausgeführt wird, und wie oft der Auftragszeitplan wiederholt werden soll (in Monaten). Wenn Sie beispielsweise möchten, dass der Auftragszeitplan jeden zweiten Monat am letzten Wochentag ausgeführt werden soll, wählen Sie **Tag** und in der ersten Liste **Letzter** und in der zweiten Liste **Wochentag** aus, und geben Sie in das letzte Feld „2“ ein. Sie können auch **ersten**, **zweiten**, **dritten**oder **vierten**sowie bestimmte Wochentage z. B. Sonntag oder Mittwoch) aus den ersten beiden Listen auswählen. Beachten Sie, dass die größte im letzten Feld zulässige Zahl „99“ ist.  
+                -   Wenn Sie **Am** auswählen, geben Sie den spezifischen Tag der Woche im Monat an, an dem der Auftragszeitplan ausgeführt wird, und wie oft der Auftragszeitplan wiederholt werden soll (in Monaten). Wenn Sie beispielsweise möchten, dass der Auftragszeitplan jeden zweiten Monat am letzten Wochentag ausgeführt werden soll, wählen Sie **Tag** und in der ersten Liste **Letzter** und in der zweiten Liste **Wochentag** aus, und geben Sie in das letzte Feld „2“ ein. Sie können auch **ersten**, **zweiten**, **dritten** oder **vierten** sowie bestimmte Wochentage z. B. Sonntag oder Mittwoch) aus den ersten beiden Listen auswählen. Beachten Sie, dass die größte im letzten Feld zulässige Zahl „99“ ist.  
   
-        2.  Geben Sie unter **Häufigkeit pro Tag**an, wie oft der Auftragszeitplan an dem Tag wiederholt werden soll, an dem der Auftragszeitplan ausgeführt wird:  
+        2.  Geben Sie unter **Häufigkeit pro Tag** an, wie oft der Auftragszeitplan an dem Tag wiederholt werden soll, an dem der Auftragszeitplan ausgeführt wird:  
   
-            -   Wenn Sie **Einmalig um**auswählen, geben Sie im Feld **Einmalig um** die spezifische Tageszeit ein, zu der der Auftragszeitplan ausgeführt werden soll. Geben Sie die Stunde, Minute und Sekunde des Tages sowie AM oder PM ein.  
+            -   Wenn Sie **Einmalig um** auswählen, geben Sie im Feld **Einmalig um** die spezifische Tageszeit ein, zu der der Auftragszeitplan ausgeführt werden soll. Geben Sie die Stunde, Minute und Sekunde des Tages sowie AM oder PM ein.  
   
-            -   Wenn Sie **Alle**auswählen, geben Sie an, wie oft der Auftragszeitplan an dem unter **Häufigkeit**ausgewählten Tag ausgeführt werden soll. Wenn Sie z.B. möchten, dass der Auftragszeitplan am Tag seiner Ausführung alle 2 Stunden wiederholt wird, wählen Sie **Alle** aus, geben in das erste Feld „2“ ein und wählen dann in der Liste **Stunde(n)** aus. Aus dieser Liste können Sie auch **Minute(n)** und **Sekunde(n)** auswählen. Beachten Sie, dass die größte im ersten Feld zulässige Zahl „100“ ist.  
+            -   Wenn Sie **Alle** auswählen, geben Sie an, wie oft der Auftragszeitplan an dem unter **Häufigkeit** ausgewählten Tag ausgeführt werden soll. Wenn Sie z.B. möchten, dass der Auftragszeitplan am Tag seiner Ausführung alle 2 Stunden wiederholt wird, wählen Sie **Alle** aus, geben in das erste Feld „2“ ein und wählen dann in der Liste **Stunde(n)** aus. Aus dieser Liste können Sie auch **Minute(n)** und **Sekunde(n)** auswählen. Beachten Sie, dass die größte im ersten Feld zulässige Zahl „100“ ist.  
   
                  Geben Sie im Feld **Start** die Zeit ein, zu der die Ausführung des Auftragszeitplans beginnen soll. Geben Sie im Feld **Ende** die Zeit ein, zu der die Ausführung des Auftragszeitplans enden soll. Geben Sie die Stunde, Minute und Sekunde des Tages sowie AM oder PM ein.  
   
-        3.  Geben Sie unter **Dauer**in **Startdatum**das Datum ein, an dem die Ausführung des Auftragszeitplans beginnen soll. Wählen Sie **Enddatum** oder **Kein Enddatum** aus, um anzugeben, wann die Ausführung des Auftragszeitplans beendet werden soll. Wenn Sie **Enddatum**auswählen, geben Sie das Datum ein, an dem die Ausführung des Auftragszeitplans beendet werden soll.  
+        3.  Geben Sie unter **Dauer** in **Startdatum** das Datum ein, an dem die Ausführung des Auftragszeitplans beginnen soll. Wählen Sie **Enddatum** oder **Kein Enddatum** aus, um anzugeben, wann die Ausführung des Auftragszeitplans beendet werden soll. Wenn Sie **Enddatum** auswählen, geben Sie das Datum ein, an dem die Ausführung des Auftragszeitplans beendet werden soll.  
   
-    5.  Wenn Sie **Einmal**auswählen, geben Sie unter **Einmalig**in das Feld **Datum** das Datum ein, an dem der Auftragszeitplan ausgeführt werden soll. Geben Sie im Feld **Uhrzeit** die Zeit ein, zu der der Auftragszeitplan ausgeführt werden soll. Geben Sie die Stunde, Minute und Sekunde des Tages sowie AM oder PM ein.  
+    5.  Wenn Sie **Einmal** auswählen, geben Sie unter **Einmalig** in das Feld **Datum** das Datum ein, an dem der Auftragszeitplan ausgeführt werden soll. Geben Sie im Feld **Uhrzeit** die Zeit ein, zu der der Auftragszeitplan ausgeführt werden soll. Geben Sie die Stunde, Minute und Sekunde des Tages sowie AM oder PM ein.  
   
-    6.  Überprüfen Sie unter **Zusammenfassung**im Feld **Beschreibung**, ob alle Auftragszeitplaneinstellungen richtig sind.  
+    6.  Überprüfen Sie unter **Zusammenfassung** im Feld **Beschreibung**, ob alle Auftragszeitplaneinstellungen richtig sind.  
   
     7.  Klicken Sie auf **OK**.  
   
      Nach Fertigstellen dieser Seite klicken Sie auf **Weiter**.  
   
-8.  Erweitern Sie auf der Seite **Zusammenfassung der Überprüfung** unter **Überprüfen Sie Ihre Auswahl**alle verfügbaren Optionen, um zu überprüfen, ob alle Partitionseinstellungen richtig sind. Klicken Sie auf **Fertig stellen**, wenn alle Einstellungen richtig sind.  
+8.  Erweitern Sie auf der Seite **Zusammenfassung der Überprüfung** unter **Überprüfen Sie Ihre Auswahl** alle verfügbaren Optionen, um zu überprüfen, ob alle Partitionseinstellungen richtig sind. Klicken Sie auf **Fertig stellen**, wenn alle Einstellungen richtig sind.  
   
 9. Auf der Seite **Status des Assistenten zum Erstellen von Partitionen** können Sie Statusinformationen zu den Aktionen des Assistenten zum Erstellen von Partitionen überwachen. Je nach den im Assistenten ausgewählten Optionen enthält diese Seite eine oder mehrere Aktionen. Im oberen Feld werden der Gesamtstatus des Assistenten und die Anzahl der empfangenen Status-, Fehler- und Warnmeldungen angezeigt.  
   
@@ -237,13 +237,13 @@ ms.locfileid: "88482533"
      Gibt den Typ und den Namen jeder Aktion an.  
   
      **Status**  
-     Gibt an, ob für die Aktion des Assistenten insgesamt der Wert **Erfolg** oder der Wert **Fehler**zurückgegeben wurde.  
+     Gibt an, ob für die Aktion des Assistenten insgesamt der Wert **Erfolg** oder der Wert **Fehler** zurückgegeben wurde.  
   
      **Meldung**  
      Stellt alle vom Prozess zurückgegebenen Fehler- oder Warnmeldungen bereit.  
   
      **Report**  
-     Erstellt einen Bericht mit den Ergebnissen des Assistenten zum Erstellen von Partitionen. Die Optionen sind **Bericht anzeigen**, **Bericht in Datei speichern**, **Bericht in Zwischenablage kopieren**und **Bericht als E-Mail senden**.  
+     Erstellt einen Bericht mit den Ergebnissen des Assistenten zum Erstellen von Partitionen. Die Optionen sind **Bericht anzeigen**, **Bericht in Datei speichern**, **Bericht in Zwischenablage kopieren** und **Bericht als E-Mail senden**.  
   
      **Bericht anzeigen**  
      Öffnet das Dialogfeld **Bericht anzeigen** , das einen Textbericht zum Fortschritt des Assistenten zum Erstellen von Partitionen enthält.  
@@ -259,7 +259,7 @@ ms.locfileid: "88482533"
   
      Nach Abschluss dieser Schritte klicken Sie auf **Schließen**.  
   
- Vom Assistenten zum Erstellen von Partitionen werden die Partitionsfunktion und das -schema erstellt, und anschließend wird die Partitionierung auf die angegebene Tabelle angewendet. Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Tabelle und wählen Sie **Eigenschaften**aus, um die Tabellenpartitionierung zu überprüfen. Klicken Sie auf die Seite **Speicherung** . Auf der Seite werden Informationen, beispielsweise der Name der Partitionsfunktion und das -schema sowie die Anzahl an Partitionen, angezeigt.  
+ Vom Assistenten zum Erstellen von Partitionen werden die Partitionsfunktion und das -schema erstellt, und anschließend wird die Partitionierung auf die angegebene Tabelle angewendet. Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Tabelle und wählen Sie **Eigenschaften** aus, um die Tabellenpartitionierung zu überprüfen. Klicken Sie auf die Seite **Speicherung** . Auf der Seite werden Informationen, beispielsweise der Name der Partitionsfunktion und das -schema sowie die Anzahl an Partitionen, angezeigt.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   

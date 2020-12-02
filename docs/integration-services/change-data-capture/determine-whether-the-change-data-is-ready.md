@@ -14,11 +14,11 @@ ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 95a2a3a5ec29f8b467cbd637e13be3aced203f41
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496224"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130644"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Bestimmen, ob die Änderungsdaten bereit sind
 
@@ -76,7 +76,7 @@ ms.locfileid: "88496224"
   
 2.  Verbinden Sie den Task "SQL ausführen", der die Endpunkte des Intervalls berechnet, mit dem For-Schleifencontainer.  
   
-3.  Aktivieren Sie im **For-Schleifen-Editor**die folgenden Optionen:  
+3.  Aktivieren Sie im **For-Schleifen-Editor** die folgenden Optionen:  
   
     1.  Geben Sie für **InitExpression**`@DataReady = 0`ein.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "88496224"
   
     2.  Geben Sie für **EvalExpression**`@DataReady == 0`ein.  
   
-         Wenn dieser Ausdruck **False**ergibt, wird die Ausführung aus der Schleife weitergegeben, und das inkrementelle Laden beginnt.  
+         Wenn dieser Ausdruck **False** ergibt, wird die Ausführung aus der Schleife weitergegeben, und das inkrementelle Laden beginnt.  
   
 ## <a name="configuring-the-execute-sql-task-that-queries-for-change-data"></a>Konfigurieren des Tasks "SQL ausführen", der Änderungsdaten abfragt  
  Innerhalb des For-Schleifencontainers fügen Sie einen Task "SQL ausführen" hinzu. Dieser Task fragt die Tabellen ab, die der Change Data Capture-Prozess in der Datenbank verwaltet. Das Ergebnis dieser Abfrage ist ein Statuswert, der angibt, ob die Änderungsdaten bereit sind.  
@@ -103,15 +103,15 @@ ms.locfileid: "88496224"
   
 1.  Fügen Sie innerhalb des For-Schleifencontainers einen Task "SQL ausführen" hinzu.  
   
-2.  Aktivieren Sie im **Skripttask-Editor**auf der Seite **Skript** die folgenden Optionen:  
+2.  Aktivieren Sie im **Skripttask-Editor** auf der Seite **Skript** die folgenden Optionen:  
   
-    1.  Wählen Sie für **ResultSet**die Option **Einzelne Zeile**aus.  
+    1.  Wählen Sie für **ResultSet** die Option **Einzelne Zeile** aus.  
   
     2.  Konfigurieren Sie zur Quelldatenbank eine gültige Verbindung.  
   
-    3.  Wählen Sie für **SQLSourceType**die Option **Direkteingabe**aus.  
+    3.  Wählen Sie für **SQLSourceType** die Option **Direkteingabe** aus.  
   
-    4.  Geben Sie für **SQLStatement**die folgende SQL-Anweisung ein:  
+    4.  Geben Sie für **SQLStatement** die folgende SQL-Anweisung ein:  
   
         ```  
         declare @DataReady int, @TimeoutCount int  
@@ -170,19 +170,19 @@ ms.locfileid: "88496224"
   
 3.  Für die Rangfolgeneinschränkung, die den Task "SQL ausführen" mit dem Skripttask verbindet, öffnen Sie den **Rangfolgeneinschränkungs-Editor** , und wählen Sie die folgenden Optionen aus:  
   
-    1.  Wählen Sie für **Auswertungsvorgang****Ausdruck und Einschränkung**aus.  
+    1.  Wählen Sie für **Auswertungsvorgang****Ausdruck und Einschränkung** aus.  
   
-    2.  Wählen Sie für **Wert****Erfolg**aus.  
+    2.  Wählen Sie für **Wert****Erfolg** aus.  
   
          Der Einschränkungswert von **Erfolg** verweist auf den Erfolg des vorherigen Tasks. In diesem Fall auf den Erfolg des Tasks "SQL ausführen".  
   
     3.  Geben Sie für **Ausdruck**`@DataReady == 0 && @TimeoutCount <= @TimeoutCeiling`ein.  
   
-    4.  Wählen Sie **Logischer AND-Operator. Alle Einschränkungen müssen zu TRUE**ausgewertet werden, sofern die Option nicht bereits ausgewählt ist.  
+    4.  Wählen Sie **Logischer AND-Operator. Alle Einschränkungen müssen zu TRUE** ausgewertet werden, sofern die Option nicht bereits ausgewählt ist.  
   
-4.  Wählen Sie im **Skripttask-Editor**auf der Seite **Skript** für **ReadOnlyVariables**die ganzzahlige Variable **User::DelaySeconds** aus der Liste aus.  
+4.  Wählen Sie im **Skripttask-Editor** auf der Seite **Skript** für **ReadOnlyVariables** die ganzzahlige Variable **User::DelaySeconds** aus der Liste aus.  
   
-5.  Klicken Sie im **Skripttask-Editor**auf der Seite **Skript** auf **Skript bearbeiten** , um die Skriptentwicklungsumgebung zu öffnen.  
+5.  Klicken Sie im **Skripttask-Editor** auf der Seite **Skript** auf **Skript bearbeiten** , um die Skriptentwicklungsumgebung zu öffnen.  
   
 6.  Geben Sie in der Main-Prozedur eine der folgenden Codezeilen ein:  
   
@@ -216,27 +216,27 @@ ms.locfileid: "88496224"
   
 3.  Für die Rangfolgeneinschränkung, die die zwei Tasks "SQL ausführen" verbindet, öffnen Sie den **Rangfolgeneinschränkungs-Editor** , und wählen Sie die folgenden Optionen aus:  
   
-    1.  Wählen Sie für **Auswertungsvorgang****Ausdruck und Einschränkung**aus.  
+    1.  Wählen Sie für **Auswertungsvorgang****Ausdruck und Einschränkung** aus.  
   
-    2.  Wählen Sie für **Wert****Erfolg**aus.  
+    2.  Wählen Sie für **Wert****Erfolg** aus.  
   
          Der Einschränkungswert von **Erfolg** verweist auf den Erfolg des vorherigen Tasks "SQL ausführen".  
   
     3.  Geben Sie für **Ausdruck**`@DataReady == 0`ein.  
   
-    4.  Wählen Sie **Logischer AND-Operator. Alle Einschränkungen müssen zu TRUE**ausgewertet werden, sofern die Option nicht bereits ausgewählt ist.  
+    4.  Wählen Sie **Logischer AND-Operator. Alle Einschränkungen müssen zu TRUE** ausgewertet werden, sofern die Option nicht bereits ausgewählt ist.  
   
          Diese Auswahl erfordert, dass beide Bedingungen, die Einschränkung und der Ausdruck, den Wert true haben müssen.  
   
-4.  Aktivieren Sie im **Skripttask-Editor**auf der Seite **Skript** die folgenden Optionen:  
+4.  Aktivieren Sie im **Skripttask-Editor** auf der Seite **Skript** die folgenden Optionen:  
   
-    1.  Wählen Sie für **ResultSet**die Option **Einzelne Zeile**aus.  
+    1.  Wählen Sie für **ResultSet** die Option **Einzelne Zeile** aus.  
   
     2.  Konfigurieren Sie zur Quelldatenbank eine gültige Verbindung.  
   
-    3.  Wählen Sie für **SQLSourceType**die Option **Direkteingabe**aus.  
+    3.  Wählen Sie für **SQLSourceType** die Option **Direkteingabe** aus.  
   
-    4.  Geben Sie für **SQLStatement**die folgende SQL-Anweisung ein:  
+    4.  Geben Sie für **SQLStatement** die folgende SQL-Anweisung ein:  
   
         ```  
         WAITFOR DELAY ?  
@@ -262,23 +262,23 @@ ms.locfileid: "88496224"
   
 4.  Für die Rangfolgeneinschränkung, die den Task "SQL ausführen" mit dem Skripttask verbindet, öffnen Sie den **Rangfolgeneinschränkungs-Editor** , und wählen Sie die folgenden Optionen aus:  
   
-    1.  Wählen Sie für **Auswertungsvorgang****Ausdruck und Einschränkung**aus.  
+    1.  Wählen Sie für **Auswertungsvorgang****Ausdruck und Einschränkung** aus.  
   
-    2.  Wählen Sie für **Wert****Erfolg**aus.  
+    2.  Wählen Sie für **Wert****Erfolg** aus.  
   
          Der Einschränkungswert von **Erfolg** verweist auf den Erfolg des vorherigen Tasks. In diesem Fall auf den Erfolg des Tasks "SQL ausführen".  
   
     3.  Geben Sie für **Ausdruck**`@DataReady == 1 || @DataReady == 5`ein.  
   
-    4.  Wählen Sie **Logischer AND-Operator. Alle Einschränkungen müssen zu TRUE**ausgewertet werden, sofern die Option nicht bereits ausgewählt ist.  
+    4.  Wählen Sie **Logischer AND-Operator. Alle Einschränkungen müssen zu TRUE** ausgewertet werden, sofern die Option nicht bereits ausgewählt ist.  
   
          Diese Auswahl erfordert, dass beide Bedingungen, die Einschränkung und der Ausdruck, den Wert true haben müssen.  
   
-5.  Wählen Sie im **Skripttask-Editor**auf der Seite **Skript** des Editors für **ReadOnlyVariables****User::DataReady** und **User::ExtractStartTime** aus der Liste aus, um deren Werte für das Skript verfügbar zu machen.  
+5.  Wählen Sie im **Skripttask-Editor** auf der Seite **Skript** des Editors für **ReadOnlyVariables****User::DataReady** und **User::ExtractStartTime** aus der Liste aus, um deren Werte für das Skript verfügbar zu machen.  
   
      Wenn Sie Informationen von bestimmten Systemvariablen (z. B. System::PackageName) in die Informationen, die in das Protokoll geschrieben werden, einschließen möchten, wählen Sie auch diese Variablen aus.  
   
-6.  Klicken Sie im **Skripttask-Editor**auf der Seite **Skript** auf **Skript bearbeiten** , um die Skriptentwicklungsumgebung zu öffnen.  
+6.  Klicken Sie im **Skripttask-Editor** auf der Seite **Skript** auf **Skript bearbeiten** , um die Skriptentwicklungsumgebung zu öffnen.  
   
 7.  Geben Sie in der Main-Prozedur Code ein, um einen Fehler zu protokollieren, indem Sie die **Dts.Log** -Methode aufrufen, oder um ein Ereignis auszulösen, indem Sie eine der Methoden der **Dts.Events** -Schnittstelle aufrufen. Informieren Sie das Paket über den Fehler, indem Sie `Dts.TaskResult = Dts.Results.Failure`zurückgeben.  
   

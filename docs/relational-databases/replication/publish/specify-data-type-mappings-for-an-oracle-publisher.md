@@ -16,11 +16,11 @@ ms.assetid: f172d631-3b8c-4912-bd0f-568366cd9870
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a58c4a27a90a36acc47c3338b39a802a2209060d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900654"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130984"
 ---
 # <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>Angeben von Datentypzuordnungen für einen Oracle-Verleger
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "85900654"
      [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
- Die Datentypzuordnungen werden auf der Registerkarte **Datenzuordnung**des Dialogfelds **Artikeleigenschaften – \<Article>** angegeben. Diese Registerkarte ist über die Seite **Artikel** des Assistenten für neue Veröffentlichung und das Dialogfeld **Veröffentlichungseigenschaften – \<Publication>** verfügbar. Weitere Informationen zum Verwenden des Assistenten sowie zum Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung aus einer Oracle-Datenbank](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Die Datentypzuordnungen werden auf der Registerkarte **Datenzuordnung** des Dialogfelds **Artikeleigenschaften – \<Article>** angegeben. Diese Registerkarte ist über die Seite **Artikel** des Assistenten für neue Veröffentlichung und das Dialogfeld **Veröffentlichungseigenschaften – \<Publication>** verfügbar. Weitere Informationen zum Verwenden des Assistenten sowie zum Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung aus einer Oracle-Datenbank](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-a-data-type-mapping"></a>So geben Sie eine Datentypzuordnung an  
   
@@ -83,11 +83,11 @@ ms.locfileid: "85900654"
 1.  Führen Sie auf dem Verteiler für eine beliebige Datenbank [sp_helpdatatypemap](../../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)aus. Geben Sie den Wert **ORACLE** für **\@source_dbms** sowie alle anderen Parameter an, die zum Filtern des Resultsets benötigt werden.  
   
 ###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Beispiele (Transact-SQL)  
- In diesem Beispiel wird eine Spalte mit dem Oracle-Datentyp NUMBER geändert, sodass er dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentyp **numeric**(38,38) anstelle des Standarddatentyps **float**angegeben werden.  
+ In diesem Beispiel wird eine Spalte mit dem Oracle-Datentyp NUMBER geändert, sodass er dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentyp **numeric**(38,38) anstelle des Standarddatentyps **float** angegeben werden.  
   
  [!code-sql[HowTo#sp_changecolumndatatype](../../../relational-databases/replication/codesnippet/tsql/specify-data-type-mappin_1.sql)]  
   
- Diese Beispielabfrage gibt die Standardzuordnungen sowie die alternativen Zuordnungen für den Oracle 9-Datentyp **CHAR**zurück.  
+ Diese Beispielabfrage gibt die Standardzuordnungen sowie die alternativen Zuordnungen für den Oracle 9-Datentyp **CHAR** zurück.  
   
  [!code-sql[HowTo#sp_helpcolumndatatype_char](../../../relational-databases/replication/codesnippet/tsql/specify-data-type-mappin_2.sql)]  
   

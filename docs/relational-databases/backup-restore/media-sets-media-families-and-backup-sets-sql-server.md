@@ -22,14 +22,14 @@ helpviewer_keywords:
 - backups [SQL Server], backup sets
 - backup sets [SQL Server]
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d8dd7099a8460d72104a3e6616d75bc5586c82c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d9a264d6b5248f4033dd1bd3e282de4872cd2eb6
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718058"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130394"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Mediensätze, Medienfamilien und Sicherungssätze (SQL Server)
 
@@ -68,7 +68,7 @@ ms.locfileid: "85718058"
   
 In einem gespiegelten Mediensatz werden alle Medienfamilien gespiegelt. Wenn beispielsweise zur Formatierung eines Mediensatzes mit zwei Spiegeln sechs Sicherungsmedien verwendet werden, sind drei Medienfamilien vorhanden, von denen jede zwei gleichwertige Kopien der Sicherungsdaten enthält. Weitere Informationen über gespiegelte Mediensätze finden Sie unter [Gespiegelte Sicherungsmediensätze &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)noch nicht kennen.  
   
- Jedem Band oder Datenträger in einer Medienfamilie wird eine *Mediensequenznummer*zugewiesen. Die Mediensequenznummer eines Datenträgers ist immer 1. In einer Bandmedienfamilie ist die Sequenznummer des ersten Bandes 1, die Sequenznummer des zweiten Bandes 2 usw. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Mediensätze, Medienfamilien und Sicherungssätze (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)noch nicht kennen.
+ Jedem Band oder Datenträger in einer Medienfamilie wird eine *Mediensequenznummer* zugewiesen. Die Mediensequenznummer eines Datenträgers ist immer 1. In einer Bandmedienfamilie ist die Sequenznummer des ersten Bandes 1, die Sequenznummer des zweiten Bandes 2 usw. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Mediensätze, Medienfamilien und Sicherungssätze (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)noch nicht kennen.
   
 ## <a name="the-media-header"></a>Der Medienheader  
  Jedes Volume eines Sicherungsmediums (Datenträgerdatei oder Band) enthält einen Medienheader, der beim ersten Sicherungsvorgang erstellt wird, der das Band (oder den Datenträger) verwendet. Dieser Header bleibt unverändert, bis das Medium neu formatiert wird.  
@@ -217,7 +217,7 @@ Das Anfügen (standardmäßiges Verhalten von BACKUP) kann explizit mithilfe der
   
 -   Die vorhandenen Sicherungen auf dem Medium sind nicht abgelaufen. (Wenn SKIP angegeben ist, ist das Ablaufen nicht aktiviert.)  
   
-     Das Ablaufdatum gibt das Datum an, an dem die Sicherung abläuft, und kann von einer anderen Sicherung überschrieben werden. Sie können das Ablaufdatum angeben, wenn eine Sicherung erstellt wird. Standardmäßig wird das Ablaufdatum durch die Option **Medienbeibehaltung** bestimmt, die mit **sp_configure**festgelegt ist. Weitere Informationen finden Sie weiter unten in diesem Thema unter [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)noch nicht kennen.  
+     Das Ablaufdatum gibt das Datum an, an dem die Sicherung abläuft, und kann von einer anderen Sicherung überschrieben werden. Sie können das Ablaufdatum angeben, wenn eine Sicherung erstellt wird. Standardmäßig wird das Ablaufdatum durch die Option **Medienbeibehaltung** bestimmt, die mit **sp_configure** festgelegt ist. Weitere Informationen finden Sie weiter unten in diesem Thema unter [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)noch nicht kennen.  
   
 -   Der Medienname, falls vorhanden, stimmt nicht mit dem Namen des Sicherungsmediums überein.  
   

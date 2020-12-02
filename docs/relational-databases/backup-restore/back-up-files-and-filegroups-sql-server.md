@@ -15,14 +15,14 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - filegroups [SQL Server], backing up
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 5ba5f84315eec687e6ab93c407226a3ff2fbc343
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6b400efdcf437fd97952ae215f5279d770c0598a
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809189"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130562"
 ---
 # <a name="back-up-files-and-filegroups"></a>Sichern von Dateien und Dateigruppen
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,7 @@ Mitglieder der festen Serverrolle **sysadmin** und der festen Datenbankrollen **
   
 1. Überprüfen Sie im Listenfeld **Datenbank** den Datenbanknamen. Sie können optional eine andere Datenbank aus der Liste auswählen.  
   
-1. Wählen Sie im Listenfeld **Sicherungstyp** die Option **Vollständig** oder **Differenziell**aus.  
+1. Wählen Sie im Listenfeld **Sicherungstyp** die Option **Vollständig** oder **Differenziell** aus.  
   
 1. Klicken Sie bei der Option **Sicherungskomponente** auf **Datei und Dateigruppen**.  
   
@@ -74,11 +74,11 @@ Mitglieder der festen Serverrolle **sysadmin** und der festen Datenbankrollen **
   
     - Wenn der Sicherungssatz nach einer bestimmten Anzahl von Tagen ablaufen soll, klicken Sie auf **Nach** (Standardoption), und geben Sie an, nach wie vielen Tagen der Sicherungssatz abläuft. Dieser Wert kann zwischen 0 und 99999 Tagen liegen. Ein Wert von 0 Tagen bedeutet, dass der Sicherungssatz nicht abläuft.  
   
-         Der Standardwert wird im Dialogfeld **Servereigenschaften** (Seite **Datenbankeinstellungen** ) über die Option**Standardbeibehaltung für Sicherungsmedien (in Tagen)** festgelegt. Um auf diese Option zuzugreifen, klicken Sie mit der rechten Maustaste auf den Servernamen im Objekt-Explorer, und wählen Sie die Eigenschaften aus. Wählen Sie anschließend die Seite **Datenbankeinstellungen** aus.  
+         Der Standardwert wird im Dialogfeld **Servereigenschaften** (Seite **Datenbankeinstellungen** ) über die Option **Standardbeibehaltung für Sicherungsmedien (in Tagen)** festgelegt. Um auf diese Option zuzugreifen, klicken Sie mit der rechten Maustaste auf den Servernamen im Objekt-Explorer, und wählen Sie die Eigenschaften aus. Wählen Sie anschließend die Seite **Datenbankeinstellungen** aus.  
   
     - Zum Speichern des Sicherungssatzes an einem bestimmten Datum klicken Sie auf **Am**. Geben Sie das Datum ein, an dem der Sicherungssatz abläuft.  
   
-1. Wählen Sie den Sicherungszieltyp aus, indem Sie auf **Datenträger** oder **Band**klicken. Zum Auswählen der Pfade von bis zu 64 Datenträgern oder Bandlaufwerken, die einen einzelnen Mediensatz enthalten, klicken Sie auf **Hinzufügen**. Die ausgewählten Pfade werden im Listenfeld **Sichern auf** angezeigt.  
+1. Wählen Sie den Sicherungszieltyp aus, indem Sie auf **Datenträger** oder **Band** klicken. Zum Auswählen der Pfade von bis zu 64 Datenträgern oder Bandlaufwerken, die einen einzelnen Mediensatz enthalten, klicken Sie auf **Hinzufügen**. Die ausgewählten Pfade werden im Listenfeld **Sichern auf** angezeigt.  
   
     > [!NOTE]
     > Um einen Sicherungsziel zu entfernen, wählen Sie ihn aus, und klicken Sie auf **Entfernen**. Zum Anzeigen des Inhalts eines Sicherungsziels wählen Sie es aus, und klicken Sie auf **Inhalt**.  
@@ -118,7 +118,7 @@ Mitglieder der festen Serverrolle **sysadmin** und der festen Datenbankrollen **
     > [!NOTE]
     > Die Optionen im Abschnitt **Transaktionsprotokoll** sind inaktiv, es sei denn, Sie sichern ein Transaktionsprotokoll (wie im Abschnitt **Sicherungstyp** der Seite **Allgemein** angegeben).  
   
-1. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] und höheren Versionen wird die [Sicherungskomprimierung](../../relational-databases/backup-restore/backup-compression-sql-server.md). Ob eine Sicherung standardmäßig komprimiert wird, ist abhängig vom Wert der Serverkonfigurationsoption **backup-compression default** . Sie können jedoch unabhängig von der aktuellen Standardeinstellung auf Serverebene eine Sicherung komprimieren, indem Sie die Option **Sicherung komprimieren**aktivieren, oder die Komprimierung verhindern, indem Sie die Option **Sicherung nicht komprimieren**aktivieren.  
+1. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] und höheren Versionen wird die [Sicherungskomprimierung](../../relational-databases/backup-restore/backup-compression-sql-server.md). Ob eine Sicherung standardmäßig komprimiert wird, ist abhängig vom Wert der Serverkonfigurationsoption **backup-compression default** . Sie können jedoch unabhängig von der aktuellen Standardeinstellung auf Serverebene eine Sicherung komprimieren, indem Sie die Option **Sicherung komprimieren** aktivieren, oder die Komprimierung verhindern, indem Sie die Option **Sicherung nicht komprimieren** aktivieren.  
   
      Informationen dazu, wie Sie Standardeinstellung für die Sicherungskomprimierung abrufen, finden Sie unter [Anzeigen oder Konfigurieren der Standardserverkonfigurationsoption für die Sicherungskomprimierung](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).  
 

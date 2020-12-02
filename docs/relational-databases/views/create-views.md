@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 654dbae04bbc69fa257b288f6b130c6b17f75ace
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809217"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130843"
 ---
 # <a name="create-views"></a>Erstellen von Sichten
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,17 +61,17 @@ ms.locfileid: "91809217"
   
 #### <a name="to-create-a-view-by-using-the-query-and-view-designer"></a>So erstellen Sie eine Sicht mit dem Abfrage- und Sicht-Designer  
   
-1.  Erweitern Sie im **Objekt-Explorer**die Datenbank, in der Sie die neue Sicht erstellen möchten.  
+1.  Erweitern Sie im **Objekt-Explorer** die Datenbank, in der Sie die neue Sicht erstellen möchten.  
   
 2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Sichten**, und klicken Sie anschließend auf **Neue Sicht…**.  
   
 3.  Wählen Sie im Dialogfeld **Tabelle hinzufügen** das Element oder die Elemente, die Sie in die neue Sicht einschließen möchten, auf einer der folgenden Registerkarten aus: Tabellen, Sichten, Funktionen und Synonyme.  
   
-4.  Klicken Sie auf **Hinzufügen**und dann auf **Schließen**.  
+4.  Klicken Sie auf **Hinzufügen** und dann auf **Schließen**.  
   
-5.  Wählen Sie im **Diagrammbereich**die Spalten bzw. die anderen Elemente aus, die in der neuen Sicht enthalten sein sollen.  
+5.  Wählen Sie im **Diagrammbereich** die Spalten bzw. die anderen Elemente aus, die in der neuen Sicht enthalten sein sollen.  
   
-6.  Wählen Sie im **Kriterienbereich**zusätzliche Sortier- oder Filterkriterien für die Spalten aus.  
+6.  Wählen Sie im **Kriterienbereich** zusätzliche Sortier- oder Filterkriterien für die Spalten aus.  
   
 7.  Klicken Sie im Menü **Datei** auf **Speichern**_view name_.  
   

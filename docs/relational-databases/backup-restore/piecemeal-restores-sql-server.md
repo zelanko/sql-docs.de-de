@@ -14,14 +14,14 @@ helpviewer_keywords:
 - piecemeal restores [SQL Server]
 - restoring [SQL Server], piecemeal restore scenario
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: 61054ac32e13c16a77c1ad27400be6b978cebe7f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 3681cad0b17f2241ae388c19ba34c18578bc258f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85670235"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130341"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Schrittweise Wiederherstellungen [SQL Server]
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,11 +33,11 @@ ms.locfileid: "85670235"
   
  Die schrittweise Wiederherstellung ist für sämtliche Wiederherstellungsmodelle möglich, zeichnet sich jedoch durch höhere Flexibilität in Bezug auf die vollständigen und massenprotokollierten Modelle als in Bezug auf das einfache Modell aus.  
   
- Jede schrittweise Wiederherstellung beginnt mit einer anfänglichen Wiederherstellungssequenz, die als *Teilwiederherstellungssequenz*bezeichnet wird. Mit der Teilwiederherstellungssequenz wird mindestens die primäre Dateigruppe wiederhergestellt und beim einfachen Wiederherstellungsmodell alle Dateigruppen mit Lese-/Schreibzugriff. Während der schrittweisen Wiederherstellungssequenz muss die gesamte Datenbank offline geschaltet werden. Danach ist die Datenbank online, und die wiederhergestellten Dateigruppen sind verfügbar. Alle nicht wiederhergestellten Dateigruppen bleiben jedoch offline, und es ist kein Zugriff möglich. Alle Offlinedateigruppen können jedoch später durch eine Dateiwiederherstellung wiederhergestellt und online geschaltet werden.  
+ Jede schrittweise Wiederherstellung beginnt mit einer anfänglichen Wiederherstellungssequenz, die als *Teilwiederherstellungssequenz* bezeichnet wird. Mit der Teilwiederherstellungssequenz wird mindestens die primäre Dateigruppe wiederhergestellt und beim einfachen Wiederherstellungsmodell alle Dateigruppen mit Lese-/Schreibzugriff. Während der schrittweisen Wiederherstellungssequenz muss die gesamte Datenbank offline geschaltet werden. Danach ist die Datenbank online, und die wiederhergestellten Dateigruppen sind verfügbar. Alle nicht wiederhergestellten Dateigruppen bleiben jedoch offline, und es ist kein Zugriff möglich. Alle Offlinedateigruppen können jedoch später durch eine Dateiwiederherstellung wiederhergestellt und online geschaltet werden.  
   
  Unabhängig davon, welches Wiederherstellungsmodell von der Datenbank verwendet wird, beginnt die Teilwiederherstellungssequenz mit einer RESTORE DATABASE-Anweisung, mit der eine vollständige Sicherung wiederhergestellt und die PARTIAL-Option angegeben wird. Mit der Option PARTIAL wird stets eine neue schrittweise Wiederherstellung gestartet. Deshalb müssen Sie PARTIAL nur einmal in der Anfangsanweisung der Teilwiederherstellungssequenz angeben. Wenn die Teilwiederherstellungssequenz abgeschlossen und die Datenbank online geschaltet wird, wird den übrigen Dateien der Status "Wiederherstellung ausstehend" zugewiesen, da ihre Wiederherstellung verschoben wurde.  
   
- Anschließend schließt eine schrittweise Wiederherstellung normalerweise eine oder mehrere Wiederherstellungssequenzen ein, die als *Dateigruppen-Wiederherstellungssequenzen*bezeichnet werden. Sie können mit der Ausführung einer bestimmten Dateigruppen-Wiederherstellungssequenz so lange warten, wie Sie möchten. Mit jeder Dateigruppenwiederherstellungssequenz wird mindestens eine Offlinedateigruppe bis zu einem mit der Datenbank konsistenten Zeitpunkt wiederhergestellt. Zeitpunkt und Anzahl der Dateigruppen-Wiederherstellungssequenzen richten sich nach Ihrem Wiederherstellungsziel, nach der Anzahl der wiederherzustellenden Offlinedateigruppen und danach, wie viele Sie davon pro Dateigruppen-Wiederherstellungssequenz wiederherstellen.  
+ Anschließend schließt eine schrittweise Wiederherstellung normalerweise eine oder mehrere Wiederherstellungssequenzen ein, die als *Dateigruppen-Wiederherstellungssequenzen* bezeichnet werden. Sie können mit der Ausführung einer bestimmten Dateigruppen-Wiederherstellungssequenz so lange warten, wie Sie möchten. Mit jeder Dateigruppenwiederherstellungssequenz wird mindestens eine Offlinedateigruppe bis zu einem mit der Datenbank konsistenten Zeitpunkt wiederhergestellt. Zeitpunkt und Anzahl der Dateigruppen-Wiederherstellungssequenzen richten sich nach Ihrem Wiederherstellungsziel, nach der Anzahl der wiederherzustellenden Offlinedateigruppen und danach, wie viele Sie davon pro Dateigruppen-Wiederherstellungssequenz wiederherstellen.  
   
  Die genauen Anforderungen zum Ausführen einer schrittweisen Wiederherstellung richten sich nach dem Wiederherstellungsmodell der Datenbank. Weitere Informationen finden Sie unter "Schrittweise Wiederherstellung mit dem einfachen Wiederherstellungsmodell" und "Schrittweise Wiederherstellung mit dem vollständigen Wiederherstellungsmodell" weiter unten in diesem Thema.  
   

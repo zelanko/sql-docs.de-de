@@ -25,11 +25,11 @@ ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d915b70f3f17c1be5c87361ab2810a82d18d6525
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192434"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130022"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Zugriffssteuerung für vertrauliche Daten in Paketen
 
@@ -42,7 +42,7 @@ ms.locfileid: "92192434"
 >  Zusätzlich zu den in diesem Thema beschriebenen Schutzebenen können Sie feste Rollen auf Datenbankebene verwenden, um Pakete zu schützen, die auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server gespeichert werden.  
   
 ## <a name="definition-of-sensitive-information"></a>Definition vertraulicher Informationen  
- In einem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket werden die folgenden Informationen als *vertraulich*definiert:  
+ In einem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket werden die folgenden Informationen als *vertraulich* definiert:  
   
 -   Der Kennwortteil einer Verbindungszeichenfolge. Wenn Sie jedoch eine Option auswählen, mit der alle Daten verschlüsselt werden, wird die gesamte Verbindungszeichenfolge als vertraulich betrachtet.  
   
@@ -74,18 +74,18 @@ ms.locfileid: "92192434"
 ## <a name="protection-level-setting-and-the-ssisdb-catalog"></a>Einstellung der Schutzebene und SSISDB-Katalog  
  Der SSISDB-Katalog verwendet die Schutzebene **ServerStorage** . Wenn Sie ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitstellen, werden die Paketdaten und sensible Werte automatisch vom Katalog verschlüsselt. Die Daten werden vom Katalog auch automatisch entschlüsselt, wenn Sie sie abrufen.  
   
- Wenn Sie das Projekt (ISPAC-Datei) vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server in das Dateisystem exportieren, ändert das System die Schutzebene automatisch in **EncryptSensitiveWithUserKey**. Wenn Sie das Projekt mit dem **Integration Services-Assistenten zum Importieren von Projekten** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]importieren, wird für die **ProtectionLevel** -Eigenschaft im Fenster **Eigenschaften** der Wert **EncryptSensitiveWithUserKey**angezeigt.  
+ Wenn Sie das Projekt (ISPAC-Datei) vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server in das Dateisystem exportieren, ändert das System die Schutzebene automatisch in **EncryptSensitiveWithUserKey**. Wenn Sie das Projekt mit dem **Integration Services-Assistenten zum Importieren von Projekten** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]importieren, wird für die **ProtectionLevel** -Eigenschaft im Fenster **Eigenschaften** der Wert **EncryptSensitiveWithUserKey** angezeigt.  
   
 ## <a name="protection-level-setting-based-on-package-life-cycle"></a>Festlegen der Schutzebene auf Grundlage des Paketlebenszyklus  
  Die Schutzebene eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakets wird bei dessen Entwicklung in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] festgelegt. Wenn das Paket dann zu einem späteren Zeitpunkt bereitgestellt, von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]importiert oder daraus exportiert wird oder von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in den [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher oder in das Dateisystem kopiert wird, können Sie die Paketschutzebene aktualisieren. Wenn Sie z. B. Pakete auf Ihrem Computer mit einer Benutzerschlüssel-Schutzebenenoption erstellen und speichern, möchten Sie eventuell die Schutzebene ändern, wenn Sie das Paket anderen Benutzern übergeben; anderenfalls können diese Benutzer das Paket nicht öffnen.  
   
  Normalerweise wird die Schutzebene wie in den folgenden Schritten beschrieben geändert:  
   
-1.  Behalten Sie während der Entwicklung den Standardwert für die Schutzebene der Pakete bei ( **EncryptSensitiveWithUserKey**). Mit dieser Einstellung wird sichergestellt, dass nur der Entwickler vertrauliche Werte im Paket sehen kann. Oder Sie können die Nutzung von **EncryptAllWithUserKey**oder **DontSaveSensitive**erwägen.  
+1.  Behalten Sie während der Entwicklung den Standardwert für die Schutzebene der Pakete bei ( **EncryptSensitiveWithUserKey**). Mit dieser Einstellung wird sichergestellt, dass nur der Entwickler vertrauliche Werte im Paket sehen kann. Oder Sie können die Nutzung von **EncryptAllWithUserKey** oder **DontSaveSensitive** erwägen.  
   
-2.  Wenn Sie die Pakete bereitstellen möchten, müssen Sie die Schutzebene so ändern, dass sie nicht von dem Benutzerschlüssel des Entwicklers abhängig ist. Deshalb müssen Sie normalerweise **EncryptSensitiveWithPassword**oder **EncryptAllWithPassword**auswählen. Verschlüsseln Sie die Pakete, indem Sie ein temporäres sicheres Kennwort zuweisen, das auch dem Betriebsteam in der Produktionsumgebung bekannt ist.  
+2.  Wenn Sie die Pakete bereitstellen möchten, müssen Sie die Schutzebene so ändern, dass sie nicht von dem Benutzerschlüssel des Entwicklers abhängig ist. Deshalb müssen Sie normalerweise **EncryptSensitiveWithPassword** oder **EncryptAllWithPassword** auswählen. Verschlüsseln Sie die Pakete, indem Sie ein temporäres sicheres Kennwort zuweisen, das auch dem Betriebsteam in der Produktionsumgebung bekannt ist.  
   
-3.  Nach dem Bereitstellen der Pakete in der Produktionsumgebung kann das Betriebsteam die bereitgestellten Pakete erneut verschlüsseln, indem ein neues, nur dem Betriebsteam bekanntes sicheres Kennwort zugewiesen wird. Die bereitgestellten Pakete können auch verschlüsselt werden, indem **EncryptSensitiveWithUserKey** oder **EncryptAllWithUserKey**ausgewählt wird und die lokalen Anmeldeinformationen des Kontos verwendet werden, mit dem die Pakete ausgeführt werden.  
+3.  Nach dem Bereitstellen der Pakete in der Produktionsumgebung kann das Betriebsteam die bereitgestellten Pakete erneut verschlüsseln, indem ein neues, nur dem Betriebsteam bekanntes sicheres Kennwort zugewiesen wird. Die bereitgestellten Pakete können auch verschlüsselt werden, indem **EncryptSensitiveWithUserKey** oder **EncryptAllWithUserKey** ausgewählt wird und die lokalen Anmeldeinformationen des Kontos verwendet werden, mit dem die Pakete ausgeführt werden.  
 
 ## <a name="set-or-change-the-protection-level-of-packages"></a><a name="set_protection"></a> Festlegen oder Ändern der Schutzebene von Paketen
   Wenn der Zugriff auf den Inhalt von Paketen und die darin enthaltenen vertraulichen Werte, z. B. Kennwörter, gesteuert werden soll, legen Sie den Wert der **ProtectionLevel** -Eigenschaft fest. Zum Erstellen des Projekts müssen die in einem Projekt enthaltenen Pakete die gleiche Schutzebene wie das Projekt aufweisen. Wenn Sie die **ProtectionLevel** -Eigenschafteneinstellung für das Projekt ändern, müssen Sie die Eigenschafteneinstellung für die Pakete manuell aktualisieren.  
@@ -153,7 +153,7 @@ ms.locfileid: "92192434"
  Geben Sie das Kennwort erneut ein.  
 
 ## <a name="package-password-dialog-box"></a><a name="password_dialog"></a> Dialogfeld „Paketkennwort“
-  Verwenden Sie das Dialogfeld **Paketkennwort** , um ein Kennwort für ein verschlüsseltes Paket bereitzustellen. Sie müssen ein Kennwort bereitstellen, wenn das Paket die Schutzebene **Sensible Daten mit einem Kennwort verschlüsseln**oder **Alle Daten mit einem Kennwort verschlüsseln** verwendet.  
+  Verwenden Sie das Dialogfeld **Paketkennwort** , um ein Kennwort für ein verschlüsseltes Paket bereitzustellen. Sie müssen ein Kennwort bereitstellen, wenn das Paket die Schutzebene **Sensible Daten mit einem Kennwort verschlüsseln** oder **Alle Daten mit einem Kennwort verschlüsseln** verwendet.  
   
 ### <a name="options"></a>Optionen  
  **Kennwort**  

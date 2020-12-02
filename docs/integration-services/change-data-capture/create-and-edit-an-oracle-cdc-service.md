@@ -14,11 +14,11 @@ ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bcccb89d1af55f990388b389087c16c003d12c39
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496258"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130653"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Erstellen und Bearbeiten eines Oracle CDC Service
 
@@ -27,11 +27,11 @@ ms.locfileid: "88496258"
 
   Sie erstellen und bearbeiten einen neuen Oracle CDC-Windows-Dienst über die CDC Service Configuration Console.  
   
- Um einen neuen Oracle CDC-Windows-Dienst zu erstellen, wählen Sie im linken Bereich **Local CDC Services** aus und klicken dann im **Aktionsbereich** auf **Neuer Dienst** . Sie können auch mit der rechten Maustaste auf **Local CDC Services** (Lokale CDC-Dienste) klicken und **Neuer Dienst**auswählen. Das Dialogfeld New Oracle CDC Windows Service wird geöffnet.  
+ Um einen neuen Oracle CDC-Windows-Dienst zu erstellen, wählen Sie im linken Bereich **Local CDC Services** aus und klicken dann im **Aktionsbereich** auf **Neuer Dienst** . Sie können auch mit der rechten Maustaste auf **Local CDC Services** (Lokale CDC-Dienste) klicken und **Neuer Dienst** auswählen. Das Dialogfeld New Oracle CDC Windows Service wird geöffnet.  
   
  **OR**  
   
- Um die Eigenschaften des CDC-Diensts zu bearbeiten, wählen Sie den Dienst aus, für den Sie die Eigenschaften bearbeiten möchten, und klicken im **Aktionsbereich** auf **Eigenschaften** . Sie können auch mit der rechten Maustaste auf den Dienst klicken, den Sie verwenden, und **Eigenschaften**wählen. Das Dialogfeld CDC Service Properties wird geöffnet.  
+ Um die Eigenschaften des CDC-Diensts zu bearbeiten, wählen Sie den Dienst aus, für den Sie die Eigenschaften bearbeiten möchten, und klicken im **Aktionsbereich** auf **Eigenschaften** . Sie können auch mit der rechten Maustaste auf den Dienst klicken, den Sie verwenden, und **Eigenschaften** wählen. Das Dialogfeld CDC Service Properties wird geöffnet.  
   
  Geben Sie im Dialogfeld New Oracle CDC Windows Service oder CDC Service Properties die folgenden Informationen ein.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "88496258"
   
  Die vom Oracle CDC Service verwendete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung muss lediglich Mitglied der festen Serverrolle public sein. Es sind keine anderen Berechtigungen erforderlich. Nachdem neue Oracle CDC-Instanzen hinzugefügt wurden, wird über diese Anmeldung der **db_owner** -Zugriff auf die zugeordneten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -CDC-Datenbanken gewährt.  
   
- Zum Erstellen der Definition des Oracle CDC-Windows-Diensts benötigt das Programm Aktualisierungszugriff auf die MSXDBCDC-Datenbank in der zugeordneten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz. Wenn Sie auf **OK**klicken, wird der Benutzer in einem Dialogfeld aufgefordert, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen mit Aktualisierungszugriff auf die MSXDBCDC-Datenbank einzugeben.  
+ Zum Erstellen der Definition des Oracle CDC-Windows-Diensts benötigt das Programm Aktualisierungszugriff auf die MSXDBCDC-Datenbank in der zugeordneten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz. Wenn Sie auf **OK** klicken, wird der Benutzer in einem Dialogfeld aufgefordert, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen mit Aktualisierungszugriff auf die MSXDBCDC-Datenbank einzugeben.  
   
  Informationen zu den Daten, die Sie im Dialogfeld Verbindung mit SQL Server herstellen eingeben müssen, finden Sie unter [Connection to SQL Server](../../integration-services/change-data-capture/connection-to-sql-server.md).  
   

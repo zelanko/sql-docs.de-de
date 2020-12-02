@@ -24,14 +24,14 @@ helpviewer_keywords:
 - backing up databases [SQL Server], backup devices
 - devices [SQL Server]
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 79fb6976eb128e31965290df302a222bcf55177e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b0e264f1111ffc924466fdbb658b3f1e278d3f3a
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728528"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130509"
 ---
 # <a name="backup-devices-sql-server"></a>Sicherungsmedien (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -102,7 +102,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-> **HINWEIS:** Der Standardspeicherort wird im **BackupDirectory** -Registrierungsschlüssel unter **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer**gespeichert.  
+> **HINWEIS:** Der Standardspeicherort wird im **BackupDirectory** -Registrierungsschlüssel unter **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer** gespeichert.  
   
    
 ###  <a name="back-up-to-a-network-share-file"></a><a name="NetworkShare"></a> Sichern in einer Netzwerkfreigabedatei  
@@ -134,7 +134,7 @@ GO
    
  Zum Sichern von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Daten auf Band ist mindestens ein Bandlaufwerk erforderlich, das vom [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Betriebssystem unterstützt wird. Verwenden Sie für diese Laufwerke nur die vom Hersteller des Laufwerks empfohlenen Bänder. Weitere Informationen zum Installieren eines Bandlaufwerks finden Sie in der Dokumentation zum Windows-Betriebssystem.  
   
- Wenn ein Bandlaufwerk verwendet wird, kann ein Sicherungsvorgang ein Band füllen und mit einem anderen Band fortfahren. Jedes Band enthält einen Medienheader. Das erste verwendete Medium wird als *Anfangsband*bezeichnet. Jedes darauf folgende Band wird als *Anschlussband* bezeichnet und verfügt über eine Mediensequenznummer (aufsteigend). Ein Mediensatz, der beispielsweise vier Bandmedien zugewiesen ist, enthält mindestens vier Anfangsbänder (und, bei Bedarf für die Datenbank vier weitere Reihen mit Anschlussbändern). Wenn Sie einen Sicherungssatz anfügen, müssen Sie das letzte Band in der Reihe einlegen. Wenn das letzte Band nicht eingelegt wurde, wird der Scanvorgang von [!INCLUDE[ssDE](../../includes/ssde-md.md)] bis zum Ende des eingelegten Bands fortgesetzt, woraufhin Sie das Band wechseln müssen. Legen Sie zu diesem Zeitpunkt das letzte Band ein.  
+ Wenn ein Bandlaufwerk verwendet wird, kann ein Sicherungsvorgang ein Band füllen und mit einem anderen Band fortfahren. Jedes Band enthält einen Medienheader. Das erste verwendete Medium wird als *Anfangsband* bezeichnet. Jedes darauf folgende Band wird als *Anschlussband* bezeichnet und verfügt über eine Mediensequenznummer (aufsteigend). Ein Mediensatz, der beispielsweise vier Bandmedien zugewiesen ist, enthält mindestens vier Anfangsbänder (und, bei Bedarf für die Datenbank vier weitere Reihen mit Anschlussbändern). Wenn Sie einen Sicherungssatz anfügen, müssen Sie das letzte Band in der Reihe einlegen. Wenn das letzte Band nicht eingelegt wurde, wird der Scanvorgang von [!INCLUDE[ssDE](../../includes/ssde-md.md)] bis zum Ende des eingelegten Bands fortgesetzt, woraufhin Sie das Band wechseln müssen. Legen Sie zu diesem Zeitpunkt das letzte Band ein.  
   
  Bandsicherungsmedien werden wie Datenträgermedien verwendet. Es gelten folgende Ausnahmen:  
   

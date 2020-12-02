@@ -18,11 +18,11 @@ ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd34411b00bfa89c5c69b0d71073ee1c0d4d2280
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728117"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130826"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>Angeben von Metaeigenschaften in OPENXML
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "85728117"
   
  Einige der Metaeigenschaftsattribute werden zu Verarbeitungszwecken eingesetzt. So wird z. B. das **xmltext** -Metaeigenschaftsattribut zur Bearbeitung von Überlaufdaten verwendet. Die Bearbeitung von Überlaufdaten bezieht sich auf nicht verbrauchte, unverarbeitete Daten im Dokument. Eine der Spalten im von OPENXML generierten Rowset kann als Überlaufspalte identifiziert werden. Dazu ordnen Sie diese Spalte mithilfe des **ColPattern** -Parameters der *xmltext* -Metaeigenschaft zu. Die Spalte nimmt dann die Überlaufdaten auf. Der *flags* -Parameter bestimmt, ob die Spalte ausschließlich nicht verbrauchte Daten oder alle Daten enthalten soll.  
   
- In der folgenden Tabelle werden die Metaeigenschaftsattribute für jedes analysierte XML-Element aufgeführt. Mithilfe des Namespaces **urn:schemas-microsoft-com:xml-sql**kann auf diese Metaeigenschaftsattribute zugegriffen werden. Jeder Wert, der direkt vom Benutzer im XML-Dokument mithilfe dieser Metaeigenschaften festgelegt wird, bleibt unberücksichtigt.  
+ In der folgenden Tabelle werden die Metaeigenschaftsattribute für jedes analysierte XML-Element aufgeführt. Mithilfe des Namespaces **urn:schemas-microsoft-com:xml-sql** kann auf diese Metaeigenschaftsattribute zugegriffen werden. Jeder Wert, der direkt vom Benutzer im XML-Dokument mithilfe dieser Metaeigenschaften festgelegt wird, bleibt unberücksichtigt.  
   
 > [!NOTE]  
 >  Sie können in XPath-Navigationen nicht auf diese Metaeigenschaften verweisen.  
@@ -116,7 +116,7 @@ id   oid         date                amount    parentIDNo  parentLocalName
 ```  
   
 ### <a name="b-retrieving-the-whole-xml-document"></a>B. Abrufen des gesamten XML-Dokuments  
- In diesem Beispiel wird mithilfe von OPENXML eine einspaltige Rowsetsicht des XML-Beispieldokuments erstellt. Diese Spalte **Col1**wird der **xmltext** -Metaeigenschaft zugeordnet und wird zu einer Überlaufspalte. Deshalb nimmt die Spalte die nicht verbrauchten Daten auf. In diesem Fall handelt es sich dabei um das gesamte Dokument.  
+ In diesem Beispiel wird mithilfe von OPENXML eine einspaltige Rowsetsicht des XML-Beispieldokuments erstellt. Diese Spalte **Col1** wird der **xmltext** -Metaeigenschaft zugeordnet und wird zu einer Überlaufspalte. Deshalb nimmt die Spalte die nicht verbrauchten Daten auf. In diesem Fall handelt es sich dabei um das gesamte Dokument.  
   
  Schließlich gibt die SELECT-Anweisung das vollständige Rowset zurück.  
   

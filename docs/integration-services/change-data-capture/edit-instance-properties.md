@@ -12,11 +12,11 @@ ms.assetid: e7d6b164-b14a-4c2b-b8ad-0d4fe1f329f4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 926ee3afb3828419a6863e99f27f529d4dcc1bab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478080"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130636"
 ---
 # <a name="edit-instance-properties"></a>Bearbeiten von Instanzeigenschaften
 
@@ -45,7 +45,7 @@ ms.locfileid: "88478080"
   
 3.  Klicken Sie in der CDC Designer Console rechts im **Aktionsbereich** auf **Eigenschaften**.  
   
-     Sie können auch im linken Bereich mit der rechten Maustaste auf den Dienst klicken und **Eigenschaften**wählen.  
+     Sie können auch im linken Bereich mit der rechten Maustaste auf den Dienst klicken und **Eigenschaften** wählen.  
   
 ### <a name="or"></a>oder  
   
@@ -55,6 +55,6 @@ ms.locfileid: "88478080"
   
 3.  Klicken Sie in der CDC Designer Console rechts im **Aktionsbereich** auf **Eigenschaften**.  
   
-     Sie können auch in der Liste im mittleren Bereich der CDC Designer Console mit der rechten Maustaste auf den Dienst klicken und **Eigenschaften**wählen.  
+     Sie können auch in der Liste im mittleren Bereich der CDC Designer Console mit der rechten Maustaste auf den Dienst klicken und **Eigenschaften** wählen.  
   
   

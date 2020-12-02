@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5a343bbd9686856d6b8bdb27808673178336ee84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408496"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130266"
 ---
 # <a name="create-clustered-indexes"></a>Erstellen gruppierter Indizes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "88408496"
   
 7.  Wählen Sie im Textfeld **Ausgewählter Primärschlüssel/eindeutiger Schlüssel oder Index** den neuen Index aus.  
   
-8.  Wählen Sie im Datenblatt **Als CLUSTERED erstellen**aus, und wählen Sie in der Dropdownliste rechts neben der Eigenschaft **Ja** aus.  
+8.  Wählen Sie im Datenblatt **Als CLUSTERED erstellen** aus, und wählen Sie in der Dropdownliste rechts neben der Eigenschaft **Ja** aus.  
   
 9. Klicken Sie auf **Schließen**.  
   

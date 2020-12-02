@@ -19,11 +19,11 @@ ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa3a520812d2b28e67b5b863d4480d7d01afaa57
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91728081"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130097"
 ---
 # <a name="excel-connection-manager"></a>Excel-Verbindungs-Manager
 
@@ -37,7 +37,7 @@ ms.locfileid: "91728081"
 
  Wenn Sie einem Paket einen Excel-Verbindungs-Manager hinzufügen, erstellt [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] einen Verbindungs-Manager, der zur Laufzeit als Excel-Verbindung aufgelöst wird, die Eigenschaften des Verbindungs-Managers festlegt und der Sammlung **Verbindungen** im Paket den Verbindungs-Manager hinzufügt.  
   
- Die **ConnectionManagerType** -Eigenschaft des Verbindungs-Managers ist auf **EXCEL**festgelegt.  
+ Die **ConnectionManagerType** -Eigenschaft des Verbindungs-Managers ist auf **EXCEL** festgelegt.  
   
 ## <a name="configure-the-excel-connection-manager"></a>Konfigurieren des Excel-Verbindungs-Managers  
  Es gibt folgende Möglichkeiten, um den Excel-Verbindungs-Manager zu konfigurieren:  

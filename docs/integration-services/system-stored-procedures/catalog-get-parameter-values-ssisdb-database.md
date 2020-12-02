@@ -12,11 +12,11 @@ ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 349a68fa94cfb479c6c3823b2b295a3a65498692
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495411"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129785"
 ---
 # <a name="catalogget_parameter_values-ssisdb-database"></a>catalog.get_parameter_values (SSISDB-Datenbank)
 
@@ -67,7 +67,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 |value_set|**bit**|Wenn der Wert `1`ist, wurde der Parameterwert zugewiesen. Wenn der Wert `0`ist, wurde der Parameterwert nicht zugewiesen.|  
   
 > [!NOTE]  
->  Literalwerte werden als Nur-Text angezeigt. Anstelle vertraulicher Werte wird**NULL** angezeigt.  
+>  Literalwerte werden als Nur-Text angezeigt. Anstelle vertraulicher Werte wird **NULL** angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Diese gespeicherte Prozedur erfordert eine der folgenden Berechtigungen:  

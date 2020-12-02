@@ -14,11 +14,11 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: d02424e5e33823956977c8b32d1ab4e996df5526
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867469"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130936"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Aktivieren der semantischen Suche in Tabellen und Spalten
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "91867469"
   
  **Beispiel 1: Erstellen eines eindeutigen Indexes, eines Volltextindexes und eines semantischen Indexes**  
   
- Im folgenden Beispiel wird der Standardvolltextkatalog **ft**erstellt. Im folgenden Beispiel wird ein eindeutiger Index für die **JobCandidateID** -Spalte der **HumanResources.JobCandidate** -Tabelle der AdventureWorks2012-Beispieldatenbank erstellt. Dieser eindeutige Index ist als Schlüsselspalte für einen Volltextindex erforderlich. Im Beispiel werden dann ein Volltextindex und ein semantischer Index in der **Resume** -Spalte erstellt.  
+ Im folgenden Beispiel wird der Standardvolltextkatalog **ft** erstellt. Im folgenden Beispiel wird ein eindeutiger Index für die **JobCandidateID** -Spalte der **HumanResources.JobCandidate** -Tabelle der AdventureWorks2012-Beispieldatenbank erstellt. Dieser eindeutige Index ist als Schlüsselspalte für einen Volltextindex erforderlich. Im Beispiel werden dann ein Volltextindex und ein semantischer Index in der **Resume** -Spalte erstellt.  
   
 ```sql  
 CREATE FULLTEXT CATALOG ft AS DEFAULT  
@@ -83,7 +83,7 @@ GO
   
  **Beispiel 2: Erstellen eines Volltextindexes und eines semantischen Indexes in mehreren Spalten mit verzögerter Indexauffüllung**  
   
- Im folgenden Beispiel wird ein Volltextkatalog **documents_catalog**in der AdventureWorks2012-Beispieldatenbank erstellt. Im Beispiel wird dann ein Volltextindex erstellt, der diesen neuen Katalog verwendet. Der Volltextindex wird in den Spalten **Title**, **DocumentSummary**und **Document** der Tabelle **Production.Document** erstellt, wohingegen der semantische Index nur in der Spalte **Document** erstellt wird. Dieser Volltextindex verwendet den neu erstellten Volltextkatalog und den vorhandenen eindeutigen Schlüsselindex **PK_Document_DocumentID**. Wie empfohlen, wird dieser Indexschlüssel in der ganzzahligen Spalte **DocumentID**erstellt. Im Beispiel ist die LCID für Englisch, 1033, angegeben. Dies entspricht der Sprache der Daten in den Spalten.  
+ Im folgenden Beispiel wird ein Volltextkatalog **documents_catalog** in der AdventureWorks2012-Beispieldatenbank erstellt. Im Beispiel wird dann ein Volltextindex erstellt, der diesen neuen Katalog verwendet. Der Volltextindex wird in den Spalten **Title**, **DocumentSummary** und **Document** der Tabelle **Production.Document** erstellt, wohingegen der semantische Index nur in der Spalte **Document** erstellt wird. Dieser Volltextindex verwendet den neu erstellten Volltextkatalog und den vorhandenen eindeutigen Schlüsselindex **PK_Document_DocumentID**. Wie empfohlen, wird dieser Indexschlüssel in der ganzzahligen Spalte **DocumentID** erstellt. Im Beispiel ist die LCID für Englisch, 1033, angegeben. Dies entspricht der Sprache der Daten in den Spalten.  
   
  In diesem Beispiel wird auch angegeben, dass die Änderungsnachverfolgung ohne Auffüllung deaktiviert ist. Im Beispiel wird eine **ALTER FULLTEXT INDEX** -Anweisung verwendet, um außerhalb der Spitzenbetriebszeiten eine vollständige Auffüllung mit dem neuen Index zu beginnen und die automatische Änderungsnachverfolgung zu aktivieren.  
   
@@ -237,7 +237,7 @@ GO
     GO  
     ```  
   
--   Klicken Sie im Objekt-Explorer in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]mit der rechten Maustaste auf eine Spalte, und wählen Sie **Eigenschaften**aus. Überprüfen Sie auf der Seite **Allgemein** des Dialogfelds **Spalteneigenschaften** den Wert der Eigenschaft **Statistical Semantics** .  
+-   Klicken Sie im Objekt-Explorer in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]mit der rechten Maustaste auf eine Spalte, und wählen Sie **Eigenschaften** aus. Überprüfen Sie auf der Seite **Allgemein** des Dialogfelds **Spalteneigenschaften** den Wert der Eigenschaft **Statistical Semantics** .  
   
      Der Wert TRUE gibt an, dass die angegebene Spalte zusätzlich zur Volltextindizierung für die semantische Indizierung aktiviert ist.  
   

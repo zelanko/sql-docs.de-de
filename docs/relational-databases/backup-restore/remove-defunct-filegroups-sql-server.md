@@ -16,14 +16,14 @@ helpviewer_keywords:
 - filegroups [SQL Server], defunct
 - unrestored filegroups
 ms.assetid: 055f9c6a-5c18-4942-98e7-ec918f0ff975
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d26bb97408fa1a4118705bd60f0cd0ef10707722
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 37c305f6901819ade1c30c2bc71c9d4cb11f6ce5
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85669730"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130310"
 ---
 # <a name="remove-defunct-filegroups-sql-server"></a>Entfernen von veralteten Dateigruppen (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,17 +68,17 @@ ms.locfileid: "85669730"
   
 #### <a name="to-remove-defunct-filegroups"></a>So entfernen Sie veraltete Dateigruppen  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her, und erweitern Sie dann diese Instanz.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her, und erweitern Sie dann diese Instanz.  
   
 2.  Erweitern Sie **Datenbanken**, klicken Sie mit der rechten Maustaste auf die Datenbank, aus der Sie die Datei löschen möchten, und klicken Sie anschließend auf **Eigenschaften**.  
   
 3.  Wählen Sie die Seite **Dateien** aus.  
   
-4.  Wählen Sie im Raster **Datenbankdateien** die zu löschende Datei aus, klicken Sie auf **Entfernen**und dann auf **OK**.  
+4.  Wählen Sie im Raster **Datenbankdateien** die zu löschende Datei aus, klicken Sie auf **Entfernen** und dann auf **OK**.  
   
 5.  Wählen Sie die Seite **Dateigruppen** aus.  
   
-6.  Wählen Sie im Raster **Zeilen** die zu löschende Dateigruppe aus, klicken Sie auf **Entfernen**und dann auf **OK**.  
+6.  Wählen Sie im Raster **Zeilen** die zu löschende Dateigruppe aus, klicken Sie auf **Entfernen** und dann auf **OK**.  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   

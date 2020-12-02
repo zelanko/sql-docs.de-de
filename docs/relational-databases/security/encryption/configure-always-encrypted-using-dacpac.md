@@ -14,11 +14,11 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4bb90c0f00087f0d2b0b76b3fa66b8cca2f4707c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470102"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130902"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>Konfigurieren der Spaltenverschlüsselung unter Verwendung von Always Encrypted mit einem DAC-Paket 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ Je nach den Unterschieden zwischen den Schemas der DACPAC-Datei und der Zieldate
 Wenn der Upgradevorgang eine Datenverschlüsselung auslöst, müssen Sie auch auf die für die betroffenen Spalten konfigurierten Spaltenhauptschlüssel zugreifen können:
 
 - **Zertifikatspeicher – Lokaler Computer**: Sie benötigen Lesezugriff auf das Zertifikat, das als Spaltenhauptschlüssel verwendet wird, oder Administratorrechte auf dem Computer.
-- **Azure Key Vault**: Sie benötigen die Berechtigungen *create*, *get*, *unwrapKey*, *wrapKey*, *sign*und *verify* für den Tresor, der den Spaltenhauptschlüssel enthält.
+- **Azure Key Vault**: Sie benötigen die Berechtigungen *create*, *get*, *unwrapKey*, *wrapKey*, *sign* und *verify* für den Tresor, der den Spaltenhauptschlüssel enthält.
 - **Schlüsselspeicheranbieter (CNG)** : Bei der Verwendung eines Schlüsselspeichers oder Schlüssels werden Sie möglicherweise aufgefordert, die erforderlichen Berechtigungen und Anmeldeinformationen anzugeben, welche von der Konfiguration des Speichers und des KSP abhängen.
 - **Kryptografiedienstanbieter (Kryptografie-API)** : Bei der Verwendung eines Schlüsselspeichers oder Schlüssels werden Sie möglicherweise aufgefordert, die erforderlichen Berechtigungen und Anmeldeinformationen anzugeben, welche von der Konfiguration des Speichers und des CSP abhängen.
 

@@ -24,11 +24,11 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 93890a2bf8fc0b9209eb9582c8129ee6856865ee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88351286"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130103"
 ---
 # <a name="flat-file-connection-manager"></a>Verbindungs-Manager für Flatfiles
 
@@ -47,11 +47,11 @@ ms.locfileid: "88351286"
 ## <a name="configuration-of-the-flat-file-connection-manager"></a>Konfiguration des Verbindungs-Managers für Flatfiles  
  Wenn Sie einem Paket einen Verbindungs-Manager für Flatfiles hinzufügen, erstellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] einen Verbindungs-Manager, der zur Laufzeit in eine Flatfileverbindung aufgelöst wird, die Eigenschaften der Flatfileverbindung festlegt und den Verbindungs-Manager für Flatfiles zur **Connections**-Sammlung des Pakets hinzufügt.  
   
- Die **ConnectionManagerType** -Eigenschaft des Verbindungs-Managers ist auf **FLATFILE**festgelegt.  
+ Die **ConnectionManagerType** -Eigenschaft des Verbindungs-Managers ist auf **FLATFILE** festgelegt.  
   
  Standardmäßig sucht der Verbindungs-Manager für Flatfiles immer nach einem Zeilentrennzeichen in Daten ohne Anführungszeichen und startet eine neue Zeile, wenn ein Zeilentrennzeichen gefunden wird. Dadurch kann der Verbindungs-Manager für Flatfiles Dateien mit Zeilen, in denen Spaltenfelder fehlen, ordnungsgemäß analysieren.  
   
- In einigen Fällen wird die Paketleistung verbessert, wenn Sie diese Funktion deaktivieren. Sie können diese Funktion deaktivieren, indem Sie die Eigenschaft für den Verbindungs-Manager für Flatfiles von **AlwaysCheckForRowDelimiters**auf **False**festlegen.  
+ In einigen Fällen wird die Paketleistung verbessert, wenn Sie diese Funktion deaktivieren. Sie können diese Funktion deaktivieren, indem Sie die Eigenschaft für den Verbindungs-Manager für Flatfiles von **AlwaysCheckForRowDelimiters** auf **False** festlegen.  
   
  Es gibt folgende Möglichkeiten, um den Verbindungs-Manager für Flatfiles zu konfigurieren:  
   
@@ -71,9 +71,9 @@ ms.locfileid: "88351286"
   
  Sie können die ConnectionString-Eigenschaft für den Verbindungs-Manager für Flatfiles festlegen, indem Sie einen Ausdruck im Eigenschaftenfenster von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]angeben. Um einen Überprüfungsfehler zu vermeiden, gehen Sie wie folgt vor.  
   
--   Wenn Sie einen Ausdruck verwenden, um die Datei anzugeben, fügen Sie einen Dateipfad im Feld **Dateiname** unter **Verbindungs-Manager-Editor für Flatfiles**hinzu.  
+-   Wenn Sie einen Ausdruck verwenden, um die Datei anzugeben, fügen Sie einen Dateipfad im Feld **Dateiname** unter **Verbindungs-Manager-Editor für Flatfiles** hinzu.  
   
--   Legen Sie die Eigenschaft **DelayValidation** im Verbindungs-Manager für Flatfiles auf **True**fest.  
+-   Legen Sie die Eigenschaft **DelayValidation** im Verbindungs-Manager für Flatfiles auf **True** fest.  
   
  Sie können einen Ausdruck verwenden, um einen Dateinamen zur Laufzeit zu erstellen, indem Sie den Verbindungs-Manager für Flatfiles mit dem Flatfileziel verwenden.  
   
@@ -186,13 +186,13 @@ ms.locfileid: "88351286"
 |**Senkrechter Strich {&#124;}**|Als Trennzeichen für Spalten dient ein senkrechter Strich.|  
   
  **Aktualisieren**  
- Zeigt durch Klicken auf **Aktualisieren**an, welche Auswirkung die Änderung der auszulassenden Trennzeichen hat. Diese Schaltfläche wird erst angezeigt, nachdem Sie andere Verbindungsoptionen geändert haben.  
+ Zeigt durch Klicken auf **Aktualisieren** an, welche Auswirkung die Änderung der auszulassenden Trennzeichen hat. Diese Schaltfläche wird erst angezeigt, nachdem Sie andere Verbindungsoptionen geändert haben.  
   
  **Vorschau der Zeilen**  
  Zeigt Beispieldaten in der Flatfile an, die entsprechend den von Ihnen ausgewählten Optionen in Spalten und Zeilen unterteilt sind.  
   
  **Spalten zurücksetzen**  
- Entfernt alle bis auf die ursprünglichen Spalten, wenn Sie auf **Spalten zurücksetzen**klicken.  
+ Entfernt alle bis auf die ursprünglichen Spalten, wenn Sie auf **Spalten zurücksetzen** klicken.  
   
 #### <a name="format--fixed-width"></a>Format = Feste Breite  
  **Schriftart**  
@@ -205,7 +205,7 @@ ms.locfileid: "88351286"
  Geben Sie erst die Länge der Zeile an, bevor Sie einzelnen Spalten Trennzeichen hinzufügen. Sie können auch die vertikale rote Linie im Vorschaufenster verschieben, um das Zeilenende zu kennzeichnen. Der Wert der Zeilenbreite wird automatisch aktualisiert.  
   
  **Spalten zurücksetzen**  
- Entfernt alle bis auf die ursprünglichen Spalten, wenn Sie auf **Spalten zurücksetzen**klicken.  
+ Entfernt alle bis auf die ursprünglichen Spalten, wenn Sie auf **Spalten zurücksetzen** klicken.  
   
 #### <a name="format--ragged-right"></a>Format = Rechter Flatterrand  
   
@@ -233,7 +233,7 @@ ms.locfileid: "88351286"
 |**Senkrechter Strich {&#124;}**|Als Trennzeichen für Zeilen dient ein senkrechter Strich.|  
   
  **Spalten zurücksetzen**  
- Entfernt alle bis auf die ursprünglichen Spalten, wenn Sie auf **Spalten zurücksetzen**klicken.  
+ Entfernt alle bis auf die ursprünglichen Spalten, wenn Sie auf **Spalten zurücksetzen** klicken.  
 ## <a name="flat-file-connection-manager-editor-advanced-page"></a>Verbindungs-Manager-Editor für Flatfiles (Seite Erweitert)
   Verwenden Sie im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** die Seite **Erweitert** , um die Eigenschaften festzulegen, mit denen angegeben wird, wie mit Integration Services Daten in Flatfiles gelesen und geschrieben werden. Sie können die Namen der Spalten in der Flatfile ändern und Eigenschaften festlegen. Zu den Eigenschaften zählen der Datentyp und die Trennzeichen für jede Spalte in der Datei.  
   
@@ -264,7 +264,7 @@ ms.locfileid: "88351286"
 |**InputColumnWidth**|Gibt an, welcher Wert als Anzahl von Bytes gespeichert werden soll; bei Unicode-Dateien wird dieser Wert als Zeichenanzahl angezeigt. Bei mit Trennzeichen versehenen Spalten wird dieser Wert ignoriert.<br /><br /> **Hinweis:** Im Objektmodell heißt diese Eigenschaft ColumnWidth.|  
   
  **Neu**  
- Durch Klicken auf **Neu**fügen Sie eine neue Spalte hinzu. Die neue Spalten wird beim Klicken auf **Neu** standardmäßig am Ende der Liste hinzugefügt. Ferner sind für die Schaltfläche folgende, über die Dropdownliste auswählbare Optionen verfügbar.  
+ Durch Klicken auf **Neu** fügen Sie eine neue Spalte hinzu. Die neue Spalten wird beim Klicken auf **Neu** standardmäßig am Ende der Liste hinzugefügt. Ferner sind für die Schaltfläche folgende, über die Dropdownliste auswählbare Optionen verfügbar.  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -273,7 +273,7 @@ ms.locfileid: "88351286"
 |**Einfügen nach**|Fügt nach der ausgewählten Spalte eine neue Spalte ein.|  
   
  **Löschen**  
- Wählen Sie eine Spalte aus, und entfernen Sie sie dann, indem Sie auf **Löschen**klicken.  
+ Wählen Sie eine Spalte aus, und entfernen Sie sie dann, indem Sie auf **Löschen** klicken.  
   
  **Typen vorschlagen**  
  Im Dialogfeld **Spaltentypen vorschlagen** können Sie die Beispieldaten in der Datei auswerten, um Vorschläge für den Datentyp und die -länge der einzelnen Spalten zu erhalten. Weitere Informationen finden Sie unter [Referenz zur Benutzeroberfläche des Dialogfelds „Spaltentypen vorschlagen“](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md).  
@@ -293,7 +293,7 @@ ms.locfileid: "88351286"
  Geben Sie an, wie viele Zeilen am Anfang von Flatfiles ausgelassen werden sollen.  
   
  **Aktualisieren**  
- Zeigen Sie an, welche Auswirkung die Änderung der Anzahl der auszulassenden Zeilen hat, indem Sie auf **Aktualisieren**klicken. Diese Schaltfläche wird erst angezeigt, nachdem Sie andere Verbindungsoptionen geändert haben.  
+ Zeigen Sie an, welche Auswirkung die Änderung der Anzahl der auszulassenden Zeilen hat, indem Sie auf **Aktualisieren** klicken. Diese Schaltfläche wird erst angezeigt, nachdem Sie andere Verbindungsoptionen geändert haben.  
   
  **Vorschau der Zeilen**  
  Zeigen Sie Beispieldaten in der Flatfile an, die entsprechend der von Ihnen gewählten Option in Spalten und Zeilen unterteilt sind.  

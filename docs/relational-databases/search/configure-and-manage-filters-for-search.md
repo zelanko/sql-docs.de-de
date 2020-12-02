@@ -15,11 +15,11 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ebeaebbc4a082bcb7051dc3d6c784b6ce1ec11fc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420354"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130952"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>Konfigurieren und Verwalten von Filtern für die Suche
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88420354"
 ## <a name="filters-and-document-types"></a>Filter und Dokumenttypen
 Ein bestimmter Filter ist immer spezifisch für einen bestimmten Dokumenttyp (DOC, PDF, XLS, XML usw.). Diese Filter implementieren die IFilter-Schnittstelle. Weitere Informationen zu diesen Dokumenttypen erhalten Sie, indem Sie die [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) -Katalogsicht abfragen.  
   
-Binäre Dokumente können in einer einzelnen **varbinary(max)** - oder **image** -Spalte gespeichert werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wählt für jedes Dokument anhand der Dateierweiterung den entsprechenden Filter aus. Da die Dateierweiterung nicht sichtbar ist, wenn die Datei in einer **varbinary(max)** - oder **image** -Spalte gespeichert wird, muss die Dateierweiterung (DOC, XLS, PDF usw.) in einer separaten Spalte der Tabelle gespeichert werden. Diese wird als Typspalte bezeichnet. Die Typspalte kann einen beliebigen zeichenbasierten Datentyp aufweisen. Sie enthält die Dokumentdateierweiterung, beispielsweise DOC für ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word-Dokument. In der **Document** -Tabelle in [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]hat die **Document** -Spalte den Typ **varbinary(max)**, und die Typspalte **FileExtension**hat den Typ **nvarchar(8)**.  
+Binäre Dokumente können in einer einzelnen **varbinary(max)** - oder **image** -Spalte gespeichert werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wählt für jedes Dokument anhand der Dateierweiterung den entsprechenden Filter aus. Da die Dateierweiterung nicht sichtbar ist, wenn die Datei in einer **varbinary(max)** - oder **image** -Spalte gespeichert wird, muss die Dateierweiterung (DOC, XLS, PDF usw.) in einer separaten Spalte der Tabelle gespeichert werden. Diese wird als Typspalte bezeichnet. Die Typspalte kann einen beliebigen zeichenbasierten Datentyp aufweisen. Sie enthält die Dokumentdateierweiterung, beispielsweise DOC für ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word-Dokument. In der **Document** -Tabelle in [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]hat die **Document** -Spalte den Typ **varbinary(max)**, und die Typspalte **FileExtension** hat den Typ **nvarchar(8)**.  
 
 **So zeigen Sie die Typspalte in einem vorhandenen Volltextindex an**  
   

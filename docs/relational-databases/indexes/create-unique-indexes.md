@@ -20,18 +20,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 59ab82f18d59bd6a2f8df0c236cd44031b740ee1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486874"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130254"
 ---
 # <a name="create-unique-indexes"></a>Erstellen eindeutiger Indizes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   In diesem Thema wird beschrieben, wie ein eindeutiger Index auf einer Tabelle in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt wird. Ein eindeutiger Index garantiert, dass der Indexschlüssel keine doppelten Werte enthält und dass deshalb jede Zeile in der Tabelle in gewisser Weise eindeutig ist. Es gibt keine bedeutenden Unterschiede zwischen dem Erstellen einer UNIQUE-Einschränkung und dem Erstellen eines eindeutigen, von Einschränkungen unabhängigen Index. Die Datenüberprüfung erfolgt auf dieselbe Weise, und der Abfrageoptimierer macht keinen Unterschied zwischen einem durch eine Einschränkung erstellten eindeutigen Index und einem manuell erstellten. Das Erstellen einer UNIQUE-Einschränkung auf der Spalte verdeutlicht jedoch die Zielsetzung des Indexes. Weitere Informationen zu UNIQUE-Einschränkungen finden Sie unter [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
- Beim Erstellen eines eindeutigen Indexes können Sie eine Option aktivieren, um doppelt vorhandene Schlüssel zu ignorieren. Wenn diese Option auf **Ja** festgelegt ist und Sie versuchen, doppelte Schlüssel zu erstellen, indem Sie (mit der INSERT-Anweisung) Daten hinzufügen, die mehrere Zeilen betreffen, wird die Zeile mit dem Duplikat nicht hinzugefügt. Wenn die Option auf **Nein**festgelegt ist, schlägt die gesamte INSERT-Operation fehl, und alle Daten werden zurückgesetzt.  
+ Beim Erstellen eines eindeutigen Indexes können Sie eine Option aktivieren, um doppelt vorhandene Schlüssel zu ignorieren. Wenn diese Option auf **Ja** festgelegt ist und Sie versuchen, doppelte Schlüssel zu erstellen, indem Sie (mit der INSERT-Anweisung) Daten hinzufügen, die mehrere Zeilen betreffen, wird die Zeile mit dem Duplikat nicht hinzugefügt. Wenn die Option auf **Nein** festgelegt ist, schlägt die gesamte INSERT-Operation fehl, und alle Daten werden zurückgesetzt.  
   
 > [!NOTE]  
 >  Sie können keinen eindeutigen Index für eine einzelne Spalte erstellen, wenn mehr als eine Zeile der Spalte NULL enthält. Ebenso können Sie keinen eindeutigen Index für mehrere Spalten erstellen, wenn die Spaltenkombination in mehreren Zeilen NULL enthält. Diese werden beim Indizieren als doppelt vorhandene Werte betrachtet.  
@@ -58,7 +58,7 @@ ms.locfileid: "88486874"
   
 ###  <a name="benefits-of-a-unique-index"></a><a name="Benefits"></a> Vorteile eines eindeutigen Indexes  
   
--   Eindeutige Indizes für mehrere Spalten stellen sicher, dass jede Kombination der Werte in der indizierten Spalte eindeutig ist. Wenn z. B. ein eindeutiger Index für eine Kombination der Spalten **LastName**, **FirstName**und **MiddleName** erstellt wird, können keine zwei Zeilen in der Tabelle dieselbe Kombination der Werte in diesen Spalten aufweisen.  
+-   Eindeutige Indizes für mehrere Spalten stellen sicher, dass jede Kombination der Werte in der indizierten Spalte eindeutig ist. Wenn z. B. ein eindeutiger Index für eine Kombination der Spalten **LastName**, **FirstName** und **MiddleName** erstellt wird, können keine zwei Zeilen in der Tabelle dieselbe Kombination der Werte in diesen Spalten aufweisen.  
   
 -   Unter der Voraussetzung, dass die Daten in jeder Spalte eindeutig sind, können Sie einen eindeutigen gruppierten Index und mehrere eindeutige nicht gruppierte Indizes in derselben Tabelle erstellen.  
   
@@ -106,9 +106,9 @@ ms.locfileid: "88486874"
   
 2.  Erweitern Sie den Ordner **Tabellen** .  
   
-3.  Klicken Sie mit der rechten Maustaste auf die Tabelle, in der Sie einen eindeutigen Index erstellen möchten, und wählen Sie **Entwurf**aus.  
+3.  Klicken Sie mit der rechten Maustaste auf die Tabelle, in der Sie einen eindeutigen Index erstellen möchten, und wählen Sie **Entwurf** aus.  
   
-4.  Wählen Sie im Menü **Tabellen-Designer****Indizes/Schlüssel**aus.  
+4.  Wählen Sie im Menü **Tabellen-Designer****Indizes/Schlüssel** aus.  
   
 5.  Klicken Sie im Dialogfeld **Indizes/Schlüssel** auf **Hinzufügen**.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "88486874"
   
 8.  Wählen Sie **Spalten** aus, und klicken Sie dann auf die Auslassungspunkte **(...)** .  
   
-9. Wählen Sie im Dialogfeld **Indexspalten** unter **Spaltenname**die Spalten aus, die Sie indizieren möchten. Sie können bis zu 16 Spalten auswählen. Um optimale Ergebnisse zu gewährleisten, sollten Sie für jeden Index höchstens zwei Spalten auswählen. Für jede ausgewählte Spalte können Sie festlegen, ob die darin enthaltenen Werte über den Index in aufsteigender oder absteigender Reihenfolge geordnet werden.  
+9. Wählen Sie im Dialogfeld **Indexspalten** unter **Spaltenname** die Spalten aus, die Sie indizieren möchten. Sie können bis zu 16 Spalten auswählen. Um optimale Ergebnisse zu gewährleisten, sollten Sie für jeden Index höchstens zwei Spalten auswählen. Für jede ausgewählte Spalte können Sie festlegen, ob die darin enthaltenen Werte über den Index in aufsteigender oder absteigender Reihenfolge geordnet werden.  
   
 10. Wenn alle Spalten für den Index ausgewählt sind, klicken Sie auf **OK**.  
   

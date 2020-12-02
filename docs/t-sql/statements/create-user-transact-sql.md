@@ -31,11 +31,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 43214b8f1e0b81b75c34c33b8b8b7df53bdd8d03
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300529"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131391"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 
@@ -177,7 +177,7 @@ CREATE USER user_name
 
 ## <a name="arguments"></a>Argumente
  *user_name*  
- Gibt den Namen an, mit dem der Benutzer innerhalb dieser Datenbank identifiziert wird. *user_name* ist vom Datentyp **sysname** . Der Name kann bis zu 128 Zeichen lang sein. Wenn Sie einen Benutzer auf Basis eines Windows-Prinzipals erstellen, wird der Prinzipalname von Windows als Benutzername verwendet, es sei denn, ein abweichender Benutzername wird angegeben.  
+ Gibt den Namen an, mit dem der Benutzer innerhalb dieser Datenbank identifiziert wird. *user_name* ist vom Datentyp **sysname**. Der Name kann bis zu 128 Zeichen lang sein. Wenn Sie einen Benutzer auf Basis eines Windows-Prinzipals erstellen, wird der Prinzipalname von Windows als Benutzername verwendet, es sei denn, ein abweichender Benutzername wird angegeben.  
   
  LOGIN *login_name*  
  Gibt die Anmeldung an, für die der Datenbankbenutzer erstellt wird. *login_name* muss ein gültiger Anmeldename im Server sein. Dies kann ein Anmeldename auf Basis eines Windows-Prinzipals (Benutzer oder Gruppe) oder ein Anmeldename mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung sein. Wird diese SQL Server-Anmeldung in die Datenbank eingetragen, erhält sie den Namen und die ID des Datenbankbenutzers, der erstellt wird. Wenn Sie einen von einem Windows-Prinzipal zugeordneten Anmeldenamen erstellen, verwenden Sie das Format **[** _\<domainName\>_ **\\** _\<loginName\>_ **]** . Beispiele finden Sie unter [Syntaxzusammenfassung](#SyntaxSummary).  
@@ -187,11 +187,11 @@ CREATE USER user_name
  WITH DEFAULT_SCHEMA = *schema_name*  
  Gibt das erste Schema an, das vom Server beim Auflösen der Namen von Objekten für diesen Datenbankbenutzer durchsucht wird.  
   
- ' *windows_principal* '  
+ '*windows_principal*'  
  Gibt den Windows-Prinzipal an, für den der Datenbankbenutzer erstellt wird. *windows_principal* kann ein Windows-Benutzer oder eine Windows-Gruppe sein. Der Benutzer wird auch dann erstellt, wenn kein Anmeldename für *windows_principal* vorhanden ist. Wenn *windows_principal* beim Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht über einen Anmeldenamen verfügt, muss vom Windows-Prinzipal über die Mitgliedschaft in einer Windows-Gruppe mit einem Anmeldenamen eine Authentifizierung bei [!INCLUDE[ssDE](../../includes/ssde-md.md)] durchgeführt werden, oder die eigenständige Datenbank muss in der Verbindungszeichenfolge als Anfangskatalog angegeben sein. Wenn Sie einen Benutzer anhand eines Windows-Prinzipals erstellen, verwenden Sie das Format **[** _\<domainName\>_ **\\** _\<loginName\>_ **]** . Beispiele finden Sie unter [Syntaxzusammenfassung](#SyntaxSummary). Benutzer auf Grundlage von Active Directory-Benutzern sind auf Namen mit weniger als 21 Zeichen beschränkt.
   
- ' *Azure_Active_Directory_principal* '  
- **Gilt für** : [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
+ '*Azure_Active_Directory_principal*'  
+ **Gilt für**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
   
  Gibt den Azure Active Directory-Prinzipal an, für den der Datenbankbenutzer erstellt wird. *Azure_Active_Directory_principal* kann ein Azure Active Directory-Benutzer, eine Azure Active Directory-Gruppe oder eine Azure Active Directory-Anwendung sein. (Azure Active Directory-Benutzer können in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] nicht über Windows-Authentifizierungsanmeldungen verfügen. Nur Datenbankbenutzer können dies tun.) Die Verbindungszeichenfolge muss die eigenständige Datenbank als den Anfangskatalog angeben.
 
@@ -208,7 +208,7 @@ CREATE USER user_name
   
  Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SQL-Datenbank unter Verwendung der Azure Active Directory-Authentifizierung](/azure/azure-sql/database/authentication-aad-overview).  
   
-WITH PASSWORD = ' *password* '  
+WITH PASSWORD = '*password*'  
  **Gilt für:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Kann nur in einer eigenständigen Datenbank verwendet werden. Gibt das Kennwort für den Benutzer an, der erstellt wird. Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] werden gespeicherte Kennwortinformationen mithilfe der SHA-512-Komponente des mit Salt verschlüsselten Kennworts berechnet.  
@@ -235,11 +235,11 @@ DEFAULT_LANGUAGE = *{ NONE \| \<lcid> \| \<language name> \| \<language salias> 
 >  *DEFAULT_LANGUAGE* wird nur für Benutzer von eigenständigen Datenbanken verwendet.  
   
 SID = *sid*  
- **Gilt für** :  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
  Gilt nur für Benutzer mit Kennwörtern ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung) in einer eigenständigen Datenbank. Gibt die SID des neuen Datenbankbenutzers an. Wenn diese Option nicht ausgewählt wird, wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatisch ein SID zugewiesen. Erstellen Sie mit dem SID-Parameter Benutzer in mehreren Datenbanken, die die gleiche Identität (SID) aufweisen. Dies ist beim Erstellen von Benutzern in mehreren Datenbanken für die Vorbereitung eines Always On-Failovers hilfreich. Fragen Sie zum Bestimmen der SID eines Benutzers sys.database_principals ab.  
   
-ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ON | **OFF** ]  
+ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ON | **OFF**]  
  **Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Verhindert bei Massenkopiervorgängen kryptografische Metadatenüberprüfungen auf dem Server. Dadurch kann der Benutzer durch Massenkopiervorgänge Daten zwischen Tabellen oder Datenbanken austauschen, ohne dabei die Daten zu verschlüsseln. Der Standardwert ist OFF.  
@@ -298,7 +298,7 @@ Beim Erstellen des Benutzers in Azure SQL Managed Instance muss „login_name“
   
 **Benutzer mit Authentifizierung bei der Datenbank**  
   
- Die folgende Liste enthält mögliche Syntaxen für Benutzer, die nur in einer eigenständigen Datenbank verwendet werden können. Die erstellten Benutzer weisen keine Beziehung zu Anmeldenamen in der **master** -Datenbank auf. Das Standardschema und die Sprachoptionen sind nicht aufgeführt.  
+ Die folgende Liste enthält mögliche Syntaxen für Benutzer, die nur in einer eigenständigen Datenbank verwendet werden können. Die erstellten Benutzer weisen keine Beziehung zu Anmeldenamen in der **master**-Datenbank auf. Das Standardschema und die Sprachoptionen sind nicht aufgeführt.  
   
 > [!IMPORTANT]  
 >  Diese Syntax gewährt Benutzern Zugriff auf die Datenbank sowie neuen Zugriff auf [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -309,7 +309,7 @@ Beim Erstellen des Benutzers in Azure SQL Managed Instance muss „login_name“
   
 **Benutzer auf Basis eines Windows-Prinzipals ohne Anmeldenamen in der master-Datenbank**  
   
- Die folgende Liste enthält verschiedene Syntaxmöglichkeiten für Benutzer mit Zugriff auf [!INCLUDE[ssDE](../../includes/ssde-md.md)] über eine Windows-Gruppe, die nicht über einen Anmeldenamen in der **master** -Datenbank verfügen. Diese Syntax kann in allen Datenbanktypen verwendet werden. Das Standardschema und die Sprachoptionen sind nicht aufgeführt.  
+ Die folgende Liste enthält verschiedene Syntaxmöglichkeiten für Benutzer mit Zugriff auf [!INCLUDE[ssDE](../../includes/ssde-md.md)] über eine Windows-Gruppe, die nicht über einen Anmeldenamen in der **master**-Datenbank verfügen. Diese Syntax kann in allen Datenbanktypen verwendet werden. Das Standardschema und die Sprachoptionen sind nicht aufgeführt.  
   
  Diese Syntax ähnelt der von Benutzern mit Anmeldenamen in der master-Datenbank; im Unterschied dazu fehlt hier jedoch der Anmeldename für die master-Datenbank. Der Benutzer muss über den Anmeldenamen einer Windows-Gruppe Zugriff auf [!INCLUDE[ssDE](../../includes/ssde-md.md)] haben.  
   
@@ -336,11 +336,11 @@ Beim Erstellen des Benutzers in Azure SQL Managed Instance muss „login_name“
  Wenn Sie einen Benutzer erstellen, erhält dieser zwar Zugriff auf eine Datenbank, nicht jedoch notwendigerweise auch auf die darin enthaltenen Objekte. Nach dem Erstellen eines Benutzers wird dieser daher häufig einer oder mehreren Datenbankrollen hinzugefügt, die über Zugriffsberechtigungen für entsprechende Objekte verfügen, oder dem Benutzer werden Berechtigungen für einzelne Objekte erteilt. Informationen zum Entwerfen eines Berechtigungssystems finden Sie unter [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
 ### <a name="special-considerations-for-contained-databases"></a>Spezielle Überlegungen zu eigenständigen Datenbanken  
- Wenn ein Benutzer beim Herstellen einer Verbindung mit einer eigenständigen Datenbank nicht über einen Anmeldenamen in der **master** -Datenbank verfügt, muss die Verbindungszeichenfolge den Namen der eigenständigen Datenbank als Anfangskatalog beinhalten. Der Anfangskatalogparameter ist für Benutzer von eigenständigen Datenbanken mit Kennwort stets erforderlich.  
+ Wenn ein Benutzer beim Herstellen einer Verbindung mit einer eigenständigen Datenbank nicht über einen Anmeldenamen in der **master**-Datenbank verfügt, muss die Verbindungszeichenfolge den Namen der eigenständigen Datenbank als Anfangskatalog beinhalten. Der Anfangskatalogparameter ist für Benutzer von eigenständigen Datenbanken mit Kennwort stets erforderlich.  
   
  In einer eigenständigen Datenbank hilft das Erstellen von Benutzern, eine Trennung zwischen der Datenbank und der Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] herzustellen, damit die Datenbank leichter in eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verschoben werden kann. Weitere Informationen finden Sie unter [Eigenständige Datenbanken](../../relational-databases/databases/contained-databases.md) und [Eigenständige Datenbankbenutzer – machen Sie Ihre Datenbank portabel](../../relational-databases/security/contained-database-users-making-your-database-portable.md). Informationen zum Ändern eines Datenbankbenutzers von einem Benutzer mit Anmeldenamen auf Basis einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung in den Benutzer einer eigenständigen Datenbank mit Kennwort finden Sie unter [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).  
   
- Benutzer in einer eigenständigen Datenbank müssen nicht über Anmeldenamen in der **master** -Datenbank verfügen. Administratoren von [!INCLUDE[ssDE](../../includes/ssde-md.md)] sollten wissen, dass der Zugriff auf eine eigenständige Datenbank auf Datenbankebene und nicht auf der Ebene von [!INCLUDE[ssDE](../../includes/ssde-md.md)] gesteuert wird. Weitere Informationen finden Sie unter [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
+ Benutzer in einer eigenständigen Datenbank müssen nicht über Anmeldenamen in der **master**-Datenbank verfügen. Administratoren von [!INCLUDE[ssDE](../../includes/ssde-md.md)] sollten wissen, dass der Zugriff auf eine eigenständige Datenbank auf Datenbankebene und nicht auf der Ebene von [!INCLUDE[ssDE](../../includes/ssde-md.md)] gesteuert wird. Weitere Informationen finden Sie unter [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
  Bei Verwendung der in Datenbanken enthaltenen Benutzern auf [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] konfigurieren Sie den Zugriff mithilfe einer Firewallregel auf Datenbankebene, anstatt einer Firewallregel auf Serverebene. Weitere Informationen finden Sie unter [sp_set_database_firewall_rule &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md).
  
@@ -380,7 +380,7 @@ GO
 ### <a name="c-creating-a-database-user-from-a-certificate"></a>C. Erstellen eines Datenbankbenutzers über ein Zertifikat  
  Im folgenden Beispiel wird der Datenbankbenutzer `JinghaoLiu` über das `CarnationProduction50`-Zertifikat erstellt.  
   
-**Gilt für** :  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -419,7 +419,7 @@ GO
 ### <a name="e-creating-a-contained-database-user-with-password"></a>E. Erstellen eines Benutzers einer eigenständigen Datenbank mit Kennwort  
  Im folgenden Beispiel wird der Benutzer einer eigenständigen Datenbank mit Kennwort erstellt. Dieses Beispiel kann nur in einer eigenständigen Datenbank ausgeführt werden.  
   
-**Gilt für** :  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher. Dieses Beispiel funktioniert in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], wenn DEFAULT_LANGUAGE entfernt wird.  
+**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher. Dieses Beispiel funktioniert in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], wenn DEFAULT_LANGUAGE entfernt wird.  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -434,7 +434,7 @@ GO
 ### <a name="f-creating-a-contained-database-user-for-a-domain-login"></a>F. Erstellen eines Benutzers einer eigenständigen Datenbank für eine Domänenanmeldung  
  Im folgenden Beispiel wird ein Benutzer für eine eigenständige Datenbank mit dem Anmeldenamen „Fritz“ in der Domäne „Contoso“ erstellt. Dieses Beispiel kann nur in einer eigenständigen Datenbank ausgeführt werden.  
   
-**Gilt für** :  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -446,7 +446,7 @@ GO
 ### <a name="g-creating-a-contained-database-user-with-a-specific-sid"></a>G. Erstellen eines Benutzers einer eigenständigen Datenbank mit einer bestimmten SID  
  Im folgenden Beispiel wird ein authentifizierter SQL Server-Benutzer einer eigenständigen Datenbank mit dem Namen CarmenW erstellt. Dieses Beispiel kann nur in einer eigenständigen Datenbank ausgeführt werden.  
   
-**Gilt für** :  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
 ```sql  
 USE AdventureWorks2012 ;  

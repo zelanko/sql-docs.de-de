@@ -25,11 +25,11 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 630fea974e83507984cae8a4ec2b7938fc551d25
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425282"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130040"
 ---
 # <a name="execute-package-utility-dtexecui"></a>Paketausführungsprogramm (dtexecui)
 
@@ -52,11 +52,11 @@ ms.locfileid: "88425282"
   
 3.  Geben Sie im Dialogfeld **Verbindung mit Server herstellen** in der Liste **Servername** den Servernamen ein, und klicken Sie anschließend auf **Verbinden**.  
   
-4.  Erweitern Sie den Ordner **Gespeicherte Pakete**und dessen Unterordner, klicken Sie mit der rechten Maustaste auf das Paket, das Sie ausführen möchten, und klicken Sie anschließend auf **Paket ausführen**.  
+4.  Erweitern Sie den Ordner **Gespeicherte Pakete** und dessen Unterordner, klicken Sie mit der rechten Maustaste auf das Paket, das Sie ausführen möchten, und klicken Sie anschließend auf **Paket ausführen**.  
   
 ### <a name="to-open-the-execute-package-utility-at-the-command-prompt"></a>So öffnen Sie das Paketausführungsprogramm an der Eingabeaufforderung  
   
--   Öffnen Sie ein Eingabeaufforderungsfenster, und führen Sie **dtexecui**aus.  
+-   Öffnen Sie ein Eingabeaufforderungsfenster, und führen Sie **dtexecui** aus.  
   
  In den folgenden Abschnitten werden Seiten des Dialogfelds **Paketausführungshilfsprogramm** beschrieben.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "88425282"
  Wählen Sie diese Option aus, um die Windows-Authentifizierung zu verwenden und sich mithilfe eines Microsoft Windows-Benutzerkontos anzumelden.  
   
  **SQL Server-Authentifizierung verwenden**  
- Diese Option ist nicht verfügbar, wenn Sie ein in **SSIS-Paketspeicher**gespeichertes Paket ausführen.  
+ Diese Option ist nicht verfügbar, wenn Sie ein in **SSIS-Paketspeicher** gespeichertes Paket ausführen.  
   
  **Pakete**  
  Geben Sie den Namen des Pakets ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)**, um das Paket mithilfe des Dialogfelds **SSIS-Paket auswählen** zu suchen.  

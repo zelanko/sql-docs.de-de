@@ -12,11 +12,11 @@ ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7aa744bd7dd3d0330dc3e996b2af90d500be9d55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495308"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129504"
 ---
 # <a name="catalogcatalog_properties-ssisdb-database"></a>catalog.catalog_properties (SSISDB-Datenbank)
 
@@ -49,7 +49,7 @@ ms.locfileid: "88495308"
 |**SERVER_CUSTOMIZED_LOGGING_LEVEL**|Der benutzerdefinierte Standardprotokolliergrad für den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server. Wenn Sie keine benutzerdefinierte Protokolliergrade erstellt haben, kann diese Eigenschaft nicht in der Sicht angezeigt werden.|
 |**SERVER_LOGGING_LEVEL**|Der Standardprotokolliergrad für den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server.|
 |**SERVER_OPERATION_ENCRYPTION_LEVEL**|Wenn der Wert „1“ (`PER_EXECUTION`) lautet, werden für jede *Ausführung* das Zertifikat und der symmetrische Schlüssel erstellt, die zum Schutz von sensiblen Ausführungsparameters und -protokollen verwendet werden. Wenn der Wert „2“ (`PER_PROJECT`) lautet, werden das Zertifikat und der symmetrische Schlüssel jeweils einmal für jedes *Projekt* erstellt. Weitere Informationen zu dieser Eigenschaft finden Sie unter den Hinweisen für die gespeicherte SSIS-Prozedur [catalog.cleanup_server_log](../system-stored-procedures/catalog-cleanup-server-log.md#remarks).|
-|**VERSION_CLEANUP_ENABLED**|Wenn der Wert `TRUE`ist, wird nur die von **MAX_PROJECT_VERSIONS** angegebene Anzahl von Projektversionen im Katalog gespeichert, und alle anderen Projektversionen werden gelöscht. Wenn der Wert **FALSE**ist, werden alle Projektversionen im Katalog gespeichert. Hinweis: Das Vorgangscleanup erfolgt durch einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Auftrag.|
+|**VERSION_CLEANUP_ENABLED**|Wenn der Wert `TRUE`ist, wird nur die von **MAX_PROJECT_VERSIONS** angegebene Anzahl von Projektversionen im Katalog gespeichert, und alle anderen Projektversionen werden gelöscht. Wenn der Wert **FALSE** ist, werden alle Projektversionen im Katalog gespeichert. Hinweis: Das Vorgangscleanup erfolgt durch einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Auftrag.|
 |||
   
 ## <a name="permissions"></a>Berechtigungen  

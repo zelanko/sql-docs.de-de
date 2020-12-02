@@ -16,11 +16,11 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8dd26e26f4b567918f56187b5be4442b286ffabb
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006339"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130196"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Erstellen, Aufbauen und Abfragen von geography-Instanzen
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -163,7 +163,7 @@ ms.locfileid: "92006339"
  [STEndpoint &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/stendpoint-geography-data-type.md)  
   
 ###  <a name="dimension"></a><a name="dimension"></a> Dimension  
- Eine nicht leere **geographyy** -Instanz kann null-, ein- oder zweidimensional sein. Nulldimensionale **geography** -Instanzen, wie z.B. **Point** und **MultiPoint**, haben weder Länge noch Fläche. Eindimensionale Objekte, wie z.B. **LineString, CircularString**, **CompoundCurve**und **MultiLineString**, haben Länge. Zweidimensionale Instanzen, wie z.B. **Polygon, CurvePolygon**und **MultiPolygon**, haben Fläche und Länge. Für leere Instanzen wird als Dimension -1 ausgegeben, und eine **GeometryCollection** gibt die maximale Dimension der darin enthaltenen Elemente zurück.  
+ Eine nicht leere **geographyy** -Instanz kann null-, ein- oder zweidimensional sein. Nulldimensionale **geography** -Instanzen, wie z.B. **Point** und **MultiPoint**, haben weder Länge noch Fläche. Eindimensionale Objekte, wie z.B. **LineString, CircularString**, **CompoundCurve** und **MultiLineString**, haben Länge. Zweidimensionale Instanzen, wie z.B. **Polygon, CurvePolygon** und **MultiPolygon**, haben Fläche und Länge. Für leere Instanzen wird als Dimension -1 ausgegeben, und eine **GeometryCollection** gibt die maximale Dimension der darin enthaltenen Elemente zurück.  
   
  **So geben Sie die Dimension einer Instanz zurück**  
  [STDimension &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/stdimension-geography-data-type.md)  
@@ -181,7 +181,7 @@ ms.locfileid: "92006339"
  [STIsEmpty &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  
   
 ###  <a name="closure"></a><a name="closure"></a> Abgeschlossenheit  
- Eine _geschlossene_**geography**-Instanz ist eine Abbildung, deren Ausgangs- und Endpunkt identisch ist. Alle**Polygon** -Instanzen gelten als geschlossen. Alle**Point** -Instanzen gelten als nicht geschlossen.  
+ Eine _geschlossene_**geography**-Instanz ist eine Abbildung, deren Ausgangs- und Endpunkt identisch ist. Alle **Polygon** -Instanzen gelten als geschlossen. Alle **Point** -Instanzen gelten als nicht geschlossen.  
   
  Ein Ring ist eine einfache, geschlossene **LineString** -Instanz.  
   

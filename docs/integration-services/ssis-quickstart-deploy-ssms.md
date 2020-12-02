@@ -12,11 +12,11 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/21/2018
 ms.openlocfilehash: fc86054be556dbb34d212b24172e50fbf52f8980
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344551"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129974"
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>Bereitstellen eines SSIS-Projekts mit SQL Server Management Studio (SSMS)
 
@@ -76,19 +76,19 @@ Verwenden Sie SQL Server Management Studio, um eine Verbindung mit dem SSIS-Kata
    | **Anmeldung** | Das Serveradministratorkonto | Dabei handelt es sich um das Konto, das Sie beim Erstellen des Servers angegeben haben. |
    | **Kennwort** | Das Kennwort für das Serveradministratorkonto | Dabei handelt es sich um das Kennwort, das Sie beim Erstellen des Servers angegeben haben. |
 
-3. Klicken Sie auf **Verbinden** . Das Fenster „Objekt-Explorer“ wird in SSMS geöffnet. 
+3. Klicken Sie auf **Verbinden**. Das Fenster „Objekt-Explorer“ wird in SSMS geöffnet. 
 
-4. Erweitern Sie im Objekt-Explorer **Integration Services-Kataloge** und dann **SSISDB** , um die Objekte in der SSIS-Katalogdatenbank anzuzeigen.
+4. Erweitern Sie im Objekt-Explorer **Integration Services-Kataloge** und dann **SSISDB**, um die Objekte in der SSIS-Katalogdatenbank anzuzeigen.
 
 ## <a name="start-the-integration-services-deployment-wizard"></a>Starten des Bereitstellungs-Assistenten für Integration Services
-1. Erweitern Sie im Objekt-Explorer den Knoten **Integration Services-Kataloge** , den Knoten **SSISDB** und dann einen Order.
+1. Erweitern Sie im Objekt-Explorer den Knoten **Integration Services-Kataloge**, den Knoten **SSISDB** und dann einen Order.
 
 2.  Wählen Sie den Knoten **Projekte** aus.
 
-3.  Klicken Sie mit der rechten Maustaste auf den Knoten **Projekte** , und wählen Sie **Projekt bereitstellen** aus. Der Bereitstellungs-Assistent für Integration Services wird geöffnet. Sie können ein Projekt aus dem aktuellen Katalog oder dem Dateisystem bereitstellen.
+3.  Klicken Sie mit der rechten Maustaste auf den Knoten **Projekte**, und wählen Sie **Projekt bereitstellen** aus. Der Bereitstellungs-Assistent für Integration Services wird geöffnet. Sie können ein Projekt aus dem aktuellen Katalog oder dem Dateisystem bereitstellen.
 
 ## <a name="deploy-a-project-with-the-wizard"></a>Bereitstellen eines Projekts mit dem Assistenten
-1. Lesen Sie auf der Seite **Einführung** des Assistenten die Einführung. Klicken Sie auf **Weiter** , um die Seite **Quelle auswählen** zu öffnen.
+1. Lesen Sie auf der Seite **Einführung** des Assistenten die Einführung. Klicken Sie auf **Weiter**, um die Seite **Quelle auswählen** zu öffnen.
 
 2. Wählen Sie auf der Seite **Quelle auswählen** das vorhandene SSIS-Projekt aus, das bereitgestellt werden soll.
     -   Um eine Projektbereitstellungsdatei bereitzustellen, die Sie über ein Projekt in einer Entwicklungsumgebung erstellt haben, wählen Sie **Projektbereitstellungsdatei** aus, und geben Sie den Pfad für die ISPAC-Datei ein.
@@ -97,9 +97,9 @@ Verwenden Sie SQL Server Management Studio, um eine Verbindung mit dem SSIS-Kata
   
 3.  Wählen Sie auf der Seite **Ziel auswählen** das Ziel für das Projekt aus.
     -   Geben Sie den vollqualifizierten Servernamen ein. Wenn es sich bei dem Zielserver um einen Azure SQL-Datenbank-Server handelt, liegt der Name im Format `<server_name>.database.windows.net` vor.
-    -   Stellen Sie die Authentifizierungsinformationen bereit, und klicken Sie dann auf **Verbinden** . Weitere Informationen finden Sie in diesem Artikel unter [Authentifizierungsmethoden für die Bereitstellung](#authentication-methods-for-deployment).
-    -   Klicken Sie dann auf **Durchsuchen** , um den Zielordner in SSISDB auszuwählen.
-    -   Klicken Sie dann auf **Weiter** , um die Seite **Überprüfen** zu öffnen. (Die Schaltfläche **Weiter** ist nur nach der Auswahl von **Verbinden** aktiviert.)
+    -   Stellen Sie die Authentifizierungsinformationen bereit, und klicken Sie dann auf **Verbinden**. Weitere Informationen finden Sie in diesem Artikel unter [Authentifizierungsmethoden für die Bereitstellung](#authentication-methods-for-deployment).
+    -   Klicken Sie dann auf **Durchsuchen**, um den Zielordner in SSISDB auszuwählen.
+    -   Klicken Sie dann auf **Weiter**, um die Seite **Überprüfen** zu öffnen. (Die Schaltfläche **Weiter** ist nur nach der Auswahl von **Verbinden** aktiviert.)
   
 4.  Überprüfen Sie auf der Seite **Überprüfen** die Einstellungen, die Sie ausgewählt haben.
     -   Sie können Ihre Auswahl ändern, indem Sie auf **Zurück** klicken oder indem Sie auf einen der Schritte im linken Bereich klicken.
@@ -108,9 +108,9 @@ Verwenden Sie SQL Server Management Studio, um eine Verbindung mit dem SSIS-Kata
 5.  Wenn Sie eine Bereitstellung auf einem Azure SQL-Datenbank-Server durchführen, wird die Seite **Überprüfen** geöffnet. Diese prüft die im Projekt enthaltenen Pakete auf bekannte Probleme, die möglicherweise eine erwartungsgemäße Ausführung in der Azure-SSIS Integration Runtime verhindern. Weitere Informationen finden Sie unter [Überprüfen von in Azure bereitgestellten SSIS-Paketen](lift-shift/ssis-azure-validate-packages.md).
 
 6.  Nachdem der Bereitstellungsvorgang abgeschlossen ist, wird die Seite **Ergebnisse** geöffnet. Diese Seite zeigt an, ob die einzelnen Aktionen erfolgreich ausgeführt wurden oder ob Fehler aufgetreten sind.
-    -   Ist die Aktion fehlerhaft, klicken Sie in der Spalte **Ergebnis** auf **Fehler** , um eine Erläuterung zum Fehler anzuzeigen.
-    -   Klicken Sie auf **Bericht speichern...** , um die Ergebnisse in einer XML-Datei zu speichern.
-    -   Klicken Sie auf **Schließen** , um den Assistenten zu beenden.
+    -   Ist die Aktion fehlerhaft, klicken Sie in der Spalte **Ergebnis** auf **Fehler**, um eine Erläuterung zum Fehler anzuzeigen.
+    -   Klicken Sie auf **Bericht speichern...**, um die Ergebnisse in einer XML-Datei zu speichern.
+    -   Klicken Sie auf **Schließen**, um den Assistenten zu beenden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 - Erfahren Sie mehr über weitere Möglichkeiten, ein Paket bereitzustellen.

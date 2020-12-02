@@ -20,11 +20,11 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 90fdfd4a64d77d3fa51ef7dc4c39ccf11b1fb9f3
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196369"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130081"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Bereitstellen von SQL Server Integration Services-Projekten und Paketen (SSIS)
 
@@ -55,7 +55,7 @@ Weitere Informationen zum Legacy-Paketbereitstellungsmodell finden Sie unter [Le
 |Auf der Datenbank-Engine ist die CLR-Integration erforderlich.|Auf der Datenbank-Engine ist die CLR-Integration nicht erforderlich.|  
 |Umgebungsspezifische Parameterwerte werden in Umgebungsvariablen gespeichert.|Umgebungsspezifische Konfigurationswerte werden in Konfigurationsdateien gespeichert.|  
 |Im Katalog enthaltene Projekte und Pakete können vor der Ausführung auf dem Server überprüft werden. Sie können die Überprüfung mithilfe von SQL Server Management Studio, gespeicherten Prozeduren oder verwaltetem Code ausführen.|Pakete werden unmittelbar vor der Ausführung überprüft. Ein Paket kann auch mit dtExec oder verwaltetem Code überprüft werden.|  
-|Pakete werden ausgeführt, indem mit der Datenbank-Engine eine Ausführung gestartet wird. Einer Ausführung werden vor dem Start ein Projektbezeichner, explizite Parameterwerte (optional) und Umgebungsverweise (optional) zugewiesen.<br /><br /> Sie können Pakete mit **dtExec**ausführen.|Pakete werden mit den Ausführungshilfsprogrammen **dtExec** und **DTExecUI** ausgeführt. Anwendbare Konfigurationen werden durch Eingabeaufforderungsargumente (optional) identifiziert.|  
+|Pakete werden ausgeführt, indem mit der Datenbank-Engine eine Ausführung gestartet wird. Einer Ausführung werden vor dem Start ein Projektbezeichner, explizite Parameterwerte (optional) und Umgebungsverweise (optional) zugewiesen.<br /><br /> Sie können Pakete mit **dtExec** ausführen.|Pakete werden mit den Ausführungshilfsprogrammen **dtExec** und **DTExecUI** ausgeführt. Anwendbare Konfigurationen werden durch Eingabeaufforderungsargumente (optional) identifiziert.|  
 |Während der Ausführung werden Ereignisse, die vom Paket erzeugt werden, automatisch aufgezeichnet und im Katalog gespeichert. Sie können diese Ereignisse mit Transact-SQL-Sichten abfragen.|Während der Ausführung werden Ereignisse, die von einem Paket erzeugt werden, nicht automatisch aufgezeichnet. Dem Paket muss ein Protokollanbieter zum Aufzeichnen von Ereignissen hinzugefügt werden.|  
 |Pakete werden in einem separaten Windows-Prozess ausgeführt.|Pakete werden in einem separaten Windows-Prozess ausgeführt.|  
 |SQL Server-Agent wird verwendet, um die Paketausführung zu planen.|SQL Server-Agent wird verwendet, um die Paketausführung zu planen.|  
@@ -124,7 +124,7 @@ Weitere Informationen zu dem in diesem Abschnitt beschriebenen Fehler und zu den
   
              Sie können eine vorhandene Datei auswählen oder eine neue Datei erstellen (auf der Assistentenseite für das **Auswahlziel**).  
   
-             Zur Aktualisierung von Paketdateien bei der Konvertierung eines Projekts führen Sie den **Assistenten für die Konvertierung von Integration Services-Projekten** über [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]aus. Wenn Paketdateien unabhängig von einer Projektkonvertierung aktualisiert werden sollen, führen Sie den Assistenten zum Konvertieren von **Integration Services-Projekten** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] aus, und führen Sie dann den **SSIS-Paketupgrade-Assistenten**aus. Wenn Sie die Paketdateien getrennt aktualisieren, stellen Sie sicher, dass Sie die Änderungen speichern. Andernfalls werden bei der Konvertierung des Projekts in das Projektbereitstellungsmodell alle nicht gespeicherten Änderungen am Paket nicht konvertiert.  
+             Zur Aktualisierung von Paketdateien bei der Konvertierung eines Projekts führen Sie den **Assistenten für die Konvertierung von Integration Services-Projekten** über [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]aus. Wenn Paketdateien unabhängig von einer Projektkonvertierung aktualisiert werden sollen, führen Sie den Assistenten zum Konvertieren von **Integration Services-Projekten** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] aus, und führen Sie dann den **SSIS-Paketupgrade-Assistenten** aus. Wenn Sie die Paketdateien getrennt aktualisieren, stellen Sie sicher, dass Sie die Änderungen speichern. Andernfalls werden bei der Konvertierung des Projekts in das Projektbereitstellungsmodell alle nicht gespeicherten Änderungen am Paket nicht konvertiert.  
   
      Weitere Informationen zum Upgraden von Paketen finden Sie unter [Upgraden von Integration Services-Paketen](../../integration-services/install-windows/upgrade-integration-services-packages.md) und [Upgraden von Integration Services-Paketen mit dem SSIS-Paketupgrade-Assistenten](../../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
@@ -138,13 +138,13 @@ Weitere Informationen zu dem in diesem Abschnitt beschriebenen Fehler und zu den
   
      - oder -  
   
-     Klicken Sie im Objekt-Explorer in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]mit der rechten Maustaste auf den Knoten **Projekte** , und wählen Sie anschließend die Option **Pakete importieren**aus.  
+     Klicken Sie im Objekt-Explorer in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]mit der rechten Maustaste auf den Knoten **Projekte** , und wählen Sie anschließend die Option **Pakete importieren** aus.  
   
 2.  Schließen Sie den Assistenten ab.
   
 ###  <a name="to-deploy-a-project-to-the-integration-services-server"></a><a name="deploy"></a> So stellen Sie ein Projekt auf dem Integration Services-Server bereit  
   
-1.  Öffnen Sie das Projekt in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], und wählen Sie dann im Menü **Projekt** die Option **Bereitstellen** aus, um den **Bereitstellungs-Assistent für Integration Services**zu starten.  
+1.  Öffnen Sie das Projekt in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], und wählen Sie dann im Menü **Projekt** die Option **Bereitstellen** aus, um den **Bereitstellungs-Assistent für Integration Services** zu starten.  
   
      oder  
   
@@ -152,7 +152,7 @@ Weitere Informationen zu dem in diesem Abschnitt beschriebenen Fehler und zu den
   
      oder  
   
-     Führen Sie an der Eingabeaufforderung **isdeploymentwizard.exe** unter dem Pfad **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn**aus. Auf 64-Bit-Computern steht auch eine 32-Bit-Version des Tools unter **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**zur Verfügung.  
+     Führen Sie an der Eingabeaufforderung **isdeploymentwizard.exe** unter dem Pfad **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn** aus. Auf 64-Bit-Computern steht auch eine 32-Bit-Version des Tools unter **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn** zur Verfügung.  
   
 2.  Klicken Sie auf der Seite **Quelle auswählen** auf **Projektbereitstellungsdatei** , um die Bereitstellungsdatei für das Projekt auszuwählen.  
   
@@ -167,7 +167,7 @@ Weitere Informationen zu dem in diesem Abschnitt beschriebenen Fehler und zu den
   
 ###  <a name="deploy-packages-by-using-the-integration-services-deployment-wizard"></a><a name="DeployWizard"></a> Bereitstellen von Paketen mit dem Bereitstellungs-Assistenten für Integration Services  
   
-1.  Führen Sie an der Eingabeaufforderung **isdeploymentwizard.exe** unter dem Pfad **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn**aus. Auf 64-Bit-Computern steht auch eine 32-Bit-Version des Tools unter **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**zur Verfügung.  
+1.  Führen Sie an der Eingabeaufforderung **isdeploymentwizard.exe** unter dem Pfad **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn** aus. Auf 64-Bit-Computern steht auch eine 32-Bit-Version des Tools unter **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn** zur Verfügung.  
   
 2.  Wechseln Sie auf der Seite **Quelle auswählen** zu **Paketbereitstellungsmodell**. Wählen Sie dann den Ordner aus, der Quellpakete enthält, und konfigurieren Sie die Pakete.  
   
@@ -189,7 +189,7 @@ Weitere Informationen zu dem in diesem Abschnitt beschriebenen Fehler und zu den
   
 1.  Öffnen Sie in Visual Studio ein Integration Services-Projekt, und wählen Sie ein oder mehrere Pakete aus, die Sie bereitstellen möchten.  
   
-2.  Klicken Sie mit der rechten Maustaste, und wählen Sie **Paket bereitstellen**aus. Der Bereitstellung-Assistent wird geöffnet, und in diesem sind die ausgewählten Pakete als Quellpakete konfiguriert.  
+2.  Klicken Sie mit der rechten Maustaste, und wählen Sie **Paket bereitstellen** aus. Der Bereitstellung-Assistent wird geöffnet, und in diesem sind die ausgewählten Pakete als Quellpakete konfiguriert.  
   
 3.  Schließen Sie den Assistenten ab. Führen Sie die restlichen Schritte aus, die in [Paketbereitstellungsmodell](#PackageModel)beschrieben werden.  
   
@@ -309,7 +309,7 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
   
 #### <a name="select-source"></a>Auswählen der Quelle
 
- Um eine von Ihnen erstellte Projektbereitstellungsdatei bereitzustellen, wählen Sie **Projektbereitstellungsdatei** aus, und geben Sie den Pfad für die ISPAC-Datei ein. Um ein Projekt bereitzustellen, das sich im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog befindet, wählen Sie **Integration Services-Katalog**aus und geben dann den Servernamen und den Pfad zum Projekt im Katalog ein. Klicken Sie auf **Weiter** , um die Seite **Ziel auswählen** zu sehen.  
+ Um eine von Ihnen erstellte Projektbereitstellungsdatei bereitzustellen, wählen Sie **Projektbereitstellungsdatei** aus, und geben Sie den Pfad für die ISPAC-Datei ein. Um ein Projekt bereitzustellen, das sich im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog befindet, wählen Sie **Integration Services-Katalog** aus und geben dann den Servernamen und den Pfad zum Projekt im Katalog ein. Klicken Sie auf **Weiter** , um die Seite **Ziel auswählen** zu sehen.  
   
 #### <a name="select-destination"></a>Ziel auswählen
 
@@ -317,7 +317,7 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
   
 #### <a name="review-and-deploy"></a>Überprüfen (und Bereitstellen)
 
- Diese Seite erlaubt Ihnen die Überprüfung der von Ihnen vorgenommenen Einstellungen. Sie können Ihre Auswahl ändern, indem Sie auf **Zurück**klicken oder indem Sie auf einen der Schritte im linken Bereich klicken. Klicken Sie auf **Bereitstellen** , um den Bereitstellungsprozess zu starten.  
+ Diese Seite erlaubt Ihnen die Überprüfung der von Ihnen vorgenommenen Einstellungen. Sie können Ihre Auswahl ändern, indem Sie auf **Zurück** klicken oder indem Sie auf einen der Schritte im linken Bereich klicken. Klicken Sie auf **Bereitstellen** , um den Bereitstellungsprozess zu starten.  
   
 #### <a name="results"></a>Ergebnisse
 
@@ -327,15 +327,15 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
   
 #### <a name="select-source"></a>Auswählen der Quelle
 
- Die Seite **Quelle auswählen** im **Bereitstellungs-Assistenten für Integration Services** zeigt die Einstellungen speziell für das Paketbereitstellungsmodell an, wenn Sie die Option **Paketbereitstellung** als **Bereitstellungsmodell**gewählt haben.  
+ Die Seite **Quelle auswählen** im **Bereitstellungs-Assistenten für Integration Services** zeigt die Einstellungen speziell für das Paketbereitstellungsmodell an, wenn Sie die Option **Paketbereitstellung** als **Bereitstellungsmodell** gewählt haben.  
   
  Klicken Sie zum Auswählen der Quellpakete auf die Schaltfläche **Durchsuchen...**, um den **Ordner** auszuwählen, der die Pakete enthält, oder geben Sie den Ordnerpfad in das Textfeld **Paketordnerpfad** ein, und klicken Sie auf die Schaltfläche **Aktualisieren** am unteren Seitenrand. Jetzt sollten Sie alle Pakete im angegebenen Ordner im Listenfeld sehen. Standardmäßig sind alle Pakete ausgewählt. Klicken Sie das **Kontrollkästchen** in der ersten Spalte, um auszuwählen, welche Pakete an den Server bereitgestellt werden sollen.  
   
- Beziehen Sie sich auf die Spalten **Status** und **Meldung** , um den Status des Pakets zu überprüfen. Falls der Status auf **Bereit** oder **Warnung**steht, würde der Bereitstellungs-Assistent den Bereitstellungsvorgang nicht blockieren. Wenn der Status auf **Fehler** festgelegt ist, setzt der Assistent die Bereitstellung der ausgewählten Pakete nicht fort. Klicken Sie zum Anzeigen der detaillierten Warn- oder Fehlermeldungen auf den Link in der Spalte **Meldung**.  
+ Beziehen Sie sich auf die Spalten **Status** und **Meldung** , um den Status des Pakets zu überprüfen. Falls der Status auf **Bereit** oder **Warnung** steht, würde der Bereitstellungs-Assistent den Bereitstellungsvorgang nicht blockieren. Wenn der Status auf **Fehler** festgelegt ist, setzt der Assistent die Bereitstellung der ausgewählten Pakete nicht fort. Klicken Sie zum Anzeigen der detaillierten Warn- oder Fehlermeldungen auf den Link in der Spalte **Meldung**.  
   
  Falls die sensiblen Daten oder Paketdaten mit einem Kennwort verschlüsselt sind, geben Sie das Kennwort in die Spalte **Kennwort** ein, und klicken Sie auf die Schaltfläche **Aktualisieren** , um zu überprüfen, ob das Kennwort akzeptiert wird. Falls das Kennwort korrekt ist, ändert sich der Status auf **Bereit** , und die Warnmeldung verschwindet. Wenn mehrere Pakete mit dem gleichen Kennwort vorhanden sind, wählen Sie die Pakete mit dem gleichen Verschlüsselungskennwort aus, geben Sie das Kennwort in das Textfeld **Kennwort** ein, und klicken Sie auf die Schaltfläche **Anwenden**. Das Kennwort würde auf die ausgewählten Pakete angewendet werden.  
   
- Falls der Status aller ausgewählten Pakete nicht auf **Fehler**steht, ist die Schaltfläche **Weiter** aktiviert. Sie können also mit dem Paketbereitstellungsvorgang fortfahren.  
+ Falls der Status aller ausgewählten Pakete nicht auf **Fehler** steht, ist die Schaltfläche **Weiter** aktiviert. Sie können also mit dem Paketbereitstellungsvorgang fortfahren.  
   
 #### <a name="select-destination"></a>Ziel auswählen
 
@@ -343,7 +343,7 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
   
 #### <a name="review-and-deploy"></a>Überprüfen und bereitstellen
 
- Klicken Sie auf der Seite **Ziel auswählen** auf **Weiter** , um auf die Seite **Überprüfung** im **Bereitstellungs-Assistenten für Integration Services**zu wechseln. Auf der Seite zur Überprüfung können Sie sich den Bericht zur Bereitstellungsaktion ansehen. Klicken Sie nach der Überprüfung auf die Schaltfläche **Bereitstellen**, um die Bereitstellungsaktion auszuführen.  
+ Klicken Sie auf der Seite **Ziel auswählen** auf **Weiter** , um auf die Seite **Überprüfung** im **Bereitstellungs-Assistenten für Integration Services** zu wechseln. Auf der Seite zur Überprüfung können Sie sich den Bericht zur Bereitstellungsaktion ansehen. Klicken Sie nach der Überprüfung auf die Schaltfläche **Bereitstellen**, um die Bereitstellungsaktion auszuführen.  
   
 #### <a name="results"></a>Ergebnisse
 
@@ -380,7 +380,7 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
   
     4.  Geben Sie an, ob die Variable einen vertraulichen Wert enthält, indem Sie das Kontrollkästchen **Vertraulich** aktivieren oder deaktivieren.  
   
-         Bei Auswahl von **Vertraulich**wird der Variablenwert nicht im Feld **Wert** angezeigt.  
+         Bei Auswahl von **Vertraulich** wird der Variablenwert nicht im Feld **Wert** angezeigt.  
   
          Vertrauliche Werte werden im SSISDB-Katalog verschlüsselt. Weitere Informationen zur Verschlüsselung finden Sie unter [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
@@ -501,9 +501,9 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
   
 -   Erstellen Sie ein Verbindungsserverobjekt. Weitere Informationen finden Sie unter [Erstellen von Verbindungsservern &#40;SQL Server-Datenbank-Engine&#41;](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md).  
   
-     Legen Sie auf der Seite **Serveroptionen** des Dialogfelds **Eigenschaften des Verbindungsservers** die Optionen **RPC** und **RPC-Ausgabe** auf **True**fest. Legen Sie außerdem **Höherstufung von verteilten Transaktionen für RPC aktivieren** auf **False**fest.  
+     Legen Sie auf der Seite **Serveroptionen** des Dialogfelds **Eigenschaften des Verbindungsservers** die Optionen **RPC** und **RPC-Ausgabe** auf **True** fest. Legen Sie außerdem **Höherstufung von verteilten Transaktionen für RPC aktivieren** auf **False** fest.  
   
--   Aktivieren Sie dynamische Parameter für den Anbieter, den Sie für den Verbindungsserver ausgewählt haben, indem Sie im Objekt-Explorer unter **Verbindungsserver** den Knoten **Anbieter** erweitern, mit der rechten Maustaste auf den Anbieter klicken und dann auf **Eigenschaften**klicken. Wählen Sie **Aktivieren** neben **Dynamischer Parameter**aus.  
+-   Aktivieren Sie dynamische Parameter für den Anbieter, den Sie für den Verbindungsserver ausgewählt haben, indem Sie im Objekt-Explorer unter **Verbindungsserver** den Knoten **Anbieter** erweitern, mit der rechten Maustaste auf den Anbieter klicken und dann auf **Eigenschaften** klicken. Wählen Sie **Aktivieren** neben **Dynamischer Parameter** aus.  
   
 -   Überprüfen Sie, ob der Distributed Transaction Coordinator (DTC) auf beiden Servern gestartet ist.  
   
@@ -573,7 +573,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  Die folgende Option wird auf der Seite angezeigt, wenn Sie **Dateisystem** in der Dropdownliste **Quelle** auswählen. Wählen Sie diese Option, wenn das Paket im Dateisystem gespeichert ist.  
   
  **Ordner**  
- Geben Sie den Paketpfad ein, oder navigieren Sie zum Paket, indem Sie auf **Durchsuchen**klicken.  
+ Geben Sie den Paketpfad ein, oder navigieren Sie zum Paket, indem Sie auf **Durchsuchen** klicken.  
   
  Die folgenden Optionen werden auf der Seite angezeigt, wenn Sie **SSIS-Paketspeicher** in der Dropdownliste **Quelle** auswählen. Weitere Informationen zum Paketspeicher finden Sie unter [Paketverwaltung &#40;SSIS-Dienst&#41;](../../integration-services/service/package-management-ssis-service.md).  
   
@@ -581,7 +581,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  Geben Sie einen Servernamen ein, oder wählen Sie den Server aus.  
   
  **Ordner**  
- Geben Sie den Paketpfad ein, oder navigieren Sie zum Paket, indem Sie auf **Durchsuchen**klicken.  
+ Geben Sie den Paketpfad ein, oder navigieren Sie zum Paket, indem Sie auf **Durchsuchen** klicken.  
   
  Die folgenden Optionen werden auf der Seite angezeigt, wenn Sie **Microsoft SQL Server** in der Dropdownliste **Quelle** auswählen. Wählen Sie diese Option aus, wenn das Paket in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gespeichert ist.  
   
@@ -601,7 +601,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  Geben Sie das Kennwort ein, wenn Sie die SQL Server-Authentifizierung verwenden.  
   
  **Ordner**  
- Geben Sie den Paketpfad ein, oder navigieren Sie zum Paket, indem Sie auf **Durchsuchen**klicken.  
+ Geben Sie den Paketpfad ein, oder navigieren Sie zum Paket, indem Sie auf **Durchsuchen** klicken.  
   
 ###  <a name="set-options-on-the-select-packages-page"></a><a name="selectPackages"></a> Festlegen von Optionen auf der Seite "Pakete auswählen"  
  **Paketname**  
@@ -629,7 +629,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 >   Die Seite **Ziel auswählen** ist nur verfügbar, wenn Sie den Assistenten über [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]ausführen.  
   
  **Ausgabepfad**  
- Geben Sie den Pfad für die Bereitstellungsdatei ein, oder navigieren Sie zur Datei, indem Sie auf **Durchsuchen**klicken.  
+ Geben Sie den Pfad für die Bereitstellungsdatei ein, oder navigieren Sie zur Datei, indem Sie auf **Durchsuchen** klicken.  
   
  **Projektname**  
  Geben Sie den Projektnamen ein.  

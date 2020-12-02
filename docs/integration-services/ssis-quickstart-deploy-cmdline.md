@@ -10,11 +10,11 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 127df7b347f1c421d3714fc8be2f92dfc6f05e52
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495477"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130007"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Bereitstellen eines SSIS-Projekts über die Eingabeaufforderung mit ISDeploymentWizard.exe
 
@@ -76,7 +76,7 @@ Weitere Informationen finden Sie unter [Authentifizierungsmethoden für die Bere
     -   Klicken Sie dann auf **Weiter**, um die Seite **Überprüfen** zu öffnen. (Die Schaltfläche **Weiter** ist nur nach der Auswahl von **Verbinden** aktiviert.)
 
 4.  Überprüfen Sie auf der Seite **Überprüfen** die Einstellungen, die Sie ausgewählt haben.
-    -   Sie können Ihre Auswahl ändern, indem Sie auf **Zurück**klicken oder indem Sie auf einen der Schritte im linken Bereich klicken.
+    -   Sie können Ihre Auswahl ändern, indem Sie auf **Zurück** klicken oder indem Sie auf einen der Schritte im linken Bereich klicken.
     -   Klicken Sie auf **Bereitstellen** , um den Bereitstellungsprozess zu starten.
 
 5.  Wenn Sie eine Bereitstellung auf einem Azure SQL-Datenbank-Server durchführen, wird die Seite **Überprüfen** geöffnet. Diese prüft die im Projekt enthaltenen Pakete auf bekannte Probleme, die möglicherweise eine erwartungsgemäße Ausführung in der Azure-SSIS Integration Runtime verhindern. Weitere Informationen finden Sie unter [Überprüfen von in Azure bereitgestellten SSIS-Paketen](lift-shift/ssis-azure-validate-packages.md).

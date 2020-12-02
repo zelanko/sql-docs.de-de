@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 464b8069b09af65c86521878803fdf1bd7744548
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424172"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130284"
 ---
 # <a name="disable-indexes-and-constraints"></a>Deaktivieren von Indizes und Einschränkungen
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "88424172"
   
 4.  Klicken Sie auf das Pluszeichen, um den Ordner **Indizes** zu erweitern.  
   
-5.  Klicken Sie mit der rechten Maustaste auf den Index, den Sie deaktivieren möchten, und wählen Sie **Deaktivieren**aus.  
+5.  Klicken Sie mit der rechten Maustaste auf den Index, den Sie deaktivieren möchten, und wählen Sie **Deaktivieren** aus.  
   
 6.  Überprüfen Sie im Dialogfeld **Index deaktivieren** , dass der richtige Index im Raster **Zu deaktivierende Indizes** ausgewählt ist, und klicken sie auf **OK**.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "88424172"
   
 3.  Klicken Sie auf das Pluszeichen, um die Tabelle zu erweitern, in der Sie die Indizes deaktivieren möchten.  
   
-4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Indizes** , und wählen Sie **Alle deaktivieren**aus.  
+4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Indizes** , und wählen Sie **Alle deaktivieren** aus.  
   
 5.  Überprüfen Sie im Dialogfeld **Indizes deaktivieren** , dass die richtigen Indizes im Raster **Zu deaktivierende Indizes** ausgewählt sind, und klicken sie auf **OK**. Um einen Index aus dem Raster **Zu deaktivierende Indizes** zu entfernen, wählen Sie den Index aus, und drücken Sie die ENTF-Taste.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "88424172"
  Zeigt den Namen der Tabelle oder Sicht an, für die der Index erstellt wurde.  
   
  **Indextyp**  
- Zeigt den Typ des Indexes an: **Gruppiert**, **Nicht gruppiert**, **Räumlich**oder **XML**.  
+ Zeigt den Typ des Indexes an: **Gruppiert**, **Nicht gruppiert**, **Räumlich** oder **XML**.  
   
  **Status**  
  Zeigt den Status des Deaktivierungsvorgangs an. Mögliche Werte nach der Ausführung:  

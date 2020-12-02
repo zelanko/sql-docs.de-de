@@ -12,20 +12,20 @@ helpviewer_keywords:
 - online restores [SQL Server]
 - online restores [SQL Server], about online restores
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: 6579e091911dc5e6a6c41bc27a567300f6fe2390
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 00cec6d2ce9fcb74151bcbc6e87a58f9b8fbbfe2
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85670448"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130374"
 ---
 # <a name="online-restore-sql-server"></a>Onlinewiederherstellungen [SQL Server]
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Die Onlinewiederherstellung wird nur von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition unterstützt. In dieser Edition erfolgen Datei- und Seitenwiederherstellungen sowie schrittweise Wiederherstellungen standardmäßig online. Dieses Thema ist nur für Datenbanken relevant, die mehrere Dateien oder Dateigruppen enthalten (und unter dem einfachen Wiederherstellungsmodell nur für schreibgeschützte Dateigruppen).  
   
- Die Wiederherstellung von Daten, während die Datenbank online ist, wird als *Onlinewiederherstellung*bezeichnet. Eine Datenbank gilt immer als online, wenn die primäre Dateigruppe online ist, selbst wenn eine oder mehrere der sekundären Dateigruppen offline sind. Bei jedem Wiederherstellungsmodell ist es möglich, eine Datei wiederherzustellen, die offline ist, während die Datenbank online ist. Im vollständigen Wiederherstellungsmodell können Sie auch Seiten wiederherstellen, während die Datenbank online ist.  
+ Die Wiederherstellung von Daten, während die Datenbank online ist, wird als *Onlinewiederherstellung* bezeichnet. Eine Datenbank gilt immer als online, wenn die primäre Dateigruppe online ist, selbst wenn eine oder mehrere der sekundären Dateigruppen offline sind. Bei jedem Wiederherstellungsmodell ist es möglich, eine Datei wiederherzustellen, die offline ist, während die Datenbank online ist. Im vollständigen Wiederherstellungsmodell können Sie auch Seiten wiederherstellen, während die Datenbank online ist.  
   
 > [!NOTE]  
 >  Die Onlinewiederherstellung erfolgt in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise automatisch und erfordert keine Benutzeraktion. Wenn Sie keine Onlinewiederherstellung verwenden möchten, können Sie eine Datenbank offline schalten, bevor Sie eine Wiederherstellung starten. Weitere Informationen finden Sie unter [Offlineschalten einer Datenbank oder Datei](#taking_db_or_file_offline)weiter unten in diesem Thema.  
@@ -47,7 +47,7 @@ ms.locfileid: "85670448"
 >  Wenn die Sicherungen mit mehreren an den Server angeschlossenen Geräten vorgenommen wurden, darf während der Onlinewiederherstellung keines dieser Geräte fehlen.  
   
 > [!CAUTION]  
->  Bei der Verwendung von Momentaufnahmesicherungen kann keine **Online Restore**ausgeführt werden. Weitere Informationen zu **Momentaufnahme-Sicherungen**finden Sie unter [Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
+>  Bei der Verwendung von Momentaufnahmesicherungen kann keine **Online Restore** ausgeführt werden. Weitere Informationen zu **Momentaufnahme-Sicherungen** finden Sie unter [Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
 ## <a name="log-backups-for-online-restore"></a>Protokollsicherungen für die Onlinewiederherstellung  
  Bei einer Onlinewiederherstellung ist der Wiederherstellungspunkt der Punkt, an dem die wiederhergestellten Daten offline geschaltet oder zum letzten Mal mit einem Schreibschutz versehen wurden. Alle Transaktionsprotokollsicherungen, die zu diesem Wiederherstellungspunkt führen und diesen beinhalten, müssen verfügbar sein. Im Allgemeinen ist nach diesem Punkt eine Protokollsicherung erforderlich, damit der Wiederherstellungspunkt für die Datei abgedeckt ist. Die einzige Ausnahme stellt eine Onlinewiederherstellung schreibgeschützter Daten aus einer Datensicherung dar, die ausgeführt wurde, nachdem die Daten schreibgeschützt wurden. In diesem Fall müssen Sie nicht über eine Protokollsicherung verfügen.  

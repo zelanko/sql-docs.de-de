@@ -12,11 +12,11 @@ ms.assetid: b79e3a06-22c0-40e5-8933-1b3414db3329
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6af8fdff22031cd5f806cb3d6f640223414f3ac1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425072"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129715"
 ---
 # <a name="catalogset_environment_reference_type-ssisdb-database"></a>catalog.set_environment_reference_type (SSISDB-Datenbank)
 
@@ -73,6 +73,6 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
  Ein Projekt kann über relative oder absolute Umgebungsverweise verfügen. Relative Verweise verweisen mit dem Namen auf die Umgebung und erfordern, dass sich diese im gleichen Ordner wie das Projekt befindet. Absolute Verweise verweisen mit Name und Ordner auf die Umgebung und verweisen möglicherweise auf Umgebungen, die sich in einem anderen Ordner als das Projekt befinden. Ein Projekt kann auf mehrere Umgebungen verweisen.  
   
 > [!IMPORTANT]  
->  Wenn ein relativer Verweis angegeben wird, wird der *environment_folder_name* -Parameterwert nicht verwendet, und der Umgebungsordnername wird automatisch auf **NULL**festgelegt. Wenn ein absoluter Verweis angegeben wird, muss der Umgebungsordnername im *environment_folder_name* -Parameter angegeben werden.  
+>  Wenn ein relativer Verweis angegeben wird, wird der *environment_folder_name* -Parameterwert nicht verwendet, und der Umgebungsordnername wird automatisch auf **NULL** festgelegt. Wenn ein absoluter Verweis angegeben wird, muss der Umgebungsordnername im *environment_folder_name* -Parameter angegeben werden.  
   
   
