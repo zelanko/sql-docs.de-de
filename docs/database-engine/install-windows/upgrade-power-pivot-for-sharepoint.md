@@ -177,7 +177,7 @@ ms.locfileid: "91670183"
   
     3.  Klicken Sie auf **Funktionen, Dienste, Anwendungen und Lösungen aktualisieren**, und klicken Sie dann auf **OK** , um fortzufahren.  
   
-    4.  Die folgende Warnung wird angezeigt: „Workbooks in the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Management Dashboard are about to be upgraded to the latest version. Alle an vorhandenen Arbeitsmappen vorgenommenen Anpassungen gehen verloren. Möchten Sie den Vorgang fortsetzen?“  
+    4.  Die folgende Warnung wird angezeigt: „Arbeitsmappen im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Management-Dashboard werden in Kürze auf die neueste Version aktualisiert. Alle an vorhandenen Arbeitsmappen vorgenommenen Anpassungen gehen verloren. Möchten Sie den Vorgang fortsetzen?“  
   
          Diese Warnung bezieht sich auf Arbeitsmappen im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Management-Dashboard, die Berichte zu Datenaktualisierungsaktivitäten enthalten. Wenn Sie diese Arbeitsmappen angepasst haben, gehen alle an diesen Arbeitsmappen vorgenommenen Änderungen verloren, wenn vorhandene Dateien durch neuere Versionen ersetzt werden.  
   
