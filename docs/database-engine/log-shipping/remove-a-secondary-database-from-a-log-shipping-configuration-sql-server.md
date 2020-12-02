@@ -14,14 +14,14 @@ helpviewer_keywords:
 - secondary data files [SQL Server], removing
 - log shipping [SQL Server], secondary databases
 ms.assetid: ebe368a4-ca1c-45d0-9a71-3ddbd5b26a8e
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: db79ab9084e1c633af66736d6974487e00182385
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d06b864f4a14b15acaf978d74d8224019dc010b1
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85695750"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125702"
 ---
 # <a name="remove-a-secondary-database-from-a-log-shipping-configuration-sql-server"></a>Entfernen einer sekundären Datenbank aus einer Protokollversandkonfiguration (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,9 +56,9 @@ ms.locfileid: "85695750"
   
 2.  Erweitern Sie **Datenbanken**, klicken Sie mit der rechten Maustaste auf die primäre Datenbank für den Protokollversand, und klicken Sie dann auf **Eigenschaften**.  
   
-3.  Klicken Sie unter **Seite auswählen**auf **Transaktionsprotokollversand**.  
+3.  Klicken Sie unter **Seite auswählen** auf **Transaktionsprotokollversand**.  
   
-4.  Klicken Sie unter **Sekundäre Serverinstanzen und Datenbanken**auf die Datenbank, die Sie entfernen wollen.  
+4.  Klicken Sie unter **Sekundäre Serverinstanzen und Datenbanken** auf die Datenbank, die Sie entfernen wollen.  
   
 5.  Klicken Sie auf **Entfernen**.  
   

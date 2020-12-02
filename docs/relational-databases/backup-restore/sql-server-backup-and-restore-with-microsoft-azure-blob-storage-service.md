@@ -10,14 +10,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 41c11b596017f9dfeab7d62cfbe517e764f733ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d28d41c85b267d3920e62773f3694cabb252c64b
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428922"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125461"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88428922"
   
  SQL Server unterstützt das Speichern von Sicherungen im Microsoft Azure Blob Storage Service auf folgende Weise:  
   
--   **Verwalten von Sicherungen in Microsoft Azure:** Mithilfe derselben Methoden, die für DISK- und TAPE-Sicherungen verwendet werden, können Sie Ihre Sicherungen jetzt in Microsoft Azure Storage speichern, indem Sie die URL als Sicherungsziel angeben. Mithilfe dieser Funktion können Sie manuelle Sicherungen ausführen oder eine eigene Sicherungsstrategie konfigurieren, wie auch für einen lokalen Speicher oder andere externe Optionen. Diese Funktion wird auch als **SQL Server-Sicherung über URLs**bezeichnet. Weitere Informationen finden Sie unter [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md). Diese Funktion ist in SQL Server 2012 SP1 CU2 oder höher verfügbar. Diese Funktion wurde in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] erweitert, um verbesserte Leistung und Funktionalität durch die Verwendung von Blockblobs, SAS und Striping zu bieten.  
+-   **Verwalten von Sicherungen in Microsoft Azure:** Mithilfe derselben Methoden, die für DISK- und TAPE-Sicherungen verwendet werden, können Sie Ihre Sicherungen jetzt in Microsoft Azure Storage speichern, indem Sie die URL als Sicherungsziel angeben. Mithilfe dieser Funktion können Sie manuelle Sicherungen ausführen oder eine eigene Sicherungsstrategie konfigurieren, wie auch für einen lokalen Speicher oder andere externe Optionen. Diese Funktion wird auch als **SQL Server-Sicherung über URLs** bezeichnet. Weitere Informationen finden Sie unter [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md). Diese Funktion ist in SQL Server 2012 SP1 CU2 oder höher verfügbar. Diese Funktion wurde in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] erweitert, um verbesserte Leistung und Funktionalität durch die Verwendung von Blockblobs, SAS und Striping zu bieten.  
   
     > [!NOTE]  
     >  Für SQL Server-Versionen vor SQL Server 2012 SP1 CU2 können Sie das Add-In „SQL Server Backup to Microsoft Azure Tool“ verwenden, um Sicherungen schnell und einfach in Microsoft Azure Storage zu erstellen. Weitere Informationen finden Sie im [Download Center](https://go.microsoft.com/fwlink/?LinkID=324399).  

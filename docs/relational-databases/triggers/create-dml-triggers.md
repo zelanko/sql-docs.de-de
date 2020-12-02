@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: aace4785289cd041b72c98a880ac38741bf0d641
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446352"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125061"
 ---
 # <a name="create-dml-triggers"></a>Erstellen von DML-Triggern
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "88446352"
   
 ###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und erweitern Sie dann diese Instanz.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und erweitern Sie dann diese Instanz.  
   
 2.  Erweitern Sie **Datenbanken**, die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank und **Tabellen** , und erweitern Sie dann die Tabelle **Purchasing.PurchaseOrderHeader**.  
   
-3.  Klicken Sie mit der rechten Maustaste auf **Trigger**, und wählen Sie **Neuer Trigger**aus.  
+3.  Klicken Sie mit der rechten Maustaste auf **Trigger**, und wählen Sie **Neuer Trigger** aus.  
   
 4.  Klicken Sie im Menü **Abfrage** auf **Werte für Vorlagenparameter angeben**. Alternativ können Sie die Tastenkombination STRG+UMSCHALT+M drücken, um das Dialogfeld **Werte für Vorlagenparameter angeben** zu öffnen.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "88446352"
   
 6.  Klicken Sie auf **OK**.  
   
-7.  Ersetzen Sie im **Abfrage-Editor**den Kommentar `-- Insert statements for trigger here` durch die folgende Anweisung:  
+7.  Ersetzen Sie im **Abfrage-Editor** den Kommentar `-- Insert statements for trigger here` durch die folgende Anweisung:  
   
     ```sql  
     IF @@ROWCOUNT = 1  
@@ -98,13 +98,13 @@ ms.locfileid: "88446352"
   
 9. Zum Erstellen des DML-Triggers klicken Sie im Menü **Abfrage** auf **Ausführen**. Der DML-Trigger wird als Objekt in der Datenbank erstellt.  
   
-10. Zum Anzeigen des DML-Triggers im Objekt-Explorer klicken Sie mit der rechten Maustaste auf **Trigger** und wählen **Aktualisieren**aus.  
+10. Zum Anzeigen des DML-Triggers im Objekt-Explorer klicken Sie mit der rechten Maustaste auf **Trigger** und wählen **Aktualisieren** aus.  
 
  [Vorbereitungen](#Top)  
   
 ###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und erweitern Sie dann diese Instanz.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und erweitern Sie dann diese Instanz.  
   
 2.  Klicken Sie im Menü **Datei** auf **Neue Abfrage**.  
   

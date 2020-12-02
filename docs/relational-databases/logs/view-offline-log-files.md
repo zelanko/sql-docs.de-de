@@ -15,11 +15,11 @@ ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4f0f124b9073335a5dc681c34fb7fa977123f04c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869285"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125132"
 ---
 # <a name="view-offline-log-files"></a>Anzeigen von Offlineprotokolldateien
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "91869285"
 ## <a name="before-you-begin"></a>Voraussetzungen  
  Zum Herstellen einer Verbindung mit Offlineprotokolldateien muss eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem Computer installiert sein, den Sie zum Anzeigen der Offlineprotokolldateien verwenden möchten, und außerdem auf dem Computer, auf dem sich die Protokolldateien befinden, die Sie anzeigen möchten. Wenn auf beiden Computern eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist, können Sie Offlinedateien für Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sowie für Instanzen anzeigen, von denen frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem der Computer ausgeführt werden.  
   
- Wenn Sie Registrierte Server verwenden, muss die Instanz, mit der Sie eine Verbindung herstellen möchten, unter **Lokale Servergruppen** oder **Zentrale Verwaltungsserver**registriert sein. (Die Instanz kann eigenständig oder als Mitglied einer Servergruppe registriert werden.) Weitere Informationen zum Hinzufügen einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu Registrierte Server finden Sie in den folgenden Themen:  
+ Wenn Sie Registrierte Server verwenden, muss die Instanz, mit der Sie eine Verbindung herstellen möchten, unter **Lokale Servergruppen** oder **Zentrale Verwaltungsserver** registriert sein. (Die Instanz kann eigenständig oder als Mitglied einer Servergruppe registriert werden.) Weitere Informationen zum Hinzufügen einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu Registrierte Server finden Sie in den folgenden Themen:  
   
 -   [Erstellen oder Bearbeiten einer Servergruppe &#40;SQL Server Management Studio&#41;](../../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "91869285"
   
     -   Klicken Sie im **Startmenü** auf **Suche starten**, geben Sie **wmimgmt.msc** ein, und drücken Sie dann die EINGABETASTE.  
   
-    -   Klicken Sie auf **Start**, dann auf **Ausführen**, geben Sie **wmimgmt.msc**ein, und drücken Sie dann die EINGABETASTE.  
+    -   Klicken Sie auf **Start**, dann auf **Ausführen**, geben Sie **wmimgmt.msc** ein, und drücken Sie dann die EINGABETASTE.  
   
 2.  Standardmäßig wird mit dem Snap-In WMI-Kontrolle der lokale Computer verwaltet.  
   
@@ -103,11 +103,11 @@ ms.locfileid: "91869285"
   
 4.  Führen Sie eines der folgenden Verfahren aus:  
   
-    -   Wenn die Instanz unter **Lokale Servergruppen**aufgeführt wird, erweitern Sie **Lokale Servergruppen**und die Servergruppe (wenn die Instanz Mitglied einer Gruppe ist), klicken Sie mit der rechten Maustaste auf die Instanz, und klicken Sie dann auf **SQL Server-Protokoll anzeigen**.  
+    -   Wenn die Instanz unter **Lokale Servergruppen** aufgeführt wird, erweitern Sie **Lokale Servergruppen** und die Servergruppe (wenn die Instanz Mitglied einer Gruppe ist), klicken Sie mit der rechten Maustaste auf die Instanz, und klicken Sie dann auf **SQL Server-Protokoll anzeigen**.  
   
-    -   Wenn es sich bei der Instanz um den zentralen Verwaltungsserver selbst handelt, erweitern Sie **Zentrale Verwaltungsserver**, klicken Sie mit der rechten Maustaste auf die Instanz, zeigen Sie auf **Aktionen des zentralen Verwaltungsservers**, und klicken Sie dann auf **SQL Server-Protokoll**anzeigen.  
+    -   Wenn es sich bei der Instanz um den zentralen Verwaltungsserver selbst handelt, erweitern Sie **Zentrale Verwaltungsserver**, klicken Sie mit der rechten Maustaste auf die Instanz, zeigen Sie auf **Aktionen des zentralen Verwaltungsservers**, und klicken Sie dann auf **SQL Server-Protokoll** anzeigen.  
   
-    -   Wenn die Instanz unter **Zentrale Verwaltungsserver**aufgeführt wird, erweitern Sie **Zentrale Verwaltungsserver**und den zentralen Verwaltungsserver, klicken Sie mit der rechten Maustaste auf die Instanz (oder erweitern Sie eine Servergruppe, und klicken Sie mit der rechten Maustaste auf die Instanz), und klicken Sie dann auf **SQL Server-Protokoll anzeigen**.  
+    -   Wenn die Instanz unter **Zentrale Verwaltungsserver** aufgeführt wird, erweitern Sie **Zentrale Verwaltungsserver** und den zentralen Verwaltungsserver, klicken Sie mit der rechten Maustaste auf die Instanz (oder erweitern Sie eine Servergruppe, und klicken Sie mit der rechten Maustaste auf die Instanz), und klicken Sie dann auf **SQL Server-Protokoll anzeigen**.  
   
 5.  Wenn Sie eine Verbindung mit einer lokalen Instanz herstellen, wird die Verbindung mit den aktuellen Benutzeranmeldeinformationen hergestellt.  
   

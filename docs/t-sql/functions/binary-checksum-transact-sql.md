@@ -21,11 +21,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2dd65d2923d063440e292884da2bb4c6aecf0ec4
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92255458"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124892"
 ---
 # <a name="binary_checksum--transact-sql"></a>BINARY_CHECKSUM (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -81,7 +81,7 @@ oder
   
 Die `BINARY_CHECKSUM`-Werte für die Zeichenfolgen „McCavity“ und „Mccavity“ sind z. B. unterschiedlich. Bei einem Server ohne Unterscheidung nach Groß-/Kleinschreibung gibt `CHECKSUM` jedoch für diese Zeichenfolgen dieselben Prüfsummenwerte zurück. Sie sollten Vergleiche zwischen `CHECKSUM`-Werten und `BINARY_CHECKSUM`-Werten vermeiden.
  
-`BINARY_CHECKSUM` unterstützt für den Typ **varbinary(max)** beliebige Längen und bis zu 255 Zeichen für den Typ **nvarchar(max)** .
+`BINARY_CHECKSUM` unterstützt für den Typ **varbinary(max)** beliebige Längen und bis zu 255 Zeichen für den Typ **nvarchar(max)**.
   
 ## <a name="examples"></a>Beispiele  
 Im folgenden Beispiel wird `BINARY_CHECKSUM` verwendet, um Änderungen in einer Zeile einer Tabelle zu erkennen.

@@ -23,11 +23,11 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 80745e9ea57da0a2307c304c46aaa2ea831f84ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386706"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125265"
 ---
 # <a name="deploy-a-data-tier-application"></a>Bereitstellen einer Datenebenenanwendung
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88386706"
 ## <a name="deploy-the-same-dac-package-multiple-times"></a>Mehrfaches Bereitstellen desselben DAC-Pakets 
  Dasselbe DAC-Paket kann mehrmals an eine einzelne [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz bereitgestellt werden, die Bereitstellungen müssen jedoch einzeln ausgeführt werden. Der für die einzelnen Bereitstellungen angegebene DAC-Instanzname muss innerhalb der Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]eindeutig sein.  
   
- Beim Bereitstellen einer DAC für eine Instanz der Datenbank-Engine wird die bereitgestellte DAC in das **SQL Server-Hilfsprogramm** integriert, wenn der Sammlungssatz des Hilfsprogramms das nächste Mal von der Instanz an den Steuerungspunkt für das Hilfsprogramm gesendet wird. Die DAC ist dann im Knoten **Bereitgestellte Datenebenenanwendungen** im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Hilfsprogramm-Explorer**von** vorhanden und wird auf der Detailseite **Bereitgestellte Datenebenenanwendungen** aufgeführt.  
+ Beim Bereitstellen einer DAC für eine Instanz der Datenbank-Engine wird die bereitgestellte DAC in das **SQL Server-Hilfsprogramm** integriert, wenn der Sammlungssatz des Hilfsprogramms das nächste Mal von der Instanz an den Steuerungspunkt für das Hilfsprogramm gesendet wird. Die DAC ist dann im Knoten **Bereitgestellte Datenebenenanwendungen** im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Hilfsprogramm-Explorer **von** vorhanden und wird auf der Detailseite **Bereitgestellte Datenebenenanwendungen** aufgeführt.  
   
 ###  <a name="database-options-and-settings"></a>Datenbankoptionen und -einstellungen  
  Die während der Bereitstellung erstellte Datenbank verfügt standardmäßig über alle Standardeinstellungen der CREATE DATABASE-Anweisung mit folgenden Ausnahmen:  
@@ -62,7 +62,7 @@ Um eine DAC mit Anmeldungen bei [!INCLUDE[ssSDS](../../includes/sssds-md.md)] be
   
 ## <a name="deploy-a-dac-using-the-wizard"></a>Bereitstellen einer DAC mithilfe des Assistenten  
   
-1.  Erweitern Sie im **Objekt-Explorer**den Knoten für die Instanz, für die Sie die DAC bereitstellen möchten.  
+1.  Erweitern Sie im **Objekt-Explorer** den Knoten für die Instanz, für die Sie die DAC bereitstellen möchten.  
   
 2.  Klicken Sie mit der rechten Maustaste auf den Knoten **Datenbanken**, und wählen Sie **Datenebenenanwendung bereitstellen...** aus.  
   
@@ -103,7 +103,7 @@ Im Folgenden erfahren Sie mehr über einige Seiten des Assistenten:
   
  Wenn Sie den Datenbanknamen ändern, werden die Namen der Datendatei und der Protokolldateien entsprechend dem neuen Wert angepasst.  
   
- Der Datenbankname wird auch als Name der DAC-Instanz verwendet. Der Instanzname wird im Knoten der DAC unter dem Knoten **Datenebenenanwendungen** im **Objekt-Explorer**oder im Knoten **Bereitgestellte Datenebenenanwendungen** im **Hilfsprogramm-Explorer**angezeigt.  
+ Der Datenbankname wird auch als Name der DAC-Instanz verwendet. Der Instanzname wird im Knoten der DAC unter dem Knoten **Datenebenenanwendungen** im **Objekt-Explorer** oder im Knoten **Bereitgestellte Datenebenenanwendungen** im **Hilfsprogramm-Explorer** angezeigt.  
   
  Die folgenden Optionen gelten nicht für [!INCLUDE[ssSDS](../../includes/sssds-md.md)]und werden beim Bereitstellen auf [!INCLUDE[ssSDS](../../includes/sssds-md.md)]nicht angezeigt.  
   
@@ -138,7 +138,7 @@ Im Folgenden erfahren Sie mehr über einige Seiten des Assistenten:
   
 4.  Verwenden Sie **add_DacActionStarted** und **add_DacActionFinished** , um die DAC-Bereitstellungsereignisse zu abonnieren.  
   
-5.  Legen Sie die **DatabaseDeploymentProperties**fest.  
+5.  Legen Sie die **DatabaseDeploymentProperties** fest.  
   
 6.  Verwenden Sie die **DacStore.Install** -Methode zum Bereitstellen der DAC.  
   

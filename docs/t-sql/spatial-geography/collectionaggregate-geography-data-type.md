@@ -16,11 +16,11 @@ ms.assetid: e49a644a-dbf2-46c3-98f5-4b3ec197e2ad
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: b49f1ab03be85c2c83caf50b548528ff36fd97b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88360386"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124330"
 ---
 # <a name="collectionaggregate-geography-data-type"></a>CollectionAggregate (geography-Datentyp)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +52,7 @@ ConvexHullAggregate ( geography_operand )
  Diese Methode ignoriert **null** -Eingaben.  
   
 > [!NOTE]  
->  Diese Methode gibt **null** zurück, wenn alle eingegebenen Werte **null**sind.  
+>  Diese Methode gibt **null** zurück, wenn alle eingegebenen Werte **null** sind.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine `GeometryCollection` -Instanz zurückgegeben, die einen Satz von **geography** -Objekten.  

@@ -8,14 +8,14 @@ ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 121155e824df7bde4e8420eacdb2a56784864d62
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 3f098dc361d4e30a82dee198bb8203d19b412613
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243614"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125435"
 ---
 # <a name="sql-server-back-up-applications---volume-shadow-copy-service-vss-and-sql-writer"></a>SQL Server-Sicherungsanwendungen – Volumeschattenkopie-Dienst und SQL Writer
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -223,10 +223,10 @@ Dabei handelt es sich um ein XML-Dokument, das von einem Writer (in diesem Fall 
     - VSS_BS_COPY: unterstützt die Sicherungsoption „Kopiesicherung“
 - Component Level Information (Komponentenbezogene Informationen): Dieser Abschnitt enthält komponentenspezifische Informationen, die vom SQL Writer bereitgestellt werden.
    - **Type** (Typ): VSS_CT_FILEGROUP
-   - **Name** : Name der Komponente (Datenbankname)
+   - **Name**: Name der Komponente (Datenbankname)
    - **Logical path** (Logischer Pfad): logischer Pfad der Serverinstanz; weist bei benannten Instanzen das Schema „Server\Instanzname“ und bei Standardinstanzen das Schema „Server“ auf
    - **Component Flags** (Komponentenflags)
-   - **VSS_CF_APP_ROLLBACK_RECOVERY** : gibt an, dass SQL Server-Momentaufnahmen immer eine Wiederherstellungsphase erfordern, damit die Dateien konsistent und für Nicht-Sicherungsszenarios (d. h. ein App-Rollback) wiederverwendbar gemacht werden können
+   - **VSS_CF_APP_ROLLBACK_RECOVERY**: gibt an, dass SQL Server-Momentaufnahmen immer eine Wiederherstellungsphase erfordern, damit die Dateien konsistent und für Nicht-Sicherungsszenarios (d. h. ein App-Rollback) wiederverwendbar gemacht werden können
    - Selectable (Auswählbar): TRUE
    - Selectable for Restore (Für die Wiederherstellung auswählbar): TRUE 
    - Restore methods supported (Unterstützte Wiederherstellungsmethoden): VSS_RME_RESTORE_IF_CAN_REPLACE
@@ -239,7 +239,7 @@ Am Ende dieses Artikels ist ein Beispiel für ein Writer-Metadatendokument aufge
 In dieser Phase untersucht ein Anforderer das Writer-Metadatendokument, erstellt ein **Sicherungskomponentendokument** und befüllt es mit jeder Komponente, die gesichert werden muss. In dem Dokument werden ebenfalls die erforderlichen Sicherungsoptionen und -parameter angegeben. Für den SQL Writer ist jede Datenbankinstanz, die gesichert werden muss, eine einzelne Komponente.
 
 #### <a name="backup-components-document"></a>Sicherungskomponentendokument
-Dabei handelt es sich um ein XML-Dokument, das von einem Anforderer (mithilfe der Schnittstelle **IVssBackupComponents** ) während eines Wiederherstellungs- oder Sicherungsvorgangs erstellt wird. Das Sicherungskomponentendokument enthält eine Liste der Komponenten, die von mindestens einem Writer, der an einem Sicherungs- oder Wiederherstellungsvorgang beteiligt ist, explizit hinzugefügt wurden. Es enthält keine implizit enthaltenen Komponenteninformationen. Ein Writer-Metadatendokument enthält nur Writer-Komponenten, die an einer Sicherung beteiligt sein können. Die strukturellen Details eines Sicherungskomponentendokuments werden in der Dokumentation zur VSS-API beschrieben.
+Dabei handelt es sich um ein XML-Dokument, das von einem Anforderer (mithilfe der Schnittstelle **IVssBackupComponents**) während eines Wiederherstellungs- oder Sicherungsvorgangs erstellt wird. Das Sicherungskomponentendokument enthält eine Liste der Komponenten, die von mindestens einem Writer, der an einem Sicherungs- oder Wiederherstellungsvorgang beteiligt ist, explizit hinzugefügt wurden. Es enthält keine implizit enthaltenen Komponenteninformationen. Ein Writer-Metadatendokument enthält nur Writer-Komponenten, die an einer Sicherung beteiligt sein können. Die strukturellen Details eines Sicherungskomponentendokuments werden in der Dokumentation zur VSS-API beschrieben.
 
 #### <a name="prebackup-tasks"></a>Vor der Sicherung anfallende Tasks
 Unter VSS vor der Sicherung anfallende Tasks sind darauf ausgerichtet, eine Schattenkopie der Volumes zu erstellen, die die zu sichernden Daten enthalten. Die Sicherungsanwendung speichert Daten aus der Schattenkopie, nicht aus dem zugrunde liegenden Volume.
@@ -247,7 +247,7 @@ Unter VSS vor der Sicherung anfallende Tasks sind darauf ausgerichtet, eine Scha
 Anforderer warten typischerweise während der Sicherungsvorbereitung und der Erstellung der Schattenkopie auf die Writer. Wenn der SQL Writer am Sicherungsvorgang beteiligt ist, muss er seine Dateien und sich selbst so konfigurieren, dass er bereit für die Sicherung und die Schattenkopie ist.
 
 #### <a name="prepare-for-backup"></a>Vorbereiten der Sicherung
-Der Anforderer muss den Typ des Sicherungsvorgangs festlegen, der ausgeführt werden muss ( **IVssBackupComponents::SetBackupState** ), und anschließend die Writer über VSS darüber benachrichtigen, dass sie sich mithilfe von **IVssBackupComponents::PrepareForBackup** auf die Sicherung vorbereiten sollen.
+Der Anforderer muss den Typ des Sicherungsvorgangs festlegen, der ausgeführt werden muss (**IVssBackupComponents::SetBackupState**), und anschließend die Writer über VSS darüber benachrichtigen, dass sie sich mithilfe von **IVssBackupComponents::PrepareForBackup** auf die Sicherung vorbereiten sollen.
 
 Der SQL Writer erhält Zugriff auf das Sicherungskomponentendokument, in dem angegeben ist, welche Datenbanken gesichert werden müssen. Alle Unterstützungsvolumes sollten im Volume-Momentaufnahmesatz enthalten sein. Der SQL Writer erkennt zerrissene Datenbanken (deren Unterstützungsvolumes nicht im Momentaufnahmesatz enthalten sind) und lässt die Sicherung während des Ereignisses „PostSnapshot“ fehlschlagen.
 
@@ -329,7 +329,7 @@ Wenn eine Sicherungsanwendung zusätzlich zum aktuellen Wiederherstellungsvorgan
 IVssBackupComponents::SetAdditionalRestores(true)
 ```
 
-Nachdem alle erforderlichen Details im Sicherungskomponentendokument festgelegt wurden, sendet der Anforderer einen Aufruf an **IVssBackupComponents::PreRestore** , um ein PreRestore-Ereignis über VSS zu generieren, das von den Writern verarbeitet wird.
+Nachdem alle erforderlichen Details im Sicherungskomponentendokument festgelegt wurden, sendet der Anforderer einen Aufruf an **IVssBackupComponents::PreRestore**, um ein PreRestore-Ereignis über VSS zu generieren, das von den Writern verarbeitet wird.
 
 Der SQL Writer untersucht das angegebene Sicherungskomponentendokument, um die entsprechenden Datenbanken zu ermitteln, wobei alle zusätzlichen Dateien gelöscht werden, die seit dem Sicherungszeitpunkt erstellt wurden. Außerdem überprüft der Writer den Speicherplatz und schließt alle geöffneten Datenbank-Dateihandles, sodass der Anforderer die benötigten Daten während der Wiederherstellungsphase kopieren kann. Aufgrund dieser Phase können alle frühen Fehlerzustände erkannt werden, bevor der Anforderer das tatsächliche Kopieren der Dateien ausführt. SQL Server versetzt die Datenbank außerdem in den Wiederherstellungszustand.  Ab diesem Zeitpunkt kann die Datenbank erst nach einer erfolgreichen Wiederherstellung gestartet werden.
 
@@ -339,7 +339,7 @@ Dabei handelt es sich um eine rein anfordererspezifische Aktion. Der Anforderer 
 
 #### <a name="cleanup-and-termination"></a>Cleanup und Beenden
 
-Nachdem alle Daten an der richtigen Stelle wiederhergestellt wurden, ruft ein Anforderer den SQL Writer auf und benachrichtigt ihn, dass der Wiederherstellungsvorgang abgeschlossen wurde ( **IvssBackupComponents::PostRestore** ). So erfährt der SQL Writer, dass die PostRestore-Aktionen gestartet werden können.  Der SQL Writer führt zu diesem Zeitpunkt die Rollforwardphase der Wiederherstellung nach Systemabsturz aus. Wenn die Wiederherstellung nicht angefordert wird (d. h. SetAdditionalRestores(true) wird nicht vom Anforderer angegeben), wird die Rollbackphase des Wiederherstellungsschritts ebenfalls während dieser Phase durchgeführt.
+Nachdem alle Daten an der richtigen Stelle wiederhergestellt wurden, ruft ein Anforderer den SQL Writer auf und benachrichtigt ihn, dass der Wiederherstellungsvorgang abgeschlossen wurde (**IvssBackupComponents::PostRestore**). So erfährt der SQL Writer, dass die PostRestore-Aktionen gestartet werden können.  Der SQL Writer führt zu diesem Zeitpunkt die Rollforwardphase der Wiederherstellung nach Systemabsturz aus. Wenn die Wiederherstellung nicht angefordert wird (d. h. SetAdditionalRestores(true) wird nicht vom Anforderer angegeben), wird die Rollbackphase des Wiederherstellungsschritts ebenfalls während dieser Phase durchgeführt.
 
 ## <a name="backup-and-restore-option-details"></a>Informationen zu Sicherungs- und Wiederherstellungsoptionen
 
@@ -409,7 +409,7 @@ Bei einem differenziellen Sicherungsvorgang werden nur die Daten gesichert, die 
 
 ### <a name="backup"></a>Backup
 
-Der Anforderer kann eine differenzielle Sicherung beauftragen, indem er die Option DIFFERENTIAL ( **VSS_BT_DIFFERENTIAL** ) im Sicherungskomponentendokument ( **IVssBackupComponents::SetBackupState** ) angibt, wenn ein Sicherungsvorgang mit VSS initiiert wird.  Der SQL Writer übergibt die partiellen Dateiinformationen (von SQL Server an den SQL Writer übergeben) an VSS.  Der Anforderer kann sich diese Dateiinformationen verschaffen, indem er VSS-APIs abruft ( **IVssComponent::GetPartialFile** ). Diese partiellen Dateiinformationen ermöglichen es dem Anforderer, für die Sicherung der Datenbankdateien nur die geänderten Bytebereiche auszuwählen.
+Der Anforderer kann eine differenzielle Sicherung beauftragen, indem er die Option DIFFERENTIAL (**VSS_BT_DIFFERENTIAL**) im Sicherungskomponentendokument (**IVssBackupComponents::SetBackupState**) angibt, wenn ein Sicherungsvorgang mit VSS initiiert wird.  Der SQL Writer übergibt die partiellen Dateiinformationen (von SQL Server an den SQL Writer übergeben) an VSS.  Der Anforderer kann sich diese Dateiinformationen verschaffen, indem er VSS-APIs abruft (**IVssComponent::GetPartialFile**). Diese partiellen Dateiinformationen ermöglichen es dem Anforderer, für die Sicherung der Datenbankdateien nur die geänderten Bytebereiche auszuwählen.
 
 Während der Phase „Vor der Sicherung anfallende Tasks“ stellt der SQL Writer sicher, dass für jede ausgewählte Datenbank eine einzelne differenzielle Basis vorhanden ist.
 

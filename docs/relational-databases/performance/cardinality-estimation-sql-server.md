@@ -17,11 +17,11 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e6ae3d6eaeab58e1352c14ba5ee90b47d500b974
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891000"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125114"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Kardinalitätsschätzung (SQL Server)
 
@@ -100,11 +100,11 @@ GO
  
 Alternativ ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 den [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md#use_hint) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
  
- ```sql  
+ ```sql  
 SELECT CustomerId, OrderAddedDate  
 FROM OrderTable  
 WHERE OrderAddedDate >= '2016-05-01'
-OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
+OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
 **Abfragespeicher:** Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ist der Abfragespeicher ein praktisches Tool zum Untersuchen der Leistung Ihrer Abfragen. In [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] wird im **Objekt-Explorer** unterhalb des Knotens Ihrer Datenbank ein Knoten **Abfragespeicher** angezeigt, wenn der Abfragespeicher aktiviert ist.  
@@ -195,7 +195,7 @@ Mit den folgenden Schritten können Sie ermitteln, ob Ihre wichtigsten Abfragen 
   
     -   **Geschätzte Anzahl von Zeilen**.  
   
-    -   **Geschätzte E/A-Kosten**sowie einige weitere ähnliche *geschätzte* Eigenschaften, die sich eher auf die tatsächliche Leistung als auf Vorhersagen zur Zeilenanzahl beziehen.  
+    -   **Geschätzte E/A-Kosten** sowie einige weitere ähnliche *geschätzte* Eigenschaften, die sich eher auf die tatsächliche Leistung als auf Vorhersagen zur Zeilenanzahl beziehen.  
   
     -   **Logische Operation** und **Physische Operation**. *Parallelität* ist ein guter Wert.  
   
@@ -243,9 +243,9 @@ Die genaueste Steuerung erzielen Sie, indem Sie *erzwingen*, dass das System den
   
 Der Abfragespeicher bietet verschiedene Möglichkeiten, das System zur Verwendung eines bestimmten Abfrageplans zu zwingen:  
   
-- Führen Sie **sp_query_store_force_plan**aus.  
+- Führen Sie **sp_query_store_force_plan** aus.  
   
-- Erweitern Sie in [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] den Knoten für Ihren **Abfragespeicher**, klicken Sie mit der rechten Maustaste auf **Knoten mit dem höchsten Ressourcenverbrauch**, und klicken Sie dann auf **Knoten mit dem höchsten Ressourcenverbrauch anzeigen**. Es werden die Schaltflächen **Plan erzwingen** und **Erzwingung des Plans aufheben**angezeigt.  
+- Erweitern Sie in [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] den Knoten für Ihren **Abfragespeicher**, klicken Sie mit der rechten Maustaste auf **Knoten mit dem höchsten Ressourcenverbrauch**, und klicken Sie dann auf **Knoten mit dem höchsten Ressourcenverbrauch anzeigen**. Es werden die Schaltflächen **Plan erzwingen** und **Erzwingung des Plans aufheben** angezeigt.  
   
 Weitere Informationen zum Abfragespeicher finden Sie unter [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
   

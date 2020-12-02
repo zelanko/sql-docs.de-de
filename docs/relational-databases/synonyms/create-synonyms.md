@@ -16,11 +16,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f5c4d25ed48715c9317ebe0df37ee4d2779abe10
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551596"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125107"
 ---
 # <a name="create-synonyms"></a>Erstellen von Synonymen
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "89551596"
   
 #### <a name="to-create-a-synonym"></a>So erstellen Sie ein Synonym  
   
-1.  Erweitern Sie im **Objekt-Explorer**die Datenbank, in der Sie die neue Sicht erstellen möchten.  
+1.  Erweitern Sie im **Objekt-Explorer** die Datenbank, in der Sie die neue Sicht erstellen möchten.  
   
 2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Synonyme**, und klicken Sie dann auf **Neues Synonym…**.  
   

@@ -11,14 +11,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.restoredb.general.f1
 ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 5c322f8c798a7b4a319df67e56565af54ceac20f
-ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: cda87fffca686f8e86c7b617e502952341bd459f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91662179"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125551"
 ---
 # <a name="restore-database-general-page"></a>Datenbank wiederherstellen (Seite 'Allgemein')
 
@@ -78,7 +78,7 @@ Mit diesen Optionen kann der Speicherort der Sicherungssätze für die Datenbank
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verwendet im Vergleich zu früheren Versionen einen anderen Standardpfad. Zum Wiederherstellen einer Datenbank, die am Standardspeicherort einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erstellt wurde, müssen Sie die MOVE-Option verwenden.  
   
- Nachdem Sie eine Datenbank einer früheren Version in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]wiederhergestellt haben, wird die Datenbank automatisch aktualisiert. In der Regel ist die Datenbank sofort verfügbar. Wenn eine [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Datenbank Volltextindizes aufweist, werden diese beim Upgrade entweder importiert, zurückgesetzt oder neu erstellt, je nach der Einstellung der Servereigenschaft **Volltextupgrade-Option** . Wenn die Upgradeoption auf **Importieren** oder **Neu erstellen**festgelegt ist, sind die Volltextindizes während des Upgrades nicht verfügbar. Je nach Menge der indizierten Daten kann der Importvorgang mehrere Stunden dauern, die Neuerstellung sogar bis zu zehnmal länger. Wenn die Upgradeoption auf **Importieren**festgelegt und kein Volltextkatalog verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt.  
+ Nachdem Sie eine Datenbank einer früheren Version in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]wiederhergestellt haben, wird die Datenbank automatisch aktualisiert. In der Regel ist die Datenbank sofort verfügbar. Wenn eine [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Datenbank Volltextindizes aufweist, werden diese beim Upgrade entweder importiert, zurückgesetzt oder neu erstellt, je nach der Einstellung der Servereigenschaft **Volltextupgrade-Option** . Wenn die Upgradeoption auf **Importieren** oder **Neu erstellen** festgelegt ist, sind die Volltextindizes während des Upgrades nicht verfügbar. Je nach Menge der indizierten Daten kann der Importvorgang mehrere Stunden dauern, die Neuerstellung sogar bis zu zehnmal länger. Wenn die Upgradeoption auf **Importieren** festgelegt und kein Volltextkatalog verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt.  
   
 ## <a name="restoring-from-an-encrypted-backup"></a>Wiederherstellen aus einer verschlüsselten Sicherung  
  Für die Wiederherstellung muss das Zertifikat oder der asymmetrische Schlüssel, mit dem die Sicherung ursprünglich erstellt wurde, auf der Instanz verfügbar sein, auf der die Wiederherstellung erfolgen soll. Das Konto, mit dem die Wiederherstellung ausgeführt wird, sollte über **VIEW DEFINITIONS** für das Zertifikat oder den asymmetrischen Schlüssel verfügen. Erneuern oder aktualisieren Sie keine Zertifikate, die zum Verschlüsseln der Sicherung verwendet werden.  

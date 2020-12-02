@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 44252fa011dcdeaca457d6aa7f9819f581dbeb11
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192578"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125257"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Konfigurieren von SQL Server-Agent-Mail zum Verwenden von Datenbank-E-Mails
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,11 +63,11 @@ ms.locfileid: "92192578"
   
 -   Klicken Sie auf **Warnungssystem**.  
   
--   Wählen Sie **Mailprofil aktivieren**aus.  
+-   Wählen Sie **Mailprofil aktivieren** aus.  
   
--   Wählen Sie in der Liste **Mailsystem** die Option **Datenbank-E-Mail**aus.  
+-   Wählen Sie in der Liste **Mailsystem** die Option **Datenbank-E-Mail** aus.  
   
--   Wählen Sie in der Liste **Mailprofil**ein Mailprofil für Datenbank-E-Mail aus. 
+-   Wählen Sie in der Liste **Mailprofil** ein Mailprofil für Datenbank-E-Mail aus. 
   
 -   Starten Sie den SQL Server-Agent neu.  
   

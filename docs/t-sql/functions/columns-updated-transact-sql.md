@@ -22,11 +22,11 @@ ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: bc2c16fb026bb64a304c1582b59ee7ffa09f35d6
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116505"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124864"
 ---
 # <a name="columns_updated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 
@@ -52,7 +52,7 @@ COLUMNS_UPDATED ( )
   
 `COLUMNS_UPDATED` gibt mindestens ein Byte in der Reihenfolge von links nach rechts zurück. Das äußere rechte Bit stellt in jedem Byte das niederwertigste Bit dar. Das äußere rechte Bit im Byte ganz links stellt die erste Tabellenspalte in der Tabelle dar. Das nächste Bit links davon stellt die zweite Spalte dar usw. `COLUMNS_UPDATED` gibt mehrere Bytes zurück, falls die Tabelle, für die der Trigger erstellt wird, mehr als acht Spalten enthält, wobei das niederwertigste Byte ganz links steht. `COLUMNS_UPDATED` gibt für alle Spalten in INSERT-Aktionen TRUE zurück, weil in die Spalten entweder explizite oder implizite Werte (NULL) eingefügt wurden.
   
-Verwenden Sie zum Testen, ob in bestimmten Spalten Updates oder Einfügungen vorgenommen wurden, die Syntax mit einem bitweisen Operator und einer ganzzahligen Bitmaske der getesteten Spalten. Die Tabelle **t1** enthält beispielsweise die Spalten **C1**, **C2**, **C3**, **C4**und **C5**. Wenn Sie überprüfen möchten, ob die Spalten **C2**, **C3** und **C4** alle erfolgreich aktualisiert wurden (die Tabelle **t1** weist dabei einen UPDATE-Trigger auf), verwenden Sie die Syntax mit **& 14**. Geben Sie **& 2** ein, um zu testen, ob nur die Spalte **C2** aktualisiert wurde. Tatsächliche Beispiele finden Sie unter [Beispiel A](#a-using-columns_updated-to-test-the-first-eight-columns-of-a-table) und [Beispiel B](#b-using-columns_updated-to-test-more-than-eight-columns).
+Verwenden Sie zum Testen, ob in bestimmten Spalten Updates oder Einfügungen vorgenommen wurden, die Syntax mit einem bitweisen Operator und einer ganzzahligen Bitmaske der getesteten Spalten. Die Tabelle **t1** enthält beispielsweise die Spalten **C1**, **C2**, **C3**, **C4** und **C5**. Wenn Sie überprüfen möchten, ob die Spalten **C2**, **C3** und **C4** alle erfolgreich aktualisiert wurden (die Tabelle **t1** weist dabei einen UPDATE-Trigger auf), verwenden Sie die Syntax mit **& 14**. Geben Sie **& 2** ein, um zu testen, ob nur die Spalte **C2** aktualisiert wurde. Tatsächliche Beispiele finden Sie unter [Beispiel A](#a-using-columns_updated-to-test-the-first-eight-columns-of-a-table) und [Beispiel B](#b-using-columns_updated-to-test-more-than-eight-columns).
   
 Verwenden Sie `COLUMNS_UPDATED` überall innerhalb eines INSERT- oder UPDATE-Triggers von [!INCLUDE[tsql](../../includes/tsql-md.md)].
   

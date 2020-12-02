@@ -18,14 +18,14 @@ helpviewer_keywords:
 - database backups [SQL Server], full backups
 - restoring databases [SQL Server], full backups
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2e23cceab272e11eedb1fa99250dce5520ada073
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: f93bb71a3f6dcbbd98e62cca67a877361c6766db
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718018"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125594"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +41,9 @@ Um eine verschlüsselte Datenbank wiederherzustellen, benötigen Sie Zugriff auf
     
 Wenn Sie eine Datenbank einer älteren Version nach [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] wiederherstellen, wird diese Datenbank automatisch auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisiert. Dies verhindert, dass die Datenbank mit einer älteren Version der [!INCLUDE[ssde_md](../../includes/ssde_md.md)] verwendet wird. Dies bezieht sich jedoch auf die Aktualisierung der Metadaten und besitzt keine Auswirkungen auf den [Datenbank-Kompatibilitätsgrad](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md). War der Kompatibilitätsgrad einer Benutzerdatenbank vor dem Upgrade 100 oder höher, wird er nach dem Upgrade beibehalten. War der Kompatibilitätsgrad der aktualisierten Datenbank vor dem Upgrade 90, wird er auf 100 gesetzt, was dem niedrigsten unterstützten Kompatibilitätsgrad in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]entspricht. Weitere Informationen finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
-In der Regel ist die Datenbank sofort verfügbar. Wenn eine [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Datenbank Volltextindizes aufweist, werden diese beim Upgrade entweder importiert, zurückgesetzt oder neu erstellt, je nach der Einstellung der Servereigenschaft **Volltextupgrade-Option** . Wenn Sie die Upgradeoption auf **Importieren** oder **Neu erstellen**festlegen, sind die Volltextindizes während des Upgrades nicht verfügbar. Je nach Menge der indizierten Daten kann der Importvorgang mehrere Stunden dauern; die Neuerstellung dauert sogar bis zu zehnmal länger.     
+In der Regel ist die Datenbank sofort verfügbar. Wenn eine [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Datenbank Volltextindizes aufweist, werden diese beim Upgrade entweder importiert, zurückgesetzt oder neu erstellt, je nach der Einstellung der Servereigenschaft **Volltextupgrade-Option** . Wenn Sie die Upgradeoption auf **Importieren** oder **Neu erstellen** festlegen, sind die Volltextindizes während des Upgrades nicht verfügbar. Je nach Menge der indizierten Daten kann der Importvorgang mehrere Stunden dauern; die Neuerstellung dauert sogar bis zu zehnmal länger.     
     
-Wenn die Upgradeoption auf **Importieren**festgelegt und kein Volltextkatalog verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt. Informationen zum Anzeigen oder Ändern der Einstellung der Eigenschaft **Volltextupgrade-Option** finden Sie unter [Verwalten und Überwachen der Volltextsuche auf einer Serverinstanz](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).    
+Wenn die Upgradeoption auf **Importieren** festgelegt und kein Volltextkatalog verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt. Informationen zum Anzeigen oder Ändern der Einstellung der Eigenschaft **Volltextupgrade-Option** finden Sie unter [Verwalten und Überwachen der Volltextsuche auf einer Serverinstanz](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).    
 
 Informationen zur SQL Server-Wiederherstellung aus dem Microsoft Azure-BLOB-Speicherdienst finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure-BLOB-Speicherdienst](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
 
@@ -51,9 +51,9 @@ Informationen zur SQL Server-Wiederherstellung aus dem Microsoft Azure-BLOB-Spei
     
 ### <a name="a-restore-a-full-database-backup"></a>A. Wiederherstellen einer vollständigen Datenbanksicherung   
     
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her, und erweitern Sie dann diese Instanz.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her, und erweitern Sie dann diese Instanz.  
     
-2.  Klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Datenbank wiederherstellen**aus.    
+2.  Klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Datenbank wiederherstellen** aus.    
     
 3.  Legen Sie Quelle und Speicherort der wiederherzustellenden Sicherungssätze auf der Seite **Allgemein** mithilfe des Abschnitts **Quelle** fest. Wählen Sie eine der folgenden Optionen aus:    
     
@@ -68,7 +68,7 @@ Informationen zur SQL Server-Wiederherstellung aus dem Microsoft Azure-BLOB-Spei
     
          Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen. 
          
-        -   Dialogfeld**Sicherungsmedien auswählen**  
+        -   Dialogfeld **Sicherungsmedien auswählen**  
         
             **Sicherungsmedientyp**  
          Wählen Sie einen Medientyp aus der Dropdownliste **Sicherungsmedientyp** aus.  Hinweis: Die Option **Band** ist nur verfügbar, wenn ein Bandlaufwerk auf dem Computer bereitgestellt ist. Die Option **Sicherungsmedium** wird nur angezeigt, wenn mindestens ein Sicherungsmedium vorhanden ist.
@@ -87,7 +87,7 @@ Informationen zur SQL Server-Wiederherstellung aus dem Microsoft Azure-BLOB-Spei
              Entfernt eine oder mehrere ausgewählte Dateien, Bänder oder logische Sicherungsmedien.    
                  
              **Inhalt**    
-            Zeigt den Medieninhalt von ausgewählten Dateien, Bändern oder logischen Sicherungsmedien an.  Diese Schaltfläche funktioniert möglicherweise nicht, wenn der Medientyp **URL**ist.  
+            Zeigt den Medieninhalt von ausgewählten Dateien, Bändern oder logischen Sicherungsmedien an.  Diese Schaltfläche funktioniert möglicherweise nicht, wenn der Medientyp **URL** ist.  
 
              **Sicherungsmedien**   
              Listet die ausgewählten Medien auf.
@@ -138,8 +138,8 @@ Weitere Informationen zu diesen Wiederherstellungsoptionen finden Sie unter [Dat
 ### <a name="b-restore-an-earlier-disk-backup-over-an-existing-database"></a>B. Wiederherstellen einer früheren Datenträgersicherung über eine vorhandene Datenbank
 Im folgenden Beispiel wird eine frühere Datenträgersicherung von `Sales` wiederhergestellt und dabei die vorhandene `Sales` -Datenbank überschrieben.
 
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her, und erweitern Sie dann diese Instanz.  
-2.  Klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Datenbank wiederherstellen**aus.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her, und erweitern Sie dann diese Instanz.  
+2.  Klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Datenbank wiederherstellen** aus.  
 3.  Wählen Sie auf der Seite **Allgemein** im Abschnitt **Quelle** die Option **Gerät** aus.
 4.  Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen. Klicken Sie auf **Hinzufügen** , und navigieren Sie Ihrer Sicherung. Nachdem Sie Ihre Datenträgersicherungsdatei(en) ausgewählt haben, klicken Sie auf **OK** .
 5.  Klicken Sie auf **OK** , um zur Seite **Allgemein** zurückzukehren.
@@ -166,14 +166,14 @@ Im folgenden Beispiel wird eine frühere Datenträgersicherung von `Sales` wiede
 ### <a name="c--restore-an-earlier-disk-backup-with-a-new-database-name-where-the-original-database-still-exists"></a>C.  Wiederherstellen einer früheren Datenträgersicherung mit einem neuen Datenbanknamen unter Beibehaltung der ursprünglichen Datenbank
 Im folgenden Beispiel wird eine frühere Datenträgersicherung von `Sales` wiederhergestellt und dabei eine neue Datenbank mit dem Namen `SalesTest`erstellt.  Die ursprüngliche Datenbank `Sales`bleibt auf dem Server erhalten.
 
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her, und erweitern Sie dann diese Instanz.  
-2.  Klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Datenbank wiederherstellen**aus.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her, und erweitern Sie dann diese Instanz.  
+2.  Klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Datenbank wiederherstellen** aus.  
 3.  Wählen Sie auf der Seite **Allgemein** im Abschnitt **Quelle** die Option **Gerät** aus.
 4.  Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen. Klicken Sie auf **Hinzufügen** , und navigieren Sie Ihrer Sicherung. Nachdem Sie Ihre Datenträgersicherungsdatei(en) ausgewählt haben, klicken Sie auf **OK** .
 5.  Klicken Sie auf **OK** , um zur Seite **Allgemein** zurückzukehren.
 6.  Im Abschnitt **Ziel** wird das Feld **Datenbank** automatisch mit dem Namen der Datenbank aufgefüllt, die wiederhergestellt werden soll. Geben Sie zum Ändern des Datenbanknamens den neuen Namen ins Feld **Datenbank** ein.
 7.  Klicken Sie im Abschnitt **Seite auswählen** auf **Optionen** .
-8.  Deaktivieren Sie im Abschnitt **Sicherung des Protokollfragments** die Option**Protokollfragment vor der Wiederherstellung sichern**.
+8.  Deaktivieren Sie im Abschnitt **Sicherung des Protokollfragments** die Option **Protokollfragment vor der Wiederherstellung sichern**.
 
     > [!IMPORTANT]
     > Wenn Sie diese Option nicht deaktivieren, wechselt die vorhandene `Sales`-Datenbank in den Status RESTORING.
@@ -188,13 +188,13 @@ Im folgenden Beispiel wird eine frühere Datenträgersicherung von `Sales` wiede
 ### <a name="d--restore-earlier-disk-backups-to-a-point-in-time"></a>D:  Wiederherstellen früherer Datenträgersicherungen bis zu einem bestimmten Zeitpunkt
 Im folgenden Beispiel wird eine Datenbank in den am `1:23:17 PM` um `May 30, 2016` bestehenden Status wiederhergestellt und ein Wiederherstellungsvorgang gezeigt, der mehrere Protokollsicherungen umfasst. Die Datenbank ist auf dem Server derzeit nicht vorhanden.
 
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her, und erweitern Sie dann diese Instanz.  
-2.  Klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Datenbank wiederherstellen**aus.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her, und erweitern Sie dann diese Instanz.  
+2.  Klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Datenbank wiederherstellen** aus.  
 3.  Wählen Sie auf der Seite **Allgemein** im Abschnitt **Quelle** die Option **Gerät** aus.
 4.  Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen. Klicken Sie auf **Hinzufügen** , und navigieren Sie zu der vollständigen Sicherung und allen relevanten Transaktionsprotokollsicherungen.  Nachdem Sie Ihre Datenträgersicherungsdateien ausgewählt haben, klicken Sie auf **OK** .
 5.  Klicken Sie auf **OK** , um zur Seite **Allgemein** zurückzukehren.
 6.  Klicken Sie im Abschnitt **Ziel** auf **Zeitachse** , um auf das Dialogfeld **Sicherungszeitachse** zuzugreifen und darin manuell einen Zeitpunkt zum Beenden des Wiederherstellungsvorgangs auszuwählen.
-7.  Wählen Sie **Bestimmtes Datum und bestimmte Uhrzeit**aus.  
+7.  Wählen Sie **Bestimmtes Datum und bestimmte Uhrzeit** aus.  
 8.  Ändern Sie die Einstellung von **Zeitachsenintervall** im Dropdownfeld auf **Stunde** (optional).  
 9.  Verschieben Sie den Schieberegler auf die gewünschte Zeit.
 10. Klicken Sie auf **OK** , um zur Seite „Allgemein“ zurückzukehren.
@@ -205,7 +205,7 @@ Im folgenden Beispiel wird eine Datenbank in den am `1:23:17 PM` um `May 30, 201
 #### <a name="common-steps"></a>Allgemeine Schritte
 In den beiden folgenden Beispielen wird eine Wiederherstellung von `Sales` aus einer Sicherung ausgeführt, die sich im Microsoft Azure-Speicherdienst befindet.  Der Speicherkontoname lautet `mystorageaccount`.  Der Container heißt `myfirstcontainer`.  Aus Gründen der Übersichtlichkeit sind die ersten sechs Schritte hier einmal aufgelistet und alle Beispiele beginnen mit **Schritt 7**.
 1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz der SQL Server-Datenbank-Engine her, und erweitern Sie anschließend diese Instanz.
-2.  Klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Datenbank wiederherstellen**aus.
+2.  Klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Datenbank wiederherstellen** aus.
 3.  Wählen Sie auf der Seite **Allgemein** im Abschnitt **Quelle** die Option **Gerät** aus.
 4.  Klicken Sie auf die Schaltfläche zum Durchsuchen (...), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen.    
 5.  Wählen Sie eine **URL** aus der Dropdownliste **Sicherungsmedientyp** aus.
@@ -240,7 +240,7 @@ In diesem Beispiel ist die Datenbank `Sales` auf dem Server derzeit nicht vorhan
 #### <a name="f-restore-local-backup-to-microsoft-azure-storage-url"></a>F. Wiederherstellen einer lokalen Sicherung in Microsoft Azure-Speicher (URL)
 Die Datenbank `Sales` wird aus einer Sicherung unter `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` im Microsoft Azure-Speichercontainer `E:\MSSQL\BAK`wiederhergestellt.  Die SQL Server-Anmeldeinformationen für den Azure-Container wurden bereits erstellt.  SQL Server-Anmeldeinformationen für den Zielcontainer müssen bereits vorhanden sein, da sie durch den **Wiederherstellungstask** nicht erstellt werden können.  Die Datenbank `Sales` ist auf dem Server derzeit nicht vorhanden.
 1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz der SQL Server-Datenbank-Engine her, und erweitern Sie anschließend diese Instanz.
-2.  Klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Datenbank wiederherstellen**aus.
+2.  Klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Datenbank wiederherstellen** aus.
 3.  Wählen Sie auf der Seite **Allgemein** im Abschnitt **Quelle** die Option **Gerät** aus.
 4.  Klicken Sie auf die Schaltfläche zum Durchsuchen (...), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen.  
 5.  Wählen Sie eine **Datei** aus der Dropdownliste **Sicherungsmedientyp** aus.

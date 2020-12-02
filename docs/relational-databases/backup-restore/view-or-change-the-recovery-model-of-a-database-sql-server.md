@@ -17,14 +17,14 @@ helpviewer_keywords:
 - database restores [SQL Server], recovery models
 - modifying database recovery models
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4e3aa38d92dbd829ff4259ac384475781534b4a3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6f4b1c8c2bcdc3a755a0311d83a08f7b083d4676
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85747609"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125318"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Anzeigen oder Ändern des Wiederherstellungsmodells einer Datenbank (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "85747609"
   
 5.  Das aktuelle Wiederherstellungsmodell wird im Listenfeld **Wiederherstellungsmodell** angezeigt.  
   
-6.  Sie können auch zum Wechseln des Wiederherstellungsmodells eine andere Modellliste auswählen. Die Auswahlmöglichkeiten sind **Vollständig**, **Massenprotokolliert**oder **Einfach**.  
+6.  Sie können auch zum Wechseln des Wiederherstellungsmodells eine andere Modellliste auswählen. Die Auswahlmöglichkeiten sind **Vollständig**, **Massenprotokolliert** oder **Einfach**.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

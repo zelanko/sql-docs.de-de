@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b562b03068ebee035f9b298c62ca49d5c1c0f396
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 6c06cb6fe516625cb517fc315bac8f3bc91e4fd7
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671100"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125913"
 ---
 # <a name="install-sql-server-with-sysprep"></a>Installieren von SQL Server mit SysPrep
 
@@ -86,13 +86,13 @@ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
   
 2. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationscenter wird vom Installations-Assistenten ausgeführt. Um eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorzubereiten, klicken Sie auf der Seite Erweitert auf die **Imagevorbereitung einer eigenständigen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** auf der Seite **Erweitert**. 
   
-3. Die Systemkonfigurationsprüfung führt einen Ermittlungsvorgang auf dem Computer aus. Klicken Sie zum Fortsetzen des Vorgangs auf **OK**. Sie können die Details auf dem Bildschirm anzeigen, indem Sie auf **Details anzeigen**klicken, oder als HTML-Bericht, indem Sie auf **Detaillierten Bericht anzeigen**klicken. 
+3. Die Systemkonfigurationsprüfung führt einen Ermittlungsvorgang auf dem Computer aus. Klicken Sie zum Fortsetzen des Vorgangs auf **OK**. Sie können die Details auf dem Bildschirm anzeigen, indem Sie auf **Details anzeigen** klicken, oder als HTML-Bericht, indem Sie auf **Detaillierten Bericht anzeigen** klicken. 
   
 4. Auf der Seite für Produktupdates werden die neuesten verfügbaren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Produktupdates angezeigt. Wenn Sie die Updates nicht einschließen möchten, deaktivieren Sie das Kontrollkästchen **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Produktupdates einschließen**. Wenn keine Produktupdates ermittelt wurden, zeigt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup diese Seite nicht an und geht automatisch zur Seite **Setupdateien installieren** über. 
   
 5. Auf der Seite Setupdateien installieren wird der Status angezeigt, während die Setupdateien heruntergeladen, extrahiert und installiert werden. Wenn ein Update für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup gefunden und angegeben wird, dass das Update eingeschlossen werden soll, wird dieses Update ebenfalls installiert. 
   
-6. Die Systemkonfigurationsprüfung überprüft den Systemstatus des Computers, bevor Setup fortgesetzt wird. Sie können die Details auf dem Bildschirm anzeigen, indem Sie auf **Details anzeigen**klicken, oder als HTML-Bericht, indem Sie auf **Detaillierten Bericht anzeigen**klicken. 
+6. Die Systemkonfigurationsprüfung überprüft den Systemstatus des Computers, bevor Setup fortgesetzt wird. Sie können die Details auf dem Bildschirm anzeigen, indem Sie auf **Details anzeigen** klicken, oder als HTML-Bericht, indem Sie auf **Detaillierten Bericht anzeigen** klicken. 
   
 7. Wählen Sie auf der Seite **Typ der Imagevorbereitung** die Option **Neue Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorbereiten** aus. 
   
@@ -110,7 +110,7 @@ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
   
      Die erforderlichen Komponenten für die ausgewählten Funktionen werden im rechten Bereich angezeigt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup installiert die erforderlichen Komponenten, die nicht bereits während des Installationsschritts installiert werden, der im weiteren Verlauf dieser Prozedur beschrieben wird. 
   
-10. Auf der Seite **Regeln zum Vorbereiten des Images** überprüft die Systemkonfigurationsprüfung den Systemstatus Ihres Computers, bevor Setup fortfährt. Sie können die Details auf dem Bildschirm anzeigen, indem Sie auf **Details anzeigen**klicken, oder als HTML-Bericht, indem Sie auf **Detaillierten Bericht anzeigen**klicken. 
+10. Auf der Seite **Regeln zum Vorbereiten des Images** überprüft die Systemkonfigurationsprüfung den Systemstatus Ihres Computers, bevor Setup fortfährt. Sie können die Details auf dem Bildschirm anzeigen, indem Sie auf **Details anzeigen** klicken, oder als HTML-Bericht, indem Sie auf **Detaillierten Bericht anzeigen** klicken. 
   
 11. Geben Sie auf der Instanzkonfigurationsseite die Instanz-ID für die Instanz an. Klicken Sie auf zum Fortfahren auf **Weiter**. 
   
@@ -124,7 +124,7 @@ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
   
 12. Auf der Seite **Erforderlicher Speicherplatz** wird der für die angegebenen Funktionen erforderliche Speicherplatz berechnet. Der erforderliche Speicherplatz wird dann mit dem verfügbaren Speicherplatz auf dem Computer verglichen. 
   
-13. Die Systemkonfigurationsprüfung führt Regeln für die Imagevorbereitung aus, um die Konfiguration des Computers anhand der von Ihnen angegebenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen zu überprüfen. Sie können die Details auf dem Bildschirm anzeigen, indem Sie auf **Details anzeigen**klicken, oder als HTML-Bericht, indem Sie auf **Detaillierten Bericht anzeigen**klicken. 
+13. Die Systemkonfigurationsprüfung führt Regeln für die Imagevorbereitung aus, um die Konfiguration des Computers anhand der von Ihnen angegebenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen zu überprüfen. Sie können die Details auf dem Bildschirm anzeigen, indem Sie auf **Details anzeigen** klicken, oder als HTML-Bericht, indem Sie auf **Detaillierten Bericht anzeigen** klicken. 
   
 14. Auf der Seite **Das Image kann jetzt vorbereitet werden** wird eine Strukturansicht der Installationsoptionen angezeigt, die in Setup angegeben wurden. Auf dieser Setupseite ist neben der letzten Updateversion auch angegeben, ob die Produktupdatefunktion aktiviert oder deaktiviert ist. Klicken Sie zum Fortsetzen des Vorgangs auf **Vorbereiten**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup installiert zuerst die erforderlichen Komponenten für die ausgewählten Funktionen und dann die Funktionen. 
   
@@ -142,11 +142,11 @@ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
   
 1. Wenn in das Image Ihres Computers eine vorbereitete Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eingeschlossen ist, wird im Startmenü eine Verknüpfung angezeigt. Sie können auch das Installationscenter starten und auf der Seite **Erweitert** auf **Abschließen eines Images von einer vorbereiteten eigenständigen Instanz** klicken. 
   
-2. Die Systemkonfigurationsprüfung führt einen Ermittlungsvorgang auf dem Computer aus. Klicken Sie zum Fortsetzen des Vorgangs auf **OK**. Sie können die Details auf dem Bildschirm anzeigen, indem Sie auf **Details anzeigen**klicken, oder als HTML-Bericht, indem Sie auf **Detaillierten Bericht anzeigen**klicken. 
+2. Die Systemkonfigurationsprüfung führt einen Ermittlungsvorgang auf dem Computer aus. Klicken Sie zum Fortsetzen des Vorgangs auf **OK**. Sie können die Details auf dem Bildschirm anzeigen, indem Sie auf **Details anzeigen** klicken, oder als HTML-Bericht, indem Sie auf **Detaillierten Bericht anzeigen** klicken. 
   
 3. Klicken Sie auf der Seite **Setup-Unterstützungsdateien** auf **Installieren** , um die Setup-Unterstützungsdateien zu installieren. 
   
-4. Die Systemkonfigurationsprüfung überprüft den Systemstatus des Computers, bevor Setup fortgesetzt wird. Nachdem die Prüfung abgeschlossen wurde, klicken Sie auf **Weiter** , um den Vorgang fortzusetzen. Sie können die Details auf dem Bildschirm anzeigen, indem Sie auf **Details anzeigen**klicken, oder als HTML-Bericht, indem Sie auf **Detaillierten Bericht anzeigen**klicken. 
+4. Die Systemkonfigurationsprüfung überprüft den Systemstatus des Computers, bevor Setup fortgesetzt wird. Nachdem die Prüfung abgeschlossen wurde, klicken Sie auf **Weiter** , um den Vorgang fortzusetzen. Sie können die Details auf dem Bildschirm anzeigen, indem Sie auf **Details anzeigen** klicken, oder als HTML-Bericht, indem Sie auf **Detaillierten Bericht anzeigen** klicken. 
   
 5. Wählen Sie auf der Seite **Product Key** ein Optionsfeld aus, um anzugeben, ob Sie eine kostenlose Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installieren oder ob Sie über eine Produktionsversion des Produkts mit einem PID-Schlüssel verfügen. Weitere Informationen finden Sie unter [Editionen und unterstützte Funktionen von SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md). Wenn Sie Evaluation Edition installieren, beginnt der 180-Tage-Testzeitraum mit dem Abschließen dieses Schritts. 
   
@@ -156,7 +156,7 @@ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
   
      **Installierte Instanzen:** Dieses Raster zeigt alle Instanzen einschließlich der vorbereiteten Instanzen auf diesem Computer an. 
   
-8. Auf der Seite **Überprüfung der Funktionen** werden die ausgewählten Funktionen und Komponenten angezeigt, die während des Vorbereitungsschritts in die Installation eingeschlossen wurden. Wenn Sie der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz weitere Funktionen hinzufügen möchten, die nicht in die vorbereitete Instanz eingeschlossen sind, müssen Sie zunächst diesen Schritt abschließen, um die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz fertig zu stellen, und anschließend die Funktionen im **Installationscenter** im Bereich **Funktionen hinzufügen**hinzufügen. 
+8. Auf der Seite **Überprüfung der Funktionen** werden die ausgewählten Funktionen und Komponenten angezeigt, die während des Vorbereitungsschritts in die Installation eingeschlossen wurden. Wenn Sie der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz weitere Funktionen hinzufügen möchten, die nicht in die vorbereitete Instanz eingeschlossen sind, müssen Sie zunächst diesen Schritt abschließen, um die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz fertig zu stellen, und anschließend die Funktionen im **Installationscenter** im Bereich **Funktionen hinzufügen** hinzufügen. 
   
     > [!NOTE]  
     >  Sie können Funktionen hinzufügen, die für die Produktversion, die Sie installieren, verfügbar sind. Weitere Informationen finden Sie unter [Editionen und unterstützte Funktionen von SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md).  
@@ -208,7 +208,7 @@ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
   
 17. Geben Sie auf der Seite **Fehlerberichterstellung** die Informationen an, die Sie an [!INCLUDE[msCoName](../../includes/msconame-md.md)] senden möchten, um zur Verbesserung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]beizutragen. Die Option für Fehlerberichte ist standardmäßig aktiviert. 
   
-18. Auf der Seite **Regeln zum Abschließen des Images** führt die Systemkonfigurationsprüfung alle Imageregeln vollständig aus, um die Konfiguration des Computers anhand der von Ihnen angegebenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurationen zu überprüfen. Sie können die Details auf dem Bildschirm anzeigen, indem Sie auf **Details anzeigen**klicken, oder als HTML-Bericht, indem Sie auf **Detaillierten Bericht anzeigen**klicken. 
+18. Auf der Seite **Regeln zum Abschließen des Images** führt die Systemkonfigurationsprüfung alle Imageregeln vollständig aus, um die Konfiguration des Computers anhand der von Ihnen angegebenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurationen zu überprüfen. Sie können die Details auf dem Bildschirm anzeigen, indem Sie auf **Details anzeigen** klicken, oder als HTML-Bericht, indem Sie auf **Detaillierten Bericht anzeigen** klicken. 
   
 19. Auf der Seite **Das Image kann jetzt abgeschlossen werden** wird eine Strukturansicht der Installationsoptionen angezeigt, die in Setup angegeben wurden. Klicken Sie zum Fortsetzen des Vorgangs auf **Installieren**. 
   
@@ -228,7 +228,7 @@ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
   
 2. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationscenter wird vom Installations-Assistenten ausgeführt. Um einer vorbereiteten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Funktionen hinzuzufügen, klicken Sie auf der Seite **Erweitert** auf **Vorbereiten eines Images von einer eigenständigen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . 
   
-3. Die Systemkonfigurationsprüfung führt einen Ermittlungsvorgang auf dem Computer aus. Klicken Sie zum Fortsetzen des Vorgangs auf **OK**. Sie können die Details auf dem Bildschirm anzeigen, indem Sie auf **Details anzeigen**klicken, oder als HTML-Bericht, indem Sie auf **Detaillierten Bericht anzeigen**klicken. 
+3. Die Systemkonfigurationsprüfung führt einen Ermittlungsvorgang auf dem Computer aus. Klicken Sie zum Fortsetzen des Vorgangs auf **OK**. Sie können die Details auf dem Bildschirm anzeigen, indem Sie auf **Details anzeigen** klicken, oder als HTML-Bericht, indem Sie auf **Detaillierten Bericht anzeigen** klicken. 
   
 4. Klicken Sie auf der Seite **Setup-Unterstützungsdateien** auf Installieren, um die Setup-Unterstützungsdateien zu installieren. 
   
@@ -238,11 +238,11 @@ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
   
      Die erforderlichen Komponenten für die ausgewählten Funktionen werden im rechten Bereich angezeigt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup installiert die erforderlichen Komponenten, die nicht bereits während des Installationsschritts installiert werden, der im weiteren Verlauf dieser Prozedur beschrieben wird. 
   
-7. Auf der Seite **Regeln zum Vorbereiten des Images** überprüft die Systemkonfigurationsprüfung den Systemstatus Ihres Computers, bevor Setup fortfährt. Sie können die Details auf dem Bildschirm anzeigen, indem Sie auf **Details anzeigen**klicken, oder als HTML-Bericht, indem Sie auf **Detaillierten Bericht anzeigen**klicken. 
+7. Auf der Seite **Regeln zum Vorbereiten des Images** überprüft die Systemkonfigurationsprüfung den Systemstatus Ihres Computers, bevor Setup fortfährt. Sie können die Details auf dem Bildschirm anzeigen, indem Sie auf **Details anzeigen** klicken, oder als HTML-Bericht, indem Sie auf **Detaillierten Bericht anzeigen** klicken. 
   
 8. Auf der Seite Erforderlicher Speicherplatz wird der für die angegebenen Funktionen erforderliche Speicherplatz berechnet. Der erforderliche Speicherplatz wird dann mit dem verfügbaren Speicherplatz auf dem Computer verglichen. 
   
-9. Auf der Seite **Regeln zum Vorbereiten des Images** führt die Systemkonfigurationsprüfung Regeln für die Imagevorbereitung aus, um die Konfiguration des Computers anhand der von Ihnen angegebenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen zu überprüfen. Sie können die Details auf dem Bildschirm anzeigen, indem Sie auf **Details anzeigen**klicken, oder als HTML-Bericht, indem Sie auf **Detaillierten Bericht anzeigen**klicken. 
+9. Auf der Seite **Regeln zum Vorbereiten des Images** führt die Systemkonfigurationsprüfung Regeln für die Imagevorbereitung aus, um die Konfiguration des Computers anhand der von Ihnen angegebenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen zu überprüfen. Sie können die Details auf dem Bildschirm anzeigen, indem Sie auf **Details anzeigen** klicken, oder als HTML-Bericht, indem Sie auf **Detaillierten Bericht anzeigen** klicken. 
   
 10. Auf der Seite **Das Image kann jetzt vorbereitet werden** wird eine Strukturansicht der Installationsoptionen angezeigt, die in Setup angegeben wurden. Klicken Sie zum Fortsetzen des Vorgangs auf **Installieren**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup installiert zuerst die erforderlichen Komponenten für die ausgewählten Funktionen und dann die Funktionen. 
   
@@ -256,7 +256,7 @@ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
   
 ### <a name="removing-features-from-a-prepared-instance-of-ssnoversion"></a>Entfernen von Funktionen aus einer vorbereiteten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1. Beginnen Sie den Deinstallationsvorgang, indem Sie im Menü **Start** auf **Systemsteuerung** klicken und danach auf **Programme und Funktionen**doppelklicken. 
+1. Beginnen Sie den Deinstallationsvorgang, indem Sie im Menü **Start** auf **Systemsteuerung** klicken und danach auf **Programme und Funktionen** doppelklicken. 
   
 2. Doppelklicken Sie auf die zu deinstallierende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponente, und klicken Sie dann auf **Entfernen**. 
   
@@ -278,7 +278,7 @@ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
   
 ### <a name="uninstall-a-prepared-instance-of-ssnoversion"></a>Deinstallieren einer vorbereiteten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1. Beginnen Sie den Deinstallationsvorgang, indem Sie im Menü **Start** auf **Systemsteuerung** klicken und danach auf **Programme und Funktionen**doppelklicken. 
+1. Beginnen Sie den Deinstallationsvorgang, indem Sie im Menü **Start** auf **Systemsteuerung** klicken und danach auf **Programme und Funktionen** doppelklicken. 
   
 2. Doppelklicken Sie auf die zu deinstallierende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponente, und klicken Sie dann auf **Entfernen**. 
   

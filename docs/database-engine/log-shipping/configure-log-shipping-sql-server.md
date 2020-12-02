@@ -11,14 +11,14 @@ helpviewer_keywords:
 - log shipping [SQL Server], enabling
 - log shipping [SQL Server], configuring
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: b9735e45e834f60cff3a9d7fa25360b8935ed9b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 711f16dc52a25f03fabcd59dd63e13e5d075ba05
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85696269"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125720"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Konfigurieren des Protokollversands (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,11 +62,11 @@ ms.locfileid: "85696269"
   
 1.  Klicken Sie mit der rechten Maustaste auf die Datenbank, die Sie als primäre Datenbank in der Protokollversandkonfiguration verwenden möchten, und klicken Sie dann auf **Eigenschaften**.  
   
-2.  Klicken Sie unter **Seite auswählen**auf **Transaktionsprotokollversand**.  
+2.  Klicken Sie unter **Seite auswählen** auf **Transaktionsprotokollversand**.  
   
 3.  Aktivieren Sie das Kontrollkästchen vor **Diese Datenbank als primäre Datenbank in einer Protokollversandkonfiguration aktivieren** .  
   
-4.  Klicken Sie unter **Transaktionsprotokollsicherungen**auf **Sicherungseinstellungen**.  
+4.  Klicken Sie unter **Transaktionsprotokollsicherungen** auf **Sicherungseinstellungen**.  
   
 5.  Geben Sie in das Feld **Geben Sie den Netzwerkpfad zum Sicherungsordner an** den Netzwerkpfad für die Freigabe ein, die Sie für den Ordner der Transaktionsprotokollsicherung erstellt haben.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "85696269"
   
 10. Klicken Sie auf **OK**.  
   
-11. Klicken Sie unter **Sekundäre Serverinstanzen und Datenbanken**auf **Hinzufügen**.  
+11. Klicken Sie unter **Sekundäre Serverinstanzen und Datenbanken** auf **Hinzufügen**.  
   
 12. Klicken Sie auf **Verbinden** , und stellen Sie eine Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] her, die Sie als sekundären Server verwenden möchten.  
   
@@ -98,30 +98,30 @@ ms.locfileid: "85696269"
   
 16. Beachten Sie den Zeitplan für das Kopieren im Feld **Zeitplan** unter **Kopierauftrag**. Wenn Sie den Zeitplan für Ihre Installation anpassen möchten, klicken Sie auf **Zeitplan** , und passen Sie den Zeitplan des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents bei Bedarf an. Dieser Zeitplan sollte ungefähr mit dem Sicherungszeitplan übereinstimmen.  
   
-17. Wählen Sie auf der Registerkarte **Wiederherstellen** unter **Datenbankstatus beim Wiederherstellen von Sicherungen**die Option **Kein Wiederherstellungsmodus** oder **Standbymodus** aus.  
+17. Wählen Sie auf der Registerkarte **Wiederherstellen** unter **Datenbankstatus beim Wiederherstellen von Sicherungen** die Option **Kein Wiederherstellungsmodus** oder **Standbymodus** aus.  
     > [!IMPORTANT]  
     > **Standby-Modus** ist nur eine Option, wenn die Versionen des primären und sekundären Servers identisch sind. Wenn die Hauptversion des sekundären Servers höher ist als die des primären, ist nur **Kein Wiederherstellungsmodus** zulässig.
   
 18. Wenn Sie die Option **Standbymodus** auswählen, legen Sie fest, ob die Benutzer von der sekundären Datenbank getrennt werden sollen, während der Wiederherstellungsvorgang ausgeführt wird.  
   
-19. Wenn Sie den Wiederherstellungsprozess auf dem sekundären Server verzögern möchten, wählen Sie unter **Wiederherstellen von Sicherungen verzögern um mindestens**eine Verzögerungszeit aus.  
+19. Wenn Sie den Wiederherstellungsprozess auf dem sekundären Server verzögern möchten, wählen Sie unter **Wiederherstellen von Sicherungen verzögern um mindestens** eine Verzögerungszeit aus.  
   
-20. Wählen Sie unter **Warnen, wenn keine Wiederherstellung erfolgt in**einen Warnschwellenwert aus.  
+20. Wählen Sie unter **Warnen, wenn keine Wiederherstellung erfolgt in** einen Warnschwellenwert aus.  
   
 21. Beachten Sie den Wiederherstellungszeitplan im Feld **Zeitplan** unter **Wiederherstellungsauftrag**. Wenn Sie den Zeitplan für Ihre Installation anpassen möchten, klicken Sie auf **Zeitplan** , und passen Sie den Zeitplan des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents bei Bedarf an. Dieser Zeitplan sollte ungefähr mit dem Sicherungszeitplan übereinstimmen.  
   
 22. Klicken Sie auf **OK**.  
   
-23. Aktivieren Sie unter **Überwachungsserverinstanz**das Kontrollkästchen **Überwachungsserverinstanz verwenden** , und klicken Sie dann auf **Einstellungen**.  
+23. Aktivieren Sie unter **Überwachungsserverinstanz** das Kontrollkästchen **Überwachungsserverinstanz verwenden** , und klicken Sie dann auf **Einstellungen**.  
   
     > [!IMPORTANT]  
     >  Wenn Sie diese Protokollversandkonfiguration überwachen möchten, müssen Sie nun den Überwachungsserver hinzufügen. Zum späteren Hinzufügen des Überwachungsservers müssten Sie diese Protokollversandkonfiguration entfernen und sie dann durch eine neue Konfiguration ersetzen, die einen Überwachungsserver umfasst.  
   
 24. Klicken Sie auf **Verbinden** , und stellen Sie eine Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] her, die Sie als Überwachungsserver verwenden möchten.  
   
-25. Wählen Sie unter **Überwachungsverbindungen**die Verbindungsmethode aus, die von den Sicherungs-, Kopier- und Wiederherstellungsaufträgen zum Herstellen einer Verbindung mit dem Überwachungsserver verwendet werden soll.  
+25. Wählen Sie unter **Überwachungsverbindungen** die Verbindungsmethode aus, die von den Sicherungs-, Kopier- und Wiederherstellungsaufträgen zum Herstellen einer Verbindung mit dem Überwachungsserver verwendet werden soll.  
   
-26. Wählen Sie unter **Verlaufsbeibehaltung**aus, wie lang ein Datensatz des Protokollversandverlaufs beibehalten werden soll.  
+26. Wählen Sie unter **Verlaufsbeibehaltung** aus, wie lang ein Datensatz des Protokollversandverlaufs beibehalten werden soll.  
   
 27. Klicken Sie auf **OK**.  
   
