@@ -12,10 +12,10 @@ ms.assetid: 59990fe2-7036-4e9c-8efc-6ece9e66eda7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 025e601dfb6f062246d1edcb1799c1daf2b69886
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88449684"
 ---
 # <a name="lesson-1-2---creating-the-deployment-project"></a>Lektion 1-2: Erstellen des Bereitstellungsprojekts
@@ -27,7 +27,7 @@ In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]ist die bereitstell
   
 ### <a name="to-create-the-integration-services-project"></a>So erstellen Sie das Integration Services-Projekt  
   
-1.  Klicken Sie auf **Start**und zeigen sie auf **Alle Programme**. Klicken Sie nun auf **Microsoft SQL Server**und anschließend auf **SQL Server Data Tools**.  
+1.  Klicken Sie auf **Start** und zeigen sie auf **Alle Programme**. Klicken Sie nun auf **Microsoft SQL Server** und anschließend auf **SQL Server Data Tools**.  
   
 2.  Zeigen Sie im Menü **Datei** auf **Neu**, und klicken Sie anschließend auf **Projekt** , um ein neues [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt zu erstellen.  
   

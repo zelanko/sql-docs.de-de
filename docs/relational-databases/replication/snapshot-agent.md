@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 532917bc211dcc281dd65ebb6229febc953d5805
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88420384"
 ---
 # <a name="snapshot-agent"></a>Momentaufnahme-Agent
@@ -28,7 +28,7 @@ ms.locfileid: "88420384"
    Im Dialogfeld **Momentaufnahmen-Agent** werden detaillierte Informationen zum Momentaufnahmen-Agent wie Status, Verlauf, Informationsmeldungen und alle Fehlermeldungen angezeigt.  
   
 ## <a name="options"></a>Tastatur  
- Wählen Sie im Menü **Sicht** aus, welche Sitzungen des Momentaufnahme-Agents angezeigt werden, und wählen Sie dann eine bestimmte Sitzung aus dem Raster mit der Bezeichnung **Sitzungen des Momentaufnahme-Agents**aus. Detaillierte Informationen zu dieser Sitzung werden im Raster mit der Bezeichnung **Aktionen in der ausgewählten Sitzung**angezeigt. Wenn die ausgewählte Sitzung mit einem Fehler beendet wurde, wird auch der Textbereich mit der Bezeichnung **Fehlerdetails oder Meldung der ausgewählten Sitzung** angezeigt.  
+ Wählen Sie im Menü **Sicht** aus, welche Sitzungen des Momentaufnahme-Agents angezeigt werden, und wählen Sie dann eine bestimmte Sitzung aus dem Raster mit der Bezeichnung **Sitzungen des Momentaufnahme-Agents** aus. Detaillierte Informationen zu dieser Sitzung werden im Raster mit der Bezeichnung **Aktionen in der ausgewählten Sitzung** angezeigt. Wenn die ausgewählte Sitzung mit einem Fehler beendet wurde, wird auch der Textbereich mit der Bezeichnung **Fehlerdetails oder Meldung der ausgewählten Sitzung** angezeigt.  
   
  **Ansicht**  
  Wählen Sie aus, welche Sitzungen des Momentaufnahme-Agents angezeigt werden.  

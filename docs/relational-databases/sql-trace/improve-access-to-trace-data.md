@@ -16,10 +16,10 @@ ms.assetid: c260c000-fd53-4831-993f-df6894f3228b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f2c85d7c440f32aee7b6b6fb76019fdb2eef2c2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88324878"
 ---
 # <a name="improve-access-to-trace-data"></a>Verbessern des Zugriffs auf Ablaufverfolgungsdaten
@@ -32,11 +32,11 @@ ms.locfileid: "88324878"
   
 ### <a name="to-change-the-temp-environment-variable-in-windows-operating-systems"></a>So ändern Sie die TEMP-Umgebungsvariable in Windows-Betriebssystemen  
   
-1.  Wählen Sie im Menü **Start** die Option **Systemsteuerung**aus, und klicken Sie dann auf **System**.  
+1.  Wählen Sie im Menü **Start** die Option **Systemsteuerung** aus, und klicken Sie dann auf **System**.  
   
 2.  Klicken Sie im Dialogfeld **Systemeigenschaften** auf die Registerkarte **Erweitert** , und klicken Sie dann auf **Umgebungsvariablen**.  
   
-3.  Führen Sie in der Liste **Systemvariablen**einen Bildlauf nach unten durch, wählen Sie die Zeile für die **TEMP** -Variable aus, und klicken Sie auf **Bearbeiten**.  
+3.  Führen Sie in der Liste **Systemvariablen** einen Bildlauf nach unten durch, wählen Sie die Zeile für die **TEMP** -Variable aus, und klicken Sie auf **Bearbeiten**.  
   
 4.  Geben Sie im Dialogfeld **Systemvariable bearbeiten** den Pfad und den Namen des Laufwerks und des Verzeichnisses für das **temp** -Verzeichnis ein.  
   

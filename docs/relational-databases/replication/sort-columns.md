@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 08a1426de0d150684d867135947087e40207f246
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88326506"
 ---
 # <a name="sort-columns"></a>Spalten sortieren
@@ -34,7 +34,7 @@ ms.locfileid: "88326506"
  Der Name der Spalte, nach Sie sortieren möchten. Sie können nach einer oder mehreren Spalten sortieren. Nach den Spalten **Aktuelle Durchschnittsleistung** oder **Die derzeit schlechteste Leistung** auf der Registerkarte **Veröffentlichungen** können Sie aufgrund der Art und Weise, in der die Werte in diesen Spalten berechnet werden, nicht sortieren.  
   
  **Sortierreihenfolge**  
- Geben Sie den Wert **Aufsteigend** oder **Absteigend**an.  
+ Geben Sie den Wert **Aufsteigend** oder **Absteigend** an.  
   
  **Auswahl aufheben**  
  Hiermit entfernen Sie alle Zeilen aus dem Sortierungsraster. Wenn Sie eine einzelne Zeile entfernen möchten, wählen Sie die Zeile aus, und drücken Sie die ENTF-TASTE.  

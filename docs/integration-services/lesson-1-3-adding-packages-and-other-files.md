@@ -12,10 +12,10 @@ ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38d062e21ec2bd7eb0e9314f5e108ea785e5428a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88449717"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>Lektion 1-3: Hinzufügen von Paketen und weiteren Dateien
@@ -50,11 +50,11 @@ In der folgenden Aufgabe fügen Sie den DataTransfer- und LoadXMLData-Paketen Ko
   
 1.  Wenn [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] noch nicht geöffnet ist, klicken Sie auf **Start**, zeigen Sie auf **Alle Programme**, zeigen Sie auf **Microsoft SQL Server**, und klicken Sie dann auf **SQL Server Data Tools**.  
   
-2.  Klicken Sie im Menü **Datei** auf **Öffnen**&gt; **Projekt/Projektmappe**. Wählen Sie den Ordner **Deployment Tutorial** aus, klicken Sie auf **Öffnen**und anschließend doppelt auf **Deployment Tutorial.sln**.  
+2.  Klicken Sie im Menü **Datei** auf **Öffnen**&gt; **Projekt/Projektmappe**. Wählen Sie den Ordner **Deployment Tutorial** aus, klicken Sie auf **Öffnen** und anschließend doppelt auf **Deployment Tutorial.sln**.  
   
-3.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf Deployment Tutorial, dann auf **Hinzufügen**und anschließend auf **Vorhandenes Paket**.  
+3.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf Deployment Tutorial, dann auf **Hinzufügen** und anschließend auf **Vorhandenes Paket**.  
   
-4.  Wählen Sie im Dialogfeld **Kopie des vorhandenen Pakets hinzufügen** unter **Paketspeicherort**die Option **Dateisystem**aus.  
+4.  Wählen Sie im Dialogfeld **Kopie des vorhandenen Pakets hinzufügen** unter **Paketspeicherort** die Option **Dateisystem** aus.  
   
 5.  Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**, navigieren Sie zu C:\Programme\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages, wählen Sie **DataTransfer.dtsx** aus, und klicken Sie anschließend auf **Öffnen**.  
   
@@ -64,7 +64,7 @@ In der folgenden Aufgabe fügen Sie den DataTransfer- und LoadXMLData-Paketen Ko
   
 ### <a name="to-add-ancillary-files-to-the-deployment-tutorial-project"></a>So fügen Sie dem Deployment Tutorial-Projekt Hilfsdateien hinzu  
   
-1.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf Deployment Tutorial, klicken Sie auf **Hinzufügen**und anschließend auf **Vorhandenes Element**.  
+1.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf Deployment Tutorial, klicken Sie auf **Hinzufügen** und anschließend auf **Vorhandenes Element**.  
   
 2.  Navigieren Sie im Dialogfeld **Vorhandenes Element hinzufügen - Deployment Tutorial** zu C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deployment Packages\Sample Data, wählen Sie orders.xml, orders.xsd und NewCustomers.txt aus, und klicken Sie anschließend auf **Hinzufügen**.  
   

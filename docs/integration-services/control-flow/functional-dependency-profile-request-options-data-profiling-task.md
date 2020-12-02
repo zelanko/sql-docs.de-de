@@ -14,10 +14,10 @@ ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1fa83e2b75860730f4e3d9b419a2ca8ca374ba31
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88393426"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Optionen für die Anforderung für funktionales Abhängigkeitsprofil (Datenprofilerstellungs-Task)
@@ -28,7 +28,7 @@ ms.locfileid: "88393426"
   Verwenden Sie den Bereich **Anforderungseigenschaften** im Fenster **Profilanforderungen** , um die Optionen für die im Anforderungsbereich ausgewählte **Anforderung für funktionales Abhängigkeitsprofil** festzulegen. Ein funktionales Abhängigkeitsprofil dokumentiert das Ausmaß, in dem die Werte in einer Spalte (der abhängigen Spalte) von den Werten in einer anderen Spalte oder einer Gruppe von Spalten (der determinanten Spalte) abhängen. Dieses Profil hilft Ihnen auch, Probleme mit den Daten zu identifizieren, z. B. ungültige Werte. Beispiel: Sie erstellen ein Profil der Abhängigkeit zwischen einer Spalte, die Postleitzahlen enthält, und einer Spalte mit US-amerikanischen Bundesstaaten. In diesem Profil sollte dieselbe Postleitzahl immer denselben Bundesstaat aufweisen, doch das Profil entdeckt Verstöße gegen das Abhängigkeitsverhältnis.  
   
 > [!NOTE]  
->  Die in diesem Thema beschriebenen Optionen werden auf der Seite **Profilanforderungen** im **Editor für den Datenprofilerstellungs-Task**angezeigt. Weitere Informationen zu dieser Seite des Editors finden Sie unter [Editor für den Datenprofilerstellungs-Task &#40;Seite „Profilanforderungen“&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md).  
+>  Die in diesem Thema beschriebenen Optionen werden auf der Seite **Profilanforderungen** im **Editor für den Datenprofilerstellungs-Task** angezeigt. Weitere Informationen zu dieser Seite des Editors finden Sie unter [Editor für den Datenprofilerstellungs-Task &#40;Seite „Profilanforderungen“&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md).  
   
  Weitere Informationen zum Verwenden des Datenprofilerstellungs-Tasks finden Sie unter [Einrichten von Datenprofilerstellungs-Tasks](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Weitere Informationen zum Verwenden des Datenprofil-Viewers zum Analysieren der Ausgabe des Datenprofilerstellungs-Tasks finden Sie unter [Datenprofil-Viewer](../../integration-services/control-flow/data-profile-viewer.md).  
   
@@ -47,7 +47,7 @@ ms.locfileid: "88393426"
 >  Wenn Sie **(\*)** auswählen, kann dies zu zahlreichen Berechnungen führen und die Leistung des Tasks beeinträchtigen. Wenn der Task jedoch eine Teilmenge findet, die den Schwellenwert für eine funktionale Abhängigkeit erfüllt, analysiert der Task keine weiteren Kombinationen. Wenn der Task beispielsweise in der oben beschriebenen Beispieltabelle ermittelt, dass Spalte C eine determinante Spalte ist, führt er keine Analyse der zusammengesetzten Kandidaten aus.  
   
 ## <a name="request-properties-options"></a>Optionen für Anforderungseigenschaften  
- Für eine **Anforderung für funktionales Abhängigkeitsprofil**zeigt der Bereich **Anforderungseigenschaften** die folgenden Gruppen von Optionen an:  
+ Für eine **Anforderung für funktionales Abhängigkeitsprofil** zeigt der Bereich **Anforderungseigenschaften** die folgenden Gruppen von Optionen an:  
   
 -   **Daten**, die die **DeterminantColumns** -Option und die **DependentColumn** -Option enthalten  
   
@@ -73,7 +73,7 @@ ms.locfileid: "88393426"
  Weitere Informationen finden Sie im Abschnitt "Grundlegendes zur Auswahl von determinanten und abhängigen Spalten" und im Abschnitt "Optionen 'DeterminantColumns' und 'DependentColumn'" in diesem Thema.  
   
 #### <a name="determinantcolumns-and-dependentcolumn-options"></a>Optionen 'DeterminantColumns' und 'DependentColumn'  
- Die folgenden Optionen sind für jede Spalte verfügbar, die für die Profilerstellung in **DeterminantColumns** und **DependentColumn**ausgewählt wird.  
+ Die folgenden Optionen sind für jede Spalte verfügbar, die für die Profilerstellung in **DeterminantColumns** und **DependentColumn** ausgewählt wird.  
   
  Weitere Informationen finden Sie im Abschnitt "Grundlegendes zur Auswahl von determinanten und abhängigen Spalten" in diesem Thema.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "88393426"
 |**BinarySort**|Sortiert und vergleicht Daten anhand der für jedes Zeichen definierten Bitmuster. Die binäre Sortierreihenfolge unterscheidet nach Groß- und Kleinschreibung und nach Akzent. Die Option Binär ist zudem die schnellste Sortierreihenfolge.|  
 |**DictionarySort**|Sortiert und vergleicht Daten anhand der Sortier- und Vergleichsregeln, die in Wörterbüchern für die zugeordnete Sprache definiert sind, oder nach dem jeweiligen Alphabet.|  
   
- Wenn Sie **DictionarySort**auswählen, können Sie auch jede Kombination der in der folgenden Tabelle aufgelisteten Optionen auswählen. Standardmäßig ist keine dieser zusätzlichen Optionen ausgewählt.  
+ Wenn Sie **DictionarySort** auswählen, können Sie auch jede Kombination der in der folgenden Tabelle aufgelisteten Optionen auswählen. Standardmäßig ist keine dieser zusätzlichen Optionen ausgewählt.  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -115,14 +115,14 @@ ms.locfileid: "88393426"
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**None**|Gibt keinen Schwellenwert an. Die funktionale Abhängigkeitsstärke wird unabhängig vom Wert gemeldet.|  
-|**Specified**|Verwenden Sie den Schwellenwert, der in **FDStrengthThreshold**angegeben ist. Die funktionale Abhängigkeitsstärke wird nur gemeldet, wenn sie größer als der Schwellenwert ist.|  
+|**Specified**|Verwenden Sie den Schwellenwert, der in **FDStrengthThreshold** angegeben ist. Die funktionale Abhängigkeitsstärke wird nur gemeldet, wenn sie größer als der Schwellenwert ist.|  
 |**Exact**|Gibt keinen Schwellenwert an. Die funktionale Abhängigkeitsstärke wird nur gemeldet, wenn eine genaue funktionale Abhängigkeit zwischen den ausgewählten Spalten besteht.|  
   
  **FDStrengthThreshold**  
- Geben Sie (mit einem Wert zwischen 0 und 1) den Schwellenwert an, bei dessen Überschreiten die funktionale Abhängigkeitsstärke gemeldet werden sollte. Der Standardwert dieser Eigenschaft ist 0,95. Diese Option ist nur aktiviert, wenn **Specified** als **ThresholdSetting**ausgewählt wird.  
+ Geben Sie (mit einem Wert zwischen 0 und 1) den Schwellenwert an, bei dessen Überschreiten die funktionale Abhängigkeitsstärke gemeldet werden sollte. Der Standardwert dieser Eigenschaft ist 0,95. Diese Option ist nur aktiviert, wenn **Specified** als **ThresholdSetting** ausgewählt wird.  
   
  **MaxNumberOfViolations**  
- Geben Sie die maximale Anzahl von funktionale Abhängigkeitsverstößen an, die in der Ausgabe dokumentiert werden sollen. Der Standardwert dieser Eigenschaft ist 100. Diese Option ist deaktiviert, wenn **Exact** als **ThresholdSetting**ausgewählt wird.  
+ Geben Sie die maximale Anzahl von funktionale Abhängigkeitsverstößen an, die in der Ausgabe dokumentiert werden sollen. Der Standardwert dieser Eigenschaft ist 100. Diese Option ist deaktiviert, wenn **Exact** als **ThresholdSetting** ausgewählt wird.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Editor für den Datenprofilerstellungs-Task &#40;Seite "Allgemein"&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   

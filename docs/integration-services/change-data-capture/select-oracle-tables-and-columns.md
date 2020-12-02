@@ -14,10 +14,10 @@ ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d418e3d9f8b323c5f0c7905dad8c2ec636f1a3e0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88457639"
 ---
 # <a name="select-oracle-tables-and-columns"></a>Auswählen von Oracle-Tabellen und -Spalten
@@ -37,11 +37,11 @@ ms.locfileid: "88457639"
   
      Wenn kein Name angegeben wird, wird der Name aus dem Quellschemanamen und dem Quelltabellennamen im Format `<schema-name>_<table-name>`abgeleitet. Der Name der Aufzeichnungsinstanz darf nicht länger als 100 Zeichen sein und muss innerhalb der Datenbank eindeutig sein.  
   
-     Sie können in dieser Spalte in jede Zelle klicken, um die **capture_instance**manuell zu bearbeiten.  
+     Sie können in dieser Spalte in jede Zelle klicken, um die **capture_instance** manuell zu bearbeiten.  
   
 -   **Security Role**: Der Name der Datenbank-Gatingrolle, mit deren Hilfe der Zugriff auf die Änderungsdaten gesteuert wird.  
   
-     Sie können in dieser Spalte in jede Zelle klicken, um die **security_role**manuell zu bearbeiten.  
+     Sie können in dieser Spalte in jede Zelle klicken, um die **security_role** manuell zu bearbeiten.  
   
  **Tabellen hinzufügen**  
  Klicken Sie auf **Tabellen hinzufügen** , um das Dialogfeld „Tabellenauswahl“ zu öffnen und den Schritt [Auswählen von Oracle-Tabellen zum Aufzeichnen von Änderungen](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)auszuführen.  

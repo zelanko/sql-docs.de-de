@@ -11,10 +11,10 @@ author: chugugrace
 ms.author: chugu
 ms.reviewer: ''
 ms.openlocfilehash: 4ab6f98a868dc504cf13fa770cd0d5ad5ceb1788
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88462036"
 ---
 # <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>Lektion 1.6: Hinzufügen und Konfigurieren von Suchtransformationen
@@ -38,7 +38,7 @@ In beiden Fällen wird von der Suchtransformation der OLE DB-Verbindungs-Manager
   
 ## <a name="add-and-configure-the-lookup-currency-key-transformation"></a>Hinzufügen und Konfigurieren der Lookup Currency Key-Transformation  
   
-1.  Erweitern Sie in der **SSIS-Toolbox**die Option **Allgemein**, und ziehen Sie anschließend **Suche** auf die Entwurfsoberfläche der Registerkarte **Datenfluss** . Legen Sie **Suche** direkt unterhalb der Quelle **Extract Sample Currency Data** ab.  
+1.  Erweitern Sie in der **SSIS-Toolbox** die Option **Allgemein**, und ziehen Sie anschließend **Suche** auf die Entwurfsoberfläche der Registerkarte **Datenfluss** . Legen Sie **Suche** direkt unterhalb der Quelle **Extract Sample Currency Data** ab.  
   
 2.  Klicken Sie auf die Flatfilequelle **Extract Sample Currency Data**, und ziehen Sie den blauen Pfeil auf die neu hinzugefügte Transformation **Suche**, um die zwei Komponenten zu verbinden.  
   
@@ -48,9 +48,9 @@ In beiden Fällen wird von der Suchtransformation der OLE DB-Verbindungs-Manager
   
 5.  Wählen Sie auf der Seite **Allgemein** die folgenden Optionen aus:  
   
-    1.  Wählen Sie **Vollcache**aus.  
+    1.  Wählen Sie **Vollcache** aus.  
   
-    2.  Wählen Sie im Bereich **Verbindungstyp****OLE DB-Verbindungs-Manager**aus.  
+    2.  Wählen Sie im Bereich **Verbindungstyp****OLE DB-Verbindungs-Manager** aus.  
   
 6.  Wählen Sie auf der Seite **Verbindung** die folgenden Optionen aus:  
   
@@ -81,7 +81,7 @@ In beiden Fällen wird von der Suchtransformation der OLE DB-Verbindungs-Manager
   
 ## <a name="add-and-configure-the-lookup-date-key-transformation"></a>Hinzufügen und Konfigurieren der Lookup Date Key-Transformation  
   
-1.  Ziehen Sie in der **SSIS-Toolbox**die Option **Suche** auf die **Datenfluss** -Entwurfsoberfläche. Legen Sie **Suche** direkt unterhalb der **Lookup Currency Key**-Transformation ab.  
+1.  Ziehen Sie in der **SSIS-Toolbox** die Option **Suche** auf die **Datenfluss** -Entwurfsoberfläche. Legen Sie **Suche** direkt unterhalb der **Lookup Currency Key**-Transformation ab.  
   
 2.  Klicken Sie auf die **Lookup Currency Key**-Transformation, und ziehen Sie den blauen Pfeil auf die neue Transformation **Suche**, um die zwei Komponenten zu verbinden.  
   
@@ -91,7 +91,7 @@ In beiden Fällen wird von der Suchtransformation der OLE DB-Verbindungs-Manager
   
 5.  Doppelklicken Sie auf die Transformation **Lookup Date Key** .  
   
-6.  Wählen Sie auf der Seite **Allgemein** die Option **Teilcache**aus.  
+6.  Wählen Sie auf der Seite **Allgemein** die Option **Teilcache** aus.  
   
 7.  Wählen Sie auf der Seite **Verbindung** die folgenden Optionen aus:  
   

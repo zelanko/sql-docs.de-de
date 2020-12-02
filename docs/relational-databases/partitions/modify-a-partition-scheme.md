@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bc39ec02fe5059bb8b1ae561be732244cbb07791
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88327176"
 ---
 # <a name="modify-a-partition-scheme"></a>Ändern eines Partitionsschemas
@@ -65,7 +65,7 @@ ms.locfileid: "88327176"
   
 3.  Klicken Sie auf das Pluszeichen, um den Ordner **Partitionsschemas** zu erweitern.  
   
-4.  Klicken Sie mit der rechten Maustaste auf das Partitionsschema, das Sie löschen möchten, und wählen Sie **Löschen**aus.  
+4.  Klicken Sie mit der rechten Maustaste auf das Partitionsschema, das Sie löschen möchten, und wählen Sie **Löschen** aus.  
   
 5.  Stellen Sie im Dialogfeld **Objekt löschen** sicher, dass das richtige Partitionsschema ausgewählt ist, und klicken Sie dann auf **OK**.  
   

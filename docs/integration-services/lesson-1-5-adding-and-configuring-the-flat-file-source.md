@@ -12,10 +12,10 @@ ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cfc6ffa21bf3f6c1205b1c9c667cc6e75868cece
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88390866"
 ---
 # <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>Lektion 1.5: Hinzufügen und Konfigurieren der Flatfilequelle
@@ -31,7 +31,7 @@ Für diese Aufgabe konfigurieren Sie die Flatfilequelle zum Verwenden von der Ve
   
 1.  Öffnen Sie den **Datenfluss**-Designer, indem Sie entweder auf den Datenflusstask **Extract Sample Currency Data** (Währungsdaten aus dem Beispiel extrahieren) doppelklicken oder auf die Registerkarte **Datenfluss** klicken.  
   
-2.  Erweitern Sie in der **SSIS-Toolbox**die Option **Weitere Quellen**, und ziehen Sie anschließend **Flatfilequelle** auf die Entwurfsoberfläche der Registerkarte **Datenfluss** .  
+2.  Erweitern Sie in der **SSIS-Toolbox** die Option **Weitere Quellen**, und ziehen Sie anschließend **Flatfilequelle** auf die Entwurfsoberfläche der Registerkarte **Datenfluss** .  
   
 3.  Klicken Sie auf der **Datenfluss**-Entwurfsoberfläche mit der rechten Maustaste auf die neu hinzugefügte **Flatfilequelle**, klicken Sie auf **Umbenennen**, und ändern Sie den Namen in **Extract Sample Currency Data** (Währungsdaten aus dem Beispiel extrahieren).  
   

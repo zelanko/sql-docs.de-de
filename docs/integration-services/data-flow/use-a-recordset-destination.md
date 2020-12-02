@@ -14,10 +14,10 @@ ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4d823048d128d8837c80c724064ea0d8afe1a5a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425602"
 ---
 # <a name="use-a-recordset-destination"></a>Verwenden eines Recordsetziels
@@ -42,7 +42,7 @@ ms.locfileid: "88425602"
   
 1.  Erstellen oder öffnen Sie ein [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]-Paket in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-2.  Erstellen Sie eine Variable für das vom Recordsetziel im Speicher gespeicherte Recordset, und legen Sie den Variablentyp auf **Object**fest.  
+2.  Erstellen Sie eine Variable für das vom Recordsetziel im Speicher gespeicherte Recordset, und legen Sie den Variablentyp auf **Object** fest.  
   
 3.  Erstellen Sie zusätzliche Variablen der entsprechenden Typen für die Werte der einzelnen Spalten im zu verwendenden Recordset.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "88425602"
   
 7.  Fügen Sie auf der Registerkarte „Ablaufsteuerung“ des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers einen Foreach-Schleifencontainer hinzu, und verbinden Sie diesen Container nach dem Datenflusstask. Öffnen Sie dann den **Foreach-Schleifen-Editor** , um den Container mit den folgenden Einstellungen zu konfigurieren:  
   
-    1.  Wählen Sie auf der Seite **Sammlung** den Foreach-ADO-Enumerator aus. Wählen Sie dann unter **ADO-Objektquellvariable**die Variable aus, die das Recordset enthält.  
+    1.  Wählen Sie auf der Seite **Sammlung** den Foreach-ADO-Enumerator aus. Wählen Sie dann unter **ADO-Objektquellvariable** die Variable aus, die das Recordset enthält.  
   
     2.  Ordnen Sie auf der Seite **Variablenzuordnungen** den nullbasierten Index der einzelnen zu verwendenden Spalten der entsprechenden Variablen zu.  
   
@@ -69,23 +69,23 @@ ms.locfileid: "88425602"
   
 1.  Erstellen Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]ein neues [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt.  
   
-2.  Wählen Sie im Menü **SSIS** den Befehl **Variablen**aus.  
+2.  Wählen Sie im Menü **SSIS** den Befehl **Variablen** aus.  
   
 3.  Erstellen Sie im Fenster **Variablen** die Variablen für das Recordset sowie die Spaltenwerte in der aktuellen Zeile:  
   
-    1.  Erstellen Sie die Variable **BonusRecordset**, und legen Sie deren Typ auf **Object**fest.  
+    1.  Erstellen Sie die Variable **BonusRecordset**, und legen Sie deren Typ auf **Object** fest.  
   
          Die Variable **BonusRecordset** enthält das Recordset.  
   
-    2.  Erstellen Sie die Variable **EmailAddress**, und legen Sie deren Typ auf **String**fest.  
+    2.  Erstellen Sie die Variable **EmailAddress**, und legen Sie deren Typ auf **String** fest.  
   
          Die Variable **EmailAddress** enthält die E-Mail-Adresse der Vertriebsperson.  
   
-    3.  Erstellen Sie die Variable **FirstName**, und legen Sie deren Typ auf **String**fest.  
+    3.  Erstellen Sie die Variable **FirstName**, und legen Sie deren Typ auf **String** fest.  
   
          Die Variable **FirstName** enthält den Vornamen der Vertriebsperson.  
   
-    4.  Erstellen Sie die Variable **Bonus**, und legen Sie deren Typ auf **Double**fest.  
+    4.  Erstellen Sie die Variable **Bonus**, und legen Sie deren Typ auf **Double** fest.  
   
          Die Variable **Bonus** enthält den Betrag für den Bonus der Vertriebsperson.  
   
@@ -107,11 +107,11 @@ ms.locfileid: "88425602"
   
 3.  Konfigurieren Sie auf der Seite **Verbindungs-Manager** des Editors die Quelle mit den folgenden Einstellungen:  
   
-    1.  Wählen Sie unter **OLE DB-Verbindungs-Manager**den zuvor erstellten OLE DB-Verbindungs-Manager aus.  
+    1.  Wählen Sie unter **OLE DB-Verbindungs-Manager** den zuvor erstellten OLE DB-Verbindungs-Manager aus.  
   
-    2.  Wählen Sie unter **Datenzugriffsmodus**die Option **SQL-Befehl**aus.  
+    2.  Wählen Sie unter **Datenzugriffsmodus** die Option **SQL-Befehl** aus.  
   
-    3.  Geben Sie unter **SQL-Befehlstext**die folgende Abfrage ein:  
+    3.  Geben Sie unter **SQL-Befehlstext** die folgende Abfrage ein:  
   
         ```sql 
         SELECT     Person.Contact.EmailAddress, Person.Contact.FirstName, CONVERT(float, Sales.SalesPerson.Bonus) AS Bonus  
@@ -120,13 +120,13 @@ ms.locfileid: "88425602"
         ```  
   
         > [!NOTE]  
-        >  Sie müssen den **currency** -Wert in der Bonus-Spalte in den Datentyp **float** konvertieren, bevor Sie diesen in eine Paketvariable vom Typ **Double**laden können.  
+        >  Sie müssen den **currency** -Wert in der Bonus-Spalte in den Datentyp **float** konvertieren, bevor Sie diesen in eine Paketvariable vom Typ **Double** laden können.  
   
 4.  Fügen Sie auf der Registerkarte **Datenfluss** ein Recordsetziel hinzu, und stellen Sie eine Verbindung mit dem Ziel nach der der OLE DB-Quelle her.  
   
 5.  Öffnen Sie den **Recordsetziel-Editor**, und konfigurieren Sie das Ziel mit den folgenden Einstellungen:  
   
-    1.  Wählen Sie auf der Registerkarte **Komponenteneigenschaften** für die **VariableName** -Eigenschaft **User::BonusRecordset**aus.  
+    1.  Wählen Sie auf der Registerkarte **Komponenteneigenschaften** für die **VariableName** -Eigenschaft **User::BonusRecordset** aus.  
   
     2.  Wählen Sie auf der Registerkarte **Eingabespalten** alle drei verfügbaren Spalten aus.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "88425602"
   
 2.  Öffnen Sie den **Foreach-Schleifen-Editor**, und konfigurieren Sie den Container mit den folgenden Einstellungen:  
   
-    1.  Wählen Sie auf der Seite **Sammlung** unter **Enumerator**die Option **Foreach-ADO-Enumerator**und unter **ADO-Objektquellvariable**die Option **User::BonusRecordset**aus.  
+    1.  Wählen Sie auf der Seite **Sammlung** unter **Enumerator** die Option **Foreach-ADO-Enumerator** und unter **ADO-Objektquellvariable** die Option **User::BonusRecordset** aus.  
   
     2.  Ordnen Sie auf der Seite **Variablenzuordnungen****User::EmailAddress** Index 0, **User::FirstName** Index 1 und **User::Bonus** Index 2 zu.  
   
@@ -144,25 +144,25 @@ ms.locfileid: "88425602"
   
 4.  Öffnen Sie den **Editor für den Task „Mail senden“**, und konfigurieren Sie auf der Seite **E-Mail** den Task mit den folgenden Einstellungen:  
   
-    1.  Wählen Sie für **SmtpConnection**den SMTP-Verbindungs-Manager aus, der zuvor konfiguriert wurde.  
+    1.  Wählen Sie für **SmtpConnection** den SMTP-Verbindungs-Manager aus, der zuvor konfiguriert wurde.  
   
-    2.  Geben Sie unter **From**eine geeignete E-Mail-Adresse ein.  
+    2.  Geben Sie unter **From** eine geeignete E-Mail-Adresse ein.  
   
          Wenn Sie Ihre eigene E-Mail-Adresse verwenden, können Sie überprüfen, ob das Paket erfolgreich ausgeführt wird. Für Nachrichten, die vom Task „Mail senden“ an die fiktiven Vertriebspersonen von [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]gesendet wurden, erhalten Sie Unzustellbarkeitsmeldungen.  
   
-    3.  Geben Sie unter **To**eine Standard-E-Mail-Adresse ein.  
+    3.  Geben Sie unter **To** eine Standard-E-Mail-Adresse ein.  
   
          Dieser Wert wird nicht verwendet, sondern zur Laufzeit durch die E-Mail-Adresse der betreffenden Vertriebsperson ersetzt.  
   
     4.  Geben Sie unter **Subject**„Ihr Jahresbonus“ ein.  
   
-    5.  Wählen Sie für **MessageSourceType**die Option **Direkteingabe**aus.  
+    5.  Wählen Sie für **MessageSourceType** die Option **Direkteingabe** aus.  
   
-5.  Klicken Sie auf der Seite **Ausdrücke** des **Editors für den Task „Mail senden“** auf die Schaltfläche mit den drei Punkten (**...**), um den **Eigenschaftsausdrucks-Editor**zu öffnen.  
+5.  Klicken Sie auf der Seite **Ausdrücke** des **Editors für den Task „Mail senden“** auf die Schaltfläche mit den drei Punkten (**...**), um den **Eigenschaftsausdrucks-Editor** zu öffnen.  
   
-6.  Geben Sie im **Eigenschaftsausdrucks-Editor**die folgenden Informationen ein:  
+6.  Geben Sie im **Eigenschaftsausdrucks-Editor** die folgenden Informationen ein:  
   
-    1.  Fügen Sie unter **ToLine**den folgenden Ausdruck hinzu:  
+    1.  Fügen Sie unter **ToLine** den folgenden Ausdruck hinzu:  
   
         ```  
         @[User::EmailAddress]  

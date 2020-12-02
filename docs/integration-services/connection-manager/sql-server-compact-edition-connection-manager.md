@@ -19,10 +19,10 @@ ms.assetid: ba627d4d-41f4-49fc-a921-f534cde67770
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ae61fcfcec740ee26a7fc2a57c0e03b0141e6e10
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425942"
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>SQL Server Compact Edition-Verbindungs-Manager
@@ -38,7 +38,7 @@ ms.locfileid: "88425942"
 ## <a name="configuration-the-sql-server-compact-edition-connection-manager"></a>Konfiguration des SQL Server Compact Edition-Verbindungs-Managers  
  Wenn Sie einem Paket einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact-Verbindungs-Manager hinzufügen, wird von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ein Verbindungs-Manager erstellt, der zur Laufzeit zu einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact-Verbindung aufgelöst wird, die Eigenschaften des Verbindungs-Managers werden festgelegt, und der Verbindungs-Manager wird der **Connections** -Auflistung im Paket hinzugefügt.  
   
- Die **ConnectionManagerType** -Eigenschaft des Verbindungs-Managers ist auf **SQLMOBILE**festgelegt.  
+ Die **ConnectionManagerType** -Eigenschaft des Verbindungs-Managers ist auf **SQLMOBILE** festgelegt.  
   
  Es gibt folgende Möglichkeiten, um den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact-Verbindungs-Manager zu konfigurieren:  
   

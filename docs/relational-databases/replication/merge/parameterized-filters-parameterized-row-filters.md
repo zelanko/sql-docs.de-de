@@ -22,10 +22,10 @@ ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 656f36cce2c1b458f2eb85c734709691b59a82bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88423544"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Parametrisierte Filter – Parametrisierte Zeilenfilter
@@ -55,7 +55,7 @@ ms.locfileid: "88423544"
 >  Bei Vergleichen für parametrisierte Filter wird in jedem Fall die Datenbanksortierung verwendet. Wenn die Datenbanksortierung z. B. ohne Unterscheidung von Groß- und Kleinschreibung erfolgt, die Tabellen- oder Spaltensortierung dagegen mit, wird beim Vergleich nicht zwischen Groß-/Kleinschreibung unterschieden.  
   
 ### <a name="filtering-with-suser_sname"></a>Filtern mit SUSER_SNAME()  
- Sehen Sie sich die **Employee-Tabelle** in der [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] -Beispieldatenbank an. Diese Tabelle enthält die **LoginID**-Spalte, in der Sie die Domäne und den Anmeldenamen (Anmelde-ID) für jeden Mitarbeiter in der Form*domain\login*finden. Wenn Sie diese Tabelle so filtern möchten, dass alle Mitarbeiter nur die Daten erhalten, die für sie jeweils relevant sind, geben Sie folgende Filterklausel an:  
+ Sehen Sie sich die **Employee-Tabelle** in der [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] -Beispieldatenbank an. Diese Tabelle enthält die **LoginID**-Spalte, in der Sie die Domäne und den Anmeldenamen (Anmelde-ID) für jeden Mitarbeiter in der Form *domain\login* finden. Wenn Sie diese Tabelle so filtern möchten, dass alle Mitarbeiter nur die Daten erhalten, die für sie jeweils relevant sind, geben Sie folgende Filterklausel an:  
   
 ```  
 LoginID = SUSER_SNAME()  
@@ -116,12 +116,12 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   Sie können festlegen, wie die Filter durch die Mergereplikation verarbeitet werden. Dazu stehen zwei Veröffentlichungseinstellungen zur Verfügung: **use partition groups** und **keep partition changes**.  
   
--   Sie können steuern, wie die Daten auf die einzelnen Abonnenten aufgeteilt werden. Dies muss sich in der Artikeleinstellung **partition options**widerspiegeln.  
+-   Sie können steuern, wie die Daten auf die einzelnen Abonnenten aufgeteilt werden. Dies muss sich in der Artikeleinstellung **partition options** widerspiegeln.  
   
  Informationen zum Festlegen von Filteroptionen finden Sie unter [Optimize Parameterized Row Filters](../../../relational-databases/replication/publish/optimize-parameterized-row-filters.md).  
   
 ### <a name="setting-use-partition-groups-and-keep-partition-changes"></a>Festlegen von 'use partition groups' und 'keep partition changes'  
- Die Optionen **use partition groups** und **keep partition changes** verbessern bei Veröffentlichungen mit gefilterten Artikeln die Synchronisierungsleistung, da in der Veröffentlichungsdatenbank zusätzliche Metadaten gespeichert werden. Da die Option **use partition groups** auf vorausberechnete Partitionen zurückgreift, bietet sie das größere Potenzial für eine Leistungserhöhung. Diese Option ist standardmäßig auf **true** festgelegt, wenn die Artikel in Ihrer Veröffentlichung einem Satz von Anforderungen entsprechen. Weitere Informationen zu diesen Anforderungen finden Sie unter [Optimieren der Leistung parametrisierter Filter mithilfe vorausberechneter Partitionen](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md). Wenn die Anforderungen für die Verwendung vorausberechneter Partitionen von Ihren Artikeln nicht erfüllt werden, wird die Option **keep partition changes** auf **true**festgelegt.  
+ Die Optionen **use partition groups** und **keep partition changes** verbessern bei Veröffentlichungen mit gefilterten Artikeln die Synchronisierungsleistung, da in der Veröffentlichungsdatenbank zusätzliche Metadaten gespeichert werden. Da die Option **use partition groups** auf vorausberechnete Partitionen zurückgreift, bietet sie das größere Potenzial für eine Leistungserhöhung. Diese Option ist standardmäßig auf **true** festgelegt, wenn die Artikel in Ihrer Veröffentlichung einem Satz von Anforderungen entsprechen. Weitere Informationen zu diesen Anforderungen finden Sie unter [Optimieren der Leistung parametrisierter Filter mithilfe vorausberechneter Partitionen](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md). Wenn die Anforderungen für die Verwendung vorausberechneter Partitionen von Ihren Artikeln nicht erfüllt werden, wird die Option **keep partition changes** auf **true** festgelegt.  
   
 ### <a name="setting-partition-options"></a>Festlegen von 'partition options'  
  Der Wert für die **partition options** -Eigenschaft wird angegeben, wenn Sie einen Artikel erstellen. Ausschlaggebend für den Wert ist dabei die Art und Weise, wie die Daten in der gefilterten Tabelle für mehrere Abonnenten freigegeben werden. Die Eigenschaft kann mithilfe von [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)und dem Dialogfeld **Artikeleigenschaften** auf einen von vier Werten festgelegt werden. Wird das Dialogfeld **Filter hinzufügen** oder **Filter bearbeiten** verwendet, kann aus zwei Werten ausgewählt werden. Diese beiden Dialogfelder stehen über den Assistenten für neue Veröffentlichung und das Dialogfeld **Veröffentlichungseigenschaften** zur Verfügung. Die folgende Tabelle gibt einen Überblick über die verfügbaren Werte für diese Eigenschaft:  
@@ -184,7 +184,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   Der Artikel sollte nur einen einzigen parametrisierten Filter bzw. Joinfilter aufweisen. Ein Artikel darf einen parametrisierten Filter aufweisen und gleichzeitig in einem Joinfilter übergeordnet sein. Hingegen ist es nicht möglich, dass ein Artikel einen parametrisierten Filter aufweist und gleichzeitig in einem Joinfilter untergeordnet ist. Darüber hinaus darf der Artikel nicht über mehrere Joinfilter verfügen.  
   
--   Wenn zwei Tabellen auf dem Abonnenten über eine Joinfilterbeziehung verfügen und die untergeordnete Tabelle Zeilen enthält, für die es in der übergeordneten Tabelle keine entsprechende Zeile gibt, führt das Einfügen der fehlenden übergeordneten Zeile nicht dazu, dass die zugehörigen Zeilen auf den Abonnenten heruntergeladen werden (bei überlappenden Partitionen würde ein Download erfolgen). Wenn z. B. die **SalesOrderDetail** -Tabelle über Zeilen ohne zugehörige Zeile in der **SalesOrderHeader** -Tabelle verfügt und Sie die fehlende Zeile in **SalesOrderHeader**einfügen, wird zwar die Zeile auf dem Abonnenten heruntergeladen, nicht aber die zugehörigen Zeilen in **SalesOrderDetail** .  
+-   Wenn zwei Tabellen auf dem Abonnenten über eine Joinfilterbeziehung verfügen und die untergeordnete Tabelle Zeilen enthält, für die es in der übergeordneten Tabelle keine entsprechende Zeile gibt, führt das Einfügen der fehlenden übergeordneten Zeile nicht dazu, dass die zugehörigen Zeilen auf den Abonnenten heruntergeladen werden (bei überlappenden Partitionen würde ein Download erfolgen). Wenn z. B. die **SalesOrderDetail** -Tabelle über Zeilen ohne zugehörige Zeile in der **SalesOrderHeader** -Tabelle verfügt und Sie die fehlende Zeile in **SalesOrderHeader** einfügen, wird zwar die Zeile auf dem Abonnenten heruntergeladen, nicht aber die zugehörigen Zeilen in **SalesOrderDetail** .  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Bewährte Methoden für zeitbasierte Zeilenfilter](../../../relational-databases/replication/merge/best-practices-for-time-based-row-filters.md)   

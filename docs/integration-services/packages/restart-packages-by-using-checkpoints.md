@@ -16,10 +16,10 @@ ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 090e89467a7916295abdc31305cbe993872ade60
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425242"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Neustarten von Paketen mit Prüfpunkten
@@ -78,7 +78,7 @@ ms.locfileid: "88425242"
 |**IfExists**|Gibt an, dass die Prüfpunktdatei verwendet wird, falls sie vorhanden ist. Wenn die Prüfpunktdatei vorhanden ist, wird das Paket an dem Punkt neu gestartet, an dem bei der letzten Ausführung ein Fehler aufgetreten ist; anderenfalls wird das Paket vom Beginn des Paketworkflows aus ausgeführt.|  
   
 > [!NOTE]  
->  Das Festlegen der Prüfpunktausführungsoption **/CheckPointing** von dtexec auf „on“ entspricht der **SaveCheckpoints** -Eigenschaft des Pakets **TRUE**oder der **CheckpointUsage** -Eigenschaft „Immer“. Weitere Informationen finden Sie [hier](../../integration-services/packages/dtexec-utility.md).  
+>  Das Festlegen der Prüfpunktausführungsoption **/CheckPointing** von dtexec auf „on“ entspricht der **SaveCheckpoints** -Eigenschaft des Pakets **TRUE** oder der **CheckpointUsage** -Eigenschaft „Immer“. Weitere Informationen finden Sie [hier](../../integration-services/packages/dtexec-utility.md).  
   
 ## <a name="securing-checkpoint-files"></a>Sichern von Prüfpunktdateien  
  Der Schutz auf Paketebene schließt nicht den Schutz von Prüfpunktdateien ein. Daher müssen diese Dateien separat gesichert werden. Prüfpunktdaten können nur im Dateisystem gespeichert werden. Sie sollten daher eine Zugriffssteuerungsliste (ACL, Access Control List) des Betriebssystems verwenden, um den Speicherort der Datei bzw. den Ordner, in dem die Datei gespeichert wird, zu sichern. Prüfpunktdateien sollten unbedingt gesichert werden, da sie Informationen zum Paketstatus enthalten, einschließlich der aktuellen Variablenwerte. Beispielsweise kann eine Variable ein Recordset mit mehreren Zeilen privater Daten, wie z. B. Telefonnummern, enthalten. Weitere Informationen finden Sie unter [Zugriff auf Dateien, die von Paketen verwendet werden](../../integration-services/security/security-overview-integration-services.md#files).  
@@ -90,13 +90,13 @@ ms.locfileid: "88425242"
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem Paket, das Sie konfigurieren möchten.  
   
-2.  Doppelklicken Sie im **Projektmappen-Explorer**auf das Paket, um es zu öffnen.  
+2.  Doppelklicken Sie im **Projektmappen-Explorer** auf das Paket, um es zu öffnen.  
   
 3.  Klicken Sie auf die Registerkarte **Ablaufsteuerung** .  
   
 4.  Klicken Sie mit der rechten Maustaste an einer beliebigen Stelle im Hintergrund der Entwurfsoberfläche der Ablaufsteuerung, und klicken Sie anschließend auf **Eigenschaften**.  
   
-5.  Legen Sie die SaveCheckpoints-Eigenschaft auf **TRUE**fest.  
+5.  Legen Sie die SaveCheckpoints-Eigenschaft auf **TRUE** fest.  
   
 6.  Geben Sie den Namen der Prüfpunktdatei in die CheckpointFileName-Eigenschaft ein.  
   

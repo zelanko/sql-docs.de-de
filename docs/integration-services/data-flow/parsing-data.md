@@ -15,10 +15,10 @@ ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: eba3e72558433acab3ba1a0edc3cd921b15281bd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88457349"
 ---
 # <a name="parsing-data"></a>Analysieren von Daten
@@ -198,7 +198,7 @@ Die Fast Parse-Eigenschaft muss für jede Spalte der Quelle oder Transformation 
   
 3.  Klicken Sie im Bereich **Eingaben und Ausgaben** auf die Spalte, für die die schnelle Analyse aktiviert werden soll.  
   
-4.  Erweitern Sie im Eigenschaftenfenster den Knoten **Benutzerdefinierte Eigenschaften** , und legen Sie anschließend die **FastParse** -Eigenschaft auf **True**fest.  
+4.  Erweitern Sie im Eigenschaftenfenster den Knoten **Benutzerdefinierte Eigenschaften** , und legen Sie anschließend die **FastParse** -Eigenschaft auf **True** fest.  
   
 5.  Klicken Sie auf **OK**.  
 

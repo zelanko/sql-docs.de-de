@@ -12,10 +12,10 @@ ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e12fe80482b6b6ffd96fe6e56e6dfad1a92362fc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425672"
 ---
 # <a name="tutorial-using-the-odata-source"></a>Tutorial: Verwenden der OData-Quelle
@@ -31,7 +31,7 @@ ms.locfileid: "88425672"
   
 2.  Klicken Sie auf **Datei**, zeigen Sie auf **Neu**, und klicken Sie auf **Projekt**.  
   
-3.  Erweitern Sie im Dialogfeld **Neues Projekt** die Knoten **Installiert**, **Vorlagen**und **Business Intelligence**, und klicken Sie auf **Integration Services**.  
+3.  Erweitern Sie im Dialogfeld **Neues Projekt** die Knoten **Installiert**, **Vorlagen** und **Business Intelligence**, und klicken Sie auf **Integration Services**.  
   
 4.  Wählen Sie als Projekttyp **Integration Services-Projekt** aus.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "88425672"
   
 5.  Klicken Sie auf **Neu…**, um einen neuen OData-Verbindungs-Manager hinzuzufügen.  
   
-6.  Geben Sie die OData-Dienst-URL als **Speicherort des Dienstdokuments**ein. Diese URL kann die URL zum Dienstdokument oder zu einem bestimmten Feed oder einer bestimmten Entität sein. Geben Sie im Rahmen dieses Tutorials die folgende URL zum Dienstdokument ein: [https://services.odata.org/V3/Northwind/Northwind.svc/](https://services.odata.org/V3/Northwind/Northwind.svc/).  
+6.  Geben Sie die OData-Dienst-URL als **Speicherort des Dienstdokuments** ein. Diese URL kann die URL zum Dienstdokument oder zu einem bestimmten Feed oder einer bestimmten Entität sein. Geben Sie im Rahmen dieses Tutorials die folgende URL zum Dienstdokument ein: [https://services.odata.org/V3/Northwind/Northwind.svc/](https://services.odata.org/V3/Northwind/Northwind.svc/).  
   
 7.  Vergewissern Sie sich, dass als **Authentifizierung** der Typ **Windows-Authentifizierung** für den Zugriff auf den OData-Dienst ausgewählt ist. **Windows-Authentifizierung** ist standardmäßig ausgewählt.  
   
@@ -59,13 +59,13 @@ ms.locfileid: "88425672"
   
 10. Wählen Sie in der Dropdownliste **Auflistung** den Eintrag **Employees** aus.  
   
-11. Geben Sie zusätzliche OData-Abfrageoptionen oder Filter für **Abfrageoptionen**ein. Beispiel: `$orderby=CompanyName&$top=100`. Geben Sie für die Zwecke dieses Tutorials `$top=5` ein.  
+11. Geben Sie zusätzliche OData-Abfrageoptionen oder Filter für **Abfrageoptionen** ein. Beispiel: `$orderby=CompanyName&$top=100`. Geben Sie für die Zwecke dieses Tutorials `$top=5` ein.  
   
 12. Klicken Sie auf **Vorschau** , um eine Vorschau der Daten aufzurufen.  
   
 13. Klicken Sie im linken Navigationsbereich auf **Spalten** , um zur Seite **Spalten** zu wechseln.  
   
-14. Wählen Sie in **Verfügbare externe Spalten**die Spalten **EmployeeID**, **FirstName** und **LastName** aus, indem Sie die Kontrollkästchen aktivieren.  
+14. Wählen Sie in **Verfügbare externe Spalten** die Spalten **EmployeeID**, **FirstName** und **LastName** aus, indem Sie die Kontrollkästchen aktivieren.  
   
 15. Klicken Sie auf **OK** , um das Dialogfeld **Quellen-Editor für OData** zu schließen.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "88425672"
   
 4.  Klicken Sie im Dialogfeld **Ziel-Editor für Flatfiles** auf **Neu** , um einen neuen Verbindungs-Manager für Flatfiles zu erstellen.  
   
-5.  Wählen Sie im Dialogfeld **Flatfileformat** die Option **Mit Trennzeichen**aus. Dann wird dass Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** geöffnet.  
+5.  Wählen Sie im Dialogfeld **Flatfileformat** die Option **Mit Trennzeichen** aus. Dann wird dass Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** geöffnet.  
   
 6.  Geben Sie im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** für **Dateiname**`c:\Employees.txt` ein.  
   

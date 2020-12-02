@@ -12,10 +12,10 @@ ms.assetid: 5d9e677f-b872-497d-9cde-472184a214ab
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c4c09c590d92d97ea56c795db6fe8676d5771277
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88426052"
 ---
 # <a name="how-to-manage-a-cdc-instance"></a>How to Manage a CDC Instance
@@ -27,7 +27,7 @@ ms.locfileid: "88426052"
   
 ### <a name="to-manage-cdc-instance-operations"></a>So verwalten Sie CDC-Instanzvorgänge  
   
-1.  Wählen Sie im Menü **Start** die Option **CDC Designer Console**aus.  
+1.  Wählen Sie im Menü **Start** die Option **CDC Designer Console** aus.  
   
 2.  Erweitern Sie im linken Bereich die Option **Change Data Capture** , und erweitern Sie dann den Dienst, der die anzuzeigende Instanz enthält.  
   

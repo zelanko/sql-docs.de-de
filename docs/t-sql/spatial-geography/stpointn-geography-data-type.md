@@ -19,10 +19,10 @@ ms.assetid: 47670feb-b9e0-4b4b-af83-b9bba7da66ac
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 00604f3066c746057e1ffaaefc0cffb00244d57b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88459002"
 ---
 # <a name="stpointn-geography-data-type"></a>STPointN (geography-Datentyp)
@@ -55,7 +55,7 @@ ms.locfileid: "88459002"
   
  Wenn eine **geography**-Instanz systemseitig erstellt wurde, gibt STPointN() den von *expression* angegebenen Punkt zurück, indem alle Punkte in der Reihenfolge sortiert werden, in der sie ausgegeben werden: erst nach der **geography**-Instanz, dann nach dem Ring innerhalb der Instanz (falls zutreffend) und schließlich nach dem Punkt innerhalb des Rings. Diese Reihenfolge ist deterministisch.  
   
- Wenn diese Methode mit einem geringeren Wert als 1 aufgerufen wird, löst sie eine **ArgumentOutOfRangeException**aus.  
+ Wenn diese Methode mit einem geringeren Wert als 1 aufgerufen wird, löst sie eine **ArgumentOutOfRangeException** aus.  
   
  Wenn diese Methode mit einem Wert aufgerufen wird, der die Anzahl der Punkte in der Instanz übersteigt, gibt sie NULL zurück.  
   

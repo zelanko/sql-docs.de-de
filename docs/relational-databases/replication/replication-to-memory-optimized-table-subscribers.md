@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 7345d2ed17d8eca7bac386f4abe58893827ff00e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88404966"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replikation mit Abonnenten von speicheroptimierten Tabellen
@@ -41,26 +41,26 @@ ms.locfileid: "88404966"
 2.  Fügen Sie der Veröffentlichung Artikel hinzu. Weitere Informationen finden Sie unter [Definieren eines Artikels](../../relational-databases/replication/publish/define-an-article.md).  
   
      Falls Sie die Konfiguration mit [!INCLUDE[tsql](../../includes/tsql-md.md)] erfolgt, legen Sie den **\@schema_option**-Parameter der gespeicherten Prozedur **sp_addarticle** folgendermaßen fest:   
-    **0x40000000000**verfügbar.  
+    **0x40000000000** verfügbar.  
   
-3.  Legen Sie im Fenster mit den Artikeleigenschaften **Enable Memory optimization** auf **true**fest.  
+3.  Legen Sie im Fenster mit den Artikeleigenschaften **Enable Memory optimization** auf **true** fest.  
   
 4.  Starten Sie den Auftrag des Momentaufnahme-Agents, um die Anfangsmomentaufnahme für diese Veröffentlichung zu generieren. Weitere Informationen finden Sie unter [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
-5.  Erstellen Sie dann ein neues Abonnement. Legen Sie im **Assistenten für neue Abonnements****Memory Optimized Subscription** auf **true**fest.  
+5.  Erstellen Sie dann ein neues Abonnement. Legen Sie im **Assistenten für neue Abonnements****Memory Optimized Subscription** auf **true** fest.  
 
  Speicheroptimierte Tabellen empfangen nun Updates vom Verleger.  
   
 #### <a name="reconfigure-an-existing-transaction-replication"></a>Neukonfiguration einer vorhandenen Transaktionsreplikation  
   
-1.  Gehen Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] zu den Abonnementeigenschaften, und legen Sie **Memory Optimized Subscription** auf **true**fest. Die Änderungen werden erst nach der erneuten Initialisierung des Abonnements wirksam.  
+1.  Gehen Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] zu den Abonnementeigenschaften, und legen Sie **Memory Optimized Subscription** auf **true** fest. Die Änderungen werden erst nach der erneuten Initialisierung des Abonnements wirksam.  
   
      Falls Sie die Konfiguration mit [!INCLUDE[tsql](../../includes/tsql-md.md)] vornehmen, legen Sie den neuen **\@memory_optimized**-Parameter der gespeicherten Prozedur **sp_addsubscription** auf TRUE fest.  
   
 2.  Gehen Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] zu den Artikeleigenschaften einer Veröffentlichung, und legen Sie **Enable Memory optimization** auf "true" fest.  
   
      Falls Sie die Konfiguration mit [!INCLUDE[tsql](../../includes/tsql-md.md)] erfolgt, legen Sie den **\@schema_option**-Parameter der gespeicherten Prozedur **sp_addarticle** folgendermaßen fest:   
-    **0x40000000000**verfügbar.  
+    **0x40000000000** verfügbar.  
   
 3.  Speicheroptimierte Tabellen unterstützen keine gruppierten Indizes. Daher müssen gruppierte Indizes bei der Replikation auf dem Ziel in nicht gruppierte Indizes konvertiert werden. Hierzu muss der Parameter **Convert clustered index to nonclustered for memory optimized article** auf "true" festgelegt werden.  
   

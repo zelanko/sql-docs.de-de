@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: c8d6d59dc29060a10fc0ad15f1b2fbbfbba5fb34
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88448175"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>Replizieren partitionierter Tabellen und Indizes
@@ -40,7 +40,7 @@ ms.locfileid: "88448175"
   
  Die erste Gruppe von Eigenschaften, die mit der Partitionierung in Zusammenhang stehen, sind Artikelschemaoptionen, die bestimmen, ob Partitionierungsobjekte auf den Abonnenten kopiert werden sollen. Diese Schemaoptionen können folgendermaßen festgelegt werden:  
   
--   Auf der Seite **Artikeleigenschaften** des Assistenten für neue Veröffentlichungen oder im Dialogfeld Veröffentlichungseigenschaften. Geben Sie für die Eigenschaften **Tabellenpartitionierungsschemas kopieren** und **Indexpartitionierungsschemas kopieren** den Wert **true**an, um die in der obigen Tabelle aufgeführten Objekte zu kopieren. Informationen zum Zugriff auf die Seite **Artikeleigenschaften** finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+-   Auf der Seite **Artikeleigenschaften** des Assistenten für neue Veröffentlichungen oder im Dialogfeld Veröffentlichungseigenschaften. Geben Sie für die Eigenschaften **Tabellenpartitionierungsschemas kopieren** und **Indexpartitionierungsschemas kopieren** den Wert **true** an, um die in der obigen Tabelle aufgeführten Objekte zu kopieren. Informationen zum Zugriff auf die Seite **Artikeleigenschaften** finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 -   Mithilfe des Parameters *schema_option* einer der folgenden gespeicherten Prozeduren:  
   

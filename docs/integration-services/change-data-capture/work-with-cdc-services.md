@@ -14,10 +14,10 @@ ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e591992c3e03162ecdbb928b7ce41ced3037f5ac
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88394496"
 ---
 # <a name="work-with-cdc-services"></a>Verwenden von CDC Services
@@ -31,7 +31,7 @@ ms.locfileid: "88394496"
  **Prepare SQL Server**  
  Aktivieren Sie diese Option im **Aktionsbereich** rechts in der CDC Service Configuration Console.  
   
- Sie können auch mit der rechten Maustaste auf **Local CDC Services** klicken und **Prepare SQL Server**wählen.  
+ Sie können auch mit der rechten Maustaste auf **Local CDC Services** klicken und **Prepare SQL Server** wählen.  
   
  Das Dialogfeld Preparing SQL Server Instance for Oracle CDC wird geöffnet.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "88394496"
  **Erstellen eines neuen CDC-Diensts**  
  Klicken Sie auf der rechten Seite der CDC Service Configuration Console im **Aktionsbereich** auf **Neuer Dienst** .  
   
- Sie können auch mit der rechten Maustaste auf **Local CDC Services** (Lokale CDC-Dienste) klicken und **Neuer Dienst**auswählen.  
+ Sie können auch mit der rechten Maustaste auf **Local CDC Services** (Lokale CDC-Dienste) klicken und **Neuer Dienst** auswählen.  
   
  Das Dialogfeld New Oracle CDC Service wird geöffnet.  
   

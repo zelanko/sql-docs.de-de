@@ -12,10 +12,10 @@ ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7237d7356ffb97861779c4d5427fd4fb05083695
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88345326"
 ---
 # <a name="lesson-5-2-enable-and-configure-package-configurations"></a>Lektion 5.2: Aktivieren und Konfigurieren von Paketkonfigurationen
@@ -30,7 +30,7 @@ In dieser Aufgabe konvertieren Sie das Projekt in das Paketbereitstellungsmodell
   
 1.  Wählen Sie den Hintergrund der Registerkarte **Ablaufsteuerung** im [!INCLUDE[ssIS](../includes/ssis-md.md)]-Designer aus. Durch diese Auswahl wird der Bereich für die Variable, die Sie erstellen, auf das Paket festgelegt.  
   
-2.  Wählen Sie im Menü [!INCLUDE[ssIS](../includes/ssis-md.md)] den Befehl **Variablen**aus.  
+2.  Wählen Sie im Menü [!INCLUDE[ssIS](../includes/ssis-md.md)] den Befehl **Variablen** aus.  
   
 3.  Wählen Sie im Fenster **Variablen** das Symbol **Variable hinzufügen** aus.  
   
@@ -41,7 +41,7 @@ In dieser Aufgabe konvertieren Sie das Projekt in das Paketbereitstellungsmodell
   
 5.  Überprüfen Sie, ob im Feld **Bereich** der Name des Pakets **Lesson 5** (Lektion 5) angezeigt wird.  
   
-6.  Legen Sie den Wert des Felds **Datentyp** der `varFolderName` -Variable auf **String**fest.  
+6.  Legen Sie den Wert des Felds **Datentyp** der `varFolderName` -Variable auf **String** fest.  
   
 7.  Kehren Sie zur Registerkarte **Ablaufsteuerung** zurück, und doppelklicken Sie auf den **Foreach File in Folder** -Container.  
   
@@ -73,17 +73,17 @@ In dieser Aufgabe konvertieren Sie das Projekt in das Paketbereitstellungsmodell
   
 6.  Klicken Sie auf der Willkommensseite des **Paketkonfigurations-Assistenten** auf **Weiter**.  
   
-7.  Überprüfen Sie auf der Seite **Konfigurationstyp auswählen** , ob **Konfigurationstyp** auf **XML-Konfigurationsdatei**festgelegt ist.  
+7.  Überprüfen Sie auf der Seite **Konfigurationstyp auswählen** , ob **Konfigurationstyp** auf **XML-Konfigurationsdatei** festgelegt ist.  
   
 8.  Klicken Sie auf der Seite **Konfigurationstyp auswählen** auf **Durchsuchen**.  
   
 9. Das Dialogfeld **Speicherort der Konfigurationsdatei auswählen** mit dem Projektordner wird geöffnet.  
   
-10. Geben Sie im Dialogfeld **Speicherort der Konfigurationsdatei auswählen** als **Dateinamen****SSISTutorial**ein, und klicken Sie auf **Speichern**.  
+10. Geben Sie im Dialogfeld **Speicherort der Konfigurationsdatei auswählen** als **Dateinamen****SSISTutorial** ein, und klicken Sie auf **Speichern**.  
   
 11. Klicken Sie auf der Seite **Konfigurationstyp auswählen** auf **Weiter**.
   
-12. Erweitern Sie **Variablen** auf der Seite **Eigenschaften für den Exportvorgang auswählen** im Bereich **Objekte**, erweitern Sie **varFolderName** und **Eigenschaften**, und wählen Sie anschließend **Wert**aus.  
+12. Erweitern Sie **Variablen** auf der Seite **Eigenschaften für den Exportvorgang auswählen** im Bereich **Objekte**, erweitern Sie **varFolderName** und **Eigenschaften**, und wählen Sie anschließend **Wert** aus.  
   
 13. Klicken Sie auf der Seite **Eigenschaften für den Exportvorgang auswählen** auf **Weiter**.  
   

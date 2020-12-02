@@ -19,16 +19,16 @@ ms.assetid: 774560ab-4a4a-4058-b043-1e67cf6fb9eb
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5fe53017aa78bd4025a251611fd6f50c67d4401a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445167"
 ---
 # <a name="stlength-geography-data-type"></a>STLength (geography-Datentyp)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
-  Gibt die Gesamtlänge der Elemente in einer **geography** -Instanz oder der **geography** in einer **GeometryCollection**zurück.  
+  Gibt die Gesamtlänge der Elemente in einer **geography** -Instanz oder der **geography** in einer **GeometryCollection** zurück.  
   
 ## <a name="syntax"></a>Syntax  
   

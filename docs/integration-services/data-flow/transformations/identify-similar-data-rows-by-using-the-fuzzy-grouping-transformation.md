@@ -17,10 +17,10 @@ ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 09ef796494f084fda4cbe27d5fc0ac33b2cfb402
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88430662"
 ---
 # <a name="identify-similar-data-rows-with-the-fuzzy-grouping-transformation"></a>Identifizieren ähnlicher Datenzeilen mithilfe der Transformation für Fuzzygruppierung
@@ -36,7 +36,7 @@ ms.locfileid: "88430662"
   
 2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
   
-3.  Klicken Sie auf die Registerkarte **Datenfluss** , und ziehen Sie dann aus dem Fenster **Toolbox**die Transformation für Fuzzygruppierung auf die Entwurfsoberfläche.  
+3.  Klicken Sie auf die Registerkarte **Datenfluss** , und ziehen Sie dann aus dem Fenster **Toolbox** die Transformation für Fuzzygruppierung auf die Entwurfsoberfläche.  
   
 4.  Verbinden Sie die Transformation für Fuzzygruppierung mit dem Datenfluss, indem Sie den Konnektor von der Datenquelle oder einer vorherigen Transformation auf die Transformation für Fuzzygruppierung ziehen.  
   

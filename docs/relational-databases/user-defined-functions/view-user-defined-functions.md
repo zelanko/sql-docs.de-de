@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 70cb57fd62b62e10aeb1d68d708a7504265e4e97
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88460192"
 ---
 # <a name="view-user-defined-functions"></a>Anzeigen benutzerdefinierter Funktionen
@@ -57,7 +57,7 @@ ms.locfileid: "88460192"
   
 #### <a name="to-show-a-user-defined-functions-properties"></a>So zeigen Sie die Eigenschaften einer benutzerdefinierten Funktion an  
   
-1.  Klicken Sie im **Objekt-Explorer**auf das Pluszeichen neben der Datenbank mit der Funktion, deren Eigenschaften Sie anzeigen möchten, und klicken Sie dann auf das Pluszeichen, um den Ordner **Programmierbarkeit** zu erweitern.  
+1.  Klicken Sie im **Objekt-Explorer** auf das Pluszeichen neben der Datenbank mit der Funktion, deren Eigenschaften Sie anzeigen möchten, und klicken Sie dann auf das Pluszeichen, um den Ordner **Programmierbarkeit** zu erweitern.  
   
 2.  Klicken Sie auf das Pluszeichen, um den Ordner **Funktionen** zu erweitern.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "88460192"
   
     -   Aggregatfunktion  
   
-4.  Klicken Sie mit der rechten Maustaste auf die Funktion, deren Eigenschaften Sie anzeigen möchten, und wählen Sie **Eigenschaften**aus.  
+4.  Klicken Sie mit der rechten Maustaste auf die Funktion, deren Eigenschaften Sie anzeigen möchten, und wählen Sie **Eigenschaften** aus.  
 
      Die folgenden Eigenschaften werden im Dialogfeld **Funktionseigenschaften -** _function_name_ angezeigt.  
   

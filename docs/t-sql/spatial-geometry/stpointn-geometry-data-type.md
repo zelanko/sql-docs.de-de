@@ -19,10 +19,10 @@ ms.assetid: 8f0bb3b7-5cd9-42c2-b9f8-f04628653bd0
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 751fc973188d7fe12ea0034a14c4620808912545
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88444922"
 ---
 # <a name="stpointn-geometry-data-type"></a>STPointN (geometry-Datentyp)
@@ -55,7 +55,7 @@ Gibt einen festgelegten Punkt in einer **geometry** -Instanz zurück.
   
  Wenn eine **geometry** -Instanz systemseitig konstruiert wurde, gibt `STPointN()` den durch *expression* festgelegten Punkt zurück, indem alle Punkte in der Reihenfolge sortiert werden, in der sie ausgegeben würden: erst nach Geometrie, dann nach Ring innerhalb der Geometrie (falls zutreffend) und schließlich nach Punkt innerhalb des Rings. Diese Reihenfolge ist deterministisch.  
   
- Wenn diese Methode mit einem geringeren Wert als 1 aufgerufen wird, löst sie eine **ArgumentOutOfRangeException**aus.  
+ Wenn diese Methode mit einem geringeren Wert als 1 aufgerufen wird, löst sie eine **ArgumentOutOfRangeException** aus.  
   
  Wenn diese Methode mit einem Wert aufgerufen wird, der die Anzahl der Punkte in der Instanz übersteigt, gibt sie NULL zurück.  
   

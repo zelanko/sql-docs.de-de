@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ea5366a8080ccbfb4d48c8bcfda8928ed54932d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88408116"
 ---
 # <a name="indexes-on-computed-columns"></a>Indizes in berechneten Spalten
@@ -95,9 +95,9 @@ Die **IsPrecise** -Eigenschaft der COLUMNPROPERTY-Funktion teilt mit, ob der Aus
 
 ## <a name="data-type-requirements"></a>Anforderungen hinsichtlich des Datentyps
   
--   Der *computed_column_expression* , der für die berechnete Spalte definiert ist, kann nicht zu einem der Datentypen **text**, **ntext**oder **image** ausgewertet werden.  
+-   Der *computed_column_expression* , der für die berechnete Spalte definiert ist, kann nicht zu einem der Datentypen **text**, **ntext** oder **image** ausgewertet werden.  
 -   Berechnete Spalten, die aus den Datentypen **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** und **xml** abgeleitet wurden, können indiziert werden, solange der Datentyp der berechneten Spalte als Indexschlüsselspalte zulässig ist.  
--   Berechnete Spalten, die aus den Datentypen **image**, **ntext**und **text** abgeleitet wurden, können Nichtschlüsselspalten (eingeschlossene Spalten) in einem nicht gruppierten Index sein, so lange der Datentyp der berechneten Spalte für Nichtschlüssel-Indexspalten zulässig ist.  
+-   Berechnete Spalten, die aus den Datentypen **image**, **ntext** und **text** abgeleitet wurden, können Nichtschlüsselspalten (eingeschlossene Spalten) in einem nicht gruppierten Index sein, so lange der Datentyp der berechneten Spalte für Nichtschlüssel-Indexspalten zulässig ist.  
 
 
 ## <a name="set-option-requirements"></a>Anforderungen hinsichtlich der SET-Option

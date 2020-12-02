@@ -14,10 +14,10 @@ ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2a942af36a551498e81b3dbaeaa02686dec9c28b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88410996"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
@@ -67,7 +67,7 @@ GO
   
 1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf den Servernamen, und klicken Sie auf **Eigenschaften**.  
   
-2.  Legen Sie auf der Seite **Erweitert** im Abschnitt **Kapselung** die Option **Enthaltene Datenbanken aktivieren** auf **True**fest.  
+2.  Legen Sie auf der Seite **Erweitert** im Abschnitt **Kapselung** die Option **Enthaltene Datenbanken aktivieren** auf **True** fest.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

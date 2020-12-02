@@ -15,10 +15,10 @@ ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2294c3b934aaef7691849b34f53cc6f4dc76d28d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88351526"
 ---
 # <a name="package-properties-dialog-box"></a>Paketeigenschaften (Dialogfeld)
@@ -48,7 +48,7 @@ ms.locfileid: "88351526"
   
 4.  Erweitern Sie den Ordner mit dem Paket, für das Sie die Eigenschaften anzeigen möchten.  
   
-5.  Klicken Sie mit der rechten Maustaste auf das Paket, und wählen Sie **Eigenschaften**aus.  
+5.  Klicken Sie mit der rechten Maustaste auf das Paket, und wählen Sie **Eigenschaften** aus.  
   
 ##  <a name="configure-the-options"></a><a name="options"></a> Konfigurieren der Optionen  
  Auf der Seite **Allgemein** können Sie die Eigenschaften des ausgewählten Pakets anzeigen.  
@@ -64,7 +64,7 @@ ms.locfileid: "88351526"
  **Einstiegspunkt**  
  Der Wert **TRUE** gibt an, dass das Paket direkt gestartet wird. Der Wert **False** gibt an, dass das Paket von einem anderen Paket mit dem Task "Paket ausführen" gestartet wird. Der Standardwert ist **True**.  
   
- Sie können diese Eigenschaft in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] für das übergeordnete Paket und die untergeordneten Pakete festlegen, indem Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Paket und anschließend auf **Einstiegspunktpaket**klicken.  
+ Sie können diese Eigenschaft in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] für das übergeordnete Paket und die untergeordneten Pakete festlegen, indem Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Paket und anschließend auf **Einstiegspunktpaket** klicken.  
   
  **Beschreibung**  
  Zeigt die optionale Beschreibung des Pakets an.  

@@ -18,10 +18,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 49a16c2b5f18eeda3a6abd1396650131543ead4f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88417136"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
@@ -44,7 +44,7 @@ TRANSLATE ( inputString, characters, translations)
 
  *characters* ist ein aus einer Zeichenfolge bestehender [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der zu ersetzende Zeichen enthält. Für *characters* sind beliebige Zeichendatentypen möglich.
 
-*translations* ist ein aus einer Zeichenfolge bestehender[Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der die Ersetzungszeichen enthält. *translations* muss denselben Datentyp und dieselbe Länge wie *characters* haben.
+*translations* ist ein aus einer Zeichenfolge bestehender [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der die Ersetzungszeichen enthält. *translations* muss denselben Datentyp und dieselbe Länge wie *characters* haben.
 
 ## <a name="return-types"></a>Rückgabetypen
 

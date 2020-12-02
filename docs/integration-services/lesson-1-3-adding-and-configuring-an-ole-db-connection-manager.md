@@ -12,10 +12,10 @@ ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 33eeb6e462c096505fc4fbd1088e7f5b36b37618
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88449683"
 ---
 # <a name="lesson-1-3-add-and-configure-an-ole-db-connection-manager"></a>Lektion 1.3: Hinzufügen und Konfigurieren eines OLE DB-Verbindungs-Managers
@@ -36,13 +36,13 @@ In dieser Aufgabe erstellen Sie eine OLE DB-Verbindungs-Manager-Instanz, die die
     
 2. Klicken Sie im Dialogfeld **OLE DB-Verbindungs-Manager konfigurieren** auf **Neu**.  
   
-3. Geben Sie für **Servername**den Namen **localhost**ein.  
+3. Geben Sie für **Servername** den Namen **localhost** ein.  
   
     Wenn Sie localhost als Servernamen angeben, stellt der Verbindungs-Manager eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf dem lokalen Computer her. Wenn Sie eine Remoteinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verwenden möchten, ersetzen Sie localhost durch den Namen des Servers, mit dem Sie eine Verbindung herstellen möchten.  
   
 4. Überprüfen Sie in der Gruppe **Am Server anmelden** , ob **Windows-Authentifizierung verwenden** ausgewählt ist.  
   
-5. Geben Sie in der Gruppe **Mit Datenbank verbinden** im Feld **Datenbanknamen eingeben oder auswählen** den Wert **AdventureWorksDW2012**ein, oder wählen Sie ihn aus.  
+5. Geben Sie in der Gruppe **Mit Datenbank verbinden** im Feld **Datenbanknamen eingeben oder auswählen** den Wert **AdventureWorksDW2012** ein, oder wählen Sie ihn aus.  
   
 6. Klicken Sie auf **Verbindung testen**, um zu überprüfen, ob die von Ihnen angegebenen Verbindungseinstellungen gültig sind.  
   

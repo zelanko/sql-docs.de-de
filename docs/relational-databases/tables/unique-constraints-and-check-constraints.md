@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: efd7fb070a81715b88d6949fac47c972bdd0643d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88418964"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>UNIQUE- und CHECK-Einschränkungen
@@ -55,7 +55,7 @@ ms.locfileid: "88418964"
 >  Einschränkungen, die implizite oder explizite Datentypkonvertierungen einschließen, können bei bestimmten Vorgängen einen Fehler erzeugen. So können z. B. Einschränkungen, die für Tabellen definiert werden, die ihrerseits die Quellen von Partitionswechseln sind, bei einer ALTER TABLE...SWITCH-Operation zu einem Fehler führen. Vermeiden Sie deshalb die Datentypkonvertierung in Einschränkungsdefinitionen.  
   
 ### <a name="limitations-of-check-constraints"></a>Beschränkungen bei CHECK-Einschränkungen  
- CHECK-Einschränkungen weisen Werte zurück, die als FALSE ausgewertet werden. Da NULL-Werte als UNKNOWN ausgewertet werden, kann deren Vorhandensein in Ausdrücken zum Überschreiben einer Einschränkung führen. Angenommen, Sie platzieren z. B. eine Einschränkung für eine **int** -Spalte **MyColumn** und geben darin an, dass **MyColumn** ausschließliche den Wert 10 enthalten darf (**MyColumn=10**). Wenn Sie dann den Wert NULL in **MyColumn**einfügen, wird von [!INCLUDE[ssDE](../../includes/ssde-md.md)] der Wert NULL eingefügt, und es wird kein Fehler zurückgegeben.  
+ CHECK-Einschränkungen weisen Werte zurück, die als FALSE ausgewertet werden. Da NULL-Werte als UNKNOWN ausgewertet werden, kann deren Vorhandensein in Ausdrücken zum Überschreiben einer Einschränkung führen. Angenommen, Sie platzieren z. B. eine Einschränkung für eine **int** -Spalte **MyColumn** und geben darin an, dass **MyColumn** ausschließliche den Wert 10 enthalten darf (**MyColumn=10**). Wenn Sie dann den Wert NULL in **MyColumn** einfügen, wird von [!INCLUDE[ssDE](../../includes/ssde-md.md)] der Wert NULL eingefügt, und es wird kein Fehler zurückgegeben.  
   
  Eine CHECK-Einschränkung gibt TRUE zurück, wenn die von ihr überprüfte Bedingung für alle Zeilen in der Tabelle nicht FALSE ist. CHECK-Einschränkungen werden auf Zeilenebene verwendet. Wenn eine gerade erstellte Tabelle über keinerlei Zeilen verfügt, wird jede CHECK-Einschränkung für diese Tabelle als gültig betrachtet. Dieser Umstand kann zu unerwarteten Ergebnissen führen, wie das im folgenden Beispiel gezeigt wird.  
   

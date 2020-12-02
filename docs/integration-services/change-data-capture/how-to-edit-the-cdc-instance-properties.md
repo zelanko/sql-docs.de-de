@@ -12,10 +12,10 @@ ms.assetid: 7a6c719a-3735-43b7-b3ab-dfadd325eca2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ee2861b40dbe132e7c95b52802bd10ccd46c20c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88426092"
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>Bearbeiten der CDC-Instanzeigenschaften
@@ -27,7 +27,7 @@ ms.locfileid: "88426092"
   
 ### <a name="to-edit-the-cdc-instance-configuration-properties"></a>So bearbeiten Sie die Konfigurationseigenschaften einer CDC-Instanz  
   
-1.  Wählen Sie im Menü **Start** die Option **CDC Designer Console**aus.  
+1.  Wählen Sie im Menü **Start** die Option **CDC Designer Console** aus.  
   
 2.  Erweitern Sie im linken Bereich die Option **Change Data Capture** , und erweitern Sie dann den Dienst, der die Instanz mit den zu bearbeitenden Eigenschaften enthält.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "88426092"
   
 4.  Klicken Sie in der der CDC Designer Console rechts im Aktionsbereich auf **Eigenschaften**.  
   
-     Sie können auch mit der rechten Maustaste auf die Instanz klicken, für die Sie die Eigenschaften bearbeiten möchten, und dann auf **Eigenschaften**klicken.  
+     Sie können auch mit der rechten Maustaste auf die Instanz klicken, für die Sie die Eigenschaften bearbeiten möchten, und dann auf **Eigenschaften** klicken.  
   
 5.  Bearbeiten Sie im Eigenschaften-Editor die Eigenschaften auf den folgenden Registerkarten:  
   

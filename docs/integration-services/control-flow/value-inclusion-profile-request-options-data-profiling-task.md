@@ -14,10 +14,10 @@ ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2c30a5e35a3c3e5b8e127a317e6d44880dee2e7f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88430932"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Optionen für Anforderung für Wertinklusionsprofil (Datenprofilerstellungs-Task)
@@ -28,7 +28,7 @@ ms.locfileid: "88430932"
   Verwenden Sie den Bereich **Anforderungseigenschaften** der Seite **Profilanforderungen** , um die Optionen für die im Anforderungsbereich ausgewählte **Anforderung für Wertinklusionsprofil** festzulegen. Ein Wertinklusionsprofil berechnet die Überschneidung in den Werten zwischen zwei Spalten oder Gruppen von Spalten. Dieses Profil kann auch ermitteln, ob eine Spalte oder eine Gruppe von Spalten geeignet ist, um als Fremdschlüssel zwischen den ausgewählten Tabellen zu fungieren. Dieses Profil hilft Ihnen auch, Probleme mit den Daten zu identifizieren, z. B. ungültige Werte. Zum Beispiel verwenden Sie ein Wertinklusionsprofil, um ein Profil für die Spalte ProductID einer Vertriebstabelle zu erstellen. Das Profil erkennt, dass die Spalte Werte enthält, die nicht in der Spalte ProductID der Products-Tabelle enthalten sind.  
   
 > [!NOTE]  
->  Die in diesem Thema beschriebenen Optionen werden auf der Seite **Profilanforderungen** im **Editor für den Datenprofilerstellungs-Task**angezeigt. Weitere Informationen zu dieser Seite des Editors finden Sie unter [Editor für den Datenprofilerstellungs-Task &#40;Seite „Profilanforderungen“&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md).  
+>  Die in diesem Thema beschriebenen Optionen werden auf der Seite **Profilanforderungen** im **Editor für den Datenprofilerstellungs-Task** angezeigt. Weitere Informationen zu dieser Seite des Editors finden Sie unter [Editor für den Datenprofilerstellungs-Task &#40;Seite „Profilanforderungen“&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md).  
   
  Weitere Informationen zum Verwenden des Datenprofilerstellungs-Tasks finden Sie unter [Einrichten von Datenprofilerstellungs-Tasks](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Weitere Informationen zum Verwenden des Datenprofil-Viewers zum Analysieren der Ausgabe des Datenprofilerstellungs-Tasks finden Sie unter [Datenprofil-Viewer](../../integration-services/control-flow/data-profile-viewer.md).  
   
@@ -43,20 +43,20 @@ ms.locfileid: "88430932"
 ## <a name="understanding-the-threshold-settings"></a>Grundlegendes zu den Schwellenwerteinstellungen  
  Sie können zwei verschiedene Schwellenwerteinstellungen verwenden, um die Ausgabe einer Anforderung für Wertinklusionsprofil zu verfeinern.  
   
- Wenn Sie für **InclusionThresholdSetting** einen anderen Wert als **Keine**angeben, meldet das Profil die Inklusionsstärke der Teilmenge nur unter einer der folgenden Bedingungen in der Obermenge:  
+ Wenn Sie für **InclusionThresholdSetting** einen anderen Wert als **Keine** angeben, meldet das Profil die Inklusionsstärke der Teilmenge nur unter einer der folgenden Bedingungen in der Obermenge:  
   
--   Wenn die Inklusionsstärke den in **InclusionStrengthThreshold**angegebenen Schwellenwert überschreitet.  
+-   Wenn die Inklusionsstärke den in **InclusionStrengthThreshold** angegebenen Schwellenwert überschreitet.  
   
--   Wenn die Inklusionsstärke den Wert 1,0 aufweist und **InclusionStrengthThreshold** auf **Exact**festgelegt ist.  
+-   Wenn die Inklusionsstärke den Wert 1,0 aufweist und **InclusionStrengthThreshold** auf **Exact** festgelegt ist.  
   
- Sie können die Ausgabe weiter verfeinern, indem Sie Kombinationen ausfiltern, bei denen die übergeordnete Spalte aufgrund nicht eindeutiger Werte kein geeigneter Schlüssel für die übergeordnete Tabelle ist. Wenn Sie für **SupersetColumnsKeyThresholdSetting** einen anderen Wert als **Keine**angeben, meldet das Profil die Inklusionsstärke der Teilmenge nur unter einer der folgenden Bedingungen in der Obermenge:  
+ Sie können die Ausgabe weiter verfeinern, indem Sie Kombinationen ausfiltern, bei denen die übergeordnete Spalte aufgrund nicht eindeutiger Werte kein geeigneter Schlüssel für die übergeordnete Tabelle ist. Wenn Sie für **SupersetColumnsKeyThresholdSetting** einen anderen Wert als **Keine** angeben, meldet das Profil die Inklusionsstärke der Teilmenge nur unter einer der folgenden Bedingungen in der Obermenge:  
   
--   Wenn die Eignung der übergeordneten Spalten als Schlüssel in der übergeordneten Tabelle den in **SupersetColumnsKeyThreshold**angegebenen Schwellenwert überschreitet.  
+-   Wenn die Eignung der übergeordneten Spalten als Schlüssel in der übergeordneten Tabelle den in **SupersetColumnsKeyThreshold** angegebenen Schwellenwert überschreitet.  
   
--   Wenn die Inklusionsstärke den Wert 1,0 aufweist und **SupersetColumnsKeyThreshold** auf **Exact**festgelegt ist.  
+-   Wenn die Inklusionsstärke den Wert 1,0 aufweist und **SupersetColumnsKeyThreshold** auf **Exact** festgelegt ist.  
   
 ## <a name="request-properties-options"></a>Optionen für Anforderungseigenschaften  
- Für eine **Anforderung für Wertinklusionsbereich**zeigt der Bereich **Anforderungseigenschaften** die folgenden Gruppen von Optionen an:  
+ Für eine **Anforderung für Wertinklusionsbereich** zeigt der Bereich **Anforderungseigenschaften** die folgenden Gruppen von Optionen an:  
   
 -   **Daten**, die die **SubsetTableOrView**-, **SupersetTableOrView**- und **InclusionColumns** -Option enthalten  
   
@@ -91,7 +91,7 @@ ms.locfileid: "88430932"
  Zeigt den Namen der ausgewählten Tabelle an. Diese Option ist schreibgeschützt.  
   
 #### <a name="inclusioncolumns-options"></a>InclusionColumns-Optionen  
- Die folgenden Optionen sind für jede Gruppe von Spalten verfügbar, die für die Profilerstellung in **InclusionColumns**ausgewählt wird.  
+ Die folgenden Optionen sind für jede Gruppe von Spalten verfügbar, die für die Profilerstellung in **InclusionColumns** ausgewählt wird.  
   
  Weitere Informationen finden Sie im Abschnitt "Grundlegendes zur Auswahl von Spalten für die InclusionColumns-Eigenschaft" in diesem Thema.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "88430932"
 |**BinarySort**|Sortiert und vergleicht Daten anhand der für jedes Zeichen definierten Bitmuster. Die binäre Sortierreihenfolge unterscheidet nach Groß- und Kleinschreibung und nach Akzent. Die Option Binär ist zudem die schnellste Sortierreihenfolge.|  
 |**DictionarySort**|Sortiert und vergleicht Daten anhand der Sortier- und Vergleichsregeln, die in Wörterbüchern für die zugeordnete Sprache definiert sind, oder nach dem jeweiligen Alphabet.|  
   
- Wenn Sie **DictionarySort**auswählen, können Sie auch jede Kombination der in der folgenden Tabelle aufgelisteten Optionen auswählen. Standardmäßig ist keine dieser zusätzlichen Optionen ausgewählt.  
+ Wenn Sie **DictionarySort** auswählen, können Sie auch jede Kombination der in der folgenden Tabelle aufgelisteten Optionen auswählen. Standardmäßig ist keine dieser zusätzlichen Optionen ausgewählt.  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -133,11 +133,11 @@ ms.locfileid: "88430932"
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**None**|Gibt keinen Schwellenwert an. Die Schlüsselstärke wird unabhängig vom Wert gemeldet.|  
-|**Specified**|Verwenden Sie den Schwellenwert, der in **InclusionStrengthThreshold**angegeben ist. Die Inklusionsstärke wird nur gemeldet, wenn sie größer als der Schwellenwert ist.|  
+|**Specified**|Verwenden Sie den Schwellenwert, der in **InclusionStrengthThreshold** angegeben ist. Die Inklusionsstärke wird nur gemeldet, wenn sie größer als der Schwellenwert ist.|  
 |**Exact**|Gibt keinen Schwellenwert an. Die Inklusionsstärke wird nur gemeldet, wenn die untergeordneten Werte vollständig in den übergeordneten Werten enthalten sind.|  
   
  **InclusionStrengthThreshold**  
- Geben Sie (mit einem Wert zwischen 0 und 1) den Schwellenwert an, bei dessen Überschreiten die Inklusionsstärke gemeldet werden sollte. Der Standardwert dieser Eigenschaft ist 0,95. Diese Option ist nur aktiviert, wenn **Specified** als **InclusionThresholdSetting**ausgewählt wird.  
+ Geben Sie (mit einem Wert zwischen 0 und 1) den Schwellenwert an, bei dessen Überschreiten die Inklusionsstärke gemeldet werden sollte. Der Standardwert dieser Eigenschaft ist 0,95. Diese Option ist nur aktiviert, wenn **Specified** als **InclusionThresholdSetting** ausgewählt wird.  
   
  Weitere Informationen finden Sie im Abschnitt "Grundlegendes zu Schwellenwerteinstellungen" in diesem Thema.  
   
@@ -147,16 +147,16 @@ ms.locfileid: "88430932"
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**None**|Gibt keinen Schwellenwert an. Die Inklusionsstärke wird unabhängig von der Schlüsselstärke der übergeordneten Spalte gemeldet.|  
-|**Specified**|Verwenden Sie den Schwellenwert, der in **SupersetColumnsKeyThreshold**angegeben ist. Die Inklusionsstärke wird nur gemeldet, wenn die Schlüsselstärke der übergeordneten Spalte größer als der Schwellenwert ist.|  
+|**Specified**|Verwenden Sie den Schwellenwert, der in **SupersetColumnsKeyThreshold** angegeben ist. Die Inklusionsstärke wird nur gemeldet, wenn die Schlüsselstärke der übergeordneten Spalte größer als der Schwellenwert ist.|  
 |**Exact**|Gibt keinen Schwellenwert an. Die Inklusionsstärke wird nur gemeldet, wenn die übergeordneten Spalten ein genauer Schlüssel in der übergeordneten Tabelle sind.|  
   
  **SupersetColumnsKeyThreshold**  
- Geben Sie (mit einem Wert zwischen 0 und 1) den Schwellenwert an, bei dessen Überschreiten die Inklusionsstärke gemeldet werden sollte. Der Standardwert dieser Eigenschaft ist 0,95. Diese Option ist nur aktiviert, wenn **Specified** als **SupersetColumnsKeyThresholdSetting**ausgewählt wird.  
+ Geben Sie (mit einem Wert zwischen 0 und 1) den Schwellenwert an, bei dessen Überschreiten die Inklusionsstärke gemeldet werden sollte. Der Standardwert dieser Eigenschaft ist 0,95. Diese Option ist nur aktiviert, wenn **Specified** als **SupersetColumnsKeyThresholdSetting** ausgewählt wird.  
   
  Weitere Informationen finden Sie im Abschnitt "Grundlegendes zu Schwellenwerteinstellungen" in diesem Thema.  
   
  **MaxNumberOfViolations**  
- Geben Sie die maximale Anzahl von Inklusionsverstößen an, die in der Ausgabe dokumentiert werden sollen. Der Standardwert dieser Eigenschaft ist 100. Diese Option ist deaktiviert, wenn **Exact** als **InclusionThresholdSetting**ausgewählt wird.  
+ Geben Sie die maximale Anzahl von Inklusionsverstößen an, die in der Ausgabe dokumentiert werden sollen. Der Standardwert dieser Eigenschaft ist 100. Diese Option ist deaktiviert, wenn **Exact** als **InclusionThresholdSetting** ausgewählt wird.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Editor für den Datenprofilerstellungs-Task &#40;Seite "Allgemein"&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   

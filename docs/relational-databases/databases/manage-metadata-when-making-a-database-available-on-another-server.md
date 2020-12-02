@@ -35,10 +35,10 @@ helpviewer_keywords:
 - credentials [SQL Server], metadata
 - copying databases
 ms.openlocfilehash: 3dc93671874de47f45bd26ae12fa9ded44c9a4fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88412846"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einem anderen Server
@@ -150,12 +150,12 @@ ms.locfileid: "88412846"
 ##  <a name="event-notifications-and-windows-management-instrumentation-wmi-events-at-server-level"></a><a name="event_notif_and_wmi_events"></a> Ereignisbenachrichtigungen und Windows Management Instrumentation (WMI)-Ereignisse (auf Serverebene)  
   
 ### <a name="server-level-event-notifications"></a>Ereignisbenachrichtigungen auf Serverebene  
- Ereignisbenachrichtigungen auf Serverebene werden in **msdb**gespeichert. Wenn eine Datenbankanwendung von einer Ereignisbenachrichtigung auf Serverebene abhängt, muss diese Ereignisbenachrichtigung daher auf der Zielserverinstanz neu erstellt werden. Die Ereignisbenachrichtigungen auf einer Serverinstanz werden in der [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) -Katalogsicht angezeigt. Weitere Informationen finden Sie unter [Event Notifications](../../relational-databases/service-broker/event-notifications.md).  
+ Ereignisbenachrichtigungen auf Serverebene werden in **msdb** gespeichert. Wenn eine Datenbankanwendung von einer Ereignisbenachrichtigung auf Serverebene abhängt, muss diese Ereignisbenachrichtigung daher auf der Zielserverinstanz neu erstellt werden. Die Ereignisbenachrichtigungen auf einer Serverinstanz werden in der [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) -Katalogsicht angezeigt. Weitere Informationen finden Sie unter [Event Notifications](../../relational-databases/service-broker/event-notifications.md).  
   
- Zudem werden Ereignisbenachrichtigungen mithilfe von [!INCLUDE[ssSB](../../includes/sssb-md.md)]übermittelt. Routen für eingehende Nachrichten sind in der Datenbank, die einen Dienst enthält, nicht eingeschlossen. Stattdessen werden explizite Routen in **msdb**gespeichert. Wenn Ihr Dienst eine explizite Route in der **msdb** -Datenbank verwendet, um eingehende Nachrichten an den Dienst weiterzuleiten, wenn Sie eine Datenbank in einer anderen Instanz anfügen, müssen Sie diese Route erneut erstellen.  
+ Zudem werden Ereignisbenachrichtigungen mithilfe von [!INCLUDE[ssSB](../../includes/sssb-md.md)]übermittelt. Routen für eingehende Nachrichten sind in der Datenbank, die einen Dienst enthält, nicht eingeschlossen. Stattdessen werden explizite Routen in **msdb** gespeichert. Wenn Ihr Dienst eine explizite Route in der **msdb** -Datenbank verwendet, um eingehende Nachrichten an den Dienst weiterzuleiten, wenn Sie eine Datenbank in einer anderen Instanz anfügen, müssen Sie diese Route erneut erstellen.  
   
 ### <a name="windows-management-instrumentation-wmi-events"></a>WMI-Ereignisse (Windows Management Instrumentation, Windows-Verwaltungsinstrumentation)  
- Über den WMI-Anbieter für Serverereignisse können Sie Ereignisse in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mithilfe von WMI (Windows Management Instrumentation) überwachen. Jede Anwendung, die auf Ereignissen der Serverebene beruht, die über den WMI-Anbieter verfügbar gemacht werden, auf dem eine Datenbank beruht, muss für den Computer der Zielserverinstanz definiert werden. Der WMI-Ereignisanbieter erstellt Ereignisbenachrichtigungen mit einem Zieldienst, der in **msdb**definiert wird.  
+ Über den WMI-Anbieter für Serverereignisse können Sie Ereignisse in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mithilfe von WMI (Windows Management Instrumentation) überwachen. Jede Anwendung, die auf Ereignissen der Serverebene beruht, die über den WMI-Anbieter verfügbar gemacht werden, auf dem eine Datenbank beruht, muss für den Computer der Zielserverinstanz definiert werden. Der WMI-Ereignisanbieter erstellt Ereignisbenachrichtigungen mit einem Zieldienst, der in **msdb** definiert wird.  
   
 > **HINWEIS:** Weitere Informationen finden Sie unter [Konzepte des WMI-Anbieters für Serverereignisse](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md).  
   
@@ -258,7 +258,7 @@ ms.locfileid: "88412846"
 ##  <a name="logins"></a><a name="logins"></a> Anmeldungen  
  Für die Anmeldung bei einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist ein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldename erforderlich. Dieser Anmeldename wird bei der Authentifizierung verwendet, die überprüft, ob der Prinzipal eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz herstellen kann. Ein Datenbankbenutzer, für den ein entsprechender [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldename auf einer Serverinstanz nicht oder falsch definiert ist, kann sich bei der Instanz nicht anmelden. Diese Benutzer werden als *verwaiste Benutzer* der Datenbank dieser Serverinstanz bezeichnet. Ein Datenbankbenutzer kann zu einem verwaisten Benutzer werden, wenn die Datenbank auf einer anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz wiederhergestellt, an eine andere SQL Server-Instanz angefügt oder auf eine andere Instanz kopiert wird.  
   
- Zum Erstellen eines Skripts für einige oder für alle Objekte in der ursprünglichen Kopie der Datenbank können Sie den Assistenten zum Generieren von SQL Server-Skripts verwenden und im Dialogfeld **Skriptoptionen auswählen** die Option **Skripterstellung für Anmeldungen** auf **True**festlegen.  
+ Zum Erstellen eines Skripts für einige oder für alle Objekte in der ursprünglichen Kopie der Datenbank können Sie den Assistenten zum Generieren von SQL Server-Skripts verwenden und im Dialogfeld **Skriptoptionen auswählen** die Option **Skripterstellung für Anmeldungen** auf **True** festlegen.  
   
 > **HINWEIS:** Informationen zum Einrichten von Anmeldenamen für eine gespiegelte Datenbank finden Sie unter [Einrichten von Anmeldekonten für die Datenbankspiegelung oder Always On-Verfügbarkeitsgruppen (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) und [Verwaltung von Anmeldenamen und Aufträgen nach einem Rollenwechsel &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   

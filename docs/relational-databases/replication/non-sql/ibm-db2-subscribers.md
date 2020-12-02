@@ -18,10 +18,10 @@ ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e044fa0e368893f0aaa1fe8175b306c2fc04c24b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88327066"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
@@ -42,11 +42,11 @@ ms.locfileid: "88327066"
   
 2.  Erstellen Sie eine Verbindungszeichenfolge für den Abonnenten. Die Verbindungszeichenfolge kann in einem beliebigen Text-Editor erstellt werden, Sie sollten jedoch das Data Access Tool verwenden. So erstellen Sie die Zeichenfolge im Data Access Tool  
   
-    1.  Zeigen Sie im Menü **Start**auf **Programme**, dann auf **Microsoft OLE DB-Anbieter für DB2**, und klicken Sie dann auf **Data Access Tool**.  
+    1.  Zeigen Sie im Menü **Start** auf **Programme**, dann auf **Microsoft OLE DB-Anbieter für DB2**, und klicken Sie dann auf **Data Access Tool**.  
   
     2.  Folgen Sie im **Data Access Tool** den Anweisungen, um die Informationen zum DB2-Server anzugeben. Wenn Sie das Tool abgeschlossen haben, wird ein universeller Datenlink (Universal Data Link, UDL) mit einer zugeordneten Verbindungszeichenfolge erstellt (die UDL wird nicht tatsächlich von der Replikation verwendet, sondern die Verbindungszeichenfolge).  
   
-    3.  Greifen Sie auf die Verbindungszeichenfolge zu: Klicken Sie mit der rechten Maustaste auf die UDL im Data Access Tool, und wählen Sie **Verbindungszeichenfolge anzeigen**aus.  
+    3.  Greifen Sie auf die Verbindungszeichenfolge zu: Klicken Sie mit der rechten Maustaste auf die UDL im Data Access Tool, und wählen Sie **Verbindungszeichenfolge anzeigen** aus.  
   
      Die Verbindungszeichenfolge ähnelt dem Folgenden (der Zeilenumbruch dient der besseren Lesbarkeit):  
   
@@ -79,7 +79,7 @@ ms.locfileid: "88327066"
   
      **So erstellen Sie ein Artikelskript und stellen Sie es als benutzerdefiniertes Erstellungsskript bereit**  
   
-    1.  Erstellen Sie mit dem DB2 SQL-Dialekt ein Artikelskript. Stellen Sie sicher, dass **bypass_translation**die erste Zeile in der Datei ist und nichts sonst in der Zeile steht.  
+    1.  Erstellen Sie mit dem DB2 SQL-Dialekt ein Artikelskript. Stellen Sie sicher, dass **bypass_translation** die erste Zeile in der Datei ist und nichts sonst in der Zeile steht.  
   
     2.  Führen Sie sp_changearticle aus, wobei Sie den Dateipfad und den Namen für die Eigenschaft *creation_script* angeben.  
   
