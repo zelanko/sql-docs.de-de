@@ -14,10 +14,10 @@ ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2d897301336c7697b658fbf40837b23b0a2e3797
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91719817"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Suchtransformation im Vollcachemodus – Cacheverbindungs-Manager
@@ -78,7 +78,7 @@ ms.locfileid: "91719817"
   
      Konfigurieren Sie die Datenquelle nach Bedarf.  
   
-4.  Doppelklicken Sie auf die Transformation für Cachetransformation, und klicken Sie dann im **Cachetransformations-Editor**auf der Seite **Verbindungs-Manager** auf **Neu** , um einen neuen Cacheverbindungs-Manager zu erstellen.  
+4.  Doppelklicken Sie auf die Transformation für Cachetransformation, und klicken Sie dann im **Cachetransformations-Editor** auf der Seite **Verbindungs-Manager** auf **Neu** , um einen neuen Cacheverbindungs-Manager zu erstellen.  
   
 5.  Klicken Sie auf die Registerkarte **Spalten** im Dialogfeld **Editor für den Cacheverbindungs-Manager** , und geben Sie dann mit der Option **Indexposition** an, welche Spalten die Indexspalten sind.  
   
@@ -87,11 +87,11 @@ ms.locfileid: "91719817"
     > [!NOTE]  
     >  Wenn die Transformation für Suche so konfiguriert ist, dass sie einen Cacheverbindungs-Manager verwendet, können nur Indexspalten im Verweisdataset Eingabespalten zugeordnet werden. Auch müssen alle Indexspalten zugeordnet werden. Weitere Informationen finden Sie unter [Cache Connection Manager Editor](./cache-connection-manager.md).  
   
-6.  Um den Cache in einer Datei zu speichern, konfigurieren Sie den Cacheverbindungs-Manager im **Editor für den Cacheverbindungs-Manager**auf der Registerkarte **Allgemein** , indem Sie die folgenden Optionen festlegen:  
+6.  Um den Cache in einer Datei zu speichern, konfigurieren Sie den Cacheverbindungs-Manager im **Editor für den Cacheverbindungs-Manager** auf der Registerkarte **Allgemein** , indem Sie die folgenden Optionen festlegen:  
   
-    -   Wählen Sie **Dateicache verwenden**aus.  
+    -   Wählen Sie **Dateicache verwenden** aus.  
   
-    -   Im Feld **Dateiname**geben Sie entweder den Dateipfad ein, oder klicken Sie auf **Durchsuchen** , um die Datei auszuwählen.  
+    -   Im Feld **Dateiname** geben Sie entweder den Dateipfad ein, oder klicken Sie auf **Durchsuchen** , um die Datei auszuwählen.  
   
          Wenn Sie einen Pfad für eine Datei eingeben, die nicht vorhanden ist, erstellt das System die Datei, wenn Sie das Paket ausführen.  
   
@@ -105,13 +105,13 @@ ms.locfileid: "91719817"
     1.  Verbinden Sie die Suchtransformation mit dem Datenfluss, indem Sie einen Konnektor von einer Quelle oder einer vorherigen Transformation auf die Suchtransformation ziehen.  
   
         > [!NOTE]  
-        >  Eine Suchtransformation erzeugt möglicherweise einen Fehler, wenn sie sich mit einem Flatfile verbindet, das ein leeres Datenfeld enthält. Die Gültigkeit der Transformation hängt davon ab, ob der Verbindungs-Manager für das Flatfile so konfiguriert wurde, dass NULL-Werte beibehalten werden. Um sicherzustellen, dass die Suchtransformation gültig ist, wählen Sie im **Quelleneditor für Flatfiles**auf der **Seite Verbindungs-Manager**die Option **NULL-Werte aus der Quelle als NULL-Werte im Datenfluss beibehalten** .  
+        >  Eine Suchtransformation erzeugt möglicherweise einen Fehler, wenn sie sich mit einem Flatfile verbindet, das ein leeres Datenfeld enthält. Die Gültigkeit der Transformation hängt davon ab, ob der Verbindungs-Manager für das Flatfile so konfiguriert wurde, dass NULL-Werte beibehalten werden. Um sicherzustellen, dass die Suchtransformation gültig ist, wählen Sie im **Quelleneditor für Flatfiles** auf der **Seite Verbindungs-Manager** die Option **NULL-Werte aus der Quelle als NULL-Werte im Datenfluss beibehalten** .  
   
     2.  Doppelklicken Sie auf die Quelle oder die vorherige Transformation, um die Komponente zu konfigurieren.  
   
-    3.  Doppelklicken Sie auf die Transformation für Suche, und wählen Sie dann im **Transformations-Editor für Suche**auf der Seite **Allgemein** die Option **Vollcache**aus.  
+    3.  Doppelklicken Sie auf die Transformation für Suche, und wählen Sie dann im **Transformations-Editor für Suche** auf der Seite **Allgemein** die Option **Vollcache** aus.  
   
-    4.  Wählen Sie im Bereich **Verbindungstyp****Cacheverbindungs-Manager**aus.  
+    4.  Wählen Sie im Bereich **Verbindungstyp****Cacheverbindungs-Manager** aus.  
   
     5.  Wählen Sie für die Liste **Angeben, wie Zeilen ohne übereinstimmende Einträge behandelt werden sollen** eine Fehlerbehandlungsoption aus.  
   
@@ -143,13 +143,13 @@ ms.locfileid: "91719817"
   
      Konfigurieren Sie die Datenquelle nach Bedarf.  
   
-4.  Doppelklicken Sie auf die Transformation für Cachetransformation, und klicken Sie dann im **Cachetransformations-Editor**auf der Seite **Verbindungs-Manager** auf **Neu** , um einen neuen Cacheverbindungs-Manager zu erstellen.  
+4.  Doppelklicken Sie auf die Transformation für Cachetransformation, und klicken Sie dann im **Cachetransformations-Editor** auf der Seite **Verbindungs-Manager** auf **Neu** , um einen neuen Cacheverbindungs-Manager zu erstellen.  
   
-5.  Konfigurieren Sie den Cacheverbindungs-Manager im **Editor für Cacheverbindungs-Manager**auf der Registerkarte **Allgemein** , indem Sie die folgenden Optionen festlegen:  
+5.  Konfigurieren Sie den Cacheverbindungs-Manager im **Editor für Cacheverbindungs-Manager** auf der Registerkarte **Allgemein** , indem Sie die folgenden Optionen festlegen:  
   
-    -   Wählen Sie **Dateicache verwenden**aus.  
+    -   Wählen Sie **Dateicache verwenden** aus.  
   
-    -   Im Feld **Dateiname**geben Sie entweder den Dateipfad ein, oder klicken Sie auf **Durchsuchen** , um die Datei auszuwählen.  
+    -   Im Feld **Dateiname** geben Sie entweder den Dateipfad ein, oder klicken Sie auf **Durchsuchen** , um die Datei auszuwählen.  
   
          Wenn Sie einen Pfad für eine Datei eingeben, die nicht vorhanden ist, erstellt das System die Datei, wenn Sie das Paket ausführen.  
   
@@ -171,15 +171,15 @@ ms.locfileid: "91719817"
   
     -   Doppelklicken Sie auf den Cacheverbindungs-Manager, den Sie in Schritt 4 erstellt haben, klicken Sie auf **Spalten**, wählen Sie die Zeilen aus, und drücken Sie STRG+C, um die Spaltenmetadaten zu kopieren.  
   
-9. Erstellen Sie im untergeordneten Paket einen Cacheverbindungs-Manager, indem Sie mit der rechten Maustaste in den Bereich **Verbindungs-Manager** klicken, auf **Neue Verbindung**klicken, im Dialogfeld **SSIS-Verbindungs-Manager hinzufügen** die Option **CACHE** auswählen und dann auf **Hinzufügen**klicken.  
+9. Erstellen Sie im untergeordneten Paket einen Cacheverbindungs-Manager, indem Sie mit der rechten Maustaste in den Bereich **Verbindungs-Manager** klicken, auf **Neue Verbindung** klicken, im Dialogfeld **SSIS-Verbindungs-Manager hinzufügen** die Option **CACHE** auswählen und dann auf **Hinzufügen** klicken.  
   
-     Der Bereich **Verbindungs-Manager** wird unten auf den Registerkarten **Ablaufsteuerung**, **Datenfluss**und **Ereignishandler** des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Designers angezeigt.  
+     Der Bereich **Verbindungs-Manager** wird unten auf den Registerkarten **Ablaufsteuerung**, **Datenfluss** und **Ereignishandler** des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Designers angezeigt.  
   
-10. Konfigurieren Sie den Cacheverbindungs-Manager im **Editor für Cacheverbindungs-Manager**auf der Registerkarte **Allgemein** so, dass die Daten aus der ausgewählten Cachedatei gelesen werden, indem Sie die folgenden Optionen festlegen:  
+10. Konfigurieren Sie den Cacheverbindungs-Manager im **Editor für Cacheverbindungs-Manager** auf der Registerkarte **Allgemein** so, dass die Daten aus der ausgewählten Cachedatei gelesen werden, indem Sie die folgenden Optionen festlegen:  
   
-    -   Wählen Sie **Dateicache verwenden**aus.  
+    -   Wählen Sie **Dateicache verwenden** aus.  
   
-    -   Im Feld **Dateiname**geben Sie entweder den Dateipfad ein, oder klicken Sie auf **Durchsuchen** , um die Datei auszuwählen.  
+    -   Im Feld **Dateiname** geben Sie entweder den Dateipfad ein, oder klicken Sie auf **Durchsuchen** , um die Datei auszuwählen.  
   
     > [!NOTE]  
     >  Die Schutzebene des Pakets gilt nicht für die Cachedatei. Wenn die Cachedatei vertrauliche Informationen enthält, schränken Sie den Zugriff auf den Speicherort oder Ordner, in dem Sie die Datei speichern, mithilfe einer Zugriffssteuerungsliste ein. Sie sollten nur bestimmten Konten den Zugriff ermöglichen. Weitere Informationen finden Sie unter [Zugriff auf Dateien, die von Paketen verwendet werden](../../integration-services/security/security-overview-integration-services.md#files).  
@@ -191,11 +191,11 @@ ms.locfileid: "91719817"
     1.  Verbinden Sie die Suchtransformation mit dem Datenfluss, indem Sie einen Konnektor von einer Quelle oder einer vorherigen Transformation auf die Suchtransformation ziehen.  
   
         > [!NOTE]  
-        >  Eine Suchtransformation erzeugt möglicherweise einen Fehler, wenn sie sich mit einem Flatfile verbindet, das ein leeres Datenfeld enthält. Die Gültigkeit der Transformation hängt davon ab, ob der Verbindungs-Manager für das Flatfile so konfiguriert wurde, dass NULL-Werte beibehalten werden. Um sicherzustellen, dass die Suchtransformation gültig ist, wählen Sie im **Quelleneditor für Flatfiles**auf der **Seite Verbindungs-Manager**die Option **NULL-Werte aus der Quelle als NULL-Werte im Datenfluss beibehalten** .  
+        >  Eine Suchtransformation erzeugt möglicherweise einen Fehler, wenn sie sich mit einem Flatfile verbindet, das ein leeres Datenfeld enthält. Die Gültigkeit der Transformation hängt davon ab, ob der Verbindungs-Manager für das Flatfile so konfiguriert wurde, dass NULL-Werte beibehalten werden. Um sicherzustellen, dass die Suchtransformation gültig ist, wählen Sie im **Quelleneditor für Flatfiles** auf der **Seite Verbindungs-Manager** die Option **NULL-Werte aus der Quelle als NULL-Werte im Datenfluss beibehalten** .  
   
     2.  Doppelklicken Sie auf die Quelle oder die vorherige Transformation, um die Komponente zu konfigurieren.  
   
-    3.  Doppelklicken Sie auf die Transformation für Suche, und wählen Sie dann **Vollcache** auf der Seite **Allgemein** im **Transformations-Editor für Suche**aus.  
+    3.  Doppelklicken Sie auf die Transformation für Suche, und wählen Sie dann **Vollcache** auf der Seite **Allgemein** im **Transformations-Editor für Suche** aus.  
   
     4.  Wählen Sie im Bereich **Verbindungstyp****Cacheverbindungs-Manager** aus.  
   
@@ -227,17 +227,17 @@ ms.locfileid: "91719817"
   
 2.  Klicken Sie mit der rechten Maustaste in den Bereich **Verbindungs-Manager** , und klicken Sie dann auf **Neue Verbindung**.  
   
-     Der Bereich **Verbindungs-Manager** wird unten auf den Registerkarten **Ablaufsteuerung**, **Datenfluss**und **Ereignishandler** des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Designers angezeigt.  
+     Der Bereich **Verbindungs-Manager** wird unten auf den Registerkarten **Ablaufsteuerung**, **Datenfluss** und **Ereignishandler** des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Designers angezeigt.  
   
-3.  Wählen Sie im Dialogfeld **SSIS-Verbindungs-Manager hinzufügen****CACHE**aus, und klicken Sie dann auf **Hinzufügen** , um einen Cacheverbindungs-Manager hinzuzufügen.  
+3.  Wählen Sie im Dialogfeld **SSIS-Verbindungs-Manager hinzufügen****CACHE** aus, und klicken Sie dann auf **Hinzufügen** , um einen Cacheverbindungs-Manager hinzuzufügen.  
   
-4.  Doppelklicken Sie auf den Cacheverbindungs-Manager, um den **Editor für den Cacheverbindungs-Manager**zu öffnen.  
+4.  Doppelklicken Sie auf den Cacheverbindungs-Manager, um den **Editor für den Cacheverbindungs-Manager** zu öffnen.  
   
-5.  Konfigurieren Sie den Cacheverbindungs-Manager im **Editor für Cacheverbindungs-Manager**auf der Registerkarte **Allgemein** , indem Sie die folgenden Optionen festlegen:  
+5.  Konfigurieren Sie den Cacheverbindungs-Manager im **Editor für Cacheverbindungs-Manager** auf der Registerkarte **Allgemein** , indem Sie die folgenden Optionen festlegen:  
   
-    -   Wählen Sie **Dateicache verwenden**aus.  
+    -   Wählen Sie **Dateicache verwenden** aus.  
   
-    -   Im Feld **Dateiname**geben Sie entweder den Dateipfad ein, oder klicken Sie auf **Durchsuchen** , um die Datei auszuwählen.  
+    -   Im Feld **Dateiname** geben Sie entweder den Dateipfad ein, oder klicken Sie auf **Durchsuchen** , um die Datei auszuwählen.  
   
     > [!NOTE]  
     >  Die Schutzebene des Pakets gilt nicht für die Cachedatei. Wenn die Cachedatei vertrauliche Informationen enthält, schränken Sie den Zugriff auf den Speicherort oder Ordner, in dem Sie die Datei speichern, mithilfe einer Zugriffssteuerungsliste ein. Sie sollten nur bestimmten Konten den Zugriff ermöglichen. Weitere Informationen finden Sie unter [Zugriff auf Dateien, die von Paketen verwendet werden](../../integration-services/security/security-overview-integration-services.md#files).  
@@ -256,11 +256,11 @@ ms.locfileid: "91719817"
     1.  Verbinden Sie die Suchtransformation mit dem Datenfluss, indem Sie einen Konnektor von einer Quelle oder einer vorherigen Transformation auf die Suchtransformation ziehen.  
   
         > [!NOTE]  
-        >  Eine Suchtransformation erzeugt möglicherweise einen Fehler, wenn sie sich mit einem Flatfile verbindet, das ein leeres Datenfeld enthält. Die Gültigkeit der Transformation hängt davon ab, ob der Verbindungs-Manager für das Flatfile so konfiguriert wurde, dass NULL-Werte beibehalten werden. Um sicherzustellen, dass die Suchtransformation gültig ist, wählen Sie im **Quelleneditor für Flatfiles**auf der **Seite Verbindungs-Manager**die Option **NULL-Werte aus der Quelle als NULL-Werte im Datenfluss beibehalten** .  
+        >  Eine Suchtransformation erzeugt möglicherweise einen Fehler, wenn sie sich mit einem Flatfile verbindet, das ein leeres Datenfeld enthält. Die Gültigkeit der Transformation hängt davon ab, ob der Verbindungs-Manager für das Flatfile so konfiguriert wurde, dass NULL-Werte beibehalten werden. Um sicherzustellen, dass die Suchtransformation gültig ist, wählen Sie im **Quelleneditor für Flatfiles** auf der **Seite Verbindungs-Manager** die Option **NULL-Werte aus der Quelle als NULL-Werte im Datenfluss beibehalten** .  
   
     2.  Doppelklicken Sie auf die Quelle oder die vorherige Transformation, um die Komponente zu konfigurieren.  
   
-    3.  Doppelklicken Sie auf die Transformation für Suche, und wählen Sie dann im **Transformations-Editor für Suche**auf der Seite **Allgemein** die Option **Vollcache**aus.  
+    3.  Doppelklicken Sie auf die Transformation für Suche, und wählen Sie dann im **Transformations-Editor für Suche** auf der Seite **Allgemein** die Option **Vollcache** aus.  
   
     4.  Wählen Sie im Bereich **Verbindungstyp****Cacheverbindungs-Manager** aus.  
   

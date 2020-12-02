@@ -14,15 +14,15 @@ ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4a56b34301386287ef954edae0528decd4d03fee
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91809479"
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>Lektion 1: Konvertieren einer Tabelle in eine hierarchische Struktur
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-Kunden mit Tabellen, die hierarchische Beziehungen mithilfe von Selbstjoins darstellen, können diese Tabellen in eine hierarchische Struktur konvertieren, indem Sie diese Lektion als Richtlinie verwenden. Es ist relativ leicht, von dieser Darstellung zu einer mit **hierarchyid**zu migrieren. Nach der Migration verfügen die Benutzer über ein grundlegendes Verständnis hierarchischer Darstellungen, die für effizientere Abfragen auf verschiedene Weise indiziert werden können.  
+Kunden mit Tabellen, die hierarchische Beziehungen mithilfe von Selbstjoins darstellen, können diese Tabellen in eine hierarchische Struktur konvertieren, indem Sie diese Lektion als Richtlinie verwenden. Es ist relativ leicht, von dieser Darstellung zu einer mit **hierarchyid** zu migrieren. Nach der Migration verfügen die Benutzer über ein grundlegendes Verständnis hierarchischer Darstellungen, die für effizientere Abfragen auf verschiedene Weise indiziert werden können.  
   
 In dieser Lektion wird eine vorhandene Tabelle untersucht und eine neue Tabelle mit einer **hierarchyid** -Spalte erstellt. Daraufhin wird diese Tabelle mit den Daten der Quelltabelle gefüllt, und schließlich werden drei Indizierungsstrategien dargestellt. Diese Lektion enthält die folgenden Themen:  
  
@@ -37,11 +37,11 @@ Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio, 
 Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Wiederherstellen einer Datenbank](../backup-restore/restore-a-database-backup-using-ssms.md).  
 
 ## <a name="examine-the-current-structure-of-the-employee-table"></a>Untersuchen der aktuellen Struktur der Mitarbeitertabelle
-Die Beispieldatenbank Adventureworks2017 (oder höher) enthält im Schema **HumanResources** die Tabelle **Employee**. Um Änderungen an der ursprünglichen Tabelle zu vermeiden, wird in diesem Schritt eine Kopie der Tabelle **Employee** mit dem Namen **EmployeeDemo**erstellt. Um das Beispiel zu vereinfachen, kopieren Sie nur fünf Spalten aus der ursprünglichen Tabelle. Dann fragen Sie die Tabelle **HumanResources.EmployeeDemo** ab, um zu sehen, wie die Daten in einer Tabelle strukturiert werden, wenn der **hierarchyid** -Datentyp nicht verwendet wird.  
+Die Beispieldatenbank Adventureworks2017 (oder höher) enthält im Schema **HumanResources** die Tabelle **Employee**. Um Änderungen an der ursprünglichen Tabelle zu vermeiden, wird in diesem Schritt eine Kopie der Tabelle **Employee** mit dem Namen **EmployeeDemo** erstellt. Um das Beispiel zu vereinfachen, kopieren Sie nur fünf Spalten aus der ursprünglichen Tabelle. Dann fragen Sie die Tabelle **HumanResources.EmployeeDemo** ab, um zu sehen, wie die Daten in einer Tabelle strukturiert werden, wenn der **hierarchyid** -Datentyp nicht verwendet wird.  
   
 ### <a name="copy-the-employee-table"></a>Kopieren der Mitarbeitertabelle  
   
-1.  Führen Sie in einem Abfrage-Editorfenster den folgenden Code aus, um die Tabellenstruktur und die Daten der Tabelle **Employee** in eine neue Tabelle namens **EmployeeDemo**zu kopieren. Da die ursprüngliche Tabelle bereits HierarchyID verwendet, vereinfacht diese Abfrage die Hierarchie, um den Manager des Mitarbeiters abzurufen. Im weiteren Verlauf dieser Lektion rekonstruieren Sie diese Hierarchie.
+1.  Führen Sie in einem Abfrage-Editorfenster den folgenden Code aus, um die Tabellenstruktur und die Daten der Tabelle **Employee** in eine neue Tabelle namens **EmployeeDemo** zu kopieren. Da die ursprüngliche Tabelle bereits HierarchyID verwendet, vereinfacht diese Abfrage die Hierarchie, um den Manager des Mitarbeiters abzurufen. Im weiteren Verlauf dieser Lektion rekonstruieren Sie diese Hierarchie.
 
    ```sql  
    USE AdventureWorks2017;  
@@ -103,7 +103,7 @@ Beachten Sie, dass die **ORDER BY** -Klausel bewirkt, dass die Mitarbeiter, die 
   
 ### <a name="to-create-a-new-table-named-neworg"></a>So erstellen Sie eine neue Tabelle namens NewOrg  
   
--   Führen Sie in einem Abfrage-Editorfenster den folgenden Code aus, um eine einfache Tabelle namens **HumanResources.NewOrg**zu erstellen.  
+-   Führen Sie in einem Abfrage-Editorfenster den folgenden Code aus, um eine einfache Tabelle namens **HumanResources.NewOrg** zu erstellen.  
   
     ```sql   
     CREATE TABLE HumanResources.NewOrg  
@@ -242,7 +242,7 @@ Die Spalte **hierarchyid** (**OrgNode**) ist der Primärschlüssel für die **Ne
     GO  
     ```  
   
-2.  Erstellen Sie für die Spalte **EmployeeID** einen eindeutigen Index. Dies ist der übliche Singleton-Suchvorgang nach einem einzelnen Mitarbeiter entsprechend der **EmployeeID** -Nummer. Führen Sie den folgenden Code aus, um für **EmployeeID**einen Index zu erstellen:  
+2.  Erstellen Sie für die Spalte **EmployeeID** einen eindeutigen Index. Dies ist der übliche Singleton-Suchvorgang nach einem einzelnen Mitarbeiter entsprechend der **EmployeeID** -Nummer. Führen Sie den folgenden Code aus, um für **EmployeeID** einen Index zu erstellen:  
   
     ```sql  
     CREATE UNIQUE INDEX EmpIDs_unq ON HumanResources.NewOrg(EmployeeID) ;  
@@ -290,7 +290,7 @@ Die Spalte **hierarchyid** (**OrgNode**) ist der Primärschlüssel für die **Ne
     /1/1/5/ 0x5AE3  3   11  adventure-works\ovidiu0
     ```
 
-    Sortiert nach**EmployeeID**: Die Zeilen werden in der Reihenfolge der **EmployeeID** gespeichert.  
+    Sortiert nach **EmployeeID**: Die Zeilen werden in der Reihenfolge der **EmployeeID** gespeichert.  
 
     ```
     LogicalNode OrgNode H_Level EmployeeID  LoginID

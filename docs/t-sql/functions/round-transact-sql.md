@@ -21,10 +21,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3bafff2cafe25587ae65c519bfc2e1896b34117d
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379991"
 ---
 # <a name="round-transact-sql"></a>ROUND (Transact-SQL)
@@ -47,7 +47,7 @@ ROUND ( numeric_expression , length [ ,function ] )
  Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) der genauen numerischen oder ungefähren numerischen Datentypkategorie, mit Ausnahme des **bit**-Datentyps.  
   
  *length*  
- Dies entspricht der Genauigkeit, auf die *numeric_expression* gerundet werden soll. *length* muss ein Ausdruck vom Typ **tinyint**, **smallint** oder **int** sein. Wenn *length* eine positive Zahl ist, wird *numeric_expression* auf die Anzahl der durch *length* angegebenen Dezimalstellen gerundet. Wenn *length* eine negative Zahl ist, wird *numeric_expression* wie durch *length*angegeben auf der linken Seite des Dezimaltrennzeichens gerundet.  
+ Dies entspricht der Genauigkeit, auf die *numeric_expression* gerundet werden soll. *length* muss ein Ausdruck vom Typ **tinyint**, **smallint** oder **int** sein. Wenn *length* eine positive Zahl ist, wird *numeric_expression* auf die Anzahl der durch *length* angegebenen Dezimalstellen gerundet. Wenn *length* eine negative Zahl ist, wird *numeric_expression* wie durch *length* angegeben auf der linken Seite des Dezimaltrennzeichens gerundet.  
   
  *Funktion*  
  Die Art der auszuführenden Operation. *function* muss vom Typ **tinyint**, **smallint** oder **int** sein. Wenn *function* fehlt oder den Wert 0 (Standard) hat, wird *numeric_expression* gerundet. Wird nicht der Wert 0 angegeben, wird *numeric_expression* abgeschnitten.  

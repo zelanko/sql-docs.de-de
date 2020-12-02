@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest
 ms.openlocfilehash: 82c8807aef206867a8f50eed507e7a3a4cb48e59
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379505"
 ---
 # <a name="try_convert-transact-sql"></a>TRY_CONVERT (Transact-SQL)
@@ -43,7 +43,7 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
 
 ## <a name="arguments"></a>Argumente
  *data_type [ ( length ) ]*  
- Der Datentyp, in den *expression*umgewandelt werden soll.  
+ Der Datentyp, in den *expression* umgewandelt werden soll.  
   
  *expression*  
  Der umzuwandelnde Wert.  
@@ -53,13 +53,13 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
   
  *style* akzeptiert die gleichen Werte wie der *style*-Parameter der **CONVERT**-Funktion. Weitere Informationen finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
- Der Bereich zulässiger Werte wird durch den Wert von *data_type*bestimmt. Wenn *style* NULL ist, gibt **TRY_CONVERT** NULL zurück.  
+ Der Bereich zulässiger Werte wird durch den Wert von *data_type* bestimmt. Wenn *style* NULL ist, gibt **TRY_CONVERT** NULL zurück.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  Gibt einen in den angegebenen Datentyp umgewandelten Wert zurück, wenn die Umwandlung erfolgreich ist. Andernfalls wird NULL zurückgegeben.  
   
 ## <a name="remarks"></a>Bemerkungen  
- **TRY_CONVERT** versucht, den übergebenen Wert in den angegebenen *data_type*zu konvertieren. Wenn die Umwandlung erfolgreich ist, gibt **TRY_CONVERT** den Wert als angegebenen *data_type* zurück. Bei einem Fehler wird NULL zurückgegeben. Wenn Sie jedoch eine Konvertierung anfordern, die explizit nicht zulässig ist, verursacht **TRY_CONVERT** einen Fehler.  
+ **TRY_CONVERT** versucht, den übergebenen Wert in den angegebenen *data_type* zu konvertieren. Wenn die Umwandlung erfolgreich ist, gibt **TRY_CONVERT** den Wert als angegebenen *data_type* zurück. Bei einem Fehler wird NULL zurückgegeben. Wenn Sie jedoch eine Konvertierung anfordern, die explizit nicht zulässig ist, verursacht **TRY_CONVERT** einen Fehler.  
   
  **TRY_CONVERT** ist ein reserviertes Schlüsselwort in Kompatibilitätsgrad 110 und höher.  
   

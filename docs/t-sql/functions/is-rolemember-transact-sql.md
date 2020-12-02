@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 856265d1ba66eb2cfae29b12ec23b432cb4c8e3f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91116721"
 ---
 # <a name="is_rolemember-transact-sql"></a>IS_ROLEMEMBER (Transact-SQL)
@@ -48,7 +48,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
  Der Name der Datenbankrolle, die überprüft wird. *role* weist den Typ **sysname** auf.  
   
  **'** *database_principal* **'**  
- Der Name des Datenbankbenutzers, der Datenbankrolle oder der Anwendungsrolle, der/die überprüft werden soll. *database_principal* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn kein Wert angegeben wird, basiert das Ergebnis auf dem aktuellen Ausführungskontext. Wenn der Parameter das Wort NULL enthalten ist, wird NULL zurückgegeben.  
+ Der Name des Datenbankbenutzers, der Datenbankrolle oder der Anwendungsrolle, der/die überprüft werden soll. *database_principal* ist vom Datentyp **sysname** und hat den Standardwert NULL. Wenn kein Wert angegeben wird, basiert das Ergebnis auf dem aktuellen Ausführungskontext. Wenn der Parameter das Wort NULL enthalten ist, wird NULL zurückgegeben.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  

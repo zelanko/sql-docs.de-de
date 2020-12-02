@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0ddf8c0360de470d5640ed650c4b8339061c41b4
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91810484"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Tabellenspalteneigenschaften (SQL Server Management Studio)
@@ -32,7 +32,7 @@ ms.locfileid: "91810484"
 >  Wenn die Tabelle für die Replikation veröffentlicht wird, müssen Sie mithilfe der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) oder mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) Schemaänderungen vornehmen. Wenn die Schemaänderungen mit dem Tabellen-Designer oder dem Datenbankdiagramm-Designer ausgeführt werden, wird versucht, die Tabelle zu entfernen und erneut zu erstellen. Da veröffentlichte Objekte nicht gelöscht werden können, schlägt die Schemaänderung fehl.  
   
  **Allgemein**  
- Wird erweitert, um **Name**, **NULL-Werte zulassen**, **Datentyp**, **Standardwert oder -bindung**, **Länge**, **Genauigkeit**und **Dezimalstellen**anzuzeigen.  
+ Wird erweitert, um **Name**, **NULL-Werte zulassen**, **Datentyp**, **Standardwert oder -bindung**, **Länge**, **Genauigkeit** und **Dezimalstellen** anzuzeigen.  
   
  **Name**  
  Zeigt den Namen der ausgewählten Spalte an.  
@@ -93,14 +93,14 @@ ms.locfileid: "91810484"
   
 -   **Ist volltextindiziert** Gibt an, ob diese Spalte volltextindiziert ist. Diese Eigenschaft kann nur dann auf **Ja** festgelegt werden, wenn für den Datentyp der Spalte eine Volltextsuche möglich ist und wenn für die Spalte in der zugehörigen Tabelle ein Volltextindex angegeben ist. Klicken Sie zum Bearbeiten diese Eigenschaft auf den Wert, erweitern Sie die Dropdownliste, und wählen Sie einen Wert aus.  
   
--   **Volltexttypspalte** zeigt den Namen der Spalte an, für den diese Spalte volltextindiziert ist. Diese Eigenschaft muss festgelegt sein, wenn die **Datentyp** -Eigenschaft für diese Spalte entweder **image** oder **varbinary**ist. Die in dieser Eigenschaft benannte Spalte muss vom Typ **[n]char, [n]varchar,** oder **xml**sein, und die Dropdownliste für diese Eigenschaft enthält nur Spalten, die von einem dieser drei Datentypen sind. Zeilen in den Spalten, die durch diese Eigenschaft benannt werden, zeigen den Dokumenttyp der entsprechenden Zeilen in Spalten an, die mit Volltextsuche durchsucht werden können. Um diese Eigenschaft zu bearbeiten, klicken Sie auf ihren Wert, erweitern Sie die Dropdownliste, und wählen Sie einen anderen Wert aus.  
+-   **Volltexttypspalte** zeigt den Namen der Spalte an, für den diese Spalte volltextindiziert ist. Diese Eigenschaft muss festgelegt sein, wenn die **Datentyp** -Eigenschaft für diese Spalte entweder **image** oder **varbinary** ist. Die in dieser Eigenschaft benannte Spalte muss vom Typ **[n]char, [n]varchar,** oder **xml** sein, und die Dropdownliste für diese Eigenschaft enthält nur Spalten, die von einem dieser drei Datentypen sind. Zeilen in den Spalten, die durch diese Eigenschaft benannt werden, zeigen den Dokumenttyp der entsprechenden Zeilen in Spalten an, die mit Volltextsuche durchsucht werden können. Um diese Eigenschaft zu bearbeiten, klicken Sie auf ihren Wert, erweitern Sie die Dropdownliste, und wählen Sie einen anderen Wert aus.  
   
 -   **Sprache** Gibt die Sprache für die Wörtertrennung an, die zum Indizieren der Spalte verwendet wird. Der in der Eigenschaft gespeicherte Wert ist der Gebietsschemabezeichner für die Wörtertrennung. Weitere Informationen zur Wörtertrennung und zu LCIDs, finden Sie unter Wörtertrennung und Wortstammerkennungen. Um diese Eigenschaft zu bearbeiten, klicken Sie auf ihren Wert, erweitern Sie die Dropdownliste, und wählen Sie einen anderen Wert aus.  
   
  **Statistische Semantik**  
  Wählen Sie aus, ob die statistische semantische Indizierung für die ausgewählte Spalte aktiviert werden soll. Weitere Informationen finden Sie unter [Semantische Suche &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
- Wenn Sie eine **Sprache** vor der Option **Statistische Semantik**auswählen und die ausgewählte Sprache über kein zugeordnetes semantisches Sprachmodell verfügt, ist die Option **Statistische Semantik** auf **Nein** festgelegt, und sie kann nicht geändert werden. Wenn Sie die Option **Statistische Semantik** auf **Ja** festlegen, bevor Sie eine **Sprache**auswählen, sind in der Spalte **Sprache** nur die Sprachen verfügbar, für die das semantische Sprachmodell unterstützt wird.  
+ Wenn Sie eine **Sprache** vor der Option **Statistische Semantik** auswählen und die ausgewählte Sprache über kein zugeordnetes semantisches Sprachmodell verfügt, ist die Option **Statistische Semantik** auf **Nein** festgelegt, und sie kann nicht geändert werden. Wenn Sie die Option **Statistische Semantik** auf **Ja** festlegen, bevor Sie eine **Sprache** auswählen, sind in der Spalte **Sprache** nur die Sprachen verfügbar, für die das semantische Sprachmodell unterstützt wird.  
   
  **Hat Nicht-SQL Server-Abonnent**  
  Gibt an, ob die Spalte auf einen Abonnenten repliziert wird, der kein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist.  

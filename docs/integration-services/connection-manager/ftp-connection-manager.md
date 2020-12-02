@@ -18,10 +18,10 @@ ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 854f975c64f5622c53d04c51651929d83745864a
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91728041"
 ---
 # <a name="ftp-connection-manager"></a>FTP-Verbindungs-Manager
@@ -33,7 +33,7 @@ ms.locfileid: "91728041"
   
  Wenn Sie einem Paket einen FTP-Verbindungs-Manager hinzufügen, erstellt [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] einen Verbindungs-Manager, der zur Laufzeit als FTP-Verbindung aufgelöst werden kann, die Eigenschaften des Verbindungs-Managers festlegt und der **Connections** -Sammlung im Paket den Verbindungs-Manager hinzufügt.  
   
- Die **ConnectionManagerType** -Eigenschaft des Verbindungs-Managers ist auf **FTP**festgelegt.  
+ Die **ConnectionManagerType** -Eigenschaft des Verbindungs-Managers ist auf **FTP** festgelegt.  
   
  Es gibt folgende Möglichkeiten, um den FTP-Verbindungs-Manager zu konfigurieren:  
   
@@ -98,7 +98,7 @@ ms.locfileid: "91728041"
  Geben Sie eine Segmentgröße in KB für das Übertragen von Daten an.  
   
  **Verbindung testen**  
- Nachdem die Konfiguration des FTP-Verbindungs-Managers abgeschlossen ist, bestätigen Sie die Gültigkeit der Verbindung, indem Sie auf **Verbindung testen**klicken.  
+ Nachdem die Konfiguration des FTP-Verbindungs-Managers abgeschlossen ist, bestätigen Sie die Gültigkeit der Verbindung, indem Sie auf **Verbindung testen** klicken.  
   
 ## <a name="see-also"></a>Siehe auch  
  [FTP-Task](../../integration-services/control-flow/ftp-task.md)   

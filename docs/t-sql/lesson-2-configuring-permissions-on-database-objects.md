@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 15986ee3b8407a62fc4ed40a49c043921fe34588
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92035851"
 ---
 # <a name="lesson-2-configure-permissions-on-database-objects"></a>Lektion 2: Konfigurieren von Berechtigungen für Datenbankobjekte
@@ -45,9 +45,9 @@ Standardmäßig haben Administratoren auf Ihrem Computer vollständigen Zugriff 
   
 ### <a name="create-a-new-windows-account"></a>Erstellen eines neuen Windows-Kontos  
   
-1.  Klicken Sie auf **Start**und auf **Ausführen**, geben Sie **%SystemRoot%\system32\compmgmt.msc /s** in das Feld **Öffnen**ein, und klicken Sie anschließend auf **OK** , um das Programm Computerverwaltung zu öffnen. 
-2.  Erweitern Sie unter **Systemprogramme**den Eintrag **Lokale Benutzer und Gruppen**, klicken Sie mit der rechten Maustaste auf **Benutzer**und anschließend auf **Neuer Benutzer**.    
-3.  Geben Sie in das Feld **Benutzername****Mary**ein.    
+1.  Klicken Sie auf **Start** und auf **Ausführen**, geben Sie **%SystemRoot%\system32\compmgmt.msc /s** in das Feld **Öffnen** ein, und klicken Sie anschließend auf **OK** , um das Programm Computerverwaltung zu öffnen. 
+2.  Erweitern Sie unter **Systemprogramme** den Eintrag **Lokale Benutzer und Gruppen**, klicken Sie mit der rechten Maustaste auf **Benutzer** und anschließend auf **Neuer Benutzer**.    
+3.  Geben Sie in das Feld **Benutzername****Mary** ein.    
 4.  Geben Sie in das Feld **Kennwort** und **Kennwort bestätigen** ein sicheres Kennwort ein. Klicken Sie anschließend auf **Erstellen** , um einen neuen lokalen Windows-Benutzer zu erstellen.  
   
 ### <a name="create-a-sql-login"></a>Erstellen einer SQL-Anmeldung  

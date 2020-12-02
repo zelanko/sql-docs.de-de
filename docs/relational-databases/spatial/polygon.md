@@ -15,10 +15,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4a17fb30859866155b2e3976e3d1a1bb2890ac4e
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92006226"
 ---
 # <a name="polygon"></a>Polygon
@@ -30,7 +30,7 @@ ms.locfileid: "92006226"
 ## <a name="polygon-instances"></a>Polygon-Instanzen  
  Eine **Polygon** -Instanz kann aus einem Ring gebildet werden, der wenigstens drei unterschiedliche Punkte besitzt. Eine **Polygon** -Instanz kann auch leer sein.  
   
-Der äußere und eventuelle innere Ring einer **Polygon** -Instanz definieren die Begrenzung. Der Raum innerhalb der Ringe definiert das Innere des **Polygon**s.  
+Der äußere und eventuelle innere Ring einer **Polygon** -Instanz definieren die Begrenzung. Der Raum innerhalb der Ringe definiert das Innere des **Polygon** s.  
   
 Die nachfolgende Abbildung enthält Beispiele für **Polygon** -Instanzen.  
   

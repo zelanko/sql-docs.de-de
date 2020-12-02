@@ -28,10 +28,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: aaf9bcf9387d4414959e569301e16f348f1164c0
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91809819"
 ---
 # <a name="memory-management-architecture-guide"></a>Handbuch zur Architektur der Speicherverwaltung
@@ -163,7 +163,7 @@ SELECT
 FROM sys.dm_os_process_memory;  
 ```  
  
-<a name="stacksizes"></a> Arbeitsspeicher für Threadstapel<sup>1</sup>, CLR<sup>2</sup>, DLL-Dateien von erweiterten Prozeduren, OLE DB-Anbieter, auf die verteilte Abfragen verweisen, Automatisierungsobjekte, auf die [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen verweisen, und jede Art von Arbeitsspeicher, die von nicht zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gehörenden DLLs belegt wird, werden **nicht** durch „Max. Serverarbeitsspeicher“ gesteuert.
+<a name="stacksizes"></a> Arbeitsspeicher für Threadstapel <sup>1</sup>, CLR <sup>2</sup>, DLL-Dateien von erweiterten Prozeduren, OLE DB-Anbieter, auf die verteilte Abfragen verweisen, Automatisierungsobjekte, auf die [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen verweisen, und jede Art von Arbeitsspeicher, die von nicht zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gehörenden DLLs belegt wird, werden **nicht** durch „Max. Serverarbeitsspeicher“ gesteuert.
 
 <sup>1</sup> Informationen zu den standardmäßig berechneten Arbeitsthreads für eine bestimmte Anzahl kategorisierter CPUs auf dem aktuellen Host finden Sie auf der Dokumentationsseite zum [Konfigurieren der Serverkonfigurationsoption Maximale Anzahl von Arbeitsthreads](../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md). Die Stapelgrößen für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sind wie folgt:
 
@@ -343,7 +343,7 @@ Die Verwendung von Mutexen kann jedoch zu Konflikten führen, wenn viele Threads
 > [!NOTE]
 > Vor [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] konnte das Ablaufverfolgungsflag 8048 verwendet werden, um zu erzwingen, dass ein knotenbasiertes PMO zu einem CPU-basierten PMO wird. Ab [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 und [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] ist dieses Verhalten dynamisch und wird durch die Engine gesteuert.
 
-Ab [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 und [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] kann [!INCLUDE[ssde_md](../includes/ssde_md.md)] Konflikte für ein bestimmtes CMemThread-Objekt dynamisch erkennen und das Objekt auf eine pro-Knoten- oder pro-CPU-basierten Implementierung heraufstufen. Nach der Heraufstufung bleibt das PMO höher gestuft, bis der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Prozess neu gestartet wird. CMemThread-Konflikte können durch das Vorhandensein von hohen CMEMTHREAD-Wartezeiten in der [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)-DMV und durch Beobachtung der [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)-DMV-Spalten *contention_factor*, *partition_type*, *exclusive_allocations_count* und *waiting_tasks_count* erkannt werden.
+Ab [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 und [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] kann [!INCLUDE[ssde_md](../includes/ssde_md.md)] Konflikte für ein bestimmtes CMemThread-Objekt dynamisch erkennen und das Objekt auf eine pro-Knoten- oder pro-CPU-basierten Implementierung heraufstufen.  Nach der Heraufstufung bleibt das PMO höher gestuft, bis der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Prozess neu gestartet wird. CMemThread-Konflikte können durch das Vorhandensein von hohen CMEMTHREAD-Wartezeiten in der [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)-DMV und durch Beobachtung der [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)-DMV-Spalten *contention_factor*, *partition_type*, *exclusive_allocations_count* und *waiting_tasks_count* erkannt werden.
 
 ## <a name="see-also"></a>Weitere Informationen
 [Serverkonfigurationsoptionen für den Serverarbeitsspeicher](../database-engine/configure-windows/server-memory-server-configuration-options.md)   

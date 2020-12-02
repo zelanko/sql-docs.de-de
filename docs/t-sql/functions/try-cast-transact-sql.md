@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest
 ms.openlocfilehash: 02ec3dd7e7047411901dcaad4b76056781a9384c
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379515"
 ---
 # <a name="try_cast-transact-sql"></a>TRY_CAST (Transact-SQL)
@@ -46,18 +46,18 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
  Der umzuwandelnde Wert. Beliebiger gültiger Ausdruck.  
   
  *data_type*  
- Der Datentyp, in den *expression*umgewandelt werden soll.  
+ Der Datentyp, in den *expression* umgewandelt werden soll.  
   
  *length*  
  Eine optionale ganze Zahl, die die Länge des Zieldatentyps angibt.  
   
- Der Bereich zulässiger Werte wird durch den Wert von *data_type*bestimmt.  
+ Der Bereich zulässiger Werte wird durch den Wert von *data_type* bestimmt.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  Gibt einen in den angegebenen Datentyp umgewandelten Wert zurück, wenn die Umwandlung erfolgreich ist. Andernfalls wird NULL zurückgegeben.  
   
 ## <a name="remarks"></a>Bemerkungen  
- **TRY_CAST** versucht, den übergebenen Wert in den angegebenen *data_type*zu konvertieren. Wenn die Umwandlung erfolgreich ist, gibt **TRY_CAST** den Wert als angegebenen *data_type*zurück. Bei einem Fehler wird NULL zurückgegeben. Wenn Sie jedoch eine Konvertierung anfordern, die explizit nicht zulässig ist, verursacht **TRY_CAST** einen Fehler.  
+ **TRY_CAST** versucht, den übergebenen Wert in den angegebenen *data_type* zu konvertieren. Wenn die Umwandlung erfolgreich ist, gibt **TRY_CAST** den Wert als angegebenen *data_type* zurück. Bei einem Fehler wird NULL zurückgegeben. Wenn Sie jedoch eine Konvertierung anfordern, die explizit nicht zulässig ist, verursacht **TRY_CAST** einen Fehler.  
   
  **TRY_CAST** ist kein neues reserviertes Schlüsselwort und in allen Kompatibilitätsgraden verfügbar. **TRY_CAST** verfügt beim Herstellen einer Verbindung mit Remoteservern über die gleiche Semantik wie **TRY_CONVERT** .  
   

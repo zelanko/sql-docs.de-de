@@ -22,10 +22,10 @@ ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 90365bd45edac8e3e5a131ab4786449352b70011
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92036465"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Text- und Bildfunktionen: TEXTPTR (Transact-SQL)
@@ -64,10 +64,10 @@ TEXTPTR ( column )
   
 |Funktion oder Anweisung|BESCHREIBUNG|  
 |---------------------------|-----------------|  
-|PATINDEX<b>('</b> _%pattern%_ **' ,** _expression_ **)**|Gibt die Zeichenposition einer angegebenen Zeichenfolge in Spalten von Typ **text** oder **ntext** zurück.|  
-|DATALENGTH<b>(</b>_expression_ **)**|Gibt die Länge der Daten in den **text**-, **ntext**- und **image**-Spalten zurück.|  
+|PATINDEX <b>('</b> _%pattern%_ **' ,** _expression_ **)**|Gibt die Zeichenposition einer angegebenen Zeichenfolge in Spalten von Typ **text** oder **ntext** zurück.|  
+|DATALENGTH <b>(</b>_expression_ **)**|Gibt die Länge der Daten in den **text**-, **ntext**- und **image**-Spalten zurück.|  
 |SET TEXTSIZE|Gibt das Limit der **text**-, **ntext**- oder **image**-Daten, die von einer SELECT-Anweisung zurückgegeben werden sollen, in Byte zurück.|  
-|SUBSTRING<b>(</b>_text_column_, _start_, _length_ **)**|Gibt eine **varchar**-Zeichenfolge zurück, die durch den Offset *start* und *length* angegeben wird. Die Länge sollte kleiner als 8 KB sein.|  
+|SUBSTRING <b>(</b>_text_column_, _start_, _length_ **)**|Gibt eine **varchar**-Zeichenfolge zurück, die durch den Offset *start* und *length* angegeben wird. Die Länge sollte kleiner als 8 KB sein.|  
   
 ## <a name="examples"></a>Beispiele  
   

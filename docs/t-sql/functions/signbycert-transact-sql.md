@@ -25,10 +25,10 @@ ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: acc73e861b0c27b4a1fa46e7c4c2efa0e23cb55d
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91378837"
 ---
 # <a name="signbycert-transact-sql"></a>SIGNBYCERT (Transact-SQL)
@@ -51,7 +51,7 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
  Die ID eines Zertifikats in der aktuellen Datenbank. *certificate_ID* ist vom Datentyp **int**.  
   
  *\@cleartext*  
- Eine Variable vom Typ **nvarchar**, **char**, **varchar**oder **nchar**, die mit einem Zertifikat signierte Daten enthält.  
+ Eine Variable vom Typ **nvarchar**, **char**, **varchar** oder **nchar**, die mit einem Zertifikat signierte Daten enthält.  
   
  **'** *password* **'**  
  Das Kennwort, mit dem der private Schlüssel des Zertifikats verschlüsselt wurde. *password* ist vom Datentyp **nvarchar(128)**.  

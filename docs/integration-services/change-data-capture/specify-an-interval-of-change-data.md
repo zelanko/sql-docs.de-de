@@ -14,10 +14,10 @@ ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 960567c1278f1ed4e5da60a018c330591cd3627d
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91724974"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Angeben eines Intervalls von Änderungsdaten
@@ -88,13 +88,13 @@ ms.locfileid: "91724974"
   
 2.  Öffnen Sie den **Editor für den Task 'SQL ausführen'**, und aktivieren Sie auf der Seite **Allgemein** des Editors die folgenden Optionen:  
   
-    1.  Wählen Sie für **ResultSet**die Option **Einzelne Zeile**aus.  
+    1.  Wählen Sie für **ResultSet** die Option **Einzelne Zeile** aus.  
   
     2.  Konfigurieren Sie zur Quelldatenbank eine gültige Verbindung.  
   
-    3.  Wählen Sie für **SQLSourceType**die Option **Direkteingabe**aus.  
+    3.  Wählen Sie für **SQLSourceType** die Option **Direkteingabe** aus.  
   
-    4.  Geben Sie für **SQLStatement**die folgende SQL-Anweisung ein:  
+    4.  Geben Sie für **SQLStatement** die folgende SQL-Anweisung ein:  
   
         ```sql
         SELECT DATEADD(dd,0, DATEDIFF(dd,0,GETDATE()-1)) AS ExtractStartTime,  

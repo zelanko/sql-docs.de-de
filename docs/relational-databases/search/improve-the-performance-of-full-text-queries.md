@@ -12,10 +12,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 783d2a0e80728f323b5b9d25048c10189df695a3
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91868040"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>Verbessern der Leistung von Volltextabfragen
@@ -36,7 +36,7 @@ ms.locfileid: "91868040"
   
 -   Verwenden Sie [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) oder [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) statt CONTAINS bzw. FREETEXT, wenn Sie nur Volltextschlüssel- oder Ranginformationen benötigen.  
   
--   Verwenden Sie den *top_n_by_rank* -Parameter der Funktionen FREETEXTTABLE und CONTAINSTABLE, um die Ergebnisse einzuschränken und die Leistung zu erhöhen. Mit*top_n_by_rank* können Sie nur die relevantesten Treffer aufrufen. Verwenden Sie diesen Parameter nur, wenn es beim vorliegenden Geschäftsmodell nicht erforderlich ist, alle möglichen Ergebnisse zurückzugeben (d.h., es wird kein *Gesamtrückruf*benötigt).  
+-   Verwenden Sie den *top_n_by_rank* -Parameter der Funktionen FREETEXTTABLE und CONTAINSTABLE, um die Ergebnisse einzuschränken und die Leistung zu erhöhen. Mit *top_n_by_rank* können Sie nur die relevantesten Treffer aufrufen. Verwenden Sie diesen Parameter nur, wenn es beim vorliegenden Geschäftsmodell nicht erforderlich ist, alle möglichen Ergebnisse zurückzugeben (d.h., es wird kein *Gesamtrückruf* benötigt).  
   
     > [!NOTE]  
     >  Gesamtrückrufe werden i d. R. in juristischen Szenarios verlangt. In anderen Geschäftsszenarios, z. B. für das E-Business, sind Leistungsaspekte meist vorrangig.  

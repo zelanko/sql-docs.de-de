@@ -15,10 +15,10 @@ f1_keywords:
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 68b556070ef8714bc793a333b2a7e6c5d392d882
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91719768"
 ---
 # <a name="odata-connection-manager"></a>OData-Verbindungs-Manager
@@ -33,9 +33,9 @@ ms.locfileid: "91719768"
   
 -   Klicken Sie im **Quellen-Editor für OData** auf die Schaltfläche **Neu...**.  
   
--   Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Ordner **Verbindungs-Manager**, und klicken Sie anschließend auf **Neuer Verbindungs-Manager**. Wählen Sie unter **Typ des Verbindungs-Managers** die Option **ODATA**aus.  
+-   Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Ordner **Verbindungs-Manager**, und klicken Sie anschließend auf **Neuer Verbindungs-Manager**. Wählen Sie unter **Typ des Verbindungs-Managers** die Option **ODATA** aus.  
   
--   Klicken Sie unten im Paket-Designer mit der rechten Maustaste auf **Verbindungs-Manager**, und wählen Sie **Neue Verbindung** aus. Wählen Sie unter **Typ des Verbindungs-Managers** die Option **ODATA**aus.  
+-   Klicken Sie unten im Paket-Designer mit der rechten Maustaste auf **Verbindungs-Manager**, und wählen Sie **Neue Verbindung** aus. Wählen Sie unter **Typ des Verbindungs-Managers** die Option **ODATA** aus.  
   
 ## <a name="connection-manager-authentication"></a>Verbindungs-Manager-Authentifizierung  
  Der OData-Verbindungs-Manager unterstützt fünf Authentifizierungsmodi.  

@@ -18,10 +18,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4759838a20e721031db8e4ea5e644cc3822285a8
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91868946"
 ---
 # <a name="upgrade-full-text-search"></a>Upgrade der Volltextsuche
@@ -99,7 +99,7 @@ Wenn eine Datenbank von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] au
   
 -   Wenn die Füllwortdateien in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]geändert wurden, gehen diese Änderungen während des Upgrades verloren. Wenn Sie die Updates erneut erstellen möchten, müssen Sie diese Änderungen in der entsprechenden [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-Stoppliste manuell neu erstellen. Weitere Informationen finden Sie unter [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md).  
   
--   Wenn Sie auf die Volltextindizes keine Stoppwörter anwenden möchten (wenn Sie z. B. die Füllwortdateien in der [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Installation gelöscht haben), müssen Sie die Stopliste für jeden aktualisierten Volltextindex deaktivieren. Führen Sie die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung aus ( *Datenbank* wird durch den Namen der aktualisierten Datenbank und *Tabelle* durch den Namen der *Tabelle*ersetzt):  
+-   Wenn Sie auf die Volltextindizes keine Stoppwörter anwenden möchten (wenn Sie z. B. die Füllwortdateien in der [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Installation gelöscht haben), müssen Sie die Stopliste für jeden aktualisierten Volltextindex deaktivieren. Führen Sie die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung aus ( *Datenbank* wird durch den Namen der aktualisierten Datenbank und *Tabelle* durch den Namen der *Tabelle* ersetzt):  
   
     ```  
     Use database;   
@@ -137,9 +137,9 @@ Wenn eine Datenbank von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] au
   
  Weitere Informationen zur Sicherung und Wiederherstellung von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Volltextkatalogen finden Sie unter [Sichern und Wiederherstellen von Volltextkatalogen](./back-up-and-restore-full-text-catalogs-and-indexes.md) und [Dateisicherung und -wiederherstellung und Volltextkataloge](/previous-versions/sql/sql-server-2008-r2/ms190643(v=sql.105))in der [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Onlinedokumentation.  
   
- Wenn die Datenbank für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]wiederhergestellt wird, wird für den Volltextkatalog eine neue Datenbankdatei erstellt. Der Standardname dieser Datei lautet ftrow_*catalog-name*.ndf. Wenn Sie für *catalog-name* (Katalogname) zum Beispiel `cat1`verwenden, lautet der Standardname der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbankdatei `ftrow_cat1.ndf`. Wenn der Standardname im Zielverzeichnis jedoch bereits verwendet wird, erhält die neue Datenbankdatei den Namen `ftrow_`*catalog-name*`{`*GUID*`}.ndf`, wobei *GUID* für den eindeutigen Bezeichner (Globally Unique Identifier, GUID) der neuen Datei steht.  
+ Wenn die Datenbank für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]wiederhergestellt wird, wird für den Volltextkatalog eine neue Datenbankdatei erstellt. Der Standardname dieser Datei lautet ftrow_ *catalog-name*.ndf. Wenn Sie für *catalog-name* (Katalogname) zum Beispiel `cat1`verwenden, lautet der Standardname der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbankdatei `ftrow_cat1.ndf`. Wenn der Standardname im Zielverzeichnis jedoch bereits verwendet wird, erhält die neue Datenbankdatei den Namen `ftrow_`*catalog-name*`{`*GUID*`}.ndf`, wobei *GUID* für den eindeutigen Bezeichner (Globally Unique Identifier, GUID) der neuen Datei steht.  
   
- Nach dem Importieren der Kataloge werden die Dateien **sys.database_files** und **sys.master_file**aktualisiert, um die Katalogeinträge zu entfernen, und die Spalte **path** in der Datei **sys.fulltext_catalogs** wird auf NULL festgelegt.  
+ Nach dem Importieren der Kataloge werden die Dateien **sys.database_files** und **sys.master_file** aktualisiert, um die Katalogeinträge zu entfernen, und die Spalte **path** in der Datei **sys.fulltext_catalogs** wird auf NULL festgelegt.  
   
  **So sichern Sie eine Datenbank**  
   
@@ -174,7 +174,7 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
   
  Der Status der einzelnen angefügten Volltextkataloge von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] entspricht dem Status beim Trennen der Datenbank von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Wenn beim Trennvorgang eine Auffüllung des Volltextindex unterbrochen wurde, wird die Auffüllung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]wieder aufgenommen, und der Volltextindex ist für die Volltextsuche verfügbar.  
   
- Wenn [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] keine Volltextkatalogdatei finden kann oder wenn die Volltextdatei während des Anfügens verschoben und ein neuer Speicherort angegeben wurde, ist das Verhalten von der gewählten Volltextupgrade-Option abhängig. Wenn die Volltextupgrade-Option **Importieren** oder **Neu erstellen**lautet, wird der angefügte Volltextkatalog neu erstellt. Wenn die Volltextupgrade-Option **Zurücksetzen** lautet, wird der angefügte Volltextkatalog zurückgesetzt.  
+ Wenn [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] keine Volltextkatalogdatei finden kann oder wenn die Volltextdatei während des Anfügens verschoben und ein neuer Speicherort angegeben wurde, ist das Verhalten von der gewählten Volltextupgrade-Option abhängig. Wenn die Volltextupgrade-Option **Importieren** oder **Neu erstellen** lautet, wird der angefügte Volltextkatalog neu erstellt. Wenn die Volltextupgrade-Option **Zurücksetzen** lautet, wird der angefügte Volltextkatalog zurückgesetzt.  
   
  Weitere Informationen zum Trennen oder Anfügen einer Datenbank finden Sie unter [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md), [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md), [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md), und [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).  
   

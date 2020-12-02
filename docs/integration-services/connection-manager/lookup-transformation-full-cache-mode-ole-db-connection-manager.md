@@ -14,10 +14,10 @@ ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 55a439be88d422130e8a511a5c1d2071ece7fc2c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91719745"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>Suchtransformation im Vollcachemodus – OLE DB-Verbindungs-Manager
@@ -35,18 +35,18 @@ ms.locfileid: "91719745"
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket, und doppelklicken Sie dann im Projektmappen-Explorer auf das Paket.  
   
-2.  Ziehen Sie auf der Registerkarte **Datenfluss** die Transformation für Suche aus der **Toolbox**auf die Entwurfsoberfläche.  
+2.  Ziehen Sie auf der Registerkarte **Datenfluss** die Transformation für Suche aus der **Toolbox** auf die Entwurfsoberfläche.  
   
 3.  Verbinden Sie die Suchtransformation mit dem Datenfluss, indem Sie einen Konnektor von einer Quelle oder einer vorherigen Transformation auf die Suchtransformation ziehen.  
   
     > [!NOTE]  
-    >  Eine Suchtransformation erzeugt möglicherweise einen Fehler, wenn sie sich mit einem Flatfile verbindet, das ein leeres Datenfeld enthält. Die Gültigkeit der Transformation hängt davon ab, ob der Verbindungs-Manager für das Flatfile so konfiguriert wurde, dass NULL-Werte beibehalten werden. Um sicherzustellen, dass die Suchtransformation gültig ist, wählen Sie im **Quelleneditor für Flatfiles**auf der **Seite Verbindungs-Manager**die Option **NULL-Werte aus der Quelle als NULL-Werte im Datenfluss beibehalten** .  
+    >  Eine Suchtransformation erzeugt möglicherweise einen Fehler, wenn sie sich mit einem Flatfile verbindet, das ein leeres Datenfeld enthält. Die Gültigkeit der Transformation hängt davon ab, ob der Verbindungs-Manager für das Flatfile so konfiguriert wurde, dass NULL-Werte beibehalten werden. Um sicherzustellen, dass die Suchtransformation gültig ist, wählen Sie im **Quelleneditor für Flatfiles** auf der **Seite Verbindungs-Manager** die Option **NULL-Werte aus der Quelle als NULL-Werte im Datenfluss beibehalten** .  
   
 4.  Doppelklicken Sie auf die Quelle oder die vorherige Transformation, um die Komponente zu konfigurieren.  
   
-5.  Doppelklicken Sie auf die Transformation für Suche, und wählen Sie dann im **Transformations-Editor für Suche**auf der Seite **Allgemein** die Option **Vollcache**aus.  
+5.  Doppelklicken Sie auf die Transformation für Suche, und wählen Sie dann im **Transformations-Editor für Suche** auf der Seite **Allgemein** die Option **Vollcache** aus.  
   
-6.  Wählen Sie im Bereich **Verbindungstyp****OLE DB-Verbindungs-Manager**aus.  
+6.  Wählen Sie im Bereich **Verbindungstyp****OLE DB-Verbindungs-Manager** aus.  
   
 7.  Wählen Sie in der Liste **Angeben, wie Zeilen ohne übereinstimmende Einträge behandelt werden sollen** eine Fehlerbehandlungsoption für Zeilen ohne übereinstimmende Einträge aus.  
   

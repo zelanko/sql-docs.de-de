@@ -14,10 +14,10 @@ f1_keywords:
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6e09a6cdf6f8d863e57d2de0749e29b33c989eea
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91719445"
 ---
 # <a name="sap-bw-connection-manager"></a>SAP BW-Verbindungs-Manager
@@ -30,7 +30,7 @@ ms.locfileid: "91719445"
 > [!IMPORTANT]  
 >  Die Dokumentation für Microsoft Connector 1.1 for SAP BW setzt Kenntnisse der SAP NetWeaver BW-Umgebung voraus. Weitere Informationen zu SAP NetWeaver BW oder Informationen zur Konfiguration von SAP NetWeaver BW-Objekten und -Prozessen finden Sie in der SAP-Dokumentation.  
   
- Wenn Sie einem Paket einen SAP BW-Verbindungs-Manager hinzufügen, wird die **ConnectionManagerType** -Eigenschaft des Verbindungs-Managers auf **SAPBI**festgelegt.  
+ Wenn Sie einem Paket einen SAP BW-Verbindungs-Manager hinzufügen, wird die **ConnectionManagerType** -Eigenschaft des Verbindungs-Managers auf **SAPBI** festgelegt.  
   
 ## <a name="configuring-the-sap-bw-connection-manager"></a>Konfigurieren des SAP BW-Verbindungs-Managers  
  Es gibt folgende Möglichkeiten, um den SAP BW-Verbindungs-Manager zu konfigurieren:  
@@ -75,7 +75,7 @@ ms.locfileid: "91719445"
   
          - oder -  
   
-    -   Klicken Sie mit der rechten Maustaste auf den SAP BW-Verbindungs-Manager, und wählen Sie dann **Bearbeiten**aus.  
+    -   Klicken Sie mit der rechten Maustaste auf den SAP BW-Verbindungs-Manager, und wählen Sie dann **Bearbeiten** aus.  
   
 ### <a name="options"></a>Optionen  
   
@@ -150,7 +150,7 @@ ms.locfileid: "91719445"
  Wechseln Sie zu einem Ordner, der als Protokollverzeichnis verwendet wird.  
   
  **Verbindung testen**  
- Testen Sie die Verbindung mithilfe der Werte, die Sie eingegeben haben. Nachdem Sie auf **Verbindung testen**geklickt haben, wird in einem Meldungsfeld angezeigt, ob die Verbindung erfolgreich war oder nicht.  
+ Testen Sie die Verbindung mithilfe der Werte, die Sie eingegeben haben. Nachdem Sie auf **Verbindung testen** geklickt haben, wird in einem Meldungsfeld angezeigt, ob die Verbindung erfolgreich war oder nicht.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Connector for SAP BW Components](../../integration-services/microsoft-connector-for-sap-bw-components.md)  

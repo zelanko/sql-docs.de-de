@@ -23,10 +23,10 @@ ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: b299ace817088af33732d9e4a9984d7978709f6c
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91498188"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
@@ -171,7 +171,7 @@ ms.locfileid: "91498188"
 |**service_contract_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objektbezeichner des Vertrags, dem die Konversation entspricht.|  
 |**message_type_name**|**nvarchar(256)**|Name des Nachrichtentyps, der das Format der Nachricht beschreibt. Nachrichten können entweder vom Typ Anwendungsnachricht oder Brokersystemmeldungen sein.|  
 |**message_type_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objektbezeichner des Nachrichtentyps, der die Nachricht beschreibt.|  
-|**validation**|**nchar(2)**|Für die Nachricht verwendete Überprüfung.<br /><br /> **E**=Empty**N**=None**X**=XML|  
+|**validation**|**nchar(2)**|Für die Nachricht verwendete Überprüfung.<br /><br /> **E**=Empty **N**=None **X**=XML|  
 |**message_body**|**varbinary(MAX)**|Inhalt der Nachricht.|  
   
 ## <a name="permissions"></a>Berechtigungen  
