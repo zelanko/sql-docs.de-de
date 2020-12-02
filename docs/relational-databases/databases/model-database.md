@@ -16,10 +16,10 @@ ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0e1af46a47e6e0e09c8e538fed06ecd1eb1ccc41
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88465419"
 ---
 # <a name="model-database"></a>model-Datenbank
@@ -94,7 +94,7 @@ Die Standardwerte für die Dateivergrößerung für SQL Server 2014 finden Sie u
   
 -   Ändern der Sortierung. Die Standardsortierung entspricht der Serversortierung.  
   
--   Ändern des Datenbankbesitzers Der Besitzer von**model** ist **sa**.  
+-   Ändern des Datenbankbesitzers Der Besitzer von **model** ist **sa**.  
   
 -   Löschen der Datenbank.  
   
@@ -112,7 +112,7 @@ Die Standardwerte für die Dateivergrößerung für SQL Server 2014 finden Sie u
   
 -   Versetzen der primären Dateigruppe in den READ_ONLY-Modus.  
   
--   Erstellen von Prozeduren, Sichten oder Triggern mit der Option WITH ENCRYPTION. Der Verschlüsselungsschlüssel ist an die Datenbank gebunden, in der das Objekt erstellt wird. In der **model** -Datenbank erstellte verschlüsselte Objekte können nur in **model**verwendet werden.  
+-   Erstellen von Prozeduren, Sichten oder Triggern mit der Option WITH ENCRYPTION. Der Verschlüsselungsschlüssel ist an die Datenbank gebunden, in der das Objekt erstellt wird. In der **model** -Datenbank erstellte verschlüsselte Objekte können nur in **model** verwendet werden.  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  [Systemdatenbanken](../../relational-databases/databases/system-databases.md)  

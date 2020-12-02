@@ -14,25 +14,25 @@ ms.assetid: d664c2e5-dd0c-4da8-b27d-aa4ee4fc0ffd
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 6ea25aebc5368295f13105ecc58d18e86bfc6071
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88493974"
 ---
 # <a name="select-source-dialog-box"></a>Dialogfeld 'Quelle auswählen'
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Mithilfe dieses Dialogfelds können Sie die Quelle der zu ausführenden Richtlinien auswählen. Um eine oder mehrere XML-Dateien auszuwählen, die Richtlinien enthalten, wählen Sie **Dateien**aus. Um die Richtlinien auszuführen, die auf der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gefunden werden, wählen Sie **Server**aus.  
+  Mithilfe dieses Dialogfelds können Sie die Quelle der zu ausführenden Richtlinien auswählen. Um eine oder mehrere XML-Dateien auszuwählen, die Richtlinien enthalten, wählen Sie **Dateien** aus. Um die Richtlinien auszuführen, die auf der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gefunden werden, wählen Sie **Server** aus.  
   
  Es gibt mehrere Möglichkeiten zum Öffnen dieses Dialogfelds.  
   
  **So öffnen Sie dieses Dialogfeld**  
   
--   Klicken Sie im Fenster „Registrierte Server“ mit der rechten Maustaste auf **Lokale Servergruppen** oder unter **Lokale Servergruppen**auf einen beliebigen Server oder unter **Zentrale Verwaltungsserver**auf einen beliebigen Server, und wählen Sie dann **Richtlinien auswerten**aus. Klicken Sie auf der Seite **Richtlinienauswahl** des Dialogfelds **Richtlinien auswerten** auf die Schaltfläche zum Durchsuchen (**...**).  
+-   Klicken Sie im Fenster „Registrierte Server“ mit der rechten Maustaste auf **Lokale Servergruppen** oder unter **Lokale Servergruppen** auf einen beliebigen Server oder unter **Zentrale Verwaltungsserver** auf einen beliebigen Server, und wählen Sie dann **Richtlinien auswerten** aus. Klicken Sie auf der Seite **Richtlinienauswahl** des Dialogfelds **Richtlinien auswerten** auf die Schaltfläche zum Durchsuchen (**...**).  
   
--   Erweitern Sie im Objekt-Explorer **Verwaltung**, erweitern Sie **Richtlinienverwaltung**, klicken Sie mit der rechten Maustaste auf **Richtlinien**, und wählen Sie dann **Richtlinie importieren**aus. Klicken Sie im Dialogfeld **Importieren** auf die Schaltfläche zum Durchsuchen (**...**).  
+-   Erweitern Sie im Objekt-Explorer **Verwaltung**, erweitern Sie **Richtlinienverwaltung**, klicken Sie mit der rechten Maustaste auf **Richtlinien**, und wählen Sie dann **Richtlinie importieren** aus. Klicken Sie im Dialogfeld **Importieren** auf die Schaltfläche zum Durchsuchen (**...**).  
   
--   Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf einen Server, eine Datenbank oder ein Datenbankobjekt, wählen Sie **Richtlinien**aus, und wählen Sie dann **Auswerten**aus. Klicken Sie auf der Seite **Richtlinienauswahl** des Dialogfelds **Richtlinien auswerten** auf die Schaltfläche zum Durchsuchen (**...**).  
+-   Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf einen Server, eine Datenbank oder ein Datenbankobjekt, wählen Sie **Richtlinien** aus, und wählen Sie dann **Auswerten** aus. Klicken Sie auf der Seite **Richtlinienauswahl** des Dialogfelds **Richtlinien auswerten** auf die Schaltfläche zum Durchsuchen (**...**).  
   
 ## <a name="options"></a>Optionen  
  **Dateien**  

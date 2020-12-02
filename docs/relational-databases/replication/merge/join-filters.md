@@ -17,10 +17,10 @@ ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a667c6055a43886239102bd9985d06fa714a24d2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88470253"
 ---
 # <a name="join-filters"></a>Verknüpfungsfilter
@@ -39,7 +39,7 @@ ms.locfileid: "88470253"
   
  Diese Tabellen könnten in einer Anwendung zur Unterstützung mobiler Außendienstmitarbeiter verwendet werden, müssen dabei aber gefiltert werden, damit jeder Mitarbeiter in der **HumanResources.Employee** -Tabelle nur die für die Aufträge seiner Kunden relevanten Daten erhält.  
   
- Dafür muss als Erstes ein parametrisierter Filter für die übergeordnete Tabelle definiert werden. In diesem Beispiel ist dies die **HumanResources.Employee** -Tabelle. Diese Tabelle enthält die **LoginID**-Spalte, in der Sie die Domäne und den Anmeldenamen (Anmelde-ID) für jeden Mitarbeiter in der Form *domain\login*finden. Wenn Sie diese Tabelle so filtern möchten, dass jeder Mitarbeiter nur die Daten erhält, die für ihn relevant sind, geben Sie folgende parametrisierte Filterklausel an:  
+ Dafür muss als Erstes ein parametrisierter Filter für die übergeordnete Tabelle definiert werden. In diesem Beispiel ist dies die **HumanResources.Employee** -Tabelle. Diese Tabelle enthält die **LoginID**-Spalte, in der Sie die Domäne und den Anmeldenamen (Anmelde-ID) für jeden Mitarbeiter in der Form *domain\login* finden. Wenn Sie diese Tabelle so filtern möchten, dass jeder Mitarbeiter nur die Daten erhält, die für ihn relevant sind, geben Sie folgende parametrisierte Filterklausel an:  
   
 ```  
 LoginID = SUSER_SNAME()  

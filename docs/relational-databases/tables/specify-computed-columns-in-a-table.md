@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ee1d32ce60064d6ab42b04a9aeddec4a6252d479
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88488598"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Angeben von berechneten Spalten in einer Tabelle
@@ -58,13 +58,13 @@ Erfordert die ALTER-Berechtigung für die Tabelle.
 
 ### <a name="to-add-a-new-computed-column"></a><a name="NewColumn"></a> So fügen Sie eine neue berechnete Spalte hinzu
 
-1. Erweitern Sie in **Objekt-Explorer**die Tabelle, der Sie die neue berechnete Spalte hinzufügen möchten. Klicken Sie mit der rechten Maustaste auf **Spalten** , und wählen Sie **Neue Spalte**aus.
-2. Geben Sie den Spaltennamen ein, und akzeptieren Sie den Standarddatentyp (**nchar**(10)). [!INCLUDE[ssDE](../../includes/ssde-md.md)] ermittelt den Datentyp der berechneten Spalte, indem die Regeln zur Rangfolge von Datentypen auf Ausdrücke angewendet werden, die in der Formel angegeben wurden. Wenn die Formel beispielsweise auf eine Spalte vom Typ **money** und eine Spalte vom Typ **int**verweist, weist die berechnete Spalte den Typ **money** auf, da dieser Datentyp die höhere Rangfolge hat. Weitere Informationen finden Sie unter [Rangfolge der Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).
+1. Erweitern Sie in **Objekt-Explorer** die Tabelle, der Sie die neue berechnete Spalte hinzufügen möchten. Klicken Sie mit der rechten Maustaste auf **Spalten** , und wählen Sie **Neue Spalte** aus.
+2. Geben Sie den Spaltennamen ein, und akzeptieren Sie den Standarddatentyp (**nchar**(10)). [!INCLUDE[ssDE](../../includes/ssde-md.md)] ermittelt den Datentyp der berechneten Spalte, indem die Regeln zur Rangfolge von Datentypen auf Ausdrücke angewendet werden, die in der Formel angegeben wurden. Wenn die Formel beispielsweise auf eine Spalte vom Typ **money** und eine Spalte vom Typ **int** verweist, weist die berechnete Spalte den Typ **money** auf, da dieser Datentyp die höhere Rangfolge hat. Weitere Informationen finden Sie unter [Rangfolge der Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).
 3. Erweitern Sie auf der Registerkarte **Spalteneigenschaften** die **BerechneteSpalteSpezifikation** -Eigenschaft.
 4. Geben Sie für die untergeordnete Eigenschaft **(Formel)** in der Datenblattzelle auf der rechten Seite den Ausdruck für diese Spalte ein. In einer `SalesTotal` -Spalte kann die eingegebene Formel z. B. `SubTotal+TaxAmt+Freight`lauten, wodurch für jede Tabellenzeile der Wert in diesen Spalten hinzugefügt wird.
 
    > [!IMPORTANT]
-   > Wenn in einer Formel zwei Ausdrücke verschiedener Datentypen kombiniert sind, geben die Rangfolgeregeln für Datentypen an, dass der Datentyp mit der niedrigeren Rangfolge in den Datentyp mit der höheren Rangfolge konvertiert wird. Wenn es sich bei der Konvertierung nicht um eine unterstützte implizite Konvertierung handelt, wird der Fehler "`Error validating the formula for column column_name.`" zurückgegeben. Verwenden Sie die CAST-Funktion oder CONVERT-Funktion, um den Datentypkonflikt aufzulösen. Wenn beispielsweise eine Spalte vom Typ **nvarchar** mit einer Spalte vom Typ **int**kombiniert wird, muss der ganzzahlige Typ in **nvarchar** konvertiert werden, wie in der folgenden Formel `('Prod'+CONVERT(nvarchar(23),ProductID))`dargestellt. Weitere Informationen finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
+   > Wenn in einer Formel zwei Ausdrücke verschiedener Datentypen kombiniert sind, geben die Rangfolgeregeln für Datentypen an, dass der Datentyp mit der niedrigeren Rangfolge in den Datentyp mit der höheren Rangfolge konvertiert wird. Wenn es sich bei der Konvertierung nicht um eine unterstützte implizite Konvertierung handelt, wird der Fehler "`Error validating the formula for column column_name.`" zurückgegeben. Verwenden Sie die CAST-Funktion oder CONVERT-Funktion, um den Datentypkonflikt aufzulösen. Wenn beispielsweise eine Spalte vom Typ **nvarchar** mit einer Spalte vom Typ **int** kombiniert wird, muss der ganzzahlige Typ in **nvarchar** konvertiert werden, wie in der folgenden Formel `('Prod'+CONVERT(nvarchar(23),ProductID))`dargestellt. Weitere Informationen finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
 
 5. Geben Sie an, ob die Daten persistent gespeichert werden sollen, indem Sie im Dropdownfeld für die untergeordnete Eigenschaft **IsPersisted** die Option **Ja** oder **Nein** wählen.
 

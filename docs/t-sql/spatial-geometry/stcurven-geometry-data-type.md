@@ -16,16 +16,16 @@ ms.assetid: 64adf1a1-3a41-41fb-b7d1-44390c3e4ea9
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e182b7c5670bd86e0d684d1d8caaea563a2ff456
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88467387"
 ---
 # <a name="stcurven-geometry-data-type"></a>STCurveN (geometry-Datentyp)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
-Gibt die von einer Instanz von **geometry** angegebene Kurve zurück, bei der es sich um eine **LineString**, **CircularString**, **CompoundCurve**oder **MultiLineString**handelt.
+Gibt die von einer Instanz von **geometry** angegebene Kurve zurück, bei der es sich um eine **LineString**, **CircularString**, **CompoundCurve** oder **MultiLineString** handelt.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,7 +57,7 @@ Gibt die von einer Instanz von **geometry** angegebene Kurve zurück, bei der es
   
 -   *curve_index* überschreitet die Anzahl der Kurven in der **geometry** -Instanz.  
   
--   Bei der **geometry** -Instanz handelt es sich um einen **Point**, **MultiPoint**, ein **Polygon**, **CurvePolygon**oder **MultiPolygon**  
+-   Bei der **geometry** -Instanz handelt es sich um einen **Point**, **MultiPoint**, ein **Polygon**, **CurvePolygon** oder **MultiPolygon**  
   
 ## <a name="examples"></a>Beispiele  
   

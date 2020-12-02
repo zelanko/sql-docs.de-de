@@ -17,10 +17,10 @@ ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 02632ce64dbd7b10571e559daf8fde4475a4e37b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88471192"
 ---
 # <a name="msdb-database"></a>msdb-Datenbank
@@ -30,10 +30,10 @@ ms.locfileid: "88471192"
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird beispielsweise in der **msdb**-Datenbank automatisch ein vollständiger Onlinesicherungs- und Wiederherstellungsverlauf in Tabellen verwaltet. Diese Informationen umfassen den Namen der Person, die die Sicherung ausgeführt hat, den Zeitpunkt der Sicherung und die Angabe, auf welchen Medien bzw. in welchen Dateien die Sicherung gespeichert wurde. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwendet diese Informationen, um einen Plan für das Wiederherstellen einer Datenbank und das Anwenden vorhandener Transaktionsprotokollsicherungen vorzuschlagen. Sicherungsvorgänge für alle Datenbanken werden auch dann aufgezeichnet, wenn sie mit benutzerdefinierten Anwendungen oder Tools von Drittanbietern erstellt wurden. Wenn Sie beispielsweise eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Anwendung verwenden, die zum Ausführen von Sicherungsvorgängen SMO-Objekte (SQL Server Management Objects) aufruft, wird das Ereignis in den **msdb**-Systemtabellen, im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anwendungsprotokoll sowie im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll protokolliert. Um die in der **msdb**-Datenbank gespeicherten Informationen zu schützen, empfiehlt es sich, das **msdb** -Transaktionsprotokoll auf einem fehlertoleranten Datenträger zu speichern.  
   
- Standardmäßig verwendet **msdb** das einfache Wiederherstellungsmodell. Wenn Sie die Tabellen mit dem [Sicherungs- und Wiederherstellungsverlauf](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md) verwenden, empfiehlt es sich, das vollständige Wiederherstellungsmodell für **msdb**zu verwenden. Weitere Informationen finden Sie unter [Wiederherstellungsmodelle &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md). Beachten Sie Folgendes: Ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert oder aktualisiert oder wird **Setup.exe** zum Neuerstellen der Systemdatenbanken verwendet, wird das Wiederherstellungsmodell von msdb automatisch auf simple festgelegt.  
+ Standardmäßig verwendet **msdb** das einfache Wiederherstellungsmodell. Wenn Sie die Tabellen mit dem [Sicherungs- und Wiederherstellungsverlauf](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md) verwenden, empfiehlt es sich, das vollständige Wiederherstellungsmodell für **msdb** zu verwenden. Weitere Informationen finden Sie unter [Wiederherstellungsmodelle &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md). Beachten Sie Folgendes: Ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert oder aktualisiert oder wird **Setup.exe** zum Neuerstellen der Systemdatenbanken verwendet, wird das Wiederherstellungsmodell von msdb automatisch auf simple festgelegt.  
   
 > [!IMPORTANT]  
->  Nach einem Vorgang, durch den **msdb**aktualisiert wird (beispielsweise nach dem Sichern oder Wiederherstellen von Datenbanken), empfiehlt es sich, eine Sicherung von **msdb**auszuführen. Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von Systemdatenbanken &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
+>  Nach einem Vorgang, durch den **msdb** aktualisiert wird (beispielsweise nach dem Sichern oder Wiederherstellen von Datenbanken), empfiehlt es sich, eine Sicherung von **msdb** auszuführen. Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von Systemdatenbanken &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
 ## <a name="physical-properties-of-msdb"></a>Physische Eigenschaften der msdb-Datenbank  
  Die folgende Tabelle zeigt die Anfangskonfigurationswerte der **msdb** -Daten und -Protokolldateien. Die Größe dieser Dateien kann sich in den verschiedenen Editionen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]geringfügig unterscheiden.  

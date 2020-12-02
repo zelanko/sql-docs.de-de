@@ -14,10 +14,10 @@ ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d6db17f4c7930e03e65412c9addaef5340ec4645
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88471125"
 ---
 # <a name="secondary-database-settings"></a>Einstellungen für die sekundäre Datenbank
@@ -55,7 +55,7 @@ ms.locfileid: "88471125"
  Veranlassen Sie, dass [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] für die Initialisierung der sekundären Datenbank eine vorhandene Sicherung der primären Datenbank verwendet. Geben Sie den Speicherort dieser Sicherung in das Feld **Sicherungsdatei** ein. Wenn Sie in das Feld Sekundäre Datenbank den Namen einer neuen Datenbank eingegeben haben, wird die Datenbank im Verlauf des Wiederherstellungsvorgangs erstellt.  
   
  **Sicherungsdatei**  
- Geben Sie den Pfad und den Dateinamen der vollständigen Datenbanksicherung ein, die für die Initialisierung der sekundären Datenbank verwendet werden soll, wenn Sie die Option **Ja, eine vorhandene Sicherung der primären Datenbank in der sekundären Datenbank wiederherstellen**ausgewählt haben.  
+ Geben Sie den Pfad und den Dateinamen der vollständigen Datenbanksicherung ein, die für die Initialisierung der sekundären Datenbank verwendet werden soll, wenn Sie die Option **Ja, eine vorhandene Sicherung der primären Datenbank in der sekundären Datenbank wiederherstellen** ausgewählt haben.  
   
  **Wiederherstellungsoptionen**  
  Siehe dazu die Beschreibung dieser Schaltfläche an einer früheren Stelle dieses Themas.  
@@ -97,7 +97,7 @@ ms.locfileid: "88471125"
  Belässt die sekundäre Datenbank im STANDBY-Modus. In diesem Modus können schreibgeschützte Vorgänge in der Datenbank ausgeführt werden.  
   
 > [!IMPORTANT]  
->  Wenn Sie den Wiederherstellungsmodus für eine vorhandene sekundäre Datenbank von beispielsweise **Kein Wiederherstellungsmodus** in **Standbymodus**ändern, wird diese Änderung erst umgesetzt, nachdem die nächste Protokollsicherung in der Datenbank wiederhergestellt wurde.  
+>  Wenn Sie den Wiederherstellungsmodus für eine vorhandene sekundäre Datenbank von beispielsweise **Kein Wiederherstellungsmodus** in **Standbymodus** ändern, wird diese Änderung erst umgesetzt, nachdem die nächste Protokollsicherung in der Datenbank wiederhergestellt wurde.  
   
  **Wiederherstellen von Sicherungen verzögern um mindestens**  
  Wählen Sie ggf. die Wartezeit vor der Wiederherstellung von Transaktionsprotokollsicherungen in der sekundären Datenbank.  

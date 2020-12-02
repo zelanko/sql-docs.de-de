@@ -17,10 +17,10 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 717d81dd0f6f7f55af78ec4264b4f3b9fb329583
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88471416"
 ---
 # <a name="validate-a-dac-package"></a>Überprüfen eines DAC-Pakets
@@ -41,7 +41,7 @@ ms.locfileid: "88471416"
   
 1.  Öffnen Sie das Menü **Datei**, und klicken Sie auf **Neu** und dann auf **Projekt...** .  
   
-2.  Wählen Sie die **SQL Server** -Projektvorlage aus, und geben Sie **Name**, **Speicherort**und **Projektmappenname**ein.  
+2.  Wählen Sie die **SQL Server** -Projektvorlage aus, und geben Sie **Name**, **Speicherort** und **Projektmappenname** ein.  
   
 3.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Projektknoten, und wählen Sie dann **Eigenschaften** aus.  
   

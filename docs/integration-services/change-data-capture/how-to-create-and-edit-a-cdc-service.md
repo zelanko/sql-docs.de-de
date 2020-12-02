@@ -12,10 +12,10 @@ ms.assetid: 1b3d47a5-dc89-482d-bbc7-fff04f194c43
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6c0ecefc040d07405e700ee879b2220ff820e0cf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88484643"
 ---
 # <a name="how-to-create-and-edit-a-cdc-service"></a>Erstellen und Bearbeiten eines CDC Service
@@ -41,7 +41,7 @@ ms.locfileid: "88484643"
   
 4.  Klicken Sie auf **OK**, nachdem Sie die erforderlichen Informationen eingegeben haben.  
   
-     Zum Erstellen der Definition des Oracle CDC-Windows-Diensts benötigt das Programm Aktualisierungszugriff auf die MSXDBCDC-Datenbank in der zugeordneten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz. Wenn Sie auf **OK**klicken, wird der Benutzer in einem Dialogfeld aufgefordert, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen mit Aktualisierungszugriff auf die MSXDBCDC-Datenbank einzugeben.  
+     Zum Erstellen der Definition des Oracle CDC-Windows-Diensts benötigt das Programm Aktualisierungszugriff auf die MSXDBCDC-Datenbank in der zugeordneten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz. Wenn Sie auf **OK** klicken, wird der Benutzer in einem Dialogfeld aufgefordert, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen mit Aktualisierungszugriff auf die MSXDBCDC-Datenbank einzugeben.  
   
      Informationen zu den Daten, die Sie im Dialogfeld Verbindung mit SQL Server herstellen eingeben müssen, finden Sie unter [Connection to SQL Server](../../integration-services/change-data-capture/connection-to-sql-server.md).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "88484643"
   
 2.  Wählen Sie im linken Bereich **Local CDC Services** , klicken Sie anschließend mit der rechten Maustaste auf den lokalen Dienst, den Sie bearbeiten möchten, und wählen Sie **Eigenschaften**.  
   
-     Sie können den Dienst, den Sie verwenden möchten, auch im mittleren Bereich auswählen und dann im **Aktionsbereich** auf **Eigenschaften**klicken.  
+     Sie können den Dienst, den Sie verwenden möchten, auch im mittleren Bereich auswählen und dann im **Aktionsbereich** auf **Eigenschaften** klicken.  
   
 3.  Geben Sie die erforderlichen Informationen im Dialogfeld CDC Service Properties ein. Informationen zum Eingeben von Informationen im Dialogfeld CDC Service Properties finden Sie unter [Create and Edit an Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md) .  
   

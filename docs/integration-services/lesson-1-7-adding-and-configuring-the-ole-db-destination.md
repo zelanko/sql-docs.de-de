@@ -12,10 +12,10 @@ ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8c30d9c27550913f5c83334ff33ff3a1cc08e1bc
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "90990409"
 ---
 # <a name="lesson-1-7-add-and-configure-the-ole-db-destination"></a>Lektion 1.7: Hinzufügen und Konfigurieren des OLE DB-Ziels
@@ -30,7 +30,7 @@ In dieser Aufgabe fügen Sie ein OLE DB-Ziel hinzu und konfigurieren es, sodass 
   
 ## <a name="add-and-configure-the-sample-ole-db-destination"></a>Hinzufügen und Konfigurieren eines OLE DB-Beispielziels  
   
-1.  Erweitern Sie **Andere Ziele**in der **SSIS-Toolbox**, und ziehen Sie **OLE DB-Ziel** auf die Entwurfsoberfläche der Registerkarte **Datenfluss** . Fügen Sie das **OLE DB-Ziel** direkt unterhalb der Transformation **Lookup Date Key** ein.  
+1.  Erweitern Sie **Andere Ziele** in der **SSIS-Toolbox**, und ziehen Sie **OLE DB-Ziel** auf die Entwurfsoberfläche der Registerkarte **Datenfluss** . Fügen Sie das **OLE DB-Ziel** direkt unterhalb der Transformation **Lookup Date Key** ein.  
   
 2.  Klicken Sie auf die Transformation **Lookup Date Key**, und ziehen Sie den blauen Pfeil zum neuen **OLE DB-Ziel**, um die zwei Komponenten miteinander zu verbinden.  
   
@@ -52,7 +52,7 @@ In dieser Aufgabe fügen Sie ein OLE DB-Ziel hinzu und konfigurieren es, sodass 
   
 11. Klicken Sie auf **Zuordnungen**.  
   
-12. Überprüfen Sie, ob die Eingabespalten **AverageRate**, **CurrencyKey**, **EndOfDayRate**und **DateKey** den Zielspalten ordnungsgemäß zugeordnet sind. Wenn gleichnamige Spalten einander zugeordnet sind, ist die Zuordnung richtig.  
+12. Überprüfen Sie, ob die Eingabespalten **AverageRate**, **CurrencyKey**, **EndOfDayRate** und **DateKey** den Zielspalten ordnungsgemäß zugeordnet sind. Wenn gleichnamige Spalten einander zugeordnet sind, ist die Zuordnung richtig.  
   
 13. Klicken Sie auf **OK**.  
   

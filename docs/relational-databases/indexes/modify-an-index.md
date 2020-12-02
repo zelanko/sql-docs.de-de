@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 15a7386c08d2b9147858cab3fde212cf285902cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88499362"
 ---
 # <a name="modify-an-index"></a>Ändern eines Indexes
@@ -45,7 +45,7 @@ ms.locfileid: "88499362"
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her, und erweitern Sie dann diese Instanz.  
   
-2.  Erweitern Sie **Datenbanken**und dann die Datenbank, zu der die Tabelle gehört, und klicken Sie anschließend auf **Tabellen**.  
+2.  Erweitern Sie **Datenbanken** und dann die Datenbank, zu der die Tabelle gehört, und klicken Sie anschließend auf **Tabellen**.  
   
 3.  Erweitern Sie die Tabelle, in die der Index gehört, und erweitern Sie dann **Indizes**.  
   

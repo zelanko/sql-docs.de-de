@@ -12,10 +12,10 @@ ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f6c7fed5c20d9025be9ad9bce060d6fa83de378a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88472010"
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>Lektion 3-3: Testen der bereitgestellten Pakete
@@ -27,7 +27,7 @@ In dieser Aufgabe testen Sie die Pakete, die Sie auf einer Instanz von [!INCLUDE
   
 In anderen [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Tutorials haben Sie Pakete in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], der Entwicklungsumgebung für [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], mithilfe des Befehls **Debuggen starten** im Menü **Debuggen** ausgeführt. Dieses Mal führen Sie die Pakete auf andere Weise aus.  
   
-[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] „Integration Services“ stellt mehrere Tools bereit, die Sie zum Ausführen von Paketen in der Test- und Produktionsumgebung verwenden können: das Eingabeaufforderungs-Hilfsprogramm **dtexec** und das Paketausführungshilfsprogramm. Das Paketausführungshilfsprogramm ist ein grafisches Tool, das auf **dtexec**aufbaut. Mit diesen beiden Tools wird das Paket sofort ausgeführt. Zusätzlich stellt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ein Subsystem des SQL Server-Agents bereit, das speziell dazu dient, die Paketausführung als Schritt in einem SQL Server-Agent-Auftrag zu planen.  
+[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] „Integration Services“ stellt mehrere Tools bereit, die Sie zum Ausführen von Paketen in der Test- und Produktionsumgebung verwenden können: das Eingabeaufforderungs-Hilfsprogramm **dtexec** und das Paketausführungshilfsprogramm. Das Paketausführungshilfsprogramm ist ein grafisches Tool, das auf **dtexec** aufbaut. Mit diesen beiden Tools wird das Paket sofort ausgeführt. Zusätzlich stellt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ein Subsystem des SQL Server-Agents bereit, das speziell dazu dient, die Paketausführung als Schritt in einem SQL Server-Agent-Auftrag zu planen.  
   
 Sie verwenden das Paketausführungshilfsprogramm, um die bereitgestellten Pakete auszuführen. Die Pakete werden in ihrem aktuellen Zustand verwendet. Sie brauchen die Informationen auf den Seiten des Dialogfelds also nicht zu aktualisieren. Sie führen die Pakete von der Seite Allgemein aus. Hierbei handelt es sich um die erste Seite des Paketausführungshilfsprogramms. Sie können auf die anderen Seiten klicken, um zu sehen, welche Informationen für jedes Paket angezeigt werden.  
   

@@ -25,10 +25,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 24903e075fc7ce38e79c0b99a559afac194638bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88490561"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Verwenden des Volltextindizierungs-Assistenten
@@ -48,13 +48,13 @@ ms.locfileid: "88490561"
   
 5.  **Typspalte** Wählen Sie den Namen der Spalte aus, in der der Dokumenttyp der volltextindizierten Spalte enthalten ist.  
 
-> **HINWEIS:** Das Feld  **Typspalte** ist nur verfügbar, wenn die unter **Verfügbare Spalten** genannte Spalte vom Typ **varbinary(max)** oder **image**ist.  
+> **HINWEIS:** Das Feld  **Typspalte** ist nur verfügbar, wenn die unter **Verfügbare Spalten** genannte Spalte vom Typ **varbinary(max)** oder **image** ist.  
   
 6. **Statistische Semantik** Wählen Sie aus, ob die semantische Indizierung für die ausgewählte Spalte aktiviert werden soll. Weitere Informationen finden Sie unter [Semantische Suche &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
 >**Hinweise** 
 >
->Wenn die von Ihnen gewählte Sprache nicht über ein zugeordnetes semantisches Sprachmodell verfügt, dann ist das Kontrollkästchen **Statistische Semantik** nicht aktiviert. Wenn Sie **Statistische Semantik** vor einer **Sprache**auswählen, werden im Dropdown-Kombinationsfeld nur die Sprachen angezeigt, für die das semantische Sprachmodell unterstützt wird.  
+>Wenn die von Ihnen gewählte Sprache nicht über ein zugeordnetes semantisches Sprachmodell verfügt, dann ist das Kontrollkästchen **Statistische Semantik** nicht aktiviert. Wenn Sie **Statistische Semantik** vor einer **Sprache** auswählen, werden im Dropdown-Kombinationsfeld nur die Sprachen angezeigt, für die das semantische Sprachmodell unterstützt wird.  
 >
 > Die semantische Suche ist für die **Azure SQL-Datenbank nicht verfügbar**. Die Option „Statistische Semantik“ wird nicht angezeigt, wenn dieser Assistent für eine Azure SQL-Datenbank ausgeführt wird.
   

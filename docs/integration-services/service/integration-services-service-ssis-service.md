@@ -24,10 +24,10 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 465aef4e631602a645bbeff5b437cb2f09994d3c
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "90990404"
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services-Dienst (SSIS-Dienst)
@@ -119,7 +119,7 @@ ms.locfileid: "90990404"
   
 ### <a name="to-set-properties-of-the-integration-services-service-by-using-services"></a>So legen Sie die Eigenschaften des Integration Services-Diensts mit Diensten fest  
   
-1.  Wenn Sie die klassische Ansicht verwenden, klicken Sie in der **Systemsteuerung**auf **Verwaltung**. Wenn Sie die Kategorieansicht verwenden, klicken Sie auf **Leistung und Wartung** und dann auf **Verwaltung**.  
+1.  Wenn Sie die klassische Ansicht verwenden, klicken Sie in der **Systemsteuerung** auf **Verwaltung**. Wenn Sie die Kategorieansicht verwenden, klicken Sie auf **Leistung und Wartung** und dann auf **Verwaltung**.  
   
 2.  Klicken Sie auf **Dienste**.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "90990404"
   
 5.  Klicken Sie auf **OK**.  
   
-6.  Wenn als Starttyp „Manuell“ oder „Automatisch“ ausgewählt wurde, können Sie optional mit der rechten Maustaste auf **SQL Server Integration Services** klicken und anschließend auf **Starten, Beenden oder Neu starten**klicken.  
+6.  Wenn als Starttyp „Manuell“ oder „Automatisch“ ausgewählt wurde, können Sie optional mit der rechten Maustaste auf **SQL Server Integration Services** klicken und anschließend auf **Starten, Beenden oder Neu starten** klicken.  
   
 7.  Klicken Sie im Menü **Datei** auf **Beenden** , um das Snap-In **Dienste** zu schließen.  
 
@@ -229,7 +229,7 @@ Wenn Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]installier
 ```  
   
 ### <a name="modify-the-configuration-file"></a>Ändern der Konfigurationsdatei  
- Sie können die Konfigurationsdatei ändern, um Pakete beim Beenden des Diensts weiterhin auszuführen, um zusätzliche Stammordner im Objekt-Explorer anzuzeigen oder um einen anderen Ordner oder zusätzliche Ordner im Dateisystem anzugeben, die von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwaltet werden sollen. Sie können beispielsweise zusätzliche Stammordner des Typs **SqlServerFolder**erstellen, um Pakete in den msdb-Datenbanken zusätzlicher Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]zu verwalten.  
+ Sie können die Konfigurationsdatei ändern, um Pakete beim Beenden des Diensts weiterhin auszuführen, um zusätzliche Stammordner im Objekt-Explorer anzuzeigen oder um einen anderen Ordner oder zusätzliche Ordner im Dateisystem anzugeben, die von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwaltet werden sollen. Sie können beispielsweise zusätzliche Stammordner des Typs **SqlServerFolder** erstellen, um Pakete in den msdb-Datenbanken zusätzlicher Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]zu verwalten.  
   
 > [!NOTE]  
 >  Manche Zeichen sind für Ordnernamen nicht zulässig. Die gültigen Zeichen für Ordnernamen werden durch die [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Klasse **System.IO.Path** und das Feld **GetInvalidFilenameChars** bestimmt. Das Feld **GetInvalidFilenameChars** stellt ein plattformspezifisches Array mit Zeichen bereit, das nicht in Pfadzeichenfolgenargumenten angegeben werden kann, die an Mitglieder der **Path** -Klasse übergeben werden. Die Menge der ungültigen Zeichen kann je nach Dateisystem variieren. Normalerweise zählen zu den ungültigen Zeichen das Anführungszeichen ("), das Kleiner-als-Zeichen (<) und der senkrechte Strich (|).  
@@ -290,7 +290,7 @@ Wenn Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]installier
   
 2.  Klicken Sie im Menü **Ansicht** auf **Objekt-Explorer** .  
   
-3.  Klicken Sie auf der Symbolleiste **Objekt-Explorer**auf **Verbinden**, und klicken Sie dann auf Integration Services.  
+3.  Klicken Sie auf der Symbolleiste **Objekt-Explorer** auf **Verbinden**, und klicken Sie dann auf Integration Services.  
   
 4.  Geben Sie im Dialogfeld **Verbindung mit Server herstellen** einen Servernamen ein. Sie können einen Punkt (.), (local) oder **localhost** zum Angeben des lokalen Servers verwenden.  
   
@@ -311,7 +311,7 @@ Wenn Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]installier
   
 1.  Öffnen Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-2.  Wählen Sie im Menü **Datei**die Option **Objekt-Explorer verbinden** , um das Dialogfeld **Verbindung mit Server herstellen** anzuzeigen.  
+2.  Wählen Sie im Menü **Datei** die Option **Objekt-Explorer verbinden** , um das Dialogfeld **Verbindung mit Server herstellen** anzuzeigen.  
   
 3.  Wählen Sie in der Liste **Servertyp** den Eintrag **Integration Services** aus.  
   
@@ -342,7 +342,7 @@ Wenn Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]installier
   
 6.  Wählen Sie im Dialogfeld für die **Eigenschaften von SQL Server Integration Services 11.0** die Registerkarte **Sicherheit** aus.  
   
-7.  Wählen Sie unter **Start- und Aktivierungsberechtigungen**die Option **Anpassen**aus, und klicken Sie auf **Bearbeiten** , um das Dialogfeld **Startberechtigung** zu öffnen.  
+7.  Wählen Sie unter **Start- und Aktivierungsberechtigungen** die Option **Anpassen** aus, und klicken Sie auf **Bearbeiten** , um das Dialogfeld **Startberechtigung** zu öffnen.  
   
 8.  Fügen Sie im Dialogfeld **Startberechtigung** Benutzer hinzu, oder löschen Sie Benutzer, und weisen Sie die entsprechenden Berechtigungen den passenden Benutzern und Gruppen zu. Die verfügbaren Berechtigungen sind Lokaler Start, Remotestart, Lokale Aktivierung und Remoteaktivierung. Die Startrechte erteilen oder verweigern die Berechtigung zum Starten und Beenden des Diensts, während die Aktivierungsrechte die Berechtigung zum Herstellen einer Verbindung mit dem Dienst erteilen oder verweigern.  
   
@@ -427,7 +427,7 @@ SSIS unterstützt nicht die Delegierung von Anmeldeinformationen, die auch als d
   
 4.  Klicken Sie auf der Registerkarte **Ausnahmen** auf **Port hinzufügen**.  
   
-5.  Geben Sie im Dialogfeld **Port hinzufügen****RPC(TCP/135)** oder einen anderen beschreibenden Namen in das Feld **Name**ein, geben Sie **135** in das Feld **Portnummer** ein, und wählen anschließend Sie **TCP**aus.  
+5.  Geben Sie im Dialogfeld **Port hinzufügen****RPC(TCP/135)** oder einen anderen beschreibenden Namen in das Feld **Name** ein, geben Sie **135** in das Feld **Portnummer** ein, und wählen anschließend Sie **TCP** aus.  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst verwendet immer Port 135. Sie können keinen anderen Port angeben.  
@@ -436,9 +436,9 @@ SSIS unterstützt nicht die Delegierung von Anmeldeinformationen, die auch als d
   
 7.  Wählen Sie im Dialogfeld **Bereich ändern** das Optionsfeld **My network (subnet only)** (Eigenes Netzwerk (nur Subnetz)) aus, oder geben Sie eine benutzerdefinierte Liste ein, und klicken Sie anschließend auf **OK**.  
   
-8.  Klicken Sie auf **OK** , um das Dialogfeld **Port hinzufügen**zu schließen.  
+8.  Klicken Sie auf **OK** , um das Dialogfeld **Port hinzufügen** zu schließen.  
   
-9. Klicken Sie auf **OK** , um das Dialogfeld **Windows-Firewall**zu schließen.  
+9. Klicken Sie auf **OK** , um das Dialogfeld **Windows-Firewall** zu schließen.  
   
     > [!NOTE]  
     >  Diese Prozedur verwendet das Systemsteuerungselement **Windows-Firewall**, um die Windows-Firewall zu konfigurieren. Über die Option **Windows-Firewall** wird nur die Firewall für das Profil des aktuellen Netzwerkspeicherorts konfiguriert. Sie können die Windows-Firewall jedoch auch mithilfe des Befehlszeilentools **netsh** oder des MMC-Snap-Ins ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console) Windows Firewall mit erweiterter Sicherheit konfigurieren. Weitere Informationen über diese Tools finden Sie unter [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  

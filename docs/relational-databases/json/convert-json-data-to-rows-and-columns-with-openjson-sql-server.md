@@ -16,10 +16,10 @@ ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6c92c89d86f14f108e1d21643da7b578d6a2f800
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88499353"
 ---
 # <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>Analysieren und Transformieren von JSON-Daten mit OPENJSON (SQL Server)
@@ -136,7 +136,7 @@ Weitere Informationen zu Syntax und Verwendung finden Sie unter [OPENJSON &#40;T
 
 ## <a name="openjson-requires-compatibility-level-130"></a>OPENJSON erfordert Kompatibilitätsgrad 130
 
-Die **OPENJSON** -Funktion steht nur für den **Kompatibilitätsgrad 130**zur Verfügung. Wenn der Kompatibilitätsgrad Ihrer Datenbank kleiner als 130 ist, kann SQL Server die **OPENJSON**-Funktion nicht finden und ausführen. Andere integrierte JSON-Funktionen sind für alle Kompatibilitätsgrade verfügbar.
+Die **OPENJSON** -Funktion steht nur für den **Kompatibilitätsgrad 130** zur Verfügung. Wenn der Kompatibilitätsgrad Ihrer Datenbank kleiner als 130 ist, kann SQL Server die **OPENJSON**-Funktion nicht finden und ausführen. Andere integrierte JSON-Funktionen sind für alle Kompatibilitätsgrade verfügbar.
 
 Sie können den Kompatibilitätsgrad in der `sys.databases`-Ansicht oder in den Datenbankeigenschaften überprüfen.
 

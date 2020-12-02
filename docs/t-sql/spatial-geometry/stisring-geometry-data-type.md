@@ -19,10 +19,10 @@ ms.assetid: ea0063be-1c74-4cc4-ac6f-b65321ddfa54
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 06702731a47683c44d6096b354c3ec2f773aefaf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88472472"
 ---
 # <a name="stisring-geometry-data-type"></a>STIsRing (geometry-Datentyp)
@@ -51,7 +51,7 @@ Gibt 1 zur체ck, wenn eine **geometry** -Instanz die folgenden Anforderungen erf�
  CLR-R체ckgabetyp: **SqlBoolean**  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Methode gibt NULL zur체ck, wenn die Instanz kein **LineString**ist.  
+ Diese Methode gibt NULL zur체ck, wenn die Instanz kein **LineString** ist.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine `LineString` -Instanz erstellt und `STIsRing()` verwendet, um zu 체berpr체fen, ob die Instanz ein Ring ist.  

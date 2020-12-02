@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: c83a02c9c2b0c8c22a62f1765c839a1c15534405
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88470185"
 ---
 # <a name="validate-replicated-data"></a>Überprüfen von replizierten Daten
@@ -47,7 +47,7 @@ Bei der Transaktions- und der Mergereplikation können Sie überprüfen, ob die 
 
  Der Prozess der Datenüberprüfung besteht aus drei Teilen:  
   
-1.  Zunächst müssen die Abonnements für eine Veröffentlichung, die überprüft werden sollen, *gekennzeichnet* werden. Die Abonnements, die überprüft werden sollen, können Sie in den Dialogfeldern **Abonnement überprüfen**, **Abonnements überprüfen**und **Alle Abonnements überprüfen** , die über den Ordner **Lokale Veröffentlichungen** und **Lokale Abonnements** in [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verfügbar sind. Abonnements können darüber hinaus auch auf der Registerkarte **Alle Abonnements** , auf der Registerkarte **Überwachungsliste für Abonnements** und über den Veröffentlichungsknoten im Replikationsmonitor gekennzeichnet werden. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+1.  Zunächst müssen die Abonnements für eine Veröffentlichung, die überprüft werden sollen, *gekennzeichnet* werden. Die Abonnements, die überprüft werden sollen, können Sie in den Dialogfeldern **Abonnement überprüfen**, **Abonnements überprüfen** und **Alle Abonnements überprüfen** , die über den Ordner **Lokale Veröffentlichungen** und **Lokale Abonnements** in [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verfügbar sind. Abonnements können darüber hinaus auch auf der Registerkarte **Alle Abonnements** , auf der Registerkarte **Überwachungsliste für Abonnements** und über den Veröffentlichungsknoten im Replikationsmonitor gekennzeichnet werden. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 2.  Ein Abonnement wird bei der nächsten Synchronisierung durch den Verteilungs-Agent (für Transaktionsreplikationen) oder durch den Merge-Agent (für Mergereplikationen) überprüft. Der Verteilungs-Agent wird in der Regel kontinuierlich ausgeführt. In diesem Fall erfolgt die Überprüfung sofort. Der Merge-Agent wird in der Regel bei Bedarf ausgeführt, und die Überprüfung erfolgt nach der Ausführung des Agents.  
   
@@ -96,8 +96,8 @@ Bei der Transaktions- und der Mergereplikation können Sie überprüfen, ob die 
 2.  Erweitern Sie den Ordner **Replikation** , und erweitern Sie dann den Ordner **Lokale Veröffentlichungen** .    
 3.  Klicken Sie mit der rechten Maustaste auf die Veröffentlichung, deren Abonnements Sie überprüfen möchten, und klicken Sie dann auf **Abonnements überprüfen**.    
 4.  Wählen Sie im Dialogfeld **Abonnements überprüfen** die zu überprüfenden Abonnements aus:   
-    -   Wählen Sie **Alle SQL Server-Abonnements überprüfen**aus.    
-    -   Wählen Sie **Folgende Abonnements überprüfen**aus, und wählen Sie dann ein oder mehrere Abonnements aus.    
+    -   Wählen Sie **Alle SQL Server-Abonnements überprüfen** aus.    
+    -   Wählen Sie **Folgende Abonnements überprüfen** aus, und wählen Sie dann ein oder mehrere Abonnements aus.    
 5.  Um den Typ der durchzuführenden Überprüfung (Zeilenanzahl oder Zeilenanzahl und Prüfsumme) anzugeben, klicken Sie auf **Überprüfungsoptionen**, und geben Sie dann im Dialogfeld **Optionen für die Abonnementüberprüfung** die gewünschten Optionen an.  
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
 7.  Zeigen Sie die Überprüfungsergebnisse Im Replikationsmonitor oder im Dialogfeld **Synchronisierungsstatus anzeigen** an: Führen Sie für jedes Abonnement folgende Vorgänge aus:   
@@ -157,8 +157,8 @@ Bei der Transaktions- und der Mergereplikation können Sie überprüfen, ob die 
 2.  Klicken Sie mit der rechten Maustaste auf die Veröffentlichung, deren Abonnements Sie überprüfen möchten, und klicken Sie dann auf **Abonnements überprüfen**.   
 3.  Wählen Sie im Dialogfeld **Abonnements überprüfen** die zu überprüfenden Abonnements aus:  
   
-    -   Wählen Sie **Alle SQL Server-Abonnements überprüfen**aus.    
-    -   Wählen Sie **Folgende Abonnements überprüfen**aus, und wählen Sie dann ein oder mehrere Abonnements aus.    
+    -   Wählen Sie **Alle SQL Server-Abonnements überprüfen** aus.    
+    -   Wählen Sie **Folgende Abonnements überprüfen** aus, und wählen Sie dann ein oder mehrere Abonnements aus.    
 4.  Um den Typ der durchzuführenden Überprüfung (Zeilenanzahl oder Zeilenanzahl und Prüfsumme) anzugeben, klicken Sie auf **Überprüfungsoptionen**, und geben Sie dann im Dialogfeld **Optionen für die Abonnementüberprüfung** die gewünschten Optionen an.    
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 6.  Klicken Sie auf die Registerkarte **Alle Abonnements** .  
@@ -174,7 +174,7 @@ Bei der Transaktions- und der Mergereplikation können Sie überprüfen, ob die 
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit dem Verleger her, und erweitern Sie dann den Serverknoten.    
 2.  Erweitern Sie den Ordner **Replikation** , und erweitern Sie dann den Ordner **Lokale Veröffentlichungen** .   
 3.  Erweitern Sie die Veröffentlichung, für die Sie Abonnements überprüfen möchten, klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Abonnement überprüfen**.    
-4.  Wählen Sie im Dialogfeld **Abonnement überprüfen** die Option **Dieses Abonnement überprüfen**aus.    
+4.  Wählen Sie im Dialogfeld **Abonnement überprüfen** die Option **Dieses Abonnement überprüfen** aus.    
 5.  Um den Typ der durchzuführenden Überprüfung (Zeilenanzahl oder Zeilenanzahl und Prüfsumme) anzugeben, klicken Sie auf **Optionen**, und geben Sie dann im Dialogfeld **Optionen für die Abonnementüberprüfung** die gewünschten Optionen an.    
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 7.  Zeigen Sie die Überprüfungsergebnisse Im Replikationsmonitor oder im Dialogfeld **Synchronisierungsstatus anzeigen** an:  
@@ -205,7 +205,7 @@ Bei der Transaktions- und der Mergereplikation können Sie überprüfen, ob die 
 1.  Erweitern Sie im Replikationsmonitor im linken Bereich eine Verlegergruppe, erweitern Sie einen Verleger, und klicken Sie dann auf eine Veröffentlichung.    
 2.  Klicken Sie auf die Registerkarte **Alle Abonnements** .    
 3.  Klicken Sie mit der rechten Maustaste auf das Abonnement, das Sie überprüfen möchten, und klicken Sie dann auf **Abonnement überprüfen**.    
-4.  Wählen Sie im Dialogfeld **Abonnement überprüfen** die Option **Dieses Abonnement überprüfen**aus.    
+4.  Wählen Sie im Dialogfeld **Abonnement überprüfen** die Option **Dieses Abonnement überprüfen** aus.    
 5.  Um den Typ der durchzuführenden Überprüfung (Zeilenanzahl oder Zeilenanzahl und Prüfsumme) anzugeben, klicken Sie auf **Optionen**, und geben Sie dann im Dialogfeld **Optionen für die Abonnementüberprüfung** die gewünschten Optionen an.    
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 7.  Klicken Sie auf die Registerkarte **Alle Abonnements** .    
@@ -272,7 +272,7 @@ Bei der Transaktions- und der Mergereplikation können Sie überprüfen, ob die 
   
 2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransPublication>-Klasse. Legen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> -Eigenschaft und die <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> -Eigenschaft für die Veröffentlichung fest. Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die restlichen Objekteigenschaften abzurufen. Wenn diese Methode **false**zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die restlichen Objekteigenschaften abzurufen. Wenn diese Methode **false** zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
   
 4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.TransPublication.ValidatePublication%2A> -Methode auf. Übergeben Sie die folgenden Werte:  
   
@@ -292,7 +292,7 @@ Bei der Transaktions- und der Mergereplikation können Sie überprüfen, ob die 
   
 2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePublication>-Klasse. Legen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> -Eigenschaft und die <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> -Eigenschaft für die Veröffentlichung fest. Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die restlichen Objekteigenschaften abzurufen. Wenn diese Methode **false**zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die restlichen Objekteigenschaften abzurufen. Wenn diese Methode **false** zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
   
 4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.MergePublication.ValidatePublication%2A> -Methode auf. Übergeben Sie die gewünschte <xref:Microsoft.SqlServer.Replication.ValidationOption>.  
   
@@ -304,7 +304,7 @@ Bei der Transaktions- und der Mergereplikation können Sie überprüfen, ob die 
   
 2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePublication>-Klasse. Legen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> -Eigenschaft und die <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> -Eigenschaft für die Veröffentlichung fest. Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die restlichen Objekteigenschaften abzurufen. Wenn diese Methode **false**zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die restlichen Objekteigenschaften abzurufen. Wenn diese Methode **false** zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
   
 4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A> -Methode auf. Übergeben Sie den Namen des Abonnenten und der Abonnementdatenbank, der bzw. die überprüft wird, und die gewünschte <xref:Microsoft.SqlServer.Replication.ValidationOption>.  
   

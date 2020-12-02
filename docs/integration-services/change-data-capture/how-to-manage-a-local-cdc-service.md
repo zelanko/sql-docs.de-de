@@ -12,10 +12,10 @@ ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1d103c224088d2dfa22fe1d8dcb36306177aac54
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88496180"
 ---
 # <a name="how-to-manage-a-local-cdc-service"></a>Verwalten eines lokalen CDC Service
@@ -47,7 +47,7 @@ ms.locfileid: "88496180"
   
          Klicken Sie im **Aktionsbereich** rechts in der CDC Service Configuration Console auf **Löschen** , um den Dienst zu löschen.  
   
-         Sie können auch mit der rechten Maustaste auf den CDC-Dienst klicken, den Sie löschen möchten, und dann **Löschen**wählen.  
+         Sie können auch mit der rechten Maustaste auf den CDC-Dienst klicken, den Sie löschen möchten, und dann **Löschen** wählen.  
   
          **Hinweis**: Falls der Dienst beim Löschen des Diensts ausgeführt wird, wird der Dienst vor dem Löschvorgang beendet.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "88496180"
   
          Klicken Sie im **Aktionsbereich** rechts in der CDC Service Configuration Console auf **Eigenschaften**.  
   
-         Sie können auch mit der rechten Maustaste auf den CDC-Dienst klicken, für den Sie die Eigenschaften bearbeiten möchten, und dann **Eigenschaften**wählen.  
+         Sie können auch mit der rechten Maustaste auf den CDC-Dienst klicken, für den Sie die Eigenschaften bearbeiten möchten, und dann **Eigenschaften** wählen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Manage an Oracle CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  

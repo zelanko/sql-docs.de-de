@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1dd037349e2e8126a74fbd895598f3ef05e06583
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88488604"
 ---
 # <a name="get-information-about-a-view"></a>Abrufen von Informationen zu einer Sicht
@@ -60,9 +60,9 @@ ms.locfileid: "88488604"
   
 #### <a name="get-view-properties-by-using-object-explorer"></a>Abrufen von Sichteigenschaften mit Objekt-Explorer  
   
-1.  Klicken Sie in **Objekt-Explorer**auf das Pluszeichen neben der Datenbank, die die Sicht enthält, deren Eigenschaften Sie anzeigen möchten, und klicken Sie dann auf das Pluszeichen, um den Ordner **Sichten** zu erweitern.  
+1.  Klicken Sie in **Objekt-Explorer** auf das Pluszeichen neben der Datenbank, die die Sicht enthält, deren Eigenschaften Sie anzeigen möchten, und klicken Sie dann auf das Pluszeichen, um den Ordner **Sichten** zu erweitern.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Sicht, deren Eigenschaften Sie anzeigen möchten, und wählen Sie **Eigenschaften**aus.  
+2.  Klicken Sie mit der rechten Maustaste auf die Sicht, deren Eigenschaften Sie anzeigen möchten, und wählen Sie **Eigenschaften** aus.  
 
      Die folgenden Eigenschaften werden im Dialogfeld **Sichteigenschaften** angezeigt.  
   
@@ -101,9 +101,9 @@ ms.locfileid: "88488604"
   
 #### <a name="getting-view-properties-by-using-the-view-designer-tool"></a>Abrufen von Sichteigenschaften mit dem Tool Sicht-Designer  
   
-1.  Erweitern Sie in **Objekt-Explorer**die Datenbank, die die Sicht enthält, deren Eigenschaften Sie anzeigen möchten, und erweitern Sie dann den Ordner **Sichten** .  
+1.  Erweitern Sie in **Objekt-Explorer** die Datenbank, die die Sicht enthält, deren Eigenschaften Sie anzeigen möchten, und erweitern Sie dann den Ordner **Sichten** .  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Sicht, deren Eigenschaften Sie anzeigen möchten, und wählen Sie **Entwurf**aus.  
+2.  Klicken Sie mit der rechten Maustaste auf die Sicht, deren Eigenschaften Sie anzeigen möchten, und wählen Sie **Entwurf** aus.  
   
 3.  Klicken Sie mit der rechten Maustaste in den Leerraum des Diagrammbereichs, und klicken Sie auf **Eigenschaften**.  
   
@@ -143,13 +143,13 @@ ms.locfileid: "88488604"
      Zeigt eine Beschreibung der SQL-Anweisungen an. Klicken Sie auf die Beschreibung, und klicken Sie anschließend auf die Auslassungspunkte **(...)** rechts neben der Eigenschaft, um die ganze Beschreibung anzuzeigen oder sie zu bearbeiten. Kommentare können Informationen darüber enthalten, wer die Sicht verwendet und wann sie verwendet wird.  
   
      **Oberste Angabe**  
-     Erweitert das Element, um die Eigenschaften für **Oben**, **Ausdruck**, **Prozent**und **WITH TIES** anzuzeigen.  
+     Erweitert das Element, um die Eigenschaften für **Oben**, **Ausdruck**, **Prozent** und **WITH TIES** anzuzeigen.  
   
      **(Nach oben)**  
      Gibt an, dass die Sicht eine TOP-Klausel enthält, die bewirkt, dass nur die ersten N Zeilen oder ersten N Prozent der Zeilen im Resultset zurückgegeben werden. In der Standardeinstellung gibt die Sicht die ersten 10 Zeilen im Resultset zurück. Verwenden Sie dies, um die Anzahl der zurückzugebenden Zeilen zu ändern oder einen anderen Prozentwert anzugeben.  
   
      **Ausdruck**  
-     Zeigt an, welchen Prozentsatz (wenn **Prozent** auf **Ja**festgelegt ist) oder welche Datensätze (wenn **Prozent** auf **Nein**festgelegt wird) die Sicht zurückgegeben wird.  
+     Zeigt an, welchen Prozentsatz (wenn **Prozent** auf **Ja** festgelegt ist) oder welche Datensätze (wenn **Prozent** auf **Nein** festgelegt wird) die Sicht zurückgegeben wird.  
   
      **Prozent**  
      Gibt an, dass die Abfrage eine **TOP** -Klausel enthält, von der nur die ersten N Prozent der Zeilen im Resultset zurückgegeben werden.  
@@ -163,16 +163,16 @@ ms.locfileid: "88488604"
      **(Aktualisieren mit Sichtregeln)**  
      Gibt an, dass alle Updates und Einfügungen für die Sicht von Microsoft Data Access Components (MDAC) in SQL-Anweisungen übersetzt werden, die auf die Sicht verweisen, statt in SQL-Anweisungen, die direkt auf die Basistabellen der Sicht verweisen.  
   
-     In einigen Fällen gibt MDAC Sichtaktualisierungen und Sichteinfügevorgänge als Aktualisierungen und Einfügungen für die zugrunde liegenden Basistabellen der Sicht bekannt. Durch Auswahl von **Aktualisieren mit Sichtregeln**wird gewährleistet, dass MDAC Aktualisierungs- und Einfügevorgänge für die Sicht selbst generiert.  
+     In einigen Fällen gibt MDAC Sichtaktualisierungen und Sichteinfügevorgänge als Aktualisierungen und Einfügungen für die zugrunde liegenden Basistabellen der Sicht bekannt. Durch Auswahl von **Aktualisieren mit Sichtregeln** wird gewährleistet, dass MDAC Aktualisierungs- und Einfügevorgänge für die Sicht selbst generiert.  
   
      **Überprüfungsoption**  
      Gibt an, dass beim Öffnen dieser Sicht und Ändern des Bereichs **Ergebnisse** die Datenquelle überprüft, ob die hinzugefügten oder geänderten Daten die **WHERE-Klausel** der Sichtdefinition erfüllen. Wenn die Änderung die **WHERE** -Klausel nicht erfüllt, erhalten Sie eine Fehlermeldung mit weiteren Informationen.  
   
 #### <a name="to-get-dependencies-on-the-view"></a>So rufen Sie Abhängigkeiten für die Sicht ab  
   
-1.  Erweitern Sie in **Objekt-Explorer**die Datenbank, die die Sicht enthält, deren Eigenschaften Sie anzeigen möchten, und erweitern Sie dann den Ordner **Sichten** .  
+1.  Erweitern Sie in **Objekt-Explorer** die Datenbank, die die Sicht enthält, deren Eigenschaften Sie anzeigen möchten, und erweitern Sie dann den Ordner **Sichten** .  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Sicht, deren Eigenschaften Sie anzeigen möchten, und wählen Sie **Abhängigkeiten anzeigen**aus.  
+2.  Klicken Sie mit der rechten Maustaste auf die Sicht, deren Eigenschaften Sie anzeigen möchten, und wählen Sie **Abhängigkeiten anzeigen** aus.  
   
 3.  Wählen Sie **Objekte, die von [Sichtname] abhängig sind** aus, um die Objekte anzuzeigen, die auf die Sicht verweisen.  
   

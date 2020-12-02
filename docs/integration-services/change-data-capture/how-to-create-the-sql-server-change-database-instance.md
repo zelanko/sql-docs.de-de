@@ -12,10 +12,10 @@ ms.assetid: 3895097e-28fa-4808-a3a8-ba821b4ba4d4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0eaee23380c929ce5f9f106fb130d328bd3c7e47
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88478051"
 ---
 # <a name="how-to-create-the-sql-server-change-database-instance"></a>Erstellen der Instanz für die SQL Server-Änderungsdatenbank
@@ -27,7 +27,7 @@ ms.locfileid: "88478051"
   
 ### <a name="to-create-cdc-instances"></a>So erstellen Sie CDC-Instanzen  
   
-1.  Wählen Sie im Menü **Start** die Option **CDC Designer Console**aus.  
+1.  Wählen Sie im Menü **Start** die Option **CDC Designer Console** aus.  
   
 2.  Erweitern Sie im linken Bereich die Option **Change Data Capture**.  
   

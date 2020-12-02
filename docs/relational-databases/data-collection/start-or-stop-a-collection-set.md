@@ -14,10 +14,10 @@ ms.assetid: 48a7b2fe-6bc3-4278-a7ec-1babc1290345
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1d62c72e43d9495874881ba3c029640626f129c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88471427"
 ---
 # <a name="start-or-stop-a-collection-set"></a>Starten oder Beenden eines Sammlungssatzes
@@ -67,7 +67,7 @@ ms.locfileid: "88471427"
   
 #### <a name="to-start-a-collection-set"></a>So starten Sie einen Sammlungssatz  
   
-1.  Erweitern Sie im Objekt-Explorer nacheinander die Knoten **Verwaltung** , **Datensammlung**und dann **Systemdaten-Sammlungssätze**.  
+1.  Erweitern Sie im Objekt-Explorer nacheinander die Knoten **Verwaltung** , **Datensammlung** und dann **Systemdaten-Sammlungssätze**.  
   
 2.  Klicken Sie mit der rechten Maustaste auf den Sammlungssatz, den Sie starten möchten, und klicken Sie anschließend auf **Datenauflistsatz starten**.  
 
@@ -75,7 +75,7 @@ ms.locfileid: "88471427"
   
 #### <a name="to-stop-a-collection-set"></a>So beenden Sie einen Sammlungssatz  
   
-1.  Erweitern Sie im Objekt-Explorer nacheinander die Knoten **Verwaltung** , **Datensammlung**und dann **Systemdaten-Sammlungssätze**.  
+1.  Erweitern Sie im Objekt-Explorer nacheinander die Knoten **Verwaltung** , **Datensammlung** und dann **Systemdaten-Sammlungssätze**.  
   
 2.  Klicken Sie mit der rechten Maustaste auf den Sammlungssatz, den Sie beenden möchten, und klicken Sie anschließend auf **Datensammlungssatz beenden**.  
   

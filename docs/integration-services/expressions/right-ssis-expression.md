@@ -14,10 +14,10 @@ ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dbf49e07dd37e621ed5a733e8f1ad22e5d057b1f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88477429"
 ---
 # <a name="right-ssis-expression"></a>RIGHT (SSIS-Ausdruck)
@@ -45,7 +45,7 @@ RIGHT(character_expression,integer_expression)
  DT_WSTR  
   
 ## <a name="remarks"></a>Bemerkungen  
- Wenn *integer_expression* größer ist als die Länge von *character_expression*, gibt die Funktion *character_expression*zurück.  
+ Wenn *integer_expression* größer ist als die Länge von *character_expression*, gibt die Funktion *character_expression* zurück.  
   
  Falls *integer_expression* null ist, gibt die Funktion eine leere Zeichenfolge zurück.  
   

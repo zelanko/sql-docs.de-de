@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1427a47837063db4fd617c8489d99a3ab7927d15
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88499383"
 ---
 # <a name="set-index-options"></a>Festlegen von Indexoptionen
@@ -85,8 +85,8 @@ Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht.
 2. Klicken Sie auf das Pluszeichen, um den Ordner **Tabellen** zu erweitern.
 3. Klicken Sie auf das Pluszeichen, um die Tabelle zu erweitern, in der Sie die Eigenschaften eines Indexes ändern möchten.
 4. Klicken Sie auf das Pluszeichen, um den Ordner **Indizes** zu erweitern.
-5. Klicken Sie mit der rechten Maustaste auf den Index, dessen Eigenschaften Sie ändern möchten, und wählen Sie **Eigenschaften**aus.
-6. Wählen Sie unter **Seite auswählen**die Option **Optionen**aus.
+5. Klicken Sie mit der rechten Maustaste auf den Index, dessen Eigenschaften Sie ändern möchten, und wählen Sie **Eigenschaften** aus.
+6. Wählen Sie unter **Seite auswählen** die Option **Optionen** aus.
 7. Ändern Sie die Einstellungen beliebiger oder aller Eigenschaften, um den Index anzupassen.
 8. Zum Hinzufügen, Entfernen oder Ändern der Position einer Indexspalte wählen Sie auf der Seite **Allgemein** im Dialogfeld **Index Properties –** _Indexname_ (Indexeigenschaften – Indexname) aus. Weitere Informationen finden Sie unter [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md).
 

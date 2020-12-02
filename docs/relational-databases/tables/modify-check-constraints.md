@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 024897c426ed1bee082a75f44365698274424977
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88488561"
 ---
 # <a name="modify-check-constraints"></a>Ändern von CHECK-Einschränkungen
@@ -52,11 +52,11 @@ ms.locfileid: "88488561"
   
 #### <a name="to-modify-a-check-constraint"></a>So ändern Sie eine CHECK-Einschränkung  
   
-1.  Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf die Tabelle mit der CHECK-Einschränkung, und wählen Sie dann **Entwerfen**aus.  
+1.  Klicken Sie im **Objekt-Explorer** mit der rechten Maustaste auf die Tabelle mit der CHECK-Einschränkung, und wählen Sie dann **Entwerfen** aus.  
   
 2.  Klicken Sie im Menü **Tabellen-Designer** auf **Einschränkungen überprüfen...** .  
   
-3.  Wählen Sie im Dialogfeld **CHECK-Einschränkungen** unter **Ausgewählte CHECK-Einschränkung**die Einschränkung aus, die Sie bearbeiten möchten.  
+3.  Wählen Sie im Dialogfeld **CHECK-Einschränkungen** unter **Ausgewählte CHECK-Einschränkung** die Einschränkung aus, die Sie bearbeiten möchten.  
   
 4.  Führen Sie eine Aktion aus der folgenden Tabelle aus:  
   

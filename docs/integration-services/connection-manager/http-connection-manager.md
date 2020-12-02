@@ -21,10 +21,10 @@ ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cd88a7f40787ecc33d99fe0c749c477f23b526a3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88496134"
 ---
 # <a name="http-connection-manager"></a>HTTP-Verbindungs-Manager
@@ -95,7 +95,7 @@ ms.locfileid: "88496134"
  Geben Sie eine Segmentgröße zum Schreiben von Daten an.  
   
  **Verbindung testen**  
- Nachdem die Konfiguration des HTTP-Verbindungs-Managers abgeschlossen ist, bestätigen Sie die Gültigkeit der Verbindung, indem Sie auf **Verbindung testen**klicken.  
+ Nachdem die Konfiguration des HTTP-Verbindungs-Managers abgeschlossen ist, bestätigen Sie die Gültigkeit der Verbindung, indem Sie auf **Verbindung testen** klicken.  
   
 ## <a name="http-connection-manager-editor-proxy-page"></a>HTTP-Verbindungs-Manager-Editor (Seite Proxy)
   Auf der Registerkarte **Proxy** des Dialogfelds **HTTP-Verbindungs-Manager-Editor** können Sie den HTTP-Verbindungs-Manager für die Verwendung eines Proxyservers konfigurieren. Eine HTTP-Verbindung ermöglicht Paketen den Zugriff auf einen Webserver, indem zum Senden und Empfangen von Dateien HTTP verwendet wird.  
@@ -131,7 +131,7 @@ ms.locfileid: "88496134"
  Geben Sie eine Adresse ein, für die Sie den Proxyserver umgehen möchten.  
   
  **Remove**  
- Wählen Sie eine Adresse aus, und entfernen Sie sie dann, indem Sie auf **Entfernen**klicken.  
+ Wählen Sie eine Adresse aus, und entfernen Sie sie dann, indem Sie auf **Entfernen** klicken.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Webdienst (Task)](../../integration-services/control-flow/web-service-task.md)   

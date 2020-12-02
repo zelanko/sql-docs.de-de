@@ -17,10 +17,10 @@ ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5cde3dc6eb7805f412ed7e820fb4946cf0c20c1a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88477639"
 ---
 # <a name="ole-db-command-transformation"></a>Transformation für OLE DB-Befehl
@@ -38,9 +38,9 @@ ms.locfileid: "88477639"
   
 -   Geben Sie die Standardcodepage an.  
   
- In der Regel enthält die SQL-Anweisung Parameter. Die Parameterwerte sind in externen Spalten in der Transformationseingabe gespeichert, und beim Zuordnen einer Eingabespalte zu einer externen Spalte wird eine Eingabespalte einem Parameter zugeordnet. Angenommen, Sie möchten Zeilen in der **DimProduct** -Tabelle anhand des Werts in der **ProductKey** -Spalte suchen und diese dann löschen. Hierzu können Sie die externe Spalte **Param_0** der **ProductKey** -Eingabespalte zuordnen und anschließend den SQL-Befehl `DELETE FROM DimProduct WHERE ProductKey = ?`ausführen. Die Transformation für OLE DB-Befehl stellt die Parameternamen bereit, die nicht geändert werden können. Die Parameternamen lauten **Param_0**, **Param_1**usw.  
+ In der Regel enthält die SQL-Anweisung Parameter. Die Parameterwerte sind in externen Spalten in der Transformationseingabe gespeichert, und beim Zuordnen einer Eingabespalte zu einer externen Spalte wird eine Eingabespalte einem Parameter zugeordnet. Angenommen, Sie möchten Zeilen in der **DimProduct** -Tabelle anhand des Werts in der **ProductKey** -Spalte suchen und diese dann löschen. Hierzu können Sie die externe Spalte **Param_0** der **ProductKey** -Eingabespalte zuordnen und anschließend den SQL-Befehl `DELETE FROM DimProduct WHERE ProductKey = ?`ausführen. Die Transformation für OLE DB-Befehl stellt die Parameternamen bereit, die nicht geändert werden können. Die Parameternamen lauten **Param_0**, **Param_1** usw.  
   
- Wenn Sie die Transformation für OLE DB-Befehl mithilfe des Dialogfelds **Erweiterter Editor** konfigurieren, können die Parameter in der SQL-Anweisung automatisch externen Spalten in der Transformationseingabe zugeordnet und die Merkmale jedes Parameters definiert werden, indem Sie auf die Schaltfläche **Aktualisieren** klicken. Wenn jedoch der von der Transformation für OLE DB-Befehl verwendete OLE DB-Anbieter das Ableiten von Parameterinformationen von dem Parameter nicht unterstützt, müssen Sie die externen Spalten manuell konfigurieren. Das heißt, Sie müssen der Transformation für jeden Parameter zur externen Eingabe eine Spalte hinzufügen, die Spaltennamen aktualisieren, um Namen wie **Param_0**zu verwenden, den Wert der DBParamInfoFlags-Eigenschaft angeben sowie die Eingabespalten, die Parameterwerte enthalten, den externen Spalten zuordnen.  
+ Wenn Sie die Transformation für OLE DB-Befehl mithilfe des Dialogfelds **Erweiterter Editor** konfigurieren, können die Parameter in der SQL-Anweisung automatisch externen Spalten in der Transformationseingabe zugeordnet und die Merkmale jedes Parameters definiert werden, indem Sie auf die Schaltfläche **Aktualisieren** klicken. Wenn jedoch der von der Transformation für OLE DB-Befehl verwendete OLE DB-Anbieter das Ableiten von Parameterinformationen von dem Parameter nicht unterstützt, müssen Sie die externen Spalten manuell konfigurieren. Das heißt, Sie müssen der Transformation für jeden Parameter zur externen Eingabe eine Spalte hinzufügen, die Spaltennamen aktualisieren, um Namen wie **Param_0** zu verwenden, den Wert der DBParamInfoFlags-Eigenschaft angeben sowie die Eingabespalten, die Parameterwerte enthalten, den externen Spalten zuordnen.  
   
  Der Wert von DBParamInfoFlags stellt die Merkmale des Parameters dar. Beispielsweise gibt der Wert **1** an, dass der Parameter ein Eingabeparameter ist, und der Wert **65** gibt an, dass der Parameter ein Eingabeparameter ist und einen NULL-Wert enthalten kann. Die Werte müssen mit den Werten in der OLE DB-Enumeration DBPARAMFLAGSENUM übereinstimmen. Weitere Informationen finden Sie in der OLE DB-Referenzdokumentation.  
   
@@ -63,25 +63,25 @@ ms.locfileid: "88477639"
   
 2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
   
-3.  Klicken Sie auf die Registerkarte **Datenfluss** , und ziehen Sie dann aus dem Fenster **Toolbox**die Transformation für OLE DB-Befehl auf die Entwurfsoberfläche.  
+3.  Klicken Sie auf die Registerkarte **Datenfluss** , und ziehen Sie dann aus dem Fenster **Toolbox** die Transformation für OLE DB-Befehl auf die Entwurfsoberfläche.  
   
 4.  Verbinden Sie die Transformation für den OLE DB-Befehl mit dem Datenfluss, indem Sie einen Connector (der grüne oder rote Pfeil) von einer Datenquelle oder einer vorherigen Transformation mit der Maus auf die Transformation für den OLE DB-Befehl ziehen.  
   
-5.  Klicken Sie mit der rechten Maustaste auf die Komponente, und wählen Sie „Bearbeiten“ oder **Erweiterten Editor anzeigen**aus.  
+5.  Klicken Sie mit der rechten Maustaste auf die Komponente, und wählen Sie „Bearbeiten“ oder **Erweiterten Editor anzeigen** aus.  
   
 6.  Wählen Sie auf der Registerkarte **Verbindungs-Manager** in der Liste **Verbindungs-Manager** einen OLE DB-Verbindungs-Manager aus. Weitere Informationen finden Sie unter [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
 7.  Klicken Sie auf die Registerkarte **Komponenteneigenschaften**, und klicken Sie im Feld **SqlCommand** auf die Schaltfläche mit den Auslassungspunkten (**...**).  
   
-8.  Geben Sie in **Zeichenfolgenwert-Editor**die parametrisierte SQL-Anweisung mithilfe eines Fragezeichens (?) als Parametermarkierung für jeden Parameter ein.  
+8.  Geben Sie in **Zeichenfolgenwert-Editor** die parametrisierte SQL-Anweisung mithilfe eines Fragezeichens (?) als Parametermarkierung für jeden Parameter ein.  
   
-9. Klicken Sie auf **Aktualisieren**. Wenn Sie auf **Aktualisieren**klicken, erstellt die Transformation eine Spalte für jeden Parameter in der Sammlung externer Spalten und legt die DBParamInfoFlags-Eigenschaft fest.  
+9. Klicken Sie auf **Aktualisieren**. Wenn Sie auf **Aktualisieren** klicken, erstellt die Transformation eine Spalte für jeden Parameter in der Sammlung externer Spalten und legt die DBParamInfoFlags-Eigenschaft fest.  
   
 10. Klicken Sie auf die Registerkarte **Eingabe- und Ausgabeeigenschaften** .  
   
-11. Erweitern Sie **Eingabe des OLE DB-Befehls**und anschließend **Externe Spalten**.  
+11. Erweitern Sie **Eingabe des OLE DB-Befehls** und anschließend **Externe Spalten**.  
   
-12. Überprüfen Sie, ob **Externe Spalten** eine Spalte für jeden Parameter in der SQL-Anweisung auflistet. Die Spaltennamen lauten **Param_0**, **Param_1**usw.  
+12. Überprüfen Sie, ob **Externe Spalten** eine Spalte für jeden Parameter in der SQL-Anweisung auflistet. Die Spaltennamen lauten **Param_0**, **Param_1** usw.  
   
      Die Spaltennamen sollten nicht geändert werden. Wenn Sie die Spaltennamen ändern, generiert [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] einen Überprüfungsfehler für die Transformation für den OLE DB-Befehl.  
   
@@ -91,13 +91,13 @@ ms.locfileid: "88477639"
   
     -   Klicken Sie für jeden Parameter in der SQL-Anweisung einmal auf **Spalte hinzufügen** .  
   
-    -   Aktualisieren Sie die Spaltennamen auf **Param_0**, **Param_1**usw.  
+    -   Aktualisieren Sie die Spaltennamen auf **Param_0**, **Param_1** usw.  
   
     -   Geben Sie einen Wert in der DBParamInfoFlags-Eigenschaft an. Der Wert muss mit einem Wert in der OLE DB-Enumeration DBPARAMFLAGSENUM übereinstimmen. Weitere Informationen finden Sie in der OLE DB-Referenzdokumentation.  
   
     -   Geben Sie den Datentyp der Spalte und, in Abhängigkeit vom Datentyp, die Codepage, die Länge, die Genauigkeit und die Dezimalstellen der Spalte an.  
   
-    -   Wenn Sie einen nicht verwendeten Parameter löschen möchten, wählen Sie den Parameter in **Externe Spalten**aus, und klicken Sie auf **Spalte entfernen**.  
+    -   Wenn Sie einen nicht verwendeten Parameter löschen möchten, wählen Sie den Parameter in **Externe Spalten** aus, und klicken Sie auf **Spalte entfernen**.  
   
     -   Klicken Sie auf **Spaltenzuordnungen** , und ordnen Sie Spalten in der Liste **Verfügbare Eingabespalten** Parametern in der Liste **Verfügbare Zielspalten** zu.  
   

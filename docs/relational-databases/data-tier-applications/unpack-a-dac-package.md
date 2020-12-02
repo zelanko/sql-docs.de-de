@@ -15,10 +15,10 @@ ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: dee530c223890a51ab255d319db9a7772e0ce686
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88499853"
 ---
 # <a name="unpack-a-dac-package"></a>Entpacken eines DAC-Pakets
@@ -35,11 +35,11 @@ ms.locfileid: "88499853"
 ##  <a name="unpack-data-tier-application-dialog"></a><a name="UnpackDACDial"></a> Datenebenenanwendung entpacken  
  **So entpacken Sie eine DAC-Paketdatei**  
   
--   Navigieren Sie im **Windows-Explorer**zum Speicherort einer DAC-Paketdatei (.dacpac).  
+-   Navigieren Sie im **Windows-Explorer** zum Speicherort einer DAC-Paketdatei (.dacpac).  
   
 -   Öffnen Sie das Dialogfeld "Datenebenenanwendung entpacken" mit einer dieser beiden Methoden:  
   
-    1.  Klicken Sie mit der rechten Maustaste auf die DAC-Paketdatei (.dacpac), und wählen Sie **Entpacken**aus.  
+    1.  Klicken Sie mit der rechten Maustaste auf die DAC-Paketdatei (.dacpac), und wählen Sie **Entpacken** aus.  
   
     2.  Doppelklicken Sie auf die DAC-Paketdatei.  
   

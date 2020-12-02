@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b14aaaceadcc5cabeb8fad667879cae60e2d1331
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88499338"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Angeben des Füllfaktors für einen Index
@@ -97,7 +97,7 @@ ms.locfileid: "88499338"
   
 5.  Klicken Sie mit der rechten Maustaste auf den Index mit dem Füllfaktor, den Sie angeben möchten, und wählen Sie **Eigenschaften**.  
   
-6.  Wählen Sie unter **Seite auswählen**die Option **Optionen**aus.  
+6.  Wählen Sie unter **Seite auswählen** die Option **Optionen** aus.  
   
 7.  Geben Sie in der Zeile **Füllfaktor** den gewünschten Füllfaktor ein.  
   

@@ -12,10 +12,10 @@ ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d938b3d742dd9d4b43f0a9b3704281392d89049d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495803"
 ---
 # <a name="look-up-rfc-destination"></a>RFC-Ziel suchen
@@ -36,11 +36,11 @@ ms.locfileid: "88495803"
   
 2.  Doppelklicken Sie auf der Registerkarte **Datenfluss** auf die SAP BW-Quelle oder das SAP BW-Ziel.  
   
-3.  Klicken Sie im **Quellen-Editor für SAP BW** oder im **Ziel-Editor für SAP BW**auf **Verbindungs-Manager** , um die Seite **Verbindungs-Manager** des Editors zu öffnen.  
+3.  Klicken Sie im **Quellen-Editor für SAP BW** oder im **Ziel-Editor für SAP BW** auf **Verbindungs-Manager** , um die Seite **Verbindungs-Manager** des Editors zu öffnen.  
   
 4.  Klicken Sie auf der Seite **Verbindungs-Manager** im Gruppenfeld **RFC-Ziel** auf **Suchen** , um das Dialogfeld **RFC-Ziel suchen** anzuzeigen.  
   
-     Das Gruppenfeld **RFC-Ziel**wird im **Quellen-Editor für SAP BW** nur angezeigt, wenn der Wert für **Ausführungsmodus****P - Prozesskette auslösen** oder **W - Benachrichtigung abwarten**lautet.  
+     Das Gruppenfeld **RFC-Ziel** wird im **Quellen-Editor für SAP BW** nur angezeigt, wenn der Wert für **Ausführungsmodus****P - Prozesskette auslösen** oder **W - Benachrichtigung abwarten** lautet.  
   
 ## <a name="options"></a>Tastatur  
  **Ziel**  
@@ -50,7 +50,7 @@ ms.locfileid: "88495803"
  Zeigt den Servernamen oder die IP-Adresse des Gatewayhosts an. Normalerweise ist der Name oder die IP-Adresse identisch mit dem SAP-Anwendungsserver.  
   
  **Gatewaydienst**  
- Zeigt den Namen des Gatewaydiensts im Format **sapgwNN**an, wobei **NN** der Systemnummer entspricht.  
+ Zeigt den Namen des Gatewaydiensts im Format **sapgwNN** an, wobei **NN** der Systemnummer entspricht.  
   
  **Programm-ID**  
  Zeigt die Programm-ID an, die dem RFC-Ziel zugeordnet ist.  

@@ -19,16 +19,16 @@ ms.assetid: 99ef7100-2c4b-4f07-8d66-b343da94b023
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 18d3a992b3f3d5eeecb09a16ce3fb6d582ee2fb2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88479347"
 ---
 # <a name="stcurven-geography-data-type"></a>STCurveN (geography-Datentyp)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Gibt die Kurve zurück, die von einer Instanz von **geography** angegeben wurde und eine **LineString**, **CircularString**oder **CompoundCurve**ist.  
+  Gibt die Kurve zurück, die von einer Instanz von **geography** angegeben wurde und eine **LineString**, **CircularString** oder **CompoundCurve** ist.  
   
 ## <a name="syntax"></a>Syntax  
   

@@ -15,10 +15,10 @@ ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8be99986e6ca9ded5bb28e53b5c3ae166e8b86b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88490944"
 ---
 # <a name="json-path-expressions-sql-server"></a>JSON-Pfadausdrücke (SQL Server)
@@ -44,7 +44,7 @@ ms.locfileid: "88490944"
 2.  Der [Pfad](#PATH) selbst.  
 
 ##  <a name="path-mode"></a><a name="PATHMODE"></a> Path mode  
- Am Anfang des Pfadausdrucks können Sie optional den „path mode“ deklarieren, indem Sie das Schlüsselwort **lax** oder **strict**angeben. Der Standardwert ist **lax**.  
+ Am Anfang des Pfadausdrucks können Sie optional den „path mode“ deklarieren, indem Sie das Schlüsselwort **lax** oder **strict** angeben. Der Standardwert ist **lax**.  
   
 -   Im Modus **lax** gibt die Funktion leere Werte zurück, falls der Pfadausdruck einen Fehler enthält. Falls Sie beispielsweise den Wert **$.name** anfordern und der JSON-Text keinen **name**-Schlüssel enthält, gibt die Funktion NULL zurück, löst jedoch keinen Fehler aus.  
   

@@ -14,10 +14,10 @@ ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ccd18ea2d13b643899b5492b0151984b275b8c80
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88484565"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>Ziel-Editor für SAP BW (Seite Verbindungs-Manager)
@@ -38,7 +38,7 @@ ms.locfileid: "88484565"
   
 2.  Doppelklicken Sie auf der Registerkarte **Datenfluss** auf das SAP BW-Ziel.  
   
-3.  Klicken Sie im **Ziel-Editor für SAP BW**auf **Verbindungs-Manager** , um die Seite **Verbindungs-Manager** des Editors zu öffnen.  
+3.  Klicken Sie im **Ziel-Editor für SAP BW** auf **Verbindungs-Manager** , um die Seite **Verbindungs-Manager** des Editors zu öffnen.  
   
 ## <a name="options"></a>Tastatur  
   
@@ -46,7 +46,7 @@ ms.locfileid: "88484565"
 >  Wenn Sie nicht alle Werte kennen, die zur Konfiguration des Ziels erforderlich sind, müssen Sie ggf. Ihren SAP-Administrator um Unterstützung bitten.  
   
  **SAP BW-Verbindungs-Manager**  
- Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
+ Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu** klicken.  
   
  **Neu**  
  Erstellen Sie mithilfe des Dialogfelds **SAP BW-Verbindungs-Manager** einen neuen Verbindungs-Manager.  
@@ -86,7 +86,7 @@ ms.locfileid: "88484565"
  Geben Sie den Servernamen oder die IP-Adresse des Gatewayhosts ein. Normalerweise ist der Name oder die IP-Adresse identisch mit dem SAP-Anwendungsserver.  
   
  **Gatewaydienst**  
- Geben Sie den Namen des Gatewaydiensts im Format **sapgwNN**ein, wobei **NN** der Systemnummer entspricht.  
+ Geben Sie den Namen des Gatewaydiensts im Format **sapgwNN** ein, wobei **NN** der Systemnummer entspricht.  
   
  **Programm-ID**  
  Geben Sie die Programm-ID ein, die dem RFC-Ziel zugeordnet ist.  

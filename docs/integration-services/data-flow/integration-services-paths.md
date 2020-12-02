@@ -22,10 +22,10 @@ ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a69d70b9e58458303dbba3444b6a8c38fb40ccc0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495856"
 ---
 # <a name="integration-services-paths"></a>SQL Server Integration Services-Pfade
@@ -42,7 +42,7 @@ ms.locfileid: "88495856"
   
  Zu den konfigurierbaren Pfadeigenschaften gehört der Name, die Beschreibung und die Anmerkung des Pfads. Pfade können auch programmgesteuert konfiguriert werden. Weitere Informationen finden Sie unter [Programmgesteuertes Verbinden von Datenflusskomponenten](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
   
- Eine Pfadanmerkung zeigt den Namen der Pfadquelle oder den Pfadnamen in der Entwurfsoberfläche der Registerkarte **Datenfluss** im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer an. Pfadanmerkungen sind mit den Anmerkungen vergleichbar, die Sie Datenflüssen, Ablaufsteuerungen und Ereignishandlern hinzufügen können. Der einzige Unterschied besteht darin, dass eine Pfadanmerkung einem Pfad hinzugefügt wird, während andere Anmerkungen auf den Registerkarten **Datenfluss**, **Ablaufsteuerung**und **Ereignishandler**des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers angezeigt werden.  
+ Eine Pfadanmerkung zeigt den Namen der Pfadquelle oder den Pfadnamen in der Entwurfsoberfläche der Registerkarte **Datenfluss** im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer an. Pfadanmerkungen sind mit den Anmerkungen vergleichbar, die Sie Datenflüssen, Ablaufsteuerungen und Ereignishandlern hinzufügen können. Der einzige Unterschied besteht darin, dass eine Pfadanmerkung einem Pfad hinzugefügt wird, während andere Anmerkungen auf den Registerkarten **Datenfluss**, **Ablaufsteuerung** und **Ereignishandler** des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers angezeigt werden.  
   
  Die Metadaten zeigen den Namen, den Datentyp, die Genauigkeit, die Dezimalstellen, die Länge, die Codepage und die Quellkomponente jeder Spalte in der Ausgabe der vorherigen Komponente an. Die Quellkomponente ist jene Datenflusskomponente, die die Spalte erstellt hat. Dies kann, muss aber nicht die erste Komponente im Datenfluss sein. Beispielsweise werden mit einer Transformation für UNION ALL und einer Transformation zum Sortieren eigene Spalten erstellt, die die Quelle der Ausgabespalten sind. Dagegen können Spalten mit einer Transformation für das Kopieren von Spalten durchlaufen werden, ohne sie zu ändern. Es können auch neue Spalten erstellt werden, indem Eingabespalten kopiert werden. Die Transformation für das Kopieren von Spalten ist nur für neue Spalten die Quellkomponente.  
 
@@ -55,7 +55,7 @@ Mit Pfaden werden zwei Datenflusskomponenten verbunden. Wenn Sie Pfadeigenschaft
   
 3.  Klicken Sie auf die Registerkarte **Datenfluss** , und doppelklicken Sie auf einen Pfad.  
   
-4.  Klicken Sie im Dialogfeld **Datenflusspfad-Editor**auf **Allgemein**. Nun können Sie den Standardnamen des Pfades bearbeiten und eine Beschreibung des Pfades angeben. Sie können auch die PathAnnotation-Eigenschaft ändern.  
+4.  Klicken Sie im Dialogfeld **Datenflusspfad-Editor** auf **Allgemein**. Nun können Sie den Standardnamen des Pfades bearbeiten und eine Beschreibung des Pfades angeben. Sie können auch die PathAnnotation-Eigenschaft ändern.  
   
 5.  Klicken Sie auf **OK**.  
   
@@ -159,6 +159,6 @@ Die Datenflussobjekte im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
   
 |Eigenschaftenname|Datentyp|BESCHREIBUNG|  
 |-------------------|---------------|-----------------|  
-|PathAnnotation|Ganze Zahl (Enumeration)|Ein Wert, der angibt, ob eine Anmerkung mit dem Pfad auf der Designeroberfläche angezeigt werden soll. Die möglichen Werte sind **AsNeeded**, **SourceName**, **PathName**und **Never**. Der Standardwert ist **AsNeeded**.|  
+|PathAnnotation|Ganze Zahl (Enumeration)|Ein Wert, der angibt, ob eine Anmerkung mit dem Pfad auf der Designeroberfläche angezeigt werden soll. Die möglichen Werte sind **AsNeeded**, **SourceName**, **PathName** und **Never**. Der Standardwert ist **AsNeeded**.|  
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|Die dem Pfad zugeordnete Eingabe.|  
 |SourceName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>|Die dem Pfad zugeordnete Ausgabe.|  

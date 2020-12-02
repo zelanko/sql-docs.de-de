@@ -14,10 +14,10 @@ ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dab03a43269739bbf77101f8ded9dac68ff2b8f3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495758"
 ---
 # <a name="sap-bw-source-editor-columns-page"></a>Quellen-Editor für SAP BW (Seite Spalten)
@@ -41,7 +41,7 @@ ms.locfileid: "88495758"
   
 2.  Doppelklicken Sie auf der Registerkarte **Datenfluss** auf die SAP BW-Quelle.  
   
-3.  Klicken Sie im **Quellen-Editor für SAP BW**auf **Spalten** , um die Seite **Spalten** des Editors zu öffnen.  
+3.  Klicken Sie im **Quellen-Editor für SAP BW** auf **Spalten** , um die Seite **Spalten** des Editors zu öffnen.  
   
 ## <a name="options"></a>Tastatur  
   

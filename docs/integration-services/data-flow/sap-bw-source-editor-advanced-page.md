@@ -14,10 +14,10 @@ ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 433698b83ed1148f473062658b95d99e9657e6ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495752"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>Quellen-Editor für SAP BW (Seite Erweitert)
@@ -41,7 +41,7 @@ ms.locfileid: "88495752"
   
 2.  Doppelklicken Sie auf der Registerkarte **Datenfluss** auf die SAP BW-Quelle.  
   
-3.  Klicken Sie im **Quellen-Editor für SAP BW**auf **Erweitert** , um die Seite **Erweitert** des Editors zu öffnen.  
+3.  Klicken Sie im **Quellen-Editor für SAP BW** auf **Erweitert** , um die Seite **Erweitert** des Editors zu öffnen.  
   
 ## <a name="options"></a>Tastatur  
   
@@ -64,7 +64,7 @@ ms.locfileid: "88495752"
 >  Diese Option ist nur gültig, wenn Sie auf der Seite **Verbindungs-Manager** des Editors **W – Benachrichtigung abwarten** als Wert für den **Ausführungsmodus** ausgewählt haben. Informationen hierzu finden Sie unter [Quellen-Editor für SAP BW &#40;Seite Verbindungs-Manager&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md).  
   
  **Anfrage-ID**  
- Geben Sie die Anforderungs-ID an, deren Status Sie auf „G – Grün“ zurücksetzen möchten, wenn Sie auf **Zurücksetzen**klicken.  
+ Geben Sie die Anforderungs-ID an, deren Status Sie auf „G – Grün“ zurücksetzen möchten, wenn Sie auf **Zurücksetzen** klicken.  
   
  **Zurücksetzen**  
  Mit dieser Option können Sie den Status der angegebenen Anforderungs-ID auf G - Grün zurücksetzen, nachdem Ihre Bestätigung angefordert wurde. Dies kann hilfreich sein, wenn ein Problem aufgetreten ist und das SAP NetWeaver BW-System die Anforderung mit einem gelben oder roten Status gekennzeichnet hat.  

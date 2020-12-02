@@ -18,10 +18,10 @@ ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e4f59f38a15bf7a703bbdf18277b4e384d1f4c94
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495136"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>Tools zur Problembehandlung für die Paketentwicklung
@@ -34,11 +34,11 @@ ms.locfileid: "88495136"
 ## <a name="troubleshooting-design-time-validation-issues"></a>Behandlung von Problemen bei der Überprüfung zur Entwurfszeit  
  Wenn in der aktuellen Version von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]ein Paket geöffnet wird, werden vom System alle Verbindungen überprüft, bevor alle Datenflusskomponenten überprüft werden, sowie alle langsamen oder nicht verfügbaren Verbindungen auf den Offlinemodus festgelegt. So kann die Verzögerung beim Überprüfen des Paketdatenflusses reduziert werden.  
   
- Wenn ein Paket geöffnet wurde, können Sie eine Verbindung auch deaktivieren, indem Sie mit der rechten Maustaste im Bereich **Verbindungs-Manager** auf den Verbindungs-Manager und anschließend auf **Offline arbeiten**klicken. So können Vorgänge im SSIS-Designer beschleunigt werden.  
+ Wenn ein Paket geöffnet wurde, können Sie eine Verbindung auch deaktivieren, indem Sie mit der rechten Maustaste im Bereich **Verbindungs-Manager** auf den Verbindungs-Manager und anschließend auf **Offline arbeiten** klicken. So können Vorgänge im SSIS-Designer beschleunigt werden.  
   
  Auf den Offlinemodus festgelegte Verbindungen bleiben offline, bis Sie eine der folgenden Aktionen ausführen:  
   
--   Testen Sie die Verbindung, indem Sie mit der rechten Maustaste im Bereich **Verbindungs-Manager** des SSIS-Designers auf den Verbindungs-Manager und anschließend auf **Verbindung testen**klicken.  
+-   Testen Sie die Verbindung, indem Sie mit der rechten Maustaste im Bereich **Verbindungs-Manager** des SSIS-Designers auf den Verbindungs-Manager und anschließend auf **Verbindung testen** klicken.  
   
      Eine Verbindung ist beispielsweise anfänglich auf den Offlinemodus festgelegt, wenn das Paket geöffnet wird. Sie ändern die Verbindungszeichenfolge, um das Problem zu beheben, und klicken auf **Verbindung testen** , um die Verbindung zu testen.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "88495136"
   
 -   **Konfiguration der DelayValidation-Eigenschaft für Paketelemente, die bis zur Laufzeit nicht gültig sind**. Zum Verhindern von Überprüfungsfehlern können Sie für Paketelemente, deren Konfigurationen zur Entwurfszeit ungültig sind, **DelayValidation** auf **True** festlegen. Ein Beispiel hierfür wäre ein Datenflusstask, der eine Zieltabelle verwendet, die erst zur Laufzeit durch einen Task 'SQL ausführen' erstellt wird. Die **DelayValidation** -Eigenschaft kann auf Paketebene oder auf der Ebene der einzelnen, in den Paketen enthaltenen Tasks und Container aktiviert werden. In der Regel sollte bei der Bereitstellung des Pakets diese Eigenschaft für die betreffenden Paketelemente auf dem Wert **True** festgelegt bleiben, da andernfalls die gleichen Überprüfungsfehler zur Laufzeit auftreten.  
   
-     Die **DelayValidation** -Eigenschaft kann für einen Datenflusstask, jedoch nicht für einzelne Datenflusskomponenten festgelegt werden. Sie erreichen ein ähnliches Ergebnis, wenn Sie die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> -Eigenschaft einzelner Datenflusskomponenten auf **FALSE**. Wenn jedoch der Wert dieser Eigenschaft auf **false**festgelegt ist, erkennt die Komponente keine Änderungen der Metadaten externer Datenquellen.  
+     Die **DelayValidation** -Eigenschaft kann für einen Datenflusstask, jedoch nicht für einzelne Datenflusskomponenten festgelegt werden. Sie erreichen ein ähnliches Ergebnis, wenn Sie die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> -Eigenschaft einzelner Datenflusskomponenten auf **FALSE**. Wenn jedoch der Wert dieser Eigenschaft auf **false** festgelegt ist, erkennt die Komponente keine Änderungen der Metadaten externer Datenquellen.  
   
  Wenn vom Paket verwendete Datenbankobjekte zum Zeitpunkt der Überprüfung gesperrt sind, reagiert der Überprüfungsvorgang möglicherweise nicht mehr. Unter diesen Umständen reagiert der [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer ebenfalls nicht mehr. Sie können die Überprüfung fortsetzen, indem Sie die zugehörigen Sitzung in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]schließen. Sie können dieses Problem auch mit den in diesem Abschnitt beschriebenen Einstellungen umgehen.  
   

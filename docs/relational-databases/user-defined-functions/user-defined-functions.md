@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7abbff8fbf88ccca3a0226b651da11f0825436b1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88472918"
 ---
 # <a name="user-defined-functions"></a>Benutzerdefinierte Funktionen
@@ -50,7 +50,7 @@ Gründe für die Verwendung benutzerdefinierter Funktionen
   
 ##  <a name="types-of-functions"></a><a name="FunctionTypes"></a> Funktionstypen  
 **Skalarfunktion**  
- Benutzerdefinierte Skalarfunktionen geben einen einzelnen Datenwert des definierten Datentyps in einer RETURNS-Klausel zurück. Bei einer Inlineskalarfunktion ist der zurückgegebene Skalarwert das Ergebnis einer einzelnen Anweisung. Bei einer aus mehreren Anweisungen bestehenden Skalarfunktion kann der Hauptteil der Funktion eine Reihe von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen enthalten, die den einzelnen Wert zurückgeben. Der Rückgabetyp kann ein beliebiger Datentypen mit Ausnahme von **text**, **ntext**, **image**, **cursor**und **timestamp**sein. 
+ Benutzerdefinierte Skalarfunktionen geben einen einzelnen Datenwert des definierten Datentyps in einer RETURNS-Klausel zurück. Bei einer Inlineskalarfunktion ist der zurückgegebene Skalarwert das Ergebnis einer einzelnen Anweisung. Bei einer aus mehreren Anweisungen bestehenden Skalarfunktion kann der Hauptteil der Funktion eine Reihe von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen enthalten, die den einzelnen Wert zurückgeben. Der Rückgabetyp kann ein beliebiger Datentypen mit Ausnahme von **text**, **ntext**, **image**, **cursor** und **timestamp** sein. 
  **[Beispiele.](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)**
   
 **Tabellenwertfunktionen**  

@@ -18,10 +18,10 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: abbd77be3e20cc69bc12cd69f07fa82ec99d95db
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88470464"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Verschieben eines vorhandenen Indexes in eine andere Dateigruppe
@@ -64,7 +64,7 @@ ms.locfileid: "88470464"
   
 2.  Klicken Sie auf das Pluszeichen, um den Ordner **Tabellen** zu erweitern.  
   
-3.  Klicken Sie mit der rechten Maustaste auf die Tabelle mit dem zu verschiebenden Index, und wählen Sie **Entwurf**aus.  
+3.  Klicken Sie mit der rechten Maustaste auf die Tabelle mit dem zu verschiebenden Index, und wählen Sie **Entwurf** aus.  
   
 4.  Klicken Sie im Menü **Tabellen-Designer** auf **Indizes/Schlüssel**.  
   
@@ -88,9 +88,9 @@ ms.locfileid: "88470464"
   
 4.  Klicken Sie auf das Pluszeichen, um den Ordner **Indizes** zu erweitern.  
   
-5.  Klicken Sie mit der rechten Maustaste auf den Index, den Sie verschieben möchten, und wählen Sie **Eigenschaften**aus.  
+5.  Klicken Sie mit der rechten Maustaste auf den Index, den Sie verschieben möchten, und wählen Sie **Eigenschaften** aus.  
   
-6.  Wählen Sie unter **Seite auswählen**die Option **Speicher**aus.  
+6.  Wählen Sie unter **Seite auswählen** die Option **Speicher** aus.  
   
 7.  Wählen Sie die Dateigruppe aus, in die der Index verschoben werden soll.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "88470464"
   
 8.  Klicken Sie auf **OK**.  
   
- Die folgenden Informationen sind auf der Seite **Speicher** des Dialogfelds **Indexeigenschaften – ** _Indexname_ verfügbar:  
+ Die folgenden Informationen sind auf der Seite **Speicher** des Dialogfelds **Indexeigenschaften –** _Indexname_ verfügbar:  
   
  **Dateigruppe**  
  Speichert den Index in der angegebenen Dateigruppe. Diese Liste enthält nur Standarddateigruppen (ROW). Die Standardauswahl in der Liste ist die PRIMARY-Dateigruppe der Datenbank.  

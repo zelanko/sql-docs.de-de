@@ -17,16 +17,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b20ea3e11cc08463a377616e319c8398525c90b4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88470432"
 ---
 # <a name="rename-indexes"></a>Umbenennen von Indizes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  In diesem Thema wird beschrieben, wie ein Index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]umbenannt wird. Wenn Sie einen Index umbenennen, wird der aktuelle Name des Indexes durch den neuen Namen ersetzt, den Sie bereitstellen. Der angegebene Name muss innerhalb der Tabelle oder Sicht eindeutig sein. So können z.B. zwei Tabellen über einen Index mit dem Namen **XPK_1**verfügen; innerhalb derselben Tabelle können jedoch nicht zwei Indizes mit dem Namen **XPK_1**verwendet werden. Sie können keinen Index mit dem gleichen Namen erstellen, den ein vorhandener deaktivierter Index aufweist. Das Umbenennen eines Indexes bewirkt nicht, dass der Index neu erstellt wird.  
+  In diesem Thema wird beschrieben, wie ein Index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]umbenannt wird. Wenn Sie einen Index umbenennen, wird der aktuelle Name des Indexes durch den neuen Namen ersetzt, den Sie bereitstellen. Der angegebene Name muss innerhalb der Tabelle oder Sicht eindeutig sein. So können z.B. zwei Tabellen über einen Index mit dem Namen **XPK_1** verfügen; innerhalb derselben Tabelle können jedoch nicht zwei Indizes mit dem Namen **XPK_1** verwendet werden. Sie können keinen Index mit dem gleichen Namen erstellen, den ein vorhandener deaktivierter Index aufweist. Das Umbenennen eines Indexes bewirkt nicht, dass der Index neu erstellt wird.  
   
  **In diesem Thema**  
   
