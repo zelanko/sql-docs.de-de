@@ -17,11 +17,11 @@ ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 41a59d34bd6b84388f9fc32443b703bdf94f3239
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91728101"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123692"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Hinzufügen oder Löschen eines Tasks oder Containers in einer Ablaufsteuerung
 
@@ -44,7 +44,7 @@ ms.locfileid: "91728101"
   
 3.  Klicken Sie auf die Registerkarte **Ablaufsteuerung** .  
   
-4.  Klicken Sie im Menü **Ansicht**auf **Toolbox** , um **Toolbox** zu öffnen.  
+4.  Klicken Sie im Menü **Ansicht** auf **Toolbox** , um **Toolbox** zu öffnen.  
   
 5.  Erweitern Sie **Ablaufsteuerungselemente** und **Wartungstasks**.  
   

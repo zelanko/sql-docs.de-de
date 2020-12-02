@@ -15,11 +15,11 @@ ms.assetid: e298776e-d18a-4393-a8e6-65ee3d555749
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8e081ecc3eecf44e358d5288fa689e2676d21f22
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496056"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123660"
 ---
 # <a name="azure-hdinsight-delete-cluster-task"></a>Azure HDInsight-Delete Cluster-Task
 
@@ -33,7 +33,7 @@ Der **Azure HDInsight-Delete Cluster-Task** ist eine Komponente des [SQL Server 
 > [!NOTE]
 > Das Löschen eines HDInsight-Clusters kann 10-20 Minuten in Anspruch nehmen.  
   
-Um einen **Azure HDInsight-Delete Cluster-Task**hinzuzufügen, legen Sie ihn mittels Drag &amp; Drop auf dem SSIS-Designer ab, und doppelklicken Sie darauf, oder klicken Sie mit der rechten Maustaste, und klicken Sie dann auf **Bearbeiten** , um das folgende Dialogfeld A **zure HDInsight-Delete Cluster-Task-Editor** anzuzeigen.  
+Um einen **Azure HDInsight-Delete Cluster-Task** hinzuzufügen, legen Sie ihn mittels Drag &amp; Drop auf dem SSIS-Designer ab, und doppelklicken Sie darauf, oder klicken Sie mit der rechten Maustaste, und klicken Sie dann auf **Bearbeiten** , um das folgende Dialogfeld A **zure HDInsight-Delete Cluster-Task-Editor** anzuzeigen.  
   
 Die folgende Tabelle enthält Beschreibungen für die Felder in diesem Dialogfeld.  
   

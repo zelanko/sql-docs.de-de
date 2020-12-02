@@ -14,10 +14,10 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 ms.openlocfilehash: 01b629b65c7f8ab1571aa53a944a8525bd09a0b0
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "93235453"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Handbuch für die Überprüfung und Optimierung nach der Migration
@@ -94,7 +94,7 @@ Falsche oder fehlende Indizes führt zu zusätzlicher Eingabe/Ausgabe, wegen der
 > [!NOTE]
 > Bei Migrationen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird dieses Szenario bei einer Migration auf eine neuere, unveränderte Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nicht berücksichtigt, wenn das Problem auf dem Quell-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bereits bestand.
 
-Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer kann nur Informationen berücksichtigen, die zum Zeitpunkt der Kompilierung bekannt sind. Wenn eine Arbeitsauslastung Prädikate nutzt, die nur zum Zeitpunkt der Ausführung bekannt sein können, erhöht sich das Risiko einer schlechten Planauswahl. Für einen qualitativ noch hochwertigeren Plan zu erhalten, müssen Prädikate **SARGable** , oder „ **S** earch **Arg** ument **able** “ sein.
+Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer kann nur Informationen berücksichtigen, die zum Zeitpunkt der Kompilierung bekannt sind. Wenn eine Arbeitsauslastung Prädikate nutzt, die nur zum Zeitpunkt der Ausführung bekannt sein können, erhöht sich das Risiko einer schlechten Planauswahl. Für einen qualitativ noch hochwertigeren Plan zu erhalten, müssen Prädikate **SARGable**, oder „**S** earch **Arg** ument **able**“ sein.
 
 Einige Beispiele für nicht SARGable-Prädikate sind:
 -   Implizite Datenkonvertierungen wie VARCHAR, NVARCHAR oder INT zu VARCHAR. Suchen Sie in den tatsächlichen Ausführungsplänen nach CONVERT_IMPLICIT-Laufzeitwarnungen. Das Konvertieren von einem Typ in einen anderen kann auch zu einem Genauigkeitsverlust führen.

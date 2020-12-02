@@ -14,11 +14,11 @@ ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 85beabd085481a48d6681bbaf2d2d381a1d0df93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425972"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123559"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Optionen für die Anforderung für Spaltenmusterprofil (Datenprofilerstellungs-Task)
 
@@ -28,12 +28,12 @@ ms.locfileid: "88425972"
   Verwenden Sie den Bereich **Anforderungseigenschaften** der Seite **Profilanforderungen** , um die Optionen für die im Anforderungsbereich ausgewählte **Anforderung für Spaltenmusterprofil** festzulegen. Ein Spaltenmusterprofil meldet einen Satz von regulären Ausdrücken, die den angegebenen Prozentsatz der Werte in einer Zeichenfolgenspalte abdecken. Mit diesem Profil können Sie Probleme in Ihren Daten, wie z. B. ungültige Zeichenfolgen, ermitteln und reguläre Ausdrücke vorschlagen, die in Zukunft zum Überprüfen neuer Werte verwendet werden können. Beispiel: Ein Musterprofil einer Spalte mit US-Postleitzahlen kann die regulären Ausdrücke \d{5}-\d{4}, \d{5} und \d{9} erstellen. Wenn Sie andere reguläre Ausdrücke erhalten, enthalten Ihre Daten wahrscheinlich ungültige oder falsch formatierte Werte.  
   
 > [!NOTE]  
->  Die in diesem Thema beschriebenen Optionen werden auf der Seite **Profilanforderungen** im **Editor für den Datenprofilerstellungs-Task**angezeigt. Weitere Informationen zu dieser Seite des Editors finden Sie unter [Editor für den Datenprofilerstellungs-Task &#40;Seite „Profilanforderungen“&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md).  
+>  Die in diesem Thema beschriebenen Optionen werden auf der Seite **Profilanforderungen** im **Editor für den Datenprofilerstellungs-Task** angezeigt. Weitere Informationen zu dieser Seite des Editors finden Sie unter [Editor für den Datenprofilerstellungs-Task &#40;Seite „Profilanforderungen“&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md).  
   
  Weitere Informationen zum Verwenden des Datenprofilerstellungs-Tasks finden Sie unter [Einrichten von Datenprofilerstellungs-Tasks](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Weitere Informationen zum Verwenden des Datenprofil-Viewers zum Analysieren der Ausgabe des Datenprofilerstellungs-Tasks finden Sie unter [Datenprofil-Viewer](../../integration-services/control-flow/data-profile-viewer.md).  
   
 ## <a name="understanding-the-use-of-delimiters-and-symbols"></a>Grundlegendes zur Verwendung von Trennzeichen und Symbolen  
- Vor dem Berechnen der Muster für eine **Anforderung für Spaltenmusterprofil**versieht der Datenprofilerstellungs-Task die Daten mit einem Token. Das heißt, der Task unterteilt die Zeichenfolgenwerte in kleinere Einheiten, die als Token bezeichnet werden. Der Task unterteilt Zeichenfolgen anhand der Trennzeichen und Symbole, die Sie für die **Delimiters** -Eigenschaft und die **Symbols** -Eigenschaft angeben, in Token:  
+ Vor dem Berechnen der Muster für eine **Anforderung für Spaltenmusterprofil** versieht der Datenprofilerstellungs-Task die Daten mit einem Token. Das heißt, der Task unterteilt die Zeichenfolgenwerte in kleinere Einheiten, die als Token bezeichnet werden. Der Task unterteilt Zeichenfolgen anhand der Trennzeichen und Symbole, die Sie für die **Delimiters** -Eigenschaft und die **Symbols** -Eigenschaft angeben, in Token:  
   
 -   **Trennzeichen** Standardmäßig enthält die Liste der Trennzeichen die folgenden Zeichen: Leerzeichen, horizontaler Tabstopp (\t), Neue-Zeile-Zeichen (\n) und Wagenrücklauf (\r). Sie können zusätzliche Trennzeichen angeben, Sie können die Standardtrennzeichen jedoch nicht entfernen.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "88425972"
  Alle Trennzeichen werden im Rahmen des Prozesses zur Tokenerstellung in ein Leerzeichen normalisiert, während Symbole beibehalten werden.  
   
 ## <a name="understanding-the-use-of-the-tag-table"></a>Grundlegendes zur Verwendung der Tagtabelle  
- Sie können zusammengehörige Token optional mit einem Tag gruppieren. Dazu speichern Sie Tags und die zugehörigen Ausdrücke in einer speziellen Tabelle, die Sie in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank erstellen. Die Tagtabelle muss zwei Zeichenfolgenspalten aufweisen, eine mit der Bezeichnung "Tag" und eine weitere mit der Bezeichnung "Begriff". Diese Spalten können vom Typ **char**, **nchar**, **varchar**oder **nvarchar**sein, jedoch nicht **text** oder **ntext**. Sie können mehrere Tags und die entsprechenden Ausdrücke in einer einzelnen Tabelle kombinieren. Eine Anforderung für Spaltenmusterprofil kann nur eine Tagtabelle verwenden. Sie können einen separaten [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager verwenden, um eine Verbindung zur Tagtabelle herzustellen. Daher kann sich die Tagtabelle in einer anderen Datenbank oder auf einem anderen Server befinden als die Quelldaten.  
+ Sie können zusammengehörige Token optional mit einem Tag gruppieren. Dazu speichern Sie Tags und die zugehörigen Ausdrücke in einer speziellen Tabelle, die Sie in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank erstellen. Die Tagtabelle muss zwei Zeichenfolgenspalten aufweisen, eine mit der Bezeichnung "Tag" und eine weitere mit der Bezeichnung "Begriff". Diese Spalten können vom Typ **char**, **nchar**, **varchar** oder **nvarchar** sein, jedoch nicht **text** oder **ntext**. Sie können mehrere Tags und die entsprechenden Ausdrücke in einer einzelnen Tabelle kombinieren. Eine Anforderung für Spaltenmusterprofil kann nur eine Tagtabelle verwenden. Sie können einen separaten [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager verwenden, um eine Verbindung zur Tagtabelle herzustellen. Daher kann sich die Tagtabelle in einer anderen Datenbank oder auf einem anderen Server befinden als die Quelldaten.  
   
  Sie können z. B. die Werte "Ost", "West", "Nord" und "Süd", die in Straßennamen angezeigt werden können, mit dem Tag "Richtung" gruppieren. Die folgende Tabelle ist ein Beispiel für eine Tagtabelle.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "88425972"
  Derselbe Begriff kann zu mehreren Tags gehören.  
   
 ## <a name="request-properties-options"></a>Optionen für Anforderungseigenschaften  
- Für eine **Anforderung für Spaltenmusterprofil**zeigt der Bereich **Anforderungseigenschaften** die folgenden Gruppen von Optionen an:  
+ Für eine **Anforderung für Spaltenmusterprofil** zeigt der Bereich **Anforderungseigenschaften** die folgenden Gruppen von Optionen an:  
   
 -   **Daten**, die die Optionen **TableOrView** und **Spalte** enthalten  
   

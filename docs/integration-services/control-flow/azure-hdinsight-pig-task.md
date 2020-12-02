@@ -15,11 +15,11 @@ ms.assetid: 26f34f64-f344-486e-9190-acf71aef29a8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a7e5d57d54bc54cf6e905d66bf7d6687c737e070
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484652"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123623"
 ---
 # <a name="azure-hdinsight-pig-task"></a>Azure HDInsight Pig-Task
 
@@ -28,7 +28,7 @@ ms.locfileid: "88484652"
 
 Verwenden Sie den **Azure HDInsight Pig-Task** zum Ausführen eines Pig-Skripts auf einem Azure HDInsight-Cluster.
      
-Um einen **Azure HDInsight-Pig-Task**hinzuzufügen, legen Sie ihn mittels Drag &amp; Drop auf dem SSIS-Designer ab, und doppelklicken Sie darauf, oder klicken Sie mit der rechten Maustaste, und klicken Sie anschließend auf **Bearbeiten** , um das folgende Dialogfeld **Azure HDInsight-Pig-Task-Editor** anzuzeigen.  
+Um einen **Azure HDInsight-Pig-Task** hinzuzufügen, legen Sie ihn mittels Drag &amp; Drop auf dem SSIS-Designer ab, und doppelklicken Sie darauf, oder klicken Sie mit der rechten Maustaste, und klicken Sie anschließend auf **Bearbeiten** , um das folgende Dialogfeld **Azure HDInsight-Pig-Task-Editor** anzuzeigen.  
   
 Der **Azure HDInsight-Pig-Task** ist eine Komponente des [SQL Server Integration Services-Feature Packs (SSIS) für Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
   

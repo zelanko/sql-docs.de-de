@@ -21,10 +21,10 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c066add73dbc8049f389c828363f1157bb39edae
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92194552"
 ---
 # <a name="xml-source"></a>XML-Quelle
@@ -108,7 +108,7 @@ ms.locfileid: "92194552"
  Gibt an, ob die XML-Quelldaten das XSD-Schema enthalten, mit dem die Struktur und die Daten definiert und überprüft werden.  
   
  **XSD-Speicherort**  
- Geben Sie den Pfad und den Dateinamen der XSD-Schemadatei ein, oder suchen Sie die Datei, indem Sie auf die Schaltfläche **Durchsuchen**klicken.  
+ Geben Sie den Pfad und den Dateinamen der XSD-Schemadatei ein, oder suchen Sie die Datei, indem Sie auf die Schaltfläche **Durchsuchen** klicken.  
   
  **Durchsuchen**  
  Mithilfe des Dialogfelds **Öffnen** können Sie die XSD-Schemadatei suchen.  
@@ -120,7 +120,7 @@ ms.locfileid: "92194552"
   
 #### <a name="data-access-mode--xml-file-location"></a>Datenzugriffsmodus = Speicherort der XML-Datei  
  **XML-Speicherort**  
- Geben Sie den Pfad und den Dateinamen der XML-Datendatei ein, oder suchen Sie die Datei, indem Sie auf die Schaltfläche **Durchsuchen**klicken.  
+ Geben Sie den Pfad und den Dateinamen der XML-Datendatei ein, oder suchen Sie die Datei, indem Sie auf die Schaltfläche **Durchsuchen** klicken.  
   
  **Durchsuchen**  
  Mithilfe des Dialogfelds **Öffnen** können Sie die XML-Datendatei suchen.  
@@ -154,7 +154,7 @@ ms.locfileid: "92194552"
  Zeigt den Namen der Datenquelle an.  
   
  **Spalte**  
- Zeigt die externen (Quell-)Spalten an, die im Dialogfeld **Quellen-Editor für XML** auf der Seite **Verbindungs-Manager**ausgewählt wurden.  
+ Zeigt die externen (Quell-)Spalten an, die im Dialogfeld **Quellen-Editor für XML** auf der Seite **Verbindungs-Manager** ausgewählt wurden.  
   
  **Fehler**  
  Gibt an, was bei Auftreten eines Fehlers geschehen soll: den Fehler ignorieren, die Zeile umleiten oder die Komponente mit einem Fehler abbrechen.  

@@ -17,10 +17,10 @@ ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 12d70dc722250d33de52bf8d1f13d1ab06083108
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92194769"
 ---
 # <a name="odbc-source"></a>ODBC-Quelle
@@ -134,7 +134,7 @@ ms.locfileid: "92194769"
   
 2.  Doppelklicken Sie auf der Registerkarte **Datenfluss** auf die ODBC-Quelle.  
   
-3.  Klicken Sie im **Quellen-Editor für ODBC**auf **Spalten**.  
+3.  Klicken Sie im **Quellen-Editor für ODBC** auf **Spalten**.  
   
 ### <a name="options"></a>Optionen  
   
@@ -159,7 +159,7 @@ ms.locfileid: "92194769"
   
 -   Doppelklicken Sie auf der Registerkarte **Datenfluss** auf die ODBC-Quelle.  
   
--   Klicken Sie im **Quellen-Editor für ODBC**auf **Fehlerausgabe**.  
+-   Klicken Sie im **Quellen-Editor für ODBC** auf **Fehlerausgabe**.  
   
 ### <a name="options"></a>Tastatur  
   

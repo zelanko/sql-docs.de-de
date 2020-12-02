@@ -16,11 +16,11 @@ ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 29fb988b6c326f9c6bb6ef39d5d1fc031d12f908
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88351906"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123781"
 ---
 # <a name="folder-properties-dialog-box"></a>Ordnereigenschaften (Dialogfeld)
 
@@ -31,13 +31,13 @@ ms.locfileid: "88351906"
   
 ## <a name="to-set-folder-description-and-permissions"></a>So legen Sie die Ordnerbeschreibung und Berechtigungen fest  
   
-1.  Klicken Sie mit der rechten Maustaste auf den Ordner, und wählen Sie **Eigenschaften**aus.  
+1.  Klicken Sie mit der rechten Maustaste auf den Ordner, und wählen Sie **Eigenschaften** aus.  
   
 2.  Wählen Sie auf der Seite **Allgemein** unter **Allgemein** die Option **Beschreibung** aus, und geben Sie eine optionale Beschreibung ein.  
   
 3.  Klicken Sie auf der Seite **Berechtigungen** auf **Durchsuchen**, wählen Sie einen oder mehrere Datenbankprinzipale aus, und klicken Sie auf **OK**.  
   
-4.  Wählen Sie unter **Anmeldungen oder Rollen** einen Namen aus, und geben Sie die entsprechenden Berechtigungen unter **Berechtigungen**an.  
+4.  Wählen Sie unter **Anmeldungen oder Rollen** einen Namen aus, und geben Sie die entsprechenden Berechtigungen unter **Berechtigungen** an.  
   
 5.  Klicken Sie auf **OK** , um die Änderungen zu akzeptieren, und schließen Sie das Dialogfeld für die **Eigenschaften der Ordner**.  
   

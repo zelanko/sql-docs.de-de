@@ -24,11 +24,11 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 307d27f85d5643b837298418279e22dc9225ac67
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423584"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96121381"
 ---
 # <a name="enhance-general-replication-performance"></a>Verbessern der allgemeinen Replikationsleistung
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "88423584"
   
 -   Schränken Sie die Verwendung des LOB-Datentyps (Large OBjects) ein.  
   
-     LOBs beanspruchen mehr Speicherplatz und Verarbeitungszeit als andere Spaltendatentypen. Verwenden Sie diese Spalten nur dann in Artikeln, wenn sie für die Anwendung erforderlich sind. Die Datentypen **text**, **ntext**und **image** sind als veraltet markiert. Wenn Sie LOBs verwenden, sollten Sie auf die Datentypen **varchar(max)**, **nvarchar(max)** und **varbinary(max)** zurückgreifen.  
+     LOBs beanspruchen mehr Speicherplatz und Verarbeitungszeit als andere Spaltendatentypen. Verwenden Sie diese Spalten nur dann in Artikeln, wenn sie für die Anwendung erforderlich sind. Die Datentypen **text**, **ntext** und **image** sind als veraltet markiert. Wenn Sie LOBs verwenden, sollten Sie auf die Datentypen **varchar(max)**, **nvarchar(max)** und **varbinary(max)** zurückgreifen.  
   
      Verwenden Sie für die Transaktionsreplikation das Verteilungs-Agentprofil **Verteilungsprofil für das OLE DB-Streaming**. Weitere Informationen finden Sie unter [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   

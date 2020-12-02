@@ -12,10 +12,10 @@ ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8d62e20117bf23511a1d261142a3618dcbd5095a
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195330"
 ---
 # <a name="sap-bw-source"></a>SAP BW-Quelle
@@ -49,7 +49,7 @@ ms.locfileid: "92195330"
   
 1.  Melden Sie sich über die SAP GUI bei SAP NetWeaver BW an, geben Sie den Transaktionscode SM59 ein, und erstellen Sie ein RFC-Ziel:  
   
-    1.  Wählen Sie für **Verbindungstyp**die Option **TCP/IP**aus.  
+    1.  Wählen Sie für **Verbindungstyp** die Option **TCP/IP** aus.  
   
     2.  Wählen Sie für **Activation Type**(Aktivierungstyp) die Option **Registered Server Program**(Registriertes Serverprogramm) aus.  
   

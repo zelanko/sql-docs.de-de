@@ -23,11 +23,11 @@ ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 584fcb85f71d253fd2ecc471d64c58579cf2c233
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688378"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124268"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -102,7 +102,7 @@ ALTER FULLTEXT INDEX ON table_name
 >  Ob der Volltextindex aufgefüllt wird, nachdem eine Spalte hinzugefügt oder entfernt wurde, hängt davon ab, ob die Änderungsnachverfolgung aktiviert wurde und WITH NO POPULATION angegeben ist. Weitere Informationen finden Sie unter [Interaktionen zwischen der Änderungsnachverfolgung und dem Parameter NO POPULATION](#change-tracking-no-population).
   
  TYPE COLUMN *type_column_name*  
- Gibt den Namen der Tabellenspalte *table_column_name* an, die den Dokumenttyp für ein Dokument vom Typ **varbinary**,** varbinary(max)** oder **image** enthält. Diese Spalte, als Typspalte bezeichnet, enthält eine vom Benutzer angegebene Dateierweiterung (.doc, .pdf, .xls usw.) Die Typspalte muss vom Typ **char**, **nchar**, **varchar**oder **nvarchar**sein.  
+ Gibt den Namen der Tabellenspalte *table_column_name* an, die den Dokumenttyp für ein Dokument vom Typ **varbinary**,**varbinary(max)** oder **image** enthält. Diese Spalte, als Typspalte bezeichnet, enthält eine vom Benutzer angegebene Dateierweiterung (.doc, .pdf, .xls usw.) Die Typspalte muss vom Typ **char**, **nchar**, **varchar** oder **nvarchar** sein.  
   
  Geben Sie TYPE COLUMN *type_column_name* nur an, wenn *column_name* eine Spalte vom Typ **varbinary**, **varbinary(max)** oder **image** angibt, in der Daten als Binärdaten gespeichert werden. Andernfalls gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler zurück.  
   
@@ -154,7 +154,7 @@ ALTER FULLTEXT INDEX ON table_name
  Gibt an, dass jede Zeile der Tabelle für die Volltextindizierung abgerufen werden soll, auch wenn die Zeilen bereits indiziert wurden.  
   
  INCREMENTAL  
- Gibt an, dass nur die Zeilen für die Volltextindizierung abgerufen werden sollen, die seit dem letzten Auffüllen geändert wurden. INCREMENTAL kann nur angewendet werden, wenn die Tabelle eine Spalte vom Typ **timestamp**besitzt. Falls eine Tabelle im Volltextkatalog keine Spalte vom Typ **timestamp** besitzt, wird die Tabelle vollständig aufgefüllt.  
+ Gibt an, dass nur die Zeilen für die Volltextindizierung abgerufen werden sollen, die seit dem letzten Auffüllen geändert wurden. INCREMENTAL kann nur angewendet werden, wenn die Tabelle eine Spalte vom Typ **timestamp** besitzt. Falls eine Tabelle im Volltextkatalog keine Spalte vom Typ **timestamp** besitzt, wird die Tabelle vollständig aufgefüllt.  
   
  UPDATE  
  Gibt die Verarbeitung aller Einfügungen, Updates oder Löschungen seit dem letzten Update des Index für die Änderungsnachverfolgung an. Das Auffüllen der Änderungsnachverfolgung muss in einer Tabelle aktiviert sein, nicht aktiviert sein sollten jedoch die Aktualisierung des Index im Hintergrund und die automatische Änderungsnachverfolgung.  

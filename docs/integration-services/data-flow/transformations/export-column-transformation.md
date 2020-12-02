@@ -23,11 +23,11 @@ ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1cf2f0799896bfaac652e00a7736a0de3d8be97e
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194604"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123367"
 ---
 # <a name="export-column-transformation"></a>Transformation für das Exportieren von Spalten
 
@@ -44,11 +44,11 @@ ms.locfileid: "92194604"
 |False|False|Nein|Die Transformation erstellt eine neue Datei und schreibt die Daten in die Datei.|  
 |True|False|Nein|Die Transformation erstellt eine neue Datei und schreibt die Daten in die Datei.|  
 |False|True|Nein|Die Transformation erstellt eine neue Datei und schreibt die Daten in die Datei.|  
-|True|True|No|Zur Entwurfszeit tritt bei der Überprüfung der Transformation ein Fehler auf. Beide Eigenschaften dürfen nicht auf **true**festgelegt werden.|  
+|True|True|No|Zur Entwurfszeit tritt bei der Überprüfung der Transformation ein Fehler auf. Beide Eigenschaften dürfen nicht auf **true** festgelegt werden.|  
 |False|False|Yes|Ein Laufzeitfehler tritt auf. Die Datei ist vorhanden, aber die Transformation kann nicht in diese schreiben.|  
 |False|True|Yes|Die Transformation löscht die Datei und erstellt sie neu und schreibt die Daten in diese Datei.|  
 |True|False|Yes|Die Transformation öffnet die Datei und fügt die Daten am Dateiende an.|  
-|True|True|Yes|Zur Entwurfszeit tritt bei der Überprüfung der Transformation ein Fehler auf. Beide Eigenschaften dürfen nicht auf **true**festgelegt werden.|  
+|True|True|Yes|Zur Entwurfszeit tritt bei der Überprüfung der Transformation ein Fehler auf. Beide Eigenschaften dürfen nicht auf **true** festgelegt werden.|  
   
 ## <a name="configuration-of-the-export-column-transformation"></a>Konfiguration der Transformation für das Exportieren von Spalten  
  Es gibt folgende Möglichkeiten, um die Transformation für das Exportieren von Spalten zu konfigurieren:  
@@ -81,10 +81,10 @@ ms.locfileid: "92194604"
   
 ### <a name="options"></a>Optionen  
  **Spalte extrahieren**  
- Wählen Sie Spalten aus der Liste der Eingabespalten aus, die Text- oder Bilddaten enthalten. Alle Zeilen sollten Definitionen für **Spalte extrahieren** und **Dateipfadspalte**aufweisen.  
+ Wählen Sie Spalten aus der Liste der Eingabespalten aus, die Text- oder Bilddaten enthalten. Alle Zeilen sollten Definitionen für **Spalte extrahieren** und **Dateipfadspalte** aufweisen.  
   
  **Dateipfadspalte**  
- Wählen Sie Spalten aus der Liste der Eingabespalten aus, die Dateipfade und Dateinamen enthalten. Alle Zeilen sollten Definitionen für **Spalte extrahieren** und **Dateipfadspalte**aufweisen.  
+ Wählen Sie Spalten aus der Liste der Eingabespalten aus, die Dateipfade und Dateinamen enthalten. Alle Zeilen sollten Definitionen für **Spalte extrahieren** und **Dateipfadspalte** aufweisen.  
   
  **Anfügen zulassen**  
  Geben Sie an, ob Daten durch die Transformation an vorhandene Dateien angefügt werden sollen. Die Standardeinstellung ist **false**.  

@@ -20,10 +20,10 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1dfeeecf62ad33ab5d2d66e0fdf454f89036d047
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193826"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services-Variablen (SSIS)
@@ -91,7 +91,7 @@ ms.locfileid: "92193826"
  Gibt die Beschreibung der Variablen an.  
   
  **EvaluateAsExpression**    
- Wenn die Eigenschaft auf **True**festgelegt wird, wird der bereitgestellte Ausdruck zum Festlegen des Variablenwerts verwendet.  
+ Wenn die Eigenschaft auf **True** festgelegt wird, wird der bereitgestellte Ausdruck zum Festlegen des Variablenwerts verwendet.  
   
  **expression**    
  Gibt den der Variablen zugeordneten Ausdruck an.  
@@ -103,10 +103,10 @@ ms.locfileid: "92193826"
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt zwei Namespaces bereit: **User** und **System**. Standardmäßig gehören benutzerdefinierte Variablen zum Namespace **User** und Systemvariablen zum Namespace **System** . Sie können zusätzliche Namespaces für benutzerdefinierte Variablen erstellen und den Namen des **User** -Namespaces ändern. Es ist jedoch nicht möglich, den Namen des **System** -Namespaces zu ändern, dem **System** -Namespace Variablen hinzuzufügen oder Systemvariablen einem anderen Namespace zuzuweisen.  
   
 **RaiseChangedEvent**  
- Wenn die Eigenschaft auf **True**festgelegt wird, wird das **OnVariableValueChanged** -Ereignis bei einer Änderung des Variablenwerts ausgelöst.  
+ Wenn die Eigenschaft auf **True** festgelegt wird, wird das **OnVariableValueChanged** -Ereignis bei einer Änderung des Variablenwerts ausgelöst.  
   
  **ReadOnly**  
- Wenn die Eigenschaft auf **False**festgelegt wird, besteht ein Lese- und Schreibzugriff auf die Variable.  
+ Wenn die Eigenschaft auf **False** festgelegt wird, besteht ein Lese- und Schreibzugriff auf die Variable.  
   
 **Umfang**    
  > [!NOTE]  
@@ -123,13 +123,13 @@ ms.locfileid: "92193826"
   
  Für benutzerdefinierte Variablen setzt das System die **IncludeInDebugDump** -Option jedoch auf **false** zurück, wenn die folgenden Bedingungen erfüllt sind:  
   
--   Wenn die **EvaluateAsExpression** -Variableneigenschaft auf **true**festgelegt ist, setzt das System die **IncludeInDebugDump** -Option auf **false**zurück.  
+-   Wenn die **EvaluateAsExpression** -Variableneigenschaft auf **true** festgelegt ist, setzt das System die **IncludeInDebugDump** -Option auf **false** zurück.  
   
-     Um den Text des Ausdrucks als Variablenwert in die Debugdumpdatei einzuschließen, legen Sie die **IncludeInDebugDump** -Option auf **true**fest.  
+     Um den Text des Ausdrucks als Variablenwert in die Debugdumpdatei einzuschließen, legen Sie die **IncludeInDebugDump** -Option auf **true** fest.  
   
--   Wenn der Datentyp der Variablen in eine Zeichenfolge umgewandelt wird, setzt das System die **IncludeInDebugDump** -Option auf **false**zurück.  
+-   Wenn der Datentyp der Variablen in eine Zeichenfolge umgewandelt wird, setzt das System die **IncludeInDebugDump** -Option auf **false** zurück.  
   
- Wenn das System die **IncludeInDebugDump** -Option auf **false**zurücksetzt, wird möglicherweise der vom Benutzer gewählte Wert überschrieben.  
+ Wenn das System die **IncludeInDebugDump** -Option auf **false** zurücksetzt, wird möglicherweise der vom Benutzer gewählte Wert überschrieben.  
   
 **Wert**    
 Der Wert einer benutzerdefinierten Variable kann ein Literal oder ein Ausdruck sein. Der Wert einer Variable darf nicht NULL sein. Variablen enthalten die folgenden Standardwerte:
@@ -159,7 +159,7 @@ Eine Variable enthält Optionen zum Festlegen des Variablenwerts und des Datenty
   
  **Datenflussausdrücke** Verwendet Variablen, um Werte in den Ausdrücken bereitzustellen, die die Transformationen Abgeleitete Spalten und Bedingtes Teilen zum Auffüllen der Spalten verwenden, oder um Datenzeilen an verschiedene Transformationsausgaben weiterzuleiten. Beispielsweise verkettet der `@varSalutation + LastName`-Ausdruck den Wert in der `VarSalutation` -Variablen und der `LastName` -Spalte. Der `Income < @HighIncome`-Ausdruck leitet Datenzeilen, in denen der Wert der `Income` -Spalte niedriger ist als der Wert in der `HighIncome` -Variablen an eine Ausgabe weiter. Weitere Informationen finden Sie unter [Transformation für abgeleitete Spalten](../integration-services/data-flow/transformations/derived-column-transformation.md), [Transformation für bedingtes Teilen](../integration-services/data-flow/transformations/conditional-split-transformation.md) und [Integration Services-Ausdrücke &#40;SSIS&#41;](../integration-services/expressions/integration-services-ssis-expressions.md).  
   
- **Rangfolgeneinschränkungs-Ausdrücke** Stellen Werte in Rangfolgeneinschränkungen bereit, um zu bestimmen, ob eine ausführbare Datei ausgeführt wird. Die Ausdrücke können entweder gemeinsam mit einem Ausführungsergebnis (Erfolg, Fehler, Beendigung) oder stattdessen mit einem Ausführungsergebnis verwendet werden. Wenn der Ausdruck `@varMax > @varMin`beispielsweise zu **TRUE**ausgewertet wird, werden die ausführbaren Dateien ausgeführt. Weitere Informationen finden Sie unter [Hinzufügen von Ausdrücken zu Rangfolgeneinschränkungen](./control-flow/precedence-constraints.md).  
+ **Rangfolgeneinschränkungs-Ausdrücke** Stellen Werte in Rangfolgeneinschränkungen bereit, um zu bestimmen, ob eine ausführbare Datei ausgeführt wird. Die Ausdrücke können entweder gemeinsam mit einem Ausführungsergebnis (Erfolg, Fehler, Beendigung) oder stattdessen mit einem Ausführungsergebnis verwendet werden. Wenn der Ausdruck `@varMax > @varMin`beispielsweise zu **TRUE** ausgewertet wird, werden die ausführbaren Dateien ausgeführt. Weitere Informationen finden Sie unter [Hinzufügen von Ausdrücken zu Rangfolgeneinschränkungen](./control-flow/precedence-constraints.md).  
   
  **Parameter und Rückgabecode** Stellt Eingabeparametern Werte bereit oder speichert die Ausgabeparameter und den Rückgabecode. Dies erfolgt durch Zuordnen der Variablen zu Parametern und Rückgabewerten. Wenn sie beispielsweise die `varProductId` -Variable auf 23 festlegen und die `SELECT * from Production.Product WHERE ProductID = ?`-SQL-Anweisung ausführen, ruft die Abfrage das Produkt mit einer `ProductID` von 23 ab. Weitere Informationen finden Sie unter [SQL ausführen (Task)](../integration-services/control-flow/execute-sql-task.md) und [Parameter und Rückgabecodes im Task „SQL ausführen“](./control-flow/execute-sql-task.md).  
   
@@ -261,21 +261,21 @@ Mithilfe des Dialogfelds **Variable hinzufügen** können Sie die Eigenschaften 
   
  Wenn Sie das Fenster **Eigenschaften** verwenden, um Ausdrücke für eine benutzerdefinierte Variable festzulegen:  
   
--   Der Wert dieser Variablen kann durch die Value-Eigenschaft oder die Expression-Eigenschaft festgelegt werden. Standardmäßig ist die EvaluateAsExpression-Eigenschaft auf **False** festgelegt, und der Wert dieser Variablen wird durch die Value-Eigenschaft festgelegt. Um einen Ausdruck zum Festlegen des Werts zu verwenden, müssen Sie zuerst EvaluateAsExpression auf **True**festlegen und dann einen Ausdruck in der Expression-Eigenschaft bereitstellen. Die Value-Eigenschaft wird automatisch auf das Auswertungsergebnis des Ausdrucks festgelegt.  
+-   Der Wert dieser Variablen kann durch die Value-Eigenschaft oder die Expression-Eigenschaft festgelegt werden. Standardmäßig ist die EvaluateAsExpression-Eigenschaft auf **False** festgelegt, und der Wert dieser Variablen wird durch die Value-Eigenschaft festgelegt. Um einen Ausdruck zum Festlegen des Werts zu verwenden, müssen Sie zuerst EvaluateAsExpression auf **True** festlegen und dann einen Ausdruck in der Expression-Eigenschaft bereitstellen. Die Value-Eigenschaft wird automatisch auf das Auswertungsergebnis des Ausdrucks festgelegt.  
   
--   Die ValueType-Eigenschaft enthält den Datentyp des Werts in der Value-Eigenschaft. Wenn Value durch einen Ausdruck festgelegt wird, dann wird ValueType automatisch auf einen Datentyp aktualisiert, der mit dem Auswertungsergebnis des Ausdrucks kompatibel ist. Angenommen, Value enthält 0 und die ValueType-Eigenschaft enthält **Int32** . Nun legen Sie Expression auf GETDATE() fest. Daraufhin enthält Value das aktuelle Datum und die Uhrzeit, und ValueType wird auf **DateTime**festgelegt.  
+-   Die ValueType-Eigenschaft enthält den Datentyp des Werts in der Value-Eigenschaft. Wenn Value durch einen Ausdruck festgelegt wird, dann wird ValueType automatisch auf einen Datentyp aktualisiert, der mit dem Auswertungsergebnis des Ausdrucks kompatibel ist. Angenommen, Value enthält 0 und die ValueType-Eigenschaft enthält **Int32** . Nun legen Sie Expression auf GETDATE() fest. Daraufhin enthält Value das aktuelle Datum und die Uhrzeit, und ValueType wird auf **DateTime** festgelegt.  
   
--   Das ** Eigenschaftenfenster** für die Variable stellt den Zugriff auf das Dialogfeld **Ausdrucks-Generator** bereit. Sie können dieses Tool zum Erstellen, Überprüfen und Auswerten von Ausdrücken verwenden. Weitere Informationen finden Sie unter [Ausdrucks-Generator](../integration-services/expressions/expression-builder.md) und [Integration Services-Ausdrücke &#40;SSIS&#41;](../integration-services/expressions/integration-services-ssis-expressions.md).  
+-   Das **Eigenschaftenfenster** für die Variable stellt den Zugriff auf das Dialogfeld **Ausdrucks-Generator** bereit. Sie können dieses Tool zum Erstellen, Überprüfen und Auswerten von Ausdrücken verwenden. Weitere Informationen finden Sie unter [Ausdrucks-Generator](../integration-services/expressions/expression-builder.md) und [Integration Services-Ausdrücke &#40;SSIS&#41;](../integration-services/expressions/integration-services-ssis-expressions.md).  
   
  Wenn Sie das Fenster **Variablen** verwenden, um Ausdrücke für eine benutzerdefinierte Variable festzulegen:  
   
--   Wenn Sie den Variablenwert mit einem Ausdruck festlegen möchten, stellen Sie zunächst sicher, dass der Variablendatentyp mit dem Auswertungsergebnis des Ausdrucks kompatibel ist. Stellen Sie dann einen Ausdruck in der Spalte **Ausdruck** im Fenster **Variablen** bereit. Die EvaluateAsExpression-Eigenschaft im Fenster **Eigenschaften** wird automatisch auf **True**festgelegt.  
+-   Wenn Sie den Variablenwert mit einem Ausdruck festlegen möchten, stellen Sie zunächst sicher, dass der Variablendatentyp mit dem Auswertungsergebnis des Ausdrucks kompatibel ist. Stellen Sie dann einen Ausdruck in der Spalte **Ausdruck** im Fenster **Variablen** bereit. Die EvaluateAsExpression-Eigenschaft im Fenster **Eigenschaften** wird automatisch auf **True** festgelegt.  
   
 -   Wenn Sie einer Variablen einen Ausdruck zuweisen, wird ein spezieller Symbolmarker neben der Variablen angezeigt. Dieser spezielle Symbolmarker wird auch neben Verbindungs-Managern und Tasks angezeigt, für die Ausdrücke festgelegt wurden.  
   
 -   Das Fenster **Variablen** für die Variable stellt den Zugriff auf das Dialogfeld **Ausdrucks-Generator** bereit. Sie können dieses Tool zum Erstellen, Überprüfen und Auswerten von Ausdrücken verwenden. Weitere Informationen finden Sie unter [Ausdrucks-Generator](../integration-services/expressions/expression-builder.md) und [Integration Services-Ausdrücke &#40;SSIS&#41;](../integration-services/expressions/integration-services-ssis-expressions.md).  
   
- Wenn Sie der Variablen im Fenster **Variablen** oder im **Eigenschaftenfenster** einen Ausdruck zuweisen und **EvaluateAsExpression** auf **True**festgelegt ist, können Sie den Datentyp der Variablen nicht ändern.  
+ Wenn Sie der Variablen im Fenster **Variablen** oder im **Eigenschaftenfenster** einen Ausdruck zuweisen und **EvaluateAsExpression** auf **True** festgelegt ist, können Sie den Datentyp der Variablen nicht ändern.  
   
 ### <a name="set-the-namespace-and-name-properties"></a>Festlegen des Namespaces und der Namenseigenschaften
   

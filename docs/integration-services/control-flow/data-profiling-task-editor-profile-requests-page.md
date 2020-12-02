@@ -16,11 +16,11 @@ ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3365f6540a95639f2f6d4c607bfdee094c550c1c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431002"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123530"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Editor für den Datenprofilerstellungs-Task (Seite 'Profilanforderungen')
 
@@ -37,7 +37,7 @@ ms.locfileid: "88431002"
   
 2.  Doppelklicken Sie auf der Registerkarte **Ablaufsteuerung** auf den Datenprofilerstellungs-Task.  
   
-3.  Klicken Sie im **Editor für den Datenprofilerstellungs-Task**auf **Profilanforderungen**.  
+3.  Klicken Sie im **Editor für den Datenprofilerstellungs-Task** auf **Profilanforderungen**.  
   
 ## <a name="using-the-requests-pane"></a>Verwenden des Anforderungsbereichs  
  Der Anforderungsbereich ist der Bereich, der oben auf der Seite angezeigt wird. In diesem Bereich werden alle Profile aufgelistet, die für den aktuellen Datenprofilerstellungs-Task konfiguriert wurden. Wenn keine Profile konfiguriert wurden, ist der Anforderungsbereich leer. Um ein neues Profil hinzuzufügen, klicken Sie in einen leeren Bereich unter der Spalte **Profiltyp** , und wählen Sie einen Profiltyp aus der Liste aus. Zum Konfigurieren eines Profils wählen Sie das Profil im Anforderungsbereich aus und legen dann die Eigenschaften des Profils im Bereich **Anforderungseigenschaften** fest.  
@@ -53,15 +53,15 @@ ms.locfileid: "88431002"
 ### <a name="requests-pane-columns"></a>Spalten im Anforderungsbereich  
  Welche Spalten im Anforderungsbereich angezeigt werden, hängt von der **Sicht** ab, die Sie ausgewählt haben:  
   
--   Wenn Sie **Alle Anforderungen**auswählen, enthält der Anforderungsbereich zwei Spalten: **Profiltyp** und **Anforderungs-ID**.  
+-   Wenn Sie **Alle Anforderungen** auswählen, enthält der Anforderungsbereich zwei Spalten: **Profiltyp** und **Anforderungs-ID**.  
   
--   Wenn Sie die Sicht eines der fünf Spaltenprofile wählen, enthält der Anforderungsbereich vier Spalten: **Profiltyp**, **Tabelle oder Sicht**, **Spalte**und **Anforderungs-ID**.  
+-   Wenn Sie die Sicht eines der fünf Spaltenprofile wählen, enthält der Anforderungsbereich vier Spalten: **Profiltyp**, **Tabelle oder Sicht**, **Spalte** und **Anforderungs-ID**.  
   
--   Wenn Sie die Sicht eines Kandidatenschlüsselprofils auswählen, enthält der Anforderungsbereich vier Spalten: **Profiltyp**, **Tabelle oder Sicht**, **Schlüsselspalten**und **Anforderungs-ID**.  
+-   Wenn Sie die Sicht eines Kandidatenschlüsselprofils auswählen, enthält der Anforderungsbereich vier Spalten: **Profiltyp**, **Tabelle oder Sicht**, **Schlüsselspalten** und **Anforderungs-ID**.  
   
--   Wenn Sie ein funktionales Abhängigkeitsprofil anzeigen, enthält der Anforderungsbereich fünf Spalten: **Profiltyp**, **Tabelle oder Sicht**, **Bestimmende Spalten**, **Abhängige Spalte**und **Anforderungs-ID**.  
+-   Wenn Sie ein funktionales Abhängigkeitsprofil anzeigen, enthält der Anforderungsbereich fünf Spalten: **Profiltyp**, **Tabelle oder Sicht**, **Bestimmende Spalten**, **Abhängige Spalte** und **Anforderungs-ID**.  
   
--   Wenn Sie ein Wertanschlussprofil anzeigen, enthält der Anforderungsbereich sechs Spalten: **Profiltyp**, **Untergeordnete Tabelle oder Sicht**, **Übergeordnete Tabelle oder Sicht**, **Untergeordnete Spalten**, **Übergeordnete Spalten**und **Anforderungs-ID**.  
+-   Wenn Sie ein Wertanschlussprofil anzeigen, enthält der Anforderungsbereich sechs Spalten: **Profiltyp**, **Untergeordnete Tabelle oder Sicht**, **Übergeordnete Tabelle oder Sicht**, **Untergeordnete Spalten**, **Übergeordnete Spalten** und **Anforderungs-ID**.  
   
  In den folgenden Abschnitten wird jede dieser Spalten beschrieben.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "88431002"
  Der Bereich **Anforderungseigenschaften** wird unter dem Anforderungsbereich angezeigt. Dieser Bereich zeigt die Optionen für das Profil an, das Sie im Anforderungsbereich ausgewählt haben.  
   
 > [!NOTE]  
->   Wenn Sie einen **Profiltyp**ausgewählt haben, müssen Sie das Feld **Anforderungs-ID** auswählen, um die Eigenschaften für die Profilanforderung im Bereich **Anforderungseigenschaften** anzuzeigen.  
+>   Wenn Sie einen **Profiltyp** ausgewählt haben, müssen Sie das Feld **Anforderungs-ID** auswählen, um die Eigenschaften für die Profilanforderung im Bereich **Anforderungseigenschaften** anzuzeigen.  
   
  Diese Optionen hängen vom ausgewählten Profil ab. Informationen zu den Optionen für einzelne Profiltypen finden Sie in den folgenden Themen:  
   

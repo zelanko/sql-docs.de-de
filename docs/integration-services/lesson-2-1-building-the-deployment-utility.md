@@ -12,10 +12,10 @@ ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3e1b6c318bd971e5352ad0191ccad51e20f5560a
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193800"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>Lektion 2-1: Erstellen des Bereitstellungshilfsprogramms
@@ -33,13 +33,13 @@ Vor dem Erstellen des Bereitstellungshilfsprogramms müssen Sie die Eigenschafte
   
 1.  Wenn [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] noch nicht geöffnet ist, klicken Sie auf **Start**, zeigen Sie auf **Alle Programme**, zeigen Sie auf **Microsoft SQL Server 2005**, und klicken Sie dann auf **Business Intelligence Development Studio**.  
   
-2.  Klicken Sie im Menü **Datei** auf **Öffnen**&gt; **Projekt/Projektmappe**. Wählen Sie den Ordner **Deployment Tutorial** aus, klicken Sie auf **Öffnen**und anschließend doppelt auf **Deployment Tutorial.sln**.  
+2.  Klicken Sie im Menü **Datei** auf **Öffnen**&gt; **Projekt/Projektmappe**. Wählen Sie den Ordner **Deployment Tutorial** aus, klicken Sie auf **Öffnen** und anschließend doppelt auf **Deployment Tutorial.sln**.  
   
 3.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf „Deployment Tutorial“ und anschließend auf **Eigenschaften**.  
   
 4.  Erweitern Sie im Dialogfeld **Deployment Tutorial-Eigenschaftenseiten** den Knoten Konfigurationseigenschaften, und klicken Sie auf Bereitstellungshilfsprogramm.  
   
-5.  Überprüfen Sie im rechten Bereich des Dialogfelds **Deployment Tutorial-Eigenschaftenseiten** , ob **AllowConfigurationChanges** auf **true**festgelegt ist, legen Sie **CreateDeploymentUtility** auf **true**fest, und aktualisieren Sie optional den Standardwert von **DeploymentOutputPath**.  
+5.  Überprüfen Sie im rechten Bereich des Dialogfelds **Deployment Tutorial-Eigenschaftenseiten** , ob **AllowConfigurationChanges** auf **true** festgelegt ist, legen Sie **CreateDeploymentUtility** auf **true** fest, und aktualisieren Sie optional den Standardwert von **DeploymentOutputPath**.  
   
 6.  Klicken Sie auf **OK**.  
   

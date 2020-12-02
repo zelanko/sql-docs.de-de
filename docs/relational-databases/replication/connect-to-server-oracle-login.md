@@ -16,11 +16,11 @@ ms.assetid: 86ed91a1-a07c-46f2-a913-67317ef2255e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b585e2a17e577aab7ade2c5906bdcd184a12e8dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455593"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96121353"
 ---
 # <a name="connect-to-server-oracle-login"></a>Verbindung mit Server herstellen (Oracle), Anmeldename
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88455593"
  Der TNS-Name (Transparent Network Substrate) des Oracle-Verlegers, der bei Konfiguration der auf dem Verteiler installierten Oracle-Clientsoftware angegeben wurde.  
   
  **Authentifizierung**  
- Wählen Sie **Oracle-Standardauthentifizierung** (empfohlen) oder **Windows-Authentifizierung**aus. Bei Auswahl von **Windows-Authentifizierung**:  
+ Wählen Sie **Oracle-Standardauthentifizierung** (empfohlen) oder **Windows-Authentifizierung** aus. Bei Auswahl von **Windows-Authentifizierung**:  
   
 -   Der Oracle-Server muss so konfiguriert sein, dass mit den Windows-Anmeldeinformationen Verbindungen hergestellt werden können. Weitere Informationen finden Sie in der Oracle-Dokumentation.  
   

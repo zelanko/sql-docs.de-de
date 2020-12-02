@@ -10,10 +10,10 @@ ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ad867768d72d9e03b7d76761bd371dd369c7161b
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "94384729"
 ---
 # <a name="known-errors-and-resolutions-with-change-data-capture-for-oracle-by-attunity"></a>Bekannte Fehler und Lösungen bei Change Data Capture für Oracle von Attunity
@@ -60,11 +60,11 @@ Bevor Sie allzu viel Zeit für Problembehandlung aufwenden, achten Sie darauf, d
 **Version 2.0.0.92** enthält diese Korrekturen: 
 - In den erweiterten Optionen der Attunity CDC-Instanz hinzugefügte Eigenschaften werden entfernt, wenn eine Tabelle zu CDC hinzugefügt oder daraus entfernt wird. Attunity CDC funktioniert nach dem Anwenden einer SQL-Korrektur, die „__$command_id column“ hinzufügt, nicht mehr
 - Fehler bei der Überprüfung der Metadaten für die Oracle-Tabelle „cdc.table_name“. Der column_name-Spaltenindex liegt außerhalb des zulässigen Bereichs.  Ferner dieses Problem: Der Oracle CDC-Dienst zeigt den Status „abgebrochen“ an, wenn CDC für Oracle von Attunity verwendet wird
-    - Behoben in _Kumulatives Update 1 für SQL Server 2014 RTM_ , wie in KB [2894025](https://support.microsoft.com/kb/2894025) beschrieben.
+    - Behoben in _Kumulatives Update 1 für SQL Server 2014 RTM_, wie in KB [2894025](https://support.microsoft.com/kb/2894025) beschrieben.
 - Einige Änderungen fehlen und werden nicht in die SQL Server-Datenbank repliziert. Dieses Problem tritt auf, wenn eine Tabelle mehr als ein CLOB (Character Large Binary Object) enthält und eins der CLOBs einen großen Wert aufweist. 
-    - Behoben in _Kumulatives Update 1 für SQL Server 2014 SP1_ und _Kumulatives Update 8 für SQL Server 2014 RTM_ , wie in KB [3029096](https://support.microsoft.com/kb/3029096) beschrieben. 
+    - Behoben in _Kumulatives Update 1 für SQL Server 2014 SP1_ und _Kumulatives Update 8 für SQL Server 2014 RTM_, wie in KB [3029096](https://support.microsoft.com/kb/3029096) beschrieben. 
 - Change Data Capture für Oracle von Attunity funktioniert nicht mehr, wenn Oracle-Tabellen Spalten mit Long-Datentyp aufweisen.
-    - Behoben in _Kumulatives Update 5 für SQL Server 2014 SP1_ und _Kumulatives Update 12 für SQL Server 2014 RTM_ , wie in KB [3145983](https://support.microsoft.com/kb/3145983) beschrieben.
+    - Behoben in _Kumulatives Update 5 für SQL Server 2014 SP1_ und _Kumulatives Update 12 für SQL Server 2014 RTM_, wie in KB [3145983](https://support.microsoft.com/kb/3145983) beschrieben.
 
 ### <a name="sql-server-2012"></a>SQL Server 2012
 
@@ -78,18 +78,18 @@ Bevor Sie allzu viel Zeit für Problembehandlung aufwenden, achten Sie darauf, d
 - Änderungen gehen verloren
     - Die Ereigniserfassung kann in einer Endlosschleife münden und die Erfassung neuer Datenänderungen beenden (zusammenhängend mit Oracle-Fehler 5623813). Wenn die CDC-Instanz in einer Oracle RAC-Umgebung beendet oder fortgesetzt wird, können Änderungen übersprungen/verloren werden. Dies bedeutet, dass in der SQL Server Change Data Capture wichtige Zeilen fehlen, sodass es zu Datenverlust im Data Warehouse oder dem abonnierenden System kommt. Korrigiert in der _Service Pack 1-Version für SQL Server 2012_. Weitere Informationen finden Sie auf der [Downloadseite für das SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35575)
 - Doppelte Breite für Spalten in SQL
-    - Beim Erstellen einer CDC für Oracle-Instanz in den Skripts, die für SQL Server ausgeführt werden, wird die Länge einer Spalte mit einem Datentyp variabler Breite in SQL Server-Tabellen, die im Skript erstellt werden, verdoppelt. Wenn Sie beispielsweise versuchen, Änderungen in einer VARCHAR2(10)-Spalte in einer Oracle-Tabelle nachzuverfolgen, ist die entsprechende SQL Server-Tabelle im Bereitstellungsskript NVARCHAR(20). Behoben in _Kumulatives Update 2 für SQL Server 2012 SP1_ und _Kumulatives Update 5 für SQL Server 2012_ , wie in KB [2769673](https://support.microsoft.com/kb/2769673) beschrieben. 
+    - Beim Erstellen einer CDC für Oracle-Instanz in den Skripts, die für SQL Server ausgeführt werden, wird die Länge einer Spalte mit einem Datentyp variabler Breite in SQL Server-Tabellen, die im Skript erstellt werden, verdoppelt. Wenn Sie beispielsweise versuchen, Änderungen in einer VARCHAR2(10)-Spalte in einer Oracle-Tabelle nachzuverfolgen, ist die entsprechende SQL Server-Tabelle im Bereitstellungsskript NVARCHAR(20). Behoben in _Kumulatives Update 2 für SQL Server 2012 SP1_ und _Kumulatives Update 5 für SQL Server 2012_, wie in KB [2769673](https://support.microsoft.com/kb/2769673) beschrieben. 
 - DDL-Daten werden abgeschnitten
-    - Wenn Sie eine DDL-Anweisung (Data Definition Language) mit einer Größe von mehr als 4.000 Byte für eine Oracle-Datenbank ausführen, die nicht dem lateinischen Alphabet entstammende Zeichen enthält, tritt ein Fehler bei CDC für Oracle von Attunity auf. Außerdem wird die Fehlermeldung `ORA-01406: fetched column value was truncated.` angezeigt. Behoben in _Kumulatives Update 4 für SQL Server 2012 SP1_ , wie in KB [2839806](https://support.microsoft.com/kb/2839806) beschrieben. 
+    - Wenn Sie eine DDL-Anweisung (Data Definition Language) mit einer Größe von mehr als 4.000 Byte für eine Oracle-Datenbank ausführen, die nicht dem lateinischen Alphabet entstammende Zeichen enthält, tritt ein Fehler bei CDC für Oracle von Attunity auf. Außerdem wird die Fehlermeldung `ORA-01406: fetched column value was truncated.` angezeigt. Behoben in _Kumulatives Update 4 für SQL Server 2012 SP1_, wie in KB [2839806](https://support.microsoft.com/kb/2839806) beschrieben. 
 - Die Änderungen in den letzten zwei Spalten gehen verloren
-    - Behoben in _Kumulatives Update 6 für SQL Server 2012 SP1_ , wie in KB [2874879](https://support.microsoft.com/kb/2874879) beschrieben. 
+    - Behoben in _Kumulatives Update 6 für SQL Server 2012 SP1_, wie in KB [2874879](https://support.microsoft.com/kb/2874879) beschrieben. 
 - Das SQL-Transaktionsprotokoll wächst, wenn Sie CDC für Oracle verwenden
      - Wenn Instanzen von Change Data Capture für Oracle konfiguriert werden, weist die SQL-Datenbank, die die geänderten Daten empfängt, gespiegelte Tabellen mit für die Replikation gekennzeichneten Transaktionen auf. Dieses Verhalten tritt auf, weil CDC für Oracle auf zugrundeliegenden gespeicherten Systemprozeduren aufbaut, die denen ähneln, die in CDC für SQL Server verwendet werden. Da aber keine SQL-CDC-Replikation stattfindet, wenn CDC für Oracle eigenständig verwendet wird, gibt es keinen Protokollleser zum Löschen der für die Replikation gekennzeichneten Transaktionen. Da die Transaktion nicht in SQL Server repliziert werden muss, kann sie ohne Bedenken mithilfe der später in diesem Artikel beschriebenen Problemumgehung manuell als verteilt gekennzeichnet werden. Weitere Informationen finden Sie in KB [2871474](https://support.microsoft.com/kb/2871474). 
-- Fehler `ORACDC000T: Error encountered at position to change event - SCN not found - EOF simulated`. Behoben in _Kumulatives Update 7 für SQL Server 2012 SP1_ , wie in KB [2883524](https://support.microsoft.com/kb/2883524) beschrieben. 
-- Fehler bei der Überprüfung der Metadaten für die Oracle-Tabelle „cdc.table_name“. Der column_name-Spaltenindex liegt außerhalb des zulässigen Bereichs. Behoben in _Kumulatives Update 7 für SQL Server 2012 SP1_ , wie in KB [2883524](https://support.microsoft.com/kb/2883524) beschrieben.
-- Der Oracle CDC-Dienst zeigt den Status „abgebrochen“ an, wenn CDC für Oracle von Attunity in SQL Server 2012 verwendet wird. Behoben in _Kumulatives Update 8 für SQL Server 2012 SP1_ , wie in KB [2923839](https://support.microsoft.com/kb/2923839) beschrieben.  
-- Einige Änderungen fehlen und werden nicht in die SQL Server-Datenbanken repliziert. Dieses Problem tritt auf, wenn eine Tabelle mehr als ein CLOB (Character Large Binary Object) enthält und eins der CLOBs einen großen Wert aufweist. Behoben in _Kumulatives Update 8 für SQL Server 2012 SP1_ , wie in KB [2923839](https://support.microsoft.com/kb/2923839) beschrieben.   
-- Change Data Capture für Oracle von Attunity funktioniert nicht mehr, wenn Oracle-Tabellen Spalten mit Long-Datentyp aufweisen. Behoben in _Kumulatives Update 2 für SQL Server 2012 SP3_ und _Kumulatives Update 11 für SQL Server 2012 SP2_ , wie in KB [3145983](https://support.microsoft.com/kb/3145983) beschrieben. 
+- Fehler `ORACDC000T: Error encountered at position to change event - SCN not found - EOF simulated`. Behoben in _Kumulatives Update 7 für SQL Server 2012 SP1_, wie in KB [2883524](https://support.microsoft.com/kb/2883524) beschrieben. 
+- Fehler bei der Überprüfung der Metadaten für die Oracle-Tabelle „cdc.table_name“. Der column_name-Spaltenindex liegt außerhalb des zulässigen Bereichs. Behoben in _Kumulatives Update 7 für SQL Server 2012 SP1_, wie in KB [2883524](https://support.microsoft.com/kb/2883524) beschrieben.
+- Der Oracle CDC-Dienst zeigt den Status „abgebrochen“ an, wenn CDC für Oracle von Attunity in SQL Server 2012 verwendet wird. Behoben in _Kumulatives Update 8 für SQL Server 2012 SP1_, wie in KB [2923839](https://support.microsoft.com/kb/2923839) beschrieben.  
+- Einige Änderungen fehlen und werden nicht in die SQL Server-Datenbanken repliziert. Dieses Problem tritt auf, wenn eine Tabelle mehr als ein CLOB (Character Large Binary Object) enthält und eins der CLOBs einen großen Wert aufweist. Behoben in _Kumulatives Update 8 für SQL Server 2012 SP1_, wie in KB [2923839](https://support.microsoft.com/kb/2923839) beschrieben.   
+- Change Data Capture für Oracle von Attunity funktioniert nicht mehr, wenn Oracle-Tabellen Spalten mit Long-Datentyp aufweisen. Behoben in _Kumulatives Update 2 für SQL Server 2012 SP3_ und _Kumulatives Update 11 für SQL Server 2012 SP2_, wie in KB [3145983](https://support.microsoft.com/kb/3145983) beschrieben. 
 
 ## <a name="collect-detailed-logs"></a>Erfassen ausführlicher Protokolle 
 
@@ -119,7 +119,7 @@ Sie können den Grad der von der Instanz erfassten Ablaufverfolgung heraufsetzen
 
 ![Screenshot: Option „Eigenschaften“ unter „Aktionen“](media/known-issues-resolutions-with-cdc-for-oracle-attunity/properties.png)
 
-Reproduzieren Sie den Fehler, und aktivieren Sie dann die Option **Diagnosedaten sammeln** , um Protokolle zu erfassen. 
+Reproduzieren Sie den Fehler, und aktivieren Sie dann die Option **Diagnosedaten sammeln**, um Protokolle zu erfassen. 
 
 ![Weiterer Screenshot der Registerkarte „Status“ in der Verwaltungskonsole von Oracle Change Data Capture mit umrandeter Option „Diagnosedaten sammeln“](media/known-issues-resolutions-with-cdc-for-oracle-attunity/collect-diagnostics.png)
 
@@ -151,7 +151,7 @@ Um diesen Fehler zu beheben, erteilen Sie entweder dem aktuell konfigurierten Be
 
 Die Liste aller erforderlichen Berechtigungen ist ausführlich in der Hilfedatei aufgeführt, die im Installationsordner der Programmdateien enthalten ist `C:\Program Files\Change Data Capture for Oracle by Attunity\Attunity.SqlServer.XdbCdcDesigner.chm`.  Die vollständige Liste finden Sie auf der Seite „Connect to an Oracle Source Database“ (Herstellen einer Verbindung mit einer Oracle-Quelldatenbank) in der CHM-Datei.
 
-Sie können das Benutzerkonto festlegen, indem Sie die CDCInstance im linken Bereich und dann die Schaltfläche „Eigenschaften“ im Aktionsbereich ganz rechts im **Change Data Capture Designer** -Fenster auswählen. Sie können das Konto für die Oracle Log Mining Authentication auf der Dialogseite „Eigenschaften“ ändern.
+Sie können das Benutzerkonto festlegen, indem Sie die CDCInstance im linken Bereich und dann die Schaltfläche „Eigenschaften“ im Aktionsbereich ganz rechts im **Change Data Capture Designer**-Fenster auswählen. Sie können das Konto für die Oracle Log Mining Authentication auf der Dialogseite „Eigenschaften“ ändern.
 
 ![Screenshot: Registerkarte „Oracle“ des Dialogfelds „testTA Properties“ (testTA-Eigenschaften)](media/known-issues-resolutions-with-cdc-for-oracle-attunity/oracle-connection.png)
 

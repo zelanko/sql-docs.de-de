@@ -16,11 +16,11 @@ ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 074aa791a20eed06241aef1087f5ac355f8ea493
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725356"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123705"
 ---
 # <a name="cache-connection-manager"></a>Cacheverbindungs-Manager
 
@@ -120,16 +120,16 @@ ms.locfileid: "91725356"
  Geben Sie den Datentyp der Spalte an.  
   
  **Länge**  
- Gibt den Datentyp der Spalte an. Wenn für den Datentyp zutreffend, können Sie den Wert von **Length**aktualisieren.  
+ Gibt den Datentyp der Spalte an. Wenn für den Datentyp zutreffend, können Sie den Wert von **Length** aktualisieren.  
   
  **Genauigkeit**  
- Gibt die Genauigkeit für bestimmte Spaltendatentypen an. Genauigkeit gibt die Anzahl der Ziffern einer Zahl an. Wenn für den Datentyp zutreffend, können Sie den Wert von **Precision**aktualisieren.  
+ Gibt die Genauigkeit für bestimmte Spaltendatentypen an. Genauigkeit gibt die Anzahl der Ziffern einer Zahl an. Wenn für den Datentyp zutreffend, können Sie den Wert von **Precision** aktualisieren.  
   
  **Skalierung**  
- Gibt die Dezimalstellen für bestimmte Spaltendatentypen an. Dezimalstellen gibt die Anzahl der Nachkommastellen an. Wenn für den Datentyp zutreffend, können Sie den Wert von **Scale**aktualisieren.  
+ Gibt die Dezimalstellen für bestimmte Spaltendatentypen an. Dezimalstellen gibt die Anzahl der Nachkommastellen an. Wenn für den Datentyp zutreffend, können Sie den Wert von **Scale** aktualisieren.  
   
  **Codepage**  
- Gibt die Codepage für den Spaltentyp an. Wenn für den Datentyp zutreffend, können Sie den Wert von **Code Page**aktualisieren.  
+ Gibt die Codepage für den Spaltentyp an. Wenn für den Datentyp zutreffend, können Sie den Wert von **Code Page** aktualisieren.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Implementieren einer Suchtransformation im Vollcachemodus mit der Transformation für Cacheverbindungs-Manager](lookup-transformation-full-cache-mode-cache-connection-manager.md)  

@@ -17,11 +17,11 @@ ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b5a0e9c219a1649385b337ea378dec751f7851d4
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194551"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123310"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>Beispiele für erweiterte SQL Server Integration Services-Ausdrücke
 
@@ -53,7 +53,7 @@ ms.locfileid: "92194551"
     MakeFlag ==  TRUE && FinishedGoodsFlag == TRUE  && Size != (DT_WSTR,10)@BikeSize  
     ```  
   
--   In diesem Beispiel wird die **CurrencyRate** -Tabelle verwendet. Der Ausdruck vergleicht Werte in Tabellen und Variablen. Er gibt TRUE zurück, falls Einträge in den Spalten **FromCurrencyCode** oder **ToCurrencyCode** mit Variablenwerten identisch sind und falls der Wert in **AverageRate** größer als der Wert in **EndOfDayRate**ist.  
+-   In diesem Beispiel wird die **CurrencyRate** -Tabelle verwendet. Der Ausdruck vergleicht Werte in Tabellen und Variablen. Er gibt TRUE zurück, falls Einträge in den Spalten **FromCurrencyCode** oder **ToCurrencyCode** mit Variablenwerten identisch sind und falls der Wert in **AverageRate** größer als der Wert in **EndOfDayRate** ist.  
   
     ```  
     (FromCurrencyCode == @FromCur || ToCurrencyCode == @ToCur) && AverageRate > EndOfDayRate  
@@ -74,7 +74,7 @@ ms.locfileid: "92194551"
 ## <a name="non-boolean-expressions"></a>Nicht boolesche Ausdrücke  
  Nicht boolesche Ausdrücke werden in der Transformation für abgeleitete Spalten, in Eigenschaftsausdrücken und im For-Schleifencontainer verwendet.  
   
--   In diesem Beispiel wird die **Contact** -Tabelle verwendet. Der Ausdruck entfernt führende und nachfolgende Leerzeichen aus den Spalten **FirstName**, **MiddleName**und **LastName** . Er extrahiert den ersten Buchstaben der **MiddleName** -Spalte, falls sie ungleich NULL ist, verkettet den Anfangsbuchstaben des zweiten Vornamens sowie die Werte in **FirstName** und **LastName**und fügt zwischen den Werten entsprechende Leerzeichen ein.  
+-   In diesem Beispiel wird die **Contact** -Tabelle verwendet. Der Ausdruck entfernt führende und nachfolgende Leerzeichen aus den Spalten **FirstName**, **MiddleName** und **LastName** . Er extrahiert den ersten Buchstaben der **MiddleName** -Spalte, falls sie ungleich NULL ist, verkettet den Anfangsbuchstaben des zweiten Vornamens sowie die Werte in **FirstName** und **LastName** und fügt zwischen den Werten entsprechende Leerzeichen ein.  
   
     ```  
     TRIM(FirstName) + " " + (!ISNULL(MiddleName) ? SUBSTRING(MiddleName,1,1) + " " : "") + TRIM(LastName)  

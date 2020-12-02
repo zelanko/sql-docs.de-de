@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5c1bb607326233dccdafa8fc57e3ce9d32cf20c9
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195362"
 ---
 # <a name="oracle-destination"></a>Oracle-Ziel
@@ -55,7 +55,7 @@ Das Oracle-Ziel verfügt über eine Fehlerausgabe. Die Komponentenfehlerausgabe 
 
 Typen von Ausgabefehlern beim unterstützten Ladevorgang sind: Datenkonvertierung, Abschneiden oder Einschränkungsverletzung usw. Siehe [Editor für Oracle-Ziel (Seite „Fehlerausgabe“)](#oracle-destination-editor-error-output-page).
 
-Die**Maximale Anzahl von Fehlern (MaxErrors)**-Eigenschaft legt die maximale Anzahl von Fehlern fest, die auftreten können. Die Ausführung wird beendet und es werden Fehler zurückgegeben, wenn die maximale Anzahl erreicht ist. Nur vor Erreichen der maximalen Fehlerzahl ausgeführte Datensätze werden in die Zieltabelle einbezogen. Informationen zur detaillierten Konfiguration finden Sie unter [Editor für Oracle-Ziel (Seite „Verbindungs-Manager“)](#oracle-destination-editor-connection-manager-page).
+Die **Maximale Anzahl von Fehlern (MaxErrors)**-Eigenschaft legt die maximale Anzahl von Fehlern fest, die auftreten können. Die Ausführung wird beendet und es werden Fehler zurückgegeben, wenn die maximale Anzahl erreicht ist. Nur vor Erreichen der maximalen Fehlerzahl ausgeführte Datensätze werden in die Zieltabelle einbezogen. Informationen zur detaillierten Konfiguration finden Sie unter [Editor für Oracle-Ziel (Seite „Verbindungs-Manager“)](#oracle-destination-editor-connection-manager-page).
 
 ## <a name="parallelism"></a>Parallelität
 

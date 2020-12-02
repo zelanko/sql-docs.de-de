@@ -20,11 +20,11 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1af5f497be96f5c8b9808878aea9e5275c77ddf7
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727586"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123549"
 ---
 # <a name="data-mining-query-task"></a>Data Mining-Abfragetask
 
@@ -144,7 +144,7 @@ ms.locfileid: "91727586"
  **Ergebnisname**  
  Sie können optional den Resultsetnamen aktualisieren. Ordnen Sie das Resultset einer Variable zu, indem Sie in der Liste **Variablenname** eine Variable auswählen.  
   
- Nachdem Sie das Ergebnis durch Klicken auf **Hinzufügen**hinzugefügt haben, geben Sie einen eindeutigen Namen für das Ergebnis an.  
+ Nachdem Sie das Ergebnis durch Klicken auf **Hinzufügen** hinzugefügt haben, geben Sie einen eindeutigen Namen für das Ergebnis an.  
   
  **Variablenname**  
  Wählen Sie in der Liste eine Variable aus, um sie dem Resultset zuzuordnen.  

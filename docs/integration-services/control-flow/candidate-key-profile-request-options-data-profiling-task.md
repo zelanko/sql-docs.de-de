@@ -14,11 +14,11 @@ ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 499f56a0ce11bc68ad046035ff0a43d80ae4bfe7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431042"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123590"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Optionen für die Anforderung für Kandidatenschlüsselprofil (Datenprofilerstellungs-Task)
 
@@ -28,30 +28,30 @@ ms.locfileid: "88431042"
   Verwenden Sie den Bereich **Anforderungseigenschaften** im Fenster **Profilanforderungen** , um die Optionen für die im Anforderungsbereich ausgewählte **Anforderung für Kandidatenschlüsselprofil** festzulegen. Ein Kandidatenschlüsselprofil meldet, ob eine Spalte oder eine Gruppe von Spalten ein Schlüssel oder ein ungefährer Schlüssel für die ausgewählte Tabelle ist. Dieses Profil hilft Ihnen auch, Probleme bei den Daten zu identifizieren, z. B. doppelte Werte in einer potenziellen Schlüsselspalte.  
   
 > [!NOTE]  
->  Die in diesem Thema beschriebenen Optionen werden auf der Seite **Profilanforderungen** im **Editor für den Datenprofilerstellungs-Task**angezeigt. Weitere Informationen zu dieser Seite des Editors finden Sie unter [Editor für den Datenprofilerstellungs-Task &#40;Seite „Profilanforderungen“&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md).  
+>  Die in diesem Thema beschriebenen Optionen werden auf der Seite **Profilanforderungen** im **Editor für den Datenprofilerstellungs-Task** angezeigt. Weitere Informationen zu dieser Seite des Editors finden Sie unter [Editor für den Datenprofilerstellungs-Task &#40;Seite „Profilanforderungen“&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md).  
   
  Weitere Informationen zum Verwenden des Datenprofilerstellungs-Tasks finden Sie unter [Einrichten von Datenprofilerstellungs-Tasks](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Weitere Informationen zum Verwenden des Datenprofil-Viewers zum Analysieren der Ausgabe des Datenprofilerstellungs-Tasks finden Sie unter [Datenprofil-Viewer](../../integration-services/control-flow/data-profile-viewer.md).  
   
 ## <a name="understanding-the-selection-of-columns-for-the-keycolumns-property"></a>Grundlegendes zur Auswahl von Spalten für die KeyColumns-Eigenschaft  
  Jede **Anforderung für Kandidatenschlüsselprofil** berechnet die Schlüsselstärke eines einzelnen Schlüsselkandidaten, der aus einer oder mehreren Spalten besteht:  
   
--   Wenn Sie in **KeyColumns**nur eine Spalte auswählen, berechnet der Task die Schlüsselstärke dieser Spalte.  
+-   Wenn Sie in **KeyColumns** nur eine Spalte auswählen, berechnet der Task die Schlüsselstärke dieser Spalte.  
   
--   Wenn Sie in **KeyColumns**mehrere Spalten auswählen, berechnet der Task die Schlüsselstärke des zusammengesetzten Schlüssels, der aus allen ausgewählten Spalten besteht.  
+-   Wenn Sie in **KeyColumns** mehrere Spalten auswählen, berechnet der Task die Schlüsselstärke des zusammengesetzten Schlüssels, der aus allen ausgewählten Spalten besteht.  
   
 -   Wenn Sie das Platzhalterzeichen **(\*)** in **KeyColumns** auswählen, berechnet der Task die Schlüsselstärke jeder Spalte in der Tabelle oder Sicht.  
   
- Beispiel: Eine Beispieltabelle enthält die Spalten A, B und C. Sie nehmen die folgende Auswahl für die **KeyColumns**vor:  
+ Beispiel: Eine Beispieltabelle enthält die Spalten A, B und C. Sie nehmen die folgende Auswahl für die **KeyColumns** vor:  
   
--   Sie wählen (\*) und Spalte C in **KeyColumns**aus. Der Task berechnet die Schlüsselstärke von Spalte C und anschließend diejenige der zusammengesetzten Schlüsselkandidaten (A, C) und (B, C).  
+-   Sie wählen (\*) und Spalte C in **KeyColumns** aus. Der Task berechnet die Schlüsselstärke von Spalte C und anschließend diejenige der zusammengesetzten Schlüsselkandidaten (A, C) und (B, C).  
   
--   Sie wählen (\*) und (\*) in **KeyColumns**aus. Der Task berechnet die Schlüsselstärke der einzelnen Spalten A, B und C und anschließend diejenige der zusammengesetzten Schlüsselkandidaten (A, B), (A, C) und (B, C).  
+-   Sie wählen (\*) und (\*) in **KeyColumns** aus. Der Task berechnet die Schlüsselstärke der einzelnen Spalten A, B und C und anschließend diejenige der zusammengesetzten Schlüsselkandidaten (A, B), (A, C) und (B, C).  
   
 > [!NOTE]  
 >  Wenn Sie (*) auswählen, kann diese Option zu zahlreichen Berechnungen führen und die Leistung des Tasks beeinträchtigen. Wenn der Task jedoch eine Teilmenge findet, die den Schwellenwert für einen Schlüssel erfüllt, analysiert der Task keine weiteren Kombinationen. Wenn der Task beispielsweise in der oben beschriebenen Beispieltabelle ermittelt, dass Spalte C ein Schlüssel ist, führt er keine Analyse der zusammengesetzten Schlüsselkandidaten aus.  
   
 ## <a name="request-properties-options"></a>Optionen für Anforderungseigenschaften  
- Für eine **Anforderung für Kandidatenschlüsselprofil**zeigt der Bereich **Anforderungseigenschaften** die folgenden Gruppen von Optionen an:  
+ Für eine **Anforderung für Kandidatenschlüsselprofil** zeigt der Bereich **Anforderungseigenschaften** die folgenden Gruppen von Optionen an:  
   
 -   **Daten**, die die **TableOrView** -Option und die **KeyColumns** -Option enthalten  
   
@@ -103,7 +103,7 @@ ms.locfileid: "88431042"
 |**BinarySort**|Sortiert und vergleicht Daten anhand der für jedes Zeichen definierten Bitmuster. Die binäre Sortierreihenfolge unterscheidet nach Groß- und Kleinschreibung und nach Akzent. Die Option Binär ist zudem die schnellste Sortierreihenfolge.|  
 |**DictionarySort**|Sortiert und vergleicht Daten anhand der Sortier- und Vergleichsregeln, die in Wörterbüchern für die zugeordnete Sprache definiert sind, oder nach dem jeweiligen Alphabet.|  
   
- Wenn Sie **DictionarySort**auswählen, können Sie auch jede Kombination der in der folgenden Tabelle aufgelisteten Optionen auswählen. Standardmäßig ist keine dieser zusätzlichen Optionen ausgewählt.  
+ Wenn Sie **DictionarySort** auswählen, können Sie auch jede Kombination der in der folgenden Tabelle aufgelisteten Optionen auswählen. Standardmäßig ist keine dieser zusätzlichen Optionen ausgewählt.  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -123,14 +123,14 @@ ms.locfileid: "88431042"
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**None**|Es ist kein Schwellenwert angegeben. Die Schlüsselstärke wird unabhängig vom Wert gemeldet.|  
-|**Specified**|Ein Schwellenwert wird in **KeyStrengthThreshold**angegeben. Die Schlüsselstärke wird nur gemeldet, wenn sie größer als der Schwellenwert ist.|  
+|**Specified**|Ein Schwellenwert wird in **KeyStrengthThreshold** angegeben. Die Schlüsselstärke wird nur gemeldet, wenn sie größer als der Schwellenwert ist.|  
 |**Exact**|Es ist kein Schwellenwert angegeben. Die Schlüsselstärke wird nur gemeldet, wenn die ausgewählten Spalten ein genauer Schlüssel sind.|  
   
  **KeyStrengthThreshold**  
- Geben Sie (mit einem Wert zwischen 0 und 1) den Schwellenwert an, bei dessen Überschreiten die Schlüsselstärke gemeldet werden sollte. Der Standardwert dieser Eigenschaft ist 0,95. Diese Option ist nur aktiviert, wenn **Specified** als **KeyStrengthThresholdSetting**ausgewählt wird.  
+ Geben Sie (mit einem Wert zwischen 0 und 1) den Schwellenwert an, bei dessen Überschreiten die Schlüsselstärke gemeldet werden sollte. Der Standardwert dieser Eigenschaft ist 0,95. Diese Option ist nur aktiviert, wenn **Specified** als **KeyStrengthThresholdSetting** ausgewählt wird.  
   
  **MaxNumberOfViolations**  
- Geben Sie die maximale Anzahl von Kandidatenschlüsselverstößen an, die in der Ausgabe dokumentiert werden sollen. Der Standardwert dieser Eigenschaft ist 100. Diese Option ist deaktiviert, wenn **Exact** als **KeyStrengthThresholdSetting**ausgewählt wird.  
+ Geben Sie die maximale Anzahl von Kandidatenschlüsselverstößen an, die in der Ausgabe dokumentiert werden sollen. Der Standardwert dieser Eigenschaft ist 100. Diese Option ist deaktiviert, wenn **Exact** als **KeyStrengthThresholdSetting** ausgewählt wird.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Editor für den Datenprofilerstellungs-Task &#40;Seite "Allgemein"&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   

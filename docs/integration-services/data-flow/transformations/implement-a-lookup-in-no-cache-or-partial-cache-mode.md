@@ -17,10 +17,10 @@ ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f971d0788b33420495f1ae7ceeaca56599c8e239
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92194174"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Implementieren einer Suche im Modus "Kein Cache" oder "Teilcache"
@@ -49,11 +49,11 @@ ms.locfileid: "92194174"
 3.  Verbinden Sie die Suchtransformation mit dem Datenfluss, indem Sie einen Konnektor von einer Quelle oder einer vorherigen Transformation auf die Suchtransformation ziehen.  
   
     > [!NOTE]  
-    >  Eine Suchtransformation, die für die Verwendung des Modus „Kein Cache“ konfiguriert ist, erzeugt möglicherweise einen Fehler, wenn die Transformation sich mit einem Flatfile verbindet, das ein leeres Datenfeld enthält. Die Gültigkeit der Transformation hängt davon ab, ob der Verbindungs-Manager für das Flatfile so konfiguriert wurde, dass NULL-Werte beibehalten werden. Um sicherzustellen, dass die Suchtransformation gültig ist, wählen Sie im **Quelleneditor für Flatfiles**auf der **Seite Verbindungs-Manager**die Option **NULL-Werte aus der Quelle als NULL-Werte im Datenfluss beibehalten** .  
+    >  Eine Suchtransformation, die für die Verwendung des Modus „Kein Cache“ konfiguriert ist, erzeugt möglicherweise einen Fehler, wenn die Transformation sich mit einem Flatfile verbindet, das ein leeres Datenfeld enthält. Die Gültigkeit der Transformation hängt davon ab, ob der Verbindungs-Manager für das Flatfile so konfiguriert wurde, dass NULL-Werte beibehalten werden. Um sicherzustellen, dass die Suchtransformation gültig ist, wählen Sie im **Quelleneditor für Flatfiles** auf der **Seite Verbindungs-Manager** die Option **NULL-Werte aus der Quelle als NULL-Werte im Datenfluss beibehalten** .  
   
 4.  Doppelklicken Sie auf die Quelle oder die vorherige Transformation, um die Komponente zu konfigurieren.  
   
-5.  Doppelklicken Sie auf die Transformation für Suche, und wählen Sie anschließend im **Transformations-Editor für Suche**auf der Seite **Allgemein** die Option **Teilcache** oder die Option **Kein Cache**aus.  
+5.  Doppelklicken Sie auf die Transformation für Suche, und wählen Sie anschließend im **Transformations-Editor für Suche** auf der Seite **Allgemein** die Option **Teilcache** oder die Option **Kein Cache** aus.  
   
 6.  Wählen Sie für die Liste **Angeben, wie Zeilen ohne übereinstimmende Einträge behandelt werden sollen** eine Fehlerbehandlungsoption aus der Liste aus.  
   
@@ -101,12 +101,12 @@ ms.locfileid: "92194174"
   
     -   Wählen Sie aus der Liste **Zuordnung von Cache** den Prozentsatz des Zwischenspeichers aus, der zum Speichern der Zeilen ohne übereinstimmende Einträge verwendet werden soll.  
   
-12. Um die SQL-Anweisung zu ändern, die das Verweisdataset generiert, wählen Sie **SQL-Anweisung ändern**aus, und ändern Sie die im Textfeld angezeigte SQL-Anweisung.  
+12. Um die SQL-Anweisung zu ändern, die das Verweisdataset generiert, wählen Sie **SQL-Anweisung ändern** aus, und ändern Sie die im Textfeld angezeigte SQL-Anweisung.  
   
      Falls die Anweisung Parameter enthält, klicken Sie auf **Parameter** , um den Eingabespalten die Parameter zuzuordnen.  
   
     > [!NOTE]  
-    >  Durch die auf dieser Seite angegebene optionale SQL-Anweisung wird der auf der Seite **Verbindung** im **Transformations-Editor für Suche**angegebene Tabellenname überschrieben und ersetzt.  
+    >  Durch die auf dieser Seite angegebene optionale SQL-Anweisung wird der auf der Seite **Verbindung** im **Transformations-Editor für Suche** angegebene Tabellenname überschrieben und ersetzt.  
   
 13. Um die Fehlerausgabe zu konfigurieren, klicken Sie auf die Seite **Fehlerausgabe** , und legen Sie die Fehlerbehandlungsoptionen fest. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite Fehlerausgabe&#41;](./lookup-transformation.md).  
   

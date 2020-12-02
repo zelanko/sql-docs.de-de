@@ -22,10 +22,10 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 27b28672540d25fe84573c37004161992d3d3827
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92194196"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
@@ -118,9 +118,9 @@ ms.locfileid: "92194196"
   
  Um die Datei in der ersten Iteration einer Schleife zu erstellen, und dann die Zeilen in der nachfolgenden Iteration der Schleife anzufügen, müssen Sie Folgendes zur Entwurfszeit ausführen:  
   
-1.  Legen Sie die „WriteOption“-Eigenschaft auf **CreateOnce** oder **CreateAlways**fest, und führen Sie dann eine Iteration der Schleife aus. Die Datei ist erstellt. Dadurch wird sichergestellt, dass die Metadaten der angefügten Daten mit der Datei übereinstimmen.  
+1.  Legen Sie die „WriteOption“-Eigenschaft auf **CreateOnce** oder **CreateAlways** fest, und führen Sie dann eine Iteration der Schleife aus. Die Datei ist erstellt. Dadurch wird sichergestellt, dass die Metadaten der angefügten Daten mit der Datei übereinstimmen.  
   
-2.  Setzen Sie die „WriteOption“-Eigenschaft auf **Append** zurück, und legen Sie die „ValidateExternalMetadata“-Eigenschaft auf **False**fest.  
+2.  Setzen Sie die „WriteOption“-Eigenschaft auf **Append** zurück, und legen Sie die „ValidateExternalMetadata“-Eigenschaft auf **False** fest.  
   
  Wenn Sie die Option **TruncateAppend** statt der Option **Append** verwenden, werden die Zeilen abgeschnitten, die in einer vorherigen Iteration hinzugefügt wurden, und dann neue Zeilen angefügt. Das Verwenden der Option **TruncateAppend** erfordert auch, dass die Daten im Dateiformat übereinstimmen.  
   
@@ -167,16 +167,16 @@ ms.locfileid: "92194196"
  Wählen Sie die Methode aus, die zum Erstellen und Schreiben in die Datei verwendet wird.  
   
  **Generieren einer anfänglichen Rohdatendatei**  
- Klicken Sie auf die Schaltfläche, um eine leere Rohdatendatei zu generieren, die nur die Spalten (Nur-Metadatendatei) enthält, ohne dass das Paket ausgeführt werden muss. Die Datei enthält die Spalten, die Sie auf der Seite **Spalten** von **Ziel-Editor für Rohdatendateien**ausgewählt haben. Sie können die Rohdatendatei-Quelle auf diese Nur-Metadaten-Datei verweisen.  
+ Klicken Sie auf die Schaltfläche, um eine leere Rohdatendatei zu generieren, die nur die Spalten (Nur-Metadatendatei) enthält, ohne dass das Paket ausgeführt werden muss. Die Datei enthält die Spalten, die Sie auf der Seite **Spalten** von **Ziel-Editor für Rohdatendateien** ausgewählt haben. Sie können die Rohdatendatei-Quelle auf diese Nur-Metadaten-Datei verweisen.  
   
- Wenn Sie auf **Anfängliche Rohdatendatei generieren**klicken, wird ein Meldungsfeld angezeigt. Klicken Sie auf **OK** , um die Erstellung der Datei fortzusetzen. Klicken Sie auf **Abbrechen** , um eine andere Liste von Spalten auf der Seite **Spalten** auszuwählen.  
+ Wenn Sie auf **Anfängliche Rohdatendatei generieren** klicken, wird ein Meldungsfeld angezeigt. Klicken Sie auf **OK** , um die Erstellung der Datei fortzusetzen. Klicken Sie auf **Abbrechen** , um eine andere Liste von Spalten auf der Seite **Spalten** auszuwählen.  
   
 ###  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a> Festlegen von Optionen auf der Registerkarte "Spalten"  
  **Verfügbare Eingabespalten**  
  Wählen Sie mindestens eine Eingabespalte aus, die in die Rohdatendatei geschrieben werden soll.  
   
  **Eingabespalte**  
- Dieser Tabelle wird automatisch eine Eingabespalte hinzugefügt, wenn Sie sie unter **Verfügbare Eingabespalten**auswählen. Alternativ können Sie die Eingabespalte direkt in dieser Tabelle auswählen.  
+ Dieser Tabelle wird automatisch eine Eingabespalte hinzugefügt, wenn Sie sie unter **Verfügbare Eingabespalten** auswählen. Alternativ können Sie die Eingabespalte direkt in dieser Tabelle auswählen.  
   
  **Ausgabealias**  
  Geben Sie einen anderen Namen an, der für die Ausgabespalte verwendet werden soll.  
@@ -218,7 +218,7 @@ ms.locfileid: "92194196"
  Wählen Sie mindestens eine Eingabespalte aus, die in die Rohdatendatei geschrieben werden soll.  
   
  **Eingabespalte**  
- Dieser Tabelle wird automatisch eine Eingabespalte hinzugefügt, wenn Sie sie unter **Verfügbare Eingabespalten**auswählen. Alternativ können Sie die Eingabespalte direkt in dieser Tabelle auswählen.  
+ Dieser Tabelle wird automatisch eine Eingabespalte hinzugefügt, wenn Sie sie unter **Verfügbare Eingabespalten** auswählen. Alternativ können Sie die Eingabespalte direkt in dieser Tabelle auswählen.  
   
  **Ausgabealias**  
  Geben Sie einen anderen Namen an, der für die Ausgabespalte verwendet werden soll.  

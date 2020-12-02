@@ -22,11 +22,11 @@ ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 67a93e031afddb7533cea5251c4882da2760fbfe
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195394"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123497"
 ---
 # <a name="dimension-processing-destination"></a>Ziel für Dimensionsverarbeitung
 
@@ -91,7 +91,7 @@ ms.locfileid: "92195394"
  Zeigt die Liste der verfügbaren Zielspalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Zielspalten in der Tabelle Eingabespalten zuordnen.  
   
  **Eingabespalte**  
- Zeigen Sie die in obiger Tabelle ausgewählten Eingabespalten an. Die Zuordnungen können Sie mithilfe der Liste **Verfügbare Eingabespalten**ändern.  
+ Zeigen Sie die in obiger Tabelle ausgewählten Eingabespalten an. Die Zuordnungen können Sie mithilfe der Liste **Verfügbare Eingabespalten** ändern.  
   
  **Zielspalte**  
  Zeigt alle verfügbaren Zielspalten unabhängig davon an, ob sie zugeordnet sind oder nicht.  
@@ -118,10 +118,10 @@ ms.locfileid: "92195394"
  Gibt an, dass die Verarbeitung beendet werden soll, wenn ein Fehler auftritt.  
   
  **Anzahl von Fehlern**  
- Gibt den Grenzwert für die Anzahl der Fehler an, bei dem die Verarbeitung beendet werden soll, wenn Sie **Bei Fehler beenden**ausgewählt haben.  
+ Gibt den Grenzwert für die Anzahl der Fehler an, bei dem die Verarbeitung beendet werden soll, wenn Sie **Bei Fehler beenden** ausgewählt haben.  
   
  **Aktion bei Fehler**  
- Gibt die Aktion an, die bei Erreichen des Fehlergrenzwertes ausgeführt wird, wenn Sie **Bei Fehler beenden**ausgewählt haben.  
+ Gibt die Aktion an, die bei Erreichen des Fehlergrenzwertes ausgeführt wird, wenn Sie **Bei Fehler beenden** ausgewählt haben.  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  

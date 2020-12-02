@@ -21,11 +21,11 @@ ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: df48a338c2fe6cbc938284ed85b3b08fdc06f1cc
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193214"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123382"
 ---
 # <a name="derived-column-transformation"></a>Transformation für abgeleitete Spalten
 
@@ -36,13 +36,13 @@ ms.locfileid: "92193214"
   
  Mit dieser Transformation können die folgenden Aufgaben ausgeführt werden:  
   
--   Verketten von Daten aus verschiedenen Spalten zu einer abgeleiteten Spalte. Beispielsweise können Sie mithilfe des Ausdrucks **Werte aus den Spalten** FirstName **und** LastName **zu einer einzelnen abgeleiteten Spalte mit dem Namen**FullName `FirstName + " " + LastName`verketten.  
+-   Verketten von Daten aus verschiedenen Spalten zu einer abgeleiteten Spalte. Beispielsweise können Sie mithilfe des Ausdrucks **Werte aus den Spalten** FirstName **und** LastName **zu einer einzelnen abgeleiteten Spalte mit dem Namen** FullName `FirstName + " " + LastName`verketten.  
   
 -   Extrahieren von Zeichen aus Zeichenfolgendaten mithilfe von Funktionen, wie z. B. SUBSTRING, und anschließendes Speichern des Ergebnisses in einer abgeleiteten Spalte. Beispielsweise können Sie mithilfe des Ausdrucks **die Initialen einer Person aus der** FirstName `SUBSTRING(FirstName,1,1)`-Spalte extrahieren.  
   
--   Anwenden mathematischer Funktionen auf numerische Daten und Speichern des Ergebnisses in einer abgeleiteten Spalte. Beispielsweise können Sie mithilfe des Ausdrucks **die Länge und die Genauigkeit der numerischen**SalesTax `ROUND(SalesTax, 2)`-Spalte in eine Zahl mit zwei Dezimalstellen ändern.  
+-   Anwenden mathematischer Funktionen auf numerische Daten und Speichern des Ergebnisses in einer abgeleiteten Spalte. Beispielsweise können Sie mithilfe des Ausdrucks **die Länge und die Genauigkeit der numerischen** SalesTax `ROUND(SalesTax, 2)`-Spalte in eine Zahl mit zwei Dezimalstellen ändern.  
   
--   Erstellen von Ausdrücken, die Eingabespalten und Variablen vergleichen. Beispielsweise können Sie mithilfe des Ausdrucks **die** Version **-Variable mit den Daten in der**ProductVersion **-Spalte vergleichen und in Abhängigkeit vom Ergebnis des Vergleichs den Wert von** Version **bzw.** ProductVersion `ProductVersion == @Version? ProductVersion : @Version`verwenden.  
+-   Erstellen von Ausdrücken, die Eingabespalten und Variablen vergleichen. Beispielsweise können Sie mithilfe des Ausdrucks **die** Version **-Variable mit den Daten in der** ProductVersion **-Spalte vergleichen und in Abhängigkeit vom Ergebnis des Vergleichs den Wert von** Version **bzw.** ProductVersion `ProductVersion == @Version? ProductVersion : @Version`verwenden.  
   
 -   Extrahieren von Elementen eines datetime-Werts. Beispielsweise können Sie mithilfe des Ausdrucks `DATEPART("year",GETDATE())`und den Funktionen "GETDATE" und "DATEPART" das aktuelle Jahr extrahieren.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "92193214"
     > [!NOTE]  
     >  Falls ein Ausdruck auf eine Eingabespalte verweist, die von der Transformation für abgeleitete Spalten überschrieben wird, wird im Ausdruck nicht der abgeleitete Wert, sondern der ursprüngliche Wert verwendet.  
   
--   Wenn Sie neuen Spalten Ergebnisse hinzufügen und der Datentyp **string**lautet, geben Sie eine Codepage an. Weitere Informationen finden Sie unter [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).  
+-   Wenn Sie neuen Spalten Ergebnisse hinzufügen und der Datentyp **string** lautet, geben Sie eine Codepage an. Weitere Informationen finden Sie unter [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).  
   
  Die Transformation für bedingtes Teilen schließt die benutzerdefinierte Eigenschaft FriendlyExpression ein. Diese Eigenschaft kann beim Laden des Pakets mithilfe eines Eigenschaftsausdrucks aktualisiert werden. Weitere Informationen finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](../../../integration-services/expressions/use-property-expressions-in-packages.md)und [Benutzerdefinierte Eigenschaften von Transformationen](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
@@ -114,7 +114,7 @@ ms.locfileid: "92193214"
  Beim Hinzufügen von Daten zu einer neuen Spalte legt das Dialogfeld **Transformations-Editor für abgeleitete Spalten** automatisch die Skala für numerische Daten basierend auf dem Datentyp fest. Der Wert dieser Spalte ist schreibgeschützt.  
   
  **Codepage**  
- Beim Hinzufügen von Daten zu einer neuen Spalte legt das Dialogfeld **Transformations-Editor für abgeleitete Spalten** automatisch die Codepage für den DT_STR-Datentyp fest. Sie können den Wert von **Codepage**aktualisieren.  
+ Beim Hinzufügen von Daten zu einer neuen Spalte legt das Dialogfeld **Transformations-Editor für abgeleitete Spalten** automatisch die Codepage für den DT_STR-Datentyp fest. Sie können den Wert von **Codepage** aktualisieren.  
   
  **Fehlerausgabe konfigurieren**  
  Geben Sie mithilfe des Dialogfelds [Fehlerausgabe konfigurieren](../error-handling-in-data.md) an, wie Fehler behandelt werden sollen.  

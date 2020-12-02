@@ -24,10 +24,10 @@ ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: be606f7aa8f42b9966f6b1a2d1e3e21095b03916
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92196220"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Upgrade a Data-tier Application
@@ -44,13 +44,13 @@ ms.locfileid: "92196220"
 ###  <a name="choosing-dac-upgrade-options"></a><a name="ChoseDACUpgOptions"></a> Auswählen von DAC-Aktualisierungsoptionen  
  Für eine parallele Aktualisierung stehen vier Aktualisierungsoptionen zur Verfügung:  
   
--   **Datenverlust ignorieren**: Wenn **TRUE**, wird das Upgrade auch dann fortgesetzt, wenn einige der Vorgänge zu Datenverlust führen. Wenn auf **False**festgelegt, wird bei solchen Vorgängen die Aktualisierung beendet. Wenn beispielsweise eine Tabelle in der aktuellen Datenbank im Schema der neuen DAC nicht vorhanden ist, wird die Tabelle gelöscht, wenn **True** festgelegt ist. Die Standardeinstellung ist **True**.  
+-   **Datenverlust ignorieren**: Wenn **TRUE**, wird das Upgrade auch dann fortgesetzt, wenn einige der Vorgänge zu Datenverlust führen. Wenn auf **False** festgelegt, wird bei solchen Vorgängen die Aktualisierung beendet. Wenn beispielsweise eine Tabelle in der aktuellen Datenbank im Schema der neuen DAC nicht vorhanden ist, wird die Tabelle gelöscht, wenn **True** festgelegt ist. Die Standardeinstellung ist **True**.  
   
--   **Bei Änderungen blockieren**: Wenn **TRUE**, wird die Aktualisierung beendet, wenn sich das Datenbankschema von dem in der vorherigen DAC definierten Schema unterscheidet. Wenn auf **False**festgelegt, wird die Aktualisierung auch dann fortgesetzt, wenn Änderungen erkannt werden. Die Standardeinstellung lautet **Falsch**.  
+-   **Bei Änderungen blockieren**: Wenn **TRUE**, wird die Aktualisierung beendet, wenn sich das Datenbankschema von dem in der vorherigen DAC definierten Schema unterscheidet. Wenn auf **False** festgelegt, wird die Aktualisierung auch dann fortgesetzt, wenn Änderungen erkannt werden. Die Standardeinstellung lautet **Falsch**.  
   
--   **Rollback bei Fehler**: Wenn **TRUE**, wird die Aktualisierung in eine Transaktion eingeschlossen, und wenn Fehler auftreten, wird ein Rollback versucht. Wenn auf **False**festgelegt, wird für alle Änderungen bei ihrer Erstellung ein Commit ausgeführt, und wenn Fehler auftreten, muss möglicherweise eine vorherige Sicherung der Datenbank wiederhergestellt werden. Die Standardeinstellung lautet **Falsch**.  
+-   **Rollback bei Fehler**: Wenn **TRUE**, wird die Aktualisierung in eine Transaktion eingeschlossen, und wenn Fehler auftreten, wird ein Rollback versucht. Wenn auf **False** festgelegt, wird für alle Änderungen bei ihrer Erstellung ein Commit ausgeführt, und wenn Fehler auftreten, muss möglicherweise eine vorherige Sicherung der Datenbank wiederhergestellt werden. Die Standardeinstellung lautet **Falsch**.  
   
--   **Richtlinienüberprüfung überspringen**: Wenn **TRUE**, wird die DAC-Richtlinie zur Serverauswahl nicht überprüft. Wenn auf **False**festgelegt, wird die Richtlinie ausgewertet, und im Fall eines Fehlers wird die Aktualisierung beendet. Die Standardeinstellung lautet **Falsch**.  
+-   **Richtlinienüberprüfung überspringen**: Wenn **TRUE**, wird die DAC-Richtlinie zur Serverauswahl nicht überprüft. Wenn auf **False** festgelegt, wird die Richtlinie ausgewertet, und im Fall eines Fehlers wird die Aktualisierung beendet. Die Standardeinstellung lautet **Falsch**.  
   
 ###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Einschränkungen  
  DAC-Aktualisierungen können nur in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]oder [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ab Service Pack 4 (SP4) durchgeführt werden.  
@@ -66,7 +66,7 @@ ms.locfileid: "92196220"
   
 -   Es ist unerlässlich, eine Liste der Änderungen des Schemas zu generieren, die bei der Aktualisierung durchgeführt werden, und diese auf mögliche Probleme zu überprüfen.  
   
- Der Anwendungsname im DAC-Paket muss mit dem Anwendungsnamen der gerade bereitgestellten DAC übereinstimmen. Wenn die aktuelle DAC z. B. den Anwendungsnamen **GeneralLedger**hat, können Sie die Aktualisierung nur mithilfe eines DAC-Pakets ausführen, das ebenfalls den Anwendungsnamen **GeneralLedger**aufweist.  
+ Der Anwendungsname im DAC-Paket muss mit dem Anwendungsnamen der gerade bereitgestellten DAC übereinstimmen. Wenn die aktuelle DAC z. B. den Anwendungsnamen **GeneralLedger** hat, können Sie die Aktualisierung nur mithilfe eines DAC-Pakets ausführen, das ebenfalls den Anwendungsnamen **GeneralLedger** aufweist.  
   
  Stellen Sie sicher, dass im Transaktionsprotokoll ausreichend Speicherplatz verfügbar ist, um alle Änderungen zu protokollieren.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "92196220"
 ##  <a name="using-the-upgrade-data-tier-application-wizard"></a><a name="UsingDACUpgradeWizard"></a> Verwenden des Assistenten zum Aktualisieren von Datenebenenanwendungen  
  **So aktualisieren Sie eine DAC mithilfe eines Assistenten**  
   
-1.  Erweitern Sie im **Objekt-Explorer**den Knoten für die Instanz, die die zu aktualisierende DAC enthält.  
+1.  Erweitern Sie im **Objekt-Explorer** den Knoten für die Instanz, die die zu aktualisierende DAC enthält.  
   
 2.  Erweitern Sie nacheinander die Knoten **Verwaltung** und **Datenebenenanwendungen** .  
   
@@ -240,7 +240,7 @@ ms.locfileid: "92196220"
   
 4.  Verwenden Sie **add_DacActionStarted** und **add_DacActionFinished** , um die DAC-Aktualisierungsereignisse zu abonnieren.  
   
-5.  Legen Sie die **DacUpgradeOptions**fest.  
+5.  Legen Sie die **DacUpgradeOptions** fest.  
   
 6.  Verwenden Sie die **IncrementalUpgrade** -Methode zum Aktualisieren der DAC.  
   

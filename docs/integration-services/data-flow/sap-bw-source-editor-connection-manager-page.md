@@ -14,10 +14,10 @@ ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b745e73cb7f25ff8936ddc385979c69ad675f8ea
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92194750"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Quellen-Editor für SAP BW (Seite Verbindungs-Manager)
@@ -41,7 +41,7 @@ ms.locfileid: "92194750"
   
 2.  Doppelklicken Sie auf der Registerkarte **Datenfluss** auf die SAP BW-Quelle.  
   
-3.  Klicken Sie im **Quellen-Editor für SAP BW**auf **Verbindungs-Manager** , um die Seite **Verbindungs-Manager** des Editors zu öffnen.  
+3.  Klicken Sie im **Quellen-Editor für SAP BW** auf **Verbindungs-Manager** , um die Seite **Verbindungs-Manager** des Editors zu öffnen.  
   
 ## <a name="static-options"></a>Statische Optionen  
   
@@ -49,7 +49,7 @@ ms.locfileid: "92194750"
 >  Wenn Sie nicht alle Werte kennen, die zur Konfiguration der Quelle erforderlich sind, müssen Sie ggf. Ihren SAP-Administrator um Unterstützung bitten.  
   
  **SAP BW-Verbindungs-Manager**  
- Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
+ Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu** klicken.  
   
  **Neu**  
  Erstellen Sie mithilfe des Dialogfelds **SAP BW-Verbindungs-Manager** einen neuen Verbindungs-Manager.  
@@ -74,7 +74,7 @@ ms.locfileid: "92194750"
 > [!IMPORTANT]  
 >  Die Daten werden tatsächlich mithilfe der Option **Vorschau** extrahiert, die im Quellen-Editor für SAP BW auf der Seite **Verbindungs-Manager** verfügbar ist. Wenn Sie SAP NetWeaver BW so konfiguriert haben, dass nur Daten extrahiert werden, die sich seit der letzten Extrahierung geändert haben, schließen Sie die in der Vorschau angezeigten Daten durch Auswahl von **Vorschau** aus der nachfolgenden Extrahierung aus.  
   
- Wenn Sie auf **Vorschau**klicken, wird gleichzeitig das Dialogfeld **Anforderungsprotokoll** geöffnet. Sie können dieses Dialogfeld verwenden, um die Ereignisse anzuzeigen, die protokolliert werden, während Beispieldaten vom SAP NetWeaver BW-System angefordert werden. Weitere Informationen finden Sie unter [Request Log](../../integration-services/data-flow/request-log.md).  
+ Wenn Sie auf **Vorschau** klicken, wird gleichzeitig das Dialogfeld **Anforderungsprotokoll** geöffnet. Sie können dieses Dialogfeld verwenden, um die Ereignisse anzuzeigen, die protokolliert werden, während Beispieldaten vom SAP NetWeaver BW-System angefordert werden. Weitere Informationen finden Sie unter [Request Log](../../integration-services/data-flow/request-log.md).  
   
 ## <a name="execution-mode-dynamic-options"></a>Optionen für den dynamischen Ausführungsmodus  
   
@@ -90,7 +90,7 @@ ms.locfileid: "92194750"
  Geben Sie den Servernamen oder die IP-Adresse des Gatewayhosts ein. Normalerweise ist der Name oder die IP-Adresse identisch mit dem SAP-Anwendungsserver.  
   
  **Gatewaydienst**  
- Geben Sie den Namen des Gatewaydiensts im Format **sapgwNN**ein, wobei **NN** der Systemnummer entspricht.  
+ Geben Sie den Namen des Gatewaydiensts im Format **sapgwNN** ein, wobei **NN** der Systemnummer entspricht.  
   
  **Programm-ID**  
  Geben Sie die Programm-ID ein, die dem RFC-Ziel zugeordnet ist.  
@@ -116,7 +116,7 @@ ms.locfileid: "92194750"
  Geben Sie den Servernamen oder die IP-Adresse des Gatewayhosts ein. Normalerweise ist der Name oder die IP-Adresse identisch mit dem SAP-Anwendungsserver.  
   
  **Gatewaydienst**  
- Geben Sie den Namen des Gatewaydiensts im Format **sapgwNN**ein, wobei **NN** der Systemnummer entspricht.  
+ Geben Sie den Namen des Gatewaydiensts im Format **sapgwNN** ein, wobei **NN** der Systemnummer entspricht.  
   
  **Programm-ID**  
  Geben Sie die Programm-ID ein, die dem RFC-Ziel zugeordnet ist.  

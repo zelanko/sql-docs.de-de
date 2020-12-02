@@ -20,10 +20,10 @@ ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1918d6cac049fd863426ce320ab774067c350ea5
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92678932"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>SQL Server Integration Services-Projekte und Projektmappen (SSIS)
@@ -40,7 +40,7 @@ ms.locfileid: "92678932"
  Projekte werden in Projektmappen gespeichert. Sie können zuerst eine Projektmappe erstellen und dann ein [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt hinzufügen. Falls keine Projektmappe vorhanden ist, erstellt [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] automatisch eine Projektmappe für Sie, wenn Sie das Projekt erstellen. Eine Projektmappe kann mehrere Projekte unterschiedlichen Typs enthalten.  
   
 > [!TIP]  
->  Wenn Sie in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] ein neues Projekt erstellen, wird die Projektmappe standardmäßig nicht im Bereich **Projektmappen-Explorer** angezeigt. Um dieses Standardverhalten zu ändern, klicken Sie im Menü **Extras** auf **Optionen** . Erweitern Sie im Dialogfeld **Optionen** den Eintrag **Projekte und Projektmappen** , und klicken Sie dann auf **Allgemein** . Wählen Sie auf der Seite **Allgemein** die Option **Projektmappe immer anzeigen** aus.  
+>  Wenn Sie in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] ein neues Projekt erstellen, wird die Projektmappe standardmäßig nicht im Bereich **Projektmappen-Explorer** angezeigt. Um dieses Standardverhalten zu ändern, klicken Sie im Menü **Extras** auf **Optionen**. Erweitern Sie im Dialogfeld **Optionen** den Eintrag **Projekte und Projektmappen**, und klicken Sie dann auf **Allgemein**. Wählen Sie auf der Seite **Allgemein** die Option **Projektmappe immer anzeigen** aus.  
 
 ## <a name="solutions-contain-projects"></a>Projektmappen enthalten Projekte  
  Eine Projektmappe ist ein Container, in dem die Projekte gruppiert und verwaltet werden, die Sie zum Entwickeln von End-to-End-Unternehmenslösungen verwenden. Mithilfe einer Projektmappe können Sie mehrere Projekte als Einheit verwalten und zusammenhängende Projekte für eine Unternehmenslösung zusammenbringen.  
@@ -90,7 +90,7 @@ ms.locfileid: "92678932"
 ## <a name="version-targeting-in-integration-services-projects"></a>Versionsauswahl in Integration Services-Projekten  
  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie Pakete für SQL Server 2017, 2016, 2014 oder 2012 erstellen, verwalten und ausführen.  
   
- Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf ein Integration Services-Projekt, und wählen Sie **Eigenschaften** aus, um die Eigenschaftsseiten für das Projekt zu öffnen. Klicken Sie in der Registerkarte **Allgemein** in den **Konfigurationseigenschaften** auf die Eigenschaft **TargetServerVersion** , und wählen Sie dann SQL Server 2017, 2016, 2014 oder 2012 aus.  
+ Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf ein Integration Services-Projekt, und wählen Sie **Eigenschaften** aus, um die Eigenschaftsseiten für das Projekt zu öffnen. Klicken Sie in der Registerkarte **Allgemein** in den **Konfigurationseigenschaften** auf die Eigenschaft **TargetServerVersion**, und wählen Sie dann SQL Server 2017, 2016, 2014 oder 2012 aus.  
   
  ![TargetServerVersion-Eigenschaft im Dialogfeld „Projekteigenschaften“](../integration-services/media/targetserverversion2.png "TargetServerVersion-Eigenschaft im Dialogfeld „Projekteigenschaften“")  
 
@@ -98,7 +98,7 @@ ms.locfileid: "92678932"
   
 1.  Öffnen Sie [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
-2.  Zeigen Sie im Menü **Datei** auf **Neu** , und klicken Sie dann auf **Projekt** .  
+2.  Zeigen Sie im Menü **Datei** auf **Neu**, und klicken Sie dann auf **Projekt**.  
   
 3.  Wählen Sie im Dialogfeld **Neues Projekt** die Option **Business Intelligence** und dann die Vorlage **Integration Services-Projekt** aus.  
   
@@ -110,13 +110,13 @@ ms.locfileid: "92678932"
   
      Der Projektmappenname wird automatisch aktualisiert und an den Projektnamen angepasst.  
   
-5.  Um einen separaten Ordner für die Projektmappendatei zu erstellen, aktivieren Sie das Kontrollkästchen **Projektmappenverzeichnis erstellen** . Dies ist die Standardoption.  
+5.  Um einen separaten Ordner für die Projektmappendatei zu erstellen, aktivieren Sie das Kontrollkästchen **Projektmappenverzeichnis erstellen**. Dies ist die Standardoption.  
   
 6.  Wenn die Software für die Quellcodeverwaltung auf dem Computer installiert ist, wählen Sie **Zur Quellcodeverwaltung hinzufügen**  aus, um das Projekt der Quellcodeverwaltung zuzuordnen.  
   
 7.  Falls es sich bei der Software für die Quellcodeverwaltung um [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe handelt, wird das Dialogfeld **Visual SourceSafe-Anmeldung** geöffnet. Stellen Sie im Dialogfeld **Visual SourceSafe-Anmeldung** einen Benutzernamen, ein Kennwort und den Namen der [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe-Datenbank bereit. Klicken Sie auf **Durchsuchen** , um die Datenbank zu suchen.  
   
-    > **HINWEIS:** Klicken Sie im Menü **Extras** auf **Optionen** , und erweitern Sie den Knoten **Quellcodeverwaltung** , um das ausgewählte Quellcodeverwaltungs-Plug-In anzuzeigen und zu ändern und um die Umgebung für die Quellcodeverwaltung zu konfigurieren.  
+    > **HINWEIS:** Klicken Sie im Menü **Extras** auf **Optionen**, und erweitern Sie den Knoten **Quellcodeverwaltung**, um das ausgewählte Quellcodeverwaltungs-Plug-In anzuzeigen und zu ändern und um die Umgebung für die Quellcodeverwaltung zu konfigurieren.  
   
 8.  Klicken Sie auf **OK** , um die Projektmappe dem **Projektmappen-Explorer** und das Projekt der Projektmappe hinzuzufügen.  
 
@@ -124,7 +124,7 @@ ms.locfileid: "92678932"
   
 1.  Klicken Sie in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]im Menü **Datei** > **auf** Neu **Projekt** .  
   
-2.  Erweitern Sie im Bereich **Installierte Vorlagen** des Fensters **Neues Projekt****Business Intelligence** , und klicken Sie auf **Integration Services** .  
+2.  Erweitern Sie im Bereich **Installierte Vorlagen** des Fensters **Neues Projekt****Business Intelligence**, und klicken Sie auf **Integration Services**.  
   
 3.  Wählen Sie **Integration Services-Assistent zum Importieren von Projekten** aus der Liste der Projekttypen aus.  
   
@@ -138,11 +138,11 @@ ms.locfileid: "92678932"
   
 8.  Klicken Sie auf **Weiter** , um zur Seite **Quelle auswählen** zu wechseln.  
   
-9. Wenn Sie aus einer **ISPAC-Datei** importieren, geben Sie den Pfad einschließlich Dateinamen im Textfeld **Pfad** ein. Klicken Sie auf **Durchsuchen** , um zu dem Ordner zu navigieren, in dem die Projektmappe gespeichert werden soll. Geben Sie den Dateinamen im Textfeld **Dateiname** ein, und klicken Sie auf **Öffnen** .  
+9. Wenn Sie aus einer **ISPAC-Datei** importieren, geben Sie den Pfad einschließlich Dateinamen im Textfeld **Pfad** ein. Klicken Sie auf **Durchsuchen** , um zu dem Ordner zu navigieren, in dem die Projektmappe gespeichert werden soll. Geben Sie den Dateinamen im Textfeld **Dateiname** ein, und klicken Sie auf **Öffnen**.  
   
-     Wenn Sie aus einem **Integration Services-Katalog** importieren, geben Sie den Datenbankinstanznamen im Textfeld **Servername** ein, oder klicken Sie auf **Durchsuchen** , und wählen Sie die Datenbankinstanz aus, die den Katalog enthält.  
+     Wenn Sie aus einem **Integration Services-Katalog** importieren, geben Sie den Datenbankinstanznamen im Textfeld **Servername** ein, oder klicken Sie auf **Durchsuchen**, und wählen Sie die Datenbankinstanz aus, die den Katalog enthält.  
   
-     Klicken Sie auf **Durchsuchen** neben dem Textfeld **Pfad** , erweitern Sie den Ordner im Katalog, wählen Sie das Projekt aus, das Sie importieren möchten, und klicken Sie auf **OK** .  
+     Klicken Sie auf **Durchsuchen** neben dem Textfeld **Pfad** , erweitern Sie den Ordner im Katalog, wählen Sie das Projekt aus, das Sie importieren möchten, und klicken Sie auf **OK**.  
   
      Klicken Sie auf **Weiter** , um zur Seite **///Überprüfen** zu wechseln.  
   
@@ -159,25 +159,25 @@ ms.locfileid: "92678932"
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]die Projektmappe, der Sie ein neues [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt hinzufügen möchten, und führen Sie eine der folgenden Aktionen aus:  
   
-    -   Klicken Sie mit der rechten Maustaste auf die Projektmappe, klicken Sie auf **Hinzufügen** , und klicken Sie dann auf **Neues Projekt** .  
+    -   Klicken Sie mit der rechten Maustaste auf die Projektmappe, klicken Sie auf **Hinzufügen**, und klicken Sie dann auf **Neues Projekt**.  
   
-    -   Zeigen Sie im Menü **Datei** auf **Hinzufügen** , und klicken Sie dann auf **Neues Projekt** .  
+    -   Zeigen Sie im Menü **Datei** auf **Hinzufügen**, und klicken Sie dann auf **Neues Projekt**.  
   
 2.  Klicken Sie im Dialogfeld **Neues Projekt hinzufügen** im Fensterbereich **Vorlagen** auf **Integration Services-Projekt** .  
   
 3.  Bearbeiten Sie optional den Projektnamen und den Speicherort.  
   
-4.  Klicken Sie auf **OK** .  
+4.  Klicken Sie auf **OK**.  
   
 ### <a name="add-an-existing-project-to-a-solution"></a>Hinzufügen eines vorhandenen Projekts zu einer Projektmappe  
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]die Projektmappe, der Sie ein vorhandenes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt hinzufügen möchten, und führen Sie eine der folgenden Aktionen aus:  
   
-    -   Klicken Sie mit der rechten Maustaste auf die Projektmappe, zeigen Sie auf **Hinzufügen** , und klicken Sie dann auf **Vorhandenes Projekt** .  
+    -   Klicken Sie mit der rechten Maustaste auf die Projektmappe, zeigen Sie auf **Hinzufügen**, und klicken Sie dann auf **Vorhandenes Projekt**.  
   
-    -   Klicken Sie im Menü **Datei** auf **Hinzufügen** , und klicken Sie dann auf **Vorhandenes Projekt** .  
+    -   Klicken Sie im Menü **Datei** auf **Hinzufügen**, und klicken Sie dann auf **Vorhandenes Projekt**.  
   
-2.  Suchen Sie im Dialogfeld **Vorhandenes Projekt hinzufügen** das Projekt, das Sie hinzufügen möchten, und klicken Sie dann auf **Öffnen** .  
+2.  Suchen Sie im Dialogfeld **Vorhandenes Projekt hinzufügen** das Projekt, das Sie hinzufügen möchten, und klicken Sie dann auf **Öffnen**.  
   
 3.  Das Projekt wird dem Projektmappenordner im **Projektmappen-Explorer** hinzugefügt.  
   
@@ -186,19 +186,19 @@ ms.locfileid: "92678932"
    
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]die Projektmappe, aus der Sie ein [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt entfernen möchten.  
   
-2.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und klicken Sie dann auf **Projekt entladen** .  
+2.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und klicken Sie dann auf **Projekt entladen**.  
   
-3.  Klicken Sie auf **OK** , um das Entfernen zu bestätigen.  
+3.  Klicken Sie auf **OK**, um das Entfernen zu bestätigen.  
 
 ## <a name="add-an-item-to-a-project"></a>Hinzufügen eines Elements zu einem Projekt  
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]die Projektmappe mit dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt, dem Sie ein Element hinzufügen möchten.  
   
-2.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, zeigen Sie auf **Hinzufügen** , und führen Sie eine der folgenden Aktionen aus:  
+2.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, zeigen Sie auf **Hinzufügen**, und führen Sie eine der folgenden Aktionen aus:  
   
-    -   Klicken Sie auf **Neues Element** , und wählen Sie im Bereich **Vorlagen** im Dialogfeld **Neues Element hinzufügen** eine Vorlage aus.  
+    -   Klicken Sie auf **Neues Element**, und wählen Sie im Bereich **Vorlagen** im Dialogfeld **Neues Element hinzufügen** eine Vorlage aus.  
   
-    -   Klicken Sie auf **Vorhandenes Element** , suchen Sie im Dialogfeld **Vorhandenes Element hinzufügen** nach dem Element, das Sie dem Projekt hinzufügen möchten, und klicken Sie dann auf **Hinzufügen** .  
+    -   Klicken Sie auf **Vorhandenes Element**, suchen Sie im Dialogfeld **Vorhandenes Element hinzufügen** nach dem Element, das Sie dem Projekt hinzufügen möchten, und klicken Sie dann auf **Hinzufügen**.  
   
 3.  Das neue Element wird im Projektmappen-Explorer im entsprechenden Ordner angezeigt.  
 
@@ -209,9 +209,9 @@ Sie können Objekte in einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-
   
 2.  Erweitern Sie das Projekt und den Elementordner, aus dem Sie kopieren möchten.  
   
-3.  Klicken Sie mit der rechten Maustaste auf das Element, und klicken Sie anschließend auf **Kopieren** .  
+3.  Klicken Sie mit der rechten Maustaste auf das Element, und klicken Sie anschließend auf **Kopieren**.  
   
-4.  Klicken Sie mit der rechten Maustaste auf das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt, in das kopiert werden soll, und klicken Sie auf **Einfügen** .  
+4.  Klicken Sie mit der rechten Maustaste auf das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt, in das kopiert werden soll, und klicken Sie auf **Einfügen**.  
   
      Die Elemente werden automatisch in den richtigen Ordner kopiert. Wenn Sie in das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt Elemente kopieren, die keine Pakete darstellen, werden die Elemente in den Ordner **Sonstiges** kopiert.  
 

@@ -17,17 +17,17 @@ ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 75cc3aaec07d038ed6218a7a20268e94f23d3949
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "93067318"
 ---
 # <a name="maintenance-plan-design-tab"></a>Wartungsplan (Registerkarte Entwurf)
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
- Verwenden Sie **Wartungsplan (Registerkarte „Entwurf“)** , um die Eigenschaften eines Wartungsplans und seiner Unterpläne anzugeben. Ziehen Sie Tasks aus der Toolbox in den Wartungsplan-Designer. Klicken Sie mit der rechten Maustaste auf Gruppen von Tasks, um verzweigte Ausführungspfade zu erstellen. Wartungspläne werden als [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete gespeichert, die von Aufträgen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents ausgeführt werden.  
+ Verwenden Sie **Wartungsplan (Registerkarte „Entwurf“)**, um die Eigenschaften eines Wartungsplans und seiner Unterpläne anzugeben. Ziehen Sie Tasks aus der Toolbox in den Wartungsplan-Designer. Klicken Sie mit der rechten Maustaste auf Gruppen von Tasks, um verzweigte Ausführungspfade zu erstellen. Wartungspläne werden als [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete gespeichert, die von Aufträgen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents ausgeführt werden.  
   
 ## <a name="options"></a>Optionen  
  **Unterplan hinzufügen**  
@@ -63,7 +63,7 @@ ms.locfileid: "93067318"
  **Designeroberfläche**  
  Hiermit können Sie Wartungspläne entwerfen und verwalten. Verwenden Sie die Designeroberfläche, um einem Plan Wartungspläne hinzuzufügen, Tasks aus einem Plan zu entfernen, Rangfolgenlinks zwischen den Tasks anzugeben oder Taskverzweigungen und -parallelausführungen anzuzeigen.  
   
- Ein Rangfolgenlink zwischen zwei Tasks legt eine Beziehung zwischen den Tasks fest. Der zweite Task (der *abhängige Task* ) wird nur ausgeführt, wenn das Ausführungsergebnis des ersten Tasks (des *Vorgängertasks* ) bestimmte Kriterien erfüllt. Normalerweise ist das angegebene Ausführungsergebnis **Erfolg** , **Fehler** oder **Beendigung**. Die Oberfläche des Wartungsplan-Designers basiert auf der Oberfläche des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers. Weitere Informationen finden Sie unter [Rangfolgeneinschränkungen](../../integration-services/control-flow/precedence-constraints.md).  
+ Ein Rangfolgenlink zwischen zwei Tasks legt eine Beziehung zwischen den Tasks fest. Der zweite Task (der *abhängige Task*) wird nur ausgeführt, wenn das Ausführungsergebnis des ersten Tasks (des *Vorgängertasks*) bestimmte Kriterien erfüllt. Normalerweise ist das angegebene Ausführungsergebnis **Erfolg**, **Fehler** oder **Beendigung**. Die Oberfläche des Wartungsplan-Designers basiert auf der Oberfläche des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers. Weitere Informationen finden Sie unter [Rangfolgeneinschränkungen](../../integration-services/control-flow/precedence-constraints.md).  
   
  Ein Task zur Defragmentierung des Indexes könnte beispielsweise so festgelegt werden, dass er nur ausgeführt wird, wenn der vorher ausgeführte Task Datenbankintegrität überprüfen erfolgreich abgeschlossen wurde. Mit der Funktion für Rangfolgenlinks werden Fehlerbehandlungen und Vorgehensweisen bei Fehlschlägen in den Plänen ermöglicht. Bei einem Fehler des Tasks Datenbankintegritätsprüfung könnte der Task Operator benachrichtigen beispielsweise einen Benutzer oder Operator über den Fehler benachrichtigen.  
   
@@ -73,20 +73,20 @@ ms.locfileid: "93067318"
   
  Nachdem ein Wartungstask auf der Entwurfsoberfläche platziert ist, können seine Eigenschaften je nach Bedarf bearbeitet werden. So wird beispielsweise die für einen Task Datenbank sichern relevante Datenbank erst angegeben, nachdem der Task dem Plan hinzugefügt wurde. Die Tasks auf der Entwurfsoberfläche, die nicht ordnungsgemäß konfiguriert sind, enthalten ein rotes Symbol mit einem weißen x.  
   
- Wenn Sie einem Plan einen Wartungstask hinzufügen möchten, ziehen Sie das Symbol des Tasks aus der Toolbox **Wartungsplantasks** in die Planentwurfsoberfläche, oder doppelklicken Sie in der Toolbox auf den Task, wodurch dieser Task der derzeit aktiven Designeroberfläche hinzugefügt wird. Klicken Sie im -Menü [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Ansicht** auf **Toolbox** , wenn die Toolbox **Wartungsplantasks** nicht sichtbar ist. Erweitern Sie den Knoten **Wartungsplantasks** im Bereich **Toolbox** .  
+ Wenn Sie einem Plan einen Wartungstask hinzufügen möchten, ziehen Sie das Symbol des Tasks aus der Toolbox **Wartungsplantasks** in die Planentwurfsoberfläche, oder doppelklicken Sie in der Toolbox auf den Task, wodurch dieser Task der derzeit aktiven Designeroberfläche hinzugefügt wird. Klicken Sie im -Menü [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Ansicht** auf **Toolbox**, wenn die Toolbox **Wartungsplantasks** nicht sichtbar ist. Erweitern Sie den Knoten **Wartungsplantasks** im Bereich **Toolbox** .  
   
  Wenn Sie einen Task aus einem Plan entfernen möchten, wählen Sie den Task in der Designeroberfläche aus, und drücken Sie die **ENTF** -TASTE, oder klicken Sie mit der rechten Maustaste auf den Task, und klicken Sie auf **Löschen**.  
   
  Wenn Sie Rangfolgenlinks zwischen zwei Tasks angeben möchten, ziehen Sie die Tasks zunächst auf die Entwurfsoberfläche, klicken Sie anschließend auf den zuerst auftretenden Task (den Vorgängertask), und ziehen Sie anschließend den Pfeil auf den abhängigen Task. Wenn ein Rangfolgenlink eingerichtet wurde, zeigt der Designer einen Pfeil an, der die beiden Tasks miteinander verbindet, wobei der Vorgängertask auf den abhängigen Task zeigt. Wenn ein Link erstmalig eingerichtet wird, sind die Einschränkungen für den Link so festgelegt, dass der abhängige Task nur ausgeführt wird, wenn das Ausführungsergebnis des Vorgängertasks **Erfolg** ist.  
   
- Um die Eigenschaften eines Rangfolgenlinks zu ändern, doppelklicken Sie auf den Link, um den **Rangfolgeneinschränkungs-Editor** zu starten. Hier werden viele Optionen für das Festlegen logischer Bedingungen bereitgestellt, die bestimmen, ob der abhängige Task ausgeführt wird. Das **Ausführungsergebnis** kann z. B. auf **Fehler** festgelegt werden, wodurch der abhängige Task nur ausgeführt wird, wenn der Vorgängertask fehlschlägt. Die Änderung der Ausführungsergebnis-Eigenschaft eines Links in **Erfolg** , **Fehler** oder **Beendigung** kann auch vorgenommen werden, indem Sie mit der rechten Maustaste auf den Link klicken und dann die entsprechende Option im Kontextmenü auswählen.  
+ Um die Eigenschaften eines Rangfolgenlinks zu ändern, doppelklicken Sie auf den Link, um den **Rangfolgeneinschränkungs-Editor** zu starten. Hier werden viele Optionen für das Festlegen logischer Bedingungen bereitgestellt, die bestimmen, ob der abhängige Task ausgeführt wird. Das **Ausführungsergebnis** kann z. B. auf **Fehler** festgelegt werden, wodurch der abhängige Task nur ausgeführt wird, wenn der Vorgängertask fehlschlägt. Die Änderung der Ausführungsergebnis-Eigenschaft eines Links in **Erfolg**, **Fehler** oder **Beendigung** kann auch vorgenommen werden, indem Sie mit der rechten Maustaste auf den Link klicken und dann die entsprechende Option im Kontextmenü auswählen.  
   
- Um eine Taskverzweigung festzulegen, erstellen Sie zunächst Rangfolgenlinks zwischen zwei Tasks. Platzieren Sie dann einen weiteren abhängigen Task auf der Entwurfsoberfläche, der bei einem anderen Ergebnis als der erste abhängige Task ausgeführt werden soll. Klicken Sie auf den Vorgängertask, und ziehen Sie den zweiten Pfeil vom Vorgängertask auf den abhängigen Task. Wenn Sie das Ausführungsergebnis ( **Erfolg** , **Fehler** , **Beendigung** ), das zur Ausführung eines abhängigen Tasks führt, ändern möchten, doppelklicken Sie auf den Linkpfeil, und ändern Sie das Feld **Ausführungsergebnis** . Alternativ dazu können Sie auch mit der rechten Maustaste auf den Link klicken und den gewünschten Ausführungsergebniswert aus dem Kontextmenü auswählen.  
+ Um eine Taskverzweigung festzulegen, erstellen Sie zunächst Rangfolgenlinks zwischen zwei Tasks. Platzieren Sie dann einen weiteren abhängigen Task auf der Entwurfsoberfläche, der bei einem anderen Ergebnis als der erste abhängige Task ausgeführt werden soll. Klicken Sie auf den Vorgängertask, und ziehen Sie den zweiten Pfeil vom Vorgängertask auf den abhängigen Task. Wenn Sie das Ausführungsergebnis (**Erfolg**, **Fehler**, **Beendigung**), das zur Ausführung eines abhängigen Tasks führt, ändern möchten, doppelklicken Sie auf den Linkpfeil, und ändern Sie das Feld **Ausführungsergebnis** . Alternativ dazu können Sie auch mit der rechten Maustaste auf den Link klicken und den gewünschten Ausführungsergebniswert aus dem Kontextmenü auswählen.  
   
  Um Taskparallelitäten festzulegen, verknüpfen Sie mehrere abhängige Tasks mit einem einzelnen Vorgängertask. Ändern Sie die Eigenschaften der Rangfolgenlinks so, dass diejenigen, die auf die parallel auszuführenden abhängigen Tasks zeigen, denselben Wert in den Ausführungsergebnisfeldern haben.  
   
 ## <a name="additional-features-available-from-the-shortcut-menu"></a>Zusätzlich verfügbare Funktionen im Kontextmenü  
- Um zusätzliche Optionen anzuzeigen, wählen Sie einen oder mehrere Tasks auf der Entwurfsoberfläche aus, und klicken Sie mit der rechten Maustaste auf die Auswahl, um das Kontextmenü zu öffnen. Zusätzlich zu den üblichen Optionen **Ausschneiden** , **Kopieren** , **Einfügen** , **Löschen** und **Alles auswählen** sind folgende besondere Optionen für einige Tasks verfügbar.  
+ Um zusätzliche Optionen anzuzeigen, wählen Sie einen oder mehrere Tasks auf der Entwurfsoberfläche aus, und klicken Sie mit der rechten Maustaste auf die Auswahl, um das Kontextmenü zu öffnen. Zusätzlich zu den üblichen Optionen **Ausschneiden**, **Kopieren**, **Einfügen**, **Löschen** und **Alles auswählen** sind folgende besondere Optionen für einige Tasks verfügbar.  
   
  **Anmerkung hinzufügen**  
  Fügt der Entwurfsoberfläche eine beschreibende Anmerkung hinzu.  

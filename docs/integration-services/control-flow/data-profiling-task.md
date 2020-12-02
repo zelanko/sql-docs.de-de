@@ -18,11 +18,11 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 60e136951deb8701893ea3d611597e8388909816
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430992"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123534"
 ---
 # <a name="data-profiling-task"></a>Datenprofilerstellungs-Task
 
@@ -91,7 +91,7 @@ ms.locfileid: "88430992"
   
  Ganzzahltypen umfassen den **bit**-Typ, den **tinyint**-Typ, den **smallint**-Typ, den **int**-Typ und den **bigint**-Typ.  
   
- Typen mit Zeichen umfassen **char**, **nchar**, **varchar**und **nvarchar,** jedoch nicht **varchar(max)** und **nvarchar(max)**.  
+ Typen mit Zeichen umfassen **char**, **nchar**, **varchar** und **nvarchar,** jedoch nicht **varchar(max)** und **nvarchar(max)**.  
   
  Datums- und Zeittypen schließen den **datetime**-Typ, den **smalldatetime**-Typ und den **timestamp**-Typ ein.  
   

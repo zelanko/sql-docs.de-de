@@ -12,10 +12,10 @@ ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a1e2b55f3c61308d4f3dba30ac1c9b079031e01d
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193812"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>Lektion 1-4: Hinzufügen von Paketkonfigurationen
@@ -37,7 +37,7 @@ Sie erstellen die beiden Konfigurationsdateien DataTransferConfig.dtsConfig und 
   
 ### <a name="to-create-indirect-configuration-for-the-datatransfer-package"></a>So erstellen Sie eine indirekte Konfiguration für das DataTransfer-Paket  
 
-Überprüfen Sie das aktuelle Bereitstellungsmodell des Projekts, und legen Sie es bei Bedarf auf **Paketbereitstellungsmodell** fest. Klicken Sie im Menü **Projekt**auf **In Paketbereitstellungsmodell konvertieren**.
+Überprüfen Sie das aktuelle Bereitstellungsmodell des Projekts, und legen Sie es bei Bedarf auf **Paketbereitstellungsmodell** fest. Klicken Sie im Menü **Projekt** auf **In Paketbereitstellungsmodell konvertieren**.
   
 1.  Doppelklicken Sie im Projektmappen-Explorer auf DataTransfer.dtsx.  
   
@@ -45,7 +45,7 @@ Sie erstellen die beiden Konfigurationsdateien DataTransferConfig.dtsConfig und 
   
 3.  Klicken Sie im Menü **SSIS** auf **Paketkonfigurationen**.  
   
-4.  Wählen Sie im Dialogfeld **Paketkonfigurationsplaner**gegebenenfalls die Option **Paketkonfigurationen aktivieren** aus, und klicken Sie anschließend auf **Hinzufügen**.  
+4.  Wählen Sie im Dialogfeld **Paketkonfigurationsplaner** gegebenenfalls die Option **Paketkonfigurationen aktivieren** aus, und klicken Sie anschließend auf **Hinzufügen**.  
   
 5.  Klicken Sie auf der Willkommensseite des Paketkonfigurations-Assistenten auf **Weiter**.  
   
@@ -96,7 +96,7 @@ Sie erstellen die beiden Konfigurationsdateien DataTransferConfig.dtsConfig und 
   
 3.  Klicken Sie im Menü **SSIS** auf **Paketkonfigurationen**.  
   
-4.  Klicken Sie im Dialogfeld **Paketkonfigurationsplaner**auf **Hinzufügen**.  
+4.  Klicken Sie im Dialogfeld **Paketkonfigurationsplaner** auf **Hinzufügen**.  
   
 5.  Klicken Sie auf der Willkommensseite des Paketkonfigurations-Assistenten auf **Weiter**.  
   

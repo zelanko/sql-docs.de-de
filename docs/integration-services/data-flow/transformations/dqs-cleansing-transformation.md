@@ -18,11 +18,11 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ce6e3f36d8216f08493933798cdab558274e0cb5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495700"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123385"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS-Bereinigungstransformation
 
@@ -39,7 +39,7 @@ ms.locfileid: "88495700"
   
 -   Der Spalte ist eine Domäne mit einem kompatiblen Datentyp zugeordnet.  
   
- Die Transformation umfasst auch eine Fehlerausgabe, die Sie zur Behandlung von Fehlern auf Zeilenebene konfigurieren können. Die Fehlerausgabe wird mit dem **Transformations-Editor für die DQS-Bereinigung**konfiguriert.  
+ Die Transformation umfasst auch eine Fehlerausgabe, die Sie zur Behandlung von Fehlern auf Zeilenebene konfigurieren können. Die Fehlerausgabe wird mit dem **Transformations-Editor für die DQS-Bereinigung** konfiguriert.  
   
  Sie können die [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md) in den Datenfluss einschließen, um Zeilen mit Daten zu ermitteln, bei denen es sich wahrscheinlich um Duplikate handelt.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "88495700"
   
 ###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> Festlegen der Optionen auf der Registerkarte "Verbindungs-Manager"  
  **Data Quality Services-Verbindungs-Manager**  
- Wählen Sie in der Liste einen vorhandenen DQS-Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
+ Wählen Sie in der Liste einen vorhandenen DQS-Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu** klicken.  
   
  **Neu**  
  Erstellen Sie mithilfe des Dialogfelds **Verbindungs-Manager für DQS-Bereinigung** einen neuen Verbindungs-Manager. Siehe [Festlegen der Optionen im Dialogfeld „Verbindungs-Manager für DQS-Bereinigung“](#manager)  
@@ -106,9 +106,9 @@ ms.locfileid: "88495700"
   
  Folgende Werte sind gültig:  
   
--   **Fehler bei Komponente**gibt an, dass die Transformation fehlgeschlagen ist und dass die Eingabedaten nicht in die Data Quality Services-Datenbank eingefügt werden. Dies ist der Standardwert.  
+-   **Fehler bei Komponente** gibt an, dass die Transformation fehlgeschlagen ist und dass die Eingabedaten nicht in die Data Quality Services-Datenbank eingefügt werden. Dies ist der Standardwert.  
   
--   **Zeile umleiten**gibt an, dass die Eingabedaten nicht in die Data Quality Services-Datenbank eingefügt und an die Fehlerausgabe umgeleitet werden.  
+-   **Zeile umleiten** gibt an, dass die Eingabedaten nicht in die Data Quality Services-Datenbank eingefügt und an die Fehlerausgabe umgeleitet werden.  
   
 ###  <a name="set-options-on-the-mapping-tab"></a><a name="mapping"></a> Festlegen der Optionen auf der Registerkarte "Zuordnung"  
  Weitere Informationen zum Zuordnen von Spalten zu Verbunddomänen finden Sie unter [Map Columns to Composite Domains](../../../integration-services/data-flow/transformations/map-columns-to-composite-domains.md).  
@@ -128,7 +128,7 @@ ms.locfileid: "88495700"
  Klicken Sie in das Feld, um den Spaltennamen zu ändern.  
   
  **Ausgabealias**  
- Zeigt die Spalte an, die vom **Transformations-Editor für die DQS-Bereinigung**ausgegeben wird. Die Spalte enthält den ursprünglichen Spaltenwert oder den korrigierten Wert.  
+ Zeigt die Spalte an, die vom **Transformations-Editor für die DQS-Bereinigung** ausgegeben wird. Die Spalte enthält den ursprünglichen Spaltenwert oder den korrigierten Wert.  
   
  Klicken Sie in das Feld, um den Spaltennamen zu ändern.  
   

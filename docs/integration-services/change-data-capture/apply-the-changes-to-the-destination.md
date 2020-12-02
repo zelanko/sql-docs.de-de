@@ -14,11 +14,11 @@ ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0176dcc68e8c7f72c4bd9b78b1f3d926e52ad215
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484752"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123736"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>Anwenden der Änderungen auf das Ziel
 
@@ -39,7 +39,7 @@ ms.locfileid: "88484752"
   
 2.  Verbinden Sie die Ausgabe, die Einfügungen aus der Transformation für bedingtes Teilen enthält, mit dem OLE DB-Ziel.  
   
-3.  Aktivieren Sie im **Ziel-Editor für OLE DB**auf der Seite **Verbindungs-Manager** die folgenden Optionen:  
+3.  Aktivieren Sie im **Ziel-Editor für OLE DB** auf der Seite **Verbindungs-Manager** die folgenden Optionen:  
   
     1.  Wählen Sie einen OLE DB-Verbindungs-Manager für die Zieldatenbank aus oder erstellen Sie einen.  
   
@@ -59,9 +59,9 @@ ms.locfileid: "88484752"
   
 2.  Verbinden Sie die Ausgabe, die Updates aus der Transformation für bedingtes Teilen enthält, mit der Transformation für OLE DB-Befehl.  
   
-3.  Wählen Sie auf der Registerkarte **Verbindungs-Manager**im **Erweiterten Editor für OLE DB-Befehl** für die Zieldatenbank einen OLE DB-Verbindungs-Manager aus, oder erstellen Sie einen.  
+3.  Wählen Sie auf der Registerkarte **Verbindungs-Manager** im **Erweiterten Editor für OLE DB-Befehl** für die Zieldatenbank einen OLE DB-Verbindungs-Manager aus, oder erstellen Sie einen.  
   
-4.  Geben Sie auf der Registerkarte **Komponenteneigenschaften**im **Erweiterten Editor für OLE DB-Befehl** für **SqlCommand**eine parametrisierte UPDATE-Anweisung ein.  
+4.  Geben Sie auf der Registerkarte **Komponenteneigenschaften** im **Erweiterten Editor für OLE DB-Befehl** für **SqlCommand** eine parametrisierte UPDATE-Anweisung ein.  
   
      Zum Beispiel könnte eine UPDATE-Anweisung für eine Customer-Tabelle die folgende Syntax aufweisen:  
   
@@ -91,9 +91,9 @@ ms.locfileid: "88484752"
   
 3.  Öffnen Sie den erweiterten Editor, um die Transformation zu konfigurieren.  
   
-4.  Wählen Sie auf der Registerkarte **Verbindungs-Manager**im **Erweiterten Editor für OLE DB-Befehl** für die Zieldatenbank einen OLE DB-Verbindungs-Manager aus, oder erstellen Sie einen.  
+4.  Wählen Sie auf der Registerkarte **Verbindungs-Manager** im **Erweiterten Editor für OLE DB-Befehl** für die Zieldatenbank einen OLE DB-Verbindungs-Manager aus, oder erstellen Sie einen.  
   
-5.  Geben Sie im **Erweiterten Editor für OLE DB-Befehl**auf der Registerkarte **Komponenteneigenschaften** des Editors für **SqlCommand**eine parametrisierte DELETE-Anweisung ein.  
+5.  Geben Sie im **Erweiterten Editor für OLE DB-Befehl** auf der Registerkarte **Komponenteneigenschaften** des Editors für **SqlCommand** eine parametrisierte DELETE-Anweisung ein.  
   
      Zum Beispiel könnte eine DELETE-Anweisung für eine Customer-Tabelle die folgende Syntax aufweisen:  
   

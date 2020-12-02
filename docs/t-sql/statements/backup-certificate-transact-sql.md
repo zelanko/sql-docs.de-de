@@ -30,11 +30,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest'
 ms.openlocfilehash: 06776d309042483f879dd3d31d9f6bae62119037
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067490"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124178"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asa-pdw](../../includes/applies-to-version/sql-asa-pdw.md)]
@@ -79,18 +79,18 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  *certname*  
  Der Name des Zertifikats für die Sicherung.
 
- TO FILE = ' *path_to_file* '  
+ TO FILE = '*path_to_file*'  
  Gibt den vollständigen Pfad einschließlich des Dateinamens zu der Datei an, in der das Zertifikat gespeichert werden soll. Dieser Pfad kann ein lokaler Pfad oder ein UNC-Pfad zu einer Netzwerkadresse sein. Wenn nur ein Dateiname angegeben ist, wird die Datei im Standardordner für Benutzerdaten der Instanz gespeichert (entweder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-DATA-Ordner oder nicht). Für SQL Server Express LocalDB entspricht der standardmäßige Benutzerdatenordner der Instanz dem von der Umgebungsvariable `%USERPROFILE%` angegebenen Pfad für das Konto, das die Instanz erstellt hat.  
 
  WITH PRIVATE KEY gibt an, dass der private Schlüssel des Zertifikats in einer Datei gespeichert werden muss. Diese Klausel ist optional.
 
- FILE = ' *path_to_private_key_file* '  
+ FILE = '*path_to_private_key_file*'  
  Gibt den vollständigen Pfad einschließlich des Dateinamens zu der Datei an, in der der private Schlüssel gespeichert werden soll. Dieser Pfad kann ein lokaler Pfad oder ein UNC-Pfad zu einer Netzwerkadresse sein. Wenn nur ein Dateiname angegeben ist, wird die Datei im Standardordner für Benutzerdaten der Instanz gespeichert (entweder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-DATA-Ordner oder nicht). Für SQL Server Express LocalDB entspricht der standardmäßige Benutzerdatenordner der Instanz dem von der Umgebungsvariable `%USERPROFILE%` angegebenen Pfad für das Konto, das die Instanz erstellt hat.  
 
- ENCRYPTION BY PASSWORD = ' *encryption_password* '  
+ ENCRYPTION BY PASSWORD = '*encryption_password*'  
  Das Kennwort, das zum Verschlüsseln des privaten Schlüssels verwendet wird, bevor der Schlüssel in die Sicherungsdatei geschrieben wird. Das Kennwort unterliegt Komplexitätsüberprüfungen.  
   
- DECRYPTION BY PASSWORD = ' *decryption_password* '  
+ DECRYPTION BY PASSWORD = '*decryption_password*'  
  Das Kennwort, das zum Entschlüsseln des privaten Schlüssels verwendet wird, bevor der Schlüssel gesichert wird. Dieses Argument ist nicht erforderlich, wenn das Zertifikat mit dem Hauptschlüssel verschlüsselt ist. 
   
 ## <a name="remarks"></a>Hinweise  

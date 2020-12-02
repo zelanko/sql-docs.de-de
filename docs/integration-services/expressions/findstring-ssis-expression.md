@@ -14,11 +14,11 @@ ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3c4da6f54ead49d01d9d691cc081ac9b9955c693
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425472"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123249"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING (SSIS-Ausdruck)
 
@@ -48,7 +48,7 @@ FINDSTRING(character_expression, searchstring, occurrence)
  DT_I4  
   
 ## <a name="remarks"></a>Bemerkungen  
- FINDSTRING kann nur mit dem DT_WSTR-Datentyp verwendet werden.  Das*character_expression* -Argument und das *searchstring* -Argument, die Zeichenfolgenliterale oder Datenspalten mit dem DT_STR-Datentyp sind, werden implizit in den DT_WSTR-Datentyp umgewandelt, bevor FINDSTRING die Operation ausführt. Andere Datentypen müssen explizit in den DT_WSTR-Datentyp umgewandelt werden. Weitere Informationen finden Sie unter [Integration Services-Datentypen](../../integration-services/data-flow/integration-services-data-types.md) und [CAST &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
+ FINDSTRING kann nur mit dem DT_WSTR-Datentyp verwendet werden.  Das *character_expression* -Argument und das *searchstring* -Argument, die Zeichenfolgenliterale oder Datenspalten mit dem DT_STR-Datentyp sind, werden implizit in den DT_WSTR-Datentyp umgewandelt, bevor FINDSTRING die Operation ausführt. Andere Datentypen müssen explizit in den DT_WSTR-Datentyp umgewandelt werden. Weitere Informationen finden Sie unter [Integration Services-Datentypen](../../integration-services/data-flow/integration-services-data-types.md) und [CAST &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
   
  FINDSTRING gibt NULL zurück, wenn *character_expression* oder *searchstring* NULL sind.  
   
@@ -69,7 +69,7 @@ FINDSTRING("New York, NY, NY", "NY", 1)
 FINDSTRING("New York, NY, NY", "NY", 3)   
 ```  
   
- In diesem Beispiel wird die **Name** -Spalte verwendet. Der Speicherort des zweiten „n“ in der Spalte **Name** wird zurückgegeben. Das Ergebnis hängt vom Wert in **Name**ab. Wenn die **Name** -Spalte „Anderson“ enthält, gibt die Funktion den Wert 8 zurück.  
+ In diesem Beispiel wird die **Name** -Spalte verwendet. Der Speicherort des zweiten „n“ in der Spalte **Name** wird zurückgegeben. Das Ergebnis hängt vom Wert in **Name** ab. Wenn die **Name** -Spalte „Anderson“ enthält, gibt die Funktion den Wert 8 zurück.  
   
 ```  
 FINDSTRING(Name, "n", 2)   

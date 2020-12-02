@@ -21,11 +21,11 @@ ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c99a1d737e2b3d5c928f1b555915a14443b30584
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194692"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123450"
 ---
 # <a name="aggregate-transformation"></a>Transformation für das Aggregieren
 
@@ -107,11 +107,11 @@ ms.locfileid: "92194692"
   
  Die Transformation für das Aggregieren ist asynchron. Das heißt, sie verwendet und veröffentlicht Daten nicht zeilenweise. Vielmehr verwendet sie das gesamte Rowset, führt Gruppierungen und Aggregationen aus und veröffentlicht dann die Ergebnisse.  
   
- Diese Transformation übergibt keine Spalten, sondern erstellt im Datenfluss für die veröffentlichten Daten neue Spalten. Nur die Eingabespalten, für die Aggregatfunktionen gelten, oder die Eingabespalten, die die Transformation zum Gruppieren verwendet, werden in die Transformationsausgabe kopiert. Angenommen, eine Transformation für das Aggregieren weist drei Spalten auf: **CountryRegion**, **City**und **Population**. Die Transformation gruppiert nach der **CountryRegion** -Spalte und wendet die SUM-Funktion auf die **Population** -Spalte an. Deshalb ist in der Ausgabe die **City** -Spalte nicht enthalten.  
+ Diese Transformation übergibt keine Spalten, sondern erstellt im Datenfluss für die veröffentlichten Daten neue Spalten. Nur die Eingabespalten, für die Aggregatfunktionen gelten, oder die Eingabespalten, die die Transformation zum Gruppieren verwendet, werden in die Transformationsausgabe kopiert. Angenommen, eine Transformation für das Aggregieren weist drei Spalten auf: **CountryRegion**, **City** und **Population**. Die Transformation gruppiert nach der **CountryRegion** -Spalte und wendet die SUM-Funktion auf die **Population** -Spalte an. Deshalb ist in der Ausgabe die **City** -Spalte nicht enthalten.  
   
  Sie können der Transformation für das Aggregieren auch mehrere Ausgaben hinzufügen und jede Aggregation an eine andere Ausgabe weiterleiten. Wendet beispielsweise die Transformation für das Aggregieren die Funktionen Sum und Average an, kann jede Aggregation an eine andere Ausgabe geleitet werden.  
   
- Auf eine einzelne Eingabespalte können mehrere Aggregationen angewendet werden. Wenn Sie z.B. die Sum- und Average-Werte für eine Eingabespalte mit dem Namen **Sales**haben möchten, können Sie die Transformation so konfigurieren, dass sie die Sum-Funktion und die Average-Funktion auf die **Sales** -Spalte anwendet.  
+ Auf eine einzelne Eingabespalte können mehrere Aggregationen angewendet werden. Wenn Sie z.B. die Sum- und Average-Werte für eine Eingabespalte mit dem Namen **Sales** haben möchten, können Sie die Transformation so konfigurieren, dass sie die Sum-Funktion und die Average-Funktion auf die **Sales** -Spalte anwendet.  
   
  Die Transformation für das Aggregieren weist je eine Eingabe und mindestens eine Ausgabe auf. Eine Fehlerausgabe wird nicht unterstützt.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "92194692"
 |**Maximum**|Gibt den größten Wert in einer Gruppe zurück. Ist auf numerische Datentypen beschränkt.|  
   
  **Vergleichsflags**  
- Wenn Sie **Group By**auswählen, steuern Sie mithilfe der Kontrollkästchen, wie der Vergleich durch die Transformation ausgeführt wird. Weitere Informationen zu den Optionen für das Vergleichen von Zeichenfolgen finden Sie unter [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).  
+ Wenn Sie **Group By** auswählen, steuern Sie mithilfe der Kontrollkästchen, wie der Vergleich durch die Transformation ausgeführt wird. Weitere Informationen zu den Optionen für das Vergleichen von Zeichenfolgen finden Sie unter [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).  
   
  **COUNT DISTINCT-Skala**  
  Gibt optional die ungefähre Anzahl unterschiedlicher Werte an, die durch die Aggregation geschrieben werden können. Der Standardwert für diese Option ist **Keine Angabe**. Wenn sowohl **CountDistinctScale** und **CountDistinctKeys** angegeben werden, wird **CountDistinctKeys** vorrangig behandelt.  

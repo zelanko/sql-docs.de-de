@@ -16,10 +16,10 @@ ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9c67835df192436ce3b8264849589a1db3f66fee
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92192376"
 ---
 # <a name="ssis-toolbox"></a>SSIS-Toolbox
@@ -34,15 +34,15 @@ ms.locfileid: "92192376"
  > [!NOTE]
 > Wenn die Toolbox nicht angezeigt wird, wechseln Sie zu „ANSICHT -> Andere Fenster -> SSIS-Toolbox“.
  
-Um auf weitere Informationen zu einer Komponente in der Toolbox zuzugreifen, klicken Sie auf die Komponente, um am unteren Rand der Toolbox deren Beschreibung anzuzeigen. Für einige Komponenten sind auch Beispiele verfügbar, in denen die Konfiguration und Verwendung der Komponenten veranschaulicht wird. Die Beispiele sind auf [MSDN](/samples/browse/)verfügbar. Um über die **SSIS-Toolbox**auf die Beispiele zuzugreifen, klicken Sie auf den unterhalb der Beschreibung angezeigten Link **Beispiele suchen** .  
+Um auf weitere Informationen zu einer Komponente in der Toolbox zuzugreifen, klicken Sie auf die Komponente, um am unteren Rand der Toolbox deren Beschreibung anzuzeigen. Für einige Komponenten sind auch Beispiele verfügbar, in denen die Konfiguration und Verwendung der Komponenten veranschaulicht wird. Die Beispiele sind auf [MSDN](/samples/browse/)verfügbar. Um über die **SSIS-Toolbox** auf die Beispiele zuzugreifen, klicken Sie auf den unterhalb der Beschreibung angezeigten Link **Beispiele suchen** .  
   
 > [!NOTE]
 > Sie können installierte Komponenten nicht aus der Toolbox *entfernen*.  
 
 ## <a name="toolbox-categories"></a>Toolbox-Kategorien
- In der **SSIS-Toolbox**werden Ablaufsteuerungs- und Datenflusskomponenten in Kategorien organisiert.  Sie können Kategorien erweitern und ausblenden sowie Komponenten neu anordnen.  Stellen Sie die Standardorganisation wieder her, indem Sie mit der rechten Maustaste in die Toolbox klicken und dann auf **Toolbox-Standardwerte wiederherstellen** klicken.  
+ In der **SSIS-Toolbox** werden Ablaufsteuerungs- und Datenflusskomponenten in Kategorien organisiert.  Sie können Kategorien erweitern und ausblenden sowie Komponenten neu anordnen.  Stellen Sie die Standardorganisation wieder her, indem Sie mit der rechten Maustaste in die Toolbox klicken und dann auf **Toolbox-Standardwerte wiederherstellen** klicken.  
   
- Die Kategorien **Favoriten** und **Allgemein** werden in der Toolbox angezeigt, wenn Sie die Registerkarten **Ablaufsteuerung**, **Datenfluss**und **Ereignishandlern** auswählen. Die Kategorie **Weitere Tasks** wird in der Toolbox angezeigt, wenn Sie die Registerkarte **Ablaufsteuerung** oder die Registerkarte **Ereignishandler** auswählen. Die Kategorien **Weitere Transformationen**, **Weitere Quellen**und **Weitere Ziele** werden in der Toolbox angezeigt, wenn Sie die Registerkarte **Datenfluss** auswählen.  
+ Die Kategorien **Favoriten** und **Allgemein** werden in der Toolbox angezeigt, wenn Sie die Registerkarten **Ablaufsteuerung**, **Datenfluss** und **Ereignishandlern** auswählen. Die Kategorie **Weitere Tasks** wird in der Toolbox angezeigt, wenn Sie die Registerkarte **Ablaufsteuerung** oder die Registerkarte **Ereignishandler** auswählen. Die Kategorien **Weitere Transformationen**, **Weitere Quellen** und **Weitere Ziele** werden in der Toolbox angezeigt, wenn Sie die Registerkarte **Datenfluss** auswählen.  
 
  ## <a name="add-azure-components-to-the-toolbox"></a>Hinzufügen von Azure-Komponenten zur Toolbox  
  Das Azure Feature Pack für Integration Service enthält Verbindungs-Manager für Verbindungen zu Azure-Datenquellen und Tasks für allgemeine Azure-Vorgänge. Installieren Sie das Feature Pack, um diese Elemente der Toolbox hinzufügen. Weitere Informationen finden Sie unter [Azure Feature Pack für Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md).  

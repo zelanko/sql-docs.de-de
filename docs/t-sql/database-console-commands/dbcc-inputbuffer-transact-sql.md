@@ -25,11 +25,11 @@ ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: a76fab0c7e0b7e15beb0eb094de4aa66e1644b2e
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114998"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96119577"
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ Die Sitzungs-ID, die jeweils einer aktiven primären Verbindung zugeordnet ist.
 *request_id*  
 Die genaue Anforderung (Batch), nach der in der aktuellen Sitzung gesucht werden soll.  
 
-Die folgende Abfrage gibt *request_id*zurück:  
+Die folgende Abfrage gibt *request_id* zurück:  
 ```sql
 SELECT request_id   
 FROM sys.dm_exec_requests   
@@ -71,7 +71,7 @@ DBCC INPUTBUFFER gibt ein Rowset mit folgenden Spalten zurück.
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**EventType**|**nvarchar(30)**|Der Ereignistyp. Dies kann **RPC Event** oder **Language Event**sein. Wurde kein letztes Ereignis erkannt, wird **No Event** ausgegeben.|  
+|**EventType**|**nvarchar(30)**|Der Ereignistyp. Dies kann **RPC Event** oder **Language Event** sein. Wurde kein letztes Ereignis erkannt, wird **No Event** ausgegeben.|  
 |**Parameter**|**smallint**|0 = Text<br /><br /> 1- *n* = Parameter|  
 |**EventInfo**|**nvarchar(4000)**|Wenn **EventType** gleich RPC, enthält **EventInfo** nur den Namen der Prozedur. Wenn **EventType** gleich Language, werden nur die ersten 4000 Zeichen des Ereignisses angezeigt.|  
   

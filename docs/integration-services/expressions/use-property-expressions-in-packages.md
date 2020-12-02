@@ -21,10 +21,10 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d8775714da1c59e86a6ba62661610a0f5abbd11e
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193178"
 ---
 # <a name="use-property-expressions-in-packages"></a>Verwenden von Eigenschaftsausdrücken in Paketen
@@ -57,7 +57,7 @@ ms.locfileid: "92193178"
   
  Eine Eigenschaft kann jeweils nur einen Eigenschaftsausdruck verwenden, und ein Eigenschaftsausdruck kann nur für eine einzige Eigenschaft angewendet werden. Allerdings können Sie mehrere identische Eigenschaftsausdrücke erstellen und diese unterschiedlichen Eigenschaften zuordnen.  
   
- Einige Eigenschaften werden mithilfe von Enumeratorwerten festgelegt. Wenn Sie in einem Eigenschaftsausdruck auf das Enumeratorelement verweisen, müssen Sie den numerischen Wert verwenden, der dem Anzeigenamen des Enumeratorelements entspricht. Wenn beispielsweise ein Eigenschaftsausdruck die **LoggingMode** -Eigenschaft festlegt, die einen Wert der **DTSLoggingMode** -Enumeration verwendet, muss der Eigenschaftsausdruck anstelle der Anzeigenamen **Enabled**, **Disabled**oder **UseParentSetting**gleich 0, 1 oder 2 sein. Weitere Informationen finden Sie unter [Aufgezählte Konstanten in Eigenschaftsausdrücken](../../integration-services/expressions/enumerated-constants-in-property-expressions.md).  
+ Einige Eigenschaften werden mithilfe von Enumeratorwerten festgelegt. Wenn Sie in einem Eigenschaftsausdruck auf das Enumeratorelement verweisen, müssen Sie den numerischen Wert verwenden, der dem Anzeigenamen des Enumeratorelements entspricht. Wenn beispielsweise ein Eigenschaftsausdruck die **LoggingMode** -Eigenschaft festlegt, die einen Wert der **DTSLoggingMode** -Enumeration verwendet, muss der Eigenschaftsausdruck anstelle der Anzeigenamen **Enabled**, **Disabled** oder **UseParentSetting** gleich 0, 1 oder 2 sein. Weitere Informationen finden Sie unter [Aufgezählte Konstanten in Eigenschaftsausdrücken](../../integration-services/expressions/enumerated-constants-in-property-expressions.md).  
   
 ## <a name="property-expression-user-interface"></a>Benutzeroberfläche von Eigenschaftsausdrücken  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt eine Reihe von Tools zum Erstellen und Verwalten von Eigenschaftsausdrücken bereit.  
@@ -160,7 +160,7 @@ ms.locfileid: "92193178"
  `@[User::myfilenamefull]`  
   
 > [!NOTE]  
->  Der Zugriff auf Eigenschaftsausdrücke für Verbindungs-Manager ist nur mithilfe des Eigenschaften-Fensters möglich. Um die Eigenschaften eines Verbindungs-Managers anzuzeigen, müssen Sie bei geöffnetem Eigenschaftenfenster im **Verbindungs-Manager** -Bereich des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers den Verbindungs-Manager auswählen oder mit der rechten Maustaste auf den Verbindungs-Manager klicken und **Eigenschaften**auswählen.  
+>  Der Zugriff auf Eigenschaftsausdrücke für Verbindungs-Manager ist nur mithilfe des Eigenschaften-Fensters möglich. Um die Eigenschaften eines Verbindungs-Managers anzuzeigen, müssen Sie bei geöffnetem Eigenschaftenfenster im **Verbindungs-Manager** -Bereich des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers den Verbindungs-Manager auswählen oder mit der rechten Maustaste auf den Verbindungs-Manager klicken und **Eigenschaften** auswählen.  
   
 ### <a name="property-expression-for-the-configstring-property-of-a-text-file-log-provider"></a>Eigenschaftsausdruck für die ConfigString-Eigenschaft eines Protokollanbieters für Textdateien  
  Der folgende Eigenschaftsausdruck kann verwendet werden, um die ConfigString-Eigenschaft eines Protokollanbieters für Textdateien festzulegen. Der Ausdruck verwendet eine einzelne benutzerdefinierte Variable, `varConfigString`, die den Namen des zu verwendenden Dateiverbindungs-Managers enthält. Der Dateiverbindungs-Manager gibt den Pfad der Textdatei an, in den Protokolleinträge geschrieben werden.  
@@ -168,7 +168,7 @@ ms.locfileid: "92193178"
  `@[User::varConfigString]`  
   
 > [!NOTE]  
->  Der Zugriff auf Eigenschaftsausdrücke für Protokollanbieter ist nur über das Eigenschaftenfenster möglich. Um die Eigenschaften eines Protokollanbieters anzuzeigen, müssen Sie bei geöffnetem Eigenschaftenfenster auf der Registerkarte **Paket-Explorer** des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers den Protokollanbieter auswählen oder im Paket-Explorer mit der rechten Maustaste auf den Protokollanbieter klicken und auf **Eigenschaften**klicken.  
+>  Der Zugriff auf Eigenschaftsausdrücke für Protokollanbieter ist nur über das Eigenschaftenfenster möglich. Um die Eigenschaften eines Protokollanbieters anzuzeigen, müssen Sie bei geöffnetem Eigenschaftenfenster auf der Registerkarte **Paket-Explorer** des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers den Protokollanbieter auswählen oder im Paket-Explorer mit der rechten Maustaste auf den Protokollanbieter klicken und auf **Eigenschaften** klicken.  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
   

@@ -20,11 +20,11 @@ ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b825ff5cee4ceba526d59cc30dc0bb1205896171
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194635"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123425"
 ---
 # <a name="character-map-transformation"></a>Transformation zum Zuordnen der Zeichen
 
@@ -103,7 +103,7 @@ ms.locfileid: "92194635"
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|Neue Spalte|Speichern Sie die Daten in einer neuen Spalte. Weisen Sie der Spalte unter **Ausgabealias**einen Namen zu.|  
+|Neue Spalte|Speichern Sie die Daten in einer neuen Spalte. Weisen Sie der Spalte unter **Ausgabealias** einen Namen zu.|  
 |Direkte Änderung|Speichern Sie die geänderten Daten in der vorhandenen Spalte.|  
   
  **Vorgang**  

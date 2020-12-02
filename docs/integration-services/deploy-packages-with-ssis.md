@@ -22,11 +22,11 @@ ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d82aae4ee0195adca300d16bf9f2a2217c40a38c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194585"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123340"
 ---
 # <a name="deploy-packages-with-ssis"></a>Bereitstellen von Paketen mit SSIS
 
@@ -63,7 +63,7 @@ Auf dem Computer, auf dem Sie das Bereitstellungspaket erstellen, **müssen die 
 
 - Beispieldaten, fertige Pakete, Konfigurationen und eine Infodatei. Informationen zum Download der Beispieldaten sowie der Lektionspakete als ZIP-Datei finden Sie unter [Tutorial für SQL Server Integration Services: Erstellen eines einfachen ETL-Pakets](https://www.microsoft.com/download/details.aspx?id=56827). Die meisten Dateien in der ZIP-Datei sind schreibgeschützt, um unbeabsichtigte Änderungen zu verhindern. Um die Ausgabe in eine Datei zu schreiben oder zu ändern, müssen Sie unter Umständen das Nur-Lese-Attribut in den Dateieigenschaften deaktivieren.
 
--   Die Beispieldatenbank **AdventureWorks2014**. Laden Sie `AdventureWorks2014.bak` von der GitHub-Website[AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) herunter, und stellen Sie die Sicherung wieder her, um die Datenbank **AdventureWorks2014** herunterzuladen.  
+-   Die Beispieldatenbank **AdventureWorks2014**. Laden Sie `AdventureWorks2014.bak` von der GitHub-Website [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) herunter, und stellen Sie die Sicherung wieder her, um die Datenbank **AdventureWorks2014** herunterzuladen.  
 
 -   Sie müssen die Berechtigung zum Erstellen und Löschen von Tabellen in der AdventureWorks-Datenbank haben.
     
@@ -77,7 +77,7 @@ Auf dem Computer, auf dem Sie die Pakete bereitstellen, **müssen die folgenden 
 
 - Beispieldaten, fertige Pakete, Konfigurationen und eine Infodatei. Informationen zum Download der Beispieldaten sowie der Lektionspakete als ZIP-Datei finden Sie unter [Tutorial für SQL Server Integration Services: Erstellen eines einfachen ETL-Pakets](https://www.microsoft.com/download/details.aspx?id=56827). Die meisten Dateien in der ZIP-Datei sind schreibgeschützt, um unbeabsichtigte Änderungen zu verhindern. Um die Ausgabe in eine Datei zu schreiben oder zu ändern, müssen Sie unter Umständen das Nur-Lese-Attribut in den Dateieigenschaften deaktivieren.
 
--   Die Beispieldatenbank **AdventureWorks2014**. Laden Sie `AdventureWorks2014.bak` von der GitHub-Website[AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) herunter, und stellen Sie die Sicherung wieder her, um die Datenbank **AdventureWorks2014** herunterzuladen.  
+-   Die Beispieldatenbank **AdventureWorks2014**. Laden Sie `AdventureWorks2014.bak` von der GitHub-Website [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) herunter, und stellen Sie die Sicherung wieder her, um die Datenbank **AdventureWorks2014** herunterzuladen.  
     
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md):    
     

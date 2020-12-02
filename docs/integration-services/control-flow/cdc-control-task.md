@@ -15,11 +15,11 @@ ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 685ac46fd80e92d115dcf8aed3c49abb1ac9d144
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496042"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123580"
 ---
 # <a name="cdc-control-task"></a>CDC-Steuerungstask
 
@@ -108,17 +108,17 @@ ms.locfileid: "88496042"
   
 -   **Beginn des anfänglichen Ladevorgangs kennzeichnen**: Dieser Vorgang wird verwendet, wenn der anfängliche Ladevorgang aus einer aktiven Datenbank ohne Momentaufnahme erfolgt. Er wird zu Beginn eines Pakets für das anfängliche Laden verwendet, um die aktuelle LSN in der Quelldatenbank aufzuzeichnen, bevor das Paket für das anfängliche Laden mit dem Lesen der Quelltabellen beginnt. Für diesen Vorgang ist eine Verbindung mit der Quelldatenbank erforderlich.  
   
-     Wenn Sie bei Verwendung von **CDC (nicht Oracle) die Option** Beginn des anfänglichen Ladevorgangs kennzeichnen [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auswählen, muss als Benutzer im Verbindungs-Manager entweder  **db_owner** oder **sysadmin**angegeben sein.  
+     Wenn Sie bei Verwendung von **CDC (nicht Oracle) die Option** Beginn des anfänglichen Ladevorgangs kennzeichnen [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auswählen, muss als Benutzer im Verbindungs-Manager entweder  **db_owner** oder **sysadmin** angegeben sein.  
   
 -   **Ende des anfänglichen Ladevorgangs kennzeichnen**: Dieser Vorgang wird verwendet, wenn der anfängliche Ladevorgang aus einer aktiven Datenbank ohne Momentaufnahme erfolgt. Er wird am Ende eines Pakets zum anfänglichen Laden verwendet, um die aktuelle LSN in der Quelldatenbank aufzuzeichnen, nachdem das Paket für das anfängliche Laden das Lesen der Quelltabellen beendet hat. Diese LSN wird durch das Aufzeichnen der aktuellen Zeit, zu der dieser Vorgang aufgetreten ist, und das anschließende Abfragen der `cdc.lsn_time_`-Zuordnungstabelle in der CDC-Datenbank ermittelt. Dabei wird nach einer Änderung gesucht, die nach diesem Zeitpunkt aufgetreten ist.  
   
-     Wenn Sie bei Verwendung von **CDC (nicht Oracle) die Option** Ende des anfänglichen Ladevorgangs kennzeichnen [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auswählen, muss als Benutzer im Verbindungs-Manager entweder  **db_owner** oder **sysadmin**angegeben sein.  
+     Wenn Sie bei Verwendung von **CDC (nicht Oracle) die Option** Ende des anfänglichen Ladevorgangs kennzeichnen [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auswählen, muss als Benutzer im Verbindungs-Manager entweder  **db_owner** oder **sysadmin** angegeben sein.  
   
 -   **CDC-Start kennzeichnen**: Dieser Vorgang wird verwendet, wenn der anfängliche Ladevorgang aus einer Momentaufnahmedatenbank oder einer inaktiven Datenbank erfolgt. Er wird an einem beliebigem Punkt im anfänglich geladenen Paket aufgerufen. Der Vorgang akzeptiert einen Parameter, bei dem es sich um eine Momentaufnahme-LSN oder den Namen einer Momentaufnahmedatenbank (von dem die Momentaufnahme-LSN automatisch abgeleitet wird) handeln kann. Der Parameter kann auch leer gelassen werden. In diesem Fall wird die aktuelle Datenbank-LSN als Start-LSN für das Änderungsverarbeitungspaket verwendet.  
   
      Dieser Vorgang wird anstelle der Vorgänge "Beginn/Ende des anfänglichen Ladevorgangs kennzeichnen" verwendet.  
   
-     Wenn Sie bei Verwendung von **CDC (nicht Oracle) die Option** CDC-Start kennzeichnen [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auswählen, muss als Benutzer im Verbindungs-Manager entweder  **db_owner** oder **sysadmin**angegeben sein.  
+     Wenn Sie bei Verwendung von **CDC (nicht Oracle) die Option** CDC-Start kennzeichnen [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auswählen, muss als Benutzer im Verbindungs-Manager entweder  **db_owner** oder **sysadmin** angegeben sein.  
   
 -   **Verarbeitungsbereich abrufen**: Dieser Vorgang wird in einem Änderungsverarbeitungspaket vor dem Aufrufen des Datenflusses verwendet, der den CDC-Quelldatenfluss verwendet. Dabei wird ein Bereich von LSNs eingerichtet, der vom CDC-Quelldatenfluss nach dem Aufrufen gelesen wird. Der Bereich wird in einer SSIS-Paketvariablen gespeichert, die von der CDC-Quelle während der Datenflussverarbeitung verwendet wird.  
   
@@ -131,12 +131,12 @@ ms.locfileid: "88496042"
      Dieser Vorgang wird z. B. verwendet, wenn Sie nur die neu erstellten Änderungsdatensätze verarbeiten und alle alten Änderungsdatensätze ignorieren möchten.  
   
  **Variable, die den CDC-Status enthält**  
- Wählen Sie die SSIS-Paketvariable aus, die die Statusinformationen für den Taskvorgang speichert. Sie sollten vor Beginn eine Variable definieren. Wenn Sie **Automatische Statuspersistenz**auswählen, wird die Statusvariable automatisch geladen und gespeichert.  
+ Wählen Sie die SSIS-Paketvariable aus, die die Statusinformationen für den Taskvorgang speichert. Sie sollten vor Beginn eine Variable definieren. Wenn Sie **Automatische Statuspersistenz** auswählen, wird die Statusvariable automatisch geladen und gespeichert.  
   
  Weitere Informationen zum Definieren der Statusvariable finden Sie unter [Definieren einer Statusvariablen](../../integration-services/data-flow/define-a-state-variable.md).  
   
  **SQL Server LSN, um CDC zu starten/Name der Momentaufnahme**  
- Geben Sie die aktuelle Quelldatenbank-LSN oder den Namen der Momentaufnahmedatenbank ein, aus der der anfängliche Ladevorgang ausgeführt wird, um die Startposition für CDC zu bestimmen. Diese Option ist nur verfügbar, wenn **CDC-Steuerungsvorgang** auf **CDC-Start kennzeichnen**festgelegt ist.  
+ Geben Sie die aktuelle Quelldatenbank-LSN oder den Namen der Momentaufnahmedatenbank ein, aus der der anfängliche Ladevorgang ausgeführt wird, um die Startposition für CDC zu bestimmen. Diese Option ist nur verfügbar, wenn **CDC-Steuerungsvorgang** auf **CDC-Start kennzeichnen** festgelegt ist.  
   
  Weitere Informationen zu diesen Vorgängen finden Sie unter [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).  
   

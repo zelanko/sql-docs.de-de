@@ -16,11 +16,11 @@ ms.assetid: 96871075-1998-4cd9-86b1-3fc55577aee4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 4a717b5b83be8d381a91ff1ab1055d24ae8c59ed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488193"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96115964"
 ---
 # <a name="curvetolinewithtolerance-geometry-data-type"></a>CurveToLineWithTolerance (geometry-Datentyp)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +52,7 @@ Gibt eine polygonale Näherung einer Instanz von **geometry** mit Kreisbogensegm
  Wenn Sie die Toleranz auf <= 0 festlegen, wird eine `ArgumentOutOfRange`-Ausnahme ausgelöst.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Mit dieser Methode kann ein Umfang für die Fehlertoleranz in der resultierenden **LineString**angegeben werden.  
+ Mit dieser Methode kann ein Umfang für die Fehlertoleranz in der resultierenden **LineString** angegeben werden.  
   
  In der folgenden Tabelle wird der von `CurveToLineWithTolerance()`zurückgegebene Instanzentyp für verschiedene Typen angezeigt.  
   
@@ -60,11 +60,11 @@ Gibt eine polygonale Näherung einer Instanz von **geometry** mit Kreisbogensegm
 |----------------------------|---------------------------|  
 |Leere geometry-Instanz|Leere Instanz von **GeometryCollection**|  
 |**Point** und **MultiPoint**|**Point** -Instanz|  
-|**MultiPoint**|Instanz von**Point** oder **MultiPoint**|  
-|**CircularString**, **CompoundCurve**oder **LineString**|**LineString** -Instanz|  
-|**MultiLineString**|Instanz von**LineString** oder **MultiLineString**|  
+|**MultiPoint**|Instanz von **Point** oder **MultiPoint**|  
+|**CircularString**, **CompoundCurve** oder **LineString**|**LineString** -Instanz|  
+|**MultiLineString**|Instanz von **LineString** oder **MultiLineString**|  
 |**CurvePolygon** und **Polygon**|**Polygon** -Instanz|  
-|**MultiPolygon**|Instanz von**Polygon** oder **MultiPolygon**|  
+|**MultiPolygon**|Instanz von **Polygon** oder **MultiPolygon**|  
 |**GeometryCollection** mit einer einzelnen Instanz, die kein Kreisbogensegment enthält|Die Instanz, die im **GeometryCollection** enthalten ist, bestimmt den Typ der Instanz, die zurückgegeben wird.|  
 |**GeometryCollection** mit einer einzelnen eindimensionalen Instanz eines Kreisbogensegments (**CircularString**, **CompoundCurve**)|**LineString** -Instanz|  
 |**GeometryCollection** mit einer einzelnen zweidimensionalen Instanz eines Kreisbogensegments (**CurvePolygon**)|**Polygon** -Instanz|  

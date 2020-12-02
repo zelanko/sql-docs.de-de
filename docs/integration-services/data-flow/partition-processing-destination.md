@@ -21,10 +21,10 @@ ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d98fda12251dafb69ab3738ea90f1eaf0298df46
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92192696"
 ---
 # <a name="partition-processing-destination"></a>Ziel für Partitionsverarbeitung
@@ -70,7 +70,7 @@ ms.locfileid: "92192696"
   
 ### <a name="options"></a>Tastatur  
  **Connection manager**  
- Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
+ Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu** klicken.  
   
  **Neu**  
  Erstellen Sie mithilfe des Dialogfelds **Analysis Services-Verbindungs-Manager hinzufügen** eine neue Verbindung.  
@@ -101,7 +101,7 @@ ms.locfileid: "92192696"
  Zeigt die Liste der verfügbaren Zielspalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Zielspalten in der Tabelle Eingabespalten zuordnen.  
   
  **Eingabespalte**  
- Zeigen Sie die in obiger Tabelle ausgewählten Eingabespalten an. Die Zuordnungen können Sie mithilfe der Liste **Verfügbare Eingabespalten**ändern.  
+ Zeigen Sie die in obiger Tabelle ausgewählten Eingabespalten an. Die Zuordnungen können Sie mithilfe der Liste **Verfügbare Eingabespalten** ändern.  
   
  **Zielspalte**  
  Zeigt alle verfügbaren Zielspalten an, und ob sie zugeordnet sind.  
@@ -131,10 +131,10 @@ ms.locfileid: "92192696"
  Gibt an, dass die Verarbeitung beendet werden soll, wenn ein Fehler auftritt.  
   
  **Anzahl von Fehlern**  
- Gibt den Schwellenwert für die Anzahl von Fehlern an, ab dem die Verarbeitung beendet werden soll, wenn Sie **Bei Fehler beenden**ausgewählt haben.  
+ Gibt den Schwellenwert für die Anzahl von Fehlern an, ab dem die Verarbeitung beendet werden soll, wenn Sie **Bei Fehler beenden** ausgewählt haben.  
   
  **Aktion bei Fehler**  
- Gibt die Aktion an, die bei Erreichen des Fehlerschwellenwerts ausgeführt wird, wenn Sie **Bei Fehler beenden**ausgewählt haben.  
+ Gibt die Aktion an, die bei Erreichen des Fehlerschwellenwerts ausgeführt wird, wenn Sie **Bei Fehler beenden** ausgewählt haben.  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  

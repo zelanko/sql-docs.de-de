@@ -21,11 +21,11 @@ ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ebe86146e2ce4f25f05c9948071d3fc7a4d4edb8
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91728049"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123700"
 ---
 # <a name="file-connection-manager"></a>Dateiverbindungs-Manager
 
@@ -37,7 +37,7 @@ ms.locfileid: "91728049"
 ## <a name="usage-types-of-the-file-connection-manager"></a>Verwendungstypen des Dateiverbindungs-Managers  
  Mit der **FileUsageType** -Eigenschaft des Dateiverbindungs-Managers wird angegeben, wie die Dateiverbindung verwendet wird. Der Dateiverbindungs-Manager kann eine Datei bzw. einen Ordner erstellen und eine vorhandene Datei bzw. einen vorhandenen Ordner verwenden.  
   
- In der folgenden Tabelle sind die Werte von **FileUsageType**aufgeführt.  
+ In der folgenden Tabelle sind die Werte von **FileUsageType** aufgeführt.  
   
 |value|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -52,7 +52,7 @@ ms.locfileid: "91728049"
 ## <a name="configuration-of-the-file-connection-manager"></a>Konfiguration des Verbindungs-Managers für Dateien  
  Wenn Sie einem Paket einen Dateiverbindungs-Manager hinzufügen, erstellt [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] einen Verbindungs-Manager, der zur Laufzeit in eine Dateiverbindung aufgelöst wird, die Eigenschaften der Dateiverbindung festlegt und der **Connections** -Sammlung des Pakets die Dateiverbindung hinzufügt.  
   
- Die **ConnectionManagerType** -Eigenschaft des Verbindungs-Managers ist auf **FILE**festgelegt.  
+ Die **ConnectionManagerType** -Eigenschaft des Verbindungs-Managers ist auf **FILE** festgelegt.  
   
  Es gibt folgende Möglichkeiten, um einen Dateiverbindungs-Manager zu konfigurieren:  
   
@@ -60,7 +60,7 @@ ms.locfileid: "91728049"
   
 -   Geben Sie eine Datei oder einen Ordner an.  
   
- Sie können die ConnectionString-Eigenschaft für den Dateiverbindungs-Manager festlegen, indem Sie einen Ausdruck im Eigenschaftenfenster von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]angeben. Fügen Sie jedoch im **Dateiverbindungs-Manager-Editor**für **Datei/Ordner**einen Pfad für eine Datei oder einen Ordner hinzu, um Überprüfungsfehler zu vermeiden, wenn Sie die Datei oder den Ordner mit einem Ausdruck angeben.  
+ Sie können die ConnectionString-Eigenschaft für den Dateiverbindungs-Manager festlegen, indem Sie einen Ausdruck im Eigenschaftenfenster von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]angeben. Fügen Sie jedoch im **Dateiverbindungs-Manager-Editor** für **Datei/Ordner** einen Pfad für eine Datei oder einen Ordner hinzu, um Überprüfungsfehler zu vermeiden, wenn Sie die Datei oder den Ordner mit einem Ausdruck angeben.  
   
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "91728049"
   Im Dialogfeld **Dateiverbindungs-Manager-Editor** werden die Eigenschaften angegeben, die zum Herstellen einer Verbindung zu einer Datei oder einem Ordner verwendet werden.  
   
 > [!NOTE]  
->  Sie können die ConnectionString-Eigenschaft für den Dateiverbindungs-Manager festlegen, indem Sie einen Ausdruck im Eigenschaftenfenster von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]angeben. Fügen Sie jedoch im **Dateiverbindungs-Manager-Editor**für **Datei/Ordner**einen Pfad für eine Datei oder einen Ordner hinzu, um Überprüfungsfehler zu vermeiden, wenn Sie die Datei oder den Ordner mit einem Ausdruck angeben.  
+>  Sie können die ConnectionString-Eigenschaft für den Dateiverbindungs-Manager festlegen, indem Sie einen Ausdruck im Eigenschaftenfenster von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]angeben. Fügen Sie jedoch im **Dateiverbindungs-Manager-Editor** für **Datei/Ordner** einen Pfad für eine Datei oder einen Ordner hinzu, um Überprüfungsfehler zu vermeiden, wenn Sie die Datei oder den Ordner mit einem Ausdruck angeben.  
   
  Weitere Informationen zum Dateiverbindungs-Manager finden Sie unter [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md).  
   
@@ -88,9 +88,9 @@ ms.locfileid: "91728049"
 |Vorhandener Ordner|Verwenden Sie einen vorhandenen Ordner.|  
   
  **Datei/Ordner**  
- Bei **Datei**geben Sie die zu verwendende Datei an.  
+ Bei **Datei** geben Sie die zu verwendende Datei an.  
   
- Bei **Ordner**geben Sie den zu verwendenden Ordner an.  
+ Bei **Ordner** geben Sie den zu verwendenden Ordner an.  
   
  **Durchsuchen**  
  Wählen Sie die Datei oder den Ordner mithilfe des Dialogfelds **Datei auswählen** oder des Dialogfelds **Ordner suchen** aus.  

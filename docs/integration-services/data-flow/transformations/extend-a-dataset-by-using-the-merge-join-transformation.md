@@ -17,11 +17,11 @@ ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7000b1593f20305c4d09f1f8ee11eb4b874ee3aa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495681"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123355"
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>Erweitern eines Datasets mithilfe der Transformation für Zusammenführungsjoins
 
@@ -38,7 +38,7 @@ ms.locfileid: "88495681"
   
 2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
   
-3.  Klicken Sie auf die Registerkarte **Datenfluss** , und ziehen Sie dann aus dem Bereich **Toolbox**die Transformation für Zusammenführungsjoin auf die Entwurfsoberfläche.  
+3.  Klicken Sie auf die Registerkarte **Datenfluss** , und ziehen Sie dann aus dem Bereich **Toolbox** die Transformation für Zusammenführungsjoin auf die Entwurfsoberfläche.  
   
 4.  Verbinden Sie die Transformation für Zusammenführungsjoins mit dem Datenfluss, indem Sie den Konnektor von einer Datenquelle oder einer vorherigen Transformation auf die Transformation für Zusammenführungsjoins ziehen.  
   

@@ -17,10 +17,10 @@ ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8f872916b7b93a1aab3447bad6579dd672c915e1
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92194798"
 ---
 # <a name="odata-source"></a>OData-Quelle
@@ -83,7 +83,7 @@ Beim Datentyp **Decimal** werden Genauigkeit und Skalierung durch die Quellmetad
   
 ### <a name="static-options"></a>Statische Optionen  
  **OData-Verbindungs-Manager**  
- Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
+ Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu** klicken.  
   
  Nach dem Auswählen oder Erstellen eines Verbindungs-Managers wird im Dialogfeld die vom Verbindungs-Manager verwendete OData-Protokollversion angezeigt.  
   
@@ -105,7 +105,7 @@ Beim Datentyp **Decimal** werden Genauigkeit und Skalierung durch die Quellmetad
  Zeigt die schreibgeschützte Feed-URL auf Grundlage der Optionen an, die Sie in diesem Dialogfeld ausgewählt haben.  
   
  **Vorschau**  
- Zeigt mithilfe des Dialogfelds **Vorschau** eine Vorschau der Ergebnisse an. In der**Vorschau** können bis zu 20 Zeilen angezeigt werden.  
+ Zeigt mithilfe des Dialogfelds **Vorschau** eine Vorschau der Ergebnisse an. In der **Vorschau** können bis zu 20 Zeilen angezeigt werden.  
   
 ### <a name="dynamic-options"></a>Dynamische Optionen  
   

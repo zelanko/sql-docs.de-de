@@ -27,10 +27,10 @@ ms.author: sstein
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 77209c7b5156956897c3c458e825fddeb7462e22
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195582"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importieren einer BACPAC-Datei zum Erstellen einer neuen Benutzerdatenbank
@@ -45,7 +45,7 @@ ms.locfileid: "92195582"
 2.  Beim Import werden die Daten per Massenkopieren in die Exportdatei kopiert.  
 
 ## <a name="sql-server-utility"></a>SQL Server-Hilfsprogramm  
- Beim Importieren einer DAC in eine Instanz der Datenbank-Engine wird die importierte DAC in das SQL Server-Hilfsprogramm integriert, wenn der Sammlungssatz des Hilfsprogramms das nächste Mal von der Instanz an den Steuerungspunkt für das Hilfsprogramm gesendet wird. Die DAC ist dann im Knoten **Bereitgestellte Datenebenenanwendungen** im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Hilfsprogramm-Explorer**von** vorhanden und wird auf der Detailseite **Bereitgestellte Datenebenenanwendungen** aufgeführt.  
+ Beim Importieren einer DAC in eine Instanz der Datenbank-Engine wird die importierte DAC in das SQL Server-Hilfsprogramm integriert, wenn der Sammlungssatz des Hilfsprogramms das nächste Mal von der Instanz an den Steuerungspunkt für das Hilfsprogramm gesendet wird. Die DAC ist dann im Knoten **Bereitgestellte Datenebenenanwendungen** im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Hilfsprogramm-Explorer **von** vorhanden und wird auf der Detailseite **Bereitgestellte Datenebenenanwendungen** aufgeführt.  
   
 ## <a name="database-options-and-settings"></a>Datenbankoptionen und -einstellungen  
  Standardmäßig verfügt die während des Imports erstellte Datenbank über alle Standardeinstellungen aus der CREATE DATABASE-Anweisung, mit der Ausnahme, dass die Datenbanksortierung und der Kompatibilitätsgrad auf die in der DAC-Exportdatei festgelegten Werte gesetzt sind. Eine DAC-Exportdatei verwendet die Werte aus der ursprünglichen Datenbank.  
@@ -103,7 +103,7 @@ ms.locfileid: "92195582"
   
 -   **Aus Azure importieren**: Importiert eine BACPAC-Datei aus einem Microsoft Azure-Container. Sie müssen eine Verbindung mit einem Microsoft Azure-Container herstellen, um diese Option zu überprüfen. Beachten Sie, dass diese Option für den Import aus Azure auch erfordert, dass Sie ein lokales Verzeichnis für die temporäre Datei angeben. Die temporäre Datei wird am angegebenen Speicherort erstellt und verbleibt dort, nachdem der Vorgang abgeschlossen wurde.  
   
-     Wenn Sie Azure durchsuchen, können Sie zwischen Containern innerhalb eines Kontos wechseln. Sie müssen eine einzelne BACPAC-Datei angeben, um den Importvorgang fortzusetzen. Beachten Sie, dass Sie Spalten nach **Name**, **Größe**oder **Änderungsdatum** sortieren können.  
+     Wenn Sie Azure durchsuchen, können Sie zwischen Containern innerhalb eines Kontos wechseln. Sie müssen eine einzelne BACPAC-Datei angeben, um den Importvorgang fortzusetzen. Beachten Sie, dass Sie Spalten nach **Name**, **Größe** oder **Änderungsdatum** sortieren können.  
   
      Um fortzufahren, geben Sie die zu importierende BACPAC-Datei an, und klicken Sie dann auf **Öffnen**.  
   

@@ -15,11 +15,11 @@ ms.assetid: e1896c73-128a-4128-9814-3e01f7dfe19b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0c327451deeb763605dc9e66862fe275046cddb9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496029"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123621"
 ---
 # <a name="azure-hdinsight-hive-task"></a>Azure HDInsight Hive-Task
 
@@ -28,7 +28,7 @@ ms.locfileid: "88496029"
 
 Verwenden Sie den **Azure HDInsight Hive-Task** zum Anwenden eines Hive-Skripts auf einen Azure HDInsight-Cluster.
      
-Um einen **Azure HDInsight-Hive-Task**hinzuzufügen, legen Sie ihn mittels Drag &amp; Drop auf dem SSIS-Designer ab, und doppelklicken Sie darauf, oder klicken Sie mit der rechten Maustaste, und klicken Sie dann auf **Bearbeiten** , um das folgende Dialogfeld **Azure HDInsight-Hive-Task-Editor** anzuzeigen.  
+Um einen **Azure HDInsight-Hive-Task** hinzuzufügen, legen Sie ihn mittels Drag &amp; Drop auf dem SSIS-Designer ab, und doppelklicken Sie darauf, oder klicken Sie mit der rechten Maustaste, und klicken Sie dann auf **Bearbeiten** , um das folgende Dialogfeld **Azure HDInsight-Hive-Task-Editor** anzuzeigen.  
   
 Der **Azure HDInsight-Hive-Task** ist eine Komponente des [SQL Server Integration Services-Feature Packs (SSIS) für Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
   

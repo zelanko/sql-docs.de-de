@@ -30,10 +30,10 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6ce27ef50da9b1c72bc3b620dda61e6c1c925d14
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195954"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Transformation für Fuzzygruppierung
@@ -56,7 +56,7 @@ ms.locfileid: "92195954"
   
 -   **_key_in**, eine Spalte, mit der jede Zeile eindeutig identifiziert wird.  
   
--   **_key_out**, eine Spalte, mit der eine Gruppe von doppelten Zeilen identifiziert wird. Die **_key_out** -Spalte, die den Wert der **_key_in** -Spalte in der kanonischen Datenzeile enthält. Zeilen mit demselben Wert in **_key_out** gehören zur selben Gruppe. Der Wert **_key_out**für eine Gruppe entspricht dem Wert von **_key_in** in der kanonischen Datenzeile.  
+-   **_key_out**, eine Spalte, mit der eine Gruppe von doppelten Zeilen identifiziert wird. Die **_key_out** -Spalte, die den Wert der **_key_in** -Spalte in der kanonischen Datenzeile enthält. Zeilen mit demselben Wert in **_key_out** gehören zur selben Gruppe. Der Wert **_key_out** für eine Gruppe entspricht dem Wert von **_key_in** in der kanonischen Datenzeile.  
   
 -   **_score**, ein Wert zwischen 0 und 1, der die Ähnlichkeit der Eingabezeile gegenüber der kanonischen Zeile angibt.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "92195954"
  Diese Transformation weist je eine Eingabe und eine Ausgabe auf. Eine Fehlerausgabe wird nicht unterstützt.  
   
 ## <a name="row-comparison"></a>Zeilenvergleich  
- Wenn Sie die Transformation für Fuzzygruppierung konfigurieren, können Sie den Vergleichsalgorithmus angeben, den die Transformation zum Vergleichen der Zeilen in der Transformationseingabe verwendet. Wenn Sie die Exhaustive-Eigenschaft auf **TRUE**festlegen, vergleicht die Transformation jede Zeile in der Eingabe mit jeder anderen Zeile in der Eingabe. Dieser Vergleichsalgorithmus kann zwar präzisere Ergebnisse produzieren, führt jedoch wahrscheinlich zu einer Einschränkung der Transformationsleistung, sofern die Anzahl der Zeilen in der Eingabe nicht gering ist. Um Leistungsprobleme zu vermeiden, wird empfohlen, die Exhaustive-Eigenschaft nur während der Paketentwicklung auf **TRUE** festzulegen.  
+ Wenn Sie die Transformation für Fuzzygruppierung konfigurieren, können Sie den Vergleichsalgorithmus angeben, den die Transformation zum Vergleichen der Zeilen in der Transformationseingabe verwendet. Wenn Sie die Exhaustive-Eigenschaft auf **TRUE** festlegen, vergleicht die Transformation jede Zeile in der Eingabe mit jeder anderen Zeile in der Eingabe. Dieser Vergleichsalgorithmus kann zwar präzisere Ergebnisse produzieren, führt jedoch wahrscheinlich zu einer Einschränkung der Transformationsleistung, sofern die Anzahl der Zeilen in der Eingabe nicht gering ist. Um Leistungsprobleme zu vermeiden, wird empfohlen, die Exhaustive-Eigenschaft nur während der Paketentwicklung auf **TRUE** festzulegen.  
   
 ## <a name="temporary-tables-and-indexes"></a>Temporäre Tabellen und Indizes  
  Zur Laufzeit erstellt die Transformation für Fuzzygruppierung temporäre Objekte wie z. B. Tabellen und Indizes mit potenziell erheblicher Größe in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank, zu der die Transformation eine Verbindung herstellt. Die Größe der Tabellen und Indizes ist proportional zur Anzahl der Zeilen in der Transformationseingabe und zur Anzahl der von der Transformation für Fuzzygruppierung erstellten Token.  
@@ -163,7 +163,7 @@ ms.locfileid: "92195954"
   Geben Sie mithilfe der Registerkarte **Erweitert** von **Transformations-Editor für Fuzzygruppierung** die Ein- und Ausgabespalten an, legen Sie Schwellenwerte für die Ähnlichkeit fest, und definieren Sie Begrenzungszeichen.  
   
 > [!NOTE]  
->  Die **Exhaustive** - und **MaxMemoryUsage** -Eigenschaften der Transformation für Fuzzgruppierung sind im **Transformations-Editor für Fuzzygruppierung**nicht verfügbar, können jedoch mit dem Dialogfeld **Erweiterter Editor**festgelegt werden. Weitere Informationen zu diesen Eigenschaften finden Sie im Abschnitt Transformation für Fuzzgruppierung von [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
+>  Die **Exhaustive** - und **MaxMemoryUsage** -Eigenschaften der Transformation für Fuzzgruppierung sind im **Transformations-Editor für Fuzzygruppierung** nicht verfügbar, können jedoch mit dem Dialogfeld **Erweiterter Editor** festgelegt werden. Weitere Informationen zu diesen Eigenschaften finden Sie im Abschnitt Transformation für Fuzzgruppierung von [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
 ### <a name="options"></a>Optionen  
  **Name der Eingabeschlüsselspalte**  

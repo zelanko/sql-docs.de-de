@@ -16,11 +16,11 @@ ms.assetid: b7c85d59-c841-4b7f-9d46-8b4b7f2a3afe
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1c51f5c7c038abf9d3ee6ed48549ffafffd6b1d0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445111"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96114575"
 ---
 # <a name="collectionaggregate-geometry-data-type"></a>CollectionAggregate (geometry-Datentyp)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +52,7 @@ CollectionAggregate ( geometry_operand )
  Diese Methode ignoriert **null** -Eingaben.  
   
 > [!NOTE]  
->  Diese Methode gibt **null** zurück, wenn alle eingegebenen Werte **null**sind.  
+>  Diese Methode gibt **null** zurück, wenn alle eingegebenen Werte **null** sind.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine `GeometryCollection` -Instanz mit einem `CurvePolygon` und einem `Polygon`zurückgegeben.  
