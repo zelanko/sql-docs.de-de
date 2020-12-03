@@ -21,12 +21,12 @@ ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d4d4c319afb3cfb40c05cc187ae4d6ea6e0eacb
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: f47083ceb58a7125ad1477c1471c1d9f329472c8
+ms.sourcegitcommit: 773c1203e3c4617606cecb2626f6b2f2c855a53d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059618"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535294"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -74,9 +74,9 @@ Die ID der Datei. *file_id* ist vom Datentyp int und hat keinen Standardwert. Ei
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|Datenbankname.</br></br>Bei Azure Synapse Analytics ist dies der Name der Datenbank, die auf dem Knoten gespeichert ist, der durch pdw_node_id identifiziert wird. Jeder Knoten verfügt über eine tempdb-Datenbank, die über 13 Dateien verfügt. Jeder Knoten verfügt auch über eine Datenbank pro Verteilung, und jede Verteilungs Datenbank verfügt über fünf Dateien. Wenn z. b. jeder Knoten vier Verteilungen enthält, werden in den Ergebnissen 20 Verteilungsdaten Bank Dateien pro pdw_node_id angezeigt. 
+|**database_name**|**sysname**|**Gilt nicht für:**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Datenbankname.</br></br>Bei Azure Synapse Analytics ist dies der Name der Datenbank, die auf dem Knoten gespeichert ist, der durch pdw_node_id identifiziert wird. Jeder Knoten verfügt über eine tempdb-Datenbank, die über 13 Dateien verfügt. Jeder Knoten verfügt auch über eine Datenbank pro Verteilung, und jede Verteilungs Datenbank verfügt über fünf Dateien. Wenn z. b. jeder Knoten vier Verteilungen enthält, werden in den Ergebnissen 20 Verteilungsdaten Bank Dateien pro pdw_node_id angezeigt. 
 |**database_id**|**smallint**|ID der Datenbank.|  
 |**file_id**|**smallint**|ID der Datei.|  
 |**sample_ms**|**bigint**|Anzahl der Millisekunden seit dem Starten des Computers. Mit dieser Spalte können verschiedene Ausgaben dieser Funktion verglichen werden.</br></br>Der Datentyp ist " **int** " für [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
