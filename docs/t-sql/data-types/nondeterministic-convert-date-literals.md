@@ -14,10 +14,10 @@ ms.author: mikeray
 ms.reviewer: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4c1d50cc58995479aa61b4c62639f9d13de6f400
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445868"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>Nicht deterministische Konvertierung von Datumsliteralen in DATE-Werte
@@ -60,7 +60,7 @@ SL_Polish
 
 SL_Croatian
 2018-10-28
-***/
+**_/
 ```
 
 
@@ -69,9 +69,9 @@ SL_Croatian
 
 - `SET DATEFORMAT dmy;`
 
-Das voranstehende **dmy**-Format besagt, dass z. B. die Datumszeichenfolge '01-03-2018' so interpretiert wird, dass sie _den ersten Tag im März im Jahr 2018_ bedeutet.
+Das voranstehende _ *dmy**-Format besagt, dass die Beispieldatumszeichenfolge '01-03-2018' als _der erste Tag im März des Jahres 2018_ interpretiert wird.
 
-Wenn stattdessen **mdy** angegeben wird, würde die gleiche Zeichenfolge '01-03-2018' _ den dritten Tag im Januar 2018_ bedeuten.
+Wenn stattdessen **mdy** angegeben wird, würde die gleiche Zeichenfolge '01-03-2018' _den dritten Tag im Januar 2018_ bedeuten.
 
 Und wenn **ymd** angegeben würde, gibt es keine Garantie dafür, wie die Ausgabe aussehen würde. Der numerische Wert '2018' ist zu groß für einen Tag.
 <!--
@@ -115,10 +115,10 @@ MDY-Interpretation-of-input-format
 
 YMD-Interpretation--?--NotGuaranteed
 2018-12-09
-***/
+**_/
 ```
 
-Im vorhergehenden Codebeispiel weist das letzte Beispiel eine Nichtübereinstimmung zwischen dem Format **ymd** und der Eingabezeichenfolge auf. Der dritte Knoten der Eingabezeichenfolge stellt einen Zahlenwert dar, der für einen Tag zu groß ist. Bei solchen Nichtübereinstimmungen garantiert Microsoft nicht den Ausgabewert.
+Im vorherigen Codebeispiel weist das letzte Beispiel keine Übereinstimmung zwischen dem Format _ *ymd** und der Eingabezeichenfolge auf. Der dritte Knoten der Eingabezeichenfolge stellt einen Zahlenwert dar, der für einen Tag zu groß ist. Bei solchen Nichtübereinstimmungen garantiert Microsoft nicht den Ausgabewert.
 
 #### <a name="convert-offers-explicit-codes-for-_deterministic_-control-of-date-formats"></a>CONVERT bietet explizite Codes für die _deterministische_ Steuerung von Datumsformaten.
 

@@ -2,19 +2,19 @@
 title: Verknüpfen von SQL Server für Linux mit Active Directory
 titleSuffix: SQL Server
 description: Diese Artikel enthält Anleitungen zum Hinzufügen eines Linux-Hostcomputers für SQL Server zu einer AD-Domäne. Sie können ein integriertes SSSD-Paket oder AD-Drittanbieter verwenden.
-author: Dylan-MSFT
-ms.author: dygray
+author: tejasaks
+ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 04/01/2019
+ms.date: 11/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: ff058b2e326399fa6d04503d984d540fba8efc1b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 184744aeea40dd8d21c023806cc63d644311ffde
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896970"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419844"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Verknüpfen eines Hosts für SQL Server für Linux mit einer Active Directory-Domäne
 
@@ -29,13 +29,21 @@ Bevor Sie die Active Directory-Authentifizierung konfigurieren können, müssen 
 > [!IMPORTANT]
 > Die in diesem Artikel beispielhaft beschriebenen Schritte dienen lediglich zur Orientierung und beziehen sich auf die Betriebssysteme Ubuntu 16.04, Red Hat Enterprise Linux (RHEL) 7.x und SUSE Enterprise Linux (SLES) 12. Die tatsächlichen Schritte können sich je nach Konfiguration Ihrer gesamten Umgebung und Version des Betriebssystems geringfügig unterscheiden. So verwendet Ubuntu 18.04 als Tool für die Netzwerkverwaltung und -konfiguration beispielsweise Netplan, während Red Hat Enterprise Linux (RHEL) 8.x unter anderem nmcli verwendet. Es wird empfohlen, dass Sie sich mit den System- und Domänenadministratoren für Ihre Umgebung in Verbindung setzen, um genaue Informationen zu Tools, Konfiguration und Anpassung sowie zur Behandlung von möglicherweise auftretenden Problemen zu erhalten.
 
+### <a name="reverse-dns-rdns"></a>Reverse DNS (RDNS)
+
+Wenn Sie einen Computer, auf dem Windows Server ausgeführt wird, als Domänencontroller einrichten, verfügen Sie möglicherweise nicht standardmäßig über eine RDNS-Zone. Stellen Sie sicher, dass für den Domänencontroller und die IP-Adresse des Linux-Computers, auf dem SQL Server ausgeführt wird, eine gültige RDNS-Zone vorhanden ist.
+
+Sorgen Sie außerdem dafür, dass ein auf Ihre Domänencontroller verweisender PTR-Eintrag vorhanden ist.
+
 ## <a name="check-the-connection-to-a-domain-controller"></a>Überprüfen der Verbindung mit einem Domänencontroller
 
-Überprüfen Sie, ob Sie den Domänencontroller mithilfe des Domänenkurznamens und des vollqualifizierten Domänennamens kontaktieren können:
+Überprüfen Sie, ob Sie den Domänencontroller mithilfe des kurzen und des vollqualifizierten Domänennamens (Fully Qualified Domain Name, FQDN) sowie mithilfe des Hostnamens des Domänencontrollers kontaktieren können. Die IP-Adresse des Domänencontrollers sollte auch in den FQDN des Domänencontrollers aufgelöst werden:
 
 ```bash
 ping contoso
 ping contoso.com
+ping dc1.contoso.com
+nslookup <IP address of dc1.contoso.com>
 ```
 
 > [!TIP]
@@ -62,6 +70,39 @@ Wenn eine dieser Namensprüfungen fehlschlägt, aktualisieren Sie Ihre Domänens
 
    ```bash
    sudo ifdown eth0 && sudo ifup eth0
+   ```
+
+1. Überprüfen Sie als Nächstes, ob die Datei **/etc/resolv.conf** eine Zeile wie die Folgende enthält:
+
+   ```/etc/resolv.conf
+   search contoso.com com  
+   nameserver **<AD domain controller IP address>**
+   ```
+
+### <a name="ubuntu-1804"></a>Ubuntu 18.04
+
+1. Bearbeiten Sie die Datei [sudo vi /etc/netplan/******.yaml], sodass Ihre Active Directory-Domäne in die Domänensuchliste aufgenommen wird:
+
+   ```/etc/netplan/******.yaml
+   network:
+     ethernets:
+       eth0:
+               dhcp4: true
+
+               dhcp6: true
+               nameservers:
+                       addresses: [ **<AD domain controller IP address>**]
+                       search: [**<AD domain name>**]
+     version: 2
+   ```
+
+   > [!NOTE]
+   > Die Netzwerkschnittstelle `eth0` kann je nach Computer abweichen. Führen Sie **ifconfig** aus, um herauszufinden, welche Schnittstelle für Ihren Computer verwendet wird. Kopieren Sie dann die Schnittstelle, die eine IP-Adresse aufweist sowie Bytes übertragen und empfangen hat.
+
+1. Nachdem Sie diese Datei bearbeitet haben, sollten Sie den Netzwerkdienst neu starten:
+
+   ```bash
+   sudo netplan apply
    ```
 
 1. Überprüfen Sie als Nächstes, ob die Datei **/etc/resolv.conf** eine Zeile wie die Folgende enthält:
@@ -145,22 +186,41 @@ Führen Sie die folgenden Schritte aus, um einen SQL Server-Host mit einer Acti
    ```base
    sudo yum install realmd krb5-workstation
    ```
-
-   **SUSE:**
+   
+   **SLES 12:**
+   
+   Beachten Sie, dass diese Schritte speziell für SLES 12 gelten, die einzige offiziell unterstützte SUSE-Version für Linux.
 
    ```bash
-   sudo zypper install realmd krb5-client
+   sudo zypper addrepo https://download.opensuse.org/repositories/network/SLE_12/network.repo
+   sudo zypper refresh
+   sudo zypper install realmd krb5-client sssd-ad
    ```
 
-   **Ubuntu:**
+   **Ubuntu 16.04:**
 
    ```bash
    sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
    ```
 
+   **Ubuntu 18.04:**
+
+   ```bash
+   sudo apt-get install realmd krb5-user software-properties-common python3-software-properties packagekit
+   sudo apt-get install adcli libpam-sss libnss-sss sssd sssd-tools
+   ```
+
 1. Wenn Sie bei der Installation des Pakets für den Kerberos-Client aufgefordert werden, einen Bereichsnamen einzugeben, geben Sie Ihren Domänennamen in Großbuchstaben ein.
 
 1. Nachdem Sie sich vergewissert haben, dass Ihr DNS ordnungsgemäß konfiguriert wurde, führen Sie den folgenden Befehl aus, um der Domäne beizutreten. Sie müssen sich mit einem AD-Konto authentifizieren, das über ausreichende Berechtigungen in AD verfügt, um einen neuen Computer mit der Domäne verknüpfen zu können. Mithilfe des folgenden Befehls wird ein neues Computerkonto in AD und die KEYTAB-Datei für den Host (**/etc/krb5.keytab**) erstellt, die Domäne in der Datei **/etc/sssd/sssd.conf** wird konfiguriert, und die Datei **/etc/krb5.conf** wird aktualisiert.
+
+   Legen Sie den Hostnamen des Computers aufgrund eines Problems mit **realmd** zunächst auf den FQDN anstatt auf den Computernamen fest. Andernfalls erstellt **realmd** möglicherweise nicht alle erforderlichen SPNs für den Computer, und DNS-Einträge werden nicht automatisch aktualisiert, auch wenn der Domänencontroller dynamische DNS-Updates unterstützt.
+   
+   ```bash
+   sudo hostname <old hostname>.contoso.com
+   ```
+   
+   Nachdem Sie den obigen Befehl ausgeführt haben, sollte die Datei „/etc/hostname“ <old hostname>.contoso.com enthalten.
 
    ```bash
    sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
@@ -210,7 +270,7 @@ Sie können auch Hilfsprogramme von Drittanbietern wie [PBIS](https://www.beyond
 SQL Server verwendet keinen Integratorcode oder Bibliotheken von Drittanbietern für AD-bezogene Abfragen. SQL Server fragt AD bei diesem Setup immer mithilfe von direkten Aufrufen der OpenLDAP-Bibliothek ab. Die Drittanbieterintegratoren werden nur verwendet, um den Linux-Host mit der AD-Domäne zu verknüpfen. SQL Server kommuniziert nicht direkt mit diesen Hilfsprogrammen.
 
 > [!IMPORTANT]
-> Lesen Sie sich die Empfehlungen für die Verwendung der **mssql-conf**-Konfiguration `network.disablesssd` im Abschnitt **Zusätzliche Konfigurationsoptionen** des Artikels [Verwenden der Active Directory-Authentifizierung mit SQL Server für Linux](sql-server-linux-active-directory-authentication.md#additionalconfig) durch.
+> Lesen Sie sich die Empfehlungen für die Verwendung der **mssql-conf-Konfiguration** `network.disablesssd` im Abschnitt **Zusätzliche Konfigurationsoptionen** des Artikels [Verwenden der Active Directory-Authentifizierung mit SQL Server für Linux](sql-server-linux-active-directory-authentication.md#additionalconfig) durch.
 
 Vergewissern Sie sich, dass die Datei **/etc/krb5.conf** ordnungsgemäß konfiguriert ist. Bei den meisten Drittanbietern für Active Directory erfolgt diese Konfiguration automatisch. Überprüfen Sie jedoch die Datei **/etc/krb5.conf** auf die folgenden Werte, um zukünftige Probleme zu vermeiden:
 

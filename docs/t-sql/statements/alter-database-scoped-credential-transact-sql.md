@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 00cfd711ce130fa9c90c11000a6853082494e9bd
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300304"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124299"
 ---
 # <a name="alter-database-scoped-credential-transact-sql"></a>ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,11 +45,11 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  *credential_name*  
  Gibt den Namen der datenbankweit gültigen Anmeldeinformationen an, die geändert werden.  
   
- IDENTITY **=' ***identity_name*** '**  
+ IDENTITY **='** _identity_name_*_'_*  
  Gibt den Namen des Kontos an, das beim Herstellen einer Verbindung außerhalb des Servers verwendet wird. Zum Importieren einer Datei aus dem Azure Blob Storage muss `SHARED ACCESS SIGNATURE` als Identitätsname festgelegt werden.  Weitere Informationen zu SAS finden Sie unter [Verwenden von Shared Access Signatures (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1).  
     
   
- SECRET **=' ***secret*** '**  
+ SECRET **='** _secret_*_'_*  
  Gibt den geheimen Bereich an, der für die ausgehende Authentifizierung erforderlich ist. *secret* ist erforderlich, um eine Datei aus dem Azure Blob Storage zu importieren. *secret* kann für andere Zwecke optional sein.   
 > [!WARNING]
 >  Der SAS-Schlüssel beginnt mit einem Fragezeichen (?). Wenn Sie den SAS-Schlüssel verwenden, müssen Sie das vorangestellte Fragezeichen entfernen. Andernfalls funktioniert der Vorgang nicht.    

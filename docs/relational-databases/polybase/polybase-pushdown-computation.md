@@ -2,7 +2,7 @@
 description: Weitergabeberechnungen in PolyBase
 title: Weitergabeberechnungen in PolyBase | Microsoft-Dokumentation
 dexcription: Enable pushdown computation to improve performance of queries on your Hadoop cluster. You can select a subset of rows/columns in an external table for pushdown.
-ms.date: 04/23/2019
+ms.date: 11/17/2020
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -10,26 +10,29 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 0b028d0476b55d17a7eca9a8cace18d9ca206bc3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 59ff1e7807a8bdd8427e3b902bf53c111d52c7b7
+ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482508"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "96127843"
 ---
 # <a name="pushdown-computations-in-polybase"></a>Weitergabeberechnungen in PolyBase
 
-## <a name="dmv"></a>DMV
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+Weitergabeberechnungen verbessern die Leistung von Abfragen in externen Datenquellen. Seit SQL Server 2016 sind Weitergabeberechnungen für externe Hadoop-Datenquellen verfügbar. In SQL Server 2019 wurden Weitergabeberechnungen für andere Arten von externen Datenquellen eingeführt.
 
-Weitergabeberechnungen verbessern die Leistung von Abfragen in Ihrem Hadoop-Cluster.
+## <a name="enable-pushdown-computation"></a> Aktivieren der Weitergabeberechnung
 
-## <a name="enable-pushdown"></a>Aktivieren der Weitergabe
+Die folgenden Artikel enthalten Informationen zum Konfigurieren von Weitergabeberechnungen für bestimmte Typen von externen Datenquellen:
 
-Die Schritte zum Aktivieren der Weitergabe werden im folgenden Artikel erläutert:
-
-[Aktivieren der Weitergabeberechnung in Hadoop](polybase-configure-hadoop.md#pushdown)
+- [Aktivieren der Weitergabeberechnung in Hadoop](polybase-configure-hadoop.md#pushdown)
+- [Konfigurieren von PolyBase für den Zugriff auf externe Daten in Oracle](polybase-configure-oracle.md)
+- [Konfigurieren von PolyBase für den Zugriff auf externe Daten in Teradata](polybase-configure-teradata.md)
+- [Konfigurieren von PolyBase für den Zugriff auf externe Daten in MongoDB](polybase-configure-mongodb.md)
+- [Konfigurieren von PolyBase für den Zugriff auf externe Daten mit generischen ODBC-Typen](polybase-configure-odbc-generic.md)
+- [Konfigurieren von PolyBase für den Zugriff auf externe Daten in SQL Server](polybase-configure-sql-server.md)
 
 ## <a name="select-a-subset-of-rows"></a>Auswählen einer Teilmenge von Zeilen
 
@@ -46,35 +49,38 @@ SELECT * FROM SensorData WHERE Speed > 65;
 
 Verwenden Sie die Prädikatweitergabe zum Verbessern der Leistung für eine Abfrage, die eine Teilmenge von Spalten aus einer externen Tabelle auswählt.
 
-In dieser Abfrage initiiert SQL Server einen map-reduce-Auftrag, um die auf Hadoop begrenzte Textdatei vorab zu verarbeiten, sodass nur die Daten der zwei Spalten customer.name und customer.zip_code in SQL Server PDW kopiert werden.
+In dieser Abfrage initiiert SQL Server einen MapReduce-Auftrag, um die durch Trennzeichen getrennte Hadoop-Textdatei vorab zu verarbeiten, sodass nur die Daten der zwei Spalten „customer.name“ und „customer.zip_code“ in SQL Server kopiert werden.
 
 ```sql
-SELECT customer.name, customer.zip_code FROM customer WHERE customer.account_balance < 200000
+SELECT customer.name, customer.zip_code
+FROM customer
+WHERE customer.account_balance < 200000
 ```
 
 ### <a name="pushdown-for-basic-expressions-and-operators"></a>Weitergabe für grundlegende Ausdrücke und Operatoren
 
 SQL Server erlaubt die folgenden grundlegenden Ausdrücke und Operatoren für Prädikatweitergabe.
 
-+ Binäre Vergleichsoperatoren (\<, >, =, !=, <>, >=, <=) für die numerischen, Datums- und Zeitwerte.
+- Binäre Vergleichsoperatoren (`<`, `>`, `=`, `!=`, `<>`, `>=`, `<=`) für die Zahlen-, Datums- und Zeitwerte.
+- Arithmetische Operatoren (`+`, `-`, `*`, `/`, `%`)
+- Logische Operatoren (`AND`, `OR`)
+- Unäre Operatoren (`NOT`, `IS NULL`, `IS NOT NULL`)
 
-+ Arithmetische Operatoren (+, -, *, /, %).
+Die Operatoren `BETWEEN`, `NOT`, `IN` und `LIKE` werden möglicherweise weitergegeben. Das aktuelle Verhalten hängt davon ab, wie der Abfrageoptimierer die Operatorausdrücke als eine Reihe von Anweisungen neu schreibt, die grundlegende relationale Operatoren verwenden.
 
-+ Logische Operatoren (AND, OR).
+Die Abfrage in diesem Beispiel verfügt über mehrere Prädikate, die an Hadoop weitergegeben werden können. SQL Server kann map-reduce-Aufträge an Hadoop weitergeben, um das Prädikat `customer.account_balance <= 200000` auszuführen. Der Ausdruck `BETWEEN 92656 AND 92677` besteht auch aus binären und logischen Operationen, die an Hadoop weitergegeben werden können. Das logische **AND** in `customer.account_balance AND customer.zipcode` ist ein finaler Ausdruck.
 
-+ Unäroperatoren (NOT, IS NULL, IS NOT NULL).
-
-Die Operatoren BETWEEN, NOT, IN und LIKE können möglicherweise weitergegeben werden. Das aktuelle Verhalten hängt davon ab, wie der Abfrageoptimierer die Operatorausdrücke als eine Reihe von Anweisungen neu schreibt, die grundlegende relationale Operatoren verwenden.
-
-Die Abfrage in diesem Beispiel verfügt über mehrere Prädikate, die an Hadoop weitergegeben werden können. SQL Server kann map-reduce-Aufträge an Hadoop weitergeben, um das Prädikat `customer.account_balance <= 200000` auszuführen. Der Ausdruck `BETWEEN 92656 and 92677` besteht auch aus binären und logischen Operationen, die an Hadoop weitergegeben werden können. Das logische **AND** in `customer.account_balance and customer.zipcode` ist ein finaler Ausdruck.
-
-Mit dieser Kombination von Prädikaten können also die map-reduce-Aufträge alle Bedingungen der WHERE-Klausel vollständig bearbeiten. Nur die Daten, die die Kriterien von SELECT erfüllen, werden in SQL Server PDW zurückkopiert.
+Mit dieser Kombination von Prädikaten können also die map-reduce-Aufträge alle Bedingungen der WHERE-Klausel vollständig bearbeiten. Nur die Daten, die die Kriterien von `SELECT` erfüllen, werden in SQL Server zurückkopiert.
 
 ```sql
-SELECT * FROM customer WHERE customer.account_balance <= 200000 AND customer.zipcode BETWEEN 92656 AND 92677
+SELECT * FROM customer 
+WHERE customer.account_balance <= 200000 
+    AND customer.zipcode BETWEEN 92656 AND 92677
 ```
 
-## <a name="force-pushdown"></a>Weitergabe erzwingen
+## <a name="examples"></a>Beispiele
+
+### <a name="force-pushdown"></a>Weitergabe erzwingen
 
 ```sql
 SELECT * FROM [dbo].[SensorData]
@@ -82,7 +88,7 @@ WHERE Speed > 65
 OPTION (FORCE EXTERNALPUSHDOWN);
 ```
 
-## <a name="disable-pushdown"></a>Weitergabe deaktivieren
+### <a name="disable-pushdown"></a>Weitergabe deaktivieren
 
 ```sql
 SELECT * FROM [dbo].[SensorData]

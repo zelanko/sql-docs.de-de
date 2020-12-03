@@ -24,12 +24,12 @@ ms.assetid: f82aaab0-334f-427b-89b0-de4af596b4fa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8b41f37f996015de4b853c9443ef700b16242b44
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: d1dfea07a02effb5362b0f01ad496b536c646139
+ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300840"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328104"
 ---
 # <a name="set-ansi_warnings-transact-sql"></a>SET ANSI_WARNINGS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,16 +39,14 @@ ms.locfileid: "92300840"
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax
-  
+
+### <a name="syntax-for-ssnoversion-mdmd-and-sssodfull-mdmd"></a>Syntax für [!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)] und [!INCLUDE[sssodfull-md.md](../../includes/sssodfull-md.md)]
 ```syntaxsql
--- Syntax for SQL Server and Azure SQL Database
-  
 SET ANSI_WARNINGS { ON | OFF }
 ```
 
+### <a name="syntax-for-sssdw-mdmd-and-sspdw-mdmd"></a>Syntax für [!INCLUDE[sssdw-md.md](../../includes/sssdw-md.md)] und [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)]
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
-
 SET ANSI_WARNINGS ON
 ```
 
@@ -59,10 +57,10 @@ SET ANSI_WARNINGS ON
   
 -   Bei ON wird eine Warnmeldung generiert, wenn NULL-Werte in Aggregatfunktionen, wie z. B. SUM, AVG, MAX, MIN, STDEV, STDEVP, VAR, VARP oder COUNT, auftreten. Bei OFF wird keine Warnung ausgegeben.  
   
--   Bei ON bewirken Fehler aufgrund einer Division durch Null und arithmetische Überlauffehler, dass für die Anweisung ein Rollback ausgeführt und eine Fehlermeldung generiert wird. Bei OFF bewirken Fehler aufgrund einer Division durch Null und arithmetische Überlauffehler, dass NULL-Werte zurückgegeben werden. Das Verhalten, bei dem Fehler aufgrund einer Division durch 0 (null) oder arithmetischer Überlauffehler bewirken, dass NULL-Werte zurückgegeben werden, tritt auf, wenn ein INSERT- oder UPDATE-Vorgang in einer Spalte des Typs **character** , Unicode oder **binary** versucht wird und die Länge eines der neuen Werte die maximale Spaltengröße überschreitet. Wenn SET ANSI_WARNINGS auf ON festgelegt ist, wird der INSERT- oder UPDATE-Vorgang gemäß ISO-Standard abgebrochen. Nachfolgende Leerzeichen werden in Zeichenspalten ignoriert, und nachfolgende Nullen werden in Binärspalten ignoriert. Bei OFF werden Daten auf die Spaltengröße abgeschnitten, und die Anweisung wird erfolgreich ausgeführt.  
+-   Bei ON bewirken Fehler aufgrund einer Division durch Null und arithmetische Überlauffehler, dass für die Anweisung ein Rollback ausgeführt und eine Fehlermeldung generiert wird. Bei OFF bewirken Fehler aufgrund einer Division durch Null und arithmetische Überlauffehler, dass NULL-Werte zurückgegeben werden. Das Verhalten, bei dem Fehler aufgrund einer Division durch 0 (null) oder arithmetischer Überlauffehler bewirken, dass NULL-Werte zurückgegeben werden, tritt auf, wenn ein INSERT- oder UPDATE-Vorgang in einer Spalte des Typs **character**, Unicode oder **binary** versucht wird und die Länge eines der neuen Werte die maximale Spaltengröße überschreitet. Wenn SET ANSI_WARNINGS auf ON festgelegt ist, wird der INSERT- oder UPDATE-Vorgang gemäß ISO-Standard abgebrochen. Nachfolgende Leerzeichen werden in Zeichenspalten ignoriert, und nachfolgende Nullen werden in Binärspalten ignoriert. Bei OFF werden Daten auf die Spaltengröße abgeschnitten, und die Anweisung wird erfolgreich ausgeführt.  
   
 > [!NOTE]  
-> Wenn Abschneidevorgänge bei beliebigen Konvertierungen in oder von **binary** - oder **varbinary** -Daten auftreten, werden keine Warnungen oder Fehler ausgelöst, unabhängig von den SET-Optionen.  
+> Wenn Abschneidevorgänge bei beliebigen Konvertierungen in oder von **binary**- oder **varbinary**-Daten auftreten, werden keine Warnungen oder Fehler ausgelöst, unabhängig von den SET-Optionen.  
   
 > [!NOTE]  
 > ANSI_WARNINGS wird beim Übergeben von Parametern in einer gespeicherten Prozedur oder einer benutzerdefinierten Funktion oder beim Deklarieren und Festlegen von Variablen in einer Batchanweisung nicht berücksichtigt. Wird beispielsweise eine Variable als **char(3)** definiert und dann auf einen Wert festgelegt, der länger als drei Zeichen ist, werden die Daten auf die definierte Größe abgeschnitten, und die Anweisung INSERT oder UPDATE wird erfolgreich ausgeführt.  

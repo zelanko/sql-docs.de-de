@@ -18,11 +18,11 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 9b0f95a4afa1397783547f2804d92dd3fc37b357
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457254"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126613"
 ---
 # <a name="execution-plans"></a>Ausführungspläne
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,9 +46,9 @@ In einem Abfrageausführungsplan wird Folgendes definiert:
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügt über drei Optionen zum Anzeigen von Ausführungsplänen:        
-> -  Der ***[geschätzte Ausführungsplan](../../relational-databases/performance/display-the-estimated-execution-plan.md)*** ist der kompilierte Plan, der vom Abfrageoptimierer anhand von Schätzungen erzeugt wird. Dies ist der Abfrageplan, der im Plancache gespeichert wird.        
-> -  Der ***[tatsächliche Ausführungsplan](../../relational-databases/performance/display-an-actual-execution-plan.md)*** entspricht dem kompilierten Plan und enthält zusätzlich den zugehörigen [Ausführungskontext](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse). Er wird **nach Abschluss der Abfrage Ausführung** verfügbar. Dies umfasst die tatsächlichen Laufzeitinformationen, z. B. Ausführungswarnungen oder, in neueren Versionen von [!INCLUDE[ssde_md](../../includes/ssde_md.md)], die vergangene und die CPU-Zeit während der Ausführung.         
-> -  Die ***[Live-Abfragestatistik](../../relational-databases/performance/live-query-statistics.md)*** entspricht dem kompilierten Plan und enthält dessen Ausführungskontext. Sie ist für die **In-Flight-Abfrageausführung** verfügbar und wird jede Sekunde aktualisiert. Dies schließt Laufzeitinformationen ein, z. B. die tatsächliche Anzahl der Zeilen, die die [Operatoren](../../relational-databases/showplan-logical-and-physical-operators-reference.md) durchlaufen, die verstrichene Zeit und den geschätzten Abfragefortschritt.
+> -  Der **_[geschätzte Ausführungsplan](../../relational-databases/performance/display-the-estimated-execution-plan.md)_* _ ist der kompilierte Plan, so wie er vom Abfrageoptimierer anhand von Schätzungen erstellt wird. Dies ist der Abfrageplan, der im Plancache gespeichert wird.        
+> -  Der _*_ [tatsächliche Ausführungsplan](../../relational-databases/performance/display-an-actual-execution-plan.md) _*_ entspricht dem kompilierten Plan und enthält zusätzlich den zugehörigen [Ausführungskontext](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse). Er wird _*nach Abschluss der Abfrageausführung** verfügbar. Dies umfasst die tatsächlichen Laufzeitinformationen, z. B. Ausführungswarnungen oder, in neueren Versionen von [!INCLUDE[ssde_md](../../includes/ssde_md.md)], die vergangene und die CPU-Zeit während der Ausführung.         
+> -  Die **_[Liveabfragestatistik](../../relational-databases/performance/live-query-statistics.md)_ *entspricht dem kompilierten Plan und enthält dessen Ausführungskontext. Sie ist für _* In-Flight-Abfrageausführungen** verfügbar und wird jede Sekunde aktualisiert. Dies schließt Laufzeitinformationen ein, z. B. die tatsächliche Anzahl der Zeilen, die die [Operatoren](../../relational-databases/showplan-logical-and-physical-operators-reference.md) durchlaufen, die verstrichene Zeit und den geschätzten Abfragefortschritt.
 
 > [!TIP]
 > Weitere Informationen zur Abfrageverarbeitung und den Abfrageausführungsplänen finden Sie in den Abschnitten [Optimieren von SELECT-Anweisungen](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements) und [Zwischenspeichern und Wiederverwenden von Ausführungsplänen](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse) des Handbuchs zur Architektur der Abfrageverarbeitung.

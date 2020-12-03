@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a866d7d1083435acffeb157edf9fe4a0bb725d3e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425762"
 ---
 # <a name="microsoft-connector-for-teradata"></a>Microsoft Connector für Teradata
@@ -86,15 +86,15 @@ Zum Ausführen des SSIS-Pakets *für SQL Server 2017 und früher* müssen Sie 
 
 Zum Entwerfen des SSIS-Pakets *für SQL Server 2017 und früher* in SSDT müssen Sie **Microsoft Connector für Teradata** bereits installiert haben und die entsprechende Version von **Microsoft Connector für Teradata von Attunity** installieren.
 
-## <a name="limitationsandknownissues"></a>Einschränkungen und bekannte Probleme
+## <a name="limitations-and-known-issues"></a>Einschränkungen und bekannte Probleme
 
-- Im Teradata-Quellen-/Ziel-Editor funktioniert die Eigenschaft  **Standarddatenbank**  nicht ordnungsgemäß. Geben Sie im Dropdownfeld den Namen der Datenbank zum Anzeigen oder Filtern der Tabelle ein, um das Problem zu umgehen.
+- Im Teradata-Quellen-/Ziel-Editor funktioniert die Eigenschaft **Default database** (Standarddatenbank) nicht ordnungsgemäß.  Geben Sie im Dropdownfeld den Namen der Datenbank zum Anzeigen oder Filtern der Tabelle ein, um das Problem zu umgehen.
 
-- Im Teradata-Quellen-/Ziel-Editor funktioniert der Zuordnungsschritt bei Eingabe von  \<database>.<table/view> nicht. Geben Sie stattdessen  \<database>.<table/view> ein, und klicken Sie auf die Dropdownschaltfläche.
+- Im Teradata-Quellen-/Ziel-Editor funktioniert der Zuordnungsschritt bei Eingabe von \<database>.<table/view> nicht. Geben Sie stattdessen \<database>.<table/view> ein, und klicken Sie auf die Dropdownschaltfläche.
 
 - Im Teradata-Quellen-Editor kann die Ansicht nicht angezeigt werden, wenn der Datenzugriffsmodus auf „Tabellenname – TPT-Export“ festgelegt ist. Verwenden Sie den erweiterten Teradata-Quellen-Editor, um das Problem zu umgehen.
 
-- Für das Teradata-Ziel kann das Attribut „PackMaximum“ nicht auf TRUE festgelegt werden. Andernfalls tritt ein Fehler auf.
+- Für das Teradata-Ziel kann das Attribut „PackMaximum“ nicht auf TRUE festgelegt werden.  Andernfalls tritt ein Fehler auf.
 
 ## <a name="uninstallation"></a>Deinstallation
 

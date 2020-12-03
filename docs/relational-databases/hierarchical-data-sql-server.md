@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 994adada7ecef047967b07d03cd2a9a129c8f227
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91869055"
 ---
 # <a name="hierarchical-data-sql-server"></a>Hierarchische Daten (SQL Server)
@@ -51,7 +51,7 @@ ms.locfileid: "91869055"
   
 -   Äußerst komprimiert  
   
-     Die durchschnittliche Zahl der Bits, die erforderlich sind, um einen Knoten in einer Struktur mit *n* Knoten darzustellen, hängt von der durchschnittlichen Anzahl der Verzweigungen (der durchschnittlichen Anzahl untergeordneter Knoten) eines Knotens ab. Bei wenigen Verzweigungen (0-7) entspricht diese Zahl etwa 6\*logA*n* Bit, wobei A die durchschnittliche Anzahl von Verzweigungen angibt. Ein Knoten in einer 100.000 Leute umfassenden Organisationshierarchie mit durchschnittlich 6 Verzweigungen benötigt etwa 38 Bit. Dieser Wert wird bei der Speicherung auf 40 Bit oder 5 Byte aufgerundet.  
+     Die durchschnittliche Zahl der Bits, die erforderlich sind, um einen Knoten in einer Struktur mit *n* Knoten darzustellen, hängt von der durchschnittlichen Anzahl der Verzweigungen (der durchschnittlichen Anzahl untergeordneter Knoten) eines Knotens ab. Bei wenigen Verzweigungen (0-7) entspricht diese Zahl etwa 6\*logA *n* Bit, wobei A die durchschnittliche Anzahl von Verzweigungen angibt. Ein Knoten in einer 100.000 Leute umfassenden Organisationshierarchie mit durchschnittlich 6 Verzweigungen benötigt etwa 38 Bit. Dieser Wert wird bei der Speicherung auf 40 Bit oder 5 Byte aufgerundet.  
   
 -   Vergleiche erfolgen in Tiefensuchreihenfolge  
   
@@ -99,13 +99,13 @@ GO
   
  Vergleich von über- und untergeordneten Elementen mit **hierarchyid** bei allgemeinen Vorgängen  
   
--   Teilstrukturabfragen sind mit **hierarchyid**bedeutend schneller.  
+-   Teilstrukturabfragen sind mit **hierarchyid** bedeutend schneller.  
   
--   Abfragen für direkt untergeordnete Elemente sind bei **hierarchyid**etwas langsamer.  
+-   Abfragen für direkt untergeordnete Elemente sind bei **hierarchyid** etwas langsamer.  
   
--   Das Verschieben innerer Knoten erfolgt bei **hierarchyid**langsamer.  
+-   Das Verschieben innerer Knoten erfolgt bei **hierarchyid** langsamer.  
   
--   Das Einfügen innerer Knoten und das Einfügen oder Verschieben von Blattknoten weisen bei **hierarchyid**die gleiche Komplexität auf.  
+-   Das Einfügen innerer Knoten und das Einfügen oder Verschieben von Blattknoten weisen bei **hierarchyid** die gleiche Komplexität auf.  
   
  Über- und untergeordnete Elemente könnten überlegen sein, wenn die folgenden Bedingungen vorliegen:  
   
@@ -260,7 +260,7 @@ INSERT SimpleDemo
 SELECT CAST(Level AS nvarchar(100)) AS [Converted Level], * FROM SimpleDemo ORDER BY Level;  
 ```  
   
- Dadurch werden weitere potenzielle Probleme deutlich. Kyoto kann als Ebene `/1/3/1/` eingefügt werden, obwohl keine übergeordnete Ebene `/1/3/`vorhanden ist. Darüber hinaus verfügen sowohl London als auch Kyoto für **hierarchyid**über denselben Wert. Auch in diesem Fall müssen die Benutzer entscheiden, ob dieser Hierarchietyp für sie geeignet ist und Werte blockieren, die nicht brauchbar sind.  
+ Dadurch werden weitere potenzielle Probleme deutlich. Kyoto kann als Ebene `/1/3/1/` eingefügt werden, obwohl keine übergeordnete Ebene `/1/3/`vorhanden ist. Darüber hinaus verfügen sowohl London als auch Kyoto für **hierarchyid** über denselben Wert. Auch in diesem Fall müssen die Benutzer entscheiden, ob dieser Hierarchietyp für sie geeignet ist und Werte blockieren, die nicht brauchbar sind.  
   
  Auch in dieser Tabelle wurde die oberste Hierarchieebene `'/'`nicht verwendet. Sie wurde weggelassen, weil die Kontinente kein gemeinsames übergeordnetes Element aufweisen. Sie können den gesamten Planeten hinzufügen, falls Sie ein gemeinsames übergeordnetes Element benötigen.  
   

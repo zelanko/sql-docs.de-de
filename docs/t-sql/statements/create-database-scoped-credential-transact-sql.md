@@ -23,12 +23,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cfca6f2f7e40593e4480c90ecf543eb39fc810be
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: ee984b5e04426cd269b7ed21f43d6b9b9dc91469
+ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300936"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328110"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
@@ -53,7 +53,7 @@ WITH IDENTITY = 'identity_name'
 
 *credential_name* Gibt den Namen für die datenbankweit gültigen Anmeldeinformationen an, die erstellt werden sollen. *credential_name* darf nicht mit dem Nummernzeichen (#) beginnen. Systemanmeldeinformationen beginnen mit zwei Nummernzeichen (##).
 
-IDENTITY **='** _identity\_name_ **'** Gibt den Namen des Kontos an, das beim Herstellen einer Verbindung außerhalb des Servers verwendet wird. Der Identitätsname muss `SHARED ACCESS SIGNATURE` entsprechen, um eine Datei aus Azure Blob Storage mithilfe eines freigegebenen Schlüssels zu importieren. Jeder gültige Wert kann für die Identität verwendet werden, um Daten in SQL Data Warehouse zu laden. Weitere Informationen zu SAS finden Sie unter [Verwenden von Shared Access Signatures (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1). Verwenden Sie nicht den Domänennamen im IDENTITY-Argument, wenn Sie Kerberos (Windows Active Directory oder MIT KDC) verwenden. Sie sollten lediglich den Kontonamen verwenden.
+IDENTITY **='** _identity\_name_ **'** Gibt den Namen des Kontos an, das beim Herstellen einer Verbindung außerhalb des Servers verwendet wird. Der Identitätsname muss `SHARED ACCESS SIGNATURE` entsprechen, um eine Datei aus Azure Blob Storage mithilfe eines freigegebenen Schlüssels zu importieren. Jeder gültige Wert kann für die Identität verwendet werden, um Daten in SQL Data Warehouse zu laden. Weitere Informationen zu SAS finden Sie unter [Verwenden von Shared Access Signatures (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1). Verwenden Sie den Domänennamen nicht im IDENTITY-Argument, wenn Sie Kerberos (Active Directory oder MIT KDC) verwenden. Sie sollten lediglich den Kontonamen verwenden.
 
 > [!IMPORTANT]
 > Die SQL, Oracle, Teradata und MongoDB ODBC-Connectors für PolyBase unterstützen nur die einfache Authentifizierung, nicht die Kerberos-Authentifizierung.
@@ -91,7 +91,7 @@ Im Folgenden werden einige Anwendungen datenbankweit gültiger Anmeldeinformatio
 
 ## <a name="permissions"></a>Berechtigungen
 
-Erfordert die **CONTROL** -Berechtigung für die Datenbank.
+Erfordert die **CONTROL**-Berechtigung für die Datenbank.
 
 ## <a name="examples"></a>Beispiele
 

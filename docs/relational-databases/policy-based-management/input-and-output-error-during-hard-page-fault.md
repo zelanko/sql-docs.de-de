@@ -1,5 +1,5 @@
 ---
-description: Input and Output Error During Hard Page Fault
+description: Eingabe- und Ausgabefehler während eines Hardwareseitenfehlers
 title: Eingabe- und Ausgabefehler während eines Hardwareseitenfehlers | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -20,7 +20,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 10/09/2020
 ms.locfileid: "91892470"
 ---
-# <a name="input-and-output-error-during-hard-page-fault"></a>Input and Output Error During Hard Page Fault
+# <a name="input-and-output-error-during-hard-page-fault"></a>Eingabe- und Ausgabefehler während eines Hardwareseitenfehlers
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Diese Regel überprüft das Systemereignisprotokoll auf EventId 51. Dieser Fehler wird von einem Fehler während eines Hardwareseitenfehlers verursacht.  
   

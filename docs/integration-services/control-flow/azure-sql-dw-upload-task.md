@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: c0864f868cc046fcd1f0763fff7e5a97e2fe8607
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 5510fb2a0a4760b5465dad7f44eed8c85ef36251
+ms.sourcegitcommit: ece151df14dc2610d96cd0d40b370a4653796d74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006204"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96297959"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW-Uploadtask
 
@@ -32,9 +32,14 @@ Der Task nutzt PolyBase zur Leistungssteigerung gemäß der Beschreibung im Arti
 Das gegenwärtig unterstützte Quelldatenformat ist Text mit Trennzeichen in UTF8-Codierung.
 Beim Kopieren aus einem Dateisystem werden Daten zunächst in Azure Blob Storage für das Staging und dann in Azure SQL Data Warehouse hochgeladen. Darum ist ein Azure Blob Storage-Konto erforderlich.
 
+> [!NOTE]
+> Der Azure Storage-Verbindungs-Manager mit dem Diensttyp „Data Lake Gen2“ wird nicht unterstützt.
+>
+> Wenn Sie Azure Data Lake Gen2 für das Staging oder eine Quelle verwenden möchten, können Sie über den Azure Storage-Verbindungs-Manager eine Verbindung mit dem Diensttyp „Blob Storage“ herstellen.
+
 Der **Azure SQL DW-Uploadtask** ist eine Komponente des [SQL Server Integration Services-Feature Packs (SSIS) für Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
-Um einen **Azure SQL DW-Uploadtask**hinzuzufügen, ziehen Sie ihn mittels Drag &amp; Drop aus der SSIS-Toolbox auf den Designercanvas, und doppelklicken Sie, oder klicken Sie mit der rechten Maustaste darauf, und klicken Sie anschließend auf **Bearbeiten** , um das Dialogfeld des Task-Editors anzuzeigen.
+Um einen **Azure SQL DW-Uploadtask** hinzuzufügen, ziehen Sie ihn mittels Drag &amp; Drop aus der SSIS-Toolbox auf den Designercanvas, und doppelklicken Sie, oder klicken Sie mit der rechten Maustaste darauf, und klicken Sie anschließend auf **Bearbeiten** , um das Dialogfeld des Task-Editors anzuzeigen.
 
 Konfigurieren Sie auf der Seite **Allgemein** die folgenden Eigenschaften.
 
@@ -63,8 +68,8 @@ CompressionType|Gibt an, welches Komprimierungsformat beim Hochladen von Dateien
 CompressionLevel|Gibt an, welcher Komprimierungsgrad für das Komprimierungsformat verwendet werden soll.
 AzureDwConnection|Gibt einen ADO.NET-Verbindungs-Manager für Azure SQL Data Warehouse an.
 TableName|Gibt den Namen der Zieltabelle an. Wählen Sie entweder einen vorhandenen Tabellennamen, oder erstellen Sie einen neuen durch Auswahl von **\<New Table ...>** .
-TableDistribution|Gibt die Verteilungsmethode für die neue Tabelle an. Gilt, wenn für **TableName**ein neuer Tabellenname angegeben wird.
-HashColumnName|Gibt an, welche Spalte für die Verteilung der Hashtabelle verwendet werden soll. Gilt, wenn **HASH** für **TableDistribution**angegeben wird.
+TableDistribution|Gibt die Verteilungsmethode für die neue Tabelle an. Gilt, wenn für **TableName** ein neuer Tabellenname angegeben wird.
+HashColumnName|Gibt an, welche Spalte für die Verteilung der Hashtabelle verwendet werden soll. Gilt, wenn **HASH** für **TableDistribution** angegeben wird.
 
 ### <a name="blobstorage"></a>BlobStorage
 
@@ -78,8 +83,8 @@ ColumnDelimiter|Gibt ein oder mehrere Zeichen an, die das Ende jeder Spalte mark
 CompressionType|Gibt das für die Quelldaten verwendete Komprimierungsformat an.
 AzureDwConnection|Gibt einen ADO.NET-Verbindungs-Manager für Azure SQL Data Warehouse an.
 TableName|Gibt den Namen der Zieltabelle an. Wählen Sie entweder einen vorhandenen Tabellennamen, oder erstellen Sie einen neuen durch Auswahl von **\<New Table ...>** .
-TableDistribution|Gibt die Verteilungsmethode für die neue Tabelle an. Gilt, wenn für **TableName**ein neuer Tabellenname angegeben wird.
-HashColumnName|Gibt an, welche Spalte für die Verteilung der Hashtabelle verwendet werden soll. Gilt, wenn **HASH** für **TableDistribution**angegeben wird.
+TableDistribution|Gibt die Verteilungsmethode für die neue Tabelle an. Gilt, wenn für **TableName** ein neuer Tabellenname angegeben wird.
+HashColumnName|Gibt an, welche Spalte für die Verteilung der Hashtabelle verwendet werden soll. Gilt, wenn **HASH** für **TableDistribution** angegeben wird.
 
 Je nachdem, ob Sie zu einer neuen oder einer vorhandenen Tabelle kopieren, sehen Sie eine andere Seite **Zuordnungen**.
 Konfigurieren Sie im ersten Fall, welche Quellspalten zugeordnet werden sollen, sowie ihre entsprechenden Namen in der zu erstellenden Zieltabelle.

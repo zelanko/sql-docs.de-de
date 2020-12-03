@@ -23,11 +23,11 @@ ms.assetid: f6ad87d5-6a34-435a-8456-8244947c5c83
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: a314867515ecbde34702761e7c9ee8904523d0a3
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688362"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128095"
 ---
 # <a name="alter-fulltext-stoplist-transact-sql"></a>ALTER FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -67,16 +67,16 @@ ALTER FULLTEXT STOPLIST stoplist_name
   
 |Format|BESCHREIBUNG|  
 |------------|-----------------|  
-|String|*language_term* entspricht dem **Alias**-Spaltenwert in der [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) Kompatibilitätssicht. Die Zeichenfolge muss in einfache Anführungszeichen gesetzt werden, z.B. **'***language_term***'** .|  
+|String|*language_term* entspricht dem **Alias**-Spaltenwert in der [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) Kompatibilitätssicht. Die Zeichenfolge muss in einfache Anführungszeichen gesetzt werden, z. B. **'** _language_term_*_'_*.|  
 |Integer|*language_term* ist der LCID der Sprache.|  
 |Hexadezimal|*language_term* ist gleich 0x, gefolgt vom Hexadezimalwert des Gebietsschemabezeichners (LCID). Der Hexadezimalwert darf acht Ziffern nicht überschreiten, einschließlich führender Nullen. Wird der Wert im Format DBCS (Double-Byte Character Set, Doppelbyte-Zeichensatz) angegeben, wird er von SQL Server in Unicode konvertiert.|  
   
- ADD **'***stopword***'** LANGUAGE *language_term*  
+ ADD **'** _stopword_*_'_* LANGUAGE *language_term*  
  Fügt der Stoppliste ein Stoppwort für die durch LANGUAGE *language_term* angegebene Sprache hinzu.  
   
  Wenn die angegebene Kombination von Schlüsselwort und LCID-Wert der Sprache in der Stoppliste nicht eindeutig ist, wird ein Fehler zurückgegeben.  Wenn der LCID-Wert keiner registrierten Sprache entspricht, wird ein Fehler erzeugt.  
   
- DROP { **'***stopword***'** LANGUAGE *language_term* | ALL LANGUAGE *language_term* | ALL }  
+ DROP { **'** _stopword_*_'_* LANGUAGE *language_term* | ALL LANGUAGE *language_term* | ALL }  
  Löscht ein Stoppwort aus der Stoppliste.  
   
  **'** *stopword* **'** LANGUAGE *language_term*  

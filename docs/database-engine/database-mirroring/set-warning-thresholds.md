@@ -14,17 +14,17 @@ ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1d94a2c804f67657581f5ead059e6951f410e05f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789637"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126142"
 ---
 # <a name="set-warning-thresholds"></a>Schwellenwerte für Warnung festlegen
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Mithilfe dieses Dialogfelds können Sie einen oder mehrere Warnungsschwellenwerte für die in der Navigationsstruktur des Dialogfelds **Datenbankspiegelungs-Monitor** ausgewählte Datenbank aktivieren und konfigurieren.  
   
- Mit dem Dialogfeld wird versucht, eine Verbindung mit beiden Serverinstanzen herzustellen. Diese Verbindungen werden asynchron hergestellt. Das Dialogfeld zeigt den Verbindungsstatus von jedem Partner an. Wenn der Partner nicht verbunden ist, können Sie auf **Verbinden**klicken.  
+ Mit dem Dialogfeld wird versucht, eine Verbindung mit beiden Serverinstanzen herzustellen. Diese Verbindungen werden asynchron hergestellt. Das Dialogfeld zeigt den Verbindungsstatus von jedem Partner an. Wenn der Partner nicht verbunden ist, können Sie auf **Verbinden** klicken.  
   
  **So verwenden Sie SQL Server Management Studio zum Überwachen der Datenbankspiegelung**  
   
@@ -32,7 +32,7 @@ ms.locfileid: "85789637"
   
 ## <a name="options"></a>Tastatur  
  *Serverinstanz und zugehöriger Verbindungsstatus*  
- Name einer Partnerserverinstanz in der Form *SYSTEM***\\***INSTANZNAME*. Für eine Standardserverinstanz wird nur der Systemname angezeigt.  
+ Name einer Partnerserverinstanz in der Form *SYSTEM* **\\** _INSTANZNAME_. Für eine Standardserverinstanz wird nur der Systemname angezeigt.  
   
  Dieses Feld zeigt auch an, ob der Monitor zum aktuellen Zeitpunkt mit der Serverinstanz verbunden ist. Folgende Werte sind für den Verbindungsstatus möglich:  
   
@@ -83,7 +83,7 @@ ms.locfileid: "85789637"
  Wenn eine Warnung nicht aktiviert ist, ist dieses Feld inaktiv.  
   
  **OK**  
- Wenn Sie auf **OK** klicken, wird das Dialogfeld geschlossen, und die aktuell angegebenen Warnungsschwellenwerte werden im Raster **Schwellenwerte** auf der Seite **Warnungen**angezeigt.  
+ Wenn Sie auf **OK** klicken, wird das Dialogfeld geschlossen, und die aktuell angegebenen Warnungsschwellenwerte werden im Raster **Schwellenwerte** auf der Seite **Warnungen** angezeigt.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Ein Schwellenwert gilt jeweils nur auf einem Partner. Es ist jedoch empfehlenswert, einen Schwellenwert für ein bestimmtes Ereignis auf beiden Partnern festzulegen, um sicherzustellen, dass die Warnung weiterhin angezeigt wird, wenn ein Failover der Datenbank erfolgt. Der geeignete Schwellenwert für jeden Partner ist abhängig von der Leistungsfähigkeit des Systems des betreffenden Partners.  

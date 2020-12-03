@@ -25,10 +25,10 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b3c2abcfbb15fa1d2adcd6683e2c2ead5e4572f1
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193215"
 ---
 # <a name="lookup-transformation"></a>Transformation für Suche
@@ -91,9 +91,9 @@ ms.locfileid: "92193215"
   
  Im Folgenden finden Sie weitere Vorteile einer persistenten Speicherung des Caches in einer Datei:  
   
--   ***Die Cachedatei kann für mehrere Pakete freigegeben werden. Weitere Informationen finden Sie unter***  [Implementieren einer Suchtransformation im Vollcachemodus mit der Transformation für Cacheverbindungs-Manager](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
+-   ***Die Cachedatei kann in mehreren Paketen verwendet werden. Weitere Informationen finden Sie unter** _ [Implementieren einer Suchtransformation im Vollcachemodus mithilfe des Cacheverbindungs-Managers](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md) _*_ . _*_  
   
--   Die Cachedatei kann mit einem Paket bereitgestellt werden. ***Die Daten können dann auf mehreren Computern verwendet werden.*** Weitere Informationen finden Sie unter [Erstellen und Bereitstellen eines Cache für die Transformation für Suche](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md).  
+-   Die Cachedatei kann mit einem Paket bereitgestellt werden. _*_Die Daten können dann auf mehreren Computern verwendet werden._*_ Weitere Informationen finden Sie unter [Erstellen und Bereitstellen eines Cache für die Transformation für Suche](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   
 -   Sie können die Rohdatendatei-Quelle zum Lesen der Daten aus der Cachedatei verwenden. Dann können Sie die Daten mithilfe anderer Datenflusskomponenten umwandeln oder verschieben. Weitere Informationen finden Sie unter [Raw File Source](../../../integration-services/data-flow/raw-file-source.md).  
   
@@ -146,7 +146,7 @@ ms.locfileid: "92193215"
      Informationen zum Installieren von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Produktbeispielen und Beispieldatenbanken finden Sie unter [SQL Server Integration Services-Produktbeispiele](https://go.microsoft.com/fwlink/?LinkId=267527).  
   
 ## <a name="lookup-transformation-editor-general-page"></a>Transformations-Editor für Suche (Seite 'Allgemein')
-  Auf der Seite **Allgemein** des Dialogfelds Transformations-Editor für Suche können Sie den Cachemodus und den Verbindungstyp auswählen sowie angeben, wie Zeilen ohne übereinstimmende Einträge behandelt werden sollen.  
+  Auf der Seite _ *Allgemein** des Dialogfelds „Transformations-Editor für Suche“ können Sie den Cachemodus und den Verbindungstyp auswählen sowie angeben, wie Zeilen ohne übereinstimmende Einträge verarbeitet werden sollen.  
   
 ### <a name="options"></a>Tastatur  
  **Vollcache**  
@@ -167,7 +167,7 @@ ms.locfileid: "92193215"
  **Angeben, wie Zeilen ohne übereinstimmende Einträge behandelt werden sollen**  
  Wählen Sie eine Option für die Behandlung von Zeilen aus, die nicht mindestens einem Eintrag im Verweisdataset entsprechen.  
   
- Wenn Sie **Zeilen an Ausgabe nicht übereinstimmender Einträge umleiten**auswählen, werden die Zeilen an eine Ausgabe nicht übereinstimmender Einträge weitergeleitet und nicht als Fehler behandelt. Die Option **Fehler** auf der Seite **Fehlerausgabe** des Dialogfelds **Transformations-Editor für Suche** ist nicht verfügbar.  
+ Wenn Sie **Zeilen an Ausgabe nicht übereinstimmender Einträge umleiten** auswählen, werden die Zeilen an eine Ausgabe nicht übereinstimmender Einträge weitergeleitet und nicht als Fehler behandelt. Die Option **Fehler** auf der Seite **Fehlerausgabe** des Dialogfelds **Transformations-Editor für Suche** ist nicht verfügbar.  
   
  Wenn Sie im Listenfeld **Angeben, wie Zeilen ohne übereinstimmende Einträge behandelt werden sollen** eine andere Option auswählen, werden die Zeilen als Fehler behandelt. In diesem Fall ist die Option **Fehler** auf der Seite **Fehlerausgabe** verfügbar.  
   
@@ -181,21 +181,21 @@ ms.locfileid: "92193215"
  Die folgenden Optionen sind verfügbar, wenn Sie im Dialogfeld **Transformations-Editor für Suche** auf der Seite **Allgemein** die Optionen **Vollcache** und Cacheverbindungs-Manager auswählen.  
   
  **Allgemein**  
- Wählen Sie einen vorhandenen Cacheverbindungs-Manager aus der Liste aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
+ Wählen Sie einen vorhandenen Cacheverbindungs-Manager aus der Liste aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu** klicken.  
   
  **Neu**  
  Erstellen Sie mithilfe des Dialogfelds **Editor für den Cacheverbindungs-Manager** eine neue Verbindung.  
   
- Die folgenden Optionen sind verfügbar, wenn Sie im Dialogfeld **Transformations-Editor für Suche**auf der Seite **Allgemein**die Optionen **Vollcache**, **Teilcache**oder **Kein Cache** und OLE DB-Verbindungs-Manager auswählen.  
+ Die folgenden Optionen sind verfügbar, wenn Sie im Dialogfeld **Transformations-Editor für Suche** auf der Seite **Allgemein** die Optionen **Vollcache**, **Teilcache** oder **Kein Cache** und OLE DB-Verbindungs-Manager auswählen.  
   
  **Teilcache**  
- Wählen Sie einen vorhandenen OLE DB-Verbindungs-Manager aus der Liste aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
+ Wählen Sie einen vorhandenen OLE DB-Verbindungs-Manager aus der Liste aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu** klicken.  
   
  **Neu**  
  Erstellen Sie mithilfe des Dialogfelds **OLE DB-Verbindungs-Manager konfigurieren** eine neue Verbindung.  
   
  **Tabelle oder Sicht verwenden**  
- Wählen Sie eine vorhandene Tabelle oder Sicht aus der Liste aus, oder erstellen Sie eine neue Tabelle, indem Sie auf **Neu**klicken.  
+ Wählen Sie eine vorhandene Tabelle oder Sicht aus der Liste aus, oder erstellen Sie eine neue Tabelle, indem Sie auf **Neu** klicken.  
   
 > [!NOTE]  
 >  Wenn Sie auf der Seite **Erweitert** im **Transformations-Editor für Suche** eine SQL-Anweisung angeben, wird durch diese SQL-Anweisung der hier ausgewählte Tabellenname überschrieben und ersetzt. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite „Erweitert“&#41;]().  
@@ -270,7 +270,7 @@ ms.locfileid: "92193215"
  Hiermit ändern Sie die zum Generieren des Verweisdatasets verwendete SQL-Anweisung.  
   
 > [!NOTE]  
->  Durch die auf dieser Seite angegebene optionale SQL-Anweisung wird der auf der Seite **Verbindung** im **Transformations-Editor für Suche**angegebene Tabellenname überschrieben und ersetzt. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite „Verbindung“&#41;]().  
+>  Durch die auf dieser Seite angegebene optionale SQL-Anweisung wird der auf der Seite **Verbindung** im **Transformations-Editor für Suche** angegebene Tabellenname überschrieben und ersetzt. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite „Verbindung“&#41;]().  
   
  **Abfrageparameter festlegen**  
  Ordnen Sie mithilfe des Dialogfelds **Abfrageparameter festlegen** die Eingabespalten den Parametern zu.  

@@ -2,7 +2,7 @@
 title: Statistik
 description: Der Abfrageoptimierer verwendet Statistiken zum Erstellen von Abfrageplänen, die die Abfrageleistung verbessern. Informationen zu Konzepten und Richtlinien für die Abfrageoptimierung.
 ms.custom: ''
-ms.date: 06/03/2020
+ms.date: 11/23/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -24,12 +24,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc2c5467768aa92badb1a74e90a9f940eb0732e3
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 1374be401f379dceb73a41f7a4e2f38882a9a98c
+ms.sourcegitcommit: f2bdebed3efa55a2b7e64de9d6d9d9b1c85f479e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810526"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96130173"
 ---
 # <a name="statistics"></a>Statistik
 
@@ -40,7 +40,7 @@ ms.locfileid: "91810526"
 ### <a name="statistics"></a>Statistik  
  Statistiken zur Abfrageoptimierung sind Blobs (Binary Large Objects), die statistische Informationen über die Verteilung von Werten in Spalten einer Tabelle oder indizierten Sicht enthalten. Der Abfrageoptimierer verwendet diese Statistiken, um die *Kardinalität* oder Anzahl von Zeilen im Abfrageergebnis zu schätzen. Diese *Kardinalitätsschätzungen* ermöglichen es dem Abfrageoptimierer, einen hochwertigen Abfrageplan zu erstellen. Beispielsweise kann der Abfrageoptimierer, abhängig von Ihren Prädikaten, Kardinalitätsschätzungen verwenden, um statt des ressourcenintensiveren Operators „Index Scan“ den Operator „Index Seek“ auszuwählen, wenn auf diese Weise die Abfrageleistung verbessert werden kann.  
   
- Jedes Statistikobjekt wird für eine Liste mit mindestens einer Tabellenspalte erstellt und enthält ein *Histogramm*, das die Verteilung von Werten in der ersten Spalte anzeigt. Statistikobjekte, die sich auf mehrere Spalten beziehen, enthalten außerdem statistische Informationen über die spaltenübergreifende Korrelation von Werten. Diese Korrelationsstatistiken oder *Dichten*werden von der Anzahl unterschiedlicher Zeilen mit Spaltenwerten abgeleitet. 
+ Jedes Statistikobjekt wird für eine Liste mit mindestens einer Tabellenspalte erstellt und enthält ein *Histogramm*, das die Verteilung von Werten in der ersten Spalte anzeigt. Statistikobjekte, die sich auf mehrere Spalten beziehen, enthalten außerdem statistische Informationen über die spaltenübergreifende Korrelation von Werten. Diese Korrelationsstatistiken oder *Dichten* werden von der Anzahl unterschiedlicher Zeilen mit Spaltenwerten abgeleitet. 
 
 #### <a name="histogram"></a><a name="histogram"></a> Histogramm  
 Ein **Histogramm** misst die Häufigkeit des Vorkommens für jeden unterschiedlichen Wert in einem Dataset. Der Abfrageoptimierer berechnet ein Histogramm für die Spaltenwerte in der ersten Schlüsselspalte des Statistikobjekts und wählt die Spaltenwerte aus, indem statistische Zeilenstichproben entnommen werden oder indem ein vollständiger Scan aller Zeilen in der Tabelle oder Sicht ausgeführt wird. Wenn das Histogramm anhand einer Gruppe von Zeilenstichproben erstellt wird, handelt es sich bei der gespeicherten Gesamtzahl von Zeilen und unterschiedlichen Werten um Schätzungen, die keine ganzen Zahlen sein müssen.
@@ -134,20 +134,23 @@ Sie können [sys.dm_db_stats_properties](../../relational-databases/system-dynam
 
   
 #### <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC  
- Mit der [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async)-Option für das asynchrone Statistikupdate wird festgelegt, ob der Abfrageoptimierer das synchrone oder asynchrone Statistikupdate verwendet. Die Option für das asynchrone Statistikupdate ist standardmäßig deaktiviert, sodass der Abfrageoptimierer Statistiken synchron aktualisiert. Die AUTO_UPDATE_STATISTICS_ASYNC-Option gilt für Statistikobjekte, die für Indizes, einzelne Spalten in Abfrageprädikaten und mit der [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) -Anweisung generierte Statistiken erstellt wurden.  
+Mit der [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async)-Option für das asynchrone Statistikupdate wird festgelegt, ob der Abfrageoptimierer das synchrone oder asynchrone Statistikupdate verwendet. Die Option für das asynchrone Statistikupdate ist standardmäßig deaktiviert, sodass der Abfrageoptimierer Statistiken synchron aktualisiert. Die AUTO_UPDATE_STATISTICS_ASYNC-Option gilt für Statistikobjekte, die für Indizes, einzelne Spalten in Abfrageprädikaten und mit der [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) -Anweisung generierte Statistiken erstellt wurden.  
  
- > [!NOTE]
- > Um die Option für die asynchrone Statistikaktualisierung in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] auf der Seite *Optionen* des Fensters *Datenbankeigenschaften* festzulegen, müssen die beiden Optionen *Statistik automatisch aktualisierenn* und *Statistik automatisch asynchron aktualisieren* auf **True** festgelegt werden.
+> [!NOTE]
+> Um die Option für die asynchrone Statistikaktualisierung in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] auf der Seite *Optionen* des Fensters *Datenbankeigenschaften* festzulegen, müssen die beiden Optionen *Statistik automatisch aktualisierenn* und *Statistik automatisch asynchron aktualisieren* auf **True** festgelegt werden.
   
- Statistikaktualisierungen können entweder synchron (Standard) oder asynchron sein. Bei synchronen Statistikaktualisierungen werden Abfragen immer anhand aktueller Statistiken kompiliert und ausgeführt. Wenn Statistiken veraltet sind, wartet der Abfrageoptimierer auf aktualisierte Statistiken, bevor er die Abfrage kompiliert und ausführt. Bei asynchronen Statistikaktualisierungen werden Abfragen anhand vorhandener Statistiken kompiliert, auch wenn diese veraltet sind. Der Abfrageoptimierer könnte einen suboptimalen Abfrageplan auswählen, wenn die Statistiken beim Kompilieren der Abfrage veraltet sind. Wenn Abfragen nach dem Ausführen asynchroner Updates kompiliert werden, hat dies den Vorteil, dass für die Abfragen aktualisierte Statistiken verwendet werden.  
+Statistikaktualisierungen können entweder synchron (Standard) oder asynchron sein. Bei synchronen Statistikaktualisierungen werden Abfragen immer anhand aktueller Statistiken kompiliert und ausgeführt. Wenn Statistiken veraltet sind, wartet der Abfrageoptimierer auf aktualisierte Statistiken, bevor er die Abfrage kompiliert und ausführt. Bei asynchronen Statistikaktualisierungen werden Abfragen anhand vorhandener Statistiken kompiliert, auch wenn diese veraltet sind. Der Abfrageoptimierer könnte einen suboptimalen Abfrageplan auswählen, wenn die Statistiken beim Kompilieren der Abfrage veraltet sind. Wenn Abfragen nach dem Ausführen asynchroner Updates kompiliert werden, hat dies den Vorteil, dass für die Abfragen aktualisierte Statistiken verwendet werden.  
   
- Verwenden Sie ggf. synchrone Statistiken, wenn Sie Vorgänge ausführen, die die Verteilung der Daten ändern, beispielsweise das Kürzen einer Tabelle oder das Ausführen eines Massenupdates für einen großen Zeilenprozentsatz. Wenn Sie nach dem Abschließen des Vorgangs die Statistiken nicht aktualisieren, wird mithilfe von synchronen Statistiken sichergestellt, dass Statistiken vor dem Ausführen von Abfragen über die geänderten Daten aktuell sind.  
+Verwenden Sie ggf. synchrone Statistiken, wenn Sie Vorgänge ausführen, die die Verteilung der Daten ändern, beispielsweise das Kürzen einer Tabelle oder das Ausführen eines Massenupdates für einen großen Zeilenprozentsatz. Wenn Sie nach dem Abschließen des Vorgangs die Statistiken nicht aktualisieren, wird mithilfe von synchronen Statistiken sichergestellt, dass Statistiken vor dem Ausführen von Abfragen über die geänderten Daten aktuell sind.  
   
- In den folgenden Szenarien empfiehlt sich die Verwendung asynchroner Statistiken, um besser vorhersagbare Antwortzeiten für Abfragen zu erzielen:  
+In den folgenden Szenarien empfiehlt sich die Verwendung asynchroner Statistiken, um besser vorhersagbare Antwortzeiten für Abfragen zu erzielen:  
   
 * Häufig werden von der Anwendung die gleichen Abfragen, ähnliche Abfragen bzw. ähnliche zwischengespeicherte Abfragepläne ausgeführt. Bei Verwendung asynchroner Statistikaktualisierungen können die Antwortzeiten für Abfragen vorhersagbarer sein als bei synchronen Statistikaktualisierungen, weil der Abfrageoptimierer eingehende Abfragen direkt ausführen kann, ohne auf aktuelle Statistiken zu warten. Dadurch wird verhindert, dass sich einige Abfragen verzögern und andere nicht.  
   
 * In der Anwendung sind Timeouts bei Clientanforderungen aufgetreten, die dadurch verursacht werden, dass mindestens eine Abfrage auf aktualisierte Statistiken wartet. In einigen Fällen kann das Warten auf synchrone Statistiken dazu führen, dass Anwendungen mit kurzen Timeouts einen Fehler erzeugen.  
+
+> [!NOTE]
+> Statistiken für lokale temporäre Tabellen werden unabhängig von der Option AUTO_UPDATE_STATISTICS_ASYNC immer synchron aktualisiert. Statistiken für globale temporäre Tabellen werden der Option AUTO_UPDATE_STATISTICS_ASYNC entsprechend, die für die Benutzerdatenbank festgelegt wird, synchron oder asynchron aktualisiert.
 
 Asynchrone Statistikupdates werden von einer Hintergrundanforderung ausgeführt. Wenn die Anforderung bereit ist, aktualisierte Statistiken in die Datenbank zu schreiben, versucht sie, eine Schemaänderungssperre für das Statistikmetadatenobjekt zu erhalten. Wenn eine andere Sitzung bereits eine Sperre für dasselbe Objekt verwendet, wird das asynchrone Statistikupdate blockiert, bis die Schemaänderungssperre abgerufen werden kann. Ebenso werden Sitzungen, die zum Kompilieren einer Abfrage eine Schemastabilitätssperre für das Statistikmetadatenobjekt abrufen müssen, möglicherweise durch die Hintergrundsitzung für das asynchrone Statistikupdate blockiert, die bereits die Schemaänderungssperre verwendet oder darauf wartet, diese abzurufen. Daher erhöht sich durch die Verwendung von asynchronen Statistiken für Arbeitsauslastungen mit sehr häufigen Abfragekompilierungen und häufigen Statistikupdates möglicherweise die Wahrscheinlichkeit, dass aufgrund von Blockierung durch Sperren Parallelitätsprobleme auftreten.
 
@@ -255,7 +258,7 @@ Nur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann temporäre St
 * Löschen Sie temporäre Statistiken mit der Anweisung [DROP STATISTICS](../../t-sql/statements/drop-statistics-transact-sql.md).  
 * Überwachen Sie Statistiken mit den Katalogsichten **[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)** und **[sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)** . **sys_stats** beinhaltet die Spalte **is_temporary** . Damit wird angegeben, welche Statistiken dauerhaft und welche temporär sind.  
   
- Da temporäre Statistiken in **tempdb**gespeichert werden, werden durch einen Neustart des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Diensts alle temporären Statistiken entfernt.  
+ Da temporäre Statistiken in **tempdb** gespeichert werden, werden durch einen Neustart des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Diensts alle temporären Statistiken entfernt.  
     
 ## <a name="when-to-update-statistics"></a><a name="UpdateStatistics"></a>Zeitpunkt der Statistikaktualisierung  
  Der Abfrageoptimierer stellt fest, wann Statistiken veraltet sein könnten, und aktualisiert sie, sobald sie für einen Abfrageplan benötigt werden. In einigen Fällen können Sie den Abfrageplan und damit die Abfrageleistung verbessern, indem Sie Statistiken häufiger aktualisieren, als dies bei Aktivierung von [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) der Fall ist. Sie können Statistiken mit der UPDATE STATISTICS-Anweisung oder der gespeicherten Prozedur sp_updatestats aktualisieren.  

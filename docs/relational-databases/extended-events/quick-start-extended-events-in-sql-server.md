@@ -16,12 +16,12 @@ ms.author: genemi
 ms.reviewer: maghan
 ms.date: 04/16/2020
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b2cc5e7de4b96bbd85ebe36e3173189d08258139
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 2e24711b7b67f19018b325da3c6b78dc954e6a31
+ms.sourcegitcommit: 4b98c54859a657023495dddb7595826662dcd9ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869419"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96130295"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>Schnellstart: Erweiterte Ereignisse in SQL Server
 
@@ -46,7 +46,7 @@ Dieser Artikel bietet Folgendes:
 - Bereitstellung der Beziehungen zwischen Primär- und Fremdschlüsseln, die unter dynamischen Verwaltungssichten (DMVs) für erweiterte Ereignisse implizit sind.
 - Beschreibung der Inhalte von verwandten Artikeln.
 
-In Blogbeiträgen und anderen formlosen Konversationen wird häufig über die Abkürzung *xevents*auf erweiterte Ereignisse verwiesen.
+In Blogbeiträgen und anderen formlosen Konversationen wird häufig über die Abkürzung *xevents* auf erweiterte Ereignisse verwiesen.
 
 > [!NOTE]
 > Informationen zu erweiterten Ereignissen in Azure SQL-Datenbank, einschließlich Codebeispielen, finden Sie unter [Erweiterte Ereignisse in SQL-Datenbank](/azure/azure-sql/database/xevent-db-diff-from-svr).
@@ -59,7 +59,7 @@ Die folgenden Vorbereitungen wären erforderlich, damit Sie die nachfolgende Dem
 
    Sie sollten jeden Monat das neueste monatliche Update von SSMS installieren.
 2. Melden Sie sich bei Microsoft SQL Server 2014 oder höher an.
-3. Stellen Sie sicher, dass Ihr Konto über die [Serverberechtigung](../../t-sql/statements/grant-server-permissions-transact-sql.md)**ALTER ANY EVENT SESSION**verfügt.
+3. Stellen Sie sicher, dass Ihr Konto über die [Serverberechtigung](../../t-sql/statements/grant-server-permissions-transact-sql.md)**ALTER ANY EVENT SESSION** verfügt.
 
   Bei Interesse sind am Ende dieses Artikels im [Anhang](#appendix1) weitere Details zur Sicherheit und zu Berechtigungen verfügbar, die sich auf erweiterte Ereignisse beziehen.
 
@@ -82,9 +82,9 @@ Der Text und die unterstützenden Screenshots können im Laufe der Monate oder J
 
 1. Stellen Sie eine Verbindung mit SSMS her.
 
-2. Klicken Sie im Objekt-Explorer auf **Verwaltung** > **Erweiterte Ereignisse** > **Neue Sitzung**. Das Dialogfeld **Neue Sitzung** ist dabei dem **Assistenten für neue Sitzungen**vorzuziehen, obwohl die beiden einander ähnlich sind.
+2. Klicken Sie im Objekt-Explorer auf **Verwaltung** > **Erweiterte Ereignisse** > **Neue Sitzung**. Das Dialogfeld **Neue Sitzung** ist dabei dem **Assistenten für neue Sitzungen** vorzuziehen, obwohl die beiden einander ähnlich sind.
 
-3. Klicken Sie in der linken oberen Ecke auf die Seite **Allgemein** . Geben Sie *YourSession*oder einen beliebigen Namen in das Textfeld **Sitzungsname** ein. Drücken Sie noch *nicht* die Schaltfläche **OK**, die nur am Ende der Demo auftritt.
+3. Klicken Sie in der linken oberen Ecke auf die Seite **Allgemein** . Geben Sie *YourSession* oder einen beliebigen Namen in das Textfeld **Sitzungsname** ein. Drücken Sie noch *nicht* die Schaltfläche **OK**, die nur am Ende der Demo auftritt.
 
    ![Neue Sitzung > Allgemein > Sitzungsname](../../relational-databases/extended-events/media/xevents-session-newsessions-10-general-ssms-yoursessionnode.png)
 
@@ -93,7 +93,7 @@ Der Text und die unterstützenden Screenshots können im Laufe der Monate oder J
    ![Neue Sitzung > Ereignisse > Auswählen > Ereignisbibliothek, Ausgewählte Ereignisse](../../relational-databases/extended-events/media/xevents-session-newsessions-14-events-ssms-rightclick-not-wizard.png)
 
 5. Wählen Sie im Bereich **Ereignisbibliothek** in der Dropdownliste **Nur Ereignisnamen** aus.
-    - Geben Sie **sql**in das Textfeld ein, wodurch die lange Liste der verfügbaren Ereignisse mithilfe eines *Enthält* -Operators gefiltert und somit verkürzt wird.
+    - Geben Sie **sql** in das Textfeld ein, wodurch die lange Liste der verfügbaren Ereignisse mithilfe eines *Enthält* -Operators gefiltert und somit verkürzt wird.
     - Scrollen Sie zum Ereignis **sql_statement_completed**, und klicken Sie anschließend darauf.
     - Klicken Sie auf den Pfeil nach rechts **>** , um das Ereignis in das Feld **Ausgewählte Ereignisse** zu verschieben.
 
@@ -105,23 +105,26 @@ Der Text und die unterstützenden Screenshots können im Laufe der Monate oder J
 
 7. Klicken Sie auf die Registerkarte **Filter (Prädikat)** . Klicken Sie anschließend auf **Klicken Sie hier, um eine Klausel hinzuzufügen**, um alle SQL SELECT-Anweisungen zu erfassen, die eine HAVING-Klausel aufweisen.
 
-8. Wählen Sie in der Dropdownliste **Feld** die Option **sqlserver.sql_text**aus.
+8. Wählen Sie in der Dropdownliste **Feld** die Option **sqlserver.sql_text** aus.
    - Wählen Sie für **Operator** einen LIKE-Operator aus.
    - Geben Sie für **Wert** die Option **%SELECT%HAVING%** ein.
 
    > [!NOTE]
-   > In diesem zweiteiligen Namen stellt *sqlserver* den Paketnamen und *sql_text* den Feldnamen dar. Das zuvor von uns ausgewählte Ereignis, *sql_statement_completed* muss sich in demselben Paket wie das ausgewählte Feld befinden.
+   > In diesem zweiteiligen Namen stellt *sqlserver* den Paketnamen und *sql_text* den Feldnamen dar. Das zuvor von Ihnen ausgewählte Ereignis, *sql_statement_completed*, muss sich im selben Paket wie das ausgewählte Feld befinden.
 
 9. Klicken Sie in der linken oberen Ecke auf die Seite **Datenspeicher** .
 
 10. Klicken Sie im Bereich **Ziele** auf **Klicken Sie hier, um ein Ziel hinzuzufügen**.
-    - Wählen Sie in der Dropdownliste **Typ** den Eintrag **event_file**aus.
+    - Wählen Sie in der Dropdownliste **Typ** den Eintrag **event_file** aus.
     - Dies bedeutet, dass die Ereignisdaten in einer Datei gespeichert werden, die wir anzeigen können.
+    
+    > [!NOTE]
+    > Sie können Azure Blob Storage nicht als Datenspeicherziel in einer lokalen Instanz von SQL Server verwenden.
 
     ![Neue Sitzung > Datenspeicher > Ziele > Typ > event_file](../../relational-databases/extended-events/media/xevents-session-newsessions-30-datastorage-ssms-yoursessionnode.png)
 
 11. Geben Sie im Bereich **Eigenschaften** einen vollständigen Pfad und Namen in das Textfeld **Dateiname auf Server** ein.
-    - Die Dateierweiterung muss *XEL*sein.
+    - Die Dateierweiterung muss *XEL* sein.
     - Unser kleiner Test erfordert eine Dateigröße von weniger als 1 MB.
 
     ![Neue Sitzung > Erweitert > Maximale Verteilungslatenzzeit > OK](../../relational-databases/extended-events/media/xevents-session-newsessions-40-advanced-ssms-yoursessionnode.png)
@@ -136,7 +139,7 @@ Der Text und die unterstützenden Screenshots können im Laufe der Monate oder J
 
 #### <a name="edit-your-event-session"></a>Bearbeiten der Ereignissitzung
 
-Im **Objekt-Explorer**von SSMS können Sie die Ereignissitzung bearbeiten, indem Sie mit der rechten Maustaste auf ihren Knoten klicken. Anschließend klicken Sie auf **Eigenschaften**. Dasselbe mehrseitige Dialogfeld wird angezeigt.
+Im **Objekt-Explorer** von SSMS können Sie die Ereignissitzung bearbeiten, indem Sie mit der rechten Maustaste auf ihren Knoten klicken. Anschließend klicken Sie auf **Eigenschaften**. Dasselbe mehrseitige Dialogfeld wird angezeigt.
 
 ### <a name="corresponding-t-sql-for-your-event-session"></a>Entsprechendes T-SQL für die Ereignissitzung
 
@@ -209,7 +212,7 @@ Sie haben die Möglichkeit, der Ereignissitzung mitzuteilen, dass sie beim Start
 
 Verwenden Sie die folgenden einfachen Schritte zum Testen Ihrer Ereignissitzung:
 
-1. Klicken Sie im **Objekt-Explorer**von SSMS mit der rechten Maustaste auf den Ereignissitzungsknoten, und klicken Sie dann auf **Sitzung starten**.
+1. Klicken Sie im **Objekt-Explorer** von SSMS mit der rechten Maustaste auf den Ereignissitzungsknoten, und klicken Sie dann auf **Sitzung starten**.
 2. Führen Sie die folgende `SELECT...HAVING` -Anweisung mehrmals aus.
     - Im Idealfall können Sie den `HAVING Count` -Wert zwischen den beiden Testläufen ändern, wobei Sie zwischen 2 und 3 wechseln. Dadurch können Sie die Unterschiede in den Ergebnissen erkennen.
 3. Klicken Sie mit der rechten Maustaste auf den Sitzungsknoten, und klicken Sie dann auf **Sitzung beenden**.
@@ -247,7 +250,7 @@ event_session_address  5
 event_session_id       5
 is_trigger_event       4
 trace_event_id         3
-***/
+**_/
 ```
 
 <a name="select-the-full-results-xml-37"/>
@@ -257,7 +260,7 @@ trace_event_id         3
 Führen Sie in SSMS die folgende T-SQL SELECT-Anweisung aus, um Ergebnisse zurückzugeben, bei denen jede Zeile die Daten zu einem Ereignisvorkommen bereitstellt. Die CAST AS XML-Anweisung vereinfacht die Anzeige der Ergebnisse.
 
 > [!NOTE]
-> Das Ereignissystem fügt immer eine lange Zahl an den von Ihnen angegebenen Dateinamen für „ *.xel* event_file“ an. Bevor Sie die folgende SELECT-Anweisung aus der Datei ausführen können, müssen Sie den vom System angegebenen vollständigen Namen kopieren und in die SELECT-Anweisung einfügen.
+> Das Ereignissystem fügt immer eine lange Zahl an den von Ihnen angegebenen Dateinamen für „_.xel* event_file“ an. Bevor Sie die folgende SELECT-Anweisung aus der Datei ausführen können, müssen Sie den vom System angegebenen vollständigen Namen kopieren und in die SELECT-Anweisung einfügen.
 
 ```sql
 SELECT
@@ -334,11 +337,11 @@ Die SSMS-Benutzeroberfläche verfügt über zahlreiche Features, mit denen Sie d
 
 - [Erweiterte Ansicht von Zieldaten aus erweiterten Ereignissen in SQL Server](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)
 
-Die Grundlagen beginnen mit Kontextmenüoptionen, die mit **Anzeigen von Zieldaten** und **Anzeigen von Livedaten**bezeichnet sind.
+Die Grundlagen beginnen mit Kontextmenüoptionen, die mit **Anzeigen von Zieldaten** und **Anzeigen von Livedaten** bezeichnet sind.
 
 ### <a name="view-target-data"></a>Anzeigen von Zieldaten
 
-Im **Objekt-Explorer**von SSMS können Sie mit der rechten Maustaste auf den Zielknoten klicken, der sich unter Ihrem Sitzungsereignisknoten befindet. Klicken Sie im Kontextmenü auf **Zieldaten anzeigen**. Die Daten werden von SSMS angezeigt.
+Im **Objekt-Explorer** von SSMS können Sie mit der rechten Maustaste auf den Zielknoten klicken, der sich unter Ihrem Sitzungsereignisknoten befindet. Klicken Sie im Kontextmenü auf **Zieldaten anzeigen**. Die Daten werden von SSMS angezeigt.
 
 Die Anzeige wird nicht aktualisiert, da neue Daten vom Ereignis gemeldet werden. Sie können jedoch erneut auf **Zieldaten anzeigen** klicken.
 
@@ -346,7 +349,7 @@ Die Anzeige wird nicht aktualisiert, da neue Daten vom Ereignis gemeldet werden.
 
 ### <a name="watch-live-data"></a>Anzeigen von Livedaten
 
-Im **Objekt-Explorer**von SSMS können Sie mit der rechten Maustaste auf Ihren Sitzungsereignisknoten klicken. Klicken Sie im Kontextmenü auf **Livedaten anzeigen**. Eingehende Daten werden beim Eintreffen von SSMS in Echtzeit angezeigt.
+Im **Objekt-Explorer** von SSMS können Sie mit der rechten Maustaste auf Ihren Sitzungsereignisknoten klicken. Klicken Sie im Kontextmenü auf **Livedaten anzeigen**. Eingehende Daten werden beim Eintreffen von SSMS in Echtzeit angezeigt.
 
 ![Livedaten anzeigen, in SSMS, Verwaltung > Erweiterte Ereignisse > Sitzungen > YourSession, mit der rechten Maustaste klicken](../../relational-databases/extended-events/media/xevents-watchlivedata-ssms-yoursessionnode-63.png)
 
@@ -367,11 +370,11 @@ In der folgenden Tabelle sind die für erweiterte Ereignisse verwendeten Begriff
 
 | Begriff | BESCHREIBUNG |
 | :--- | :---------- |
-| Ereignissitzung | Ein Konstrukt, das um mindestens ein Ereignis angeordnet ist, sowie unterstützende Elemente (wie Aktionen) stellen Ziele dar. Die CREATE EVENT SESSION-Anweisung erstellt jede Ereignissitzung. Sie können eine Ereignissitzung mithilfe der ALTER-Anweisung bei Bedarf starten und beenden. <br/> <br/> Eine Ereignissitzung wird gelegentlich nur als *Sitzung*bezeichnet, wenn der Kontext verdeutlicht, dass es sich um eine *Ereignissitzung*handelt. <br/> <br/> Weitere Informationen zu Ereignissitzungen finden Sie unter: [SQL Server Extended Events Sessions (Erweiterte Ereignissitzungen in SQL Server)](../../relational-databases/extended-events/sql-server-extended-events-sessions.md). |
+| Ereignissitzung | Ein Konstrukt, das um mindestens ein Ereignis angeordnet ist, sowie unterstützende Elemente (wie Aktionen) stellen Ziele dar. Die CREATE EVENT SESSION-Anweisung erstellt jede Ereignissitzung. Sie können eine Ereignissitzung mithilfe der ALTER-Anweisung bei Bedarf starten und beenden. <br/> <br/> Eine Ereignissitzung wird gelegentlich nur als *Sitzung* bezeichnet, wenn der Kontext verdeutlicht, dass es sich um eine *Ereignissitzung* handelt. <br/> <br/> Weitere Informationen zu Ereignissitzungen finden Sie unter: [SQL Server Extended Events Sessions (Erweiterte Ereignissitzungen in SQL Server)](../../relational-databases/extended-events/sql-server-extended-events-sessions.md). |
 | Ereignis | Ein bestimmtes Vorkommen im System, das von einer aktiven Ereignissitzung überwacht wird. <br/> <br/> Das Ereignis *sql_statement_completed* stellt z. B. den Zeitpunkt dar, zu dem jede angegebene T-SQL-Anweisung abgeschlossen wird. Das Ereignis kann seine Dauer und andere Daten melden. |
-| target | Ein Element, das die Ausgabedaten eines erfassten Ereignisses empfängt. Das Ziel zeigt Ihnen die Daten an. <br/> <br/> Beispiele hierfür sind *event_file*und das verwandte kompakte Ereignis *ring_buffer*für den Speicher. Das ausgefallenere Ziel *histogram* verarbeitet Ihre Daten vor der Anzeige. <br/> <br/> Sie können für jede Ereignissitzung beliebige Ziele verwenden. Details finden Sie unter [Ziele für erweiterte Ereignisse in SQL Server](../../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md). |
-| action | Ein Feld, das dem Ereignis bekannt ist. Daten aus dem Feld werden an das Ziel gesendet. Das Aktionsfeld ist eng mit dem *Prädikatfilter*verknüpft. |
-| Prädikatfilter | Ein Test für die Daten in einem Ereignisfeld, der dazu verwendet wird, dass nur eine interessante Teilmenge der Ereignisvorkommen an das Ziel gesendet wird. <br/> <br/> Ein Filter kann beispielsweise nur die *sql_statement_completed* -Ereignisvorkommen einbeziehen, für die die T-SQL-Anweisung die Zeichenfolge *HAVING*enthält. |
+| target | Ein Element, das die Ausgabedaten eines erfassten Ereignisses empfängt. Das Ziel zeigt Ihnen die Daten an. <br/> <br/> Beispiele hierfür sind *event_file* und das verwandte kompakte Ereignis *ring_buffer* für den Speicher. Das ausgefallenere Ziel *histogram* verarbeitet Ihre Daten vor der Anzeige. <br/> <br/> Sie können für jede Ereignissitzung beliebige Ziele verwenden. Details finden Sie unter [Ziele für erweiterte Ereignisse in SQL Server](../../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md). |
+| action | Ein Feld, das dem Ereignis bekannt ist. Daten aus dem Feld werden an das Ziel gesendet. Das Aktionsfeld ist eng mit dem *Prädikatfilter* verknüpft. |
+| Prädikatfilter | Ein Test für die Daten in einem Ereignisfeld, der dazu verwendet wird, dass nur eine interessante Teilmenge der Ereignisvorkommen an das Ziel gesendet wird. <br/> <br/> Ein Filter kann beispielsweise nur die *sql_statement_completed* -Ereignisvorkommen einbeziehen, für die die T-SQL-Anweisung die Zeichenfolge *HAVING* enthält. |
 | Paket | Ein Namensqualifizierer, der jedem Element in einem Satz von Elementen angefügt wird, die um einen Kern von Ereignissen herum angeordnet sind. <br/> <br/> Beispielsweise kann ein Paket Ereignisse zum T-SQL-Text enthalten. Ein Ereignis könnte sich auf alle T-SQL-Anweisungen in einem durch GO getrennten Batch beziehen. Unterdessen bezieht sich ein anderes begrenzteres Ereignis auf einzelne T-SQL-Anweisungen. Darüber hinaus gibt es für jede T-SQL-Anweisung Ereignisse für den Start und für den Abschluss. <br/> <br/> Zudem befinden sich in dem Paket mit den Ereignissen auch für die Ereignisse geeignete Felder. Die meisten Ziele befinden sich in *package0* und sie werden mit Ereignissen aus vielen anderen Paketen verwendet. |
 
 ## <a name="how-to-discover-the-available-events-in-packages"></a>Ermitteln der verfügbaren Ereignisse in Paketen
@@ -432,7 +435,7 @@ In diesem Abschnitt werden einige verschiedene Elemente kurz erwähnt.
 
 Im Lieferumfang von SQL Server befinden sind einige bereits erstellte erweiterte Ereignisse. Alle Ereignisse sind so konfiguriert, dass sie bei jedem Start des SQL-Systems gestartet werden. Diese Ereignissitzungen erfassen Daten, die im Falle eines Systemfehlers hilfreich sein können. Wie alle erweiterten Ereignisse belegen sie nur geringe Mengen von Ressourcen und Microsoft empfiehlt, dass sie weiterhin unverändert ausgeführt werden.
 
-Sie können diese Ereignissitzungen im **Objekt-Explorer** von SSMS unter **Verwaltung** > **Erweiterte Ereignisse** > **Sitzungen**anzeigen.  Ab Juni 2016 sieht die Liste dieser installierten Ereignissitzungen wie folgt aus:
+Sie können diese Ereignissitzungen im **Objekt-Explorer** von SSMS unter **Verwaltung** > **Erweiterte Ereignisse** > **Sitzungen** anzeigen.  Ab Juni 2016 sieht die Liste dieser installierten Ereignissitzungen wie folgt aus:
 
 - AlwaysOn_health
 - system_health

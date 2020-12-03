@@ -25,11 +25,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 973583b5c5dd32273312f6282e91d501659887fb
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114891"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124859"
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -79,7 +79,7 @@ COUNT(DISTINCT *expression*) wertet *expression* für jede Zeile in einer Gruppe
   
 Für Rückgabewerte größer als 2^31-1 gibt `COUNT` einen Fehler zurück. Verwenden Sie für diese Fälle stattdessen `COUNT_BIG`.
   
-`COUNT` ist eine deterministische Funktion, wenn sie ***ohne*** die OVER- und ORDER BY-Klauseln verwendet wird. Sie ist nicht deterministisch, wenn sie ***mit*** den OVER- und ORDER BY-Klauseln verwendet wird. Weitere Informationen finden Sie unter [Deterministische und nicht deterministische Funktionen](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
+`COUNT` ist eine deterministische Funktion, wenn sie ***ohne** _ die OVER- und ORDER BY-Klauseln verwendet wird. Sie ist nicht deterministisch, wenn sie _*_mit_*_ den OVER- und ORDER BY-Klauseln verwendet wird. Weitere Informationen finden Sie unter [Deterministische und nicht deterministische Funktionen](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
   
 ## <a name="examples"></a>Beispiele  
   
@@ -101,7 +101,7 @@ GO
 (1 row(s) affected)
 ```
   
-### <a name="b-using-count"></a>B. Unter Verwendung von COUNT(\*)  
+### <a name="b-using-count_"></a>B. Unter Verwendung von COUNT(\_)  
 Dieses Beispiel gibt die Gesamtzahl der [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]-Mitarbeiter zurück.
   
 ```sql

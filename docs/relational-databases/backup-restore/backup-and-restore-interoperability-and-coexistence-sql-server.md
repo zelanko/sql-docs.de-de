@@ -15,14 +15,14 @@ helpviewer_keywords:
 - backups [SQL Server], files or filegroups
 - file backups [SQL Server], related features
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 3dcf1473fc92ba69d68f9aae9d871540e2604b52
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 106773df7a5e9f88c123b614688ca19722613d7f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737824"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130536"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Sichern und Wiederherstellen: Interoperabilität und Koexistenz (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "85737824"
   
  Falls beim Starten der Datenbank ein Problem auftritt, wird bei der Wiederherstellung ein Fehler gemeldet, und die Datenbank wird als SUSPECT gekennzeichnet. Wenn das Problem auf eine Datei oder mehrere Dateien isoliert werden kann, kann der Datenbankadministrator die Dateien offline schalten und versuchen, die Datenbank erneut zu starten. Sie können die folgende [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) -Anweisung verwenden, um eine Datei offline zu schalten:  
   
- ALTER DATABASE *Datenbankname* MODIFY FILE (NAME **='***Dateiname***'** , OFFLINE)  
+ ALTER DATABASE *Datenbankname* MODIFY FILE (NAME **='** _Dateiname_*_'_*, OFFLINE)  
   
  Wenn der Start erfolgreich ist, bleibt jede Dateigruppe, die eine Offlinedatei enthält, offline.  
   
