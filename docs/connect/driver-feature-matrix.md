@@ -2,19 +2,19 @@
 title: Unterstützungsmatrix für Treiberfeatures
 description: In diesem Artikel erfahren Sie, welche beliebten Features von Treibern für SQL Server unterstützt werden und wo Sie Informationen zu diesen Features finden.
 ms.custom: ''
-ms.date: 08/05/2020
+ms.date: 11/30/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-daenge
-ms.openlocfilehash: 6a781688b4fc24f8b79f3820fbcc3dc339b6c068
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: ac2f39826768cf7fe2948a4168bd93187a93ea3c
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081429"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419672"
 ---
 # <a name="driver-feature-support-matrix-for-microsoft-sql-server"></a>Unterstützungsmatrix für Treiberfeatures für Microsoft SQL Server
 
@@ -43,7 +43,7 @@ Wir möchten, dass alle Treiber alle Features unterstützen und arbeiten mit Nac
 | [Azure Active Directory-Kennwortauthentifizierung](/azure/sql-database/sql-database-aad-authentication) | Ja | Ja | | Ja |
 | [Integrierte Azure Active Directory-Authentifizierung](/azure/sql-database/sql-database-aad-authentication) | Ja | Ja | | Ja |
 | [Interaktive Azure Active Directory-Authentifizierung (MFA)](/azure/sql-database/sql-database-aad-authentication) | Ja | Ja | | Ja |
-| [Azure Active Directory-Authentifizierung mit einer verwalteten Identität](/azure/active-directory/managed-identities-azure-resources/overview) | | | | |
+| [Azure Active Directory-Authentifizierung mit einer verwalteten Identität](/azure/active-directory/managed-identities-azure-resources/overview) | Ja | Ja | | |
 | [Azure Active Directory-Authentifizierung mit einem Dienstprinzipal](/azure/active-directory/develop/app-objects-and-service-principals) | Ja | Ja | | |
 | [Integrierte Windows-Authentifizierung](/windows-server/security/windows-authentication/windows-authentication-overview) | [Ja](ado-net/sql/authentication-sql-server.md) | [Ja](ado-net/sql/authentication-sql-server.md) | [Ja](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) | [Ja](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) |
 | [Massenkopieren](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | [Ja](ado-net/sql/bulk-copy-operations-sql-server.md) | [Ja](ado-net/sql/bulk-copy-operations-sql-server.md) | [Ja](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) | [Ja](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) |

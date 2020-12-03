@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 20897f6ffbcf165c38bedac2ed1f8e6ad760cc93
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 03af2a8544763aab7609fd713790622bbb1bfef4
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126415"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419761"
 ---
 # <a name="data-type-mappings-in-adonet"></a>Datentypzuordnungen in ADO.NET
 
@@ -40,4 +40,5 @@ Sie können auch die typisierten Zugriffsmethoden des `DataReader` verwenden, we
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [SQL Server-Datentypen und ADO.NET](./sql/sql-server-data-types.md)
+- [SQL Server-Datentypen und ADO.NET](./sql/sql-server-data-types.md)
+- [Konfigurieren von Parametern](configure-parameters.md)
