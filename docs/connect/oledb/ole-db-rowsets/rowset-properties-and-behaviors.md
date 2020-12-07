@@ -2,7 +2,7 @@
 title: Eigenschaften und Verhaltensweisen von Rowsets (OLE DB-Treiber)
 description: Dies sind die Rowseteigenschaften für den OLE DB-Treiber für SQL Server, einschließlich Eigenschaftsname und Beschreibung.
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b5d42db2a329290f13917b754a89232e30ae52ed
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: ff19eb334fceba0b49a88fd1f812ad5b320c762f
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88859994"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504734"
 ---
 # <a name="rowset-properties-and-behaviors"></a>Eigenschaften und Verhaltensweisen von Rowsets
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Dies sind die Eigenschaften von Rowsets im OLE DB-Treiber für SQL Server.  
+  Nachfolgend sind die Eigenschaften von Rowsets im OLE DB-Treiber für SQL Server aufgeführt:
   
 |Eigenschafts-ID|BESCHREIBUNG|  
 |-----------------|-----------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "88859994"
 |DBPROP_BOOKMARKTYPE|R/W: Schreibgeschützt<br /><br /> Standardwert: DBPROPVAL_BMK_NUMERIC<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server implementiert ausschließlich numerische Lesezeichen. Ein OLE DB-Treiber für SQL Server-Lesezeichen ist eine 32-Bit-Ganzzahl ohne Vorzeichen vom Typ DBTYPE_UI4.|  
 |DBPROP_CACHEDEFERRED|Diese Rowseteigenschaft wird nicht vom OLE DB-Treiber für SQL Server implementiert. Beim Versuch, den Eigenschaftswert zu lesen oder zu schreiben, wird ein Fehler generiert.|  
 |DBPROP_CANFETCHBACKWARDS DBPROP_CANSCROLLBACKWARDS|R/W: Lesen/Schreiben<br /><br /> Standardwert: VARIANT_FALSE<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server unterstützt rückwärts gerichtete Abruf- und Scrollvorgänge in nicht sequenziellen Rowsets. Der OLE DB-Treiber für SQL Server erstellt ein durch Cursor unterstütztes Rowset, wenn entweder DBPROP_CANFETCHBACKWARDS oder DBPROP_CANSCROLLBACKWARDS den Wert VARIANT_TRUE aufweist. Weitere Informationen finden Sie unter [Rowsets und SQL Server-Cursor](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  
-|DBPROP_CANHOLDROWS|R/W: Lesen/Schreiben<br /><br /> Standardwert: VARIANT_FALSE<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server gibt standardmäßig DB_E_ROWSNOTRELEASED zurück, wenn der Consumer versucht, weitere Zeilen für ein Rowset abzurufen, wenn für die aktuell im Rowset befindlichen Zeilen Änderungen ausstehen. Dieses Verhalten kann geändert werden.<br /><br /> Das Festlegen von DBPROP_CANHOLDROWS und DBPROP_IRowsetChange auf VARIANT_TRUE impliziert ein mit Lesezeichen versehenes Rowset. Wenn beide Eigenschaften auf VARIANT_TRUE festgelegt sind, ist die **IRowsetLocate**-Schnittstelle für das Rowset verfügbar, und sowohl DBPROP_BOOKMARKS als auch DBPROP_LITERALBOOKMARKS weisen den Wert VARIANT_TRUE auf.<br /><br /> Rowsets des OLE DB-Treibers für SQL Server, die Lesezeichen enthalten, werden von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Cursorn unterstützt.|  
+|DBPROP_CANHOLDROWS|R/W: Lesen/Schreiben<br /><br /> Standardwert: VARIANT_FALSE<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server gibt standardmäßig DB_E_ROWSNOTRELEASED zurück, wenn der Consumer versucht, weitere Zeilen für ein Rowset abzurufen, während für die aktuell im Rowset befindlichen Zeilen Änderungen ausstehen. Dieses Verhalten kann geändert werden.<br /><br /> Das Festlegen von DBPROP_CANHOLDROWS und DBPROP_IRowsetChange auf VARIANT_TRUE impliziert ein mit Lesezeichen versehenes Rowset. Wenn beide Eigenschaften auf VARIANT_TRUE festgelegt sind, ist die **IRowsetLocate**-Schnittstelle für das Rowset verfügbar, und sowohl DBPROP_BOOKMARKS als auch DBPROP_LITERALBOOKMARKS weisen den Wert VARIANT_TRUE auf.<br /><br /> Rowsets des OLE DB-Treibers für SQL Server, die Lesezeichen enthalten, werden von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Cursorn unterstützt.|  
 |DBPROP_CHANGEINSERTEDROWS|R/W: Lesen/Schreiben<br /><br /> Standardwert: VARIANT_FALSE<br /><br /> Beschreibung: Diese Eigenschaft kann nur auf VARIANT_TRUE festgelegt werden, wenn das Rowset einen über einen keysetgesteuerten Cursor verwendet.|  
 |DBPROP_COLUMNRESTRICT|R/W: Schreibgeschützt<br /><br /> Standardwert: VARIANT_FALSE<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server legt die Eigenschaft auf VARIANT_TRUE fest, wenn eine Spalte in einem Rowset nicht vom Consumer geändert werden kann. Andere Spalten im Rowset können möglicherweise aktualisiert werden, und die Zeilen selbst können gelöscht werden.<br /><br /> Wenn die Eigenschaft auf VARIANT_TRUE festgelegt ist, überprüft der Consumer das *dwFlags*-Element der DBCOLUMNINFO-Struktur, um zu bestimmen, ob der Wert einer einzelnen Spalte geschrieben werden kann oder nicht. Für veränderbare Spalten weist *dwFlags* DBCOLUMNFLAGS_WRITE auf.|  
 |DBPROP_COMMANDTIMEOUT|R/W: Lesen/Schreiben<br /><br /> Standardwert: 0<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server löst für die **ICommand::Execute**-Methode standardmäßig keinen Timeout aus.|  
@@ -97,6 +97,7 @@ ms.locfileid: "88859994"
 |SSPROP_DEFERPREPARE|Spalte: Nein<br /><br /> R/W: Lesen/Schreiben<br /><br /> Typ: VT_BOOL<br /><br /> Standardwert: VARIANT_TRUE<br /><br /> Beschreibung: VARIANT_TRUE: Bei der vorbereiteten Ausführung wird die Befehlsvorbereitung verzögert, bis **ICommand::Execute** aufgerufen oder ein Metaeigenschaftenvorgang ausgeführt wird. Wenn die Eigenschaft festgelegt ist auf<br /><br /> VARIANT_FALSE: Die Anweisung wird vorbereitet, wenn **ICommandPrepare::Prepare** ausgeführt wird.|  
 |SSPROP_IRowsetFastLoad|Spalte: Nein<br /><br /> R/W: Lesen/Schreiben<br /><br /> Typ: VT_BOOL<br /><br /> Standardwert: VARIANT_FALSE<br /><br /> Beschreibung: Legen Sie diese Eigenschaft auf VARIANT_TRUE fest, um durch **IOpenRowset::OpenRowset** ein FastLoad-Rowset zu öffnen. Sie können diese Eigenschaft nicht in **ICommandProperties::SetProperties** festlegen.|  
 |SSPROP_ISSAsynchStatus|Spalte: Nein.<br /><br /> R/W: Lesen/Schreiben<br /><br /> Typ: VT_BOOL<br /><br /> Standardwert: VARIANT_FALSE<br /><br /> Beschreibung: Legen Sie diese Eigenschaft auf VARIANT_TRUE fest, um asynchrone Vorgänge unter Verwendung der [ISSAsynchStatus](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)-Schnittstelle zu aktivieren.|  
+|SSPROP_ISSDataClassification|R/W: Lesen/Schreiben<br /><br />  Typ: VT_BOOL<br /><br /> Standardwert: VARIANT_TRUE<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server unterstützt das Abrufen von Vertraulichkeitsklassifizierungsinformationen über die [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md)-Schnittstelle.|  
 |SSPROP_MAXBLOBLENGTH|Spalte: Nein<br /><br /> R/W: Lesen/Schreiben<br /><br /> Typ: VT_I4<br /><br /> Standardwert: Der Anbieter schränkt die Größe des vom Server zurückgegebenen Texts nicht ein, und der Eigenschaftswert wird auf den zulässigen Höchstwert festgelegt. Beispiel: 2147483647.<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server führt eine SET TEXTSIZE-Anweisung aus, um die Länge der Blobdaten (Binary Large Object) zu begrenzen, die in einer SELECT-Anweisung zurückgegeben werden.|  
 |SSPROP_NOCOUNT_STATUS|Spalte: NoCount<br /><br /> R/W: Schreibgeschützt<br /><br /> Typ: VT_BOOL<br /><br /> Standardwert: VARIANT_FALSE<br /><br /> Beschreibung: Ein boolescher Wert, der den Status von SET NOCOUNT ON/OFF in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] darstellt:<br /><br /> VARIANT_TRUE: wenn SET NOCOUNT ON<br /><br /> VARIANT_FALSE: wenn SET NOCOUNT OFF|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|Spalte: Nein<br /><br /> R/W: Lesen/Schreiben<br /><br /> Typ: VT_BSTR (1–2000 Zeichen zulässig)<br /><br /> Standardwert: leere Zeichenfolge<br /><br /> Beschreibung: Der Meldungstext der Abfragebenachrichtigung. Dieser ist benutzerdefiniert und weist kein bestimmtes Format auf.|  

@@ -1,7 +1,7 @@
 ---
 title: Versionshinweise für die Report Viewer-Steuerelemente
 description: Die Versionshinweise zu den Report Viewer-Steuerelementen für WebForms und WinForms (Reporting Services)
-ms.date: 01/16/2020
+ms.date: 11/30/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
@@ -11,18 +11,25 @@ ms.assetid: 112e0240-351d-46a9-98c7-2be09f26ac60
 ms.reviewer: maggies
 author: RhysSchmidtke
 ms.author: rhys
-ms.openlocfilehash: 1ed8d92f77a360d195c893c38ee08e642ee0b24a
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: 7edb40b44108ebf66c9462e8c909fbbd9f39510f
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80752882"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443002"
 ---
 # <a name="release-notes-for-report-viewer-controls-for-webforms-and-winforms-of-ssrs"></a>Versionshinweise für die Report Viewer-Steuerelemente für WebForms und WinForms (SSRS)
 
 Dies sind die Versionshinweise zu den Report Viewer-Steuerelementen für WebForms und WinForms. Sie beziehen sich auf [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS).
 
 Die Versionshinweise für SSRS finden Sie unter [Versionshinweise für SQL Server Reporting Services (SSRS) 2017 und höher](../release-notes-reporting-services.md).
+
+## <a name="15014270"></a>150.1427.0
+| Beschreibung der Änderung: | Details |
+| :----------------- | :------ |
+| Fehlerbehebungen | Es wurde ein Problem behoben, bei dem Links nach dem Anklicken nicht als aufgerufene Links angezeigt wurden. |
+|           | Es wurde ein datetime-Analyseproblem behoben, das sich auf bestimmte Gebietsschemas ausgewirkt hat. |
+| &nbsp; | &nbsp; |
 
 ## <a name="15014040"></a>150.1404.0
 | Beschreibung der Änderung: | Details |

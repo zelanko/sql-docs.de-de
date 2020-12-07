@@ -2,7 +2,7 @@
 title: Dialogfeld „SQL Server-Anmeldung“ (OLE DB) | Microsoft-Dokumentation
 description: Wenn Sie eine Verbindung herstellen und nicht genügend Informationen angeben, werden diese vom OLE DB-Treiber für SQL Server im Dialogfeld „SQL Server-Anmeldung“ angefordert.
 ms.custom: ''
-ms.date: 10/11/2019
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: 403c134c6e627ba1eb6c18cd2ba5341e54d65975
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 97b52f8c1e4560c5fe1654d8e81d2ac00cdb6257
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727252"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506384"
 ---
 # <a name="sql-server-login-dialog-box"></a>Dialogfeld „SQL Server-Anmeldung“
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,10 +35,10 @@ Wenn Sie versuchen, eine Verbindung herzustellen, ohne ausreichend Informationen
 |Option|BESCHREIBUNG|
 |---   |---        |
 |Server|Hier geben Sie den Namen einer SQL Server-Instanz in Ihrem Netzwerk ein. Wählen Sie einen Server-/Instanzennamen aus der Liste aus, oder geben Sie den Server-/Instanzennamen in das Feld **Server** ein. Optional können Sie mit dem **SQL Server-Konfigurations-Manager** einen Serveralias auf dem Clientcomputer erstellen und diesen Namen in das Feld **Server** eingeben. <br/><br/>Sie können „(local)“ eingeben, wenn Sie den gleichen Computer wie SQL Server verwenden. Sie können anschließend eine Verbindung mit einer lokalen Instanz von SQL Server herstellen, selbst wenn eine nicht vernetzte Version von SQL Server ausgeführt wird.<br/><br/>Weitere Informationen zu Servernamen für verschiedene Netzwerktypen finden Sie unter [Installation von SQL Server](../../../database-engine/install-windows/install-sql-server.md).|
-|Authentifizierungsmodus|Sie können in der Dropdownliste die folgenden Authentifizierungsoptionen auswählen:<br/><ul><li>`Windows Authentication:` Authentifizierung gegenüber SQL Server über die Anmeldeinformationen des Windows-Kontos, das aktuell angemeldet ist.</li><li>`SQL Server Authentication:` Authentifizierung über eine Anmelde-ID und ein Kennwort.</li><li>`Active Directory - Integrated:` Integrierte Authentifizierung mit einer Azure Active Directory-Identität. Dieser Modus kann auch für die Windows-Authentifizierung gegenüber SQL Server verwendet werden.</li><li>`Active Directory - Password:` Authentifizierung mit Benutzer-ID und Kennwort über eine Azure Active Directory-Identität.</li><li>`Active Directory - Universal with MFA support:` Interaktive Authentifizierung mit einer Azure Active Directory-Identität. Dieser Modus unterstützt die Azure Multi-Factor Authentication (MFA).</li></ul>|
+|Authentifizierungsmodus|Sie können in der Dropdownliste die folgenden Authentifizierungsoptionen auswählen:<br/><ul><li>`Windows Authentication:` Authentifizierung gegenüber SQL Server über die Anmeldeinformationen des Windows-Kontos, das aktuell angemeldet ist.</li><li>`SQL Server Authentication:` Authentifizierung über eine Anmelde-ID und ein Kennwort.</li><li>`Active Directory - Integrated:` Integrierte Authentifizierung mit einer Azure Active Directory-Identität. Dieser Modus kann auch für die Windows-Authentifizierung gegenüber SQL Server verwendet werden.</li><li>`Active Directory - Password:` Authentifizierung mit Benutzer-ID und Kennwort über eine Azure Active Directory-Identität.</li><li>`Active Directory - Universal with MFA support:` Interaktive Authentifizierung mit einer Azure Active Directory-Identität. Dieser Modus unterstützt die Azure Multi-Factor Authentication (MFA).</li><li>`Active Directory - Service Principal:` Authentifizierung mit einem Azure Active Directory-Dienstprinzipal. Als **Anmelde-ID** sollte die ID der Anwendung (des Clients) festgelegt werden. Als **Kennwort** sollte das Geheimnis der Anwendung (des Clients) festgelegt werden.</li></ul>|
 |Server-SPN|Wenn Sie eine vertrauenswürdige Verbindung verwenden, können Sie einen Dienstprinzipalnamen (SPN) für den Server angeben.|
-|Login ID|Gibt die Anmelde-ID an, die für die Verbindung verwendet werden soll. Das Textfeld „Anmelde-ID“ ist nur aktiviert, wenn `Authentication Mode` auf `SQL Server Authentication`, `Active Directory - Password` oder `Active Directory - Universal with MFA support` festgelegt ist.|
-|Kennwort|Gibt das Kennwort an, das für die Verbindung verwendet werden soll. Das Textfeld „Kennwort“ ist nur aktiviert, wenn `Authentication Mode` auf `SQL Server Authentication` oder `Active Directory - Password` festgelegt ist.|
+|Login ID|Gibt die Anmelde-ID an, die für die Verbindung verwendet werden soll. Das Textfeld „Anmelde-ID“ ist nur aktiviert, wenn `Authentication Mode` auf `SQL Server Authentication`, `Active Directory - Password`, `Active Directory - Universal with MFA support` oder `Active Directory - Service Principal` festgelegt ist.|
+|Kennwort|Gibt das Kennwort an, das für die Verbindung verwendet werden soll. Das Textfeld „Kennwort“ ist nur aktiviert, wenn `Authentication Mode` auf `SQL Server Authentication`, `Active Directory - Password` oder `Active Directory - Service Principal` festgelegt ist.|
 |Tastatur|Zeigt die Gruppe **Optionen** an oder blendet sie aus. Die Schaltfläche **Optionen** wird aktiviert, wenn **Server** über einen Wert verfügt.|
 |Ändern des Kennworts|Wenn diese Option ausgewählt wird, werden die Textfelder **Neues Kennwort** und **Neues Kennwort bestätigen** aktiviert.|
 |Neues Kennwort|Gibt das neue Kennwort an.|

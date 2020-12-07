@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 11/4/2020
-ms.openlocfilehash: ee78b145965c17ff0a496611c6506d23df1a31a3
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.openlocfilehash: 7894ea12ef77a7fb07a61ff454f27150812c7dfb
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384499"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443068"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -245,7 +245,7 @@ Eine Veröffentlichungsaktion von "SqlPackage.exe" aktualisiert inkrementell das
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|Gibt an, ob Unterschiede bei dem Zeitraum, über den SQL Server die Route in der Routingtabelle beibehält, beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen.|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|Gibt an, ob Unterschiede in den Semikolons zwischen T-SQL-Anweisungen beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen.|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|Gibt an, ob Unterschiede in den Tabellenoptionen beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen.|
-|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Gibt an, ob Unterschiede in den Tabellenpartitionsoptionen beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen.  Diese Option gilt nur für SQL-Pool-Datenbanken (Data Warehouse) von Azure Synapse Analytics.|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Gibt an, ob Unterschiede in den Tabellenpartitionsoptionen beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen.  Diese Option gilt nur für Azure Synapse Analytics-Datenbanken mit dediziertem SQL-Pool.|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|Gibt an, ob Unterschiede in den Benutzereinstellungsobjekten beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen.|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|Gibt an, ob Unterschiede in den Leerzeichen beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen.|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|Gibt an, ob Unterschiede im Wert der WITH NOCHECK-Klausel für CHECK-Einschränkungen beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen.|

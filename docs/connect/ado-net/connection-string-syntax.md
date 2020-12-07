@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 40fc82cdc264951d1e776875a48b5a516b4b26a8
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: f61b867b70825595a012b2167d2c63b13409a8e2
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126519"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442813"
 ---
 # <a name="connection-string-syntax"></a>Syntax von Verbindungszeichenfolgen
 
@@ -69,7 +69,7 @@ Zum Herstellen einer Verbindung mit SQL Server ist vorzugsweise die Windows-Auth
 "Persist Security Info=False;User ID=*****;Password=*****;Initial Catalog=AdventureWorks;Server=MySqlServer"  
 ```  
 
-Wenn Sie eine Verbindung mit Azure SQL-Datenbank oder Azure SQL Data Warehouse herstellen und eine Anmeldung im Format `user@servername` anbieten, stellen Sie sicher, dass der Wert `servername` in der Anmeldung mit dem für `Server=` angegebenen Wert übereinstimmt.
+Wenn Sie eine Verbindung mit Azure SQL-Datenbank oder Azure Synapse Analytics herstellen und die Anmeldeinformationen im Format `user@servername` eingeben, stellen Sie sicher, dass der Wert `servername` in der Anmeldung mit dem für `Server=` angegebenen Wert übereinstimmt.
 
 > [!NOTE]
 > Das Angeben der Windows-Authentifizierung hat Vorrang vor SQL Server-Anmeldungen. Wenn Sie sowohl die integrierte Sicherheit aktivieren als auch einen Benutzernamen und ein Kennwort angeben, werden Benutzername und Kennwort ignoriert, und die Windows-Authentifizierung wird verwendet.
@@ -125,7 +125,7 @@ In der folgenden Tabelle werden alle Fälle beschrieben.
 
 Weitere Informationen finden Sie unter [Verwenden von Verschlüsselung ohne Überprüfung](/sql/relational-databases/native-client/features/using-encryption-without-validation).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Verbindungszeichenfolgen](connection-strings.md)
-- [Herstellen der Verbindung mit einer Datenquelle](connecting-to-data-source.md)
+- [Herstellen einer Verbindung mit Datenquellen](connecting-to-data-source.md)

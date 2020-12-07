@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 11/12/2020
-ms.openlocfilehash: a45b17b98ae8c8d398eee18c7678a119cb32a4f7
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+ms.openlocfilehash: b9bfda0507b81211feefb0fdb2505ae31f0c8c3b
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94584803"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442648"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Versionshinweise für Azure Data Studio
 
@@ -39,7 +39,7 @@ ms.locfileid: "94584803"
 | Neues Element | Details | Problemumgehung |
 |----------|---------|------------|
 | Azure Arc-Erweiterung | [Bekanntes Problem:](https://github.com/microsoft/azuredatastudio/issues/13319) Die Schaltfläche „Skript in Notebook schreiben“ für Arc MIAA & PG-Bereitstellungen führt vor der Skripterstellung für das Notebook keine Feldüberprüfung aus. Das bedeutet Folgendes: Wenn ein Benutzer ein falsches Kennwort in das Kennwortbestätigungsfeld eingibt, entsteht möglicherweise ein Notebook mit einem falschen Kennwortwert.| Die Schaltfläche „Bereitstellen“ funktioniert erwartungsgemäß. Daher sollten Benutzer diese Schaltfläche verwenden. |
-| Objekt-Explorer | ADS-Releases vor 1.24.0 weisen aufgrund von Änderungen der Engine im Zusammenhang mit [Azure Synapse Analytics SQL On-Demand](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview) einen Breaking Change im Objekt-Explorer auf. | Um den Objekt-Explorer in Azure Data Studio weiterhin mit Azure Synapse Analytics SQL On-Demand verwenden zu können, müssen Sie Azure Data Studio 1.24.0 oder höher verwenden. |
+| Objekt-Explorer | ADS-Releases vor 1.24.0 weisen aufgrund von Änderungen der Engine im Zusammenhang mit [serverlosen SQL-Pools bei Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview) einen Breaking Change im Objekt-Explorer auf. | Um den Objekt-Explorer in Azure Data Studio weiterhin mit serverlosen SQL-Pools in Azure Synapse Analytics verwenden zu können, müssen Sie Azure Data Studio 1.24.0 oder höher verwenden. |
 
 Unter [Azure Data Studio-Feedback](https://github.com/microsoft/azuredatastudio) können Sie Lösungen für andere bekannte Probleme finden und Feedback an das Produktteam übermitteln.
 

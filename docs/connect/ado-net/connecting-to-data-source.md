@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: ab6edc2a7090de85e970445cdb2b86d6ed5cb8f2
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 26554deb5d8a3786efd1bd869a2692d368132531
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126529"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419811"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>Herstellen einer Verbindung mit einer Datenquelle in ADO.NET
 
@@ -35,7 +35,7 @@ Beschreibt die Verwendung eines **Connection**-Objekts zum Herstellen einer Verb
 [Verbindungsereignisse](connection-events.md)\
 Beschreibt die Verwendung eines **InfoMessage**-Ereignisses zum Abrufen von Informationsmeldungen von einer Datenquelle.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Verbindungszeichenfolgen](connection-strings.md)
 - [Verbindungspooling](connection-pooling.md)

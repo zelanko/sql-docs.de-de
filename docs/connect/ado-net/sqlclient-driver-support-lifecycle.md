@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-jizho2
-ms.openlocfilehash: 30155a584de4e22692601a1dcf9551a67d4f580f
-ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
+ms.openlocfilehash: eef9e81c94c930b9f00689b41339d54a0f0302be
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95011795"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442716"
 ---
 # <a name="sqlclient-driver-support-lifecycle"></a>Lebenszyklus der SqlClient-Treiberunterstützung
 
@@ -30,18 +30,23 @@ Die Microsoft.Data.SqlClient-Bibliothek unterliegt der neuesten .NET Core-Unters
 
 ## <a name="microsoftdatasqlclient-release-cadence"></a>Microsoft.Data.SqlClient-Releaseintervall
 
-Neue stabile Releases werden alle sechs Monate beginnend mit Version 1.2 mit zwei bis drei Previewreleases dazwischen veröffentlicht. LTS-Releases (Long Term Support, langfristige Unterstützung) werden basierend auf einigen Qualifikationen und der Kundenreaktion von Projektbeteiligten und Verwaltern ausgewählt.
+Neue stabile Releases mit allgemeiner Verfügbarkeit werden beginnend mit Version 1.2 alle sechs Monate veröffentlicht. Innerhalb dieses sechsmonatigen Zeitraums werden zwei bis drei Previewreleases verfügbar gemacht. LTS-Releases (Long Term Support, langfristige Unterstützung) werden basierend auf einigen Qualifikationen und der Kundenreaktion von Projektbeteiligten und Verwaltern ausgewählt.
 
-### <a name="release-life-cycles"></a>Releaselebenszyklen
+### <a name="actively-supported-releases"></a>Aktiv unterstützte Releases
 
 | Version | Offizielles Veröffentlichungsdatum | Aktuelle Patchversion | Veröffentlichungsdatum für Patch | Supportebene  | Supportende |
 | -- | -- | -- | -- | -- | -- |
 | 2.1 | 19. November 2020 | 2.1.0 | 19. November 2020 | Aktuell | |
-| 2.0 | 16. Juni 2020 | 2.0.1 | 25. August 2020 | Aktuell | |
+| 2.0 | 16. Juni 2020 | 2.0.1 | 25. August 2020 | Aktuell | 19. Februar 2021 |
 | 1.1 | 20. November 2019 | 1.1.3 | 15. Mai 2020 | LTS | 21. November 2022 |
-| 1.0 | 28. August 2019 | 1.0.19269.1 | 26. September 2019 | Aktuell | 20. Februar 2020 |
 
-### <a name="long-term-support-lts-releases"></a>LTS-Releases
+### <a name="out-of-support-releases"></a>Nicht mehr unterstützte Releases
+
+| Version | Veröffentlichungsdatum des letzten Patches | Aktuelle Patchversion | Ende des Supportzeitraums |
+| -- | -- | -- | -- |
+| 1.0 | 26. September 2019 | 1.0.19269.1 | 20. Februar 2020 |
+
+### <a name="long-term-support-lts-releases"></a>LTS-Releases (Long Term Support, langfristiger Support)
 
 LTS-Releases werden drei Jahre nach der Veröffentlichung unterstützt.
 
@@ -57,3 +62,20 @@ Aktuelle Releases werden bis zu drei Monate nach nachfolgenden aktuellen oder LT
 |2.0|Ja|Ja|Ja|Ja|Ja|Ja|Ja|Ja|
 |1.1|Ja|Ja|Ja|Ja|Ja|Ja|Ja|Ja|
 |1.0|Ja|Ja|Ja|Ja|Ja|Ja|Ja|Ja|
+
+## <a name="supported-os-versions"></a>Unterstützte Betriebssystemversionen
+
+### <a name="support-for-net-framework-applications"></a>Unterstützung für .NET Framework-Anwendungen
+
+Microsoft.Data.SqlClient unterstützt alle Betriebssysteme, die von .NET Framework v4.6 und höher unterstützt werden.
+
+[.NET Framework-Systemanforderungen](/dotnet/framework/get-started/system-requirements).
+
+### <a name="support-for-net-core-applications"></a>Unterstützung für .NET Core-Anwendungen
+
+Microsoft.Data.SqlClient unterstützt alle Betriebssysteme, die von .NET Core v2.1 und höher unterstützt werden.
+
+[Von .NET Core unterstützte Betriebssystem-Lebenszyklusrichtlinie](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md).
+
+> [!NOTE]
+> Der invariante Globalisierungsmodus wird aktuell nicht unterstützt.

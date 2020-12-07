@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 10/27/2020
-ms.openlocfilehash: eb3fa0a07e9a0b5e7cf1bc1c7564fdb7b0d82a62
-ms.sourcegitcommit: a2182276ba00c48dc1475b9c7dfa45179d4416dc
+ms.openlocfilehash: 4569c61552a03e928d01e47940ae02e7fee9dcec
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94704195"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523086"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Versionshinweise zu SQL Server Management Studio (SSMS)
 
@@ -56,12 +56,13 @@ SSMS 18.7 ist das neueste Release von SSMS mit allgemeiner Verfügbarkeit (GA).
 |----------|---------|------------|
 | Analysis Services | Beim Herstellen einer Verbindung mit SSAS über msmdpump.dll tritt ein Fehler auf. Weitere Informationen finden Sie im [SQL Server-Benutzerfeedback](https://feedback.azure.com/forums/908035-sql-server/suggestions/40144696). | – |
 | Analysis Services | In seltenen Fällen, kann es bei der Verwendung des Upgradesetups zu einem Fehler „Objekt nicht auf die Instanz eines Objekts festgelegt“ kommen, wenn versucht wird, den DAX-Editor nach einem Upgrade von SSMS zu öffnen. | Um dieses Problem zu beheben, deinstallieren Sie SSMS, und installieren Sie es erneut. |
+| DAX-Abfrage-Editor | Beim Öffnen des DAX-Abfrage-Editors wird der Fehler „Objekt nicht auf die Instanz eines Objekts festgelegt“ ausgegeben. | Deinstallieren und erneutes Installieren von SQL Server Management Studio.  Wenn das Problem durch die Neuinstallation nicht behoben wird, schließen Sie alle Instanzen von SSMS, führen Sie eine Sicherung von `%AppData%\Microsoft\SQL Server Management Studio` und `%LocalAppData%\Microsoft\SQL Server Management Studio` durch, und entfernen Sie diese Elemente dann. |
 | SSMS allgemein | Das neue Dialogfeld „Serverüberwachungsspezifikation“ kann den Absturz von SSMS mit einem Zugriffsverletzungsfehler bewirken. | – |
 | SSMS allgemein | SSMS-Erweiterungen, die SMO verwenden, sollten für das neue SSMS-spezifische SMO V161-Paket neu kompiliert werden. Eine Vorschauversion ist unter https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ verfügbar. </br></br> Erweiterungen, die für frühere V160-Versionen des Microsoft.SqlServer.SqlManagementObjects-Pakets kompiliert wurden, funktionieren weiterhin. | – |
 | Assistent zum Generieren von Skripts | Der Assistent löst einen Fehler aus, wenn Sie versuchen, Datenbankobjekte in SQL Server 2014 und höher aufzulisten. Weitere Informationen finden Sie im [SQL Server-Benutzerfeedback](https://feedback.azure.com/forums/908035-sql-server/suggestions/41885587). | Verwenden Sie SSMS 18.6, um Objekte im Assistenten zum Generieren von Skripts für SQL 2014 und höher auszuwählen. |
-| Integration Services | Beim Im- oder Export von Paketen in Integration Services oder beim Export von Paketen in Azure-SSIS Integration Runtime gehen Skripts für Pakete verloren, die Skriptaufgaben/-komponenten enthalten. Problemumgehung: Entfernen Sie den Ordner „C:\Programme (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild“. | – |
-| Integration Services | Bei Remoteverbindungen mit den Integrationsdiensten tritt möglicherweise ein Fehler „The specified service does not exist as an installed service“ (Der angegebene Dienst ist nicht als installierter Dienst vorhanden) in neueren Betriebssystemen auf. Problemumgehung: Identifizieren Sie den Registrierungsspeicherort für die Integrationsdienste unter „Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\WOW6432Node\AppID“, und benennen Sie innerhalb dieser Strukturen für die bestimmte Version der Integrationsdienste, mit denen wir eine Verbindung herstellen möchten, den Registrierungsschlüssel „LocalService“ in „LocalService_A“ um. | N/V |
-| Objekt-Explorer | Releases von SSMS, die niedriger als 18.7 sind, besitzen einen Breaking Change im Objekt-Explorer aufgrund der Änderungen der Engine im Zusammenhang mit [Azure Synapse Analytics SQL On-Demand](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | Um den Objekt-Explorer in SSMS weiterhin mit Azure Synapse Analytics SQL On-Demand verwenden zu können, müssen Sie SSMS 18.7 oder höher verwenden. |
+| Integration Services | Beim Im- oder Export von Paketen in Integration Services oder beim Export von Paketen in Azure-SSIS Integration Runtime gehen Skripts für Pakete verloren, die Skriptaufgaben/-komponenten enthalten. | Entfernen Sie den Ordner „C:\Programme (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild“. |
+| Integration Services | Bei Remoteverbindungen mit den Integrationsdiensten tritt möglicherweise ein Fehler „The specified service does not exist as an installed service“ (Der angegebene Dienst ist nicht als installierter Dienst vorhanden) in neueren Betriebssystemen auf. | Identifizieren Sie den Registrierungsspeicherort für die Integrationsdienste unter „Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\WOW6432Node\AppID“, und benennen Sie innerhalb dieser Strukturen für die bestimmte Version der Integrationsdienste, mit denen wir eine Verbindung herstellen möchten, den Registrierungsschlüssel „LocalService“ in „LocalService_A“ um. |
+| Objekt-Explorer | SSMS-Releases vor 18.7 weisen aufgrund von Änderungen der Engine im Zusammenhang mit [serverlosen SQL-Pools bei Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview) einen Breaking Change im Objekt-Explorer auf. | Um den Objekt-Explorer in SSMS weiterhin mit serverlosen SQL-Pools in Azure Synapse Analytics verwenden zu können, müssen Sie SSMS 18.7 oder höher verwenden. |
 
 Bei anderen Problemen können Sie auf [SQL Server-Benutzerfeedback](https://feedback.azure.com/forums/908035-sql-server) verweisen. Außerdem können Sie so Feedback an das Produktteam übermitteln.
 
@@ -129,7 +130,7 @@ SSMS 18.7 ist das neueste Release von SSMS mit allgemeiner Verfügbarkeit (GA).
 | SSMS allgemein | Ein Problem wurde behoben, bei dem das Herstellen einer Verbindung mit einer Azure SQL-Datenbank mehrere Sekunden dauern konnte (SQL-Anmeldung bei einer Benutzerdatenbank). |
 | SSMS allgemein | Ein Problem wurde behoben, bei dem SSMS die erfasste Deadlocks (XDL-Dateien) nicht verarbeitete/anzeigte. |
 | SSMS allgemein | Ein Problem wurde behoben, bei dem das Öffnen von Fehlerprotokolleinstellungen für SQL Server 2008 R2 und niedriger fehlschlug, weil die „ErrorLogSizeKb“Eigenschaft nicht gefunden wurde. |
-| SSMS allgemein | Allgemeine Korrekturen und Verbesserungen im Zusammenhang mit der Unterstützung von [Azure Synapse Analytics SQL On-Demand](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). |
+| SSMS allgemein | Allgemeine Korrekturen und Verbesserungen im Zusammenhang mit der Unterstützung von [serverlosen SQL-Pools in Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). |
 | Importieren einer Flatfile | Ein Problem wurde behoben, bei dem der Assistent nicht erkannte, dass die Datei von einer anderen Anwendung verwendet wurde, und stattdessen einen Fehler auslöste. Weitere Informationen finden Sie unter [SQL Server-Benutzerfeedback](https://feedback.azure.com/forums/908035/suggestions/40761574). |
 | Importieren/Exportieren einer Datenschichtanwendung | Die Standarddienstebene wurde korrigiert, sodass sie beim Importieren einer BACPAC-Datei (identisch mit dem Verhalten des Azure-Portals und von „Sqlpackage.exe“) „Standard S0“ ist. |
 | Importieren einer Flatfile | Ein Problem wurde behoben, bei dem der Assistent nicht erkannte, dass die Datei von einer anderen Anwendung verwendet wurde, und stattdessen einen Fehler auslöste. Weitere Informationen finden Sie unter [SQL Server-Benutzerfeedback](https://feedback.azure.com/forums/908035/suggestions/40761574). |
@@ -161,7 +162,7 @@ SSMS 18.7 ist das neueste Release von SSMS mit allgemeiner Verfügbarkeit (GA).
 | Assistent zum Generieren von Skripts | Der Assistent löst einen Fehler aus, wenn Sie versuchen, Datenbankobjekte in SQL Server 2014 und höher aufzulisten. Weitere Informationen finden Sie im [SQL Server-Benutzerfeedback](https://feedback.azure.com/forums/908035-sql-server/suggestions/41885587). | Verwenden Sie SSMS 18.6, um Objekte im Assistenten zum Generieren von Skripts für SQL 2014 und höher auszuwählen. |
 | Integration Services | Beim Im- oder Export von Paketen in Integration Services oder beim Export von Paketen in Azure-SSIS Integration Runtime gehen Skripts für Pakete verloren, die Skriptaufgaben/-komponenten enthalten. Problemumgehung: Entfernen Sie den Ordner „C:\Programme (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild“. | – |
 | Integration Services | Bei Remoteverbindungen mit den Integrationsdiensten tritt möglicherweise ein Fehler „The specified service does not exist as an installed service“ (Der angegebene Dienst ist nicht als installierter Dienst vorhanden) in neueren Betriebssystemen auf. Problemumgehung: Identifizieren Sie den Registrierungsspeicherort für die Integrationsdienste unter „Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\WOW6432Node\AppID“, und benennen Sie innerhalb dieser Strukturen für die bestimmte Version der Integrationsdienste, mit denen wir eine Verbindung herstellen möchten, den Registrierungsschlüssel „LocalService“ in „LocalService_A“ um. | N/V |
-| Objekt-Explorer | Releases von SSMS, die niedriger als 18.7 sind, besitzen einen Breaking Change im Objekt-Explorer aufgrund der Änderungen der Engine im Zusammenhang mit [Azure Synapse Analytics SQL On-Demand](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | Um den Objekt-Explorer in SSMS weiterhin mit Azure Synapse Analytics SQL On-Demand verwenden zu können, benötigen Sie SSMS 18.7 oder höher. |
+| Objekt-Explorer | SSMS-Releases vor 18.7 weisen aufgrund von Änderungen der Engine im Zusammenhang mit [serverlosen SQL-Pools bei Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview) einen Breaking Change im Objekt-Explorer auf. | Um den Objekt-Explorer in SSMS weiterhin mit serverlosen SQL-Pools in Azure Synapse Analytics verwenden zu können, müssen Sie SSMS 18.7 oder höher verwenden. |
 | Abfragespeicher | Nach einem Rechtsklick auf den Objekt-Explorer-Knoten für Abfragespeicher wird ein Fehler ausgelöst. | Greifen Sie direkt auf Elemente zu, indem Sie den Knoten erweitern und mit der rechten Maustaste auf einzelne untergeordnete Optionen klicken. |
 
 ### <a name="186"></a>18.6
@@ -185,7 +186,7 @@ SSMS 18.7 ist das neueste Release von SSMS mit allgemeiner Verfügbarkeit (GA).
 | Importieren einer Flatfile | Die Unterstützung für Dateien mit fester Breite und die Dateityperkennung für CSV/TSV-Dateien wurde hinzugefügt, um sicherzustellen, dass diese als CSV/TSV-Dateien analysiert werden. |
 | Integration Services | Die Unterstützung für Azure SQL Managed Instance-Agent-Aufträge zum Ausführen eines SSIS-Pakets aus dem Paketspeicher in Azure-SSIS IR wurde hinzugefügt. |
 | SMO/Skripterstellung | Die Unterstützung für das Erstellen der dynamischen Datenmaskierung für [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (zuvor SQL Azure Data Warehouse) wurde hinzugefügt. |
-| SMO/Skripterstellung | Die Unterstützung zum Erstellen von Sicherheitsrichtlinien für [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (zuvor SQL Data Warehouse) wurde hinzugefügt. |
+| SMO/Skripterstellung | Unterstützung zum Erstellen von Sicherheitsrichtlinien für [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) hinzugefügt. |
 
 #### <a name="bug-fixes-in-186"></a>Fehlerkorrekturen in Version 18.6
 
@@ -278,7 +279,7 @@ SSMS 18.7 ist das neueste Release von SSMS mit allgemeiner Verfügbarkeit (GA).
 | SMO/Skripterstellung | Neue DwMaterializedViewDistribution-Eigenschaft zu View-Objekt hinzugefügt. |
 | SMO/Skripterstellung | Unterstützung für *Funktionseinschränkung* entfernt (diese Previewfunktion wurde aus SQL Azure und lokalem SQL Server entfernt). |
 | SMO/Skripterstellung | *Notebook* als Ziel für den Assistenten zum Generieren von Skripts hinzugefügt. |
-| SMO/Skripterstellung | Unterstützung für *bedarfsgesteuertes SQL* wurde hinzugefügt. |
+| SMO/Skripterstellung | Unterstützung für *serverlose SQL-Pools in Azure Synapse Analytics* hinzugefügt. |
 | SMO/Skripterstellung | [SQL-Bewertungs-API](../tools/sql-assessment-api/sql-assessment-api-overview.md): Die Felder „Plattform“, „Name“ und engineEdition fields können nun durch Trennzeichen getrennte Listen enthalten (*Plattform*: \[*Windows*, *Linux*\]) und nicht nur reguläre Ausdrücke (*Plattform*: *\/Windows\|Linux\/* )
 | SMO/Skripterstellung | [SQL-Bewertungs-API](../tools/sql-assessment-api/sql-assessment-api-overview.md): 13 Bewertungsregeln wurden hinzugefügt. Weitere Informationen finden Sie auf [GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-assessment-api). |
 
@@ -301,9 +302,9 @@ SSMS 18.7 ist das neueste Release von SSMS mit allgemeiner Verfügbarkeit (GA).
 | SSMS allgemein | Version der MSODBC- und MSOLEDB-Treiber aktualisiert. |
 | SSMS allgemein | Mindestens zwei häufigen Ursachen für Aufhäng- und Absturzvorgänge in SSMS behoben. |
 | SSMS allgemein | Ein weiterer Fall wurde behandelt, bei dem das Dialogfeld *Wiederherstellen* bei Auswahl der Schaltfläche „Durchsuchen“ hängen blieb. |
-| SSMS allgemein | *Neue Datenbank-Benutzeroberfläche* für SqlOnDemand korrigiert. |
-| SSMS allgemein | Vorlagen *Neue externe Tabelle...* und *Neue externe Datenquelle...* für SqlOnDemand korrigiert. |
-| SSMS allgemein | Datenbank- und Verbindungseigenschaften, Ausblenden von Berichten und Umbenennen für SqlOnDemand korrigiert. |
+| SSMS allgemein | Probleme bei *neuer Datenbank-GUI* für serverlose SQL-Pools in Azure Synapse Analytics behoben. |
+| SSMS allgemein | Probleme bei den Vorlagen *Neue externe Tabelle...* und *Neue externe Datenquelle...* für serverlose SQL-Pools in Azure Synapse Analytics behoben. |
+| SSMS allgemein | Probleme bei Datenbank- und Verbindungseigenschaften, beim Ausblenden von Berichten und beim Umbenennen für serverlose SQL-Pools in Azure Synapse Analytics behoben. |
 | SSMS allgemein | Always Encrypted: Es wurde ein Problem behoben, bei dem die Dropdownliste für den Schlüsselnamen schreibgeschützt wird, wenn ein neuer Enclave-fähiger Schlüssel ausgewählt wird. |
 | SSMS allgemein | Das Raster *Datenbankeigenschaften (Seite „Optionen“)* , das zwei *sonstige Kategorien* zeigte, wurde bereinigt. |
 | SSMS allgemein | Es wurde ein Problem behoben, bei dem die Scrollleiste in der Mitte des Rasters „Datenbankeigenschaften (Seite „Optionen“)“ startete. |
@@ -330,7 +331,7 @@ SSMS 18.7 ist das neueste Release von SSMS mit allgemeiner Verfügbarkeit (GA).
 | SQL-Agent | Reihenfolge der Registerkarten auf der Seite „Auftragsschritt“ korrigiert. |
 | SQL-Agent | Die Position der Schaltflächen „Weiter“ und „Zurück“ auf der Seite „Auftragsschritt“ wurde umgekehrt, um sie in eine logische Reihenfolge zu bringen. |
 | SQL-Agent | Das Fenster „Auftragszeitplan“ wurde so angepasst, dass die Benutzeroberfläche nicht abgeschnitten wird. |
-| SMO/Skripterstellung | Datenbankskripts für SqlOnDemand korrigiert. |
+| SMO/Skripterstellung | Probleme beim Erstellen von Datenbankskripts für serverlose SQL-Pools in Azure Synapse Analytics behoben. |
 | SMO/Skripterstellung | Explizite SQLVARIANT-Umwandlung entfernt (unzulässige T-SQL-Syntax für SqlOnDemand), wodurch die Skripterstellung für SqlOnDemand ermöglicht wird. |
 | SMO/Skripterstellung | Es wurde ein Problem behoben, bei dem FILLFACTOR in Indizes für SQL Azure übersprungen wurde. |
 | SMO/Skripterstellung | Ein Problem im Zusammenhang mit der Skripterstellung für externe Objekte wurde behoben. |
@@ -370,7 +371,7 @@ SSMS 18.7 ist das neueste Release von SSMS mit allgemeiner Verfügbarkeit (GA).
 | Abfragespeicher | Unterstützung für die neuen benutzerdefinierten Erfassungsrichtlinien wurde hinzugefügt. |
 | Abfragespeicher | Den Optionen für **Datenbankeigenschaften** des **Abfragespeichers** wurde das Feature **Wartestatistik-Erfassungsmodus** hinzugefügt. |
 | SMO/Skripterstellung | Unterstützung des Skripts der materialisierten Sicht in SQL DW. |
-| SMO/Skripterstellung | Unterstützung für *bedarfsgesteuertes SQL* wurde hinzugefügt. |
+| SMO/Skripterstellung | Unterstützung für *serverlose SQL-Pools in Azure Synapse Analytics* hinzugefügt. |
 | SMO/Skripterstellung | [SQL-Bewertungs-API](../tools/sql-assessment-api/sql-assessment-api-overview.md): 50 Bewertungsregeln wurden hinzugefügt (weitere Details auf GitHub). |
 | SMO/Skripterstellung | [SQL-Bewertungs-API](../tools/sql-assessment-api/sql-assessment-api-overview.md): Den Regelbedingungen wurden grundlegende mathematische Ausdrücke und Vergleiche hinzugefügt. |
 | SMO/Skripterstellung | [SQL-Bewertungs-API](../tools/sql-assessment-api/sql-assessment-api-overview.md): Unterstützung für das RegisteredServer-Objekt wurde hinzugefügt. |

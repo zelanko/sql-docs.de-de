@@ -2,7 +2,7 @@
 title: Konfigurieren von Universal Data Link (UDL) | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie die Registerkarte „Verbindung“ verwenden, um anzugeben, wie über den OLE DB-Treiber für SQL Server eine Verbindung mit Ihren Daten hergestellt werden soll.
 ms.custom: ''
-ms.date: 10/11/2019
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: b691d24bb1d700a63e1ecfc9daca3bbfb5399800
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: f8d9444864dfe144918374c6d10e1a9f403faff3
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727281"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504729"
 ---
 # <a name="universal-data-link-udl-configuration"></a>Universal Data Link (UDL)-Konfiguration
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +32,7 @@ Diese Registerkarte „Verbindung“ ist anbieterspezifisch und zeigt nur die Ve
 |Option|BESCHREIBUNG|
 |---   |---        |
 |Wählen Sie einen Servernamen aus, oder geben Sie ihn ein.|Wählen Sie den Namen eines Servers aus der Dropdownliste, oder geben Sie den Speicherort des Servers ein, auf dem sich die gewünschte Datenbank befindet. Das Auswählen der Datenbank auf dem Server ist eine separate Aktion. Aktualisieren Sie die Liste, indem Sie auf „Aktualisieren“ klicken.
-|Geben Sie Informationen zum Anmelden am Server ein|Sie können in der Dropdownliste die folgenden Authentifizierungsoptionen auswählen: <ul><li>`Windows Authentication:` Authentifizierung gegenüber SQL Server über die Anmeldeinformationen des Windows-Kontos, das aktuell angemeldet ist.</li><li>`SQL Server Authentication:` Authentifizierung über eine Anmelde-ID und ein Kennwort.</li><li>`Active Directory - Integrated:` Integrierte Authentifizierung mit einer Azure Active Directory-Identität. Dieser Modus kann auch für die Windows-Authentifizierung gegenüber SQL Server verwendet werden.</li><li>`Active Directory - Password:` Authentifizierung mit Benutzer-ID und Kennwort über eine Azure Active Directory-Identität.</li><li>`Active Directory - Universal with MFA support:` Interaktive Authentifizierung mit einer Azure Active Directory-Identität. Dieser Modus unterstützt die Azure Multi-Factor Authentication (MFA).</li></ul>|
+|Geben Sie Informationen zum Anmelden am Server ein|Sie können in der Dropdownliste die folgenden Authentifizierungsoptionen auswählen: <ul><li>`Windows Authentication:` Authentifizierung gegenüber SQL Server über die Anmeldeinformationen des Windows-Kontos, das aktuell angemeldet ist.</li><li>`SQL Server Authentication:` Authentifizierung über eine Anmelde-ID und ein Kennwort.</li><li>`Active Directory - Integrated:` Integrierte Authentifizierung mit einer Azure Active Directory-Identität. Dieser Modus kann auch für die Windows-Authentifizierung gegenüber SQL Server verwendet werden.</li><li>`Active Directory - Password:` Authentifizierung mit Benutzer-ID und Kennwort über eine Azure Active Directory-Identität.</li><li>`Active Directory - Universal with MFA support:` Interaktive Authentifizierung mit einer Azure Active Directory-Identität. Dieser Modus unterstützt die Azure Multi-Factor Authentication (MFA).</li><li>`Active Directory - Service Principal:` Authentifizierung mit einem Azure Active Directory-Dienstprinzipal. Als **Benutzername** sollte die ID der Anwendung (des Clients) festgelegt werden. Als **Kennwort** sollte das Geheimnis der Anwendung (des Clients) festgelegt werden.</li></ul>|
 |Server-SPN|Wenn Sie eine vertrauenswürdige Verbindung verwenden, können Sie einen Dienstprinzipalnamen (SPN) für den Server angeben.|
 |Benutzername|Geben Sie die Benutzer-ID ein, die bei der Anmeldung bei der Datenquelle für die Authentifizierung verwendet werden soll.|
 |Kennwort|Geben Sie das Kennwort ein, das bei der Anmeldung bei der Datenquelle für die Authentifizierung verwendet werden soll.|

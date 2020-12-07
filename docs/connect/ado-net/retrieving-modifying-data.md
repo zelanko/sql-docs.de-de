@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: cbe61aafd8dcd1681230c355187a65a231535e00
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 8fc6a8ed3cf4fec9b97b81c38fb1667588623ba7
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126388"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419738"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Abrufen und Ändern von Daten in ADO.NET
 
@@ -31,9 +31,9 @@ Eine der wichtigsten Funktionen einer Datenbankanwendung ist das Herstellen eine
 
 [Verbindungszeichenfolgen](connection-strings.md) Enthält Themen mit Erläuterungen verschiedener Aspekte von Verbindungszeichenfolgen, einschließlich Schlüsselwörter für Verbindungszeichenfolgen, Sicherheitsinformationen sowie Speicherung und Abruf von Verbindungszeichenfolgen.
 
-[Verbindungspooling](connection-pooling.md) Beschreibt das Verbindungspooling für den Microsoft SqlClient-Datenanbieter für SQL Server.
+[Verbindungspooling](connection-pooling.md) Beschreibt das Verbindungspooling für den Microsoft SqlClient-Datenanbieter für SQL Server.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Datentypzuordnungen in ADO.NET](data-type-mappings-ado-net.md)
 - [SQL Server und ADO.NET](./sql/index.md)

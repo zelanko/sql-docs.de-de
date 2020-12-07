@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 09eac13d41656721a9a4cc6d8fb8fa9790779018
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 14074b0136baf800b038e4b113325e81d65dc3e7
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943019"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442599"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Verwenden der Massenkopierungs-API für den Batcheinfügungsvorgang
 
@@ -71,7 +71,7 @@ Wenn die Abfrage aufgrund eines nicht SQL Server-bezogenen Fehlers nicht ausgef�
 
 ## <a name="example"></a>Beispiel
 
-Das nachfolgende Codebeispiel veranschaulicht einen Anwendungsfall für einen Batcheinfügevorgang in Azure Synapse Analytics (SQL DW) mit tausend Zeilen für beide Szenarios (regulär im Vergleich zur API für das Massenkopieren).
+Das nachfolgende Codebeispiel veranschaulicht einen Anwendungsfall für einen Batcheinfügevorgang in Azure Synapse Analytics mit tausend Zeilen für beide Szenarien (regulär im Vergleich zur API für das Massenkopieren).
 
 ```java
     public static void main(String[] args) throws Exception

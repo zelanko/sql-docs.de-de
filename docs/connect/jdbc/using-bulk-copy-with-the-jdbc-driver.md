@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 69379b9af3dc126713cb2bbd3172003692a7d4de
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: 52f465b4cfdcb2ff771a71c1ef956af78b522358
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042213"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442881"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Verwenden von Massenkopieren mit dem JDBC Driver
 
@@ -364,9 +364,9 @@ Mit der Treiberversion v8.4.1 wird die neue Verbindungseigenschaft `sendTempora
 
 Wenn diese Verbindungseigenschaft auf `false` festgelegt ist, werden die Datentypen **DATE**, **DATETIME**, **DATIMETIME2**, **DATETIMEOFFSET**, **SMALLDATETIME** und **TIME** in Form ihrer jeweiligen Datentypen und nicht als Zeichenfolgen gesendet.
 
-Das Senden der temporalen Datentypen in Form ihrer jeweiligen Datentypen ermöglicht dem Benutzer das Senden von Daten an diese Spalten für Azure Synapse Analytics (SQL DW). Das war zuvor nicht möglich, weil der Treiber die Daten in Zeichenfolgen konvertierte. Das Senden von Zeichenfolgendaten an temporale Spalten funktioniert bei SQL Server, da SQL Server eine implizite Konvertierung für uns ausführt, was auf Azure Synapse Analytics (SQL DW) jedoch nicht zutrifft.
+Das Senden der temporalen Datentypen in Form ihrer jeweiligen Datentypen ermöglicht dem Benutzer das Senden von Daten an diese Spalten für Azure Synapse Analytics. Das war zuvor nicht möglich, weil der Treiber die Daten in Zeichenfolgen konvertiert hat. Das Senden von Zeichenfolgendaten an temporale Spalten funktioniert bei SQL Server, weil SQL Server eine implizite Konvertierung durchführt. Dies ist bei Azure Synapse Analytics nicht der Fall.
 
-Zusätzlich gilt: Selbst wenn diese Verbindungszeichenfolge nicht auf „false“ festgelegt wird, werden ab **v8.4.1** die Datentypen **MONEY** und **SMALLMONEY** als **MONEY** / **SMALLMONEY** anstatt als **DECIMAL** gesendet, wodurch diese Datentypen ebenfalls in einem Massenvorgang in Azure Synapse Analytics (SQL DW) kopiert werden können.
+Zusätzlich gilt: Selbst wenn diese Verbindungszeichenfolge nicht auf „false“ festgelegt wird, werden ab **v8.4.1** die Datentypen **MONEY** und **SMALLMONEY** als **MONEY** / **SMALLMONEY** anstatt als **DECIMAL** gesendet. Dadurch können diese Datentypen ebenfalls in einem Massenvorgang nach Azure Synapse Analytics kopiert werden.
 
 ### <a name="extended-bulk-copy-for-azure-data-warehouse-limitations"></a>Einschränkungen beim erweiterten Massenkopieren für Azure Data Warehouse
 
