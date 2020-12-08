@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: c1f79050a4bbabcfc8729ccdc270d47fe9055c29
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: faf3ccecd17ece2b66371d81a68589f184fe48a0
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92524065"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506406"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>Schnellstart: Sicherung und Wiederherstellung von SQL Server mit dem Azure Blob Storage-Dienst
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ Führen Sie die folgenden Schritte aus, um einen Container zu erstellen:
 
 1. Öffnen Sie das Azure-Portal. 
 1. Navigieren Sie zu Ihrem Speicherkonto. 
-1. Wählen Sie das Speicherkonto aus, und scrollen Sie zu **Blobdienste** .
+1. Wählen Sie das Speicherkonto aus, und scrollen Sie zu **Blobdienste**.
 1. Wählen Sie **Blobs** und dann **+ Container** aus, um einen neuen Container hinzuzufügen. 
 1. Geben Sie den Namen für den Container ein, und notieren Sie sich diesen. Diese Informationen werden in der URL (Pfad der Sicherungsdatei) der T-SQL-Anweisungen im späteren Verlauf dieses Schnellstarts verwendet. 
-1. Klicken Sie auf **OK** . 
+1. Klicken Sie auf **OK**. 
     
     ![Neuer Container](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/new-container.png)
 
@@ -52,8 +52,8 @@ Führen Sie die folgenden Schritte aus, um einen Container zu erstellen:
 In diesem Schritt erstellen Sie mithilfe von SQL Server Management Studio (SSMS) eine Testdatenbank. 
 
 1. Starten Sie [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md), und stellen Sie eine Verbindung mit Ihrer SQL Server-Instanz her.
-1. Öffnen Sie das Fenster **Neue Abfrage** . 
-1. Führen Sie den folgenden Transact-SQL-Code (T-SQL-Code) aus, um die Testdatenbank zu erstellen. Aktualisieren Sie den Knoten **Datenbanken** im **Objekt-Explorer** , um Ihre neue Datenbank anzuzeigen. Für neu erstellte Datenbanken in SQL Managed Instance ist TDE automatisch aktiviert. Sie müssen dies also deaktivieren, um fortzufahren. 
+1. Öffnen Sie das Fenster **Neue Abfrage**. 
+1. Führen Sie den folgenden Transact-SQL-Code (T-SQL-Code) aus, um die Testdatenbank zu erstellen. Aktualisieren Sie den Knoten **Datenbanken** im **Objekt-Explorer**, um Ihre neue Datenbank anzuzeigen. Für neu erstellte Datenbanken in SQL Managed Instance ist TDE automatisch aktiviert. Sie müssen dies also deaktivieren, um fortzufahren. 
 
 ```sql
 USE [master]
@@ -98,9 +98,9 @@ GO
 
 Erstellen Sie auf der grafischen Benutzeroberfläche von SQL Server Management Studio die Anmeldeinformationen, indem Sie die folgenden Schritte ausführen. Alternativ können Sie die Anmeldeinformationen auch [programmgesteuert](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#2---create-a-sql-server-credential-using-a-shared-access-signature) erstellen. 
 
-1. Erweitern Sie im **Objekt-Explorer** von [SQL Server Management Studio(SSMS)](../ssms/download-sql-server-management-studio-ssms.md) den Knoten **Datenbanken** .
-1. Klicken Sie mit der rechten Maustaste auf Ihre neue `SQLTestDB`-Datenbank, bewegen Sie den Mauszeiger über **Tasks** , und wählen Sie dann **Sichern...** aus, um den Assistenten **Datenbank sichern** zu starten. 
-1. Wählen Sie **URL** in der Dropdownliste **Sichern auf** aus, und klicken Sie dann auf **Hinzufügen** , um das Dialogfeld **Sicherungsziel auswählen** zu öffnen. 
+1. Erweitern Sie im **Objekt-Explorer** von [SQL Server Management Studio(SSMS)](../ssms/download-sql-server-management-studio-ssms.md) den Knoten **Datenbanken**.
+1. Klicken Sie mit der rechten Maustaste auf Ihre neue `SQLTestDB`-Datenbank, bewegen Sie den Mauszeiger über **Tasks**, und wählen Sie dann **Sichern...** aus, um den Assistenten **Datenbank sichern** zu starten. 
+1. Wählen Sie **URL** in der Dropdownliste **Sichern auf** aus, und klicken Sie dann auf **Hinzufügen**, um das Dialogfeld **Sicherungsziel auswählen** zu öffnen. 
 
    ![Auf URL sichern](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/back-up-to-url.png)
 
@@ -116,7 +116,7 @@ Erstellen Sie auf der grafischen Benutzeroberfläche von SQL Server Management S
 
    ![Erstellen von Anmeldeinformationen](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/create-credential.png)
 
-1. Klicken Sie auf **OK** , um das Dialogfeld **Mit einem Microsoft-Abonnement verbinden** zu schließen. Dadurch wird der Wert *Azure-Speichercontainer* im Dialogfeld **Sicherungsziel auswählen** ausgefüllt. Klicken Sie auf **OK** , um den ausgewählten Speichercontainer zu wählen, und schließen Sie das Dialogfeld. 
+1. Klicken Sie auf **OK**, um das Dialogfeld **Mit einem Microsoft-Abonnement verbinden** zu schließen. Dadurch wird der Wert *Azure-Speichercontainer* im Dialogfeld **Sicherungsziel auswählen** ausgefüllt. Klicken Sie auf **OK**, um den ausgewählten Speichercontainer zu wählen, und schließen Sie das Dialogfeld. 
 1. An dieser Stelle können Sie entweder zu Schritt 4 im nächsten Abschnitt übergehen, um die Sicherung der Datenbank durchzuführen, oder den Assistenten **Datenbank sichern** schließen, wenn Sie stattdessen die Sicherung der Datenbank mit Transact-SQL fortsetzen möchten. 
 
 
@@ -125,9 +125,9 @@ In diesem Schritt sichern Sie die Datenbank `SQLTestDB` in Ihrem Azure Blob Stor
 
 # <a name="ssms"></a>[SSMS](#tab/SSMS)
 
-1. Wenn der Assistent **Datenbank sichern** nicht bereits geöffnet ist, erweitern Sie im **Objekt-Explorer** von [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) den Knoten **Datenbanken** .
-1. Klicken Sie mit der rechten Maustaste auf Ihre neue `SQLTestDB`-Datenbank, bewegen Sie den Mauszeiger über **Tasks** , und wählen Sie dann **Sichern...** aus, um den Assistenten **Datenbank sichern** zu starten. 
-1. Wählen Sie **URL** in der Dropdownliste **Sichern auf** aus, und klicken Sie dann auf **Hinzufügen** , um das Dialogfeld **Sicherungsziel auswählen** zu öffnen. 
+1. Wenn der Assistent **Datenbank sichern** nicht bereits geöffnet ist, erweitern Sie im **Objekt-Explorer** von [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) den Knoten **Datenbanken**.
+1. Klicken Sie mit der rechten Maustaste auf Ihre neue `SQLTestDB`-Datenbank, bewegen Sie den Mauszeiger über **Tasks**, und wählen Sie dann **Sichern...** aus, um den Assistenten **Datenbank sichern** zu starten. 
+1. Wählen Sie **URL** in der Dropdownliste **Sichern auf** aus, und klicken Sie dann auf **Hinzufügen**, um das Dialogfeld **Sicherungsziel auswählen** zu öffnen. 
 
    ![Auf URL sichern](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/back-up-to-url.png)
 
@@ -135,8 +135,8 @@ In diesem Schritt sichern Sie die Datenbank `SQLTestDB` in Ihrem Azure Blob Stor
 
    ![Azure-Speichercontainer](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/azure-storage-container.png)
 
-1. Klicken Sie im Assistenten **Datenbank sichern** auf **OK** , um Ihre Datenbank zu sichern. 
-1. Klicken Sie auf **OK** , nachdem Ihre Datenbank erfolgreich gesichert wurde, um alle mit der Sicherung verbundenen Fenster zu schließen. 
+1. Klicken Sie im Assistenten **Datenbank sichern** auf **OK**, um Ihre Datenbank zu sichern. 
+1. Klicken Sie auf **OK**, nachdem Ihre Datenbank erfolgreich gesichert wurde, um alle mit der Sicherung verbundenen Fenster zu schließen. 
 
    > [!TIP]
    > Sie können die Transact-SQL hinter diesem Befehl als Skript ausgeben, indem Sie **Skript** oben im Assistenten **Datenbank sichern** auswählen: ![Befehl „Skript“](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/script-backup-command.png)
@@ -163,8 +163,8 @@ In diesem Schritt löschen Sie die Datenbank, bevor Sie die Wiederherstellung du
 
 # <a name="ssms"></a>[SSMS](#tab/SSMS)
 
-1. Erweitern Sie im **Objekt-Explorer** den Knoten **Datenbanken** , klicken Sie mit der rechten Maustaste auf die `SQLTestDB`-Datenbank, und wählen Sie „Löschen“ aus, um den Assistenten **Objekt löschen** zu starten. 
-1. Klicken Sie bei einer verwalteten Instanz auf **OK** , um die Datenbank zu löschen. Aktivieren Sie lokal das Kontrollkästchen neben **Bestehende Verbindungen schließen** , und klicken Sie dann auf **OK** , um die Datenbank zu löschen. 
+1. Erweitern Sie im **Objekt-Explorer** den Knoten **Datenbanken**, klicken Sie mit der rechten Maustaste auf die `SQLTestDB`-Datenbank, und wählen Sie „Löschen“ aus, um den Assistenten **Objekt löschen** zu starten. 
+1. Klicken Sie bei einer verwalteten Instanz auf **OK**, um die Datenbank zu löschen. Aktivieren Sie lokal das Kontrollkästchen neben **Bestehende Verbindungen schließen**, und klicken Sie dann auf **OK**, um die Datenbank zu löschen. 
 
 # <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
@@ -195,12 +195,12 @@ In diesem Schritt stellen Sie die Datenbank entweder über die grafische Benutze
 
 # <a name="ssms"></a>[SSMS](#tab/SSMS)
 
-1. Klicken Sie in SQL Server Management Studio im **Objekt-Explorer** mit der rechten Maustaste auf den Knoten **Datenbanken** , und wählen Sie dann **Datenbank wiederherstellen** aus. 
+1. Klicken Sie in SQL Server Management Studio im **Objekt-Explorer** mit der rechten Maustaste auf den Knoten **Datenbanken**, und wählen Sie dann **Datenbank wiederherstellen** aus. 
 1. Klicken Sie auf **Gerät** und dann auf die Auslassungspunkte (...), um das Gerät zu wählen. 
 
    ![Wiederherstellungsgerät auswählen](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-restore-device.png)
 
-1. Wählen Sie **URL** in der Dropdownliste **Sicherungsmedientyp** aus, und klicken Sie auf **Hinzufügen** , um Ihr Gerät hinzuzufügen. 
+1. Wählen Sie **URL** in der Dropdownliste **Sicherungsmedientyp** aus, und klicken Sie auf **Hinzufügen**, um Ihr Gerät hinzuzufügen. 
 
    ![Sicherungsgerät hinzufügen](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/add-backup-device.png)
 
@@ -208,14 +208,14 @@ In diesem Schritt stellen Sie die Datenbank entweder über die grafische Benutze
 
    ![Screenshot: Dialogfeld „Speicherort für Sicherungsdatei auswählen“ mit ausgefülltem Feld „Shared Access Signature“](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/restore-from-container.png)
 
-1. Klicken Sie auf **OK** , um den Speicherort der Sicherungsdatei auszuwählen. 
-1. Erweitern Sie **Container** , und wählen Sie den Container aus, in dem sich Ihre Sicherungsdatei befindet. 
-1. Wählen Sie die Sicherungsdatei aus, die Sie wiederherstellen möchten, und klicken Sie dann auf **OK** . Wenn keine Dateien sichtbar sind, verwenden Sie möglicherweise den falschen SAS-Schlüssel. Sie können den SAS-Schlüssel erneut generieren, indem Sie die gleichen Schritte wie zuvor ausführen, um den Container hinzuzufügen. 
+1. Klicken Sie auf **OK**, um den Speicherort der Sicherungsdatei auszuwählen. 
+1. Erweitern Sie **Container**, und wählen Sie den Container aus, in dem sich Ihre Sicherungsdatei befindet. 
+1. Wählen Sie die Sicherungsdatei aus, die Sie wiederherstellen möchten, und klicken Sie dann auf **OK**. Wenn keine Dateien sichtbar sind, verwenden Sie möglicherweise den falschen SAS-Schlüssel. Sie können den SAS-Schlüssel erneut generieren, indem Sie die gleichen Schritte wie zuvor ausführen, um den Container hinzuzufügen. 
 
    ![Wiederherstellungsdatei auswählen](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-restore-file.png)
 
-1. Klicken Sie auf **OK** , um das Dialogfeld **Sicherungsmedien auswählen** zu schließen. 
-1. Klicken Sie auf **OK** , um die Datenbank wiederherzustellen. 
+1. Klicken Sie auf **OK**, um das Dialogfeld **Sicherungsmedien auswählen** zu schließen. 
+1. Klicken Sie auf **OK**, um die Datenbank wiederherzustellen. 
 
 # <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - workload groups [SQL Server], delete
 - Resource Governor, workload group delete
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 160f7f998aa42ed86a9f46d9fab70e38ac1b2d02
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 27708e9a4b5a6d0a2863595e7ee25dccf77e5d2f
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457899"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506599"
 ---
 # <a name="delete-a-workload-group"></a>Löschen von Arbeitsauslastungsgruppen
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "86457899"
 ##  <a name="delete-a-workload-group-using-resource-governor-properties"></a><a name="DelWGRGProp"></a> Löschen einer Arbeitsauslastungsgruppe über die Eigenschaften der Ressourcenkontrolle  
  **So löschen Sie eine Arbeitsauslastungsgruppe auf der Seite "Eigenschaften der Ressourcenkontrolle"**  
   
-1.  Erweitern Sie im Objekt-Explorer den Knoten **Verwaltung** so lange, bis der Eintrag **Ressourcenpools**angezeigt wird.  
+1.  Erweitern Sie im Objekt-Explorer den Knoten **Verwaltung** so lange, bis der Eintrag **Ressourcenpools** angezeigt wird.  
   
 2.  Klicken Sie mit der rechten Maustaste auf den Ressourcenpool, der die zu löschende Arbeitsauslastungsgruppe enthält, und klicken Sie dann auf **Eigenschaften**. Die Seite **Eigenschaften der Ressourcenkontrolle** wird angezeigt.  
   

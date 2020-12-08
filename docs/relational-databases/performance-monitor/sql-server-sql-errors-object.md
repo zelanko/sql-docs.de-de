@@ -12,18 +12,18 @@ helpviewer_keywords:
 - SQL Errors object
 - SQLServer:SQL Errors
 ms.assetid: 6e5273ca-29cb-4618-88a2-70b9b8d6cf76
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 8d2b511f76fd659f1fcb3bd37d4041d57603b3cd
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: e0433802954301c9ea5a9e483c0e54ca893f6b2d
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457972"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505579"
 ---
 # <a name="sql-server-sql-errors-object"></a>SQL Server, SQL-Fehler-Objekt
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Durch das Objekt **SQLServer:SQL Errors** in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Indikatoren zum Überwachen von **SQL-Fehlern**zur Verfügung gestellt.  
+  Durch das Objekt **SQLServer:SQL Errors** in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Indikatoren zum Überwachen von **SQL-Fehlern** zur Verfügung gestellt.  
   
  Diese Tabelle enthält eine Beschreibung der **SQL Errors**-Zähler in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

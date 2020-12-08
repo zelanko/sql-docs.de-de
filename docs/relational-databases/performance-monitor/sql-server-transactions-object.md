@@ -12,20 +12,20 @@ helpviewer_keywords:
 - SQLServer:Transactions
 - Transactions object
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 0a7d51ee275f234de0be33a5bfa618684ee2e07e
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 2f86c13a6f4cc6672b457653f6d923b63245fbc7
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458762"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505544"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, Transaktionen-Objekt
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Das **Transaktionen** -Objekt in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet Leistungsindikatoren zum Überwachen der Anzahl aktiver Transaktionen in einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]und der Auswirkungen solcher Transaktionen auf Ressourcen wie dem Momentaufnahmeisolations-Zeilenversionsspeicher in **tempdb**. Transaktionen sind logische Arbeitseinheiten - eine Reihe von Vorgängen, die entweder alle erfolgreich ausgeführt oder aber komplett aus einer Datenbank gelöscht werden müssen, damit die logische Integrität der Daten beibehalten werden kann. Jede Veränderung an Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken wird in Transaktionen vorgenommen.  
   
- Wenn für eine Datenbank die Möglichkeit der Momentaufnahmeisolationsstufe gegeben ist, muss von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Datensatz der Änderungen beibehalten werden, die an jeder Zeile in einer Datenbank vorgenommen wurden. Bei jeder Änderung an einer Zeile wird eine Kopie der Zeile im Zustand vor der Änderung in einem Zeilenversionsspeicher in **tempdb**aufgezeichnet. Viele der Leistungsindikatoren im **Transaction** -Objekt können zum Überwachen der Größe und Wachstumsrate des Zeilenversionsspeichers in **tempdb**verwendet werden.  
+ Wenn für eine Datenbank die Möglichkeit der Momentaufnahmeisolationsstufe gegeben ist, muss von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Datensatz der Änderungen beibehalten werden, die an jeder Zeile in einer Datenbank vorgenommen wurden. Bei jeder Änderung an einer Zeile wird eine Kopie der Zeile im Zustand vor der Änderung in einem Zeilenversionsspeicher in **tempdb** aufgezeichnet. Viele der Leistungsindikatoren im **Transaction** -Objekt können zum Überwachen der Größe und Wachstumsrate des Zeilenversionsspeichers in **tempdb** verwendet werden.  
   
  Von den **Transaktionen** -Objektleistungsindikatoren werden alle Transaktionen in einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]ausgegeben.  
   
@@ -41,8 +41,8 @@ ms.locfileid: "86458762"
 |**Updatekonfliktquote**|Der Prozentsatz derjenigen Transaktionen, die die Momentaufnahmeisolationsstufe verwenden und bei denen innerhalb der letzten Sekunde Updatekonflikte aufgetreten sind. Ein Updatekonflikt tritt auf, wenn von einer Momentaufnahmeisolationsstufen-Transaktion der Versuch unternommen wird, eine Zeile zu ändern, die zuletzt von einer anderen Transaktion geändert wurde, für die kein Commit ausgeführt worden ist, als die Momentaufnahmeisolationsstufen-Transaktion gestartet wurde.|  
 |**Basis der Updatekonfliktquote**|Nur zur internen Verwendung.|
 |**Update-Momentaufnahmetransaktionen**|Die Anzahl aktuell aktiver Transaktionen, von denen die Momentaufnahmeisolationsstufe verwendet wird und Daten geändert wurden.|  
-|**Versionscleanuprate (KB/s)**|Die Rate (in Kilobytes pro Sekunde), mit der Zeilenversionen aus dem Versionsspeicher für Momentaufnahmeisolationen in **tempdb**entfernt werden.|  
-|**Versionsgenerierungsrate (KB/s)**|Die Rate (in Kilobytes pro Sekunde), mit der neue Zeilenversionen zum Versionsspeicher für Momentaufnahmeisolationen in **tempdb**hinzugefügt werden.|  
+|**Versionscleanuprate (KB/s)**|Die Rate (in Kilobytes pro Sekunde), mit der Zeilenversionen aus dem Versionsspeicher für Momentaufnahmeisolationen in **tempdb** entfernt werden.|  
+|**Versionsgenerierungsrate (KB/s)**|Die Rate (in Kilobytes pro Sekunde), mit der neue Zeilenversionen zum Versionsspeicher für Momentaufnahmeisolationen in **tempdb** hinzugefügt werden.|  
 |**Versionsspeichergröße (KB)**|Der Speicherplatz (in Kilobytes) in **tempdb** , der für die Speicherung von Zeilenversionen für Momentaufnahmeisolationsstufen verwendet wird.|  
 |**Anzahl der Versionsspeichereinheiten**|Die Anzahl aktiver Zuordnungseinheiten im Momentaufnahmeisolations-Versionsspeicher in **tempdb**.|  
 |**Erstellung von Versionsspeichereinheiten**|Die Anzahl der Zuordnungseinheiten, die seit dem Start der Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] im Momentaufnahmeisolationsspeicher erstellt worden sind.|  

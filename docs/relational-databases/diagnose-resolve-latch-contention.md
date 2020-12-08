@@ -3,18 +3,18 @@ title: 'Whitepaper: Diagnostizieren und Lösen von Latchkonflikten'
 description: In diesem Artikel wird die Diagnose und Lösung von Latchkonflikten in SQL Server ausführlich behandelt. Dieser Artikel wurde ursprünglich vom SQLCAT (Microsoft SQL Server Customer Advisory Team, SQL Server-Kundenberatungsteam) von Microsoft veröffentlicht.
 ms.date: 09/30/2020
 ms.prod: sql
-ms.reviewer: jroth
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: how-to
 author: bluefooted
 ms.author: pamela
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b438bd466023844f7396a5ef71e9c8e0f916005
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.openlocfilehash: 3a1ce0e4a54810730935b4a93aef72edfa404d88
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384309"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506451"
 ---
 # <a name="diagnose-and-resolve-latch-contention-on-sql-server"></a>Diagnostizieren und Lösen von Latchkonflikten in SQL Server
 
@@ -65,7 +65,7 @@ Latches werden in einem von fünf Modi abgerufen, die sich auf das Ausmaß des Z
 
 Latchmodi weisen verschiedene Grade an Kompatibilität auf, beispielsweise sind SH-Latches mit UP- und KP-Latches kompatibel, aber nicht mit DT-Latches. Mehrere Latches können gleichzeitig für dieselbe Struktur abgerufen werden, solange die Latches kompatibel sind. Wenn ein Thread versucht, einen Latch abzurufen, der einen inkompatiblen Modus aufweist, wird er in eine Warteschlange platziert, um auf ein Signal zu warten, das die Verfügbarkeit der Ressource angibt. Ein Spinlock vom Typ SOS_Task wird zum Schützen der Warteschlange verwendet, indem der serialisierte Zugriff auf die Warteschlange erzwungen wird. Dieser Spinlock muss zum Hinzufügen von Elementen zur Warteschlange abgerufen werden. Der SOS_Task-Spinlock informiert Threads in der Warteschlange auch, wenn inkompatible Latches freigegeben werden, sodass die wartenden Threads einen kompatiblen Latch abrufen und weiter arbeiten können. Die Warteschlange wird nach der FIFO-Methode (first in, first out) verarbeitet, wenn Latchanforderungen freigegeben werden. Latches unterliegen diesem FIFO-System, um Fairness sicherzustellen und Threadmangel zu vermeiden.
 
-Die Latchmoduskompatibilität wird in der folgenden Tabelle aufgeführt ( **J** steht für Kompatibilität und **N** steht für Inkompatibilität):
+Die Latchmoduskompatibilität wird in der folgenden Tabelle aufgeführt (**J** steht für Kompatibilität und **N** steht für Inkompatibilität):
 
 |Latchmodus |**KP**  |**SH** |**UP**  |**EX**  |**DT**|
 |--------|--------|-------|--------|--------|--------|
@@ -89,11 +89,11 @@ Verwenden Sie das Objekt **SQL Server:Latches** und die zugehörigen Leistungsin
 
 Kumulative Warteinformationen werden von SQL Server nachverfolgt und können über die DMV (dynamische Verwaltungssicht) *sys.dm_os_wait_stats* eingesehen werden. SQL Server nutzt drei Latchwartetypen, die vom entsprechenden Wert für „wait_type“ in der DMV *sys.dm_os_wait_stats* definiert werden:
 
-* **Pufferlatch (BUF):** Mit diesem Typ wird die Konsistenz von Index- und Datenseiten für Benutzerobjekte gewährleistet. Sie werden außerdem dazu verwendet, den Zugriff auf Datenseiten zu schützen, die SQL Server für Systemobjekte verwendet. Beispielsweise werden Seiten, die Zuteilungen verwalten, durch Pufferlatches geschützt. Dazu gehören folgende Seiten: PFS (Page Free Space), GAM (Global Allocation Map), SGAM (Shared Global Allocation Map) und IAM (Index Allocation Map). Pufferlatches werden in *sys.dm_os_wait_stats* mit dem *wait_type* -Wert * *PAGELATCH\_\** _ angezeigt.
+* **Pufferlatch (BUF):** Mit diesem Typ wird die Konsistenz von Index- und Datenseiten für Benutzerobjekte gewährleistet. Sie werden außerdem dazu verwendet, den Zugriff auf Datenseiten zu schützen, die SQL Server für Systemobjekte verwendet. Beispielsweise werden Seiten, die Zuteilungen verwalten, durch Pufferlatches geschützt. Dazu gehören folgende Seiten: PFS (Page Free Space), GAM (Global Allocation Map), SGAM (Shared Global Allocation Map) und IAM (Index Allocation Map). Pufferlatches werden in *sys.dm_os_wait_stats* mit dem *wait_type*-Wert **PAGELATCH\_\** _ angezeigt.
 
-_ **Nicht-Puffer-Latch (Non-BUF):** Mit diesem Typ wird die Konsistenz beliebiger In-Memory-Strukturen gewährleistet, bei denen es sich nicht um Pufferpoolseiten handelt. Alle Wartevorgänge für Nicht-Puffer-Latches werden mit dem *wait_type* -Wert * *LATCH\_\** _ angezeigt.
+_ **Nicht-Puffer-Latch (Non-BUF):** Mit diesem Typ wird die Konsistenz beliebiger In-Memory-Strukturen gewährleistet, bei denen es sich nicht um Pufferpoolseiten handelt. Alle Wartevorgänge für Nicht-Puffer-Latches werden mit dem *wait_type*-Wert **LATCH\_\** _ angezeigt.
 
-_ **E/A-Latch:** Hierbei handelt es sich um eine Teilmenge von Pufferlatches, die die Konsistenz derselben Strukturen gewährleisten, die durch Pufferlatches geschützt werden, wenn diese Strukturen mit einem E/A-Vorgang in den Pufferpool geladen werden müssen. E/A-Latches hindern andere Threads am Laden derselben Seite in den Pufferpool mit einem inkompatiblen Latch. Diese Latches werden mit dem *wait_type* -Wert * *PAGEIOLATCH\_\** _ angezeigt.
+_ **E/A-Latch:** Hierbei handelt es sich um eine Teilmenge von Pufferlatches, die die Konsistenz derselben Strukturen gewährleisten, die durch Pufferlatches geschützt werden, wenn diese Strukturen mit einem E/A-Vorgang in den Pufferpool geladen werden müssen. E/A-Latches hindern andere Threads am Laden derselben Seite in den Pufferpool mit einem inkompatiblen Latch. Diese Latches werden mit dem *wait_type*-Wert **PAGEIOLATCH\_\** _ angezeigt.
 
    > [!NOTE]
    > Wenn lange PAGEIOLATCH-Wartezeiten vorliegen, bedeutet dies, dass SQL Server auf das E/A-Subsystem wartet. Eine gewisse Menge an PAGEIOLATCH-Wartevorgängen wird erwartet und entspricht dem normalen verhalten. Wenn die durchschnittlichen PAGEIOLATCH-Wartezeiten jedoch konsistent über 10 Millisekunden (ms) liegen, sollten Sie untersuchen, wieso das E/A-Subsystem überlastet ist.
@@ -163,7 +163,7 @@ Wie bereits erwähnt sind Latchkonflikte nur problematisch, wenn der Konflikt un
 
 3. Bestimmen Sie den Anteil der Ergebnisse, die sich auf Latches beziehen.
 
-Kumulative Warteinformationen finden Sie in der DMV *sys.dm_os_wait_stats*. Die gängigsten Latchkonflikte sind Pufferlatchkonflikte, bei denen erhöhte Wartezeiten für Latches mit dem *wait_type* -Wert * *PAGELATCH\_\** _ auftreten. Nicht-Puffer-Latches werden nach dem Wartetyp _*LATCH\**_ gruppiert. Wie im folgenden Diagramm veranschaulicht wird, sollten Sie zunächst die Systemwartezeiten kumulativ mithilfe der DMV _sys.dm_os_wait_stats* betrachten, um den Prozentsatz der Gesamtwartezeit zu bestimmen, die von Pufferlatches oder Nicht-Puffer-Latches verursacht wird. Wenn Nicht-Pufferlatches auftreten, müssen Sie auch die DMV *sys.dm_os_latch_stats* untersuchen.
+Kumulative Warteinformationen finden Sie in der DMV *sys.dm_os_wait_stats*. Die gängigsten Latchkonflikte sind Pufferlatchkonflikte, bei denen erhöhte Wartezeiten für Latches mit dem *wait_type*-Wert **PAGELATCH\_\** _ auftreten. Nicht-Puffer-Latches werden nach dem Wartetyp _*LATCH\**_ gruppiert. Wie im folgenden Diagramm veranschaulicht wird, sollten Sie zunächst die Systemwartezeiten kumulativ mithilfe der DMV _sys.dm_os_wait_stats* betrachten, um den Prozentsatz der Gesamtwartezeit zu bestimmen, die von Pufferlatches oder Nicht-Puffer-Latches verursacht wird. Wenn Nicht-Pufferlatches auftreten, müssen Sie auch die DMV *sys.dm_os_latch_stats* untersuchen.
 
 Im folgenden Diagramm wird die Beziehung zwischen Informationen veranschaulicht, die von den DMVs *sys.dm_os_wait_stats* und *sys.dm_os_latch_stats* bereitgestellt werden.
 
@@ -182,7 +182,7 @@ Die folgenden Measures der Latchwartezeit sind Anzeichen dafür, dass übermäß
    * Messen Sie die durchschnittliche Wartezeit für Seitenlatches mit dem Indikator **MSSQL%InstanceName%\\Wait Statistics\\Page Latch Waits\\Average Wait Time** des Systemmonitors oder mit der DMV *sys.dm_os_wait_stats*.
 
    > [!NOTE]
-   > Teilen Sie die Gesamtwartezeit ( *wait_time_ms* ) durch die Anzahl der wartenden Tasks ( *waiting_tasks_count* ), um die durchschnittliche Wartezeit für einen bestimmten Wartetyp (wird von *sys.dm_os_wait_stats* als *wt_:type* zurückgegeben) zu berechnen.
+   > Teilen Sie die Gesamtwartezeit (*wait_time_ms*) durch die Anzahl der wartenden Tasks (*waiting_tasks_count*), um die durchschnittliche Wartezeit für einen bestimmten Wartetyp (wird von *sys.dm_os_wait_stats* als *wt_:type* zurückgegeben) zu berechnen.
 
 * **Prozentsatz der gesamten Wartezeit für Latchwartetypen während Spitzenlasten:** Wenn die durchschnittliche Latchwartezeit als Prozentsatz der Gesamtwartezeit mit zunehmender Anwendungslast steigt, beeinträchtigen Latchkonflikte möglicherweise die Leistung, was untersucht werden sollte.
 
@@ -191,7 +191,7 @@ Die folgenden Measures der Latchwartezeit sind Anzeichen dafür, dass übermäß
    > [!NOTE]
    > Die relative Wartezeit für jeden Wartetyp ist nicht in der DMV *sys.dm_os_wait_stats* enthalten, da diese DMV die Wartezeiten seit dem letzten Start der SQL Server-Instanz oder der letzten Zurücksetzung der kumulativen Wartestatistik mit DBCC SQLPERF misst. Erfassen Sie eine Momentaufnahme von *sys.dm_os_wait_stats* vor und nach Spitzenlasten, und berechnen Sie dann die Differenz, um die relative Wartezeit für jeden Wartetyp zu berechnen. Hierzu können Sie das Beispielskript [Berechnen der Wartevorgänge in einem Zeitraum](#calculate-waits-over-a-time-period) verwenden.
 
-   Bereinigen Sie die DMV *sys.dm_os_wait_stats* mit dem folgenden Befehl nur für **Nicht-Produktionsumgebungen** :
+   Bereinigen Sie die DMV *sys.dm_os_wait_stats* mit dem folgenden Befehl nur für **Nicht-Produktionsumgebungen**:
    
    ```sql
    dbcc SQLPERF ('sys.dm_os_wait_stats', 'CLEAR')
@@ -210,7 +210,7 @@ Analysieren Sie die Grundursache. Selbst wenn alle genannten Bedingungen vorlieg
 
 ## <a name="analyzing-current-wait-buffer-latches"></a>Analysieren aktueller Wartevorgänge von Pufferlatches
 
-Pufferlatchkonflikte äußern sich in erhöhten Wartezeiten für Latches mit den *wait_type* -Werten * *PAGELATCH\_\** _ oder _*PAGEIOLATCH\_\**_ , die in der DMV _sys.dm_os_wait_stats* angezeigt werden. Führen Sie die folgende Abfrage für ein System aus, damit die DMVs *sys.dm_os_wait_stats* , *sys.dm_exec_sessions* und *sys.dm_exec_requests* verknüpft werden, um das System in Echtzeit zu betrachten. Anhand der Ergebnisse können Sie den aktuellen Wartetyp für Sitzungen ermitteln, die auf dem Server ausgeführt werden.
+Pufferlatchkonflikte äußern sich in erhöhten Wartezeiten für Latches mit den *wait_type*-Werten **PAGELATCH\_\** _ oder _*PAGEIOLATCH\_\**_, die in der DMV _sys.dm_os_wait_stats* angezeigt werden. Führen Sie die folgende Abfrage für ein System aus, damit die DMVs *sys.dm_os_wait_stats*, *sys.dm_exec_sessions* und *sys.dm_exec_requests* verknüpft werden, um das System in Echtzeit zu betrachten. Anhand der Ergebnisse können Sie den aktuellen Wartetyp für Sitzungen ermitteln, die auf dem Server ausgeführt werden.
 
 ```sql
 SELECT wt.session_id, wt.wait_type
@@ -271,7 +271,7 @@ Die folgenden Szenarios sind dafür bekannt, übermäßige Latchkonflikte zu ver
 
 Ein gängiges OLTP-Verfahren besteht darin, einen gruppierten Index für eine Identitäts- oder Datumsspalte zu erstellen. Dies trägt zu einer guten physischen Sortierung des Index bei, was sich positiv auf die Leistung von Lese- und Schreibvorgängen im Index auswirken kann. Dieser Schemaentwurf kann jedoch auch zu versehentlichen Latchkonflikten führen. Dieses Problem tritt häufig bei großen Tabellen mit kleinen Zeilen und Einfügevorgängen in einen Index, der eine sequenziell steigende führende Schlüsselspalte enthält, z. B. ein steigender Integer oder Datetime-Schlüssel. In diesem Szenario führt die Anwendung, wenn überhaupt, nur selten Update- oder Löschvorgänge durch, es sei denn, Vorgänge werden archiviert.
 
-Im folgenden Beispiel möchten Thread 1 und Thread 2 beide einen Datensatz einfügen, der auf Seite 299 gespeichert wird. Aus der Perspektive der logischen Sperre liegt kein Problem vor, da Sperren auf Zeilenebene verwendet werden und exklusive Sperren für beide Datensätze auf derselben Seite gleichzeitig aufrechterhalten werden können. Zum Sicherstellen der Integrität des physischen Arbeitsspeichers kann immer nur ein Thread einen exklusiven Latch abrufen, damit der Zugriff auf die Seite serialisiert wird, um verlorene Updates im Arbeitsspeicher zu vermeiden. In diesem Fall ruft Thread 1 den exklusiven Latch ab, und Thread 2 wartet, wodurch ein PAGELATCH_EX-Wartevorgang für diese Ressource in den Wartestatistiken registriert wird. Dies wird vom *wait_type* -Wert in der DMV *sys.dm_os_waiting_tasks* angezeigt.
+Im folgenden Beispiel möchten Thread 1 und Thread 2 beide einen Datensatz einfügen, der auf Seite 299 gespeichert wird. Aus der Perspektive der logischen Sperre liegt kein Problem vor, da Sperren auf Zeilenebene verwendet werden und exklusive Sperren für beide Datensätze auf derselben Seite gleichzeitig aufrechterhalten werden können. Zum Sicherstellen der Integrität des physischen Arbeitsspeichers kann immer nur ein Thread einen exklusiven Latch abrufen, damit der Zugriff auf die Seite serialisiert wird, um verlorene Updates im Arbeitsspeicher zu vermeiden. In diesem Fall ruft Thread 1 den exklusiven Latch ab, und Thread 2 wartet, wodurch ein PAGELATCH_EX-Wartevorgang für diese Ressource in den Wartestatistiken registriert wird. Dies wird vom *wait_type*-Wert in der DMV *sys.dm_os_waiting_tasks* angezeigt.
 
 ![Exklusiver Seitenlatch in der letzten Zeile](./media/diagnose-resolve-latch-contention/image10.png)
 
@@ -477,12 +477,12 @@ Die Tabellenpartitionierung in SQL Server kann dazu verwendet werden, übermäß
 
 2. Wenn Sie eine neue Dateigruppe verwenden, sollten Sie die einzelnen Dateien gleichmäßig auf die LUNs (logische Gerätenummer) verteilen. Achten Sie dabei darauf, dass Sie ein optimales Layout verwenden. Wenn das Zugriffsmuster eine hohe Anzahl von Einfügungen involviert, sollten Sie sicherstellen, dass Sie eine Anzahl von Dateien erstellen, die mit der Anzahl der physischen CPU-Kerne im SQL Server-Computer übereinstimmt.
 
-3. Verwenden Sie den Befehl **CREATE PARTITION FUNCTION** , um die Tabellen in *X*  Partitionen zu unterteilen, wobei *X* der Anzahl der physischen CPU-Kerne im SQL Server-Computer entspricht. (Mindestens 32 Partitionen)
+3. Verwenden Sie den Befehl **CREATE PARTITION FUNCTION**, um die Tabellen in *X* Partitionen zu unterteilen, wobei *X* der Anzahl der physischen CPU-Kerne im SQL Server-Computer entspricht. (Mindestens 32 Partitionen)
 
    > [!NOTE]
    > Eine 1:1-Übereinstimmung der Anzahl der Partitionen und der Anzahl der CPU-Kerne ist nicht immer notwendig. In vielen Fällen kann eine Anzahl verwendet werden, die unter der Anzahl der CPU-Kerne liegt. Die Verwendung von mehr Partitionen kann zu Mehraufwand für Abfragen führen, die alle Partitionen durchsuchen müssen. In diesen Fällen sind weniger Partitionen hilfreich. In Tests von 64 und 128 logischen CPU-Systemen mit echten Kundenarbeitsauslastungen hat das SQLCAT festgestellt, dass 32 Partitionen ausreichen, um übermäßige Latchkonflikte zu lösen und Skalierungsziele zu erreichen. Letztendlich sollte die ideale Anzahl der Partitionen mithilfe von Tests bestimmt werden. 
 
-4. Verwenden Sie den Befehl **CREATE PARTITION SCHEME** :
+4. Verwenden Sie den Befehl **CREATE PARTITION SCHEME**:
 
    * Binden Sie die Partitionsfunktion an die Dateigruppen. 
    * Fügen Sie eine Hashspalte vom Typ „tinyint“ oder „smallint“ zur Tabelle hinzu. 

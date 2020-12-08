@@ -14,14 +14,14 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: a833e7029697693a6620ce5196a10b6ef95acc8f
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 4e6e6ae53bfc9cf3c6c702e9caf8a1a9bdaf29a1
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890920"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505718"
 ---
 # <a name="sql-server-deprecated-features-object"></a>'SQL Server:Als veraltet markierte Funktionen'-Objekt
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ In der folgenden Tabelle wird das SQL Server-Leistungsobjekt **Als veraltet mark
 |CREATE TRIGGER WITH APPEND|Eine CREATE TRIGGER-Anweisung mit der WITH APPEND-Klausel wurde gefunden. Erstellen Sie stattdessen den ganzen Trigger neu. Tritt einmal pro Verwendung in einer DDL-Anweisung auf.|  
 |CREATE_DROP_DEFAULT|Die Syntax CREATE DEFAULT oder DROP DEFAULT wurde gefunden. Schreiben Sie den Befehl unter Verwendung der DEFAULT-Option von CREATE TABLE oder ALTER TABLE um. Tritt einmal pro Kompilierung auf.|  
 |CREATE_DROP_RULE|Die Syntax CREATE RULE wurde gefunden. Schreiben Sie den Befehl unter Verwendung von Einschränkungen um. Tritt einmal pro Kompilierung auf.|  
-|Datentypen: 'text', 'ntext' oder 'image'|Ein **Text**-, **Ntext**- oder **Image** -Datentyp wurde gefunden. Schreiben Sie Anwendungen so um, dass der Datentyp **varchar(max)** verwendet und die Datentypsyntax **text**, **ntext**und **image** entfernt wird. Tritt einmal pro Abfrage auf.|  
+|Datentypen: 'text', 'ntext' oder 'image'|Ein **Text**-, **Ntext**- oder **Image** -Datentyp wurde gefunden. Schreiben Sie Anwendungen so um, dass der Datentyp **varchar(max)** verwendet und die Datentypsyntax **text**, **ntext** und **image** entfernt wird. Tritt einmal pro Abfrage auf.|  
 ||Die Gesamtzahl der Änderungen des Kompatibilitätsgrads einer Datenbank auf den Wert 80. Planen Sie, vor der nächsten Version die Datenbank und die Anwendung zu aktualisieren. Tritt auch auf, wenn eine Datenbank mit dem Kompatibilitätsgrad 80 gestartet wird.|  
 |Datenbank-Kompatibilitätsgrad 100, 110. 120|Die Gesamtzahl der Änderungen des Kompatibilitätsgrads einer Datenbank. Planen Sie, in einer zukünftigen Version die Datenbank und die Anwendung zu aktualisieren. Tritt auch auf, wenn eine Datenbank mit veraltetem Kompatibilitätsgrad gestartet wird.|  
 |DATABASE_MIRRORING|Es wurden Verweise für die Datenbankspiegelungsfunktion gefunden. Planen Sie, auf Always On-Verfügbarkeitsgruppen zu aktualisieren. Planen Sie alternativ, zu Protokollversand zu migrieren, wenn Sie eine Edition von SQL Server ausführen, die Always On-Verfügbarkeitsgruppen nicht unterstützt.|  
@@ -266,10 +266,10 @@ In der folgenden Tabelle wird das SQL Server-Leistungsobjekt **Als veraltet mark
 |sysusers|Verweise auf sysusers wurden gefunden. Verwenden Sie stattdessen sys.database_principals. Tritt einmal pro Kompilierung auf.|  
 |Tabellenhinweis ohne WITH|Eine Anweisung wurde gefunden, die Tabellenhinweise verwendet, jedoch nicht das WITH-Schlüsselwort. Ändern Sie Anweisungen so, dass sie das Wort WITH einschließen. Tritt einmal pro Kompilierung auf.|  
 |Tabellenoption 'text in row'|Verweise auf die Tabellenoption text in row wurden gefunden. Verwenden Sie stattdessen die „large value types out of row“-Option von sp_tableoption. Tritt einmal pro Abfrage auf.|  
-|TEXTPTR|Verweise auf die TEXTPTR-Funktion wurden gefunden. Schreiben Sie Anwendungen so um, dass der Datentyp **varchar(max)** verwendet und die Datentypsyntax **text**, **ntext**und **image** entfernt wird. Tritt einmal pro Abfrage auf.|  
-|TEXTVALID|Verweise auf die TEXTVALID-Funktion wurden gefunden. Schreiben Sie Anwendungen so um, dass der Datentyp **varchar(max)** verwendet und die Datentypsyntax **text**, **ntext**und **image** entfernt wird. Tritt einmal pro Abfrage auf.|  
+|TEXTPTR|Verweise auf die TEXTPTR-Funktion wurden gefunden. Schreiben Sie Anwendungen so um, dass der Datentyp **varchar(max)** verwendet und die Datentypsyntax **text**, **ntext** und **image** entfernt wird. Tritt einmal pro Abfrage auf.|  
+|TEXTVALID|Verweise auf die TEXTVALID-Funktion wurden gefunden. Schreiben Sie Anwendungen so um, dass der Datentyp **varchar(max)** verwendet und die Datentypsyntax **text**, **ntext** und **image** entfernt wird. Tritt einmal pro Abfrage auf.|  
 |timestamp|Gesamtanzahl der gefundenen Vorkommnisse des veralteten **timestamp** -Datentyps in einer DDL-Anweisung. Verwenden Sie stattdessen den **rowversion** -Datentyp .|  
-|UPDATETEXT oder WRITETEXT|Die UPDATETEXT- oder WRITETEXT-Anweisung wurde gefunden. Schreiben Sie Anwendungen so um, dass der Datentyp **varchar(max)** verwendet und die Datentypsyntax **text**, **ntext**und **image** entfernt wird. Tritt einmal pro Abfrage auf.|  
+|UPDATETEXT oder WRITETEXT|Die UPDATETEXT- oder WRITETEXT-Anweisung wurde gefunden. Schreiben Sie Anwendungen so um, dass der Datentyp **varchar(max)** verwendet und die Datentypsyntax **text**, **ntext** und **image** entfernt wird. Tritt einmal pro Abfrage auf.|  
 |USER_ID|Verweise auf die USER_ID-Funktion wurden gefunden. Verwenden Sie stattdessen die DATABASE_PRINCIPAL_ID-Funktion. Tritt einmal pro Kompilierung auf.|  
 |Verwenden von OLEDB für Verbindungsserver||  
 |Vardecimal-Speicherformat|Die Verwendung des Speicherformats **vardecimal** wurde erkannt. Verwenden Sie stattdessen die Datenkomprimierung.|  
