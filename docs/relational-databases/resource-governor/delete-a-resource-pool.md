@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Resource Governor, resource pool delete
 - resource pools [SQL Server], delete
 ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 1b2494442986bd24febc90318502736faf5f2367
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 2df6daca54fe31273d61226c210285fec305769d
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457852"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504823"
 ---
 # <a name="delete-a-resource-pool"></a>Löschen eines Ressourcenpools
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "86457852"
 ##  <a name="delete-a-resource-pool-using-object-explorer"></a><a name="DelRPSSMS"></a> Löschen eines Ressourcenpools im Objekt-Explorer  
  **So löschen Sie einen Ressourcenpool in SQL Server Management Studio**  
   
-1.  Öffnen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]den Objekt-Explorer, und erweitern Sie den Knoten **Verwaltung** rekursiv, bis **Ressourcenkontrolle**angezeigt wird.  
+1.  Öffnen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]den Objekt-Explorer, und erweitern Sie den Knoten **Verwaltung** rekursiv, bis **Ressourcenkontrolle** angezeigt wird.  
   
 2.  Klicken Sie mit der rechten Maustaste auf den zu löschenden Ressourcenpool, und klicken Sie anschließend auf **Löschen**.  
   

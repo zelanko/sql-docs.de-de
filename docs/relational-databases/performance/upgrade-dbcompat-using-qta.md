@@ -4,7 +4,7 @@ description: Erfahren Sie, wie der Abfrageoptimierungs-Assistent Sie durch den e
 ms.custom: seo-dt-2019
 ms.date: 02/13/2019
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 f1_keywords:
@@ -21,12 +21,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: aafbba1fe5c4d7fe8c20b1d50d97bbd8a4277bae
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 31cdd59e519437f679cd738ef1dc959919b86667
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890970"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504934"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Upgraden von Datenbanken mit dem Abfrageoptimierungs-Assistenten
 
@@ -55,7 +55,7 @@ Als Ausgangspunkt geht QTA davon aus, dass eine Datenbank aus einer früheren Ve
 2. Anfordern des Starts der erforderlichen Workload, damit der Abfragespeicher eine Baseline für Workloaddaten erfassen kann (wenn noch keine Baseline verfügbar ist).
 3. Upgrade auf den vom Benutzer ausgewählten Zieldatenbank-Kompatibilitätsgrad.
 4. Anfordern eines zweiten Durchgangs der Workloaddatenerfassung für Vergleichs- und Regressionserkennungszwecke.
-5. Iterieren durch alle Regressionen, die auf Grundlage der Ansicht [Abfragespeicher**Zurückgestellte Abfragen**](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed) gefunden wurden, Experimentieren durch Erfassen von Laufzeitstatistiken für mögliche Permutationen anwendbarer Optimierungsmodellvariationen und Messen des Ergebnisses. 
+5. Iterieren durch alle Regressionen, die auf Grundlage der Ansicht [Abfragespeicher **Zurückgestellte Abfragen**](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed) gefunden wurden, Experimentieren durch Erfassen von Laufzeitstatistiken für mögliche Permutationen anwendbarer Optimierungsmodellvariationen und Messen des Ergebnisses. 
 6. Melden der gemessenen Optimierungen und optional Zulassen, dass diese Änderungen mit [Planhinweislisten](../../relational-databases/performance/plan-guides.md) persistent gespeichert werden.
 
 Weitere Informationen zum Anfügen einer Datenbank finden Sie unter [Anfügen und Trennen einer Datenbank](../../relational-databases/databases/database-detach-and-attach-sql-server.md#AttachDb).

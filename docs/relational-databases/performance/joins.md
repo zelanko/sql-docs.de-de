@@ -15,15 +15,15 @@ helpviewer_keywords:
 - joins [SQL Server], about joins
 - join hints [SQL Server]
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c672ae4cf447f60f486eaaca8a50a1d79c3cd4b4
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 7dd500eb443af493403b64b652e047608d2a0dd1
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726011"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505184"
 ---
 # <a name="joins-sql-server"></a>Joins (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -135,7 +135,7 @@ Im einfachsten Fall wird beim Suchvorgang eine Tabelle oder ein Index vollständ
 
 Ein Nested Loops-Join ist besonders wirksam, wenn die äußere Eingabe klein und die innere Eingabe vorindiziert und umfangreich ist. In vielen kleinen Transaktionen, die beispielsweise nur wenige Zeilen betreffen, sind indizierte Nested Loops-Joins sowohl Zusammenführungsjoins als auch Hashjoins überlegen. In umfangreichen Abfragen dagegen sind Nested Loops-Joins häufig nicht die optimale Wahl.    
 
-Wenn das „OPTIMIZED“-Attribut eines Operators für Joins geschachtelter Schleifen auf **True**festgelegt ist, bedeutet dies, dass ein optimierter Join geschachtelter Schleifen (oder eine Sortierung im Batchmodus) verwendet wird, um E/A-Vorgänge zu minimieren, wenn die innere Tabelle groß ist, unabhängig davon, ob sie parallelisiert wird oder nicht. Das Vorhandensein dieser Optimierung in einem bestimmten Plan ist beim Analysieren eines Ausführungsplans möglicherweise nicht offensichtlich, da die Sortierung selbst ein verborgener Vorgang ist. Wenn jedoch in der Plan-XML nach dem Attribut „OPTIMIZED“ gesucht wird, deutet dies darauf hin, dass der Join geschachtelter Schleifen möglicherweise versucht, die Eingabezeilen neu anzuordnen und die E/A-Leistung zu verbessern.
+Wenn das „OPTIMIZED“-Attribut eines Operators für Joins geschachtelter Schleifen auf **True** festgelegt ist, bedeutet dies, dass ein optimierter Join geschachtelter Schleifen (oder eine Sortierung im Batchmodus) verwendet wird, um E/A-Vorgänge zu minimieren, wenn die innere Tabelle groß ist, unabhängig davon, ob sie parallelisiert wird oder nicht. Das Vorhandensein dieser Optimierung in einem bestimmten Plan ist beim Analysieren eines Ausführungsplans möglicherweise nicht offensichtlich, da die Sortierung selbst ein verborgener Vorgang ist. Wenn jedoch in der Plan-XML nach dem Attribut „OPTIMIZED“ gesucht wird, deutet dies darauf hin, dass der Join geschachtelter Schleifen möglicherweise versucht, die Eingabezeilen neu anzuordnen und die E/A-Leistung zu verbessern.
 
 ## <a name="understanding-merge-joins"></a><a name="merge"></a> Grundlegendes zu Zusammenführungsjoins
 Sind beide Joineingaben nicht klein, aber nach ihrer Joinspalte sortiert (was beispielsweise der Fall ist, wenn sie beim Scannen sortierter Indizes gewonnen wurden), so ist ein Zusammenführungsjoin der schnellste Joinvorgang. Sind beide Joineingaben umfangreich und etwa gleich groß, so bietet ein Zusammenführungsjoin mit vorherigem Sortiervorgang und ein Hashjoin vergleichbares Leistungsverhalten. Hashjoinvorgänge sind jedoch häufig erheblich schneller, wenn sich beide Eingaben im Umfang deutlich unterscheiden.       

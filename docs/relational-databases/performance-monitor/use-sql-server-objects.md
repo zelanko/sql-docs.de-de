@@ -29,14 +29,14 @@ helpviewer_keywords:
 - counters [SQL Server]
 - performance counters [SQL Server], listed
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 0dd256b071ce3621f02e6c4a6a152670e2fd5c0f
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 6595db2d6d9f0c2f4e3cbd50dcadbc16e379d05f
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892220"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505420"
 ---
 # <a name="use-sql-server-objects"></a>Verwenden von SQL Server-Objekten
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -139,7 +139,7 @@ Werte von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Leistungsind
  Informationen zum **SSIS-Pipeline** -Leistungsindikator finden Sie unter [Leistungsindikatoren](../../integration-services/performance/performance-counters.md).  
   
 ##  <a name="required-permissions"></a><a name="RequiredPermissions"></a> Erforderliche Berechtigungen  
- Die Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekten hängt von Windows-Berechtigungen ab, außer für **SQLAgent:Warnungen**. Die Benutzer müssen Mitglied der festen Serverrolle **sysadmin** sein, um **SQLAgent:Warnungen**zu verwenden.  
+ Die Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekten hängt von Windows-Berechtigungen ab, außer für **SQLAgent:Warnungen**. Die Benutzer müssen Mitglied der festen Serverrolle **sysadmin** sein, um **SQLAgent:Warnungen** zu verwenden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Verwenden von Leistungsobjekten](../../ssms/agent/use-performance-objects.md)   

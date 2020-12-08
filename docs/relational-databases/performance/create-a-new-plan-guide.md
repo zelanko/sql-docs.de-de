@@ -13,14 +13,14 @@ helpviewer_keywords:
 - creating plan guides
 - plan guides [SQL Server]. creating
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 46a3cc2e95093a9d4d3a69f1b5ca0e1eddb38d21
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: b8f96167fff7c5d36209d43eedbbd53bc1daffee
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457349"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505324"
 ---
 # <a name="create-a-new-plan-guide"></a>Erstellen einer neuen Planhinweisliste
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -29,7 +29,7 @@ Planhinweislisten beeinflussen die Abfrageoptimierung, indem Abfragehinweise ode
 Eine Planhinweisliste wendet entweder einen festen Abfrageplan und/oder Abfragehinweise auf eine Abfrage an.
   
 ##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
--   Die Argumente für sp_create_plan_guide müssen in der angezeigten Reihenfolge bereitgestellt werden. Wenn Sie Werte für die Parameter von **sp_create_plan_guide**angeben, müssen entweder alle oder überhaupt keine Parameternamen explizit angegeben werden. Wird z.B. **@name =** angegeben, müssen auch **@stmt =** , **@type =** usw. angegeben werden. Ebenso dürfen, wenn **@name =** nicht angegeben und nur der Parameterwert bereitgestellt wird, die übrigen Parameterwerte ebenfalls nicht angegeben und nur ihre Werte bereitgestellt werden. Argumentnamen dienen nur zu Beschreibungszwecken, zum besseren Verständnis der Syntax. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überprüft nicht, ob der angegebene Parametername mit dem Namen des Parameters an der Position übereinstimmt, an der der Name verwendet wird.  
+-   Die Argumente für sp_create_plan_guide müssen in der angezeigten Reihenfolge bereitgestellt werden. Wenn Sie Werte für die Parameter von **sp_create_plan_guide** angeben, müssen entweder alle oder überhaupt keine Parameternamen explizit angegeben werden. Wird z.B. **@name =** angegeben, müssen auch **@stmt =** , **@type =** usw. angegeben werden. Ebenso dürfen, wenn **@name =** nicht angegeben und nur der Parameterwert bereitgestellt wird, die übrigen Parameterwerte ebenfalls nicht angegeben und nur ihre Werte bereitgestellt werden. Argumentnamen dienen nur zu Beschreibungszwecken, zum besseren Verständnis der Syntax. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überprüft nicht, ob der angegebene Parametername mit dem Namen des Parameters an der Position übereinstimmt, an der der Name verwendet wird.  
   
 -   Sie können mehr als eine Planhinweisliste des Typs OBJECT oder SQL für dieselbe Abfrage und den Batch oder das Modul erstellen. Es kann jedoch nur jeweils eine Planhinweisliste aktiviert sein.  
   
@@ -49,7 +49,7 @@ Eine Planhinweisliste wendet entweder einen festen Abfrageplan und/oder Abfrageh
   
 4.  Geben Sie im Feld **Anweisung** die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung ein, auf die die Planhinweisliste angewendet werden soll.  
   
-5.  Wählen Sie in der Liste **Bereichstyp** den Entitätstyp aus, mit dem die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung angezeigt wird. Dies gibt den Kontext zum Abgleich der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung mit der Planhinweisliste an. Mögliche Werte sind **OBJECT**, **SQL**und **TEMPLATE**.  
+5.  Wählen Sie in der Liste **Bereichstyp** den Entitätstyp aus, mit dem die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung angezeigt wird. Dies gibt den Kontext zum Abgleich der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung mit der Planhinweisliste an. Mögliche Werte sind **OBJECT**, **SQL** und **TEMPLATE**.  
   
 6.  Geben Sie im Feld **Bereichsbatch** den Batchtext ein, mit dem die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung angezeigt wird. Der Batchtext darf keine `USE`*Datenbank*-Anweisung enthalten. Das Feld **Bereichsbatch** ist nur verfügbar, wenn **SQL** als Bereichstyp ausgewählt ist. Wenn bei Verwendung von SQL als Bereichstyp im Feld Bereichsbatch kein Wert angegeben wird, wird der Wert des Batchtexts auf den gleichen Wert wie im Feld **Anweisung** festgelegt.  
   
@@ -61,7 +61,7 @@ Eine Planhinweisliste wendet entweder einen festen Abfrageplan und/oder Abfrageh
   
    Parameter sind nur dann anwendbar, wenn eine der folgenden Aussagen zutrifft:  
   
-   -   Der Bereichstyp lautet **SQL** oder **TEMPLATE**. Bei **TEMPLATE**dürfen Parameter nicht NULL sein.  
+   -   Der Bereichstyp lautet **SQL** oder **TEMPLATE**. Bei **TEMPLATE** dürfen Parameter nicht NULL sein.  
   
    -   Die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung wird mithilfe von sp_executesql übermittelt und für den Parameter ein Wert festgelegt, oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] übermittelt eine Anweisung intern, nachdem sie parametrisiert wurde.  
   

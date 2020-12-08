@@ -2,19 +2,19 @@
 title: 'DMVs: Verwendungsstatistiken und der Leistung von Sichten'
 description: Hier erfahren Sie, wie Sie die dynamischen Verwaltungssichten (DMVs) „sys.dm_exec_query_optimizer_info“, „sys.views“ und „sys.dmv_exec_cached_plans“ verwenden, um Statistiken zur SQL-Abfrageleistung abzurufen.
 ms.custom: seo-dt-2019
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 09/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: ea5ae310606097b9f25a31337222b941ac963fd0
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: d900786f27280eb66ded8801843e9c657f2ceb5f
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87899543"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504904"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>Bestimmen von Nutzungsstatistiken und der Leistung von Ansichten mit DMV
 Dieser Artikel behandelt Methoden und Skripts, mit denen Sie Informationen zur **Leistung von Abfragen, die Sichten verwenden** abrufen können. Der Zweck dieser Skripts besteht darin, Indikatoren für die Nutzung und Leistung verschiedener Sichten in einer Datenbank zu liefern. 

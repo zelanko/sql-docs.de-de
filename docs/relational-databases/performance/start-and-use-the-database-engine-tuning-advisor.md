@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 68e48fb6316b5794d51208b42ab10938b17126dc
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: c8cd352c5347cbc48979af4e03775c9d7da8f3d1
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890754"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504963"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Starten und Verwenden des Datenbankoptimierungsratgebers
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "91890754"
   
 #### <a name="to-start-database-engine-tuning-advisor-from-the-windows-start-menu"></a>So starten Sie den Datenbankoptimierungsratgeber aus dem Windows-Startmenü  
   
-1.  Zeigen Sie im Menü **Start** auf **Alle Programme**, zeigen Sie nacheinander auf **Microsoft SQL Server**und **Leistungstools**, und klicken Sie dann auf **Datenbankoptimierungsratgeber**.  
+1.  Zeigen Sie im Menü **Start** auf **Alle Programme**, zeigen Sie nacheinander auf **Microsoft SQL Server** und **Leistungstools**, und klicken Sie dann auf **Datenbankoptimierungsratgeber**.  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-management-studio"></a>So starten Sie den Datenbankoptimierungsratgeber in SQL Server Management Studio  
   
@@ -127,7 +127,7 @@ ms.locfileid: "91890754"
  Sie können auch die **Starting** -Versionen dieser Ablaufverfolgungsereignisse verwenden. Zum Beispiel **SQL:BatchStarting**. Jedoch beinhalten die **Completed** -Versionen dieser Ablaufverfolgungsereignisse die **Duration** -Spalte, die es dem Datenbankoptimierungsratgeber ermöglichen, die Arbeitsauslastung effizienter zu optimieren. Der Datenbankoptimierungsratgeber optimiert keine anderen Arten von Ablaufverfolgungsereignissen. Weitere Informationen zu diesen Ablaufverfolgungsereignissen finden Sie unter [Stored Procedures Event Category](../../relational-databases/event-classes/stored-procedures-event-category.md) und [TSQL Event Category](../../relational-databases/event-classes/tsql-event-category.md). Informationen zum Verwenden der gespeicherten Prozeduren der SQL-Ablaufverfolgung zum Erstellen einer Arbeitsauslastung der Ablaufverfolgungsdatei finden Sie unter [Erstellen einer Ablaufverfolgung &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  
   
 ### <a name="trace-file-or-trace-table-workloads-that-contain-the-loginname-data-column"></a>Ablaufverfolgungsdatei- oder Ablaufverfolgungstabellen-Arbeitsauslastungen, die die LoginName-Datenspalte enthalten  
- Der Datenbankoptimierungsratgeber übermittelt im Rahmen des Optimierungsprozesses Showplan-Anforderungen. Wenn eine Ablaufverfolgungstabelle oder -datei, die die **LoginName** -Datenspalte enthält, als Arbeitsauslastung verbraucht wird, nimmt der Datenbankoptimierungsratgeber die Identität des in **LoginName**angegebenen Benutzers an. Wenn dieser Benutzer keine SHOWPLAN-Berechtigung besitzt (über die der Benutzer für die in der Ablaufverfolgung enthaltenen Anweisungen Showplans erstellen und ausführen kann), werden diese Anweisungen nicht durch den Datenbankoptimierungsratgeber optimiert.  
+ Der Datenbankoptimierungsratgeber übermittelt im Rahmen des Optimierungsprozesses Showplan-Anforderungen. Wenn eine Ablaufverfolgungstabelle oder -datei, die die **LoginName** -Datenspalte enthält, als Arbeitsauslastung verbraucht wird, nimmt der Datenbankoptimierungsratgeber die Identität des in **LoginName** angegebenen Benutzers an. Wenn dieser Benutzer keine SHOWPLAN-Berechtigung besitzt (über die der Benutzer für die in der Ablaufverfolgung enthaltenen Anweisungen Showplans erstellen und ausführen kann), werden diese Anweisungen nicht durch den Datenbankoptimierungsratgeber optimiert.  
   
 ##### <a name="to-avoid-granting-the-showplan-permission-to-each-user-specified-in-the-loginname-column-of-the-trace"></a>So vermeiden Sie, jedem der in der LoginName-Spalte der Ablaufverfolgung angegebenen Benutzer die SHOWPLAN-Berechtigung erteilen zu müssen  
   
@@ -161,7 +161,7 @@ Weitere Informationen finden Sie unter [Tuning Database Using Workload from Quer
   
 3.  Wählen Sie **Plancache** als Arbeitsauslastungsoption aus. Der Datenbankoptimierungsratgeber wählt die obersten 1.000 Ereignisse aus dem für die Analyse zu verwendenden Plancache aus.  
   
-4.  Wählen Sie die zu optimierenden Datenbanken aus, und wählen Sie optional unter **Ausgewählte Tabellen**eine oder mehrere Tabellen aus jeder Datenbank aus. Klicken Sie zum Einschließen von Cacheeinträgen für alle Datenbanken unter **Optimierungsoptionen**auf **Erweiterte Optionen** , und aktivieren Sie dann **Plancacheereignisse aus allen Datenbanken einschließen**.  
+4.  Wählen Sie die zu optimierenden Datenbanken aus, und wählen Sie optional unter **Ausgewählte Tabellen** eine oder mehrere Tabellen aus jeder Datenbank aus. Klicken Sie zum Einschließen von Cacheeinträgen für alle Datenbanken unter **Optimierungsoptionen** auf **Erweiterte Optionen** , und aktivieren Sie dann **Plancacheereignisse aus allen Datenbanken einschließen**.  
   
 5.  Aktivieren Sie die Option **Optimierungsprotokoll speichern** , um eine Kopie des Optimierungsprotokolls zu speichern. Deaktivieren Sie das Kontrollkästchen, wenn Sie keine Kopie des Optimierungsprotokolls speichern möchten.  
   
