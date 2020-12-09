@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6273f057b7733b787ed2ed8e8b61d23fd107fbd7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d470cda4e0c5cf54bcce0827fff4e5f9b9d1acb7
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546825"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96901054"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Enthält eine Zeile für jeden serverweiten Konfigurations Optionswert im System.  
 
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**configuration_id**|**int**|Eindeutige ID des Konfigurationswerts.|  
 |**name**|**nvarchar(35)**|Der Name der Konfigurationsoption.|  
@@ -44,7 +44,7 @@ ms.locfileid: "89546825"
 |**is_dynamic**|**bit**|1 = Variable, die bei Ausführung der RECONFIGURE-Anweisung wirksam wird.|  
 |**is_advanced**|**bit**|1 = die Variable wird nur angezeigt, wenn die **Option advancedoption anzeigen** festgelegt ist.|  
   
- ## <a name="remarks"></a>Hinweise
+ ## <a name="remarks"></a>Bemerkungen
   Eine Liste aller Server Konfigurationsoptionen finden Sie unter [Server Configuration options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 > [!NOTE]  
@@ -53,7 +53,7 @@ ms.locfileid: "89546825"
 Die sys.configurations-Katalog Sicht kann verwendet werden, um die config_value (die Wert Spalte), den run_value (die value_in_use Spalte) und die Option zu bestimmen, ob es sich um eine dynamische Konfigurationsoption handelt (erfordert keine Server-Engine-Neustarts oder die is_dynamic Spalte).
 
 > [!NOTE]
-> Die config_value im Resultset von sp_configure entspricht der **sys.configurations. Value** -Spalte. Der **run_value** entspricht der Spalte **sys.configurations. value_in_use** .
+> Die config_value im Resultset von sp_configure entspricht der **sys.configurations. Value** -Spalte. Der **run_value** entspricht der Spalte **sys.configurations.value_in_use** .
 
 Die folgende Abfrage kann verwendet werden, um zu bestimmen, ob konfigurierte Werte nicht installiert wurden:
 
@@ -65,9 +65,10 @@ Wenn der Wert der Änderung für die von Ihnen vorgenommene Konfigurationsoption
 
 Es gibt Konfigurationsoptionen, bei denen der Wert und die value_in_use möglicherweise nicht identisch sind und dieses Verhalten erwartet wird. Beispiel:
 
-"Max. Server Arbeitsspeicher (MB)": der konfigurierte Standardwert "0" wird als value_in_use = 2147483647 "min. Server Arbeitsspeicher (MB)" angezeigt. der konfigurierte Standardwert "0" wird möglicherweise als value_in_use = 8 (32-Bit) oder 16 (64 Bit) angezeigt. 
+"Max. Server Arbeitsspeicher (MB)": der konfigurierte Standardwert von 0 wird als **value_in_use** = 2147483647 angezeigt.<br>
 
-In einigen Fällen ist der **value_in_use** 0. In dieser Situation ist der Wert "true" **value_in_use** 8 (32-Bit) oder 16 (64 Bit).
+"min. Server Arbeitsspeicher (MB)": der konfigurierte Standardwert "0" wird möglicherweise als **value_in_use** = 8 (32-Bit) oder 16 (64 Bit) angezeigt. In einigen Fällen ist der **value_in_use** 0. In dieser Situation ist der Wert "true" **value_in_use** 8 (32-Bit) oder 16 (64 Bit).
+
 
 Mithilfe der Spalte **is_dynamic** kann bestimmt werden, ob für die Konfigurationsoption ein Neustart erforderlich ist. is_dynamic = 1 bedeutet, dass der neue Wert beim Ausführen der RECONFIGURE-Befehls (T-SQL) sofort wirksam wird (in einigen Fällen wertet die Server-Engine den neuen Wert möglicherweise nicht sofort aus, führt dies jedoch im normalen Verlauf der Ausführung aus). is_dynamic = 0 bedeutet, dass der geänderte Konfigurations Wert erst wirksam wird, wenn der Server neu gestartet wird, obwohl der Befehl RECONFIGURE (T-SQL) ausgeführt wurde.
 
