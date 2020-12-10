@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: e2996b583cd1005e26e4334c9934fff79c321ee4
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 44080250d95d21cecca16ff605ca22683e5b4440
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364047"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900813"
 ---
 # <a name="create-a-jupyter-notebook-extension"></a>Entwickeln einer Jupyter Notebook-Erweiterung
 
@@ -55,7 +55,7 @@ Azure Data Studio ist auf dem gleichen Framework wie Visual Studio Code aufgebau
 Um den Prozess der Erstellung von Erweiterungen zu vereinfachen, haben wir einen [Erweiterungsgenerator](https://www.npmjs.com/package/generator-azuredatastudio) erstellt, der Yeoman verwendet. Um diesen zu installieren, führen Sie an der Eingabeaufforderung den folgenden Befehl aus:
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## <a name="create-your-extension"></a>Erstellen der Erweiterung
@@ -76,7 +76,7 @@ An dieser Stelle gibt es einige Verzweigungen. Sie können entweder bereits erst
 
 Verwenden Sie für dieses Tutorial ein Python-Beispielnotebook:
 
-   :::image type="content" source="media/notebook-extension/notebook-sample-generator.png" alt-text="Erweiterungs-Generator für Notebooks":::
+   :::image type="content" source="media/notebook-extension/notebook-sample-generator.png" alt-text="Python-Beispiel auswählen":::
 
 Wenn Sie über Notebooks verfügen, die Sie gern verwenden würden, geben Sie dies als Antwort an. Geben Sie den absoluten Dateipfad an, unter dem alle Notebooks oder Markdowndateien gespeichert sind.
 
@@ -86,7 +86,7 @@ Wenn Sie die vorherigen Schritte abschließen, wird ein neuer Ordner mit dem Bei
 
 Ihr Projekt sollte derzeit wie folgt aussehen:
 
-   :::image type="content" source="media/notebook-extension/notebook-file-structure-generator.png" alt-text="Erweiterungs-Generator für Notebooks":::
+   :::image type="content" source="media/notebook-extension/notebook-file-structure-generator.png" alt-text="Dateistruktur der Erweiterung":::
 
 Die Datei `vsc-extension-quickstart.md` enthält einen Verweis auf die wichtigen Dateien. In der Datei `README.md` können Sie die Dokumentation für Ihre neue Erweiterung bereitstellen. Beachten Sie die Dateien `package.json`, `notebook.ts` und `pySample.ipynb`.
 
@@ -136,7 +136,7 @@ Für den Befehl sind nun ein Aktivierungsereignis und spezifische Beitragspunkte
 Um Ihre Erweiterung für andere Benutzer freizugeben, müssen Sie sie in eine einzelne Datei packen. Ihre Erweiterung kann im Marketplace für Azure Data Studio-Erweiterungen veröffentlicht oder für Ihr Team oder Ihre Community freigegeben werden. Zu diesem Zweck müssen Sie über die Befehlszeile ein weiteres npm-Paket installieren.
 
 ```console
-`npm install -g vsce`
+npm install -g vsce
 ```
 
 Bearbeiten Sie die `README.md`-Datei nach Ihren Wünschen. Navigieren Sie anschließend zum Basisverzeichnis der Erweiterung, und führen Sie `vsce package` aus. Optional können Sie ein Repository mit ihrer Erweiterung verknüpfen oder den Vorgang ohne Repository fortsetzen. Um ein Repository hinzuzufügen, fügen Sie der Datei `package.json` eine ähnliche Zeile hinzu.
@@ -154,11 +154,11 @@ Sobald diese Zeilen hinzugefügt werden, wird die Datei `my test-notebook-0.0.1.
 
 Um die Erweiterung auszuführen und zu testen, öffnen Sie Azure Data Studio, und öffnen Sie dann die Befehlspalette, indem Sie **STRG+UMSCHALT+P** drücken. Suchen Sie nach dem Befehl **Extensions: Install from VSIX** (Erweiterungen: Aus VSIX installieren), und navigieren Sie zu dem Ordner, der die neue Erweiterung enthält.
 
-   :::image type="content" source="media/notebook-extension/install-vsix.png" alt-text="Erweiterungs-Generator für Notebooks":::
+   :::image type="content" source="media/notebook-extension/install-vsix.png" alt-text="Installieren über VSIX":::
 
 Ihre Erweiterung sollte nun in Ihrem Erweiterungsbereich in Azure Data Studio angezeigt werden. Öffnen Sie die Befehlspalette noch mal. Dort sehen Sie den neuen Befehl, den Sie mit der Erweiterung erstellt haben: **Launch Notebook: Test Notebook** (Notebook starten: Notebook testen). Bei der Ausführung sollte das Jupyter Book geöffnet werden, das wir mit unserer Erweiterung gepackt haben.
 
-   :::image type="content" source="media/notebook-extension/notebook-launch-ads.png" alt-text="Erweiterungs-Generator für Notebooks":::
+   :::image type="content" source="media/notebook-extension/notebook-launch-ads.png" alt-text="Notebook-Befehl":::
 
 Herzlichen Glückwunsch! Sie haben Ihre erste Jupyter Notebook-Erweiterung entwickelt und können sie jetzt bereitstellen.
 

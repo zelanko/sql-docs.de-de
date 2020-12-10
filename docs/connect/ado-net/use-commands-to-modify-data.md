@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 03ebdbdd15adfae8e765964e8338f043999319f3
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 98127e41b5b07c38030ef27214c9c92bf7c4b4be
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96428236"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761478"
 ---
 # <a name="using-commands-to-modify-data"></a>Verwenden von Befehlen zum Ändern von Daten
 
@@ -31,11 +31,14 @@ Obwohl von der **ExecuteNonQuery**-Methode keine Zeilen zurückgegeben werden, k
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Aktualisieren von Daten in einer Datenquelle](update-data-inside-data-source.md) Beschreibt, wie Befehle oder gespeicherte Prozeduren ausgeführt werden, mit denen Daten in einer Datenbank geändert werden.
+[Aktualisieren von Daten in einer Datenquelle](update-data-inside-data-source.md)  
+Beschreibt das Ausführen von Befehlen oder gespeicherten Prozeduren, mit denen Daten in einer Datenbank geändert werden.
 
-[Ausführen von Katalogoperationen](perform-catalog-operations.md) Beschreibt, wie Befehle ausgeführt werden, mit denen ein Datenbankschema geändert wird.
+[Ausführen von Katalogoperationen](perform-catalog-operations.md)  
+Beschreibt das Ausführen von Befehlen, mit denen ein Datenbankschema geändert wird.
 
 ## <a name="see-also"></a>Weitere Informationen:
 
 - [Abrufen und Ändern von Daten in ADO.NET](retrieving-modifying-data.md)
 - [Befehle und Parameter](commands-parameters.md)
+- [Microsoft ADO.NET für SQL Server](microsoft-ado-net-sql-server.md)

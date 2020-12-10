@@ -2,19 +2,19 @@
 title: Unterstützungsmatrix für Treiberfeatures
 description: In diesem Artikel erfahren Sie, welche beliebten Features von Treibern für SQL Server unterstützt werden und wo Sie Informationen zu diesen Features finden.
 ms.custom: ''
-ms.date: 11/30/2020
+ms.date: 12/03/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-daenge
-ms.openlocfilehash: ac2f39826768cf7fe2948a4168bd93187a93ea3c
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 4fff9c04098bd0796f714d160864e4edb93613ac
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419672"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595231"
 ---
 # <a name="driver-feature-support-matrix-for-microsoft-sql-server"></a>Unterstützungsmatrix für Treiberfeatures für Microsoft SQL Server
 
@@ -40,14 +40,14 @@ Wir möchten, dass alle Treiber alle Features unterstützen und arbeiten mit Nac
 | [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md) | [Ja](ado-net/sql/sqlclient-support-always-encrypted.md) | [Ja](ado-net/sql/sqlclient-support-always-encrypted.md) | | [Ja](ado-net/sql/sqlclient-support-always-encrypted.md) |
 | [Always Encrypted mit Secure Enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md) | [Ja](ado-net/sql/sqlclient-support-always-encrypted.md#enabling-always-encrypted-with-secure-enclaves) | [Ja](ado-net/sql/sqlclient-support-always-encrypted.md#enabling-always-encrypted-with-secure-enclaves) | | [Ja](ado-net/sql/sqlclient-support-always-encrypted.md#enabling-always-encrypted-with-secure-enclaves) |
 | [Azure Active Directory-Authentifizierung mit Zugriffstoken](/azure/active-directory/develop/access-tokens) | [Ja](/dotnet/api/system.data.sqlclient.sqlconnection.accesstoken) | [Ja](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstoken) | [Ja](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstoken) | [Ja](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstoken) |
-| [Azure Active Directory-Kennwortauthentifizierung](/azure/sql-database/sql-database-aad-authentication) | Ja | Ja | | Ja |
-| [Integrierte Azure Active Directory-Authentifizierung](/azure/sql-database/sql-database-aad-authentication) | Ja | Ja | | Ja |
-| [Interaktive Azure Active Directory-Authentifizierung (MFA)](/azure/sql-database/sql-database-aad-authentication) | Ja | Ja | | Ja |
-| [Azure Active Directory-Authentifizierung mit einer verwalteten Identität](/azure/active-directory/managed-identities-azure-resources/overview) | Ja | Ja | | |
-| [Azure Active Directory-Authentifizierung mit einem Dienstprinzipal](/azure/active-directory/develop/app-objects-and-service-principals) | Ja | Ja | | |
+| [Azure Active Directory-Kennwortauthentifizierung](/azure/sql-database/sql-database-aad-authentication) | [Ja](ado-net/sql/azure-active-directory-authentication.md) | [Ja](ado-net/sql/azure-active-directory-authentication.md) | | Ja |
+| [Integrierte Azure Active Directory-Authentifizierung](/azure/sql-database/sql-database-aad-authentication) | [Ja](ado-net/sql/azure-active-directory-authentication.md) | [Ja](ado-net/sql/azure-active-directory-authentication.md) | | Ja |
+| [Interaktive Azure Active Directory-Authentifizierung (MFA)](/azure/sql-database/sql-database-aad-authentication) | [Ja](ado-net/sql/azure-active-directory-authentication.md) | [Ja](ado-net/sql/azure-active-directory-authentication.md) | | Ja |
+| [Azure Active Directory-Authentifizierung mit einer verwalteten Identität](/azure/active-directory/managed-identities-azure-resources/overview) | [Ja](ado-net/sql/azure-active-directory-authentication.md) | [Ja](ado-net/sql/azure-active-directory-authentication.md) | | |
+| [Azure Active Directory-Authentifizierung mit einem Dienstprinzipal](/azure/active-directory/develop/app-objects-and-service-principals) | [Ja](ado-net/sql/azure-active-directory-authentication.md) | [Ja](ado-net/sql/azure-active-directory-authentication.md) | | |
 | [Integrierte Windows-Authentifizierung](/windows-server/security/windows-authentication/windows-authentication-overview) | [Ja](ado-net/sql/authentication-sql-server.md) | [Ja](ado-net/sql/authentication-sql-server.md) | [Ja](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) | [Ja](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) |
 | [Massenkopieren](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | [Ja](ado-net/sql/bulk-copy-operations-sql-server.md) | [Ja](ado-net/sql/bulk-copy-operations-sql-server.md) | [Ja](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) | [Ja](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) |
-| [Metadaten für Datenvertraulichkeit und -klassifizierung](../relational-databases/security/sql-data-discovery-and-classification.md) | Ja | Ja | Ja | Ja |
+| [Metadaten für Datenvertraulichkeit und -klassifizierung](../relational-databases/security/sql-data-discovery-and-classification.md) | [Ja](ado-net/sql/data-classification.md) | [Ja](ado-net/sql/data-classification.md) | Ja | Ja |
 | [Mehrere aktive Resultsets (MARS)](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md) | [Ja](ado-net/sql/multiple-active-result-sets-mars.md) | [Ja](ado-net/sql/multiple-active-result-sets-mars.md) | [Ja](/dotnet/framework/data/adonet/sql/multiple-active-result-sets-mars) | [Ja](/dotnet/framework/data/adonet/sql/multiple-active-result-sets-mars) |
 | [Räumliche Datentypen](../relational-databases/spatial/spatial-data-sql-server.md) | | Ja | | Ja |
 | [Tabellenwertparameter (Table-Valued Parameters, TVP)](../relational-databases/tables/use-table-valued-parameters-database-engine.md) | [Ja](ado-net/sql/table-valued-parameters.md) | [Ja](ado-net/sql/table-valued-parameters.md) | [Ja](/dotnet/framework/data/adonet/sql/table-valued-parameters) | [Ja](/dotnet/framework/data/adonet/sql/table-valued-parameters) |
@@ -64,7 +64,7 @@ Wir möchten, dass alle Treiber alle Features unterstützen und arbeiten mit Nac
 | [Integrierte Azure Active Directory-Authentifizierung](/azure/sql-database/sql-database-aad-authentication) | [Ja](odbc/using-azure-active-directory.md) | [Ja](odbc/using-azure-active-directory.md) | [Ja](jdbc/connecting-using-azure-active-directory-authentication.md) | [Ja](oledb/features/using-azure-active-directory.md) |
 | [Interaktive Azure Active Directory-Authentifizierung (MFA)](/azure/sql-database/sql-database-aad-authentication) | [Ja](odbc/using-azure-active-directory.md) | | | [Ja](oledb/features/using-azure-active-directory.md) |
 | [Azure Active Directory-Authentifizierung mit einer verwalteten Identität](/azure/active-directory/managed-identities-azure-resources/overview) | [Ja](odbc/using-azure-active-directory.md) | [Ja](odbc/using-azure-active-directory.md) | [Ja](jdbc/connecting-using-azure-active-directory-authentication.md) | [Ja](oledb/features/using-azure-active-directory.md) |
-| [Azure Active Directory-Authentifizierung mit einem Dienstprinzipal](/azure/active-directory/develop/app-objects-and-service-principals) | | | | |
+| [Azure Active Directory-Authentifizierung mit einem Dienstprinzipal](/azure/active-directory/develop/app-objects-and-service-principals) | | | | [Ja](oledb/features/using-azure-active-directory.md) |
 | [Integrierte Windows-Authentifizierung](/windows-server/security/windows-authentication/windows-authentication-overview) | Ja | [Ja](odbc/linux-mac/using-integrated-authentication.md) | [Ja](jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) | Ja |
 | [Massenkopieren](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | [Ja](../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md) | [Ja](../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md) | [Ja](jdbc/using-bulk-copy-with-the-jdbc-driver.md) | [Ja](oledb/features/performing-bulk-copy-operations.md) |
 | [Metadaten für Datenerkennung und -klassifizierung](../relational-databases/security/sql-data-discovery-and-classification.md) | [Ja](odbc/data-classification.md) | [Ja](odbc/data-classification.md) | [Ja](jdbc/data-discovery-classification-sample.md) | |

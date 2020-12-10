@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 091bf94f01c66b3f991c0457adcfa4d119d49167
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: c7402c8dd0d2d85d38536a0bcfea3ce8cd780657
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364097"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900873"
 ---
 # <a name="create-an-azure-data-studio-dashboard-extension"></a>Erstellen einer Azure Data Studio-Dashboarderweiterung
 
@@ -44,7 +44,7 @@ Azure Data Studio ist auf dem gleichen Framework wie Visual Studio Code aufgebau
 Um den Prozess der Erstellung von Erweiterungen zu vereinfachen, haben wir einen [Erweiterungsgenerator](https://code.visualstudio.com/docs/extensions/yocode) erstellt, der Yeoman verwendet. Um diesen zu installieren, führen Sie an der Eingabeaufforderung den folgenden Befehl aus:
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## <a name="create-your-dashboard-extension"></a>Erstellen Ihrer Dashboarderweiterung
@@ -63,7 +63,7 @@ Es gibt drei wichtige Bereiche, in denen Erweiterungen dem Dashboard Funktionali
 2. **Homepageaktionen**: Aktionsschaltflächen am oberen Rand der Verbindungssymbolleiste.
 3. **Widgets**: Diagramme, die für Ihre SQL Server-Instanz ausgeführt werden.
 
-   :::image type="content" source="media/dashboard-extension/dashboard-contrib-points.png" alt-text="Screenshot: Einführung in Dashboards":::
+   :::image type="content" source="media/dashboard-extension/dashboard-contrib-points.png" alt-text="Screenshot: Bereiche, deren Funktionalität durch Erweiterungen erweitert werden kann":::
 
 ### <a name="run-the-extension-generator"></a>Ausführen des Erweiterungsgenerators
 
@@ -77,11 +77,11 @@ So erstellen Sie eine Erweiterung:
 
 1. Füllen Sie die Eingabeaufforderungen wie gezeigt aus, um eine Erweiterung zu erstellen, die dem Serverdashboard eine Registerkarte hinzufügt.
 
-   :::image type="content" source="media/dashboard-extension/dashboard-generator.png" alt-text="Screenshot: Einführung in Dashboards":::
+   :::image type="content" source="media/dashboard-extension/dashboard-generator.png" alt-text="Screenshot: Erweiterungs-Generator":::
 
    Nachstehend werden die angezeigten Eingabeaufforderungen etwas detaillierter erläutert:
 
-   :::image type="content" source="media/dashboard-extension/dashboard-flowchart.png" alt-text="Screenshot: Einführung in Dashboards":::
+   :::image type="content" source="media/dashboard-extension/dashboard-flowchart.png" alt-text="Screenshot: Flussdiagramm für das Dashboard":::
 
 Durch Ausführen der oben genannten Schritte wird ein neuer Ordner erstellt. Öffnen Sie den Ordner in Visual Studio Code, und schon sind Sie bereit, selbst eine Dashboarderweiterung zu erstellen.
 
@@ -108,7 +108,7 @@ Im Folgenden sind einige Änderungen aufgeführt, die Sie ausprobieren sollten:
 Um Ihre Erweiterung für andere Benutzer freizugeben, müssen Sie sie in eine einzelne Datei packen. Ihre Erweiterung kann im Marketplace für Azure Data Studio-Erweiterungen veröffentlicht oder für Ihr Team oder Ihre Community freigegeben werden. Zu diesem Zweck müssen Sie über die Befehlszeile ein weiteres npm-Paket installieren.
 
 ```console
-`npm install -g vsce`
+npm install -g vsce
 ```
 
 Bearbeiten Sie die `README.md`-Datei nach Ihren Wünschen. Navigieren Sie anschließend zum Basisverzeichnis der Erweiterung, und führen Sie `vsce package` aus. Optional können Sie ein Repository mit ihrer Erweiterung verknüpfen oder den Vorgang ohne Repository fortsetzen. Um ein Repository hinzuzufügen, fügen Sie der Datei `package.json` eine ähnliche Zeile hinzu.
@@ -122,7 +122,7 @@ Bearbeiten Sie die `README.md`-Datei nach Ihren Wünschen. Navigieren Sie anschl
 
 Nachdem diese Zeilen hinzugefügt wurden, wird die Datei `my-test-extension-0.0.1.vsix` erstellt und ist nun für die Installation in Azure Data Studio bereit.
 
-:::image type="content" source="media/dashboard-extension/install-vsix.png" alt-text="Screenshot: Einführung in Dashboards":::
+:::image type="content" source="media/dashboard-extension/install-vsix.png" alt-text="Screenshot: Installation von VSIX":::
 
 ## <a name="publish-your-extension-to-the-marketplace"></a>Veröffentlichen der Erweiterung im Marketplace
 

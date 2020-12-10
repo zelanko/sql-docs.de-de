@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 1cf7cf010724453aadcc3c93ef216e44d6a869fc
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: ef687114ff2ceceabc1ed87d67a4585a5846029d
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419736"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563077"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server-Verbindungspooling (ADO.NET)
 
@@ -68,10 +68,10 @@ Wenn ein <xref:Microsoft.Data.SqlClient.SqlConnection>-Objekt angefordert wird, 
 Die Verbindungspoolfunktion erfüllt diese Verbindungsanforderungen, indem Verbindungen erneut zugewiesen werden, sobald sie wieder für den Pool freigegeben werden. Wenn die maximale Poolgröße erreicht ist und keine verwendbare Verbindung verfügbar ist, wird die Anforderung in die Warteschlange gestellt. Die Poolfunktion versucht dann, alle Verbindungen freizugeben, bis das Zeitlimit (**Standardwert: 15 Sekunden**) erreicht ist. Wenn der Pooler die Anforderung nicht erfüllt, bevor das Zeitlimit für die Verbindung überschritten ist, wird eine Ausnahme ausgelöst.
 
 > [!CAUTION]
-> Es ist unbedingt zu empfehlen, die Verbindung nach Verwendung stets zu schließen, damit sie in den Pool zurückgegeben wird. Verwenden Sie dazu die Methode `Close` oder `Dispose` des `Connection`-Objekts, oder öffnen Sie alle Verbindungen innerhalb einer `using`-Anweisung in C# oder innerhalb einer `Using`-Anweisung in Visual Basic. Verbindungen, die nicht explizit geschlossen werden, werden möglicherweise dem Pool nicht hinzugefügt bzw. nicht an den Pool zurückgegeben. Weitere Informationen finden Sie unter [using-Anweisung](/dotnet/docs/csharp/language-reference/keywords/using-statement.md) oder [Gewusst wie:  Freigeben einer Systemressource](/dotnet/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) für Visual Basic.
+> Es ist unbedingt zu empfehlen, die Verbindung nach Verwendung stets zu schließen, damit sie in den Pool zurückgegeben wird. Verwenden Sie dazu die Methode `Close` oder `Dispose` des `Connection`-Objekts, oder öffnen Sie alle Verbindungen innerhalb einer `using`-Anweisung in C# oder innerhalb einer `Using`-Anweisung in Visual Basic. Verbindungen, die nicht explizit geschlossen werden, werden möglicherweise dem Pool nicht hinzugefügt bzw. nicht an den Pool zurückgegeben. Weitere Informationen finden Sie unter [using-Anweisung](/dotnet/csharp/language-reference/keywords/using-statement) oder [Gewusst wie:  Freigeben einer Systemressource](/dotnet/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource) für Visual Basic.
 
 > [!NOTE]
-> Rufen Sie nicht `Close` oder `Dispose` für eine `Connection`, einen `DataReader` oder ein anderes verwaltetes Objekt in der `Finalize`-Methode der Klasse auf. Geben Sie in einer Finalize-Methode nur nicht verwaltete Ressourcen frei, die der Klasse direkt gehören. Wenn die Klasse keine nicht verwalteten Ressourcen besitzt, definieren Sie in der Klasse keine `Finalize`-Methode. Weitere Informationen finden Sie unter [Garbage Collection](/dotnet/docs/standard/garbage-collection/index.md).
+> Rufen Sie nicht `Close` oder `Dispose` für eine `Connection`, einen `DataReader` oder ein anderes verwaltetes Objekt in der `Finalize`-Methode der Klasse auf. Geben Sie in einer Finalize-Methode nur nicht verwaltete Ressourcen frei, die der Klasse direkt gehören. Wenn die Klasse keine nicht verwalteten Ressourcen besitzt, definieren Sie in der Klasse keine `Finalize`-Methode. Weitere Informationen finden Sie unter [Garbage Collection](/dotnet/standard/garbage-collection/index).
 
 Weitere Informationen zu den Ereignissen im Zusammenhang mit dem Öffnen und Schließen von Verbindungen finden Sie in der SQL Server-Dokumentation unter [Audit Login (Ereignisklasse)](/sql/relational-databases/event-classes/audit-login-event-class) und [Audit Logout (Ereignisklasse)](/sql/relational-databases/event-classes/audit-logout-event-class).
 

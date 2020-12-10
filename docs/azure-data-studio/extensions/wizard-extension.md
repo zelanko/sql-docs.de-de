@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 50440aca120dad6cfd165262bd4bfd2e139393cf
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 2d4864a3475b8e27fd86e90fbfa690c49a0c413d
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364057"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900793"
 ---
 # <a name="create-an-azure-data-studio-wizard-extension"></a>Entwickeln einer Azure Data Studio-Erweiterung für einen Assistenten
 
@@ -43,7 +43,7 @@ Azure Data Studio ist auf dem gleichen Framework wie Visual Studio Code aufgebau
 Um den Prozess der Erstellung von Erweiterungen zu vereinfachen, haben wir einen [Erweiterungsgenerator](https://code.visualstudio.com/docs/extensions/yocode) erstellt, der Yeoman verwendet. Um diesen zu installieren, führen Sie an der Eingabeaufforderung folgenden Befehl aus:
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## <a name="create-your-wizard-extension"></a>Entwickeln einer Assistenten-Erweiterung
@@ -104,7 +104,7 @@ Wenn Sie mit der Vorlage vertraut sind, finden Sie hier einige zusätzliche Idee
 Um Ihre Erweiterung für andere Benutzer freizugeben, müssen Sie sie in eine einzige Datei packen. Diese kann im Marketplace für Azure Data Studio-Erweiterungen veröffentlicht oder für Ihr Team oder Ihre Community freigegeben werden. Zu diesem Zweck müssen Sie über die Befehlszeile ein weiteres npm-Paket installieren:
 
 ```console
-npm install -g vsce`
+npm install -g vsce
 ```
 
 Bearbeiten Sie `README.md` wie gewünscht, und navigieren Sie dann zum Basisverzeichnis der Erweiterung, und führen Sie `vsce package` aus. Optional können Sie ein Repository mit ihrer Erweiterung verknüpfen oder den Vorgang ohne Repository fortsetzen. Um ein Repository hinzuzufügen, fügen Sie der Datei `package.json` eine ähnliche Zeile hinzu.

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 87d8e2013693d2e8123adb97273309d6f22de03e
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 146063d665b89a8541c34d9cc3b0b6da3939d801
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126387"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563096"
 ---
 # <a name="protecting-connection-information"></a>Schützen von Verbindungsinformationen
 
@@ -23,7 +23,7 @@ ms.locfileid: "96126387"
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-Eines der wichtigsten Ziele beim Sichern einer Anwendung besteht darin, den Zugriff auf die Datenquelle zu schützen. Eine Verbindungszeichenfolge stellt ein potenzielles Sicherheitsrisiko dar, wenn sie nicht gesichert wird. Das Speichern von Verbindungsinformationen als Klartext oder das Aufbewahren dieser Informationen im Arbeitsspeicher gefährdet Ihr gesamtes System. Die in Ihrem Quellcode eingebetteten Verbindungszeichenfolgen können mit [Ildasm.exe (IL Disassembler)](/dotnet/docs/framework/tools/ildasm-exe-il-disassembler.md) gelesen werden, um MSIL (Microsoft Intermediate Language) in einer kompilierten Assembly anzuzeigen.
+Eines der wichtigsten Ziele beim Sichern einer Anwendung besteht darin, den Zugriff auf die Datenquelle zu schützen. Eine Verbindungszeichenfolge stellt ein potenzielles Sicherheitsrisiko dar, wenn sie nicht gesichert wird. Das Speichern von Verbindungsinformationen als Klartext oder das Aufbewahren dieser Informationen im Arbeitsspeicher gefährdet Ihr gesamtes System. Die in Ihrem Quellcode eingebetteten Verbindungszeichenfolgen können mit [Ildasm.exe (IL Disassembler)](/dotnet/framework/tools/ildasm-exe-il-disassembler) gelesen werden, um MSIL (Microsoft Intermediate Language) in einer kompilierten Assembly anzuzeigen.
 
 Welche Sicherheitsrisiken sich im Zusammenhang mit Verbindungszeichenfolgen ergeben, hängt von der Art der verwendeten Authentifizierung, der Art und Weise, wie die Verbindungszeichenfolgen im Arbeitsspeicher und auf der Festplatte aufbewahrt werden, und den Verfahren ab, mit denen die Verbindungszeichenfolgen zur Laufzeit konstruiert werden.
 

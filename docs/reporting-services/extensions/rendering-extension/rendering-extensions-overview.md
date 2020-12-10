@@ -1,7 +1,7 @@
 ---
 title: Übersicht über Renderingerweiterungen | Microsoft-Dokumentation
 description: In diesem Artikel werden die in den Reporting Services enthaltenen Datenrenderingerweiterungen behandelt. Dabei erfahren Sie, wie Sie benutzerdefinierte Renderingerweiterungen hinzufügen, um Berichte in anderen Formaten zu erstellen.
-ms.date: 03/14/2017
+ms.date: 12/7/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dd3bca97b438d683e325194616af123ea9fb8290
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: c14237adcb3cd45e62db0915004f51ed547c9f30
+ms.sourcegitcommit: dc858552f0c9314b3411e630bbd9bbce65f85913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529426"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96788305"
 ---
 # <a name="rendering-extensions-overview"></a>Übersicht über Renderingerweiterungen
   Eine Renderingerweiterung stellt eine Komponente oder ein Modul eines Berichtsservers dar, mit dem Daten- und Layoutinformationen in ein gerätespezifisches Format umgewandelt werden. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] umfasst sieben Renderingerweiterungen: HTML, Excel, Word, CSV oder Text, XML, Image und PDF. Sie können zusätzliche Renderingerweiterungen erstellen, um Berichte in anderen Formaten zu generieren.  
@@ -54,8 +54,6 @@ ms.locfileid: "84529426"
 -   Fügen Sie benutzerdefinierte Formatierungs- und Präsentationsfunktionen hinzu, indem Sie XSL-Transformationen (XSLT) mit der Ausgabe des XML-Renderingformats kombinieren.  
   
  Das Schreiben von benutzerdefinierten Renderingerweiterungen ist nicht ganz einfach. Eine Renderingerweiterung muss normalerweise alle möglichen Kombinationen von Berichtselementen unterstützen und erfordert, dass Sie Hunderte von Klassen, Schnittstellen, Methoden und Eigenschaften implementieren. Wenn Sie einen Bericht in einem Format rendern müssen, das nicht in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enthalten ist, und sich entscheiden, eine eigene Implementierung einer Renderingerweiterung mit verwaltetem Code zu schreiben, dann muss die Renderingerweiterung die vom Berichtsserver benötigte **Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension**-Schnittstelle implementieren.  
-  
- Ergänzende Dokumentation sowie Whitepapers zu [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] finden Sie in den aktuellen technischen Ressourcen auf der [Reporting Services-Website](https://go.microsoft.com/fwlink/?LinkId=19951).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Implementing a Rendering Extension (Implementieren von Renderingerweiterungen)](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   

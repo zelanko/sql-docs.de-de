@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 5d9138a5d02008cc173bc7f0b64d354d67112d3b
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 9f6449c11c4033324b8f294449942b67425a737c
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364087"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900893"
 ---
 # <a name="create-a-jupyter-book-extension"></a>Erstellen einer Jupyter Book-Erweiterung
 
@@ -57,7 +57,7 @@ Azure Data Studio ist auf dem gleichen Framework wie Visual Studio Code aufgebau
 Um den Prozess der Erstellung von Erweiterungen zu vereinfachen, haben wir einen [Erweiterungsgenerator](https://www.npmjs.com/package/generator-azuredatastudio) erstellt, der Yeoman verwendet. Um diesen zu installieren, führen Sie an der Eingabeaufforderung den folgenden Befehl aus:
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## <a name="create-your-extension"></a>Erstellen der Erweiterung
@@ -151,7 +151,7 @@ Das Aktivierungsereignis(`onCommand`) löst die Funktion aus, die wir registrier
 Um Ihre Erweiterung für andere Benutzer freizugeben, müssen Sie sie in eine einzelne Datei packen. Ihre Erweiterung kann im Marketplace für Azure Data Studio-Erweiterungen veröffentlicht oder für Ihr Team oder Ihre Community freigegeben werden. Zu diesem Zweck müssen Sie über die Befehlszeile ein weiteres npm-Paket installieren.
 
 ```console
-`npm install -g vsce`
+npm install -g vsce
 ```
 
 Bearbeiten Sie die `README.md`-Datei nach Ihren Wünschen. Navigieren Sie anschließend zum Basisverzeichnis der Erweiterung, und führen Sie `vsce package` aus. Optional können Sie ein Repository mit ihrer Erweiterung verknüpfen oder den Vorgang ohne Repository fortsetzen. Um ein Repository hinzuzufügen, fügen Sie der Datei `package.json` eine ähnliche Zeile hinzu.

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 26554deb5d8a3786efd1bd869a2692d368132531
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 0fdf91c5a4da33b585f10939cd6a801a46b236b3
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419811"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761518"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>Herstellen einer Verbindung mit einer Datenquelle in ADO.NET
 
@@ -39,3 +39,5 @@ Beschreibt die Verwendung eines **InfoMessage**-Ereignisses zum Abrufen von Info
 
 - [Verbindungszeichenfolgen](connection-strings.md)
 - [Verbindungspooling](connection-pooling.md)
+- [Befehle und Parameter](commands-parameters.md)
+- ["DataAdapters" und "DataReaders"](dataadapters-datareaders.md)

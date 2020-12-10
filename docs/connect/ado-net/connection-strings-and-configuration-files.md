@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: c5610f182adaab2197b67578e51331fd6d7ce19b
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: fb290f9a795c9f64bcb2ee95c66210790a80a71d
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126508"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563116"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Verbindungszeichenfolgen und Konfigurationsdateien
 
@@ -25,7 +25,7 @@ ms.locfileid: "96126508"
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-Das Einbetten von Verbindungszeichenfolgen in den Code Ihrer Anwendung kann zu Sicherheitslücken und Wartungsproblemen führen. Unverschlüsselte Verbindungszeichenfolgen, die in den Quellcode einer Anwendung kompiliert wurden, können mit dem Tool [Ildasm.exe (IL Disassembler)](/dotnet/docs/framework/tools/ildasm-exe-il-disassembler.md) angezeigt werden. Hinzu kommt, dass die Anwendung neu kompiliert werden muss, wenn sich die Verbindungszeichenfolge irgendwann einmal ändert. Aus diesen Gründen empfehlen wir, Verbindungszeichenfolgen in einer Anwendungskonfigurationsdatei zu speichern.
+Das Einbetten von Verbindungszeichenfolgen in den Code Ihrer Anwendung kann zu Sicherheitslücken und Wartungsproblemen führen. Unverschlüsselte Verbindungszeichenfolgen, die in den Quellcode einer Anwendung kompiliert wurden, können mit dem Tool [Ildasm.exe (IL Disassembler)](/dotnet/framework/tools/ildasm-exe-il-disassembler) angezeigt werden. Hinzu kommt, dass die Anwendung neu kompiliert werden muss, wenn sich die Verbindungszeichenfolge irgendwann einmal ändert. Aus diesen Gründen empfehlen wir, Verbindungszeichenfolgen in einer Anwendungskonfigurationsdatei zu speichern.
 
 ## <a name="working-with-application-configuration-files"></a>Arbeiten mit Anwendungskonfigurationsdateien
 
@@ -194,5 +194,5 @@ Weitere Informationen zum Absichern von ASP.NET-Anwendungen finden Sie unter [Ab
 - [Verbindungszeichenfolgen-Generatoren](connection-string-builders.md)
 - [Schützen von Verbindungsinformationen](protecting-connection-information.md)
 - [Verwenden der Konfigurationsklassen](/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
-- [Konfigurieren von Apps](/dotnet/docs/framework/configure-apps/index.md)
+- [Konfigurieren von Apps](/dotnet/framework/configure-apps/index)
 - [ASP.NET-Websiteverwaltung](/previous-versions/aspnet/6hy1xzbw(v=vs.100))

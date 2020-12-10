@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 2eb3c7d996463b9c581ea60bc11f853a5d131582
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: cb77d01ede16a6fa68aac6dcb49612ad8fd9a191
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419744"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563085"
 ---
 # <a name="establishing-connection"></a>Herstellen einer Verbindung
 
@@ -29,12 +29,12 @@ Zum Herstellen einer Verbindung mit Microsoft SQL Server verwenden Sie das <xre
 
 ## <a name="closing-connections"></a>Schließen von Verbindungen
 
-Es wird empfohlen, die Verbindung nach Verwendung stets zu schließen, damit sie in den Pool zurückgegeben werden kann. Der `Using`-Block in Visual Basic oder C# verwirft automatisch die Verbindung, wenn der Code den Block verlässt, auch im Falle einer unbehandelten Ausnahme. Weitere Informationen finden Sie unter [using-Anweisung](/dotnet/docs/csharp/language-reference/keywords/using-statement.md) und [Using-Anweisung](/dotnet/docs/visual-basic/language-reference/statements/using-statement.md).
+Es wird empfohlen, die Verbindung nach Verwendung stets zu schließen, damit sie in den Pool zurückgegeben werden kann. Der `Using`-Block in Visual Basic oder C# verwirft automatisch die Verbindung, wenn der Code den Block verlässt, auch im Falle einer unbehandelten Ausnahme. Weitere Informationen finden Sie unter [using-Anweisung](/dotnet/csharp/language-reference/keywords/using-statement) und [Using-Anweisung](/dotnet/visual-basic/language-reference/statements/using-statement).
 
 Sie können auch die Methoden `Close` oder `Dispose` des „Connection“-Objekts verwenden. Verbindungen, die nicht explizit geschlossen werden, werden möglicherweise dem Pool nicht hinzugefügt bzw. nicht an den Pool zurückgegeben. Beispielsweise wird eine Verbindung, die sich nicht mehr im Gültigkeitsbereich befindet, aber nicht explizit geschlossen wurde, nur dann an den Verbindungspool zurückgegeben, wenn die maximale Poolgröße erreicht wurde und die Verbindung immer noch gültig ist.
 
 > [!NOTE]
-> Rufen Sie in der `Finalize`-Methode Ihrer Klasse `Close` oder `Dispose` nicht für **Connection**, **DataReader** oder ein anderes verwaltetes Objekt auf. Geben Sie in einer Finalize-Methode nur nicht verwaltete Ressourcen frei, die der Klasse direkt gehören. Wenn die Klasse keine nicht verwalteten Ressourcen besitzt, definieren Sie in der Klasse keine `Finalize`-Methode. Weitere Informationen finden Sie unter [Garbage Collection](/dotnet/docs/standard/garbage-collection/index.md).
+> Rufen Sie in der `Finalize`-Methode Ihrer Klasse `Close` oder `Dispose` nicht für **Connection**, **DataReader** oder ein anderes verwaltetes Objekt auf. Geben Sie in einer Finalize-Methode nur nicht verwaltete Ressourcen frei, die der Klasse direkt gehören. Wenn die Klasse keine nicht verwalteten Ressourcen besitzt, definieren Sie in der Klasse keine `Finalize`-Methode. Weitere Informationen finden Sie unter [Garbage Collection](/dotnet/standard/garbage-collection/index).
 
 > [!NOTE]
 > Wenn eine Verbindung aus dem Verbindungspool abgerufen oder an diesen zurückgegeben wird, werden keine Anmelde- und Abmeldeereignisse auf dem Server ausgelöst, da die Verbindung bei der Rückgabe an den Verbindungspool nicht geschlossen wird. Weitere Informationen finden Sie unter [SQL Server-Verbindungspooling (ADO.NET)](sql-server-connection-pooling.md).
