@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Query Store
 - Query Store, described
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 4cccda1a792b8c006b758c3788d910e745e94989
-ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
+ms.openlocfilehash: 96e137f3e49ac21a38577704c2663d3de85151ff
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94418023"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505144"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Leistungsüberwachung mit dem Abfragespeicher
 
@@ -35,7 +35,7 @@ Informationen zum Betrieb des Abfragespeichers in Azure [!INCLUDE[ssSDS](../../i
 
 ## <a name="enabling-the-query-store"></a><a name="Enabling"></a> Aktivieren des Abfragespeichers
 
- Standardmäßig ist der Abfragespeicher für neue SQL Server- und Azure Synapse Analytics-Datenbanken (SQL DW) nicht aktiviert. Für neue Azure SQL-Datenbanken ist er hingegen aktiviert.
+ Standardmäßig ist der Abfragespeicher für neue SQL Server- und Azure Synapse Analytics-Datenbanken nicht aktiviert. Für neue Azure SQL-Datenbanken ist er hingegen standardmäßig aktiviert.
 
 ### <a name="use-the-query-store-page-in-ssmanstudiofull"></a>Verwenden der Seite „Abfragespeicher“ in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 
@@ -50,7 +50,7 @@ Informationen zum Betrieb des Abfragespeichers in Azure [!INCLUDE[ssSDS](../../i
 
 ### <a name="use-transact-sql-statements"></a>Verwenden von Transact-SQL-Anweisungen
 
-Verwenden Sie die Anweisung **ALTER DATABASE** , um den Abfragespeicher für eine bestimmte Datenbank zu aktivieren. Beispiel:
+Verwenden Sie die Anweisung **ALTER DATABASE**, um den Abfragespeicher für eine bestimmte Datenbank zu aktivieren. Beispiel:
 
 ```sql
 SET QUERY_STORE = ON (OPERATION_MODE = READ_WRITE);
@@ -59,7 +59,7 @@ SET QUERY_STORE = ON (OPERATION_MODE = READ_WRITE);
 Weitere Syntaxoptionen im Zusammenhang mit dem Abfragespeicher finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).
 
 > [!NOTE]
-> Der Abfragespeicher kann für die **master** - oder **tempdb** -Datenbank nicht aktiviert werden.
+> Der Abfragespeicher kann für die **master**- oder **tempdb**-Datenbank nicht aktiviert werden.
 
 > [!IMPORTANT]
 > Informationen zum Aktivieren des Abfragespeichers und dazu, wie Sie ihn an Ihre Arbeitsauslastung angepasst halten, finden Sie unter [Bewährte Methoden für den Abfragespeicher](../../relational-databases/performance/best-practice-with-the-query-store.md#Configure).
@@ -93,9 +93,9 @@ Häufige Szenarios für die Verwendung des Abfragespeichers:
 
 Der Abfragespeicher enthält drei Speicher:
 
-- einen **Planspeicher** , der die Informationen zum Ausführungsplan speichert
-- einen **Speicher für Laufzeitstatistiken** , der die Informationen zum Ausführungsstatistiken speichert
-- einen **Speicher für Wartestatistiken** , der die Informationen zum Wartestatistiken speichert
+- einen **Planspeicher**, der die Informationen zum Ausführungsplan speichert
+- einen **Speicher für Laufzeitstatistiken**, der die Informationen zum Ausführungsstatistiken speichert
+- einen **Speicher für Wartestatistiken**, der die Informationen zum Wartestatistiken speichert
 
 Die Anzahl der eindeutigen Pläne, die für eine Abfrage gespeichert werden können, wird durch die Konfigurationsoption **max_plans_per_query** begrenzt. Zum Verbessern der Leistung werden diese Informationen asynchron in die Speicher geschrieben. Um die Speicherverwendung zu minimieren, werden die statistischen Daten zur Laufzeitausführung im Speicher für Laufzeitstatistiken über ein festes Zeitintervall aggregiert. Die Informationen in diesen Speichern können durch Abfragen der Katalogsichten für den Abfragespeicher angezeigt werden.
 
@@ -122,7 +122,7 @@ Wählen Sie einen Plan aus, um die grafische Darstellung des Abfrageplans anzuze
 
 ![SQL Server 2016: Zurückgestellte Abfragen im Objekt-Explorer in SSMS](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "SQL Server 2016: Zurückgestellte Abfragen im Objekt-Explorer in SSMS")
 
-Wählen Sie eine Abfrage und einen Plan aus, und klicken Sie anschließend auf **Plan erzwingen** , um einen Plan zu erzwingen. Sie können nur Pläne erzwingen, die mit dem Abfrageplanfeature gespeichert wurden und sich noch im Abfrageplancache befinden.
+Wählen Sie eine Abfrage und einen Plan aus, und klicken Sie anschließend auf **Plan erzwingen**, um einen Plan zu erzwingen. Sie können nur Pläne erzwingen, die mit dem Abfrageplanfeature gespeichert wurden und sich noch im Abfrageplancache befinden.
 
 ## <a name="finding-waiting-queries"></a><a name="Waiting"></a> Suchen von Wartestatistiken zu Abfragen
 
@@ -385,8 +385,8 @@ Sie können eine eigene Prozedur mit abweichender Logik für das Bereinigen von 
 
 Im Beispiel oben wird die erweiterte gespeicherte Prozedur **sp_query_store_remove_query** verwendet, um nicht benötigte Daten zu entfernen. Sie können auch Folgendes verwenden:
 
-- **sp_query_store_reset_exec_stats** , um Laufzeitstatistiken für einen bestimmten Plan zu löschen.
-- **sp_query_store_remove_plan** , um einen einzelnen Plan zu entfernen.
+- **sp_query_store_reset_exec_stats**, um Laufzeitstatistiken für einen bestimmten Plan zu löschen.
+- **sp_query_store_remove_plan**, um einen einzelnen Plan zu entfernen.
 
 ### <a name="performance-auditing-and-troubleshooting"></a><a name="Peformance"></a> Leistungsüberwachung und Problembehandlung
 

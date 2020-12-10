@@ -4,7 +4,7 @@ description: Erfahren Sie, wie die SQL Server-Datenbank-Engine auf Laufzeitinfor
 ms.custom: ''
 ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 02b4935c7608bb6912274ee017371f519df7bdf8
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 125a95f14f7082a3ed806d6dfa7fcb05b6d11c81
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890774"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505070"
 ---
 # <a name="query-profiling-infrastructure"></a>Profilerstellungsinfrastruktur für Abfragen
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,8 +46,8 @@ Die *Profilerstellungsinfrastruktur für Abfrageausführungsstatistiken* (Standa
 
 Die folgenden Methoden zum globalen Erfassen von Ausführungsplaninformationen für **alle Sitzungen** nutzen die Standard-Profilerstellungsinfrastruktur:
 
--  Das erweiterte Ereignis ***query_post_execution_showplan***. Informationen zum Aktivieren von erweiterten Ereignissen finden Sie unter [Überwachen der Systemaktivität mit erweiterten Ereignissen](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
-- Das Ablaufverfolgungsereignis **Showplan XML** in der [SQL-Ablaufverfolgung](../../relational-databases/sql-trace/sql-trace.md) und in [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md). Weitere Informationen zu diesem Ablaufverfolgungsereignis finden Sie unter [Showplan XML-Ereignisklasse](../../relational-databases/event-classes/showplan-xml-event-class.md).
+-  Das erweiterte Ereignis **_query_post_execution_showplan_* _. Informationen zum Aktivieren von erweiterten Ereignissen finden Sie unter [Überwachen der Systemaktivität mit erweiterten Ereignissen](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
+- Das Ablaufverfolgungsereignis _ *Showplan XML** in der [SQL-Ablaufverfolgung](../../relational-databases/sql-trace/sql-trace.md) und in [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md). Weitere Informationen zu diesem Ablaufverfolgungsereignis finden Sie unter [Showplan XML-Ereignisklasse](../../relational-databases/event-classes/showplan-xml-event-class.md).
 
 Wenn Sie eine erweiterte Ereignissitzung ausführen, die das Ereignis *query_post_execution_showplan* verwendet, dann wird die [sys.dm_exec_query_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)-DMV ebenfalls mit Daten aufgefüllt. Dies ermöglicht Live-Abfragestatistiken für alle Sitzungen, indem der [Aktivitätsmonitor](../../relational-databases/performance-monitor/activity-monitor.md) verwendet oder die DMV direkt abgefragt wird. Weitere Informationen finden Sie unter [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md).
 
@@ -64,7 +64,7 @@ Beginnend mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 und [!INCLUD
   
 Beginnend mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 und [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] wurde der Leistungsmehraufwand für die Erfassung von Informationen zu Ausführungsplänen durch die Einführung von einfacher Profilerstellung verringert. Im Gegensatz zur Standardprofilerstellung erfasst die einfache Profilerstellung keine CPU-Laufzeitinformationen. Allerdings erfasst die einfache Profilerstellung weiterhin die Zeilenanzahl und Informationen zur E/A-Verwendung.
 
-Ein neues erweitertes Ereignis ***query_thread_profile*** wurde ebenfalls eingeführt, das einfache Profilerstellung nutzt. Dieses erweiterte Ereignis stellt Statistiken zur Abfrageausführung pro Operator bereit und ermöglicht einen besseren Einblick in die Leistung der einzelnen Knoten und Threads. Eine Beispielsitzung mit diesem erweiterten Ereignis kann wie im folgenden Beispiel konfiguriert werden:
+Ein neues erweitertes Ereignis **_query_thread_profile_* _, das einfache Profilerstellung nutzt, wurde ebenfalls eingeführt. Dieses erweiterte Ereignis stellt Statistiken zur Abfrageausführung pro Operator bereit und ermöglicht einen besseren Einblick in die Leistung der einzelnen Knoten und Threads. Eine Beispielsitzung mit diesem erweiterten Ereignis kann wie im folgenden Beispiel konfiguriert werden:
 
 ```sql
 CREATE EVENT SESSION [NodePerfStats] ON SERVER
@@ -86,7 +86,7 @@ WITH (MAX_MEMORY=4096 KB,
 > [!NOTE]
 > Weitere Informationen zum Leistungsmehraufwand bei der Abfrageprofilerstellung finden Sie im Blogbeitrag [Developers Choice: Query progress - anytime, anywhere (Von Entwicklern inspiriert: Abfragestatus – jederzeit und überall)](/archive/blogs/sql_server_team/query-progress-anytime-anywhere) 
 
-Wenn Sie eine erweiterte Ereignissitzung ausführen, die das Ereignis *query_thread_profile* verwendet, dann wird die [sys.dm_exec_query_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)-DMV ebenfalls unter Verwendung von einfacher Profilerstellung mit Daten aufgefüllt. Dies ermöglicht Live-Abfragestatistiken für alle Sitzungen, indem der [Aktivitätsmonitor](../../relational-databases/performance-monitor/activity-monitor.md) verwendet oder die DMV direkt abgefragt wird.
+Wenn Sie eine erweiterte Ereignissitzung ausführen, die das Ereignis _query_thread_profile* verwendet, dann wird die [sys.dm_exec_query_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)-DMV ebenfalls unter Verwendung von einfacher Profilerstellung mit Daten aufgefüllt. Dies ermöglicht Live-Abfragestatistiken für alle Sitzungen, indem der [Aktivitätsmonitor](../../relational-databases/performance-monitor/activity-monitor.md) verwendet oder die DMV direkt abgefragt wird.
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v2"></a>Einfache Profilerstellungsinfrastruktur für die Abfrageausführungsstatistik v2
 
@@ -94,7 +94,7 @@ Wenn Sie eine erweiterte Ereignissitzung ausführen, die das Ereignis *query_thr
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 enthält eine überarbeitete Version der einfachen Profilerstellung mit minimalem Mehraufwand. Einfache Profilerstellung kann auch global über das [Ablaufverfolgungsflag 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) für die Versionen aktiviert werden, die oben unter *Gilt für* angegeben werden. Eine neue DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) wurde eingeführt, um den Abfrageausführungsplan für In-Flight-Anforderungen zurückzugeben.
 
-Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 gilt Folgendes: Wenn einfache Profilerstellung nicht global aktiviert ist, kann das Argument **QUERY_PLAN_PROFILE** des neuen [USE HINT-Abfragehinweises](../../t-sql/queries/hints-transact-sql-query.md#use_hint) verwendet werden, um einfache Profilerstellung auf Abfrageebene für jede beliebige Sitzung zu aktivieren. Wenn eine Abfrage, die diesen neuen Hinweis enthält, abgeschlossen wird, wird auch ein neues erweitertes Ereignis ***query_plan_profile*** ausgegeben, das XML für einen tatsächlichen Ausführungsplan ähnlich dem erweiterten Ereignis *query_post_execution_showplan* bereitstellt. 
+Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 gilt Folgendes: Wenn einfache Profilerstellung nicht global aktiviert ist, kann das Argument **QUERY_PLAN_PROFILE** des neuen [USE HINT-Abfragehinweises](../../t-sql/queries/hints-transact-sql-query.md#use_hint) verwendet werden, um einfache Profilerstellung auf Abfrageebene für jede beliebige Sitzung zu aktivieren. Wenn eine Abfrage abgeschlossen wird, die diesen neuen Hinweis enthält, wird auch ein neues erweitertes Ereignis **_query_plan_profile_* _ ausgegeben, das XML für einen tatsächlichen Ausführungsplan ähnlich dem erweiterten Ereignis _query_post_execution_showplan* bereitstellt. 
 
 > [!NOTE]
 > Das erweiterte Ereignis *query_plan_profile* nutzt zudem die einfache Profilerstellung, auch wenn der Abfragehinweis nicht verwendet wird. 

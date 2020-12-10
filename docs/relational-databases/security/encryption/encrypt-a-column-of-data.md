@@ -18,18 +18,18 @@ ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 882a99eafed8c913ef0edef213b09ef23a0990f7
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+ms.openlocfilehash: 4d1fefc10f19a4b8fda411337cd4b35a6f8f2939
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439334"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442972"
 ---
 # <a name="encrypt-a-column-of-data"></a>Verschlüsseln einer Datenspalte
 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]  
 
-  In diesem Artikel wird beschrieben, wie Sie eine Datenspalte mithilfe der symmetrischen Verschlüsselung in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[tsql](../../../includes/tsql-md.md)]verschlüsseln können. Dies wird manchmal als Verschlüsselung auf Spaltenebene oder Verschlüsselung auf Zellenebene bezeichnet. Dieses Feature befindet sich in der Vorschau für Azure Synapse Analytics (SQL DW).
+  In diesem Artikel wird beschrieben, wie Sie eine Datenspalte mithilfe der symmetrischen Verschlüsselung in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[tsql](../../../includes/tsql-md.md)]verschlüsseln können. Dies wird manchmal als Verschlüsselung auf Spaltenebene oder Verschlüsselung auf Zellenebene bezeichnet. Dieses Feature befindet sich in der Vorschau für Azure Synapse Analytics.
 
 ## <a name="security"></a>Sicherheit  
   
@@ -59,9 +59,9 @@ Erstellen Sie immer eine Sicherung Ihres Datenbankhauptschlüssels. Weitere Info
   
 1. Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
-2. Klicken Sie in der Standardleiste auf **Neue Abfrage** .  
+2. Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-3. Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen** .  
+3. Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
 
     ```sql
     USE AdventureWorks2012;  
@@ -117,9 +117,9 @@ Erstellen Sie immer eine Sicherung Ihres Datenbankhauptschlüssels. Weitere Info
   
 1. Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
-2. Klicken Sie in der Standardleiste auf **Neue Abfrage** .  
+2. Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-3. Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen** .  
+3. Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
   
     ```sql
     USE AdventureWorks2012;  

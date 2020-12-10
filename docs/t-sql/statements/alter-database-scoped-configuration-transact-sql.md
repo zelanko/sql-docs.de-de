@@ -24,18 +24,18 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: 99d2f29a4e0e1839256acb49b91307e48e39d057
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: 092c6c8b99c7a30ff02aed450a4da9d991d7f3df
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300330"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443031"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-Dieser Befehl aktiviert mehrere Einstellungen für die Datenbankkonfiguration auf der Ebene **einzelner Datenbanken** . 
+Dieser Befehl aktiviert mehrere Einstellungen für die Datenbankkonfiguration auf der Ebene **einzelner Datenbanken**. 
 
 Die folgenden Einstellungen werden, wie durch die Zeile **GILT FÜR** für jede Einstellung im Abschnitt [Argumente](#arguments) angegeben, in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] und in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt: 
 
@@ -58,7 +58,7 @@ Die folgenden Einstellungen werden, wie durch die Zeile **GILT FÜR** für jede 
 - Geben Sie die Anzahl der Minuten an, in denen ein angehaltener fortsetzbarer Indexvorgang angehalten wird, bevor er von der SQL Server-Engine automatisch abgebrochen wird.
 - Aktivieren oder Deaktivieren des Wartens auf Sperren mit niedriger Priorität für asynchrone Statistikupdates
 
-Diese Einstellung ist nur in Azure Synapse Analytics (ehemals SQL DW) verfügbar.
+Diese Einstellung ist nur in Azure Synapse Analytics verfügbar.
 - Festlegen des Kompatibilitätsgrads von Benutzerdatenbanken
 
 ![Linksymbol](../../database-engine/configure-windows/media/topic-link.gif "Linksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
@@ -113,7 +113,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 > -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` wurde in `BATCH_MODE_ADAPTIVE_JOINS` geändert
 
 ```SQL
--- Syntax for Azure Synapse Analytics (Formerly SQL DW)
+-- Syntax for Azure Synapse Analytics
 
 ALTER DATABASE SCOPED CONFIGURATION
 {
@@ -139,7 +139,7 @@ Löscht den Prozedurcache (Plan) für die Datenbank und kann sowohl in den prim�
 
 Geben Sie ein Abfrageplanhandle an, um einen einzelnen Abfrageplan aus dem Plancache zu löschen.
 
-**GILT FÜR** : Abfrageplanhandles können in Azure SQL-Datenbank und SQL Server 2019 oder höher angegeben werden.
+**GILT FÜR**: Abfrageplanhandles können in Azure SQL-Datenbank und SQL Server 2019 oder höher angegeben werden.
 
 MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 
@@ -156,8 +156,8 @@ Informationen zum Festlegen dieser Option auf Instanzebene finden Sie unter [Kon
 > In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ist die datenbankweite Konfiguration von MAXDOP für neue Singletons und elastische Datenbanken in Pools standardmäßig auf 8 begrenzt. Der maximale Grad an Parallelität kann für jede Datenbank, wie im aktuellen Artikel beschrieben, konfiguriert werden. Empfehlungen zur optimalen Konfiguration des maximalen Grads an Parallelität finden Sie im Abschnitt [Weitere Ressourcen](#additional-resources).
 
 > [!TIP]
-> Verwenden Sie den [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP** , um dies auf Abfrageebene zu erreichen.    
-> Verwenden Sie den **MAXDOP** -Wert (maximaler Parallelitätsgrad) der [Serverkonfigurationsoption](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md), um dies auf Serverebene zu erreichen.     
+> Verwenden Sie den [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**, um dies auf Abfrageebene zu erreichen.    
+> Verwenden Sie den **MAXDOP**-Wert (maximaler Parallelitätsgrad) der [Serverkonfigurationsoption](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md), um dies auf Serverebene zu erreichen.     
 > Verwenden Sie die [Resource Governor-Konfigurationsoption **MAX_DOP** für die Arbeitsauslastungsgruppe](../../t-sql/statements/create-workload-group-transact-sql.md), um dies auf Arbeitsauslastungsebene zu erreichen.    
 
 PRIMARY
@@ -166,7 +166,7 @@ Kann nur für die sekundären Datenbanken festgelegt werden, während die betref
 
 LEGACY_CARDINALITY_ESTIMATION **=** { ON | **OFF** | PRIMARY }
 
-Damit können Sie das Kardinalitätsschätzungsmodell für den Abfrageoptimierer unabhängig vom Kompatibilitätsgrad der Datenbank in SQL Server 2012 und früheren Versionen festlegen. Die Standardeinstellung ist **OFF** . Sie legt das Kardinalitätsschätzungsmodell für den Abfrageoptimierer basierend auf dem Kompatibilitätsgrad der Datenbank fest. Das Festlegen von LEGACY_CARDINALITY_ESTIMATION auf **ON** entspricht der Aktivierung des [Ablaufverfolgungsflags 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
+Damit können Sie das Kardinalitätsschätzungsmodell für den Abfrageoptimierer unabhängig vom Kompatibilitätsgrad der Datenbank in SQL Server 2012 und früheren Versionen festlegen. Die Standardeinstellung ist **OFF**. Sie legt das Kardinalitätsschätzungsmodell für den Abfrageoptimierer basierend auf dem Kompatibilitätsgrad der Datenbank fest. Das Festlegen von LEGACY_CARDINALITY_ESTIMATION auf **ON** entspricht der Aktivierung des [Ablaufverfolgungsflags 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 > [!TIP]
 > Fügen Sie den [Abfragehinweis](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) **QUERYTRACEON** hinzu, um dies auf Abfrageebene zu erreichen.
@@ -181,7 +181,7 @@ PARAMETER_SNIFFING **=** { **ON** | OFF | PRIMARY}
 Aktiviert oder deaktiviert die [Parameterermittlung](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing). Der Standardwert ist ON. Das Festlegen von PARAMETER_SNIFFING auf OFF entspricht der Aktivierung des [Ablaufverfolgungsflags 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 > [!TIP]
-> Informationen darüber, wie Sie dies auf Abfrageebene erreichen, finden Sie unter dem [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) **OPTIMIZE FOR UNKNOWN** .
+> Informationen darüber, wie Sie dies auf Abfrageebene erreichen, finden Sie unter dem [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) **OPTIMIZE FOR UNKNOWN**.
 > Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 ist der [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md#use_hint) **USE HINT** auch verfügbar, damit dies auf Abfrageebene erreicht werden kann.
 
 PRIMARY
@@ -190,9 +190,9 @@ Dieser Wert ist nur für sekundäre Datenbanken gültig, während die betreffend
 
 <a name="qo_hotfixes"></a> QUERY_OPTIMIZER_HOTFIXES **=** { ON | **OFF** | PRIMARY }
 
-Aktiviert oder deaktiviert Hotfixes für die Abfrageoptimierung unabhängig vom Kompatibilitätsgrad der Datenbank. Die Standardeinstellung ist **OFF** . Sie deaktiviert Hotfixes für Abfrageoptimierer, die nach der Einführung des höchsten verfügbaren Kompatibilitätsgrads für eine bestimmte Version (post-RTM) veröffentlicht wurden. Ein Festlegen dieser Einstellung auf **ON** entspricht der Aktivierung des [Ablaufverfolgungsflags 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
+Aktiviert oder deaktiviert Hotfixes für die Abfrageoptimierung unabhängig vom Kompatibilitätsgrad der Datenbank. Die Standardeinstellung ist **OFF**. Sie deaktiviert Hotfixes für Abfrageoptimierer, die nach der Einführung des höchsten verfügbaren Kompatibilitätsgrads für eine bestimmte Version (post-RTM) veröffentlicht wurden. Ein Festlegen dieser Einstellung auf **ON** entspricht der Aktivierung des [Ablaufverfolgungsflags 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
-**GILT FÜR** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**GILT FÜR**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 > [!TIP]
 > Fügen Sie den [Abfragehinweis](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) **QUERYTRACEON** hinzu, um dies auf Abfrageebene zu erreichen.
@@ -204,16 +204,16 @@ Dieser Wert ist nur für sekundäre Datenbanken gültig, während die betreffend
 
 IDENTITY_CACHE **=** { **ON** | OFF }
 
-**GILT FÜR** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**GILT FÜR**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-Aktiviert oder deaktiviert den Identitätscache auf Datenbankebene. Der Standardwert ist **ON** . Identitätszwischenspeichern wird verwendet, um die Leistung von INSERT in Tabellen mit Identitätsspalten zu verbessern. Deaktiviert die Option IDENTITY_CACHE, um Lücken in einer Identitätsspalte zu vermeiden, wenn der Server unerwartet neu gestartet oder ein Failover zu einem sekundären Server ausgeführt wird. Diese Option ist mit dem vorhandenen [Ablaufverfolgungsflag 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) vergleichbar. Der einzige Unterschied besteht darin, dass sie auf Datenbankebene und nicht nur auf Serverebene festgelegt werden kann.
+Aktiviert oder deaktiviert den Identitätscache auf Datenbankebene. Der Standardwert ist **ON**. Identitätszwischenspeichern wird verwendet, um die Leistung von INSERT in Tabellen mit Identitätsspalten zu verbessern. Deaktiviert die Option IDENTITY_CACHE, um Lücken in einer Identitätsspalte zu vermeiden, wenn der Server unerwartet neu gestartet oder ein Failover zu einem sekundären Server ausgeführt wird. Diese Option ist mit dem vorhandenen [Ablaufverfolgungsflag 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) vergleichbar. Der einzige Unterschied besteht darin, dass sie auf Datenbankebene und nicht nur auf Serverebene festgelegt werden kann.
 
 > [!NOTE]
 > Diese Option kann nur für PRIMARY festgelegt werden. Weitere Informationen finden Sie unter [Identitätsspalten](create-table-transact-sql-identity-property.md).
 
 INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
 
-**GILT FÜR** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**GILT FÜR**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren der verschachtelten Ausführung für Tabellenwertfunktionen mit mehreren Anweisungen im Datenbank- oder Anweisungsbereich. Dabei kann ein Datenbank-Kompatibilitätsgrad von mindestens 140 beibehalten werden. Verschachtelte Funktionen stellen ein Feature der adaptiven Abfrageverarbeitung in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] dar. Weitere Informationen finden Sie unter [Intelligente Abfrageverarbeitung in SQL-Datenbanken](../../relational-databases/performance/intelligent-query-processing.md).
 
@@ -224,7 +224,7 @@ Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren der verschachtelten Ausführu
 
 BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 
-**GILT FÜR** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**GILT FÜR**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren von Feedback zur Speicherzuweisung im Batchmodus im Datenbankbereich. Dabei kann ein Datenbank-Kompatibilitätsgrad von mindestens 140 beibehalten werden. Das Feedback zur Speicherzuweisung im Batchmodus stellt einen Bestandteil der [intelligenten Abfrageverarbeitung](../../relational-databases/performance/intelligent-query-processing.md) dar, die in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] eingeführt wurde.
 
@@ -233,7 +233,7 @@ Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren von Feedback zur Speicherzuwe
 
 BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}
 
-**GILT FÜR** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**GILT FÜR**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren von adaptiven Joins im Batchmodus im Datenbankbereich. Dabei kann ein Datenbank-Kompatibilitätsgrad von mindestens 140 beibehalten werden. Adaptive Joins im Batchmodus stellen einen Bestandteil der [intelligenten Abfrageverarbeitung](../../relational-databases/performance/intelligent-query-processing.md) dar, die in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] eingeführt wurde.
 
@@ -242,7 +242,7 @@ Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren von adaptiven Joins im Batchm
 
 TSQL_SCALAR_UDF_INLINING **=** { **ON** | OFF }
 
-**GILT FÜR** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (Feature der Public Preview)
+**GILT FÜR**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (Feature der Public Preview)
 
 Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren des Inlining benutzerdefinierter T-SQL-Skalarfunktionen im Datenbankbereich. Dabei kann ein Datenbank-Kompatibilitätsgrad von mindestens 150 beibehalten werden. Das Inlining von benutzerdefinierten T-SQL-Skalarfunktionen gehört zur Featurefamilie der [intelligenten Abfrageverarbeitung](../../relational-databases/performance/intelligent-query-processing.md).
 
@@ -251,7 +251,7 @@ Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren des Inlining benutzerdefinier
 
 ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
-**GILT FÜR** : [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (das Feature befindet sich in der öffentlichen Vorschau)
+**GILT FÜR**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (das Feature befindet sich in der öffentlichen Vorschau)
 
 Ermöglicht es Ihnen, Optionen auszuwählen, die das Modul dazu veranlassen, unterstützte Vorgänge automatisch in den Onlinezustand zu erhöhen. Der Standardwert ist OFF, was bedeutet, dass Vorgänge nicht in den Onlinezustand erhöht werden, es sei denn, dies ist in der Anweisung angegeben. [sys. database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) enthält den aktuellen Wert von ELEVATE_ONLINE. Diese Optionen gelten nur für Vorgänge, die für den Onlinezustand unterstützt werden.
 
@@ -268,7 +268,7 @@ Dieser Wert erhöht Vorgänge, die ONLINE unterstützen. Vorgänge, die den Onli
 
 ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
-**GILT FÜR** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (Feature der Public Preview)
+**GILT FÜR**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (Feature der Public Preview)
 
 Ermöglicht es Ihnen, Optionen auszuwählen, die das Modul dazu veranlassen, unterstützte Vorgänge automatisch in fortsetzbar zu erhöhen. Der Standardwert ist OFF, was bedeutet, dass Vorgänge nicht in fortsetzbar erhöht werden, es sei denn, dies ist in der Anweisung angegeben. [sys. database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) enthält den aktuellen Wert von ELEVATE_RESUMABLE. Diese Optionen gelten nur für Vorgänge, die für fortsetzbar unterstützt werden.
 
@@ -285,13 +285,13 @@ Dieser Wert erhöht Vorgänge, die RESUMABLE unterstützen. Vorgänge, die forts
 
 OPTIMIZE_FOR_AD_HOC_WORKLOADS **=** { ON | **OFF** }
 
-**GILT FÜR** : [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]
+**GILT FÜR**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]
 
 Aktiviert oder deaktiviert einen Stub des kompilierten Plans, der bei der erstmaligen Kompilierung eines Batches im Cache gespeichert werden soll. Der Standardwert ist OFF. Sobald die datenbankweite Konfiguration OPTIMIZE_FOR_AD_HOC_WORKLOADS für eine Datenbank aktiviert ist, wird ein Stub des kompilierten Plans zwischengespeichert, wenn ein Batch zum ersten Mal kompiliert wird. Planstubs weisen im Vergleich zur Größe des vollständigen kompilierten Plans einen niedrigeren Speicherbedarf auf. Wenn ein Batch erneut kompiliert oder ausgeführt wird, wird der Stub des kompilierten Plans entfernt und durch einen vollständigen kompilierten Plan ersetzt.
 
 XTP_PROCEDURE_EXECUTION_STATISTICS **=** { ON | **OFF** }
 
-**GILT FÜR** : [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
+**GILT FÜR**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
 
 Aktiviert oder deaktiviert die Sammlung von Ausführungsstatistiken auf Modulebene für nativ kompilierte T-SQL-Module in der aktuellen Datenbank. Der Standardwert ist OFF. Die Ausführungsstatistiken werden in [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) wiedergegeben.
 
@@ -299,7 +299,7 @@ Ausführungsstatistiken auf Modulebene für nativ kompilierte T-SQL-Module werde
 
 XTP_QUERY_EXECUTION_STATISTICS **=** { ON | **OFF** }
 
-**GILT FÜR** : [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
+**GILT FÜR**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
 
 Aktiviert oder deaktiviert die Sammlung von Ausführungsstatistiken auf Anweisungsebene für nativ kompilierte T-SQL-Module in der aktuellen Datenbank. Der Standardwert ist OFF. Die Ausführungsstatistik wird in [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) und im [Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) wiedergegeben.
 
@@ -309,7 +309,7 @@ Weitere Informationen über die Leistungsüberwachung von nativ kompilierten [!I
 
 ROW_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 
-**GILT FÜR** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (Feature der Public Preview)
+**GILT FÜR**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (Feature der Public Preview)
 
 Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren von Feedback zur Speicherzuweisung im Zeilenmodus im Datenbankbereich. Dabei kann ein Datenbank-Kompatibilitätsgrad von mindestens 150 beibehalten werden. Das Feedback zur Speicherzuweisung im Zeilenmodus stellt einen Bestandteil der [intelligenten Abfrageverarbeitung](../../relational-databases/performance/intelligent-query-processing.md) dar, die in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] eingeführt wurde. Der Zeilenmodus wird in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] unterstützt.
 
@@ -318,7 +318,7 @@ Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren von Feedback zur Speicherzuwe
 
 BATCH_MODE_ON_ROWSTORE **=** { **ON** | OFF}
 
-**GILT FÜR** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (Feature der Public Preview)
+**GILT FÜR**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (Feature der Public Preview)
 
 Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren des Batchmodus bei Rowstore im Datenbankbereich. Dabei kann ein Datenbank-Kompatibilitätsgrad von mindestens 150 beibehalten werden. Der Batchmodus bei Rowstore gehört zur Funktionsfamilie für die [intelligente Abfrageverarbeitung](../../relational-databases/performance/intelligent-query-processing.md).
 
@@ -327,7 +327,7 @@ Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren des Batchmodus bei Rowstore i
 
 DEFERRED_COMPILATION_TV **=** { **ON** | OFF}
 
-**GILT FÜR** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (Feature der Public Preview)
+**GILT FÜR**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (Feature der Public Preview)
 
 Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren der verzögerten Kompilierung von Tabellenvariablen im Datenbankbereich. Dabei kann ein Datenbank-Kompatibilitätsgrad von mindestens 150 beibehalten werden. Die verzögerte Kompilierung von Tabellenvariablen gehört zur Funktionsfamilie für die [intelligente Abfrageverarbeitung](../../relational-databases/performance/intelligent-query-processing.md).
 
@@ -336,7 +336,7 @@ Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren der verzögerten Kompilierung
 
 ACCELERATED_PLAN_FORCING **=** { **ON** | OFF }
 
-**Gilt für** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 Aktiviert einen optimierten Mechanismus für das Erzwingen von Abfrageplänen, der sich auf alle Formen des Erzwingens von Plänen anwenden lässt, wie etwa [Query Store Force Plan](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed), [Automatische Optimierung](../../relational-databases/automatic-tuning/automatic-tuning.md#automatic-plan-correction) oder den Abfragehinweis [USE PLAN](../../t-sql/queries/hints-transact-sql-query.md#use-plan). Der Standardwert ist ON.
 
@@ -345,7 +345,7 @@ Aktiviert einen optimierten Mechanismus für das Erzwingen von Abfrageplänen, d
 
 GLOBAL_TEMPORARY_TABLE_AUTO_DROP **=** { **ON** | OFF }
 
-**GILT FÜR** : [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (das Feature befindet sich in der öffentlichen Vorschau)
+**GILT FÜR**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (das Feature befindet sich in der öffentlichen Vorschau)
 
 Gestattet das Festlegen der Funktion für automatisches Löschen von [globalen temporären Tabellen](../../t-sql/statements/create-table-transact-sql.md#temporary-tables). Der Standardwert ist ON, was bedeutet, dass die globalen temporären Tabellen automatisch gelöscht werden, wenn sie von keiner Sitzung verwendet werden. Wenn sie auf OFF festgelegt ist, müssen globale temporäre Tabellen explizit mithilfe einer DROP TABLE-Anweisung gelöscht werden, oder sie werden beim Serverneustart automatisch gelöscht.
 
@@ -356,15 +356,15 @@ Gestattet das Festlegen der Funktion für automatisches Löschen von [globalen t
 
 LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 
-**GILT FÜR** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**GILT FÜR**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Ermöglicht das Aktivieren oder Deaktivieren der [einfachen Profilerstellungsinfrastruktur für Abfragen](../../relational-databases/performance/query-profiling-infrastructure.md) Die LWP-Abfrageinfrastruktur (Lightweight Profiling) stellt Abfrageleistungsdaten effizienter bereit als standardmäßige Profilerstellungsmechanismen. Sie ist standardmäßig aktiviert.
 
 <a name="verbose-truncation"></a>
 
-VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
+VERBOSE_TRUNCATION_WARNINGS **=** {**ON** | OFF}
 
-**GILT FÜR** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**GILT FÜR**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Ermöglicht Ihnen das Aktivieren oder Deaktivieren der neuen `String or binary data would be truncated`-Fehlermeldung. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] führt eine neue, spezifischere Fehlermeldung (2628) für dieses Szenario ein:
 
@@ -376,15 +376,15 @@ Wenn OFF bei einem Datenbank-Kompatibilitätsgrad unter 150 festgelegt ist, lös
 
 Bei einem Datenbank-Kompatibilitätsgrad von 140 oder niedriger ist die Fehlermeldung 2628 weiterhin eine optionale Fehlermeldung, für die das [Ablaufverfolgungsflag 460](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) aktiviert sein muss. Diese datenbankweite Konfiguration hat keine Auswirkungen.
 
-LAST_QUERY_PLAN_STATS **=** { ON | **OFF** }
+LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
 
-**GILT FÜR** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], Feature der Public Preview)
+**GILT FÜR**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], Feature der Public Preview)
 
 Ermöglicht Ihnen das Aktivieren oder Deaktivieren der Collection der Abfrageplanstatistiken (entspricht einem tatsächlichen Ausführungsplan) in [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
 
 PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES
 
-**GILT FÜR** : ausschließlich Azure SQL-Datenbank
+**GILT FÜR**: ausschließlich Azure SQL-Datenbank
 
 Die Option `PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES` legt fest, wie lange (in Minuten) der fortsetzbare Index angehalten wird, bevor er automatisch von der Engine abgebrochen wird.
 
@@ -395,15 +395,15 @@ Die Option `PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES` legt fest, wie lange 
 
 Der aktuelle Wert für diese Option wird in [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) angezeigt.
 
-ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF** }
+ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
 
-**GILT FÜR** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**GILT FÜR**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Ermöglicht es Ihnen, zu steuern, ob ein Prädikat für die [Sicherheit auf Zeilenebene](../../relational-databases/security/row-level-security.md) (Row-Level Security, RLS) die Kardinalität des Ausführungsplans für die gesamte Benutzerabfrage beeinflusst. Wenn für ISOLATE_SECURITY_POLICY_CARDINALITY ON festgelegt ist, beeinflussen RLS-Prädikate die Kardinalität von Ausführungsplänen nicht. Angenommen, es gibt eine Tabelle mit 1 Million Zeilen und ein RLS-Prädikat, das das Ergebnis für einen bestimmten Benutzer, der die Abfrage durchführt, auf 10 Zeilen beschränkt. Wenn für diese datenbankweite Konfiguration OFF festgelegt ist, schätzt dieses Prädikat die Kardinalität auf 10. Wenn für diese datenbankweite Konfiguration ON festgelegt ist, schätzt die Abfrageoptimierung die Anzahl der Zeilen auf 1 Million. Für die meisten Arbeitsauslastungen wird empfohlen, den Standardwert zu verwenden.
 
-DW_COMPATIBILITY_LEVEL **=** { **AUTO** | 10 | 20 }
+DW_COMPATIBILITY_LEVEL **=** {**AUTO** | 10 | 20 }
 
-**GILT FÜR** : nur Azure Synapse Analytics (ehemals SQL DW)
+**GILT FÜR**: Nur Azure Synapse Analytics
 
 Dieses Argument legt fest, dass das Transact-SQL- und Abfrageverarbeitungsverhalten jeweils mit der angegebenen Version der Datenbank-Engine kompatibel sein muss.  Sobald es festgelegt ist, werden beim Ausführen von Abfragen für die entsprechende Datenbank nur die kompatiblen Features ausgeführt.  Beim Erstellen einer Datenbank wird für den Kompatibilitätsgrad standardmäßig AUTO festgelegt.  Der Kompatibilitätsgrad wird auch nach dem Anhalten/Fortsetzen einer Datenbank sowie Sicherungs-/Wiederherstellungsvorgängen beibehalten. 
 
@@ -413,9 +413,9 @@ Dieses Argument legt fest, dass das Transact-SQL- und Abfrageverarbeitungsverhal
 |**10**| Bei diesem Wert wird das Transact-SQL- und Abfrageverarbeitungsverhalten ausgeführt, bevor Kompatibilitätsgradunterstützung eingeführt wird.|
 |**20**| Hierbei handelt es sich um den ersten Kompatibilitätsgrad mit geschlossenem Transact-SQL- und Abfrageverarbeitungsverhalten. |
 
-ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY **=** { ON | **OFF** }
+ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY **=** { ON | **OFF**}
 
-**GILT FÜR** : Azure SQL-Datenbank (das Feature ist in der öffentlichen Vorschauversion verfügbar)
+**GILT FÜR**: Azure SQL-Datenbank (das Feature ist in der öffentlichen Vorschauversion verfügbar)
 
 Wenn das asynchrone Statistikupdate aktiviert ist, bewirkt das Aktivieren dieser Konfiguration, dass der Hintergrundprozess zum Aktualisieren von Statistiken in einer Warteschlange mit niedriger Priorität auf eine Sch-M-Sperre wartet, um zu verhindern, dass andere Sitzungen in Szenarios mit hoher Parallelität blockiert werden. Weitere Informationen finden Sie unter [AUTO_UPDATE_STATISTICS_ASYNC](../../relational-databases/statistics/statistics.md#auto_update_statistics_async).
 
@@ -559,7 +559,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 
 ### <a name="g-set-identity_cache"></a>G. Festlegen von IDENTITY_CACHE
 
-**GILT FÜR** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (Feature der Public Preview)
+**GILT FÜR**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (Feature der Public Preview)
 
 In diesem Beispiel wird der Identitätscache deaktiviert.
 
@@ -569,7 +569,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE = OFF ;
 
 ### <a name="h-set-optimize_for_ad_hoc_workloads"></a>H. Festlegen von OPTIMIZE_FOR_AD_HOC_WORKLOADS
 
-**GILT FÜR** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**GILT FÜR**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 In diesem Beispiel wird ein Stub des kompilierten Plans aktiviert, der bei der erstmaligen Kompilierung eines Batches im Cache gespeichert werden soll.
 
@@ -579,7 +579,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 
 ### <a name="i-set-elevate_online"></a>I. Festlegen von ELEVATE_ONLINE
 
-**GILT FÜR** : [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (das Feature befindet sich in der öffentlichen Vorschau)
+**GILT FÜR**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (das Feature befindet sich in der öffentlichen Vorschau)
 
 In diesem Beispiel wird ELEVATE_ONLINE auf FAIL_UNSUPPORTED festgelegt.
 
@@ -589,7 +589,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED ;
 
 ### <a name="j-set-elevate_resumable"></a>J. Festlegen von ELEVATE_RESUMABLE
 
-**GILT FÜR** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (das Feature befindet sich in der öffentlichen Vorschau)
+**GILT FÜR**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (das Feature befindet sich in der öffentlichen Vorschau)
 
 In diesem Beispiel wird ELEVATE_RESUMABLE auf WHEN_SUPPORTED festgelegt.
 
@@ -599,7 +599,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
 
 ### <a name="k-clear-a-query-plan-from-the-plan-cache"></a>K. Löschen eines Abfrageplans aus dem Plancache
 
-**GILT FÜR** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**GILT FÜR**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 In diesem Beispiel wird ein bestimmter Plan aus dem Prozedurcache gelöscht.
 
@@ -609,7 +609,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B
 
 ### <a name="l-set-paused-duration"></a>L. Festlegen der Pausendauer
 
-**GILT FÜR** : ausschließlich Azure SQL-Datenbank
+**GILT FÜR**: ausschließlich Azure SQL-Datenbank
 
 In diesem Beispiel wird die Pausendauer des fortsetzbaren Index auf 60 Minuten festgelegt.
 

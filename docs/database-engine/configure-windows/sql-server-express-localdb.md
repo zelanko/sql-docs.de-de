@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1b0fea6ec995f383cd290ebbee786e31623b25f1
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: f290da98335aaf46c3c0d12c94d265f14dc1e2bd
+ms.sourcegitcommit: 773c1203e3c4617606cecb2626f6b2f2c855a53d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91669605"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535284"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -64,6 +64,10 @@ Das Hilfsprogramm `SqlLocalDb` kann neue Instanzen von LocalDB erstellen, eine I
 Die Instanzsortierung für LocalDB ist auf `SQL_Latin1_General_CP1_CI_AS` festgelegt und kann nicht geändert werden. Auf Datenbankebene, Spaltenebene und Ausdrucksebene werden Sortierungen normal unterstützt. Eigenständige Datenbanken basieren auf den Metadaten- und `tempdb`-Sortierungsregeln unter [Enthaltene Datenbanksortierungen](../../relational-databases/databases/contained-database-collations.md).
 
 ### <a name="restrictions"></a>Beschränkungen
+
+- LocalDB kann nicht über Service Packs hinaus gepatcht werden. CUs und Sicherheitsupdates können nicht manuell angewendet werden und werden nicht mit Windows Update, Windows Update for Business oder anderen Methoden angewendet.
+
+- LocalDB kann nicht remote über SQL Management Studio verwaltet werden.
 
 - LocalDB kann nicht als Abonnent für die Mergereplikation hinzugefügt werden.
 

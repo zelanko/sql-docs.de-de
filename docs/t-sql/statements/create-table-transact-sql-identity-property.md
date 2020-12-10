@@ -22,12 +22,12 @@ ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f9508420a8f629a189a1d623e5ac1d310a7f940
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 309243b635cb42b3f4acc62422bdfd3eb4aff807
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257757"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443134"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (Eigenschaft)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "92257757"
   Erstellt eine Identitätsspalte in einer Tabelle. Diese Eigenschaft wird in den [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen CREATE TABLE und ALTER TABLE verwendet.  
   
 > [!NOTE]  
->  Die IDENTITY-Eigenschaft unterscheidet sich von der SQL-DMO-Eigenschaft **IDENTITY** , die die IDENTITY-Eigenschaft für Zeilen einer Spalte verfügbar macht.  
+>  Die IDENTITY-Eigenschaft unterscheidet sich von der SQL-DMO-Eigenschaft **IDENTITY**, die die IDENTITY-Eigenschaft für Zeilen einer Spalte verfügbar macht.  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,7 +57,7 @@ IDENTITY [ (seed , increment) ]
  Der inkrementelle Wert, der zum Identitätswert der zuvor geladenen Zeile addiert wird.
 
  > [!NOTE]
- > In Azure Synapse Analytics sind Werte für die Identität aufgrund der verteilten Architektur des Data Warehouse nicht inkrementell. Weitere Informationen finden Sie unter [Erstellen von Ersatzschlüsseln im Synapse SQL-Pool mit IDENTITY](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#allocation-of-values).
+ > In Azure Synapse Analytics sind Werte für die Identität aufgrund der verteilten Architektur des Data Warehouse nicht inkrementell. Weitere Informationen finden Sie unter [Erstellen von Ersatzschlüsseln in einem Synapse SQL-Pool mit IDENTITY](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#allocation-of-values).
   
  Sie müssen entweder sowohl den Ausgangswert als auch den inkrementellen Wert oder keinen von beiden angeben. Wurden Ausgangswert und inkrementeller Wert nicht angegeben, ist der Standardwert (1,1).  
   
@@ -70,16 +70,16 @@ IDENTITY [ (seed , increment) ]
   
  Die Identitätseigenschaft für eine Spalte garantiert nicht Folgendes:  
   
--   **Eindeutigkeit des Werts** : Die Eindeutigkeit muss mit einer **PRIMARY KEY** - oder **UNIQUE** -Einschränkung bzw. einem **UNIQUE** -Index erzwungen werden. - 
+-   **Eindeutigkeit des Werts**: Die Eindeutigkeit muss mit einer **PRIMARY KEY**- oder **UNIQUE**-Einschränkung bzw. einem **UNIQUE**-Index erzwungen werden. - 
  
 > [!NOTE]
-> Azure Synapse Analytics unterstützt weder **PRIMARY KEY** - oder **UNIQUE** -Einschränkungen noch einen **UNIQUE** -Index. Weitere Informationen finden Sie unter [Erstellen von Ersatzschlüsseln im Synapse SQL-Pool mit IDENTITY](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#what-is-a-surrogate-key).
+> Azure Synapse Analytics unterstützt weder **PRIMARY KEY**- oder **UNIQUE**-Einschränkungen noch einen **UNIQUE**-Index. Weitere Informationen finden Sie unter [Erstellen von Ersatzschlüsseln in einem Synapse SQL-Pool mit IDENTITY](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#what-is-a-surrogate-key).
 
--   **Aufeinanderfolgende Werte innerhalb einer Transaktion** : Bei einer Transaktion, durch die mehrere Zeilen eingefügt werden, ist nicht sichergestellt, dass Sie aufeinanderfolgende Werte für die Zeilen erhalten, da für die Tabelle möglicherweise andere gleichzeitige Einfügungsvorgänge stattfinden. Wenn Werte fortlaufend sein müssen, sollte die Transaktion eine exklusive Sperre für die Tabelle oder die Isolationsstufe **SERIALIZABLE** verwenden.  
+-   **Aufeinanderfolgende Werte innerhalb einer Transaktion**: Bei einer Transaktion, durch die mehrere Zeilen eingefügt werden, ist nicht sichergestellt, dass Sie aufeinanderfolgende Werte für die Zeilen erhalten, da für die Tabelle möglicherweise andere gleichzeitige Einfügungsvorgänge stattfinden. Wenn Werte fortlaufend sein müssen, sollte die Transaktion eine exklusive Sperre für die Tabelle oder die Isolationsstufe **SERIALIZABLE** verwenden.  
   
--   **Aufeinanderfolgende Werte nach Serverneustart oder anderen Fehlern** -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann Identitätswerte aus Leistungsgründen zwischenspeichern. Einige der zugewiesenen Werte können während eines Datenbankausfalls oder Serverneustarts verloren gehen. Dies kann zu Lücken im Identitätswert beim Einfügen führen. Wenn Lücken nicht zulässig sind, sollte die Anwendung ihren eigenen Mechanismus verwenden, um Schlüsselwerte zu generieren. Die Verwendung eines Sequenzgenerators mit der **NOCACHE** -Option kann die Lücken auf Transaktionen beschränken, für die nie ein Commit ausgeführt wird.  
+-   **Aufeinanderfolgende Werte nach Serverneustart oder anderen Fehlern** -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann Identitätswerte aus Leistungsgründen zwischenspeichern. Einige der zugewiesenen Werte können während eines Datenbankausfalls oder Serverneustarts verloren gehen. Dies kann zu Lücken im Identitätswert beim Einfügen führen. Wenn Lücken nicht zulässig sind, sollte die Anwendung ihren eigenen Mechanismus verwenden, um Schlüsselwerte zu generieren. Die Verwendung eines Sequenzgenerators mit der **NOCACHE**-Option kann die Lücken auf Transaktionen beschränken, für die nie ein Commit ausgeführt wird.  
   
--   **Wiederverwendung von Werten** : Für eine bestimmte Identitätseigenschaft mit spezifischem Ausgangswert/Inkrement werden die Identitätswerte von der Engine nicht wiederverwendet. Wenn eine bestimmte INSERT-Anweisung fehlschlägt oder für die INSERT-Anweisung ein Rollback ausgeführt wird, gehen die verwendeten Identitätswerte verloren und werden nicht erneut generiert. Es können Lücken entstehen, wenn die nachfolgenden Identitätswerte generiert werden.  
+-   **Wiederverwendung von Werten**: Für eine bestimmte Identitätseigenschaft mit spezifischem Ausgangswert/Inkrement werden die Identitätswerte von der Engine nicht wiederverwendet. Wenn eine bestimmte INSERT-Anweisung fehlschlägt oder für die INSERT-Anweisung ein Rollback ausgeführt wird, gehen die verwendeten Identitätswerte verloren und werden nicht erneut generiert. Es können Lücken entstehen, wenn die nachfolgenden Identitätswerte generiert werden.  
   
  Diese Einschränkungen sind beabsichtigt, um die Leistung zu verbessern. Ferner sind sie in vielen Situationen akzeptabel. Wenn Sie Identitätswerte aufgrund dieser Einschränkungen nicht verwenden können, sollten Sie eine separate Tabelle mit einem aktuellen Wert erstellen und den Zugriff auf die Tabelle und die Nummernzuweisung für die Anwendung verwalten.  
   

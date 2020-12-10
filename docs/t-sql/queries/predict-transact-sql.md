@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||>=azure-sqldw-latest||=sqlallproducts-allversions'
-ms.openlocfilehash: 6a21506caf12537eb8acab96c97fa53c62b7fadf
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: ff521b8cf230bcb2113937ee6c223b55c61be02a
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116282"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523049"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)
 
@@ -120,9 +120,9 @@ Der DATA-Parameter wird verwendet, um die Daten anzugeben, die für die Bewertun
 **RUNTIME = ONNX**
 
 > [!IMPORTANT]
-> Das Argument `RUNTIME = ONNX` ist nur in [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview) und [Azure SQL Edge](/azure/sql-database-edge/onnx-overview) verfügbar.
+> Das Argument `RUNTIME = ONNX` ist nur in [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview), [Azure SQL Edge](/azure/sql-database-edge/onnx-overview) und [Azure Synapse Analytics](/azure/synapse-analytics/overview-what-is) verfügbar.
 
-Dieses Argument gibt die für die Modellausführung verwendete Machine-Learning-Engine an. Der Wert für den Parameter `RUNTIME` ist immer `ONNX`. Dieser Parameter ist für Azure SQL Edge erforderlich. In Azure SQL Managed Instance ist er optional und wird nur bei der Verwendung von ONNX-Modellen verwendet.
+Dieses Argument gibt die für die Modellausführung verwendete Machine-Learning-Engine an. Der Wert für den Parameter `RUNTIME` ist immer `ONNX`. Dieser Parameter ist für Azure SQL Edge und Azure Synapse Analytics erforderlich. In Azure SQL Managed Instance ist er optional und wird nur bei der Verwendung von ONNX-Modellen verwendet.
 
 **WITH ( <result_set_definition> )**
 
@@ -186,7 +186,7 @@ DECLARE @model VARBINARY(max) = (SELECT test_model FROM scoring_model WHERE mode
 
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = @model,
-    DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
+    DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH (Score FLOAT) AS p;
 ```
 
 ::: moniker-end
@@ -207,7 +207,7 @@ CREATE VIEW predictions
 AS
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
-             DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
+             DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH (Score FLOAT) AS p;
 ```
 
 :::moniker-end
@@ -216,6 +216,8 @@ FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
 
 Einer der gängigsten Anwendungsfälle für die Vorhersage ist das Generieren einer Bewertung für Eingabedaten und das anschließende Einfügen der vorhergesagten Werte in eine Tabelle. Im folgenden Beispiel wird davon ausgegangen, dass die aufrufende Anwendung eine gespeicherte Prozedur verwendet, um eine Zeile mit dem vorhergesagten Wert in eine Tabelle einzufügen:
 
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+
 ```sql
 DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
 
@@ -223,6 +225,20 @@ INSERT INTO loan_applications (c1, c2, c3, c4, score)
 SELECT d.c1, d.c2, d.c3, d.c4, p.score
 FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d) WITH(score FLOAT) AS p;
 ```
+
+:::moniker-end
+
+::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+
+```sql
+DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
+
+INSERT INTO loan_applications (c1, c2, c3, c4, score)
+SELECT d.c1, d.c2, d.c3, d.c4, p.score
+FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH(score FLOAT) AS p;
+```
+
+:::moniker-end
 
 - Die Ergebnisse von `PREDICT` werden in einer Tabelle namens PredictionResults gespeichert. 
 - Das Modell wird als `varbinary(max)`-Spalte in einer Tabelle namens **Models** gespeichert. Weitere Informationen, z. B. die ID und eine Beschreibung, können zur Identifikation des Modells in der Tabelle gespeichert werden.

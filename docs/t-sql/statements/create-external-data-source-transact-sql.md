@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05995a1205677bbeefbb2b025268af20e445a1b4
-ms.sourcegitcommit: ab68925e9869e6cf5b39efdb415ecc8e8f5b08fc
+ms.openlocfilehash: 7888360aa4d4bdfa9b9eb782226f718d8f503ff8
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93417421"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443103"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -63,7 +63,7 @@ Erstellt eine externe Datenquelle für PolyBase-Abfragen. Externe Datenquellen w
 - Datenvirtualisierung und Laden von Dateien mithilfe von [PolyBase][intro_pb]
 - Massenladevorgänge mit `BULK INSERT` oder `OPENROWSET`
 
-**Gilt für** : Seit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]
+**Gilt für**: Seit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]
 
 ## <a name="syntax"></a>Syntax
 
@@ -732,7 +732,7 @@ Gibt die datenbankbezogenen Anmeldeinformationen für die Authentifizierung mit 
 
 Zusätzliche Hinweise und Anweisungen für das Erstellen der Anmeldeinformationen:
 
-- Verwenden Sie einen Azure Storage-Schlüssel, um Daten aus Azure Storage oder Azure Data Lake Storage Gen2 (ADLS) in SQL DW zu laden.
+- Verwenden Sie einen Azure Storage-Schlüssel, um Daten aus Azure Storage oder Azure Data Lake Storage Gen2 (ADLS) in Azure Synapse Analytics zu laden.
 - `CREDENTIAL` ist nur erforderlich, wenn die Daten gesichert wurden. `CREDENTIAL` ist für Datasets, die den anonymen Zugriff zulassen, nicht erforderlich.
 
 Weitere Informationen zum Erstellen datenbankweit gültiger Anmeldeinformationen finden Sie unter [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].

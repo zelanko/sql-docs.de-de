@@ -26,12 +26,12 @@ ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f90d94a11b4e026082bd3be9f25cc7ad7246df9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e5802f6e2a078a50797579f2c03079802be5c097
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006659"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443042"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Massenimport und -export von Daten (SQL Server)
 
@@ -39,7 +39,7 @@ ms.locfileid: "86006659"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt den Massenexport von Daten (*Massendaten*) aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle und den Massenimport in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle oder eine nicht partitionierte Sicht.
 
-- Der*Massenexport* bezieht sich auf das Kopieren von Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle in eine Datendatei.
+- Der *Massenexport* bezieht sich auf das Kopieren von Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle in eine Datendatei.
 - Beim *Massenimport* werden Daten aus einer Datendatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle geladen. Sie können beispielsweise Daten von einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel-Anwendung in eine Datendatei exportieren und dann einen Massenimport der Daten in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle ausführen.
 
 ## <a name="methods-for-bulk-importing-and-exporting-data"></a><a name="MethodsForBuliIE"></a> Methoden für den Massenimport und -export von Daten
@@ -57,7 +57,7 @@ ms.locfileid: "86006659"
 > Regeln zur Verwendung von CSV-Dateien (durch Trennzeichen getrennte Dateien) als Datendatei für den Massenimport von Daten in SQL Server finden Sie unter [Vorbereiten von Daten für den Massenexport oder -import (SQL Server)](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).
 
 > [!NOTE]
-> Nur das Hilfsprogramm „bcp“ wird von Azure SQL Data Warehouse zum Importieren und Exportieren von durch Trennzeichen getrennte Dateien unterstützt.
+> Nur das Hilfsprogramm „bcp“ wird von Azure Synapse Analytics zum Importieren und Exportieren von durch Trennzeichen getrennten Dateien unterstützt.
 
 ## <a name="format-files"></a><a name="FFs"></a> Formatdateien
 

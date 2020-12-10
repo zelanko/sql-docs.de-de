@@ -1,1 +1,1 @@
-Serverloser SQL-Pool (Vorschauversion) in Azure Synapse Analytics
+Serverloser SQL-Pool in Azure Synapse Analytics

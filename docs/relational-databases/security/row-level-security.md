@@ -18,12 +18,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e5ddd76c050e50576a446e8e404b889fcc8fa92d
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 728650497849454ab7c30dae04317a750665a26c
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867959"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442957"
 ---
 # <a name="row-level-security"></a>Sicherheit auf Zeilenebene
 
@@ -208,12 +208,12 @@ CREATE TABLE Sales
  Füllen Sie die Tabelle mit sechs Datenzeilen auf, sodass drei Bestellungen pro Vertriebsmitarbeiter enthalten sind.  
 
 ```sql
-INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
-INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
-INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
-INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
-INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
-INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
+INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
+INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
+INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
+INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
+INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
+INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
 -- View the 6 rows in the table  
 SELECT * FROM Sales;
 ```
@@ -302,8 +302,8 @@ In diesem kurzen Beispiel werden drei Benutzer und eine externe Tabelle mit sech
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
-1. Sie müssen über einen SQL-Pool verfügen. Siehe [Erstellen eines Synapse SQL-Pools](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal).
-1. Der Server, auf dem der SQL-Pool gehostet wird, muss bei AAD registriert sein, und Sie müssen über ein Azure-Speicherkonto mit den Berechtigungen „Speicherblogmitwirkender“ verfügen. Führen Sie [die hier beschriebenen Schritte](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps) aus.
+1. Sie besitzen einen dedizierten SQL-Pool. Siehe [Erstellen eines dedizierten SQL-Pools](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal).
+1. Der Server, auf dem der dedizierte SQL-Pool gehostet wird, muss bei AAD registriert sein, und Sie müssen über ein Azure-Speicherkonto mit den Berechtigungen eines Speicherblogmitwirkenden verfügen. Führen Sie [die hier beschriebenen Schritte](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps) aus.
 1. Erstellen Sie ein Dateisystem fürIhr Azure Storage-Konto. Zeigen Sie Ihr Speicherkonto mit Storage-Explorer an. Klicken Sie mit der rechten Maustaste auf Container, und wählen Sie *Dateisystem erstellen* aus.  
 
 Sobald Sie die Voraussetzungen eingerichtet haben, erstellen Sie drei Benutzerkonten, anhand derer unterschiedliche Zugriffsmöglichkeiten gezeigt werden.
@@ -317,10 +317,10 @@ GO
 CREATE LOGIN Sales2 WITH PASSWORD = '<user_password>'
 GO
 
---run in master and your SQL pool database
-CREATE USER Manager FOR LOGIN Manager;  
-CREATE USER Sales1  FOR LOGIN Sales1;  
-CREATE USER Sales2  FOR LOGIN Sales2 ;
+--run in master and your dedicated SQL pool database
+CREATE USER Manager FOR LOGIN Manager;  
+CREATE USER Sales1  FOR LOGIN Sales1;  
+CREATE USER Sales2  FOR LOGIN Sales2 ;
 ```
 
 Erstellen Sie eine Tabelle zum Speichern von Daten.  
@@ -504,7 +504,7 @@ CREATE SECURITY POLICY Security.SalesFilter
     WITH (STATE = ON);  
 ```
 
-Nun können wir die Verbindungsfilterung durch Auswahl der Tabelle `Sales` simulieren, nachdem in **SESSION_CONTEXT**andere Benutzer-IDs festgelegt wurden. In der Praxis ist die Anwendung nach Öffnen einer Verbindung zuständig für das Festlegen der aktuellen Benutzer-ID in **SESSION_CONTEXT** .
+Nun können wir die Verbindungsfilterung durch Auswahl der Tabelle `Sales` simulieren, nachdem in **SESSION_CONTEXT** andere Benutzer-IDs festgelegt wurden. In der Praxis ist die Anwendung nach Öffnen einer Verbindung zuständig für das Festlegen der aktuellen Benutzer-ID in **SESSION_CONTEXT** .
 
 ```sql
 EXECUTE AS USER = 'AppUser';  

@@ -21,12 +21,12 @@ ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d282a1dca21d2b76925c12dddf3002d159aaec64
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: f7911d4f096c8b90b2ee01341405acd561c46ec9
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116517"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443122"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -90,7 +90,7 @@ Ein Ausdruck, der den Namen der zurückzugebenden Datenbankeigenschaft angibt. *
 |IsXTPSupported|Gibt an, ob die Datenbank In-Memory-OLTP unterstützt, d.h. das Erstellen und Verwenden von speicheroptimierten Tabellen und nativ kompilierten Modulen.<br /><br /> Spezifisch für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> IsXTPSupported ist unabhängig von der Existenz von MEMORY_OPTIMIZED_DATA-Dateigruppen, die für die Erstellung von In-Memory-OLTP-Objekten benötigt werden.|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Ungültige Eingabe, ein Fehler oder nicht anwendbar<br /><br /> Basisdatentyp: **int**|  
 |LastGoodCheckDbTime|Datum und Uhrzeit der letzten Ausführung von DBCC CHECKDB in der angegebenen Datenbank. <sup>1</sup> Wenn DBCC CHECKDB in einer Datenbank noch nicht ausgeführt wurde, wird 1900-01-01 00:00:00.000 zurückgegeben.|**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ab SP2.</br>[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] ab CU9</br>[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] oder höher.</br>Azure SQL-Datenbank.<br/><br/>Ein datetime-Wert<br /><br /> NULL: Ungültige Eingabe<br /><br /> Basisdatentyp: **datetime**| 
 |LCID|Der zur Sortierung verwendete Windows-Gebietsschemabezeichner (LCID, Locale Identifier).|LCID-Wert (im Dezimalformat).<br /><br /> Basisdatentyp: **int**|  
-|MaxSizeInBytes|Maximale Datenbankgröße in Bytes.|**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br />[Azure SQL-Datenbank und Azure Synapse Analytics (SQL DW)](/azure/sql-database/sql-database-single-database-scale#dtu-based-purchasing-model): Der Wert basiert auf SLO, sofern kein zusätzlicher Speicher erworben wurde.<br /><br />[vCore](/azure/sql-database/sql-database-single-database-scale#vcore-based-purchasing-model): Der Wert wird in Inkrementen von 1 GB bis zur Maximalgröße erhöht.<br /><br />NULL: Die Datenbank wurde nicht gestartet.<br /><br /> Basisdatentyp: **bigint**|  
+|MaxSizeInBytes|Maximale Datenbankgröße in Bytes.|**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br />[Azure SQL-Datenbank und Azure Synapse Analytics](/azure/sql-database/sql-database-single-database-scale#dtu-based-purchasing-model): Der Wert basiert auf SLO, sofern kein zusätzlicher Speicher erworben wurde.<br /><br />[vCore](/azure/sql-database/sql-database-single-database-scale#vcore-based-purchasing-model): Der Wert wird in Inkrementen von 1 GB bis zur Maximalgröße erhöht.<br /><br />NULL: Die Datenbank wurde nicht gestartet.<br /><br /> Basisdatentyp: **bigint**|  
 |Wiederherstellung|Datenbank-Wiederherstellungsmodell|FULL: Vollständiges Wiederherstellungsmodell<br /><br /> BULK_LOGGED: Massenprotokolliertes Modell<br /><br /> SIMPLE: Einfaches Wiederherstellungsmodell<br /><br /> Basisdatentyp: **nvarchar(128)**|  
 |ServiceObjective|Beschreibt die Leistungsstufe der Datenbank in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] oder [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|Einer der folgenden:<br /><br /> NULL = Die Datenbank wurde nicht gestartet.<br /><br /> Freigegeben (für Web/Business-Editionen)<br /><br /> Basic<br /><br /> S0<br /><br /> S1<br /><br /> S2<br /><br /> S3<br /><br /> P1<br /><br /> P2<br /><br /> P3<br /><br /> ElasticPool<br /><br /> System (für die master-Datenbank)<br /><br /> Basisdatentyp: **nvarchar(32)**|  
 |ServiceObjectiveId|Die ID des Dienstziels in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|**uniqueidentifier**, die das Dienstziel identifiziert.|  

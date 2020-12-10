@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 11462e9c55f22e16fb3e20920c104bf1047d8991
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: 3ab1841c009094831ae114d701d526a1d3036dba
+ms.sourcegitcommit: 773c1203e3c4617606cecb2626f6b2f2c855a53d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523845"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535274"
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase-Erweiterungsgruppen
 
@@ -35,11 +35,11 @@ Siehe [Get started with PolyBase](./polybase-guide.md) (Erste Schritte mit PolyB
   
 ## <a name="head-node"></a>Hauptknoten  
 
-Der Hauptknoten enthält die SQL Server-Instanz, an die die PolyBase-Abfragen geschickt werden. Jede PolyBase-Gruppe kann nur einen Hauptknoten haben. Ein Hauptknoten ist eine logische Gruppe aus SQL-Datenbank-Engine, PolyBase-Engine und PolyBase-Datenverschiebungsdienst auf der SQL Server-Instanz.
+Der Hauptknoten enthält die SQL Server-Instanz, an die die PolyBase-Abfragen geschickt werden. Jede PolyBase-Gruppe kann nur einen Hauptknoten haben. Ein Hauptknoten ist eine logische Gruppe aus SQL Server-Datenbank-Engine, PolyBase-Engine und PolyBase-Datenverschiebungsdienst auf der SQL Server-Instanz. Für SQL Server 2017 und SQL Server 2016 ist ein Enterprise Edition-Hauptknoten erforderlich. Ab SQL Server 2019 ist ein Enterprise oder Standard Edition-PolyBase-Hauptknoten möglich.
   
-## <a name="compute-node"></a>Computeknoten  
+## <a name="compute-node"></a>Computeknoten
 
-Ein Computeknoten enthält die SQL Server-Instanz, die bei der Verarbeitung von Hochskalierungsabfragen für externe Daten hilft. Ein Computeknoten ist eine logische Gruppe aus SQL Server und dem PolyBase-Datenverschiebungsdienst auf der SQL Server-Instanz. Eine PolyBase-Gruppe kann mehrere Computeknoten umfassen. Auf den Hauptknoten und den Computeknoten muss die gleiche Version von SQL Server ausgeführt werden.
+Ein Computeknoten enthält die SQL Server-Instanz, die bei der Verarbeitung von Hochskalierungsabfragen für externe Daten hilft. Ein Computeknoten ist eine logische Gruppe aus SQL Server und dem PolyBase-Datenverschiebungsdienst auf der SQL Server-Instanz. Eine PolyBase-Gruppe kann mehrere Computeknoten umfassen. Auf den Hauptknoten und den Computeknoten muss die gleiche Version von SQL Server ausgeführt werden. Im ersten Release von SQL Server 2016 waren Enterprise oder Standard Edition-Computeknoten möglich. Seit SQL Server 2016 SP1 sind Computeknoten aller Editionen von SQL Server möglich.
 
 ## <a name="scale-out-reads"></a>Horizontale Leseskalierung
 

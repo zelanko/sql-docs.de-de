@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: a8866c438b446715f7e804688f50881e0b0eb167
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 73f9f3a39f5a30fe611c5ec839d8d2c7172206d8
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778439"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761508"
 ---
 # <a name="azure-data-studio-extensibility"></a>Erweiterbarkeit für Azure Data Studio
 
@@ -32,6 +32,9 @@ Zu den wichtigsten Erweiterbarkeitspunkten gehören:
 ## <a name="visual-studio-code-extensibility-apis"></a>Visual Studio Code-Erweiterbarkeits-APIs
 
 Da die Kernplattform von Azure Data Studio auf Visual Studio Code basiert, finden Sie ausführliche Informationen zu den Erweiterbarkeits-APIs von Visual Studio Code in der Dokumentation zu [Erweiterungserstellung](https://code.visualstudio.com/docs/extensions/overview) und [Erweiterungs-APIs](https://code.visualstudio.com/docs/extensionAPI/overview) auf der Visual Studio Code-Website.
+
+> [!NOTE]
+>  Die Releases von Azure Data Studio sind an einer aktuellen Version von VS Code ausgerichtet, doch die enthaltene VS Code-Engine entspricht möglicherweise nicht dem aktuellen VS Code-Release. Beispielsweise entspricht im November 2020 die VS Code-Engine in Azure Data Studio 1.48, die aktuelle VS Code-Version ist jedoch 1.51.  Die Anzeige der Fehlermeldung „Die Erweiterung '<name>' kann nicht installiert werden, weil sie nicht mit VS Code <version> kompatibel ist." bei der Installation einer Erweiterung wird durch eine Erweiterung verursacht, die eine spätere Version der VS Code-Engine enthält als im Paketmanifest (`package.json`) definiert. Sie können die Version der VS Code-Engine in Ihrer Azure Data Studio-Instanz über das Menü **Hilfe** unter **Info** überprüfen.
 
 ## <a name="manage-dashboard-tab-panel-contributions"></a>Verwalten von Beiträgen zum Dashboard-Registerkartenbereich
 

@@ -1,19 +1,19 @@
 ---
 title: Häufig gestellte Fragen zu PolyBase | Microsoft-Dokumentation
-description: Hier werden PolyBase und Verbindungsserver miteinander verglichen, sowie PolyBase in Big Data-Clustern und PolyBase in eigenständigen Instanzen. Neuerungen in PolyBase 2019
-ms.date: 04/23/2019
+description: Hier werden PolyBase und Verbindungsserver sowie PolyBase in Big Data-Clustern und PolyBase in eigenständigen Instanzen miteinander verglichen. Neuerungen in PolyBase 2019
+ms.date: 12/02/2020
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.openlocfilehash: 627afe62630dbca81c77bef45d8263824d8c41df
-ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
+ms.openlocfilehash: 57d59e774c1042bf7989bcd2df4a652ed4498f0d
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "96127855"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563136"
 ---
 # <a name="frequently-asked-questions"></a>Häufig gestellte Fragen
 
@@ -49,19 +49,19 @@ PolyBase in [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] kann ab sofort D
 > [!NOTE]
 > Mit PolyBase sind jetzt Verbindungen zu externen Datenquellen über ODBC-Treiber von Drittanbietern möglich. Diese Treiber sind nicht im Lieferumfang von PolyBase enthalten und funktionieren ggf. nicht wie vorgesehen. Weitere Informationen finden Sie in unserer [Anleitung](../../relational-databases/polybase/polybase-configure-odbc-generic.md) zur generischen ODBC-Konfiguration in PolyBase.  
 
-## <a name="polybase-in-big-data-clusters-vs-polybase-in-stand-alone-instances"></a>PolyBase in Big Data-Clustern im Vergleich zu PolyBase in eigenständigen Instanzen
+## <a name="polybase-in-big-data-clusters-vs-polybase-in-stand-alone-instances"></a>PolyBase in Big Data-Clustern im Vergleich zu PolyBase in eigenständigen Instanzen
 
 Die folgende Tabelle zeigt die Features von PolyBase, die in der eigenständigen Installation von [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] und im Big Data-Cluster von [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] verfügbar sind:
 
 |Funktion |Big Data-Cluster|Eigenständige Instanz|
 |--------------------------|--------------------------|---------|   
-|Erstellen einer externen Datenquelle für SQL Server, Oracle, Teradata und Mongo DB |X|X |
+|Erstellen einer externen Datenquelle für SQL Server, Oracle, Teradata und Mongo DB |X|X|
 |Erstellen einer externe Datenquelle mit einem kompatiblen ODBC-Treibers eines Drittanbieters | | X|
 |Erstellen einer externen Datenquelle für Hadoop-Datenquelle | X| X|
 |Erstellen einer externen Datenquelle für Azure Blob Storage | X| X|
 |Erstellen einer externen Tabelle für einen SQL Server-Datenpool | X| |
 |Erstellen einer externen Tabelle für einen SQL Server-Speicherpool | X| |
-|Horizontale Skalierung der Abfrageausführung | X| X|
+|Horizontale Skalierung der Abfrageausführung | X| X (nur Windows) |
 
 > [!NOTE]
 >In der Tabelle ist nicht die Funktionalität beschrieben, die im neuesten [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] CTP verfügbar ist. Die verfügbaren Funktionen finden Sie in den Versionshinweisen. Weitere Informationen zu Verbindungen mit dem generischen ODBC-Connector finden Sie in unserer [Anleitung zum Konfigurieren von generischen ODBC-Datentypen](polybase-configure-odbc-generic.md).

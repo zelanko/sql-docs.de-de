@@ -5,23 +5,23 @@ ms.custom: seo-dt-2019
 ms.date: 11/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce39e398db9d3676bc9c6e2257c9847774927e26
-ms.sourcegitcommit: 757b827cf322c9f792f05915ff3450e95ba7a58a
+ms.openlocfilehash: d1171d4f3570c6bcfcf222043c5036de15c98241
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92134868"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595141"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Intelligente Abfrageverarbeitung in SQL-Datenbanken
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Die Featurefamilie „Intelligente Abfrageverarbeitung“ (Intelligent Query Processing, IQP) umfasst Features mit weitreichenden Auswirkungen, die die Leistung vorhandener Workloads mit minimalem Implementierungsaufwand verbessern. 
 
@@ -40,8 +40,8 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 
 In der folgenden Tabelle sind Details zu allen Features der intelligenten Abfrageverarbeitung dargestellt, sowie deren jeweiligen Anforderungen für den Datenbank-Kompatibilitätsgrad.
 
-| **IQP-Feature** | **Unterstützt in Azure SQL-Datenbank** | **Unterstützt in SQL Server** |**Beschreibung** |
-| --- | --- | --- |--- |
+| **IQP-Feature** | **Unterstützt in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]** | **Unterstützt in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** |**Beschreibung** |
+| ---------------- | ------- | ------- | ---------------- |
 | [Adaptive Joins (Batchmodus)](#batch-mode-adaptive-joins) | Ja, unter Kompatibilitätsgrad 140| Ja, ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] unter Kompatibilitätsgrad 140|Adaptive Joins wählen je nach tatsächlichen Eingabezeilen während der Laufzeit dynamisch einen Jointyp aus.|
 | [Approximate Count Distinct](#approximate-query-processing) | Ja| Ja, ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|Stellt die geschätzte Abfrageverarbeitung für Big Data-Szenarios mit dem Vorteil einer hohen Leistung und einem niedrigen Speicherbedarf bereit. |
 | [Batchmodus bei Rowstore](#batch-mode-on-rowstore) | Ja, unter Kompatibilitätsgrad 150| Ja, ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] unter Kompatibilitätsgrad 150|Stellt den Batchmodus für CPU-gebundene relationale Data Warehouse-Workloads bereit, ohne Columnstore-Indizes zu benötigen.  | 
@@ -136,7 +136,7 @@ Um Feedback zur Speicherzuweisung im Zeilenmodus in [!INCLUDE[ssSDSfull](../../i
 
 Die Feedbackaktivität zur Speicherzuweisung im Zeilenmodus wird über das XEvent-Ereignis **memory_grant_updated_by_feedback** angezeigt. 
 
-Seitdem das Feedback zur Speicherzuweisung im Zeilenmodus verfügbar ist, werden zwei neue Abfrageplanattribute für die tatsächlichen Pläne nach der Ausführung angezeigt: ***IsMemoryGrantFeedbackAdjusted*** und ***LastRequestedMemory***. Diese werden dem XML-Element des *MemoryGrantInfo*-Abfrageplans hinzugefügt. 
+Seitdem Feedback zur Speicherzuweisung im Zeilenmodus verfügbar ist, werden zwei neue Abfrageplanattribute für die tatsächlichen Pläne nach der Ausführung angezeigt: **_IsMemoryGrantFeedbackAdjusted_* _ und _*_LastRequestedMemory_*_. Diese werden dem XML-Element des _MemoryGrantInfo*-Abfrageplans hinzugefügt. 
 
 *LastRequestedMemory* zeigt den zugewiesenen Speicher in KB von der vorherigen Abfrageausführung an. Mit dem Attribut *IsMemoryGrantFeedbackAdjusted* können Sie den Feedbackstatus einer Speicherzuweisung für die Anweisung in einem Abfrageausführungsplan überprüfen. Folgende Werte werden in diesem Attribut angezeigt:
 
@@ -319,14 +319,14 @@ SELECT L_OrderKey, L_Quantity
 FROM dbo.lineitem
 WHERE L_Quantity = 5;
 
-SELECT  O_OrderKey,
+SELECT O_OrderKey,
     O_CustKey,
     O_OrderStatus,
     L_QUANTITY
 FROM    
     ORDERS,
     @LINEITEMS
-WHERE   O_ORDERKEY  =   L_ORDERKEY
+WHERE    O_ORDERKEY    =    L_ORDERKEY
     AND O_OrderStatus = 'O'
 OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
 ```
@@ -391,7 +391,6 @@ Legen Sie für die Datenbank den Kompatibilitätsgrad 150 fest. Es sind keine we
 Auch wenn eine Abfrage nicht auf Tabellen mit Columnstore-Indizes zugreift, verwendet der Abfrageprozessor Heuristik, um zu entscheiden, ob der Batchmodus berücksichtigt wird. Die Heuristik umfasst diese Überprüfungen:
 1. Ein erstes Überprüfen der Tabellengrößen, verwendeten Operatoren und geschätzten Kardinalitäten in der Eingabeabfrage.
 2. Weitere Prüfpunkte kommen hinzu, wenn der Abfrageoptimierer neue, kostengünstigere Pläne für die Abfrage entdeckt. Wenn diese alternativen Pläne keine signifikante Verwendung des Batchmodus aufweisen, beendet der Optimierer die Untersuchung von Batchmodusalternativen.
-
 
 Wenn der Batch-modus bei Rowstow verwendet wird, sehen Sie den tatsächlichen Ausführungsmodus als **Batchmodus** im Abfrageplan. Der Scan-Operator verwendet den Batchmodus für On-Disk-Heaps und B-Struktur-Indizes. Diese Überprüfung im Batchmodus kann Batchmodus-Bitmapfilter auswerten. Vielleicht finden Sie auch andere Batchmodusoperatoren im Plan. Beispielsweise Hashjoins, hashbasierte Aggregate, Sortierungen, Fensteraggregate, Filter, Verkettung und Skalarwertberechnungs-Operatoren.
 

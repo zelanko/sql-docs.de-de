@@ -1,5 +1,5 @@
 ---
-title: COPY INTO – Transact-SQL (Vorschau)
+title: COPY INTO (Transact-SQL)
 titleSuffix: (Azure Synapse Analytics) - SQL Server
 description: Verwenden Sie die COPY-Anweisung in Azure Synapse Analytics zum Laden aus externen Speicherkonten.
 ms.date: 09/25/2020
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 0951081be190fff9c2d7f88d28f88b14f793eb43
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: a6cb58245e4128b58e237d61e2a278ea039afe9c
+ms.sourcegitcommit: dc858552f0c9314b3411e630bbd9bbce65f85913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300287"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96787997"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -45,7 +45,7 @@ In den folgenden Dokumentationen finden Sie umfassende Beispiele und Schnellstar
 
 - [Schnellstart: Massenladen von Daten mit der COPY-Anweisung](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
 - [Schnellstart: Beispiele zur Verwendung der COPY-Anweisung und der unterstützten Authentifizierungsmethoden](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
-- [Schnellstart: Erstellen der COPY-Anweisung mithilfe der umfassenden Benutzeroberfläche von Synapse Studio (Vorschau für Arbeitsbereiche)](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
+- [Schnellstart: Erstellen der COPY-Anweisung mithilfe der umfassenden Benutzeroberfläche von Synapse Studio](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
 
 ## <a name="syntax"></a>Syntax  
 
@@ -85,9 +85,9 @@ Eine optionale Liste mit einer oder mehreren Spalten, mit denen Quelldatenfelder
 
 [(Spaltenname [Standardwert] [Feldnummer] [,...n])]
 
-- *Spaltenname* : Der Name der Spalte in der Zieltabelle.
-- *Standardwert* : Der Standardwert, durch den alle NULL-Werte in der Eingabedatei ersetzt werden. Der Standardwert gilt für alle Dateiformate. Beim COPY-Vorgang wird versucht, NULL aus der Eingabedatei zu laden, wenn eine Spalte aus der Spaltenliste ausgelassen wird oder ein leeres Eingabedateifeld vorhanden ist.
-- *Feldnummer* : Die Feldnummer der Eingabedatei, die dem Namen der Zielspalte zugeordnet wird.
+- *Spaltenname*: Der Name der Spalte in der Zieltabelle.
+- *Standardwert*: Der Standardwert, durch den alle NULL-Werte in der Eingabedatei ersetzt werden. Der Standardwert gilt für alle Dateiformate. Beim COPY-Vorgang wird versucht, NULL aus der Eingabedatei zu laden, wenn eine Spalte aus der Spaltenliste ausgelassen wird oder ein leeres Eingabedateifeld vorhanden ist.
+- *Feldnummer*: Die Feldnummer der Eingabedatei, die dem Namen der Zielspalte zugeordnet wird.
 - Die Feldindizierung beginnt bei 1.
 
 Wenn keine Spaltenliste angegeben wird, ordnet COPY die Spalten auf Grundlage der Quell- und Zielordnung zu: Eingabefeld 1 wird Zielspalte 1 zugeordnet, Feld 2 wird Spalte 2 zugeordnet usw.
@@ -101,11 +101,11 @@ Speicherorte, wo die Dateien bereitgestellt werden, die die Daten enthalten. Der
 > [!NOTE]  
 > Der .blob-Endpunkt ist auch für ADLS Gen2 verfügbar und führt derzeit zur besten Leistung. Verwenden Sie den .blob-Endpunkt, wenn .dfs für Ihre Authentifizierungsmethode nicht erforderlich ist.
 
-- *Konto* : Der Speicherkontoname
+- *Konto*: Der Speicherkontoname
 
-- *Container* : Der Blobcontainername
+- *Container*: Der Blobcontainername
 
-- *Pfad* : Der Ordner- oder Dateipfad für die Daten. Der Speicherort beginnt im Container. Wenn ein Ordner angegeben wird, ruft COPY alle Dateien aus dem Ordner und seinen Unterordnern ab. COPY ignoriert ausgeblendete Ordner, und es werden keine Dateien zurückgegeben, die mit einem Unterstrich (_) oder einem Punkt (.) beginnen, es sei denn, sie werden explizit im Pfad angegeben. Dieses Verhalten gilt auch dann, wenn ein Pfad mit einem Platzhalter angegeben wird.
+- *Pfad*: Der Ordner- oder Dateipfad für die Daten. Der Speicherort beginnt im Container. Wenn ein Ordner angegeben wird, ruft COPY alle Dateien aus dem Ordner und seinen Unterordnern ab. COPY ignoriert ausgeblendete Ordner, und es werden keine Dateien zurückgegeben, die mit einem Unterstrich (_) oder einem Punkt (.) beginnen, es sei denn, sie werden explizit im Pfad angegeben. Dieses Verhalten gilt auch dann, wenn ein Pfad mit einem Platzhalter angegeben wird.
 
 Platzhalter können im Pfad enthalten sein, wobei gilt:
 
@@ -141,9 +141,9 @@ Es können nur mehrere Dateispeicherorte aus demselben Speicherkonto und Contain
 |  **Azure Blob Storage**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |                      SAS/KEY                       |                      SAS/KEY                       |
 | **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD |
 
-1: Der .blob-Endpunkt ( **.blob** .core.windows.net) unter Ihrem externen Speicherortpfad ist für diese Authentifizierungsmethode erforderlich.
+1: Der .blob-Endpunkt ( **.blob**.core.windows.net) unter Ihrem externen Speicherortpfad ist für diese Authentifizierungsmethode erforderlich.
 
-2: Der .dfs-Endpunkt ( **.dfs** .core.windows.net) unter Ihrem externen Speicherortpfad ist für diese Authentifizierungsmethode erforderlich.
+2: Der .dfs-Endpunkt ( **.dfs**.core.windows.net) unter Ihrem externen Speicherortpfad ist für diese Authentifizierungsmethode erforderlich.
 
 
 > [!NOTE]  
@@ -179,7 +179,7 @@ Es können nur mehrere Dateispeicherorte aus demselben Speicherkonto und Contain
   - Mindestens erforderliche RBAC-Rollen: Mitwirkender von Speicherblobdaten oder Besitzer von Speicherblobdaten für den AAD-Benutzer
 
 *ERRORFILE = Verzeichnisspeicherort*</br>
-*ERRORFILE* gilt nur für CSV. Gibt in der COPY-Anweisung das Verzeichnis an, in das die abgelehnten Zeilen und die entsprechende Fehlerdatei geschrieben werden sollen. Der vollständige Pfad vom Speicherkonto oder der relative Pfad zum Container kann angegeben werden. Ist der angegebene Pfad nicht vorhanden, wird ein Pfad für Sie erstellt. Es wird ein untergeordnetes Verzeichnis mit dem Namen „ _rejectedrows“ erstellt. Mit dem „_ “-Zeichen wird sichergestellt, dass das Verzeichnis für andere Datenverarbeitungsvorgänge übergangen wird, es sei denn, es ist explizit im LOCATION-Parameter angegeben. 
+*ERRORFILE* gilt nur für CSV. Gibt in der COPY-Anweisung das Verzeichnis an, in das die abgelehnten Zeilen und die entsprechende Fehlerdatei geschrieben werden sollen. Der vollständige Pfad vom Speicherkonto oder der relative Pfad zum Container kann angegeben werden. Ist der angegebene Pfad nicht vorhanden, wird ein Pfad für Sie erstellt. Es wird ein untergeordnetes Verzeichnis mit dem Namen „_rejectedrows“ erstellt. Mit dem „_ “-Zeichen wird sichergestellt, dass das Verzeichnis für andere Datenverarbeitungsvorgänge übergangen wird, es sei denn, es ist explizit im LOCATION-Parameter angegeben. 
 
 In diesem Verzeichnis befindet sich ein Ordner, der ausgehend von der Zeit der Lastübermittlung im Format „JahrMonatTag-StundeMinuteSekunde“ erstellt wurde (z.B. 20180330-173205). In diesen Ordner werden zwei Dateitypen geschrieben: die Ursachendatei (Fehler) und die Datendatei (Zeile), denen jeweils queryID, distributionID und eine Datei-GUID vorangestellt werden. Da die Daten und die Ursache in getrennten Dateien gespeichert sind, haben die zugehörigen Dateien ein entsprechendes Präfix.
 
@@ -262,7 +262,7 @@ DATEFORMAT gilt nur für CSV und gibt das Datumsformat der Datumszuordnung zu SQ
 *ENCODING* gilt nur für CSV. Der Standardwert ist UTF8. Gibt den Datencodierungsstandard für die Dateien an, die vom COPY-Befehl geladen werden. 
 
 *IDENTITY_INSERT = ‘ON’ | ‘OFF’*</br>
-IDENTITY_INSERT gibt an, ob die Identitätswerte oder Werte in der importierten Datendatei für die Identitätsspalte verwendet werden sollen. Wenn IDENTITY_INSERT auf OFF gesetzt ist (Standard), werden die Identitätswerte für diese Spalte überprüft, aber nicht importiert. SQL DW weist automatisch eindeutige Werte auf Basis des Ausgangswerts und der inkrementellen Werte zu, die bei der Tabellenerstellung angegeben werden. Beachten Sie das folgende Verhalten beim COPY-Befehl:
+IDENTITY_INSERT gibt an, ob die Identitätswerte oder Werte in der importierten Datendatei für die Identitätsspalte verwendet werden sollen. Wenn IDENTITY_INSERT auf OFF gesetzt ist (Standard), werden die Identitätswerte für diese Spalte überprüft, aber nicht importiert. Azure Synapse Analytics weist automatisch eindeutige Werte auf Basis des Ausgangswerts und der inkrementellen Werte zu, die bei der Tabellenerstellung angegeben werden. Beachten Sie das folgende Verhalten beim COPY-Befehl:
 
 - Wenn IDENTITY_INSERT auf OFF gesetzt ist und die Tabelle eine Identitätsspalte aufweist
   - Es muss eine Spaltenliste angegeben werden, die der Identitätsspalte kein Eingabefeld zuordnet.
@@ -433,17 +433,6 @@ Das Aufteilen von Parquet- und ORC-Dateien ist nicht erforderlich, da der COPY-B
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>Gibt es Einschränkungen hinsichtlich der Anzahl oder Größe von Dateien?
 Es gibt keine Einschränkungen in Bezug auf die Anzahl oder Größe von Dateien. Um eine optimale Leistung zu erzielen, wird jedoch eine Dateigröße von mindestens 4 MB empfohlen.
 
-### <a name="are-there-any-limitations-with-copy-using-synapse-workspaces-preview"></a>Gibt es Einschränkungen beim COPY-Befehl in Synapse-Arbeitsbereichen (Vorschau)?
-
-Die Authentifizierung über eine verwaltete Identität wird mit der COPY-Anweisung und mit PolyBase nicht unterstützt (auch nicht bei Verwendung in Pipelines). Möglicherweise wird eine Fehlermeldung wie die folgende angezeigt:
-
-*com.microsoft.sqlserver.jdbc.SQLServerException: Eine verwaltete Dienstidentität wurde auf diesem Server nicht aktiviert. Aktivieren Sie die verwaltete Dienstidentität, und versuchen Sie es noch mal.*
-
-Wenn das Speicherkonto mit einem VNET verknüpft wird, ist eine MSI-Authentifizierung erforderlich. In diesem Fall müssen Sie zum Laden von Daten BCP/BULK INSERT anstelle von COPY oder PolyBase verwenden.
-
-Diese Einschränkung gilt nur für SQL-Pools, die zu einem Synapse-Arbeitsbereich gehören (Vorschau). Die Unterstützung für MSI in Synapse-Arbeitsbereichen wird in einem zukünftigen Release hinzugefügt. 
-
-Senden Sie Feedback oder Probleme an die folgende Verteilerliste: sqldwcopypreview@service.microsoft.com
 
 ## <a name="see-also"></a>Weitere Informationen  
 

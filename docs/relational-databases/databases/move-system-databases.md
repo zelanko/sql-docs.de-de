@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c9edfd5b460a6a6b80900e1beced674b80bfce93
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: a72ccacd9401a8b7955eae10751c5ac67ca211ac
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195012"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523059"
 ---
 # <a name="move-system-databases"></a>Verschieben von Systemdatenbanken
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "92195012"
 >  Wenn Sie eine Systemdatenbank verschieben und anschließend die master-Datenbank neu erstellen, müssen Sie die Systemdatenbank erneut verschieben, da bei der Neuerstellung alle Systemdatenbanken an ihrem standardmäßigen Speicherort installiert werden.  
 
 > [!IMPORTANT]  
->  Nach dem Verschieben der Dateien muss das [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] -Dienstkonto über Zugriffsberechtigungen für die Dateien an ihren neuen Speicherorten verfügen.
+>  Nach dem Verschieben der Dateien muss das [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]-Dienstkonto über Zugriffsberechtigungen für die Dateien an ihren neuen Dateiordner-Speicherorten verfügen. Weitere Informationen finden Sie unter [Konfigurieren von Dateisystemberechtigungen für den Datenbank-Engine-Zugriff](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md).
     
   
 ##  <a name="planned-relocation-and-scheduled-disk-maintenance-procedure"></a><a name="Planned"></a> Prozedur zur geplanten Verschiebung und planmäßigen Datenträgerwartung  
@@ -147,7 +147,7 @@ ms.locfileid: "92195012"
   
 1.  Zeigen Sie im Menü **Start** auf **Alle Programme**, auf **Microsoft SQL Server 2005**, auf **Konfigurationstools**, und klicken Sie dann auf **SQL Server-Konfigurations-Manager**.  
   
-2.  Klicken Sie im Knoten **SQL Server-Dienste** mit der rechten Maustaste auf die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (z. B. **SQL Server (MSSQLSERVER)** ), und wählen Sie **Eigenschaften**aus.  
+2.  Klicken Sie im Knoten **SQL Server-Dienste** mit der rechten Maustaste auf die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (z. B. **SQL Server (MSSQLSERVER)** ), und wählen Sie **Eigenschaften** aus.  
   
 3.  Klicken Sie im Dialogfeld **Eigenschaften von SQL Server (** _Instanzname_ **)** auf die Registerkarte **Startparameter** .  
   
@@ -171,7 +171,7 @@ ms.locfileid: "92195012"
   
      `-lE:\SQLData\mastlog.ldf`  
   
-6.  Beenden Sie die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , indem Sie mit der rechten Maustaste auf den Instanznamen klicken und **Beenden**auswählen.  
+6.  Beenden Sie die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , indem Sie mit der rechten Maustaste auf den Instanznamen klicken und **Beenden** auswählen.  
   
 7.  Verschieben Sie die Dateien master.mdf und mastlog.ldf an den neuen Speicherort.  
   
@@ -211,9 +211,9 @@ ms.locfileid: "92195012"
   
 1.  Klicken Sie in SQL Server Management Studio im Objekt-Explorer mit der rechten Maustaste auf den SQL Server-Server, und klicken Sie dann auf **Eigenschaften**.  
   
-2.  Wählen Sie im Dialogfeld **Servereigenschaften** die Option **Datenbankeinstellungen**aus.  
+2.  Wählen Sie im Dialogfeld **Servereigenschaften** die Option **Datenbankeinstellungen** aus.  
   
-3.  Wechseln Sie unter **Standardspeicherorte für Datenbank**zum neuen Speicherort sowohl für die Daten- als auch die Protokolldatei.  
+3.  Wechseln Sie unter **Standardspeicherorte für Datenbank** zum neuen Speicherort sowohl für die Daten- als auch die Protokolldatei.  
   
 4.  Starten und beenden Sie den SQL Server-Dienst, um die Änderung abzuschließen.  
   

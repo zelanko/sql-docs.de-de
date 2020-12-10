@@ -2,7 +2,7 @@
 title: Definieren der Serialisierung von XML-Daten | Microsoft-Dokumentation
 description: Hier erfahren Sie mehr über die Regeln für die Serialisierung von Daten in SQL Server.
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 12/07/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0ddeb0b98f163feb49eb258db29a58bfa5dd1f57
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 67201804cc1f93a9595ff46c02a57da7ea6e6109
+ms.sourcegitcommit: 68063a1857f40487e6a2028de25990728419e3a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738440"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96749702"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Definieren der Serialisierung von XML-Daten
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "85738440"
   
  Beispiel:  
   
-```  
+```sql
 select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))  
 ```  
   
  Dies ist das Ergebnis:  
   
-```  
+```console
 0xFFFE3C0094032F003E00  
 ```  
   
@@ -49,13 +49,13 @@ select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))
   
  Beispiel:  
   
-```  
+```sql
 select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))  
 ```  
   
  Dies ist das Ergebnis:  
   
-```  
+```console
 <Δ/>  
 ```  
   
@@ -63,7 +63,7 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
   
  Beispiel:  
   
-```  
+```sql
 select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
 ```  
   
@@ -77,21 +77,21 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
 ## <a name="entitization-of-xml-characters-during-serialization"></a>Ändern von XML-Zeichen in Entitäten bei der Serialisierung  
  Jede serialisierte XML-Struktur muss in der Lage sein, neu analysiert zu werden. Deshalb müssen einige Zeichen so serialisiert werden, dass sie in eine Entität geändert werden, damit die Roundtripfähigkeit der Zeichen in der gesamten Normalisierungsphase des XML-Parsers erhalten bleibt. Allerdings müssen einige Zeichen so in Entitäten geändert werden, dass das Dokument wohlgeformt ist und somit analysiert werden kann. Im Folgenden sind die bei der Serialisierung geltenden Regeln für das Ändern in Entitäten aufgeführt:  
   
--   Die Zeichen „&“, und „\<, and >“ werden immer in die Entitäten &amp;, &lt; oder &gt; geändert, wenn sie in einem Attributwert oder Elementinhalt auftreten.  
+-   Die Zeichen „&“, und „\<, and >“ werden immer in die Entitäten `&amp;`, `&lt;` oder `&gt;` geändert, wenn sie in einem Attributwert oder Elementinhalt auftreten.  
   
--   Da SQL Server ein Anführungszeichen (U+0022) zum Einschließen von Attributwerten verwendet, wird das Anführungszeichen in Attributwerten bei der Änderung in Entitäten zu &quot;.  
+-   Da SQL Server ein Anführungszeichen (U+0022) zum Einschließen von Attributwerten verwendet, wird das Anführungszeichen in Attributwerten bei der Änderung in Entitäten zu `&quot;`.  
   
--   Ein Ersatzpaar wird beim Ändern in Entitäten zu einem einzelnen numerischen Zeichenverweis, wenn die Umwandlung nur auf dem Server erfolgt. So wird z.B. das Ersatzpaar U+D800 U+DF00 beim Ändern in Entitäten zum numerischen Zeichenverweis &\#x00010300;.  
+-   Ein Ersatzpaar wird beim Ändern in Entitäten zu einem einzelnen numerischen Zeichenverweis, wenn die Umwandlung nur auf dem Server erfolgt. So wird z. B. das Ersatzpaar U+D800 U+DF00 durch das Ändern in Entitäten zum numerischen Zeichenverweis `&#x00010300;`.  
   
--   Um zu verhindern, dass ein Tabstopp (U+0009) und ein Zeilenvorschub (LF, U+000A) beim Analysieren normalisiert werden, werden sie beim Ändern in Entitäten zu ihren numerischen Zeichenverweisen &\#x9; bzw. &\#xA; innerhalb von Attributwerten.  
+-   Um zu verhindern, dass ein Tabstopp (U+0009) und ein Zeilenvorschub (LF, U+000A) beim Analysieren normalisiert werden, werden sie beim Ändern in Entitäten innerhalb von Attributwerten zu ihren numerischen Zeichenverweisen `&#x9;` bzw. `&#xA;`.  
   
--   Um zu verhindern, dass ein Wagenrücklauf (CR, U+000D) beim Analysieren normalisiert wird, wird er beim Ändern in Entitäten zu seinem numerischen Zeichenverweis &\#xD; sowohl innerhalb von Attributwerten als auch in Elementinhalt.  
+-   Um zu verhindern, dass ein Wagenrücklauf (CR, U+000D) beim Analysieren normalisiert wird, wird er beim Ändern in Entitäten sowohl innerhalb von Attributwerten als auch in Elementinhalt zu seinem numerischen Zeichenverweis `&#xD;`.  
   
 -   Um Textknoten zu schützen, die ausschließlich Leerzeichen enthalten, wird eines der Leerzeichen – zumeist das letzte – beim Ändern in Entitäten zu dessen numerischem Zeichenverweis. Auf diese Weise bleibt der Leerzeichentextknoten beim Neuanalysieren erhalten, und zwar unabhängig von der Einstellung zur Handhabung von Leerzeichen beim Analysieren.  
   
  Beispiel:  
   
-```  
+```sql
 declare @u NVARCHAR(50)  
 set @u = N'<a a="  
     '+NCHAR(0xD800)+NCHAR(0xDF00)+N'>">   '+NCHAR(0xA)+N'</a>'  
@@ -100,7 +100,7 @@ select CAST(CONVERT(XML,@u,1) as NVARCHAR(50))
   
  Dies ist das Ergebnis:  
   
-```  
+```console
 <a a="  
     𐌀>">     
 </a>  
@@ -108,13 +108,13 @@ select CAST(CONVERT(XML,@u,1) as NVARCHAR(50))
   
  Wenn Sie die letzte Leerzeichenschutzregel nicht anwenden wollen, können Sie die explizite CONVERT-Option 1 beim Umwandeln von **xml** in einen Zeichenfolgen- oder Binärtyp verwenden. Sie können z. B. folgende Aktionen ausführen, um das Ändern in Entitäten zu vermeiden:  
   
-```  
+```sql
 select CONVERT(NVARCHAR(50), CONVERT(XML, '<a>   </a>', 1), 1)  
 ```  
   
  Beachten Sie, dass die [query()-Methode (xml-Datentyp)](../../t-sql/xml/query-method-xml-data-type.md) eine xml-Datentypinstanz ergibt. Deshalb wird jedes Ergebnis der **query()** -Methode, das in einen Zeichenfolgen- oder Binärtyp umgewandelt wird, entsprechend den zuvor beschriebenen Regeln in Entitäten geändert. Wenn Sie Zeichenfolgenwerte erhalten wollen, die nicht in Entitäten geändert wurden, sollten Sie stattdessen die [value()-Methode (xml-Datentyp)](../../t-sql/xml/value-method-xml-data-type.md) verwenden. Es folgt ein Beispiel zum Verwenden der **query()** -Methode:  
   
-```  
+```sql
 declare @x xml  
 set @x = N'<a>This example contains an entitized char: <.</a>'  
 select @x.query('/a/text()')  
@@ -122,19 +122,19 @@ select @x.query('/a/text()')
   
  Dies ist das Ergebnis:  
   
-```  
+```console
 This example contains an entitized char: <.  
 ```  
   
  Es folgt ein Beispiel zum Verwenden der **query(** )-Methode:  
   
-```  
+```sql
 select @x.value('(/a/text())[1]', 'nvarchar(100)')  
 ```  
   
  Dies ist das Ergebnis:  
   
-```  
+```console
 This example contains an entitized char: <.  
 ```  
   
@@ -143,7 +143,7 @@ This example contains an entitized char: <.
   
  So wird z. B. der xs:double-Wert 1.34e1 zu 13.4 serialisiert, wie das im folgenden Beispiel gezeigt wird.  
   
-```  
+```sql
 declare @x xml  
 set @x =''  
 select CAST(@x.query('1.34e1') as nvarchar(50))  
@@ -153,6 +153,5 @@ select CAST(@x.query('1.34e1') as nvarchar(50))
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Typumwandlungsregeln in XQuery](../../xquery/type-casting-rules-in-xquery.md)   
- [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-  
-  
+ [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
+ 
