@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_plan_attributes (Transact-SQL)
-title: sys. dm_exec_plan_attributes (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_exec_plan_attributes (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 481638908fea0dbad0c593b2ca8ee28195b3eaf8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c80e576bd6f2872a2486da5fd09292609f86ba60
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546593"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331991"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="arguments"></a>Argumente  
  *plan_handle*  
- Führt eine eindeutige Identifizierung eines Abfrageplans für einen ausgeführten Batch aus, dessen Plan sich im Plancache befindet. *plan_handle* ist **varbinary(64)** Das Plan Handle kann aus der dynamischen Verwaltungs Sicht [sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) abgerufen werden.  
+ Führt eine eindeutige Identifizierung eines Abfrageplans für einen ausgeführten Batch aus, dessen Plan sich im Plancache befindet. *plan_handle* ist **varbinary(64)** Das Plan Handle kann aus der dynamischen Verwaltungs Sicht [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) abgerufen werden.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
@@ -53,7 +53,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 
 In der obigen Tabelle kann das- **Attribut** die folgenden Werte aufweisen:
 
-|attribute|Datentyp|BESCHREIBUNG|  
+|Attribut|Datentyp|BESCHREIBUNG|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|Gibt die Optionswerte an, mit denen der Plan kompiliert wurde.|  
 |objectid|**int**|Einer der Hauptschlüssel zur Suche nach einem Objekt im Cache. Dies ist die Objekt-ID, die in [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) für Datenbankobjekte (Prozeduren, Sichten, Trigger usw.) gespeichert ist. Für Pläne vom Typ "Adhoc" oder "Prepared" ist dies ein interner Hash des Batchtexts.|  
@@ -82,9 +82,9 @@ In der obigen Tabelle kann das- **Attribut** die folgenden Werte aufweisen:
 ## <a name="permissions"></a>Berechtigungen  
 
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
-Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der  **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
+Bei den Dienst Zielen "Basic", "S0" und "S1" in SQL-Datenbank ist für Datenbanken in Pools für elastische Datenbanken `Server admin` oder ein `Azure Active Directory admin` Konto erforderlich. Für alle anderen SQL-Datenbank-Dienst Ziele `VIEW DATABASE STATE` ist die Berechtigung in der Datenbank erforderlich.   
 
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="set-options"></a>SET-Optionen  
  Kopien desselben kompilierten Plans können sich nur durch den Wert in der Spalte **set_options** unterscheiden. Dies weist darauf hin, dass verschiedene Verbindungen für die gleiche Abfrage unterschiedliche Sätze von SET-Optionen verwenden. Die Verwendung unterschiedlicher Sätze von Optionen ist meist unerwünscht, da dies zusätzliche Kompilierungen, einen geringeren Anteil von Wiederverwendungen von Plänen sowie, da im Cache mehrere Pläne vorhanden sind, eine Vergrößerung des Plancaches verursachen kann.  

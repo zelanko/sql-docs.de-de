@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_query_resource_semaphores (Transact-SQL)
-title: sys. dm_exec_query_resource_semaphores (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_exec_query_resource_semaphores (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -21,24 +21,24 @@ ms.assetid: e43a2aa9-dd52-4c89-911e-1a7d05f7ffbb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d782c81ce803441e91d6008ae5b0117522c3286
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d8c04104f41631e57a277c339151157353d0d830
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548536"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330924"
 ---
 # <a name="sysdm_exec_query_resource_semaphores-transact-sql"></a>sys.dm_exec_query_resource_semaphores (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Gibt Informationen zum aktuellen Status des Abfrageressourcensemaphors in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück. **sys. dm_exec_query_resource_semaphores** stellt den allgemeinen Speicherstatus der Abfrage Ausführung bereit und ermöglicht es Ihnen zu bestimmen, ob das System auf genügend Arbeitsspeicher zugreifen kann. Diese Ansicht ergänzt die Speicherinformationen aus [sys. dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md) , um ein umfassendes Bild des Server Speicherstatus bereitzustellen. **sys. dm_exec_query_resource_semaphores** gibt eine Zeile für das reguläre Ressourcen Semaphor und eine weitere Zeile für das Ressourcen Semaphor für kleine Abfragen zurück. Es gibt zwei Anforderungen an ein kleines Abfrage-Semaphor:  
+  Gibt Informationen zum aktuellen Status des Abfrageressourcensemaphors in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück. **sys.dm_exec_query_resource_semaphores** stellt den allgemeinen Speicherstatus der Abfrage Ausführung bereit und ermöglicht es Ihnen zu bestimmen, ob das System auf genügend Arbeitsspeicher zugreifen kann. Diese Ansicht ergänzt die Arbeitsspeicher Informationen, die von [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md) abgerufen wurden, um ein umfassendes Bild des Server Speicherstatus bereitzustellen. **sys.dm_exec_query_resource_semaphores** gibt eine Zeile für das reguläre Ressourcen Semaphor und eine weitere Zeile für das Ressourcen Semaphor für kleine Abfragen zurück. Es gibt zwei Anforderungen an ein kleines Abfrage-Semaphor:  
   
 -   Die angeforderte Arbeitsspeicher Zuweisung sollte weniger als 5 MB betragen.  
   
 -   Die Abfrage Kosten sollten weniger als drei Kosteneinheiten betragen.  
   
 > [!NOTE]  
->  Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys. dm_pdw_nodes_exec_query_resource_semaphores**.  
+>  Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys.dm_pdw_nodes_exec_query_resource_semaphores**.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
@@ -59,12 +59,12 @@ ms.locfileid: "89548536"
 ## <a name="permissions"></a>Berechtigungen  
 
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
-Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der  **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
+Bei den Dienst Zielen "Basic", "S0" und "S1" in SQL-Datenbank ist für Datenbanken in Pools für elastische Datenbanken `Server admin` oder ein `Azure Active Directory admin` Konto erforderlich. Für alle anderen SQL-Datenbank-Dienst Ziele `VIEW DATABASE STATE` ist die Berechtigung in der Datenbank erforderlich.   
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Abfragen mithilfe dynamischer Verwaltungssichten, die ORDER BY oder Aggregate enthalten, können die Arbeitsspeichernutzung erhöhen und so zu dem Problem beitragen, das mit ihnen behandelt werden soll.  
   
- Verwenden Sie **sys. dm_exec_query_resource_semaphores** zur Problembehandlung, aber schließen Sie es nicht in Anwendungen ein, die zukünftige Versionen von verwenden werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Verwenden Sie **sys.dm_exec_query_resource_semaphores** zur Problembehandlung, aber schließen Sie es nicht in Anwendungen ein, die zukünftige Versionen von verwenden werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Mit der Ressourcenkontrollen-Funktion kann ein Datenbankadministrator Serverressourcen auf Ressourcenpools verteilen, bis zu maximal 64 Pools. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher verhält sich jeder Pool wie eine kleine unabhängige Serverinstanz und erfordert 2 Semaphore.  
   

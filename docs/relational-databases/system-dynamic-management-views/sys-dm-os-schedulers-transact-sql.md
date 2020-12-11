@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_schedulers (Transact-SQL)
-title: sys. dm_os_schedulers (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_os_schedulers (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ffb03f426977b982c79df26ede26a777a9a98aeb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b6055413a3ff32882e86c65dd69353e44b2353bb
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543905"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333001"
 ---
 # <a name="sysdm_os_schedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,14 +34,14 @@ ms.locfileid: "89543905"
   Gibt eine Zeile pro Zeitplanungsmodul in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück, wobei jedes Zeitplanungsmodul einem einzelnen Prozessor zugeordnet ist. Mithilfe dieser Sicht können Sie den Zustand eines Zeitplanungsmoduls überwachen oder Endlostasks identifizieren. Weitere Informationen zu Zeit Planungs Modulen finden Sie im [Handbuch zur Thread-und Task Architektur](../../relational-databases/thread-and-task-architecture-guide.md).  
   
 > [!NOTE]  
->  Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys. dm_pdw_nodes_os_schedulers**.  
+>  Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys.dm_pdw_nodes_os_schedulers**.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |scheduler_address|**varbinary(8)**|Speicheradresse des Zeitplanungsmoduls. Lässt keine NULL-Werte zu.|  
 |parent_node_id|**int**|ID des Knotens, zu dem das Zeitplanungsmodul gehört, der auch als übergeordneter Knoten bezeichnet wird. Dies stellt einen NUMA-Knoten (Non-Uniform Memory Access) dar. Lässt keine NULL-Werte zu.|  
 |scheduler_id|**int**|ID des Zeitplanungsmoduls. Alle Zeitplanungsmodule, die zum Ausführen regulärer Abfragen verwendet werden, weisen IDs unter 1048576 auf. Zeitplanungsmodule mit IDs größer oder gleich 1048576 werden intern von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, wie z. B. das Zeitplanungsmodul für dedizierte Administratorverbindungen. Lässt keine NULL-Werte zu.|  
-|cpu_id|**smallint**|Die zugewiesene CPU-ID des Zeitplanungsmoduls.<br /><br /> Lässt keine NULL-Werte zu.<br /><br /> **Hinweis:** 255 gibt keine Affinität wie in an [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Weitere Informationen zur Affinität finden Sie unter [sys. dm_os_threads &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) .|  
+|cpu_id|**smallint**|Die zugewiesene CPU-ID des Zeitplanungsmoduls.<br /><br /> Lässt keine NULL-Werte zu.<br /><br /> **Hinweis:** 255 gibt keine Affinität wie in an [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Weitere Informationen zur Affinität finden Sie unter [sys.dm_os_threads &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) .|  
 |status|**nvarchar(60)**|Zeigt den Status des Zeitplanungsmoduls an. Es kann sich um einen der folgenden Werte handeln:<br /><br /> -ausgeblendet Online<br />-ausgeblendet offline<br />-sichtbar Online<br />-sichtbar (offline)<br />-Visible Online (DAC)<br />-HOT_ADDED<br /><br /> Lässt keine NULL-Werte zu.<br /><br /> Zeitplanungsmodule im Status HIDDEN werden zur Verarbeitung von Anforderungen verwendet, die intern für [!INCLUDE[ssDE](../../includes/ssde-md.md)] sind. Zeitplanungsmodule im Status VISIBLE dienen zur Verarbeitung von Benutzeranforderungen.<br /><br /> Zeitplanungsmodule im Status OFFLINE sind Prozessoren zugeordnet, die in der Affinitätsmaske als offline markiert sind und daher nicht zur Verarbeitung von Anforderungen verwendet werden. Zeitplanungsmodule im Status ONLINE sind Prozessoren zugeordnet, die in der Affinitätsmaske als online markiert sind und zur Verarbeitung von Threads zur Verfügung stehen.<br /><br /> DAC bezeichnet das Zeitplanungsmodul, das über eine dedizierte Administratorverbindung ausgeführt wird.<br /><br /> HOT ADDED gibt an, dass die Zeitplanungsmodule als Reaktion auf ein Hinzufügen von CPUs im laufenden Systembetrieb hinzugefügt wurden.|  
 |is_online|**bit**|Wurde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] so konfiguriert, dass nur einige der verfügbaren Prozessoren verwendet werden, kann diese Konfiguration bedeuten, dass einige Zeitplanungsmodule Prozessoren zugeordnet werden, die nicht in der Affinitätsmaske enthalten sind. In diesem Fall gibt diese Spalte 0 zurück. Dieser Wert bedeutet, dass das Zeitplanungsmodul nicht für die Verarbeitung von Abfragen oder Batches verwendet wird.<br /><br /> Lässt keine NULL-Werte zu.|  
 |is_idle|**bit**|1 = Das Zeitplanungsmodul befindet sich im Leerlauf. Zurzeit werden keine Arbeitsthreads ausgeführt. Lässt keine NULL-Werte zu.|  
@@ -58,9 +58,9 @@ ms.locfileid: "89543905"
 |yield_count|**int**|Interner Wert zur Angabe des Fortschritts in diesem Zeitplanungsmodul. Mit diesem Wert wird von der Zeitplanungsmodul-Überwachung bestimmt, ob im Zeitplanungsmodul ein Arbeitsthread vorhanden ist, dessen Position nicht rechtzeitig für andere Arbeitsthreads freigegeben wird. Dieser Wert gibt nicht an, dass der Arbeitsthread oder Task in einen neuen Arbeitsthread gewechselt hat. Lässt keine NULL-Werte zu.|  
 |last_timer_activity|**bigint**|Der letzte Zeitpunkt in CPU-Takten, zu dem die Zeitgeberwarteschlange des Zeitplanungsmoduls vom Zeitplanungsmodul überprüft wurde. Lässt keine NULL-Werte zu.|  
 |failed_to_create_worker|**bit**|Bei der Einstellung 1 konnte kein neuer Arbeitsthread in diesem Zeitplanungsmodul erstellt werden. Dies tritt in der Regel aufgrund von Speicherbeschränkungen auf. Lässt NULL-Werte zu.|  
-|active_worker_address|**varbinary(8)**|Speicheradresse des derzeit aktiven Arbeitsthreads. Lässt NULL-Werte zu. Weitere Informationen finden Sie unter [sys. dm_os_workers &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
+|active_worker_address|**varbinary(8)**|Speicheradresse des derzeit aktiven Arbeitsthreads. Lässt NULL-Werte zu. Weitere Informationen finden Sie unter [sys.dm_os_workers &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
 |memory_object_address|**varbinary(8)**|Speicheradresse des Speicherobjekts des Zeitplanungsmoduls. Lässt keine NULL-Werte zu.|  
-|task_memory_object_address|**varbinary(8)**|Speicheradresse des Speicherobjekts des Tasks. Lässt keine NULL-Werte zu. Weitere Informationen finden Sie unter [sys. dm_os_memory_objects &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
+|task_memory_object_address|**varbinary(8)**|Speicheradresse des Speicherobjekts des Tasks. Lässt keine NULL-Werte zu. Weitere Informationen finden Sie unter [sys.dm_os_memory_objects &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Macht das von SQLOS verwendete Zeitplanungsmodul-Quantum verfügbar.|  
 | total_cpu_usage_ms |**bigint**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher <br><br> Gesamte von diesem Scheduler verbrauchte CPU, wie von nicht präemptiven Workern gemeldet. Lässt keine NULL-Werte zu.|
 |total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Gibt die Drosselung basierend auf dem [Service Level-Ziel](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective)an, ist für nicht-Azure-Versionen von immer 0 (null) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Lässt NULL-Werte zu.|
@@ -70,7 +70,7 @@ ms.locfileid: "89543905"
   
 ## <a name="permissions"></a>Berechtigungen
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
-Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der  **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
+Bei den Dienst Zielen "Basic", "S0" und "S1" in SQL-Datenbank ist für Datenbanken in Pools für elastische Datenbanken `Server admin` oder ein `Azure Active Directory admin` Konto erforderlich. Für alle anderen SQL-Datenbank-Dienst Ziele `VIEW DATABASE STATE` ist die Berechtigung in der Datenbank erforderlich.   
 
 ## <a name="examples"></a>Beispiele  
   
@@ -146,7 +146,7 @@ active_workers_count work_queue_count
  In der folgenden Abfrage wird der Status von stark ausgelasteten nicht verborgenen Zeitplanungsmodulen angezeigt, bei denen mehr Anforderungen vorhanden sind, als von verfügbaren Arbeitsthreads verarbeitet werden können. In diesem Beispiel werden 256 Arbeitsthreads Tasks zugewiesen. Einige Tasks warten auf die Zuweisung zu einem Arbeitsthread. Eine niedrige Anzahl von ausführbaren Tasks impliziert, dass mehrere Tasks auf eine Ressource warten.  
   
 > [!NOTE]  
->  Sie können den Status von Arbeitsthreads herausfinden, indem Sie sys.dm_os_workers abfragen. Weitere Informationen finden Sie unter [sys. dm_os_workers &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).  
+>  Sie können den Status von Arbeitsthreads herausfinden, indem Sie sys.dm_os_workers abfragen. Weitere Informationen finden Sie unter [sys.dm_os_workers &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).  
   
  Hier ist die Abfrage:  
   

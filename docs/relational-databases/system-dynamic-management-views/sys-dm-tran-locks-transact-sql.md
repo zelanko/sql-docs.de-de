@@ -1,6 +1,6 @@
 ---
 description: sys.dm_tran_locks (Transact-SQL)
-title: sys. dm_tran_locks (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_tran_locks (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa9f9e0985fcebc4e9a4577745a9602c601111de
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c8bd6ad5c10d8aacf76fb6219e4e0152b2d35776
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546493"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334178"
 ---
 # <a name="sysdm_tran_locks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "89546493"
  Die Spalten im Resultset sind in zwei Hauptgruppen unterteilt: Ressourcen und Anforderungen. Die Ressourcengruppe beschreibt die Ressource, für die die Sperranforderung erfolgt. Die Anforderungsgruppe beschreibt die Sperranforderung.  
   
 > [!NOTE]  
-> Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys. dm_pdw_nodes_tran_locks**.  
+> Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys.dm_pdw_nodes_tran_locks**.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
@@ -46,7 +46,7 @@ ms.locfileid: "89546493"
 |**resource_description**|**nvarchar(256)**|Beschreibung der Ressource, die nur Informationen enthält, die in anderen Ressourcenspalten nicht verfügbar sind.|  
 |**resource_associated_entity_id**|**bigint**|ID der Entität in einer Datenbank, der eine Ressource zugeordnet ist. Hierbei kann es sich je nach Ressourcentyp um eine Objekt-ID, eine HoBt-ID oder eine Zuordnungseinheit-ID handeln.|  
 |**resource_lock_partition**|**Int**|ID der Sperrenpartition für eine partitionierte Sperrenressource. Nicht partitionierte Sperrenressourcen haben den Wert 0.|  
-|**request_mode**|**nvarchar(60)**|Der Anforderungsmodus. Für erteilte Anforderungen ist dies der erteilte Modus, für wartende Anforderungen ist dies der angeforderte Modus. <br /><br /> NULL = Auf die Ressource wird kein Zugriff erteilt. Dient als Platzhalter.<br /><br /> Sch-S (Schema Stabilität) = stellt sicher, dass ein Schema Element (z. b. eine Tabelle oder ein Index) nicht gelöscht wird, während eine Sitzung eine Schema Stabilitäts Sperre für das Schema Element enthält.<br /><br /> Sch-M (Schema Änderung) = muss von jeder Sitzung aufbewahrt werden, die das Schema der angegebenen Ressource ändern möchte. Stellt sicher, dass keine anderen Sitzungen auf das angegebene Objekt verweisen.<br /><br /> S (Shared) = der haltenden Sitzung wird der gemeinsame Zugriff auf die Ressource gewährt.<br /><br /> U (Update) = gibt eine Update Sperre für Ressourcen an, die möglicherweise aktualisiert werden. Sie wird dazu verwendet, eine häufige Form von Deadlock zu verhindern, die auftritt, wenn mehrere Sitzungen Ressourcen sperren, um diese möglicherweise zu einem späteren Zeitpunkt zu aktualisieren.<br /><br /> X (exklusiv) = der haltenden Sitzung wird exklusiver Zugriff auf die Ressource gewährt.<br /><br /> IS (Intent Shared) = gibt die Absicht an, S-Sperren für eine untergeordnete Ressource in der Sperr Hierarchie zu platzieren.<br /><br /> IU (Intent Update) = gibt an, dass U-Sperren für eine untergeordnete Ressource in der Sperr Hierarchie platziert werden sollen.<br /><br /> IX (Intent Exclusive) = gibt an, dass X-Sperren für eine untergeordnete Ressource in der Sperr Hierarchie platziert werden sollen.<br /><br /> SIU (Shared Intent Update) = gibt den gemeinsamen Zugriff auf eine Ressource mit der Absicht an, Update Sperren für untergeordnete Ressourcen in der Sperr Hierarchie zu erwerben.<br /><br /> Six (Shared Intent Exclusive) = gibt den gemeinsamen Zugriff auf eine Ressource mit dem Ziel an, exklusive Sperren für untergeordnete Ressourcen in der Sperr Hierarchie zu erwerben.<br /><br /> Uix (Update Intent Exclusive) = gibt eine Update Sperre für eine Ressource an, die die Absicht erhält, exklusive Sperren für untergeordnete Ressourcen in der Sperr Hierarchie zu erhalten.<br /><br /> BU = wird von Massen Vorgängen verwendet.<br /><br /> RangeS_S (frei gegebener Schlüsselbereich und freigegebene Ressourcen Sperre) = gibt einen serialisierbaren Bereichsscan an.<br /><br /> RangeS_U (Shared Key-Range und Update Resource Lock) = gibt die serialisierbare Update Überprüfung an.<br /><br /> RangeI_N (Einfügen von Schlüsselbereich und NULL-Ressourcen Sperre) = wird verwendet, um Bereiche vor dem Einfügen eines neuen Schlüssels in einen Index zu testen.<br /><br /> RangeI_S = Konvertierungs Sperre für Schlüsselbereich, die durch eine Überschneidung von RangeI_N und S-Sperren erstellt wurde.<br /><br /> RangeI_U = Konvertierungs Sperre für Schlüsselbereich, die durch eine Überschneidung von RangeI_N-und U-Sperren erstellt wurde.<br /><br /> RangeI_X = Konvertierungs Sperre für Schlüsselbereich, die durch eine Überschneidung von RangeI_N-und X-Sperren erstellt wurde.<br /><br /> RangeX_S = Konvertierungs Sperre für Schlüsselbereich, die durch eine Überschneidung von RangeI_N und RangeS_S erstellt wurde. erzeugt wurde.<br /><br /> RangeX_U = Konvertierungs Sperre für Schlüsselbereich, die durch eine Überschneidung von RangeI_N und RangeS_U Sperren erstellt wurde.<br /><br /> RangeX_X (exklusive Schlüsselbereich und exklusive Ressourcen Sperre) = Dies ist eine Konvertierungs Sperre, die beim Aktualisieren eines Schlüssels in einem Bereich verwendet wird.|  
+|**request_mode**|**nvarchar(60)**|Der Anforderungsmodus. Für erteilte Anforderungen ist dies der erteilte Modus, für wartende Anforderungen ist dies der angeforderte Modus. <br /><br /> NULL = Auf die Ressource wird kein Zugriff erteilt. Dient als Platzhalter.<br /><br /> Sch-S (Schema Stabilität) = stellt sicher, dass ein Schema Element (z. b. eine Tabelle oder ein Index) nicht gelöscht wird, während eine Sitzung eine Schema Stabilitäts Sperre für das Schema Element enthält.<br /><br /> Sch-M (Schema Änderung) = muss von jeder Sitzung aufbewahrt werden, die das Schema der angegebenen Ressource ändern möchte. Stellt sicher, dass keine anderen Sitzungen auf das angegebene Objekt verweisen.<br /><br /> S (Shared) = der haltenden Sitzung wird der gemeinsame Zugriff auf die Ressource gewährt.<br /><br /> U (Update) = gibt eine Update Sperre für Ressourcen an, die möglicherweise aktualisiert werden. Sie wird dazu verwendet, eine häufige Form von Deadlock zu verhindern, die auftritt, wenn mehrere Sitzungen Ressourcen sperren, um diese möglicherweise zu einem späteren Zeitpunkt zu aktualisieren.<br /><br /> X (exklusiv) = der haltenden Sitzung wird exklusiver Zugriff auf die Ressource gewährt.<br /><br /> IS (Intent Shared) = gibt die Absicht an, S-Sperren für eine untergeordnete Ressource in der Sperr Hierarchie zu platzieren.<br /><br /> IU (Intent Update) = gibt an, dass U-Sperren für eine untergeordnete Ressource in der Sperr Hierarchie platziert werden sollen.<br /><br /> IX (Intent Exclusive) = gibt an, dass X-Sperren für eine untergeordnete Ressource in der Sperr Hierarchie platziert werden sollen.<br /><br /> SIU (Shared Intent Update) = gibt den gemeinsamen Zugriff auf eine Ressource mit der Absicht an, Update Sperren für untergeordnete Ressourcen in der Sperr Hierarchie zu erwerben.<br /><br /> Six (Shared Intent Exclusive) = gibt den gemeinsamen Zugriff auf eine Ressource mit dem Ziel an, exklusive Sperren für untergeordnete Ressourcen in der Sperr Hierarchie zu erwerben.<br /><br /> Uix (Update Intent Exclusive) = gibt eine Update Sperre für eine Ressource an, die die Absicht erhält, exklusive Sperren für untergeordnete Ressourcen in der Sperr Hierarchie zu erhalten.<br /><br /> BU = wird von Massen Vorgängen verwendet.<br /><br /> RangeS_S (Shared Key-Range und Shared Resource Lock) = gibt einen serialisierbaren Bereichsscan an.<br /><br /> RangeS_U (Shared Key-Range und Update Resource Lock) = gibt die serialisierbare Update Überprüfung an.<br /><br /> RangeI_N (Insert Key-Range und NULL Resource Lock) = wird zum Testen von Bereichen verwendet, bevor ein neuer Schlüssel in einen Index eingefügt wird.<br /><br /> RangeI_S = Key-Range Konvertierungs Sperre, die durch eine Überschneidung von RangeI_N-und S-Sperren erstellt wurde.<br /><br /> RangeI_U = Key-Range Konvertierungs Sperre, die durch eine Überschneidung von RangeI_N-und U-Sperren erstellt wurde.<br /><br /> RangeI_X = Key-Range Konvertierungs Sperre, die durch eine Überschneidung von RangeI_N-und X-Sperren erstellt wurde.<br /><br /> RangeX_S = Key-Range Konvertierungs Sperre, die durch eine Überschneidung von RangeI_N und RangeS_S erstellt wurde. erzeugt wurde.<br /><br /> RangeX_U = Key-Range Konvertierungs Sperre, die durch eine Überschneidung von RangeI_N und RangeS_U Sperren erstellt wurde.<br /><br /> RangeX_X (exklusive Key-Range und exklusive Ressourcen Sperre) = Dies ist eine Konvertierungs Sperre, die beim Aktualisieren eines Schlüssels in einem Bereich verwendet wird.|  
 |**request_type**|**nvarchar(60)**|Der Anforderungstyp. Der Wert ist LOCK.|  
 |**request_status**|**nvarchar(60)**|Aktueller Status dieser Anforderung. Mögliche Werte sind GRANTED, CONVERT, WAIT, LOW_PRIORITY_CONVERT, LOW_PRIORITY_WAIT oder ABORT_BLOCKERS. Weitere Informationen zu warte Vorgängen mit niedriger Priorität und Abbruch blockatoren finden Sie im Abschnitt *low_priority_lock_wait* von [Alter Index &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-index-transact-sql.md).|  
 |**request_reference_count**|**smallint**|Gibt zurück, wie oft derselbe Anforderer diese Ressource ungefähr angefordert hat.|  
@@ -55,7 +55,7 @@ ms.locfileid: "89546493"
 |**request_exec_context_id**|**int**|Ausführungskontext-ID des Prozesses, der derzeit diese Anforderung besitzt.|  
 |**request_request_id**|**int**|Anforderungs-ID (Batch-ID) des Prozesses, der derzeit diese Anforderung besitzt. Dieser Wert wird jedes Mal geändert, wenn sich die aktive MARS-Verbindung (Multiple Active Result Set) für eine Transaktion ändert.|  
 |**request_owner_type**|**nvarchar(60)**|Entitätstyp, der die Anforderung besitzt. Sperren-Manager-Anforderungen können im Besitz einer Reihe von Entitäten sein. Mögliche Werte:<br /><br /> TRANSACTION = Der Besitzer der Anforderung ist eine Transaktion.<br /><br /> CURSOR = Der Besitzer der Anforderung ist ein Cursor.<br /><br /> SESSION = Der Besitzer der Anforderung ist eine Benutzersitzung.<br /><br /> SHARED_TRANSACTION_WORKSPACE = Der Besitzer der Anforderung ist der freigegebene Bereich des Transaktionsarbeitsbereichs.<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = Der Besitzer der Anforderung ist der exklusive Bereich des Transaktionsarbeitsbereichs.<br /><br /> NOTIFICATION_OBJECT = Der Besitzer der Anforderung ist eine interne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponente. Diese Komponente hat vom Sperren-Manager eine Benachrichtigung angefordert, wenn eine andere Komponente darauf wartet, die Sperre zu übernehmen. Die FileTable-Funktion ist eine Komponente, die diesen Wert verwendet.<br /><br /> **Hinweis:** Arbeitsbereiche werden intern verwendet, um Sperren für eingetragene Sitzungen aufzunehmen.|  
-|**request_owner_id**|**bigint**|ID des Besitzers dieser Anforderung.<br /><br /> Wenn eine Transaktion der Besitzer der Anforderung ist, enthält dieser Wert die Transaktions-ID.<br /><br /> Wenn eine FileTable der Besitzer der Anforderung ist, weist **request_owner_id** einen der folgenden Werte auf:<br /> <ul><li>**-4** : eine FILETABLE hat eine Datenbanksperre übernommen.<li> **-3** : eine FILETABLE hat eine Tabellensperre übernommen.<li> **Anderer Wert** : der Wert stellt ein Datei Handle dar. Dieser Wert wird auch als **fcb_id** in der dynamischen Verwaltungs Sicht [sys. dm_filestream_non_transacted_handles &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)angezeigt.</li></ul>|  
+|**request_owner_id**|**bigint**|ID des Besitzers dieser Anforderung.<br /><br /> Wenn eine Transaktion der Besitzer der Anforderung ist, enthält dieser Wert die Transaktions-ID.<br /><br /> Wenn eine FileTable der Besitzer der Anforderung ist, weist **request_owner_id** einen der folgenden Werte auf:<br /> <ul><li>**-4** : eine FILETABLE hat eine Datenbanksperre übernommen.<li> **-3** : eine FILETABLE hat eine Tabellensperre übernommen.<li> **Anderer Wert** : der Wert stellt ein Datei Handle dar. Dieser Wert wird auch als **fcb_id** in der dynamischen Verwaltungs Ansicht [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)angezeigt.</li></ul>|  
 |**request_owner_guid**|**uniqueidentifier**|GUID des Besitzers dieser Anforderung. Wird nur von einer verteilten Transaktion verwendet, wobei der Wert dem MS DTC-GUID für diese Transaktion entspricht.|  
 |**request_owner_lockspace_id**|**nvarchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Dieser Wert stellt die Sperrenbereich-ID des Anforderers dar. Die Sperrenbereich-ID bestimmt, ob zwei Anforderer miteinander kompatibel sind und ob ihnen Sperren in Modi erteilt werden können, die ansonsten zu Konflikten miteinander führen würden.|  
 |**lock_owner_address**|**varbinary(8)**|Speicheradresse der internen Datenstruktur, mit der diese Anforderung nachverfolgt wird. Die Spalte kann mit der **resource_address**-Spalte in **sys.dm_os_waiting_tasks** verknüpft werden.|  
@@ -63,9 +63,9 @@ ms.locfileid: "89546493"
   
 ## <a name="permissions"></a>Berechtigungen
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
-Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der  **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
+Bei den Dienst Zielen "Basic", "S0" und "S1" in SQL-Datenbank ist für Datenbanken in Pools für elastische Datenbanken `Server admin` oder ein `Azure Active Directory admin` Konto erforderlich. Für alle anderen SQL-Datenbank-Dienst Ziele `VIEW DATABASE STATE` ist die Berechtigung in der Datenbank erforderlich.   
  
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Der Anforderungsstatus GRANTED gibt an, dass dem Anforderer für eine Ressource eine Sperre erteilt wurde. Der Anforderungsstatus WAITING gibt an, dass die Anforderung noch nicht erteilt wurde. Die folgenden Anforderungstypen für WAITING werden von der **request_status**-Spalte zurückgegeben:  
   
 -   Der Anforderungsstatus CONVERT gibt an, dass dem Anforderer bereits eine Anforderung für die Ressource erteilt wurde und dass er derzeit darauf wartet, dass ein Upgrade für die ursprüngliche Anforderung erteilt wird.  
@@ -98,15 +98,15 @@ Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `V
   
 |Ressourcentyp|Ressourcenbeschreibung|Resource_associated_entity_id|  
 |-------------------|--------------------------|--------------------------------------|  
-|DATABASE|Stellt eine Datenbank dar.|Nicht verfügbar|  
-|FILE|Stellt eine Datenbankdatei dar. Bei dieser Datei kann es sich entweder um eine Datendatei oder eine Protokolldatei handeln.|Nicht verfügbar|  
+|DATABASE|Stellt eine Datenbank dar.|Nicht zutreffend|  
+|DATEI|Stellt eine Datenbankdatei dar. Bei dieser Datei kann es sich entweder um eine Datendatei oder eine Protokolldatei handeln.|Nicht zutreffend|  
 |OBJECT|Stellt ein Datenbankobjekt dar. Bei diesem Objekt kann es sich um eine Datentabelle, eine Sicht, eine gespeicherte Prozedur, eine erweiterte gespeicherte Prozedur oder ein beliebiges Objekt mit einer Objekt-ID handeln.|ObjectID|  
 |PAGE|Stellt eine einzelne Seite in einer Datendatei dar.|HoBt-ID. Dieser Wert entspricht **sys.partitions.hobt_id**. Die HoBt-ID ist nicht immer für PAGE-Ressourcen verfügbar, weil es sich bei der HoBt-ID um zusätzliche Informationen handelt, die vom Aufrufer bereitgestellt werden können. Dabei sind nicht alle Aufrufer in der Lage, diese Informationen bereitzustellen.|  
 |KEY|Stellt eine Zeile in einem Index dar.|HoBt-ID. Dieser Wert entspricht **sys.partitions.hobt_id**.|  
-|EXTENT|Stellt einen Datendateiblock dar. Ein Block ist eine Gruppe von acht fortlaufenden Seiten.|Nicht verfügbar|  
+|EXTENT|Stellt einen Datendateiblock dar. Ein Block ist eine Gruppe von acht fortlaufenden Seiten.|Nicht zutreffend|  
 |RID|Stellt eine physische Zeile in einem Heap dar.|HoBt-ID. Dieser Wert entspricht **sys.partitions.hobt_id**. Die HoBt-ID ist nicht immer für RID-Ressourcen verfügbar, weil es sich bei der HoBt-ID um zusätzliche Informationen handelt, die vom Aufrufer bereitgestellt werden können. Dabei sind nicht alle Aufrufer in der Lage, diese Informationen bereitzustellen.|  
-|APPLICATION|Stellt eine in einer Anwendung angegebene Ressource dar.|Nicht verfügbar|  
-|METADATA|Stellt Metadateninformationen dar.|Nicht verfügbar|  
+|APPLICATION|Stellt eine in einer Anwendung angegebene Ressource dar.|Nicht zutreffend|  
+|METADATA|Stellt Metadateninformationen dar.|Nicht zutreffend|  
 |HOBT|Stellt einen Heap oder eine B-Struktur dar. Dies sind die grundlegenden Zugriffspfadstrukturen.|HoBt-ID. Dieser Wert entspricht **sys.partitions.hobt_id**.|  
 |ALLOCATION_UNIT|Stellt zusammenhängende Seiten dar, wie z. B. eine Indexpartition. Jede Zuordnungseinheit deckt eine einzelne IAM-Kette (Index Allocation Map) ab.|Zuordnungseinheit-ID. Dieser Wert entspricht **sys.allocation_units.allocation_unit_id**.|  
   
@@ -198,18 +198,18 @@ Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `V
   
  In der folgenden Tabelle ist das Format der **resource_description**-Spalte für die einzelnen Ressourcentypen angegeben.  
   
-|Resource|Format|BESCHREIBUNG|  
+|Resource|Format|Beschreibung|  
 |--------------|------------|-----------------|  
-|DATABASE|Nicht verfügbar|Datenbank-ID ist bereits in der **resource_database_id**-Spalte verfügbar.|  
-|FILE|<file_id>|ID der Datei, die durch diese Ressource dargestellt wird.|  
+|DATABASE|Nicht zutreffend|Datenbank-ID ist bereits in der **resource_database_id**-Spalte verfügbar.|  
+|DATEI|<file_id>|ID der Datei, die durch diese Ressource dargestellt wird.|  
 |OBJECT|<object_id>|ID des Objekts, das durch diese Ressource dargestellt wird. Bei dem Objekt kann es sich nicht nur um eine Tabelle handeln, sondern um ein beliebiges in **sys.objects** aufgelistetes Objekt.|  
 |PAGE|<file_id>:<page_in_file>|Stellt die Datei-ID und die Seiten-ID der Seite dar, die durch diese Ressource dargestellt wird.|  
 |KEY|<hash_value>|Stellt einen Hashwert der Schlüsselspalten aus der Zeile dar, die durch diese Ressource dargestellt wird.|  
 |EXTENT|<file_id>:<page_in_files>|Stellt die Datei und die Seiten-ID des Blocks dar, der durch diese Ressource dargestellt wird. Die Block-ID ist mit der Seiten-ID der ersten Seiten des Blocks identisch.|  
 |RID|<file_id>:<page_in_file>:<row_on_page>|Stellt die Seiten-ID und die Zeilen-ID der Zeile dar, die durch diese Ressource dargestellt wird. Wenn die zugeordnete Objekt-ID 99 lautet, stellt diese Ressource eine der acht gemischten Seitenslots auf der ersten IAM-Seite einer IAM-Kette dar.|  
 |APPLICATION|\<DbPrincipalId>: \<upto 32 characters> :(<hash_value>)|Stellt die ID des Datenbankprinzipals dar, der für die Bereichsauswahl dieser Anwendungssperrenressource verwendet wird. Außerdem sind bis zu 32 Zeichen aus der Ressourcenzeichenfolge enthalten, die dieser Anwendungssperrenressource entsprechen. In bestimmten Fällen können nur 2 Zeichen angezeigt werden, da die vollständige Zeichenfolge nicht mehr verfügbar ist. Dies tritt nur beim Wiederherstellen der Datenbank für Anwendungssperren auf, die im Rahmen des Wiederherstellungsprozesses erneut abgerufen werden. Der Hashwert stellt einen Hash der vollständigen Ressourcenzeichenfolge dar, die dieser Anwendungssperrenressource entspricht.|  
-|HOBT|Nicht verfügbar|Die HoBt-ID ist als **resource_associated_entity_id** enthalten.|  
-|ALLOCATION_UNIT|Nicht verfügbar|Die Zuordnungseinheit-ID, die als **resource_associated_entity_id** enthalten ist.|  
+|HOBT|Nicht zutreffend|Die HoBt-ID ist als **resource_associated_entity_id** enthalten.|  
+|ALLOCATION_UNIT|Nicht zutreffend|Die Zuordnungseinheit-ID, die als **resource_associated_entity_id** enthalten ist.|  
 |METADATA.ASSEMBLY|assembly_id = A|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.ASSEMBLY_CLR_NAME|$qname_id = Q|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.ASSEMBLY_TOKEN|assembly_id = A, $token_id|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -284,7 +284,7 @@ Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `V
   
 -   ddl_with_wait_at_low_priority  
   
- Der vorhandene XEvent- **progress_report_online_index_operation** für Online Index Vorgänge wurde durch Hinzufügen von **partition_number** und **partition_id**erweitert.  
+ Der vorhandene XEvent- **progress_report_online_index_operation** für Online Index Vorgänge wurde durch Hinzufügen von **partition_number** und **partition_id** erweitert.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -386,7 +386,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[sys. dm_tran_database_transactions &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)      
+[sys.dm_tran_database_transactions &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)      
 [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
 [Transaktionsbezogene dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)      
 [SQL Server, Sperren-Objekt](../../relational-databases/performance-monitor/sql-server-locks-object.md)      

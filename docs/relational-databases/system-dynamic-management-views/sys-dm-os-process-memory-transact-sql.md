@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_process_memory (Transact-SQL)
-title: sys. dm_os_process_memory (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_os_process_memory (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,24 +21,24 @@ ms.assetid: e838130c-95d4-4605-9e3b-eb0ab71cd250
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4234894d907a383902a00a659e954ccfea2ff74c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6a60651016355dcf6b78a514a4b4ee3b523c9136
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539309"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325525"
 ---
 # <a name="sysdm_os_process_memory-transact-sql"></a>sys.dm_os_process_memory (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Die meisten Speicherbelegungen, die für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozessraum attributiert sind, werden über Schnittstellen gesteuert, die eine Nachverfolgung und Berücksichtigung dieser Zuordnungen ermöglichen. Speicherbelegungen werden jedoch eventuell in dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Adressraum ausgeführt, der die internen Arbeitsspeicherverwaltungsroutinen umgeht. Die Werte werden durch Aufrufe des Basisbetriebssystems erhalten. Sie werden nicht durch interne Methoden von manipuliert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , es sei denn, Sie passen sich für gesperrte oder große Seiten Zuordnungen an.  
   
- Alle zurückgegebenen Werte mit Angaben zu den Arbeitsspeichergrößen werden in Kilobytes (KB) angezeigt. Der Spalten **total_virtual_address_space_reserved_kb** ist ein Duplikat von **virtual_memory_in_bytes** aus **sys. dm_os_sys_info**.  
+ Alle zurückgegebenen Werte mit Angaben zu den Arbeitsspeichergrößen werden in Kilobytes (KB) angezeigt. Der Spalten **total_virtual_address_space_reserved_kb** ist ein Duplikat von **virtual_memory_in_bytes** von **sys.dm_os_sys_info**.  
   
  In der folgenden Tabelle wird ein vollständiges Bild des Prozessadressraums angegeben.  
   
 > [!NOTE]  
->  Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys. dm_pdw_nodes_os_process_memory**.  
+>  Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys.dm_pdw_nodes_os_process_memory**.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
@@ -60,7 +60,7 @@ ms.locfileid: "89539309"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  
   
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
-Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der  **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
+Bei den Dienst Zielen "Basic", "S0" und "S1" in SQL-Datenbank ist für Datenbanken in Pools für elastische Datenbanken `Server admin` oder ein `Azure Active Directory admin` Konto erforderlich. Für alle anderen SQL-Datenbank-Dienst Ziele `VIEW DATABASE STATE` ist die Berechtigung in der Datenbank erforderlich.   
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

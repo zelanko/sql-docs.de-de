@@ -1,6 +1,6 @@
 ---
 description: sys.dm_fts_index_population (Transact-SQL)
-title: sys. dm_fts_index_population (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_fts_index_population (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 82d1c102-efcc-4b60-9a5e-3eee299bcb2b
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1fd871a3f0de84d5a6a36eff7262f71062ace3a9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bdcae6d4efe36e8b69ae2a211616178bba8af5f3
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474949"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323806"
 ---
 # <a name="sysdm_fts_index_population-transact-sql"></a>sys.dm_fts_index_population (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88474949"
 |**is_clustered_index_scan**|**bit**|Gibt an, ob die Auffüllung einen Scanvorgang im gruppierten Index umfasst.|  
 |**range_count**|**int**|Anzahl der Teilbereiche, in die diese Auffüllung parallelisiert wurde.|  
 |**completed_range_count**|**int**|Anzahl der Bereiche, für die die Verarbeitung abgeschlossen ist.|  
-|**outstanding_batch_count**|**int**|Aktuelle Anzahl ausstehender Batches für diese Auffüllung. Weitere Informationen finden Sie unter [sys. dm_fts_outstanding_batches &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md).|  
+|**outstanding_batch_count**|**int**|Aktuelle Anzahl ausstehender Batches für diese Auffüllung. Weitere Informationen finden Sie unter [sys.dm_fts_outstanding_batches &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md).|  
 |**status**|**int**|**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Status dieser Auffüllung. Hinweis: Einige Status sind vorübergehend. Einer der folgenden:<br /><br /> 3 = Wird gestartet<br /><br /> 5 = Normal verarbeiten<br /><br /> 7 = Verarbeitung wurde angehalten<br /><br /> Dieser Status tritt zum Beispiel auf, wenn eine automatische Zusammenführung ausgeführt wird.<br /><br /> 11 = Auffüllen abgebrochen<br /><br /> 12 = Verarbeiten einer semantischen Ähnlichkeitsextraktion|  
 |**status_description**|**nvarchar(120)**|Beschreibung des Status der Auffüllung.|  
 |**completion_type**|**int**|Status des Abschlusses dieser Auffüllung.|  
@@ -61,14 +61,14 @@ ms.locfileid: "88474949"
 ## <a name="permissions"></a>Berechtigungen  
 
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
-Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der  **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
+Bei den Dienst Zielen "Basic", "S0" und "S1" in SQL-Datenbank ist für Datenbanken in Pools für elastische Datenbanken `Server admin` oder ein `Azure Active Directory admin` Konto erforderlich. Für alle anderen SQL-Datenbank-Dienst Ziele `VIEW DATABASE STATE` ist die Berechtigung in der Datenbank erforderlich.   
   
 ## <a name="physical-joins"></a>Physische Joins  
  ![Wesentliche Joins dieser dynamischen Verwaltungssicht](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-index-population-1.gif "Wesentliche Joins dieser dynamischen Verwaltungssicht")  
   
 ## <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
   
-|Von|An|Beziehung|  
+|Von|Beschreibung|Relationship|  
 |----------|--------|------------------|  
 |dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|1:1|  
 |dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|1:1|  

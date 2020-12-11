@@ -1,6 +1,6 @@
 ---
 description: sys.dm_tran_current_snapshot (Transact-SQL)
-title: sys. dm_tran_current_snapshot (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_tran_current_snapshot (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,20 +21,20 @@ ms.assetid: 7509d595-c0e1-4237-a5ac-b41ad934544c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e9785cf52937f2e8a6ec17489d4bedd0d4726149
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c1d6681ec21993481e7ff1c395b0ed2c61eb5190
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543837"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334420"
 ---
 # <a name="sysdm_tran_current_snapshot-transact-sql"></a>sys.dm_tran_current_snapshot (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Gibt eine virtuelle Tabelle zurück, in der alle aktiven Transaktionen zum Zeitpunkt des Starts der aktuellen Momentaufnahmetransaktion angezeigt werden. Wenn die aktuelle Transaktion keine Momentaufnahmetransaktion ist, gibt diese Funktion keine Zeilen zurück. **sys. dm_tran_current_snapshot** ähnelt **sys. dm_tran_transactions_snapshot**, mit dem Unterschied, dass **sys. dm_tran_current_snapshot** nur die aktiven Transaktionen für die aktuelle Momentaufnahme Transaktion zurückgibt.  
+  Gibt eine virtuelle Tabelle zurück, in der alle aktiven Transaktionen zum Zeitpunkt des Starts der aktuellen Momentaufnahmetransaktion angezeigt werden. Wenn die aktuelle Transaktion keine Momentaufnahmetransaktion ist, gibt diese Funktion keine Zeilen zurück. **sys.dm_tran_current_snapshot** ähnelt **sys.dm_tran_transactions_snapshot**, mit dem Unterschied, dass **sys.dm_tran_current_snapshot** nur die aktiven Transaktionen für die aktuelle Momentaufnahme Transaktion zurückgibt.  
   
 > [!NOTE]  
->  Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys. dm_pdw_nodes_tran_current_snapshot**.  
+>  Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys.dm_pdw_nodes_tran_current_snapshot**.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,7 +53,7 @@ sys.dm_tran_current_snapshot
 ## <a name="permissions"></a>Berechtigungen
 
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
-Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der  **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
+Bei den Dienst Zielen "Basic", "S0" und "S1" in SQL-Datenbank ist für Datenbanken in Pools für elastische Datenbanken `Server admin` oder ein `Azure Active Directory admin` Konto erforderlich. Für alle anderen SQL-Datenbank-Dienst Ziele `VIEW DATABASE STATE` ist die Berechtigung in der Datenbank erforderlich.   
 
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird ein Testszenario verwendet, in dem vier gleichzeitige Transaktionen, die jeweils durch eine Transaktionssequenznummer (XSN) identifiziert werden, in einer Datenbank ausgeführt werden, für die die Optionen ALLOW_SNAPSHOT_ISOLATION und READ_COMMITTED_SNAPSHOT auf ON festgelegt sind. Die folgenden Transaktionen werden ausgeführt:  

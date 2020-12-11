@@ -1,6 +1,6 @@
 ---
 description: sys.dm_clr_properties (Transact-SQL)
-title: sys. dm_clr_properties (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_clr_properties (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,23 +21,23 @@ ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7f966cbb5570eb1efb2068d7796ccecb4463750
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e313b3e873fbd59a53306475d0641ddbe5566703
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551292"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330024"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
-  Gibt eine Zeile für jede Eigenschaft in Verbindung mit der CLR-Integration (Common Language Runtime) von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück, einschließlich der Version und des Status der gehosteten CLR. Die gehostete CLR wird durch Ausführen der Anweisungen [Create Assembly](../../t-sql/statements/create-assembly-transact-sql.md), [Alter Assembly](../../t-sql/statements/alter-assembly-transact-sql.md)oder [Drop Assembly](../../t-sql/statements/drop-assembly-transact-sql.md) oder durch Ausführen einer beliebigen CLR-Routine, eines Typs oder eines Auslösers initialisiert. Die **sys. dm_clr_properties** -Sicht gibt nicht an, ob die Ausführung von Benutzer-CLR-Code auf dem Server aktiviert wurde. Die Ausführung von CLR-Benutzercode wird mithilfe der gespeicherten Prozedur [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) aktiviert, bei der die Option [CLR-fähig](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) auf 1 festgelegt ist.  
+  Gibt eine Zeile für jede Eigenschaft in Verbindung mit der CLR-Integration (Common Language Runtime) von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück, einschließlich der Version und des Status der gehosteten CLR. Die gehostete CLR wird durch Ausführen der Anweisungen [Create Assembly](../../t-sql/statements/create-assembly-transact-sql.md), [Alter Assembly](../../t-sql/statements/alter-assembly-transact-sql.md)oder [Drop Assembly](../../t-sql/statements/drop-assembly-transact-sql.md) oder durch Ausführen einer beliebigen CLR-Routine, eines Typs oder eines Auslösers initialisiert. In der **sys.dm_clr_properties** Ansicht wird nicht angegeben, ob die Ausführung von Benutzer-CLR-Code auf dem Server aktiviert wurde. Die Ausführung von CLR-Benutzercode wird mithilfe der gespeicherten Prozedur [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) aktiviert, bei der die Option [CLR-fähig](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) auf 1 festgelegt ist.  
   
- Die **sys. dm_clr_properties** -Sicht enthält die Spalten **Name** und **Wert** . Jede Zeile in dieser Sicht enthält Details zu einer Eigenschaft der gehosteten CLR. Mit dieser Sicht können Sie Informationen zur gehosteten CLR zusammentragen, z. B. das CLR-Installationsverzeichnis, die CLR-Version und den aktuellen Status der gehosteten CLR. Mit dieser Sicht können Sie bestimmen, ob der CLR-Integrationscode aufgrund von Problemen mit der CLR-Installation auf dem Servercomputer nicht funktioniert.  
+ Die **sys.dm_clr_properties** Ansicht enthält die Spalten **Name** und **Wert** . Jede Zeile in dieser Sicht enthält Details zu einer Eigenschaft der gehosteten CLR. Mit dieser Sicht können Sie Informationen zur gehosteten CLR zusammentragen, z. B. das CLR-Installationsverzeichnis, die CLR-Version und den aktuellen Status der gehosteten CLR. Mit dieser Sicht können Sie bestimmen, ob der CLR-Integrationscode aufgrund von Problemen mit der CLR-Installation auf dem Servercomputer nicht funktioniert.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar(128)**|Den Namen der Eigenschaft.|  
+|**name**|**nvarchar(128)**|Der Name der Eigenschaft.|  
 |**value**|**nvarchar(128)**|Der Wert der Eigenschaft.|  
   
 ## <a name="properties"></a>Eigenschaften  
@@ -45,7 +45,7 @@ ms.locfileid: "89551292"
   
  Die **Version** -Eigenschaft gibt die Version der .NET Framework und der gehosteten CLR auf dem Server an.  
   
- Die dynamische verwaltete Sicht **sys. dm_clr_properties** kann sechs verschiedene Werte für die **State** -Eigenschaft zurückgeben, die den Status der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gehosteten CLR widerspiegeln. Es handelt sich hierbei um die folgenden Topologien:  
+ Die **sys.dm_clr_properties** dynamische verwaltete Sicht kann sechs verschiedene Werte für die **State** -Eigenschaft zurückgeben, die den Status der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gehosteten CLR widerspiegeln. Sie lauten wie folgt:  
   
 -   Mscoree is not loaded.  
   
@@ -69,13 +69,13 @@ ms.locfileid: "89551292"
   
  Der **Zustand der CLR** -Beendigung ist nur sichtbar, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerade heruntergefahren wird.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die Eigenschaften und Werte dieser Sicht können sich in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgrund von Verbesserungen der CLR-Integrations Funktionalität ändern.  
   
 ## <a name="permissions"></a>Berechtigungen  
   
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
-Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der  **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
+Bei den Dienst Zielen "Basic", "S0" und "S1" in SQL-Datenbank ist für Datenbanken in Pools für elastische Datenbanken `Server admin` oder ein `Azure Active Directory admin` Konto erforderlich. Für alle anderen SQL-Datenbank-Dienst Ziele `VIEW DATABASE STATE` ist die Berechtigung in der Datenbank erforderlich.   
 
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden Informationen zur gehosteten CLR abgerufen:  

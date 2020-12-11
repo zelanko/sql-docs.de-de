@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_missing_index_details (Transact-SQL)
-title: sys. dm_db_missing_index_details (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_db_missing_index_details (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f88249c10b9e6c58e1ae68b598cfb92a876bf56a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bb253a26812d07a2527dc0a21a400906f1bb638a
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89518679"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321904"
 ---
 # <a name="sysdm_db_missing_index_details-transact-sql"></a>sys.dm_db_missing_index_details (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "89518679"
 |**included_columns**|**nvarchar(4000)**|Durch Trennzeichen getrennte Liste von Spalten, die zur Abdeckung der Abfrage benötigt werden. Weitere Informationen zum abdecken oder einschließen von Spalten finden Sie unter [Erstellen von Indizes mit eingebundenen Spalten](../../relational-databases/indexes/create-indexes-with-included-columns.md).<br /><br /> Ignorieren Sie für Speicher optimierte Indizes (sowohl Hash als auch Speicher optimiertes Nonclustered) **included_columns**. Alle Spalten der Tabelle werden in jeden speicheroptimierten Index eingeschlossen.|  
 |**statement**|**nvarchar(4000)**|Der Name der Tabelle, in der der Index fehlt.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die von **sys.dm_db_missing_index_details** zurückgegebenen Informationen werden aktualisiert, wenn eine Abfrage vom Abfrageoptimierer optimiert wird, und sind nicht persistent. Informationen zu fehlenden Indizes werden nur bis zum Neustart von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufbewahrt. Datenbankadministratoren sollten regelmäßig Sicherungskopien der Informationen zu fehlenden Indizes erstellen, wenn Sie sie nach dem Wiederverwenden des Servers beibehalten möchten.  
   
  Zum Bestimmen der Gruppen fehlender Indizes, denen ein bestimmter fehlender Index angehört, können Sie die dynamische Verwaltungssicht **sys.dm_db_missing_index_groups** abfragen, indem Sie sie in einem auf der **index_handle**-Spalte basierenden Gleichheitsjoin mit **sys.dm_db_missing_index_details** verknüpfen.  
@@ -56,9 +56,9 @@ ms.locfileid: "89518679"
   >Das Resultset für diese DMV ist auf 600 Zeilen beschränkt. Jede Zeile enthält einen fehlenden Index. Wenn Sie über mehr als 600 fehlende Indizes verfügen, sollten Sie die vorhandenen fehlenden Indizes ansprechen, damit Sie die neueren Indizes anzeigen können. 
   
 ## <a name="using-missing-index-information-in-create-index-statements"></a>Verwenden von Informationen zu fehlenden Indizes in CREATE INDEX-Anweisungen  
- Um die von **sys. dm_db_missing_index_details** zurückgegebenen Informationen in eine CREATE INDEX-Anweisung für Speicher optimierte und Datenträger basierte Indizes zu konvertieren, sollten Gleichheits Spalten vor die Ungleichheits Spalten eingefügt werden, und Sie sollten die Schlüssel des Indexes bilden. Eingeschlossene Spalten sollten der CREATE INDEX-Anweisung mithilfe der INCLUDE-Klausel hinzugefügt werden. Für eine effektive Reihenfolge der Gleichheitsspalten sortieren Sie sie nach ihrer Selektivität, wobei Sie die ausgewählten Spalten zuerst (am weitesten links in der Spaltenliste) aufführen.  
+ Um die von **sys.dm_db_missing_index_details** zurückgegebenen Informationen sowohl für Speicher optimierte als auch für Datenträger basierte Indizes in eine CREATE INDEX-Anweisung zu konvertieren, sollten Gleichheits Spalten vor die Ungleichheits Spalten gesetzt werden, und Sie sollten die Schlüssel des Indexes bilden. Eingeschlossene Spalten sollten der CREATE INDEX-Anweisung mithilfe der INCLUDE-Klausel hinzugefügt werden. Für eine effektive Reihenfolge der Gleichheitsspalten sortieren Sie sie nach ihrer Selektivität, wobei Sie die ausgewählten Spalten zuerst (am weitesten links in der Spaltenliste) aufführen.  
   
- Weitere Informationen zu Speicher optimierten Indizes finden Sie unter [Indizes für Speicher optimierte Tabellen](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).  
+ Weitere Informationen zu Speicher optimierten Indizes finden Sie unter [Indizes für Memory-Optimized Tabellen](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).  
   
 ## <a name="transaction-consistency"></a>Transaktionskonsistenz  
  Wenn durch eine Transaktion eine Tabelle erstellt oder gelöscht wird, werden die Zeilen mit Informationen zu fehlenden Indizes bezüglich der gelöschten Objekte aus diesem dynamischen Verwaltungsobjekt entfernt, damit die Transaktionskonsistenz erhalten bleibt.  
@@ -66,11 +66,11 @@ ms.locfileid: "89518679"
 ## <a name="permissions"></a>Berechtigungen
 
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
-Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der  **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
+Bei den Dienst Zielen "Basic", "S0" und "S1" in SQL-Datenbank ist für Datenbanken in Pools für elastische Datenbanken `Server admin` oder ein `Azure Active Directory admin` Konto erforderlich. Für alle anderen SQL-Datenbank-Dienst Ziele `VIEW DATABASE STATE` ist die Berechtigung in der Datenbank erforderlich.   
 
 ## <a name="see-also"></a>Weitere Informationen  
- [sys. dm_db_missing_index_columns &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
- [sys. dm_db_missing_index_groups &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
- [sys. dm_db_missing_index_group_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
+ [sys.dm_db_missing_index_columns &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
+ [sys.dm_db_missing_index_groups &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
+ [sys.dm_db_missing_index_group_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
   
   

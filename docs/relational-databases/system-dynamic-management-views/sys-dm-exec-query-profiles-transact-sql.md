@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_query_profiles (Transact-SQL)
-title: sys. dm_exec_query_profiles (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_exec_query_profiles (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/25/2019
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: markingmyname
 ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b761064191f26a05d565e673428221afb4805b1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 332b554797282510463ae3ec837fb00256db31b3
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548595"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330893"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -84,14 +84,14 @@ Die zurückgegebenen Leistungsindikatoren gelten pro Operator und pro Thread. Di
   
 -   Bei einem parallelen Scan meldet diese DMV Leistungsindikatoren für jeden der parallelen Threads für den Scan.
  
-Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 ist die *Standard Infrastruktur für die Abfrage Ausführungs Statistik-Profilerstellung* parallel mit einer vereinfachten Profil Erstellungs Infrastruktur für die *Abfrage Ausführungs Statistik*vorhanden. `SET STATISTICS XML ON` und `SET STATISTICS PROFILE ON` verwenden stets die *Standardprofil Erstellungs Infrastruktur für die Abfrage Ausführungs Statistik*. Um aufgefüllt `sys.dm_exec_query_profiles` zu werden, muss eine der Abfrage Profil Erstellungs Infrastrukturen aktiviert werden. Weitere Informationen finden Sie unter [Profilerstellungsinfrastruktur für Abfragen](../../relational-databases/performance/query-profiling-infrastructure.md).    
+Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 ist die *Standard Infrastruktur für die Abfrage Ausführungs Statistik-Profilerstellung* parallel mit einer vereinfachten Profil Erstellungs Infrastruktur für die *Abfrage Ausführungs Statistik* vorhanden. `SET STATISTICS XML ON` und `SET STATISTICS PROFILE ON` verwenden stets die *Standardprofil Erstellungs Infrastruktur für die Abfrage Ausführungs Statistik*. Um aufgefüllt `sys.dm_exec_query_profiles` zu werden, muss eine der Abfrage Profil Erstellungs Infrastrukturen aktiviert werden. Weitere Informationen finden Sie unter [Profilerstellungsinfrastruktur für Abfragen](../../relational-databases/performance/query-profiling-infrastructure.md).    
 
 >[!NOTE]
 > Die Abfrage, die untersucht wird, muss gestartet werden, **nachdem** die Infrastruktur für die Abfrage Profilerstellung aktiviert wurde, sodass Sie nach dem Start der Abfrage keine Ergebnisse in erzeugt `sys.dm_exec_query_profiles` . Weitere Informationen zum Aktivieren der Abfrage Profil Erstellungs Infrastrukturen finden Sie unter [Infrastruktur für die Abfrage Profilerstellung](../../relational-databases/performance/query-profiling-infrastructure.md).
 
 ## <a name="permissions"></a>Berechtigungen  
 Unter [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] und Azure SQL verwaltete Instanz sind `VIEW DATABASE STATE` Berechtigungen und die Mitgliedschaft in der `db_owner` Daten Bank Rolle erforderlich.   
-Bei [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] den Tarifen "Standard" und "Basic" ist der  **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
+Bei [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. Unter für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] die Dienst Ziele Basic, S0 und S1 von SQL-Datenbank und für Datenbanken in Pools für elastische Datenbanken `Server admin` ist das Konto oder ein `Azure Active Directory admin` Konto erforderlich. Für alle anderen SQL-Datenbank-Dienst Ziele `VIEW DATABASE STATE` ist die Berechtigung in der Datenbank erforderlich.   
    
 ## <a name="examples"></a>Beispiele  
  Schritt 1: Melden Sie sich bei einer Sitzung an, in der Sie die Abfrage ausführen möchten, die Sie analysieren möchten `sys.dm_exec_query_profiles` . So konfigurieren Sie die Abfrage für die Profilerstellung `SET STATISTICS PROFILE ON` Führen Sie Ihre Abfrage in derselben Sitzung aus.  

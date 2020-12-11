@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_memory_clerks (Transact-SQL)
-title: sys. dm_os_memory_clerks (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_os_memory_clerks (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 1d556c67-5c12-46d5-aa8c-7ec1bb858df7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2f5841aab34fbea23d3933f918c2ab9298594c81
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 91900dc582246c7af67ca13ff49b465b48599b5d
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550262"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326984"
 ---
 # <a name="sysdm_os_memory_clerks-transact-sql"></a>sys.dm_os_memory_clerks (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "89550262"
   Gibt die Gruppe aller derzeit in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz aktiven Arbeitsspeicherclerks zurück.  
   
 > [!NOTE]  
->  Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys. dm_pdw_nodes_os_memory_clerks**.  
+>  Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys.dm_pdw_nodes_os_memory_clerks**.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
@@ -51,16 +51,16 @@ ms.locfileid: "89550262"
 |**shared_memory_reserved_kb**|**bigint**|Gibt den Umfang des von einem Arbeitsspeicherclerk reservierten gemeinsamen Arbeitsspeichers an. Der Umfang des Arbeitsspeichers, der als freigegebener Speicherbereich und für die Dateizuordnung reserviert ist. Lässt keine NULL-Werte zu.|  
 |**shared_memory_committed_kb**|**bigint**|Gibt den Umfang des freigegebenen Speicherbereichs an, für den vom Arbeitsspeicherclerk ein Commit ausgeführt wurde. Lässt keine NULL-Werte zu.|  
 |**page_size_in_bytes**|**bigint**|Gibt die Granularität der Seitenzuordnung für diesen Arbeitsspeicherclerk an. Lässt keine NULL-Werte zu.|  
-|**page_allocator_address**|**varbinary(8)**|Gibt die Adresse der Seitenzuordnung an. Diese Adresse ist für einen Arbeitsspeicher Clerk eindeutig und kann in **sys. dm_os_memory_objects** verwendet werden, um Speicher Objekte zu suchen, die an diesen Clerk gebunden sind. Lässt keine NULL-Werte zu.|  
-|**host_address**|**varbinary(8)**|Gibt die Arbeitsspeicheradresse des Hosts für diesen Arbeitsspeicherclerk an. Weitere Informationen finden Sie unter [sys. dm_os_hosts &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md). Komponenten, z. b. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, greifen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über die Host Schnittstelle auf Speicherressourcen zu.<br /><br /> 0x00000000 = Arbeitsspeicherclerk gehört zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Lässt keine NULL-Werte zu.|  
+|**page_allocator_address**|**varbinary(8)**|Gibt die Adresse der Seitenzuordnung an. Diese Adresse ist für einen Arbeitsspeicher Clerk eindeutig und kann in **sys.dm_os_memory_objects** verwendet werden, um Speicher Objekte zu suchen, die an diesen Clerk gebunden sind. Lässt keine NULL-Werte zu.|  
+|**host_address**|**varbinary(8)**|Gibt die Arbeitsspeicheradresse des Hosts für diesen Arbeitsspeicherclerk an. Weitere Informationen finden Sie unter [sys.dm_os_hosts &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md). Komponenten, z. b. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, greifen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über die Host Schnittstelle auf Speicherressourcen zu.<br /><br /> 0x00000000 = Arbeitsspeicherclerk gehört zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Lässt keine NULL-Werte zu.|  
 |**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen 
 
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
-Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der  **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
+Bei den Dienst Zielen "Basic", "S0" und "S1" in SQL-Datenbank ist für Datenbanken in Pools für elastische Datenbanken `Server admin` oder ein `Azure Active Directory admin` Konto erforderlich. Für alle anderen SQL-Datenbank-Dienst Ziele `VIEW DATABASE STATE` ist die Berechtigung in der Datenbank erforderlich.   
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Der Speicher-Manager von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] besteht aus einer Hierarchie mit drei Ebenen. Die unterste Ebene der Hierarchie bilden Speicherknoten. Die mittlere Ebene besteht aus Arbeitsspeicherclerks, Arbeitsspeichercaches und Arbeitsspeicherpools. Die obere Ebene besteht aus Speicherobjekten. Diese Objekte werden im Allgemeinen für die Zuordnung von Arbeitsspeicher in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz verwendet.  
   
  Speicherknoten stellen die Schnittstelle und die Implementierung für Zuordnungen auf unterer Ebene bereit. Innerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] haben nur Arbeitsspeicherclerks Zugriff auf Speicherknoten. Arbeitsspeicherclerks greifen für die Belegung von Arbeitsspeicher auf Speicherknotenschnittstellen zu. Zudem können Speicherknoten den mithilfe des Clerks zugeordneten Arbeitsspeicher zu Diagnosezwecken nachverfolgen. Jede Komponente, die eine beträchtliche Speichermenge zuordnet, muss einen eigenen Arbeitsspeicherclerk erstellen und ihren gesamten Arbeitsspeicher mithilfe der Clerkschnittstellen zuordnen. Komponenten erstellen häufig ihre entsprechenden Clerks, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestartet wird.  
@@ -69,10 +69,10 @@ Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `V
 
  [SQL Server dynamischen Verwaltungs Sichten im Zusammenhang mit dem Betriebs System &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
- [sys. dm_exec_query_memory_grants &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
+ [sys.dm_exec_query_memory_grants &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [sys. dm_exec_query_plan &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
- [sys. dm_exec_sql_text &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+ [sys.dm_exec_query_plan &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
+ [sys.dm_exec_sql_text &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
   
   
 

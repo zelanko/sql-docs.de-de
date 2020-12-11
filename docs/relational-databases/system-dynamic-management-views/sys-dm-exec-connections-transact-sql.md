@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_connections (Transact-SQL)
-title: sys. dm_exec_connections (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_exec_connections (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/16/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 6bd46fe1-417d-452d-a9e6-5375ee8690d8
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f9885ce0232b9fc36cbcec48ed17d16b54f4f57
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ebb703be1a68e8cc11ac5e9cfb832ca6f8145abb
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546641"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332847"
 ---
 # <a name="sysdm_exec_connections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "89546641"
   Gibt Informationen über die zu dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hergestellten Verbindungen zurück, sowie Details zu jeder der Verbindungen. Gibt Server weite Verbindungsinformationen für SQL Server zurück. Gibt aktuelle Daten bankverbindungs Informationen für die SQL-Datenbank zurück.  
   
 > [!NOTE]
-> Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie [sys. dm_pdw_exec_connections &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-connections-transact-sql.md).  
+> [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Verwenden Sie [sys.dm_pdw_exec_connections &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-connections-transact-sql.md), um dies von oder aus aufzurufen.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
@@ -65,14 +65,14 @@ ms.locfileid: "89546641"
 ## <a name="permissions"></a>Berechtigungen
 
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
-Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der  **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
+Bei den Dienst Zielen "Basic", "S0" und "S1" in SQL-Datenbank ist für Datenbanken in Pools für elastische Datenbanken `Server admin` oder ein `Azure Active Directory admin` Konto erforderlich. Für alle anderen SQL-Datenbank-Dienst Ziele `VIEW DATABASE STATE` ist die Berechtigung in der Datenbank erforderlich.   
 
 ## <a name="physical-joins"></a>Physische Joins  
  ![Joins für sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/media/join-dm-exec-connections-1.gif "Joins für sys.dm_exec_connections")  
   
 ## <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
   
-| First-Element | Zweites Element | Beziehung |
+| First-Element | Zweites Element | Relationship |
 | --------------| -------------- | ------------ |  
 |dm_exec_sessions.session_id|dm_exec_connections.session_id|1:1|  
 |dm_exec_requests.connection_id|dm_exec_connections.connection_id|n:1|  
