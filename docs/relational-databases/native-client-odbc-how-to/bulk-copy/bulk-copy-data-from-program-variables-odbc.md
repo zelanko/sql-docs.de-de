@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6d8e85f20ff85133da38b1b1bafa6b4c5f6fbed
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ebaf54783b3141714a1cf23b4a1d5e3fd0ee7ef6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867072"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97407260"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>Massenkopieren von Daten aus Programmvariablen (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  In diesem Beispiel wird gezeigt, wie mit Massenkopierfunktionen unter Verwendung von **bcp_bind** und **bcp_sendrow**Daten aus Programmvariablen nach SQL Server massenkopiert werden. (Zur Vereinfachung dieses Beispiels wurde der Fehlerprüfcode entfernt.)  
+  In diesem Beispiel wird gezeigt, wie mit Massenkopierfunktionen unter Verwendung von **bcp_bind** und **bcp_sendrow** Daten aus Programmvariablen nach SQL Server massenkopiert werden. (Zur Vereinfachung dieses Beispiels wurde der Fehlerprüfcode entfernt.)  
   
  Dieses Beispiel wurde für ODBC, Version 3.0 oder höher, entwickelt.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "91867072"
   
 8.  Nachdem alle Zeilen gesendet wurden, rufen Sie [bcp_done](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) auf, um den Vorgang abzuschließen.  
 
- Position und Länge der Programmvariablen können während eines Massenkopiervorgangs durch Aufrufe von [bcp_colptr](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) und [bcp_collen](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)abgeändert werden. Verwenden Sie [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) zum Festlegen verschiedener Massenkopieroptionen. Verwenden Sie [bcp_moretext](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) , um Daten des Typs **text**, **ntext**und **image** segmentweise an den Server zu senden.  
+ Position und Länge der Programmvariablen können während eines Massenkopiervorgangs durch Aufrufe von [bcp_colptr](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) und [bcp_collen](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)abgeändert werden. Verwenden Sie [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) zum Festlegen verschiedener Massenkopieroptionen. Verwenden Sie [bcp_moretext](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) , um Daten des Typs **text**, **ntext** und **image** segmentweise an den Server zu senden.  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  

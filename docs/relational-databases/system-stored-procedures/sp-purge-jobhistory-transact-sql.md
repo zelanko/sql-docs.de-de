@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c804e5fbeb61a62ae7a615d09085e0dea8ee61d0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 6d65e13bdcf03aab38786b519dfaeb6e58004a27
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535023"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97404211"
 ---
 # <a name="sp_purge_jobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,14 +44,14 @@ sp_purge_jobhistory
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_name = ] 'job_name'` Der Name des Auftrags, für den die Verlaufs Datensätze gelöscht werden sollen. *job_name*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags, für den die Verlaufs Datensätze gelöscht werden sollen. *job_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
   
 > [!NOTE]  
->  Mitglieder der festen Server Rolle **sysadmin** oder Mitglieder der festen Daten Bank Rolle **SQLAgentOperatorRole** können **sp_purge_jobhistory** ausführen, ohne eine *job_name* oder *job_id*anzugeben. Wenn **sysadmin** -Benutzer diese Argumente nicht angeben, wird der Auftrags Verlauf für alle lokalen und Multiserveraufträge innerhalb der durch *oldest_date*angegebenen Zeit gelöscht. Wenn **SQLAgentOperatorRole** -Benutzer diese Argumente nicht angeben, wird der Auftrags Verlauf für alle lokalen Aufträge innerhalb der durch *oldest_date*angegebenen Zeit gelöscht.  
+>  Mitglieder der festen Server Rolle **sysadmin** oder Mitglieder der festen Daten Bank Rolle **SQLAgentOperatorRole** können **sp_purge_jobhistory** ausführen, ohne eine *job_name* oder *job_id* anzugeben. Wenn **sysadmin** -Benutzer diese Argumente nicht angeben, wird der Auftrags Verlauf für alle lokalen und Multiserveraufträge innerhalb der durch *oldest_date* angegebenen Zeit gelöscht. Wenn **SQLAgentOperatorRole** -Benutzer diese Argumente nicht angeben, wird der Auftrags Verlauf für alle lokalen Aufträge innerhalb der durch *oldest_date* angegebenen Zeit gelöscht.  
   
-`[ @job_id = ] job_id` Die Auftrags-ID des Auftrags für die zu löschenden Datensätze. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL. Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. Informationen dazu, wie **sysadmin** -oder **SQLAgentOperatorRole** -Benutzer dieses Argument verwenden können, finden Sie in der Beschreibung der ** \@ job_name** .  
+`[ @job_id = ] job_id` Die Auftrags-ID des Auftrags für die zu löschenden Datensätze. *job_id* ist vom Datentyp **uniqueidentifier** und hat den Standardwert NULL. Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. Informationen dazu, wie **sysadmin** -oder **SQLAgentOperatorRole** -Benutzer dieses Argument verwenden können, finden Sie in der Beschreibung der **\@ job_name** .  
   
-`[ @oldest_date = ] oldest_date` Der älteste Datensatz, der im Verlauf beibehalten werden soll. *oldest_date* ist vom **Datentyp DateTime**und hat den Standardwert NULL. Wenn *oldest_date* angegeben wird, entfernt **sp_purge_jobhistory** nur Datensätze, die älter sind als der angegebene Wert.  
+`[ @oldest_date = ] oldest_date` Der älteste Datensatz, der im Verlauf beibehalten werden soll. *oldest_date* ist vom **Datentyp DateTime** und hat den Standardwert NULL. Wenn *oldest_date* angegeben wird, entfernt **sp_purge_jobhistory** nur Datensätze, die älter sind als der angegebene Wert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -65,9 +65,9 @@ sp_purge_jobhistory
 ## <a name="permissions"></a>Berechtigungen  
  Standardmäßig können diese gespeicherte Prozedur nur von Mitgliedern der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **SQLAgentOperatorRole** ausgeführt werden. Mitglieder von **sysadmin** können den Auftrags Verlauf für alle lokalen und Multiserveraufträge bereinigen. Mitglieder von **SQLAgentOperatorRole** können den Auftrags Verlauf nur für alle lokalen Aufträge löschen.  
   
- Anderen Benutzern, einschließlich der Mitglieder von **SQLAgentUserRole** und den Mitgliedern von **SQLAgentReaderRole**, muss explizit die EXECUTE-Berechtigung für **sp_purge_jobhistory**erteilt werden. Nachdem die EXECUTE-Berechtigung für diese gespeicherte Prozedur erteilt wurde, können dieses Benutzer nur den Verlauf für Aufträge leeren, deren Besitzer sie sind.  
+ Anderen Benutzern, einschließlich der Mitglieder von **SQLAgentUserRole** und den Mitgliedern von **SQLAgentReaderRole**, muss explizit die EXECUTE-Berechtigung für **sp_purge_jobhistory** erteilt werden. Nachdem die EXECUTE-Berechtigung für diese gespeicherte Prozedur erteilt wurde, können dieses Benutzer nur den Verlauf für Aufträge leeren, deren Besitzer sie sind.  
   
- Die SQL Server-Daten bankrollen **SQLAgentUserRole**, **SQLAgentReaderRole**und **SQLAgentOperatorRole** befinden sich in der **msdb** -Datenbank. Ausführliche Informationen zu ihren Berechtigungen finden Sie unter [SQL Server-Agent fester Daten bankrollen](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Die SQL Server-Daten bankrollen **SQLAgentUserRole**, **SQLAgentReaderRole** und **SQLAgentOperatorRole** befinden sich in der **msdb** -Datenbank. Ausführliche Informationen zu ihren Berechtigungen finden Sie unter [SQL Server-Agent fester Daten bankrollen](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="examples"></a>Beispiele  
   

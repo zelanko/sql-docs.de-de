@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
 author: kevin-farlee
 ms.author: kfarlee
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 37f819a453b9619fa4e3c6185aac77859654505b
-ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a6a32b926eebf2e8a7d80823004824ec377ec199
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92175944"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97404926"
 ---
 # <a name="sysmemory_optimized_tables_internal_attributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
 
@@ -34,7 +34,7 @@ ms.locfileid: "92175944"
 
 Enthält eine Zeile für jede interne speicheroptimierte Tabelle, die zum Speichern von speicheroptimierten Benutzertabellen verwendet wird. Jede Benutzertabelle entspricht mindestens einer internen Tabelle. Eine einzelne Tabelle wird für die Speicherung von Kerndaten verwendet. Zusätzliche interne Tabellen werden für die Unterstützung von Funktionen wie dem temporalen Columnstore-Index und die Speicherung außerhalb von Zeilen (LOB) für speicheroptimierte Tabellen verwendet.
  
-| Spaltenname  | Datentyp  | BESCHREIBUNG |
+| Spaltenname  | Datentyp  | Beschreibung |
 | :------ |:----------| :-----|
 |object_id  |**int**|       Die ID der Benutzertabelle. Interne speicheroptimierte Tabellen, die der Unterstützung einer Benutzertabelle dienen (wie etwa Speicherung außerhalb der Zeile oder gelöschte Zeilen im Fall von Hk/Columnstore-Kombinationen), weisen die gleiche object_id wie ihr übergeordnetes Objekt auf. |
 |xtp_object_id  |**bigint**|    In-Memory-OLTP-Objekt-ID, die der internen speicheroptimierten Tabelle entspricht, die für die Unterstützung der Benutzertabelle verwendet wird. Sie ist innerhalb der Datenbank eindeutig und kann sich im Lauf der Lebensspanne des Objekts ändern. 

@@ -21,13 +21,13 @@ ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 06299f367f987cfc716154f4d26ffb8e5e07a868
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8c8643c40f7b62c0a0fdc3d85d32111d05ee955f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760415"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405110"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Angeben eines Zuordnungsschemas mit Anmerkungen in einem Updategram (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "85760415"
 >  Diese Dokumentation setzt voraus, dass Sie mit Vorlagen und der Unterstützung von Zuordnungsschemas in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vertraut sind. Weitere Informationen finden Sie unter [Einführung in XSD-Schemas mit Anmerkungen &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Informationen zu Legacy Anwendungen, die XDR verwenden, finden Sie unter mit Anmerkungen versehene [XDR-Schemas &#40;in SQLXML 4,0&#41;veraltet ](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="dealing-with-data-types"></a>Umgehen mit Datentypen  
- Wenn das Schema den **Image**-, **Binary**-oder **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentyp (mithilfe von **SQL: datatype**) angibt und keinen XML-Datentyp angibt, geht das Update Gram davon aus, dass der XML-Datentyp die **binäre Basis 64**ist. Wenn es sich bei den Daten um den Typ **bin. Base** handelt, müssen Sie explizit den Typ angeben (**dt: Type = bin. Base** oder **Type = "xsd: hexBinary"**).  
+ Wenn das Schema den **Image**-, **Binary**-oder **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentyp (mithilfe von **SQL: datatype**) angibt und keinen XML-Datentyp angibt, geht das Update Gram davon aus, dass der XML-Datentyp die **binäre Basis 64** ist. Wenn es sich bei den Daten um den Typ **bin. Base** handelt, müssen Sie explizit den Typ angeben (**dt: Type = bin. Base** oder **Type = "xsd: hexBinary"**).  
   
  Wenn das Schema den **DateTime**-, **Date**-oder **time** -XSD-Datentyp angibt, müssen Sie auch den entsprechenden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datentyp mithilfe von **SQL: datatype = "DateTime"** angeben.  
   

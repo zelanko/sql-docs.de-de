@@ -1,6 +1,6 @@
 ---
 description: sys.master_files (Transact-SQL)
-title: sys. master_files (Transact-SQL) | Microsoft-Dokumentation
+title: sys.master_files (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/10/2016
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ecf00931301e468f3fcaa92b95e15f778bd1607c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3bd6320435c372b99d9b88f9e0ecc7e41c41cf90
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548700"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405376"
 ---
 # <a name="sysmaster_files-transact-sql"></a>sys.master_files (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Enthält eine Zeile pro Datei einer Datenbank, die als master-Datenbank gespeichert ist. Dies ist eine einzelne, systemweite Sicht.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|ID der Datenbank, auf die sich diese Datei bezieht Der masterdatabase_id ist immer 1.|  
 |file_id|**int**|ID der Datei in der Datenbank Die ID der primären Datei ist immer 1.|  
@@ -45,7 +45,7 @@ ms.locfileid: "89548700"
 |physical_name|**nvarchar(260)**|Betriebssystem-Dateiname|  
 |state|**tinyint**|Dateistatus:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
 |state_desc|**nvarchar(60)**|Beschreibung des Dateistatus:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Weitere Informationen finden Sie im Abschnitt [Dateistatus](../../relational-databases/databases/file-states.md).|  
-|size|**int**|Die aktuelle Dateigröße in Seiten mit einer Größe von 8 KB. Für eine Datenbankmomentaufnahme gibt size den Speicherplatz an, den die Momentaufnahme maximal für die Datei verwenden kann.<br /><br /> Hinweis: Dieses Feld wird für FILESTREAM-Container als 0 (null) aufgefüllt. Fragen Sie die *sys. database_files* -Katalog Sicht nach der tatsächlichen Größe der FILESTREAM-Container ab.|  
+|Größe|**int**|Die aktuelle Dateigröße in Seiten mit einer Größe von 8 KB. Für eine Datenbankmomentaufnahme gibt size den Speicherplatz an, den die Momentaufnahme maximal für die Datei verwenden kann.<br /><br /> Hinweis: Dieses Feld wird für FILESTREAM-Container als 0 (null) aufgefüllt. Fragen Sie die *sys.database_files* -Katalog Sicht nach der tatsächlichen Größe der FILESTREAM-Container ab.|  
 |max_size|**int**|Maximale Dateigröße in Seiten mit einer Größe von 8 KB:<br /><br /> 0 = Keine Vergrößerung zulässig.<br /><br /> -1 = Datei wird vergrößert, bis der Datenträger voll ist.<br /><br /> 268435456 = Protokolldatei wird bis zu einer maximalen Größe von 2 TB vergrößert.<br /><br /> Hinweis: Datenbanken, die mit einer unbegrenzten Protokolldatei Größe aktualisiert werden, melden-1 für die maximale Größe der Protokolldatei.|  
 |growth|**int**|0 = Die Datei hat eine feste Größe und wird nicht vergrößert.<br /><br /> >0 = die Datei wird automatisch vergrößert.<br /><br /> Falls is_percent_growth = 0, erfolgt die Vergrößerung in Schritten von 8-KB-Seiten, gerundet auf die nächsten 64 KB.<br /><br /> Falls is_percent_growth = 1, erfolgt die Vergrößerung als ganzzahliger Prozentwert.|  
 |is_media_read_onlyF|**bit**|1 = Die Datei befindet sich auf einem schreibgeschützten Medium.<br /><br /> 0 = Die Datei befindet sich auf einem Medium mit Lese-/Schreibzugriff.|  

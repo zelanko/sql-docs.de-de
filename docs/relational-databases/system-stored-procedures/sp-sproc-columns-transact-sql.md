@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 62c18c21-35c5-4772-be0d-ffdcc19c97ab
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 756b50b22b470ec8dcf3f54467af78e71558ea1c
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 180d57f7daacb1f7aeb6b638dba03f893340c1d2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006484"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97404195"
 ---
 # <a name="sp_sproc_columns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,11 +49,11 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 ## <a name="arguments"></a>Argumente  
 `[ @procedure_name = ] 'name'` Der Name der Prozedur, die zum Zurückgeben von Katalog Informationen verwendet wird. *Name ist vom Datentyp* **nvarchar (** 390 **)**. der Standardwert ist%, d. h. alle Tabellen in der aktuellen Datenbank. Mustervergleiche mit Platzhalterzeichen werden unterstützt.  
   
-`[ @procedure_owner = ] 'owner'` Der Name des Besitzers der Prozedur. *Owner*ist vom Datentyp **nvarchar (** 384 **)** und hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Wenn *owner* nicht angegeben wird, gelten die Standardregeln für die Sichtbarkeit von Prozeduren des zugrunde liegenden DBMS.  
+`[ @procedure_owner = ] 'owner'` Der Name des Besitzers der Prozedur. *Owner* ist vom Datentyp **nvarchar (** 384 **)** und hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Wenn *owner* nicht angegeben wird, gelten die Standardregeln für die Sichtbarkeit von Prozeduren des zugrunde liegenden DBMS.  
   
- Wenn der aktuelle Benutzer eine Prozedur mit dem angegebenen Namen besitzt, werden Informationen zu dieser Prozedur zurückgegeben. Wenn *Owner*nicht angegeben wird und der aktuelle Benutzer keine Prozedur mit dem angegebenen Namen besitzt, sucht **sp_sproc_columns** nach einer Prozedur mit dem angegebenen Namen, die im Besitz des Daten Bank Besitzers ist. Sofern die Prozedur vorhanden ist, werden Information zu deren Spalten zurückgegeben.  
+ Wenn der aktuelle Benutzer eine Prozedur mit dem angegebenen Namen besitzt, werden Informationen zu dieser Prozedur zurückgegeben. Wenn *Owner* nicht angegeben wird und der aktuelle Benutzer keine Prozedur mit dem angegebenen Namen besitzt, sucht **sp_sproc_columns** nach einer Prozedur mit dem angegebenen Namen, die im Besitz des Daten Bank Besitzers ist. Sofern die Prozedur vorhanden ist, werden Information zu deren Spalten zurückgegeben.  
   
-`[ @procedure_qualifier = ] 'qualifier'` Der Name des Prozedur Qualifizierers. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Benennung für Tabellen (*Qualifier.Owner.Name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entspricht dieser Parameter dem Datenbanknamen. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
+`[ @procedure_qualifier = ] 'qualifier'` Der Name des Prozedur Qualifizierers. *qualifier* ist vom Datentyp **sysname** und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Benennung für Tabellen (*Qualifier.Owner.Name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entspricht dieser Parameter dem Datenbanknamen. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
   
 `[ @column_name = ] 'column_name'` Bei handelt es sich um eine einzelne Spalte, die verwendet wird, wenn nur eine Spalte mit Katalog Informationen gewünscht wird. *column_name* ist vom Datentyp **nvarchar (** 384 **)** und hat den Standardwert NULL. Wenn *column_name* weggelassen wird, werden alle Spalten zurückgegeben. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Für eine optimale Interoperabilität sollte der Gatewayclient nur einen ISO-Standardmustervergleich voraussetzen (die Platzhalterzeichen % und _).  
   
@@ -83,14 +83,14 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**HINWEISE**|**varchar (** 254 **)**|Beschreibung der Prozedurspalte. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt für diese Spalte keinen Wert zurück.|  
 |**COLUMN_DEF**|**nvarchar (** 4000 **)**|Standardwert der Spalte|  
 |**SQL_DATA_TYPE**|**smallint**|Der Wert des SQL-Datentyps, wie er im **Type** -Feld des Deskriptors angezeigt wird. Diese Spalte entspricht der **DATA_TYPE**-Spalte mit Ausnahme der **datetime**- und ISO-**interval**-Datentypen. Diese Spalte gibt immer einen Wert zurück.|  
-|**SQL_DATETIME_SUB**|**smallint**|Wenn **SQL_DATA_TYPE** den Wert **SQL_DATETIME** oder **SQL_INTERVAL** aufweist, enthält diese Spalte den Subcode für **datetime** ISO **interval**. Für andere Datentypen als **DateTime** -und ISO- **Intervalle**ist dieses Feld NULL.|  
+|**SQL_DATETIME_SUB**|**smallint**|Wenn **SQL_DATA_TYPE** den Wert **SQL_DATETIME** oder **SQL_INTERVAL** aufweist, enthält diese Spalte den Subcode für **datetime** ISO **interval**. Für andere Datentypen als **DateTime** -und ISO- **Intervalle** ist dieses Feld NULL.|  
 |**CHAR_OCTET_LENGTH**|**int**|Maximale Länge in Bytes für eine **Zeichen** -oder **Binär** Datentyp Spalte. Bei allen anderen Datentypen gibt diese Spalte einen NULL-Wert zurück.|  
 |**ORDINAL_POSITION**|**int**|Die Position einer Spalte innerhalb der Tabelle. Die erste Spalte in der Tabelle ist "1". Diese Spalte gibt immer einen Wert zurück.|  
 |**IS_NULLABLE**|**varchar (254)**|NULL-Zulässigkeit der Spalte in der Tabelle. Die NULL-Zulässigkeit wird gemäß den ISO-Regeln bestimmt. Ein DBMS nach ISO kann keine leere Zeichenfolge zurückgeben.<br /><br /> YES, wenn die Spalte NULL-Werte einschließen kann. NO, wenn die Spalte keine NULL-Werte einschließen kann.<br /><br /> Die Spalte gibt eine leere Zeichenfolge zurück, wenn die NULL-Zulässigkeit unbekannt ist.<br /><br /> Der für diese Spalte zurückgegebene Wert ist ein anderer als der für die NULLABLE-Spalte zurückgegebene Wert.|  
 |**SS_DATA_TYPE**|**tinyint**|Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp, der von erweiterten gespeicherten Prozeduren verwendet wird. Weitere Informationen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|  
   
-## <a name="remarks"></a>Bemerkungen  
- **sp_sproc_columns** entspricht **sqlprocedurecolrens** in ODBC. Die zurückgegebenen Ergebnisse werden nach **PROCEDURE_QUALIFIER**, **PROCEDURE_OWNER**, **procedure_name**und der Reihenfolge sortiert, in der die Parameter in der Prozedur Definition angezeigt werden.  
+## <a name="remarks"></a>Hinweise  
+ **sp_sproc_columns** entspricht **sqlprocedurecolrens** in ODBC. Die zurückgegebenen Ergebnisse werden nach **PROCEDURE_QUALIFIER**, **PROCEDURE_OWNER**, **procedure_name** und der Reihenfolge sortiert, in der die Parameter in der Prozedur Definition angezeigt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert SELECT-Berechtigung für das Schema.  
