@@ -1,6 +1,6 @@
 ---
-title: Datenübertragung von Tabellenwert Parametern
-description: Beschreiben Datenübertragung von Tabellenwert Parametern
+title: Datenübertragung von Table-Valued Parametern
+description: Beschreiben Datenübertragung von Table-Valued Parametern
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.technology: native-client
@@ -11,12 +11,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 07/01/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0be2ffbfb7160d5be8f5ebb2a2ed688103a54b4d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 19a7f22cd26ea4988364d51ff70300cdbf42d365
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004612"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97436154"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Bindung und Datenübertragung von Tabellenwertparametern und Spaltenwerten
 
@@ -42,11 +43,11 @@ Für den Tabellenwertparameter an sich werden keine Daten gesendet oder empfange
 |-----------|---------------------------------------------------------------------------|-----------------------------------------------|
 |*InputOutputType*|SQL_DESC_PARAMETER_TYPE in IPD<br /><br /> Für Tabellenwertparameter-Spalten muss diese Angabe der Angabe für den Tabellenwertparameter selbst entsprechen.|SQL_DESC_PARAMETER_TYPE in IPD<br /><br /> Hier muss SQL_PARAM_INPUT angegeben werden.|  
 |*ValueType*|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE in APD|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE in APD<br /><br /> Hier muss SQL_C_DEFAULT oder SQL_C_BINARY angegeben werden.|  
-|*Parameter Type*|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE in IPD|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE in IPD<br /><br /> Hier muss SQL_SS_TABLE angegeben werden.|  
-|*ColumnSize*|SQL_DESC_LENGTH oder SQL_DESC_PRECISION in IPD<br /><br /> Dies hängt vom Wert von *ParameterType*ab.|SQL_DESC_ARRAY_SIZE<br /><br /> Kann auch mit SQL_ATTR_PARAM_SET_SIZE festgelegt werden, wenn der Parameterfokus auf den Tabellenwertparameter festgelegt wurde.<br /><br /> Bei einem Tabellenwertparameter ist dies die Anzahl von Zeilen in den Tabellenwertparameter-Spaltenpuffern.|  
+|*ParameterType*|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE in IPD|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE in IPD<br /><br /> Hier muss SQL_SS_TABLE angegeben werden.|  
+|*ColumnSize*|SQL_DESC_LENGTH oder SQL_DESC_PRECISION in IPD<br /><br /> Dies hängt vom Wert von *ParameterType* ab.|SQL_DESC_ARRAY_SIZE<br /><br /> Kann auch mit SQL_ATTR_PARAM_SET_SIZE festgelegt werden, wenn der Parameterfokus auf den Tabellenwertparameter festgelegt wurde.<br /><br /> Bei einem Tabellenwertparameter ist dies die Anzahl von Zeilen in den Tabellenwertparameter-Spaltenpuffern.|  
 |*DecimalDigits*|SQL_DESC_PRECISION oder SQL_DESC_SCALE in IPD|Nicht verwendet. Diese Angabe muss 0 sein.<br /><br /> Wenn dieser Parameter nicht 0 ist, gibt SQLBindParameter SQL_ERROR zurück, und es wird ein Diagnosedaten Satz mit SQLSTATE = HY104 und der Meldung "ungültige Genauigkeit oder Skala" generiert.|  
 |*ParameterValuePtr*|SQL_DESC_DATA_PTR in APD|SQL_CA_SS_TYPE_NAME<br /><br /> Dies ist für Aufrufe gespeicherter Prozeduren optional, und NULL kann angegeben werden, wenn dies nicht erforderlich ist. Es muss für SQL-Anweisungen angegeben werden, die keine Prozedur Aufrufe sind.<br /><br /> Dieser Parameter dient als eindeutiger Wert, anhand dessen die Anwendung den betreffenden Tabellenwertparameter bei Verwendung einer variablen Zeilenbindung identifizieren kann. Weitere Informationen finden Sie im Abschnitt "Variable Tabellenwertparameter-Zeilenbindung" weiter unten in diesem Thema.<br /><br /> Wenn ein Tabellenwert Parameter-Typname beim Aufrufen von SQLBindParameter angegeben wird, muss er auch in Anwendungen, die als ANSI-Anwendungen erstellt wurden, als Unicode-Wert angegeben werden. Der für den Parameter *StrLen_or_IndPtr* verwendete Wert muss entweder SQL_NTS oder die Zeichen folgen Länge des Namens multipliziert mit der Größe von (WChar) sein.|  
-|*Pufferlänge*|SQL_DESC_OCTET_LENGTH in APD|Die Länge des Typnamens des Tabellenwertparameters in Byte<br /><br /> Dies kann SQL_NTS werden, wenn der Typname NULL-terminiert ist, oder 0, wenn der Typname des Tabellenwert Parameters nicht erforderlich ist.|  
+|*BufferLength*|SQL_DESC_OCTET_LENGTH in APD|Die Länge des Typnamens des Tabellenwertparameters in Byte<br /><br /> Dies kann SQL_NTS werden, wenn der Typname NULL-terminiert ist, oder 0, wenn der Typname des Tabellenwert Parameters nicht erforderlich ist.|  
 |*StrLen_or_IndPtr*|SQL_DESC_OCTET_LENGTH_PTR in APD|SQL_DESC_OCTET_LENGTH_PTR in APD<br /><br /> Für Tabellenwertparameter wird hier die Zeilenanzahl statt die Datenlänge angegeben.|  
 ||||
 
@@ -78,7 +79,7 @@ Bei der festen Zeilenbindung ordnet die Anwendung Puffer (oder Pufferarrays) zu,
 
 Bei einer Variablen Zeilen Bindung werden Zeilen zur Ausführungszeit in Batches übertragen, und die Anwendung übergibt bei Bedarf Zeilen an den Treiber. Dies ähnelt der Übergabe einzelner Werte für Data-at-Execution-Parameter zur Laufzeit. Bei einer variablen Zeilenbindung geht die Anwendung wie folgt vor:  
 
-1. Bindet Parameter und Tabellenwert Parameter-Spalten, wie in den Schritten 1 bis 3 des vorherigen Abschnitts "korrigieren der Tabellenwert Parameter-Zeilen Bindung" beschrieben.  
+1. Bindet Parameter und Tabellenwert Parameter-Spalten, wie in den Schritten 1 bis 3 des vorherigen Abschnitts "korrigieren Table-Valued Parameter Zeilen Bindung" beschrieben.  
 
 2. Legt *StrLen_or_IndPtr* oder SQL_DESC_OCTET_LENGTH_PTR für Tabellenwert Parameter fest, die zur Ausführungszeit an SQL_DATA_AT_EXEC übermittelt werden. Wenn keines von beiden festgelegt ist, wird der-Parameter wie im vorherigen Abschnitt beschrieben verarbeitet.  
 

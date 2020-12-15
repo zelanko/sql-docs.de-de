@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 61a8db19-6571-47dd-84e8-fcc97cb60b45
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 912a025e689343ffe3dce2ccc19dbec600576cd1
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a7e51247bec904bbd4d735e5706814c2b60bdfed
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867272"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97437951"
 ---
 # <a name="processing-results-odbc"></a>Verarbeiten von Ergebnissen (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "91867272"
   
  Andere SQL-Anweisungen, z. B. GRANT oder REVOKE, geben keine Resultsets zurück. Für diese Anweisungen ist der Rückgabecode von **SQLExecute** oder **SQLExecDirect** normalerweise der einzige Hinweis darauf, dass die Anweisung erfolgreich war.  
   
- Jede INSERT-, UPDATE- und DELETE-Anweisung gibt ein Resultset zurück, das nur die Anzahl der von der Änderung betroffenen Zeilen enthält. Diese Anzahl wird zur Verfügung gestellt, wenn die Anwendung [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md)aufruft. ODBC 3. *x* -Anwendungen müssen entweder **SQLRowCount** aufrufen, um das Resultset abzurufen, oder [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) , um das Resultset abzubrechen. Wenn eine Anwendung einen Batch oder eine gespeicherte Prozedur ausführt, die mehrere INSERT-, Update-oder DELETE-Anweisungen enthält, muss das Resultset aus jeder Änderungs Anweisung mithilfe von **SQLRowCount** verarbeitet oder mit **SQLMoreResults**abgebrochen werden. Die Anzahlangaben können durch eine SET NOCOUNT ON-Anweisung im Batch oder in der gespeicherten Prozedur annulliert werden.  
+ Jede INSERT-, UPDATE- und DELETE-Anweisung gibt ein Resultset zurück, das nur die Anzahl der von der Änderung betroffenen Zeilen enthält. Diese Anzahl wird zur Verfügung gestellt, wenn die Anwendung [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md)aufruft. ODBC 3. *x* -Anwendungen müssen entweder **SQLRowCount** aufrufen, um das Resultset abzurufen, oder [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) , um das Resultset abzubrechen. Wenn eine Anwendung einen Batch oder eine gespeicherte Prozedur ausführt, die mehrere INSERT-, Update-oder DELETE-Anweisungen enthält, muss das Resultset aus jeder Änderungs Anweisung mithilfe von **SQLRowCount** verarbeitet oder mit **SQLMoreResults** abgebrochen werden. Die Anzahlangaben können durch eine SET NOCOUNT ON-Anweisung im Batch oder in der gespeicherten Prozedur annulliert werden.  
   
  Transact-SQL enthält die SET NOCOUNT-Anweisung. Wenn die NOCOUNT-Option auf ON festgelegt ist, gibt SQL Server nicht die Anzahl der von einer-Anweisung betroffenen Zeilen zurück, und **SQLRowCount** gibt 0 zurück. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version des Native Client-ODBC-Treibers stellt eine Treiber spezifische [SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) -Option (SQL_SOPT_SS_NOCOUNT_STATUS) vor, um zu melden, ob die NOCOUNT-Option aktiviert oder deaktiviert ist. Jedes Mal, wenn **SQLRowCount** 0 zurückgibt, sollte die Anwendung SQL_SOPT_SS_NOCOUNT_STATUS testen. Wenn SQL_NC_ON zurückgegeben wird, gibt der Wert 0 von **SQLRowCount** lediglich an, dass SQL Server keine Zeilen Anzahl zurückgegeben hat. Wenn SQL_NC_OFF zurückgegeben wird, bedeutet dies, dass NOCOUNT auf OFF festgelegt ist und der Wert 0 aus **SQLRowCount** angibt, dass sich die Anweisung nicht auf Zeilen ausgewirkt hat. Anwendungen sollten den Wert von **SQLRowCount** nicht anzeigen, wenn SQL_SOPT_SS_NOCOUNT_STATUS SQL_NC_OFF ist. Große Batches oder gespeicherte Prozeduren können mehrere SET NOCOUNT-Anweisungen enthalten. Daher kann der Programmierer nicht davon ausgehen, dass SQL_SOPT_SS_NOCOUNT_STATUS konstant bleibt. Die Option sollte jedes Mal getestet werden, wenn **SQLRowCount** 0 zurückgibt.  
   

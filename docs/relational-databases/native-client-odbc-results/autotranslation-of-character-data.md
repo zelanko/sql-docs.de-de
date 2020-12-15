@@ -23,18 +23,18 @@ helpviewer_keywords:
 ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f7c3c16222d1537c250e888e365754fd9d919f6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2de8b3a1fc6b1bd6547ec413fb5d8e4e0fbca6dd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486793"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438251"
 ---
 # <a name="autotranslation-of-character-data"></a>Automatische Übersetzung der Zeichendaten
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Zeichendaten, wie z. b. ANSI-Zeichen Variablen, die mit SQL_C_CHAR deklariert wurden, oder Daten, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die in mithilfe der Datentypen **char**, **varchar**oder **Text** gespeichert werden, können nur eine begrenzte Anzahl von Zeichen darstellen. Mit einem Byte pro Zeichen gespeicherte Zeichendaten können nur 256 Zeichen darstellen. Die in SQL_C_CHAR-Variablen gespeicherten Werte werden mithilfe der ANSI-Codepage (ACP) auf dem Clientcomputer interpretiert. Die Werte, die mit den Datentypen **char**, **varchar**oder **Text** auf dem Server gespeichert werden, werden mithilfe der ACP des Servers ausgewertet.  
+  Zeichendaten, wie z. b. ANSI-Zeichen Variablen, die mit SQL_C_CHAR deklariert wurden, oder Daten, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die in mithilfe der Datentypen **char**, **varchar** oder **Text** gespeichert werden, können nur eine begrenzte Anzahl von Zeichen darstellen. Mit einem Byte pro Zeichen gespeicherte Zeichendaten können nur 256 Zeichen darstellen. Die in SQL_C_CHAR-Variablen gespeicherten Werte werden mithilfe der ANSI-Codepage (ACP) auf dem Clientcomputer interpretiert. Die Werte, die mit den Datentypen **char**, **varchar** oder **Text** auf dem Server gespeichert werden, werden mithilfe der ACP des Servers ausgewertet.  
   
  Wenn sowohl der Server als auch der Client über dieselbe ACP verfügen, haben Sie keine Probleme bei der Interpretation der Werte, die in SQL_C_CHAR-, **char**-, **varchar**-oder **Text** -Objekten gespeichert werden. Wenn der Server und der Client über unterschiedliche ACPs verfügen, werden SQL_C_CHAR Daten vom Client möglicherweise als ein anderes Zeichen auf dem Server interpretiert, wenn Sie in **char**-, **varchar**-oder **Text** -Spalten,-Variablen oder-Parametern verwendet werden. Ein Zeichen Byte, das den Wert 0xA5 enthält, wird z. b. auf einem Computer mit der Codepage 437 als Zeichen Version interpretiert und als Yen-Zeichen (Yen Sign) auf einem Computer mit der Codepage 1252 interpretiert.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "88486793"
   
 -   Verschieben von Daten zwischen Zeichen SQL_C_CHAR Client Variablen und Unicode- **NCHAR**-, **nvarchar**-oder **ntext** -Spalten,-Variablen oder-Parametern in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbanken.  
   
--   Verschieben von Daten zwischen Unicode-SQL_C_WCHAR Client Variablen und Zeichen Spalten, Variablen oder Parametern von Zeichen **char**, **varchar**oder **Text** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbanken.  
+-   Verschieben von Daten zwischen Unicode-SQL_C_WCHAR Client Variablen und Zeichen Spalten, Variablen oder Parametern von Zeichen **char**, **varchar** oder **Text** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbanken.  
   
  Daten müssen immer konvertiert werden, wenn sie vom Zeichenformat in Unicode übertragen werden.  
   
