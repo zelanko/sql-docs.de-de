@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: acdb347af36812095df03f61ae9f118493496e51
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: f0ae8e1f4ec9fdf83ce3f143c175fd08b153a960
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364772"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475061"
 ---
 # <a name="sysdm_database_copies-azure-sql-database"></a>sys.dm_database_copies (Azure SQL-Datenbank)
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
@@ -59,7 +59,7 @@ Verwenden Sie die [sys.geo_replication_links](../../relational-databases/system-
 ## <a name="permissions"></a>Berechtigungen  
  Diese Ansicht ist nur in der **Master** -Datenbank für den Prinzipal Anmelde Namen auf Serverebene verfügbar.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Sie können die **sys.dm_database_copies** Ansicht in der **Master** -Datenbank der Quell-oder Ziel [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Server verwenden. Wenn das Kopieren der Datenbank erfolgreich abgeschlossen wurde und die neue Datenbank online geschaltet wird, wird die Zeile in der **sys.dm_database_copies** Ansicht automatisch entfernt.  
   
   

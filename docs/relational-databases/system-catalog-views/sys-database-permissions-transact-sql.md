@@ -1,6 +1,6 @@
 ---
 description: sys.database_permissions (Transact-SQL)
-title: sys. database_permissions (Transact-SQL) | Microsoft-Dokumentation
+title: sys.database_permissions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/11/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: c1e261f8-6cb0-4759-b5f1-5ec233602655
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc503cec67334a95a7e5e06e19a3b6eb722e27f6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0af3adae81e4f0bb9489e3534427dfe03efebf09
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469966"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475251"
 ---
 # <a name="sysdatabase_permissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,17 +36,17 @@ ms.locfileid: "88469966"
 > [!IMPORTANT]  
 >  Berechtigungen auf Spaltenebene überschreiben Berechtigungen auf Objektebene in derselben Entität.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**class**|**tinyint**|Identifiziert die Klasse, für die die Berechtigung vorhanden ist.<br /><br /> 0 = Datenbank<br />1 = Objekt oder Spalte<br />3 = Schema<br />4 = Daten Bank Prinzipal<br />5 = Assembly- **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br />6 = Typ<br />10 = XML-Schema Auflistung- <br />                      **Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br />15 = Nachrichtentyp: **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br />16 = Dienstvertrag: **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br />17 = Dienst: **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br />18 = Remote Dienst Bindung: **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br />19 = Route- **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br />23 = voll Text Katalog- **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br />24 = symmetrischer Schlüssel: **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br />25 = Zertifikat- **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br />26 = asymmetrischer Schlüssel: **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.|  
 |**class_desc**|**nvarchar(60)**|Beschreibung der Klasse, in der die Berechtigung vorhanden ist.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  
-|**major_id**|**int**|ID des Objekts, für das die Berechtigung vorhanden ist, interpretiert nach der Klasse. In der Regel ist der **major_id** einfach die Art der ID, die für das darstellt, was die Klasse darstellt. <br /><br /> 0 = die Datenbank selbst <br /><br /> >0 = Objekt-IDs für Benutzer Objekte <br /><br /> \<0 = Objekt-IDs für Systemobjekte |  
+|**major_id**|**int**|ID des Objekts, für das die Berechtigung vorhanden ist, interpretiert nach der Klasse. In der Regel ist der **major_id** einfach die Art der ID, die für das darstellt, was die Klasse darstellt. <br /><br /> 0 = die Datenbank selbst <br /><br /> >0 = Object-IDs für Benutzer Objekte <br /><br /> \<0 = Object-IDs für Systemobjekte |  
 |**minor_id**|**int**|Sekundäre ID des Objekts, für das die Berechtigung vorhanden ist, interpretiert nach der Klasse. Häufig ist der **minor_id** NULL, da keine Unterkategorie für die Klasse des Objekts verfügbar ist. Andernfalls handelt es sich um die Spalten-ID einer Tabelle.|  
 |**grantee_principal_id**|**int**|Datenbankprinzipal-ID, der die Berechtigungen erteilt werden.|  
 |**grantor_principal_id**|**int**|Datenbankprinzipal-ID des Berechtigenden dieser Berechtigungen.|  
 |**type**|**char (4)**|Datenbank-Berechtigungstyp. Eine Liste der Berechtigungstypen finden Sie in der folgenden Tabelle.|  
 |**permission_name**|**nvarchar(128)**|Berechtigungsname.|  
-|**Status**|**char (1)**|Der Berechtigungsstatus:<br /><br /> D = Verweigern<br /><br /> R = Aufheben<br /><br /> G = Erteilen<br /><br /> W = Erteilen mit WITH GRANT OPTION|  
+|**state**|**char(1)**|Der Berechtigungsstatus:<br /><br /> D = Verweigern<br /><br /> R = Aufheben<br /><br /> G = Erteilen<br /><br /> W = Erteilen mit WITH GRANT OPTION|  
 |**state_desc**|**nvarchar(60)**|Beschreibung des Berechtigungsstatus:<br /><br /> VERWEIGERN<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
 
 ## <a name="database-permissions"></a>Datenbankberechtigungen   

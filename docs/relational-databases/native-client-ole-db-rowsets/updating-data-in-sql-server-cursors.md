@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 732dafee-f2d5-4aef-aad7-3a8bf3b1e876
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e00bf48c991d496e4425e665206b22a0ac3d32a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 35c2bbfb0b4aeac91e4a2c6ddcccaeddfce76857
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448322"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476031"
 ---
 # <a name="updating-data-in-sql-server-cursors-in-sql-server-native-client"></a>Aktualisieren von Daten in SQL Server Cursorn in SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88448322"
   
  In beiden Modi stellt ein Roundtrip eine separate Transaktion dar, wenn kein Transaktionsobjekt für das Rowset geöffnet ist.  
   
- Wenn Sie **IRowsetUpdate:: Update**verwenden, versucht der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter, jede bestimmte Zeile zu verarbeiten. Aufgrund ungültiger Daten-, Längen-oder Statuswerte für eine Zeile wird die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verarbeitung von Native Client OLE DB-Anbietern nicht beendet. Es können nur alle oder keine der anderen am Update beteiligten Zeilen geändert werden. Der Consumer muss das zurückgegebene *prgRowStatus* -Array untersuchen, um den Fehler für eine bestimmte Zeile zu ermitteln, wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter DB_S_ERRORSOCCURRED zurückgibt.  
+ Wenn Sie **IRowsetUpdate:: Update** verwenden, versucht der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter, jede bestimmte Zeile zu verarbeiten. Aufgrund ungültiger Daten-, Längen-oder Statuswerte für eine Zeile wird die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verarbeitung von Native Client OLE DB-Anbietern nicht beendet. Es können nur alle oder keine der anderen am Update beteiligten Zeilen geändert werden. Der Consumer muss das zurückgegebene *prgRowStatus* -Array untersuchen, um den Fehler für eine bestimmte Zeile zu ermitteln, wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter DB_S_ERRORSOCCURRED zurückgibt.  
   
  Ein Consumer darf nicht davon ausgehen, dass Zeilen in einer bestimmten Reihenfolge verarbeitet werden. Wenn ein Consumer es erfordert, dass die Verarbeitung von Datenänderungen in mehr als einer Zeile in einer bestimmten Reihenfolge durchgeführt wird, muss der Consumer diese Reihenfolge in der Anwendungslogik festlegen und eine Transaktion öffnen, um den Prozess darin einzuschließen.  
   

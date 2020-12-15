@@ -20,20 +20,20 @@ helpviewer_keywords:
 ms.assetid: e5046102-a65c-401e-b80d-05636884dec9
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 95e4d3b3b1b06810fc1e60564a4ad7c84e85189a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 169f0069565c3d1f6561d6edc8e8b459fc77ac9a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486528"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475261"
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Gibt eine Zeile für jedes Zertifikat in der Datenbank zurück.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Name des Zertifikats. Ist in der Datenbank eindeutig.|  
 |**certificate_id**|**int**|ID des Zertifikats. Ist in der Datenbank eindeutig.|  
@@ -48,7 +48,7 @@ ms.locfileid: "88486528"
 |**subject**|**nvarchar(4000)**|Betreff dieses Zertifikats.|  
 |**expiry_date**|**datetime**|Das Ablaufdatum des Zertifikats.|  
 |**start_date**|**datetime**|Das Datum, ab dem das Zertifikat gültig ist.|  
-|**Fingerabdruck**|**varbinary(32)**|SHA-1-Hash des Zertifikats. Der SHA-1-Hash ist global eindeutig.|  
+|**thumbprint**|**varbinary(32)**|SHA-1-Hash des Zertifikats. Der SHA-1-Hash ist global eindeutig.|  
 |**attested_by**|**nvarchar(260)**|Nur zur Verwendung durch das System.|  
 |**pvt_key_last_backup_date**|**datetime**|Das Datum und die Uhrzeit, zu denen der private Schlüssel des Zertifikats zuletzt exportiert wurde.|  
   

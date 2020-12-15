@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_xtp_memory_consumers (Transact-SQL)
-title: sys. dm_db_xtp_memory_consumers (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_db_xtp_memory_consumers (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: f7ab2eaf-e627-464d-91fe-0e170b3f37bc
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 321297a2590a18ed7e51364b3f532076f90ce740
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a962925e0a359055286b6598914cd3e79cf8036c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542232"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474971"
 ---
 # <a name="sysdm_db_xtp_memory_consumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "89542232"
   
  Weitere Informationen finden Sie unter [In-Memory OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |memory_consumer_id|**bigint**|ID (intern) des Arbeitsspeicherconsumers.|  
 |memory_consumer_type|**int**|Der Typ des Arbeitsspeicherconsumers:<br /><br /> 0=Aggregation. (Aggregiert die Arbeitsspeichernutzung von mindestens zwei Consumern. Sollte nicht angezeigt werden.)<br /><br /> 2=VARHEAP (Verfolgt die Arbeitsspeichernutzung für einen Heap variabler Länge nach.)<br /><br /> 3=HASH (Verfolgt die Arbeitsspeichernutzung für einen Index nach.)<br /><br /> 5=DB-Seitenpool (Verfolgt die Arbeitsspeichernutzung für einen Datenbank-Seitenpool nach, der für Laufzeitvorgänge verwendet wird, z. B. Tabellenvariablen und einige serialisierbare Scans. Es gibt nur einen Arbeitsspeicherconsumer dieses Typs pro Datenbank.)|  
@@ -47,11 +47,11 @@ ms.locfileid: "89542232"
 |allocated_bytes|**bigint**|Anzahl der für den Consumer reservierten Bytes.|  
 |used_bytes|**bigint**|Die von diesem Consumer verwendeten Bytes. Gilt nur für varheap.|  
 |allocation_count|**int**|Anzahl der Zuordnungen.|  
-|partition_count|**int**|Nur interne Verwendung.|  
-|sizeclass_count|**int**|Nur interne Verwendung.|  
-|min_sizeclass|**int**|Nur interne Verwendung.|  
-|max_sizeclass|**int**|Nur interne Verwendung.|  
-|memory_consumer_address|**varbinary**|Interne Adresse des Consumers. Nur für interne Verwendung.|  
+|partition_count|**int**|Nur zur internen Verwendung.|  
+|sizeclass_count|**int**|Nur zur internen Verwendung.|  
+|min_sizeclass|**int**|Nur zur internen Verwendung.|  
+|max_sizeclass|**int**|Nur zur internen Verwendung.|  
+|memory_consumer_address|**varbinary**|Interne Adresse des Consumers. Nur zur internen Verwendung.|  
 |xtp_object_id|**bigint**|Die in-Memory-OLTP-Objekt-ID, die der Speicher optimierten Tabelle entspricht.|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -65,7 +65,7 @@ ms.locfileid: "89542232"
  Systemtabellen werden nur für Benutzer mit der VIEW DATABASE STATE-Berechtigung zurückgegeben.  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
- Wenn eine Speicher optimierte Tabelle über einen columnstore--Index verfügt, verwendet das System einige interne Tabellen, die Arbeitsspeicher belegen, um Daten für den columnstore--Index zu verfolgen. Ausführliche Informationen zu diesen internen Tabellen und Beispielabfragen mit der Arbeitsspeicher Nutzung finden Sie unter [sys. memory_optimized_tables_internal_attributes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md).
+ Wenn eine Speicher optimierte Tabelle über einen columnstore--Index verfügt, verwendet das System einige interne Tabellen, die Arbeitsspeicher belegen, um Daten für den columnstore--Index zu verfolgen. Ausführliche Informationen zu diesen internen Tabellen und Beispielabfragen, die ihre Arbeitsspeicher Nutzung anzeigen, finden Sie unter [sys.memory_optimized_tables_internal_attributes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md).
  
   
 ## <a name="examples"></a>Beispiele  
@@ -112,7 +112,7 @@ NULL       VARHEAP                   NULL        NULL        1405943808         
 (17 row(s) affected)  
 ```  
   
- Der von dieser DMV zugeordnete und verwendete Gesamtspeicher entspricht der Objektebene in [sys. dm_db_xtp_table_memory_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md).  
+ Der Gesamtspeicher, der dieser DMV zugeordnet und verwendet wird, entspricht der Objektebene in [sys.dm_db_xtp_table_memory_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md).  
   
 ```  
 select  sum(allocated_bytes)/(1024*1024) as total_allocated_MB,   
