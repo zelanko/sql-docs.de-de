@@ -1,6 +1,6 @@
 ---
 description: sys.table_types (Transact-SQL)
-title: sys. table_types (Transact-SQL) | Microsoft-Dokumentation
+title: sys.table_types (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,20 +23,20 @@ helpviewer_keywords:
 ms.assetid: c05fd873-aff2-4a89-9936-a54c2ea09996
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd8ea2fe8960115b5ef638490a38291ed9cdd559
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0e55d33dbc18c8a06100a2ffab4b9ea3691aabc1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548652"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482881"
 ---
 # <a name="systable_types-transact-sql"></a>sys.table_types (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Zeigt Eigenschaften von benutzerdefinierten Tabellentypen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an. Ein Tabellentyp ist ein Typ, von dem Tabellenvariablen oder Tabellenwertparameter deklariert werden können. Jeder Tabellentyp verfügt über eine **type_table_object_id** , bei der es sich um einen Fremdschlüssel in die [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) -Katalog Sicht handelt. Sie können diese ID-Spalte verwenden, um verschiedene Katalog Sichten auf eine Weise abzufragen, die mit einer **object_id** -Spalte einer regulären Tabelle vergleichbar ist, um die Struktur des Tabellentyps, wie z. b. die Spalten und Einschränkungen, zu ermitteln.    
  
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |*\<inherited columns>*||Eine Liste der Spalten, die diese Sicht erbt, finden Sie unter [sys. types &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md).|  
 |**type_table_object_id**|**int**|Objekt-ID. Diese Nummer ist innerhalb einer Datenbank eindeutig.|  
@@ -47,7 +47,7 @@ ms.locfileid: "89548652"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Katalogsichten für Objekte &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Tabellenwert Parameter &#40;Datenbank-Engine verwenden&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)   
+ [Verwenden Sie Table-Valued Parameter &#40;Datenbank-Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)   
  [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

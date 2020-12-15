@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: f0b734d5-816f-4b10-a60c-615931b515c2
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c7237d75abfcc67dc1045896cd095cea4f78123
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1621d12ef0382f4df071d41a8bc3f84b447c8b20
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753604"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482447"
 ---
 # <a name="domains-transact-sql"></a>DOMAINS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "91753604"
   
  Zum Abrufen von Informationen aus diesen Sichten geben Sie den voll qualifizierten Namen **INFORMATION_SCHEMA an.** _view_name_.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**DOMAIN_CATALOG**|**nvarchar (** 128 **)**|Datenbank, in der der Aliasdatentyp vorhanden ist.|  
 |**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|Der Name des Schemas, das den Alias Datentyp enthält.<br /><br /> **&#42;&#42; wichtige &#42;&#42;** Verwenden Sie INFORMATION_SCHEMA Sichten nicht, um das Schema eines Datentyps zu bestimmen. Die einzige zuverlässige Möglichkeit zum Finden des Schemas eines Typs besteht darin, die TYPEPROPERTY-Funktion zu verwenden.|  
@@ -45,7 +45,7 @@ ms.locfileid: "91753604"
 |**COLLATION_CATALOG**|**varchar (** 6 **)**|Gibt immer NULL zurück.|  
 |**COLLATION_SCHEMA**|**varchar (** 3 **)**|Gibt immer NULL zurück.|  
 |**COLLATION_NAME**|**nvarchar (** 128 **)**|Gibt den eindeutigen Namen für die Sortierreihenfolge zurück, wenn die Spalte Zeichendaten oder **Text** Datentyp ist. Andernfalls wird NULL zurückgegeben.|  
-|**CHARACTER_SET_CATALOG**|**varchar (** 6 **)**|Gibt **Master**zurück. Gibt die Datenbank an, in der sich der Zeichensatz befindet, wenn die Spalte Zeichendaten oder **Text** Datentyp ist. Andernfalls wird NULL zurückgegeben.|  
+|**CHARACTER_SET_CATALOG**|**varchar (** 6 **)**|Gibt **Master** zurück. Gibt die Datenbank an, in der sich der Zeichensatz befindet, wenn die Spalte Zeichendaten oder **Text** Datentyp ist. Andernfalls wird NULL zurückgegeben.|  
 |**CHARACTER_SET_SCHEMA**|**varchar (** 3 **)**|Gibt immer NULL zurück.|  
 |**CHARACTER_SET_NAME**|**nvarchar (** 128 **)**|Gibt den eindeutigen Namen für den Zeichensatz zurück, wenn diese Spalte Zeichendaten oder **Text** Datentyp ist. Andernfalls wird NULL zurückgegeben.|  
 |**NUMERIC_PRECISION**|**tinyint**|Genauigkeit für Spalten mit ungefähren numerischen Daten, exakten numerischen Daten, ganzzahligen Daten oder Währungsdaten. Andernfalls wird NULL zurückgegeben.|  

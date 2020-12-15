@@ -22,18 +22,18 @@ helpviewer_keywords:
 ms.assetid: 4523ae15-4260-40a7-a53c-8df15e1fee79
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f44a757695d067f518de22f9d3bc59af455a67c
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 83aa956f8a9a9421cdbc411856be78af272f1fa6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753770"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482512"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Eine Funktion, die in der [from-Klausel](../../t-sql/queries/from-transact-sql.md) einer [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung verwendet wird, um eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Volltextsuche für voll Text indizierte Spalten mit Zeichen basierten Datentypen durchzuführen. Diese Funktion gibt eine Tabelle mit keiner, einer oder mehreren Zeilen für die Spalten zurück, die Werte enthalten, die der Bedeutung und nicht nur dem genauen Wortlaut des Texts im angegebenen *freetext_string*entsprechen. Auf FREETEXTTABLE wird wie auf einen regulären Tabellennamen verwiesen.  
+  Eine Funktion, die in der [from-Klausel](../../t-sql/queries/from-transact-sql.md) einer [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung verwendet wird, um eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Volltextsuche für voll Text indizierte Spalten mit Zeichen basierten Datentypen durchzuführen. Diese Funktion gibt eine Tabelle mit keiner, einer oder mehreren Zeilen für die Spalten zurück, die Werte enthalten, die der Bedeutung und nicht nur dem genauen Wortlaut des Texts im angegebenen *freetext_string* entsprechen. Auf FREETEXTTABLE wird wie auf einen regulären Tabellennamen verwiesen.  
   
  "Fretexamp;" ist für die gleichen Arten von Übereinstimmungen geeignet wie für den [&#40;Transact-SQL-&#41;](../../t-sql/queries/freetext-transact-sql.md).  
   
@@ -58,7 +58,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
   
 ## <a name="arguments"></a>Argumente  
  *Tabelle*  
- Der Name der Tabelle, die für Volltextabfragen markiert wurde. die *Tabelle* oder *Sicht*kann ein ein-, zwei-oder dreiteilige Datenbankobjekt Name sein. Bei der Abfrage einer Sicht kann nur eine volltextindizierte Basistabelle verwendet werden.  
+ Der Name der Tabelle, die für Volltextabfragen markiert wurde. die *Tabelle* oder *Sicht* kann ein ein-, zwei-oder dreiteilige Datenbankobjekt Name sein. Bei der Abfrage einer Sicht kann nur eine volltextindizierte Basistabelle verwendet werden.  
   
  die *Tabelle* kann keinen Servernamen angeben und kann nicht in Abfragen für Verbindungs Server verwendet werden.  
   
@@ -90,9 +90,9 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
  Ist die angegebene Sprache ungültig oder sind keine Ressourcen installiert, die dieser Sprache entsprechen, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler zurück. Geben Sie 0x0 als *language_term* an, um neutrale Sprachressourcen zu verwenden.  
   
  *top_n_by_rank*  
- Gibt an, dass nur die *n*höchsten Übereinstimmungen in absteigender Reihenfolge zurückgegeben werden. Gilt nur, wenn ein ganzzahliger Wert ( *n*) angegeben wird. Wenn *top_n_by_rank* mit anderen Parametern kombiniert wird, werden von der Abfrage möglicherweise weniger Zeilen zurückgegeben als die Anzahl von Zeilen, die mit allen Prädikaten übereinstimmen. mit *top_n_by_rank* können Sie die Abfrageleistung erhöhen, indem Sie nur die relevantesten Treffer abrufen.  
+ Gibt an, dass nur die *n* höchsten Übereinstimmungen in absteigender Reihenfolge zurückgegeben werden. Gilt nur, wenn ein ganzzahliger Wert ( *n*) angegeben wird. Wenn *top_n_by_rank* mit anderen Parametern kombiniert wird, werden von der Abfrage möglicherweise weniger Zeilen zurückgegeben als die Anzahl von Zeilen, die mit allen Prädikaten übereinstimmen. mit *top_n_by_rank* können Sie die Abfrageleistung erhöhen, indem Sie nur die relevantesten Treffer abrufen.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Volltextprädikate und -funktionen gelten für eine einzelne Tabelle, die im FROM-Prädikat enthalten ist. Um eine Suche in mehreren Tabellen auszuführen, können Sie eine verknüpfte Tabelle in der FROM-Klausel verwenden, um in einem Resultset zu suchen, das aus mindestens zwei Tabellen erstellt wird.  
   
  FREETEXTTABLE verwendet die gleichen Suchbedingungen wie das FREETEXT-Prädikat.  

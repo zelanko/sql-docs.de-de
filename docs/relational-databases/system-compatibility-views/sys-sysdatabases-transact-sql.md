@@ -21,26 +21,26 @@ helpviewer_keywords:
 ms.assetid: 60a93880-62f1-4eda-a886-f046706ba90c
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c851732077c60d8527050edf045aaf342c7c66e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ebee2c9eba8870dbb3b95712d69eaa1e09e2a563
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493764"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477341"
 ---
 # <a name="syssysdatabases-transact-sql"></a>sys.sysdatabases (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
-  Enthält eine Zeile für jede Datenbank in einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstmalig installiert wird, enthält **sysdatabases** Einträge für die Datenbanken **master**, **model**, **msdb**und **tempdb** .  
+  Enthält eine Zeile für jede Datenbank in einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstmalig installiert wird, enthält **sysdatabases** Einträge für die Datenbanken **master**, **model**, **msdb** und **tempdb** .  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Datenbankname|  
-|**dbid**|**smallint**|Datenbank-ID|  
+|**DBID**|**smallint**|Datenbank-ID|  
 |**sid**|**varbinary(85)**|Die System-ID des Datenbankerstellers.|  
 |**mode**|**smallint**|Wird intern verwendet, um eine Datenbank beim Erstellen zu sperren.|  
 |**status**|**int**|Statusbits, die teilweise mithilfe von [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) festgelegt werden können, wie im Folgenden beschrieben:<br /><br /> 1 = **autoclose** (ALTER DATABASE)<br /><br /> 4 = **select into/bulkcopy** (ALTER DATABASE mithilfe von SET RECOVERY)<br /><br /> 8 = **trunc. log on chkpt** (ALTER DATABASE mithilfe von SET RECOVERY)<br /><br /> 16 = **torn page detection** (ALTER DATABASE)<br /><br /> 32 = **loading**<br /><br /> 64 = **pre recovery**<br /><br /> 128 = **recovering**<br /><br /> 256 = **not recovered**<br /><br /> 512 = **offline** (ALTER DATABASE)<br /><br /> 1024 = **read only** (ALTER DATABASE)<br /><br /> 2048 = **dbo use only** (ALTER DATABASE mithilfe von SET RESTRICTED_USER)<br /><br /> 4096 = **single user** (ALTER DATABASE)<br /><br /> 32768 = **emergency mode**<br /><br /> 65536 = **CHECKSUM** (ALTER DATABASE)<br /><br /> 4194304 = **autoshrink** (ALTER DATABASE)<br /><br /> 1073741824 = **cleanly shutdown**<br /><br /> Es können mehrere Bits gleichzeitig aktiviert (ON) sein.|  

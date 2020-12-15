@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3097ba3a920a049dd69b54a8a9f7b84638ff3fb
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1fce9f5d723006fdccba975b1014012e4a21ad13
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97328197"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482811"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ Gibt die zusammengefasste Leistungsstatistik für zwischengespeicherte Abfragepl
 > - Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys.dm_pdw_nodes_exec_query_stats**.    
 
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**sql_handle**|**varbinary(64)**  |Ein Token, das den Batch oder die gespeicherte Prozedur eindeutig identifiziert, zu der die Abfrage gehört.<br /><br /> **sql_handle** kann zusammen mit **statement_start_offset** und **statement_end_offset** verwendet werden, um den SQL-Text der Abfrage abzurufen, indem die dynamische Verwaltungsfunktion **sys.dm_exec_sql_text** aufgerufen wird.|  
 |**statement_start_offset**|**int**|Gibt die Startposition der Abfrage, die in der Zeile beschrieben wird, beginnend mit 0 im Text des zugehörigen persistenten Objekts oder Batchobjekts an (in Bytes).|  
@@ -129,7 +129,7 @@ Gibt die zusammengefasste Leistungsstatistik für zwischengespeicherte Abfragepl
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
 Bei den Dienst Zielen "Basic", "S0" und "S1" in SQL-Datenbank ist für Datenbanken in Pools für elastische Datenbanken `Server admin` oder ein `Azure Active Directory admin` Konto erforderlich. Für alle anderen SQL-Datenbank-Dienst Ziele `VIEW DATABASE STATE` ist die Berechtigung in der Datenbank erforderlich.   
    
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Statistiken in der Sicht werden nach Abschluss einer Abfrage aktualisiert.  
   
 ## <a name="examples"></a>Beispiele  
@@ -174,7 +174,7 @@ WHERE qt.text like '%SELECT%'
 ORDER BY qs.execution_count DESC;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 [Dynamische Verwaltungs Sichten und-Funktionen im Zusammenhang mit der Ausführung &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
 [sys.dm_exec_sql_text &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
 [sys.dm_exec_query_plan &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    

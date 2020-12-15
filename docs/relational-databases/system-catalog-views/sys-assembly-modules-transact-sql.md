@@ -1,6 +1,6 @@
 ---
 description: sys.assembly_modules (Transact-SQL)
-title: sys. assembly_modules (Transact-SQL) | Microsoft-Dokumentation
+title: sys.assembly_modules (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,27 +20,27 @@ helpviewer_keywords:
 ms.assetid: 5f9e644e-8065-49a2-b53d-db7df98f70d8
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33599443948e52ca21eba59afd86eb6a67c58fae
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 333aa642ee0d644377e8f3d665f793bedf810b3d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551544"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479081"
 ---
 # <a name="sysassembly_modules-transact-sql"></a>sys.assembly_modules (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
-  Gibt eine Zeile für jede Funktion, jede Prozedur oder jeden Trigger zurück, die bzw. der mit einer CLR-Assembly (Common Language Runtime) definiert ist. Diese Katalogsicht ordnet CLR-gespeicherte Prozeduren, CLR-Trigger oder CLR-Funktionen der zugrunde liegenden Implementierung zu. Objekten vom Typ TA, AF, PC, FS und FT ist ein Assemblymodul zugeordnet. Um die Zuordnung zwischen dem Objekt und der Assembly zu finden, können Sie diese Katalogsicht mit anderen Katalogsichten verknüpfen. Wenn Sie z. B. eine CLR-gespeicherte Prozedur erstellen, wird diese durch eine Zeile in **sys.objects**, eine Zeile in **sys.procedures** (geerbt von **sys.objects**) und eine Zeile in **sys.assembly_modules**dargestellt. Die gespeicherte Prozedur selbst wird durch die Metadaten in **sys.objects** und **sys.procedures**dargestellt. Verweise auf die zugrunde liegende CLR-Implementierung der Prozedur finden Sie in **sys. assembly_modules**.  
+  Gibt eine Zeile für jede Funktion, jede Prozedur oder jeden Trigger zurück, die bzw. der mit einer CLR-Assembly (Common Language Runtime) definiert ist. Diese Katalogsicht ordnet CLR-gespeicherte Prozeduren, CLR-Trigger oder CLR-Funktionen der zugrunde liegenden Implementierung zu. Objekten vom Typ TA, AF, PC, FS und FT ist ein Assemblymodul zugeordnet. Um die Zuordnung zwischen dem Objekt und der Assembly zu finden, können Sie diese Katalogsicht mit anderen Katalogsichten verknüpfen. Wenn Sie z. B. eine CLR-gespeicherte Prozedur erstellen, wird diese durch eine Zeile in **sys.objects**, eine Zeile in **sys.procedures** (geerbt von **sys.objects**) und eine Zeile in **sys.assembly_modules** dargestellt. Die gespeicherte Prozedur selbst wird durch die Metadaten in **sys.objects** und **sys.procedures** dargestellt. Verweise auf die zugrunde liegende CLR-Implementierung der Prozedur finden Sie in **sys.assembly_modules**.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Objekt-ID des SQL-Objekts. Ist innerhalb einer Datenbank eindeutig.|  
 |**assembly_id**|**int**|ID der Assembly, aus der dieses Modul erstellt wurde.|  
 |**assembly_class**|**sysname**|Der Name der Klasse innerhalb der Assembly, die dieses Modul definiert.|  
 |**assembly_method**|**sysname**|Der Name der Methode innerhalb von **assembly_class** , die dieses Modul definiert.<br /><br /> NULL für Aggregatfunktionen (AF).|  
 |**null_on_null_input**|**bit**|Für das Modul wurde deklariert, dass für jede NULL-Eingabe eine NULL-Ausgabe erstellt wird.|  
-|**execute_as_principal_id**|**int**|Die ID des Datenbankprinzipals, unter dem der Kontext ausgeführt wird, gemäß der EXECUTE AS-Klausel der CLR-Funktion, der gespeicherten Prozedur oder des Triggers.<br /><br /> NULL = EXECUTE AS CALLER. Dies ist die Standardoption.<br /><br /> Die ID des angegebenen Datenbankprinzipals = EXECUTE AS SELF, EXECUTE AS *user_name*oder EXECUTE AS *login_name*.<br /><br /> -2 = EXECUTE AS OWNER.|  
+|**execute_as_principal_id**|**int**|Die ID des Datenbankprinzipals, unter dem der Kontext ausgeführt wird, gemäß der EXECUTE AS-Klausel der CLR-Funktion, der gespeicherten Prozedur oder des Triggers.<br /><br /> NULL = EXECUTE AS CALLER. Dies ist die Standardoption.<br /><br /> Die ID des angegebenen Datenbankprinzipals = EXECUTE AS SELF, EXECUTE AS *user_name* oder EXECUTE AS *login_name*.<br /><br /> -2 = EXECUTE AS OWNER.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

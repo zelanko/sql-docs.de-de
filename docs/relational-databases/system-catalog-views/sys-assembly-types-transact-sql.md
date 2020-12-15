@@ -1,6 +1,6 @@
 ---
 description: sys.assembly_types (Transact-SQL)
-title: sys. assembly_types (Transact-SQL) | Microsoft-Dokumentation
+title: sys.assembly_types (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 ms.assetid: 35f0384f-7a6d-41b1-9461-f1406d68f317
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06eb2eb4fe6b0983b798ea38fa98057be73af77a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 006495335ab8a6bfa48adf8d840b3b96a0c936d0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545076"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479091"
 ---
 # <a name="sysassembly_types-transact-sql"></a>sys.assembly_types (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
-  Enthält eine Zeile für jeden benutzerdefinierten Datentyp, der durch eine CLR-Assembly definiert ist. Die folgenden **sys. assembly_types** werden in der Liste der geerbten Spalten (siehe [sys. types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)) nach **rule_object_id**angezeigt.  
+  Enthält eine Zeile für jeden benutzerdefinierten Datentyp, der durch eine CLR-Assembly definiert ist. Die folgenden **sys.assembly_types** werden in der Liste der geerbten Spalten (siehe [sys. types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)) nach **rule_object_id** angezeigt.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**assembly_id**|**int**|ID der Assembly, aus der dieser Typ erstellt wurde.|  
 |**assembly_class**|**sysname**|Name der Klasse innerhalb der Assembly, mit der dieser Typ definiert wird.|  

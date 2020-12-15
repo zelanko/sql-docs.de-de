@@ -1,6 +1,6 @@
 ---
 description: sys.fn_listextendedproperty (Transact-SQL)
-title: sys. fn_listextendedproperty (Transact-SQL) | Microsoft-Dokumentation
+title: sys.fn_listextendedproperty (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,13 +26,13 @@ helpviewer_keywords:
 ms.assetid: 59bbb91f-a277-4a35-803e-dcb91e847a49
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd891bcfdaddfb42e2b55e1b69e3f320563c1ba7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3efd2428f9eeae241c0ec9be497c854ba0d91417
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427822"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478951"
 ---
 # <a name="sysfn_listextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -97,7 +97,7 @@ fn_listextendedproperty (
   
  Wenn die zurückgegebene Tabelle leer ist, besitzt das Objekt keine erweiterten Eigenschaften oder der Benutzer hat keine Berechtigungen zum Auflisten der erweiterten Eigenschaften des Objekts. Beim Zurückgeben erweiterter Eigenschaften für die Datenbank selbst weisen die Spalten objtype und objname den Wert NULL auf.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn der Wert für *property_name* NULL oder default ist, gibt fn_listextendedproperty alle Eigenschaften für das angegebene Objekt zurück.  
   
  Wenn der Objekttyp angegeben ist und der Wert des entsprechenden Objektnamens NULL oder default ist, gibt fn_listextendedproperty alle erweiterten Eigenschaften für alle Objekte des angegebenen Typs zurück.  

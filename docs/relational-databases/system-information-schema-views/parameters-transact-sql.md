@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 06ded0ca-7d21-4400-864a-b801e855b257
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 46360eac7080f92f98ba3f081b7cd9ec505f12c9
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 481e104f4762638fb4c71a548c3a390e1babe762
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753566"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478931"
 ---
 # <a name="parameters-transact-sql"></a>PARAMETERS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "91753566"
   
  Zum Abrufen von Informationen aus diesen Sichten geben Sie den voll qualifizierten Namen **INFORMATION_SCHEMA an.** _view_name_.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**SPECIFIC_CATALOG**|**nvarchar (** 128 **)**|Katalogname der Routine, für die dies ein Parameter ist|  
 |**SPECIFIC_SCHEMA**|**nvarchar (** 128 **)**|Schemaname der Routine, für die dies ein Parameter ist<br /><br /> Wichtig verwenden Sie keine INFORMATION_SCHEMA Sichten, um das Schema eines Objekts zu bestimmen. <strong> \* \* \* \* </strong> INFORMATION_SCHEMA Sichten stellen nur eine Teilmenge der Metadaten eines Objekts dar. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
@@ -56,7 +56,7 @@ ms.locfileid: "91753566"
 |**NUMERIC_PRECISION**|**tinyint**|Genauigkeit für Spalten mit ungefähren numerischen Daten, exakten numerischen Daten, ganzzahligen Daten oder Währungsdaten. Andernfalls wird NULL zurückgegeben.|  
 |**NUMERIC_PRECISION_RADIX**|**smallint**|Basis der Genauigkeit für Spalten mit ungefähren numerischen Daten, exakten numerischen Daten, ganzzahligen Daten oder Währungsdaten. Andernfalls wird NULL zurückgegeben.|  
 |**NUMERIC_SCALE**|**tinyint**|Anzahl der Dezimalstellen für Spalten mit ungefähren numerischen Daten, exakten numerischen Daten, ganzzahligen Daten oder Währungsdaten. Andernfalls wird NULL zurückgegeben.|  
-|**DATETIME_PRECISION**|**smallint**|Genauigkeit in Sekundenbruchteilen, wenn der Parametertyp **DateTime** oder **smalldatetime**ist. Andernfalls wird NULL zurückgegeben.|  
+|**DATETIME_PRECISION**|**smallint**|Genauigkeit in Sekundenbruchteilen, wenn der Parametertyp **DateTime** oder **smalldatetime** ist. Andernfalls wird NULL zurückgegeben.|  
 |**INTERVAL_TYPE**|**nvarchar (** 30 **)**|NULL. Für zukünftige Verwendung reserviert.|  
 |**INTERVAL_PRECISION**|**smallint**|NULL. Für zukünftige Verwendung reserviert.|  
 |**USER_DEFINED_TYPE_CATALOG**|**nvarchar (** 128 **)**|NULL. Für zukünftige Verwendung reserviert.|  

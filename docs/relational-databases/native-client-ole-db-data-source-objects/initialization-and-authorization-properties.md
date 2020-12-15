@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 913ab38c-e443-446c-b326-7447e95aa7f9
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 93bb835a9d783cf2e7d3ca0ac95fbf1f640cb8dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 50e5fe1d6ce26bfc4fbc9a4efc61bc7c16881c31
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88381201"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478011"
 ---
 # <a name="initialization-and-authorization-properties-native-client-ole-db-provider"></a>Initialisierungs-und Autorisierungs Eigenschaften (Native Client OLE DB-Anbieter)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

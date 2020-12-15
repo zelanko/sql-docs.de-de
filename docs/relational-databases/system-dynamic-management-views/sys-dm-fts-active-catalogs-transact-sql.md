@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 40ab5453-040c-4d2e-bb49-e340cf90c3ee
 author: pmasl
 ms.author: pelopes
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f352af03115de658f16e56e27bc5ecf3bd900c3
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6b557073c7ad5d9aaef7f90380bf80f6ba382901
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97324536"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482731"
 ---
 # <a name="sysdm_fts_active_catalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "97324536"
 >  Die folgenden Spalten werden in einer zukünftigen Version von entfernt [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : is_paused, previous_status, previous_status_description, row_count_in_thousands, Status, status_description und worker_count. Verwenden Sie diese Spalten in Neuentwicklungen nicht. Planen Sie die Änderung von Anwendungen, die diese Spalten derzeit verwenden.  
   
  
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID der Datenbank, die den aktiven Volltextkatalog enthält.|  
 |**catalog_id**|**int**|ID des aktiven Volltextkatalogs.|  
@@ -56,7 +56,7 @@ ms.locfileid: "97324536"
 |**row_count_in_thousands**|**int**|Geschätzte Zeilenanzahl (in Tausenden) in allen Volltextindizes in diesem Volltextkatalog.|  
 |**is_importing**|**bit**|Gibt an, ob der Volltextkatalog importiert wird:<br /><br /> 1 = Der Katalog wird importiert.<br /><br /> 2 = Der Katalog wird nicht importiert.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die is_importing Spalte war neu in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -69,7 +69,7 @@ Bei den Dienst Zielen "Basic", "S0" und "S1" in SQL-Datenbank ist für Datenbank
   
 ## <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
   
-|Von|Beschreibung|Relationship|  
+|Von|Beschreibung|Beziehung|  
 |----------|--------|------------------|  
 |dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|1:1|  
 |dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|1:1|  

@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8816e2ca5872da55193fab016a459a461359c742
-ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: a84facf470cbafa9480c1beb48b19be7b9783f51
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93328584"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482575"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -57,16 +57,16 @@ Der negative ganzzahlige Wert in der result_cache_hit-Spalte ist ein Bitmapwert 
 |Wert            |BESCHREIBUNG  |  
 |-----------------|-----------------|  
 |**1**|Resultsetcache-Treffer|  
-|**0x00** ( **0** )|Resultsetcache-Fehler|  
-|-**0x01** ( **-1** )|Das Zwischenspeichern von Resultsets ist für die Datenbank deaktiviert.|  
-|-**0x02** ( **-2** )|Das Zwischenspeichern von Resultsets ist für die Sitzung deaktiviert. | 
-|-**0x04** ( **-4** )|Das Zwischenspeichern von Resultsets ist deaktiviert, weil keine Datenquellen für die Abfrage verfügbar sind.|  
-|-**0x08** ( **-8** )|Das Zwischenspeichern von Resultsets ist aufgrund von Sicherheits Prädikaten auf Zeilenebene deaktiviert.|  
-|-**0x10** ( **-16** )|Das Zwischenspeichern von Resultsets ist aufgrund der Verwendung der Systemtabelle, der temporären Tabelle oder der externen Tabelle in der Abfrage deaktiviert.|  
-|-**0x20** ( **-32** )|Das Zwischenspeichern von Resultsets ist deaktiviert, da die Abfrage Lauf Zeitkonstanten, benutzerdefinierte Funktionen oder nicht deterministische Funktionen enthält.|  
-|-**0x40** ( **-64** )|Das Zwischenspeichern von Resultsets ist deaktiviert, da die geschätzte Größe des Resultsets >10 GB beträgt.|  
-|-**0x80** ( **-128** ) |Das Zwischenspeichern von Resultsets ist deaktiviert, da das Resultset Zeilen mit großer Größe (>64 KB) enthält.|  
-|-**0x100** ( **-256** ) |Das Zwischenspeichern von Resultsets ist aufgrund der Verwendung von granularer dynamischer Daten Maskierung deaktiviert.|  
+|**0x00** (**0**)|Resultsetcache-Fehler|  
+|-**0x01** (**-1**)|Das Zwischenspeichern von Resultsets ist für die Datenbank deaktiviert.|  
+|-**0x02** (**-2**)|Das Zwischenspeichern von Resultsets ist für die Sitzung deaktiviert. | 
+|-**0x04** (**-4**)|Das Zwischenspeichern von Resultsets ist deaktiviert, weil keine Datenquellen für die Abfrage verfügbar sind.|  
+|-**0x08** (**-8**)|Das Zwischenspeichern von Resultsets ist aufgrund von Sicherheits Prädikaten auf Zeilenebene deaktiviert.|  
+|-**0x10** (**-16**)|Das Zwischenspeichern von Resultsets ist aufgrund der Verwendung der Systemtabelle, der temporären Tabelle oder der externen Tabelle in der Abfrage deaktiviert.|  
+|-**0x20** (**-32**)|Das Zwischenspeichern von Resultsets ist deaktiviert, da die Abfrage Lauf Zeitkonstanten, benutzerdefinierte Funktionen oder nicht deterministische Funktionen enthält.|  
+|-**0x40**(**-64**)|Das Zwischenspeichern von Resultsets ist deaktiviert, da die geschätzte Größe des Resultsets >10 GB beträgt.|  
+|-**0x80**(**-128**) |Das Zwischenspeichern von Resultsets ist deaktiviert, da das Resultset Zeilen mit großer Größe (>64 KB) enthält.|  
+|-**0x100**(**-256**) |Das Zwischenspeichern von Resultsets ist aufgrund der Verwendung von granularer dynamischer Daten Maskierung deaktiviert.|  
 
 ## <a name="permissions"></a>Berechtigungen
 

@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 0a284d18-3c46-4ffa-bcc9-689e660ee8b4
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: cf53d8d1ae8787ee8cff12ea944398f90707d7ea
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 2c81bb5c02b11753fa98024cfd4d3861b2768d24
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035393"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482591"
 ---
 # <a name="sysdm_pdw_dms_workers-transact-sql"></a>sys.dm_pdw_dms_workers (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "92035393"
 |dms_step_index|**int**|Schritt in den DMS-Plan, den dieser Worker ausgeführt wird.<br /><br /> request_id, step_index und dms_step_index bilden den Schlüssel für diese Ansicht.||  
 |pdw_node_id|**int**|Knoten, auf dem der Worker ausgeführt wird.|Weitere Informationen finden Sie unter node_id in [sys.dm_pdw_nodes &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
 |distribution_id|**Int**|Die Verteilung, auf der der Worker ausgeführt wird (sofern vorhanden).|Weitere Informationen finden Sie unter distribution_id in [sys.pdw_distributions &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md).|  
-|type|**nvarchar(32)**|Der Typ des DMS-Arbeitsthreads, den dieser Eintrag darstellt.|' DIRECT_CONVERTER ', ' DIRECT_READER ', ' FILE_READER ', ' HASH_CONVERTER ', ' HASH_READER ', ' ROUNDROBIN_CONVERTER ', ' EXPORT_READER ', ' EXTERNAL_READER ', ' EXTERNAL_WRITER ', ' PARALLEL_COPY_READER ', ' REJECT_WRITER ', ' Writer '|  
+|Typ|**nvarchar(32)**|Der Typ des DMS-Arbeitsthreads, den dieser Eintrag darstellt.|' DIRECT_CONVERTER ', ' DIRECT_READER ', ' FILE_READER ', ' HASH_CONVERTER ', ' HASH_READER ', ' ROUNDROBIN_CONVERTER ', ' EXPORT_READER ', ' EXTERNAL_READER ', ' EXTERNAL_WRITER ', ' PARALLEL_COPY_READER ', ' REJECT_WRITER ', ' Writer '|  
 |status|**nvarchar(32)**|Der Status des DMS-Workers.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |bytes_per_sec|**bigint**|Lese-oder Schreibdurchsatz in der letzten Sekunde.|Größer oder gleich 0 (null). NULL, wenn die Abfrage abgebrochen wurde oder fehlgeschlagen ist, bevor der Worker ausgeführt werden konnte.|  
 |bytes_processed|**bigint**|Gesamtanzahl der Bytes, die von diesem Worker verarbeitet wurden.|Größer oder gleich 0 (null). NULL, wenn die Abfrage abgebrochen wurde oder fehlgeschlagen ist, bevor der Worker ausgeführt werden konnte.|  

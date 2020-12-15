@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 35f0ab89e1aa90ea8eeeb09f57911b7b526026f9
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c695cedaef77306aeb62d4a053deb650f6841427
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97332179"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477321"
 ---
 # <a name="sysdm_exec_function_stats-transact-sql"></a>sys.dm_exec_function_stats (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "97332179"
 > Die Ergebnisse von **sys.dm_exec_function_stats**  können bei jeder Ausführung variieren, da die Daten nur abgeschlossene Abfragen widerspiegeln, und keine, die noch aktiv sind. 
 
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Datenbank-ID, in der sich die Funktion befindet.|  
 |**object_id**|**int**|Objekt-ID der Funktion.|  

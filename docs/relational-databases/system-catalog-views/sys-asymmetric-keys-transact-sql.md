@@ -1,6 +1,6 @@
 ---
 description: sys.asymmetric_keys (Transact-SQL)
-title: sys. asymmetric_keys (Transact-SQL) | Microsoft-Dokumentation
+title: sys.asymmetric_keys (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,27 +20,27 @@ helpviewer_keywords:
 ms.assetid: bbca796a-9bb5-4a62-9ca8-1d255984553d
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d8ff4d42014f0e3b61c4087ae879edfb8f9da744
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 785b3095987a0ade14008f9251a45167ce5011ce
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539704"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479071"
 ---
 # <a name="sysasymmetric_keys-transact-sql"></a>sys.asymmetric_keys (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Gibt eine Zeile für jeden asymmetrischen Schlüssel zurück.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Name des Schlüssels. Ist in der Datenbank eindeutig.|  
 |**principal_id**|**int**|ID des Datenbankprinzipals, der der Besitzer des Schlüssels ist.|  
 |**asymmetric_key_id**|**int**|ID des Schlüssels. Ist in der Datenbank eindeutig.|  
 |**pvt_key_encryption_type**|**char(2)**|Die Verschlüsselungsart des Schlüssels.<br /><br /> NA = Nicht verschlüsselt<br /><br /> MK = Schlüssel ist mit dem Hauptschlüssel verschlüsselt<br /><br /> PW = Schlüssel ist mit einem benutzerdefinierten Kennwort verschlüsselt<br /><br /> SK = Schlüssel ist mit dem Diensthauptschlüssel verschlüsselt|  
 |**pvt_key_encryption_type_desc**|**nvarchar(60)**|Die Beschreibung der Verschlüsselungsart des privaten Schlüssels.<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
-|**Fingerabdruck**|**varbinary(32)**|SHA-1-Hash des Schlüssels. Der Hash ist global eindeutig.|  
+|**thumbprint**|**varbinary(32)**|SHA-1-Hash des Schlüssels. Der Hash ist global eindeutig.|  
 |**projiziert**|**char(2)**|Der mit dem Schlüssel verwendete Algorithmus.<br /><br /> 1R = 512-Bit-RSA<br /><br /> 2R = 1024-Bit-RSA<br /><br /> 3R = 2048-Bit-RSA|  
 |**algorithm_desc**|**nvarchar(60)**|Beschreibung des mit dem Schlüssel verwendeten Algorithmus.<br /><br /> RSA_512<br /><br /> RSA_1024<br /><br /> RSA_2048|  
 |**key_length**|**int**|Bitlänge des Schlüssels.|  

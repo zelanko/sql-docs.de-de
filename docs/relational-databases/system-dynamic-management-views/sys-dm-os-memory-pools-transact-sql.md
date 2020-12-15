@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 1ef053f3-c6f3-456e-82b6-26e4bd630d46
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d06c82fea42adf1a2cacfab8ccc2118f68c165ba
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7d6f41a3eca54dbcaa0c21e21a38482cae821808
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97326272"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480811"
 ---
 # <a name="sysdm_os_memory_pools-transact-sql"></a>sys.dm_os_memory_pools (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "97326272"
 > [!NOTE]  
 >  Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys.dm_pdw_nodes_os_memory_pools**.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**memory_pool_address**|**varbinary(8)**|Speicheradresse des Eintrags, der für den Speicherpool steht. Lässt keine NULL-Werte zu.|  
 |**pool_id**|**int**|ID eines bestimmten Pools in einer Gruppe von Pools. Lässt keine NULL-Werte zu.|  
@@ -52,7 +52,7 @@ ms.locfileid: "97326272"
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
 Bei den Dienst Zielen "Basic", "S0" und "S1" in SQL-Datenbank ist für Datenbanken in Pools für elastische Datenbanken `Server admin` oder ein `Azure Active Directory admin` Konto erforderlich. Für alle anderen SQL-Datenbank-Dienst Ziele `VIEW DATABASE STATE` ist die Berechtigung in der Datenbank erforderlich.   
 
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten verwenden gelegentlich ein gemeinsames Poolframework zum Zwischenspeichern homogener, statusfreier Datentypen. Das Poolframework ist einfacher als das Cacheframework. Alle Einträge in den Pools werden als gleichwertig betrachtet. Pools sind in interner Hinsicht Arbeitsspeicherclerks und können an den Stellen verwendet werden, an denen Arbeitsspeicherclerks verwendet werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  

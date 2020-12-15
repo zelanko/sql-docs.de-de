@@ -1,6 +1,6 @@
 ---
 description: sys.external_libraries (Transact-SQL)
-title: sys. external_libraries (Transact-SQL) | Microsoft-Dokumentation
+title: sys.external_libraries (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/25/2020
 ms.prod: sql
@@ -19,13 +19,13 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 6dcc1b8f7cddc785203dc2430c2f1a4dce4b4d39
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 540420eee8f6de671df54ace8af9fbe1fe0c501d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88377576"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477501"
 ---
 # <a name="sysexternal_libraries-transact-sql"></a>sys.external_libraries (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -37,9 +37,9 @@ Unterstützt die Verwaltung von Paket Bibliotheken im Zusammenhang mit externen 
 
 ## <a name="sysexternal_libraries"></a>sys.external_libraries
 
-In der Katalog Sicht sys. external_libraries wird eine Zeile für jede externe Bibliothek aufgelistet, die in die Datenbank hochgeladen wurde.
+In der Katalog Sicht sys.external_libraries wird eine Zeile für jede externe Bibliothek aufgelistet, die in die Datenbank hochgeladen wurde.
 
-|Spaltenname |Datentyp | BESCHREIBUNG|
+|Spaltenname |Datentyp | Beschreibung|
 |------|------|------|
 |external_library_id |INT | ID des externen Bibliotheks Objekts. |
 |name |sysname |Der Name der externen Bibliothek. Ist innerhalb der Datenbank pro Besitzer eindeutig.|

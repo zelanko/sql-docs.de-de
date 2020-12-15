@@ -20,20 +20,20 @@ helpviewer_keywords:
 ms.assetid: 863498b4-849c-434d-b748-837411458738
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51a83d1a812df700c2685598498312ee6b29bde0
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1977e0310074842cdd1af8f1bc7b1888e8443966
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97334137"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482721"
 ---
 # <a name="sysdm_exec_trigger_stats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Gibt die Aggregatleistungsstatistik für zwischengespeicherte Trigger zurück. Diese Sicht enthält eine Zeile pro Trigger, und die Lebensdauer der Zeile entspricht der Verweildauer des Triggers im Cache. Bei Entfernung eines Triggers aus dem Cache wird die entsprechende Zeile aus dieser Sicht gelöscht. Zu diesem Zeitpunkt wird ein Leistungsstatistik-SQL-Ablaufverfolgungsereignis ausgelöst, das **sys.dm_exec_query_stats** entspricht.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID der Datenbank, in der sich der Trigger befindet.|  
 |**object_id**|**int**|Objekt-ID des Triggers.|  
@@ -74,7 +74,7 @@ ms.locfileid: "97334137"
 |**max_page_server_reads**|**bigint**|Die maximale Anzahl von Seiten Server Lesevorgängen, die dieser Triggern während einer einzelnen Ausführung ausgeführt hat.<br /><br /> **Gilt für**: hyperskalierung von Azure SQL-Datenbank|  
 
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  In [!INCLUDE[ssSDS](../../includes/sssds-md.md)]können dynamische Verwaltungssichten keine Informationen verfügbar machen, die sich auf die Datenbankkapselung auswirken würden oder die sich auf andere Datenbanken beziehen, auf die der Benutzer Zugriff hat. Um zu vermeiden, dass diese Informationen verfügbar gemacht werden, wird jede Zeile, die Daten enthält, die nicht zum verbundenen Mandanten gehören, herausgefiltert.  
 
 Statistiken in der Sicht werden nach Abschluss einer Abfrage aktualisiert.  

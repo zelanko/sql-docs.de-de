@@ -1,6 +1,6 @@
 ---
-description: sys. external_languages (Transact-SQL)-SQL Server
-title: sys. external_languages (Transact-SQL)-SQL Server | Microsoft-Dokumentation
+description: sys.external_languages (Transact-SQL)-SQL Server
+title: sys.external_languages (Transact-SQL)-SQL Server | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -19,24 +19,24 @@ author: nelgson
 ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f44ce24baf72b5bb93e8d649d8fa4ebed1d6e99
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-ver15'
+ms.openlocfilehash: 107a775af7379167716993e4d95b524e361eed31
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420124"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477481"
 ---
-# <a name="sysexternal_languages-transact-sql"></a>sys. external_languages (Transact-SQL)
+# <a name="sysexternal_languages-transact-sql"></a>sys.external_languages (Transact-SQL)
 [!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 Diese Katalog Sicht enthält eine Liste der externen Sprachen in der Datenbank. **R** und **Python** sind reservierte Namen, und es kann keine externe Sprache mit diesen Namen erstellt werden.
 
 ## <a name="sysexternal_languages"></a>sys.external_languages
 
-In der Katalog Sicht sys. external_languages wird eine Zeile für jede externe Sprache in der Datenbank aufgelistet.
+Die Katalog Sicht sys.external_languages listet eine Zeile für jede externe Sprache in der Datenbank auf.
 
-|Spaltenname |Datentyp | BESCHREIBUNG|
+|Spaltenname |Datentyp | Beschreibung|
 |------|------|------|
 |external_language_id |INT | ID der externen Sprache|
 |language |sysname |Der Name der externen Sprache. Ist in der Datenbank eindeutig. R und python sind reservierte Namen pro Instanz.|

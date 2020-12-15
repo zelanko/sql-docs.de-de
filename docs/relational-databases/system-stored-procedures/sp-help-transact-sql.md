@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21116db0cc5faa63a54ffda5740f1c93df27c676
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fe0b4f610b0656a0b82ad80adebde1480f14c6f3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543344"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478911"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Meldet Informationen zu einem Datenbankobjekt (alle in dersys.sys-Objekt Kompatibilitäts Sicht aufgeführten ** Objekte** ), einen benutzerdefinierten Datentyp oder einen-Datentyp.  
+  Meldet Informationen zu einem Datenbankobjekt (alle in dersys.sys-Objekt Kompatibilitäts Sicht aufgeführten **Objekte** ), einen benutzerdefinierten Datentyp oder einen-Datentyp.  
   
  
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -53,7 +53,7 @@ sp_help [ [ @objname = ] 'name' ]
   
 1.  Wenn **sp_help** ohne Argumente ausgeführt wird, werden zusammenfassende Informationen zu Objekten aller Typen zurückgegeben, die in der aktuellen Datenbank vorhanden sind.  
   
-    |Spaltenname|Datentyp|BESCHREIBUNG|  
+    |Spaltenname|Datentyp|Beschreibung|  
     |-----------------|---------------|-----------------|  
     |**Name**|**nvarchar (** 128 **)**|Objektname|  
     |**Besitzer**|**nvarchar (** 128 **)**|Objektbesitzer (Dies ist der Datenbankprinzipal, der das Objekt besitzt. Wird standardmäßig auf den Besitzer des Schemas festgelegt, das das Objekt enthält.)|  
@@ -61,7 +61,7 @@ sp_help [ [ @objname = ] 'name' ]
   
 2.  Wenn *Name* ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp oder ein benutzerdefinierter Datentyp ist, gibt **sp_help** dieses Resultset zurück.  
   
-    |Spaltenname|Datentyp|BESCHREIBUNG|  
+    |Spaltenname|Datentyp|Beschreibung|  
     |-----------------|---------------|-----------------|  
     |**Type_name**|**nvarchar (** 128 **)**|Name des Datentyps.|  
     |**Storage_type**|**nvarchar (** 128 **)**|Name des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Typs|  
@@ -75,7 +75,7 @@ sp_help [ [ @objname = ] 'name' ]
   
 3.  Wenn *Name* ein anderes Datenbankobjekt als ein-Datentyp ist, gibt **sp_help** dieses Resultset und auch zusätzliche Resultsets zurück, basierend auf dem angegebenen Objekttyp.  
 
-    |Spaltenname|Datentyp|BESCHREIBUNG|  
+    |Spaltenname|Datentyp|Beschreibung|  
     |-----------------|---------------|-----------------|  
     |**Name**|**nvarchar (** 128 **)**|Tabellenname|  
     |**Besitzer**|**nvarchar (** 128 **)**|Tabellenbesitzer|  
@@ -88,7 +88,7 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   Zusätzliches Resultset, das für Spaltenobjekte zurückgegeben wird:  
   
-        |Spaltenname|Datentyp|BESCHREIBUNG|  
+        |Spaltenname|Datentyp|Beschreibung|  
         |-----------------|---------------|-----------------|  
         |**Column_name**|**nvarchar (** 128 **)**|Spaltenname.|  
         |**Typ**|**nvarchar (** 128 **)**|Der Spaltendatentyp.|  
@@ -103,28 +103,28 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   Zusätzliches Resultset, das für Identitätsspalten zurückgegeben wird:  
   
-        |Spaltenname|Datentyp|BESCHREIBUNG|  
+        |Spaltenname|Datentyp|Beschreibung|  
         |-----------------|---------------|-----------------|  
         |**Identität**|**nvarchar (** 128 **)**|Name der Spalte, deren Datentyp als Identität deklariert wird|  
-        |**Seed**|**numeric**|Startwert für die Identitätsspalte|  
+        |**Säen**|**numeric**|Startwert für die Identitätsspalte|  
         |**Increment**|**numeric**|Schrittweite für Werte in dieser Spalte|  
         |**Not For Replication**|**int**|Die Identity-Eigenschaft wird nicht erzwungen, wenn eine Replikations Anmeldung, z. b. **sqlrepl**, Daten in die Tabelle einfügt:<br /><br /> 1 = True<br /><br /> 0 = False|  
   
     -   Zusätzliches Resultset, das für Spalten zurückgegeben wird:  
   
-        |Spaltenname|Datentyp|BESCHREIBUNG|  
+        |Spaltenname|Datentyp|Beschreibung|  
         |-----------------|---------------|-----------------|  
         |**RowGuidCol**|**sysname**|Name der GUID-Spalte|  
   
     -   Zusätzliches Resultset, das für Dateigruppen zurückgegeben wird:  
   
-        |Spaltenname|Datentyp|BESCHREIBUNG|  
+        |Spaltenname|Datentyp|Beschreibung|  
         |-----------------|---------------|-----------------|  
         |**Data_located_on_filegroup**|**nvarchar (** 128 **)**|Die Dateigruppe, in der sich die Daten befinden: primäre oder sekundäre Dateigruppe oder Transaktionsprotokoll|  
   
     -   Zusätzliches Resultset, das für Indizes zurückgegeben wird:  
   
-        |Spaltenname|Datentyp|BESCHREIBUNG|  
+        |Spaltenname|Datentyp|Beschreibung|  
         |-----------------|---------------|-----------------|  
         |**index_name**|**sysname**|Indexname.|  
         |**Index_description**|**varchar (** 210 **)**|Beschreibung des Index.|  
@@ -132,7 +132,7 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   Zusätzliches Resultset, das für Einschränkungen zurückgegeben wird:  
   
-        |Spaltenname|Datentyp|BESCHREIBUNG|  
+        |Spaltenname|Datentyp|Beschreibung|  
         |-----------------|---------------|-----------------|  
         |**constraint_type**|**nvarchar (** 146 **)**|Einschränkungstyp|  
         |**constraint_name**|**nvarchar (** 128 **)**|Der Name der Einschränkung.|  
@@ -144,13 +144,13 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   Zusätzliches Resultset, das für verweisende Objekte zurückgegeben wird:  
   
-        |Spaltenname|Datentyp|BESCHREIBUNG|  
+        |Spaltenname|Datentyp|Beschreibung|  
         |-----------------|---------------|-----------------|  
         |**Table is referenced by**|**nvarchar (** 516 **)**|Identifiziert andere Datenbankobjekte, die auf die Tabelle verweisen.|  
   
     -   Zusätzliches Resultset, das für gespeicherte Prozeduren, Funktionen oder erweiterte gespeicherte Prozeduren zurückgegeben wird.  
   
-        |Spaltenname|Datentyp|BESCHREIBUNG|  
+        |Spaltenname|Datentyp|Beschreibung|  
         |-----------------|---------------|-----------------|  
         |**Parameter_name**|**nvarchar (** 128 **)**|Name des Parameters der gespeicherten Prozedur|  
         |**Typ**|**nvarchar (** 128 **)**|Datentyp des Parameters der gespeicherten Prozedur|  
@@ -167,7 +167,7 @@ sp_help [ [ @objname = ] 'name' ]
  **sp_help** macht nur sortierbare Index Spalten verfügbar. Daher werden keine Informationen über XML-Indizes oder räumliche Indizes bereitgestellt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **public** -Rolle. Der Benutzer muss mindestens eine Berechtigung für *objname*besitzen. Um Spalteneinschränkungsschlüssel, Standards oder Regeln anzuzeigen, müssen Sie über die VIEW DEFINITION-Berechtigung für die Tabelle verfügen.  
+ Erfordert die Mitgliedschaft in der **public** -Rolle. Der Benutzer muss mindestens eine Berechtigung für *objname* besitzen. Um Spalteneinschränkungsschlüssel, Standards oder Regeln anzuzeigen, müssen Sie über die VIEW DEFINITION-Berechtigung für die Tabelle verfügen.  
   
 ## <a name="examples"></a>Beispiele  
   

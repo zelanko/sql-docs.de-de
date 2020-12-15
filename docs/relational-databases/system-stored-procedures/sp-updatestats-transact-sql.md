@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dee5ef30ca260855c9df6a7823e7dce605c3ff72
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f976f9be51d688833a09e5faaae42b8864ecc274
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534798"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482378"
 ---
 # <a name="sp_updatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +52,7 @@ sp_updatestats [ [ @resample = ] 'resample']
   
 **sp_updatestats** aktualisiert Statistiken für deaktivierte nicht gruppierte Indizes und aktualisiert keine Statistiken für deaktivierte gruppierte Indizes.  
   
-Bei Datenträger basierten Tabellen aktualisiert **sp_updatestats** Statistiken basierend auf den **modification_counter** Informationen in der **sys. dm_db_stats_properties** -Katalog Sicht und aktualisiert die Statistiken, wenn mindestens eine Zeile geändert wurde. Statistiken für speicheroptimierte Tabellen werden immer aktualisiert, wenn **sp_updatestats**ausgeführt wird. Deshalb sollte **sp_updatestats** nicht häufiger als nötig ausgeführt werden.  
+Bei Datenträger basierten Tabellen aktualisiert **sp_updatestats** Statistiken basierend auf den **modification_counter** Informationen in der **sys.dm_db_stats_properties** -Katalog Sicht und aktualisiert die Statistiken, wenn mindestens eine Zeile geändert wurde. Statistiken für speicheroptimierte Tabellen werden immer aktualisiert, wenn **sp_updatestats** ausgeführt wird. Deshalb sollte **sp_updatestats** nicht häufiger als nötig ausgeführt werden.  
   
 **sp_updatestats** kann die Neukompilierung von gespeicherten Prozeduren oder anderem kompilierten Code auslösen. Allerdings kann **sp_updatestats** unter Umständen keine Neukompilierung verursachen, wenn nur ein Abfrageplan für die Tabellen, auf die verwiesen wird, und die Indizes möglich ist. Eine Neukompilierung wäre in diesen Fällen nicht erforderlich, selbst wenn die Statistiken aktualisiert werden.  
   
@@ -60,7 +60,7 @@ Bei Datenbanken mit einem Kompatibilitätsgrad unter 90 wird beim Ausführen von
   
 ## <a name="permissions"></a>Berechtigungen  
 
-Um **sp_updatestats**auszuführen, muss der Benutzer der Besitzer der Datenbank ( `dbo` nicht nur Mitglied der Rolle `db_owner` ) oder Mitglied der festen Server Rolle sysadmin sein.
+Um **sp_updatestats** auszuführen, muss der Benutzer der Besitzer der Datenbank ( `dbo` nicht nur Mitglied der Rolle `db_owner` ) oder Mitglied der festen Server Rolle sysadmin sein.
 
 ## <a name="examples"></a>Beispiele  
 Im folgenden Beispiel werden die Statistiken für Tabellen in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank aktualisiert.  

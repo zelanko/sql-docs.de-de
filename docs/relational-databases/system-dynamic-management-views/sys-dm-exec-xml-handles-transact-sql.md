@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_xml_handles (Transact-SQL)
-title: sys. dm_exec_xml_handles (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_exec_xml_handles (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: a873ce0f-6955-417a-96a1-b2ef11a83633
 author: pmasl
 ms.author: pelopes
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57347d66ba5bf0438b40696433a4eb5c0d6124bc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0433126f43a14aa12521c0a65cd1b4aca8441ac6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489869"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482661"
 ---
 # <a name="sysdm_exec_xml_handles-transact-sql"></a>sys.dm_exec_xml_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
-  Gibt Informationen zu aktiven Handles zurück, die von **sp_xml_preparedocument**geöffnet wurden.  
+  Gibt Informationen zu aktiven Handles zurück, die von **sp_xml_preparedocument** geöffnet wurden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,22 +48,22 @@ dm_exec_xml_handles (session_id | 0 )
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|Sitzungs-ID der Sitzung, die dieses XML-Dokumenthandle verwaltet.|  
-|**document_id**|**int**|Von **sp_xml_preparedocument**zurückgegebene ID eines XML-Dokumenthandles.|  
-|**namespace_document_id**|**int**|Interne Handle-ID für das zugeordnete Namespacedokument, das als dritter Parameter an **sp_xml_preparedocument**übergeben wurde. NULL, wenn kein Namespacedokument vorhanden ist.|  
+|**document_id**|**int**|Von **sp_xml_preparedocument** zurückgegebene ID eines XML-Dokumenthandles.|  
+|**namespace_document_id**|**int**|Interne Handle-ID für das zugeordnete Namespacedokument, das als dritter Parameter an **sp_xml_preparedocument** übergeben wurde. NULL, wenn kein Namespacedokument vorhanden ist.|  
 |**sql_handle**|**varbinary(64)**|Handle für den Text des SQL-Codes, in dem das Handle definiert wurde.|  
-|**statement_start_offset**|**int**|Die Anzahl von Zeichen, nach der der Aufruf von **sp_xml_preparedocument** im zurzeit ausgeführten Batch oder in der gespeicherten Prozedur auftritt. Kann in Verbindung mit dem **sql_handle**, dem **statement_end_offset**und der dynamischen Verwaltungsfunktion **sys. dm_exec_sql_text** verwendet werden, um die derzeit ausgeführte Anweisung für die Anforderung abzurufen.|  
-|**statement_end_offset**|**int**|Die Anzahl von Zeichen, nach der der Aufruf von **sp_xml_preparedocument** im zurzeit ausgeführten Batch oder in der gespeicherten Prozedur auftritt. Kann zusammen mit **sql_handle**, **statement_start_offset**und der dynamischen Verwaltungsfunktion **sys.dm_exec_sql_text** zum Abrufen der zurzeit ausgeführten Anweisung für die Anforderung verwendet werden.|  
+|**statement_start_offset**|**int**|Die Anzahl von Zeichen, nach der der Aufruf von **sp_xml_preparedocument** im zurzeit ausgeführten Batch oder in der gespeicherten Prozedur auftritt. Kann mit dem **sql_handle**, dem **statement_end_offset** und der dynamischen Verwaltungsfunktion **sys.dm_exec_sql_text** zum Abrufen der aktuell ausgeführten Anweisung für die Anforderung verwendet werden.|  
+|**statement_end_offset**|**int**|Die Anzahl von Zeichen, nach der der Aufruf von **sp_xml_preparedocument** im zurzeit ausgeführten Batch oder in der gespeicherten Prozedur auftritt. Kann zusammen mit **sql_handle**, **statement_start_offset** und der dynamischen Verwaltungsfunktion **sys.dm_exec_sql_text** zum Abrufen der zurzeit ausgeführten Anweisung für die Anforderung verwendet werden.|  
 |**creation_time**|**datetime**|Timestamp des Aufrufs von **sp_xml_preparedocument** .|  
 |**original_document_size_bytes**|**bigint**|Größe des nicht analysierten XML-Dokuments in Bytes.|  
 |**original_namespace_document_size_bytes**|**bigint**|Größe des nicht analysierten XML-Namespacedokuments in Bytes. NULL, wenn kein Namespacedokument vorhanden ist.|  
 |**num_openxml_calls**|**bigint**|Die Anzahl von OPENXML-Aufrufen mit diesem Dokumenthandle.|  
 |**row_count**|**bigint**|Die Anzahl von Zeilen, die von allen vorherigen OPENXML-Aufrufen für dieses Dokumenthandle zurückgegeben wurden.|  
-|**dormant_duration_ms**|**bigint**|Millisekunden seit dem letzten OPENXML-Aufruf. Falls OPENXML nicht aufgerufen wurde, werden die Millisekunden seit dem Aufruf von **sp_xml_preparedocument**zurückgegeben.|  
+|**dormant_duration_ms**|**bigint**|Millisekunden seit dem letzten OPENXML-Aufruf. Falls OPENXML nicht aufgerufen wurde, werden die Millisekunden seit dem Aufruf von **sp_xml_preparedocument** zurückgegeben.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die Lebensdauer von **sql_handle** -Werten, mit denen der SQL-Text abgerufen wird, in dem ein Aufruf von **sp_xml_preparedocument** ausgeführt wird, überdauert den zwischengespeicherten Plan, nach dem die Abfrage ausgeführt wird. Ist der Abfragetext nicht im Cache verfügbar, können die Daten nicht mithilfe der Informationen im Funktionsergebnis abgerufen werden. Dies kann eintreten, wenn Sie viele umfangreiche Batches ausführen.  
   
 ## <a name="permissions"></a>Berechtigungen  

@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0bd260aebb7f55b29e0c9515d29dacce6914a04c
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ec4a753962f2dee9bf4101cc1bf80b98dda70d3a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97329679"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482711"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ Gibt Informationen zu allen Wartevorgängen in den Threads zurück, die ausgefü
 > [!NOTE] 
 > Um dies von **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] oder** aus aufzurufen, verwenden Sie den Namen **sys.dm_pdw_nodes_os_wait_stats**.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |wait_type|**nvarchar(60)**|Der Name des Wartetyps. Weitere Informationen finden Sie unter [Wartetypen](#WaitTypes) weiter unten in diesem Thema.|  
 |waiting_tasks_count|**bigint**|Anzahl von Wartevorgängen für diesen Wartetyp. Dieser Leistungsindikator wird beim Starten eines Wartevorgangs inkrementiert.|  
@@ -87,7 +87,7 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
   
  In der folgenden Tabelle werden die Wartetypen für Tasks in einer Liste aufgeführt.  
 
-|type |Beschreibung| 
+|Typ |Beschreibung| 
 |-------------------------- |--------------------------| 
 |ABR |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| | 
 |AM_INDBUILD_ALLOCATION |Nur zur internen Verwendung. <br /><br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
@@ -1026,7 +1026,7 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
   
  Eine Sperr Kompatibilitäts Matrix finden Sie unter [sys.dm_tran_locks &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
     
  [SQL Server dynamischen Verwaltungs Sichten im Zusammenhang mit dem Betriebs System &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_exec_session_wait_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   

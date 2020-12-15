@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 944eac31-5691-432b-b9f5-f1e11c05191f
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: de46fc1078b4a8a7d3898fbb034aa147cec157e5
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: f89d6ce4c8a385906856dde4c71e97d8a6e24ad2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035373"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482578"
 ---
 # <a name="sysdm_pdw_errors-transact-sql"></a>sys.dm_pdw_errors (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "92035373"
 |-----------------|---------------|-----------------|-----------|  
 |error_id|**nvarchar (36)**|Der Schlüssel für diese Ansicht.<br /><br /> Eindeutige numerische ID, die dem Fehler zugeordnet ist.|Eindeutig für alle Abfrage Fehler im System.|  
 |source|**nvarchar (64)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|type|**nvarchar(4000)**|Fehlertyp, der aufgetreten ist.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|Typ|**nvarchar(4000)**|Fehlertyp, der aufgetreten ist.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |create_time|**datetime**|Der Zeitpunkt, zu dem der Fehler aufgetreten ist.|Kleiner oder gleich der aktuellen Uhrzeit.|  
 |pwd_node_id|**int**|Der Bezeichner des beteiligten Knotens (sofern vorhanden). Weitere Informationen zu Knoten-IDs finden Sie unter [sys.dm_pdw_nodes &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).||  
 |session_id|**nvarchar(32)**|Der Bezeichner der beteiligten Sitzung (sofern vorhanden). Weitere Informationen zu Sitzungs-IDs finden Sie unter  [sys.dm_pdw_exec_sessions &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  

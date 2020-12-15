@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_text_query_plan (Transact-SQL)
-title: sys. dm_exec_text_query_plan (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_exec_text_query_plan (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51e2ee0d9867f952b219434ff59432732a96ddd6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f24871b199c66ea1efdd238b7141d8f0f7d99e19
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539429"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482821"
 ---
 # <a name="sysdm_exec_text_query_plan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Gibt den Showplan im Textformat für einen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batch oder für eine bestimmte Anweisung innerhalb des Batches zurück. Der vom Planhandle angegebene Abfrageplan ist möglicherweise zwischengespeichert oder wird gerade ausgeführt. Diese Tabellenwert Funktion ähnelt [sys. dm_exec_query_plan &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md), weist jedoch die folgenden Unterschiede auf:  
+Gibt den Showplan im Textformat für einen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batch oder für eine bestimmte Anweisung innerhalb des Batches zurück. Der vom Planhandle angegebene Abfrageplan ist möglicherweise zwischengespeichert oder wird gerade ausgeführt. Diese Tabellenwert Funktion ähnelt [sys.dm_exec_query_plan &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md), weist jedoch die folgenden Unterschiede auf:  
   
 -   Die Ausgabe des Abfrageplans wird im Textformat zurückgegeben.  
 -   Die Größe der Ausgabe des Abfrageplans ist nicht beschränkt.  
@@ -64,9 +64,9 @@ Ein Token, das einen Abfrage Ausführungsplan für einen Batch eindeutig identif
   
 -   [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
 
--   [sys. dm_exec_procedure_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+-   [sys.dm_exec_procedure_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
 
--   [sys. dm_exec_trigger_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
+-   [sys.dm_exec_trigger_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
   
 *statement_start_offset* | 0 | Vorgegebene  
 Gibt die Startposition der Abfrage an (in Bytes), die von der Zeile im Text des zugehörigen Batches oder persistenten Objekts beschrieben wird. *statement_start_offset* ist vom Datentyp **int**. Der Wert 0 gibt den Anfang des Batches an. Der Standardwert ist 0.  
@@ -86,13 +86,13 @@ Der Wert -1 gibt das Ende des Batches an. Der Standardwert ist -1.
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**DBID**|**smallint**|ID der Kontextdatenbank, die gültig war, als die diesem Plan entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung kompiliert wurde. Für Ad-hoc-Anweisungen und vorbereitete SQL-Anweisungen, die ID der Datenbank, in der die Anweisungen kompiliert wurden.<br /><br /> Die Spalte lässt NULL-Werte zu.|  
 |**objectid**|**int**|ID des Objekts (z. B. gespeicherte Prozedur oder benutzerdefinierte Funktion) für diesen Abfrageplan. Für Ad-hoc- und vorbereitete Batches entspricht diese Spalte dem Wert **NULL**.<br /><br /> Die Spalte lässt NULL-Werte zu.|  
 |**Zahl**|**smallint**|Gespeicherte Prozedur mit ganzer Zahl. Eine Gruppe von Prozeduren für die **orders**-Anwendung kann z. B. die Namen **orderproc;1**, **orderproc;2** usw. haben. Für Ad-hoc- und vorbereitete Batches entspricht diese Spalte dem Wert **NULL**.<br /><br /> Die Spalte lässt NULL-Werte zu.|  
 |**.**|**bit**|Zeigt an, ob die entsprechende Prozedur verschlüsselt ist.<br /><br /> 0 = nicht verschlüsselt<br /><br /> 1 = verschlüsselt<br /><br /> NULL-Werte sind in der Spalte nicht zulässig.|  
-|**query_plan**|**nvarchar(max)**|Enthält eine zur Kompilierzeit erstellte Showplandarstellung des Abfrageausführungsplans, der mit *plan_handle*angegeben ist. Der Showplan liegt im Textformat vor. Für jeden Batch, der z. B. Ad-hoc- [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, Aufrufe von gespeicherten Prozeduren und benutzerdefinierten Funktionen enthält, wird jeweils ein Plan generiert.<br /><br /> Die Spalte lässt NULL-Werte zu.|  
+|**query_plan**|**nvarchar(max)**|Enthält eine zur Kompilierzeit erstellte Showplandarstellung des Abfrageausführungsplans, der mit *plan_handle* angegeben ist. Der Showplan liegt im Textformat vor. Für jeden Batch, der z. B. Ad-hoc- [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, Aufrufe von gespeicherten Prozeduren und benutzerdefinierten Funktionen enthält, wird jeweils ein Plan generiert.<br /><br /> Die Spalte lässt NULL-Werte zu.|  
   
 ## <a name="remarks"></a>Hinweise  
  Unter den folgenden Bedingungen wird keine Showplanausgabe in der **plan**-Spalte der zurückgegebenen Tabelle für **sys.dm_exec_text_query_plan** zurückgegeben:  
@@ -101,7 +101,7 @@ Der Wert -1 gibt das Ende des Batches an. Der Standardwert ist -1.
   
 -   Einige [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen werden nicht zwischengespeichert. Beispiele hierfür sind Anweisungen für Massenvorgänge oder Anweisungen mit Zeichenfolgenliteralen, die größer als 8 KB sind. Showpläne für solche Anweisungen können mit **sys.dm_exec_text_query_plan** nicht abgerufen werden, da sie im Cache nicht vorhanden sind.  
   
--   Wenn ein [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch oder eine gespeicherte Prozedur einen aufzurufenden benutzerdefinierten Funktion oder einen aufzurufenden dynamischen SQL-Code (z. b. mit exec (*String*)) enthält, ist der kompilierte XML-Showplan für die benutzerdefinierte Funktion nicht in der Tabelle enthalten, die von **sys. dm_exec_text_query_plan** für den Batch oder die gespeicherte Prozedur zurückgegeben wird. Stattdessen müssen Sie einen **dm_exec_text_query_plan** separaten-Befehl für den *plan_handle* ausführen, der der benutzerdefinierten Funktion entspricht.  
+-   Wenn ein [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch oder eine gespeicherte Prozedur einen aufzurufenden benutzerdefinierten Funktion oder einen aufzurufenden dynamischen SQL-Code enthält, z. b. mit exec (*String*), ist der kompilierte XML-Showplan für die benutzerdefinierte Funktion nicht in der Tabelle enthalten, die von **sys.dm_exec_text_query_plan** für den Batch oder die gespeicherte Prozedur zurückgegeben wird. Stattdessen müssen Sie einen separaten **sys.dm_exec_text_query_plan** für den *plan_handle* erstellen, der der benutzerdefinierten Funktion entspricht.  
   
 Wenn eine Ad-hoc-Abfrage eine [einfache](../../relational-databases/query-processing-architecture-guide.md#SimpleParam) oder [erzwungene Parametrisierung](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)verwendet, enthält die **query_plan** Spalte nur den Anweisungs Text und nicht den tatsächlichen Abfrageplan. Rufen Sie zum Zurückgeben des Abfrageplans **sys.dm_exec_text_query_plan** für das Planhandle der vorbereiteten parametrisierten Abfrage auf. Sie können anhand der **sql**-Spalte der [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md)-Sicht oder anhand der Textspalte der dynamischen [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)-Verwaltungssicht ermitteln, ob die Abfrage parametrisiert wurde.  
   
@@ -181,4 +181,4 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sys. dm_exec_query_plan &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
+ [sys.dm_exec_query_plan &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  

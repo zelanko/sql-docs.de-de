@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_requests (Transact-SQL)
-title: sys. dm_exec_requests (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_exec_requests (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/01/2019
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
 ms.author: pelopes
 ms.reviewer: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 375dc6e15f8bf592ff3d5d9e8f9388f188008d3b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f1c9ac32f202766e118f7e44d3cf7c0d7fafdb6a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489961"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482801"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -49,7 +49,7 @@ Gibt Informationen zu jeder Anforderung zurück, die in ausgeführt wird [!INCLU
 |user_id|**int**|ID des Benutzers, der die Anforderung gesendet hat. Lässt keine NULL-Werte zu.|  
 |connection_id|**uniqueidentifier**|ID der Verbindung, über die die Anforderung eingetroffen ist. Lässt NULL-Werte zu.|  
 |blocking_session_id|**smallint**|ID der Sitzung, die die Anforderung blockiert. Wenn diese Spalte NULL oder gleich 0 (null) ist, wird die Anforderung nicht blockiert, oder die Sitzungsinformationen der blockierenden Sitzung sind nicht verfügbar (oder können nicht identifiziert werden).<br /><br /> -2 = Der Besitzer der blockierenden Ressource ist eine verwaiste verteilte Transaktion.<br /><br /> -3 = Der Besitzer der blockierenden Ressource ist eine verzögerte Wiederherstellungstransaktion.<br /><br /> -4 = Die Sitzungs-ID des Besitzers des blockierenden Latches konnte zu diesem Zeitpunkt aufgrund von internen Latchstatusübergängen nicht bestimmt werden.|  
-|wait_type|**nvarchar(60)**|Wenn die Anforderung zurzeit blockiert wird, gibt diese Spalte den Wartetyp zurück. Lässt NULL-Werte zu.<br /><br /> Weitere Informationen zu warte Typen finden Sie unter [sys. dm_os_wait_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
+|wait_type|**nvarchar(60)**|Wenn die Anforderung zurzeit blockiert wird, gibt diese Spalte den Wartetyp zurück. Lässt NULL-Werte zu.<br /><br /> Weitere Informationen zu warte Typen finden Sie unter [sys.dm_os_wait_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
 |wait_time|**int**|Wenn die Anforderung zurzeit blockiert wird, gibt diese Spalte die Dauer des aktuellen Wartevorgangs in Millisekunden an. Lässt keine NULL-Werte zu.|  
 |last_wait_type|**nvarchar(60)**|Wenn diese Anforderung zuvor bereits blockiert war, gibt diese Spalte den Typ des letzten Wartevorgangs zurück. Lässt keine NULL-Werte zu.|  
 |wait_resource|**nvarchar(256)**|Wenn die Anforderung zurzeit blockiert wird, gibt diese Spalte die Ressource zurück, auf die die Anforderung zurzeit wartet. Lässt keine NULL-Werte zu.|  
@@ -90,24 +90,24 @@ Gibt Informationen zu jeder Anforderung zurück, die in ausgeführt wird [!INCLU
 |query_hash|**Binär (8)**|Binärer Hashwert, der in der Abfrage berechnet wird und zum Identifizieren von Abfragen mit ähnlicher Logik verwendet wird. Sie können den Abfragehash verwenden, um die aggregierte Ressourcennutzung für Abfragen zu ermitteln, die sich nur durch Literalwerte unterscheiden.|  
 |query_plan_hash|**Binär (8)**|Binärer Hashwert, der im Abfrageausführungsplan wird und zum Identifizieren ähnlicher Abfrageausführungspläne verwendet wird. Sie können diesen Abfrageplan-Hashwert verwenden, um die kumulierten Kosten für Abfragen mit ähnlichen Ausführungsplänen zu suchen.|  
 |statement_sql_handle|**varbinary(64)**|**Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.<br /><br /> SQL-Handle der einzelnen Abfrage.<br /><br />Diese Spalte ist NULL, wenn Abfragespeicher nicht für die Datenbank aktiviert ist. |  
-|statement_context_id|**bigint**|**Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.<br /><br /> Der optionale Fremdschlüssel für sys. query_context_settings.<br /><br />Diese Spalte ist NULL, wenn Abfragespeicher nicht für die Datenbank aktiviert ist. |  
+|statement_context_id|**bigint**|**Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.<br /><br /> Der optionale Fremdschlüssel, der sys.query_context_settings werden soll.<br /><br />Diese Spalte ist NULL, wenn Abfragespeicher nicht für die Datenbank aktiviert ist. |  
 |dop |**int** |**Gilt für**:  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.<br /><br /> Der Grad der Parallelität der Abfrage. |  
 |parallel_worker_count |**int** |**Gilt für**:  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.<br /><br /> Die Anzahl der reservierten parallelen worker, wenn dies eine parallele Abfrage ist.  |  
 |external_script_request_id |**uniqueidentifier** |**Gilt für**:  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.<br /><br /> Die externe Skript Anforderungs-ID, die der aktuellen Anforderung zugeordnet ist. |  
 |is_resumable |**bit** |**Gilt für**:  [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] und höher.<br /><br /> Gibt an, ob die Anforderung ein fort Setz barer Index Vorgang ist. |  
-|page_resource |**Binär (8)** |**Gilt für:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Eine 8-Byte-hexadezimale Darstellung der Seiten Ressource, wenn die `wait_resource` Spalte eine Seite enthält. Weitere Informationen finden Sie unter [sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
+|page_resource |**Binär (8)** |**Gilt für:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Eine 8-Byte-hexadezimale Darstellung der Seiten Ressource, wenn die `wait_resource` Spalte eine Seite enthält. Weitere Informationen finden Sie unter [sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
 |page_server_reads|**bigint**|**Gilt für**: hyperskalierung von Azure SQL-Datenbank<br /><br /> Anzahl von Seiten Server Lesevorgängen, die von dieser Anforderung ausgeführt werden. Lässt keine NULL-Werte zu.|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>Bemerkungen 
+## <a name="remarks"></a>Hinweise 
 Für die Ausführung von Code außerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (z. B. erweiterte gespeicherte Prozeduren und verteilte Abfragen) muss ein Thread außerhalb der Steuerung des nicht präemptiven Zeitplanungsmoduls ausgeführt werden. Dazu wechselt ein Arbeitsthread in den präemptiven Modus. Zeitwerte, die von dieser dynamischen Verwaltungssicht zurückgegeben werden, schließen nicht die im präemptiven Modus verbrachte Zeit ein.
 
-Beim Ausführen paralleler Anforderungen im [Zeilen Modus](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weist einen Arbeits Thread zu, um die Arbeitsthreads zu koordinieren, die für das Abschließen der zugewiesenen Aufgaben zuständig sind. In dieser DMV ist nur der koordinatorthread für die Anforderung sichtbar. Die Spalten **Lese**-, **Schreib**-, **logical_reads**-und **row_count** werden für den koordinatorthread **nicht aktualisiert** . Die Spalten **wait_type**, **wait_time**, **last_wait_type**, **wait_resource**und **granted_query_memory** werden nur für den koordinatorthread **aktualisiert** . Weitere Informationen finden Sie im [Handbuch zur Thread- und Taskarchitektur](../../relational-databases/thread-and-task-architecture-guide.md).
+Beim Ausführen paralleler Anforderungen im [Zeilen Modus](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weist einen Arbeits Thread zu, um die Arbeitsthreads zu koordinieren, die für das Abschließen der zugewiesenen Aufgaben zuständig sind. In dieser DMV ist nur der koordinatorthread für die Anforderung sichtbar. Die Spalten **Lese**-, **Schreib**-, **logical_reads**-und **row_count** werden für den koordinatorthread **nicht aktualisiert** . Die Spalten **wait_type**, **wait_time**, **last_wait_type**, **wait_resource** und **granted_query_memory** werden nur für den koordinatorthread **aktualisiert** . Weitere Informationen finden Sie im [Handbuch zur Thread- und Taskarchitektur](../../relational-databases/thread-and-task-architecture-guide.md).
 
 ## <a name="permissions"></a>Berechtigungen
 Wenn der Benutzer über die- `VIEW SERVER STATE` Berechtigung auf dem Server verfügt, werden dem Benutzer alle ausgeführten Sitzungen in der Instanz von angezeigt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . andernfalls wird dem Benutzer nur die aktuelle Sitzung angezeigt. `VIEW SERVER STATE` kann in Azure SQL-Datenbank nicht erteilt werden `sys.dm_exec_requests` , sodass immer auf die aktuelle Verbindung beschränkt ist.
 
-Wenn bei Always on-Szenarien das sekundäre Replikat nur auf **Read-Intent**festgelegt ist, muss die Verbindung mit dem sekundären Replikat seine Anwendungs Absicht in Verbindungs Zeichenfolgen-Parametern `applicationintent=readonly` durch Hinzufügen von angeben Andernfalls wird die Zugriffs Überprüfung für `sys.dm_exec_requests` nicht für Datenbanken in der Verfügbarkeits Gruppe durchlaufen, auch wenn die `VIEW SERVER STATE` Berechtigung vorhanden ist.
+In Always-On Szenarien muss die Verbindung mit dem sekundären Replikat in den Verbindungs Zeichenfolgen-Parametern, wenn das sekundäre Replikat **nur auf Lese** Vorgänge festgelegt ist, durch Hinzufügen von angegeben werden `applicationintent=readonly` . Andernfalls wird die Zugriffs Überprüfung für `sys.dm_exec_requests` nicht für Datenbanken in der Verfügbarkeits Gruppe durchlaufen, auch wenn die `VIEW SERVER STATE` Berechtigung vorhanden ist.
 
   
 ## <a name="examples"></a>Beispiele  
@@ -130,14 +130,14 @@ GO
 
 ### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>B. Suchen aller Sperren, die ein ausgeführter Batch enthält
 
-Im folgenden Beispiel wird **sys. dm_exec_requests** abgefragt, um den interessanten Batch zu suchen und dessen `transaction_id` aus der Ausgabe zu kopieren.
+Im folgenden Beispiel wird **sys.dm_exec_requests** abgefragt, um den interessanten Batch zu suchen und dessen `transaction_id` aus der Ausgabe zu kopieren.
 
 ```sql
 SELECT * FROM sys.dm_exec_requests;  
 GO
 ```
 
-Verwenden Sie anschließend zum Suchen von Sperrinformationen das `transaction_id` mit der Systemfunktion **sys. dm_tran_locks**kopierte.  
+Verwenden Sie dann, um Sperrinformationen zu suchen, das `transaction_id` mit der Systemfunktion **sys.dm_tran_locks** kopierte.  
 
 ```sql
 SELECT * FROM sys.dm_tran_locks
@@ -148,7 +148,7 @@ GO
 
 ### <a name="c-finding-all-currently-blocked-requests"></a>C. Suchen aller zurzeit blockierten Anforderungen
 
-Im folgenden Beispiel wird **sys. dm_exec_requests** abgefragt, um Informationen zu blockierten Anforderungen zu finden.  
+Im folgenden Beispiel wird **sys.dm_exec_requests** abgefragt, um Informationen zu blockierten Anforderungen zu finden.  
 
 ```sql
 SELECT session_id ,status ,blocking_session_id  
@@ -187,14 +187,14 @@ FROM sys.dm_exec_requests AS req
 GO
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [Dynamische Verwaltungs Sichten und-Funktionen](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
 [Dynamische Verwaltungs Sichten und-Funktionen im Zusammenhang mit der Ausführung](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)      
-[sys. dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)     
-[sys. dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)     
-[sys. dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)    
-[sys. dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
-[sys. dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)      
+[sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)     
+[sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)     
+[sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)    
+[sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)      
 [SQL Server, SQL-Statistik-Objekt](../../relational-databases/performance-monitor/sql-server-sql-statistics-object.md)     
 [Leitfaden zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md#DOP)       
 [Handbuch zur Thread- und Taskarchitektur](../../relational-databases/thread-and-task-architecture-guide.md)    

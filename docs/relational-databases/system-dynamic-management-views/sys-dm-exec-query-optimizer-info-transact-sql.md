@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 656655d56e7188cc92b92f22d0f0155f9a0166f1
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 84aba37ec81645b1f369a527f5cee57bc807a7c1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97329206"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477311"
 ---
 # <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "97329206"
 > [!NOTE]  
 >  Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys.dm_pdw_nodes_exec_query_optimizer_info**.  
   
-|Name|Datentyp|BESCHREIBUNG|  
+|Name|Datentyp|Beschreibung|  
 |----------|---------------|-----------------|  
 |**Zähler**|**nvarchar(4000)**|Name des Statistikereignisses des Abfrageoptimierers.|  
 |**occurrence**|**bigint**|Anzahl der Vorkommen von Optimierungsereignissen für diesen Leistungsindikator.|  
@@ -48,7 +48,7 @@ ms.locfileid: "97329206"
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
 Bei den Dienst Zielen "Basic", "S0" und "S1" in SQL-Datenbank ist für Datenbanken in Pools für elastische Datenbanken `Server admin` oder ein `Azure Active Directory admin` Konto erforderlich. Für alle anderen SQL-Datenbank-Dienst Ziele `VIEW DATABASE STATE` ist die Berechtigung in der Datenbank erforderlich.   
     
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sys.dm_exec_query_optimizer_info** enthält die folgenden Eigenschaften (Indikatoren). Alle Vorkommenwerte sind kumulativ und werden beim Neustarten des Systems auf 0 festgelegt. Alle Werte für Wertfelder werden beim Neustarten des Systems auf NULL festgelegt. Alle Wertspaltenwerte, die einen Durchschnitt angeben, verwenden den Vorkommenwert aus derselben Zeile als Nenner bei der Berechnung des Durchschnitts. Alle Abfrage Optimierungen werden gemessen, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Änderungen an **dm_exec_query_optimizer_info** bestimmt, einschließlich Benutzer-und System generierter Abfragen. Durch die Ausführung eines bereits zwischengespeicherten Plans werden Werte in **dm_exec_query_optimizer_info** nicht geändert, nur Optimierungen sind von Bedeutung.  
   
 |Zähler|Vorkommen|Wert|  

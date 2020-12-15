@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 70269d26-b085-4a98-8a9f-b4742c2848bd
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8fcdf7061685dacbd578e995164e3658fd22b45
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e339b35742e95d6c55a10c161831835c04557393
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753912"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478891"
 ---
 # <a name="table_privileges-transact-sql"></a>TABLE_PRIVILEGES (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "91753912"
   
  Zum Abrufen von Informationen aus diesen Sichten geben Sie den voll qualifizierten Namen **INFORMATION_SCHEMA an.** _view_name_.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**GRANTOR**|**nvarchar (** 128 **)**|Der Berechtigende|  
 |**GRANTEE**|**nvarchar (** 128 **)**|Der Berechtigte|  

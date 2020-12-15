@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_sessions (Transact-SQL)
-title: sys. dm_exec_sessions (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_exec_sessions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql
@@ -20,22 +20,22 @@ helpviewer_keywords:
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d160be9c71c75e58a892f4b43494046b293caeb6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7b50b83a71df6485afae83fb371abb04209898ae
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539439"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482791"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Gibt eine Zeile pro authentifizierter Sitzung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück. sys.dm_exec_sessions ist eine Sicht des Serverbereichs mit Informationen zu allen aktiven Benutzerverbindungen und internen Tasks. Zu diesen Informationen zählen u. a. die Clientversion, der Name des Clientprogramms, die Clientanmeldezeit, der angemeldete Benutzer und die aktuelle Sitzungseinstellung. Mit sys.dm_exec_sessions zeigen Sie zuerst die aktuelle Systemauslastung an und identifizieren eine interessante Sitzung, und informieren Sie sich dann in dynamischen Verwaltungssichten oder dynamischen Verwaltungsfunktionen weiter über diese Sitzung.  
   
- Die dynamischen Verwaltungs Sichten sys. dm_exec_connections, sys. dm_exec_sessions und sys. dm_exec_requests werden der [sys.sysProzesse](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) -Systemtabelle zugeordnet.  
+ Die sys.dm_exec_connections, sys.dm_exec_sessions und sys.dm_exec_requests dynamischen Verwaltungs Sichten werden der [sys.sysProzesse](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) -Systemtabelle zugeordnet.  
   
-> **Hinweis:** Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys. dm_pdw_nodes_exec_sessions**.  
+> **Hinweis:** Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys.dm_pdw_nodes_exec_sessions**.  
   
 |Spaltenname|Datentyp|Beschreibung und versionsspezifische Informationen|  
 |-----------------|---------------|-----------------|  
@@ -94,8 +94,8 @@ ms.locfileid: "89539439"
   
 ## <a name="permissions"></a>Berechtigungen  
 Jeder Benutzer kann seine eigenen Sitzungsinformationen sehen.  
-** [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] :** Erfordert `VIEW SERVER STATE` die-Berechtigung für [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , um alle Sitzungen auf dem Server anzuzeigen.  
-** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] :** Erfordert `VIEW DATABASE STATE` , dass alle Verbindungen mit der aktuellen Datenbank angezeigt werden. `VIEW DATABASE STATE` kann nicht in der Datenbank erteilt werden `master` . 
+**[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] :** Erfordert `VIEW SERVER STATE` die-Berechtigung für [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , um alle Sitzungen auf dem Server anzuzeigen.  
+**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] :** Erfordert `VIEW DATABASE STATE` , dass alle Verbindungen mit der aktuellen Datenbank angezeigt werden. `VIEW DATABASE STATE` kann nicht in der Datenbank erteilt werden `master` . 
   
   
 ## <a name="remarks"></a>Hinweise  
@@ -115,12 +115,12 @@ Jeder Benutzer kann seine eigenen Sitzungsinformationen sehen.
   
 ## <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
   
-|From|To|Für/Anwendung|Beziehung|  
+|Von|Beschreibung|Für/Anwendung|Beziehung|  
 |----------|--------|---------------|------------------|  
 |sys.dm_exec_sessions|[sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|session_id|1:0 oder 1:viele|  
 |sys.dm_exec_sessions|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)|session_id|1:0 oder 1:viele|  
 |sys.dm_exec_sessions|[sys.dm_tran_session_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)|session_id|1:0 oder 1:viele|  
-|sys.dm_exec_sessions|[sys. dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)(session_id &#124; 0)|session_id CROSS APPLY<br /><br /> OUTER APPLY|1:0 oder 1:viele|  
+|sys.dm_exec_sessions|[sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)(session_id &#124; 0)|session_id CROSS APPLY<br /><br /> OUTER APPLY|1:0 oder 1:viele|  
 |sys.dm_exec_sessions|[sys.dm_db_session_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)|session_id|1:1|  
   
 ## <a name="examples"></a>Beispiele  

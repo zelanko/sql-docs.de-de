@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8dbebdd4908b4721ce91cd5994a6a25975ebdd42
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0c2400239b5ad8d19733b1fa74f7750c6edc4382
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85665509"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479181"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>XML-Datentypunterstützung für SQLXML 4.0
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "85665509"
   
 -   SQLXML 4.0 verlässt sich auf die Unterstützung für die XML-Analyse, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellt wird. Eine **XML** -Spalte kann entweder als typisiertes XML oder nicht typisiertes XML zugeordnet werden. In beiden Fällen überprüft SQLXML 4.0 die XML-Eingabe nicht.  Wenn die XML-Eingabe nicht gültig oder nicht wohlgeformt ist, sendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Meldung an SQLXML und gibt alle relevanten, vom Server an den Benutzer gesendeten Fehlerinformationen weiter.  
   
--   SQLXML 4.0 basiert auf der eingeschränkten Unterstützung für DTDs, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellt wird. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ermöglicht eine interne DTD in **XML** -Datentyp Daten, die verwendet werden können, um Standardwerte bereitzustellen und Entitäts Verweise durch ihren erweiterten Inhalt zu ersetzen. SQLXML übergibt die XML-Daten unverändert an den Server (einschließlich der internen DTD). Mithilfe von Drittanbieter-Tools können Sie DTDs in XML-Schemadokumente (XSD) konvertieren und die Daten mit XML-Inlineschemas in die Datenbank laden.  
+-   SQLXML 4.0 basiert auf der eingeschränkten Unterstützung für DTDs, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellt wird. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht eine interne DTD in **XML** -Datentyp Daten, die verwendet werden können, um Standardwerte bereitzustellen und Entitäts Verweise durch ihren erweiterten Inhalt zu ersetzen. SQLXML übergibt die XML-Daten unverändert an den Server (einschließlich der internen DTD). Mithilfe von Drittanbieter-Tools können Sie DTDs in XML-Schemadokumente (XSD) konvertieren und die Daten mit XML-Inlineschemas in die Datenbank laden.  
   
 -   SQLXML 4,0 behält keine Verarbeitungsanweisungen für die XML-Deklaration bei (z. b.), basierend auf dem Verhalten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Stattdessen wird die XML-Deklaration als Direktive an den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML-Parser behandelt, und die zugehörigen Attribute (Version, Codierung und Standalone) gehen verloren, nachdem Daten in den **XML** -Datentyp konvertiert wurden. Die XML-Daten werden intern als UCS-2 gespeichert. Alle anderen Verarbeitungsanweisungen in der XML-Instanz werden beibehalten. Sie sind in der **XML** -Spalte zulässig und können von SQLXML unterstützt werden.  
   

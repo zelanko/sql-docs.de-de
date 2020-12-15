@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: d9bcc769abf138658c4994a42b9ee1898e964509
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
+ms.openlocfilehash: c180d679075076168d3be510c22d0775ebc7af30
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96130890"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478901"
 ---
 # <a name="sp_rename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE [sql-asdb-asa](../../includes/applies-to-version/sql-asdb-asa.md)]
@@ -71,7 +71,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
  [ @objtype =] '*object_type*'  
  Der Typ des Objekts, das umbenannt wird. *object_type* ist vom Datentyp **varchar (13)** und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |COLUMN|Eine umzubenennende Spalte.|  
 |DATABASE|Eine benutzerdefinierte Datenbank. Dieser Objekttyp ist erforderlich, wenn Sie eine Datenbank umbenennen.|  
@@ -86,7 +86,7 @@ In sp_rename (Vorschau) für [!INCLUDE[ssazuresynapse](../../includes/ssazuresyn
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder eine Zahl ungleich Null (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
 **Gilt für** SQL Server (alle unterstützten Versionen) und Azure SQL-Datenbank  
  sp_rename sorgt dafür, dass beim Umbenennen einer PRIMARY KEY- oder UNIQUE-Einschränkung automatisch auch der zugehörige Index umbenannt wird. Wenn ein umbenannter Index an eine PRIMARY KEY-Einschränkung gebunden ist, wird auch die PRIMARY KEY-Einschränkung automatisch von sp_rename umbenannt.  
 

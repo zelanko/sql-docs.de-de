@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bec27f5d1f49abb1b05beaa1b17509c6cdf1ca5b
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f85aa0ff207a2748f755975ce61e69a6782f43e2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006563"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478981"
 ---
 # <a name="sysfn_helpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
 
@@ -48,7 +48,7 @@ fn_helpcollations ()
   
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|name|**sysname**|Standardsortierungsname|  
+|Name|**sysname**|Standardsortierungsname|  
 |Beschreibung|**nvarchar (1000)**|Beschreibung der Sortierung|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt Windows-Sortierungen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt auch eine begrenzte Anzahl (<80) von Sortierungen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die als Sortierungen bezeichnet werden, die vor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützten Windows-Sortierungen entwickelt wurden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sortierungen werden weiterhin aus Gründen der Abwärtskompatibilität unterstützt, sollten aber nicht für neue Entwicklungsarbeiten verwendet werden. Weitere Informationen zur Windows-Sortierung finden Sie unter [Name der Windows-Sortierung &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). Weitere Informationen zur Sortierung finden Sie unter [Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md).  

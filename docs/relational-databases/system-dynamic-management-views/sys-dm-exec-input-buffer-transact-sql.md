@@ -1,6 +1,6 @@
 ---
-description: sys. dm_exec_input_buffer (Transact-SQL)
-title: sys. dm_exec_input_buffer (Transact-SQL) | Microsoft-Dokumentation
+description: sys.dm_exec_input_buffer (Transact-SQL)
+title: sys.dm_exec_input_buffer (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/14/2019
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fecdc698dc7015ab47e5a8c97b3990c7e5bf1f4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 68673cb11ce5a003b2c9317939942b1d602095be
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536954"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477261"
 ---
-# <a name="sysdm_exec_input_buffer-transact-sql"></a>sys. dm_exec_input_buffer (Transact-SQL)
+# <a name="sysdm_exec_input_buffer-transact-sql"></a>sys.dm_exec_input_buffer (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
 
@@ -48,11 +48,11 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 - [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)
 - [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)
 
-*request_id* Der request_id aus [sys. dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md). *request_id* ist vom Datentyp **int**.
+*request_id* Die request_id von [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md). *request_id* ist vom Datentyp **int**.
 
 ## <a name="table-returned"></a>Zurückgegebene Tabelle
 
-|Spaltenname|Datentyp|BESCHREIBUNG|
+|Spaltenname|Datentyp|Beschreibung|
 |-----------------|---------------|-----------------|
 |**event_type**|**nvarchar(256)**|Der Ereignistyp im Eingabepuffer für die angegebene SPID.|
 |**parameters**|**smallint**|Alle Parameter, die für die Anweisung bereitgestellt werden.|
@@ -72,7 +72,7 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 
 ## <a name="remarks"></a>Hinweise
 
-Diese dynamische Verwaltungsfunktion kann in Verbindung mit sys. dm_exec_sessions oder sys. dm_exec_requests verwendet werden, indem **CROSS APPLY**verwendet wird.
+Diese dynamische Verwaltungsfunktion kann in Verbindung mit sys.dm_exec_sessions oder sys.dm_exec_requests mithilfe von **CROSS APPLY** verwendet werden.
 
 ## <a name="examples"></a>Beispiele
 

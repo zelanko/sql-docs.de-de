@@ -1,6 +1,6 @@
 ---
 description: sys.dm_external_script_requests
-title: sys. dm_external_script_requests | Microsoft-Dokumentation
+title: sys.dm_external_script_requests | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/26/2020
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 1b3c1f10be0b454503c5fbcfd9cdab191a687797
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 972e9527db2eaa546210ccc54528d0ce60197b4c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489841"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482681"
 ---
 # <a name="sysdm_external_script_requests"></a>sys.dm_external_script_requests
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -36,7 +36,7 @@ Gibt eine Zeile für jedes aktive Workerkonto zurück, das ein externes Skript a
 > [!NOTE]
 > Diese dynamische Verwaltungs Sicht (Dynamic Management View, DMV) ist nur verfügbar, wenn Sie die Funktion installiert und aktiviert haben, die die Ausführung externer Skripts unterstützt. Weitere Informationen finden Sie unter [Machine Learning Services (r, python) in SQL Server 2017 und](../../machine-learning/sql-server-machine-learning-services.md)höher, [R Services in SQL Server 2016](../../machine-learning/r/sql-server-r-services.md)und [Machine Learning Services in Azure SQL verwaltete Instanz](/azure/azure-sql/managed-instance/machine-learning-services-overview).  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |external_script_request_id|**eindeutiger Bezeichner**|Die ID des Prozesses, der die externe Skriptanforderung gesendet hat. Dies entspricht der Prozess-ID, die von der SQL-Instanz empfangen wurde.|  
 |language|**nvarchar**|Schlüsselwort, das einer unterstützten Skriptsprache entspricht. |  
@@ -50,7 +50,7 @@ Gibt eine Zeile für jedes aktive Workerkonto zurück, das ein externes Skript a
 > [!NOTE]
 > Benutzer, die externe Skripts ausführen, müssen über die zusätzliche Berechtigung verfügen `EXECUTE ANY EXTERNAL SCRIPT` . Diese DMV kann jedoch von Administratoren ohne diese Berechtigung verwendet werden. 
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
 
 Diese Sicht kann über die Skriptsprachen-ID gefiltert werden.
 

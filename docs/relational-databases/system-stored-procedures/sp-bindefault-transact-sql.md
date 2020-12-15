@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 3da70c10-68d0-4c16-94a5-9e84c4a520f6
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21f743aa4c28095a3167ebb16cf873f46afece38
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9cad51a7a83f694ac89b41584929a46e1fbc725c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541958"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482410"
 ---
 # <a name="sp_bindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,12 +50,12 @@ sp_bindefault [ @defname = ] 'default' ,
   
 `[ @objname = ] 'object_name'` Der Name der Tabelle und Spalte oder der Alias Datentyp, an den der Standardwert gebunden werden soll. *object_name* ist vom Datentyp **nvarchar (776)** und hat keinen Standardwert. *object_name* kann nicht mit den benutzerdefinierten Typen " **varchar (max)**", " **nvarchar (max)**", " **varbinary (max)**", " **XML**" oder "CLR" definiert werden.  
   
- Wenn *object_name* ein einteilige Name ist, wird er als Alias Datentyp aufgelöst. Wenn es sich um einen zwei-oder dreiteiligen Namen handelt, wird er zuerst als Tabelle und Spalte aufgelöst. Wenn diese Auflösung fehlschlägt, wird Sie als Alias Datentyp aufgelöst. Standardmäßig erben vorhandene Spalten des Alias Datentyps *default*, es sei denn, ein Standardwert wurde direkt an die Spalte gebunden. Ein Standardwert kann nicht an eine Spalte vom Typ **Text**, **ntext**, **Image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**, **Zeitstempel**oder CLR User-Defined Type, eine Spalte mit der Identity-Eigenschaft, eine berechnete Spalte oder eine Spalte mit einer DEFAULT-Einschränkung gebunden werden.  
+ Wenn *object_name* ein einteilige Name ist, wird er als Alias Datentyp aufgelöst. Wenn es sich um einen zwei-oder dreiteiligen Namen handelt, wird er zuerst als Tabelle und Spalte aufgelöst. Wenn diese Auflösung fehlschlägt, wird Sie als Alias Datentyp aufgelöst. Standardmäßig erben vorhandene Spalten des Alias Datentyps *default*, es sei denn, ein Standardwert wurde direkt an die Spalte gebunden. Ein Standardwert kann nicht an eine Spalte vom Typ **Text**, **ntext**, **Image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**, **Zeitstempel** oder CLR User-Defined Type, eine Spalte mit der Identity-Eigenschaft, eine berechnete Spalte oder eine Spalte mit einer DEFAULT-Einschränkung gebunden werden.  
   
 > [!NOTE]  
 >  *object_name* können eckige Klammern **[]** als Begrenzungs Bezeichner enthalten. Weitere Informationen finden Sie unter [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md).  
   
-`[ @futureonly = ] 'futureonly_flag'` Wird nur verwendet, wenn ein Standard an einen Alias Datentyp gebunden wird. *futureonly_flag* ist vom Datentyp **varchar (15)** und hat den Standardwert NULL. Wenn dieser Parameter auf **futureonly**festgelegt ist, können vorhandene Spalten dieses Datentyps nicht den neuen Standardwert erben. Dieser Parameter wird nie beim Binden eines Standards an eine Spalte verwendet. Wenn *futureonly_flag* NULL ist, wird der neue Standard an alle Spalten des Alias Datentyps gebunden, die aktuell keinen Standard aufweisen oder die den vorhandenen Standardwert des Alias Datentyps verwenden.  
+`[ @futureonly = ] 'futureonly_flag'` Wird nur verwendet, wenn ein Standard an einen Alias Datentyp gebunden wird. *futureonly_flag* ist vom Datentyp **varchar (15)** und hat den Standardwert NULL. Wenn dieser Parameter auf **futureonly** festgelegt ist, können vorhandene Spalten dieses Datentyps nicht den neuen Standardwert erben. Dieser Parameter wird nie beim Binden eines Standards an eine Spalte verwendet. Wenn *futureonly_flag* NULL ist, wird der neue Standard an alle Spalten des Alias Datentyps gebunden, die aktuell keinen Standard aufweisen oder die den vorhandenen Standardwert des Alias Datentyps verwenden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -63,7 +63,7 @@ sp_bindefault [ @defname = ] 'default' ,
 ## <a name="remarks"></a>Bemerkungen  
  Mit **sp_bindefault** können Sie einen neuen Standardwert an eine Spalte binden, obwohl die DEFAULT-Einschränkung bevorzugt wird, oder auf einen Alias Datentyp, ohne die Bindung eines vorhandenen standardmäßigen aufzuheben. Der alte Standard wird überschrieben. Sie können einen Standard nicht an einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemdatentyp oder an einen CLR-benutzerdefinierten Typ binden. Ist der Standard nicht kompatibel mit der Spalte, an die er gebunden wurde, gibt [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] eine Fehlermeldung zurück, wenn der Standardwert eingefügt werden soll (nicht beim Binden).  
   
- Vorhandene Spalten des Alias Datentyps erben den neuen Standard, es sei denn, entweder ist ein Standard direkt an Sie gebunden, oder *futureonly_flag* als **futureonly**angegeben. Neue Spalten des Aliasdatentyps erben immer den Standard.  
+ Vorhandene Spalten des Alias Datentyps erben den neuen Standard, es sei denn, entweder ist ein Standard direkt an Sie gebunden, oder *futureonly_flag* als **futureonly** angegeben. Neue Spalten des Aliasdatentyps erben immer den Standard.  
   
  Wenn Sie einen Standardwert an eine Spalte binden, werden der **sys. Columns** -Katalog Sicht zugehörige Informationen hinzugefügt. Wenn Sie einen Standardwert an einen Alias Datentyp binden, werden der **sys. types** -Katalog Sicht zugehörige Informationen hinzugefügt.  
   

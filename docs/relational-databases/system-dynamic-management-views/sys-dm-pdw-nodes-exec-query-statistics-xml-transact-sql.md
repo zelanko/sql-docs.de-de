@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
-monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f03d7b8c8b840c86cd462381d24ada70ded15147
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+monikerRange: =azure-sqldw-latest
+ms.openlocfilehash: 540a5632997c025a98e259e23f87780134649b75
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059472"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482547"
 ---
 # <a name="dm_pdw_nodes_exec_query_statistics_xml-transact-sql"></a>dm_pdw_nodes_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -36,7 +36,7 @@ Gibt den Abfrage Ausführungsplan für in-Flight-Anforderungen zurück. Verwende
 |plan_handle|**varbinary(64)**|Ein Token, das einen Abfrage Ausführungsplan für einen momentan ausgeführten Batch eindeutig identifiziert. NULL-Werte sind zulässig.|
 |query_plan|**xml**|Enthält die Showplan-Lauf Zeit Darstellung des Abfrage Ausführungs Plans, der mit *plan_handle* angegeben wird, die partielle Statistiken enthält. Der Showplan liegt im XML-Format vor. Für jeden Batch, der z. B. Ad-hoc- [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, Aufrufe von gespeicherten Prozeduren und benutzerdefinierten Funktionen enthält, wird jeweils ein Plan generiert. NULL-Werte sind zulässig.|
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 Die gleichen Hinweise in [sys.dm_exec_query_statistics_xml](./sys-dm-exec-query-statistics-xml-transact-sql.md?view=sql-server-ver15) gelten.   
 
 ## <a name="permissions"></a>Berechtigungen  

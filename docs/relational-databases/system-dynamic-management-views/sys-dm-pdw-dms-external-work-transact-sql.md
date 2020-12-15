@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 47345015-f861-451e-97c4-6e1cb81d1922
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8683920e22e8888cc3dc93ffa350a43189116646
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 2baa21665d7fae6f87acbbebb88e55ca6c4624fc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834224"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482631"
 ---
 # <a name="sysdm_pdw_dms_external_work-transact-sql"></a>sys.dm_pdw_dms_external_work (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "91834224"
 |step_index|**int**|Abfrage Schritt, der diesen DMS-Worker aufruft.<br /><br /> request_id, step_index und dms_step_index bilden den Schlüssel für diese Ansicht.|Identisch mit step_index in [sys.dm_pdw_request_steps &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |dms_step_index|**int**|Aktueller Schritt im DMS-Plan.<br /><br /> request_id, step_index und dms_step_index bilden den Schlüssel für diese Ansicht.|Identisch mit dms___step_index in [sys.dm_pdw_dms_workers &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md).|  
 |pdw_node_id|**int**|Knoten, auf dem der DMS-Worker ausgeführt wird.|Identisch mit node_id in [sys.dm_pdw_nodes &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
-|type|**nvarchar(60)**|Der Typ des externen Vorgangs, der von diesem Knoten ausgeführt wird.<br /><br /> Beim Aufteilen von Dateien handelt es sich um einen Vorgang in einer externen Hadoop-Datei, der in mehrere kleinere Fälle aufgeteilt wurde.|' Datei Teilung '|  
+|Typ|**nvarchar(60)**|Der Typ des externen Vorgangs, der von diesem Knoten ausgeführt wird.<br /><br /> Beim Aufteilen von Dateien handelt es sich um einen Vorgang in einer externen Hadoop-Datei, der in mehrere kleinere Fälle aufgeteilt wurde.|' Datei Teilung '|  
 |work_id|**int**|Die ID der Datei Aufteilung.|Größer oder gleich 0 (null).<br /><br /> Eindeutig pro Computeknoten.|  
 |input_name|**nvarchar(60)**|Der Zeichen folgen Name für die gelesene Eingabe.|Bei einer Hadoop-Datei ist dies der Hadoop-Dateiname.|  
 |read_location|**bigint**|Offset des Lese Speicher Orts.||  

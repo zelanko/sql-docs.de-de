@@ -1,6 +1,6 @@
 ---
-description: sys. dm_cluster_endpoints (Transact-SQL)
-title: sys. dm_cluster_endpoints (Transact-SQL) | Microsoft-Dokumentation
+description: sys.dm_cluster_endpoints (Transact-SQL)
+title: sys.dm_cluster_endpoints (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 7df88a6be24e5378a8bd588514c9806e8258eb0e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-2017'
+ms.openlocfilehash: 93ffc0861302b5ffbae6d8383f852480d1b80f3f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542334"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478961"
 ---
-# <a name="sysdm_cluster_endpoints-transact-sql"></a>sys. dm_cluster_endpoints (Transact-SQL)
+# <a name="sysdm_cluster_endpoints-transact-sql"></a>sys.dm_cluster_endpoints (Transact-SQL)
 [!INCLUDE[sqlserver2019](../../includes/applies-to-version/sqlserver2019.md)]
 
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |name|`sysname`|Name des Dienstanbieter, der extern in einem SQL Big Data-Cluster verfügbar gemacht wird. Eindeutiger Bezeichner für den Endpunkt. Der Schlüssel für diese Ansicht. Lässt keine NULL-Werte zu. |  
 |description|`nvarchar(4000)`|Beschreibung des Diensts Lässt keine NULL-Werte zu. |

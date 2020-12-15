@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6055413a3ff32882e86c65dd69353e44b2353bb
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7398d74e0d13ca08e6943922f46617dc828e9aa2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97333001"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480821"
 ---
 # <a name="sysdm_os_schedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "97333001"
 > [!NOTE]  
 >  Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys.dm_pdw_nodes_os_schedulers**.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |scheduler_address|**varbinary(8)**|Speicheradresse des Zeitplanungsmoduls. Lässt keine NULL-Werte zu.|  
 |parent_node_id|**int**|ID des Knotens, zu dem das Zeitplanungsmodul gehört, der auch als übergeordneter Knoten bezeichnet wird. Dies stellt einen NUMA-Knoten (Non-Uniform Memory Access) dar. Lässt keine NULL-Werte zu.|  

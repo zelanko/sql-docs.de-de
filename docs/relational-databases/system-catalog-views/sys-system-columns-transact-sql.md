@@ -20,20 +20,20 @@ helpviewer_keywords:
 ms.assetid: 4ab1d48a-d57a-4e76-a08c-9627eeaf4588
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5ebf9dad37ba44163aa3f658fab86be8d95bd8d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 13a306310fdb8a28e2613304a8fb7bba529f5f00
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546728"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479051"
 ---
 # <a name="syssystem_columns-transact-sql"></a>sys.system_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Enthält eine Zeile für jede Spalte von Systemobjekten, die Spalten aufweisen.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Die ID des Objekts, zu dem diese Spalte gehört.|  
 |**name**|**sysname**|Name der Spalte. Ist eindeutig innerhalb des Objekts.|  
@@ -56,8 +56,8 @@ ms.locfileid: "89546728"
 |**is_dts_replicated**|**bit**|1 = Die Spalte wird mithilfe von [!INCLUDE[ssIS](../../includes/ssis-md.md)] repliziert.|  
 |**is_xml_document**|**bit**|1 = Der Inhalt ist ein vollständiges XML-Dokument.<br /><br /> 0 = der Inhalt ist ein Dokument Fragment, oder der Spaltendatentyp ist nicht **XML**.|  
 |**xml_collection_id**|**int**|Ungleich 0 (null), wenn der Spaltendatentyp **XML** ist und die XML-Daten eingegeben werden. Der Wert entspricht der ID der Auflistung, die den prüfenden XML-Schemanamespace der Spalte enthält.<br /><br /> 0 = Keine XML-Schemaauflistung|  
-|**default_object_id**|**int**|ID des Standard Objekts, unabhängig davon, ob es sich um eine eigenständige [sys. sp_bindefault](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)oder eine Inline-Standard Einschränkung auf Spaltenebene handelt. Die **parent_object_id** -Spalte eines Inline-Standard Objekts auf Spaltenebene ist ein Verweis zurück auf die Tabelle selbst. Ist 0, wenn kein Standardwert vorhanden ist.|  
-|**rule_object_id**|**int**|Die ID der eigenständigen Regel, die mithilfe von **sys. sp_bindrule**an die Spalte gebunden ist.<br /><br /> 0 = Keine eigenständige Regel.<br /><br /> Informationen zu Check-Einschränkungen auf Spaltenebene finden Sie unter [sys. check_constraints &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md).|  
+|**default_object_id**|**int**|ID des Standard Objekts, unabhängig davon, ob es sich um eine eigenständige [sys.sp_bindefault](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)oder eine Inline-Standard Einschränkung auf Spaltenebene handelt. Die **parent_object_id** -Spalte eines Inline-Standard Objekts auf Spaltenebene ist ein Verweis zurück auf die Tabelle selbst. Ist 0, wenn kein Standardwert vorhanden ist.|  
+|**rule_object_id**|**int**|Die ID der eigenständigen Regel, die mithilfe von **sys.sp_bindrule** an die Spalte gebunden ist.<br /><br /> 0 = Keine eigenständige Regel.<br /><br /> Informationen zu Check-Einschränkungen auf Spaltenebene finden Sie unter [sys.check_constraints &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md).|  
 |is_sparse|**bit**|1 = Spalte ist eine Sparsespalte. Weitere Informationen finden Sie unter [Verwenden von Spalten mit geringer Dichte](../../relational-databases/tables/use-sparse-columns.md).|  
 |is_column_set|**bit**|1 = Spalte ist ein Spaltensatz. Weitere Informationen finden Sie unter [Verwenden von Spaltensätzen](../../relational-databases/tables/use-column-sets.md).|  
 |generated_always_type|**tinyint**|Der numerische Wert, der den Typ der Spalte darstellt:<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END|  
@@ -71,7 +71,7 @@ ms.locfileid: "89546728"
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Abfragen der SQL Server System Katalog-FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys. ALL_COLUMNS &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [sys. computed_columns &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)  
+ [sys.ALL_COLUMNS &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
+ [sys.computed_columns &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)  
   
   

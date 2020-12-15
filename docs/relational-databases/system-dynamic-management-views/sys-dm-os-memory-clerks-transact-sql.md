@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 1d556c67-5c12-46d5-aa8c-7ec1bb858df7
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91900dc582246c7af67ca13ff49b465b48599b5d
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 256d01bcd3b33e96adb576a59ad917df4b04585b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97326984"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477271"
 ---
 # <a name="sysdm_os_memory_clerks-transact-sql"></a>sys.dm_os_memory_clerks (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "97326984"
 > [!NOTE]  
 >  Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys.dm_pdw_nodes_os_memory_clerks**.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**memory_clerk_address**|**varbinary(8)**|Gibt die eindeutige Speicheradresse des Arbeitsspeicherclerks an. Dies ist die Primärschlüsselspalte. Lässt keine NULL-Werte zu.|  
 |**type**|**nvarchar(60)**|Gibt den Typ des Arbeitsspeicherclerks an. Jeder Clerk entspricht einem bestimmten Typ, wie z. B. dem CLR-Clerk MEMORYCLERK_SQLCLR. Lässt keine NULL-Werte zu.|  
@@ -60,7 +60,7 @@ ms.locfileid: "97326984"
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
 Bei den Dienst Zielen "Basic", "S0" und "S1" in SQL-Datenbank ist für Datenbanken in Pools für elastische Datenbanken `Server admin` oder ein `Azure Active Directory admin` Konto erforderlich. Für alle anderen SQL-Datenbank-Dienst Ziele `VIEW DATABASE STATE` ist die Berechtigung in der Datenbank erforderlich.   
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Der Speicher-Manager von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] besteht aus einer Hierarchie mit drei Ebenen. Die unterste Ebene der Hierarchie bilden Speicherknoten. Die mittlere Ebene besteht aus Arbeitsspeicherclerks, Arbeitsspeichercaches und Arbeitsspeicherpools. Die obere Ebene besteht aus Speicherobjekten. Diese Objekte werden im Allgemeinen für die Zuordnung von Arbeitsspeicher in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz verwendet.  
   
  Speicherknoten stellen die Schnittstelle und die Implementierung für Zuordnungen auf unterer Ebene bereit. Innerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] haben nur Arbeitsspeicherclerks Zugriff auf Speicherknoten. Arbeitsspeicherclerks greifen für die Belegung von Arbeitsspeicher auf Speicherknotenschnittstellen zu. Zudem können Speicherknoten den mithilfe des Clerks zugeordneten Arbeitsspeicher zu Diagnosezwecken nachverfolgen. Jede Komponente, die eine beträchtliche Speichermenge zuordnet, muss einen eigenen Arbeitsspeicherclerk erstellen und ihren gesamten Arbeitsspeicher mithilfe der Clerkschnittstellen zuordnen. Komponenten erstellen häufig ihre entsprechenden Clerks, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestartet wird.  

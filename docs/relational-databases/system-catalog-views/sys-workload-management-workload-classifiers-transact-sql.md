@@ -12,13 +12,13 @@ dev_langs:
 - TSQL
 author: ronortloff
 ms.author: rortloff
-monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 78811f776f7492cdcdba10a0f257e3d9a8f44aa7
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: =azure-sqldw-latest
+ms.openlocfilehash: 6d1bb241923146454d63cb5a1bd0c8463e81fb00
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92033828"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477301"
 ---
 # <a name="sysworkload_management_workload_classifiers-transact-sql"></a>sys.workload_management_workload_classifiers (Transact-SQL)
 
@@ -43,4 +43,4 @@ Erfordert die VIEW SERVER STATE-Berechtigung.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
- Eine Liste aller Katalog Sichten für Azure Synapse-Analysen und parallele Data Warehouse finden Sie unter [Azure-Synapse-Analysen und parallele Data Warehouse-Katalog Sichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). Informationen zum Erstellen eines workloadklassifizierers finden Sie unter CREATE worklofier [Classifier](../../t-sql/statements/create-workload-classifier-transact-sql.md) Weitere Informationen zur Klassifizierung der Arbeitsauslastung finden [Workload Classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification) Sie unter workloadklassifizierung.
+ Eine Liste aller Katalog Sichten für Azure Synapse-Analysen und parallele Data Warehouse finden Sie unter [Azure-Synapse-Analysen und parallele Data Warehouse-Katalog Sichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). Informationen zum Erstellen eines workloadklassifizierers finden Sie unter CREATE worklofier [Classifier](../../t-sql/statements/create-workload-classifier-transact-sql.md) Weitere Informationen zur Klassifizierung der Arbeitsauslastung finden [](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification) Sie unter workloadklassifizierung.

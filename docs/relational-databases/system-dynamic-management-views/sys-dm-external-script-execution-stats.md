@@ -1,6 +1,6 @@
 ---
 description: sys.dm_external_script_execution_stats
-title: sys. dm_external_script_execution_stats | Microsoft-Dokumentation
+title: sys.dm_external_script_execution_stats | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/25/2020
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.assetid: 2e99f026-ceb2-42a2-a549-c71d31ed0cf4
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 9c8244de0efc2bdd3dc506e5e1ebcddcd4843dea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 32a35224dd40cfc33bdc3c8bb0c93fd5a783966a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489920"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482691"
 ---
 # <a name="sysdm_external_script_execution_stats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -36,7 +36,7 @@ Gibt eine Zeile für jeden Typ von externer Skriptanforderung zurück. Die exter
 > [!NOTE]  
 > Diese dynamische Verwaltungs Sicht (Dynamic Management View, DMV) ist nur verfügbar, wenn Sie die Funktion installiert und aktiviert haben, die die Ausführung externer Skripts unterstützt. Weitere Informationen finden Sie unter [r Services in SQL Server 2016](../../machine-learning/r/sql-server-r-services.md) [Machine Learning Services (r, python) in SQL Server 2017 und](../../machine-learning/sql-server-machine-learning-services.md) höher und [Azure verwaltete Instanz Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview).
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |language|**nvarchar**|Name der registrierten externen Skriptsprache. Jedes externe Skript muss die Sprache in der Skriptanforderung angeben, um das zugehörige Startprogramm zu starten. |  
 |counter_name|**nvarchar**|Name einer registrierten externen Skriptfunktion. Lässt keine NULL-Werte zu.|  
@@ -49,7 +49,7 @@ Gibt eine Zeile für jeden Typ von externer Skriptanforderung zurück. Die exter
 > [!NOTE]  
 > Benutzer, die externe Skripts ausführen, müssen die zusätzliche Berechtigung EXECUTE ANY EXTERNAL SCRIPT haben, aber diese dynamische Verwaltungssicht kann von Administratoren ohne diese Berechtigung verwendet werden.
   
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
   Diese dynamische Verwaltungssicht wird für die interne Telemetrie bereitgestellt, um die Gesamtauslastung des neuen Features zur externen Skriptausführung in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]zu überwachen. Der Telemetriedienst wird mit Launchpad gestartet und inkrementiert jedes Mal einen datenträgerbasierten Zähler, wenn eine registrierte externe Skriptfunktion aufgerufen wird.
 
@@ -67,7 +67,7 @@ Für die Sprache R stellen die im Feld *counter_name* angezeigten Leistungsindik
 
 Für python verfolgt diese DMV die Anzahl von python-aufrufen, die auf einer Instanz von vorgenommen werden.
 
-Die Zählung beginnt, wenn das Feature für die Instanz installiert und aktiviert wird und bleibt kumulativ, bis die Datei, die den Status verwaltet, von einem Administrator gelöscht oder überschrieben wird. Daher ist es im Allgemeinen nicht möglich, die Werte in *counter_value*zurückzusetzen. Zum Überwachen der Nutzung nach Sitzung, Kalenderzeiten oder anderen Intervallen wird empfohlen, dass Sie die Leistungsindikatoren in einer Tabelle erfassen.
+Die Zählung beginnt, wenn das Feature für die Instanz installiert und aktiviert wird und bleibt kumulativ, bis die Datei, die den Status verwaltet, von einem Administrator gelöscht oder überschrieben wird. Daher ist es im Allgemeinen nicht möglich, die Werte in *counter_value* zurückzusetzen. Zum Überwachen der Nutzung nach Sitzung, Kalenderzeiten oder anderen Intervallen wird empfohlen, dass Sie die Leistungsindikatoren in einer Tabelle erfassen.
 
 ### <a name="registration-of-external-script-functions-in-r"></a>Registrierung externer Skriptfunktionen in R
 

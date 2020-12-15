@@ -1,6 +1,6 @@
 ---
-description: sys. security_policies (Transact-SQL)
-title: sys. security_policies (Transact-SQL) | Microsoft-Dokumentation
+description: sys.security_policies (Transact-SQL)
+title: sys.security_policies (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,27 +21,27 @@ helpviewer_keywords:
 ms.assetid: 35362f5b-e601-4049-9e1d-c5307e823831
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae97e6f310561339c24e712dd3d0f07552232bf2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e2d1cd685055d4dd91bdb9cda445c7847bf5bbd6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490149"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479031"
 ---
-# <a name="syssecurity_policies-transact-sql"></a>sys. security_policies (Transact-SQL)
+# <a name="syssecurity_policies-transact-sql"></a>sys.security_policies (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Gibt eine Zeile für jede Sicherheitsrichtlinie in der Datenbank zurück.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |name|**sysname**|Der Name der Sicherheitsrichtlinie, der innerhalb der Datenbank eindeutig ist.|  
 |object_id|**int**|Die ID der Sicherheitsrichtlinie.|  
 |principal_id|**int**|Die ID des Besitzers der Sicherheitsrichtlinie gemäß der Registrierung in der Datenbank. NULL, wenn der Besitzer über das Schema bestimmt wird.|  
 |schema_id|**int**|Die ID des Schemas, in dem sich das Objekt befindet.|  
 |parent_object_id|**int**|Die ID des Objekts, zu dem die Richtlinie gehört. Muss den Wert 0 (null) haben.|  
-|type|**vachar (2)**|Muss **SP**sein.|  
+|Typ|**vachar (2)**|Muss **SP** sein.|  
 |type_desc|**nvarchar(60)**|**SECURITY_POLICY**.|  
 |create_date|**datetime**|Das UTC-Datum, an dem die Sicherheitsrichtlinie erstellt wurde.|  
 |modify_date|**datetime**|Das UTC-Datum, an dem die Sicherheitsrichtlinie zuletzt geändert wurde.|  
@@ -56,7 +56,7 @@ ms.locfileid: "88490149"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Sicherheit auf Zeilenebene](../../relational-databases/security/row-level-security.md)   
- [sys. security_predicates &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)   
+ [sys.security_predicates &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)   
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [Sicherheitskatalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_query_memory_grants (Transact-SQL)
-title: sys. dm_exec_query_memory_grants (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_exec_query_memory_grants (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/19/2020
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da496a91a9ed3fa6a391d0862de7eb7fde391480
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b38c73b671329a13923604965f9529113d0549d7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546595"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477281"
 ---
 # <a name="sysdm_exec_query_memory_grants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,14 +36,14 @@ ms.locfileid: "89546595"
  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]können dynamische Verwaltungssichten keine Informationen verfügbar machen, die sich auf die Datenbankkapselung auswirken würden oder die sich auf andere Datenbanken beziehen, auf die der Benutzer Zugriff hat. Um zu vermeiden, dass diese Informationen verfügbar gemacht werden, wird jede Zeile, die Daten enthält, die nicht zum verbundenen Mandanten gehören, herausgefiltert. Darüber hinaus werden die Werte in den Spalten **scheduler_id**, **wait_order** **pool_id**, **group_id** gefiltert. der Spaltenwert wird auf NULL festgelegt.  
   
 > [!NOTE]  
-> Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys. dm_pdw_nodes_exec_query_memory_grants**.  
+> Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys.dm_pdw_nodes_exec_query_memory_grants**.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**smallint**|ID (SPID) der Sitzung, in der die Abfrage ausgeführt wird.|  
 |**request_id**|**int**|ID der Anforderung. Ist im Kontext der Sitzung eindeutig.|  
 |**scheduler_id**|**int**|ID des Zeitplanungsmoduls, der diese Abfrage plant.|  
-|**dop**|**smallint**|Grad an Parallelität für diese Abfrage.|  
+|**DOP**|**smallint**|Grad an Parallelität für diese Abfrage.|  
 |**request_time**|**datetime**|Datum und Uhrzeit, zu der die Abfrage die Arbeitsspeicherzuweisung angefordert hat.|  
 |**grant_time**|**datetime**|Datum und Uhrzeit, zu der die Arbeitsspeicherzuweisung für die Abfrage erfolgt ist. NULL, wenn noch kein Arbeitsspeicher zugewiesen wurde.|  
 |**requested_memory_kb**|**bigint**|Insgesamt angeforderter Arbeitsspeicher in Kilobytes.|  
@@ -82,7 +82,7 @@ In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ist die Berechtigung `V
   
 -   Überprüfen Sie die Arbeitsspeicherreservierungen für die Abfrageausführung in **sys.dm_os_memory_clerks**, wobei `type = 'MEMORYCLERK_SQLQERESERVATIONS'` ist.  
   
--   Überprüfen Sie, ob Abfragen mit dem Zustand " **sys. dm_exec_query_memory_grants**" auf<sup>1</sup> warten.  
+-   Überprüfen Sie, ob Abfragen, die auf <sup>1</sup> warten, mit **sys.dm_exec_query_memory_grants**.  
   
     ```sql  
     --Find all queries waiting in the memory queue  
@@ -91,7 +91,7 @@ In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ist die Berechtigung `V
     
     <sup>1</sup> In diesem Szenario ist der Wartetyp in der Regel RESOURCE_SEMAPHORE. Weitere Informationen finden Sie unter [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). 
   
--   Suchen Sie Cache nach Abfragen mit Arbeitsspeicher Zuweisungen mithilfe von [sys. dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) und [sys. dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
+-   Suchen Sie Cache nach Abfragen mit Arbeitsspeicher Zuweisungen mithilfe [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) und [sys.dm_exec_query_plan &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
   
     ```sql  
     -- retrieve every query plan from the plan cache  
@@ -117,10 +117,10 @@ In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ist die Berechtigung `V
   
  Abfragen, die dynamische Verwaltungs Sichten verwenden, die-oder-Aggregate enthalten, `ORDER BY` können die Arbeitsspeicher Nutzung erhöhen und so zu dem Problem beitragen, das Sie beheben.  
   
- Mit der Ressourcenkontrollen-Funktion kann ein Datenbankadministrator Serverressourcen auf Ressourcenpools verteilen, bis zu maximal 64 Pools. Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] verhält sich jeder Pool wie eine kleine unabhängige Serverinstanz und erfordert 2 Semaphoren. Die Anzahl der Zeilen, die von **sys. dm_exec_query_resource_semaphores** zurückgegeben werden, kann bis zu 20-mal mehr als die Zeilen sein, die in zurückgegeben werden [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
+ Mit der Ressourcenkontrollen-Funktion kann ein Datenbankadministrator Serverressourcen auf Ressourcenpools verteilen, bis zu maximal 64 Pools. Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] verhält sich jeder Pool wie eine kleine unabhängige Serverinstanz und erfordert 2 Semaphoren. Die Anzahl der Zeilen, die von **sys.dm_exec_query_resource_semaphores** zurückgegeben werden, kann bis zu 20-mal mehr als die Zeilen sein, die in zurückgegeben werden [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sys. dm_exec_query_resource_semaphores &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
+ [sys.dm_exec_query_resource_semaphores &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
  [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
  [Dynamische Verwaltungs Sichten und-Funktionen im Zusammenhang mit der Ausführung &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
  [Handbuch zur Thread- und Taskarchitektur](../../relational-databases/thread-and-task-architecture-guide.md)   

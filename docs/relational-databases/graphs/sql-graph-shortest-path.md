@@ -18,13 +18,13 @@ helpviewer_keywords:
 - SQL graph, MATCH statement
 author: shkale-msft
 ms.author: shkale
-monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: a77835335aa2fe3e9b5d4436dcac07556e9a3c26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-ver15||=azuresqldb-mi-current
+ms.openlocfilehash: c916466f6a105a2b10508e23f1739bba0d192970
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475840"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480181"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-SQL 19-SQL DB-SQL MI](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
@@ -50,7 +50,7 @@ FOR PATH muss mit einem beliebigen Knoten-oder Kanten Tabellennamen in der from-
 Dieses Muster umfasst die Knoten und Kanten, die wiederholt durchlaufen werden müssen, bis der gewünschte Knoten erreicht wird, oder bis die maximale Anzahl von Iterationen, die im Muster angegeben sind, erreicht wird. Jedes Mal, wenn die Abfrage ausgeführt wird, ist das Ergebnis der Ausführung dieses Musters eine geordnete Auflistung der Knoten und Kanten, die entlang des Pfads vom Startknoten zum Endknoten durchlaufen werden. Dabei handelt es sich um ein Stil Syntax Muster für reguläre Ausdrücke, und die folgenden beiden Muster quantifiziererer werden unterstützt:
 
 * **"+"**: Wiederholen Sie das Muster mindestens 1 mal. Beenden, sobald der kürzeste Pfad gefunden wird.
-* **{1, n}**: Wiederholen Sie das Muster 1 bis n. Beenden, sobald eine kürzeste gefunden wurde.
+* **{1,n}** : Das Muster 1 bis „n“ Male wiederholen. Beenden, sobald eine kürzeste gefunden wurde.
 
 ## <a name="last_node"></a>LAST_NODE
 Die LAST_NODE ()-Funktion ermöglicht das Verketten von zwei beliebigen Längen Durchlauf Mustern. Sie kann in Szenarien verwendet werden, in denen Folgendes gilt:    
@@ -109,7 +109,7 @@ Gibt den minimalen Wert aus den angegebenen Knoten-/edgeattributwerten oder dem 
 ### <a name="max"></a>MAX
 Gibt den maximalen Wert aus den angegebenen Knoten-/edgeattributwerten oder dem Ausdruck zurück, der im durchsuchten Pfad aufgetreten ist.
 
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
 shortest_path Funktion kann nur innerhalb von Match verwendet werden.     
 LAST_NODE wird nur in shortest_path unterstützt.     
 Das Auffinden von gewichtetem kürzesten Pfad wird nicht unterstützt.         
@@ -212,7 +212,7 @@ WHERE Q.levels = 2
 
 ## <a name="see-also"></a>Weitere Informationen  
  [Match (SQL-Graph)](../../t-sql/queries/match-sql-graph.md)    
- [CREATE TABLE &#40;SQL Graph-&#41;](../../t-sql/statements/create-table-sql-graph.md)   
- [Insert (SQL-Graph)](../../t-sql/statements/insert-sql-graph.md)]  
+ [CREATE TABLE &#40;SQL-Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
+ [INSERT (SQL-Graph)](../../t-sql/statements/insert-sql-graph.md)]  
  [Graph Processing with SQL Server 2017 (Graph-Verarbeitung mit SQL Server-2017)](../../relational-databases/graphs/sql-graph-overview.md)     
  

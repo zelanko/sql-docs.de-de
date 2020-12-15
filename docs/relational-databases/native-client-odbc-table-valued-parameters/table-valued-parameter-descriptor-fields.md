@@ -1,6 +1,6 @@
 ---
 description: Deskriptorfelder für Tabellenwertparameter
-title: Tabellenwert Parameter-Deskriptorfelder | Microsoft-Dokumentation
+title: Parameter Deskriptor Felder für Table-Valued | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,22 +13,22 @@ helpviewer_keywords:
 ms.assetid: 4e009eff-c156-4d63-abcf-082ddd304de2
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e5e8f06fc25aceda016398b414c895c349804008
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 391c6bafc42a7504643f09ba5cef2d17e1e734ec
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486751"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478041"
 ---
 # <a name="table-valued-parameter-descriptor-fields"></a>Deskriptorfelder für Tabellenwertparameter
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Die Unterstützung für Tabellenwertparameter bietet neue, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifische Felder in ODBC-Anwendungsparameterdeskriptoren (Application Parameter Descriptor, APD) und Implementierungsparameterdeskriptoren (Implementation Parameter Descriptor, IPD).  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
-|Name|Standort|type|Beschreibung|  
+|Name|Standort|Typ|Beschreibung|  
 |----------|--------------|----------|-----------------|  
 |SQL_CA_SS_TYPE_NAME|IPD|SQLTCHAR*|Der Servertypname des Tabellenwertparameters.<br /><br /> Wenn ein Tabellenwert Parameter-Typname für einen SQLBindParameter-Befehl angegeben wird, muss er immer als Unicode-Wert angegeben werden, auch in Anwendungen, die als ANSI-Anwendungen erstellt werden. Der für den Parameter *StrLen_or_IndPtr* verwendete Wert muss entweder SQL_NTS oder die Zeichen folgen Länge des Namens multipliziert mit sizeof (WChar) sein.<br /><br /> Wenn ein Tabellenwert Parameter-Typname über SQLSetDescField angegeben wird, kann er mit einem Literalwert angegeben werden, der der Art und Weise entspricht, in der die Anwendung erstellt wird. Der ODBC-Treiber-Manager führt die eventuell erforderliche Unicode-Konvertierung aus.|  
 |SQL_CA_SS_TYPE_CATALOG_NAME (schreibgeschützt)|IPD|SQLTCHAR*|Der Katalog, in dem der Typ definiert ist.|  
@@ -38,7 +38,7 @@ ms.locfileid: "88486751"
   
  Die folgenden Anweisungsattribute und Deskriptorheaderfelder gelten für Tabellenwertparameter, wenn der Parameterfokus auf einen Tabellenwertparameter festgelegt ist:  
   
-|Name|Standort|type|Beschreibung|  
+|Name|Standort|Typ|Beschreibung|  
 |----------|--------------|----------|-----------------|  
 |SQL_ATTR_PARAMSET_SIZE<br /><br /> (Dies entspricht SQL_DESC_ARRAY_SIZE im APD.)|APD|SQLUINTEGER|Die Arraygröße der Pufferarrays für einen Tabellenwertparameter. Dies entspricht der maximalen Anzahl an Zeilen, die die Puffer enthalten können, oder der Größe der Puffer in Zeilen ausgedrückt. Der Wert des Tabellenwertparameters selbst kann darüber- oder darunterliegen. Der Standardwert ist 1.<br /><br /> Hinweis: Wenn SQL_SOPT_SS_PARAM_FOCUS auf den Standardwert 0 festgelegt ist, verweist SQL_ATTR_PARAMSET_SIZE auf die-Anweisung und gibt die Anzahl von Parametersätzen an. Wenn SQL_SOPT_SS_PARAM_FOCUS auf die Ordnungszahl eines Tabellenwertparameters festgelegt ist, verweist das Attribut auf den Tabellenwertparameter und gibt die Anzahl der Zeilen pro Parameterset des Tabellenwertparameters an.|  
 |SQL_ATTR_PARAM _BIND_TYPE|APD|SQLINTEGER|Der Standard ist SQL_PARAM_BIND_BY_COLUMN.<br /><br /> Zum Auswählen der zeilenbezogenen Bindung wird dieses Feld auf die Länge der Struktur oder die Instanz eines Puffers festgelegt, der an einen Satz von Tabellenwert-Parameterzeilen gebunden wird. Die Längenangabe muss Platz für alle gebundenen Spalten und möglicherweise vorhandene Auffüllzeichen der Struktur bzw. des Puffers vorsehen. Auf diese Weise wird sichergestellt, dass bei einer um eine angegebene Länge inkrementierten Adresse einer gebundenen Spalte das Ergebnis auf den Anfang derselben Spalte in der nächsten Zeile zeigt. Wenn der **sizeof** -Operator in ANSI C verwendet wird, ist dieses Verhalten garantiert.|  
