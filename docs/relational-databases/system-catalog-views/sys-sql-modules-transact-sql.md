@@ -1,6 +1,6 @@
 ---
 description: sys.sql_modules (Transact-SQL)
-title: sys. sql_modules (Transact-SQL) | Microsoft-Dokumentation
+title: sys.sql_modules (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/06/2018
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fef38d2e060e8b9442a29fb83e821de0e93822b5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: acf5f7195a3ee997590d9625615038577779fd14
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551367"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97429345"
 ---
 # <a name="syssql_modules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "89551367"
   
  Weitere Informationen dazu finden Sie unter [Benutzerdefinierte Skalarfunktionen für In-Memory-OLTP](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Die Objekt-ID des enthaltenen Objekts. Ist innerhalb einer Datenbank eindeutig.|  
 |**Definition**|**nvarchar(max)**|Der SQL-Text, der dieses Modul definiert. Dieser Wert kann auch mit der [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) integrierten Funktion abgerufen werden.<br /><br /> NULL = Verschlüsselt.|  
@@ -52,9 +52,9 @@ ms.locfileid: "89551367"
 
   
 ## <a name="remarks"></a>Hinweise  
- Der SQL-Ausdruck für eine DEFAULT-Einschränkung, Objekt vom Typ D, befindet sich in der [sys. default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md) -Katalog Sicht. Der SQL-Ausdruck für eine Check-Einschränkung, Objekt vom Typ C, finden Sie in der [sys. check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) -Katalog Sicht.  
+ Der SQL-Ausdruck für eine DEFAULT-Einschränkung, Objekt vom Typ D, befindet sich in der [sys.default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md) -Katalog Sicht. Der SQL-Ausdruck für eine Check-Einschränkung, Objekt vom Typ C, finden Sie in der [sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) -Katalog Sicht.  
   
- Diese Informationen werden auch in [sys. dm_db_uncontained_entities &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)beschrieben.  
+ Diese Informationen werden auch in [sys.dm_db_uncontained_entities &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)beschrieben.  
   
 ## <a name="permissions"></a>Berechtigungen  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

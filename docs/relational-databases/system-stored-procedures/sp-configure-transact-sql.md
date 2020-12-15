@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: e02f07a78dc5f3022bfd1f374738f22b326ca94e
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: bd045c01439e2913179fdf2188448772f20d9f48
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955861"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427355"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -75,9 +75,9 @@ RECONFIGURE
 ## <a name="result-sets"></a>Resultsets  
  Bei der Ausführung ohne Parameter gibt **sp_configure** ein Resultset mit fünf Spalten zurück und sortiert die Optionen alphabetisch in aufsteigender Reihenfolge, wie in der folgenden Tabelle dargestellt.  
   
- Die Werte für **config_value** und **run_value** entsprechen nicht automatisch. Nachdem Sie eine Konfigurationseinstellung mithilfe von **sp_configure**aktualisiert haben, muss der Systemadministrator den Wert für die laufende Konfiguration entweder mithilfe von RECONFIGURE oder RECONFIGURE WITH OVERRIDE aktualisieren. Weitere Informationen finden Sie im Abschnitt "Hinweise".  
+ Die Werte für **config_value** und **run_value** entsprechen nicht automatisch. Nachdem Sie eine Konfigurationseinstellung mithilfe von **sp_configure** aktualisiert haben, muss der Systemadministrator den Wert für die laufende Konfiguration entweder mithilfe von RECONFIGURE oder RECONFIGURE WITH OVERRIDE aktualisieren. Weitere Informationen finden Sie im Abschnitt "Hinweise".  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(35)**|Der Name der Konfigurationsoption.|  
 |**minimum**|**int**|Der Mindestwert der Konfigurationsoption.|  
@@ -85,7 +85,7 @@ RECONFIGURE
 |**config_value**|**int**|Der Wert, mit dem die Konfigurationsoption mithilfe von **sp_configure** festgelegt wurde (Wert in **sys.configurations. Value**). Weitere Informationen zu diesen Optionen finden Sie unter [Server Konfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) und [sys.configurationen &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
 |**run_value**|**int**|Aktuell laufender Wert der Konfigurationsoption (Wert in **sys.configurations.value_in_use**).<br /><br /> Weitere Informationen finden Sie unter [sys.configurations &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Verwenden Sie **sp_configure** , um Einstellungen auf Serverebene anzuzeigen oder zu ändern. Zum Ändern von Einstellungen auf Datenbankebene können Sie ALTER DATABASE verwenden. Wenn Einstellungen geändert werden sollen, die nur die aktuelle Benutzersitzung betreffen, verwenden Sie die SET-Anweisung.  
   
 ### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
@@ -93,7 +93,7 @@ RECONFIGURE
 [!INCLUDE [big-data-clusters-master-instance-ha-endpoint-requirement](../../includes/big-data-clusters-master-instance-ha-endpoint-requirement.md)]
 
 ## <a name="updating-the-running-configuration-value"></a>Aktualisieren des ausgeführten Konfigurationswerts  
- Wenn Sie einen neuen *Wert* für eine *Option*angeben, wird dieser Wert im Resultset in der **config_value** Spalte angezeigt. Dieser Wert unterscheidet sich anfänglich von dem Wert in der Spalte **run_value** , in der der aktuell laufende Konfigurations Wert angezeigt wird. Der Systemadministrator muss entweder RECONFIGURE oder RECONFIGURE WITH OVERRIDE ausführen, um den Wert für die laufende Konfiguration in der **run_value** Spalte zu aktualisieren.  
+ Wenn Sie einen neuen *Wert* für eine *Option* angeben, wird dieser Wert im Resultset in der **config_value** Spalte angezeigt. Dieser Wert unterscheidet sich anfänglich von dem Wert in der Spalte **run_value** , in der der aktuell laufende Konfigurations Wert angezeigt wird. Der Systemadministrator muss entweder RECONFIGURE oder RECONFIGURE WITH OVERRIDE ausführen, um den Wert für die laufende Konfiguration in der **run_value** Spalte zu aktualisieren.  
   
  RECONFIGURE und RECONFIGURE WITH OVERRIDE können für jede Konfigurationsoption verwendet werden. Die einfache RECONFIGURE-Anweisung weist jedoch Optionswerte zurück, die außerhalb eines angemessenen Bereichs liegen oder die zu Konflikten bei den Optionen führen. Beispielsweise generiert RECONFIGURE einen Fehler, wenn der Wert des **Wiederherstellungs Intervalls** größer als 60 Minuten ist oder wenn sich der **Affinitäts Masken** Wert mit dem Wert der **Affinitäts-e/a-Maske** überlappt. Von RECONFIGURE WITH OVERRIDE hingegen werden alle Optionswerte vom richtigen Datentyp akzeptiert. Eine Neukonfiguration mit dem angegebenen Wert wird dann erzwungen.  
   
@@ -102,7 +102,7 @@ RECONFIGURE
   
  Mit der RECONFIGURE-Anweisung werden einige Optionen dynamisch aktualisiert. Für andere Optionen ist jedoch das Beenden und Neustarten des Servers erforderlich. So werden z. b. die Arbeitsspeicher Optionen **Min. Server Arbeitsspeicher** und **Max. Server Arbeitsspeicher** dynamisch in aktualisiert [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Daher können Sie Sie ändern, ohne den Server neu zu starten. Im Gegensatz dazu erfordert das erneute Konfigurieren des laufenden Werts der Option **Füllfaktor** das Neustarten von [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
- Nachdem Sie RECONFIGURE für eine Konfigurationsoption ausgeführt haben, können Sie erkennen, ob die Option dynamisch aktualisiert wurde, indem Sie **sp_configure '***option_name***'** ausführen. Die Werte in den Spalten **run_value** und **config_value** sollten mit einer dynamisch aktualisierten Option verglichen werden. Sie können auch überprüfen, welche Optionen dynamisch sind, indem Sie sich die Spalte **is_dynamic** der **sys.configurations** -Katalog Sicht ansehen.  
+ Nachdem Sie RECONFIGURE für eine Konfigurationsoption ausgeführt haben, können Sie erkennen, ob die Option dynamisch aktualisiert wurde, indem Sie **sp_configure '**_option_name_*_'_* ausführen. Die Werte in den Spalten **run_value** und **config_value** sollten mit einer dynamisch aktualisierten Option verglichen werden. Sie können auch überprüfen, welche Optionen dynamisch sind, indem Sie sich die Spalte **is_dynamic** der **sys.configurations** -Katalog Sicht ansehen.  
  
  Die Änderung wird auch in das SQL Server-Fehlerprotokoll geschrieben.
   

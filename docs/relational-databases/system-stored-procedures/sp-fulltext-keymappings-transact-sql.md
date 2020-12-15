@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfac86a5cb8000203873f2434212bf2b50749a6d
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d51d0f1f2e15bcf6db3be6d7afee6010e9454a4e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810096"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427336"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -44,13 +44,13 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 #### <a name="parameters"></a>Parameter  
  *table_id*  
- Ist die Objekt-ID der volltextindizierten Tabelle. Wenn Sie einen ungültigen *table_id*angeben, wird ein Fehler zurückgegeben. Informationen zum Abrufen der Objekt-ID einer Tabelle finden Sie unter [object_id &#40;Transact-SQL-&#41;](../../t-sql/functions/object-id-transact-sql.md).  
+ Ist die Objekt-ID der volltextindizierten Tabelle. Wenn Sie einen ungültigen *table_id* angeben, wird ein Fehler zurückgegeben. Informationen zum Abrufen der Objekt-ID einer Tabelle finden Sie unter [object_id &#40;Transact-SQL-&#41;](../../t-sql/functions/object-id-transact-sql.md).  
   
  *docid*  
  Ein interner Dokumentbezeichner (DocId), der dem Schlüsselwert entspricht. Ein ungültiger *docid* -Wert gibt keine Ergebnisse zurück.  
   
  *key*  
- Der Wert des Volltextschlüssels aus der angegebenen Tabelle. Ein ungültiger *key* -Wert gibt keine Ergebnisse zurück. Weitere Informationen zu voll Text Schlüsselwerten finden Sie unter [Verwalten von Volltextindizes](../search/create-and-manage-full-text-indexes.md).  
+ Der Wert des Volltextschlüssels aus der angegebenen Tabelle. Ein ungültiger *key* -Wert gibt keine Ergebnisse zurück. Weitere Informationen zu voll Text Schlüsselwerten finden Sie unter [Verwalten von Full-Text Indizes](../search/create-and-manage-full-text-indexes.md).  
   
 > [!IMPORTANT]  
 >  Informationen zur Verwendung von einem, zwei oder drei Parametern finden Sie unter "Hinweise" später in diesem Thema.  
@@ -63,7 +63,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |DocId|**bigint**|Eine interne Dokumentbezeichnerspalte (DocId), die dem Schlüsselwert entspricht.|  
-|Key|*|Der Wert des Volltextschlüssels aus der angegebenen Tabelle.<br /><br /> Wenn in der Zuordnungstabelle keine Volltextschlüssel vorhanden sind, wird ein leeres Rowset zurückgegeben.|  
+|Schlüssel|*|Der Wert des Volltextschlüssels aus der angegebenen Tabelle.<br /><br /> Wenn in der Zuordnungstabelle keine Volltextschlüssel vorhanden sind, wird ein leeres Rowset zurückgegeben.|  
   
  <sup>*</sup> Der Datentyp für Key ist identisch mit dem Datentyp der voll Text Schlüssel Spalte in der Basistabelle.  
   
@@ -81,7 +81,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
  Wenn eine der folgenden Bedingungen zutrifft, wird ein Fehler zurückgegeben:  
   
--   Sie geben einen ungültigen *table_id*an.  
+-   Sie geben einen ungültigen *table_id* an.  
   
 -   Die Tabelle ist nicht volltextindiziert.  
   

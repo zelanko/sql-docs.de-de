@@ -1,6 +1,6 @@
 ---
 description: sys.column_master_keys (Transact-SQL)
-title: sys. column_master_keys (Transact-SQL) | Microsoft-Dokumentation
+title: sys.column_master_keys (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/15/2019
 ms.prod: sql
@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: fbec2efa-5fe9-4121-9b34-60497b0b2aca
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a49dd0832e0319f078d91c44708e8ab821ad107
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9b62a54ec2ab17d76f5f726dbd26f28a60d79afc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646720"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97429615"
 ---
 # <a name="syscolumn_master_keys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
 
@@ -39,7 +39,7 @@ ms.locfileid: "88646720"
 
   Gibt eine Zeile für jeden Datenbank-Hauptschlüssel zurück, der mit der [Create Master Key](../../t-sql/statements/create-column-master-key-transact-sql.md) -Anweisung hinzugefügt wurde. Jede Zeile stellt einen einzelnen Spalten Hauptschlüssel (Column Master Key, CMK) dar.  
     
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Der Name des CMK.|  
 |**column_master_key_id**|**int**|ID des Spalten Hauptschlüssels.|  
@@ -48,7 +48,7 @@ ms.locfileid: "88646720"
 |**key_store_provider_name**|**sysname**|Der Name des Anbieters für den Spalten Hauptschlüssel-Speicher, der den CMK enthält. Zulässige Werte sind:<br /><br /> MSSQL_CERTIFICATE_STORE: Wenn der Spalten Hauptschlüssel-Speicher ein Zertifikat Speicher ist.<br /><br /> Ein benutzerdefinierter Wert, wenn der Spalten Hauptschlüssel-Speicher einen benutzerdefinierten Typ hat.|  
 |**key_path**|**nvarchar(4000)**|Ein Speicher spezifischer Pfad des Spalten Hauptschlüssels für den Schlüssel. Das Format des Pfads hängt vom Speicher Typ des Spalten Hauptschlüssels ab. Beispiel:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Für einen benutzerdefinierten Spalten Hauptschlüssel-Speicher ist der Entwickler dafür verantwortlich, den Schlüssel Pfad für den benutzerdefinierten Spalten Hauptschlüssel-Speicher zu definieren.|  
 |**allow_enclave_computations**|**bit**|Gibt an, ob der Spalten Hauptschlüssel Enclave-fähig ist, (wenn Spalten Verschlüsselungsschlüssel, die mit diesem Hauptschlüssel verschlüsselt sind, für Berechnungen in serverseitigen sicheren Enklaven verwendet werden können). Weitere Informationen finden Sie unter [Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|  
-|**Signatur**|**varbinary(max)**|Eine digitale Signatur von **key_path** und **allow_enclave_computations**, die mit dem Spalten Hauptschlüssel erstellt wurden, auf die von **key_path**verwiesen wird.|
+|**Signatur**|**varbinary(max)**|Eine digitale Signatur von **key_path** und **allow_enclave_computations**, die mit dem Spalten Hauptschlüssel erstellt wurden, auf die von **key_path** verwiesen wird.|
 
 
   

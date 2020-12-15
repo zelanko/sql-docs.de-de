@@ -17,13 +17,13 @@ ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f5793bef7a6b025198972b1be40fc9f482fd53c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9dedf4df4aa43f79ca4146da6f1183b0ee06286b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649736"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97431270"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Angeben eines Speicherortpfads (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -52,9 +52,9 @@ ms.locfileid: "85649736"
   
 -   **Knoten Test**  
   
-     Ein Knotentest gibt den vom Positionsschritt ausgewählten Knotentyp an. Jede**Achse (unter**geordnetes Element, über **geordnetes**Element, **Attribut**und **Self**) verfügt über einen Prinzipal Knotentyp. Für die **Attribut** Achse ist der Haupt Knotentyp **\<attribute>** . Für die übergeordnete **, unter** **geordnete**und die **Self** -Achse ist der Haupt Knotentyp **\<element>** .  
+     Ein Knotentest gibt den vom Positionsschritt ausgewählten Knotentyp an. Jede **Achse (unter** geordnetes Element, über **geordnetes** Element, **Attribut** und **Self**) verfügt über einen Prinzipal Knotentyp. Für die **Attribut** Achse ist der Haupt Knotentyp **\<attribute>** . Für die übergeordnete **, unter** **geordnete** und die **Self** -Achse ist der Haupt Knotentyp **\<element>** .  
   
-     Wenn der Speicherort Pfad z. b. **Child:: Customer**angibt, werden die untergeordneten- **\<Customer>** Elemente des Kontext Knotens ausgewählt. Da die **child** untergeordnete Achse **\<element>** als Hauptknotentyp gilt, ist der Knoten Test Customer, wenn Customer ein Knoten ist **\<element>** .  
+     Wenn der Speicherort Pfad z. b. **Child:: Customer** angibt, werden die untergeordneten- **\<Customer>** Elemente des Kontext Knotens ausgewählt. Da die  untergeordnete Achse **\<element>** als Hauptknotentyp gilt, ist der Knoten Test Customer, wenn Customer ein Knoten ist **\<element>** .  
   
 -   **Auswahlprädikate (Null oder mehr)**  
   
