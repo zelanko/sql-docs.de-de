@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 7f02360f-cb9e-48b4-b75f-29b4bc9ea304
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 52c91c09c440402df383253996e660d7abdb317c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 13d9b45efd0fc75e1e17ea0ec5b21537fae71971
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551158"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427210"
 ---
 # <a name="sp_updateextendedproperty-transact-sql"></a>sp_updateextendedproperty (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ sp_updateextendedproperty
   
 ## <a name="arguments"></a>Argumente  
  [ @name =] {'*property_name*'}  
- Der Name der zu aktualisierenden Eigenschaft. *property_name* ist vom **Datentyp vom Datentyp sysname**und darf nicht NULL sein.  
+ Der Name der zu aktualisierenden Eigenschaft. *property_name* ist vom **Datentyp vom Datentyp sysname** und darf nicht NULL sein.  
   
  [ @value =] {'*Wert*'}  
  Der Wert, der der Eigenschaft zugeordnet ist. der Wert ist **sql_variant**. der Standard *Wert* ist NULL. Die Größe des *Werts* darf nicht mehr als 7.500 Bytes betragen.  
@@ -78,7 +78,7 @@ sp_updateextendedproperty
  Der Typ des Objekts der Ebene 2. *level2_object_type* ist vom Datentyp **varchar (128)** und hat den Standardwert NULL. Gültige Eingabewerte sind COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER und NULL.  
   
  [ @level2name =] {'*level2_object_name*'}  
- Der Name des angegebenen Objekttyps der Ebene 2. *level2_object_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+ Der Name des angegebenen Objekttyps der Ebene 2. *level2_object_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -86,7 +86,7 @@ sp_updateextendedproperty
 ## <a name="remarks"></a>Bemerkungen  
  Für das Angeben erweiterter Eigenschaften werden die Objekte in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank in drei Ebenen (0, 1 und 2) unterteilt. Die Ebene 0 ist die höchste Ebene und ist definiert als Objekte, die im Datenbankbereich enthalten sind. Objekte der Ebene 1 sind in einem Schema- oder Benutzerbereich enthalten, und Objekte der Ebene 2 sind in Objekten der Ebene 1 enthalten. Erweiterte Eigenschaften können für Objekte auf einer dieser Ebenen definiert werden. Verweise auf ein Objekt einer Ebene müssen mit den Namen der Objekte der höheren Ebene gekennzeichnet werden, die diese besitzen oder enthalten.  
   
- Wenn alle Objekttypen und-Namen einen gültigen *property_name* und *Wert*haben, gehört die aktualisierte Eigenschaft zur aktuellen Datenbank, wenn alle Objekttypen und-Namen NULL sind.  
+ Wenn alle Objekttypen und-Namen einen gültigen *property_name* und *Wert* haben, gehört die aktualisierte Eigenschaft zur aktuellen Datenbank, wenn alle Objekttypen und-Namen NULL sind.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Mitglieder der festen Datenbankrollen db_owner und db_ddladmin können die erweiterten Eigenschaften jedes Objekts mit einer Ausnahme aktualisieren: db_ddladmin kann der Datenbank selbst oder Benutzern bzw. Rollen keine Eigenschaften hinzufügen.  
@@ -138,7 +138,7 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sys. fn_listextendedproperty &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [sys.fn_listextendedproperty &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_addextendedproperty &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [sp_dropextendedproperty &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
  [sys.extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
