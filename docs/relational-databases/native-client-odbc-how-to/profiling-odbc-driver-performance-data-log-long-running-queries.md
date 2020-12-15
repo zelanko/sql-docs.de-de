@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4942428a1f73275aeb85d9c41220467b89e3ab9
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0b5eb57bb4e88ebcad9a3ffdfdf9517a2f2576cf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868892"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97419392"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>Profilerstellung von ODBC-Treiberleistungsdaten: Protokollieren von lang ausgeführten Abfragen
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "91868892"
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>So protokollieren Sie Abfragen mit langer Ausführungszeit mithilfe des ODBC-Administrators  
   
-1.  Öffnen Sie in der **Systemsteuerung**die Option **Verwaltung** , und doppelklicken Sie dann auf **Datenquellen (ODBC)**. (Stattdessen können Sie auch odbcad32.exe über die Eingabeaufforderung ausführen.)  
+1.  Öffnen Sie in der **Systemsteuerung** die Option **Verwaltung** , und doppelklicken Sie dann auf **Datenquellen (ODBC)**. (Stattdessen können Sie auch odbcad32.exe über die Eingabeaufforderung ausführen.)  
   
-2.  Klicken Sie auf die Registerkarte **Benutzer-DSN**, **System-DSN**oder **Datei-DSN** .  
+2.  Klicken Sie auf die Registerkarte **Benutzer-DSN**, **System-DSN** oder **Datei-DSN** .  
   
 3.  Klicken Sie auf die Datenquelle, für die die Protokollierung der Abfragen mit langer Ausführungszeit ausgeführt werden soll.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "91868892"
   
 5.  Navigieren Sie im Microsoft SQL Server-Assistenten zum Konfigurieren von DSN zur Seite mit der Option **Abfragen mit langer Ausführungszeit in der Protokolldatei speichern**.  
   
-6.  Wählen Sie **Abfragen mit langer Ausführungszeit in der Protokolldatei speichern**aus. Platzieren Sie im Feld den Namen der Datei, in der die Abfragen mit langer Ausführungszeit protokolliert werden sollen. Klicken Sie optional auf **Durchsuchen** , um im Dateisystem nach dem Abfrageprotokoll zu suchen.  
+6.  Wählen Sie **Abfragen mit langer Ausführungszeit in der Protokolldatei speichern** aus. Platzieren Sie im Feld den Namen der Datei, in der die Abfragen mit langer Ausführungszeit protokolliert werden sollen. Klicken Sie optional auf **Durchsuchen** , um im Dateisystem nach dem Abfrageprotokoll zu suchen.  
   
 7.  Legen Sie im Feld **Lange Abfragezeit (Millisekunden)** ein Abfragetimeoutintervall in Millisekunden fest.  
 

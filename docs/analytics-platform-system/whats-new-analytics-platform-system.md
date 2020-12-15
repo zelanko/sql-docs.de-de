@@ -1,5 +1,5 @@
 ---
-title: Neues
+title: Neuigkeiten
 description: Sehen Sie sich die Neuerungen in Microsoft Analytics Platform System an, eine lokale Appliance für horizontales Skalieren, die MPP SQL Server parallel Data Warehouse hostet.
 author: mzaman1
 ms.prod: sql
@@ -9,19 +9,19 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 25bc830bcf2582d7630829ccb3c369fdd434c094
-ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
+ms.openlocfilehash: 693e724256d8792581770e7fde4f4e6c991701bf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95011809"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97420167"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Neues in Analytics Platform System, ein Data Warehouse für horizontales Skalieren
 Weitere Informationen finden Sie unter What es New in the latest Appliance Updates for Microsoft Analytics Platform System (APS). APS ist eine lokale Appliance für horizontales Skalieren, die MPP SQL Server parallele Data Warehouse hostet. 
 
-::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+::: moniker range=">= aps-pdw-2016-au7 "
 <a name="h2-aps-cu7.7"></a>
-## <a name="aps-cu77"></a>APS Cu 7.7
+## <a name="aps-cu77"></a>APS CU7.7
 Veröffentlichungsdatum-2020
 
 ### <a name="scvmm2016"></a>SCVMM2016
@@ -150,7 +150,7 @@ Durch die Verwendung von Katalog Objekten für Metadatenaufrufe anstelle von SMO
 ### <a name="bug-fixes"></a>Behebung von Programmfehlern
 Wir haben ein Upgrade auf SQL Server 2016 SP2 Cu2 mit APS Cu 7.1 durchgeführt. Das Upgrade korrigiert einige Probleme, die unten beschrieben werden.
 
-| Titel | BESCHREIBUNG |
+| Titel | Beschreibung |
 |:---|:---|
 | **Möglicher Deadlock von tupelbewegsvorgang** |Das Upgrade korrigiert eine langfristige Möglichkeit eines Deadlocks in einer verteilten Transaktion und einem tupelverschiebungshintergrundthread. Nach der Installation von Cu 7.1 können Kunden, die TF634 verwendet haben, um den tupelverschiebungsvorgang als SQL Server Startparameter oder globales Ablaufverfolgungsflag zu unterbinden | 
 | **Bestimmte Verzögerung/führende Abfrage schlägt fehl** |Bestimmte Abfragen in CCI-Tabellen mit in der Fehlermeldung gedebuggten Funktionen mit verzögertem verzögertem Rückstand | 
@@ -179,7 +179,7 @@ Mit APS AU7 Software wird ein Intel BIOS-Update bereitgestellt, das ein Problem 
 Microsoft rät allen Kunden, das aktualisierte BIOS zu installieren. Microsoft hat die Auswirkungen von Kernel-VMS (Virtual Address Shadowings, Kvas), Kernel Page Table deretion (kpti) und indirekter Verzweigungs Entschärfung (IBP) für verschiedene SQL-Arbeits Auslastungen in verschiedenen Umgebungen gemessen. Die Messungen haben bei einigen Arbeits Auslastungen eine erhebliche Beeinträchtigung festgestellt. Basierend auf den Ergebnissen wird empfohlen, dass Sie die Leistungs Auswirkung der Aktivierung von BIOS-Updates testen, bevor Sie Sie in einer Produktionsumgebung bereitstellen. Weitere [Informationen finden Sie unter SQL Server Anleitung.](https://support.microsoft.com/help/4073225/guidance-protect-sql-server-against-spectre-meltdown)
 
 ::: moniker-end
-::: moniker range=">= aps-pdw-2016 || = sqlallproducts-allversions"
+::: moniker range=">= aps-pdw-2016 "
 <a name="h2-aps-au6"></a>
 ## <a name="aps-2016"></a>APS 2016
 In diesem Abschnitt wurden die neuen Features für APS 2016-AU6 beschrieben.

@@ -1,6 +1,6 @@
 ---
-description: Ausführen von SQL Server Native Client Befehlen mit Tabellenwert Parametern
-title: Befehle mit Tabellenwert Parametern
+description: Ausführen von SQL Server Native Client Befehlen mit Table-Valued Parametern
+title: Befehle mit Table-Valued-Parametern
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 7ecba6f6-fe7a-462a-9aa3-d5115b6d4529
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dfacff2fb4c09f3b2bff6230d0963bef292c1266
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0d1c2e6d2ecf739f63f00702f55f653d14ededc1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448312"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97419052"
 ---
-# <a name="executing-sql-server-native-client-commands-containing-table-valued-parameters"></a>Ausführen von SQL Server Native Client Befehlen mit Tabellenwert Parametern
+# <a name="executing-sql-server-native-client-commands-containing-table-valued-parameters"></a>Ausführen von SQL Server Native Client Befehlen mit Table-Valued Parametern
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Die Ausführung eines Befehls, der Tabellenwertparameter enthält, erfordert zwei Phasen:  

@@ -10,13 +10,13 @@ ms.topic: reference
 ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48c2230327a92a560291aacbf802ae775b99fe8f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5d74887afafcc4ab0c00881081bf8abf941ac551
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498899"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97418758"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>Verhaltensänderungen des ODBC-Treibers bei der Behandlung von Zeichenkonvertierungen
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -106,9 +106,9 @@ SQLBindParameter(... SQL_W_CHAR, ...)   // Only bind up to first 64 characters
 ## <a name="performing-char-and-wchar-conversions"></a>Ausführen von CHAR- und WCHAR-Konvertierungen  
  Der [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client-ODBC-Treiber bietet verschiedene Möglichkeiten zum Durchführen von CHAR- und WCHAR-Konvertierungen. Die Logik ähnelt der Bearbeitung von blobzeichen (varchar (max), nvarchar (max),...):  
   
--   Daten werden bei der Bindung mit **SQLBindCol** oder **SQLBindParameter**in den angegebenen Puffer gespeichert oder abgeschnitten.  
+-   Daten werden bei der Bindung mit **SQLBindCol** oder **SQLBindParameter** in den angegebenen Puffer gespeichert oder abgeschnitten.  
   
--   Wenn Sie keine Bindung durchführen, können Sie die Daten in Blöcken mithilfe von **SQLGetData** und **SQLParamData**abrufen.  
+-   Wenn Sie keine Bindung durchführen, können Sie die Daten in Blöcken mithilfe von **SQLGetData** und **SQLParamData** abrufen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Native Client-Funktionen](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
