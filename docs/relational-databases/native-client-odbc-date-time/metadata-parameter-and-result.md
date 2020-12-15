@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2205348e8b0ba913cdb12a990d88233c74dfe12
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 8753d87fec58d948ccea67c139cc8b1d30861fe5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868358"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438533"
 ---
 # <a name="metadata---parameter-and-result"></a>Metadaten: Parameter und Ergebnis
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "91868358"
   
  Wenn SQL_CA_SS_SERVER_TYPE durch einen Aufrufen von SQLSetDescField festgelegt wird, muss der Wert SQL_SS_TYPE_DEFAULT, SQL_SS_TYPE_SMALLDATETIME oder SQL_SS_TYPE_DATETIME sein. Ist dies nicht der Fall, wird SQL_ERROR zurückgegeben, und es wird ein Diagnosedatensatz mit SQLState HY092 und der Meldung "Ungültiger Attribut-/Optionsbezeichner" protokolliert.  
   
- Das SQL_CA_SS_SERVER_TYPE-Attribut kann von Anwendungen verwendet werden, die von Funktionen abhängen, die von **DateTime** und **smalldatetime**unterstützt werden, jedoch nicht von **datetime2**. **Datetime2** erfordert beispielsweise die Verwendung der Funktionen **DateAdd** und **datediif** , während **DateTime** und **smalldatetime** auch arithmetische Operatoren zulassen. Die meisten Anwendungen müssen dieses Attribut nicht verwenden, und seine Verwendung sollte vermieden werden.  
+ Das SQL_CA_SS_SERVER_TYPE-Attribut kann von Anwendungen verwendet werden, die von Funktionen abhängen, die von **DateTime** und **smalldatetime** unterstützt werden, jedoch nicht von **datetime2**. **Datetime2** erfordert beispielsweise die Verwendung der Funktionen **DateAdd** und **datediif** , während **DateTime** und **smalldatetime** auch arithmetische Operatoren zulassen. Die meisten Anwendungen müssen dieses Attribut nicht verwenden, und seine Verwendung sollte vermieden werden.  
   
 ## <a name="information-returned-in-ird-fields"></a>In IRD-Feldern zurückgegebene Informationen  
  Die folgenden Informationen werden in IRD-Feldern zurückgegeben:  

@@ -20,13 +20,13 @@ helpviewer_keywords:
 - status information [ODBC]
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5370b0730328466dbdf1c1602bb4bdb3140c040e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: db45018b22f974a64159a55da39b2fceda10e90b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420564"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438503"
 ---
 # <a name="diagnostic-records-and-fields"></a>Diagnosedatensätze und -felder
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,13 +41,13 @@ ms.locfileid: "88420564"
   
  **SQLGetDiagRec** Ruft einen einzelnen Diagnosedaten Satz zusammen mit den Feldern "ODBC SQLSTATE", "Native Error Number" und "Diagnostic-Message" ab. Diese Funktion ähnelt dem ODBC 2. _x_**SQLError** -Funktion. Die einfachste Fehler Behandlungs Funktion in ODBC 3. *x* dient zum wiederholten Aufrufen von **SQLGetDiagRec** , beginnend mit dem auf 1 festgelegten Parameter " *RecNumber* " und dem erhöhen der *RecNumber* um 1, bis **SQLGetDiagRec** SQL_NO_DATA zurückgibt. Dies entspricht einem ODBC 2. *x* -Anwendung, die **SQLError** aufrufen, bis SQL_NO_DATA_FOUND zurückgegeben wird.  
   
- ODBC 3. *x* unterstützt wesentlich mehr Diagnoseinformationen als ODBC 2. *x*. Diese Informationen werden in weiteren Feldern in Diagnosedaten Sätzen gespeichert, die mit **SQLGetDiagField**abgerufen werden.  
+ ODBC 3. *x* unterstützt wesentlich mehr Diagnoseinformationen als ODBC 2. *x*. Diese Informationen werden in weiteren Feldern in Diagnosedaten Sätzen gespeichert, die mit **SQLGetDiagField** abgerufen werden.  
   
- Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber verfügt über Treiber spezifische Diagnose Felder, die mit **SQLGetDiagField**abgerufen werden können. Bezeichnungen für diese treiberspezifischen Felder werden in sqlncli.h definiert. Mit diesen Bezeichnungen rufen Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Status, den Schweregrad, den Servernamen, den Prozedurnamen und die jedem Diagnosedatensatz zugeordnete Zeilennummer ab. Sqlncli. h enthält außerdem Definitionen der Codes, die der Treiber zum Identifizieren von Transact-SQL-Anweisungen verwendet, wenn eine Anwendung **SQLGetDiagField** aufruft, wobei *DiagIdentifier* auf SQL_DIAG_DYNAMIC_FUNCTION_CODE festgelegt ist.  
+ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber verfügt über Treiber spezifische Diagnose Felder, die mit **SQLGetDiagField** abgerufen werden können. Bezeichnungen für diese treiberspezifischen Felder werden in sqlncli.h definiert. Mit diesen Bezeichnungen rufen Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Status, den Schweregrad, den Servernamen, den Prozedurnamen und die jedem Diagnosedatensatz zugeordnete Zeilennummer ab. Sqlncli. h enthält außerdem Definitionen der Codes, die der Treiber zum Identifizieren von Transact-SQL-Anweisungen verwendet, wenn eine Anwendung **SQLGetDiagField** aufruft, wobei *DiagIdentifier* auf SQL_DIAG_DYNAMIC_FUNCTION_CODE festgelegt ist.  
   
  **SQLGetDiagField** wird vom ODBC-Treiber-Manager mithilfe von Fehlerinformationen verarbeitet, die er vom zugrunde liegenden Treiber zwischenspeichert. Der ODBC-Treiber-Manager speichert Treiber spezifische Diagnose Felder erst zwischen, wenn eine erfolgreiche Verbindung hergestellt wurde. **SQLGetDiagField** gibt SQL_ERROR zurück, wenn es aufgerufen wird, um Treiber spezifische Diagnose Felder zu erhalten, bevor eine erfolgreiche Verbindung hergestellt wurde. Wenn eine ODBC-Verbindungsfunktion SQL_SUCCESS_WITH_INFO zurückgibt, sind noch keine treiberspezifischen Diagnosefelder für die Verbindungsfunktion verfügbar. Sie können **SQLGetDiagField** für Treiber spezifische Diagnose Felder erst aufrufen, nachdem Sie einen weiteren ODBC-Funktionsaufruf nach der Connect-Funktion durchgeführt haben.  
   
- Die meisten Fehler, die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber gemeldet werden, können nur mit den von **SQLGetDiagRec**zurückgegebenen Informationen diagnostiziert werden. In einigen Fällen sind jedoch die von den treiberspezifischen Diagnosefeldern zurückgegebenen Informationen für die Fehlerdiagnose wichtig. Beim Codieren eines ODBC-Fehler Handlers für Anwendungen, die den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber verwenden, empfiehlt es sich, auch **SQLGetDiagField** zu verwenden, um mindestens die SQL_DIAG_SS_MSGSTATE-und SQL_DIAG_SS_SEVERITY treiberspezifischen Felder abzurufen. Wenn ein bestimmter Fehler an mehreren Orten im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Code ausgelöst werden kann, erkennt der Microsoft Software Service anhand von SQL_DIAG_SS_MSGSTATE, wo genau ein Fehler ausgelöst wurde, was mitunter für die Problemdiagnose hilfreich ist.  
+ Die meisten Fehler, die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber gemeldet werden, können nur mit den von **SQLGetDiagRec** zurückgegebenen Informationen diagnostiziert werden. In einigen Fällen sind jedoch die von den treiberspezifischen Diagnosefeldern zurückgegebenen Informationen für die Fehlerdiagnose wichtig. Beim Codieren eines ODBC-Fehler Handlers für Anwendungen, die den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber verwenden, empfiehlt es sich, auch **SQLGetDiagField** zu verwenden, um mindestens die SQL_DIAG_SS_MSGSTATE-und SQL_DIAG_SS_SEVERITY treiberspezifischen Felder abzurufen. Wenn ein bestimmter Fehler an mehreren Orten im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Code ausgelöst werden kann, erkennt der Microsoft Software Service anhand von SQL_DIAG_SS_MSGSTATE, wo genau ein Fehler ausgelöst wurde, was mitunter für die Problemdiagnose hilfreich ist.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Behandlung von Fehlern und Meldungen](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  

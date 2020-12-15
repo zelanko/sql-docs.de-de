@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1117c89aec3a615b439686a065c29457e267bffe
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 94ce485bc773b66010708034c6c6cd2b87f85d3e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541760"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439406"
 ---
 # <a name="sp_fulltext_table-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -56,11 +56,11 @@ sp_fulltext_table
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**Erstellen**|Erstellt die Metadaten für einen Volltextindex für die Tabelle, auf die durch *qualified_table_name* verwiesen wird. Darüber hinaus wird angegeben, dass der Volltextindex für diese Tabelle in *fulltext_catalog_name*gespeichert werden soll. Diese Aktion legt außerdem die Verwendung von *unique_index_name* als Volltextschlüsselspalte fest. Dieser eindeutige Index muss bereits vorhanden sein und muss für eine Spalte der Tabelle definiert sein.<br /><br /> Eine Volltextsuche für diese Tabelle kann erst durchgeführt werden, wenn der Volltextkatalog aufgefüllt ist.|  
+|**Erstellen**|Erstellt die Metadaten für einen Volltextindex für die Tabelle, auf die durch *qualified_table_name* verwiesen wird. Darüber hinaus wird angegeben, dass der Volltextindex für diese Tabelle in *fulltext_catalog_name* gespeichert werden soll. Diese Aktion legt außerdem die Verwendung von *unique_index_name* als Volltextschlüsselspalte fest. Dieser eindeutige Index muss bereits vorhanden sein und muss für eine Spalte der Tabelle definiert sein.<br /><br /> Eine Volltextsuche für diese Tabelle kann erst durchgeführt werden, wenn der Volltextkatalog aufgefüllt ist.|  
 |**Dropdown**|Löscht die Metadaten für den Volltextindex für *qualified_table_name*. Ist der Volltextindex aktiviert, wird er vor dem Löschen automatisch deaktiviert. Es ist nicht erforderlich, Spalten zu entfernen, bevor der Volltextindex gelöscht wird.|  
-|**Aktivieren**|Aktiviert die Möglichkeit, Volltextindexdaten für *qualified_table_name*nach der Deaktivierung zu sammeln. Es muss mindestens eine Spalte im Volltextindex vorhanden sein, damit er aktiviert werden kann.<br /><br /> Ein Volltextindex wird automatisch (für das Auffüllen) aktiviert, sobald die erste Spalte für die Indizierung hinzugefügt wird. Wenn die letzte Spalte aus dem Index gelöscht wird, wird der Index inaktiv. Wenn die Änderungsprotokollierung aktiviert ist, wird durch Aktivieren eines inaktiven Index ein neuer Auffüllvorgang gestartet.<br /><br /> Beachten Sie, dass dadurch nicht der eigentliche Volltextindex aufgefüllt wird, sondern nur die Tabelle im Volltextkatalog des Dateisystems registriert wird, um Zeilen von *qualified_table_name* während der nächsten Volltextindexauffüllung abrufen zu können.|  
-|**Deaktivieren**|Deaktiviert den Volltextindex für *qualified_table_name* , sodass die Volltextindexdaten für *qualified_table_name*nicht mehr gesammelt werden können. Die Volltextindexmetadaten sind weiterhin vorhanden, und die Tabelle kann erneut aktiviert werden.<br /><br /> Wenn die Änderungsnachverfolgung aktiviert ist, wird der Status des Indexes durch die Deaktivierung eines aktiven Index eingefroren: derzeit ausgeführte Auffüllungsprozesse werden beendet, und dem Index werden keine Änderungen mehr hinzugefügt.|  
-|**start_change_tracking**|Startet das inkrementelle Auffüllen des Volltextindex. Wenn die Tabelle nicht über einen Timestamp verfügt, wird das vollständige Auffüllen des Volltextindexes gestartet. Startet die Änderungsprotokollierung für die Tabelle.<br /><br /> Von der Volltextänderungsnachverfolgung werden keine WRITETEXT- oder UPDATETEXT-Operationen in diesen Spalten protokolliert, die den Typ **image**, **text**oder **ntext**aufweisen.|  
+|**Aktivieren**|Aktiviert die Möglichkeit, Volltextindexdaten für *qualified_table_name* nach der Deaktivierung zu sammeln. Es muss mindestens eine Spalte im Volltextindex vorhanden sein, damit er aktiviert werden kann.<br /><br /> Ein Volltextindex wird automatisch (für das Auffüllen) aktiviert, sobald die erste Spalte für die Indizierung hinzugefügt wird. Wenn die letzte Spalte aus dem Index gelöscht wird, wird der Index inaktiv. Wenn die Änderungsprotokollierung aktiviert ist, wird durch Aktivieren eines inaktiven Index ein neuer Auffüllvorgang gestartet.<br /><br /> Beachten Sie, dass dadurch nicht der eigentliche Volltextindex aufgefüllt wird, sondern nur die Tabelle im Volltextkatalog des Dateisystems registriert wird, um Zeilen von *qualified_table_name* während der nächsten Volltextindexauffüllung abrufen zu können.|  
+|**Deaktivieren**|Deaktiviert den Volltextindex für *qualified_table_name* , sodass die Volltextindexdaten für *qualified_table_name* nicht mehr gesammelt werden können. Die Volltextindexmetadaten sind weiterhin vorhanden, und die Tabelle kann erneut aktiviert werden.<br /><br /> Wenn die Änderungsnachverfolgung aktiviert ist, wird der Status des Indexes durch die Deaktivierung eines aktiven Index eingefroren: derzeit ausgeführte Auffüllungsprozesse werden beendet, und dem Index werden keine Änderungen mehr hinzugefügt.|  
+|**start_change_tracking**|Startet das inkrementelle Auffüllen des Volltextindex. Wenn die Tabelle nicht über einen Timestamp verfügt, wird das vollständige Auffüllen des Volltextindexes gestartet. Startet die Änderungsprotokollierung für die Tabelle.<br /><br /> Von der Volltextänderungsnachverfolgung werden keine WRITETEXT- oder UPDATETEXT-Operationen in diesen Spalten protokolliert, die den Typ **image**, **text** oder **ntext** aufweisen.|  
 |**stop_change_tracking**|Beendet die Änderungsprotokollierung für die Tabelle.|  
 |**update_index**|Gibt den aktuellen Satz der protokollierten Änderungen an den Volltextindex weiter.|  
 |**Start_background_updateindex**|Startet den Vorgang, der protokollierte Änderungen an den Volltextindex weitergibt, sobald sie auftreten.|  
@@ -89,7 +89,7 @@ sp_fulltext_table
  Die Volltextschlüsselspalte muss mit einer Größe von maximal 900 Byte definiert sein. Aus Gründen der Leistung sollte die Schlüsselspalte so klein wie möglich sein.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Serverrolle **sysadmin** , der festen Datenbankrollen **db_owner** und **db_ddladmin** oder ein Benutzer mit Verweisberechtigungen für den Volltextkatalog können **sp_fulltext_table**ausführen.  
+ Nur Mitglieder der festen Serverrolle **sysadmin** , der festen Datenbankrollen **db_owner** und **db_ddladmin** oder ein Benutzer mit Verweisberechtigungen für den Volltextkatalog können **sp_fulltext_table** ausführen.  
   
 ## <a name="examples"></a>Beispiele  
   

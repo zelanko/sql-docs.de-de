@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3cdb3abec9d762f06016c9f620840e99d339c7c
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ec31170ac813f9a1901e5fe5dd6f58a66ea47475
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384699"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439455"
 ---
 # <a name="sp_fkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,26 +45,26 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @pktable_name =] ' *pktable_name* '  
+ [ @pktable_name =] '*pktable_name*'  
  Der Name der Tabelle mit dem Primärschlüssel, mit der Kataloginformationen zurückgegeben werden. *pktable_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden nicht unterstützt. Dieser Parameter oder der *fktable_name* Parameter muss angegeben werden.  
   
- [ @pktable_owner =] ' *pktable_owner* '  
+ [ @pktable_owner =] '*pktable_owner*'  
  Der Name des Besitzers der Tabelle (mit dem Primärschlüssel), die verwendet wird, um Katalog Informationen zurückzugeben. *pktable_owner* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden nicht unterstützt. Wenn *pktable_owner* nicht angegeben ist, werden die Standardregeln für die Tabellen Sichtbarkeit des zugrunde liegenden DBMS angewendet.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bedeutet dies: Wenn der aktuelle Benutzer eine Tabelle mit dem angegebenen Namen besitzt, werden die Spalten dieser Tabelle zurückgegeben. Wenn *pktable_owner* nicht angegeben wird und der aktuelle Benutzer keine Tabelle mit dem angegebenen *pktable_name* besitzt, sucht die Prozedur nach einer Tabelle mit der angegebenen *pktable_name* , die im Besitz des Daten Bank Besitzers ist. Sofern eine solche Tabelle vorhanden ist, werden die Spalten dieser Tabelle zurückgegeben.  
   
- [ @pktable_qualifier =] ' *pktable_qualifier* '  
- Der Name des Qualifizierers der Tabelle (mit dem Primärschlüssel). *pktable_qualifier* ist vom Datentyp sysname und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Benennung für Tabellen ( *Qualifier.Owner.Name* ). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt der Qualifizierer den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
+ [ @pktable_qualifier =] '*pktable_qualifier*'  
+ Der Name des Qualifizierers der Tabelle (mit dem Primärschlüssel). *pktable_qualifier* ist vom Datentyp sysname und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Benennung für Tabellen (*Qualifier.Owner.Name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt der Qualifizierer den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
   
- [ @fktable_name =] ' *fktable_name* '  
+ [ @fktable_name =] '*fktable_name*'  
  Der Name der Tabelle (mit einem Fremdschlüssel), mit der Kataloginformationen zurückgegeben werden. *fktable_name* ist vom Datentyp sysname und hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden nicht unterstützt. Dieser Parameter oder der *pktable_name* Parameter muss angegeben werden.  
   
- [ @fktable_owner =] ' *fktable_owner* '  
+ [ @fktable_owner =] '*fktable_owner*'  
  Der Name des Besitzers der Tabelle (mit einem Fremdschlüssel), mit der Kataloginformationen zurückgegeben werden. *fktable_owner* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden nicht unterstützt. Wenn *fktable_owner* nicht angegeben ist, werden die Standardregeln für die Tabellen Sichtbarkeit des zugrunde liegenden DBMS angewendet.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bedeutet dies: Wenn der aktuelle Benutzer eine Tabelle mit dem angegebenen Namen besitzt, werden die Spalten dieser Tabelle zurückgegeben. Wenn *fktable_owner* nicht angegeben wird und der aktuelle Benutzer keine Tabelle mit dem angegebenen *fktable_name* besitzt, sucht die Prozedur nach einer Tabelle mit der angegebenen *fktable_name* , die im Besitz des Daten Bank Besitzers ist. Sofern eine solche Tabelle vorhanden ist, werden die Spalten dieser Tabelle zurückgegeben.  
   
- [ @fktable_qualifier =] ' *FKTABLE_QUALIFIER* '  
+ [ @fktable_qualifier =] '*FKTABLE_QUALIFIER*'  
  Der Name des Qualifizierers der Tabelle (mit einem Fremdschlüssel). *FKTABLE_QUALIFIER* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt der Qualifizierer den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

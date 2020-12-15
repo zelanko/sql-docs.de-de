@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c7a46f76385a724f1aa8622ac85301cdc7e12b6
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7257b24d2908ea17977c0b08f0517d65d2481979
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006506"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439485"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,9 +50,9 @@ sp_columns [ @table_name = ] object
   
 `[ \@table_owner = ] owner` Der Objektbesitzer des-Objekts, das verwendet wird, um Katalog Informationen zurückzugeben. *Owner* ist vom Datentyp **nvarchar (384)** und hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Wenn *Owner* nicht angegeben wird, werden die Standardregeln für die Sichtbarkeit des Objekts des zugrunde liegenden DBMS angewendet.  
   
- Wenn der aktuelle Benutzer ein Objekt mit dem angegebenen Namen besitzt, werden die Spalten dieses Objekts zurückgegeben. Wenn *Owner* nicht angegeben wird und der aktuelle Benutzer kein Objekt mit dem angegebenen *Objekt*besitzt, sucht **sp_columns** nach einem Objekt mit dem angegebenen *Objekt* , das im Besitz des Daten Bank Besitzers ist. Sofern ein solches Objekt vorhanden ist, werden dessen Spalten zurückgegeben.  
+ Wenn der aktuelle Benutzer ein Objekt mit dem angegebenen Namen besitzt, werden die Spalten dieses Objekts zurückgegeben. Wenn *Owner* nicht angegeben wird und der aktuelle Benutzer kein Objekt mit dem angegebenen *Objekt* besitzt, sucht **sp_columns** nach einem Objekt mit dem angegebenen *Objekt* , das im Besitz des Daten Bank Besitzers ist. Sofern ein solches Objekt vorhanden ist, werden dessen Spalten zurückgegeben.  
   
-`[ \@table_qualifier = ] qualifier` Der Name des Objekt Qualifizierers. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Benennung für-Objekte (_Qualifizierer_)**.** _Besitzer_**.** _Name_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei einigen anderen Produkten stellt sie den Servernamen der Datenbankumgebung für das Objekt dar.  
+`[ \@table_qualifier = ] qualifier` Der Name des Objekt Qualifizierers. *qualifier* ist vom Datentyp **sysname** und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Benennung für-Objekte (_Qualifizierer_)**.** _Besitzer_**.** _Name_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei einigen anderen Produkten stellt sie den Servernamen der Datenbankumgebung für das Objekt dar.  
   
 `[ \@column_name = ] column` Bei handelt es sich um eine einzelne Spalte, die verwendet wird, wenn nur eine Spalte mit Katalog Informationen gewünscht wird. die Spalte ist vom *Datentyp* **nvarchar (384)** und hat den Standardwert NULL. Wenn *Column* nicht angegeben wird, werden alle Spalten zurückgegeben. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt *Column* den Spaltennamen dar, der in der **syscolumschlag** -Tabelle aufgelistet ist. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Für eine optimale Interoperabilität sollte der Gatewayclient nur einen SQL-92-Standardmustervergleich voraussetzen (die Platzhalterzeichen % und _).  
   
@@ -62,7 +62,7 @@ sp_columns [ @table_name = ] object
  Keine  
   
 ## <a name="result-sets"></a>Resultsets  
- Die gespeicherte Prozedur **sp_columns** Katalogs entspricht **SQLColumns** in ODBC. Die zurückgegebenen Ergebnisse werden nach **TABLE_QUALIFIER**, **TABLE_OWNER**und **table_name**geordnet.  
+ Die gespeicherte Prozedur **sp_columns** Katalogs entspricht **SQLColumns** in ODBC. Die zurückgegebenen Ergebnisse werden nach **TABLE_QUALIFIER**, **TABLE_OWNER** und **table_name** geordnet.  
   
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
@@ -91,7 +91,7 @@ sp_columns [ @table_name = ] object
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert SELECT-und View Definition-Berechtigungen für das Schema.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_columns** befolgt die Anforderungen für Begrenzungs Bezeichner. Weitere Informationen finden Sie unter [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md).  
   
 ## <a name="examples"></a>Beispiele  

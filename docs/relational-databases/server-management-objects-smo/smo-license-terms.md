@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8939bfbec2f309c899a527288de35a3d3ea10d09
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 91301000df95b19338313d4541d7a7de4956095d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420194"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439817"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQL Server Shared Management Objects (SMO) License Terms (Lizenzbedingungen für SQL Server Shared Management Objects (SMO))
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -43,7 +43,7 @@ von Microsoft für diese Software, sofern diese Elemente nicht von anderen Bedin
 
 **2.    ZUSÄTZLICHE LIZENZANFORDERUNGEN UND/ODER NUTZUNGSRECHTE.**
 
-&nbsp;&nbsp;**ein verteilbarer Code.**
+&nbsp;&nbsp;**ein.    Verteilbarer Code.**
 
 &nbsp;&nbsp;&nbsp;&nbsp;**i. Recht, zu verwenden und zu verteilen. Wenn Sie die folgenden Bedingungen einhalten:**
 *   Sie dürfen das Objektcodeformular der Software („Verteilbarer Code“) in Programmen, die Sie entwickeln, kopieren und verteilen und
@@ -86,9 +86,9 @@ von Microsoft für diese Software, sofern diese Elemente nicht von anderen Bedin
 
 **10.   GELTENDES RECHT.**
 
-&nbsp;&nbsp;**a. USA.** Wenn Sie die Software in den USA erworben haben, regelt das Gesetz des Staates Washington die Auslegung dieses Vertrages und gilt für Ansprüche, die aus einer Vertragsverletzung entstehen, ungeachtet der Bestimmungen des internationalen Privatrechts. Die Gesetze des US-Bundesstaats, in dem Sie leben, regeln sämtliche anderen Ansprüche, darunter Ansprüche unter den bundesstaatlichen Verbraucherschutzgesetzen, Gesetzen zu unlauterem Wettbewerb und zu zivilrechtlichen Delikten.
+&nbsp;&nbsp;**ein.    USA.** Wenn Sie die Software in den USA erworben haben, regelt das Gesetz des Staates Washington die Auslegung dieses Vertrages und gilt für Ansprüche, die aus einer Vertragsverletzung entstehen, ungeachtet der Bestimmungen des internationalen Privatrechts. Die Gesetze des US-Bundesstaats, in dem Sie leben, regeln sämtliche anderen Ansprüche, darunter Ansprüche unter den bundesstaatlichen Verbraucherschutzgesetzen, Gesetzen zu unlauterem Wettbewerb und zu zivilrechtlichen Delikten.
 
-&nbsp;&nbsp;**b. außerhalb der USA.** Wenn Sie die Software in einem anderen Land erworben haben, gelten die Gesetze dieses Lands.
+&nbsp;&nbsp;**b.    Außerhalb der USA.** Wenn Sie die Software in einem anderen Land erworben haben, gelten die Gesetze dieses Lands.
 
 **11.   RECHTLICHE AUSWIRKUNGEN.** Diese Vereinbarung beschreibt bestimmte gesetzliche Rechte. Unter dem Recht Ihres Landes haben Sie möglicherweise andere Rechte. Möglicherweise besitzen Sie auch Rechte gegenüber den Dritten, von denen Sie die Software erworben haben. Dieser Vertrag ändert nicht Ihre Rechte, die sich aus den Gesetzen Ihres Lands ergeben, sofern die Gesetze Ihres Lands dies nicht zulassen.
 

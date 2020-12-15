@@ -22,13 +22,13 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2d11ac386a822a6e6c0d6630fcc83ba2cf61486
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cbc39f5ea259007f19a57e77601d2528730ae88f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764888"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439701"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Angeben der Tiefe von rekursiven Beziehungen mit 'sql:max-depth'
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -172,7 +172,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 > [!NOTE]  
 >  Um verschiedene Tiefen der Hierarchien im Ergebnis zu erstellen, ändern Sie den Wert der Anmerkung " **SQL: Max-Tiefe** " im Schema, und führen Sie die Vorlage nach jeder Änderung erneut aus.  
   
- Im vorherigen Schema **\<Emp>** hatten alle Elemente genau denselben Attribut Satz (Mitarbeiter-ID, **FirstName**und **LastName**).**EmployeeID** Das folgende Schema wurde leicht geändert, um ein zusätzliches **ReportsTo** -Attribut für alle Elemente zurückzugeben **\<Emp>** , die einem Vorgesetzten Berichten.  
+ Im vorherigen Schema **\<Emp>** hatten alle Elemente genau denselben Attribut Satz (Mitarbeiter-ID, **FirstName** und **LastName**). Das folgende Schema wurde leicht geändert, um ein zusätzliches **ReportsTo** -Attribut für alle Elemente zurückzugeben **\<Emp>** , die einem Vorgesetzten Berichten.  
   
  Zum Beispiel zeigt dieses XML-Fragment die Untergebenen von Mitarbeiter 1 an:  
   
@@ -378,7 +378,7 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
 </xsd:schema>   
 ```  
   
- Im Schema ist **SQL: Max-Tiefe** für einen komplexen **CustomerBaseType** -Typ angegeben. Das Schema gibt auch ein **\<Customer>** Element vom Typ **CustomerType**an, das von **CustomerBaseType**abgeleitet ist. Eine für ein solches Schema angegebene XPath-Abfrage generiert einen Fehler, da **SQL: Max-Tiefe** für ein Element, das in einem Einschränkungs Basistyp definiert ist, nicht unterstützt wird.  
+ Im Schema ist **SQL: Max-Tiefe** für einen komplexen **CustomerBaseType** -Typ angegeben. Das Schema gibt auch ein **\<Customer>** Element vom Typ **CustomerType** an, das von **CustomerBaseType** abgeleitet ist. Eine für ein solches Schema angegebene XPath-Abfrage generiert einen Fehler, da **SQL: Max-Tiefe** für ein Element, das in einem Einschränkungs Basistyp definiert ist, nicht unterstützt wird.  
   
 ## <a name="schemas-with-a-deep-hierarchy"></a>Schemas mit einer tiefen Hierarchie  
  Möglicherweise liegt ein Schema vor, das eine tiefe Hierarchie umfasst, in der ein Element ein untergeordnetes Element enthält, das wiederum ein untergeordnetes Element enthalt usw. Wenn die in einem solchen Schema angegebene **SQL: Max-tiefen** Anmerkung ein XML-Dokument generiert, das eine Hierarchie mit mehr als 500 Ebenen enthält (mit dem Element der obersten Ebene auf Ebene 1, dem untergeordneten Element auf der Ebene 2 usw.), wird ein Fehler zurückgegeben.  

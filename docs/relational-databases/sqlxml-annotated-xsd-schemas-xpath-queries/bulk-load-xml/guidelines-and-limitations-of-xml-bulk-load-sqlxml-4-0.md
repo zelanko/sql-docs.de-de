@@ -14,13 +14,13 @@ ms.assetid: c5885d14-c7c1-47b3-a389-455e99a7ece1
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7fd6795105bb2540c08f1f241444b6464f131601
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b17b1990f168326ae884b4db4f1ff22a63b24e21
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762828"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439687"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>Richtlinien und Einschränkungen von XML-Massenladen (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -174,6 +174,6 @@ ms.locfileid: "85762828"
   
 -   Wenn Sie Datenwerte mithilfe von XML-Massenladen einfügen, müssen die Werte im Format (-)CCYY-MM-DD((+-)TZ) angegeben werden. Dies ist das XSD-Standardformat für das Datum.  
   
--   Einige Eigenschaftenflags sind mit anderen Eigenschaftenflags nicht kompatibel. Beispielsweise unterstützt das Massen laden " **IgnoreDuplicateKeys = true** " nicht in Verbindung mit " **KEEPIDENTITY = false**". Wenn **KEEPIDENTITY = false**, erwartet das Massen laden, dass der Server die Schlüsselwerte generiert. Tabellen sollten über eine **Identitäts** Einschränkung für den Schlüssel verfügen. Der Server generiert keine doppelten Schlüssel, was bedeutet, dass **Ignoreduplicatekeys** nicht auf **true**festgelegt werden muss. **Ignoreduplicatekeys** sollte nur auf " **true** " festgelegt werden, wenn Primärschlüssel Werte aus den eingehenden Daten in eine Tabelle mit Zeilen hochgeladen werden und ein Konflikt zwischen Primärschlüssel Werten besteht.  
+-   Einige Eigenschaftenflags sind mit anderen Eigenschaftenflags nicht kompatibel. Beispielsweise unterstützt das Massen laden " **IgnoreDuplicateKeys = true** " nicht in Verbindung mit " **KEEPIDENTITY = false**". Wenn **KEEPIDENTITY = false**, erwartet das Massen laden, dass der Server die Schlüsselwerte generiert. Tabellen sollten über eine **Identitäts** Einschränkung für den Schlüssel verfügen. Der Server generiert keine doppelten Schlüssel, was bedeutet, dass **Ignoreduplicatekeys** nicht auf **true** festgelegt werden muss. **Ignoreduplicatekeys** sollte nur auf " **true** " festgelegt werden, wenn Primärschlüssel Werte aus den eingehenden Daten in eine Tabelle mit Zeilen hochgeladen werden und ein Konflikt zwischen Primärschlüssel Werten besteht.  
   
   
