@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd4c4946b5e62b9e7f06ca2beea8e75732f17e43
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1e4d175fe42497d2a75c23d3ae49d60821952ccf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91833865"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97458484"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,7 +59,7 @@ sys.dm_db_index_physical_stats (
  *database_id* \| NULL \| 0 \| Standard  
  Die ID der Datenbank. *database_id* ist vom Datentyp **smallint**. Gültige Eingaben sind die ID einer Datenbank, NULL, 0 oder DEFAULT. Die Standardeinstellung ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig.  
   
- Geben Sie NULL an, wenn Informationen zu allen Datenbanken in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben werden sollen. Wenn Sie für *database_id*NULL angeben, müssen Sie für *object_id*, *index_id*und *partition_number*ebenfalls NULL angeben.  
+ Geben Sie NULL an, wenn Informationen zu allen Datenbanken in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben werden sollen. Wenn Sie für *database_id* NULL angeben, müssen Sie für *object_id*, *index_id* und *partition_number* ebenfalls NULL angeben.  
   
  Die integrierte [DB_ID](../../t-sql/functions/db-id-transact-sql.md)-Funktion kann angegeben werden. Wenn DB_ID verwendet wird, ohne dass ein Datenbankname angegeben wird, muss der Kompatibilitätsgrad der aktuellen Datenbank 90 oder höher sein.  
   
@@ -68,12 +68,12 @@ sys.dm_db_index_physical_stats (
   
  Gültige Eingaben sind die ID einer Tabelle und Sicht, NULL, 0 oder DEFAULT. Die Standardeinstellung ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] enthalten gültige Eingaben auch den Service Broker-Warteschlangen Namen oder den internen Warteschlangen Tabellennamen. Wenn Standardparameter angewendet werden (d. h. alle Objekte, alle Indizes usw.), werden die Fragmentierungs Informationen für alle Warteschlangen in das Resultset eingeschlossen.  
   
- Geben Sie NULL an, wenn Informationen zu allen Tabellen und Sichten in der angegebenen Datenbank zurückgegeben werden sollen. Wenn Sie für *object_id*NULL angeben, müssen Sie auch für *index_id* und *partition_number*NULL angeben.  
+ Geben Sie NULL an, wenn Informationen zu allen Tabellen und Sichten in der angegebenen Datenbank zurückgegeben werden sollen. Wenn Sie für *object_id* NULL angeben, müssen Sie auch für *index_id* und *partition_number* NULL angeben.  
   
  *index_id* \| 0 \| NULL \| -1 \| Standardwert  
  Die ID des Indexes. *index_id* ist vom Datentyp **int**. Gültige Eingaben sind die ID eines Indexes, 0, wenn *object_id* ein Heap ist, NULL,-1 oder default. Der Standard ist -1. NULL,-1 und Default sind in diesem Kontext äquivalente Werte.  
   
- Geben Sie NULL an, wenn Informationen zu allen Indizes für eine Basistabelle oder Sicht zurückgegeben werden sollen. Wenn Sie für *index_id*NULL angeben, müssen Sie auch für *partition_number*NULL angeben.  
+ Geben Sie NULL an, wenn Informationen zu allen Indizes für eine Basistabelle oder Sicht zurückgegeben werden sollen. Wenn Sie für *index_id* NULL angeben, müssen Sie auch für *partition_number* NULL angeben.  
   
  *partition_number* \| NULL \| 0 \| Standard  
  Die Partitionsnummer im Objekt. *partition_number* ist vom Datentyp **int**. Gültige Eingaben sind die *partion_number* eines Indexes oder Heaps, NULL, 0 oder default. Die Standardeinstellung ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig.  
@@ -95,7 +95,7 @@ sys.dm_db_index_physical_stats (
 |partition_number|**int**|1-basierte Partitionsnummer im besitzenden Objekt; eine Tabelle, eine Sicht oder ein Index.<br /><br /> 1 = Nicht partitionierter Index oder Heap.|  
 |index_type_desc|**nvarchar(60)**|Beschreibung des Indextyps:<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> ERWEITERTER INDEX<br /><br /> XML INDEX<br /><br /> Columnstore-Mapping-Index (intern)<br /><br /> Columnstore-deletebuffer-Index (intern)<br /><br /> Columnstore-deletebitmap-Index (intern)|  
 |hobt_id|**bigint**|Heap-oder B-Struktur-ID des Indexes oder der Partition.<br /><br /> Neben der Rückgabe der hobt_id von benutzerdefinierten Indizes gibt dies auch die hobt_id der internen columnstore--Indizes zurück.|  
-|alloc_unit_type_desc|**nvarchar(60)**|Beschreibung des Typs der Zuordnungseinheit:<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> Die LOB_DATA Zuordnungs Einheit enthält die Daten, die in Spalten vom Typ **Text**, **ntext**, **Image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)** und **XML**gespeichert sind. Weitere Informationen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).<br /><br /> Die ROW_OVERFLOW_DATA Zuordnungs Einheit enthält die Daten, die in Spalten vom Typ **varchar (n)**, **nvarchar (n**), **varbinary (n)** und **sql_variant** gespeichert sind, die aus der Zeile verschoben wurden.|  
+|alloc_unit_type_desc|**nvarchar(60)**|Beschreibung des Typs der Zuordnungseinheit:<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> Die LOB_DATA Zuordnungs Einheit enthält die Daten, die in Spalten vom Typ **Text**, **ntext**, **Image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)** und **XML** gespeichert sind. Weitere Informationen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).<br /><br /> Die ROW_OVERFLOW_DATA Zuordnungs Einheit enthält die Daten, die in Spalten vom Typ **varchar (n)**, **nvarchar (n**), **varbinary (n)** und **sql_variant** gespeichert sind, die aus der Zeile verschoben wurden.|  
 |index_depth|**tinyint**|Anzahl von Indexebenen.<br /><br /> 1 = Heap oder LOB_DATA- oder ROW_OVERFLOW_DATA-Zuordnungseinheit.|  
 |index_level|**tinyint**|Aktuelle Ebene des Indexes.<br /><br /> 0 für Indexblattebene, Heaps und LOB_DATA- oder ROW_OVERFLOW_DATA-Zuordnungseinheiten.<br /><br /> Werte größer 0 für Nicht-Indexblattebenen. *index_level* auf der Stamm Ebene eines Indexes der höchste Wert ist.<br /><br /> Die nicht Blatt Ebenen von Indizes werden nur verarbeitet, wenn *Mode* = detailliert ist.|  
 |avg_fragmentation_in_percent|**float**|Die logische Fragmentierung für Indizes oder die Blockfragmentierung für Heaps in der IN_ROW_DATA-Zuordnungseinheit.<br /><br /> Der Wert wird als Prozentsatz gemessen und berücksichtigt mehrere Dateien. Definitionen für die logische Fragmentierung und die Blockfragmentierung finden Sie unter den Hinweisen.<br /><br /> 0 für LOB_DATA- und ROW_OVERFLOW_DATA-Zuordnungseinheiten.<br /><br /> NULL für Heaps, wenn *Mode* = Sampling ist.|  
@@ -125,7 +125,7 @@ sys.dm_db_index_physical_stats (
  Die dynamische Verwaltungsfunktion sys.dm_db_index_physical_stats ersetzt die DBCC SHOWCONTIG-Anweisung.  
   
 ## <a name="scanning-modes"></a>Scanmodi  
- Der Modus, in dem die Funktion ausgeführt wird, bestimmt die Scanebene, die zum Abrufen der statistischen Daten von der Funktion verwendet wird. der *Modus* wird als eingeschränkt, als Stichprobe oder als detailliert angegeben. Die Funktion durchsucht die Seitenketten nach den Zuordnungseinheiten, aus denen die angegebenen Partitionen der Tabelle oder des Indexes bestehen. sys.dm_db_index_physical_stats erfordert nur eine beabsichtigte freigegebene Tabellensperre (is), unabhängig vom Modus, in dem Sie ausgeführt wird.  
+ Der Modus, in dem die Funktion ausgeführt wird, bestimmt die Scanebene, die zum Abrufen der statistischen Daten von der Funktion verwendet wird. der *Modus* wird als eingeschränkt, als Stichprobe oder als detailliert angegeben. Die Funktion durchsucht die Seitenketten nach den Zuordnungseinheiten, aus denen die angegebenen Partitionen der Tabelle oder des Indexes bestehen. sys.dm_db_index_physical_stats erfordert unabhängig vom Modus, in dem er ausgeführt wird, nur eine Intent-Shared (is)-Tabellensperre.  
   
  Der Modus LIMITED ist am schnellsten und durchsucht am wenigsten Seiten. Bei einem Index werden nur die Seiten der übergeordneten B-Strukturebene (d. h. die Seiten oberhalb der Blattebene) gescannt. Bei einem Heap werden nur die zugehörigen PFS- und IAM-Seiten untersucht; die Datenseiten des Heaps werden im Modus LIMITED gescannt.  
   
@@ -138,7 +138,7 @@ sys.dm_db_index_physical_stats (
 ## <a name="using-system-functions-to-specify-parameter-values"></a>Verwenden von Systemfunktionen zum Angeben von Parameterwerten  
  Sie können die [!INCLUDE[tsql](../../includes/tsql-md.md)] Funktionen [DB_ID](../../t-sql/functions/db-id-transact-sql.md) und [object_id](../../t-sql/functions/object-id-transact-sql.md) verwenden, um einen Wert für die Parameter *database_id* und *object_id* anzugeben. Das Übergeben von Werten, die für diese Funktionen nicht gültig sind, kann jedoch zu unerwarteten Ergebnissen führen. Falls z. B. die Datenbank oder der Objektname nicht gefunden wird, weil er nicht vorhanden oder falsch geschrieben ist, geben beide Funktionen NULL zurück. Die sys.dm_db_index_physical_stats-Funktion interpretiert NULL als Platzhalterwert, mit dem alle Datenbanken oder alle Objekte angegeben werden.  
   
- Außerdem wird die OBJECT_ID-Funktion verarbeitet, bevor die sys.dm_db_index_physical_stats-Funktion aufgerufen wird. Sie wird daher im Kontext der aktuellen Datenbank ausgewertet, nicht in der Datenbank, die in *database_id*angegeben ist. Dadurch gibt die OBJECT_ID-Funktion unter Umständen einen NULL-Wert zurück, oder es wird eine Fehlermeldung zurückgegeben, falls der Objektname sowohl im aktuellen Datenbankkontext als auch in der angegebenen Datenbank vorhanden ist. In den folgenden Beispielen werden diese nicht beabsichtigten Ergebnisse veranschaulicht.  
+ Außerdem wird die OBJECT_ID-Funktion verarbeitet, bevor die sys.dm_db_index_physical_stats-Funktion aufgerufen wird. Sie wird daher im Kontext der aktuellen Datenbank ausgewertet, nicht in der Datenbank, die in *database_id* angegeben ist. Dadurch gibt die OBJECT_ID-Funktion unter Umständen einen NULL-Wert zurück, oder es wird eine Fehlermeldung zurückgegeben, falls der Objektname sowohl im aktuellen Datenbankkontext als auch in der angegebenen Datenbank vorhanden ist. In den folgenden Beispielen werden diese nicht beabsichtigten Ergebnisse veranschaulicht.  
   
 ```  
 USE master;  
@@ -184,7 +184,7 @@ GO
   
  **Logische Fragmentierung**  
   
- Dies ist der Prozentsatz der Seiten, die auf den Blattseiten eines Indexes nicht ordnungsgemäß sortiert sind. Eine nicht ordnungsgemäß einsortierte Seite ist eine Seite, für die die nächste physische Seite, die dem Index zugeordnet ist, nicht die Seite ist, auf die der Zeiger für die nächste Seit*e* auf der aktuellen Blattseite zeigt.  
+ Dies ist der Prozentsatz der Seiten, die auf den Blattseiten eines Indexes nicht ordnungsgemäß sortiert sind. Eine nicht ordnungsgemäß einsortierte Seite ist eine Seite, für die die nächste physische Seite, die dem Index zugeordnet ist, nicht die Seite ist, auf die der Zeiger für die nächste Seit *e* auf der aktuellen Blattseite zeigt.  
   
  **Blockfragmentierung**  
   
@@ -300,7 +300,7 @@ GO
   
 ```  
   
-### <a name="d-using-sysdm_db_index_physical_stats-in-a-script-to-rebuild-or-reorganize-indexes"></a>D. Verwenden von "sys.dm_db_index_physical_stats" in einem Skript, um Indizes neu zu erstellen oder neu zu organisieren  
+### <a name="d-using-sysdm_db_index_physical_stats-in-a-script-to-rebuild-or-reorganize-indexes"></a>D: Verwenden von "sys.dm_db_index_physical_stats" in einem Skript, um Indizes neu zu erstellen oder neu zu organisieren  
  Im folgenden Beispiel werden automatisch alle Partitionen in einer Datenbank neu angeordnet oder neu erstellt, die eine durchschnittliche Fragmentierung von über 10 % aufweisen. Zum Ausführen dieser Abfrage ist die VIEW DATABASE STATE-Berechtigung erforderlich. In diesem Beispiel wird `DB_ID` als erster Parameter angegeben, ohne einen Datenbanknamen anzugeben. Ein Fehler wird generiert, wenn die aktuelle Datenbank über einen Kompatibilitätsgrad von 80 oder niedriger verfügt. Zum Beheben des Fehlers ersetzen Sie `DB_ID()` durch einen gültigen Datenbanknamen. Weitere Informationen zu Datenbank-Kompatibilitäts Graden finden Sie unter [ALTER DATABASE-Kompatibilitäts Grad &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 ```  

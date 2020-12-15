@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c67769e4afd62c4b69628a263f3485ee63081a2a
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a356ea0603d096fc339495f028b1e4f86af81f92
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892010"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463381"
 ---
 # <a name="changing-sql-server-native-client-passwords-programmatically"></a>Programm gesteuertes ändern von SQL Server Native Client Kennwörtern
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "91892010"
 ### <a name="odbc-user-interface-password-expiration"></a>ODBC-Benutzeroberfläche für abgelaufene Kennwörter  
  Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber unterstützt den Ablauf von Kenn Wörtern durch Änderungen, die an den Dialogfeldern **SQL Server Anmeldung** vorgenommen wurden  
   
- Wenn [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md) aufgerufen wird und der Wert von **DriverCompletion** auf SQL_DRIVER_NOPROMPT festgelegt ist, schlägt der anfängliche Verbindungsversuch fehl, wenn das Kennwort abgelaufen ist. Der SQLSTATE-Wert 28000 und der Native Fehler Codewert 18487 werden durch nachfolgende Aufrufe von **SQLError** oder **SQLGetDiagRec**zurückgegeben.  
+ Wenn [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md) aufgerufen wird und der Wert von **DriverCompletion** auf SQL_DRIVER_NOPROMPT festgelegt ist, schlägt der anfängliche Verbindungsversuch fehl, wenn das Kennwort abgelaufen ist. Der SQLSTATE-Wert 28000 und der Native Fehler Codewert 18487 werden durch nachfolgende Aufrufe von **SQLError** oder **SQLGetDiagRec** zurückgegeben.  
   
  Wenn für " **DriverCompletion** " ein beliebiger anderer Wert festgelegt wurde, wird dem Benutzer das **SQL Server Anmelde** Dialogfeld angezeigt, unabhängig davon, ob das Kennwort abgelaufen ist. Der Benutzer kann dann auf die Schaltfläche **Optionen** klicken und **Kennwort ändern** aktivieren, um das Kennwort zu ändern.  
   

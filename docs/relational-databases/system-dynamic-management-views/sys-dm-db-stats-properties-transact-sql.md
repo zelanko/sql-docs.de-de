@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_stats_properties (Transact-SQL)
-title: sys. dm_db_stats_properties (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_db_stats_properties (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1039850e4322003ddfedd5407d18ab6170077c42
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f412097e74c8230ee7fe9941e48f39b034c2ebca
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537030"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462741"
 ---
 # <a name="sysdm_db_stats_properties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Gibt Statistikeigenschaften für das angegebene Datenbankobjekt (Tabelle oder indizierte Sicht) in der aktuellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank zurück. Informationen zu partitionierten Tabellen finden Sie in der ähnlichen [sys. dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md). 
+  Gibt Statistikeigenschaften für das angegebene Datenbankobjekt (Tabelle oder indizierte Sicht) in der aktuellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank zurück. Informationen zu partitionierten Tabellen finden Sie in der ähnlichen [sys.dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md). 
  
 ## <a name="syntax"></a>Syntax  
   
@@ -48,7 +48,7 @@ sys.dm_db_stats_properties (object_id, stats_id)
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|ID des Objekts (Tabelle oder indizierte Sicht), für das die Eigenschaften des Statistikobjekts zurückgegeben werden sollen.|  
 |stats_id|**int**|Die ID des Statistikobjekts. Diese ist innerhalb der Tabelle oder indizierten Sicht eindeutig. Weitere Informationen finden Sie unter [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|  
@@ -61,14 +61,14 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |persisted_sample_percent|**float**|Der persistierte Prozentwert für die Stichprobe wird für Aktualisierungen von Statistiken verwendet, die keinen expliziten Prozentwert für die Stichprobenentnahme angibt. Wenn der Wert 0 (null) ist, wird kein persistierter Prozentwert für diese Statistik festgelegt.<br /><br /> **Anwendungsbereich:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
   
 ## <a name="remarks"></a><a name="Remarks"></a> Hinweise  
- **sys. dm_db_stats_properties** gibt unter den folgenden Bedingungen ein leeres Rowset zurück:  
+ **sys.dm_db_stats_properties** gibt unter den folgenden Bedingungen ein leeres Rowset zurück:  
   
 -   **object_id** oder **stats_id** ist NULL.    
 -   Das angegebene Objekt wurde nicht gefunden bzw. entspricht keiner Tabelle bzw. keiner indizierten Sicht.    
 -   Die angegebene Statistik-ID entspricht keiner vorhandenen Statistik für die angegebene Objekt-ID.    
 -   Der aktuelle Benutzer verfügt nicht über die erforderlichen Berechtigungen zum Anzeigen des Statistikobjekts.  
   
- Dieses Verhalten ermöglicht die sichere Verwendung von **sys. dm_db_stats_properties** , wenn Cross auf Zeilen in Sichten, wie z **. b. sys. Objects** und **sys. stats**, angewendet wird.  
+ Dieses Verhalten ermöglicht die sichere Verwendung von **sys.dm_db_stats_properties** , wenn Cross auf Zeilen in Sichten, wie z **. b. sys. Objects** und **sys. stats**, angewendet wird.  
  
 Das Aktualisierungsdatum für die Statistiken befindet sich gemeinsam mit dem [Histogramm](../../relational-databases/statistics/statistics.md#histogram) und [Dichtevektor](../../relational-databases/statistics/statistics.md#density) nicht in den Metadaten, sondern im [Statistik-Blobobjekt](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics). Wenn keine Daten zum Generieren von Statistikdaten gelesen werden, wird das Statistik-BLOB nicht erstellt, das Datum ist nicht verfügbar, und die *last_updated* Spalte ist NULL. Dies ist der Fall bei gefilterten Statistiken oder neuen und leeren Tabellen, für die das Prädikat keine Zeilen zurückgibt.
   

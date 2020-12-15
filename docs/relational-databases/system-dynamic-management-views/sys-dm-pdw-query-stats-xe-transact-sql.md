@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 5d551241-db35-4958-b60f-55e996f95c1f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ae6e1bad82f1280bd0e2ed4c461f93dfb2dd9e34
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016'
+ms.openlocfilehash: 9208823cd17c5638b759e3608280773ea60c454a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035250"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440735"
 ---
 # <a name="sysdm_pdw_query_stats_xe-transact-sql"></a>sys.dm_pdw_query_stats_xe (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "92035250"
   
 |Spaltenname|Datentyp|BESCHREIBUNG|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|event|**nvarchar(60)**|Der Schlüssel für diese Ansicht.||  
+|Ereignis|**nvarchar(60)**|Der Schlüssel für diese Ansicht.||  
 |event_id|**nvarchar (36)**|||  
 |create_time|**datetime**|||  
 |session_id|**int**|Die ID für die Sitzung.|Weitere Informationen finden Sie unter session_id in [sys.dm_pdw_exec_sessions &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  

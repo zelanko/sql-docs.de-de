@@ -17,13 +17,13 @@ helpviewer_keywords:
 - INFORMATION_SCHEMA.SEQUENCES view
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7fa13582e155387bbe7b7122e0051d830be2261b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 365b91660769cbb189b23366671486271177e6e4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546332"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440591"
 ---
 # <a name="sequences-transact-sql"></a>Sequenzen (Transact-SQL)
 
@@ -31,9 +31,9 @@ ms.locfileid: "89546332"
 
 Gibt für jede Sequenz, auf die der aktuelle Benutzer in der aktuellen Datenbank zugreifen kann, eine Zeile zurück.
 
-Zum Abrufen von Informationen aus diesen Sichten geben Sie den voll qualifizierten Namen **INFORMATION_SCHEMA**_. view_name_an.
+Zum Abrufen von Informationen aus diesen Sichten geben Sie den voll qualifizierten Namen **INFORMATION_SCHEMA**_.view_name_ an.
 
-|Spaltenname|Datentyp|BESCHREIBUNG|
+|Spaltenname|Datentyp|Beschreibung|
 |-----------------|---------------|-----------------|
 |**SEQUENCE_CATALOG**|**nvarchar(128)**|Sequenz Qualifizierer|
 |**SEQUENCE_SCHEMA**|**nvarchar (** 128) * *|Name des Schemas, das die Sequenz enthält|

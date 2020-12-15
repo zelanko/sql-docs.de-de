@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_virtual_address_dump (Transact-SQL)
-title: sys. dm_os_virtual_address_dump (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_os_virtual_address_dump (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 7b24ea55-3873-42fd-a86c-441c92eb6175
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 731d180d3f269c6404c9cadf9587099d6ee48f41
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 87b213cd9a3d41e6cd0422a16c0431daeaedd1e1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539274"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464561"
 ---
 # <a name="sysdm_os_virtual_address_dump-transact-sql"></a>sys.dm_os_virtual_address_dump (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "89539274"
 >  Diese Informationen werden auch von der **VirtualQuery** -Windows-API zurückgegeben.  
   
 > [!NOTE]  
->  Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys. dm_pdw_nodes_os_virtual_address_dump**.  
+>  Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys.dm_pdw_nodes_os_virtual_address_dump**.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**region_base_address**|**varbinary(8)**|Zeiger auf die Basisadresse des Seitenbereichs. Lässt keine NULL-Werte zu.|  
 |**region_allocation_base_address**|**varbinary(8)**|Zeiger auf die Basisadresse eines Seitenbereichs, der von der Windows-API-Funktion VirtualAlloc zugeordnet wird. Die Seite, auf die vom BaseAddress-Element gezeigt wird, ist in diesem Zuordnungsbereich enthalten. Lässt keine NULL-Werte zu.|  

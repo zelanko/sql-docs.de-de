@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 568cda98a1bbb55e5c4f3e07bd53592ff642f0bd
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: 12adf94f84fbe9c1b47093cf8ab6b106fb9d5249
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753690"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440651"
 ---
 # <a name="sysgeo_replication_links-azure-sql-database"></a>sys.geo_replication_links (Azure SQL-Datenbank)
 
@@ -31,7 +31,7 @@ ms.locfileid: "91753690"
 
   Enthält eine Zeile für jeden Replikations Link zwischen primären und sekundären Datenbanken in einer Partnerschaft für die georeplikation. Diese Sicht befindet sich in der logischen Masterdatenbank  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|ID der aktuellen Datenbank in der sys. Database-Sicht.|  
 |start_date|**datetimeoffset**|Die UTC-Zeit in einem regionalen SQL-Daten Bank Rechenzentrum, als die Daten Bank Replikation initiiert wurde.|  
@@ -44,7 +44,7 @@ ms.locfileid: "91753690"
 |Rolle (role)|**tinyint**|Die georeplikationsrolle ist eine der folgenden:<br /><br /> 0 = primär. Der database_id bezieht sich auf die primäre Datenbank in der georeplikationspartnerschaft.<br /><br /> 1 = sekundär.  Der database_id bezieht sich auf die primäre Datenbank in der georeplikationspartnerschaft.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|Der sekundäre Typ, einer der folgenden:<br /><br /> 0 = Nein. Der Zugriff auf die sekundäre Datenbank ist bis zum Failover nicht möglich.<br /><br /> 1 = schreibgeschützt. Auf die sekundäre Datenbank kann nur für Clientverbindungen mit applicationintent = schreibgeschützt zugegriffen werden.<br /><br /> 2 = Alle. Auf die sekundäre Datenbank kann jede Client Verbindung zugreifen.|  
-|secondary_allow_connections _DESC|**nvarchar(256)**|Nein<br /><br /> All<br /><br /> Schreibgeschützt|  
+|secondary_allow_connections _DESC|**nvarchar(256)**|No<br /><br /> Alle<br /><br /> Schreibgeschützt|  
   
 ## <a name="permissions"></a>Berechtigungen
 

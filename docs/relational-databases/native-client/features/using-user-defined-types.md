@@ -1,5 +1,5 @@
 ---
-description: Verwenden benutzerdefinierter Typen in SQL Server Native Client
+description: Verwenden von User-Defined Typen in SQL Server Native Client
 title: Verwenden von benutzerdefinierten Typen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: e15d8169-3517-4323-9c9e-0f5c34aff7df
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b56a4e3446c827ecd8372876aa54cb023827a861
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2808e712491271fe5738ba4d20ad3e7e2133a451
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448226"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461951"
 ---
-# <a name="using-user-defined-types-in-sql-server-native-client"></a>Verwenden benutzerdefinierter Typen in SQL Server Native Client
+# <a name="using-user-defined-types-in-sql-server-native-client"></a>Verwenden von User-Defined Typen in SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
 
   In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] wurden benutzerdefinierte Typen (User-Defined Types, UDTs) eingeführt. UDTs erweitern das SQL-Typsystem, indem sie es ermöglichen, Objekte und benutzerdefinierte Datenstrukturen in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank zu speichern. UDTs können mehrere Datentypen enthalten und Verhalten zeigen, das sie von den herkömmlichen Aliasdatentypen aus einem einzelnen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Systemdatentyp unterscheidet. UDTs werden in einer beliebigen, von .NET CLR (Common Language Runtime) unterstützten Sprache definiert, die überprüfbaren Code generiert. Dies schließt Microsoft Visual C#<sup>®</sup> und Visual Basic<sup>®</sup> .NET ein. Die Daten werden in Feldern und Eigenschaften einer .NET-Klasse oder -Struktur verfügbar gemacht. Das Verhalten wird durch die Methoden der Klasse oder Struktur definiert.  
@@ -174,7 +174,7 @@ ms.locfileid: "88448226"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fügt neue Werte oder Änderungen an vielen der Kern OLE DB-Schnittstellen hinzu.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>Die ISSCommandWithParameters-Schnittstelle  
- Um UDTs durch OLE DB zu unterstützen, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implementiert Native Client eine Reihe von Änderungen, einschließlich des Hinzufügens der **ISSCommandWithParameters** -Schnittstelle. Diese neue Schnittstelle erbt von der OLE DB-Kernschnittstelle **ICommandWithParameters**. Zusätzlich zu den drei von **ICommandWithParameters**geerbten Methoden **GetParameterInfo**, **MapParameterNames**und **SetParameterInfo**; **ISSCommandWithParameters** stellt die **GetParameterProperties** -Methode und die **SetParameterProperties** -Methode bereit, die zur Behandlung von serverspezifischen Datentypen verwendet werden.  
+ Um UDTs durch OLE DB zu unterstützen, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implementiert Native Client eine Reihe von Änderungen, einschließlich des Hinzufügens der **ISSCommandWithParameters** -Schnittstelle. Diese neue Schnittstelle erbt von der OLE DB-Kernschnittstelle **ICommandWithParameters**. Zusätzlich zu den drei von **ICommandWithParameters** geerbten Methoden **GetParameterInfo**, **MapParameterNames** und **SetParameterInfo**; **ISSCommandWithParameters** stellt die **GetParameterProperties** -Methode und die **SetParameterProperties** -Methode bereit, die zur Behandlung von serverspezifischen Datentypen verwendet werden.  
   
 > [!NOTE]  
 >  Die **ISSCommandWithParameters**-Schnittstelle nutzt auch die neue SSPARAMPROPS-Struktur.  

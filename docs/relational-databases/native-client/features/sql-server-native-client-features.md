@@ -15,12 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec878229524d048969acbf3ca1af7cca4e318084
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d192f469759ae57d01f4789aef887f4cbb60adca
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008995"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462101"
 ---
 # <a name="sql-server-native-client-features"></a>SQL Server Native Client-Funktionen
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,11 +41,11 @@ ms.locfileid: "86008995"
  [Verwenden von Multiple Active Result Sets &#40;MARS&#41;](../../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)  
  Erläutert, auf welche Weise [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client Multiple Active Result Sets (MARS) unterstützt. MARS ermöglichen es Ihnen, mehrere Resultsets mithilfe einer einzigen Datenbankverbindung auszuführen und zu empfangen.  
   
- [Using XML Data Types (Verwenden von XML-Datentypen)](../../../relational-databases/native-client/features/using-xml-data-types.md)  
+ [Verwenden von XML-Datentypen](../../../relational-databases/native-client/features/using-xml-data-types.md)  
  Erläutert, auf welche Weise [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client den XML-Datentyp unterstützt. Dieser XML-basierte Datentyp kann als Spaltentyp, Variablentyp, Parametertyp oder Funktionsrückgabetyp verwendet werden.  
   
  [Verwenden von benutzerdefinierten Typen](../../../relational-databases/native-client/features/using-user-defined-types.md)  
- Erläutert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , wie Native Client benutzerdefinierte Typen (User-Defined Types, UDT) unterstützt, die das SQL-Typsystem erweitern, indem Sie Objekte und benutzerdefinierte Datenstrukturen in einer-Datenbank speichern können [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ Erläutert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , wie Native Client User-Defined Typen (UDT) unterstützt, die das SQL-Typsystem erweitern, indem Sie Objekte und benutzerdefinierte Datenstrukturen in einer-Datenbank speichern können [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  [Verwenden von Datentypen mit umfangreichen Werten](../../../relational-databases/native-client/features/using-large-value-types.md)  
  Erläutert, auf welche Weise [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client Datentypen mit großen Werten unterstützt, bei denen es sich um LOB-Datentypen handelt.  
@@ -52,7 +53,7 @@ ms.locfileid: "86008995"
  [Programmgesteuertes Ändern von Kennwörtern](../../../relational-databases/native-client/features/changing-passwords-programmatically.md)  
  Erläutert, auf welche Weise [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client die Handhabung abgelaufener Kennwörter unterstützt und es ermöglicht, dass Kennwörter jetzt auf dem Client ohne Eingreifen eines Administrators geändert werden können.  
   
- [Arbeiten mit Momentaufnahmeisolation](../../../relational-databases/native-client/features/working-with-snapshot-isolation.md)  
+ [Arbeiten mit der Momentaufnahmeisolation](../../../relational-databases/native-client/features/working-with-snapshot-isolation.md)  
  Erläutert, auf welche Weise [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client die Verbesserung der Zeilenversionsverwaltung unterstützt. Sie erhöht die Datenbankleistung, indem Leser-/Schreiberblockierungsszenarien vermieden werden.  
   
  [Arbeiten mit Abfragebenachrichtigungen](../../../relational-databases/native-client/features/working-with-query-notifications.md)  
@@ -79,7 +80,7 @@ ms.locfileid: "86008995"
  [Unterstützung für Spalten mit geringer Dichte in SQL Server Native Client](../../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)  
  Erläutert, auf welche Weise [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client Sparsespalten unterstützt.  
   
- [Verbesserungen bei Datum und Uhrzeit](../../../relational-databases/native-client/features/date-and-time-improvements.md)  
+ [Verbesserungen bei Datum und Zeit](../../../relational-databases/native-client/features/date-and-time-improvements.md)  
  Erläutert die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client hinzugefügte Unterstützung für die Datums- und Uhrzeitdatentypen.  
   
  [Metadatenermittlung](../../../relational-databases/native-client/features/metadata-discovery.md)  
@@ -91,7 +92,7 @@ ms.locfileid: "86008995"
  [SQL Server Native Client-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
  Erläutert, wie die Anwendung konfiguriert werden kann, um von den Funktionen für Hochverfügbarkeit und Notfallwiederherstellung zu profitieren, die in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] hinzugefügt wurden.  
   
- [Zugreifen auf Diagnoseinformationen im Protokoll für erweiterte Ereignisse](../../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
+ [Zugreifen auf Diagnoseinformationen im Protokoll der erweiterten Ereignisse](../../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
  Erläutert Erweiterungen zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client und -Datenablaufverfolgung, die Ihnen Zugriff auf Diagnoseinformationen im Ringpuffer und XEvents-Protokoll geben.  
   
  [SQL Server Native Client-Unterstützung für LocalDB](../../../relational-databases/native-client/features/sql-server-native-client-support-for-localdb.md)  
@@ -100,7 +101,7 @@ ms.locfileid: "86008995"
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Native Client Programmierung](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
  [ODBC-Themen zur Vorgehensweise](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
- [Gewusst-wie-Themen zu OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)   
+ [Vorgehensweisen für OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)   
  [Installieren von SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
   
   

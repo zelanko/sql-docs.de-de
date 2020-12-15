@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: bdee149e-7556-4fc3-8242-925dd4b7b6ac
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1099243569f74cc5c50c90de1ec7bf35a5c53d51
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2cef670429ad9a086916e49049b7e28d03ad424f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005817"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462801"
 ---
 # <a name="sysquery_store_query-transact-sql"></a>sys.query_store_query (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -40,15 +40,15 @@ ms.locfileid: "92005817"
 |**query_text_id**|**bigint**|Fremdschlüssel. Joins mit [sys.query_store_query_text &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|  
 |**context_settings_id**|**bigint**|Fremdschlüssel. Joins mit [sys.query_context_settings &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md).<br/>**Hinweis:** Azure Synapse Analytics gibt immer 0 (null) zurück.|  
 |**object_id**|**bigint**|ID des Datenbankobjekts, zu dem die Abfrage gehört (gespeicherte Prozedur, Auslösung, CLR-UDF/UDAgg usw.). 0, wenn die Abfrage nicht als Teil eines Datenbankobjekts (Ad-hoc-Abfrage) ausgeführt wird.<br/>**Hinweis:** Azure Synapse Analytics gibt immer 0 (null) zurück.|  
-|**batch_sql_handle**|**varbinary(64)**|ID des Anweisungs Batches, zu dem die Abfrage gehört. Wird nur aufgefüllt, wenn die Abfrage auf temporäre Tabellen oder Tabellen Variablen verweist.<br/>**Hinweis:** Azure Synapse Analytics gibt immer *null*zurück.|  
+|**batch_sql_handle**|**varbinary(64)**|ID des Anweisungs Batches, zu dem die Abfrage gehört. Wird nur aufgefüllt, wenn die Abfrage auf temporäre Tabellen oder Tabellen Variablen verweist.<br/>**Hinweis:** Azure Synapse Analytics gibt immer *null* zurück.|  
 |**query_hash**|**Binär (8)**|MD5-Hash der einzelnen Abfrage, basierend auf der logischen Abfrage Struktur. Enthält Optimierungs Hinweise.|  
 |**is_internal_query**|**bit**|Die Abfrage wurde intern generiert.<br/>**Hinweis:** Azure Synapse Analytics gibt immer 0 (null) zurück.|  
 |**query_parameterization_type**|**tinyint**|Art der Parametrisierung:<br /><br /> 0 – Keine<br /><br /> 1-Benutzer<br /><br /> 2: einfach<br /><br /> 3-erzwungene<br/>**Hinweis:** Azure Synapse Analytics gibt immer 0 (null) zurück.|  
-|**query_parameterization_type_desc**|**nvarchar(60)**|Die Textbeschreibung für den parameterisierungstyp.<br/>**Hinweis:** Azure Synapse Analytics gibt immer *keine*zurück.|  
+|**query_parameterization_type_desc**|**nvarchar(60)**|Die Textbeschreibung für den parameterisierungstyp.<br/>**Hinweis:** Azure Synapse Analytics gibt immer *keine* zurück.|  
 |**initial_compile_start_time**|**datetimeoffset**|Startzeit der Kompilierung.|  
 |**last_compile_start_time**|**datetimeoffset**|Startzeit der Kompilierung.|  
 |**last_execution_time**|**datetimeoffset**|Die letzte Ausführungszeit bezieht sich auf die letzte Endzeit der Abfrage/des Plans.|  
-|**last_compile_batch_sql_handle**|**varbinary(64)**|Handle des letzten SQL-Batches, in dem die Abfrage zuletzt verwendet wurde. Sie kann als Eingabe für [sys.dm_exec_sql_text &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) bereitgestellt werden, um den vollständigen Text des Batches zu erhalten.<br/>**Hinweis:** Azure Synapse Analytics gibt immer *null*zurück.|  
+|**last_compile_batch_sql_handle**|**varbinary(64)**|Handle des letzten SQL-Batches, in dem die Abfrage zuletzt verwendet wurde. Sie kann als Eingabe für [sys.dm_exec_sql_text &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) bereitgestellt werden, um den vollständigen Text des Batches zu erhalten.<br/>**Hinweis:** Azure Synapse Analytics gibt immer *null* zurück.|  
 |**last_compile_batch_offset_start**|**bigint**|Informationen, die sys.dm_exec_sql_text zusammen mit last_compile_batch_sql_handle bereitgestellt werden können.<br/>**Hinweis:** Azure Synapse Analytics gibt immer 0 (null) zurück.|
 |**last_compile_batch_offset_end**|**bigint**|Informationen, die sys.dm_exec_sql_text zusammen mit last_compile_batch_sql_handle bereitgestellt werden können.<br/>**Hinweis:** Azure Synapse Analytics gibt immer 0 (null) zurück.|  
 |**count_compiles**|**bigint**|Kompilierungs Statistik.<br/>**Hinweis:** Azure Synapse Analytics gibt immer eins (1) zurück.|  

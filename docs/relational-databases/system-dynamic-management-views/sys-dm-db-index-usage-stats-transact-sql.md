@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: d06a001f-0f72-4679-bc2f-66fff7958b86
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c23997b4d622f29e32fc25c902fca70714e2d439
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: cb43dffcfaf7010b7f5c8d64b1d685fe13ea95ed
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97329215"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97458492"
 ---
 # <a name="sysdm_db_index_usage_stats-transact-sql"></a>sys.dm_db_index_usage_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "97329215"
 > [!NOTE]  
 >  Um diese Sicht von oder aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie **sys.dm_pdw_nodes_db_index_usage_stats**.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**smallint**|ID der Datenbank, für die die Tabelle oder Sicht definiert ist.|  
 |**object_id**|**int**|ID der Tabelle oder Sicht, für die der Index definiert ist.|  
@@ -64,7 +64,7 @@ ms.locfileid: "97329215"
 |**last_system_update**|**datetime**|Zeitpunkt des letzten Systemupdates.|  
 |pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Jeder einzelne Such-, Scan-, Nachschlage- oder Updatevorgang für den angegebenen Index durch eine Abfrageausführung zählt als Verwendung dieses Indexes, und der entsprechende Zähler in dieser Sicht wird inkrementiert. Informationen werden für Vorgänge angezeigt, die durch Benutzerabfragen verursacht werden, und für Vorgänge, die durch intern generierte Abfragen verursacht werden, wie z. B. Scans zum Sammeln von Statistikdaten.  
   
  Der **user_updates**-Leistungsindikator gibt die Wartungsebene für den Index an, die durch Einfüge-, Update- oder Löschvorgänge an der zugrunde liegenden Tabelle oder Sicht verursacht wird. Mithilfe dieser Sicht können Sie ermitteln, welche Indizes selten von den Anwendungen verwendet werden. Außerdem können Sie mithilfe dieser Sicht bestimmen, welche Indizes einen hohen Wartungsaufwand erzeugen. Sie können Indizes löschen, die einen hohen Wartungsaufwand erzeugen, aber nicht oder nur selten für Abfragen verwendet werden.  

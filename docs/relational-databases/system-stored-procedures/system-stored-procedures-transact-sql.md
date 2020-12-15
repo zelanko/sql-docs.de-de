@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 581ac92066750ac578cf8103383087fddeb01e65
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 60d30105f0c56224748a3c676ba4d76b73aa989b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810296"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462671"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>Gespeicherte Systemprozeduren (Transact-SQL)
 
@@ -40,7 +40,7 @@ ms.locfileid: "91810296"
   
 |Category|Beschreibung|  
 |--------------|-----------------|  
-|[Gespeicherte Prozeduren für die aktive georeplikation]()|Dient zum Verwalten von zum Verwalten von Konfigurationen für die aktive georeplikation in Azure SQL-Datenbank.|  
+|[Aktive Geo-Replication gespeicherte Prozeduren]()|Wird zur Verwaltung von Active Geo-Replication-Konfigurationen in Azure SQL-Datenbank verwendet.|  
 |[Gespeicherte Katalogprozeduren](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|Implementieren Funktionen ODBC-Datenwörterbüchern und isolieren ODBC-Anwendungen von Änderungen an den zugrunde liegenden Systemtabellen.|  
 |[Gespeicherte Prozeduren für Change Data Capture](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)|Wird verwendet, um Change Data Capture-Objekte zu aktivieren, zu deaktivieren oder über sie zu berichten.|  
 |[Gespeicherte Cursorprozeduren](../../relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md)|Werden zum Implementieren von Cursorvariablenfunktionen verwendet.|  

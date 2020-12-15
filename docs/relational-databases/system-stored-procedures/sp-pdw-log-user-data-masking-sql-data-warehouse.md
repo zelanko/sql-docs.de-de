@@ -11,13 +11,13 @@ dev_langs:
 ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c014f76aac1544e16ec693277a034779f75883cd
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 2d2b3de8cf86e7597c944b827326dd070bc2ffce
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92255610"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461551"
 ---
 # <a name="sp_pdw_log_user_data_masking-azure-synapse-analytics"></a>sp_pdw_log_user_data_masking (Azure-Synapse-Analyse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -42,7 +42,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 #### <a name="parameters"></a>Parameter  
-`[ @masking_mode = ] masking_mode` Bestimmt, ob die Daten Maskierung für die transparente Datenverschlüsselung aktiviert ist. *masking_mode* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen:  
+`[ @masking_mode = ] masking_mode` Bestimmt, ob die Daten Maskierung für die transparente Datenverschlüsselung aktiviert ist. *masking_mode* ist vom Datentyp **int** und kann einen der folgenden Werte aufweisen:  
   
 -   0 = deaktiviert, Benutzerdaten werden in den [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitäts Protokollen angezeigt.  
   
@@ -52,7 +52,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
   
  Wenn **sp_pdw_ log_user_data_masking** ohne Parameter ausgeführt wird, wird der aktuelle Zustand der TDE-Protokoll Benutzerdaten Maskierung auf dem Gerät als skalares Resultset zurückgegeben.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die Maskierung von Benutzerdaten in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitäts Protokollen ermöglicht die Ersetzung von literalen mit vordefinierten Konstanten Werten in **Select** -und DML-Anweisungen, da Sie Benutzerdaten enthalten können. Wenn Sie *masking_mode* auf 1 festlegen, werden Metadaten nicht maskiert, wie z. b. Spaltennamen oder Tabellennamen. Wenn Sie *masking_mode* auf 2 festlegen, werden-Anweisungen mit Metadaten entfernt, z. b. Spaltennamen oder Tabellennamen.  
   
  Die Benutzerdaten Maskierung in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitäts Protokollen wird folgendermaßen implementiert:  

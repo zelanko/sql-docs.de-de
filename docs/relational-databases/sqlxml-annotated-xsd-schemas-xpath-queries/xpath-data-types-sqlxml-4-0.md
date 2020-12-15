@@ -28,19 +28,19 @@ ms.assetid: a90374bf-406f-4384-ba81-59478017db68
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 724290f48b0f33d586a797629766b36bae49ddb6
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 15b308481b6622284d6f8bdd36d474b3886570d6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332637"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460033"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath-Datentypen (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath und XML-Schema (XSD) weisen sehr unterschiedliche Datentypen auf. Zum Beispiel verfügt XPath nicht über Ganzzahl- oder Datumsdatentypen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und XSD hingegen über mehrere. XSD gibt Zeitwerte auf die Nanosekunde genau an, während die Genauigkeit von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] höchstens 1/300 Sekunde beträgt. Einen Datentyp einem anderen zuzuordnen ist deshalb nicht immer möglich. Weitere Informationen zum Mapping von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentypen zu XSD-Datentypen finden Sie unter [Datentyp Umwandlungen und die SQL: datatype-Anmerkung &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
   
- XPath verfügt über drei Datentypen: **Zeichenfolge**, **Zahl**und **boolescher**Wert. Der **Number** -Datentyp ist immer ein IEEE 754-Gleit Komma Wert mit doppelter Genauigkeit. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] float-Datentyp **(53)** entspricht der XPath- **Nummer**. **Float (53)** ist jedoch nicht exakt IEEE 754. Zum Beispiel wird weder NaN (Not-a-Number) noch Unendlichkeit verwendet. Der Versuch, eine nicht numerische Zeichenfolge in eine **Zahl** zu konvertieren, und versucht, durch Null zu teilen, führt zu einem Fehler.  
+ XPath verfügt über drei Datentypen: **Zeichenfolge**, **Zahl** und **boolescher** Wert. Der **Number** -Datentyp ist immer ein IEEE 754-Gleit Komma Wert mit doppelter Genauigkeit. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] float-Datentyp **(53)** entspricht der XPath- **Nummer**. **Float (53)** ist jedoch nicht exakt IEEE 754. Zum Beispiel wird weder NaN (Not-a-Number) noch Unendlichkeit verwendet. Der Versuch, eine nicht numerische Zeichenfolge in eine **Zahl** zu konvertieren, und versucht, durch Null zu teilen, führt zu einem Fehler.  
   
 ## <a name="xpath-conversions"></a>XPath-Konvertierungen  
  Wenn Sie eine XPath-Abfrage wie `OrderDetail[@UnitPrice > "10.0"]` verwenden, können implizite und explizite Datentypkonvertierungen den Sinn der Abfrage leicht verändern. Deshalb sollte nachvollzogen werden können, wie XPath-Datentypen implementiert werden. Die XPath-Sprachspezifikation, XML Path Language (XPath), Version 1,0 W3C, vorgeschlagene Empfehlung 8. Oktober 1999, finden Sie auf der W3C-Website unter http://www.w3.org/TR/1999/PR-xpath-19991008.html .  
@@ -55,35 +55,35 @@ ms.locfileid: "87332637"
   
 -   Arithmetische Operatoren (+, -, *, DIV, MOD)  
   
- Bei jeder Operatorkategorie werden die Operanden auf andere Art und Weise konvertiert. XPath-Operatoren konvertieren ihre Operanden gegebenenfalls implizit. Arithmetische Operatoren konvertieren ihre Operanden in **Number**und führen zu einem Zahlenwert. Boolesche Operatoren konvertieren ihre Operanden in einen **booleschen**Wert und führen zu einem booleschen Wert. Relationale Operatoren und Gleichheitsoperatoren geben einen booleschen Wert aus. Allerdings verfügen sie, je nach dem ursprünglichen Datentyp ihrer Operanden, über unterschiedliche Konvertierungsregeln (siehe Tabelle).  
+ Bei jeder Operatorkategorie werden die Operanden auf andere Art und Weise konvertiert. XPath-Operatoren konvertieren ihre Operanden gegebenenfalls implizit. Arithmetische Operatoren konvertieren ihre Operanden in **Number** und führen zu einem Zahlenwert. Boolesche Operatoren konvertieren ihre Operanden in einen **booleschen** Wert und führen zu einem booleschen Wert. Relationale Operatoren und Gleichheitsoperatoren geben einen booleschen Wert aus. Allerdings verfügen sie, je nach dem ursprünglichen Datentyp ihrer Operanden, über unterschiedliche Konvertierungsregeln (siehe Tabelle).  
   
 |Operand|Relationaler Operator|Gleichheitsoperator|  
 |-------------|-------------------------|-----------------------|  
 |Beide Operanden sind Knotensätze.|True, wenn es sich um einen Knoten in einer Gruppe und einen Knoten in der zweiten Menge handelt, sodass der Vergleich der **Zeichen** folgen Werte true ist.|Identisch.|  
-|Eine ist eine Knotengruppe, die andere eine **Zeichen**Folge.|True ist nur dann, wenn ein Knoten in der Knotengruppe vorhanden ist, sodass bei der Konvertierung in eine **Zahl**der Vergleich mit der **Zeichenfolge** , die in **Number** konvertiert wurde, den Wert true hat.|True, wenn ein Knoten im Knoten Satz vorhanden ist, der bei der Konvertierung in eine **Zeichen** **Folge den** Wert true hat.|  
-|Eine ist eine Knotengruppe, die andere eine **Zahl**.|True **ist nur** dann, wenn ein Knoten im Knoten Satz vorhanden ist, der bei der Konvertierung in eine **Zahl**den Wert true hat.|Identisch.|  
-|Eine ist eine Knotengruppe, die andere ein **boolescher**Wert.|True **ist nur** dann, wenn ein Knoten im Knoten Satz vorhanden ist, der bei der Konvertierung in einen **booleschen** Wert und dann in eine **Zahl**den Wert "true" mit dem **booleschen** Wert "true" hat.|True ist nur dann, wenn ein Knoten im Knoten Satz vorhanden ist, der bei der Konvertierung in einen **booleschen**Wert mit dem **booleschen** Wert true ist.|  
+|Eine ist eine Knotengruppe, die andere eine **Zeichen** Folge.|True ist nur dann, wenn ein Knoten in der Knotengruppe vorhanden ist, sodass bei der Konvertierung in eine **Zahl** der Vergleich mit der **Zeichenfolge** , die in **Number** konvertiert wurde, den Wert true hat.|True, wenn ein Knoten im Knoten Satz vorhanden ist, der bei der Konvertierung in eine **Zeichen** **Folge den** Wert true hat.|  
+|Eine ist eine Knotengruppe, die andere eine **Zahl**.|True **ist nur** dann, wenn ein Knoten im Knoten Satz vorhanden ist, der bei der Konvertierung in eine **Zahl** den Wert true hat.|Identisch.|  
+|Eine ist eine Knotengruppe, die andere ein **boolescher** Wert.|True **ist nur** dann, wenn ein Knoten im Knoten Satz vorhanden ist, der bei der Konvertierung in einen **booleschen** Wert und dann in eine **Zahl** den Wert "true" mit dem **booleschen** Wert "true" hat.|True ist nur dann, wenn ein Knoten im Knoten Satz vorhanden ist, der bei der Konvertierung in einen **booleschen** Wert mit dem **booleschen** Wert true ist.|  
 |In beiden Fällen handelt es sich nicht um einen Knotensatz.|Konvertieren Sie beide Operanden in **Number** , und vergleichen Sie dann.|Konvertieren Sie beide Operanden in einen gängigen Typ , und führen Sie dann einen Vergleich durch. Konvertieren in einen **booleschen** Wert, wenn einer der beiden Werte " **booleschen** **" ist,**" **Number** " Andernfalls konvertieren Sie in eine **Zeichenfolge**.|  
   
 > [!NOTE]  
->  Da relationale XPath-Operatoren ihre Operanden immer in **Number**konvertieren, sind **Zeichen** folgen Vergleiche nicht möglich. Um Datums Vergleiche einzuschließen, bietet SQL Server 2000 diese Abweichung der XPath-Spezifikation: Wenn ein relationaler Operator eine **Zeichen** Folge mit einer **Zeichen**Folge vergleicht, eine Knotengruppe auf eine **Zeichen**Folge oder ein Knoten mit Zeichen folgen Wert auf einen Knoten Satz mit Zeichen folgen Wert festgelegt ist, wird ein **Zeichen** folgen Vergleich (kein **Zahlen** Vergleich) durchgeführt.  
+>  Da relationale XPath-Operatoren ihre Operanden immer in **Number** konvertieren, sind **Zeichen** folgen Vergleiche nicht möglich. Um Datums Vergleiche einzuschließen, bietet SQL Server 2000 diese Abweichung der XPath-Spezifikation: Wenn ein relationaler Operator eine **Zeichen** Folge mit einer **Zeichen** Folge vergleicht, eine Knotengruppe auf eine **Zeichen** Folge oder ein Knoten mit Zeichen folgen Wert auf einen Knoten Satz mit Zeichen folgen Wert festgelegt ist, wird ein **Zeichen** folgen Vergleich (kein **Zahlen** Vergleich) durchgeführt.  
   
 ## <a name="node-set-conversions"></a>Konvertierungen von Knotensätzen  
- Konvertierungen von Knotensätzen sind nicht immer intuitiv. Eine Knotengruppe wird in eine **Zeichenfolge** konvertiert, indem der Zeichen folgen Wert des ersten Knotens im Satz übernommen wird. Eine Knotengruppe wird in eine **Zahl** konvertiert, indem Sie in eine **Zeichenfolge**konvertiert und anschließend eine **Zeichenfolge** in eine **Zahl**konvertiert wird. Eine Knotengruppe wird in einen **booleschen** Wert konvertiert, indem überprüft wird, ob Sie vorhanden ist.  
+ Konvertierungen von Knotensätzen sind nicht immer intuitiv. Eine Knotengruppe wird in eine **Zeichenfolge** konvertiert, indem der Zeichen folgen Wert des ersten Knotens im Satz übernommen wird. Eine Knotengruppe wird in eine **Zahl** konvertiert, indem Sie in eine **Zeichenfolge** konvertiert und anschließend eine **Zeichenfolge** in eine **Zahl** konvertiert wird. Eine Knotengruppe wird in einen **booleschen** Wert konvertiert, indem überprüft wird, ob Sie vorhanden ist.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] führt bei Knotensätzen keine Positionalauswahl durch: Die XPath-Abfrage `Customer[3]` beispielsweise bezieht sich auf den dritten Kunden; eine solche Positionalauswahl wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht unterstützt. Aus diesem Grund werden die in der XPath-Spezifikation beschriebenen Konvertierungen von Knoten Satz zu**Zeichen** folgen oder Knoten Satz-zu-**Zahlen** nicht implementiert. Die Semantik von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bezieht sich auf "ein" Vorkommnis, während die XPath-Spezifikation "das erste" Vorkommnis bezeichnet. Beispielsweise wählt die XPath-Abfrage basierend auf der W3C-XPath-Spezifikation `Order[OrderDetail/@UnitPrice > 10.0]` diese Bestellungen mit dem ersten **OrderDetail** aus, das einen **UnitPrice** größer als 10,0 hat. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wählt diese XPath-Abfrage diese Bestellungen mit allen **OrderDetails** aus, deren **UnitPrice** größer als 10,0 ist.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] führt bei Knotensätzen keine Positionalauswahl durch: Die XPath-Abfrage `Customer[3]` beispielsweise bezieht sich auf den dritten Kunden; eine solche Positionalauswahl wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht unterstützt. Aus diesem Grund werden die in der XPath-Spezifikation beschriebenen Konvertierungen von Knoten Satz zu **Zeichen** folgen oder Knoten Satz-zu-**Zahlen** nicht implementiert. Die Semantik von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bezieht sich auf "ein" Vorkommnis, während die XPath-Spezifikation "das erste" Vorkommnis bezeichnet. Beispielsweise wählt die XPath-Abfrage basierend auf der W3C-XPath-Spezifikation `Order[OrderDetail/@UnitPrice > 10.0]` diese Bestellungen mit dem ersten **OrderDetail** aus, das einen **UnitPrice** größer als 10,0 hat. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wählt diese XPath-Abfrage diese Bestellungen mit allen **OrderDetails** aus, deren **UnitPrice** größer als 10,0 ist.  
   
- Die Konvertierung in einen **booleschen** Wert generiert einen Existenz Test. Daher entspricht die XPath-Abfrage `Products[@Discontinued=true()]` dem SQL-Ausdruck "Products. nicht eingestellt is not NULL", nicht dem SQL-Ausdruck "Products. nicht eingestellt = 1". Um die Abfrage dem letzteren SQL-Ausdruck entsprechend zu entsprechen, konvertieren Sie zunächst den Knoten Satz in einen nicht**booleschen** Typ, wie z. b. **Number**. Beispiel: `Products[number(@Discontinued) = true()]`.  
+ Die Konvertierung in einen **booleschen** Wert generiert einen Existenz Test. Daher entspricht die XPath-Abfrage `Products[@Discontinued=true()]` dem SQL-Ausdruck "Products. nicht eingestellt is not NULL", nicht dem SQL-Ausdruck "Products. nicht eingestellt = 1". Um die Abfrage dem letzteren SQL-Ausdruck entsprechend zu entsprechen, konvertieren Sie zunächst den Knoten Satz in einen nicht **booleschen** Typ, wie z. b. **Number**. Beispiel: `Products[number(@Discontinued) = true()]`.  
   
  Da die meisten Operatoren gemäß Definition als TRUE gelten, wenn sie für einen beliebigen oder einen einzigen der Knoten im Knotensatz TRUE sind, ergeben diese Operationen stets FALSE, wenn der Knotensatz leer ist. Wenn also A leer ist, gilt sowohl für `A = B` als auch `A != B` FALSE, für `not(A=B)` und `not(A!=B)` hingegen gilt TRUE.  
   
- Normalerweise ist ein Attribut oder Element, das einer Spalte zugeordnet ist, vorhanden, wenn der Wert dieser Spalte in der Datenbank nicht **null**ist. Elemente, die auf Zeilen verweisen, sind vorhanden, sobald untergeordnete Elemente vorhanden sind.  
+ Normalerweise ist ein Attribut oder Element, das einer Spalte zugeordnet ist, vorhanden, wenn der Wert dieser Spalte in der Datenbank nicht **null** ist. Elemente, die auf Zeilen verweisen, sind vorhanden, sobald untergeordnete Elemente vorhanden sind.  
   
 > [!NOTE]  
 >  Elemente, die mit **is-constant** kommentiert werden, sind immer vorhanden. Folglich können XPath-Prädikate nicht für **is-constant-** Elemente verwendet werden.  
   
- Wenn eine Knotengruppe in eine **Zeichenfolge** oder eine **Zahl**konvertiert wird, wird der zugehörige XDR-Typ (sofern vorhanden) im Schema mit Anmerkungen überprüft. dieser Typ wird verwendet, um die erforderliche Konvertierung zu bestimmen.  
+ Wenn eine Knotengruppe in eine **Zeichenfolge** oder eine **Zahl** konvertiert wird, wird der zugehörige XDR-Typ (sofern vorhanden) im Schema mit Anmerkungen überprüft. dieser Typ wird verwendet, um die erforderliche Konvertierung zu bestimmen.  
   
 ## <a name="mapping-xdr-data-types-to-xpath-data-types"></a>Zuordnung von XDR-Datentypen und XPath-Datentypen  
  Der XPath-Datentyp eines Knotens wird vom XDR-Datentyp im Schema abgeleitet, wie in der folgenden Tabelle dargestellt ( **die Knoten Mitarbeiter** -ID wird zur Veranschaulichung verwendet).  
@@ -98,7 +98,7 @@ ms.locfileid: "87332637"
 |date|Zeichenfolge|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
 |time<br /><br /> time.tz|Zeichenfolge|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
- Die Datums-und Uhrzeit Konvertierungen sind so konzipiert, dass Sie funktionieren, ob der Wert in der Datenbank mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **DateTime-Datentyp** oder einer **Zeichenfolge**gespeichert wird. Beachten Sie, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **DateTime-Datentyp** keine **Zeitzone** verwendet und eine geringere Genauigkeit aufweist als der XML- **Zeit** Datentyp. Wenn Sie den **Zeitzone** -Datentyp oder die zusätzliche Genauigkeit einschließen möchten, speichern Sie die Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe eines **Zeichen** folgen Typs.  
+ Die Datums-und Uhrzeit Konvertierungen sind so konzipiert, dass Sie funktionieren, ob der Wert in der Datenbank mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **DateTime-Datentyp** oder einer **Zeichenfolge** gespeichert wird. Beachten Sie, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **DateTime-Datentyp** keine **Zeitzone** verwendet und eine geringere Genauigkeit aufweist als der XML- **Zeit** Datentyp. Wenn Sie den **Zeitzone** -Datentyp oder die zusätzliche Genauigkeit einschließen möchten, speichern Sie die Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe eines **Zeichen** folgen Typs.  
   
  Wenn ein Knoten vom XDR-Datentyp in den XPath-Datentyp konvertiert wird, müssen mitunter weitere Konvertierungen vorgenommen werden (von einem XPath-Datentyp in einen anderen XPath-Datentyp). Ein Beispiel ist die folgende XPath-Abfrage:  
   
@@ -112,7 +112,7 @@ ms.locfileid: "87332637"
 CONVERT(money, m)  
 ```  
   
- Bei dieser Konvertierung wird der Knoten `m` von **Fixed 14,4** in **Money**konvertiert. Um den Wert 3 hinzuzufügen, ist jedoch eine zusätzliche Konvertierung erforderlich:  
+ Bei dieser Konvertierung wird der Knoten `m` von **Fixed 14,4** in **Money** konvertiert. Um den Wert 3 hinzuzufügen, ist jedoch eine zusätzliche Konvertierung erforderlich:  
   
 ```  
 CONVERT(float(CONVERT(money, m))  
@@ -143,7 +143,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  `N'E-' + CONVERT(nvarchar(4000), Employees.EmployeeID, 126) = N'E-1'`  
   
- Da Mitarbeiter **Eid** einer der ID-Werte (**IDREF**, **IDREFS**, **NMTOKEN**, **NMTOKENS**usw.) im XSD-Schema **ist, wird** die Mitarbeiter- **ID** mithilfe der zuvor beschriebenen Konvertierungsregeln in den XPath-Datentyp **String** konvertiert.  
+ Da Mitarbeiter **Eid** einer der ID-Werte (**IDREF**, **IDREFS**, **NMTOKEN**, **NMTOKENS** usw.) im XSD-Schema **ist, wird** die Mitarbeiter- **ID** mithilfe der zuvor beschriebenen Konvertierungsregeln in den XPath-Datentyp **String** konvertiert.  
   
  `CONVERT(nvarchar(4000), Employees.EmployeeID, 126)`  
   
@@ -156,7 +156,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  `CONVERT(float(53), CONVERT(money, OrderDetail.UnitPrice)) * CONVERT(float(53), OrderDetail.OrderQty) > CONVERT(float(53), 98)`  
   
- Beim Konvertieren der Werte in der XPath-Abfrage wird zunächst der XDR-Datentyp in den XPath-Datentyp konvertiert. Da der XSD-Datentyp von **UnitPrice** **festgelegt**ist, wie in der vorherigen Tabelle beschrieben, ist dies die erste verwendete Konvertierung:  
+ Beim Konvertieren der Werte in der XPath-Abfrage wird zunächst der XDR-Datentyp in den XPath-Datentyp konvertiert. Da der XSD-Datentyp von **UnitPrice** **festgelegt** ist, wie in der vorherigen Tabelle beschrieben, ist dies die erste verwendete Konvertierung:  
   
 ```  
 CONVERT(money, OrderDetail.UnitPrice))   
@@ -181,6 +181,6 @@ CONVERT(float(53), 98)
 ```  
   
 > [!NOTE]  
->  Wenn der im Schema verwendete XSD-Datentyp mit dem in der Datenbank zugrunde gelegten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp inkompatibel ist oder eine nicht mögliche XPath-Datentypkonvertierung durchgeführt werden soll, sollte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler melden. Wenn das Mitarbeiter-ID- **Attribut z** . b. mit der **ID-Präfix** Anmerkung versehen ist, generiert XPath `Employee[@EmployeeID=1]` einen Fehler, **EmployeeID** da die Mitarbeiter-ID über die **ID-Präfix-** Anmerkung verfügt und nicht in **Number**konvertiert werden kann.  
+>  Wenn der im Schema verwendete XSD-Datentyp mit dem in der Datenbank zugrunde gelegten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp inkompatibel ist oder eine nicht mögliche XPath-Datentypkonvertierung durchgeführt werden soll, sollte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler melden. Wenn das Mitarbeiter-ID- **Attribut z** . b. mit der **ID-Präfix** Anmerkung versehen ist, generiert XPath `Employee[@EmployeeID=1]` einen Fehler,  da die Mitarbeiter-ID über die **ID-Präfix-** Anmerkung verfügt und nicht in **Number** konvertiert werden kann.  
   
   

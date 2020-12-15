@@ -20,27 +20,27 @@ ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 2a3d57bb4ba8c36778d3d4e552d9a69bd285db9e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: e303099001b1708b6227547fdd68e94dba5c5eee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542587"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97459896"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL-Datenbank)
 
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  Enthält Statistiken für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Datenbankverbindungs-Ereignisse und bietet einen Überblick über erfolgreiche und fehlgeschlagene Datenbankverbindungen. **connectivity** Weitere Informationen zu konnektivitätsereignissen finden Sie unter Ereignis Typen in [sys. event_log &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+  Enthält Statistiken für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Datenbankverbindungs-Ereignisse und bietet einen Überblick über erfolgreiche und fehlgeschlagene Datenbankverbindungen.  Weitere Informationen zu konnektivitätsereignissen finden Sie unter Ereignis Typen in [sys.event_log &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
-|Statistik|type|BESCHREIBUNG|  
+|Statistik|Typ|Beschreibung|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|Der Name der Datenbank.|  
 |**start_time**|**datetime2**|UTC-Datum und -Zeit des Beginns des Aggregationsintervalls. Die Uhrzeit ist immer ein Vielfaches von 5 Minuten. Beispiel:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|UTC-Datum und -Zeit des Endes des Aggregationsintervalls. **End_time** ist immer genau 5 Minuten später als die entsprechende **start_time** in derselben Zeile.|  
 |**success_count**|**int**|Anzahl erfolgreicher Verbindungen.|  
-|**total_failure_count**|**int**|Gesamtzahl fehlerhafter Verbindungen. Dies ist die Summe aus **connection_failure_count**, **terminated_connection_count**und **throttled_connection_count**und umfasst keine Deadlockereignisse.|  
+|**total_failure_count**|**int**|Gesamtzahl fehlerhafter Verbindungen. Dies ist die Summe aus **connection_failure_count**, **terminated_connection_count** und **throttled_connection_count** und umfasst keine Deadlockereignisse.|  
 |**connection_failure_count**|**int**|Anzahl der Anmeldefehler.|  
 |**terminated_connection_count**|**int**|**_Gilt nur für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Anzahl beendeter Verbindungen.|  
 |**throttled_connection_count**|**int**|**_Gilt nur für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Anzahl gedrosselter Verbindungen.|  
@@ -80,7 +80,7 @@ start_time                    end_time
 
  Diese Sicht enthält möglicherweise nicht alle Verbindungs- und Fehlerinformationen:  
   
-- Diese Ansicht enthält nicht alle [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Datenbankfehler, die auftreten können, sondern nur die in Ereignis Typen in [sys. event_log &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+- Diese Ansicht enthält nicht alle [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Datenbankfehler, die auftreten können, sondern nur die in Ereignis Typen in [sys.event_log &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
 - Wenn ein Computerfehler innerhalb des [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Rechenzentrums auftritt, fehlt in der Ereignis Tabelle möglicherweise eine kleine Menge von Daten.  
   
@@ -92,7 +92,7 @@ start_time                    end_time
   
 ## <a name="example"></a>Beispiel
 
- Das folgende Beispiel zeigt eine Abfrage von **sys. database_connection_stats** , um eine Zusammenfassung der Datenbankverbindungen zurückzugeben, die zwischen 12 Uhr 9/25/2011 mittags und 12 9/28/2011 Uhr UTC (UTC) aufgetreten sind. Standardmäßig werden die Abfrageergebnisse nach **start_time** (aufsteigender Reihenfolge) sortiert.  
+ Das folgende Beispiel zeigt eine Abfrage von **sys.database_connection_stats** , um eine Zusammenfassung der Datenbankverbindungen zurückzugeben, die zwischen 12 Uhr 9/25/2011 mittags und 12 9/28/2011 Uhr UTC (UTC) aufgetreten sind. Standardmäßig werden die Abfrageergebnisse nach **start_time** (aufsteigender Reihenfolge) sortiert.  
   
 ```sql
 SELECT *  

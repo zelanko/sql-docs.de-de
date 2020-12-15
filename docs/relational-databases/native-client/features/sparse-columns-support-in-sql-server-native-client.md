@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1bf4383d8b0f6be0d3242d91c935559f8c98ff00
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 54419481ea32fb3b1a5cfc896f16bf4db974c0fb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498858"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462051"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>Unterstützung für Spalten mit geringer Dichte in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "88498858"
 ## <a name="bulk-copy-bcp-support-for-sparse-columns"></a>Massenkopierunterstützung (BCP) für Spalten mit geringer Dichte  
  Es gibt keine Änderungen an der BCP-API in ODBC oder OLE DB für die sparsespalten oder **column_set** Features.  
   
- Wenn eine Tabelle einen **column_set** aufweist, werden Sparsespalten nicht wie unterschiedliche Spalten behandelt. Die Werte aller Sparsespalten sind im Wert des **column_set** enthalten, der auf dieselbe Art und Weise wie eine XML-Spalte exportiert wird, d. h. als **varbinary(max)**, wenn er als Binärtyp gebunden ist, oder als **nvarchar(max)**, wenn er als **char**-Typ oder **wchar**-Typ gebunden ist. Beim Importieren muss der **column_set**-Wert dem Schema des **column_set** entsprechen.  
+ Wenn eine Tabelle einen **column_set** aufweist, werden Sparsespalten nicht wie unterschiedliche Spalten behandelt. Die Werte aller Sparsespalten sind im Wert des **column_set** enthalten, der auf dieselbe Art und Weise wie eine XML-Spalte exportiert wird, d. h. als **varbinary(max)** , wenn er als Binärtyp gebunden ist, oder als **nvarchar(max)** , wenn er als **char**-Typ oder **wchar**-Typ gebunden ist. Beim Importieren muss der **column_set**-Wert dem Schema des **column_set** entsprechen.  
   
  Bei **queryout**-Vorgängen gibt es keine Änderungen in der Behandlung von Spalten, auf die explizit verwiesen wird. **column_set**-Spalten weisen das gleiche Verhalten auf wie XML-Spalten, und die Sparseeigenschaft hat keine Auswirkungen auf die Behandlung von benannten Sparsespalten.  
   

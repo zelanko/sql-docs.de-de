@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: ecfd9c6b-7d29-41d8-af2e-89d7fb9a1d83
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1b31e142760e6799b743ab8771cc52c068d1b3e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 468de09dbbf49b14f1794de5956df7e6125407fa
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243875"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461981"
 ---
 # <a name="using-multiple-active-result-sets-mars-in-sql-server-native-client"></a>Verwenden von Multiple Active Result Sets (Mars) in SQL Server Native Client
 
@@ -59,7 +59,7 @@ ms.locfileid: "87243875"
   
  MARS ermöglicht die verschachtelte Ausführung mehrerer Anforderungen innerhalb einer einzelnen Verbindung. Das bedeutet, dass innerhalb der Ausführung eines Batches eine weitere Anforderung ausgeführt werden kann. Beachten Sie jedoch, dass MARS mit Blick auf Interleaving, nicht die parallele Ausführung definiert ist.  
   
- Die MARS-Infrastruktur ermöglicht die verschachtelte Ausführung mehrerer Batches, die Ausführung kann jedoch nur an genau definierten Punkten gewechselt werden. Außerdem müssen die meisten Anweisungen innerhalb eines Batches atomar ausgeführt werden. Anweisungen, die Zeilen an den Client zurückgeben (manchmal auch als *Yield Points*bezeichnet), dürfen die Ausführung vor dem Abschluss überarbeiten, während Zeilen an den Client gesendet werden, z. b.:  
+ Die MARS-Infrastruktur ermöglicht die verschachtelte Ausführung mehrerer Batches, die Ausführung kann jedoch nur an genau definierten Punkten gewechselt werden. Außerdem müssen die meisten Anweisungen innerhalb eines Batches atomar ausgeführt werden. Anweisungen, die Zeilen an den Client zurückgeben (manchmal auch als *Yield Points* bezeichnet), dürfen die Ausführung vor dem Abschluss überarbeiten, während Zeilen an den Client gesendet werden, z. b.:  
   
 -   SELECT  
   

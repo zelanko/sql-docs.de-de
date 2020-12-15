@@ -15,13 +15,13 @@ helpviewer_keywords:
 - sp_rxPredict procedure
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 625157885fa4494f4d8c70da5bea8ac70472d3b5
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 55514f89487a06e16413f199f744013d2c4f8c90
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809482"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461501"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE [SQL Server 2016 Windows only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -135,7 +135,7 @@ EXEC sp_rxPredict @model = @model,
 @inputData = N'SELECT * FROM data';
 ```
 
-Zusätzlich zu einer gültigen SQL-Abfrage müssen die Eingabedaten in * \@ inputData* Spalten enthalten, die mit den Spalten im gespeicherten Modell kompatibel sind.
+Zusätzlich zu einer gültigen SQL-Abfrage müssen die Eingabedaten in *\@ inputData* Spalten enthalten, die mit den Spalten im gespeicherten Modell kompatibel sind.
 
 `sp_rxPredict` unterstützt nur die folgenden .net-Spaltentypen: Double, float, Short, ushort, Long, ULONG und String. Möglicherweise müssen Sie nicht unterstützte Typen in ihren Eingabedaten herausfiltern, bevor Sie Sie für die Echtzeitbewertung verwenden. 
 

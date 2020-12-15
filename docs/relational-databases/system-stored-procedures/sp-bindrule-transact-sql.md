@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7355f421701c5eb24da58dec5037b5fb1b8317c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0616ed8334665f1c6226ad8bd28ed3e968a04be7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548310"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462721"
 ---
 # <a name="sp_bindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -68,7 +68,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
   
  Die Regel tritt in Kraft, wenn eine INSERT-Anweisung ausgeführt wird, nicht aber beim Binden. Sie können eine Zeichen Regel an eine Spalte des **numerischen** Datentyps binden, obwohl ein solcher Einfügevorgang ungültig ist.  
   
- Vorhandene Spalten des Alias Datentyps erben die neue Regel, es sei denn, *futureonly_flag* als **futureonly**angegeben. Neue Spalten, die mit dem Aliasdatentyp definiert sind, erben immer die Regel. Wenn jedoch die ALTER COLUMN-Klausel einer ALTER TABLE-Anweisung den Datentyp einer Spalte in einen Aliasdatentyp ändert, der an eine Regel gebunden ist, wird diese Regel nicht an die Spalte vererbt. Die Regel muss mithilfe **sp_bindrule**an die Spalte gebunden werden.  
+ Vorhandene Spalten des Alias Datentyps erben die neue Regel, es sei denn, *futureonly_flag* als **futureonly** angegeben. Neue Spalten, die mit dem Aliasdatentyp definiert sind, erben immer die Regel. Wenn jedoch die ALTER COLUMN-Klausel einer ALTER TABLE-Anweisung den Datentyp einer Spalte in einen Aliasdatentyp ändert, der an eine Regel gebunden ist, wird diese Regel nicht an die Spalte vererbt. Die Regel muss mithilfe **sp_bindrule** an die Spalte gebunden werden.  
   
  Wenn Sie eine Regel an eine Spalte binden, werden der Tabelle **sys. Columns** zugehörige Informationen hinzugefügt. Wenn Sie eine Regel an einen Alias Datentyp binden, werden der Tabelle **sys. types** zugehörige Informationen hinzugefügt.  
   
@@ -87,7 +87,7 @@ EXEC sp_bindrule 'today', 'HumanResources.Employee.HireDate';
 ```  
   
 ### <a name="b-binding-a-rule-to-an-alias-data-type"></a>B. Binden einer Regel an einen Aliasdatentyp  
- Unter der Annahme, eine Regel namens `rule_ssn` und ein Aliasdatentyp namens `ssn` sind vorhanden, wird in diesem Beispiel `rule_ssn` an `ssn` gebunden. Alle Spalten vom Datentyp `ssn` erben in einer CREATE TABLE-Anweisung die Regel `rule_ssn`. Vorhandene Spalten vom Typ `ssn` Erben auch die `rule_ssn` Regel, sofern nicht **futureonly** für *futureonly_flag*angegeben ist oder `ssn` eine Regel direkt an Sie gebunden ist. An Spalten gebundene Regeln haben immer Vorrang vor den an Datentypen gebundenen Regeln.  
+ Unter der Annahme, eine Regel namens `rule_ssn` und ein Aliasdatentyp namens `ssn` sind vorhanden, wird in diesem Beispiel `rule_ssn` an `ssn` gebunden. Alle Spalten vom Datentyp `ssn` erben in einer CREATE TABLE-Anweisung die Regel `rule_ssn`. Vorhandene Spalten vom Typ `ssn` Erben auch die `rule_ssn` Regel, sofern nicht **futureonly** für *futureonly_flag* angegeben ist oder `ssn` eine Regel direkt an Sie gebunden ist. An Spalten gebundene Regeln haben immer Vorrang vor den an Datentypen gebundenen Regeln.  
   
 ```  
 USE master;  

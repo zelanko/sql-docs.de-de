@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1fd58cef1e99a1c7648ea8ad73657b7dc02be01
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c87ba11d6a38b69c63839db9b918fe44dbca2641
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006013"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97444273"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,13 +49,13 @@ ms.locfileid: "92006013"
 |**lob_reserved_page_count**|**bigint**|Gesamtanzahl der Seiten, die zum Speichern und Verwalten von Spalten vom Typ **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** und **xml** außerhalb von Zeilen in der Partition reserviert sind, unabhängig davon, ob die Seiten verwendet werden. IAM-Seiten sind eingeschlossen.<br /><br /> Gesamtzahl von LOBs, die zum Speichern und Verwalten eines columnstore-Index in der Partition reserviert wurden.|  
 |**row_overflow_used_page_count**|**bigint**|Anzahl der Seiten, die zum Speichern und Verwalten von Zeilenüberlaufspalten vom Typ **varchar**, **nvarchar**, **varbinary** und **sql_variant** in der Partition verwendet werden. IAM-Seiten sind eingeschlossen.<br /><br /> Immer 0 für einen columnstore-Index.|  
 |**row_overflow_reserved_page_count**|**bigint**|Gesamtanzahl der Seiten, die zum Speichern und Verwalten von Zeilenüberlaufspalten vom Typ **varchar**, **nvarchar**, **varbinary** und **sql_variant** in der Partition reserviert sind, unabhängig davon, ob die Seiten verwendet werden. IAM-Seiten sind eingeschlossen.<br /><br /> Immer 0 für einen columnstore-Index.|  
-|**used_page_count**|**bigint**|Gesamtanzahl der für die Partition verwendeten Seiten. Wird als **in_row_used_page_count**  +  **lob_used_page_count**  +  **row_overflow_used_page_count**berechnet.|  
-|**reserved_page_count**|**bigint**|Gesamtanzahl der für die Partition reservierten Seiten. Wird als **in_row_reserved_page_count**  +  **lob_reserved_page_count**  +  **row_overflow_reserved_page_count**berechnet.|  
+|**used_page_count**|**bigint**|Gesamtanzahl der für die Partition verwendeten Seiten. Wird als **in_row_used_page_count**  +  **lob_used_page_count**  +  **row_overflow_used_page_count** berechnet.|  
+|**reserved_page_count**|**bigint**|Gesamtanzahl der für die Partition reservierten Seiten. Wird als **in_row_reserved_page_count**  +  **lob_reserved_page_count**  +  **row_overflow_reserved_page_count** berechnet.|  
 |**row_count**|**bigint**|Die ungefähre Anzahl von Zeilen in dieser Partition.|  
 |**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
 |**distribution_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Die eindeutige, der Verteilung zugeordnete numerische ID.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sys.dm_db_partition_stats** zeigt Informationen zu dem Bereich an, der zum Speichern und Verwalten von LOB-Daten in Zeilen und von Zeilenüberlaufdaten für alle Partitionen in einer Datenbank verwendet wird. Es wird eine Zeile pro Partition angezeigt.  
   
  Die Zahlen, auf denen die Ausgabe basiert, werden im Arbeitsspeicher zwischengespeichert oder auf einem Datenträger in unterschiedlichen Systemtabellen gespeichert.  

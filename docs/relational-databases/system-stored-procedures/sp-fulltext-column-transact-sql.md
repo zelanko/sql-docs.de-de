@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55f25dad90002ea50ba797a7960f22cfee5055c8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: aadc6c5b5548b2fccb3c37fdc9eb06a9baf69dcc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543370"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440532"
 ---
 # <a name="sp_fulltext_column-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -50,24 +50,24 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 ## <a name="arguments"></a>Argumente  
 `[ @tabname = ] 'qualified_table_name'` Ein ein-oder zweiteilige Tabellenname. Die Tabelle muss in der aktuellen Datenbank vorhanden sein. Die Tabelle muss über einen Volltextindex verfügen. *qualified_table_name* ist vom Datentyp **nvarchar(517)** und hat keinen Standardwert.  
   
-`[ @colname = ] 'column_name'` Der Name einer Spalte in *qualified_table_name*. Die Spalte muss eine Zeichen-, eine **varbinary(max)** - oder eine **image** -Spalte sein und darf keine berechnete Spalte sein. *column_name* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @colname = ] 'column_name'` Der Name einer Spalte in *qualified_table_name*. Die Spalte muss eine Zeichen-, eine **varbinary(max)** - oder eine **image** -Spalte sein und darf keine berechnete Spalte sein. *column_name* ist vom Datentyp **sysname** und hat keinen Standardwert.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann Volltextindizes von Textdaten erstellen, die in Spalten mit dem **varbinary (max)** -oder **Image** -Datentyp gespeichert sind. Bilder und Abbildungen werden nicht indiziert.  
   
 `[ @action = ] 'action'` Die auszuführende Aktion. *action* ist vom Datentyp **varchar(20)** und hat keinen Standardwert. Die folgenden Werte sind möglich:  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**add**|Fügt dem inaktiven Volltextindex der Tabelle den *column_name* von *qualified_table_name* hinzu. Durch diese Aktion wird die Volltextindizierung für die Spalte aktiviert.|  
 |**Dropdown**|Entfernt *column_name* aus dem inaktiven Volltextindex von *qualified_table_name* .|  
   
-`[ @language = ] 'language_term'` Die Sprache der in der Spalte gespeicherten Daten. Eine Liste der Sprachen, die in enthalten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind, finden Sie unter [sys. fulltext_languages &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
+`[ @language = ] 'language_term'` Die Sprache der in der Spalte gespeicherten Daten. Eine Liste der Sprachen, die in enthalten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind, finden Sie unter [sys.fulltext_languages &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
   
 > [!NOTE]  
 >  Verwenden Sie 'Neutral', wenn eine Spalte Daten in mehreren Sprachen oder in einer nicht unterstützten Sprache enthält. Die Standardsprache wird mithilfe der Konfigurationsoption 'default full-text language' angegeben.  
   
-`[ @type_colname = ] 'type_column_name'` Der Name einer Spalte in *qualified_table_name* , die den Dokumenttyp *column_name*enthält. Diese Spalte muss vom Typ **char**, **nchar**, **varchar**oder **nvarchar**sein. Wird nur verwendet, wenn der Datentyp von *column_name***varbinary(max)** oder **image**ist. *type_column_name* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @type_colname = ] 'type_column_name'` Der Name einer Spalte in *qualified_table_name* , die den Dokumenttyp *column_name* enthält. Diese Spalte muss vom Typ **char**, **nchar**, **varchar** oder **nvarchar** sein. Wird nur verwendet, wenn der Datentyp von *column_name***varbinary(max)** oder **image** ist. *type_column_name* ist vom Datentyp **sysname** und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  

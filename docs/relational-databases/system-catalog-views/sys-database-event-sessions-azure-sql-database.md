@@ -1,6 +1,6 @@
 ---
 description: sys.database_event_sessions (Azure SQL-Datenbank)
-title: sys. database_event_sessions (Azure SQL-Datenbank) | Microsoft-Dokumentation
+title: sys.database_event_sessions (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.service: sql-database
@@ -9,13 +9,13 @@ ms.topic: language-reference
 ms.assetid: 02c2cd71-d35e-4d4c-b844-92b240f768f4
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a07eab4d6636acaecda5aa2be495c3db70156822
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: b5307138766f1c05aa084e38deeaf07feff2c635
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537414"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97458528"
 ---
 # <a name="sysdatabase_event_sessions-azure-sql-database"></a>sys.database_event_sessions (Azure SQL-Datenbank)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "89537414"
 |-|  
 |**Gilt für**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] und für beliebige spätere Versionen.|  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|Die eindeutige ID der Ereignissitzung. Lässt keine NULL-Werte zu.|  
 |name|**sysname**|Der benutzerdefinierte Name zum Identifizieren der Ereignissitzung. der Name ist eindeutig. Lässt keine NULL-Werte zu.|  

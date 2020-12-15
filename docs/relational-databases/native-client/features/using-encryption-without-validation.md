@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: f4c63206-80bb-4d31-84ae-ccfcd563effa
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e22fcf286b0f1d336eebdbc5726af7b2c9f15ff0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 09cccfb889bb2eae2b80c2c466eaed1a96520be8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246727"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462001"
 ---
 # <a name="using-encryption-without-validation-in-sql-server-native-client"></a>Verwenden von Verschlüsselung ohne Überprüfung in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "87246727"
 
 Bei selbstsignierten Zertifikaten kann die Sicherheit nicht garantiert werden. Der verschlüsselte Handshake basiert auf dem Windows NT-LAN-Manager (NTLM). Sie sollten für eine sichere Konnektivität unbedingt ein verifizierbares Zertifikat für SQL Server bereitstellen. Transport Layer Security (TLS) kann nur mit einer Zertifikatüberprüfung gesichert werden.
 
-Anwendungen erfordern möglicherweise auch die Verschlüsselung des gesamten Netzwerkdatenverkehrs mit Verbindungszeichenfolgenschlüsselwörtern oder Verbindungseigenschaften. Die Schlüsselwörter sind "verschlüsseln" für ODBC und OLE DB, wenn eine Anbieter Zeichenfolge mit **IDBInitialize:: Initialize**verwendet wird, oder "Use Encryption for Data" für ADO und OLE DB, wenn eine Initialisierungs Zeichenfolge mit " **IDataInitialize**" verwendet wird. Dies kann auch vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Konfigurations-Manager mithilfe der Option **Protokollverschlüsselung erzwingen** konfiguriert werden, und indem der Client so konfiguriert wird, dass er verschlüsselte Verbindungen anfordert. Standardmäßig ist für die Verschlüsselung des Netzwerkverkehrs für eine Verbindung die Bereitstellung eines Zertifikats auf dem Server erforderlich. Wenn Sie festlegen, dass Ihr Client dem Zertifikat auf dem Server vertraut, werden Sie möglicherweise anfällig für Man-in-the-Middle-Angriffe. Wenn Sie ein verifizierbares Zertifikat auf dem Server bereitstellen, sollten Sie die Vertrauenseinstellungen des Clients für das Zertifikat in FALSE ändern.
+Anwendungen erfordern möglicherweise auch die Verschlüsselung des gesamten Netzwerkdatenverkehrs mit Verbindungszeichenfolgenschlüsselwörtern oder Verbindungseigenschaften. Die Schlüsselwörter sind "verschlüsseln" für ODBC und OLE DB, wenn eine Anbieter Zeichenfolge mit **IDBInitialize:: Initialize** verwendet wird, oder "Use Encryption for Data" für ADO und OLE DB, wenn eine Initialisierungs Zeichenfolge mit " **IDataInitialize**" verwendet wird. Dies kann auch vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Konfigurations-Manager mithilfe der Option **Protokollverschlüsselung erzwingen** konfiguriert werden, und indem der Client so konfiguriert wird, dass er verschlüsselte Verbindungen anfordert. Standardmäßig ist für die Verschlüsselung des Netzwerkverkehrs für eine Verbindung die Bereitstellung eines Zertifikats auf dem Server erforderlich. Wenn Sie festlegen, dass Ihr Client dem Zertifikat auf dem Server vertraut, werden Sie möglicherweise anfällig für Man-in-the-Middle-Angriffe. Wenn Sie ein verifizierbares Zertifikat auf dem Server bereitstellen, sollten Sie die Vertrauenseinstellungen des Clients für das Zertifikat in FALSE ändern.
 
 Weitere Informationen zu Schlüsselwörtern für Verbindungs Zeichenfolgen finden [Sie unter Verwenden von Schlüssel SQL Server Native Client Wörtern für Verbindungs Zeichenfolgen](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   
@@ -41,7 +41,7 @@ Weitere Informationen zu Schlüsselwörtern für Verbindungs Zeichenfolgen finde
   
 |Protokollverschlüsselung erzwingen - Clienteinstellung|Dem Serverzertifikat vertrauen|Verbindungszeichenfolge-/Verbindungsattribut 'Verschlüsseln/Verschlüsselung für Daten verwenden'|Verbindungszeichenfolge/Verbindungsattribut 'Dem Serverzertifikat vertrauen'|Ergebnis|  
 |----------------------------------------------|---------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------|------------|  
-|Nein|–|Nein (Standard)|Wird ignoriert.|Keine Verschlüsselung.|  
+|Nein|N/V|Nein (Standard)|Wird ignoriert.|Keine Verschlüsselung.|  
 |Nein|–|Ja|Nein (Standard)|Eine Verschlüsselung findet nur statt, wenn ein überprüfbares Serverzertifikat vorliegt, anderenfalls schlägt der Verbindungsversuch fehl.|  
 |Nein|–|Ja|Ja|Verschlüsselung wird immer durchgeführt, es wird jedoch z. B. ein selbstsigniertes Serverzertifikat verwendet.|  
 |Ja|Nein|Wird ignoriert.|Wird ignoriert.|Eine Verschlüsselung findet nur statt, wenn ein überprüfbares Serverzertifikat vorliegt, anderenfalls schlägt der Verbindungsversuch fehl.|  

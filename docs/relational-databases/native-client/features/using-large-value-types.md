@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40196c8ec895bbf6bfc8e092e82ca8704d4f803e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dce3adf92772a69875a644a2dc23344b6b139f51
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243901"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461991"
 ---
 # <a name="using-large-value-types-in-sql-server-native-client"></a>Verwenden von Typen mit umfangreichen Werten in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] war für Datentypen mit umfangreichen Werten eine besondere Behandlung erforderlich. Datentypen mit hohen Werten überschreiten eine maximale Zeilengröße von 8 KB. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]in wurde ein **Max** -Spezifizierer für die Datentypen **varchar**, **nvarchar** und **varbinary** eingeführt, um das Speichern von Werten bis zu 2 ^ 31-1 Bytes zuzulassen. Tabellen Spalten und- [!INCLUDE[tsql](../../../includes/tsql-md.md)] Variablen können die Datentypen " **varchar (max)**", " **nvarchar (max)** " oder " **varbinary (max)** " angeben.  
+  Vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] war für Datentypen mit umfangreichen Werten eine besondere Behandlung erforderlich. Datentypen mit hohen Werten überschreiten eine maximale Zeilengröße von 8 KB. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] in wurde ein **Max** -Spezifizierer für die Datentypen **varchar**, **nvarchar** und **varbinary** eingeführt, um das Speichern von Werten bis zu 2 ^ 31-1 Bytes zuzulassen. Tabellen Spalten und- [!INCLUDE[tsql](../../../includes/tsql-md.md)] Variablen können die Datentypen " **varchar (max)**", " **nvarchar (max)** " oder " **varbinary (max)** " angeben.  
   
 > [!NOTE]  
 >  Datentypen mit umfangreichen Werten können eine maximale Größe zwischen 1 und 8 KB haben oder ohne Größenbeschränkung festgelegt werden.  
@@ -701,7 +701,7 @@ _ExitProcessResultSet:
   
 -   Der Wert "Unlimited", der im Fall einer **varchar (max)** -Spalte 0 (null) ist.  
   
- Die Standard Konvertierungsregeln gelten für eine **varchar (max)** -Spalte. Dies bedeutet, dass jede Konvertierung, die für eine **varchar (** 2000 **)** -Spalte gültig ist, auch für eine **varchar (max)** -Spalte gültig ist. Das Gleiche gilt für **nvarchar(max)**- und **varbinary(max)**-Spalten.  
+ Die Standard Konvertierungsregeln gelten für eine **varchar (max)** -Spalte. Dies bedeutet, dass jede Konvertierung, die für eine **varchar (** 2000 **)** -Spalte gültig ist, auch für eine **varchar (max)** -Spalte gültig ist. Das Gleiche gilt für **nvarchar(max)** - und **varbinary(max)** -Spalten.  
   
  Die folgende Liste enthält ODBC API-Funktionen, die für die Arbeit mit Datentypen mit umfangreichen Werten erweitert wurden:  
   

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 79995dc681db76f3de5b6d6af200f6f57f087464
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b3ccfa642b98165dcbdad57adac38f300063ccdb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989934"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462761"
 ---
 # <a name="sp_autostats-transact-sql"></a>sp_autostats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +57,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
 `[ @indname = ] 'statistics_name'` Der Name der Statistik, in der die AUTO_UPDATE_STATISTICS Option angezeigt oder aktualisiert werden soll. Um die Statistik für einen Index anzuzeigen, können Sie den Namen des Indexes verwenden. Ein Index und das dazugehörige Statistikobjekt verfügen über den gleichen Namen.  
   
- *statistics_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+ *statistics_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -75,13 +75,13 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  Das Resultset für eine Tabelle oder indizierte Sicht enthält Statistiken, die für Indizes erstellt wurden, einspaltige Statistiken, die mit der Option AUTO_CREATE_STATISTICS generiert wurden, und Statistiken, die mit der [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) -Anweisung erstellt  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn der angegebene Index deaktiviert ist oder die angegebene Tabelle einen deaktivierten gruppierten Index enthält, wird eine Fehlermeldung angezeigt.  
   
  AUTO_UPDATE_STATISTICS ist für speicheroptimierte Tabellen immer auf OFF festgelegt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Zum Ändern der AUTO_UPDATE_STATISTICS Option ist die Mitgliedschaft in der **db_owner** Fixed-Daten Bank Rolle oder die ALTER-Berechtigung für *table_name*erforderlich. Zum Anzeigen der Option AUTO_UPDATE_STATISTICS ist die Mitgliedschaft in der **Public** -Rolle erforderlich.  
+ Zum Ändern der AUTO_UPDATE_STATISTICS Option ist die Mitgliedschaft in der **db_owner** Fixed-Daten Bank Rolle oder die ALTER-Berechtigung für *table_name* erforderlich. Zum Anzeigen der Option AUTO_UPDATE_STATISTICS ist die Mitgliedschaft in der **Public** -Rolle erforderlich.  
   
 ## <a name="examples"></a>Beispiele  
   

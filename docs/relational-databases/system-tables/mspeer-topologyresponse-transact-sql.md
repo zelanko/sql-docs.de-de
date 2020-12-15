@@ -18,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: 1bc5c0c6-c432-405c-89fd-e953d173a247
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c80cfd8657671f725637a8d1c667c733bc1f1d1f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 82f44d74f896ee1d7b394d7e5dc8102aa7726856
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538326"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464571"
 ---
 # <a name="mspeer_topologyresponse-transact-sql"></a>MSpeer_topologyresponse (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Wird in der Peer-zu-Peer-Replikation verwendet, um die Antwort jedes Knotens auf eine Topologiestatusanforderung zu speichern. Diese Tabelle wird in der Veröffentlichungsdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |request_id|**int**|Identifiziert einen Eintrag für eine Topologiestatusanforderung in der [Mspeer_topologyrequest](../../relational-databases/system-tables/mspeer-topologyrequest-transact-sql.md) Tabelle.|  
 |peer|**sysname**|Name der Serverinstanz, die die Antwort generiert hat.|  

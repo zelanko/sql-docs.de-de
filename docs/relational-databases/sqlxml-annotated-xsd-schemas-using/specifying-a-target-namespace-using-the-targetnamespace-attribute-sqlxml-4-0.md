@@ -20,13 +20,13 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bfa6234aae5e2744a88c4fcfb158575cb07000f5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 50eda94d40b819a5cd1fd51855232a53ecfc93db
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764902"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461741"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Angeben eines Zielnamespaces mit dem 'targetNamespace'-Attribut (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "85764902"
  Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen zum Ausführen von SQLXML-Beispielen](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-a-target-namespace"></a>A. Angeben eines Zielnamespaces  
- Das folgende XSD-Schema gibt einen Ziel Namespace mit dem **xsd: targetNamespace** -Attribut an. Das Schema legt auch die Attributwerte **Element Form default** und **attributeFormDefault** auf **"nicht qualifiziert"** (der Standardwert für diese Attribute) fest. Dies ist eine globale Deklaration und wirkt sich auf alle lokalen Elemente ( **\<Order>** im Schema) und Attribute (**CustomerID**, **ContactName**und **OrderID** im Schema) aus.  
+ Das folgende XSD-Schema gibt einen Ziel Namespace mit dem **xsd: targetNamespace** -Attribut an. Das Schema legt auch die Attributwerte **Element Form default** und **attributeFormDefault** auf **"nicht qualifiziert"** (der Standardwert für diese Attribute) fest. Dies ist eine globale Deklaration und wirkt sich auf alle lokalen Elemente ( **\<Order>** im Schema) und Attribute (**CustomerID**, **ContactName** und **OrderID** im Schema) aus.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -103,7 +103,7 @@ ms.locfileid: "85764902"
   
  Dieses Instanzdokument definiert den urn: MyNamespace-Namespace und ordnet ihm ein Präfix (y0) zu. Das-Präfix wird nur auf das **\<Customer>** globale-Element angewendet. (Das-Element ist Global, da es als untergeordnetes Element des- **\<xsd:schema>** Elements im Schema deklariert ist.)  
   
- Das-Präfix wird nicht auf die lokalen Elemente und Attribute angewendet, da der Wert der Attribute **Element Form default** und **attributeFormDefault** im Schema auf **"nicht qualifiziert"** festgelegt ist. Beachten Sie, dass das- **\<Order>** Element lokal ist, da seine Deklaration als untergeordnetes Element des-Elements angezeigt wird **\<complexType>** , das das **\<CustomerType>** Element definiert. Ebenso sind die Attribute (**CustomerID**, **OrderID**und **ContactName**) lokal und nicht global.  
+ Das-Präfix wird nicht auf die lokalen Elemente und Attribute angewendet, da der Wert der Attribute **Element Form default** und **attributeFormDefault** im Schema auf **"nicht qualifiziert"** festgelegt ist. Beachten Sie, dass das- **\<Order>** Element lokal ist, da seine Deklaration als untergeordnetes Element des-Elements angezeigt wird **\<complexType>** , das das **\<CustomerType>** Element definiert. Ebenso sind die Attribute (**CustomerID**, **OrderID** und **ContactName**) lokal und nicht global.  
   
 ##### <a name="to-create-a-working-sample-of-this-schema"></a>So erstellen Sie ein funktionstüchtiges Beispiel für dieses Schema  
   
