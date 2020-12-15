@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 7bf3928bfb21d34d0f60e6c52be8dae43621e4bd
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 526f7c7bea8d7ed1e7499649d929f6c732ab07a3
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766739"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489680"
 ---
 # <a name="master-database---parallel-data-warehouse"></a>Master Datenbank-parallele Data Warehouse
 In der SQL Server PDW Master-Datenbank werden Anmelde Informationen auf Geräteebene und der Daten Bank Katalog gespeichert. Es handelt sich um eine SQL Server Master-Datenbank, die sich auf dem Steuer Knoten befindet. Daher bietet es eine ähnliche Funktionalität wie SQL Server PDW, wie die Master-SQL Server bereitstellt.  
@@ -38,13 +38,13 @@ Folgendes ist *nicht möglich:*
   
 -   Ändern Sie die Berechtigungen für Master.  
   
--   Führen Sie **DBCC shrinklog**aus.  
+-   Führen Sie **DBCC shrinklog** aus.  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |Aufgabe|Beschreibung|  
 |--------|---------------|  
-|Erstellen Sie eine vollständige Sicherung der Master-Datei.|Beispiel:<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />Weitere Informationen finden Sie unter [Backup Database](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016).|  
+|Erstellen Sie eine vollständige Sicherung der Master-Datei.|Beispiel:<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />Weitere Informationen finden Sie unter [Backup Database](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true).|  
 |Wiederherstellen der Masterdatenbank|Verwenden Sie zum Wiederherstellen der Master-Datenbank im Configuration Manager Tool die Seite [Master Datenbank wiederherstellen](restore-the-master-database.md) .|  
 |Daten Bank Katalog Informationen anzeigen.|`SELECT * FROM master.sys.databases;`|  
 |Systemweite Anmelde-und Berechtigungsinformationen anzeigen.|`SELECT * FROM master.sys.server_permissions;`<br /><br />`SELECT * FROM master.sys.server_principals;`<br /><br />`SELECT * FROM master.sys.sql_logins;`|  

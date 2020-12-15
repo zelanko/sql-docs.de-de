@@ -1,5 +1,5 @@
 ---
-title: "\"dwloader-Befehlszeilen Lade Modul"
+title: "\"dwloader-Command-Line Lade Modul"
 description: "\"dwloader ist ein Befehlszeilen Tool für parallele Data Warehouse (PDW), das Tabellenzeilen in einem Massen Vorgang in eine vorhandene Tabelle lädt."
 author: mzaman1
 ms.prod: sql
@@ -9,15 +9,15 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 7dd0ccf960b53b3cd1b474f61c60a58ff9b0a2c6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3635aff3c3dad371c969acd3d72b2fb738748ecc
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767049"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489690"
 ---
-# <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>"dwloader-Befehlszeilen Lade Modul für parallele Data Warehouse
-**"dwloader** ist ein Befehlszeilen Tool für parallele Data Warehouse (PDW), das Tabellenzeilen in einem Massen Vorgang in eine vorhandene Tabelle lädt. Beim Laden von Zeilen können Sie alle Zeilen am Ende der Tabelle (*Anfügen* -oder *vom fastappend Lademodus-Modus*) hinzufügen, neue Zeilen anfügen und vorhandene Zeilen aktualisieren (*Upsert-Modus*) oder alle vorhandenen Zeilen vor dem Laden löschen und dann alle Zeilen in eine leere Tabelle (erneuten*laden Modus*) einfügen.  
+# <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>"dwloader Command-Line Loader für parallele Data Warehouse
+**"dwloader** ist ein Befehlszeilen Tool für parallele Data Warehouse (PDW), das Tabellenzeilen in einem Massen Vorgang in eine vorhandene Tabelle lädt. Beim Laden von Zeilen können Sie alle Zeilen am Ende der Tabelle (*Anfügen* -oder *vom fastappend Lademodus-Modus*) hinzufügen, neue Zeilen anfügen und vorhandene Zeilen aktualisieren (*Upsert-Modus*) oder alle vorhandenen Zeilen vor dem Laden löschen und dann alle Zeilen in eine leere Tabelle (erneuten *laden Modus*) einfügen.  
   
 **Prozess zum Laden von Daten**  
   
@@ -41,7 +41,7 @@ ms.locfileid: "88767049"
     See [Install dwloader Command-Line Loader &#40;SQL Server PDW&#41;](install-dwloader-command-line-loader-sql-server-pdw.md). 
 --> 
   
-5.  Führen Sie **"dwloader**aus.  
+5.  Führen Sie **"dwloader** aus.  
   
     Melden Sie sich beim Lade Server an, und führen Sie die ausführbare **dwloader.exe** mit den entsprechenden Befehlszeilenoptionen aus.  
   
@@ -134,7 +134,7 @@ For information about configuring Windows Authentication, see [Security - Config
 -->
   
 **-f** *parameter_file_name*  
-Verwenden Sie eine Parameterdatei ( *parameter_file_name*) anstelle von Befehlszeilen Parametern. *parameter_file_name* können jeden beliebigen Befehlszeilenparameter mit Ausnahme von *user_name* und *Kennwort*enthalten. Wenn ein Parameter in der Befehlszeile und in der Parameterdatei angegeben ist, überschreibt die Befehlszeile den file-Parameter.  
+Verwenden Sie eine Parameterdatei ( *parameter_file_name*) anstelle von Befehlszeilen Parametern. *parameter_file_name* können jeden beliebigen Befehlszeilenparameter mit Ausnahme von *user_name* und *Kennwort* enthalten. Wenn ein Parameter in der Befehlszeile und in der Parameterdatei angegeben ist, überschreibt die Befehlszeile den file-Parameter.  
   
 Die Parameterdatei enthält einen Parameter ohne das **-** Präfix pro Zeile.  
   
@@ -147,7 +147,7 @@ Beispiele:
 **-S** *target_appliance*  
 Gibt die SQL Server PDW Appliance an, die die geladenen Daten empfängt.  
   
-*Bei Infiniband-Verbindungen*wird *target_appliance* als <Appliance-Name>-SQLCTL01 angegeben. Informationen zum Konfigurieren dieser benannten Verbindung finden Sie unter [Konfigurieren von InfiniBand-Netzwerkadaptern](configure-infiniband-network-adapters.md).  
+*Bei Infiniband-Verbindungen* wird *target_appliance* als <Appliance-Name>-SQLCTL01 angegeben. Informationen zum Konfigurieren dieser benannten Verbindung finden Sie unter [Konfigurieren von InfiniBand-Netzwerkadaptern](configure-infiniband-network-adapters.md).  
   
 Bei Ethernet-Verbindungen ist *target_appliance* die IP-Adresse für den Steuerelement Knoten Cluster.  
   
@@ -209,7 +209,7 @@ Beispiele:
 Wenn Ladefehler auftreten, speichert **"dwloader** die Zeile, die nicht geladen werden konnte, und die Fehlerbeschreibung in einer Datei mit dem Namen *load_failure_file_name*. Wenn diese Datei bereits vorhanden ist, wird die vorhandene Datei von "dwloader überschrieben. *load_failure_file_name* wird erstellt, wenn der erste Fehler auftritt. Wenn alle Zeilen erfolgreich geladen wurden, wird *load_failure_file_name* nicht erstellt.  
   
 **-FH** *number_header_rows*  
-Die Anzahl der Zeilen (Zeilen), die am Anfang *source_data_file_name*ignoriert werden sollen. Die Standardeinstellung ist 0.  
+Die Anzahl der Zeilen (Zeilen), die am Anfang *source_data_file_name* ignoriert werden sollen. Die Standardeinstellung ist 0.  
   
 <variable_length_column_options>  
 Die Optionen für eine *source_data_file_name* , die über Zeichen getrennte Spalten mit variabler Länge verfügt. Standardmäßig enthält *source_data_file_name* ASCII-Zeichen in Spalten variabler Länge.  
@@ -376,7 +376,7 @@ Wenn Sie z. b. "-D mm/dd/yyyy" angeben, erwartet "dwloader, dass alle Datums Ein
 Umfassendere Formatierungsinformationen finden Sie unter [Datentyp-Konvertierungsregeln für "dwloader](dwloader-data-type-conversion-rules.md).  
   
 **-dt** *datetime_format_file*  
-Jedes DateTime-Format wird in einer Datei mit dem Namen *datetime_format_file*angegeben. Im Gegensatz zu den Befehlszeilen Parametern dürfen Datei Parameter, die Leerzeichen enthalten, nicht in doppelte Anführungszeichen eingeschlossen werden. Das DateTime-Format kann beim Laden von Daten nicht geändert werden. Die Quell Datendatei und die zugehörige Spalte in der Ziel Tabelle müssen das gleiche Format aufweisen.  
+Jedes DateTime-Format wird in einer Datei mit dem Namen *datetime_format_file* angegeben. Im Gegensatz zu den Befehlszeilen Parametern dürfen Datei Parameter, die Leerzeichen enthalten, nicht in doppelte Anführungszeichen eingeschlossen werden. Das DateTime-Format kann beim Laden von Daten nicht geändert werden. Die Quell Datendatei und die zugehörige Spalte in der Ziel Tabelle müssen das gleiche Format aufweisen.  
   
 Jede Zeile enthält den Namen einer Spalte in der Ziel Tabelle und deren DateTime-Format.  
   
@@ -440,7 +440,7 @@ Der Standard *reject_value* ist 0 (null).
   
 Bei Verwendung mit dem-RT-Wert stoppt das Lade Modul die Last, wenn die abgelehnte Zeilen Anzahl reject_value überschreitet.  
   
-Wenn Sie mit einem Prozentsatz von-RT verwenden, berechnet das Lade Modul den Prozentsatz bei Intervallen (-RS-Option). Daher kann der Prozentsatz fehlerhafter Zeilen *reject_value*überschreiten.  
+Wenn Sie mit einem Prozentsatz von-RT verwenden, berechnet das Lade Modul den Prozentsatz bei Intervallen (-RS-Option). Daher kann der Prozentsatz fehlerhafter Zeilen *reject_value* überschreiten.  
   
 **-RS** *reject_sample_size*  
 Wird mit der `-rt percentage` Option verwendet, um die inkrementellen Überprüfungen anzugeben. Wenn reject_sample_size z. b. 1000 ist, berechnet das Lade Modul den Prozentsatz fehlerhafter Zeilen, nachdem versucht wurde, 1000 Zeilen zu laden. Der Prozentsatz der fehlerhaften Zeilen wird neu berechnet, nachdem versucht wurde, jede weitere 1000 Zeilen zu laden.  
@@ -462,11 +462,11 @@ Leere Zeichen folgen in NULL konvertieren. Standardmäßig werden diese Konverti
 **-m**  
 Multi-Transaction-Modus für die zweite Phase des Ladens verwenden; beim Laden von Daten aus der Stagingtabelle in eine verteilte Tabelle.  
   
-Mit **-m**führt SQL Server PDW Ladevorgänge parallel aus und führt Sie aus. Dies ist wesentlich schneller als der standardmäßige Lade Modus, aber nicht transaktionssicher.  
+Mit **-m** führt SQL Server PDW Ladevorgänge parallel aus und führt Sie aus. Dies ist wesentlich schneller als der standardmäßige Lade Modus, aber nicht transaktionssicher.  
   
-Ohne **-m**führt SQL Server PDW Lasten seriale über die Verteilungen innerhalb der einzelnen Computeknoten und gleichzeitig über die Computeknoten hinweg aus. Diese Methode ist langsamer als der multitransaktionsmodus, aber ist transaktionssicher.  
+Ohne **-m** führt SQL Server PDW Lasten seriale über die Verteilungen innerhalb der einzelnen Computeknoten und gleichzeitig über die Computeknoten hinweg aus. Diese Methode ist langsamer als der multitransaktionsmodus, aber ist transaktionssicher.  
   
-**-m** ist für *Anfügen*, *Upload*und *Upsert*optional.  
+**-m** ist für *Anfügen*, *Upload* und *Upsert* optional.  
   
 **-m** ist für fastappend erforderlich.  
   
@@ -490,7 +490,7 @@ Verfügbar mit Cu 7.4 Update, gibt die maximale Zeilenlänge (in Byte) an, die g
 ## <a name="return-code-values"></a>Rückgabecodewerte  
 0 (Erfolg) oder andere ganzzahlige Werte (Fehler)  
   
-Verwenden Sie in einem Befehlsfenster oder in einer Batchdatei, `errorlevel` um den Rückgabecode anzuzeigen. Zum Beispiel:  
+Verwenden Sie in einem Befehlsfenster oder in einer Batchdatei, `errorlevel` um den Rückgabecode anzuzeigen. Beispiel:  
   
 ```  
 dwloader  
@@ -528,7 +528,7 @@ Für geladene Daten ist möglicherweise mehr oder weniger Speicherplatz auf dem 
 Obwohl es sich bei **"dwloader** um einen Transaktionsprozess handelt und ein Rollback bei einem Fehler ordnungsgemäß ausgeführt wird, kann kein Rollback ausgeführt werden, sobald der Massen Ladevorgang erfolgreich abgeschlossen wurde. Um einen aktiven **"dwloader** -Prozess abzubrechen, geben Sie STRG + C ein.  
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
-Die Gesamtgröße aller gleichzeitig auftretenden Ladevorgänge muss kleiner als LOG_SIZE für die Datenbank sein, und es wird empfohlen, dass die Gesamtgröße aller gleichzeitigen Ladevorgänge kleiner als 50% der LOG_SIZE ist. Um diese Größenbeschränkung zu erreichen, können Sie große Lasten in mehrere Batches aufteilen. Weitere Informationen zu LOG_SIZE finden Sie unter [Create Database](../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016) .  
+Die Gesamtgröße aller gleichzeitig auftretenden Ladevorgänge muss kleiner als LOG_SIZE für die Datenbank sein, und es wird empfohlen, dass die Gesamtgröße aller gleichzeitigen Ladevorgänge kleiner als 50% der LOG_SIZE ist. Um diese Größenbeschränkung zu erreichen, können Sie große Lasten in mehrere Batches aufteilen. Weitere Informationen zu LOG_SIZE finden Sie unter [Create Database](../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true) .  
   
 Beim Laden mehrerer Dateien mit einem Load-Befehl werden alle abgelehnten Zeilen in dieselbe Ablehnungs Datei geschrieben. Die Ablehnungs Datei zeigt nicht an, welche Eingabedatei jede abgelehnte Zeile enthält.  
   
@@ -598,7 +598,7 @@ dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees
 ```  
   
 ### <a name="b-load-data-into-an-adventureworks-table"></a>B. Laden von Daten in eine AdventureWorks-Tabelle  
-Das folgende Beispiel ist Teil eines Batch Skripts, mit dem Daten in **AdventureWorksPDW2012**geladen werden.  Um das vollständige Skript anzuzeigen, öffnen Sie die Datei aw_create.bat, die im Lieferumfang des **AdventureWorksPDW2012** -Installationspakets enthalten ist. 
+Das folgende Beispiel ist Teil eines Batch Skripts, mit dem Daten in **AdventureWorksPDW2012** geladen werden.  Um das vollständige Skript anzuzeigen, öffnen Sie die Datei aw_create.bat, die im Lieferumfang des **AdventureWorksPDW2012** -Installationspakets enthalten ist. 
 
 <!-- Missing link
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
@@ -695,7 +695,7 @@ Beschreibung der Befehlszeilenparameter:
   
 -   *-r \r\n* gibt an, dass jede Zeile in DimAccount.txt mit einem Wagen Rücklauf und einem Zeilenvorschub Zeichen endet.  
   
--   *-U <login_name>-P <password> * Gibt den Anmelde Namen und das Kennwort für den Anmelde Namen an, der über Berechtigungen zum Ausführen der Last verfügt.  
+-   *-U <login_name>-P <password>* Gibt den Anmelde Namen und das Kennwort für den Anmelde Namen an, der über Berechtigungen zum Ausführen der Last verfügt.  
   
 
 <!-- MISSING LINK

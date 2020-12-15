@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 035273939e2141b8497b5b0c38762fd7b7d47564
-ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
+ms.openlocfilehash: 8d4de2aea0a9020a7f971f36dd011c435a3cec3d
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94947930"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489496"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Ermitteln der richtigen Azure SQL-Datenbank/verwaltete Instanz-SKU für Ihre lokale Datenbank
 
@@ -44,7 +44,7 @@ Im folgenden finden Sie Anweisungen zum Bestimmen der SKU-Empfehlungen und zum B
 - Stellen Sie sicher, dass auf Ihrem Computer [PowerShell Version 5,1](https://www.microsoft.com/download/details.aspx?id=54616) oder höher angegeben ist, die zum Ausführen aller Skripts erforderlich ist. Informationen dazu, wie Sie herausfinden, welche Version von PowerShell auf Ihrem Computer installiert ist, finden Sie im Artikel [herunterladen und Installieren von Windows PowerShell 5,1](/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
   > [!NOTE]
   > Zum Sammeln von Computer Informationen verwendet das datensammlungsskript das Get-WmiObject-Cmdlet, das in PowerShell 6 als veraltet markiert wurde. Zum Ausführen dieses Skripts in PowerShell 6 oder 7 müssen Sie die WMI-Cmdlets durch die neueren CIM-Cmdlets ersetzen.
-- Stellen Sie sicher, dass auf Ihrem Computer das Azure PowerShell-Modul installiert ist. Weitere Informationen finden Sie im Artikel [Installieren des Azure PowerShell Moduls](/powershell/azure/install-az-ps?view=azps-1.8.0).
+- Stellen Sie sicher, dass auf Ihrem Computer das Azure PowerShell-Modul installiert ist. Weitere Informationen finden Sie im Artikel [Installieren des Azure PowerShell Moduls](/powershell/azure/install-az-ps?view=azps-1.8.0&preserve-view=true).
 - Vergewissern Sie sich, dass die PowerShell-Datei **SkuRecommendationDataCollectionScript.ps1**, die für die Erfassung der Leistungsindikatoren erforderlich ist, im DMA-Ordner installiert ist.
 - Stellen Sie sicher, dass der Computer, auf dem Sie diesen Prozess ausführen, über Administrator Berechtigungen für den Computer verfügt, auf dem die Datenbanken gehostet werden.
 
@@ -239,4 +239,4 @@ Um Bereitstellungs Informationen einzugeben und Änderungen an den Empfehlungen 
 
 ## <a name="next-step"></a>Nächster Schritt
 
-- Eine komplette Liste der Befehle zum Ausführen von DMA über die CLI finden Sie im Artikel [Ausführen von Datenmigrations-Assistent von der Befehlszeile aus](./dma-commandline.md?view=sql-server-2017).
+- Eine komplette Liste der Befehle zum Ausführen von DMA über die CLI finden Sie im Artikel [Ausführen von Datenmigrations-Assistent von der Befehlszeile aus](./dma-commandline.md).

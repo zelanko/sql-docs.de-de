@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: f6215bac-ed3d-4c36-86d5-d56ffbc106aa
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0d98baf95cbc3efac8c5bf36b53b6e0d88097e3a
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5eb5e2ea9c7fc354ec414ecd95cd090f6cd406f1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810984"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485122"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  In der Tabelle werden die von **SQLGetInfo**zurückgegebenen Werte angezeigt. Diese Werte können je nach Versionsnummer des verbundenen Servers unterschiedlich sein.  
+  In der Tabelle werden die von **SQLGetInfo** zurückgegebenen Werte angezeigt. Diese Werte können je nach Versionsnummer des verbundenen Servers unterschiedlich sein.  
   
  **SQLGetInfo** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client unterscheidet sich von **SQLGetInfo** im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC-Treiber (SQLSRV32.DLL), wenn **SQLGetInfo** mit SQL_KEYWORDS und einer Pufferlänge von 0 aufgerufen wird.  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Native Client-Treiber gibt SQL_SUCCESS zurück, aber der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-ODBC-Treiber gibt SQL_SUCCESS_WITH_INFO zurück.  Wenn jedoch eine Pufferlänge ungleich NULL aufgerufen wird, die kleiner ist als die OUTPUT-Schlüsselwort Zeichenfolge, gibt **SQLGetInfo** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client SQL_SUCCESS_WITH_INFO und einen SQLSTATE 01004 zurück.  
   

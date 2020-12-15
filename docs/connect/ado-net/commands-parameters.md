@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 931c36619f5eaed0159ee04db3a08eb745634698
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: f899ad41e609874cbcc22c2a3ac959c41574e0eb
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96428277"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761528"
 ---
 # <a name="commands-and-parameters"></a>Befehle und Parameter
 
@@ -29,17 +29,22 @@ Sie können diese Objekte auch als Eigenschaften des Befehls konfigurieren. Sie 
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Ausführen eines Befehls](execute-command.md) Beschreibt das ADO.NET-Objekt `Command` sowie die Verwendung dieses Objekts, um Abfragen und Befehle für eine Datenquelle auszuführen.
+[Ausführen eines Befehls](execute-command.md)  
+Beschreibt das ADO.NET-`Command`-Objekt und dessen Verwendung zum Ausführen von Abfragen und Befehlen für eine Datenquelle.
 
-[Konfigurieren von Parametern](configure-parameters.md) Beschreibt die Verwendung von `Command`-Parametern, einschließlich Richtung, Datentypen und Parametersyntax.
+[Konfigurieren von Parametern](configure-parameters.md)  
+Beschreibt das Arbeiten mit `Command`-Parametern und enthält Informationen zur Richtungsangabe, zu den Datentypen und zur Parametersyntax.
 
 [Generieren von Befehlen mit CommandBuilder-Objekten](generate-commands-with-commandbuilders.md)  
 Beschreibt, wie mit den Befehls-Generatoren automatisch INSERT-, UPDATE- und DELETE-Befehle für einen `DataAdapter` generiert werden können, der über einen SELECT-Befehl für eine einzelne Tabelle verfügt.
 
-[Abrufen eines Einzelwerts aus einer Datenbank](obtain-single-value-from-database.md) Beschreibt die Verwendung der `ExecuteScalar`-Methode eines `Command`-Objekts, um einen Einzelwert aus einer Datenbankabfrage zurückzugeben.
+[Abrufen eines Einzelwerts aus einer Datenbank](obtain-single-value-from-database.md)  
+Beschreibt, wie mit der `ExecuteScalar`-Methode eines `Command`-Objekts ein einzelner Wert aus einer Datenbankabfrage zurückgegeben werden kann.
 
-[Verwenden von Befehlen zum Ändern von Daten](use-commands-to-modify-data.md) Beschreibt die Verwendung des Microsoft SqlClient-Datenanbieters für SQL Server, um gespeicherte Prozeduren oder DDL-Anweisungen (Data Definition Language, Datendefinitionssprache) auszuführen.
+[Verwenden von Befehlen zum Ändern von Daten](use-commands-to-modify-data.md)  
+Beschreibt die Verwendung des Microsoft SqlClient-Datenanbieters für SQL Server, um gespeicherte Prozeduren oder DDL-Anweisungen (Data Definition Language, Datendefinitionssprache) auszuführen
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Herstellen einer Verbindung mit Datenquellen](connecting-to-data-source.md)
+- [Microsoft ADO.NET für SQL Server](microsoft-ado-net-sql-server.md)

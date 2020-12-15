@@ -1,7 +1,7 @@
 ---
 title: Von Reporting Services unterstützte Datenquellen | Microsoft-Dokumentation
 description: In diesem Artikel erhalten Sie Informationen zu den verschiedenen von den Reporting Services unterstützten Datenquellen, einschließlich Microsoft SQL Server, Oracle und ODBC.
-ms.date: 05/21/2020
+ms.date: 11/10/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5b8fb15c2fb479471000fc9979c691761e4d81cd
-ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
+ms.openlocfilehash: 34d5618950a96fd275a334dd78d914ee7e036c2f
+ms.sourcegitcommit: dc858552f0c9314b3411e630bbd9bbce65f85913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93328561"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96788389"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Von Reporting Services unterstützte Datenquellen (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden Berichtsdaten von Datenquellen über eine modulare und erweiterbare Datenschicht abgerufen, für die Datenverarbeitungserweiterungen verwendet werden. Zum Abrufen von Berichtsdaten von einer Datenquelle müssen Sie eine Datenverarbeitungserweiterung auswählen, die den Typ der Datenquelle, die Version der für die Datenquelle ausgeführten Software und die Plattform der Datenquelle (32-Bit oder 64-Bit [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]) unterstützt.  
@@ -153,7 +153,7 @@ ms.locfileid: "93328561"
   
  In [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] ist der grafische, dieser Datenerweiterung zugeordnete Abfrage-Designer der relationale Abfrage-Designer und nicht der Visual Database Tool-Designer, den Sie mit dem Datenquellentyp **Microsoft SQL Server** verwenden.  
   
- [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] unterscheidet automatisch zwischen **Microsoft Azure[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** - und **Microsoft SQL Server** -Datenquellentypen und öffnet den grafischen, dem Datenquellentyp zugeordneten Abfrage-Designer.  
+ [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] unterscheidet automatisch zwischen **Microsoft Azure[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** - und **Microsoft SQL Server**-Datenquellentypen und öffnet den grafischen, dem Datenquellentyp zugeordneten Abfrage-Designer.  
   
  Wenn Sie den Abfrage-Designer im grafischen Modus verwenden, wird die Abfrage analysiert und möglicherweise umgeschrieben. Ein textbasierter Abfrage-Designer ist ebenfalls für das Schreiben von Abfragen verfügbar. Wenn Sie die exakte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Syntax für eine Abfrage steuern möchten, verwenden Sie den textbasierten Abfrage-Designer.   
   
@@ -172,6 +172,8 @@ Die Unterstützung für diese Datenquelle wurde eingestellt. Verwenden Sie den S
  Für diesen Datenanbieter wird das ADOMD.NET-Objektmodell verwendet, um Abfragen mit XMLA (XML for Analysis), Version 1.0, zu erstellen. Ergebnisse werden als vereinfachtes Rowset zurückgegeben. Weitere Informationen finden Sie unter [Analysis Services Connection Type for MDX (SSRS) (Analysis Services-Verbindungstyp für MDX (SSRS))](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md), [Analysis Services Connection Type for DMX (SSRS) (Analysis Services-Verbindungstyp für DMX (SSRS))](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md), [Analysis Services MDX Query Designer User Interface (Benutzeroberfläche des MDX-Abfrage-Designers für Analysis Services)](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md) und [Analysis Services DMX Query Designer User Interface (Benutzeroberfläche des DMX-Abfrage-Designers für Analysis Services)](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md). 
  
  Beachten Sie bei Azure Analysis Services und Power BI Premium-Datasetdatenquellen, dass die mehrstufige Authentifizierung für die Anmeldeinformationen, mit denen eine Verbindung zur Datenquelle hergestellt wird, deaktiviert sein muss. Wenn für Ihre Umgebung die mehrstufige Authentifizierung aktiviert werden muss, ziehen Sie den <a href="/azure/active-directory/conditional-access/overview">bedingten Azure Active Directory-Zugriff</a> als Option in Betracht, um die mehrstufige Authentifizierung für die in der Datenquelle verwendeten Anmeldeinformationen zu deaktivieren.
+  
+ Wenn Sie ein Power BI Premium-Dataset als Datenquelle verwenden, werden nur der Import-Modus und DirectQuery unterstützt.
   
  Bei Verbindung mit einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenquelle unterstützt die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenverarbeitungserweiterung mehrwertige Parameter und ordnet Zell- und Elementeigenschaften erweiterten Eigenschaften zu, die von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] unterstützt werden. Weitere Informationen finden Sie unter [Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank (SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   

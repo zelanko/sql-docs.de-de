@@ -9,12 +9,12 @@ ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e7f106e462d3d1bb7848b15523ef3d3f7feed2a1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9dd52db9d34519f2b09cbaba880806c17509c84c
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767209"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489710"
 ---
 # <a name="backup-and-restore"></a>Sichern und Wiederherstellen
 
@@ -24,7 +24,7 @@ Beschreibt die Funktionsweise der Datensicherung und-Wiederherstellung für para
 
 Eine PDW- *Datenbanksicherung* ist eine Kopie einer Appliance-Datenbank, die in einem Format gespeichert ist, sodass Sie zum Wiederherstellen der ursprünglichen Datenbank auf einem Gerät verwendet werden kann.  
   
-Eine PDW-Datenbanksicherung wird mit der t-SQL-Anweisung [Backup Database](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016) erstellt und für die Verwendung mit der [Restore Database](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016) -Anweisung formatiert. Er ist für andere Zwecke nicht verwendbar. Die Sicherung kann nur auf einem Gerät mit der gleichen Anzahl oder einer größeren Anzahl von Computeknoten wieder hergestellt werden.  
+Eine PDW-Datenbanksicherung wird mit der t-SQL-Anweisung [Backup Database](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true) erstellt und für die Verwendung mit der [Restore Database](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true) -Anweisung formatiert. Er ist für andere Zwecke nicht verwendbar. Die Sicherung kann nur auf einem Gerät mit der gleichen Anzahl oder einer größeren Anzahl von Computeknoten wieder hergestellt werden.  
   
 <!-- MISSING LINKS
 The [master database](master-database.md) is a SMP SQL Server database. It is backed up with the BACKUP DATABASE statement. To restore master, use the [Restore the Master Database](configuration-manager-restore-master-database.md) page of the Configuration Manager tool.  
@@ -96,7 +96,7 @@ Eine Geräte Wiederherstellung ist eine Wiederherstellung des gesamten Geräts. 
 
 Das folgende Diagramm zeigt den Datenfluss während einer Daten Bank Wiederherstellung.  
   
-![Wiederherstellungsprozess](media/restore-process.png "Wiederherstellungsprozess")  
+![Wiederherstellungsprozess](media/restore-process.png "Wiederherstellungsvorgang")  
   
 ## <a name="restoring-to-an-appliance-with-the-same-number-of-compute-nodes"></a>Wiederherstellen auf einer Appliance mit der gleichen Anzahl von Computeknoten * *  
   
@@ -104,7 +104,7 @@ Beim Wiederherstellen von Daten erkennt das Gerät die Anzahl der Computeknoten 
   
 1.  Die wieder herzustellende Datenbanksicherung ist auf einer Windows-Dateifreigabe auf einem Sicherungs Server ohne Appliance verfügbar. Um die beste Leistung zu erzielen, ist dieser Server mit dem InfiniBand-Netzwerkgerät verbunden.  
   
-2.  Der Benutzer sendet eine zql-Anweisung der [Restore-Datenbank](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016) an den Steuer Knoten.  
+2.  Der Benutzer sendet eine zql-Anweisung der [Restore-Datenbank](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true) an den Steuer Knoten.  
   
     -   Die Wiederherstellung ist entweder eine vollständige Wiederherstellung oder eine Header Wiederherstellung. Bei der vollständigen Wiederherstellung wird eine vollständige Sicherung wieder hergestellt und anschließend optional eine differenzielle Sicherung wieder hergestellt  
   
@@ -133,8 +133,8 @@ Nach der erneuten Verteilung enthält jeder Computeknoten weniger tatsächliche 
 |Sicherungs-und Wiederherstellungs Task|Beschreibung|  
 |---------------------------|---------------|  
 |Bereiten Sie einen Server als Sicherungs Server vor.|[Erwerben und Konfigurieren eines Sicherungsservers](acquire-and-configure-backup-server.md)|  
-|Sichern einer Datenbank.|[BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)|  
-|Stellen Sie eine Datenbank wieder her.|[Datenbank wiederherstellen](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016)|    
+|Sichern einer Datenbank.|[BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true)|  
+|Wiederherstellen einer Datenbank|[Datenbank wiederherstellen](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)|    
 
 <!-- MISSING LINKS
 

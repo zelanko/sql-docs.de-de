@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 10/29/2020
-ms.openlocfilehash: 436c176e469e7ce0f34e26a883fae4cdd6bb59a1
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.openlocfilehash: cdb110059043741627300e1f6d080582363d834b
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067242"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900833"
 ---
 # <a name="kqlmagic-in-azure-data-studio"></a>Kqlmagic in Azure Data Studio
 
@@ -257,6 +257,6 @@ Erfahren Sie mehr über Notebooks und Kqlmagic:
 - [Kusto-Erweiterung (KQL) für Azure Data Studio (Vorschau)](https://docs.microsoft.com/sql/azure-data-studio/extensions/kusto-extension)
 - [Erstellen und Ausführen eines Kusto-Notebooks (KQL) (Vorschau)](https://docs.microsoft.com/sql/azure-data-studio/notebooks/notebooks-kusto-kernel)
 - [Verwenden einer Jupyter Notebook-Instanz und der Kqlmagic-Erweiterung zum Analysieren von Daten in Azure Data Explorer](/azure/data-explorer/Kqlmagic)
-- [Magic-Erweiterung für Jupyter Notebook und Jupyter Lab](https://github.com/Microsoft/jupyter-Kqlmagic) zum Ermöglichen der Notebook-Funktion mit Daten von Kusto, Application Insights und der Protokollanalyse.
+- [Erweiterung (Magic) für Jupyter Notebook und JupyterLab](https://github.com/Microsoft/jupyter-Kqlmagic), die das Arbeiten mit Notebooks mit Kusto-, Application Insights- und LogAnalytics-Daten ermöglicht
 - [Kqlmagic](https://pypi.org/project/Kqlmagic/)
 - [Verwenden von Notebooks in Azure Data Studio](./notebooks-guidance.md)

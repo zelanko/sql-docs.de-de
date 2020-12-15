@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 8fc6a8ed3cf4fec9b97b81c38fb1667588623ba7
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: d6e4d6c298c632c446e1671b5d9adabaa19e0776
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419738"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761488"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Abrufen und Ändern von Daten in ADO.NET
 
@@ -27,13 +27,23 @@ Eine der wichtigsten Funktionen einer Datenbankanwendung ist das Herstellen eine
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Herstellen einer Verbindung mit einer Datenquelle](connecting-to-data-source.md) Beschreibt, wie eine Verbindung mit einer Datenquelle hergestellt und mit Verbindungsereignissen gearbeitet wird.
+[Herstellen einer Verbindung mit Datenquellen](connecting-to-data-source.md)  
+Beschreibt, wie eine Verbindung zu einer Datenquelle hergestellt wird und wie mit Verbindungsereignissen gearbeitet wird.
 
-[Verbindungszeichenfolgen](connection-strings.md) Enthält Themen mit Erläuterungen verschiedener Aspekte von Verbindungszeichenfolgen, einschließlich Schlüsselwörter für Verbindungszeichenfolgen, Sicherheitsinformationen sowie Speicherung und Abruf von Verbindungszeichenfolgen.
+[Verbindungszeichenfolgen](connection-strings.md)  
+Enthält Themen, die verschiedene Aspekte der Verwendung von Verbindungszeichenfolgen beschreiben, einschließlich der Schlüsselwörter für Verbindungszeichenfolgen und Sicherheitsinformationen sowie das Speichern und Abrufen von Verbindungszeichenfolgen.
 
-[Verbindungspooling](connection-pooling.md) Beschreibt das Verbindungspooling für den Microsoft SqlClient-Datenanbieter für SQL Server.
+[Verbindungspooling](connection-pooling.md)  
+Beschreibt Verbindungspooling für den Microsoft SqlClient-Datenanbieter für SQL Server
+
+[Befehle und Parameter](commands-parameters.md)  
+Enthält Themen, in denen beschrieben wird, wie Befehlen und Befehlsgeneratoren erstellt und Parameter konfiguriert werden und welche Vorgehensweise beim Ausführen von Befehlen zum Abrufen und Bearbeiten von Daten ausgeführt werden muss.
+
+["DataAdapters" und "DataReaders"](dataadapters-datareaders.md)  
+Enthält Themen, in denen DataReader, DataAdapter, Parameter und die Vorgehensweise bei DataAdapter-Ereignissen und beim Ausführen von Batchvorgängen beschrieben werden.
 
 ## <a name="see-also"></a>Weitere Informationen:
 
 - [Datentypzuordnungen in ADO.NET](data-type-mappings-ado-net.md)
 - [SQL Server und ADO.NET](./sql/index.md)
+- [Microsoft ADO.NET für SQL Server](microsoft-ado-net-sql-server.md)

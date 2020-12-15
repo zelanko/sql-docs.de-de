@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: d42d51371b0641fe460150e68fe96c5eb68e09cb
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: 0b5f930568e655df645cbaed140f163ada3e3afa
+ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412550"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96934026"
 ---
 # <a name="r-tutorial-train-and-save-model"></a>R-Tutorial: Trainieren und Speichern des Modells
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -42,7 +42,7 @@ Wenn Sie R über T-SQL aufrufen, verwenden Sie die im System gespeicherte Prozed
 
 1. Öffnen Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ein neues Fenster **Abfrage**.
 
-2. Führen Sie die folgende Anweisung aus, um die gespeicherte Prozedur **RTrainLogitModel** zu erstellen. Diese gespeicherte Prozedur definiert die Eingabedaten und verwendet **glm** , um ein logistisches Regressionsmodell zu erstellen.
+2. Führen Sie die folgende Anweisung aus, um die gespeicherte Prozedur **RTrainLogitModel** zu erstellen. Diese gespeicherte Prozedur definiert die Eingabedaten und verwendet **glm**, um ein logistisches Regressionsmodell zu erstellen.
 
    ```sql
    CREATE PROCEDURE [dbo].[RTrainLogitModel] (@trained_model varbinary(max) OUTPUT)
@@ -79,7 +79,7 @@ Wenn Sie R über T-SQL aufrufen, verwenden Sie die im System gespeicherte Prozed
   
    + In dem R-Skript wird die R-Funktion **glm** aufgerufen, um das logistische Regressionsmodell zu erstellen.
   
-     Die binäre Variable _tipped_ dient als die Spalte *label* oder „outcome“, und das Modell wird mithilfe folgender Funktionsspalten angepasst:  _passenger_count_ , _trip_distance_ , _trip_time_in_secs_ und _direct_distance_.
+     Die binäre Variable _tipped_ dient als die Spalte *label* oder „outcome“, und das Modell wird mithilfe folgender Funktionsspalten angepasst:  _passenger_count_, _trip_distance_, _trip_time_in_secs_ und _direct_distance_.
   
    + Das trainierte Modell, das in der R-Variablen `logitObj` gespeichert ist, wird serialisiert und als Ausgabeparameter zurückgegeben.
 
@@ -95,13 +95,13 @@ Da die gespeicherte Prozedur schon eine Definition der Eingabedaten enthält, m�
    INSERT INTO nyc_taxi_models (name, model) VALUES('RTrainLogit_model', @model);
    ```
 
-2. Nachrichten, die an den **stdout** -Stream von R weitergeleitet werden würden, werden im Fenster [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Meldungen **von** angezeigt: 
+2. Nachrichten, die an den **stdout**-Stream von R weitergeleitet werden würden, werden im Fenster [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Meldungen **von** angezeigt: 
 
    "STDOUT message(s) from external script: Gelesene Zeilen: 1193025, Total Rows Processed: 1193025, Total Chunk Time: 0.093 seconds"
 
 3. Wenn die Anweisung abgeschlossen ist, öffnen Sie die Tabelle *nyc_taxi_models*. Die Verarbeitung der Daten und die Anpassung des Modells können eine Weile dauern.
 
-   Sie können sehen, dass eine neue Zeile hinzugefügt wurde, die das serialisierte Modell in der Spalte _model_ und den Modellnamen **TrainLog_model** in der Spalte _name_ enthält.
+   Sie können sehen, dass eine neue Zeile hinzugefügt wurde, die das serialisierte Modell in der Spalte _model_ und den Modellnamen **RTrainLogit_model** in der Spalte _name_ enthält.
 
    ```text
    model                        name

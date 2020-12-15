@@ -2,7 +2,7 @@
 description: Grundlegendes zu Zeilensperren
 title: Grundlegendes zu Zeilensperren | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 12/08/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 63c76a2f-f2b9-461f-8904-acbda0169ac3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 69b04db86ce8784f5f346a4ac0d19b2bedd0e456
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e5305f3feaa80d0a83dd1e7bfd97088492608ae5
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488028"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96901059"
 ---
 # <a name="understanding-row-locking"></a>Grundlegendes zu Zeilensperren
 
@@ -30,7 +30,7 @@ ms.locfileid: "88488028"
 Sperren werden verwendet, um Transaktionsintegrität und Datenbankkonsistenz zu gewährleisten. Sperren verhindern, dass Benutzer Daten lesen, die von anderen Benutzern geändert werden, und dass mehrere Benutzer gleichzeitig die gleichen Daten ändern. Wenn keine Sperren verwendet werden, kann dies dazu führen, dass die Daten in der Datenbank logisch falsch sind. Die für diese Daten ausgeführten Abfragen können dann unerwartete Ergebnisse zurückgeben.
 
 > [!NOTE]  
-> Weitere Informationen zu Zeilensperren in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie unter „Sperren in [!INCLUDE[ssDE](../../includes/ssde_md.md)]“ in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.
+> Weitere Informationen zu Zeilensperren in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie unter [Sperren in der [!INCLUDE[ssDE](../../includes/ssde_md.md)]](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.
 
 ## <a name="see-also"></a>Weitere Informationen:
 

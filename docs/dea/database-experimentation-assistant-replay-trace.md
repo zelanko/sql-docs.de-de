@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: fa37fb348aa94e59ac3816d523cc5a30bc314713
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+ms.openlocfilehash: b91385f587668b17bd9cde9f173cebacce48dc91
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636170"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489544"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Wiedergeben einer Ablauf Verfolgung in Assistent für Datenbankexperimente
 
@@ -31,17 +31,17 @@ In Assistent für Datenbankexperimente (DEA) können Sie eine aufgezeichnete Abl
 
 Zunächst müssen Sie eine Ablauf Verfolgungs Wiedergabe für Ziel 1 ausführen, das Ihre vorhandene Produktionsumgebung repräsentiert.
 
-1. Wählen Sie in der linken Navigationsleiste auf der linken Seite das Pfeilsymbol aus, und wählen Sie dann auf der Seite **alle wieder** gaben die Option **neue Wiedergabe**aus.
+1. Wählen Sie in der linken Navigationsleiste auf der linken Seite das Pfeilsymbol aus, und wählen Sie dann auf der Seite **alle wieder** gaben die Option **neue Wiedergabe** aus.
 
     ![Erstellen einer Wiedergabe in der DEA](./media/database-experimentation-assistant-replay-trace/dea-create-replay.png)
 
     > [!NOTE]
     > Der Distributed Replay Controller-Computer erfordert Berechtigungen für das Benutzerkonto, das Sie für die Remote Verbindung verwenden.
 
-2. Geben Sie auf der Seite **neue Wiedergabe** unter **Wiedergabe Details**die folgenden Informationen ein, oder wählen Sie Sie aus:
+2. Geben Sie auf der Seite **neue Wiedergabe** unter **Wiedergabe Details** die folgenden Informationen ein, oder wählen Sie Sie aus:
 
     - **Wiedergabe Name**: Geben Sie einen Namen für die Wiedergabe der Ablauf Verfolgung ein.
-    - **Format der Quell**Ablauf Verfolgung: Geben Sie das Format (Trace oder xevents) der Quelldatei der Ablauf Verfolgung an.
+    - **Format der Quell** Ablauf Verfolgung: Geben Sie das Format (Trace oder xevents) der Quelldatei der Ablauf Verfolgung an.
     - **Vollständiger Pfad zur Quelldatei**: Geben Sie den vollständigen Pfad zur Quelldatei der Ablauf Verfolgung an. Wenn Sie dreplay verwenden, muss die Datei auf dem Computer vorhanden sein, der als dreplay-Controller fungiert, und das Benutzerkonto muss auf die Datei und den Ordner zugreifen können.
     - **Wiedergabe Tool**: Geben Sie das Replay-Tool an (dreplay oder inbuild).
     - **Controller Computername**: Geben Sie den Namen des Computers an, der als Distributed Replay Controller fungiert.
@@ -52,11 +52,11 @@ Zunächst müssen Sie eine Ablauf Verfolgungs Wiedergabe für Ziel 1 ausführen,
 
 3. Vergewissern Sie sich, dass Sie die Datenbank (en) wieder hergestellt haben, indem Sie das Kontrollkästchen **Ja, ich habe die Datenbank (en) manuell wieder hergestellt** .
 
-4. Geben Sie unter **SQL Server Verbindungsdetails**die folgenden Informationen ein, oder wählen Sie Sie aus:
+4. Geben Sie unter **SQL Server Verbindungsdetails** die folgenden Informationen ein, oder wählen Sie Sie aus:
 
     - **Servertyp**: Geben Sie den SQL Server-Typ an (**SQLServer**, **azuresqldb**, **azuresqlmanagedinstance**).
     - **Servername**: Geben Sie den Servernamen oder die IP-Adresse Ihres SQL Server an.
-    - **Authentifizierungstyp**: Wählen Sie als Authentifizierungstyp **Windows**aus.
+    - **Authentifizierungstyp**: Wählen Sie als Authentifizierungstyp **Windows** aus.
     - **Datenbankname**: Geben Sie einen Namen für eine Datenbank ein, auf der eine serverseitige Ablauf Verfolgung gestartet werden soll. Wenn Sie keine Datenbank angeben, wird die Ablauf Verfolgung für alle Datenbanken auf dem Server aufgezeichnet.
 
 5. Aktivieren bzw. deaktivieren Sie die Kontrollkästchen **Verbindung verschlüsseln** und **Serverzertifikat vertrauen** entsprechend Ihrem Szenario.
@@ -98,7 +98,7 @@ Ja, Sie können mehrere Wiederholungen starten und diese bis zum Abschluss in de
 
 **F: kann ich mehr als eine Wiedergabe parallel starten?**
 
-Ja, jedoch nicht mit derselben Gruppe von Computern, die in **Controller plus Clients**ausgewählt sind. Der Controller und die Clients werden ausgelastet sein. Richten Sie eine separate Gruppe von Computern unter **Controller Plus Client** ein, um eine parallele Wiedergabe zu starten.
+Ja, jedoch nicht mit derselben Gruppe von Computern, die in **Controller plus Clients** ausgewählt sind. Der Controller und die Clients werden ausgelastet sein. Richten Sie eine separate Gruppe von Computern unter **Controller Plus Client** ein, um eine parallele Wiedergabe zu starten.
 
 **F: wie lange dauert es in der Regel, bis die Wiedergabe abgeschlossen ist?**
 
@@ -139,7 +139,7 @@ Weitere Details finden Sie in den Protokollen unter% Temp% \\ Dea. Wenn das Prob
 
 - Überprüfen Sie, ob der Distributed Replay Controller-Dienst auf dem Controller Computer ausgeführt wird. Um dies zu überprüfen, verwenden Sie die Distributed Replay Verwaltungs Tools (führen Sie den Befehl aus `dreplay.exe status -f 1` ).
 - Wenn die Wiedergabe Remote gestartet wird:
-  - Vergewissern Sie sich, dass der Computer, auf dem "DEA" ausgeführt wird, ein Ping Vergewissern Sie sich, dass die Firewalleinstellungen Verbindungen gemäß den Anweisungen auf der Seite " **Wiedergabe Umgebung konfigurieren** " zulassen. Weitere Informationen finden Sie im Artikel [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md?view=sql-server-2017).
+  - Vergewissern Sie sich, dass der Computer, auf dem "DEA" ausgeführt wird, ein Ping Vergewissern Sie sich, dass die Firewalleinstellungen Verbindungen gemäß den Anweisungen auf der Seite " **Wiedergabe Umgebung konfigurieren** " zulassen. Weitere Informationen finden Sie im Artikel [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md).
   - Stellen Sie sicher, dass DCOM-Remote Start und Remote Aktivierung für den Benutzer des Distributed Replay Controllers zulässig sind.
   - Stellen Sie sicher, dass die DCOM-RAS-Benutzerrechte für den Benutzer des Distributed Replay Controllers zulässig sind.
 

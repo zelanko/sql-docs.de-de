@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: b26571c01db073aa2567ebbee19ff2183c47a552
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: fd95dd20cf72900a85c675c0e6b89689553d55f5
+ms.sourcegitcommit: 821e7039a342bf76306d66c61db247dc2caabc46
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96127669"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96999243"
 ---
 # <a name="before-installing-failover-clustering"></a>Vor dem Installieren des Failoverclusterings
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -170,7 +170,7 @@ ms.locfileid: "96127669"
   
 -   Die Remoteverwaltung muss aktiviert sein.  
   
--   Überprüfen Sie für den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Port mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Konfigurations-Manager die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Netzwerkkonfiguration für das TCP/IP-Protokoll der Instanz, deren Blockierung aufgehoben werden soll. Sie müssen den TCP-Port für IPALL aktivieren, wenn Sie nach der Installation über TCP eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herstellen möchten. Standardmäßig lauscht der SQL-Browser an UDP-Port 1434.  
+- Verwenden Sie für SQL Server-Instanzen, die keinen Standardport verwenden, die Netzwerkkonfiguration des SQL Server-Konfigurations-Manager, um den Port zu bestimmen, der von der SQL Server-Instanz verwendet wird, für die Sie die Blockierung aufheben möchten. Aktivieren Sie in der Firewall den TCP-Port für IPALL, wenn Sie über den [SQL Server-Browser-Dienst](../../../tools/configuration-manager/sql-server-browser-service.md), der eine andere IP-Adresse als die gruppierte Instanz verwendet, und den UDP-Port 1434 verwenden möchten, um eine Verbindung mit Ihrer SQL Server-Instanz herzustellen. 
   
 -   Bei Setupvorgängen für Failovercluster wird eine Regel zum Überprüfen der Bindungsreihenfolge von Netzwerken befolgt. Auch wenn die Bindungsreihenfolgen korrekt erscheinen, können die NIC-Konfigurationen im System möglicherweise deaktiviert oder inaktiv sein. Inaktive NIC-Konfigurationen können sich auf die Bindingsreihenfolge auswirken und zum Ausgeben einer Warnung durch die Regel für die Bindungsreihenfolge führen. Um diese Situation zu vermeiden, führen Sie die folgenden Schritte aus, um deaktivierte Netzwerkkarten zu ermitteln und zu entfernen:  
   
