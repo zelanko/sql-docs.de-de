@@ -10,17 +10,17 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: cb70f4f5746bace6f4f7ad097a852853fea6c3ca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+monikerRange: '>= sql-server-2016'
+ms.openlocfilehash: 4fcac0794148135138194a07bce8b3ad70c0ee0e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901282"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97417044"
 ---
 # <a name="install-polybase-on-windows"></a>Installieren von PolyBase unter Windows
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only ](../../includes/applies-to-version/sql-windows-only.md)]
 
 Besuchen Sie [SQL Server Evaluation](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016), um eine Testversion von SQL Server zu installieren. 
    
@@ -117,7 +117,7 @@ Verwenden Sie die Werte in dieser Tabelle, um Installationsskripte zu erstellen.
 
 ::: moniker-end
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-ver15 "
 
 |SQL Server-Komponente|Parameter und Werte|BESCHREIBUNG|  
 |--------------------------|--------------------------|-----------------|  
@@ -193,7 +193,7 @@ Diese Regeln werden aktiviert, wenn Sie bei der Installation die SQL Server-Inst
 
 2. Klicken Sie erst auf **System and Security** (System und Sicherheit) und dann auf **Windows-Firewall**.  
    
-3. Klicken Sie erst auf **Erweiterte Einstellungen**und dann auf **Eingangsregeln**.  
+3. Klicken Sie erst auf **Erweiterte Einstellungen** und dann auf **Eingangsregeln**.  
    
 4. Klicken Sie erst mit der rechten Maustaste auf die deaktivierte Regel und dann mit der linken auf **Regel aktivieren**.  
    
