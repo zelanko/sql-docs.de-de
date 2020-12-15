@@ -1,6 +1,6 @@
 ---
-description: sys. query_store_runtime_stats (Transact-SQL)
-title: sys. query_store_runtime_stats (Transact-SQL) | Microsoft-Dokumentation
+description: sys.query_store_runtime_stats (Transact-SQL)
+title: sys.query_store_runtime_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/24/2019
 ms.prod: sql
@@ -21,24 +21,24 @@ helpviewer_keywords:
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbd5012eeb5f790daf733b3db23a6f62fa12e26f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ebcb684b424bf7ca3de384ad57b82c0c48b538f2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542480"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97404452"
 ---
-# <a name="sysquery_store_runtime_stats-transact-sql"></a>sys. query_store_runtime_stats (Transact-SQL)
+# <a name="sysquery_store_runtime_stats-transact-sql"></a>sys.query_store_runtime_stats (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Enthält Informationen zu den Lauf Zeit Ausführungs Statistik-Informationen für die Abfrage.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**runtime_stats_id**|**bigint**|Der Bezeichner der Zeile, die die Lauf Zeit Ausführungs Statistik für die **plan_id**darstellt, **execution_type** und **runtime_stats_interval_id**. Er ist nur für die letzten Lauf Zeit Statistik Intervalle eindeutig. Für das derzeit aktive Intervall kann es mehrere Zeilen geben, die Lauf Zeit Statistiken für den Plan darstellen, auf den von **plan_id**verwiesen wird, wobei der Ausführungstyp **execution_type**ist. In der Regel stellt eine Zeile Lauf Zeit Statistiken dar, die auf den Datenträger geleert werden, während andere (n) den Speicher internen Status darstellen. Wenn Sie den tatsächlichen Status für jedes Intervall erhalten möchten, müssen Sie daher Metriken aggregieren, indem Sie **plan_id** **execution_type** und **runtime_stats_interval_id**gruppieren.<br/>**Hinweis:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] gibt immer 0 (null) zurück.|
-|**plan_id**|**bigint**|Fremdschlüssel. Joins mit [sys. query_store_plan &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
-|**runtime_stats_interval_id**|**bigint**|Fremdschlüssel. Joins mit [sys. query_store_runtime_stats_interval &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
+|**runtime_stats_id**|**bigint**|Der Bezeichner der Zeile, die die Lauf Zeit Ausführungs Statistik für die **plan_id** darstellt, **execution_type** und **runtime_stats_interval_id**. Er ist nur für die letzten Lauf Zeit Statistik Intervalle eindeutig. Für das derzeit aktive Intervall kann es mehrere Zeilen geben, die Lauf Zeit Statistiken für den Plan darstellen, auf den von **plan_id** verwiesen wird, wobei der Ausführungstyp **execution_type** ist. In der Regel stellt eine Zeile Lauf Zeit Statistiken dar, die auf den Datenträger geleert werden, während andere (n) den Speicher internen Status darstellen. Wenn Sie den tatsächlichen Status für jedes Intervall erhalten möchten, müssen Sie daher Metriken aggregieren, indem Sie **plan_id** **execution_type** und **runtime_stats_interval_id** gruppieren.<br/>**Hinweis:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] gibt immer 0 (null) zurück.|
+|**plan_id**|**bigint**|Fremdschlüssel. Joins mit [sys.query_store_plan &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
+|**runtime_stats_interval_id**|**bigint**|Fremdschlüssel. Joins mit [sys.query_store_runtime_stats_interval &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**execution_type**|**tinyint**|Bestimmt den Typ der Abfrage Ausführung:<br /><br /> 0-reguläre Ausführung (erfolgreich abgeschlossen)<br /><br /> 3-vom Client initiierte Ausführung abgebrochen<br /><br /> 4-Ausnahme Abbruch abgebrochen|  
 |**execution_type_desc**|**nvarchar(128)**|Textbeschreibung des Felds "Ausführungstyp":<br /><br /> 0-regulär<br /><br /> 3-abgebrochen<br /><br /> 4-Ausnahme|  
 |**first_execution_time**|**datetimeoffset**|Die erste Ausführungszeit für den Abfrageplan innerhalb des Aggregations Intervalls. Dies bezieht sich auf die Endzeit der Abfrage Ausführung.|  
@@ -109,13 +109,13 @@ ms.locfileid: "89542480"
 Erfordert die `VIEW DATABASE STATE`-Berechtigung.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sys. database_query_store_options &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys. query_context_settings &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [sys. query_store_plan &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [sys. query_store_query &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [sys. query_store_query_text &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
+ [sys.database_query_store_options &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys.query_context_settings &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
+ [sys.query_store_plan &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
+ [sys.query_store_query &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [sys.query_store_query_text &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
- [sys. query_store_runtime_stats_interval &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+ [sys.query_store_runtime_stats_interval &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Gespeicherte Prozeduren für den Abfragespeicher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)    

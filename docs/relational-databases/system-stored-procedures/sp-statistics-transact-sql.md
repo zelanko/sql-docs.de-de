@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b22227de702e787f183a7ec15e3b26d685fd6cb
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ab64c4fa1ea96390631508130ba9a7b57d8a8493
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005959"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97410516"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,15 +49,15 @@ sp_statistics [ @table_name = ] 'table_name'
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## <a name="arguments"></a>Argumente  
-`[ @table_name = ] 'table_name'` Gibt die Tabelle an, mit der Katalog Informationen zurückgegeben werden. *table_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Mustervergleiche mit Platzhalterzeichen werden nicht unterstützt.  
+`[ @table_name = ] 'table_name'` Gibt die Tabelle an, mit der Katalog Informationen zurückgegeben werden. *table_name* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert. Mustervergleiche mit Platzhalterzeichen werden nicht unterstützt.  
   
-`[ @table_owner = ] 'owner'` Der Name des Tabellen Besitzers der Tabelle, die zum Zurückgeben von Katalog Informationen verwendet wird. *TABLE_OWNER* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden nicht unterstützt. Wenn *Owner* nicht angegeben wird, werden die Standardregeln für die Tabellen Sichtbarkeit des zugrunde liegenden DBMS angewendet.  
+`[ @table_owner = ] 'owner'` Der Name des Tabellen Besitzers der Tabelle, die zum Zurückgeben von Katalog Informationen verwendet wird. *TABLE_OWNER* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden nicht unterstützt. Wenn *Owner* nicht angegeben wird, werden die Standardregeln für die Tabellen Sichtbarkeit des zugrunde liegenden DBMS angewendet.  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden die Indizes einer Tabelle zurückgegeben, wenn der aktuelle Benutzer diese Tabelle mit dem angegebenen Namen besitzt. Wenn *Owner* nicht angegeben wird und der aktuelle Benutzer keine Tabelle mit dem angegebenen *Namen*besitzt, sucht diese Prozedur nach einer Tabelle mit dem angegebenen *Namen* , die im Besitz des Daten Bank Besitzers ist. Sofern eine solche Tabelle vorhanden ist, werden die Indizes dieser Tabelle zurückgegeben.  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden die Indizes einer Tabelle zurückgegeben, wenn der aktuelle Benutzer diese Tabelle mit dem angegebenen Namen besitzt. Wenn *Owner* nicht angegeben wird und der aktuelle Benutzer keine Tabelle mit dem angegebenen *Namen* besitzt, sucht diese Prozedur nach einer Tabelle mit dem angegebenen *Namen* , die im Besitz des Daten Bank Besitzers ist. Sofern eine solche Tabelle vorhanden ist, werden die Indizes dieser Tabelle zurückgegeben.  
   
-`[ @table_qualifier = ] 'qualifier'` Der Name des Tabellen Qualifizierers. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Benennung für Tabellen (_Qualifizierer_)**.** _Besitzer_**.** _Name_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entspricht dieser Parameter dem Datenbanknamen. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
+`[ @table_qualifier = ] 'qualifier'` Der Name des Tabellen Qualifizierers. *qualifier* ist vom Datentyp **sysname** und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Benennung für Tabellen (_Qualifizierer_)**.** _Besitzer_**.** _Name_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entspricht dieser Parameter dem Datenbanknamen. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
   
-`[ @index_name = ] 'index_name'` Der Indexname. *index_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert%. Mustervergleiche mit Platzhalterzeichen werden unterstützt.  
+`[ @index_name = ] 'index_name'` Der Indexname. *index_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert%. Mustervergleiche mit Platzhalterzeichen werden unterstützt.  
   
 `[ @is_unique = ] 'is_unique'` Gibt an, ob nur eindeutige Indizes (wenn **Y**) zurückgegeben werden sollen. *is_unique* ist vom Typ **char (1)** und hat den Standardwert **N**.  
   
@@ -81,7 +81,7 @@ sp_statistics [ @table_name = ] 'table_name'
 |**SEQ_IN_INDEX**|**smallint**|Position der Spalte im Index|  
 |**COLUMN_NAME**|**sysname**|Der Spaltenname für jede Spalte der zurückgegebenen **table_name** . Diese Spalte gibt immer einen Wert zurück.|  
 |**COLLATION**|**char(1)**|Die in der Sortierung verwendete Reihenfolge. Mögliche Werte sind:<br /><br /> A = Aufsteigend<br /><br /> D = Absteigend<br /><br /> NULL = Nicht zutreffend|  
-|**CARDINALITY**|**int**|Anzahl der Zeilen in der Tabelle oder der eindeutigen Werte im Index|  
+|**Kardinalität**|**int**|Anzahl der Zeilen in der Tabelle oder der eindeutigen Werte im Index|  
 |**Seiten**|**int**|Anzahl der Seiten, die zum Speichern des Indexes oder der Tabelle benötigt werden|  
 |**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt keinen Wert zurück.|  
   
@@ -89,13 +89,13 @@ sp_statistics [ @table_name = ] 'table_name'
  Keine  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die Indizes im Resultset werden in aufsteigender Reihenfolge nach den Spalten **NON_UNIQUE**, **Type**, **index_name**und **SEQ_IN_INDEX**angezeigt.  
+ Die Indizes im Resultset werden in aufsteigender Reihenfolge nach den Spalten **NON_UNIQUE**, **Type**, **index_name** und **SEQ_IN_INDEX** angezeigt.  
   
  Die Indexart Gruppiert bezeichnet einen Index, der sich dadurch auszeichnet, dass die in der Tabelle gespeicherten Daten in der durch den Index vorgegebenen Reihenfolge abgelegt sind. Dies entspricht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gruppierten Indizes.  
   
  Beim Indextyp Hash ist die Suche nach genauen Übereinstimmungen oder Wertebereichen zwar zulässig, bei Mustervergleichen wird der Index jedoch nicht verwendet.  
   
- **sp_statistics** entspricht **SQLStatistics** in ODBC. Die zurückgegebenen Ergebnisse werden nach **NON_UNIQUE**, **Typ**, **INDEX_QUALIFIER**, **index_name**und **SEQ_IN_INDEX**geordnet. Weitere Informationen finden Sie in der [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-reference.md).  
+ **sp_statistics** entspricht **SQLStatistics** in ODBC. Die zurückgegebenen Ergebnisse werden nach **NON_UNIQUE**, **Typ**, **INDEX_QUALIFIER**, **index_name** und **SEQ_IN_INDEX** geordnet. Weitere Informationen finden Sie in der [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-reference.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert SELECT-Berechtigung für das Schema.  

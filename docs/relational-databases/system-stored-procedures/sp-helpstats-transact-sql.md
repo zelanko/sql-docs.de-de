@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 00ab3cfd-2736-4fc0-b1b2-16dd49fb2fe5
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c7779e96727eed170d8869af8c21fe68c9d1455
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4e44d5cb6911336180b1d90701ce78cf19d0b2a6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535102"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97410857"
 ---
 # <a name="sp_helpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "89535102"
   Gibt statistische Informationen zu Spalten und Indizes der angegebenen Tabelle zurück.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] Fragen Sie die Katalog Sichten [sys. stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) und [sys. stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) ab, um Informationen zu Statistiken zu erhalten.  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] Fragen Sie die [sys. stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) -und [sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) -Katalog Sichten ab, um Informationen zu Statistiken zu erhalten.  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +55,7 @@ sp_helpstats[ @objname = ] 'object_name'
 ## <a name="result-sets"></a>Resultsets  
  In der folgenden Tabelle werden die Spalten des Resultsets beschrieben:  
   
-|Spaltenname|BESCHREIBUNG|  
+|Spaltenname|Beschreibung|  
 |-----------------|-----------------|  
 |**statistics_name**|Der Name der Statistik. Gibt " **vom Datentyp sysname** " zurück und kann nicht NULL sein.|  
 |**statistics_keys**|Die Schlüssel, auf denen die Statistik basiert. Gibt **nvarchar (2078)** zurück und darf nicht NULL sein.|  
