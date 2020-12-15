@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de602d5a975cb04c6c2f1496f0fcf01eae5a85a4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 39a4d0a6136990cdb583a432757503099f61cfb6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485367"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97403485"
 ---
 # <a name="get-information-about-dml-triggers"></a>Abrufen von Informationen zu DML-Triggern
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "88485367"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
  OBJECT_DEFINITION, OBJECTPROPERTY, **sp_helptext**  
- Erfordert die Mitgliedschaft in der **public** -Rolle. Die Definition von Benutzerobjekten ist für den Objektbesitzer sichtbar oder für Berechtigte, die über eine der folgenden Berechtigungen verfügen: ALTER, CONTROL, TAKE OWNERSHIP oder VIEW DEFINITION. Über diese Berechtigungen verfügen implizit Mitglieder der festen Datenbankrollen **db_owner**, **db_ddladmin**und **db_securityadmin** .  
+ Erfordert die Mitgliedschaft in der **public** -Rolle. Die Definition von Benutzerobjekten ist für den Objektbesitzer sichtbar oder für Berechtigte, die über eine der folgenden Berechtigungen verfügen: ALTER, CONTROL, TAKE OWNERSHIP oder VIEW DEFINITION. Über diese Berechtigungen verfügen implizit Mitglieder der festen Datenbankrollen **db_owner**, **db_ddladmin** und **db_securityadmin** .  
   
  **sys.sql_expression_dependencies**  
  Erfordert die Berechtigung VIEW DEFINITION für die Datenbank und die Berechtigung SELECT für **sys.sql_expression_dependencies** für die Datenbank. Standardmäßig wird die SELECT-Berechtigung nur Mitgliedern der festen Datenbankrolle **db_owner** gewährt. Wenn einem anderen Benutzer die SELECT-Berechtigung und die VIEW DEFINITION-Berechtigung erteilt werden, kann dieser Berechtigte alle Abhängigkeiten in der Datenbank anzeigen.  
@@ -59,17 +59,17 @@ ms.locfileid: "88485367"
   
 #### <a name="to-view-the-definition-of-a-dml-trigger"></a>So zeigen Sie die Definition eines DML-Triggers an  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und erweitern Sie dann diese Instanz.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und erweitern Sie dann diese Instanz.  
   
-2.  Erweitern Sie die gewünschte Datenbank, **Tabellen**und dann die Tabelle mit dem Trigger, dessen Definition Sie anzeigen möchten.  
+2.  Erweitern Sie die gewünschte Datenbank, **Tabellen** und dann die Tabelle mit dem Trigger, dessen Definition Sie anzeigen möchten.  
   
 3.  Erweitern Sie **Trigger**, klicken Sie mit der rechten Maustaste auf den gewünschten Trigger, und klicken Sie anschließend auf **Ändern**. Die Definition des DML-Triggers wird im Abfragefenster angezeigt.  
 
 #### <a name="to-view-the-dependencies-of-a-dml-trigger"></a>So zeigen Sie die Abhängigkeiten eines DML-Triggers an  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und erweitern Sie dann diese Instanz.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und erweitern Sie dann diese Instanz.  
   
-2.  Erweitern Sie die gewünschte Datenbank, **Tabellen**und dann die Tabelle mit dem Trigger, dessen Abhängigkeiten Sie anzeigen möchten.  
+2.  Erweitern Sie die gewünschte Datenbank, **Tabellen** und dann die Tabelle mit dem Trigger, dessen Abhängigkeiten Sie anzeigen möchten.  
   
 3.  Erweitern Sie **Trigger**, klicken Sie mit der rechten Maustaste auf den gewünschten Trigger, und klicken Sie anschließend auf **Abhängigkeiten anzeigen**.  
   
@@ -77,9 +77,9 @@ ms.locfileid: "88485367"
   
      Klicken Sie auf **Objekte, von denen \<DML trigger name> abhängt**, um die Objekte anzuzeigen, von denen der DML-Trigger abhängig ist. Die Objekte werden im Bereich **Abhängigkeiten** angezeigt. Erweitern Sie jeden Knoten, um alle Objekte anzuzeigen.  
   
-5.  Wenn Sie Informationen zu einem im Bereich **Abhängigkeiten** angezeigten Objekt anzeigen möchten, klicken Sie auf das Objekt. Im Feld **Ausgewähltes Objekt** sind Informationen in den Feldern **Name**, **Typ**und **Abhängigkeitstyp** verfügbar.  
+5.  Wenn Sie Informationen zu einem im Bereich **Abhängigkeiten** angezeigten Objekt anzeigen möchten, klicken Sie auf das Objekt. Im Feld **Ausgewähltes Objekt** sind Informationen in den Feldern **Name**, **Typ** und **Abhängigkeitstyp** verfügbar.  
   
-6.  Klicken Sie auf **OK** , um das Fenster **Objektabhängigkeiten**zu schließen.  
+6.  Klicken Sie auf **OK** , um das Fenster **Objektabhängigkeiten** zu schließen.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   

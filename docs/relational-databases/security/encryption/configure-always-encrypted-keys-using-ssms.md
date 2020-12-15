@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b84de259222b9e2bde8c9b99f67328ea317e645
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 35f08a014fd1abbc8af6db994ba4c2d9b85a0bd4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765145"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405594"
 ---
 # <a name="provision-always-encrypted-keys-using-sql-server-management-studio"></a>Bereitstellen von Always Encrypted-Schlüsseln mithilfe von SQL Server Management Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ Mit dem Dialogfeld **Neuer Spaltenhauptschlüssel** können Sie einen Spaltenhau
     - **Zertifikatspeicher – Aktueller Benutzer**: Gibt den Zertifikatspeicherort des aktuellen Benutzers im Windows-Zertifikatspeicher an, der Ihrem persönlichen Zertifikatspeicher entspricht. 
     - **Zertifikatspeicher – Lokaler Computer**: Gibt den Zertifikatspeicherort des lokalen Computers im Windows-Zertifikatspeicher an. 
     - **Azure Key Vault:** Sie müssen sich bei Azure anmelden (klicken Sie auf **Anmelden**). Sobald Sie sich angemeldet haben, können Sie eines Ihrer Azure-Abonnements und einen Schlüsseltresor auswählen.
-    - **Schlüsselspeicheranbieter (KSP)** : Gibt einen Schlüsselspeicher an, der über einen Schlüsselspeicheranbieter (KSP) zugänglich ist, der die Cryptography Next Generation-API (CNG) implementiert. Bei dieser Art von Speicher handelt sich in der Regel um ein Hardwaresicherheitsmodul (HSM). Nachdem Sie diese Option ausgewählt haben, müssen Sie einen KSP auswählen. Standardmäßig ist der**Softwareschlüsselspeicher-Anbieter von Microsoft** aktiviert. Wenn Sie einen in einem HSM gespeicherten Spaltenhauptschlüssel verwenden möchten, wählen Sie einen KSP für Ihr Gerät aus (muss installiert und auf dem Computer konfiguriert werden, bevor Sie das Dialogfeld öffnen).
+    - **Schlüsselspeicheranbieter (KSP)** : Gibt einen Schlüsselspeicher an, der über einen Schlüsselspeicheranbieter (KSP) zugänglich ist, der die Cryptography Next Generation-API (CNG) implementiert. Bei dieser Art von Speicher handelt sich in der Regel um ein Hardwaresicherheitsmodul (HSM). Nachdem Sie diese Option ausgewählt haben, müssen Sie einen KSP auswählen. Standardmäßig ist der **Softwareschlüsselspeicher-Anbieter von Microsoft** aktiviert. Wenn Sie einen in einem HSM gespeicherten Spaltenhauptschlüssel verwenden möchten, wählen Sie einen KSP für Ihr Gerät aus (muss installiert und auf dem Computer konfiguriert werden, bevor Sie das Dialogfeld öffnen).
     -   **Kryptografiedienstanbieter (CSP)** – Ein Schlüsselspeicher, der über einen Kryptografiedienstanbieter (CSP) zugänglich ist, der die Kryptografie-API (CAPI) implementiert. Bei dieser Art von Speicher handelt sich in der Regel um ein Hardwaresicherheitsmodul (HSM). Nachdem Sie diese Option ausgewählt haben, müssen Sie einen CSP auswählen.  Wenn Sie einen in einem HSM gespeicherten Spaltenhauptschlüssel verwenden möchten, wählen Sie einen CSP für Ihr Gerät aus (muss installiert und auf dem Computer konfiguriert werden, bevor Sie das Dialogfeld öffnen).
     
     > [!NOTE]
@@ -60,7 +60,7 @@ Mit dem Dialogfeld **Neuer Spaltenhauptschlüssel** können Sie einen Spaltenhau
 
 Nachdem Sie das Dialogfeld geschlossen haben, erstellt SQL Server Management Studio in der Datenbank Metadaten für den Spaltenhauptschlüssel. Das Dialogfeld erreicht dies, indem es die Anweisung [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) generiert und ausgibt.
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 Wenn Sie einen Enclave-fähigen Spaltenhauptschlüssel konfigurieren, signiert SSMS auch die Metadaten mithilfe des Spaltenhauptschlüssels. 
 
@@ -81,7 +81,7 @@ Weitere Informationen finden Sie unter [Erstellen und Speichern von Spaltenhaupt
 
 Mit dem Dialogfeld **Neuer Spaltenverschlüsselungsschlüssel** können Sie einen Spaltenverschlüsselungsschlüssel generieren, mit einem Spaltenhauptschlüssel verschlüsseln und Metadaten zu dem Spaltenverschlüsselungsschlüssel in der Datenbank erstellen.
 
-1.  Navigieren Sie über den **Objekt-Explorer**zu dem Ordner **Sicherheit &gt; Always Encrypted-Schlüssel** in Ihrer Datenbank.
+1.  Navigieren Sie über den **Objekt-Explorer** zu dem Ordner **Sicherheit &gt; Always Encrypted-Schlüssel** in Ihrer Datenbank.
 2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Spaltenverschlüsselungsschlüssel**, und wählen Sie **Neuer Spaltenverschlüsselungsschlüssel...** aus. 
 3.  Geben Sie im Dialogfeld **Neuer Spaltenverschlüsselungsschlüssel** den Namen des Spaltenverschlüsselungsschlüssel-Metadatenobjekts ein.
 4.  Wählen Sie ein Metadatenobjekt aus, das Ihren Spaltenhauptschlüssel in der Datenbank darstellt.

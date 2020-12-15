@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e130997ff6e81ffaef45597b0f4fbe9a238154c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 27af6771eeccf660b1eac623f80e663d93e411b8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866685"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405924"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>Konfigurieren der Spaltenverschlüsselung mit dem Always Encrypted-Assistenten
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ Dabei verschiebt der Assistent Daten aus der Datenbank und führt kryptografisch
 > [!NOTE]
 > Das Ausführen kryptografischer Vorgänge kann einige Zeit in Anspruch nehmen. Während dieser Zeit steht die Datenbank nicht zum Schreiben von Transaktionen zur Verfügung. PowerShell wird als Tool für kryptografische Vorgänge in größeren Tabellen empfohlen. Informationen hierzu finden Sie unter [Konfigurieren der Spaltenverschlüsselung mithilfe von Always Encrypted mit PowerShell](configure-column-encryption-using-powershell.md).
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > Wenn Sie [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] verwenden und Ihre SQL Server-Instanz mit Secure Enclave konfiguriert ist, können Sie kryptografische Vorgänge direkt ausführen, ohne Daten aus der Datenbank zu verschieben. Informationen hierzu finden Sie unter [Konfigurieren einer direkten Spaltenverschlüsselung mithilfe von Always Encrypted mit Secure Enclaves](always-encrypted-enclaves-configure-encryption.md). Beachten Sie, dass der Assistent keine direkte Verschlüsselung unterstützt.

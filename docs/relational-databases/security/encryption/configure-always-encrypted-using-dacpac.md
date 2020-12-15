@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4bb90c0f00087f0d2b0b76b3fa66b8cca2f4707c
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c18b6842139e5a4f5f0261761fa93cc42d3a506c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96130902"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405616"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>Konfigurieren der Spaltenverschlüsselung unter Verwendung von Always Encrypted mit einem DAC-Paket 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ Das Bereitstellen eines DAC-Pakets kann auch dazu führen, dass Metadatenobjekte
 ## <a name="performance-considerations"></a>Leistungserwägungen
 Ein Tool, mit dem Sie eine DACPAC-Datei bereitstellen, muss die Daten aus der Datenbank verschieben, um kryptografische Vorgänge auszuführen. Das Tool erstellt eine neue Tabelle (oder Tabellen) mit der gewünschten Verschlüsselungskonfiguration in der Datenbank, lädt alle Daten aus den ursprünglichen Tabellen, führt die angeforderten kryptografischen Vorgänge aus, lädt die Daten in die neue(n) Tabelle(n) hoch und vertauscht dann die ursprüngliche(n) Tabelle(n) mit der/den neuen Tabelle(n). Das Ausführen kryptografischer Vorgänge kann einige Zeit in Anspruch nehmen. Während dieser Zeit steht die Datenbank nicht zum Schreiben von Transaktionen zur Verfügung. 
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > Wenn Sie [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] verwenden und Ihre SQL Server-Instanz mit Secure Enclave konfiguriert ist, können Sie kryptografische Vorgänge direkt ausführen, ohne Daten aus der Datenbank zu verschieben. Informationen hierzu finden Sie unter [Konfigurieren einer direkten Spaltenverschlüsselung mithilfe von Always Encrypted mit Secure Enclaves](always-encrypted-enclaves-configure-encryption.md). Beachten Sie, dass die direkte Verschlüsselung für DACPAC-Bereitstellungen nicht verfügbar ist.

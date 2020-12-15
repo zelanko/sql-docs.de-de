@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 37ac7271be5090f17db16f67968df6eca138856d
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1406b28cae6d73228d54059cf7463b8eaa578385
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679030"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97406034"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>Abfragen von Spalten mithilfe von Always Encrypted mit SQL Server Management Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -71,8 +71,8 @@ Zum Anwenden von Abfragen auf verschlüsselte Spalten, einschließlich Abfragen 
 
 Zusätzlich zu den oben aufgeführten Berechtigungen benötigen Sie zum Entschlüsseln von Abfrageergebnissen oder Verschlüsseln von Abfrageparametern (die durch parametrisierte Transact-SQL-Anweisungen erstellt wurden) auch Zugriff auf den Spaltenhauptschlüssel, der die Zielspalten schützt:
 
-- **Zertifikatspeicher – Lokaler Computer** : Sie benötigen `Read`-Zugriff auf das Zertifikat, das als Spaltenhauptschlüssel verwendet wird, oder Administratorrechte auf dem Computer.   
-- **Azure Key Vault** : Sie benötigen die Berechtigungen `get`, `unwrapKey` und `verify` für den Tresor, der den Spaltenhauptschlüssel enthält.
+- **Zertifikatspeicher – Lokaler Computer**: Sie benötigen `Read`-Zugriff auf das Zertifikat, das als Spaltenhauptschlüssel verwendet wird, oder Administratorrechte auf dem Computer.   
+- **Azure Key Vault**: Sie benötigen die Berechtigungen `get`, `unwrapKey` und `verify` für den Tresor, der den Spaltenhauptschlüssel enthält.
 - **Schlüsselspeicheranbieter (KSP)** : Die erforderlichen Berechtigungen und Anmeldeinformationen, zu deren Eingabe Sie möglicherweise aufgefordert werden, wenn Sie einen Schlüsselspeicher oder einen Schlüssel verwenden, hängen von der Konfiguration des Speichers und des Schlüsselspeicheranbieters ab.   
 - **Kryptografiedienstanbieter (CSP)** : Die erforderlichen Berechtigungen und Anmeldeinformationen, zu deren Eingabe Sie möglicherweise aufgefordert werden, wenn Sie einen Schlüsselspeicher oder einen Schlüssel verwenden, hängen von der Konfiguration des Speichers und des Kryptografiedienstanbieters ab.
 
@@ -98,14 +98,14 @@ So aktivieren (oder deaktivieren) Sie Always Encrypted:
     1. Wenn Sie [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] verwenden und Ihre SQL Server-Instanz mit einer Secure Enclave konfiguriert sind, können Sie eine Enclave-Nachweis-URL angeben. Stellen Sie sicher, dass Sie das Textfeld **Enclave-Nachweis-URL** leer lassen, wenn Ihre SQL Server-Instanz nicht Secure Enclave verwendet. Weitere Informationen finden Sie unter [Always Encrypted mit Secure Enclaves](always-encrypted-enclaves.md).
 1. Bei Verwendung von SSMS 17 oder älter:
     1. Wählen Sie die Registerkarte **Weitere Eigenschaften** aus.
-    1. Geben Sie `Column Encryption Setting = Enabled` ein, um Always Encrypted zu aktivieren. Geben Sie zum Deaktivieren von Always Encrypted `Column Encryption Setting = Disabled` an, oder entfernen Sie die Einstellung **Spaltenverschlüsselungseinstellung** von der Registerkarte **Zusätzliche Eigenschaften** (der Standardwert ist **Deaktiviert** ).   
- 1. Klicken Sie auf **Verbinden** .
+    1. Geben Sie `Column Encryption Setting = Enabled` ein, um Always Encrypted zu aktivieren. Geben Sie zum Deaktivieren von Always Encrypted `Column Encryption Setting = Disabled` an, oder entfernen Sie die Einstellung **Spaltenverschlüsselungseinstellung** von der Registerkarte **Zusätzliche Eigenschaften** (der Standardwert ist **Deaktiviert**).   
+ 1. Klicken Sie auf **Verbinden**.
 
 > [!TIP]
 > So schalten Sie zwischen dem Aktivieren und Deaktivieren von Always Encrypted für ein vorhandenes Fenster „Abfrage-Editor“ um:   
 > 1.    Klicken Sie im Fenster „Abfrage-Editor“ mit der rechten Maustaste auf eine beliebige Stelle.
 > 2.    Wählen Sie **Verbindung** > **Verbindung ändern...** aus. Dadurch wird das Dialogfeld **Verbindung mit Server herstellen** für die aktuelle Verbindung für das Abfrage-Editor-Fenster geöffnet. 
-> 2.    Aktivieren oder deaktivieren Sie Always Encrypted, indem Sie die oben stehenden Schritte ausführen, und klicken Sie auf **Verbinden** .  
+> 2.    Aktivieren oder deaktivieren Sie Always Encrypted, indem Sie die oben stehenden Schritte ausführen, und klicken Sie auf **Verbinden**.  
    
 ## <a name="parameterization-for-always-encrypted"></a><a name="param"></a>Parametrisierung für Always Encrypted   
  
@@ -127,17 +127,17 @@ So aktivieren Sie „Parametrisierung für Always Encrypted“ für das aktuelle
 
 1. Wählen Sie im Hauptmenü **Abfrage** aus.
 2. Wählen Sie **Abfrageoptionen...** aus.
-3. Navigieren Sie zu **Ausführung** > **Erweitert** .
-4. Aktivieren bzw. deaktivieren **Parametrisierung für Always Encrypted** .
-5. Klicken Sie auf **OK** .
+3. Navigieren Sie zu **Ausführung** > **Erweitert**.
+4. Aktivieren bzw. deaktivieren **Parametrisierung für Always Encrypted**.
+5. Klicken Sie auf **OK**.
 
 So aktivieren oder deaktivieren Sie „Parametrisierung für Always Encrypted“ für künftige „Abfrage-Editor“-Fenster
 
 1. Wählen Sie im Hauptmenü **Tools** aus.
 2. Wählen Sie **Optionen...** aus.
-3. Navigieren Sie zu **Abfrageausführung** > **SQL Server** > **Erweitert** .
-4. Aktivieren bzw. deaktivieren **Parametrisierung für Always Encrypted** .
-5. Klicken Sie auf **OK** .
+3. Navigieren Sie zu **Abfrageausführung** > **SQL Server** > **Erweitert**.
+4. Aktivieren bzw. deaktivieren **Parametrisierung für Always Encrypted**.
+5. Klicken Sie auf **OK**.
 
 Bei Ausführung einer Abfrage im Fenster „Abfrage-Editor“, das eine Datenbankverbindung mit aktiviertem Always Encrypted aufweist, ohne dass die Parametrisierung für das Fenster „Abfrage-Editor“ aktiviert ist, werden Sie zur Aktivierung aufgefordert.
 
