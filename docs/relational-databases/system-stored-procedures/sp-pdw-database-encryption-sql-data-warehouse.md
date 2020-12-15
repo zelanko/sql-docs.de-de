@@ -11,13 +11,13 @@ dev_langs:
 ms.assetid: f5ccb424-7a95-4557-b774-c69de33c1545
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f8d77853846a18bd310d8afa58101cf66a24475b
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 73d1eb9fe27fa060a8bfcd13341a3908545aeed3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92258086"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468341"
 ---
 # <a name="sp_pdw_database_encryption-azure-synapse-analytics"></a>sp_pdw_database_encryption (Azure-Synapse-Analyse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -35,7 +35,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 #### <a name="parameters"></a>Parameter  
-`[ @enabled = ] enabled` Bestimmt, ob die transparente Datenverschlüsselung aktiviert ist. *aktiviert* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen:  
+`[ @enabled = ] enabled` Bestimmt, ob die transparente Datenverschlüsselung aktiviert ist. *aktiviert* ist vom Datentyp **int** und kann einen der folgenden Werte aufweisen:  
   
 -   0 = Deaktiviert  
   
@@ -46,8 +46,8 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
- Wenn TDE mit **sp_pdw_database_encryption**aktiviert ist, wird die tempdb-Datenbank gelöscht, neu erstellt und verschlüsselt. Aus diesem Grund kann der TDE nicht auf einem Gerät aktiviert werden, während andere aktive Sitzungen mit tempdb verwendet werden. Das Aktivieren oder Deaktivieren von TDE auf einer Appliance ist eine Aktion, die den Zustand des Geräts ändert. in den meisten Fällen wird davon ausgegangen, dass die Appliance in den meisten Fällen einmal ausgeführt wird, und sollte ausgeführt werden, wenn kein Datenverkehr auf dem Gerät vorhanden ist.  
+## <a name="remarks"></a>Hinweise  
+ Wenn TDE mit **sp_pdw_database_encryption** aktiviert ist, wird die tempdb-Datenbank gelöscht, neu erstellt und verschlüsselt. Aus diesem Grund kann der TDE nicht auf einem Gerät aktiviert werden, während andere aktive Sitzungen mit tempdb verwendet werden. Das Aktivieren oder Deaktivieren von TDE auf einer Appliance ist eine Aktion, die den Zustand des Geräts ändert. in den meisten Fällen wird davon ausgegangen, dass die Appliance in den meisten Fällen einmal ausgeführt wird, und sollte ausgeführt werden, wenn kein Datenverkehr auf dem Gerät vorhanden ist.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Daten Bank Rolle **sysadmin** oder die **Control Server** -Berechtigung.  

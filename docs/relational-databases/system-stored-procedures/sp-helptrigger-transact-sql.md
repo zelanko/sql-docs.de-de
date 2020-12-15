@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: e486d39b-771d-488d-a786-7136433a2203
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b7bf378b184a019c45fe20fac4dae8f995f7009
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8b03afedd01095ddfc233eca9722e9eecde8f840
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543250"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468361"
 ---
 # <a name="sp_helptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ sp_helptrigger [ @tabname = ] 'table'
   
 `[ @triggertype = ] 'type'` Der Typ des DML-Triggers, über den Informationen zurückgegeben werden sollen. *Type ist vom Datentyp* **char (6)** und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**DELETE**|Gibt DELETE-Triggerinformationen zurück.|  
 |**INSERT**|Gibt INSERT-Triggerinformationen zurück.|  
@@ -58,7 +58,7 @@ sp_helptrigger [ @tabname = ] 'table'
 ## <a name="result-sets"></a>Resultsets  
  Die folgende Tabelle zeigt die im Resultset enthaltenen Informationen an.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**trigger_name**|**sysname**|Name des Triggers.|  
 |**trigger_owner**|**sysname**|Name des Besitzers der Tabelle, für die der Trigger definiert ist.|  

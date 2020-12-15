@@ -13,12 +13,13 @@ helpviewer_keywords:
 ms.assetid: b4ac6f0e-8e6a-4b1a-9a7e-60e0a69b2180
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 499ca3cbd3c751e3f5a29260f46a5a4cfe8a6dce
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: da691dab0513ccd472459e2ad6ecaa4c446b9828
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009536"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467771"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---add-a-data-source"></a>Konfigurieren des SQL Server-ODBC-Treibers: Hinzufügen einer Datenquelle
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,11 +30,11 @@ ms.locfileid: "86009536"
   
 ### <a name="to-add-a-data-source-by-using-odbc-administrator"></a>So fügen Sie eine Datenquelle mit dem ODBC-Administrator hinzu  
   
-1.  Greifen Sie in der **Systemsteuerung**auf **Verwaltung** und dann auf **ODBC-Datenquellen (64-Bit)** oder **ODBC-Datenquellen (32 Bit)** zu. Alternativ können Sie odbcad32.exe aufrufen.  
+1.  Greifen Sie in der **Systemsteuerung** auf **Verwaltung** und dann auf **ODBC-Datenquellen (64-Bit)** oder **ODBC-Datenquellen (32 Bit)** zu. Alternativ können Sie odbcad32.exe aufrufen.  
   
-2.  Klicken Sie auf die Registerkarte **Benutzer-DSN**, **System-DSN**oder **Datei-DSN** , und klicken Sie dann auf **Hinzufügen**.  
+2.  Klicken Sie auf die Registerkarte **Benutzer-DSN**, **System-DSN** oder **Datei-DSN** , und klicken Sie dann auf **Hinzufügen**.  
   
-3.  Klicken Sie auf **SQL Server**und dann auf **Fertig stellen**.  
+3.  Klicken Sie auf **SQL Server** und dann auf **Fertig stellen**.  
   
 4.  Führen Sie die Schritte im Assistenten **zum Erstellen einer neuen Datenquelle in SQL Server** aus.  
   

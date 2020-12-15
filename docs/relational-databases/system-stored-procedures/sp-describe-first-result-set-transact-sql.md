@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9cc2e3bef68a6900d5b9735ef3a5f8a050a34361
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5c95a79bb42cbc3ab32a5521682aacc8f4f9079d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548110"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466911"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Gibt die Metadaten für das erste mögliche Resultset des [!INCLUDE[tsql](../../includes/tsql-md.md)] Batches zurück. Gibt ein leeres Resultset zurück, wenn vom Batch keine Ergebnisse zurückgegeben werden. Löst einen Fehler [!INCLUDE[ssDE](../../includes/ssde-md.md)] aus, wenn der die Metadaten für die erste Abfrage, die durch Ausführen einer statischen Analyse ausgeführt wird, nicht ermitteln kann. Die dynamische Verwaltungs Sicht [sys. dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) gibt die gleichen Informationen zurück.  
+  Gibt die Metadaten für das erste mögliche Resultset des [!INCLUDE[tsql](../../includes/tsql-md.md)] Batches zurück. Gibt ein leeres Resultset zurück, wenn vom Batch keine Ergebnisse zurückgegeben werden. Löst einen Fehler [!INCLUDE[ssDE](../../includes/ssde-md.md)] aus, wenn der die Metadaten für die erste Abfrage, die durch Ausführen einer statischen Analyse ausgeführt wird, nicht ermitteln kann. Die dynamische Verwaltungs Sicht [sys.dm_exec_describe_first_result_set &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) die gleichen Informationen zurückgibt.  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,11 +43,11 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ \@tsql = ] 'Transact-SQL_batch'` Eine oder mehrere- [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen. *Transact-SQL_batch* kann vom Datentyp **nvarchar (***n***)** oder **nvarchar (max)** sein.  
+`[ \@tsql = ] 'Transact-SQL_batch'` Eine oder mehrere- [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen. *Transact-SQL_batch* kann vom Datentyp **nvarchar (**_n_*_)_* oder **nvarchar (max)** sein.  
   
 `[ \@params = ] N'parameters'`\@Parameter stellt eine Deklarations Zeichenfolge für Parameter für den- [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch bereit, die sp_executesql ähnelt. Parameter können **nvarchar (n)** oder **nvarchar (max)** sein.  
   
- Ist eine Zeichenfolge, die die Definitionen aller Parameter enthält, die in die [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*eingebettet wurden. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. *n* ist ein Platzhalter, der zusätzliche Parameter Definitionen angibt. Jeder in der-Anweisung angegebene Parameter muss in Parametern definiert werden \@ . Wenn die- [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung oder der-Batch in der Anweisung keine Parameter enthält, ist die Angabe von Parametern \@ nicht erforderlich. Der Standardwert für diesen Parameter ist NULL.  
+ Ist eine Zeichenfolge, die die Definitionen aller Parameter enthält, die in die [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch* eingebettet wurden. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. *n* ist ein Platzhalter, der zusätzliche Parameter Definitionen angibt. Jeder in der-Anweisung angegebene Parameter muss in Parametern definiert werden \@ . Wenn die- [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung oder der-Batch in der Anweisung keine Parameter enthält, ist die Angabe von Parametern \@ nicht erforderlich. Der Standardwert für diesen Parameter ist NULL.  
   
 `[ \@browse_information_mode = ] tinyint` Gibt an, ob zusätzliche Schlüssel Spalten und Quell Tabellen Informationen zurückgegeben werden. Wenn der Wert auf 1 festgelegt ist, wird jede Abfrage so analysiert, als ob Sie eine for Browse-Option für die Abfrage enthält. Zusätzliche Schlüsselspalten und Quelltabelleninformationen werden zurückgegeben.  
   
@@ -58,12 +58,12 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 -   Bei 2 wird jede Abfrage analysiert, als würde sie beim Vorbereiten oder Ausführen eines Cursors verwendet. Damit werden Sichtnamen als Quellspalteninformationen zurückgegeben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- **sp_describe_first_result_set** gibt bei Erfolg immer den Status 0 (null) zurück. Wenn die Prozedur einen Fehler auslöst und die Prozedur als RPC aufgerufen wird, wird der Rückgabestatus durch den Fehlertyp aufgefüllt, der in der error_type-Spalte von sys. dm_exec_describe_first_result_set beschrieben wird. Wenn die Prozedur von [!INCLUDE[tsql](../../includes/tsql-md.md)] aufgerufen wird, ist der Rückgabewert immer 0; dies gilt auch bei einem Fehler.  
+ **sp_describe_first_result_set** gibt bei Erfolg immer den Status 0 (null) zurück. Wenn die Prozedur einen Fehler auslöst und die Prozedur als RPC aufgerufen wird, wird der Rückgabestatus durch den Fehlertyp aufgefüllt, der in der Spalte error_type von sys.dm_exec_describe_first_result_set beschrieben wird. Wenn die Prozedur von [!INCLUDE[tsql](../../includes/tsql-md.md)] aufgerufen wird, ist der Rückgabewert immer 0; dies gilt auch bei einem Fehler.  
   
 ## <a name="result-sets"></a>Resultsets  
  Diese allgemeinen Metadaten werden in den Ergebnismetadaten als Resultset mit einer Zeile für jede Spalte zurückgegeben. Jede Zeile beschreibt den Typ und die NULL-Zulässigkeit der Spalte in dem Format, das im folgenden Abschnitt beschriebenen wird. Wenn die erste Anweisung nicht für alle Steuerelementpfade vorhanden ist, wird ein Resultset mit 0 Zeilen zurückgegeben.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**Bit not NULL**|Gibt an, dass es sich bei der Spalte um eine zusätzliche Spalte zum Suchen von Informationen handelt, die nicht im Resultset angezeigt wird.|  
 |**column_ordinal**|**int NOT NULL**|Enthält die Ordnungsposition der Spalte im Resultset. Die Position der ersten Spalte wird als 1 angegeben.|  
@@ -106,7 +106,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**tds_collation_sort_id**|**tinyint NULL**|Für die interne Verwendung.|  
   
 ## <a name="remarks"></a>Hinweise  
- **sp_describe_first_result_set** wird sichergestellt, dass, wenn die Prozedur die ersten Resultset-Metadaten für (einen hypothetischen) Batch a zurückgibt und dieser Batch (a) anschließend ausgeführt wird, der Batch entweder (1) einen Optimierungs Zeitfehler auslöst. (2) löst einen Laufzeitfehler aus, (3) gibt kein Resultset zurück, oder (4) gibt ein erstes Resultset mit denselben Metadaten zurück, die von **sp_describe_first_result_set**beschrieben werden.  
+ **sp_describe_first_result_set** wird sichergestellt, dass, wenn die Prozedur die ersten Resultset-Metadaten für (einen hypothetischen) Batch a zurückgibt und dieser Batch (a) anschließend ausgeführt wird, der Batch entweder (1) einen Optimierungs Zeitfehler auslöst. (2) löst einen Laufzeitfehler aus, (3) gibt kein Resultset zurück, oder (4) gibt ein erstes Resultset mit denselben Metadaten zurück, die von **sp_describe_first_result_set** beschrieben werden.  
   
  Der Name, die NULL-Zulässigkeit und der Datentyp können abweichen. Wenn **sp_describe_first_result_set** ein leeres Resultset zurückgibt, ist die Garantie, dass bei der Batch Ausführung keine Resultsets zurückgegeben werden.  
   
@@ -126,7 +126,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  Wenn alle anderen Überprüfungen erfolgreich sind, werden alle möglichen Ablaufsteuerungspfade im Eingabebatch berücksichtigt. Dabei werden alle Ablauf Steuerungs Anweisungen (goto, if/else) berücksichtigt. while-und [!INCLUDE[tsql](../../includes/tsql-md.md)] try/catch-Blöcke) sowie Prozeduren, dynamische [!INCLUDE[tsql](../../includes/tsql-md.md)] Batches oder Trigger, die durch eine EXEC-Anweisung aus dem Eingabe Batch aufgerufen werden, eine DDL-Anweisung, die bewirkt, dass DDL-Trigger ausgelöst werden, oder eine DML-Anweisung, die bewirkt, dass Trigger für eine Ziel Tabelle oder für eine Tabelle ausgelöst werden, die aufgrund einer kaskadierenden Aktion Bei einer Vielzahl möglicher Steuerelementpfade wird der Algorithmus irgendwann beendet.  
   
- Für jeden Ablauf Steuerungs Pfad wird die erste Anweisung (sofern vorhanden), die ein Resultset zurückgibt, durch **sp_describe_first_result_set**bestimmt.  
+ Für jeden Ablauf Steuerungs Pfad wird die erste Anweisung (sofern vorhanden), die ein Resultset zurückgibt, durch **sp_describe_first_result_set** bestimmt.  
   
  Bei mehreren möglichen ersten Anweisungen in einem Batch kann sich das jeweilige Ergebnis im Hinblick auf die Anzahl der Spalten, die Spaltennamen, die NULL-Zulässigkeit und den Datentyp unterscheiden. Im Folgenden wird ausführlicher erläutert, wie diese Unterschiede gehandhabt werden:  
   
@@ -401,6 +401,6 @@ N'
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_describe_undeclared_parameters &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [sys. dm_exec_describe_first_result_set &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [sys. dm_exec_describe_first_result_set_for_object &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
+ [sys.dm_exec_describe_first_result_set &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
  

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 232ad1cfe65fca719260a9ed8ab87a7f2d7ed3dd
-ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017
+ms.openlocfilehash: 710265fca96078ef08d54ca503f174a8150aca8e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96443156"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466841"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
@@ -61,7 +61,7 @@ sp_describe_undeclared_parameters
 ## <a name="result-sets"></a>Resultsets  
  **sp_describe_undeclared_parameters** gibt das folgende Resultset zurück.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int NOT NULL**|Enthält die Ordnungsposition des Parameters im Resultset. Die Position des ersten Parameters wird mit 1 angegeben.|  
 |**name**|**vom Datentyp sysname ist nicht NULL.**|Enthält den Namen des Parameters.|  
@@ -88,7 +88,7 @@ sp_describe_undeclared_parameters
 |**suggested_tds_type_id**|**int NOT NULL**|Für die interne Verwendung.|  
 |**suggested_tds_length**|**int NOT NULL**|Für die interne Verwendung.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_describe_undeclared_parameters** gibt immer den Rückgabestatus 0 (null) zurück.  
   
  Die häufigste Verwendung besteht darin, dass für eine Anwendung eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung ausgeführt wird, die möglicherweise Parameter enthält und von dieser verarbeitet werden muss. Dies gilt beispielsweise für eine Benutzeroberfläche (z. B. ODBCTest oder RowsetViewer), bei der der Benutzer eine Abfrage mit ODBC-Parametersyntax eingibt. Die Anwendung muss die Anzahl der Parameter dynamisch ermitteln und bei jedem den Benutzer auffordern.  
@@ -170,7 +170,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   Einfache Ableitung  
   
-     Wenn E ( \@ p) = \@ p und TT ( \@ p) vorhanden ist, d. h., wenn \@ p direkt ein Argument für einen der am Anfang von Schritt 2 aufgeführten Ausdrücke ist, leitet der typableitungs Algorithmus den Datentyp von \@ p in TT ( \@ p) ab. Zum Beispiel:  
+     Wenn E ( \@ p) = \@ p und TT ( \@ p) vorhanden ist, d. h., wenn \@ p direkt ein Argument für einen der am Anfang von Schritt 2 aufgeführten Ausdrücke ist, leitet der typableitungs Algorithmus den Datentyp von \@ p in TT ( \@ p) ab. Beispiel:  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
@@ -218,7 +218,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 1.  Der Datentyp, der die kleinste Anzahl impliziter Konvertierungen in E ( \@ p) erzeugt, wird ausgewählt. Wenn ein bestimmter Datentyp einen Datentyp für E ( \@ p) erzeugt, der nicht mit TT ( \@ p) identisch ist, betrachtet der typableitungs Algorithmus dies als zusätzliche implizite Konvertierung des Datentyps e ( \@ p) in TT ( \@ p).  
   
-     Zum Beispiel:  
+     Beispiel:  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  

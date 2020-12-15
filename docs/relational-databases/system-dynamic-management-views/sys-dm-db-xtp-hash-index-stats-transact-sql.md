@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_xtp_hash_index_stats (Transact-SQL)
-title: sys. dm_db_xtp_hash_index_stats (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_db_xtp_hash_index_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 45969884-cd61-48e8-aee5-c725c78e3e4c
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e8b28d292de4d860a8e46f7a679e42d99ac8c88
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 310fb757ca9956ac3206ac3d9bff0cc99c857a87
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542260"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468481"
 ---
 # <a name="sysdm_db_xtp_hash_index_stats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -42,11 +42,11 @@ ms.locfileid: "89542260"
 Hohe Kettenlängen können die Leistung aller DML-Vorgänge für einzelne Zeilen, einschließlich von SELECT oder INSERT, deutlich beeinträchtigen. Kurze Kettenlängen in Kombination mit einer hohen Anzahl von leeren Buckets weisen auf eine zu hohe Bucketanzahl hin. Dadurch wird die Leistung von Indexscans verringert.  
   
 > [!WARNING]
-> **sys. dm_db_xtp_hash_index_stats** scannt die gesamte Tabelle. Wenn also große Tabellen in der Datenbank vorhanden sind, kann **sys. dm_db_xtp_hash_index_stats** viel Zeit in Anspruch nehmen.  
+> **sys.dm_db_xtp_hash_index_stats** scannt die gesamte Tabelle. Wenn also große Tabellen in der Datenbank vorhanden sind, kann **sys.dm_db_xtp_hash_index_stats** viel Zeit in Anspruch nehmen.  
   
-Weitere Informationen finden Sie unter [Hash Indizes für Speicher optimierte Tabellen](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
+Weitere Informationen finden Sie unter [Hash Indizes für Memory-Optimized Tabellen](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
   
-|Spaltenname|type|BESCHREIBUNG|  
+|Spaltenname|type|Beschreibung|  
 |-----------------|----------|-----------------|  
 |object_id|**int**|Die Objekt-ID der übergeordneten Tabelle.|  
 |xtp_object_id|**bigint**|Die ID der Speicher optimierten Tabelle.|  
@@ -88,7 +88,7 @@ Die folgende Abfrage kann verwendet werden, um eine Problembehandlung für die B
   ORDER BY [table], [index];  
 ``` 
 
-Weitere Informationen zum Interpretieren der Ergebnisse dieser Abfrage finden Sie unter Problembehandlung [bei Hash Indizes für Speicher optimierte Tabellen](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
+Weitere Informationen zum Interpretieren der Ergebnisse dieser Abfrage finden Sie unter Problembehandlung [bei Hash Indizes für Memory-Optimized Tabellen](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
 
 ### <a name="b-hash-index-statistics-for-internal-tables"></a>B. Hash Index Statistik für interne Tabellen
 

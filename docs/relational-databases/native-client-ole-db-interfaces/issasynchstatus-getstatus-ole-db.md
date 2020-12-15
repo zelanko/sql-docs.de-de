@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7bd8db285c1c8d9801adb7d37d4f03a9103b444
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4dec7256e445ff41f5e8549e4dff4e6c5c341fe1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490815"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469381"
 ---
 # <a name="issasynchstatusgetstatus-native-client-ole-db-provider"></a>ISSAsynchStatus:: GetStatus (Native Client OLE DB-Anbieter)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,12 +52,12 @@ HRESULT GetStatus(
  DBASYNCHOP_OPEN – Der Consumer fordert Informationen über das asynchrone Öffnen oder Auffüllen eines Rowsets oder über die asynchrone Initialisierung eines Datenquellobjekts an. Wenn der Anbieter OLE DB 2.5-kompatibel ist und die direkte URL-Bindung unterstützt, fordert der Consumer Informationen über die asynchrone Initialisierung oder Auffüllung einer Datenquelle, eines Rowsets, einer Zeile oder eines Datenstromobjekts an.  
   
  *pulProgress*[out]  
- Ein Zeiger auf den Arbeitsspeicher, in dem der aktuelle Status des asynchronen Vorgangs relativ zum erwarteten maximalen Wert, der im *pulProgress* -Parameter angegeben ist, zurückgegeben werden soll. Weitere Informationen über die Bedeutung von *pulProgress*finden Sie in der Beschreibung zu *peAsynchPhase*.  
+ Ein Zeiger auf den Arbeitsspeicher, in dem der aktuelle Status des asynchronen Vorgangs relativ zum erwarteten maximalen Wert, der im *pulProgress* -Parameter angegeben ist, zurückgegeben werden soll. Weitere Informationen über die Bedeutung von *pulProgress* finden Sie in der Beschreibung zu *peAsynchPhase*.  
   
  Wenn *pulProgress* ein NULL-Zeiger ist, wird kein Status zurückgegeben.  
   
  *pulProgressMax*[out]  
- Ein Zeiger auf den Arbeitsspeicher, in dem der erwartete maximale Wert des *pulProgress* -Parameters zurückgegeben werden soll. Dieser Wert ändert sich möglicherweise im Verlauf von Aufrufen für diese Methode. Weitere Informationen über die Bedeutung von *pulProgressMax*finden Sie in der Beschreibung zu *peAsynchPhase*.  
+ Ein Zeiger auf den Arbeitsspeicher, in dem der erwartete maximale Wert des *pulProgress* -Parameters zurückgegeben werden soll. Dieser Wert ändert sich möglicherweise im Verlauf von Aufrufen für diese Methode. Weitere Informationen über die Bedeutung von *pulProgressMax* finden Sie in der Beschreibung zu *peAsynchPhase*.  
   
  Wenn es sich bei *pulProgressMax* um einen NULL-Zeiger handelt, wird kein erwarteter maximaler Wert zurückgegeben.  
   
@@ -75,7 +75,7 @@ HRESULT GetStatus(
  *ppwszStatusText*[in/out]  
  Ein Zeiger auf den Arbeitsspeicher, der weitere Informationen über den Vorgang enthält. Mit diesem Wert kann ein Anbieter zwischen verschiedenen Elementen eines Vorgangs unterscheiden, z.B. verschiedene Ressourcen, auf die zugegriffen wurde. Diese Zeichenfolge wird gemäß der DBPROP_INIT_LCID-Eigenschaft für das Datenquellobjekt lokalisiert.  
   
- Wenn *ppwszStatusText* bei Eingabe ungleich NULL ist, gibt der Anbieter den Status in Verbindung mit dem entsprechenden, durch *ppwszStatusText*identifizierten Element zurück. Gibt *ppwszStatusText* kein Element von *eOperation*an, gibt der Anbieter S_OK zurück, wobei *pulProgress* und *pulProgressMax* auf den gleichen Wert festgelegt sind. Wenn der Anbieter nicht zwischen Elementen basierend auf einer wörtlichen ID unterscheidet, setzt er *ppwszStatusText* auf NULL und gibt Informationen über den gesamten Vorgang zurück. Ist *ppwszStatusText* bei Eingabe ungleich NULL, lässt der Anbieter *ppwszStatusText* unverändert.  
+ Wenn *ppwszStatusText* bei Eingabe ungleich NULL ist, gibt der Anbieter den Status in Verbindung mit dem entsprechenden, durch *ppwszStatusText* identifizierten Element zurück. Gibt *ppwszStatusText* kein Element von *eOperation* an, gibt der Anbieter S_OK zurück, wobei *pulProgress* und *pulProgressMax* auf den gleichen Wert festgelegt sind. Wenn der Anbieter nicht zwischen Elementen basierend auf einer wörtlichen ID unterscheidet, setzt er *ppwszStatusText* auf NULL und gibt Informationen über den gesamten Vorgang zurück. Ist *ppwszStatusText* bei Eingabe ungleich NULL, lässt der Anbieter *ppwszStatusText* unverändert.  
   
  Ist *ppwszStatusText* bei Eingabe NULL, legt der Anbieter *ppwszStatusText* auf einen Wert fest, der mehr Informationen über den Vorgang angibt, oder auf NULL, wenn keine derartigen Informationen verfügbar sind oder wenn **ISSAsynchStatus::GetStatus** einen Fehler zurückgibt. Wenn *ppwszStatusText* bei Eingabe NULL ist, weist der Anbieter Arbeitsspeicher für die Statuszeichenfolge zu und gibt die Adresse zu diesem Arbeitsspeicher zurück. Der Consumer gibt diesen Arbeitsspeicher mit **IMalloc::Free** frei, wenn die Zeichenfolge nicht mehr benötigt wird.  
   

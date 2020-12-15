@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 155791eb-8832-4596-8487-7fc70dfba5b9
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f51c5f4c8e96eecd770190be5efcc42799ed3958
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ca07485062d39e2fa547e524e2b0368b19e9b577
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548042"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468401"
 ---
 # <a name="sp_help_fulltext_tables_cursor-transact-sql"></a>sp_help_fulltext_tables_cursor (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "89548042"
   Verwendet einen Cursor, um eine Liste der Tabellen zurückzugeben, die für die Volltextindizierung registriert sind.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen die neue **sys. fulltext_indexes** -Katalog Sicht. Weitere Informationen finden Sie unter [sys. fulltext_indexes &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen die neue **sys.fulltext_indexes** -Katalog Sicht. Weitere Informationen finden Sie unter [sys.fulltext_indexes &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ## <a name="arguments"></a>Argumente  
 `[ @cursor_return = ] @cursor_variable OUTPUT` Die Ausgabevariable vom Typ **Cursor**. Bei dem Cursor handelt es sich um einen schreibgeschützten, bildlauffähigen, dynamischen Cursor.  
   
-`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` Der Name des voll Text Katalogs. *fulltext_catalog_name* ist vom Datentyp **sysname**. Der Standardwert ist NULL. Wenn *fulltext_catalog_name* ausgelassen wird oder den Wert NULL hat, werden alle der Datenbank zugeordneten voll Text indizierten Tabellen zurückgegeben. Wenn *fulltext_catalog_name* angegeben wird, *table_name* aber weggelassen wird oder NULL ist, werden die Volltextindex Informationen für jede voll Text indizierte Tabelle abgerufen, die diesem Katalog zugeordnet ist. Wenn sowohl *fulltext_catalog_name* als auch *table_name* angegeben werden, wird eine Zeile zurückgegeben, wenn *table_name* *fulltext_catalog_name*zugeordnet ist. Andernfalls wird ein Fehler ausgelöst.  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` Der Name des voll Text Katalogs. *fulltext_catalog_name* ist vom Datentyp **sysname**. Der Standardwert ist NULL. Wenn *fulltext_catalog_name* ausgelassen wird oder den Wert NULL hat, werden alle der Datenbank zugeordneten voll Text indizierten Tabellen zurückgegeben. Wenn *fulltext_catalog_name* angegeben wird, *table_name* aber weggelassen wird oder NULL ist, werden die Volltextindex Informationen für jede voll Text indizierte Tabelle abgerufen, die diesem Katalog zugeordnet ist. Wenn sowohl *fulltext_catalog_name* als auch *table_name* angegeben werden, wird eine Zeile zurückgegeben, wenn *table_name* *fulltext_catalog_name* zugeordnet ist. Andernfalls wird ein Fehler ausgelöst.  
   
 `[ @table_name = ] 'table_name'` Der ein-oder zweiteilige Tabellenname, für den die voll Text Metadaten angefordert werden. *table_name* ist vom Datentyp **nvarchar(517)**. Der Standardwert ist NULL. Wenn nur *table_name* angegeben ist, wird nur die Zeile zurückgegeben, die für *table_name* relevant ist.  
   
@@ -57,7 +57,7 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**TABLE_OWNER**|**sysname**|Tabellenbesitzer. Der Name des Datenbankbenutzers, der die Tabelle erstellt hat.|  
 |**TABLE_NAME**|**sysname**|Tabellenname.|  

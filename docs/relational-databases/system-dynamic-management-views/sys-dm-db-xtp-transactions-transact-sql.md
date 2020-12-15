@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_xtp_transactions (Transact-SQL)
-title: sys. dm_db_xtp_transactions (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_db_xtp_transactions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 5c1a0a7a-e851-4b6f-8dfd-c9655fbf5a51
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01f918c14409cdb23c017aaadb6432f18b25e67f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d9ac99aa3429c6f8e61828783dce6166efa43b20
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534316"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468451"
 ---
 # <a name="sysdm_db_xtp_transactions-transact-sql"></a>sys.dm_db_xtp_transactions (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "89534316"
   
  Weitere Informationen finden Sie unter [In-Memory OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
     
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |xtp_transaction_id|**bigint**|Die interne ID für diese Transaktion im XTP-Transaktions-Manager.|  
 |transaction_id|**bigint**|Die Transaktions-ID. Joins mit der Transaktions-ID in anderen transaktionsbezogenen DMVs, z. B. sys.dm_tran_active_transactions.<br /><br /> 0 nur für XTP-Transaktionen, z. B. Transaktionen, die von systemintern kompilierten gespeicherten Prozeduren gestartet werden.|  
@@ -65,7 +65,7 @@ ms.locfileid: "89534316"
 |commit_dependency_total_attempt_count|**int**|Nur interne Verwendung.|  
 |scan_area|**int**|Nur interne Verwendung.|  
 |scan_area_desc|**nvarchar**|Nur interne Verwendung.|  
-|scan_location|**int**|Nur interne Verwendung.|  
+|scan_location|**int**|Nur zur internen Verwendung.|  
 |dependent_1_address|**varbinary(8)**|Nur interne Verwendung.|  
 |dependent_2_address|**varbinary(8)**|Nur interne Verwendung.|  
 |dependent_3_address|**varbinary(8)**|Nur interne Verwendung.|  

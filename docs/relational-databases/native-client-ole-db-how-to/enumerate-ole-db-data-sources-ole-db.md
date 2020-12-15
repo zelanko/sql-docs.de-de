@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8fc37fff75c3ba078c104e87af38cbcc03954563
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 42e11b7c4a973312cb71756d0e67cc964664410e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867990"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469461"
 ---
 # <a name="enumerate-sql-server-native-client-ole-db-data-sources-ole-db"></a>SQL Server Native Client OLE DB Datenquellen aufzählen (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,17 +39,17 @@ ms.locfileid: "91867990"
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>So listen Sie OLE DB-Datenquellen auf  
   
-1.  Rufen Sie das Quellrowset ab, indem Sie **ISourceRowset::GetSourcesRowset**aufrufen.  
+1.  Rufen Sie das Quellrowset ab, indem Sie **ISourceRowset::GetSourcesRowset** aufrufen.  
   
-2.  Suchen Sie die Beschreibung des Enumeratorenrowsets, indem Sie **GetColumnInfo::IColumnInfo**aufrufen.  
+2.  Suchen Sie die Beschreibung des Enumeratorenrowsets, indem Sie **GetColumnInfo::IColumnInfo** aufrufen.  
   
 3.  Erstellen Sie die Bindungsstrukturen aus den Spalteninformationen.  
   
 4.  Erstellen Sie den Rowsetaccessor durch Aufrufen von **IAccessor::CreateAccessor**.  
   
-5.  Rufen Sie die Zeilen ab, indem Sie **IRowset::GetNextRows**aufrufen.  
+5.  Rufen Sie die Zeilen ab, indem Sie **IRowset::GetNextRows** aufrufen.  
   
-6.  Rufen Sie Daten aus der Kopie der Zeile im Rowset ab, indem Sie **IRowset::GetData**aufrufen und verarbeiten.  
+6.  Rufen Sie Daten aus der Kopie der Zeile im Rowset ab, indem Sie **IRowset::GetData** aufrufen und verarbeiten.  
   
 ## <a name="example"></a>Beispiel  
  Kompilieren Sie mit ole32.lib, und führen Sie das folgende C++-Codelisting aus. Diese Anwendung stellt eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Standardinstanz des Computers her. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz ändern. Ändern Sie zum Herstellen einer Verbindung zu einer benannten Instanz die Verbindungszeichenfolge von L„(local)“ in L„(local)\\\name“, wobei „name“ die benannte Instanz darstellt. Standardmäßig wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  

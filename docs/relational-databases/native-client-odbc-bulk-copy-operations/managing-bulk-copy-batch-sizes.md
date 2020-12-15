@@ -16,12 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4b24139f-788b-45a6-86dc-ae835435d737
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b558b9bdab0a7f582cf446b020ebaa76a07ce4f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f9be8ff6adc10b74ae176011dd1ae0f3a2b9cae1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007167"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465021"
 ---
 # <a name="managing-bulk-copy-batch-sizes"></a>Verwalten von Batchgrößen für das Massenkopieren
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,9 +41,9 @@ ms.locfileid: "86007167"
   
  Beim Massen kopieren aus einer Datendatei wird die Batch Größe durch Aufrufen von **bcp_control** mit der BCPBATCH-Option angegeben, bevor [bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)aufgerufen wird. Beim Massen Kopieren von Programmvariablen mithilfe von [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) und [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)wird die Batch Größe durch Aufrufen von [bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) nach dem Aufrufen [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) *x* -Mal gesteuert, wobei *x* die Anzahl der Zeilen in einem Batch ist.  
   
- Batches sind nicht nur für das Festlegen der Größe einer Transaktion relevant, sondern wirken sich auch auf den Zeitpunkt aus, an dem Zeilen über das Netzwerk an den Server gesendet werden. Massen Kopierfunktionen speichern die Zeilen in der Regel **bcp_sendrow** zwischen, bis ein Netzwerk Paket ausgefüllt ist, und senden das vollständige Paket an den Server. Wenn eine Anwendung **bcp_batch**aufruft, wird das aktuelle Paket jedoch unabhängig davon, ob es ausgefüllt wurde, an den Server gesendet. Eine sehr niedrige Batchgröße kann die Leistung herabsetzen, wenn dadurch viele teilweise aufgefüllte Pakete an den Server gesendet werden. Wenn Sie z. b. nach jeder **bcp_sendrow** **bcp_batch** aufrufen, bewirkt dies, dass jede Zeile in einem separaten Paket gesendet wird. wenn die Zeilen sehr groß sind, verschwendet der Speicherplatz in jedem Paket. Die Standardgröße von Netzwerk Paketen für SQL Server beträgt 4 KB, obwohl eine Anwendung die Größe durch Aufrufen von [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) , die das SQL_ATTR_PACKET_SIZE Attribut angibt, ändern kann.  
+ Batches sind nicht nur für das Festlegen der Größe einer Transaktion relevant, sondern wirken sich auch auf den Zeitpunkt aus, an dem Zeilen über das Netzwerk an den Server gesendet werden. Massen Kopierfunktionen speichern die Zeilen in der Regel **bcp_sendrow** zwischen, bis ein Netzwerk Paket ausgefüllt ist, und senden das vollständige Paket an den Server. Wenn eine Anwendung **bcp_batch** aufruft, wird das aktuelle Paket jedoch unabhängig davon, ob es ausgefüllt wurde, an den Server gesendet. Eine sehr niedrige Batchgröße kann die Leistung herabsetzen, wenn dadurch viele teilweise aufgefüllte Pakete an den Server gesendet werden. Wenn Sie z. b. nach jeder **bcp_sendrow** **bcp_batch** aufrufen, bewirkt dies, dass jede Zeile in einem separaten Paket gesendet wird. wenn die Zeilen sehr groß sind, verschwendet der Speicherplatz in jedem Paket. Die Standardgröße von Netzwerk Paketen für SQL Server beträgt 4 KB, obwohl eine Anwendung die Größe durch Aufrufen von [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) , die das SQL_ATTR_PACKET_SIZE Attribut angibt, ändern kann.  
   
- Ein weiterer Nebeneffekt von Batches besteht darin, dass jeder Batch als ausstehendes Resultset betrachtet wird, bis es mit **bcp_batch**abgeschlossen ist. Wenn bei einem Verbindungs Handle andere Vorgänge versucht werden, während ein Batch aussteht, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt der Native Client-ODBC-Treiber einen Fehler mit SQLSTATE = "HY000" und der folgenden Fehlermeldungs Zeichenfolge aus:  
+ Ein weiterer Nebeneffekt von Batches besteht darin, dass jeder Batch als ausstehendes Resultset betrachtet wird, bis es mit **bcp_batch** abgeschlossen ist. Wenn bei einem Verbindungs Handle andere Vorgänge versucht werden, während ein Batch aussteht, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt der Native Client-ODBC-Treiber einen Fehler mit SQLSTATE = "HY000" und der folgenden Fehlermeldungs Zeichenfolge aus:  
   
 ```  
 "[Microsoft][SQL Server Native Client] Connection is busy with  

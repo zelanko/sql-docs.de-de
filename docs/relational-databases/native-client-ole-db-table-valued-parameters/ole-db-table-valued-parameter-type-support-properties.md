@@ -1,6 +1,6 @@
 ---
-description: OLE DB Typunterstützung für Tabellenwert Parameter in SQL Server Native Client (Eigenschaften)
-title: OLE DB Tabellenwert Parameter-Typs (Eigenschaften)
+description: OLE DB Table-Valued Parametertyp Unterstützung in SQL Server Native Client (Eigenschaften)
+title: OLE DB Table-Valued Parametertyp (Eigenschaften)
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 96fdbd152eacf5a23f530f5bd5caa7cebb801980
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4eb8247110cdd4c69c1bf4b93c35417d0b575db1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482615"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469281"
 ---
-# <a name="ole-db-table-valued-parameter-type-support-in-sql-server-native-client-properties"></a>OLE DB Typunterstützung für Tabellenwert Parameter in SQL Server Native Client (Eigenschaften)
+# <a name="ole-db-table-valued-parameter-type-support-in-sql-server-native-client-properties"></a>OLE DB Table-Valued Parametertyp Unterstützung in SQL Server Native Client (Eigenschaften)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Dieses Thema stellt Informationen zu OLE DB-Eigenschaften und -Eigenschaftensätzen bereit, die Tabellenwertparameter-Rowsetobjekten zugeordnet werden.  

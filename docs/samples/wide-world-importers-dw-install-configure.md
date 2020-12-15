@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 18d4e9c18c4848a0857c1afb146b0d0405f418ce
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 5096ecd27f6ba9d5d06dd4efd322a42e3218a0bd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956561"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466601"
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>Installation und Konfiguration von wideworldimportersdw
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -25,7 +25,7 @@ Installations-und Konfigurations Anweisungen für die wideworldimportersdw-Daten
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (oder höher) oder [Azure SQL-Datenbank](https://azure.microsoft.com/services/sql-database/). Um die vollständige Version des Beispiels zu verwenden, verwenden Sie SQL Server Evaluation/Developer/Enterprise Edition.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md): Um die besten Ergebnisse zu erzielen, verwenden Sie die Version vom Juni 2016 oder höher.
 
-## <a name="download"></a>Download
+## <a name="download"></a>Herunterladen
 
 Die neueste Version des Beispiels:
 
@@ -47,7 +47,7 @@ Zum Wiederherstellen einer Sicherung in einer SQL Server Instanz können Sie Man
 1. Öffnen Sie SQL Server Management Studio und stellen Sie eine Verbindung mit der Ziel SQL Server Instanz her.
 2. Klicken Sie mit der rechten Maustaste auf den Knoten **Datenbanken** , und wählen Sie **Datenbank wiederherstellen**.
 3. Wählen Sie **Gerät** aus, und klicken Sie auf die Schaltfläche **...**
-4. Wählen Sie im Dialogfeld **Sicherungs**Medien aus, klicken Sie auf **Hinzufügen**, navigieren Sie im Dateisystem des Servers zu der Datenbanksicherung, und wählen Sie die Sicherung aus. Klicken Sie auf **OK**.
+4. Wählen Sie im Dialogfeld **Sicherungs** Medien aus, klicken Sie auf **Hinzufügen**, navigieren Sie im Dateisystem des Servers zu der Datenbanksicherung, und wählen Sie die Sicherung aus. Klicken Sie auf **OK**.
 5. Ändern Sie ggf. den Zielort für die Daten-und Protokolldateien im Bereich " **Dateien** ". Beachten Sie, dass es eine bewährte Vorgehensweise ist, Daten-und Protokolldateien auf verschiedenen Laufwerken zu platzieren.
 6. Klicken Sie auf **OK**. Dadurch wird die Daten Bank Wiederherstellung initiiert. Nachdem der Vorgang abgeschlossen ist, wird die Datenbank "wideworldimporters" auf der SQL Server-Instanz installiert.
 
@@ -58,7 +58,7 @@ Zum Importieren einer BacPac-Datenbank in eine neue SQL-Datenbank können Sie Ma
 1. optionale Wenn Sie noch keine SQL Server in Azure haben, navigieren Sie zum [Azure-Portal](https://portal.azure.com/) , und erstellen Sie eine neue SQL-Datenbank. Beim Erstellen einer Datenbank erstellen Sie einen Server. Notieren Sie sich den Server.
    - In [diesem Tutorial](/azure/azure-sql/database/single-database-create-quickstart) finden Sie Informationen zum Erstellen einer Datenbank in wenigen Minuten.
 2. Öffnen Sie SQL Server Management Studio, und stellen Sie in Azure eine Verbindung mit Ihrem Server her
-3. Klicken Sie mit der rechten Maustaste auf den Knoten **Datenbanken** , und wählen Sie **Data-Tier Anwendung importieren**aus.
+3. Klicken Sie mit der rechten Maustaste auf den Knoten **Datenbanken** , und wählen Sie **Data-Tier Anwendung importieren** aus.
 4. Wählen Sie unter **Import Einstellungen** die Option **aus lokalem Datenträger importieren aus** , und wählen Sie die BacPac-Datei der Beispieldatenbank aus dem Dateisystem aus.
 5. Ändern Sie unter **Datenbankeinstellungen** den Datenbanknamen in *wideworldimportersdw* , und wählen Sie die zu verwendende Ziel Edition und das Dienst Ziel aus.
 6. Klicken Sie auf **weiter** und **Beenden** , um die Bereitstellung zu starten. Dies nimmt einige Minuten in Anspruch. Wenn Sie ein Dienst Ziel angeben, das kleiner als S2 ist, kann es länger dauern.

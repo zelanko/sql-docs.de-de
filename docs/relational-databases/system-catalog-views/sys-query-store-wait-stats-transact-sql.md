@@ -1,6 +1,6 @@
 ---
-description: sys. query_store_wait_stats (Transact-SQL)
-title: sys. query_store_wait_stats (Transact-SQL) | Microsoft-Dokumentation
+description: sys.query_store_wait_stats (Transact-SQL)
+title: sys.query_store_wait_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/19/2019
 ms.prod: sql
@@ -19,25 +19,25 @@ helpviewer_keywords:
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc28729ef4f3743e945f782fed0409057e90224a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2ab48b6155e26873c22a3b951ef65705d3addd79
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537308"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466921"
 ---
-# <a name="sysquery_store_wait_stats-transact-sql"></a>sys. query_store_wait_stats (Transact-SQL)
+# <a name="sysquery_store_wait_stats-transact-sql"></a>sys.query_store_wait_stats (Transact-SQL)
 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
   Enthält Informationen zu den warte Informationen für die Abfrage.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**wait_stats_id**|**bigint**|Der Bezeichner der Zeile, die die Warte Statistik für die plan_id, runtime_stats_interval_id execution_type und wait_category darstellt. Er ist nur für die letzten Lauf Zeit Statistik Intervalle eindeutig. Für das derzeit aktive Intervall gibt es möglicherweise mehrere Zeilen, die Warte Statistiken für den Plan darstellen, auf den von plan_id verwiesen wird, wobei der Ausführungstyp execution_type und die durch wait_category dargestellte warte Kategorie ist. In der Regel stellt eine Zeile eine warte Statistik dar, die auf den Datenträger geleert wird, während andere (n) den Speicher internen Status darstellen. Um den tatsächlichen Zustand für jedes Intervall zu erhalten, müssen Sie daher Metriken aggregieren, indem Sie plan_id, runtime_stats_interval_id, execution_type und wait_category gruppieren. |  
-|**plan_id**|**bigint**|Fremdschlüssel. Joins mit [sys. query_store_plan &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
-|**runtime_stats_interval_id**|**bigint**|Fremdschlüssel. Joins mit [sys. query_store_runtime_stats_interval &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
+|**plan_id**|**bigint**|Fremdschlüssel. Joins mit [sys.query_store_plan &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
+|**runtime_stats_interval_id**|**bigint**|Fremdschlüssel. Joins mit [sys.query_store_runtime_stats_interval &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**wait_category**|**tinyint**|Warte Typen werden mithilfe der nachfolgenden Tabelle kategorisiert, und dann wird die Wartezeit über diese warte Kategorien aggregiert. Für unterschiedliche warte Kategorien sind unterschiedliche nachfolgenden Analysen erforderlich, um das Problem zu beheben. warte Typen aus der gleichen Kategorie führen jedoch zu ähnlichen Problemen bei der Problembehandlung, und das Bereitstellen der betroffenen Abfrage zusätzlich zu den Wartezeiten ist der fehlende Teil, um die Mehrzahl dieser Untersuchungen erfolgreich abzuschließen.|
 |**wait_category_desc**|**nvarchar(128)**|Eine Textbeschreibung des Felds "Warte Kategorie" finden Sie in der folgenden Tabelle.|
 |**execution_type**|**tinyint**|Bestimmt den Typ der Abfrage Ausführung:<br /><br /> 0-reguläre Ausführung (erfolgreich abgeschlossen)<br /><br /> 3-vom Client initiierte Ausführung abgebrochen<br /><br /> 4-Ausnahme Abbruch abgebrochen|  
@@ -62,8 +62,8 @@ ms.locfileid: "89537308"
 |**4**|**Latch**|LATCH_%|
 |**5**|**Pufferlatch**|PAGELATCH_%|
 |**6**|**Puffer-IO**|PAGEIOLATCH_%|
-|**7**|**Neuauflage***|RESOURCE_SEMAPHORE_QUERY_COMPILE|
-|**8**|**SQL CLR**|CLR%, SQLCLR%|
+|**7**|**Kompilierung** _|RESOURCE_SEMAPHORE_QUERY_COMPILE|
+|_ *8**|**SQL CLR**|CLR%, SQLCLR%|
 |**9**|**Spiegelung**|Dbmirror%|
 |**10**|**Transaktion**|xact%, DTC%, TRAN_MARKLATCH_%, MSQL_XACT_%, TRANSACTION_MUTEX|
 |**11**|**Idle**|SLEEP_%, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE CHECKPOINT_QUEUE, XE_TIMER_EVENT|
@@ -72,7 +72,7 @@ ms.locfileid: "89537308"
 |**14**|**Tran Log IO**|logmgr, logbuffer, LOGMGR_RESERVE_APPEND, LOGMGR_FLUSH, LOGMGR_PMM_LOG, chkpt, Write telog|
 |**15**|**Netzwerk-IO**|ASYNC_NETWORK_IO, NET_WAITFOR_PACKET PROXY_NETWORK_IO, EXTERNAL_SCRIPT_NETWORK_IOF|
 |**16**|**Parallelität**|cxpacket, Exchange, HT%, BMP%, BP%|
-|**17**|**Memory**|RESOURCE_SEMAPHORE, cmemthread, cmempartitioniert, EE_PMOLOCK, MEMORY_ALLOCATION_EXT, RESERVED_MEMORY_ALLOCATION_EXT, MEMORY_GRANT_UPDATE|
+|**17**|**Arbeitsspeicher**|RESOURCE_SEMAPHORE, cmemthread, cmempartitioniert, EE_PMOLOCK, MEMORY_ALLOCATION_EXT, RESERVED_MEMORY_ALLOCATION_EXT, MEMORY_GRANT_UPDATE|
 |**Jahren**|**Benutzer Wartezeit**|WAITFOR, WAIT_FOR_RESULTS BROKER_RECEIVE_WAITFOR|
 |**19.07.2016**|**Ablaufverfolgung**|tracewrite, SQLTRACE_LOCK, SQLTRACE_FILE_BUFFER, SQLTRACE_FILE_WRITE_IO_COMPLETION, SQLTRACE_FILE_READ_IO_COMPLETION, SQLTRACE_PENDING_BUFFER_WRITERS, SQLTRACE_SHUTDOWN, QUERY_TRACEOUT|
 |**20**|**Voll Text Suche**|FT_RESTART_CRAWL, Volltext-Gatherer, MSSearch, FT_METADATA_MUTEX, FT_IFTSHC_MUTEX, FT_IFTSISM_MUTEX, FT_IFTS_RWLOCK, FT_COMPROWSET_RWLOCK, FT_MASTER_MERGE, FT_PROPERTYLIST_CACHE, FT_MASTER_MERGE_COORDINATOR|

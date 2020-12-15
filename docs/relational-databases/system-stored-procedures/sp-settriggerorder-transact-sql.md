@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da6cb44163370332968c32324086b27f673b3f69
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6d8ef1360e35d084703a4f86590ade57be6a4c24
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543057"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468301"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,10 +59,10 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
 `[ @stmttype = ] 'statement_type'` Gibt die SQL-Anweisung an, die den-Triggern auslöst. *statement_type* ist vom Datentyp **varchar (50)** und kann Einfüge-, Aktualisierungs-, Lösch-, Anmelde-oder beliebige [!INCLUDE[tsql](../../includes/tsql-md.md)] in [DDL-Ereignissen](../../relational-databases/triggers/ddl-events.md)aufgeführte Anweisungs Ereignisse sein Ereignisgruppen können nicht angegeben werden.  
   
- Ein-Auslösers kann als **erster** oder **Letzter** -für einen Anweisungstyp festgelegt werden, nachdem dieser als ein-auslösertyp definiert wurde. Beispielsweise kann der **TR1** Auslösewert TR1 **zuerst** für INSERT in der Tabelle **T1** festgelegt werden, wenn **TR1** als INSERT-Vorgang definiert ist. [!INCLUDE[ssDE](../../includes/ssde-md.md)]Gibt einen Fehler zurück, wenn **TR1**, der nur als INSERT-Vorgang definiert wurde, als **First**-oder **Last**-Wert für eine Update-Anweisung festgelegt wird. Weitere Informationen finden Sie im Abschnitt "Hinweise".  
+ Ein-Auslösers kann als **erster** oder **Letzter** -für einen Anweisungstyp festgelegt werden, nachdem dieser als ein-auslösertyp definiert wurde. Beispielsweise kann der  Auslösewert TR1 **zuerst** für INSERT in der Tabelle **T1** festgelegt werden, wenn **TR1** als INSERT-Vorgang definiert ist. [!INCLUDE[ssDE](../../includes/ssde-md.md)]Gibt einen Fehler zurück, wenn **TR1**, der nur als INSERT-Vorgang definiert wurde, als **First**-oder **Last**-Wert für eine Update-Anweisung festgelegt wird. Weitere Informationen finden Sie im Abschnitt "Hinweise".  
   
- ** \@ Namespace =** { **' Database '**  |  **' Server '** | Normal  
- Wenn *Triggername* ein DDL-Trigger ist, gibt der ** \@ Namespace** an, ob *Triggername* mit dem Daten Bankbereich oder dem Serverbereich erstellt wurde. Wenn *Triggername* ein LOGON-Trigger ist, muss der Server angegeben werden. Weitere Informationen zum DDL-Triggerbereich finden Sie unter [DDL-Trigger](../../relational-databases/triggers/ddl-triggers.md). Wenn nicht angegeben, oder wenn NULL angegeben wird, ist *Triggername* ein DML-Trigger.  
+ **\@ Namespace =** { **' Database '**  |  **' Server '** | Normal  
+ Wenn *Triggername* ein DDL-Trigger ist, gibt der **\@ Namespace** an, ob *Triggername* mit dem Daten Bankbereich oder dem Serverbereich erstellt wurde. Wenn *Triggername* ein LOGON-Trigger ist, muss der Server angegeben werden. Weitere Informationen zum DDL-Triggerbereich finden Sie unter [DDL-Trigger](../../relational-databases/triggers/ddl-triggers.md). Wenn nicht angegeben, oder wenn NULL angegeben wird, ist *Triggername* ein DML-Trigger.  
   
 * Server gilt für: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.
   
@@ -74,27 +74,27 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ## <a name="dml-triggers"></a>DML-Trigger  
  Für jede Anweisung in einer einzelnen Tabelle können nur ein **erster** und ein **Letzter** Auslösung vorhanden sein.  
   
- Wenn für die Tabelle, die Datenbank oder den Server bereits ein neuer-Auslösung definiert ist, können **Sie für dieselbe** *statement_type*keinen neuen- **Auslösers** für dieselbe Tabelle, Datenbank oder denselben Server festlegen. Diese Einschränkung wendet auch die **letzten** Trigger an.  
+ Wenn für die Tabelle, die Datenbank oder den Server bereits ein neuer-Auslösung definiert ist, können **Sie für dieselbe** *statement_type* keinen neuen- **Auslösers** für dieselbe Tabelle, Datenbank oder denselben Server festlegen. Diese Einschränkung wendet auch die **letzten** Trigger an.  
   
  Die Replikation generiert automatisch einen ersten Trigger für alle Tabellen, die in einem Abonnement mit sofortigem Update oder verzögertem Update über eine Warteschlange enthalten sind. Für die Replikation gilt, dass ihr Trigger der erste Trigger sein muss. Die Replikation meldet einen Fehler, wenn Sie versuchen, eine Tabelle, die einen ersten Trigger aufweist, in ein Abonnement mit sofortigem Update bzw. verzögertem Update über eine Warteschlange einzufügen. Wenn Sie versuchen, einen Trigger zum ersten Trigger zu erklären, nachdem eine Tabelle in ein Abonnement aufgenommen wurde, gibt **sp_settriggerorder** einen Fehler zurück. Wenn Sie Alter-Triggern für den Replikations **-oder den** Replikations triggerbefehl verwenden, oder wenn Sie **sp_settriggerorder** verwenden, um den Replikations **-und den** Replikations Triggern in einen  
   
 ## <a name="ddl-triggers"></a>DDL-Trigger  
  Wenn ein DDL-Trigger mit Daten Bankbereich und ein DDL-Trigger mit Serverbereich für dasselbe Ereignis vorhanden sind, können Sie angeben, dass beide Trigger ein **erster** Trigger oder ein **Letzter** Trigger sind. Trigger mit einem Serverbereich werden jedoch immer zuerst ausgelöst. Im Allgemeinen ist die Reihenfolge der Auslösung von DDL-Triggern für das gleiche Ereignis Folgende:  
   
-1.  Der **zuerst**markierte Server auf Serverebene.  
+1.  Der **zuerst** markierte Server auf Serverebene.  
   
 2.  Weitere Trigger auf Serverebene  
   
-3.  Der **zuletzt**markierte Server auf Serverebene.  
+3.  Der **zuletzt** markierte Server auf Serverebene.  
   
-4.  Der **zuerst**markierte auf Datenbankebene.  
+4.  Der **zuerst** markierte auf Datenbankebene.  
   
 5.  Weitere Trigger auf Datenbankebene  
   
-6.  Der **zuletzt**markierte auf Datenbankebene.  
+6.  Der **zuletzt** markierte auf Datenbankebene.  
   
 ## <a name="general-trigger-considerations"></a>Allgemeine Überlegungen zu Triggern  
- Wenn eine Alter-auslöseranweisung den ersten oder letzten-Befehl ändert, wird das **erste** oder **Letzte** Attribut, das ursprünglich für den-Befehl festgelegt wurde, gelöscht, und der Wert wird durch **None**ersetzt. Der Bestellwert muss mithilfe **sp_settriggerorder**zurückgesetzt werden.  
+ Wenn eine Alter-auslöseranweisung den ersten oder letzten-Befehl ändert, wird das **erste** oder **Letzte** Attribut, das ursprünglich für den-Befehl festgelegt wurde, gelöscht, und der Wert wird durch **None** ersetzt. Der Bestellwert muss mithilfe **sp_settriggerorder** zurückgesetzt werden.  
   
  Wenn derselbe-Befehl für mehr als einen Anweisungstyp als erste oder Letzte Reihenfolge festgelegt werden muss, muss **sp_settriggerorder** für jeden Anweisungs Typ ausgeführt werden. Außerdem muss der Trigger zuerst für einen Anweisungstyp definiert werden, bevor er als **erster** oder **Letzter** Trigger für diesen Anweisungstyp gekennzeichnet werden kann.  
   

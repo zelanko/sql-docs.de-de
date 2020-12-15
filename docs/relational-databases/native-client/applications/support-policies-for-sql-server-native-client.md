@@ -10,12 +10,13 @@ ms.topic: reference
 ms.assetid: 09c80cf4-23e6-4027-a24f-cdb9c87af811
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08efcc441e0c06c05dcb49f2a5d18a3fc9e5d72d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1bdc9812b46869a46879adfe10efda8b35128bf9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005724"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469251"
 ---
 # <a name="support-policies-for-sql-server-native-client"></a>Richtlinien zur Unterstützung für SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -23,7 +24,7 @@ ms.locfileid: "86005724"
   In diesem Thema wird die Verwendung verschiedener Datenzugriffskomponenten mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client erläutert.  
   
 ## <a name="server-support"></a>Serverunterstützung  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 11,0 unterstützt Verbindungen mit, [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ,, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] , [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] und [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] .  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11,0 unterstützt Verbindungen mit, [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ,, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] , [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] und [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] .  
   
 ## <a name="supported-operating-system-versions"></a>Unterstützte Betriebssystemversionen  
  In der folgenden Tabelle werden die Betriebssysteme, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client unterstützen, aufgeführt.  

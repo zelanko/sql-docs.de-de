@@ -16,12 +16,13 @@ helpviewer_keywords:
 ms.assetid: 2860efdd-c59a-4deb-8a0e-5124a8f4e6dd
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b74cc8b3248d566ece7a5706e616dc7623d94518
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: fb360bbc4f874af32b720ea024f9322aa02dea24
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004249"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469221"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>Aktualisieren einer Anwendung von MDAC auf SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "86004249"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client unterstützt den Zugriff auf Datenbanken früherer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Versionen.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client enthält keine XML-Integration. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client unterstützt SELECT... FOR XML-Abfragen, unterstützt jedoch keine anderen XML-Funktionen. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client unterstützt jedoch den in eingeführten **XML** -Datentyp [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] .  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client enthält keine XML-Integration. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client unterstützt SELECT... FOR XML-Abfragen, unterstützt jedoch keine anderen XML-Funktionen. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client unterstützt jedoch den in eingeführten **XML** -Datentyp [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] .  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client unterstützt das Konfigurieren clientseitiger Netzwerkbibliotheken nur mithilfe von Verbindungszeichenfolgenattributen. Wenn Sie eine umfassendere Netzwerkbibliothekskonfiguration benötigen, müssen Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Konfigurations-Manager verwenden.  
   
@@ -58,7 +59,7 @@ ms.locfileid: "86004249"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client wird vom Microsoft OLE DB-Anbieter für ODBC (MSDASQL) nicht unterstützt. Wenn Sie den MDAC SQLODBC-Treiber mit MSDASQL oder mit ADO verwenden, sollten Sie in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB verwenden.  
   
--   Bei MDAC-Verbindungszeichenfolgen ist für das **Trusted_Connection**-Schlüsselwort ein boolescher Wert (**true**) zulässig. Für eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Verbindungs Zeichenfolge muss **Yes** oder **No**verwendet werden.  
+-   Bei MDAC-Verbindungszeichenfolgen ist für das **Trusted_Connection**-Schlüsselwort ein boolescher Wert (**true**) zulässig. Für eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Verbindungs Zeichenfolge muss **Yes** oder **No** verwendet werden.  
   
 -   An Warnungen und Fehlern wurden geringfügige Änderungen vorgenommen. Vom Server zurückgegebene Warnungen und Fehler behalten bei Übergabe an den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client den gleichen Schweregrad bei. Sie sollten sicherstellen, dass die Anwendung gründlich getestet wurde, wenn Sie auf das Abfangen bestimmter Warnungen und Fehler angewiesen sind.  
   
@@ -72,11 +73,11 @@ ms.locfileid: "86004249"
   
 -   Wenn [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client mit [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder höheren Versionen verbunden wird, wird Serverfehler 16947 als SQL_ERROR zurückgegeben. Dieser Fehler tritt auf, wenn ein positioniertes Update oder Löschen eine Zeile nicht aktualisieren oder löschen kann. Mit MDAC wird beim Herstellen einer Verbindung mit einer Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] der Serverfehler 16947 als Warnung (SQL_SUCCESS_WITH_INFO) zurückgegeben.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client implementiert die **IDBDataSourceAdmin** -Schnittstelle. dabei handelt es sich um eine optionale OLE DB-Schnittstelle, die zuvor nicht implementiert wurde, aber nur die Methode " **kreatedatasource** " dieser optionalen Schnittstelle implementiert wird. [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementiert die **IDBDataSourceAdmin** -Schnittstelle. dabei handelt es sich um eine optionale OLE DB-Schnittstelle, die zuvor nicht implementiert wurde, aber nur die Methode " **kreatedatasource** " dieser optionalen Schnittstelle implementiert wird. [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
   
 -   Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter gibt Synonyme in den Schemarowsets TABLES und TABLE_INFO zurück, wobei der Wert TABLE_TYPE auf SYNONYM gesetzt ist.  
   
--   Rückgabewerte des Datentyps **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**, **UDT**oder andere Typen von großen Objekten können nicht an Client Versionen vor zurückgegeben werden [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] . Wenn Sie diese Typen als Rückgabewerte verwenden möchten, müssen Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client verwenden.  
+-   Rückgabewerte des Datentyps **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**, **UDT** oder andere Typen von großen Objekten können nicht an Client Versionen vor zurückgegeben werden [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] . Wenn Sie diese Typen als Rückgabewerte verwenden möchten, müssen Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client verwenden.  
   
 -   MDAC lässt die Ausführung folgender Anweisungen beim Start manueller und impliziter Transaktionen zu, während [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client diese Möglichkeit nicht bietet. Die Anweisungen müssen im Autocommitmodus ausgeführt werden.  
   

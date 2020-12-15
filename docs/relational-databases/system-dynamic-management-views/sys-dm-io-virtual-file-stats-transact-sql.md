@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f47083ceb58a7125ad1477c1471c1d9f329472c8
-ms.sourcegitcommit: 773c1203e3c4617606cecb2626f6b2f2c855a53d
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 132add407f19a8a4ac33a1b2ee7587748807754e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96535294"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466901"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -74,7 +74,7 @@ Die ID der Datei. *file_id* ist vom Datentyp int und hat keinen Standardwert. Ei
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|**Gilt nicht für:**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Datenbankname.</br></br>Bei Azure Synapse Analytics ist dies der Name der Datenbank, die auf dem Knoten gespeichert ist, der durch pdw_node_id identifiziert wird. Jeder Knoten verfügt über eine tempdb-Datenbank, die über 13 Dateien verfügt. Jeder Knoten verfügt auch über eine Datenbank pro Verteilung, und jede Verteilungs Datenbank verfügt über fünf Dateien. Wenn z. b. jeder Knoten vier Verteilungen enthält, werden in den Ergebnissen 20 Verteilungsdaten Bank Dateien pro pdw_node_id angezeigt. 
 |**database_id**|**smallint**|ID der Datenbank.|  
@@ -93,7 +93,7 @@ Die ID der Datei. *file_id* ist vom Datentyp int und hat keinen Standardwert. Ei
 |**io_stall_queued_write_ms**|**bigint**|**Gilt nicht für:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] .<br /><br />  Die E/A-Gesamtlatenz, die durch die Ressourcenkontrolle für E/A-Schreibvorgänge eingeführt wird. Lässt keine NULL-Werte zu.|
 |**pdw_node_id**|**int**|**Gilt für:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Der Bezeichner des Knotens für die Verteilung.
  
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 Die Indikatoren werden so initialisiert, dass Sie bei jedem Start des SQL Server-Dienstanbieter (MSSQLSERVER) leer sind.
   
 ## <a name="permissions"></a>Berechtigungen  

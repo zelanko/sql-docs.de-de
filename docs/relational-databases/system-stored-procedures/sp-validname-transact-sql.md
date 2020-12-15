@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: d51c53c2-1332-407f-b725-4983f2e710eb
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b448493ada2d6ec5d1073f194053463b463807b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e73d8f6345be199c44278cb15aa43c6ada7f91c0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480953"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466791"
 ---
 # <a name="sp_validname-transact-sql"></a>sp_validname (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Überprüft die Gültigkeit von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichnernamen. Alle nicht binären und nicht-NULL-Daten, einschließlich Unicode-Daten, die mithilfe der Datentypen **NCHAR**, **nvarchar**oder **ntext** gespeichert werden können, werden als gültige Zeichen für Bezeichnernamen akzeptiert.  
+  Überprüft die Gültigkeit von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichnernamen. Alle nicht binären und nicht-NULL-Daten, einschließlich Unicode-Daten, die mithilfe der Datentypen **NCHAR**, **nvarchar** oder **ntext** gespeichert werden können, werden als gültige Zeichen für Bezeichnernamen akzeptiert.  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,9 +42,9 @@ sp_validname [@name =] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @name = ] 'name'` Der Name der Bezeichner [, für die die Gültigkeit](../../relational-databases/databases/database-identifiers.md) überprüft werden soll. *Name ist vom Datentyp* **vom Datentyp sysname**und hat keinen Standardwert. der *Name* darf nicht NULL sein, darf keine leere Zeichenfolge sein und darf kein binäres NULL-Zeichen enthalten.  
+`[ @name = ] 'name'` Der Name der Bezeichner [, für die die Gültigkeit](../../relational-databases/databases/database-identifiers.md) überprüft werden soll. *Name ist vom Datentyp* **vom Datentyp sysname** und hat keinen Standardwert. der *Name* darf nicht NULL sein, darf keine leere Zeichenfolge sein und darf kein binäres NULL-Zeichen enthalten.  
   
-`[ @raise_error = ] raise_error` Gibt an, ob ein Fehler ausgegeben werden soll. *raise_error* ist vom Typ **Bit**und hat den Standardwert 1. Dies bedeutet, dass Fehler auftreten. 0 bewirkt, dass keine Fehlermeldungen angezeigt werden.  
+`[ @raise_error = ] raise_error` Gibt an, ob ein Fehler ausgegeben werden soll. *raise_error* ist vom Typ **Bit** und hat den Standardwert 1. Dies bedeutet, dass Fehler auftreten. 0 bewirkt, dass keine Fehlermeldungen angezeigt werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -52,10 +52,10 @@ sp_validname [@name =] 'name'
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **public** -Rolle.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [NCHAR &#40;Transact-SQL-&#41;](../../t-sql/functions/nchar-transact-sql.md)   
+ [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)   
  [nchar und nvarchar &#40;Transact-SQL-&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
  [ntext, Text und Image &#40;Transact-SQL-&#41;](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

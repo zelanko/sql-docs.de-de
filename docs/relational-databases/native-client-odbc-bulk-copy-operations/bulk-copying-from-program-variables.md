@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50b1177e65ad2ef082335fa29a180ddd8f489adf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 66fc82b8253c5bb9eeac669bf88846737b315d91
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455975"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465061"
 ---
 # <a name="bulk-copying-from-program-variables"></a>Massenkopieren aus Programmvariablen
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,15 +42,15 @@ ms.locfileid: "88455975"
   
  **bcp_bind** unterstützt drei Methoden für den Umgang mit Daten variabler Länge:  
   
--   Verwenden Sie *cbData* nur mit einer Daten Variablen. Legen Sie die Länge der Daten in *cbData*ab. Bei jeder Änderung der Länge der Daten, die Massen kopiert werden sollen, wird [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)aufgerufen, um *cbData*zurückzusetzen. Wenn eine der beiden anderen Methoden verwendet wird, geben Sie SQL_VARLEN_DATA für *cbData*an. Wenn alle Datenwerte, die für eine Spalte bereitgestellt werden, NULL sind, geben Sie SQL_NULL_DATA für *cbData*an.  
+-   Verwenden Sie *cbData* nur mit einer Daten Variablen. Legen Sie die Länge der Daten in *cbData* ab. Bei jeder Änderung der Länge der Daten, die Massen kopiert werden sollen, wird [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)aufgerufen, um *cbData* zurückzusetzen. Wenn eine der beiden anderen Methoden verwendet wird, geben Sie SQL_VARLEN_DATA für *cbData* an. Wenn alle Datenwerte, die für eine Spalte bereitgestellt werden, NULL sind, geben Sie SQL_NULL_DATA für *cbData* an.  
   
--   Verwenden von Indikatorvariablen. Speichern Sie beim Verschieben des jeweiligen neuen Datenwerts in die Datenvariable die Länge des Werts in der Indikatorvariable. Wenn eine der beiden anderen Methoden verwendet wird, geben Sie 0 für *cbIndicator*an.  
+-   Verwenden von Indikatorvariablen. Speichern Sie beim Verschieben des jeweiligen neuen Datenwerts in die Datenvariable die Länge des Werts in der Indikatorvariable. Wenn eine der beiden anderen Methoden verwendet wird, geben Sie 0 für *cbIndicator* an.  
   
--   Verwenden von Abschlusszeichenzeigern. Laden Sie den **bcp_bind**_pterm_ -Parameter mit der Adresse des Bitmusters, von dem die Daten beendet werden. Wenn eine der beiden anderen Methoden verwendet wird, geben Sie für *pterm*den Wert NULL an.  
+-   Verwenden von Abschlusszeichenzeigern. Laden Sie den **bcp_bind**_pterm_ -Parameter mit der Adresse des Bitmusters, von dem die Daten beendet werden. Wenn eine der beiden anderen Methoden verwendet wird, geben Sie für *pterm* den Wert NULL an.  
   
  Alle drei Methoden können für denselben **bcp_bind** -Befehl verwendet werden. in diesem Fall wird die Spezifikation verwendet, die dazu führt, dass die kleinste zu kopierende Datenmenge verwendet wird.  
   
- Der **bcp_bind**_Type_ -Parameter verwendet DB-Library-Datentyp Bezeichner, nicht ODBC-Datentyp Bezeichner. DB-Library-Datentyp Bezeichner werden in sqlncli. h für die Verwendung mit der ODBC- **bcp_bind** Funktion definiert.  
+ Der **bcp_bind**_Type_ -Parameter verwendet DB-Library Datentyp Bezeichner, nicht ODBC-Datentyp Bezeichner. DB-Library-Datentyp Bezeichner werden in sqlncli. h für die Verwendung mit der ODBC-Funktion **bcp_bind** definiert.  
   
  Funktionen zum Massenkopieren unterstützen nicht alle ODBC C-Datentypen. Beispielsweise unterstützen die Massen Kopierfunktionen die ODBC-SQL_C_TYPE_TIMESTAMP Struktur nicht. verwenden Sie daher [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) oder [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) , um ODBC-SQL_TYPE_TIMESTAMP Daten in eine SQL_C_CHAR Variable zu konvertieren. Wenn Sie dann **bcp_bind** mit einem *Typparameter* von SQLCHARACTER verwenden, um die Variable an eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **DateTime** -Spalte zu binden, konvertieren die Massen Kopierfunktionen die Zeitstempel-Escapesequenz in der Zeichen Variablen in das richtige DateTime-Format.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "88455975"
   
 |ODBC SQL-Datentyp|ODBC C-Datentyp|bcp_bind *Typparameter*|SQL Server-Datentyp|  
 |-----------------------|----------------------|--------------------------------|--------------------------|  
-|SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**Art**<br /><br /> **char**|  
+|SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**character**<br /><br /> **char**|  
 |SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **character varying**<br /><br /> **char varying**<br /><br /> **sysname**|  
 |SQL_LONGVARCHAR|SQL_C_CHAR|SQLCHARACTER|**text**|  
 |SQL_WCHAR|SQL_C_WCHAR|SQLNCHAR|**nchar**|  
@@ -78,7 +78,7 @@ ms.locfileid: "88455975"
 |SQL_FLOAT|SQL_C_DOUBLE|SQLFLT8|**float**|  
 |SQL_DOUBLE|SQL_C_DOUBLE|SQLFLT8|**float**|  
 |SQL_BINARY|SQL_C_BINARY|SQLBINARY|**binary**<br /><br /> **timestamp**|  
-|SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **binary varying**|  
+|SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **binäre unterschiedlichen**|  
 |SQL_LONGVARBINARY|SQL_C_BINARY|SQLBINARY|**image**|  
 |SQL_TYPE_DATE|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
 |SQL_TYPE_TIME|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  

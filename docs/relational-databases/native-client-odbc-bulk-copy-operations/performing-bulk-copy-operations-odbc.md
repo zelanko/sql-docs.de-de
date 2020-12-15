@@ -1,6 +1,6 @@
 ---
 title: Ausführen von Massen Kopier Vorgängen (ODBC) | Microsoft-Dokumentation
-description: Erfahren Sie, wie der SQL Server Native Client ODBC-Treibers DB-Library-Funktionen unterstützt, die SQL Server Massen Kopiervorgänge durchführen.
+description: Erfahren Sie, wie der SQL Server Native Client ODBC-Treibers DB-Library Funktionen unterstützt, die SQL Server Massen Kopiervorgänge ausführen.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,12 +17,13 @@ helpviewer_keywords:
 ms.assetid: 5c793405-487c-4f52-88b8-0091d529afb3
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55736dd07331a12fe2ec2c5495e860e26ef908af
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0261b223d3a7a8e775b23ab37c264efa8a1e835f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007173"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465001"
 ---
 # <a name="performing-bulk-copy-operations-odbc"></a>Durchführen von Massenkopiervorgängen (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
