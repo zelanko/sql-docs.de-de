@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a5531450e79b036138e581aa0fb8083ebb121c6f
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c4b37d6bd4acfb88aacbeb7f86186bb8a3fcf02c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670863"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484552"
 ---
 # <a name="sp_addrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,10 +46,10 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
   
 ## <a name="arguments"></a>Argumente  
  [ @rolename =] '*Rolle*'  
- Der Name der Datenbankrolle in der aktuellen Datenbank. *role* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+ Der Name der Datenbankrolle in der aktuellen Datenbank. *role* ist vom Datentyp **sysname** und hat keinen Standardwert.  
   
  [ @membername =] '*security_account*'  
- Das Sicherheitskonto, das der Rolle hinzugefügt wird. *security_account* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. *security_account* kann ein Datenbankbenutzer, eine Daten Bank Rolle, ein Windows-Anmelde Name oder eine Windows-Gruppe sein.  
+ Das Sicherheitskonto, das der Rolle hinzugefügt wird. *security_account* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert. *security_account* kann ein Datenbankbenutzer, eine Daten Bank Rolle, ein Windows-Anmelde Name oder eine Windows-Gruppe sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  

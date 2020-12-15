@@ -1,6 +1,6 @@
 ---
 description: sys.dm_sql_referenced_entities (Transact-SQL)
-title: sys. dm_sql_referenced_entities (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_sql_referenced_entities (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/01/2019
 ms.prod: sql
@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de7e748e1e993d0e60bde500af1443707ee9020c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cd6c12416a4e1626b7439ace6921b5d1981f0051
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550212"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484602"
 ---
 # <a name="sysdm_sql_referenced_entities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Gibt eine Zeile für jede benutzerdefinierte Entität zurück, auf die nach Namen in der Definition der angegebenen verweisenden Entität in verwiesen wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Eine Abhängigkeit zwischen zwei Entitäten wird erstellt, wenn eine benutzerdefinierte Entität, die als *Referenzierte Entität*bezeichnet wird, in einem permanenten SQL-Ausdruck einer anderen benutzerdefinierten Entität, die als *verweisende Entität*bezeichnet wird, nach Namen angezeigt wird. Handelt es sich beispielsweise bei einer gespeicherten Prozedur um die angegebene verweisende Entität, gibt diese Funktion alle benutzerdefinierten Entitäten zurück, auf die die gespeicherte Prozedur verweist, z. B. Tabellen, Sichten, benutzerdefinierte Typen (UDTs) oder andere gespeicherte Prozeduren.  
+Gibt eine Zeile für jede benutzerdefinierte Entität zurück, auf die nach Namen in der Definition der angegebenen verweisenden Entität in verwiesen wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Eine Abhängigkeit zwischen zwei Entitäten wird erstellt, wenn eine benutzerdefinierte Entität, die als *Referenzierte Entität* bezeichnet wird, in einem permanenten SQL-Ausdruck einer anderen benutzerdefinierten Entität, die als *verweisende Entität* bezeichnet wird, nach Namen angezeigt wird. Handelt es sich beispielsweise bei einer gespeicherten Prozedur um die angegebene verweisende Entität, gibt diese Funktion alle benutzerdefinierten Entitäten zurück, auf die die gespeicherte Prozedur verweist, z. B. Tabellen, Sichten, benutzerdefinierte Typen (UDTs) oder andere gespeicherte Prozeduren.  
   
  Verwenden Sie diese dynamische Verwaltungsfunktion, um zu folgenden Entitätstypen, auf die in der verweisenden Entität verwiesen wird, einen Bericht zu erstellen.  
   
@@ -78,7 +78,7 @@ sys.dm_sql_referenced_entities (
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |referencing_minor_id|**int**|Die Spalten-ID, wenn es sich bei der verweisenden Entität um eine Spalte handelt. Andernfalls ist der Wert 0. Lässt keine NULL-Werte zu.|  
 |referenced_server_name|**sysname**|Servername der Entität, auf die verwiesen wird.<br /><br /> Diese Spalte wird für serverübergreifende Abhängigkeiten aufgefüllt, die auf der Angabe eines gültigen vierteiligen Namens basieren. Weitere Informationen zu mehrteiligen Namen finden Sie unter [Transact-SQL-Syntax Konventionen &#40;Transact-SQL-&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> NULL für nicht schemagebundene Abhängigkeiten, für die ohne Angabe eines vierteiligen Namens auf die Entität verwiesen wurde.<br /><br /> NULL für Schema gebundene Entitäten, da Sie sich in derselben Datenbank befinden müssen und deshalb nur mit einem zweiteiligen Namen (*Schema. Object*) definiert werden können.|  
@@ -91,7 +91,7 @@ sys.dm_sql_referenced_entities (
 |referenced_class|**tinyint**|Klasse der Entität, auf die verwiesen wird.<br /><br /> 1 = Objekt oder Spalte<br /><br /> 6 = Typ<br /><br /> 10 = XML-Schemaauflistung<br /><br /> 21 = Partitionsfunktion|  
 |referenced_class_desc|**nvarchar(60)**|Klassenbeschreibung der Entität, auf die verwiesen wird.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
 |is_caller_dependent|**bit**|Gibt an, dass die Schemabindung für die Entität, auf die verwiesen wird, zur Laufzeit erfolgt. Deshalb hängt die Auflösung der Entitäts-ID vom Schema des Aufrufers ab. Dies ist der Fall, wenn es sich bei der Entität, auf die verwiesen wird, um eine gespeicherte Prozedur, eine erweiterte gespeicherte Prozedur oder um eine benutzerdefinierte Funktion handelt, die in einer EXECUTE-Anweisung aufgerufen wird.<br /><br /> 1 = Die Entität, auf die verwiesen wird, hängt vom Aufrufer ab und wird zur Laufzeit aufgelöst. In diesem Fall ist referenced_id gleich NULL.<br /><br /> 0 = Die Entitäts-ID, auf die verwiesen wird, ist nicht aufruferabhängig. Immer 0 für schemagebundene Verweise sowie für datenbankübergreifende und serverübergreifende Verweise, die explizit einen Schemanamen angeben. Zum Beispiel ist ein Verweis auf eine Entität im Format `EXEC MyDatabase.MySchema.MyProc` nicht aufruferabhängig. Ein Verweis im Format `EXEC MyDatabase..MyProc` ist jedoch aufruferabhängig.|  
-|is_ambiguous|**bit**|Gibt an, dass der Verweis mehrdeutig ist und zur Laufzeit in eine benutzerdefinierte Funktion, in einen benutzerdefinierten Typ (User-Defined Type, UDT) oder in einen XQuery-Verweis auf eine Spalte vom Typ **XML**aufgelöst werden kann. Angenommen, die `SELECT Sales.GetOrder() FROM Sales.MySales`-Anweisung ist in einer gespeicherten Prozedur definiert. Bis zur Ausführung der gespeicherten Prozedur ist unbekannt, ob `Sales.GetOrder()` eine benutzerdefinierte Funktion im Schema `Sales` oder in der Spalte namens `Sales` vom Typ UDT mit einer Methode namens `GetOrder()` ist.<br /><br /> 1 = Verweis auf eine benutzerdefinierte Funktion oder Spalte, für die die benutzerdefinierte Typmethode (UDT) mehrdeutig ist.<br /><br /> 0 = Verweis ist eindeutig, oder die Entität kann beim Aufruf der Funktion erfolgreich gebunden werden.<br /><br /> Immer 0 für schemagebundene Verweise.|  
+|is_ambiguous|**bit**|Gibt an, dass der Verweis mehrdeutig ist und zur Laufzeit in eine benutzerdefinierte Funktion, in einen benutzerdefinierten Typ (User-Defined Type, UDT) oder in einen XQuery-Verweis auf eine Spalte vom Typ **XML** aufgelöst werden kann. Angenommen, die `SELECT Sales.GetOrder() FROM Sales.MySales`-Anweisung ist in einer gespeicherten Prozedur definiert. Bis zur Ausführung der gespeicherten Prozedur ist unbekannt, ob `Sales.GetOrder()` eine benutzerdefinierte Funktion im Schema `Sales` oder in der Spalte namens `Sales` vom Typ UDT mit einer Methode namens `GetOrder()` ist.<br /><br /> 1 = Verweis auf eine benutzerdefinierte Funktion oder Spalte, für die die benutzerdefinierte Typmethode (UDT) mehrdeutig ist.<br /><br /> 0 = Verweis ist eindeutig, oder die Entität kann beim Aufruf der Funktion erfolgreich gebunden werden.<br /><br /> Immer 0 für schemagebundene Verweise.|  
 |is_selected|**bit**|1 = Gibt an, dass das Objekt oder die Spalte ausgewählt ist.|  
 |is_updated|**bit**|1 = Gibt an, dass das Objekt oder die Spalte geändert wurde.|  
 |is_select_all|**bit**|1 = Gibt an, dass das Objekt in einer SELECT *-Klausel verwendet wird (nur auf Objektebene).|  
@@ -122,8 +122,8 @@ sys.dm_sql_referenced_entities (
   
 |Entitätstyp|Verweisende Entität|Entität, auf die verwiesen wird|  
 |-----------------|------------------------|-----------------------|  
-|Tabelle|Ja*|Yes|  
-|Ansicht|Ja|Ja|  
+|Tabelle|Ja*|Ja|  
+|Sicht|Ja|Ja|  
 |In [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur**|Ja|Ja|  
 |Gespeicherte CLR-Prozedur|Nein|Ja|  
 |Benutzerdefinierte Funktion in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Ja|Ja|  
@@ -131,8 +131,8 @@ sys.dm_sql_referenced_entities (
 |CLR-Trigger (DML und DDL)|Nein|Nein|  
 |DML-Trigger in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Ja|Nein|  
 |DDL-Trigger auf Datenbankebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Ja|Nein|  
-|DDL-Trigger auf Serverebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Ja|Nein|  
-|Erweiterte gespeicherte Prozeduren|Nein|Ja|  
+|DDL-Trigger auf Serverebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Ja|Nein |  
+|Erweiterte gespeicherte Prozeduren|Nein |Ja|  
 |Warteschlange|Nein|Ja|  
 |Synonym|Nein|Ja|  
 |Typ (Alias und CLR-benutzerdefinierter Typ)|Nein|Ja|  

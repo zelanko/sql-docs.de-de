@@ -1,6 +1,6 @@
 ---
 description: sys.dm_fts_index_keywords_by_document (Transact-SQL)
-title: sys. dm_fts_index_keywords_by_document (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_fts_index_keywords_by_document (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 793b978b-c8a1-428c-90c2-a3e49d81b5c9
 author: pmasl
 ms.author: pelopes
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d9526c20757ca8f63c468f88c56e26de7ad2b1a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 353fcb321549546ff1b44956d5ebc20826e6c0e3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481963"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484702"
 ---
 # <a name="sysdm_fts_index_keywords_by_document-transact-sql"></a>sys.dm_fts_index_keywords_by_document (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -64,15 +64,15 @@ sys.dm_fts_index_keywords_by_document
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Column|Datentyp|BESCHREIBUNG|  
+|Column|Datentyp|Beschreibung|  
 |------------|---------------|-----------------|  
 |Schlüsselwort (keyword)|**nvarchar(4000)**|Die hexadezimale Darstellung des Schlüsselworts, das im Volltextindex gespeichert ist.<br /><br /> Hinweis: OxFF stellt das Sonderzeichen dar, das das Ende einer Datei oder eines Datasets angibt.|  
 |display_term|**nvarchar(4000)**|Die Klartextform des Schlüsselworts. Dieses Format wird vom internen Format abgeleitet, das im Volltextindex gespeichert ist.<br /><br /> Hinweis: OxFF stellt das Sonderzeichen dar, das das Ende einer Datei oder eines Datasets angibt.|  
 |column_id|**int**|Die ID der Spalte für die Volltextindizierung des aktuellen Schlüsselworts.|  
 |document_id|**int**|Die ID des Dokuments bzw. der Zeile für die Volltextindizierung des aktuellen Ausdrucks. Diese ID entspricht dem Volltextschlüsselwert dieses Dokuments bzw. dieser Zeile.|  
-|occurrence_count|**int**|Anzahl der Vorkommen des aktuellen Schlüssel Worts in dem Dokument oder der Zeile, das durch **document_id**angegeben wird. Wenn "*search_property_name*" angegeben wird, zeigt occurrence_count nur die Anzahl der Vorkommen des aktuellen Schlüssel Worts in der angegebenen Such Eigenschaft innerhalb des Dokuments oder der Zeile an.|  
+|occurrence_count|**int**|Anzahl der Vorkommen des aktuellen Schlüssel Worts in dem Dokument oder der Zeile, das durch **document_id** angegeben wird. Wenn "*search_property_name*" angegeben wird, zeigt occurrence_count nur die Anzahl der Vorkommen des aktuellen Schlüssel Worts in der angegebenen Such Eigenschaft innerhalb des Dokuments oder der Zeile an.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die von sys.dm_fts_index_keywords_by_document zurückgegebenen Informationen dienen u. a. zum Abrufen der folgenden Ergebnisse:  
   
 -   Die Gesamtzahl der Schlüsselwörter in einem Volltextindex  
@@ -131,8 +131,8 @@ GO
 ## <a name="see-also"></a>Weitere Informationen  
  [Dynamische Verwaltungs Sichten und Funktionen für die voll Text Suche und die semantische Suche &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [Volltextsuche](../../relational-databases/search/full-text-search.md)   
- [sys. dm_fts_index_keywords &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
- [sys. dm_fts_index_keywords_by_property &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)   
+ [sys.dm_fts_index_keywords &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
+ [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)   
  [sp_fulltext_keymappings &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   
  [Verbessern der Leistung von Volltextindizes](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)  
   

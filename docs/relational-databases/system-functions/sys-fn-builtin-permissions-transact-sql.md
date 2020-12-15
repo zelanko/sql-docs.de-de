@@ -27,13 +27,13 @@ helpviewer_keywords:
 ms.assetid: 704b1ad3-3534-4cf3-aff4-9fb70064b6cc
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4738fca47b35cae4e6b895ac59aa26213f17a7d8
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 117c4c2e6bc3e08ea32869cd198850eb3bb29ab2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753984"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484562"
 ---
 # <a name="sysfn_builtin_permissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -77,7 +77,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |-----------------|---------------|---------------|-----------------|  
 |class_desc|**nvarchar(60)**|Sortierung des Servers.|Beschreibung der sicherbaren Klasse.|  
 |permission_name|**nvarchar(60)**|Sortierung des Servers.|Berechtigungsname.|  
-|type|**varchar(4)**|Sortierung des Servers.|Kompakter Berechtigungstypcode. Siehe Tabelle weiter unten.|  
+|Typ|**varchar(4)**|Sortierung des Servers.|Kompakter Berechtigungstypcode. Siehe Tabelle weiter unten.|  
 |covering_permission_name|**nvarchar(60)**|Sortierung des Servers.|Falls ungleich NULL, gibt dieser Wert den Namen der Berechtigung für diese Klasse an, die die anderen Berechtigungen für diese Klasse impliziert.|  
 |parent_class_desc|**nvarchar(60)**|Sortierung des Servers.|Falls ungleich NULL, gibt dieser Wert den Namen der übergeordneten Klasse an, in der die aktuelle Klasse enthalten ist.|  
 |parent_covering_permission_name|**nvarchar(60)**|Sortierung des Servers.|Falls ungleich NULL, gibt dieser Wert den Namen der Berechtigung für die übergeordnete Klasse an, die alle anderen Berechtigungen für diese Klasse impliziert.|  
@@ -323,7 +323,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |XA|EXTERNAL ACCESS ASSEMBLY|SERVER|  
 |XU|UNSAFE ASSEMBLY|SERVER|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  `sys.fn_builtin_permissions` ist eine Tabellenwertfunktion, die eine Kopie der vordefinierten Berechtigungshierarchie ausgibt. Diese Hierarchie schließt die abdeckenden Berechtigungen ein. Das `DEFAULT` Resultset beschreibt ein gerichtetes azyklisches Diagramm der Berechtigungs Hierarchie, von dem der Stamm ist (Class = Server, Berechtigung = Control Server).  
   
  `sys.fn_builtin_permissions` nimmt keine korrelierten Parameter an.  

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c32343c060eab0d70ba3bbc4419d30809ae745c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7e325b7e88b2958b8870151516f991f27ba79e44
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448571"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483341"
 ---
 # <a name="bcp_init"></a>bcp_init
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ Unicode-und ANSI-Namen:
  Das für den Massenkopiervorgang aktivierte ODBC-Verbindungshandle.  
   
  *szTable*  
- Name der Datenbanktabelle, in die bzw. aus der kopiert werden soll. Dieser Name kann auch den Namen der Datenbank oder den Namen des Besitzers enthalten. Beispielsweise **Pubs. Gracie. Titeln**, **Pubs. Titel**, **Gracie. Titeln**und **Titel** sind alle gültigen Tabellennamen.  
+ Name der Datenbanktabelle, in die bzw. aus der kopiert werden soll. Dieser Name kann auch den Namen der Datenbank oder den Namen des Besitzers enthalten. Beispielsweise **Pubs. Gracie. Titeln**, **Pubs. Titel**, **Gracie. Titeln** und **Titel** sind alle gültigen Tabellennamen.  
   
  Wenn *eDirection* DB_OUT ist, kann *szTable* auch der Name einer Daten Bank Sicht sein.  
   
@@ -62,15 +62,15 @@ Unicode-und ANSI-Namen:
  Name der Benutzerdatei, in die bzw. aus der kopiert werden soll. Wenn Daten mithilfe von [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)direkt aus Variablen kopiert werden, legen Sie *szDataFile* auf NULL fest.  
   
  *szErrorFile*  
- Der Name der Fehlerdatei, in die Statusmeldungen, Fehlermeldungen und Kopien von Zeilen geschrieben werden sollen, die aus einem bestimmten Grund nicht von einer Benutzerdatei in eine Tabelle kopiert werden konnten. Wenn NULL als *szErrorFile*übergeben wird, wird keine Fehler Datei verwendet.  
+ Der Name der Fehlerdatei, in die Statusmeldungen, Fehlermeldungen und Kopien von Zeilen geschrieben werden sollen, die aus einem bestimmten Grund nicht von einer Benutzerdatei in eine Tabelle kopiert werden konnten. Wenn NULL als *szErrorFile* übergeben wird, wird keine Fehler Datei verwendet.  
   
  *eDirection*  
  Die Richtung der Kopie, entweder DB_IN oder DB_OUT. DB_IN bedeutet eine Kopie aus Programmvariablen oder aus einer Benutzerdatei in eine Tabelle. DB_OUT bedeutet eine Kopie von einer Datenbanktabelle in eine Benutzerdatei an. Sie müssen einen Benutzerdateinamen mit DB_OUT angeben.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  SUCCEED oder FAIL.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Rufen Sie **bcp_init** auf, bevor Sie eine andere Massen Kopierfunktion aufrufen. **bcp_init** führt die erforderlichen Initialisierungen für einen Massen Kopiervorgang von Daten zwischen der Arbeitsstation und aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Die **bcp_init** -Funktion muss mit einem ODBC-Verbindungs Handle bereitgestellt werden, das für die Verwendung mit Massen Kopierfunktionen aktiviert ist. Um das Handle zu aktivieren, verwenden Sie [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) , wobei SQL_COPT_SS_BCP auf einem zugeordneten, aber nicht verbundenen Verbindungs Handle auf SQL_BCP_ON festgelegt ist. Wenn Sie versuchen, das Attribut einem bereits verbundenen Verbindungshandle zuzuweisen, tritt ein Fehler auf.  
@@ -224,7 +224,7 @@ int main() {
   
 ```  
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

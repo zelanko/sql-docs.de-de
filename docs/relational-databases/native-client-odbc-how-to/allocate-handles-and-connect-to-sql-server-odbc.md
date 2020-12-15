@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 100973ff2e7ae4d3bf066bfe49f09aa3a979230f
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 040089efc3cba453381381768d1445c8d85109c1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866968"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483271"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>Zuordnen von Handles und Herstellen einer Verbindung mit SQL Server (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "91866968"
   
 8.  Verwenden Sie SQLConnect, um eine vorhandene Datenquelle zum Herstellen einer Verbindung mit zu verwenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     Oder  
+     oder  
   
      Verwenden Sie [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) , um eine Verbindungs Zeichenfolge zum Herstellen einer Verbindung mit zu verwenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -76,7 +76,7 @@ ms.locfileid: "91866968"
 >  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](/windows/win32/seccrypto/cryptography-reference).  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel zeigt einen **SQLDriverConnect** -Befehl, um eine Verbindung mit einer Instanz von herzustellen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ohne dass eine vorhandene ODBC-Datenquelle erforderlich ist. Durch die Übergabe einer unvollständigen Verbindungs Zeichenfolge an **SQLDriverConnect**bewirkt dies, dass der ODBC-Treiber den Benutzer zur Eingabe der fehlenden Informationen auffordert.  
+ Dieses Beispiel zeigt einen **SQLDriverConnect** -Befehl, um eine Verbindung mit einer Instanz von herzustellen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ohne dass eine vorhandene ODBC-Datenquelle erforderlich ist. Durch die Übergabe einer unvollständigen Verbindungs Zeichenfolge an **SQLDriverConnect** bewirkt dies, dass der ODBC-Treiber den Benutzer zur Eingabe der fehlenden Informationen auffordert.  
   
 ```  
 #define MAXBUFLEN   255  

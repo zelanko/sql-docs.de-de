@@ -27,13 +27,13 @@ ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01fd8e99d6eb770c2f5680ead1e2c4d9b9ec98b8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b5539c07b9faab5c426ad9b101d94c683ed665c5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733663"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484812"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Aktualisieren von Daten mit XML-Updategrams (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "85733663"
   
  Wenn dies der Fall ist, verwendet das Update Gram die Schlüssel Spalten, die in den **SQL: key-fields** angegeben sind, um die Elemente in den **\<before>** Blöcken und zu koppeln **\<after>** .  
   
- Wenn das Zuordnungsschema keine Schlüssel Spalten (mithilfe von **SQL: key-fields**) identifiziert oder wenn das Update Gram einen Schlüssel Spaltenwert aktualisiert, müssen Sie **updg: ID**angeben.  
+ Wenn das Zuordnungsschema keine Schlüssel Spalten (mithilfe von **SQL: key-fields**) identifiziert oder wenn das Update Gram einen Schlüssel Spaltenwert aktualisiert, müssen Sie **updg: ID** angeben.  
   
  Die Datensätze, die in den **\<before>** -und-Blöcken identifiziert werden, **\<after>** müssen sich nicht in derselben Reihenfolge befinden. Das **updg: ID** -Attribut erzwingt die Zuordnung zwischen den Elementen, die in den **\<before>** Blöcken und angegeben sind **\<after>** .  
   

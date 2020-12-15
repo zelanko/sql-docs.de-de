@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01576468fb54618e34f72bbd42fbd1ae861c8520
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5f97b9fbd9c3f53dab9bcfaa07863dcf1d8b861c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420534"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483301"
 ---
 # <a name="bcp_setcolfmt"></a>bcp_setcolfmt
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88420534"
   
  Diese Funktion bietet einen flexiblen Ansatz für das Angeben des Spaltenformats in einem Massenkopiervorgang. Sie wird verwendet, um einzelne Spaltenformatattribute festzulegen. Jeder **bcp_setcolfmt** -Aufrufsatz legt ein Spalten Format Attribut fest.  
   
- Die **bcp_setcolfmt** -Funktion gibt das Quell-oder Zielformat der Daten in einer Benutzerdatei an. Bei Verwendung als Quellformat gibt **bcp_setcolfmt** das Format einer vorhandenen Datendatei an, die als Datenquelle für Daten in einem Massen Kopiervorgang in eine Tabelle in verwendet wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Bei Verwendung als Zielformat wird die Datendatei mithilfe der mit **bcp_setcolfmt**angegebenen Spalten Formate erstellt.  
+ Die **bcp_setcolfmt** -Funktion gibt das Quell-oder Zielformat der Daten in einer Benutzerdatei an. Bei Verwendung als Quellformat gibt **bcp_setcolfmt** das Format einer vorhandenen Datendatei an, die als Datenquelle für Daten in einem Massen Kopiervorgang in eine Tabelle in verwendet wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Bei Verwendung als Zielformat wird die Datendatei mithilfe der mit **bcp_setcolfmt** angegebenen Spalten Formate erstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -59,7 +59,7 @@ RETCODE bcp_setcolfmt (
   
 |Eigenschaft|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
-|BCP_FMT_TYPE|BYTE|Der Datentyp dieser Spalte in der Benutzerdatei. Wenn die Daten nicht mit dem Datentyp der entsprechenden Spalte in der Datenbanktabelle übereinstimmen, werden die Daten, wenn möglich, durch das Massenkopieren konvertiert.<br /><br /> Der BCP_FMT_TYPE-Parameter wird von den SQL Server-Datentyptoken in sqlncli.h anstelle der ODBC C-Datentypenumeratoren aufgelistet. Sie können beispielsweise eine Zeichenfolge, ODBC-Typ SQL_C_CHAR, mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifischen SQLCHARACTER-Typs angeben.<br /><br /> Um die Standarddatendarstellung für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp anzugeben, legen Sie diesen Parameter auf 0 fest.<br /><br /> Wenn die Quell Spalte nicht **Dezimal** oder **numerisch**ist, werden bei einem Massen Kopiervorgang aus SQL Server in eine Datei die Standardgenauigkeit und die Standardskala verwendet, wenn BCP_FMT_TYPE SqlDecimal oder SQLNUMERIC ist. Andernfalls werden die Genauigkeit und die Dezimalstellen der Quell Spalte verwendet, wenn die Quell Spalte **Dezimal** oder **numerisch**ist.|  
+|BCP_FMT_TYPE|BYTE|Der Datentyp dieser Spalte in der Benutzerdatei. Wenn die Daten nicht mit dem Datentyp der entsprechenden Spalte in der Datenbanktabelle übereinstimmen, werden die Daten, wenn möglich, durch das Massenkopieren konvertiert.<br /><br /> Der BCP_FMT_TYPE-Parameter wird von den SQL Server-Datentyptoken in sqlncli.h anstelle der ODBC C-Datentypenumeratoren aufgelistet. Sie können beispielsweise eine Zeichenfolge, ODBC-Typ SQL_C_CHAR, mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifischen SQLCHARACTER-Typs angeben.<br /><br /> Um die Standarddatendarstellung für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp anzugeben, legen Sie diesen Parameter auf 0 fest.<br /><br /> Wenn die Quell Spalte nicht **Dezimal** oder **numerisch** ist, werden bei einem Massen Kopiervorgang aus SQL Server in eine Datei die Standardgenauigkeit und die Standardskala verwendet, wenn BCP_FMT_TYPE SqlDecimal oder SQLNUMERIC ist. Andernfalls werden die Genauigkeit und die Dezimalstellen der Quell Spalte verwendet, wenn die Quell Spalte **Dezimal** oder **numerisch** ist.|  
 |BCP_FMT_INDICATOR_LEN|INT|Die Länge des Indikators (Präfix) in Bytes<br /><br /> Die Länge eines Längen-/NULL-Indikators innerhalb der Spaltendaten in Bytes. Gültige Indikatorlängenwerte sind 0 (wenn kein Indikator verwendet wird), 1, 2 oder 4.<br /><br /> Legen Sie diesen Parameter auf SQL_VARLEN_DATA fest, um die Verwendung eines standardmäßigen Massenkopierindikators anzugeben.<br /><br /> Indikatoren werden im Speicher direkt vor allen anderen Daten angezeigt. In der Datendatei werden sie direkt vor den Daten, auf die sie sich beziehen, angezeigt.<br /><br /> Wird mehr als eine Methode zur Angabe der Länge der Datendateispalte verwendet (z. B. ein Indikator und eine maximale Spaltenlänge oder ein Indikator und eine Abschlusszeichensequenz), wird beim Massenkopieren die Methode ausgewählt, die zu der kleineren zu kopierenden Datenmenge führt.<br /><br /> Datendateien, die durch Massenkopieren generiert wurden, wobei das Datenformat nicht durch Benutzereingriff angepasst wird, enthalten Indikatoren, wenn die Spaltendaten eine unterschiedliche Länge haben oder die Spalte NULL als Wert akzeptieren kann.|  
 |BCP_FMT_DATA_LEN|DBINT|Die Länge der Daten (Spaltenlänge) in Bytes<br /><br /> Dies ist die maximale Länge (in Bytes) der Daten dieser Spalte in der Benutzerdatei, ohne die Länge eines Längenindikators oder Abschlusszeichens.<br /><br /> Durch Festlegen von BCP_FMT_DATA_LEN auf SQL_NULL_DATA wird angegeben, dass alle Werte in der Datendateispalte auf NULL festgelegt sind oder sein sollten.<br /><br /> Wird BCP_FMT_DATA_LEN auf SQL_VARLEN_DATA festgelegt, bedeutet dies, dass das System die Länge der Daten für jede Spalte bestimmen soll. Für einige Spalten könnte dies bedeuten, dass ein Längen-/NULL-Indikator generiert wird, der den Daten in einer Kopie von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorangestellt wird, oder dass der Indikator in Daten, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kopiert werden, erwartet wird.<br /><br /> BCP_FMT_DATA_LEN kann für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zeichen und Binärdatentypen BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 oder ein positiver Wert sein. Wenn BCP_FMT_DATA_LEN auf SQL_VARLEN_DATA festgelegt ist, verwendet das System entweder den Längenindikator, sofern vorhanden, oder eine Abschlusszeichensequenz, um die Länge der Daten zu bestimmen. Wenn sowohl ein Längenindikator als auch eine Abschlusszeichensequenz angegeben sind, wird beim Massenkopieren der Wert verwendet, der zu der kleineren zu kopierenden Datenmenge führt. Ist BCP_FMT_DATA_LEN auf SQL_VARLEN_DATA festgelegt, ist der Datentyp ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zeichen oder -Binärtyp. Ist weder ein Längenindikator noch eine Abschlusszeichensequenz angegeben, gibt das System eine Fehlermeldung zurück.<br /><br /> Wenn BCP_FMT_DATA_LEN 0 oder ein positiver Wert ist, verwendet das System BCP_FMT_DATA_LEN als maximale Datenlänge. Wenn jedoch zusätzlich zu einem positiven BCP_FMT_DATA_LEN-Wert ein Längenindikator oder eine Abschlusszeichensequenz angegeben ist, bestimmt das System die Datenlänge mithilfe der Methode, die zu der kleineren zu kopierenden Datenmenge führt.<br /><br /> Der BCP_FMT_DATA_LEN-Wert stellt die Anzahl der Datenbytes dar. Werden Zeichendaten durch Unicode-Zeichen dargestellt, repräsentiert ein positiver BCP_FMT_DATA_LEN-Parameterwert die Anzahl der Zeichen multipliziert mit der Größe (in Bytes) der einzelnen Zeichen.|  
 |BCP_FMT_TERMINATOR|LPCBYTE|Zeiger auf die Abschlusszeichensequenz (entweder ANSI oder Unicode), die für diese Spalte verwendet werden soll. Dieser Parameter ist in erster Linie für Zeichendatentypen nützlich, da alle anderen Typen eine feste Länge besitzen oder, im Falle von Binärdaten, einen Indikator für die Länge erfordern, um die Anzahl der vorhandenen Bytes präzise zu erfassen.<br /><br /> Legen Sie diesen Parameter auf NULL fest, um zu vermeiden, dass extrahierte Daten terminiert werden, oder um anzugeben, dass Daten in einer Benutzerdatei nicht terminiert werden.<br /><br /> Wird mehr als eine Methode zur Angabe der Länge der Benutzerdateispalte verwendet (z. B. ein Abschlusszeichen und ein Längenindikator oder ein Abschlusszeichen und eine maximale Spaltenlänge), wird beim Massenkopieren die Methode ausgewählt, die zu der kleineren zu kopierenden Datenmenge führt.<br /><br /> Die API für das Massenkopieren führt nach Bedarf eine Zeichenkonvertierung von Unicode in MBCS aus. Stellen Sie unbedingt sicher, dass sowohl die Bytezeichenfolge des Abschlusszeichens und die Länge der Bytezeichenfolge richtig festgelegt werden.|  
@@ -67,15 +67,15 @@ RETCODE bcp_setcolfmt (
 |BCP_FMT_COLLATION|LPCSTR|Sortierungsname.|  
   
  *pValue*  
- Der Zeiger auf den Wert, der der *Eigenschaft*zugeordnet werden soll. Er ermöglicht es, jede Spaltenformateigenschaft einzeln festzulegen.  
+ Der Zeiger auf den Wert, der der *Eigenschaft* zugeordnet werden soll. Er ermöglicht es, jede Spaltenformateigenschaft einzeln festzulegen.  
   
  *cbValue*  
  Die Länge des Puffers der Eigenschaft in Bytes.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  SUCCEED oder FAIL.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese Funktion löst die **bcp_colfmt** -Funktion aus. Die gesamte Funktionalität von **bcp_colfmt** wird in **bcp_setcolfmt** Funktion bereitgestellt. Zusätzlich wird auch Unterstützung für Spaltensortierung bereitgestellt. Es wird empfohlen, die folgenden Spaltenformatattribute in der unten gegebenen Reihenfolge festzulegen:  
   
  BCP_FMT_SERVER_COL  
@@ -100,7 +100,7 @@ RETCODE bcp_setcolfmt (
   
  Jeder **bcp_setcolfmt** Aufrufe gibt das Format für eine Benutzerdatei Spalte an. Wenn Sie z. b. die Standardeinstellungen für drei Spalten in einer Benutzer Datendatei mit fünf Spalten ändern möchten, rufen Sie zuerst [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**(5)** auf, und rufen Sie dann **bcp_setcolfmt** fünfmal auf, wobei drei dieser Aufrufe Ihr benutzerdefiniertes Format festlegen. Legen Sie für die verbleibenden zwei Aufrufe BCP_FMT_TYPE auf 0 fest, und legen Sie BCP_FMT_INDICATOR_LENGTH, BCP_FMT_DATA_LEN und *cbValue* auf 0, SQL_VARLEN_DATA bzw. 0 fest. Mit diesem Verfahren werden alle fünf Spalten kopiert, drei mit dem benutzerdefinierten Format und zwei mit dem Standardformat.  
   
- Die **bcp_columns** -Funktion muss aufgerufen werden, bevor **bcp_setcolfmt**aufgerufen wird.  
+ Die **bcp_columns** -Funktion muss aufgerufen werden, bevor **bcp_setcolfmt** aufgerufen wird.  
   
  Sie müssen **bcp_setcolfmt** einmal für jede Eigenschaft jeder Spalte in der Benutzerdatei abrufen.  
   

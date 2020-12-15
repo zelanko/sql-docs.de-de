@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65fc7918a3e8064310757a2875e62d6e001f750c
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 57a595a2bcb78d86c3a770db6b584974c229a0df
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91808496"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483652"
 ---
 # <a name="automatic-tuning"></a>Automatische Optimierung
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
 Die automatische Datenbankoptimierung bietet einen Einblick in die potentiellen Abfrageleistungsprobleme, empfiehlt Lösungen und kann identifizierte Probleme automatisch beheben.
 
-Bei der automatischen Optimierung, die in eingeführt wurde, werden [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Sie benachrichtigt, sobald ein mögliches Leistungsproblem erkannt wird, und Sie können Korrekturmaßnahmen anwenden, oder die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] Leistungsprobleme können von automatisch behoben werden. Die automatische Optimierung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht es Ihnen, Leistungsprobleme zu identifizieren und zu beheben, die durch eine **Abfrage Ausführungsplan Auswahl Regressionen**verursacht werden. Bei der automatischen Optimierung in werden [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] auch erforderliche Indizes erstellt und nicht verwendete Indizes gelöscht. Weitere Informationen zu Abfrage Ausführungsplänen finden Sie unter [Ausführungspläne](../../relational-databases/performance/execution-plans.md).
+Bei der automatischen Optimierung, die in eingeführt wurde, werden [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Sie benachrichtigt, sobald ein mögliches Leistungsproblem erkannt wird, und Sie können Korrekturmaßnahmen anwenden, oder die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] Leistungsprobleme können von automatisch behoben werden. Die automatische Optimierung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht es Ihnen, Leistungsprobleme zu identifizieren und zu beheben, die durch eine **Abfrage Ausführungsplan Auswahl Regressionen** verursacht werden. Bei der automatischen Optimierung in werden [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] auch erforderliche Indizes erstellt und nicht verwendete Indizes gelöscht. Weitere Informationen zu Abfrage Ausführungsplänen finden Sie unter [Ausführungspläne](../../relational-databases/performance/execution-plans.md).
 
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]Überwacht die Abfragen, die für die Datenbank ausgeführt werden, und verbessert die Leistung der Arbeitsauslastung automatisch. [!INCLUDE[ssde_md](../../includes/ssde_md.md)]Verfügt über einen integrierten Intelligence-Mechanismus, mit dem die Leistung Ihrer Abfragen automatisch optimiert und verbessert werden kann, indem die Datenbank dynamisch an ihre Arbeitsauslastung angepasst wird. Es stehen zwei Features für die automatische Optimierung zur Verfügung:
 
@@ -101,7 +101,7 @@ Ohne automatische Optimierung müssen Benutzer das System in regelmäßigen Abst
 
 In [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] können Sie mit Abfragespeicher System Sichten Plan Auswahl Regressionen suchen. Ab [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] [!INCLUDE[ssde_md](../../includes/ssde_md.md)] erkennt und zeigt mögliche Regressionen der Plan Auswahl und die empfohlenen Aktionen an, die im [sys.dm_db_tuning_recommendations &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) -DMV angewendet werden sollten. Die DMV zeigt Informationen über das Problem, die Wichtigkeit des Problems und Details wie z. b. die identifizierte Abfrage, die ID des zurück gestellten Plans, die ID des Plans, der als Baseline für den Vergleich verwendet wurde, und die Anweisung, die [!INCLUDE[tsql_md](../../includes/tsql-md.md)] ausgeführt werden kann, um das Problem zu beheben.
 
-| type | description | datetime | Ergebnis Ihrer App | Details | ... |
+| Typ | description | datetime | Ergebnis Ihrer App | Details | ... |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | Die CPU-Zeit wurde von 4 ms auf 14 ms geändert. | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | Die CPU-Zeit wurde von 37 MS auf 84 MS geändert. | 16.3.2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
