@@ -19,13 +19,13 @@ f1_keywords:
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 43ef52303110cb26b145348edc6aa9ec09bf38de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 780ee667e84b0def82e27afff1b27886150c8bb0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408136"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97407276"
 ---
 # <a name="index-properties-f1-help"></a>Indexeigenschaften (F1-Hilfe)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "88408136"
  Gibt die Sortierreihenfolge der ausgewählten Indexspalte an, entweder **Aufsteigend** oder **Absteigend**.  
   
 > [!NOTE]  
->  Wenn der Indextyp **Primär-XML** oder **Räumlich**ist, wird diese Spalte nicht in der Tabelle aufgeführt.  
+>  Wenn der Indextyp **Primär-XML** oder **Räumlich** ist, wird diese Spalte nicht in der Tabelle aufgeführt.  
   
  **Datentyp**  
  Zeigt die Datentypinformationen an.  
@@ -239,7 +239,7 @@ Die Zwischenebenenseiten sind nahezu vollständig aufgefüllt. Allerdings ist au
  Auf der Seite **Räumlich** können Sie die Werte der räumlichen Eigenschaften anzeigen oder angeben. Weitere Informationen finden Sie unter [Räumliche Daten &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
 ### <a name="bounding-box"></a>Umgebendes Feld  
- Das *umgebende Feld* ist der Umkreis des Rasters der höchsten Ebene einer geometrischen Ebene. Die Parameter für das umgebende Feld sind nur im Geometrierastermosaik vorhanden. Diese Parameter sind nicht verfügbar, wenn das **Mosaikschema** auf **Geografieraster**festgelegt ist.  
+ Das *umgebende Feld* ist der Umkreis des Rasters der höchsten Ebene einer geometrischen Ebene. Die Parameter für das umgebende Feld sind nur im Geometrierastermosaik vorhanden. Diese Parameter sind nicht verfügbar, wenn das **Mosaikschema** auf **Geografieraster** festgelegt ist.  
   
  In dem Bereich werden die Koordinaten **(** _X-min_ **,** _Y-min_ **)** und **(** _X-max_ **,** _Y-max_ **)** des umgebenden Felds angezeigt. Es gibt keine Standardkoordinatenwerte. Daher müssen Sie die Koordinatenwerte angeben, wenn Sie einen neuen räumlichen Index für eine Spalte vom Typ **geometry** erstellen.  
   
@@ -276,10 +276,10 @@ Die Zwischenebenenseiten sind nahezu vollständig aufgefüllt. Allerdings ist au
  **Zellen pro Objekt**  
  Gibt die Anzahl von Zellen pro Objekt für das Mosaik an, die für ein einzelnes räumliches Objekt im Index verwendet werden können. Bei dieser Zahl kann es sich um jede ganze Zahl von 1 bis 8192 handeln. Der Standardwert ist 16. Der Wert lautet 8 für frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , wenn der Datenbank-Kompatibilitätsgrad auf 110 oder höher festgelegt wird.  
   
- Auf höchster Ebene verwendet die Indizierung die Anzahl von Zellen, die zum Bereitstellen eines vollständigen Mosaiks der höchsten Ebene erforderlich sind, wenn ein Objekt mehr Zellen abdeckt, als durch *n*angegeben sind. In solchen Fällen ist es möglich, dass ein Objekt mehr als die angegebene Anzahl von Zellen erhält. Die maximale Anzahl ist dann die Anzahl von Zellen, die von dem Raster der höchsten Ebene generiert wird, welche von der Dichte der **Ebene 1** abhängt.  
+ Auf höchster Ebene verwendet die Indizierung die Anzahl von Zellen, die zum Bereitstellen eines vollständigen Mosaiks der höchsten Ebene erforderlich sind, wenn ein Objekt mehr Zellen abdeckt, als durch *n* angegeben sind. In solchen Fällen ist es möglich, dass ein Objekt mehr als die angegebene Anzahl von Zellen erhält. Die maximale Anzahl ist dann die Anzahl von Zellen, die von dem Raster der höchsten Ebene generiert wird, welche von der Dichte der **Ebene 1** abhängt.  
   
 ### <a name="grids"></a>Raster  
- In diesem Bereich wird die Dichte des Rasters auf jeder Ebene des Mosaikschemas angezeigt. Die Dichte wird als **Niedrig**, **Mittel**oder **Hoch**angegeben. Der Standardwert ist **Mittel**. **Niedrig** stellt ein Raster aus 4x4, also 16 Zellen, **Mittel** ein Raster aus 8x8, also 64 Zellen, und **Hoch** ein Raster aus 16x16, also 256 Zellen, dar. Diese Optionen sind nicht verfügbar, wenn die Mosaikoptionen **Automatisches Geometrieraster** oder **Automatisches Geografieraster** nicht ausgewählt sind.  
+ In diesem Bereich wird die Dichte des Rasters auf jeder Ebene des Mosaikschemas angezeigt. Die Dichte wird als **Niedrig**, **Mittel** oder **Hoch** angegeben. Der Standardwert ist **Mittel**. **Niedrig** stellt ein Raster aus 4x4, also 16 Zellen, **Mittel** ein Raster aus 8x8, also 64 Zellen, und **Hoch** ein Raster aus 16x16, also 256 Zellen, dar. Diese Optionen sind nicht verfügbar, wenn die Mosaikoptionen **Automatisches Geometrieraster** oder **Automatisches Geografieraster** nicht ausgewählt sind.  
   
  **Ebene 1**  
  Die Dichte des Rasters der obersten (höchsten) Ebene.  
