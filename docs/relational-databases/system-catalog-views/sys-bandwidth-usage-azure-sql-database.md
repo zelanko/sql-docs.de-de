@@ -1,6 +1,6 @@
 ---
 description: sys.bandwidth_usage (Azure SQL Database)
-title: sys. bandwidth_usage (Azure SQL-Datenbank) | Microsoft-Dokumentation
+title: sys.bandwidth_usage (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/28/2019
 ms.service: sql-database
@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d39486a513e012fc53e66c408145bbf148696ff2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: c71fdc21c634e8f473d628373ae5adfa9c1c072f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88402526"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473031"
 ---
 # <a name="sysbandwidth_usage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 
@@ -34,11 +34,11 @@ ms.locfileid: "88402526"
 > [!NOTE]
 > Dies gilt nur für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11. * *  
   
- Gibt Informationen zur Netzwerkbandbreite zurück, die von den einzelnen Datenbanken auf einem ** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11-Datenbankserver**verwendet wird. Jede Zeile, die für eine bestimmte Datenbank zurückgegeben wird, gibt eine einzelne Richtung und eine Verwendungsklasse über eine Stunde hinweg an.  
+ Gibt Informationen zur Netzwerkbandbreite zurück, die von den einzelnen Datenbanken auf einem **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11-Datenbankserver** verwendet wird. Jede Zeile, die für eine bestimmte Datenbank zurückgegeben wird, gibt eine einzelne Richtung und eine Verwendungsklasse über eine Stunde hinweg an.  
   
  **Dies ist in einer veraltet [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .**  
   
- Die **sys. bandwidth_usage** -Sicht enthält die folgenden Spalten.  
+ Die **sys.bandwidth_usage** Sicht enthält die folgenden Spalten.  
   
 |Spaltenname|Beschreibung|  
 |-----------------|-----------------|  
@@ -53,11 +53,11 @@ ms.locfileid: "88402526"
 
  Diese Ansicht ist nur in der **Master** -Datenbank für den Prinzipal Anmelde Namen auf Serverebene verfügbar.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ### <a name="external-and-internal-classes"></a>Externe und interne Klassen
 
- Für jede Datenbank, die zu einem bestimmten Zeitpunkt verwendet wird, gibt die **sys. bandwidth_usage** -Sicht Zeilen zurück, die die Klasse und die Richtung der Bandbreiten Verwendung anzeigen. Das folgende Beispiel zeigt Daten, die für eine bestimmte Datenbank verfügbar gemacht werden können. In diesem Beispiel ist der Zeitpunkt 2012-04-21 17:00:00, der im Zeitraum mit Spitzenwerten liegt. Der Datenbankname ist Db1. In diesem Beispiel hat **sys. bandwidth_usage** eine Zeile für alle vier Kombinationen der Eingangs-und Ausgangs Richtung sowie externer und interner Klassen wie folgt zurückgegeben:  
+ Für jede Datenbank, die zu einem bestimmten Zeitpunkt verwendet wird, gibt die **sys.bandwidth_usage** Sicht Zeilen zurück, die die Klasse und die Richtung der Bandbreiten Verwendung anzeigen. Das folgende Beispiel zeigt Daten, die für eine bestimmte Datenbank verfügbar gemacht werden können. In diesem Beispiel ist der Zeitpunkt 2012-04-21 17:00:00, der im Zeitraum mit Spitzenwerten liegt. Der Datenbankname ist Db1. In diesem Beispiel hat **sys.bandwidth_usage** eine Zeile für alle vier Kombinationen der Eingangs-und Ausgangs Richtung sowie externer und interner Klassen wie folgt zurückgegeben:  
   
 |time|database_name|direction|class|time_period|quantity|  
 |----------|--------------------|---------------|-----------|------------------|--------------|  

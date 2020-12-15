@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: a27c286316dd49407b0cb74027eefc296a8ca654
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 69dfbde65d00f3d6995d1bce784a46a64515f8fe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834275"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472891"
 ---
 # <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status (Azure SQL-Datenbank)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -57,9 +57,9 @@ Bei Verwendung von SQL-Datenbank V12 sollten Sie [sys.dm_geo_replication_link_st
   
  Wenn die fortlaufende Kopier Beziehung für eine Datenbank beendet wird, wird die Zeile für diese Datenbank in der **sys.dm_continuous_copy_status** Ansicht nicht mehr angezeigt.  
   
- Wie die **sys.dm_database_copies** Ansicht gibt **sys.dm_continuous_copy_status** den Status der fortlaufenden Kopier Beziehung wieder, in der die Datenbank entweder eine primäre oder aktive sekundäre Datenbank ist. Im Gegensatz zu **sys.dm_database_copies**enthält **sys.dm_continuous_copy_status** mehrere Spalten, die Details zu Vorgängen und Leistung bereitstellen. Zu diesen Spalten gehören **last_replication**und **replication_lag_sec**.  
+ Wie die **sys.dm_database_copies** Ansicht gibt **sys.dm_continuous_copy_status** den Status der fortlaufenden Kopier Beziehung wieder, in der die Datenbank entweder eine primäre oder aktive sekundäre Datenbank ist. Im Gegensatz zu **sys.dm_database_copies** enthält **sys.dm_continuous_copy_status** mehrere Spalten, die Details zu Vorgängen und Leistung bereitstellen. Zu diesen Spalten gehören **last_replication** und **replication_lag_sec**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sys.dm_database_copies &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
- [Gespeicherte Prozeduren für die aktive georeplikation &#40;Transact-SQL-&#41;](../system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Aktive Geo-Replication gespeicherte Prozeduren &#40;Transact-SQL-&#41;](../system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e58f27f22e0a0d69ab35f21b9dcecdc80fd12e63
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dbbf927943b34c81ad1f0a49b831314803969d7c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005553"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472651"
 ---
 # <a name="sp_tables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,9 +55,9 @@ sp_tables [ [ @table_name = ] 'name' ]
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden die Spalten einer Tabelle zurückgegeben, wenn der aktuelle Benutzer diese Tabelle mit dem angegebenen Namen besitzt. Falls der Besitzer nicht angegeben ist und der aktuelle Benutzer keine Tabelle mit dem angegebenen Namen besitzt, wird nach einer Tabelle mit dem angegebenen Namen gesucht, deren Besitzer der Datenbankbesitzer ist. Wenn eine solche Tabelle vorhanden ist, werden die Spalten dieser Tabelle zurückgegeben.  
   
-`[ @table_qualifier = ] 'qualifier'` Der Name des Tabellen Qualifizierers. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Benennung für Tabellen (_Qualifizierer_)**.** _Besitzer_**.** _Name_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
+`[ @table_qualifier = ] 'qualifier'` Der Name des Tabellen Qualifizierers. *qualifier* ist vom Datentyp **sysname** und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Benennung für Tabellen (_Qualifizierer_)**.** _Besitzer_**.** _Name_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
   
-``[ , [ @table_type = ] "'type', 'type'" ]`` Eine durch Kommas getrennte Liste von Werten, die Informationen zu allen Tabellen der angegebenen Tabellentypen enthält. Dazu zählen **Table**, **systemtable**und **View**. *Type ist vom Datentyp* **varchar (100)** und hat den Standardwert NULL.  
+``[ , [ @table_type = ] "'type', 'type'" ]`` Eine durch Kommas getrennte Liste von Werten, die Informationen zu allen Tabellen der angegebenen Tabellentypen enthält. Dazu zählen **Table**, **systemtable** und **View**. *Type ist vom Datentyp* **varchar (100)** und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Jeder Tabellentyp muss in einfache Anführungszeichen und der gesamte Parameter in doppelte Anführungszeichen eingeschlossen werden. Für Tabellentypen müssen Großbuchstaben verwendet werden. Wenn SET QUOTED_IDENTIFIER auf ON festgelegt ist, müssen alle einfachen Anführungszeichen in doppelte Anführungszeichen geändert werden, und der gesamte Parameter muss in einfache Anführungszeichen eingeschlossen werden.  
@@ -77,12 +77,12 @@ sp_tables [ [ @table_name = ] 'name' ]
 |**TABLE_TYPE**|**varchar(32)**|Tabelle, Systemtabelle oder Sicht.|  
 |**HINWEISE**|**varchar (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt für diese Spalte keinen Wert zurück.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Für maximale Interoperabilität sollte der Gatewayclient nur den SQL-92-Standard zum SQL-Mustervergleich (die Platzhalterzeichen % und _) voraussetzen.  
   
- Die Privileginformationen zum Lese- und Schreibzugriff des aktuellen Benutzers für eine bestimmte Tabelle werden nicht immer geprüft. Deshalb ist der Zugriff nicht sichergestellt. Dieses Resultset enthält nicht nur Tabellen und Sichten, sondern auch Synonyme und Aliasnamen für Gateways zu DBMS-Produkten, die diese Typen unterstützen. Wenn das Server Attribut **ACCESSIBLE_TABLES** im Resultset für **sp_server_info**Y ist, werden nur Tabellen zurückgegeben, auf die der aktuelle Benutzer zugreifen kann.  
+ Die Privileginformationen zum Lese- und Schreibzugriff des aktuellen Benutzers für eine bestimmte Tabelle werden nicht immer geprüft. Deshalb ist der Zugriff nicht sichergestellt. Dieses Resultset enthält nicht nur Tabellen und Sichten, sondern auch Synonyme und Aliasnamen für Gateways zu DBMS-Produkten, die diese Typen unterstützen. Wenn das Server Attribut **ACCESSIBLE_TABLES** im Resultset für **sp_server_info** Y ist, werden nur Tabellen zurückgegeben, auf die der aktuelle Benutzer zugreifen kann.  
   
- **sp_tables** entspricht **SQLTables** in ODBC. Die zurückgegebenen Ergebnisse werden nach **TABLE_TYPE**, **TABLE_QUALIFIER**, **TABLE_OWNER**und **table_name**geordnet.  
+ **sp_tables** entspricht **SQLTables** in ODBC. Die zurückgegebenen Ergebnisse werden nach **TABLE_TYPE**, **TABLE_QUALIFIER**, **TABLE_OWNER** und **table_name** geordnet.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert SELECT-Berechtigung für das Schema.  

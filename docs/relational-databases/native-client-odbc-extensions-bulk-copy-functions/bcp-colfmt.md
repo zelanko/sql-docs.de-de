@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b5ae01aef91edd1a7fe45c9203be407dbf7620c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2478558cdb8df2de852fcdd4654c90d51b8356a2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455913"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473631"
 ---
 # <a name="bcp_colfmt"></a>bcp_colfmt
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Gibt das Quell- oder Zielformat der Daten in einer Benutzerdatei an. Bei Verwendung als Quellformat gibt **bcp_colfmt** das Format einer vorhandenen Datendatei an, die als Datenquelle in einem Massen Kopiervorgang in eine Tabelle verwendet wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Bei Verwendung als Zielformat wird die Datendatei mithilfe der mit **bcp_colfmt**angegebenen Spalten Formate erstellt.  
+  Gibt das Quell- oder Zielformat der Daten in einer Benutzerdatei an. Bei Verwendung als Quellformat gibt **bcp_colfmt** das Format einer vorhandenen Datendatei an, die als Datenquelle in einem Massen Kopiervorgang in eine Tabelle verwendet wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Bei Verwendung als Zielformat wird die Datendatei mithilfe der mit **bcp_colfmt** angegebenen Spalten Formate erstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -64,9 +64,9 @@ RETCODE bcp_colfmt (
   
  Bei einem Massen Kopiervorgang aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in eine Datei, wenn *eUserDataType* SqlDecimal oder SQLNUMERIC lautet:  
   
--   Wenn die Quell Spalte nicht **Dezimal** oder **numerisch**ist, werden die Standardgenauigkeit und die Standardskala verwendet.  
+-   Wenn die Quell Spalte nicht **Dezimal** oder **numerisch** ist, werden die Standardgenauigkeit und die Standardskala verwendet.  
   
--   Wenn die Quell Spalte **Dezimal** oder **numerisch**ist, werden die Genauigkeit und die Dezimalstellen der Quell Spalte verwendet.  
+-   Wenn die Quell Spalte **Dezimal** oder **numerisch** ist, werden die Genauigkeit und die Dezimalstellen der Quell Spalte verwendet.  
   
  *cbIndicator*  
  Die Länge eines Längen-/NULL-Indikators innerhalb der Spaltendaten in Byte. Gültige Indikatorlängenwerte sind 0 (wenn kein Indikator verwendet wird), 1, 2, 4 oder 8.  
@@ -109,10 +109,10 @@ RETCODE bcp_colfmt (
   
  Wenn dieser Wert 0 ist, wird beim Massenkopieren die Spalte in der Datendatei ignoriert.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  SUCCEED oder FAIL.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Mit der **bcp_colfmt** -Funktion können Sie das Benutzerdatei Format für Massen Kopien angeben. Für Massenkopieren besteht ein Format aus folgenden Bestandteilen:  
   
 -   Eine Zuordnung von Benutzerdateispalten zu Datenbankspalten  
@@ -127,11 +127,11 @@ RETCODE bcp_colfmt (
   
 -   Die Länge der optionalen abschließenden Bytesequenz  
   
- Jeder **bcp_colfmt** Aufrufe gibt das Format für eine Benutzerdatei Spalte an. Wenn Sie z. b. die Standardeinstellungen für drei Spalten in einer Benutzer Datendatei mit fünf Spalten ändern möchten, rufen Sie zuerst [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**(5)** auf, und rufen Sie dann **bcp_colfmt** fünfmal auf, wobei drei dieser Aufrufe Ihr benutzerdefiniertes Format festlegen. Legen Sie für die verbleibenden zwei Aufrufe *eUserDataType* auf 0 fest, und legen Sie *cbIndicator*, *cbUserData*und *cbUserDataTerm* auf 0, SQL_VARLEN_DATA bzw. 0 fest. Mit diesem Verfahren werden alle fünf Spalten kopiert, drei mit dem benutzerdefinierten Format und zwei mit dem Standardformat.  
+ Jeder **bcp_colfmt** Aufrufe gibt das Format für eine Benutzerdatei Spalte an. Wenn Sie z. b. die Standardeinstellungen für drei Spalten in einer Benutzer Datendatei mit fünf Spalten ändern möchten, rufen Sie zuerst [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**(5)** auf, und rufen Sie dann **bcp_colfmt** fünfmal auf, wobei drei dieser Aufrufe Ihr benutzerdefiniertes Format festlegen. Legen Sie für die verbleibenden zwei Aufrufe *eUserDataType* auf 0 fest, und legen Sie *cbIndicator*, *cbUserData* und *cbUserDataTerm* auf 0, SQL_VARLEN_DATA bzw. 0 fest. Mit diesem Verfahren werden alle fünf Spalten kopiert, drei mit dem benutzerdefinierten Format und zwei mit dem Standardformat.  
   
- Für *cbIndicator*ist der Wert 8, um anzugeben, dass ein großer Werttyp nun gültig ist. Wenn das Präfix für ein Feld angegeben wird, dessen entsprechende Spalte den neuen max-Typ aufweist, kann dafür nur 8 festgelegt werden. Weitere Informationen finden Sie unter [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md).  
+ Für *cbIndicator* ist der Wert 8, um anzugeben, dass ein großer Werttyp nun gültig ist. Wenn das Präfix für ein Feld angegeben wird, dessen entsprechende Spalte den neuen max-Typ aufweist, kann dafür nur 8 festgelegt werden. Weitere Informationen finden Sie unter [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md).  
   
- Die **bcp_columns** -Funktion muss vor allen Aufrufen von **bcp_colfmt**aufgerufen werden.  
+ Die **bcp_columns** -Funktion muss vor allen Aufrufen von **bcp_colfmt** aufgerufen werden.  
   
  Sie müssen **bcp_colfmt** einmal für jede Spalte in der Benutzerdatei abrufen.  
   

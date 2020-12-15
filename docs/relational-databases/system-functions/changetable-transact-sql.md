@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f142f5de6f5580e7b0e21658e4b3c276984cd88
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f1c547cee24397cc9cc1c0b139bd728aef92c2b3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474696"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472781"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ CHANGETABLE (
   
 ## <a name="arguments"></a>Argumente  
  Änderungs *Tabelle* , *last_sync_version*  
- Gibt nach Verfolgungs Informationen für alle Änderungen an einer Tabelle zurück, die seit der durch *last_sync_version*angegebenen Version aufgetreten sind.  
+ Gibt nach Verfolgungs Informationen für alle Änderungen an einer Tabelle zurück, die seit der durch *last_sync_version* angegebenen Version aufgetreten sind.  
   
  *Tabelle*  
  Die benutzerdefinierte Tabelle, von der nachverfolgte Änderungen abgerufen werden sollen. Die Änderungsnachverfolgung muss für die Tabelle aktiviert sein. Es kann ein Tabellenname verwendet werden, der aus ein, zwei, drei oder vier Teilen besteht. Der Tabellenname kann synonym mit der Tabelle sein.  
@@ -69,7 +69,7 @@ CHANGETABLE (
  Versions *Tabelle*, {<primary_key_values>}  
  Gibt die letzten Änderungsnachverfolgungsinformationen für eine angegebene Zeile zurück. Primärschlüsselwerte müssen die Zeile identifizieren. <primary_key_values> identifiziert die Primärschlüssel Spalten und gibt die Werte an. Die Namen der Primärschlüsselspalten können in beliebiger Reihenfolge angegeben werden.  
   
- *Table*  
+ *Tabelle*  
  Die benutzerdefinierte Tabelle, von der Änderungsnachverfolgungsinformationen abgerufen werden sollen. Die Änderungsnachverfolgung muss für die Tabelle aktiviert sein. Es kann ein Tabellenname verwendet werden, der aus ein, zwei, drei oder vier Teilen besteht. Der Tabellenname kann synonym mit der Tabelle sein.  
   
  *column_name*  
@@ -95,7 +95,7 @@ CHANGETABLE (
 ### <a name="changetable-changes"></a>CHANGETABLE CHANGES  
  Wenn CHANGES angegeben wird, werden 0 oder mehr Zeilen, die die folgenden Spalten aufweisen, zurückgegeben.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Versionswert, der der letzten Änderung an der Zeile zugeordnet ist.|  
 |SYS_CHANGE_CREATION_VERSION|**bigint**|Versionswerte, die dem letzten Einfügevorgang zugeordnet sind.|  
@@ -107,13 +107,13 @@ CHANGETABLE (
 ### <a name="changetable-version"></a>CHANGETABLE VERSION  
  Wenn VERSION angegeben wird, wird eine Zeile, die die folgenden Spalten aufweist, zurückgegeben.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Wert der aktuellen Änderungsversion, der mit der Zeile verknüpft ist.<br /><br /> Der Wert ist NULL, wenn für einen längeren Zeitraum als der Beibehaltungsdauer für die Änderungsnachverfolgung keine Änderung vorgenommen wurde oder wenn die Zeile seit Aktivierung der Änderungsnachverfolgung nicht geändert wurde.|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Änderungskontextinformationen, die optional angegeben werden können, indem Sie die WITH-Klausel als Teil einer INSERT-, UPDATE- oder DELETE-Anweisung verwenden.|  
 |\<primary key column value>|Identisch mit den Benutzertabellenspalten.|Die Primärschlüsselwerte für die nachverfolgte Tabelle. Diese Werte identifizieren jede Zeile in der Benutzertabelle eindeutig.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die CHANGETABLE-Funktion wird in der Regel in der FROM-Klausel einer Abfrage verwendet, so als handele es sich um eine Tabelle.  
   
 ## <a name="changetablechanges"></a>CHANGETABLE(CHANGES...)  
@@ -214,7 +214,7 @@ WHERE
  [Änderungsnachverfolgungsfunktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [Nachverfolgen von Datenänderungen &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
- [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
+ [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
  [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
   
   

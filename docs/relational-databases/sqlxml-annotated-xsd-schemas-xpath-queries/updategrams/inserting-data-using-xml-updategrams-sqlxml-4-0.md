@@ -34,13 +34,13 @@ ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88e1f334629482182fb182dde60f715c0d122d25
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ac801a52e89e60bb05d1431de77078fa750f6d34
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790597"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473111"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Einfügen von Daten mit XML-Updategrams (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -67,16 +67,16 @@ ms.locfileid: "85790597"
 </ROOT>  
 ```  
   
-## <a name="before-block"></a>\<before>Baustein  
+## <a name="before-block"></a>\<before> Baustein  
  Der- **\<before>** Block kann für einen Einfügevorgang ausgelassen werden. Wenn das optionale **Mapping-Schema-** Attribut nicht angegeben ist, wird das **\<ElementName>** im Update Gram angegebene einer Datenbanktabelle zugeordnet, und die untergeordneten Elemente oder Attribute werden den Spalten in der Tabelle zugeordnet.  
   
-## <a name="after-block"></a>\<after>Baustein  
+## <a name="after-block"></a>\<after> Baustein  
  Sie können einen oder mehrere Datensätze im- **\<after>** Block angeben.  
   
  Wenn der- **\<after>** Block keinen Wert für eine bestimmte Spalte bereitstellt, verwendet das Update Gram den Standardwert, der im Schema mit Anmerkungen angegeben ist (sofern ein Schema angegeben wurde). Wenn das Schema keinen Standardwert für die Spalte angibt, gibt das Update Gram keinen expliziten Wert für diese Spalte an und weist stattdessen der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Spalte den Standardwert (falls angegeben) zu. Wenn kein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Standardwert vorhanden ist, und die Spalte einen NULL-Wert akzeptiert, legt das Updategram den Spaltenwert auf NULL fest. Wenn die Spalte weder einen Standardwert besitzt, noch einen NULL-Wert akzeptiert, schlägt der Befehl fehl, und das Updategram gibt einen Fehler zurück. Das optionale **updg: returnid-** Attribut wird verwendet, um den Identitäts Wert zurückzugeben, der vom System generiert wird, wenn ein Datensatz in einer Tabelle mit einer Spalte vom Typ IDENTITY hinzugefügt wird.  
   
 ## <a name="updgid-attribute"></a>updg:id-Attribut  
- Wenn das Update Gram nur Datensätze einfügt, ist das **updg: ID** -Attribut für das Update Gram nicht erforderlich. Weitere Informationen zu **updg: ID**finden Sie unter [Aktualisieren von Daten mit XML-Update grams &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md).  
+ Wenn das Update Gram nur Datensätze einfügt, ist das **updg: ID** -Attribut für das Update Gram nicht erforderlich. Weitere Informationen zu **updg: ID** finden Sie unter [Aktualisieren von Daten mit XML-Update grams &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md).  
   
 ## <a name="updgat-identity-attribute"></a>updg:at-identity-Attribut  
  Wenn ein Update Gram einen Datensatz in einer Tabelle mit einer Spalte vom Typ Identity einfügt, kann das Update Gram den Wert des zugewiesenen Systems mithilfe des optionalen Attributs **updg: at-Identity** erfassen. Das Updategram kann dann diesen Wert in nachfolgenden Vorgängen verwenden. Bei der Ausführung des Update grams können Sie den Identitäts Wert zurückgeben, der generiert wird, indem Sie das **updg: returnid-** Attribut angeben.  
@@ -385,7 +385,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
  In diesem Updategram wird ein XSD-Schema angegeben (d. h. es gibt keine Standardzuordnung von Updategramelementen und -attributen). Die erforderliche Zuordnung der Elemente und Attribute zu den Datenbanktabellen und -spalten erfolgt durch das Zuordnungsschema.  
   
- Das folgende Schema (CustOrderSchema.xml) beschreibt ein **\<CustOrder>** -Element, das aus den Attributen **OrderID** und Mitarbeiter ID besteht. **EmployeeID** Um das Schema interessanter zu machen, wird dem Mitarbeiter-ID **-Attribut ein** Standardwert zugewiesen. Ein Updategram verwendet den Standardwert eines Attributs nur bei Einfügevorgängen, und auch dann nur, wenn das Updategram kein anderes Attribut angibt.  
+ Das folgende Schema (CustOrderSchema.xml) beschreibt ein **\<CustOrder>** -Element, das aus den Attributen **OrderID** und Mitarbeiter ID besteht.  Um das Schema interessanter zu machen, wird dem Mitarbeiter-ID **-Attribut ein** Standardwert zugewiesen. Ein Updategram verwendet den Standardwert eines Attributs nur bei Einfügevorgängen, und auch dann nur, wenn das Updategram kein anderes Attribut angibt.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

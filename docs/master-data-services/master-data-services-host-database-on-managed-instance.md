@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5fa8a1df313af5473de9c49137166a6c2ac50589
-ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
+monikerRange: '>=sql-server-ver15'
+ms.openlocfilehash: ef24acb23a346b59b747d876d60d9a58374188bd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94521101"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469971"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>Hosten einer MDS-Datenbank auf einer verwalteten Instanz
 
@@ -139,7 +139,7 @@ Mit dieser Aktion wird Folgendes installiert:
 
 1. Wählen Sie auf der Seite **Daten Bank Konfiguration** in der die Option [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] **Datenbank auswählen** aus.
 
-1. Wählen Sie **verbinden** , wählen Sie die Datenbank aus, [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] und klicken Sie dann auf **OK**
+1. Wählen Sie **verbinden**, wählen Sie die Datenbank aus, [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] und klicken Sie dann auf **OK**
 
    ![Screenshot des Dialog Felds "Verbindung mit Datenbank herstellen".](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "MDS-SQLServer2019-config-MI_connectDBName")
 
@@ -161,9 +161,9 @@ Mit dieser Aktion wird Folgendes installiert:
 
    Weitere Informationen zum Dialogfeld **Webanwendung erstellen** finden Sie unter [Dialogfeld "Webanwendung erstellen" &#40;[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager&#41;](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md).
 
-1. Wählen Sie **Web Configuration** im Fenster Webanwendung im Fenster **Webanwendung** die Anwendung aus, die Sie erstellt haben, und wählen Sie dann im Abschnitt **Anwendung einer Datenbank zuordnen** die Option **auswählen** aus.
+1. Wählen Sie  im Fenster Webanwendung im Fenster **Webanwendung** die Anwendung aus, die Sie erstellt haben, und wählen Sie dann im Abschnitt **Anwendung einer Datenbank zuordnen** die Option **auswählen** aus.
 
-1. Wählen Sie **verbinden** aus, und wählen Sie die [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Datenbank aus, die Sie der Webanwendung zuordnen möchten. Klicken Sie auf **OK**.
+1. Wählen Sie **verbinden** aus, und wählen Sie die [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Datenbank aus, die Sie der Webanwendung zuordnen möchten. Wählen Sie **OK** aus.
 
    Die Einrichtung der Website ist abgeschlossen. Auf der Seite **Webkonfiguration** werden nun die von Ihnen ausgewählte Website, die von Ihnen erstellte Webanwendung und die der Anwendung zugeordnete [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Datenbank angezeigt.
 
@@ -228,7 +228,7 @@ Um dieses Problem zu beheben, müssen Sie die Datenbankversion aktualisieren:
 
 1. Wählen Sie **Fertig** stellen aus, nachdem alle Aufgaben abgeschlossen sind.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Master Data Services-Datenbank](../master-data-services/master-data-services-database.md)
 - [Master Data Manager-Webanwendung [Master Data Services]](../master-data-services/master-data-manager-web-application.md)

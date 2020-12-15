@@ -13,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 21cab8507af433b39a6be6e35063d8a89c713af3
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 42b33bd1c94d9cf4d99a7f9061517d5d3de39b3a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868869"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473521"
 ---
 # <a name="process-odbc-errors-odbc"></a>Verarbeiten von ODBC-Fehlern (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Zwei ODBC-Funktionsaufrufe können verwendet werden, um ODBC-Meldungen abzurufen: [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) und [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md). Um primäre, mit ODBC verbundene Informationen in den Feldern **SQLState**, **pfNative**and **ErrorMessage** zu erhalten, rufen Sie [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) auf, bis SQL_NO_DATA zurückgegeben wird. Für jeden Diagnosedatensatz kann [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) aufgerufen werden, um einzelne Felder abzurufen. Alle treiberspezifischen Felder müssen mit **SQLGetDiagField**abgerufen werden.  
+  Zwei ODBC-Funktionsaufrufe können verwendet werden, um ODBC-Meldungen abzurufen: [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) und [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md). Um primäre, mit ODBC verbundene Informationen in den Feldern **SQLState**, **pfNative** and **ErrorMessage** zu erhalten, rufen Sie [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) auf, bis SQL_NO_DATA zurückgegeben wird. Für jeden Diagnosedatensatz kann [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) aufgerufen werden, um einzelne Felder abzurufen. Alle treiberspezifischen Felder müssen mit **SQLGetDiagField** abgerufen werden.  
   
  [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) und [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) werden vom ODBC-Treiber-Manager, nicht von einem einzelnen Treiber, verarbeitet. Der ODBC-Treiber-Manager speichert treiberspezifische Diagnosefelder erst zwischen, wenn eine erfolgreiche Verbindung hergestellt wurde. Der Aufruf von [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) für treiberspezifische Diagnosefelder ist vor dem erfolgreichen Herstellen einer Verbindung nicht möglich. Dies betrifft auch die ODBC-Verbindungsbefehle, auch wenn sie SQL_SUCCESS_WITH_INFO zurückgeben. Treiberspezifische Diagnosefelder sind bis zum nächsten ODBC-Funktionsaufruf nicht verfügbar.  
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>BESCHREIBUNG  
+### <a name="description"></a>Beschreibung  
  Dieses Beispiel zeigt einen einfachen Fehlerhandler, der [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) für die Standard-ODBC-Informationen aufruft. Anschließend wird geprüft, ob eine gültige Verbindung vorhanden ist. Ist dies der Fall, wird **SQLGetDiagField** für die ODBC-treiberspezifischen Diagnosefelder von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgerufen. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  
   
  Dieses Beispiel wurde für ODBC, Version 3.0 oder höher, entwickelt.  

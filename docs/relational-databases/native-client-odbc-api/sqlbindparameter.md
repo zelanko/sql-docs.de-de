@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f2cc89e6e7582497f2419fe19d650f0463ab0bd
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 8e676580ced0122e01286a0c6142cf63edcdf6e0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810441"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469521"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,16 +37,16 @@ ms.locfileid: "91810441"
  [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md) ist mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber unzuverlässig, wenn ein Array Element eines gebundenen Parameter Arrays einen Fehler bei der Ausführung der Anweisung verursacht. Das ODBC-Anweisungsattribut SQL_ATTR_PARAMS_PROCESSED_PTR meldet die Anzahl von Zeilen, die vor dem Auftreten des Fehler verarbeitet wurden. Die Anwendung kann dann das Parameterstatusarray durchlaufen, um ggf. die Anzahl erfolgreich verarbeiteter Anweisungen zu ermitteln.  
   
 ## <a name="binding-parameters-for-sql-character-types"></a>Binden von Parametern für SQL-Zeichentypen  
- Wenn es sich bei dem in der Übergabe des SQL-Datentyps um einen Zeichentyp handelt, ist *ColumnSize* die Größe in Zeichen (nicht Bytes). Wenn die Länge der Daten Zeichenfolge in Bytes größer als 8000 ist, sollte *ColumnSize* auf **SQL_SS_LENGTH_UNLIMITED**festgelegt werden, was bedeutet, dass die Größe des SQL-Typs nicht begrenzt ist.  
+ Wenn es sich bei dem in der Übergabe des SQL-Datentyps um einen Zeichentyp handelt, ist *ColumnSize* die Größe in Zeichen (nicht Bytes). Wenn die Länge der Daten Zeichenfolge in Bytes größer als 8000 ist, sollte *ColumnSize* auf **SQL_SS_LENGTH_UNLIMITED** festgelegt werden, was bedeutet, dass die Größe des SQL-Typs nicht begrenzt ist.  
   
- Wenn der SQL-Datentyp beispielsweise **SQL_WVARCHAR**ist, sollte *ColumnSize* nicht größer als 4000 sein. Wenn die tatsächliche Daten Länge größer als 4000 ist, sollte *ColumnSize* auf **SQL_SS_LENGTH_UNLIMITED** festgelegt werden, damit **nvarchar (max)** vom Treiber verwendet wird.  
+ Wenn der SQL-Datentyp beispielsweise **SQL_WVARCHAR** ist, sollte *ColumnSize* nicht größer als 4000 sein. Wenn die tatsächliche Daten Länge größer als 4000 ist, sollte *ColumnSize* auf **SQL_SS_LENGTH_UNLIMITED** festgelegt werden, damit **nvarchar (max)** vom Treiber verwendet wird.  
   
 ## <a name="sqlbindparameter-and-table-valued-parameters"></a>SQLBindParameter und Tabellenwertparameter  
  Wie andere Parametertypen werden Tabellenwert Parameter von SQLBindParameter gebunden.  
   
  Nachdem ein Tabellenwertparameter gebunden wurde, werden seine Spalten ebenfalls gebunden. Zum Binden der Spalten aufrufen Sie [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) , um SQL_SOPT_SS_PARAM_FOCUS auf die Ordnungszahl des Tabellenwert Parameters festzulegen. Aufrufen Sie dann SQLBindParameter für jede Spalte im Tabellenwert Parameter. Um zu den Parameterbindungen der obersten Ebene zurückzukehren, legen Sie SQL_SOPT_SS_PARAM_FOCUS auf 0 fest.  
   
- Weitere Informationen zum Mapping von Parametern für Deskriptorfelder für Tabellenwert Parameter finden Sie unter [binden und Datenübertragung von Tabellenwert Parametern und Spaltenwerten](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
+ Weitere Informationen zum Mapping von Parametern für Deskriptorfelder für Tabellenwert Parameter finden Sie unter [binden und Datenübertragung von Table-Valued Parametern und Spaltenwerten](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
   
  Weitere Informationen zu Tabellenwert Parametern finden Sie unter [Tabellenwert Parameter &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
@@ -56,7 +56,7 @@ ms.locfileid: "91810441"
  Weitere Informationen finden Sie unter [Verbesserungen bei Datum und Uhrzeit &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlbindparameter-support-for-large-clr-udts"></a>SQLBindParameter-Unterstützung für große CLR-UDTs  
- **SQLBindParameter** unterstützt große benutzerdefinierte CLR-Typen (UDTs). Weitere Informationen finden Sie unter [große benutzerdefinierte CLR-Typen &#40;ODBC-&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLBindParameter** unterstützt große benutzerdefinierte CLR-Typen (UDTs). Weitere Informationen finden Sie unter [große CLR-User-Defined Typen &#40;ODBC-&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Details zur ODBC-API-Implementierung](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   

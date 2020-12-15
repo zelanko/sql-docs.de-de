@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aad968588ff8e7ed454b35d74ce992cae0f9d836
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2d83c5ef33d9d1a050b531ef1b4a5ee2dc60d4e9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753992"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472841"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,13 +37,13 @@ ms.locfileid: "91753992"
 > [!NOTE]  
 >  Die ROUTINE_DEFINITION-Spalte enthält die Quellanweisungen, die die Funktion oder die gespeicherte Prozedur erstellt haben. Diese Quellanweisungen enthalten wahrscheinlich eingebettete Wagenrücklaufzeichen. Wenn Sie diese Spalte an eine Anwendung zurückgeben, die die Ergebnisse in einem Textformat anzeigt, beeinflussen die eingebetteten Wagenrücklaufzeichen in den Ergebnissen von ROUTINE_DEFINITION möglicherweise die Formatierung des gesamten Resultsets. Wenn Sie die ROUTINE_DEFINITION-Spalte auswählen, müssen Sie aufgrund der eingebetteten Wagenrücklaufzeichen eine Anpassung vornehmen, indem Sie beispielsweise das Resultset in ein Raster oder die ROUTINE_DEFINITION-Spalte in ein eigenes Textfeld zurückgeben.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |SPECIFIC_CATALOG|**nvarchar (** 128 **)**|Spezifischer Name des Katalogs. Dieser Name ist derselbe wie für ROUTINE_CATALOG.|  
-|SPECIFIC_SCHEMA|**nvarchar (** 128 **)**|Spezifischer Name des Schemas.<br /><br /> Wichtig verwenden Sie keine INFORMATION_SCHEMA Sichten, um das Schema eines Objekts zu bestimmen. ** \* \* \* \* ** INFORMATION_SCHEMA Sichten stellen nur eine Teilmenge der Metadaten eines Objekts dar. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
+|SPECIFIC_SCHEMA|**nvarchar (** 128 **)**|Spezifischer Name des Schemas.<br /><br /> Wichtig verwenden Sie keine INFORMATION_SCHEMA Sichten, um das Schema eines Objekts zu bestimmen. **\* \* \* \*** INFORMATION_SCHEMA Sichten stellen nur eine Teilmenge der Metadaten eines Objekts dar. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
 |SPECIFIC_NAME|**nvarchar (** 128 **)**|Spezifischer Name des Katalogs. Dieser Name ist derselbe wie für ROUTINE_NAME.|  
 |ROUTINE_CATALOG|**nvarchar (** 128 **)**|Katalogname der Funktion.|  
-|ROUTINE_SCHEMA|**nvarchar (** 128 **)**|Name des Schemas, das diese Funktion enthält.<br /><br /> Wichtig verwenden Sie keine INFORMATION_SCHEMA Sichten, um das Schema eines Objekts zu bestimmen. ** \* \* \* \* ** INFORMATION_SCHEMA Sichten stellen nur eine Teilmenge der Metadaten eines Objekts dar. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
+|ROUTINE_SCHEMA|**nvarchar (** 128 **)**|Name des Schemas, das diese Funktion enthält.<br /><br /> Wichtig verwenden Sie keine INFORMATION_SCHEMA Sichten, um das Schema eines Objekts zu bestimmen. **\* \* \* \*** INFORMATION_SCHEMA Sichten stellen nur eine Teilmenge der Metadaten eines Objekts dar. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
 |ROUTINE_NAME|**nvarchar (** 128 **)**|Name der Funktion.|  
 |ROUTINE_TYPE|**nvarchar (** 20 **)**|Gibt PROCEDURE für gespeicherte Prozeduren und FUNCTION für Funktionen zurück.|  
 |MODULE_CATALOG|**nvarchar (** 128 **)**|NULL. Für zukünftige Verwendung reserviert.|  

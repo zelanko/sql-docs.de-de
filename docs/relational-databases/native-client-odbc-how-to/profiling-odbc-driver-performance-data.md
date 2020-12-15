@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b997790a-8cc6-4800-8867-74c1bef07be3
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b55ba95c05d75c384cc89bd55452a5663bbc959
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ae2c238cb6e11293887211d3a72041ff06888fdd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868853"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469541"
 ---
 # <a name="profiling-odbc-driver-performance-data"></a>Profilerstellung von ODBC-Treiberleistungsdaten
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "91868853"
   
 ### <a name="to-log-driver-performance-data-using-odbc-administrator"></a>So protokollieren Sie Treiberleistungsdaten mit dem ODBC-Administrator  
   
-1.  Öffnen Sie in der **Systemsteuerung**die Option **Verwaltung** , und doppelklicken Sie dann auf **Datenquellen (ODBC)**. Alternativ können Sie odbcad32.exe aufrufen.  
+1.  Öffnen Sie in der **Systemsteuerung** die Option **Verwaltung** , und doppelklicken Sie dann auf **Datenquellen (ODBC)**. Alternativ können Sie odbcad32.exe aufrufen.  
   
-2.  Klicken Sie auf die Registerkarte **Benutzer-DSN**, **System-DSN**oder **Datei-DSN** .  
+2.  Klicken Sie auf die Registerkarte **Benutzer-DSN**, **System-DSN** oder **Datei-DSN** .  
   
 3.  Klicken Sie auf die Datenquelle für die die Leistung protokolliert werden soll.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "91868853"
   
 5.  Navigieren Sie im Microsoft SQL Server Assistenten zum Konfigurieren von DSN zur Seite mit den **ODBC-Treiber Statistiken für die Protokolldatei**.  
   
-6.  Wählen Sie **ODBC-Treiber Statistiken in der Protokolldatei protokollieren**aus. Platzieren Sie im Feld den Namen der Datei, in der die Statistik protokolliert werden soll. Klicken Sie optional auf **Durchsuchen** , um das Dateisystem nach dem Statistik Protokoll zu durchsuchen.  
+6.  Wählen Sie **ODBC-Treiber Statistiken in der Protokolldatei protokollieren** aus. Platzieren Sie im Feld den Namen der Datei, in der die Statistik protokolliert werden soll. Klicken Sie optional auf **Durchsuchen** , um das Dateisystem nach dem Statistik Protokoll zu durchsuchen.  
   
 ### <a name="to-log-driver-performance-data-programmatically"></a>So protokollieren Sie programmgesteuert Treiberleistungsdaten  
   

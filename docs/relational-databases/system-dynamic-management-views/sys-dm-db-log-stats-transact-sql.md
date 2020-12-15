@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_log_stats (Transact-SQL)
-title: sys. dm_db_log_stats (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_db_log_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/17/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 98c8b45ccde39b7155443b1ef7fabd994f6b26ab
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5a5ea85a212e33a3e26ef295cc4d38c84967560a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550301"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472831"
 ---
 # <a name="sysdm_db_log_stats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -44,13 +44,13 @@ Gibt Attribute der Übersichts Ebene und Informationen zu Transaktionsprotokoll 
 
 *database_id* | NULL | **Standard**
 
-Die ID der Datenbank. `database_id` ist `int`. Gültige Eingaben sind die ID einer Datenbank, `NULL` oder `DEFAULT` . Der Standardwert lautet `NULL`. `NULL` und `DEFAULT` sind äquivalente Werte im Kontext der aktuellen Datenbank.  
+Die ID der Datenbank. `database_id` ist `int`. Gültige Eingaben sind die ID einer Datenbank, `NULL` oder `DEFAULT` . Der Standardwert ist `NULL`. `NULL` und `DEFAULT` sind äquivalente Werte im Kontext der aktuellen Datenbank.  
 Die integrierte [DB_ID](../../t-sql/functions/db-id-transact-sql.md)-Funktion kann angegeben werden. Wenn Sie `DB_ID` ohne Angabe eines Daten Banknamens verwenden, muss der Kompatibilitäts Grad der aktuellen Datenbank 90 oder größer sein.
 
   
 ## <a name="tables-returned"></a>Zurückgegebene Tabellen  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |database_id    |**int**    |Datenbank-ID |  
 |recovery_model |**nvarchar(60)**   |   Wiederherstellungs Modell der Datenbank. Mögliche Werte sind: <br /> SIMPLE<br /> BULK_LOGGED <br /> FULL |  

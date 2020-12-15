@@ -23,13 +23,13 @@ helpviewer_keywords:
 - labels [SQL]
 - information types
 - rank
-monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4021751337e7c49b22d6ec8bc2d24cc4e144e763
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest'
+ms.openlocfilehash: 908151d19df364171063bffcd280786a354c2654
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006003"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472951"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -50,7 +50,7 @@ Gibt eine Zeile für jedes klassifizierte Element in der Datenbank zurück.
 |**rank_desc**|**sysname**|Textdarstellung des Rangs:  <br><br>keine, niedrig, Mittel, hoch, kritisch|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
 
 - Diese Ansicht bietet Einblick in den Klassifizierungs Status der Datenbank. Sie kann zum Verwalten der Daten Bank Klassifizierungen sowie zum Erstellen von Berichten verwendet werden.
 - Derzeit wird nur die Klassifizierung von Daten Bank Spalten unterstützt.

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_resource_governor_resource_pools (Transact-SQL)
-title: sys. dm_resource_governor_resource_pools (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_resource_governor_resource_pools (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 9bfc926e-d8bc-40f8-9229-ab1f8a1e69c5
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2620e385d33711ba958471a942d3264f8050f32d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3d99aec61bb33b989a162d63c51f10465a3c9bf0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546507"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472791"
 ---
 # <a name="sysdm_resource_governor_resource_pools-transact-sql"></a>sys.dm_resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,9 +34,9 @@ ms.locfileid: "89546507"
   Gibt Informationen zum aktuellen Status der Ressourcenpools, zur aktuellen Konfiguration der Ressourcenpools sowie Statistiken zu den Ressourcenpools zurück.  
   
 > [!NOTE]  
->  Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys. dm_pdw_nodes_resource_governor_resource_pools**.  
+>  Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys.dm_pdw_nodes_resource_governor_resource_pools**.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |pool_id|**int**|Die ID des Ressourcenpools. Lässt keine NULL-Werte zu.|  
 |name|**sysname**|Der Name des Ressourcenpools. Lässt keine NULL-Werte zu.|  
@@ -82,7 +82,7 @@ ms.locfileid: "89546507"
 ## <a name="remarks"></a>Hinweise  
  Arbeitsauslastungsgruppen und Ressourcenpools der Ressourcenkontrolle weisen eine n:1-Zuordnung auf. Daher werden viele Ressourcenpoolstatistiken von Arbeitsauslastungsstatistiken abgeleitet.  
   
- Diese dynamische Verwaltungssicht zeigt die Konfiguration im Arbeitsspeicher an. Verwenden Sie die sys. resource_governor_resource_pools-Katalog Sicht, um die gespeicherten Konfigurations Metadaten anzuzeigen.  
+ Diese dynamische Verwaltungssicht zeigt die Konfiguration im Arbeitsspeicher an. Verwenden Sie die sys.resource_governor_resource_pools-Katalog Sicht, um die gespeicherten Konfigurations Metadaten anzuzeigen.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung.  
@@ -90,7 +90,7 @@ ms.locfileid: "89546507"
 ## <a name="see-also"></a>Weitere Informationen  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
- [sys. resource_governor_resource_pools &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
+ [sys.resource_governor_resource_pools &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   

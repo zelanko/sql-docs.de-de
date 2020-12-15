@@ -1,6 +1,6 @@
 ---
 description: sys.key_encryptions (Transact-SQL)
-title: sys. key_encryptions (Transact-SQL) | Microsoft-Dokumentation
+title: sys.key_encryptions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/18/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: c39cecf8-af63-40b9-98e5-f84a5bf3ae54
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 872b6d6abbf8a962763210524eb607c07305d85d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c841e05d54ee5ba672107426c2f10b2396b84a76
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548737"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472991"
 ---
 # <a name="syskey_encryptions-transact-sql"></a>sys.key_encryptions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,10 +34,10 @@ ms.locfileid: "89548737"
   Gibt eine Zeile für jede Verschlüsselung mit einem symmetrischen Schlüssel zurück, die mit der ENCRYPTION BY-Klausel der CREATE SYMMETRIC KEY-Anweisung angegeben ist.  
 
   
-|Spaltennamen|Datentypen|BESCHREIBUNG|  
+|Spaltennamen|Datentypen|Beschreibung|  
 |------------------|----------------|-----------------|  
 |**key_id**|**int**|ID des verschlüsselten Schlüssels.|  
-|**Fingerabdruck**|**varbinary(32)**|SHA-1-Hash des Zertifikats, mit dem der Schlüssel verschlüsselt wird, oder der GUID des symmetrischen Schlüssels, mit dem der Schlüssel verschlüsselt wird.|  
+|**thumbprint**|**varbinary(32)**|SHA-1-Hash des Zertifikats, mit dem der Schlüssel verschlüsselt wird, oder der GUID des symmetrischen Schlüssels, mit dem der Schlüssel verschlüsselt wird.|  
 |**crypt_type**|**char (4)**|Verschlüsselungstyp:<br /><br /> ESKS = Verschlüsselt mit symmetrischem Schlüssel<br /><br /> ESKP, ESP2 oder ESP3 = durch Kennwort verschlüsselt<br /><br /> EPUC = Verschlüsselt mit Zertifikat<br /><br /> EPUA = Verschlüsselt mit asymmetrischem Schlüssel<br /><br /> ESKM = Verschlüsselt mit Hauptschlüssel|  
 |**crypt_type_desc**|**nvarchar(60)**|Beschreibung des Verschlüsselungstyps:<br /><br /> ENCRYPTION BY SYMMETRIC KEY<br /><br /> ENCRYPTION BY PASSWORD <br />(Ab [!INCLUDE[sssqlv14_md](../../includes/sssqlv14-md.md)] enthält eine Versionsnummer, die von CSS verwendet werden kann.)<br /><br /> ENCRYPTION BY CERTIFICATE<br /><br /> ENCRYPTION BY ASYMMETRIC KEY<br /><br /> ENCRYPTION BY MASTER KEY<br /><br /> Hinweis: Windows DPAPI wird verwendet, um den Dienst Hauptschlüssel zu schützen.|  
 |**crypt_property**|**varbinary(max)**|Signierte oder verschlüsselte Bits.|  

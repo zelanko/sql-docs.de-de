@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 2b72034c-6a11-46b9-a76c-7a88b2bea360
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 31d8ae2e196d116b6e3ff58c23deedc20425fdf5
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: e74c866747b7e8f9c784f43e60ab7fb6ce4cc673
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036980"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472911"
 ---
 # <a name="syspdw_loader_backup_runs-transact-sql"></a>sys.pdw_loader_backup_runs (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "92036980"
 |end_time|**datetime**|Uhrzeit, zu der der Vorgang abgeschlossen wurde, fehlgeschlagen ist oder abgebrochen wurde||  
 |total_elapsed_time|**int**|Die gesamte verstrichene Zeit zwischen start_time und der aktuellen Zeit oder zwischen start_time und end_time für abgeschlossene, abgebrochene oder fehlgeschlagene Ausführungen.|Wenn total_elapsed_time den maximalen Wert für eine ganze Zahl (24,8 Tage in Millisekunden) überschreitet, führt dies zu einem Materialisierungs Fehler aufgrund eines Überlaufs.<br /><br /> Der maximale Wert in Millisekunden entspricht 24,8 Tagen.|  
 |operation_type|**nvarchar (16)**|Der Auslastungstyp.|"Backup", "Load", "Restore"|  
-|Modus|**nvarchar (16)**|Der Modus innerhalb des Testlaufs.|Für operation_type = **Sicherung**<br />**DIFFERENTIAL**<br />**FULL**<br /><br /> Für operation_type = **Laden**<br />**Anfügen**<br />**Brauchte**<br />**UPSERT**<br /><br /> Für operation_type = **Restore**<br />**Verbindung**<br />**HEADER_ONLY**|  
+|Modus|**nvarchar (16)**|Der Modus innerhalb des Testlaufs.|Für operation_type = **Sicherung**<br />**DIFFERENTIAL**<br />**FULL**<br /><br /> Für operation_type = **Laden**<br />**Anfügen**<br />**Brauchte**<br />**UPSERT**<br /><br /> Für operation_type = **Restore**<br />**DATABASE**<br />**HEADER_ONLY**|  
 |database_name|**nvarchar(255)**|Der Name der Datenbank, die den Kontext dieses Vorgangs ist.||  
 |table_name|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |Principal_id|**int**|ID des Benutzers, der den Vorgang anfordert.||  
