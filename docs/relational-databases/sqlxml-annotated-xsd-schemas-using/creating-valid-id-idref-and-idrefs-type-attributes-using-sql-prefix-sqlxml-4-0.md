@@ -23,13 +23,13 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 832607a376c8c08dbcdcff0c70278401a166a7f4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 51e236b690c8523337b66d19a9b47755a6117f0c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750812"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97415853"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>Erstellen gültiger Attribute vom Typ ID, IDREF und IDREFS mit 'sql:prefix' (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "85750812"
   
 -   Der Wert eines Attributs vom Typ ID, IDREF und IDREFS muss ein benanntes Token sein. (Beispielsweise kann der ganzzahlige Wert 101 kein ID-Wert sein.)  
   
--   Die Attribute des Typs ID, IDREF und IDREFS können nicht Spalten vom Typ **Text**, **ntext**oder **Image** oder einem anderen binären Datentyp (z. b. **Zeitstempel**) zugeordnet werden.  
+-   Die Attribute des Typs ID, IDREF und IDREFS können nicht Spalten vom Typ **Text**, **ntext** oder **Image** oder einem anderen binären Datentyp (z. b. **Zeitstempel**) zugeordnet werden.  
   
  Wenn ein XML-Dokument mehrere IDs enthält, stellen Sie sicher, **dass die Werte** eindeutig sind.  
   

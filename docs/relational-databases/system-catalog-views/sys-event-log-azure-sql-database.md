@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 67c111b15728f92e3a6f0ac8dac830fe32f2f8da
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: d60c081eecf88868db4541bc79960bf1bbd8723c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892400"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97412911"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Azure SQL-Datenbank)
 
@@ -39,7 +39,7 @@ ms.locfileid: "91892400"
   
  Die `sys.event_log`-Sicht enthält die folgenden Spalten.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Der Name der Datenbank. Wenn die Verbindung nicht hergestellt werden kann und der Benutzer keinen Datenbanknamen angegeben hat, ist diese Spalte leer.|  
 |**start_time**|**datetime2**|UTC-Datum und -Zeit des Beginns des Aggregationsintervalls. Für aggregierte Ereignisse ist die Zeit immer ein Vielfaches von 5 Minuten. Beispiel:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
@@ -48,7 +48,7 @@ ms.locfileid: "91892400"
 |**event_type**|**nvarchar (64)**|Art des Ereignisses.<br /><br /> Eine Liste möglicher Werte finden Sie unter [Ereignis Typen](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
 |**event_subtype**|**int**|Der Untertyp des eintretenden Ereignisses.<br /><br /> Eine Liste möglicher Werte finden Sie unter [Ereignis Typen](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
 |**event_subtype_desc**|**nvarchar (64)**|Die Beschreibung des Ereignisuntertyps.<br /><br /> Eine Liste möglicher Werte finden Sie unter [Ereignis Typen](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
-|**severity**|**int**|Der Schweregrad des Fehlers. Dabei sind folgende Werte möglich:<br /><br /> 0 = Information<br />1 = Warning<br />2 = Fehler|  
+|**severity**|**int**|Der Schweregrad des Fehlers. Mögliche Werte:<br /><br /> 0 = Information<br />1 = Warning<br />2 = Fehler|  
 |**event_count**|**int**|Gibt an, wie oft dieses Ereignis für die angegebene Datenbank innerhalb des angegebenen Zeitintervalls eingetreten ist (**start_time** und **end_time**).|  
 |**description**|**nvarchar(max)**|Detaillierte Beschreibung des Ereignisses.<br /><br /> Eine Liste möglicher Werte finden Sie unter [Ereignis Typen](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
 |**additional_data**|**XML**|*Hinweis: dieser Wert ist für Azure SQL-Datenbank V12 immer NULL. Weitere Informationen zum Abrufen von Deadlockereignissen für V12 finden Sie im Abschnitt " [Beispiele](#Deadlock) ".*<br /><br /> Bei **Deadlock** -Ereignissen enthält diese Spalte das Deadlockdiagramm. Bei anderen Ereignistypen enthält diese Spalte NULL. |  
@@ -89,7 +89,7 @@ ms.locfileid: "91892400"
 
  Benutzer, die über die Berechtigung zum Zugriff auf die **Master** -Datenbank verfügen, haben schreibgeschützten Zugriff auf diese Sicht.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ### <a name="event-aggregation"></a>Ereignisaggregation
 

@@ -16,17 +16,17 @@ ms.assetid: f46c30bf-1e24-4435-9ac2-f8ba43a8ff94
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e0b7934b73589f71e5152bff33b2080c6eeb353e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b8fdee8bdc7f3fbc3281ecab7682efdc8378bbdf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649749"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97414761"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>Angeben eines Knotentests unter dem Speicherortpfad (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-  Ein Knotentest gibt den vom Positionsschritt ausgewählten Knotentyp an. Jede**Achse (unter**geordnetes Element, über **geordnetes**Element, **Attribut**oder **Self**) verfügt über einen Prinzipal Knotentyp. Für die **Attribut** Achse ist der Haupt Knotentyp **\<attribute>** . Für die übergeordnete **, unter** **geordnete**und die **Self** -Achse ist der Haupt Knotentyp **\<element>** .  
+  Ein Knotentest gibt den vom Positionsschritt ausgewählten Knotentyp an. Jede **Achse (unter** geordnetes Element, über **geordnetes** Element, **Attribut** oder **Self**) verfügt über einen Prinzipal Knotentyp. Für die **Attribut** Achse ist der Haupt Knotentyp **\<attribute>** . Für die übergeordnete **, unter** **geordnete** und die **Self** -Achse ist der Haupt Knotentyp **\<element>** .  
   
 > [!NOTE]  
 >  Der Platzhalterknotentest * (z. B. `child::*`) wird nicht unterstützt.  
@@ -39,7 +39,7 @@ ms.locfileid: "85649749"
 ## <a name="node-test-example-2"></a>Knotentest: Beispiel 2  
  Der Speicherort Pfad `attribute::CustomerID` wählt das **CustomerID-** Attribut des Kontext Knotens aus.  
   
- Im Beispiel ist `attribute` die Achse, und `CustomerID` ist der Knotentest. Der Haupt Knotentyp der **Attribut** Achse ist **\<attribute>** . Daher ist der Knoten Test true, wenn **CustomerID** ein **\<attribute>** Knoten ist. Wenn der Kontext Knoten über keine **CustomerID**verfügt, wird ein leerer Knoten Satz zurückgegeben.  
+ Im Beispiel ist `attribute` die Achse, und `CustomerID` ist der Knotentest. Der Haupt Knotentyp der **Attribut** Achse ist **\<attribute>** . Daher ist der Knoten Test true, wenn **CustomerID** ein **\<attribute>** Knoten ist. Wenn der Kontext Knoten über keine **CustomerID** verfügt, wird ein leerer Knoten Satz zurückgegeben.  
   
 > [!NOTE]  
 >  In dieser Implementierung von XPath wird ein Fehler generiert, wenn ein Location-Step auf einen **\<element>** oder einen Typ verweist, **\<attribute>** der nicht im Schema deklariert ist. Dies unterscheidet sich von der Implementierung von XPath in MSXML, bei der ein leerer Knotensatz zurückgegeben wird.  

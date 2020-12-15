@@ -19,13 +19,13 @@ ms.assetid: d17b8278-da58-4576-95b4-7a92772566d8
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aabd650308ecab085b121bb5ac8f5253b681a92c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 81bbefa0969cd4408ed0fbb21a2a035ddde5508e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773031"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97413738"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Angeben von Achsen in XPath-Abfragen (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "85773031"
 /child::Customer/child::Order  
 ```  
   
- In der Abfrage `child` ist die Achse und `Customer` und `Order` sind die Knoten Tests (diese Knoten Tests sind true, wenn Customer und ORDER Knoten sind **\<element>** , da der **\<element>** Knoten der primäre Knoten für die unter **child** geordnete Achse ist). **\<Customer>** Die Knoten, die mit übereinstimmen, **\<Orders>** werden dem Ergebnis hinzugefügt. **\<Order>** Im Resultset wird nur zurückgegeben.  
+ In der Abfrage `child` ist die Achse und `Customer` und `Order` sind die Knoten Tests (diese Knoten Tests sind true, wenn Customer und ORDER Knoten sind **\<element>** , da der **\<element>** Knoten der primäre Knoten für die unter  geordnete Achse ist). **\<Customer>** Die Knoten, die mit übereinstimmen, **\<Orders>** werden dem Ergebnis hinzugefügt. **\<Order>** Im Resultset wird nur zurückgegeben.  
   
  Die **untergeordnete Achse ist** die Standard Achse. Daher kann die Abfrage wie folgt angegeben werden:  
   

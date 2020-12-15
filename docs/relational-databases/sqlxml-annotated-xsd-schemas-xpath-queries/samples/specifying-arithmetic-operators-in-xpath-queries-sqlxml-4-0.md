@@ -16,13 +16,13 @@ ms.assetid: fdfbc87d-759f-4abc-acf5-a21de01f78d3
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2115d00f8b51fa16452eba3a41483c499bf9fd0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: af979995dbc3978783396797f0f29c9c89cf84e0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649368"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97413813"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Angeben von arithmetischen Operatoren in XPath-Abfragen (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "85649368"
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- In der Abfrage `child` ist die Achse und `OrderDetail` ist der Knoten Test (true, wenn **Order Detail** ein ist **\<element node>** , da der **\<element>** Knoten der primäre Knoten für die unter **child** geordnete Achse ist). Für alle **\<OrderDetail>** Elementknoten wird der Test im Prädikat angewendet, und es werden nur die Knoten zurückgegeben, die die Bedingung erfüllen.  
+ In der Abfrage `child` ist die Achse und `OrderDetail` ist der Knoten Test (true, wenn **Order Detail** ein ist **\<element node>** , da der **\<element>** Knoten der primäre Knoten für die unter  geordnete Achse ist). Für alle **\<OrderDetail>** Elementknoten wird der Test im Prädikat angewendet, und es werden nur die Knoten zurückgegeben, die die Bedingung erfüllen.  
   
 > [!NOTE]  
 >  Die in XPath verwendeten Zahlen sind Gleitkommazahlen mit doppelter Genauigkeit, durch Vergleich der Gleitkommazahlen wie im Beispiel werden die Werte gerundet.  

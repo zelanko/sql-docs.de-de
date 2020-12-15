@@ -15,13 +15,13 @@ ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 544a8741557c222577f124014d6a04a9d066add1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2e69adfb9fcd75592f25595c70741864ba4493af
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649763"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97415002"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Einführung in die Verwendung von XPath-Abfragen (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "85649763"
   
 -   **Datentypen**  
   
-     SQLXML 4,0 weist Einschränkungen bei der Implementierung der XPath- **Zeichenfolge**, der **Zahl**und der **booleschen** Datentypen auf. Weitere Informationen finden Sie unter [XPath-Datentypen &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md).  
+     SQLXML 4,0 weist Einschränkungen bei der Implementierung der XPath- **Zeichenfolge**, der **Zahl** und der **booleschen** Datentypen auf. Weitere Informationen finden Sie unter [XPath-Datentypen &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md).  
   
 -   **Produktübergreifende Abfragen**  
   
@@ -94,10 +94,10 @@ ms.locfileid: "85649763"
   
 |Funktion|Element|Link zu Beispielabfragen|  
 |-------------|----------|----------------------------|  
-|Achsen|**Attribute**, **untergeordnete Elemente, über** **geordnete**Elemente und **Self** -Achsen|[Angeben von Achsen in XPath-Abfragen &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
+|Achsen|**Attribute**, **untergeordnete Elemente, über** **geordnete** Elemente und **Self** -Achsen|[Angeben von Achsen in XPath-Abfragen &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |Prädikate mit booleschen Werten einschließlich aufeinander folgender und geschachtelter Prädikate||[Angeben arithmetischer Operatoren in XPath-Abfragen &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Alle relationalen Operatoren|=,! =, <, \<=, > , >=|[Angeben von relationalen Operatoren in XPath-Abfragen &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|Arithmetische operatoren|+, -, *, div|[Angeben arithmetischer Operatoren in XPath-Abfragen &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|Arithmetische Operatoren|+, -, *, div|[Angeben arithmetischer Operatoren in XPath-Abfragen &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Explizite Konvertierungsfunktionen|**Number ()**, **String ()**, **Boolean ()**|[Angeben von expliziten Konvertierungs Funktionen in XPath-Abfragen &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |Boolesche Operatoren|AND, OR|[Angeben von booleschen Operatoren in XPath-Abfragen &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Boolesche Funktionen|**true ()**, **false ()**, **Not ()**|[Angeben von booleschen Funktionen in XPath-Abfragen &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
@@ -108,10 +108,10 @@ ms.locfileid: "85649763"
   
 |Funktion|Element|  
 |-------------|----------|  
-|Achsen|**Vorgänger, Vorgänger** **-or-self**, **Nachfolger**, Nachfolger **oder-selbst (//)**, **folgt**, nach dem **folgenden**neben geordneten Element, **Namespace**, **vorangehende**, **vorangestelltem** neben geordnetes Element|  
+|Achsen|**Vorgänger, Vorgänger** **-or-self**, **Nachfolger**, Nachfolger **oder-selbst (//)**, **folgt**, nach dem **folgenden** neben geordneten Element, **Namespace**, **vorangehende**, **vorangestelltem** neben geordnetes Element|  
 |Prädikate mit numerischen Werten||  
-|Arithmetische operatoren|mod|  
-|Knotenfunktionen|**Vorgänger, Vorgänger** **-or-self**, **Nachfolger**, Nachfolger **oder-selbst (//)**, **folgt**, nach dem **folgenden**neben geordneten Element, **Namespace**, **vorangehende**, **vorangestelltem** neben geordnetes Element|  
+|Arithmetische Operatoren|mod|  
+|Knotenfunktionen|**Vorgänger, Vorgänger** **-or-self**, **Nachfolger**, Nachfolger **oder-selbst (//)**, **folgt**, nach dem **folgenden** neben geordneten Element, **Namespace**, **vorangehende**, **vorangestelltem** neben geordnetes Element|  
 |Zeichenfolgenfunktionen|**String ()**, **Concat ()**, **starts-with ()**, **enthält ()**, **SUBSTRING-before ()**, **substring-after ()**, **SUBSTRING ()**, **String-length ()**, **Normalize ()**, **Translation ()**|  
 |Boolesche Funktionen|**lang ()**|  
 |Numerische Funktionen|**Sum ()**, **Floor ()**, **Ceiling ()**, **Round ()**|  

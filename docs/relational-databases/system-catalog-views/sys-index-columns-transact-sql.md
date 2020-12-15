@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 211471aa-558a-475c-9b94-5913c143ed12
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e77661ec4ddd9a53a5279dd433d20ab58e4263d0
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e87793a162aa9de1b38c19a960eb7fbee173685c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006531"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97413168"
 ---
 # <a name="sysindex_columns-transact-sql"></a>sys.index_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,12 +37,12 @@ ms.locfileid: "92006531"
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID des Objekts, für das der Index definiert wird|  
 |**index_id**|**int**|ID des Indexes, in dem die Spalte definiert wird|  
-|**index_column_id**|**int**|Die ID der Indexspalte. **index_column_id** ist nur innerhalb **index_id**eindeutig.|  
-|**column_id**|**int**|ID der Spalte in **object_id**.<br /><br /> 0 = Zeilenbezeichner (RID, Row Identifier) in einem nicht gruppierten Index.<br /><br /> **column_id** ist nur innerhalb von **object_id**eindeutig.|  
+|**index_column_id**|**int**|Die ID der Indexspalte. **index_column_id** ist nur innerhalb **index_id** eindeutig.|  
+|**column_id**|**int**|ID der Spalte in **object_id**.<br /><br /> 0 = Zeilenbezeichner (RID, Row Identifier) in einem nicht gruppierten Index.<br /><br /> **column_id** ist nur innerhalb von **object_id** eindeutig.|  
 |**key_ordinal**|**tinyint**|Ordinalzahl (auf 1 basierend) innerhalb einer Gruppe von Schlüsselspalten.<br /><br /> 0 = Keine Schlüsselspalte oder ein XML-Index, columnstore-Index oder räumlicher Index.<br /><br /> Hinweis: ein XML-Index oder räumlicher Index kann kein Schlüssel sein, da die zugrunde liegenden Spalten nicht vergleichbar sind. Dies bedeutet, dass ihre Werte nicht geordnet werden können.|  
 |**partition_ordinal**|**tinyint**|Ordinalzahl (1-basiert) innerhalb einer Gruppe von Partitionierungsspalten. Ein gruppierter columnstore-Index kann maximal 1 Partitionierungsspalte aufweisen.<br /><br /> 0 = Keine Partitionierungsspalte.|  
 |**is_descending_key**|**bit**|1 = Indexschlüsselspalte hat eine absteigende Sortierreihenfolge.<br /><br /> 0 = Indexschlüsselspalte hat eine aufsteigende Sortierreihenfolge, oder die Spalte ist Teil eines columnstore-Indexes oder Hashindexes.|  
-|**is_included_column**|**bit**|1 = Spalte ist eine Nichtschlüsselspalte, die dem Index mit der CREATE INDEX INCLUDE-Klausel hinzugefügt wurde, oder die Spalte ist Teil eines columnstore-Indexes.<br /><br /> 0 = Spalte ist keine eingeschlossene Spalte.<br /><br /> Spalten, die implizit hinzugefügt werden, da Sie Teil des Clustering-Schlüssels sind, sind nicht in **sys.index_columns**aufgeführt.<br /><br /> Spalten, die implizit hinzugefügt wurden, da sie eine Partitionierungsspalte sind, werden als 0 zurückgegeben.| 
+|**is_included_column**|**bit**|1 = Spalte ist eine Nichtschlüsselspalte, die dem Index mit der CREATE INDEX INCLUDE-Klausel hinzugefügt wurde, oder die Spalte ist Teil eines columnstore-Indexes.<br /><br /> 0 = Spalte ist keine eingeschlossene Spalte.<br /><br /> Spalten, die implizit hinzugefügt werden, da Sie Teil des Clustering-Schlüssels sind, sind nicht in **sys.index_columns** aufgeführt.<br /><br /> Spalten, die implizit hinzugefügt wurden, da sie eine Partitionierungsspalte sind, werden als 0 zurückgegeben.| 
 |**column_store_order_ordinal**</br> Gilt für: Azure Synapse Analytics (Vorschau)|**tinyint**|Ordinalzahl (1-basiert) innerhalb des Satzes von Order-Spalten in einem geordneten gruppierten columnstore--Index.|
   
 ## <a name="permissions"></a>Berechtigungen
