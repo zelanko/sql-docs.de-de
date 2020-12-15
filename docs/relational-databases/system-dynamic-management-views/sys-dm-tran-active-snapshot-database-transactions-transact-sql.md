@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 537cc5a047536c682d8eb6f61d8d4811ccba1a73
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 8284708f43c600085baea8774a797a4688256c7e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97330676"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474891"
 ---
 # <a name="sysdm_tran_active_snapshot_database_transactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +59,7 @@ sys.dm_tran_active_snapshot_database_transactions
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**transaction_id**|**bigint**|Eindeutige, der Transaktion zugewiesene ID. Die Transaktions-ID wird in erster Linie zum Identifizieren der Transaktion in Sperrvorgängen verwendet.|  
 |**transaction_sequence_num**|**bigint**|Transaktionssequenznummer. Hierbei handelt es sich um eine eindeutige, der Transaktion beim Start zugewiesene Sequenznummer. Transaktionen, die keine Versionsdatensätze generieren und keine Momentaufnahmescans verwenden, erhalten keine Transaktionssequenznummer.|  
@@ -77,7 +77,7 @@ sys.dm_tran_active_snapshot_database_transactions
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
 Bei den Dienst Zielen "Basic", "S0" und "S1" in SQL-Datenbank ist für Datenbanken in Pools für elastische Datenbanken `Server admin` oder ein `Azure Active Directory admin` Konto erforderlich. Für alle anderen SQL-Datenbank-Dienst Ziele `VIEW DATABASE STATE` ist die Berechtigung in der Datenbank erforderlich.   
 
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sys.dm_tran_active_snapshot_database_transactions** meldet Transaktionen, denen eine Transaktions Sequenznummer (XSN) zugewiesen ist. Die XSN wird zugewiesen, wenn die Transaktion zum ersten Mal auf den Versionsspeicher zugreift. In den folgenden Beispielen wird gezeigt, wann in einer Datenbank, die für die Momentaufnahmeisolation oder die READ COMMITTED-Isolation aktiviert ist, die die Zeilenversionsverwaltung verwendet, einer Transaktion eine XSN zugewiesen wird:  
   
 -   Wenn eine Transaktion unter der serialisierbaren Isolationsstufe ausgeführt wird, wird eine XSN zugewiesen, wenn die Transaktion zum ersten Mal eine Anweisung ausführt, die die Erstellung einer Zeilenversion verursacht, z. B. einen UPDATE-Vorgang.  

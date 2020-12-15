@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f44f2e1c9754096ae08bc64298815a8849f92478
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 73bdc833b31251e3cf0747aca19371ad2b0cb839
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810596"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473771"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  **SQLColumns** gibt SQL_SUCCESS zurück, ob Werte für die Parameter *CatalogName*, *TableName*oder *ColumnName* vorhanden sind. **SQLFetch** gibt SQL_NO_DATA zurück, wenn in diesen Parametern ungültige Werte verwendet werden.  
+  **SQLColumns** gibt SQL_SUCCESS zurück, ob Werte für die Parameter *CatalogName*, *TableName* oder *ColumnName* vorhanden sind. **SQLFetch** gibt SQL_NO_DATA zurück, wenn in diesen Parametern ungültige Werte verwendet werden.  
   
 > [!NOTE]  
 >  Für Datentypen für große Werte werden alle Längenparameter mit einem Wert von SQL_SS_LENGTH_UNLIMITED zurückgegeben.  
@@ -34,7 +34,7 @@ ms.locfileid: "91810596"
   
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber unterstützt die Meldung von Informationen für Tabellen auf Verbindungsservern, indem er einen zweiteiligen Namen für den *CatalogName* -Parameter akzeptiert: *Linked_Server_Name.Catalog_Name*.  
   
- Für ODBC 2. *x* -Anwendungen, die keine Platzhalter in *TableName*verwenden, gibt **SQLColumns** Informationen über alle Tabellen zurück, deren Namen *TableName* entsprechen und deren Besitzer der aktuelle Benutzer ist. Wenn der aktuelle Benutzer keine Tabelle besitzt, deren Name mit dem *TableName* -Parameter übereinstimmt, gibt **SQLColumns** Informationen über alle Tabellen zurück, die sich im Besitz anderer Benutzer befinden, wobei der Tabellenname dem *TableName* -Parameter entspricht. Für ODBC 2. *x* -Anwendungen, die Platzhalter verwenden, gibt **SQLColumns** alle Tabellen zurück, deren Namen *TableName*entsprechen. Für ODBC 3. *x* -Anwendungen **SQLColumns** gibt alle Tabellen zurück, deren Namen *TableName* entsprechen, unabhängig vom Besitzer oder, wenn Platzhalter verwendet werden.  
+ Für ODBC 2. *x* -Anwendungen, die keine Platzhalter in *TableName* verwenden, gibt **SQLColumns** Informationen über alle Tabellen zurück, deren Namen *TableName* entsprechen und deren Besitzer der aktuelle Benutzer ist. Wenn der aktuelle Benutzer keine Tabelle besitzt, deren Name mit dem *TableName* -Parameter übereinstimmt, gibt **SQLColumns** Informationen über alle Tabellen zurück, die sich im Besitz anderer Benutzer befinden, wobei der Tabellenname dem *TableName* -Parameter entspricht. Für ODBC 2. *x* -Anwendungen, die Platzhalter verwenden, gibt **SQLColumns** alle Tabellen zurück, deren Namen *TableName* entsprechen. Für ODBC 3. *x* -Anwendungen **SQLColumns** gibt alle Tabellen zurück, deren Namen *TableName* entsprechen, unabhängig vom Besitzer oder, wenn Platzhalter verwendet werden.  
   
  In der folgenden Tabelle werden die vom Resultset zurückgegebenen Spalten aufgeführt:  
   
@@ -75,7 +75,7 @@ ms.locfileid: "91810596"
  Weitere Informationen finden Sie unter [Verbesserungen bei Datum und Uhrzeit &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-large-clr-udts"></a>SQLColumns-Unterstützung für große CLR-UDTs  
- **SQLColumns** unterstützt große benutzerdefinierte CLR-Typen (UDTs). Weitere Informationen finden Sie unter [große benutzerdefinierte CLR-Typen &#40;ODBC-&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLColumns** unterstützt große benutzerdefinierte CLR-Typen (UDTs). Weitere Informationen finden Sie unter [große CLR-User-Defined Typen &#40;ODBC-&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>SQLColumns-Unterstützung für Spalten mit geringer Dichte  
  Zwei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spezifische Spalten wurden dem Resultset für SQLColumns hinzugefügt:  

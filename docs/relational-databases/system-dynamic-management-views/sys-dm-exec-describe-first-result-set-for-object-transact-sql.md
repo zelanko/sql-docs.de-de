@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
-title: sys. dm_exec_describe_first_result_set_for_object (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_exec_describe_first_result_set_for_object (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9600439c2f3d58d38cea393886ed90a55e5e7d8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fb51b9913b8a45b582520174cf98a226918d6aa3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550309"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474911"
 ---
 # <a name="sysdm_exec_describe_first_result_set_for_object-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Diese dynamische Verwaltungsfunktion nimmt einen @object_id als Parameter an und beschreibt die ersten Ergebnis Metadaten für das Modul mit dieser ID. Der @object_id angegebene kann die ID einer [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherten Prozedur oder eines- [!INCLUDE[tsql](../../includes/tsql-md.md)] Auslösers sein. Wenn es sich um die ID eines beliebigen anderen Objekts (z. B. einer Sicht, Tabelle, Funktion oder CLR-Prozedur) handelt, wird in den Fehlerspalten des Ergebnisses ein Fehler angegeben.  
   
- **sys. dm_exec_describe_first_result_set_for_object** hat dieselbe resultsetdefinition wie [sys. dm_exec_describe_first_result_set &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) und ähnelt [sp_describe_first_result_set &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+ **sys.dm_exec_describe_first_result_set_for_object** hat dieselbe resultsetdefinition wie [sys.dm_exec_describe_first_result_set &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) und ähnelt [sp_describe_first_result_set &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,7 +53,7 @@ sys.dm_exec_describe_first_result_set_for_object
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
  Diese allgemeinen Metadaten werden in den Ergebnismetadaten als Resultset mit einer Zeile für jede Spalte zurückgegeben. Jede Zeile beschreibt den Typ und die NULL-Zulässigkeit der Spalte in dem Format, das im folgenden Abschnitt beschriebenen wird. Wenn die erste Anweisung nicht für alle Steuerelementpfade vorhanden ist, wird ein Resultset mit 0 Zeilen zurückgegeben.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit**|Gibt an, ob es sich um eine zusätzliche Spalte für Zwecke der Informationssuche handelt, die nicht im Resultset angezeigt wird.|  
 |**column_ordinal**|**int**|Enthält die Ordnungsposition der Spalte im Resultset. Die Position der ersten Spalte wird mit 1 angegeben.|  
@@ -102,7 +102,7 @@ sys.dm_exec_describe_first_result_set_for_object
   
  In der folgenden Tabelle werden die Fehlertypen und deren Beschreibungen aufgeführt.  
   
-|error_type|error_type|BESCHREIBUNG|  
+|error_type|error_type|Beschreibung|  
 |-----------------|-----------------|-----------------|  
 |1|MISC|Alle Fehler, die nicht anderweitig beschrieben sind.|  
 |2|SYNTAX|Im Batch ist ein Syntaxfehler aufgetreten.|  
@@ -139,7 +139,7 @@ GO
 ```  
   
 ### <a name="b-combining-the-sysdm_exec_describe_first_result_set_for_object-function-and-a-table-or-view"></a>B. Kombinieren der sys.dm_exec_describe_first_result_set_for_object-Funktion mit einer Tabelle oder Sicht  
- Im folgenden Beispiel werden die sys. Procedures-System Katalog Sicht und die **sys. dm_exec_describe_first_result_set_for_object** -Funktion verwendet, um Metadaten für die Resultsets aller gespeicherten Prozeduren in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Datenbank anzuzeigen.  
+ Im folgenden Beispiel werden die System Katalog Sicht sys. Procedures und die **sys.dm_exec_describe_first_result_set_for_object** -Funktion verwendet, um Metadaten für die Resultsets aller gespeicherten Prozeduren in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Datenbank anzuzeigen.  
   
 ```  
 USE AdventureWorks2012;  
@@ -155,6 +155,6 @@ GO
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_describe_first_result_set &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
  [sp_describe_undeclared_parameters &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [sys. dm_exec_describe_first_result_set &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)  
+ [sys.dm_exec_describe_first_result_set &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)  
   
   

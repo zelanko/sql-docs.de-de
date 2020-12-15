@@ -11,13 +11,13 @@ dev_langs:
 ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6c9d03578a2eab318be1669303e9a8b741eb3779
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 8a859571ef9f4682c4c8556038247dc21d47eb50
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059438"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474611"
 ---
 # <a name="sp_datatype_info_90-azure-synapse-analytics"></a>sp_datatype_info_90 (Azure-Synapse-Analyse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -38,7 +38,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## <a name="arguments"></a>Argumente  
-`[ @data_type = ] data_type` Die Codenummer für den angegebenen Datentyp. Um eine Liste aller Datentypen abzurufen, lassen Sie diesen Parameter weg. *data_type* ist vom Datentyp **int**und hat den Standardwert 0.  
+`[ @data_type = ] data_type` Die Codenummer für den angegebenen Datentyp. Um eine Liste aller Datentypen abzurufen, lassen Sie diesen Parameter weg. *data_type* ist vom Datentyp **int** und hat den Standardwert 0.  
   
 `[ @ODBCVer = ] odbc_version` Die verwendete ODBC-Version. *odbc_version* ist vom Datentyp **tinyint**. der Standardwert ist 2.  
   
@@ -57,7 +57,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |CREATE_PARAMS|**varchar (** 32 **)**|Die Beschreibung der Erstellungsparameter für diesen Datentyp. Beispielsweise ist " **Decimal** ", "Scale", " **float** is NULL" und " **varchar** " "max_length".|  
 |NULLABLE|**smallint**|Gibt die NULL-Zulässigkeit an.<br /><br /> 1 = Lässt NULL-Werte zu.<br /><br /> 0 = NULL ist nicht zulässig.|  
 |CASE_SENSITIVE|**smallint**|Gibt die Unterscheidung nach Groß-/Kleinschreibung an.<br /><br /> 1 = Bei allen Spalten dieses Typs wird nach Groß-/Kleinschreibung unterschieden (für Sortierungen).<br /><br /> 0 = Bei allen Spalten dieses Typs wird nicht nach Groß-/Kleinschreibung unterschieden.|  
-|SEARCHABLE|**smallint**|Gibt die Suchfunktion des Spaltentyps an:<br /><br /> 1 = Kann nicht durchsucht werden.<br /><br /> 2 = Durchsuchbar mit LIKE<br /><br /> 3 = Durchsuchbar mit WHERE<br /><br /> 4 = Durchsuchbar mit WHERE oder LIKE|  
+|DURCHSUCHBAR|**smallint**|Gibt die Suchfunktion des Spaltentyps an:<br /><br /> 1 = Kann nicht durchsucht werden.<br /><br /> 2 = Durchsuchbar mit LIKE<br /><br /> 3 = Durchsuchbar mit WHERE<br /><br /> 4 = Durchsuchbar mit WHERE oder LIKE|  
 |UNSIGNED_ATTRIBUTE|**smallint**|Gibt das Vorzeichen des Datentyps an.<br /><br /> 1 = Datentyp ohne Vorzeichen<br /><br /> 0 = Datentyp mit Vorzeichen|  
 |MONEY|**smallint**|Gibt den **Money** -Datentyp an.<br /><br /> 1 = **Money** -Datentyp.<br /><br /> 0 = kein **Money** -Datentyp.|  
 |AUTO_INCREMENT|**smallint**|Gibt die automatische Inkrementierung an.<br /><br /> 1 = Automatische Inkrementierung<br /><br /> 0 = Keine automatische Inkrementierung<br /><br /> NULL = Attribut nicht zutreffend.<br /><br /> Eine Anwendung kann zwar Werte in eine Spalte einfügen, die dieses Attribut aufweist, kann jedoch die Werte in der Spalte nicht aktualisieren. Mit Ausnahme des **Bit** -Datentyps ist AUTO_INCREMENT nur für Datentypen gültig, die zu den genauen numerischen und ungefähren numerischen Datentyp Kategorien gehören.|  
@@ -65,12 +65,12 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |MINIMUM_SCALE|**smallint**|Die minimalen Dezimalstellen des Datentyps bezüglich der Datenquelle. Wenn für einen Datentyp feste Dezimalstellen definiert wurden, enthalten die Spalten MINIMUM_SCALE und MAXIMUM_SCALE denselben Wert. NULL wird zurückgegeben, wenn Dezimalstellen auf den Datentyp nicht anwendbar sind.|  
 |MAXIMUM_SCALE|**smallint**|Die maximalen Dezimalstellen des Datentyps bezüglich der Datenquelle. Wenn die maximalen Dezimalstellen für die Datenquelle nicht separat definiert wurden und stattdessen definiert wurde, dass sie der maximalen Genauigkeit entsprechen, enthält diese Spalte denselben Wert wie die PRECISION-Spalte.|  
 |SQL_DATA_TYPE|**smallint**|Der Wert des SQL-Datentyps, wie er im TYPE-Feld des Deskriptors angezeigt wird. Diese Spalte ist mit Ausnahme der Datentypen **DateTime** und ANSI **Interval** identisch mit der Spalte data_type. Dieses Feld gibt immer einen Wert zurück.|  
-|SQL_DATETIME_SUB|**smallint**|der **DateTime** -oder ANSI- **Intervall** -Subcode, wenn der Wert von SQL_DATA_TYPE SQL_DATETIME oder SQL_INTERVAL ist. Bei anderen Datentypen als **DateTime** und ANSI **Interval**ist dieses Feld NULL.|  
+|SQL_DATETIME_SUB|**smallint**|der **DateTime** -oder ANSI- **Intervall** -Subcode, wenn der Wert von SQL_DATA_TYPE SQL_DATETIME oder SQL_INTERVAL ist. Bei anderen Datentypen als **DateTime** und ANSI **Interval** ist dieses Feld NULL.|  
 |NUM_PREC_RADIX|**int**|Die Anzahl der Bits oder Stellen für das Berechnen der höchsten Zahl, die eine Spalte enthalten kann. Wenn es sich um einen ungefähren numerischen Datentyp handelt, enthält diese Spalte den Wert 2 für mehrere Bits. Bei exakten numerischen Datentypen enthält diese Spalte den Wert 10 für mehrere Dezimalstellen. Andernfalls ist diese Spalte NULL. Aus der Kombination von Genauigkeit und Basis kann die Anwendung die höchste Zahl berechnen, die die Spalte enthalten kann.|  
-|INTERVAL_PRECISION|**smallint**|Wert der Intervall führenden Genauigkeit, *data_type* Wenn data_type **Intervall**ist. andernfalls NULL.|  
+|INTERVAL_PRECISION|**smallint**|Wert der Intervall führenden Genauigkeit,  Wenn data_type **Intervall** ist. andernfalls NULL.|  
 |USERTYPE|**smallint**|**usertype** -Wert aus der systypes-Tabelle.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  sp_datatype_info entspricht sqlgettypeingefo in ODBC. Die zurückgegebenen Ergebnisse sind zuerst nach DATA_TYPE und dann nach der Übereinstimmung des Datentyps mit dem entsprechenden ODBC SQL-Datentyp geordnet.  
   
 ## <a name="permissions"></a>Berechtigungen  

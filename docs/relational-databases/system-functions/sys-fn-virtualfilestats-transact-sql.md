@@ -1,6 +1,6 @@
 ---
 description: sys.fn_virtualfilestats (Transact-SQL)
-title: sys. fn_virtualfilestats (Transact-SQL) | Microsoft-Dokumentation
+title: sys.fn_virtualfilestats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/16/2016
 ms.prod: sql
@@ -21,18 +21,18 @@ helpviewer_keywords:
 ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fedf4b7412578bb73a717d1646f29ac1471b14ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5cb40699cf7c4ba8c2391ea12d0c060f2c388986
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481800"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474741"
 ---
 # <a name="sysfn_virtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Gibt E/A-Statistiken für Datenbankdateien zurück, einschließlich Protokolldateien. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind diese Informationen auch in der dynamischen Verwaltungs Sicht [sys. dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) verfügbar.  
+  Gibt E/A-Statistiken für Datenbankdateien zurück, einschließlich Protokolldateien. In sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diese Informationen auch über die dynamische Verwaltungs Sicht [sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) verfügbar.  
 
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,10 +45,10 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
   
 ## <a name="arguments"></a>Argumente  
  *database_id* | Normal  
- Die ID der Datenbank. *database_id* ist vom Datentyp **int**und hat keinen Standardwert. Geben Sie NULL an, wenn Informationen zu allen Datenbanken in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben werden sollen.  
+ Die ID der Datenbank. *database_id* ist vom Datentyp **int** und hat keinen Standardwert. Geben Sie NULL an, wenn Informationen zu allen Datenbanken in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben werden sollen.  
   
  *file_id* | Normal  
- Die ID der Datei. *file_id* ist vom Datentyp **int**und hat keinen Standardwert. Geben Sie NULL an, wenn Informationen zu allen Dateien in der Datenbank zurückgegeben werden sollen.  
+ Die ID der Datei. *file_id* ist vom Datentyp **int** und hat keinen Standardwert. Geben Sie NULL an, wenn Informationen zu allen Dateien in der Datenbank zurückgegeben werden sollen.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
@@ -65,9 +65,9 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |**IoStallWriteMS**|**bigint**|Gesamtzeit in Millisekunden, die die Benutzer darauf gewartet haben, dass E/A-Schreiboperationen für die Datei abgeschlossen wurden|  
 |**IoStallMS**|**bigint**|Summe von **iostallread MS** und **iostallwrite tems**.|  
 |**File handle**|**bigint**|Wert des Dateihandles|  
-|**BytesOnDisk**|**bigint**|Die physische Dateigröße (Anzahl der Bytes) auf dem Datenträger.<br /><br /> Bei Datenbankdateien entspricht dies dem gleichen Wert wie die **Größe** in **sys. database_files**, wird jedoch in Bytes und nicht in Seiten ausgedrückt.<br /><br /> Bei Sparsedateien von Datenbankmomentaufnahmen ist dies der Speicherplatz, den das Betriebssystem für die Datei in Anspruch nimmt.|  
+|**BytesOnDisk**|**bigint**|Die physische Dateigröße (Anzahl der Bytes) auf dem Datenträger.<br /><br /> Bei Datenbankdateien entspricht dies dem gleichen Wert wie die **Größe** in **sys.database_files**, wird jedoch in Bytes und nicht in Seiten ausgedrückt.<br /><br /> Bei Sparsedateien von Datenbankmomentaufnahmen ist dies der Speicherplatz, den das Betriebssystem für die Datei in Anspruch nimmt.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **fn_virtualfilestats** ist eine System-Tabellenwert Funktion, die statistische Informationen, z. b. die Gesamtzahl der e/a-Vorgänge, die für eine Datei ausgeführt werden, enthält. Diese Funktion hilft beim Verfolgen der Zeitdauer, die Benutzer warten müssen, um eine Datei zu lesen oder darin zu schreiben. Diese Funktion hilft außerdem beim Identifizieren der Dateien mit hoher E/A-Aktivität.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -104,7 +104,7 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [DB_ID &#40;Transact-SQL-&#41;](../../t-sql/functions/db-id-transact-sql.md)   
- [FILE_IDEX &#40;Transact-SQL-&#41;](../../t-sql/functions/file-idex-transact-sql.md)   
+ [FILE_IDEX &#40;Transact-SQL&#41;](../../t-sql/functions/file-idex-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   

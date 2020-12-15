@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8bd6ad5c10d8aacf76fb6219e4e0152b2d35776
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ba977b0b2f33e9c45a94c92aeb4d6fb9fba5cd0c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97334178"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474841"
 ---
 # <a name="sysdm_tran_locks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "97334178"
 > [!NOTE]  
 > Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys.dm_pdw_nodes_tran_locks**.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**resource_type**|**nvarchar(60)**|Stellt den Ressourcentyp dar. Die folgenden Werte sind möglich: DATABASE, FILE, OBJECT, PAGE, KEY, EXTENT, RID, APPLICATION, METADATA, HOBT oder ALLOCATION_UNIT.|  
 |**resource_subtype**|**nvarchar(60)**|Stellt einen Untertyp von **resource_type** dar. Es ist technisch zulässig, eine Untertypsperre abzurufen, ohne dass eine Nicht-Untertypsperre des übergeordneten Typs vorhanden ist. Unterschiedliche Untertypen führen nicht zu Konflikten untereinander oder mit dem übergeordneten Typ des Nicht-Untertyps. Nicht alle Ressourcentypen weisen Untertypen auf.|  
@@ -65,7 +65,7 @@ ms.locfileid: "97334178"
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
 Bei den Dienst Zielen "Basic", "S0" und "S1" in SQL-Datenbank ist für Datenbanken in Pools für elastische Datenbanken `Server admin` oder ein `Azure Active Directory admin` Konto erforderlich. Für alle anderen SQL-Datenbank-Dienst Ziele `VIEW DATABASE STATE` ist die Berechtigung in der Datenbank erforderlich.   
  
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Der Anforderungsstatus GRANTED gibt an, dass dem Anforderer für eine Ressource eine Sperre erteilt wurde. Der Anforderungsstatus WAITING gibt an, dass die Anforderung noch nicht erteilt wurde. Die folgenden Anforderungstypen für WAITING werden von der **request_status**-Spalte zurückgegeben:  
   
 -   Der Anforderungsstatus CONVERT gibt an, dass dem Anforderer bereits eine Anforderung für die Ressource erteilt wurde und dass er derzeit darauf wartet, dass ein Upgrade für die ursprüngliche Anforderung erteilt wird.  
@@ -198,7 +198,7 @@ Bei den Dienst Zielen "Basic", "S0" und "S1" in SQL-Datenbank ist für Datenbank
   
  In der folgenden Tabelle ist das Format der **resource_description**-Spalte für die einzelnen Ressourcentypen angegeben.  
   
-|Resource|Format|Beschreibung|  
+|Ressource|Format|Beschreibung|  
 |--------------|------------|-----------------|  
 |DATABASE|Nicht zutreffend|Datenbank-ID ist bereits in der **resource_database_id**-Spalte verfügbar.|  
 |DATEI|<file_id>|ID der Datei, die durch diese Ressource dargestellt wird.|  

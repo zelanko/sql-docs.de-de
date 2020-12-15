@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
-title: sys. dm_db_xtp_nonclustered_index_stats (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: d55ba31c-296c-419b-9c4b-c126e0a3d156
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c48807db007bd5d622283fd07c3aed8aec0198a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3688330769cbac60841f29d98efb5219cfc965a3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542201"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474941"
 ---
 # <a name="sysdm_db_xtp_nonclustered_index_stats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "89542201"
   
  Eine große Anzahl wiederholter Versuche weist auf Parallelitätsprobleme hin; wenden Sie sich an den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Support.  
   
- Weitere Informationen zu Speicher optimierten, nicht gruppierten Indizes finden Sie unter [SQL Server in-Memory OLTP Internals Übersicht](https://t.co/T6zToWc6y6), Seite 17.  
+ Weitere Informationen zu Speicher optimierten, nicht gruppierten Indizes finden Sie unter [SQL Server In-Memory OLTP Internals Übersicht](https://t.co/T6zToWc6y6), Seite 17.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|ID des Objekts.|  
 |xtp_object_id|**bigint**|Die ID der Speicher optimierten Tabelle.|  

@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: joesackmsft
 ms.author: josack
-monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 2038883693288a75f9e2dbe17d80b6b9c7474343
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current
+ms.openlocfilehash: 933b7749218e71a66cdc6d0a25666be32c8badfe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753725"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474751"
 ---
 # <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys.dm_user_db_resource_governance (Transact-SQL)
 
@@ -34,7 +34,7 @@ ms.locfileid: "91753725"
 
 Gibt die tatsächlichen Konfigurations- und Kapazitätseinstellungen zurück, die von Ressourcenkontrollmechanismen in der aktuellen Datenbank oder im Pool für elastische Datenbanken verwendet werden.
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**database_id**|INT|Die ID der Datenbank, die innerhalb eines Azure SQL-Datenbankservers eindeutig ist.|
 |**logical_database_guid**|UNIQUEIDENTIFIER|Logische GUID für die Benutzerdatenbank, die während der Lebensdauer einer Benutzerdatenbank verbleibt.  Durch das Umbenennen der Datenbank oder das Ändern des servicelevelziels wird dieser Wert nicht geändert.|
@@ -47,27 +47,27 @@ Gibt die tatsächlichen Konfigurations- und Kapazitätseinstellungen zurück, di
 |**min_cpu**|TINYINT|Der MIN_CPU_PERCENT Wert des Ressourcenpools für die Benutzer Auslastung. Siehe [Ressourcen Pool Konzepte](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts).|
 |**max_cpu**|TINYINT|Der MAX_CPU_PERCENT Wert des Ressourcenpools für die Benutzer Auslastung. Siehe [Ressourcen Pool Konzepte](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts).|
 |**cap_cpu**|TINYINT|Der CAP_CPU_PERCENT Wert des Ressourcenpools für die Benutzer Auslastung. Siehe [Ressourcen Pool Konzepte](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts).|
-|**min_cores**|SMALLINT|Nur interne Verwendung.|
+|**min_cores**|SMALLINT|Nur zur internen Verwendung.|
 |**max_dop**|SMALLINT|Der MAX_DOP Wert für die Benutzer Arbeits Auslastungs Gruppe. Siehe [Erstellen einer Arbeits](../../t-sql/statements/create-workload-group-transact-sql.md)Auslastungs Gruppe|
 |**min_memory**|INT|Der MIN_MEMORY_PERCENT Wert des Ressourcenpools für die Benutzer Auslastung. Siehe [Ressourcen Pool Konzepte](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts).|
 |**max_memory**|INT|Der MAX_MEMORY_PERCENT Wert des Ressourcenpools für die Benutzer Auslastung. Siehe [Ressourcen Pool Konzepte](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts).|
 |**max_sessions**|INT|Die maximal zulässige Anzahl von Sitzungen in der Benutzer Arbeits Auslastungs Gruppe.|
 |**max_memory_grant**|INT|Der request_max_memory_grant_percent Wert für die Benutzer Arbeits Auslastungs Gruppe. Siehe [Erstellen einer Arbeits](../../t-sql/statements/create-workload-group-transact-sql.md)Auslastungs Gruppe|
-|**max_db_memory**|INT|Nur interne Verwendung.|
-|**govern_background_io**|bit|Nur interne Verwendung.|
+|**max_db_memory**|INT|Nur zur internen Verwendung.|
+|**govern_background_io**|bit|Nur zur internen Verwendung.|
 |**min_db_max_size_in_mb**|BIGINT|Der minimale max_size Wert für eine Datendatei in MB. Siehe [sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md).|
 |**max_db_max_size_in_mb**|BIGINT|Der maximale max_size Wert für eine Datendatei in MB. Siehe [sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md).|
 |**default_db_max_size_in_mb**|BIGINT|Der Standard max_size Wert für eine Datendatei in MB. Siehe [sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md).|
 |**db_file_growth_in_mb**|BIGINT|Standard Zuwachs Inkrement für eine Datendatei in MB. Siehe [sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md).|
 |**initial_db_file_size_in_mb**|BIGINT|Die Standardgröße für die neue Datendatei in MB. Siehe [sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md).|
 |**log_size_in_mb**|BIGINT|Die Standardgröße für die neue Protokolldatei in MB. Siehe [sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md).|
-|**instance_cap_cpu**|INT|Nur interne Verwendung.|
+|**instance_cap_cpu**|INT|Nur zur internen Verwendung.|
 |**instance_max_log_rate**|BIGINT|Limit für die Protokoll Generierungs Rate für die SQL Server Instanz (in Bytes pro Sekunde). Gilt für alle von der-Instanz generierten Protokolle, einschließlich `tempdb` und anderer System Datenbanken. Bezieht sich in einem Pool für elastische Datenbanken auf Protokolle, die von allen Datenbanken im Pool generiert werden.|
 |**instance_max_worker_threads**|INT|Der Arbeits Thread Grenzwert für die SQL Server Instanz.|
 |**replica_type**|INT|Der Replikat-Typ, wobei 0 Primär und 1 sekundär ist.|
 |**max_transaction_size**|BIGINT|Maximaler von einer Transaktion verwendeter Protokoll Speicher in KB.|
-|**checkpoint_rate_mbps**|INT|Nur interne Verwendung.|
-|**checkpoint_rate_io**|INT|Nur interne Verwendung.|
+|**checkpoint_rate_mbps**|INT|Nur zur internen Verwendung.|
+|**checkpoint_rate_io**|INT|Nur zur internen Verwendung.|
 |**last_updated_date_utc**|datetime|Datum und Uhrzeit der letzten Einstellungs Änderung oder Neukonfiguration in UTC.|
 |**primary_group_id**|INT|Die ID der Arbeits Auslastungs Gruppe für die Arbeitsauslastung des Benutzers auf dem primären Replikat|
 |**primary_group_max_workers**|INT|Arbeits ThreadLimit für die Benutzer Arbeits Auslastungs Gruppe.|
@@ -80,22 +80,22 @@ Gibt die tatsächlichen Konfigurations- und Kapazitätseinstellungen zurück, di
 |**primary_log_commit_fee**|INT|Die protokolllitionscommit-Commit-Gebühr für die Benutzer Arbeits Auslastungs Gruppe in Bytes. Eine commitgebühr erhöht die Größe der einzelnen Protokoll-e/a-Vorgänge um einen bestimmten Wert für die Protokollierung der Protokoll Raten. Die tatsächliche Protokoll-e/a für den Speicher wird nicht angehoben.|
 |**primary_pool_max_workers**|INT|Der Arbeits Thread Grenzwert für den workloadpool der Benutzer.|
 |**pool_max_io**|INT|Maximaler IOPS-Grenzwert für den workloadpool für die Benutzer Auslastung.|
-|**govern_db_memory_in_resource_pool**|bit|Nur interne Verwendung.|
-|**volume_local_iops**|INT|Nur interne Verwendung.|
-|**volume_managed_xstore_iops**|INT|Nur interne Verwendung.|
-|**volume_external_xstore_iops**|INT|Nur interne Verwendung.|
-|**volume_type_local_iops**|INT|Nur interne Verwendung.|
-|**volume_type_managed_xstore_iops**|INT|Nur interne Verwendung.|
-|**volume_type_external_xstore_iops**|INT|Nur interne Verwendung.|
-|**volume_pfs_iops**|INT|Nur interne Verwendung.|
-|**volume_type_pfs_iops**|INT|Nur interne Verwendung.|
+|**govern_db_memory_in_resource_pool**|bit|Nur zur internen Verwendung.|
+|**volume_local_iops**|INT|Nur zur internen Verwendung.|
+|**volume_managed_xstore_iops**|INT|Nur zur internen Verwendung.|
+|**volume_external_xstore_iops**|INT|Nur zur internen Verwendung.|
+|**volume_type_local_iops**|INT|Nur zur internen Verwendung.|
+|**volume_type_managed_xstore_iops**|INT|Nur zur internen Verwendung.|
+|**volume_type_external_xstore_iops**|INT|Nur zur internen Verwendung.|
+|**volume_pfs_iops**|INT|Nur zur internen Verwendung.|
+|**volume_type_pfs_iops**|INT|Nur zur internen Verwendung.|
 |||
 
 ## <a name="permissions"></a>Berechtigungen
 
 Diese Sicht erfordert die VIEW DATABASE STATE-Berechtigung.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Eine Beschreibung der Ressourcenkontrolle in der Azure SQL-Datenbank finden Sie unter [Ressourceneinschränkungen für SQL-Datenbanken](/azure/sql-database/sql-database-resource-limits-database-server).
 

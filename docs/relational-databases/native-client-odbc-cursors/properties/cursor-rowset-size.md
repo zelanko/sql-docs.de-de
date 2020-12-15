@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2febe2ae-fdc1-490e-a79f-c516bc8e7c3f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71ff730734a82d37cff8e13ea6c89ce55722c186
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 66d8314123ffd37bb8163dc18900e62b252a6ce0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420644"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473751"
 ---
 # <a name="cursor-rowset-size"></a>Cursorrowsetgröße
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +47,7 @@ SQLSetStmtAttr(m_hstmt, SQL_ATTR_ROW_ARRAY_SIZE, (SQLPOINTER)uwRowsetSize, SQL_I
   
  Wenn entweder eine spaltenweise oder zeilenweise Bindung verwendet wird, füllt jeder-Befehl von **SQLFetch** oder **SQLFetchScroll** die gebundenen Arrays mit Daten aus dem abgerufenen Rowset.  
   
- [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) kann auch zum Abrufen von Spaltendaten aus einem Block Cursor verwendet werden. Da **SQLGetData** jeweils eine Zeile verwendet, müssen **SQLSetPos** aufgerufen werden, um eine bestimmte Zeile im Rowset als aktuelle Zeile festzulegen, bevor **SQLGetData**aufgerufen wird.  
+ [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) kann auch zum Abrufen von Spaltendaten aus einem Block Cursor verwendet werden. Da **SQLGetData** jeweils eine Zeile verwendet, müssen **SQLSetPos** aufgerufen werden, um eine bestimmte Zeile im Rowset als aktuelle Zeile festzulegen, bevor **SQLGetData** aufgerufen wird.  
   
  Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber bietet eine Optimierung, bei der mithilfe von Rowsets ein gesamtes Resultset schnell abgerufen wird. Um diese Optimierung zu verwenden, legen Sie die Cursor Attribute auf ihre Standardwerte fest (vorwärts, schreibgeschützt, Rowsetgröße = 1), wenn **SQLExecDirect** oder **SQLExecute** aufgerufen wird. Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber richtet ein Standardresultset ein. Beim Übertragen von Ergebnissen auf den Client ohne Bildlauf ist dies effizienter als Servercursor. Nachdem die Anweisung ausgeführt wurde, erhöhen Sie die Rowsetgröße und verwenden Sie entweder das spaltenweise oder zeilenweise Binden. Dadurch [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] kann ein Standardresultset verwendet werden, um Ergebniszeilen effizient an den Client zu senden, während der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber kontinuierlich Zeilen aus den Netzwerkpuffern auf dem Client abruft.  
   

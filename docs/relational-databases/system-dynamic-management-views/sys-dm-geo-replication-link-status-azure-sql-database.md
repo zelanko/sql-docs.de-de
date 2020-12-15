@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 0d105ddedeafa8a82c068fce90f3e29bc4622f57
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: cb9936ce01a68055b7f050ddc7dbdb21a9802438
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834248"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474851"
 ---
 # <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL-Datenbank)
 
@@ -44,14 +44,14 @@ ms.locfileid: "91834248"
 |Rolle (role)|**tinyint**|Die georeplikationsrolle ist eine der folgenden:<br /><br /> 0 = primär. Der database_id bezieht sich auf die primäre Datenbank in der georeplikationspartnerschaft.<br /><br /> 1 = sekundär.  Der database_id bezieht sich auf die primäre Datenbank in der georeplikationspartnerschaft.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|Der sekundäre Typ, einer der folgenden:<br /><br /> 0 = Es sind keine direkten Verbindungen mit der sekundären Datenbank zulässig, und die Datenbank ist für den Lesezugriff nicht verfügbar.<br /><br /> 2 = alle Verbindungen sind für die Datenbank in der sekundären repl zulässig; ikation für schreibgeschützten Zugriff.|  
-|secondary_allow_connections_desc|**nvarchar(256)**|Nein<br /><br /> Alle|  
+|secondary_allow_connections_desc|**nvarchar(256)**|No<br /><br /> Alle|  
 |last_commit|**datetimeoffset**|Zeitpunkt der letzten Transaktion, für die ein Commit an die Datenbank ausgeführt wurde. Wenn die Datenbank in der primären Datenbank abgerufen wird, gibt Sie den Zeitpunkt des letzten Commit in der primären Datenbank an. Wenn Sie in der sekundären Datenbank abgerufen wird, gibt Sie den Zeitpunkt des letzten Commit in der sekundären Datenbank an. Wenn Sie in der sekundären Datenbank abgerufen werden, wenn der primäre Replikations Link nicht aktiv ist, wird angezeigt, bis der von der sekundären Datenbank aufgefasste Punkt erreicht wurde|
   
 > [!NOTE]  
 >  Wenn die Replikations Beziehung durch Entfernen der sekundären Datenbank (Abschnitt 4,2) beendet wird, wird die Zeile für diese Datenbank in der **sys.dm_geo_replication_link_status** Sicht nicht mehr angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Alle Konten mit view_database_state Berechtigung können **sys.dm_geo_replication_link_status**Abfragen.  
+ Alle Konten mit view_database_state Berechtigung können **sys.dm_geo_replication_link_status** Abfragen.  
   
 ## <a name="example"></a>Beispiel  
  Replikations Verzögerungen und Zeitpunkt der letzten Replikation der sekundären Datenbanken anzeigen.  
