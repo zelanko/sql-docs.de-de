@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80b0606f38f50b067f706bc5dad4d094ea49a4b2
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f5317580647f0d8795277722e44382c2a77cdafe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332039"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467291"
 ---
 # <a name="metadata-visibility-configuration"></a>Konfigurieren der Sichtbarkeit von Metadaten
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -131,7 +131,7 @@ GO
   
  Für die folgenden Metadaten ist die erzwungene Anzeige nicht möglich:  
   
--   Der in der **provider_string** -Spalte von **sys.servers**gespeicherte Wert. Ein Benutzer, der keine ALTER ANY LINKED SERVER-Berechtigung hat, sieht in dieser Spalte einen NULL-Wert.  
+-   Der in der **provider_string** -Spalte von **sys.servers** gespeicherte Wert. Ein Benutzer, der keine ALTER ANY LINKED SERVER-Berechtigung hat, sieht in dieser Spalte einen NULL-Wert.  
   
 -   Quellendefinition eines benutzerdefinierten Objekts wie z. B. eine gespeicherte Prozedur oder ein Trigger. Der Quellencode ist nur sichtbar, wenn eine der folgenden Aussagen zutrifft:  
   
@@ -164,7 +164,7 @@ GO
 
 -   OBJECT_DEFINITION()-Funktion  
   
--   Der in der password_hash-Spalte von **sys.sql_logins**gespeicherte Wert.  Einem Benutzer, der nicht über die CONTROL SERVER-Berechtigung verfügt, wird in dieser Spalte ein NULL-Wert angezeigt.  
+-   Der in der password_hash-Spalte von **sys.sql_logins** gespeicherte Wert.  Einem Benutzer, der nicht über die CONTROL SERVER-Berechtigung verfügt, wird in dieser Spalte ein NULL-Wert angezeigt.  
   
 > [!NOTE]  
 >  Die SQL-Definitionen von integrierten Systemprozeduren und -funktionen sind über die **sys.system_sql_modules** -Katalogsicht, die gespeicherte Prozedur **sp_helptext** und mithilfe der OBJECT_DEFINITION()-Funktion öffentlich sichtbar.  

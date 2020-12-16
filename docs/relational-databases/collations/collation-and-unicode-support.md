@@ -32,13 +32,13 @@ helpviewer_keywords:
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b574c9efb9f6c5d5cda38731546403e1219c8a36
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 99ef20a9db20238f24361327b79068ed39d430f4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193510"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465671"
 ---
 # <a name="collation-and-unicode-support"></a>Unterstützung von Sortierungen und Unicode
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -506,7 +506,7 @@ Die folgende Tabelle enthält Informationen zur Verwendung mehrsprachiger Daten 
 ##  <a name="supplementary-characters"></a><a name="Supplementary_Characters"></a> Ergänzende Zeichen    
 Das Unicode Consortium hat jedem Zeichen einen eindeutigen Codepunkt zugeordnet, der einem Wert im Bereich von 000000 bis 10FFFF entspricht. Die am häufigsten verwendeten Zeichen haben Codepunktwerte im Bereich von 000000 bis 00FFFF (65.535 Zeichen), die in ein 8-Bit- oder 16-Bit-Wort im Arbeitsspeicher und auf dem Datenträger passen. Dieser Bereich wird in der Regel als der Basic Multilingual Plane (BMP) festgelegt. 
 
-Aber das Unicode Consortium hat 16 zusätzliche „Ebenen“ von Zeichen eingerichtet, die jeweils genauso groß sind wie die BMP. Durch diese Definition kann Unicode 1.114.112 Zeichen (d. h. 2<sup>16</sup> × 17 Zeichen) innerhalb des Codepunktbereichs von 000000 bis 10FFFF darstellen. Zeichen mit Codepunktwerten größer als 00FFFFFF erfordern zwei bis vier aufeinanderfolgende 8-Bit-Wörter (UTF-8) oder zwei aufeinanderfolgende 16-Bit-Wörter (UTF-16). Diese Zeichen, die sich außerhalb der BMP befinden, werden als *ergänzende Zeichen*bezeichnet, und die zusätzlichen aufeinanderfolgenden 8-Bit- oder 16-Bit-Wörter werden als *Ersatzzeichenpaare*bezeichnet. Weitere Informationen zu ergänzenden Zeichen, Ersatzzeichen und Ersatzzeichenpaaren finden Sie im [Unicode-Standard](http://www.unicode.org/standard/standard.html).    
+Aber das Unicode Consortium hat 16 zusätzliche „Ebenen“ von Zeichen eingerichtet, die jeweils genauso groß sind wie die BMP. Durch diese Definition kann Unicode 1.114.112 Zeichen (d. h. 2<sup>16</sup> × 17 Zeichen) innerhalb des Codepunktbereichs von 000000 bis 10FFFF darstellen. Zeichen mit Codepunktwerten größer als 00FFFFFF erfordern zwei bis vier aufeinanderfolgende 8-Bit-Wörter (UTF-8) oder zwei aufeinanderfolgende 16-Bit-Wörter (UTF-16). Diese Zeichen, die sich außerhalb der BMP befinden, werden als *ergänzende Zeichen* bezeichnet, und die zusätzlichen aufeinanderfolgenden 8-Bit- oder 16-Bit-Wörter werden als *Ersatzzeichenpaare* bezeichnet. Weitere Informationen zu ergänzenden Zeichen, Ersatzzeichen und Ersatzzeichenpaaren finden Sie im [Unicode-Standard](http://www.unicode.org/standard/standard.html).    
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt Datentypen wie **nchar** und **nvarchar** bereit, um Unicode-Daten im BMP-Bereich (000000 bis 00FFFF) zu speichern, die die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] mit UCS-2 codiert. 
 

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 89a63fd6fcf51a3ad30923e05e41e599fc7e0413
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: 9f20f527694fd0ed33de68fbcbabd93e0ef96683
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111756"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468751"
 ---
 # <a name="synchronize-a-push-subscription"></a>Synchronisieren eines Pushabonnements
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "87111756"
   
 #### <a name="to-start-the-distribution-agent-to-synchronize-a-push-subscription-to-a-transactional-publication"></a>So starten Sie den Verteilungs-Agent, um ein Pushabonnement für eine Transaktionsveröffentlichung zu synchronisieren  
   
-1.  Führen Sie auf dem Verteiler an der Eingabeaufforderung oder in einer Batchdatei **distrib.exe**aus. Geben Sie die folgenden Befehlszeilenargumente an:  
+1.  Führen Sie auf dem Verteiler an der Eingabeaufforderung oder in einer Batchdatei **distrib.exe** aus. Geben Sie die folgenden Befehlszeilenargumente an:  
   
     -   **-Publisher**  
   
@@ -116,7 +116,7 @@ ms.locfileid: "87111756"
   
 #### <a name="to-start-the-merge-agent-to-synchronize-a-push-subscription-to-a-merge-publication"></a>So starten Sie den Merge-Agent, um ein Pushabonnement für eine Mergeveröffentlichung zu synchronisieren  
   
-1.  Führen Sie auf dem Verteiler an der Eingabeaufforderung oder in einer Batchdatei **replmerg.exe**aus. Geben Sie die folgenden Befehlszeilenargumente an:  
+1.  Führen Sie auf dem Verteiler an der Eingabeaufforderung oder in einer Batchdatei **replmerg.exe** aus. Geben Sie die folgenden Befehlszeilenargumente an:  
   
     -   **-Publisher**  
   
@@ -219,7 +219,7 @@ REM -- The following command must be supplied without line breaks.
   
     -   Die in Schritt 1 erstellte Verbindung für <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die restlichen Abonnementeigenschaften abzurufen. Überprüfen Sie, ob das Abonnement vorhanden ist, wenn diese Methode **false**zurückgibt.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die restlichen Abonnementeigenschaften abzurufen. Überprüfen Sie, ob das Abonnement vorhanden ist, wenn diese Methode **false** zurückgibt.  
   
 4.  Starten Sie den Verteilungs-Agent auf eine der folgenden Arten auf dem Verteiler:  
   
@@ -243,7 +243,7 @@ REM -- The following command must be supplied without line breaks.
   
     -   Die in Schritt 1 erstellte Verbindung für <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die restlichen Abonnementeigenschaften abzurufen. Überprüfen Sie, ob das Abonnement vorhanden ist, wenn diese Methode **false**zurückgibt.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die restlichen Abonnementeigenschaften abzurufen. Überprüfen Sie, ob das Abonnement vorhanden ist, wenn diese Methode **false** zurückgibt.  
   
 4.  Starten Sie den Merge-Agent auf eine der folgenden Arten auf dem Verteiler:  
   

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ea9a185b1f7a00c8e6ea7e6d848cf2b4e88319f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: be8431723e70b85f006f24aa81f8ba51bec8360f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809626"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467051"
 ---
 # <a name="stored-procedures-database-engine"></a>Gespeicherte Prozeduren (Datenbank-Engine)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "91809626"
  Eine benutzerdefinierte Prozedur kann in einer benutzerdefinierten Datenbank sowie in allen Systemdatenbanken außer der **Ressourcendatenbank** erstellt werden. Die Prozedur kann entweder in [!INCLUDE[tsql](../../includes/tsql-md.md)] oder als Verweis auf eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-CLR-Methode (Common Language Runtime) entwickelt werden.  
   
  **Temporär**  
- Temporäre Prozeduren stellen eine Art benutzerdefinierter Prozedur dar. Temporäre Prozeduren verhalten sich wie dauerhafte Prozeduren, mit der Ausnahme, dass temporäre Prozeduren in **tempdb**gespeichert werden. Es gibt zwei Arten von temporären Prozeduren: lokale und globale temporäre Prozeduren. Sie unterscheiden sich hinsichtlich ihrer Namen, ihrer Sichtbarkeit und ihrer Verfügbarkeit. Die Namen lokaler temporärer Prozeduren beginnen mit einem einzelnen Nummernzeichen (#). Sie sind nur im Rahmen der aktuellen Benutzerverbindung sichtbar und werden gelöscht, sobald die Verbindung getrennt wird. Die Namen globaler temporärer Prozeduren beginnen mit zwei Nummernzeichen (##). Nachdem sie erstellt wurden, sind sie für jeden Benutzer sichtbar und werden am Ende der letzten Sitzung, in der die Prozedur verwendet wird, gelöscht.  
+ Temporäre Prozeduren stellen eine Art benutzerdefinierter Prozedur dar. Temporäre Prozeduren verhalten sich wie dauerhafte Prozeduren, mit der Ausnahme, dass temporäre Prozeduren in **tempdb** gespeichert werden. Es gibt zwei Arten von temporären Prozeduren: lokale und globale temporäre Prozeduren. Sie unterscheiden sich hinsichtlich ihrer Namen, ihrer Sichtbarkeit und ihrer Verfügbarkeit. Die Namen lokaler temporärer Prozeduren beginnen mit einem einzelnen Nummernzeichen (#). Sie sind nur im Rahmen der aktuellen Benutzerverbindung sichtbar und werden gelöscht, sobald die Verbindung getrennt wird. Die Namen globaler temporärer Prozeduren beginnen mit zwei Nummernzeichen (##). Nachdem sie erstellt wurden, sind sie für jeden Benutzer sichtbar und werden am Ende der letzten Sitzung, in der die Prozedur verwendet wird, gelöscht.  
   
  **System**  
  Systemprozeduren sind in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]enthalten. Sie werden physisch in der internen, ausgeblendeten **Ressourcendatenbank** gespeichert und logisch im **sys** -Schema jeder system- und benutzerdefinierten Datenbank angezeigt. Außerdem verfügt die **msdb-Datenbank** über gespeicherte Systemprozeduren im **dbo** -Schema, die zum Planen von Warnungen und Aufträgen verwendet werden. Da Systemprozeduren mit dem Präfix **sp_** beginnen, wird davon abgeraten, dieses Präfix beim Benennen benutzerdefinierter Prozeduren zu verwenden. Eine vollständige Liste der systemgespeicherten Prozeduren finden Sie unter [Systemgespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md).  

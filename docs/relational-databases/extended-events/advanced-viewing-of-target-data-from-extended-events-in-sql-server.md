@@ -11,13 +11,13 @@ ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 174873d62a2c90ba6309f9063294a27517326d62
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f6bfcd07a238c94938793d3c25769057eb058fde
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523985"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465631"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Erweiterte Ansicht von Zieldaten aus erweiterten Ereignissen in SQL Server
 
@@ -76,8 +76,8 @@ Eine Dokumentation der erweiterten Ereignissen, die nur für Azure SQL-Datenbank
 Im Allgemeinen erfolgt der Zugriff auf die erweiterten Optionen mit einer der folgenden Methoden:
 
 
-- Das reguläre Menü **Datei** > **Öffnen** > **Datei** .
-- Rechtsklick im **Objekt-Explorer** unter **Verwaltung** > **Erweiterte Ereignisse** .
+- Das reguläre Menü **Datei** > **Öffnen** > **Datei**.
+- Rechtsklick im **Objekt-Explorer** unter **Verwaltung** > **Erweiterte Ereignisse**.
 - Das spezielle Menü **Erweiterte Ereignisse** und die spezielle Symbolleiste für erweiterte Ereignisse.
 - Rechtsklick in den Bereich im Registerkartenformat, in dem die Zieldaten angezeigt werden.
 
@@ -133,7 +133,7 @@ Die Option **Zieldaten anzeigen** zeigt die Daten an, die bisher erfasst wurden.
 
 Im Bereich **Objekt-Explorer** können Sie die Knoten erweitern und dann mit der rechten Maustaste auf folgende Optionen klicken:
 
-- **Verwaltung** > **Erweiterte Ereignisse** > **Sitzungen** > *[Ihre_Sitzung]* > *[Ihr_Zielknoten]* > **Zieldaten anzeigen** .
+- **Verwaltung** > **Erweiterte Ereignisse** > **Sitzungen** > *[Ihre_Sitzung]* > *[Ihr_Zielknoten]* > **Zieldaten anzeigen**.
 
 
 Die Zieldaten werden in SSMS in einem Bereich im Registerkartenformat angezeigt. Dies wird im folgenden Screenshot gezeigt.
@@ -153,7 +153,7 @@ Die Zieldaten werden in SSMS in einem Bereich im Registerkartenformat angezeigt.
 Wenn Ihre Ereignissitzung aktiv ist, können Sie die Ereignisdaten in Echtzeit anzeigen, so wie sie vom Ziel empfangen werden.
 
 
-- **Verwaltung** > **Erweiterte Ereignisse** > **Sitzungen** > *[Ihre_Sitzung]* > **Livedaten anzeigen** .
+- **Verwaltung** > **Erweiterte Ereignisse** > **Sitzungen** > *[Ihre_Sitzung]* > **Livedaten anzeigen**.
 
 
 ![Ihre Sitzung > Livedaten anzeigen](../../relational-databases/extended-events/media/xevents-ssms-ui55-watchlivedata.png)
@@ -186,8 +186,8 @@ Wenn die Zieldaten in SSMS vorhanden sind, können Sie die Daten mit folgenden S
 
     ![Exportieren der angezeigten Daten: Erweiterte Ereignisse > Exportieren nach > (CSV- oder XEL-Datei oder eine Tabelle)](../../relational-databases/extended-events/media/xevents-ssms-ui75-menuextevent-exportto-xel.png)
 
-2. Klicken Sie auf das neue Menüelement **Erweiterte Ereignisse** .
-3. Klicken Sie auf **Exportieren nach** , und wählen Sie ein Format aus.
+2. Klicken Sie auf das neue Menüelement **Erweiterte Ereignisse**.
+3. Klicken Sie auf **Exportieren nach**, und wählen Sie ein Format aus.
 
 
 
@@ -271,7 +271,7 @@ Folgende SSMS-Anzeigefilter stehen zur Verfügung:
 - Ein Filter für *Spaltenwerte* .
 
 
-Die Beziehung zwischen dem Zeitfilter und dem Spaltenfilter ist ein boolesches *AND* .
+Die Beziehung zwischen dem Zeitfilter und dem Spaltenfilter ist ein boolesches *AND*.
 
 
 ![Filter für Zeitraum und Spalten im Dialogfeld „Filter“](../../relational-databases/extended-events/media/xevents-ssms-ui45-filters.png)

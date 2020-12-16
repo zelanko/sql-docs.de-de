@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 77b94fa9994a42dd11b6fa5a54fffd222e87feb2
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a5c6647b06d058b1b97188810c4a23644d05c4f7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867449"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468591"
 ---
 # <a name="create-a-login"></a>Erstellen eines Anmeldenamens
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "91867449"
   
      Wenn Sie auf **Suchen...** klicken:  
   
-    1.  Klicken Sie unter **Wählen Sie den Objekttyp aus** auf **Objekttypen...** , um das Dialogfeld **Objekttypen** zu öffnen, und wählen Sie beliebige oder alle der folgenden Optionen aus: **Integrierte Sicherheitsprinzipale**, **Gruppen** und **Benutzer**. Die Optionen**Integrierte Sicherheitsprinzipale** und **Benutzer** sind standardmäßig ausgewählt. Wenn Sie fertig sind, klicken Sie auf **OK**.  
+    1.  Klicken Sie unter **Wählen Sie den Objekttyp aus** auf **Objekttypen...** , um das Dialogfeld **Objekttypen** zu öffnen, und wählen Sie beliebige oder alle der folgenden Optionen aus: **Integrierte Sicherheitsprinzipale**, **Gruppen** und **Benutzer**. Die Optionen **Integrierte Sicherheitsprinzipale** und **Benutzer** sind standardmäßig ausgewählt. Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
     2.  Klicken Sie unter **Suchpfad** auf **Speicherorte...** , um das Dialogfeld **Speicherorte** zu öffnen, und wählen Sie einen der verfügbaren Serverspeicherorte aus. Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
@@ -72,19 +72,19 @@ ms.locfileid: "91867449"
   
     5.  Klicken Sie auf **OK**.  
   
-4.  Um auf Grundlage eines Windows-Prinzipals eine Anmeldung zu erstellen, wählen Sie **Windows-Authentifizierung**aus. Dies ist die Standardauswahl.  
+4.  Um auf Grundlage eines Windows-Prinzipals eine Anmeldung zu erstellen, wählen Sie **Windows-Authentifizierung** aus. Dies ist die Standardauswahl.  
   
-5.  Um eine Anmeldung zu erstellen, die auf einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank gespeichert wird, wählen Sie **SQL Server-Authentifizierung**aus.  
+5.  Um eine Anmeldung zu erstellen, die auf einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank gespeichert wird, wählen Sie **SQL Server-Authentifizierung** aus.  
   
     1.  Geben Sie im Feld **Kennwort** ein Kennwort für den neuen Benutzer ein. Geben Sie dieses Kennwort erneut im Feld **Kennwort bestätigen** ein.  
   
-    2.  Wenn Sie ein vorhandenes Kennwort ändern, wählen Sie **Altes Kennwort angeben**aus, und geben Sie dann das alte Kennwort im Feld **Altes Kennwort** ein.  
+    2.  Wenn Sie ein vorhandenes Kennwort ändern, wählen Sie **Altes Kennwort angeben** aus, und geben Sie dann das alte Kennwort im Feld **Altes Kennwort** ein.  
   
-    3.  Um Kennwortrichtlinienoptionen für Komplexität und Erzwingung zu erzwingen, wählen Sie **Kennwortrichtlinie erzwingen**aus. Weitere Informationen finden Sie unter [Password Policy](../../../relational-databases/security/password-policy.md). Dies ist eine Standardoption, wenn **SQL Server-Authentifizierung** ausgewählt wird.  
+    3.  Um Kennwortrichtlinienoptionen für Komplexität und Erzwingung zu erzwingen, wählen Sie **Kennwortrichtlinie erzwingen** aus. Weitere Informationen finden Sie unter [Password Policy](../../../relational-databases/security/password-policy.md). Dies ist eine Standardoption, wenn **SQL Server-Authentifizierung** ausgewählt wird.  
   
-    4.  Um den Ablauf von Kennwortrichtlinienoptionen zu erzwingen, wählen Sie **Ablauf des Kennworts erzwingen**aus. **Kennwortrichtlinie erzwingen** muss ausgewählt sein, damit dieses Kontrollkästchen aktiviert werden kann. Dies ist eine Standardoption, wenn **SQL Server-Authentifizierung** ausgewählt wird.  
+    4.  Um den Ablauf von Kennwortrichtlinienoptionen zu erzwingen, wählen Sie **Ablauf des Kennworts erzwingen** aus. **Kennwortrichtlinie erzwingen** muss ausgewählt sein, damit dieses Kontrollkästchen aktiviert werden kann. Dies ist eine Standardoption, wenn **SQL Server-Authentifizierung** ausgewählt wird.  
   
-    5.  Wählen Sie **Benutzer muss das Kennwort bei der nächsten Anmeldung ändern**aus, um den Benutzer zu zwingen, nach der ersten Anmeldung ein neues Kennwort zu erstellen. Die Option**Ablauf des Kennworts erzwingen** muss ausgewählt sein, damit dieses Kontrollkästchen aktiviert werden kann. Dies ist eine Standardoption, wenn **SQL Server-Authentifizierung** ausgewählt wird.  
+    5.  Wählen Sie **Benutzer muss das Kennwort bei der nächsten Anmeldung ändern** aus, um den Benutzer zu zwingen, nach der ersten Anmeldung ein neues Kennwort zu erstellen. Die Option **Ablauf des Kennworts erzwingen** muss ausgewählt sein, damit dieses Kontrollkästchen aktiviert werden kann. Dies ist eine Standardoption, wenn **SQL Server-Authentifizierung** ausgewählt wird.  
   
 6.  Um einem eigenständigen Sicherheitszertifikat die Anmeldung zuzuordnen, wählen Sie **Zugeordnet zu Zertifikat** aus, und wählen Sie anschließend den Namen eines vorhandenen Zertifikats aus der Liste aus.  
   
@@ -104,31 +104,31 @@ ms.locfileid: "91867449"
 ### <a name="server-roles"></a>Serverrollen  
  Die Seite **Serverrollen** listet alle möglichen Rollen auf, die der neuen Anmeldung zugewiesen werden können. Die folgenden Optionen sind verfügbar:  
   
- Kontrollkästchen**bulkadmin**  
+ Kontrollkästchen **bulkadmin**  
  Mitglieder der festen Serverrolle **bulkadmin** können die BULK INSERT-Anweisung ausführen.  
   
- Kontrollkästchen**dbcreator**  
+ Kontrollkästchen **dbcreator**  
  Mitglieder der festen Serverrolle **dbcreator** können beliebige Datenbanken erstellen, ändern, löschen und wiederherstellen.  
   
- Kontrollkästchen**diskadmin**  
+ Kontrollkästchen **diskadmin**  
  Mitglieder der festen Serverrolle **diskadmin** können Datenträgerdateien verwalten.  
   
- Kontrollkästchen**processadmin**  
+ Kontrollkästchen **processadmin**  
  Mitglieder der festen Serverrolle **processadmin** können Prozesse beenden, die in einer Instanz von [!INCLUDE[ssDE](../../../includes/ssde-md.md)]ausgeführt werden.  
   
- Kontrollkästchen**public**  
+ Kontrollkästchen **public**  
  Alle SQL Server-Benutzer, -Gruppen und -Rollen gehören standardmäßig zur festen Serverrolle **public** .  
   
- Kontrollkästchen**securityadmin**  
+ Kontrollkästchen **securityadmin**  
  Mitglieder der festen Serverrolle **securityadmin** können Anmeldungen und deren Eigenschaften verwalten. Sie verfügen für Berechtigungen auf Serverebene über die Berechtigungen GRANT, DENY und REVOKE. Sie verfügen für Berechtigungen auf Datenbankebene ebenfalls über die Berechtigungen GRANT, DENY und REVOKE. Sie können außerdem Kennwörter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldungen zurücksetzen.  
   
- Kontrollkästchen**serveradmin**  
+ Kontrollkästchen **serveradmin**  
  Mitglieder der festen Serverrolle **serveradmin** können serverweite Konfigurationsoptionen ändern und den Server herunterfahren.  
   
- Kontrollkästchen**setupadmin**  
+ Kontrollkästchen **setupadmin**  
  Mitglieder der festen Serverrolle **setupadmin** können Verbindungsserver hinzufügen und entfernen, und sie können einige gespeicherte Systemprozeduren ausführen.  
   
- Kontrollkästchen**sysadmin**  
+ Kontrollkästchen **sysadmin**  
  Mitglieder der festen Serverrolle **sysadmin** können in [!INCLUDE[ssDE](../../../includes/ssde-md.md)]beliebige Aktivitäten ausführen.  
   
 ### <a name="user-mapping"></a>Benutzerzuordnung  
@@ -147,7 +147,7 @@ ms.locfileid: "91867449"
  Geben Sie einen Datenbankbenutzer an, der der Anmeldung zugeordnet werden soll. Standardmäßig ist der Name des Datenbankbenutzers mit dem Anmeldenamen identisch.  
   
  **Standardschema**  
- Gibt das Standardschema des Benutzers an. Wenn ein Benutzer zum ersten Mal erstellt wird, wird als Standardschema **dbo**verwendet. Es kann auch ein Standardschema angegeben werden, das noch nicht vorhanden ist. Für Benutzer, die einer Windows-Gruppe, einem Zertifikat oder einem asymmetrischen Schlüssel zugeordnet sind, kann kein Standardschema angegeben werden.  
+ Gibt das Standardschema des Benutzers an. Wenn ein Benutzer zum ersten Mal erstellt wird, wird als Standardschema **dbo** verwendet. Es kann auch ein Standardschema angegeben werden, das noch nicht vorhanden ist. Für Benutzer, die einer Windows-Gruppe, einem Zertifikat oder einem asymmetrischen Schlüssel zugeordnet sind, kann kein Standardschema angegeben werden.  
   
  **Gastkonto aktiviert für:** _Datenbankname_  
  Ein Nur-Lese-Attribut, das angibt, ob das Gastkonto für die ausgewählte Datenbank aktiviert ist. Verwenden Sie die Seite **Status** des Dialogfelds **Anmeldungseigenschaften** des Gastkontos, um das Gastkonto zu aktivieren oder zu deaktivieren.  

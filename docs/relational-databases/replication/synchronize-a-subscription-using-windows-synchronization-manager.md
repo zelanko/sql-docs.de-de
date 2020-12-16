@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 591b33a5ad44a242fde2377c86002ea1f5b5931a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 3b29f98ad39d34935d65530841f8e81063233791
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719517"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468721"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>Synchronisieren eines Abonnements mit der Synchronisierungsverwaltung von Windows
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,11 +45,11 @@ ms.locfileid: "85719517"
   
 1.  Starten Sie die Synchronisierungsverwaltung mithilfe einer der folgenden Methoden:  
   
-    -   Klicken Sie in Internet Explorer auf das Menü **Extras**und anschließend auf **Synchronisieren**.  
+    -   Klicken Sie in Internet Explorer auf das Menü **Extras** und anschließend auf **Synchronisieren**.  
   
     -   Klicken Sie auf **Start**, zeigen Sie auf **Programme** oder **Alle Programme**, zeigen Sie auf **Zubehör**, und klicken Sie dann auf **Synchronisieren**.  
   
-    -   Klicken Sie auf **Start**und anschließend auf **Ausführen** . Geben Sie im Dialogfeld **Ausführen** **mobsync.exe** in the **Öffnen** ein, und klicken Sie dann auf **OK**.  
+    -   Klicken Sie auf **Start** und anschließend auf **Ausführen** . Geben Sie im Dialogfeld **Ausführen** **mobsync.exe** in the **Öffnen** ein, und klicken Sie dann auf **OK**.  
   
 2.  Wählen Sie im Dialogfeld **Zu synchronisierende Objekte** die Abonnements aus, die Sie synchronisieren möchten. Die Abonnements werden unter den auf dem Computer installierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen aufgeführt.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "85719517"
   
     -   **Identifikation**  
   
-    -   **Abonnentenanmeldung**, **Verteileranmeldung**und **Verlegeranmeldung** (nur für die Mergereplikation)  
+    -   **Abonnentenanmeldung**, **Verteileranmeldung** und **Verlegeranmeldung** (nur für die Mergereplikation)  
   
     -   **Webserverinformationen** (für Mergeabonnements auf Abonnenten, auf denen SQL Server 2005 oder höher ausgeführt wird)  
   
@@ -117,7 +117,7 @@ ms.locfileid: "85719517"
      Die ausgewählte Zeile wird dann auf den Verleger und/oder Abonnenten angewendet. Bei folgenden Synchronisierungen wird die Zeile an andere Knoten der Topologie weitergegeben.  
   
 > [!NOTE]  
->  Bearbeitungen werden nur dann angewendet, wenn sie zur Zeile gehören, die für die Lösung ausgewählt wurde. Wenn Sie z. B. Bearbeitungen unter **Verleger**vornehmen und dann auf **Abonnenten akzeptieren**klicken, werden die Bearbeitungen verworfen.  
+>  Bearbeitungen werden nur dann angewendet, wenn sie zur Zeile gehören, die für die Lösung ausgewählt wurde. Wenn Sie z. B. Bearbeitungen unter **Verleger** vornehmen und dann auf **Abonnenten akzeptieren** klicken, werden die Bearbeitungen verworfen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)  

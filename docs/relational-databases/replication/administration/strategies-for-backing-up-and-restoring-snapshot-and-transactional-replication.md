@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5da2a080ef20bd98b27873796a64b433268ae06f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: 1d395bebae8b009f4e91d8df074401f8659e1748
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87108427"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467401"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Strategien zum Sichern und Wiederherstellen einer Momentaufnahme- und Transaktionsreplikation
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
@@ -186,7 +186,7 @@ ms.locfileid: "87108427"
          Weitere Informationen zum Angeben, dass der Abonnement bereits über die Daten verfügt, finden Sie unter [Initialize a Subscription Manually](../../../relational-databases/replication/initialize-a-subscription-manually.md).  
   
 #### <a name="publication-database-peer-to-peer-transactional-replication"></a>Veröffentlichungsdatenbank: Peer-zu-Peer-Transaktionsreplikation  
- In den folgenden Schritten sind die Veröffentlichungsdatenbanken **A**, **B**und **C** Bestandteil einer Peer-zu-Peer-Transaktionsreplikationstopologie. Die Datenbanken **A** und **C** sind online und funktionieren ordnungsgemäß; Datenbank **B** muss wiederhergestellt werden. Der hier beschriebene Prozess, insbesondere die Schritte 7, 10 und 11, ist vergleichbar mit dem Prozess zum Hinzufügen eines Knotens zu einer Peer-zu-Peer-Topologie. Die einfachste Möglichkeit zum Ausführen dieser Schritte ist diejenige mithilfe des Assistenten zum Konfigurieren der Peer-zu-Peer-Topologie. Sie können jedoch auch gespeicherte Prozeduren dafür verwenden.  
+ In den folgenden Schritten sind die Veröffentlichungsdatenbanken **A**, **B** und **C** Bestandteil einer Peer-zu-Peer-Transaktionsreplikationstopologie. Die Datenbanken **A** und **C** sind online und funktionieren ordnungsgemäß; Datenbank **B** muss wiederhergestellt werden. Der hier beschriebene Prozess, insbesondere die Schritte 7, 10 und 11, ist vergleichbar mit dem Prozess zum Hinzufügen eines Knotens zu einer Peer-zu-Peer-Topologie. Die einfachste Möglichkeit zum Ausführen dieser Schritte ist diejenige mithilfe des Assistenten zum Konfigurieren der Peer-zu-Peer-Topologie. Sie können jedoch auch gespeicherte Prozeduren dafür verwenden.  
   
 1.  Führen Sie die Verteilungs-Agents aus, um die Abonnements in den Datenbanken **A** und **C** zu synchronisieren. Fahren Sie mit Schritt 2 fort.  
   
@@ -238,17 +238,17 @@ ms.locfileid: "87108427"
   
     4.  Führen Sie [sp_helppeerresponses](../../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) unter Angabe des in Schritt B abgerufenen Werts für `@request_id` aus. Warten Sie, bis alle Knoten angeben, dass sie die Peeranforderung empfangen haben. Fahren Sie mit Schritt e fort.  
   
-    5.  Erstellen Sie das Abonnement in Datenbank **B** für die Veröffentlichung in Datenbank **C**neu. Geben Sie dabei an, dass der Abonnent bereits über die Daten verfügt. Fahren Sie mit Schritt b fort.  
+    5.  Erstellen Sie das Abonnement in Datenbank **B** für die Veröffentlichung in Datenbank **C** neu. Geben Sie dabei an, dass der Abonnent bereits über die Daten verfügt. Fahren Sie mit Schritt b fort.  
   
-    6.  Erstellen Sie das Abonnement in Datenbank **C** für die Veröffentlichung in Datenbank **B**neu. Geben Sie dabei an, dass der Abonnent bereits über die Daten verfügt. Fahren Sie mit Schritt 13 fort.  
+    6.  Erstellen Sie das Abonnement in Datenbank **C** für die Veröffentlichung in Datenbank **B** neu. Geben Sie dabei an, dass der Abonnent bereits über die Daten verfügt. Fahren Sie mit Schritt 13 fort.  
   
-12. Erstellen Sie das Abonnement zwischen Datenbank **B** und Datenbank **C**neu:  
+12. Erstellen Sie das Abonnement zwischen Datenbank **B** und Datenbank **C** neu:  
   
-    1.  Fragen Sie in Datenbank **B**die [MSpeer_lsns](../../../relational-databases/system-tables/mspeer-lsns-transact-sql.md) -Tabelle ab, um die Protokollfolgenummer (Log Sequence Number, LSN) der letzten Transaktion abzurufen, die Datenbank **B** von Datenbank **C**erhalten hat.  
+    1.  Fragen Sie in Datenbank **B** die [MSpeer_lsns](../../../relational-databases/system-tables/mspeer-lsns-transact-sql.md) -Tabelle ab, um die Protokollfolgenummer (Log Sequence Number, LSN) der letzten Transaktion abzurufen, die Datenbank **B** von Datenbank **C** erhalten hat.  
   
     2.  Erstellen Sie das Abonnement in Datenbank **B** für die Veröffentlichung in Datenbank **C** neu. Geben Sie dabei an, dass das Abonnement basierend auf der LSN initialisiert wird (ein Wert **initialize from lsn** für den `@sync_type`-Parameter von [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)). Fahren Sie mit Schritt b fort.  
   
-    3.  Erstellen Sie das Abonnement in Datenbank **C** für die Veröffentlichung in Datenbank **B**neu. Geben Sie dabei an, dass der Abonnent bereits über die Daten verfügt. Fahren Sie mit Schritt 13 fort.  
+    3.  Erstellen Sie das Abonnement in Datenbank **C** für die Veröffentlichung in Datenbank **B** neu. Geben Sie dabei an, dass der Abonnent bereits über die Daten verfügt. Fahren Sie mit Schritt 13 fort.  
   
 13. Führen Sie die Verteilungs-Agents aus, und synchronisieren Sie die Abonnements in den Datenbanken **B** und **C**. Die Wiederherstellung ist abgeschlossen.  
   

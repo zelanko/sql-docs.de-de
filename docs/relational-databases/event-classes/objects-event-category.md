@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: acc1c7b0-4abf-42f8-b9a9-c383b715a735
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 19ce2af59fac2f44b882b9fb5eb400e968a1bb7c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2698863df40afbb0abe937f89dd093845cc0fa72
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448599"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467891"
 ---
 # <a name="objects-event-category"></a>Objekte (Ereigniskategorie)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88448599"
 |[Object:Created-Ereignisklasse](../../relational-databases/event-classes/object-created-event-class.md)|Gibt an, dass ein Objekt erstellt wurde, z. B. durch die CREATE INDEX-Anweisung, die CREATE TABLE-Anweisung oder die CREATE DATABASE-Anweisung.|  
 |[Object:Deleted-Ereignisklasse](../../relational-databases/event-classes/object-deleted-event-class.md)|Gibt an, dass ein Objekt gelöscht wurde, z. B. durch die DROP INDEX-Anweisung oder die DROP TABLE-Anweisung.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md)  
   
   
