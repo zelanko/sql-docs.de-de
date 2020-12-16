@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 15859f0f54804417e1bb0e6a871b1d84d1e40191
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 2cc745a35d1444f19da3916f090c231bb1b0f549
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423644"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461891"
 ---
 # <a name="add-or-edit-filter"></a>Hinzufügen oder Bearbeiten von Filtern
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "88423644"
   
 2.  **Vervollständigen Sie die Filteranweisung, um die von Abonnenten empfangenen Tabellenzeilen zu identifizieren**  
   
-     Definieren Sie eine neue Filteranweisung, oder bearbeiten Sie eine vorhandene. Im Listenfeld **Spalten** werden alle Spalten aufgeführt, die Sie aus einer in **Wählen Sie die zu filternde Tabelle aus**ausgewählten Tabelle veröffentlichen. Der Textbereich **Filteranweisung** enthält den Standardtext im folgenden Format:  
+     Definieren Sie eine neue Filteranweisung, oder bearbeiten Sie eine vorhandene. Im Listenfeld **Spalten** werden alle Spalten aufgeführt, die Sie aus einer in **Wählen Sie die zu filternde Tabelle aus** ausgewählten Tabelle veröffentlichen. Der Textbereich **Filteranweisung** enthält den Standardtext im folgenden Format:  
   
      `SELECT <published_columns> FROM [schema].[tablename] WHERE`  
   
@@ -58,7 +58,7 @@ ms.locfileid: "88423644"
   
 3.  **Geben Sie an, wie viele Abonnements Daten aus dieser Tabelle empfangen.**  
   
-     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höher; nur für Mergereplikationen. Mithilfe von Mergereplikationen können Sie den für Ihre Daten und Ihre Anwendung am besten geeigneten Partitionstyp angeben. Wenn Sie **Eine Zeile aus dieser Tabelle wird nur an ein Abonnement gesendet**auswählen, legt die Mergereplikation die Option für nicht überlappende Partitionen fest. Nicht überlappende Partitionen arbeiten zur Leistungsverbesserung mit vorausberechneten Partitionen zusammen, wobei nicht überlappende Partitionen die bei vorausberechneten Partitionen entstehenden Uploadkosten minimieren. Die Leistungsvorteile nicht überlappender Partitionen treten deutlicher hervor, wenn die verwendeten parametrisierten Filter und Joinfilter komplexer sind. Bei Auswahl dieser Option müssen Sie jedoch sicherstellen, dass die Daten so partitioniert werden, dass eine Zeile nicht für mehrere Abonnenten repliziert werden kann. Weitere Informationen finden Sie im Abschnitt zum Festlegen von Partitionsoptionen unter [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höher; nur für Mergereplikationen. Mithilfe von Mergereplikationen können Sie den für Ihre Daten und Ihre Anwendung am besten geeigneten Partitionstyp angeben. Wenn Sie **Eine Zeile aus dieser Tabelle wird nur an ein Abonnement gesendet** auswählen, legt die Mergereplikation die Option für nicht überlappende Partitionen fest. Nicht überlappende Partitionen arbeiten zur Leistungsverbesserung mit vorausberechneten Partitionen zusammen, wobei nicht überlappende Partitionen die bei vorausberechneten Partitionen entstehenden Uploadkosten minimieren. Die Leistungsvorteile nicht überlappender Partitionen treten deutlicher hervor, wenn die verwendeten parametrisierten Filter und Joinfilter komplexer sind. Bei Auswahl dieser Option müssen Sie jedoch sicherstellen, dass die Daten so partitioniert werden, dass eine Zeile nicht für mehrere Abonnenten repliziert werden kann. Weitere Informationen finden Sie im Abschnitt zum Festlegen von Partitionsoptionen unter [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  Nachdem Sie einen Filter hinzugefügt oder bearbeitet haben, klicken Sie auf **OK** , um die Änderungen zu speichern und das Dialogfeld zu schließen. Der von Ihnen angegebene Filter wird analysiert und für die Tabelle in der SELECT-Klausel ausgeführt. Wenn die Filteranweisung Syntaxfehler oder andere Probleme enthält, werden Sie benachrichtigt und können die Filteranweisung bearbeiten.  
   

@@ -12,13 +12,13 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 75d9993cb91ff153075aa1feae19dd5a43499b0d
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>= sql-server-ver15'
+ms.openlocfilehash: 99b04548244da3bda45346e7aa4a7c4d72481789
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868163"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463091"
 ---
 # <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutorial: Always Encrypted mit Secure Enclaves mithilfe von SSMS
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -285,7 +285,7 @@ In diesem Schritt verschlüsseln Sie die in den Spalten **SSN** und **Salary** g
     1. Starten Sie eine neue SSMS-Instanz.
     1. Geben Sie im Dialogfeld **Mit Server verbinden** Ihren Servernamen, eine Authentifizierungsmethode und Ihre Anmeldeinformationen an.
     1. Klicken Sie auf **Optionen >>** , und wählen Sie die Registerkarte **Always Encrypted** aus.
-    1. Aktivieren Sie das Kontrollkästchen **Always Encrypted aktivieren (Spaltenverschlüsselung)** und geben Sie Ihre Enclave-Nachweis-URL an (z.B. ht<span>tp://</span>hgs.bastion.local/Attestation).
+    1. Aktivieren Sie das Kontrollkästchen **Always Encrypted aktivieren (Spaltenverschlüsselung)** und geben Sie Ihre Enclave-Nachweis-URL an (z.B. ht <span>tp://</span>hgs.bastion.local/Attestation).
     1. Wählen Sie **Verbinden**.
     1. Wenn Sie aufgefordert werden, die Parametrisierung für Always Encrypted zu aktivieren, klicken Sie auf **Aktivieren**.
 

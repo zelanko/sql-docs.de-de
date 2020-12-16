@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7c71ec9f-0180-4398-b32a-4bfb7592e75d
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18ed629f6a9d02c0068a20fc1da3e8d5c4375dc2
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 70df620a283ac7f49c8ec854884a25843adc3e1c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645791"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464511"
 ---
 # <a name="rename-columns-database-engine"></a>Umbenennen von Spalten (Datenbank-Engine)
 
@@ -61,17 +61,17 @@ Erfordert die ALTER-Berechtigung für das Objekt.
 ### <a name="to-rename-a-column-using-object-explorer"></a>So benennen Sie eine Spalte mit Objekt-Explorer um
 
 1. Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.
-2. Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf die Tabelle, in der Sie Spalten umbenennen möchten, und klicken Sie dann auf **Umbenennen**.
+2. Klicken Sie im **Objekt-Explorer** mit der rechten Maustaste auf die Tabelle, in der Sie Spalten umbenennen möchten, und klicken Sie dann auf **Umbenennen**.
 3. Geben Sie einen neuen Spaltennamen ein.
 
 ### <a name="to-rename-a-column-using-table-designer"></a>So benennen Sie eine Spalte mit dem Tabellen-Designer um
 
-1. Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf die Tabelle, in der Sie Spalten umbenennen möchten, und klicken Sie dann auf **Entwerfen**.
-2. Wählen Sie unter **Spaltenname**den zu ändernden Namen aus, und geben Sie einen neuen Namen ein.
+1. Klicken Sie im **Objekt-Explorer** mit der rechten Maustaste auf die Tabelle, in der Sie Spalten umbenennen möchten, und klicken Sie dann auf **Entwerfen**.
+2. Wählen Sie unter **Spaltenname** den zu ändernden Namen aus, und geben Sie einen neuen Namen ein.
 3. Klicken Sie im Menü **Datei** auf _Tabellenname_ **speichern**.
 
 > [!NOTE]
-> Sie können den Spaltennamen auch auf der Registerkarte **Spalteneigenschaften** ändern. Wählen Sie die Spalte aus, deren Name geändert werden soll, und geben Sie für **Name**einen neuen Wert ein.
+> Sie können den Spaltennamen auch auf der Registerkarte **Spalteneigenschaften** ändern. Wählen Sie die Spalte aus, deren Name geändert werden soll, und geben Sie für **Name** einen neuen Wert ein.
 
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL
 

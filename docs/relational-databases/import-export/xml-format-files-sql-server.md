@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f336e026d95db0de5ad40a9fb4ebc90d8165f609
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 630b6a3c00d3bd4fccdb13acaadad64279a460c1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998989"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465521"
 ---
 # <a name="xml-format-files-sql-server"></a>XML-Formatdateien (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -270,12 +270,12 @@ ms.locfileid: "85998989"
   
 |Typkategorie|\<COLUMN>-Datentypen|Erforderliche(s) XML-Attribut(e)<br /><br /> für Datentyp|Optionale(s) XML-Attribut(e)<br /><br /> für Datentyp|  
 |-------------------|---------------------------|---------------------------------------------------|---------------------------------------------------|  
-|Korrigiert|**SQLBIT**, **SQLTINYINT**, **SQLSMALLINT**, **SQLINT**, **SQLBIGINT**, **SQLFLT4**, **SQLFLT8**, **SQLDATETIME**, **SQLDATETIM4**, **SQLDATETIM8**, **SQLMONEY**, **SQLMONEY4**, **SQLVARIANT**und **SQLUNIQUEID**|Keine.|NULLABLE|  
+|Korrigiert|**SQLBIT**, **SQLTINYINT**, **SQLSMALLINT**, **SQLINT**, **SQLBIGINT**, **SQLFLT4**, **SQLFLT8**, **SQLDATETIME**, **SQLDATETIM4**, **SQLDATETIM8**, **SQLMONEY**, **SQLMONEY4**, **SQLVARIANT** und **SQLUNIQUEID**|Keine.|NULLABLE|  
 |Variable Zahl|**SQLDECIMAL** und **SQLNUMERIC**|Keine.|NULLABLE, PRECISION, SCALE|  
-|LOB|**SQLIMAGE**, **CharLOB**, **SQLTEXT**und **SQLUDT**|Keine.|NULLABLE|  
+|LOB|**SQLIMAGE**, **CharLOB**, **SQLTEXT** und **SQLUDT**|Keine.|NULLABLE|  
 |Character LOB|**SQLNTEXT**|Keine.|NULLABLE|  
 |Binäre Zeichenfolge|**SQLBINARY** und **SQLVARYBIN**|Keine.|NULLABLE, LENGTH|  
-|Zeichenfolge|**SQLCHAR**, **SQLVARYCHAR**, **SQLNCHAR**und **SQLNVARCHAR**|Keine.|NULLABLE, LENGTH|  
+|Zeichenfolge|**SQLCHAR**, **SQLVARYCHAR**, **SQLNCHAR** und **SQLNVARCHAR**|Keine.|NULLABLE, LENGTH|  
   
 > [!IMPORTANT]  
 >  Verwenden Sie in der Formatdatei einen der folgenden Datentypen für den Massenexport oder -import von SQLXML-Daten: SQLCHAR oder SQLVARYCHAR (die Daten werden in der Clientcodepage oder in der Codepage, die durch die Sortierung impliziert wird, gesendet), SQLNCHAR oder SQLNVARCHAR (die Daten werden als Unicode gesendet) oder SQLBINARY oder SQLVARYBIN (die Daten werden ohne Konvertierung gesendet).  
@@ -291,7 +291,7 @@ ms.locfileid: "85998989"
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen (BULK INSERT und der OPENROWSET-Massenrowsetanbieter)  
   
-     Beim Massenimport von Daten in eine Tabelle verwenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen die \<ROW>-Komponente, um das Eingaberowset zu generieren. Darüber hinaus führen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen auf Grundlage der unter \<ROW> angegebenen Spaltentypen und der entsprechenden Spalte in der Zieltabelle die erforderlichen Typkonvertierungen durch. Besteht eine Nichtübereinstimmung zwischen den Spaltentypen, die in der Formatdatei und in der Zieltabelle angegeben sind, wird eine zusätzliche Typkonvertierung durchgeführt. Aufgrund dieser zusätzlichen Typkonvertierung kann es zu einer Diskrepanz (d. h. einem Genauigkeitsverlust) im Verhalten von BULK INSERT bzw. des OPENROWSET-Massenrowsetanbieters verglichen mit **bcp**kommen.  
+     Beim Massenimport von Daten in eine Tabelle verwenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen die \<ROW>-Komponente, um das Eingaberowset zu generieren. Darüber hinaus führen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen auf Grundlage der unter \<ROW> angegebenen Spaltentypen und der entsprechenden Spalte in der Zieltabelle die erforderlichen Typkonvertierungen durch. Besteht eine Nichtübereinstimmung zwischen den Spaltentypen, die in der Formatdatei und in der Zieltabelle angegeben sind, wird eine zusätzliche Typkonvertierung durchgeführt. Aufgrund dieser zusätzlichen Typkonvertierung kann es zu einer Diskrepanz (d. h. einem Genauigkeitsverlust) im Verhalten von BULK INSERT bzw. des OPENROWSET-Massenrowsetanbieters verglichen mit **bcp** kommen.  
   
      Anhand der Informationen im \<ROW>-Element kann eine Zeile erstellt werden, ohne dass zusätzliche Informationen erforderlich sind. Aus diesem Grund können Sie ein Rowset mithilfe einer SELECT-Anweisung generieren (SELECT \* FROM OPENROWSET(BULK *datafile* FORMATFILE=*xmlformatfile*).  
   

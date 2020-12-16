@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d213b41fe392bbc82f663360879b7d67b07675be
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 09be06fc9f84b46a93363c8386b492f987872583
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767549"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463101"
 ---
 # <a name="rotate-always-encrypted-keys-using-sql-server-management-studio"></a>Rotieren von Always Encrypted-Schlüsseln mithilfe von SQL Server Management Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ Ein Spaltenhauptschlüssel schützt in der Regel mindestens einen Spaltenverschl
 In diesem Schritt müssen Sie jeden Spaltenverschlüsselungsschlüssel, der mit dem aktuellen (zu rotierenden) Spaltenhauptschlüssel geschützt ist, mit dem neuen Spaltenhauptschlüssel verschlüsseln, und den neuen verschlüsselten Wert in der Datenbank speichern. Daher verfügt jeder von der Rotation betroffene Spaltenverschlüsselungsschlüssel über zwei verschlüsselte Werte: ein Wert, der mit dem vorhandenen Spaltenhauptschlüssel verschlüsselt wurde, und ein neuer Wert, der mit dem neuen Spaltenhauptschlüssel verschlüsselt wurde.
 
 1.  Navigieren Sie über den **Objekt-Explorer** zu dem Ordner **Sicherheit > Always Encrypted-Schlüssel > Spaltenhauptschlüssel**, und suchen Sie den Spaltenhauptschlüssel, den Sie rotieren möchten.
-2.  Klicken Sie mit der rechten Maustaste auf den Spaltenhauptschlüssel, und wählen Sie **Rotieren**aus.
+2.  Klicken Sie mit der rechten Maustaste auf den Spaltenhauptschlüssel, und wählen Sie **Rotieren** aus.
 3.  Wählen Sie im Dialogfeld **Column Master Key Rotation** (Rotation der Spaltenhauptschlüssel) den Namen Ihres neuen Spaltenhauptschlüssels im Feld **Ziel** aus, den Sie in Schritt 1 erstellt haben.
 4.  Überprüfen Sie die Liste der Spaltenverschlüsselungsschlüssel, die durch den vorhanden Spaltenhauptschlüssel geschützt sind. Die Rotation wirkt sich auf diese Schlüssel aus.
 5.  Klicken Sie auf **OK**.
@@ -79,7 +79,7 @@ Ein weiterer Grund dafür, den alten Wert vor dem Archivieren oder Entfernen des
 > Wenn Sie den Wert eines Spaltenverschlüsselungsschlüssels entfernen, bevor der zugehörige Spaltenhauptschlüssel für eine Anwendung verfügbar gemacht wurde, kann die Anwendung die Datenbankspalte nicht mehr entschlüsseln.
 
 1.  Navigieren Sie über den **Objekt-Explorer** zu dem Ordner **Sicherheit > Always Encrypted-Schlüssel**, und suchen Sie den vorhandenen Spaltenhauptschlüssel, den Sie ersetzen möchten.
-2.  Klicken Sie mit der rechten Maustaste auf den vorhandenen Spaltenhauptschlüssel, und wählen Sie **Cleanup**aus.
+2.  Klicken Sie mit der rechten Maustaste auf den vorhandenen Spaltenhauptschlüssel, und wählen Sie **Cleanup** aus.
 3.  Überprüfen Sie die Liste der zu entfernenden Werte für den Spaltenhauptschlüssel.
 4.  Klicken Sie auf **OK**.
 
@@ -90,7 +90,7 @@ SQL Server Management Studio gibt [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](.
 Wenn Sie die Definition des alten Spaltenhauptschlüssels aus der Datenbank entfernen möchten, befolgen Sie diese Schritte.
 
 1. Navigieren Sie über den **Objekt-Explorer** zu dem Ordner **Sicherheit > Always Encrypted-Schlüssel > Spaltenhauptschlüssel**, und suchen Sie den alten Spaltenhauptschlüssel, der aus der Datenbank entfernt werden soll.
-2. Klicken Sie mit der rechten Maustaste auf den alten Spaltenhauptschlüssel, und wählen Sie **Löschen**aus. (Dadurch wird eine [DROP COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/drop-column-master-key-transact-sql.md) -Anweisung generiert und ausgegeben, die die Metadaten des Spaltenhauptschlüssels entfernt.)
+2. Klicken Sie mit der rechten Maustaste auf den alten Spaltenhauptschlüssel, und wählen Sie **Löschen** aus. (Dadurch wird eine [DROP COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/drop-column-master-key-transact-sql.md) -Anweisung generiert und ausgegeben, die die Metadaten des Spaltenhauptschlüssels entfernt.)
 3. Klicken Sie auf **OK**.
 
 > [!NOTE]
@@ -105,7 +105,7 @@ Die Rotation eines Spaltenhauptschlüssels erfordert die folgenden Berechtigunge
 
 Sie müssen sowohl auf den alten als auch auf den neuen Spaltenhauptschlüssel in ihren jeweiligen Schlüsselspeichern zugreifen können. Sie benötigen möglicherweise Berechtigungen für Schlüsselspeicher oder/und den Schlüssel, um auf einen Schlüsselspeicher zugreifen und einen Spaltenhauptschlüssel verwenden zu können:
 - **Zertifikatspeicher – Lokaler Computer**: Sie benötigen Lesezugriff auf das Zertifikat, das als Spaltenhauptschlüssel verwendet wird, oder Administratorrechte auf dem Computer.
-- **Azure Key Vault**: Sie benötigen die Berechtigungen *create*, *get*, *unwrapKey*, *wrapKey*, *sign*und *verify* für den Tresor, der den bzw. die Spaltenhauptschlüssel enthält.
+- **Azure Key Vault**: Sie benötigen die Berechtigungen *create*, *get*, *unwrapKey*, *wrapKey*, *sign* und *verify* für den Tresor, der den bzw. die Spaltenhauptschlüssel enthält.
 - **Schlüsselspeicheranbieter (CNG)** : Bei der Verwendung eines Schlüsselspeichers oder Schlüssels werden Sie möglicherweise aufgefordert, die erforderlichen Berechtigungen und Anmeldeinformationen anzugeben, welche von der Konfiguration des Speichers und des KSP abhängen.
 - **Kryptografiedienstanbieter (Kryptografie-API)** : Bei der Verwendung eines Schlüsselspeichers oder Schlüssels werden Sie möglicherweise aufgefordert, die erforderlichen Berechtigungen und Anmeldeinformationen anzugeben, welche von der Konfiguration des Speichers und des CSP abhängen.
 
@@ -125,9 +125,9 @@ Verwenden Sie den Always Encrypted-Assistenten, um einen Spaltenverschlüsselung
 3.  Erweitern Sie auf der Seite **Spaltenauswahl** die Tabellen, und suchen Sie alle Spalten, die Sie ersetzen möchten und die derzeit mit dem alten Spaltenverschlüsselungsschlüssel verschlüsselt sind.
 4.  Legen Sie **Verschlüsselungsschlüssel** für jede mit dem alten Verschlüsselungsschlüssel verschlüsselte Spalte auf einen neuen, automatisch generierten Schlüssel fest. **Hinweis:** Alternativ können Sie einen neuen Spaltenverschlüsselungsschlüssel erstellen, bevor Sie den Assistenten ausführen. Informationen dazu finden Sie unter [Bereitstellen von Spaltenverschlüsselungsschlüsseln mit dem Dialogfeld „Neuer Spaltenverschlüsselungsschlüssel“](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog).
 5.  Wählen Sie auf der Seite **Konfiguration des Hauptschlüssels** einen Speicherort für den neuen Schlüssel aus, wählen Sie eine Hauptschlüsselquelle aus, und klicken Sie anschließend auf **Weiter**. **Hinweis:** Wenn Sie einen vorhandenen Spaltenverschlüsselungsschlüssel verwenden (keinen automatisch generierten), können Sie diesen Schritt überspringen.
-6.  Wählen Sie auf der **Überprüfungsseite**aus, ob das Skript sofort ausgeführt oder ob ein PowerShell-Skript erstellt werden soll, und klicken Sie anschließend auf **Weiter**.
+6.  Wählen Sie auf der **Überprüfungsseite** aus, ob das Skript sofort ausgeführt oder ob ein PowerShell-Skript erstellt werden soll, und klicken Sie anschließend auf **Weiter**.
 7.  Überprüfen Sie die ausgewählten Optionen auf der Seite **Zusammenfassung**, klicken Sie anschließend auf **Fertig stellen**, und schließen Sie den Assistenten, wenn Sie alle Schritte ausgeführt haben.
-8.  Navigieren Sie über den **Objekt-Explorer**zu dem Ordner **Sicherheit &gt; Always Encrypted-Schlüssel &gt; Spaltenverschlüsselungsschlüssel** , und suchen Sie Ihren alten Spaltenverschlüsselungsschlüssel, der aus der Datenbank entfernt werden soll. Klicken Sie mit der rechten Maustaste auf den Schlüssel, und wählen Sie anschließend **Löschen**aus.
+8.  Navigieren Sie über den **Objekt-Explorer** zu dem Ordner **Sicherheit &gt; Always Encrypted-Schlüssel &gt; Spaltenverschlüsselungsschlüssel** , und suchen Sie Ihren alten Spaltenverschlüsselungsschlüssel, der aus der Datenbank entfernt werden soll. Klicken Sie mit der rechten Maustaste auf den Schlüssel, und wählen Sie anschließend **Löschen** aus.
 
 ### <a name="permissions-for-rotating-column-encryption-keys"></a>Berechtigung zum Rotieren von Spaltenverschlüsselungsschlüsseln
 

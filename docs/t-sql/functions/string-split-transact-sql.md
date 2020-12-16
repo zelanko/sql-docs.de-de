@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: a7c3220138c0f375b043f41044d5023fdb355ff5
-ms.sourcegitcommit: ef7539af262aad327270bb28752e420197e9e776
+monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017
+ms.openlocfilehash: d30220685c2654c745c40ecc8782b79049f5c598
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93405047"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461191"
 ---
 # <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
@@ -53,7 +53,7 @@ STRING_SPLIT ( string , separator )
 ## <a name="arguments"></a>Argumente
 
  *string*  
- Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines beliebigen Zeichentyps (z.B. **nvarchar** , **varchar** , **nchar** oder **char** ).  
+ Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines beliebigen Zeichentyps (z.B. **nvarchar**, **varchar**, **nchar** oder **char**).  
   
  *Trennzeichen*  
  Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) mit einem einzelnen Zeichen jedes beliebigen Zeichentyps (z.B. **nvarchar(1)** , **varchar(1)** , **nchar(1)** oder **char(1)** ), der als Trennzeichen für verkettete Teilzeichenfolgen verwendet wird.  
@@ -68,7 +68,7 @@ Gibt eine einspaltige Tabelle zurück, deren Zeilen die Teilzeichenfolgen sind. 
 
 Die Ausgabezeilen können in beliebiger Reihenfolge sein. Die Reihenfolge ist _nicht_ stimmt nicht garantiert mit der Reihenfolge der Teilzeichenfolgen in der Eingabezeichenfolge überein. Sie können die endgültige Sortierreihenfolge überschreiben, indem Sie in der SELECT-Anweisung (`ORDER BY value`) eine ORDER BY-Klausel verwenden.
 
-0x0000 ( **char(0)** ) ist ein nicht definiertes Zeichen in Windows-Sortierungen und kann nicht in SPRING_SPLIT enthalten sein.
+0x0000 (**char(0)** ) ist ein nicht definiertes Zeichen in Windows-Sortierungen und kann nicht in SPRING_SPLIT enthalten sein.
 
 Leere Teilzeichenfolgen der Länge null sind vorhanden, wenn die Eingabezeichenfolge zwei oder mehr aufeinanderfolgende Vorkommen des Trennzeichens enthält. Leere Teilzeichenfolgen werden genauso behandelt wie normale Teilzeichenfolgen. Sie können alle Zeilen, die die leere Teilzeichenfolge enthalten, mit der WHERE-Klausel (`WHERE value <> ''`) herausfiltern. Wenn die Eingabezeichenfolge NULL ist, gibt die Tabellenwertfunktion STRING_SPLIT eine leere Tabelle zurück.  
 

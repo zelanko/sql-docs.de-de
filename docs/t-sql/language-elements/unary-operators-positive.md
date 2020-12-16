@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 0f31c5cc-3078-4f6a-9870-7eb1a98053fb
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48ea2ba928333eef0980ad199e33f93f94a859c6
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ec7815d623208c5e2860fd233ba5a290e2e8762b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195422"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460903"
 ---
 # <a name="unary-operators---positive"></a>Unäre Operatoren: Positiv
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -57,7 +57,7 @@ Gibt den Wert eines numerischen Ausdrucks zurück (ein unärer Operator). Unäre
  Jeder gültige [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines Datentyps der numerischen Datentypkategorie. Gilt allerdings nicht für die Datentypen **datetime** und **smalldatetime**.  
   
 ## <a name="result-types"></a>Ergebnistypen  
- Gibt den Datentyp von *numeric_expression*zurück.  
+ Gibt den Datentyp von *numeric_expression* zurück.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Obwohl ein unäres Plus vor jedem numerischen Ausdruck angezeigt werden kann, führt es keinen Vorgang mit dem Wert aus, der von dem Ausdruck zurückgegeben wird. Insbesondere gibt es nicht den positiven Wert eines negativen Ausdrucks zurück. Verwenden Sie zum Zurückgeben des positiven Werts eines negativen Ausdrucks die [ABS](../../t-sql/functions/abs-transact-sql.md)-Funktion.  

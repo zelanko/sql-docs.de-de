@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: fffbaee8df76859f5c09d08e7bb0d23e466c4e00
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 17f96bc2ee6c1e8c4d55491424b0099c467ed8de
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918309"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461881"
 ---
 # <a name="best-practices-for-replication-administration"></a>Bewährte Methoden für die Replikationsverwaltung
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,12 +61,12 @@ ms.locfileid: "86918309"
   
 -   Abonnementdatenbanken  
   
--   Die Datenbanken**msdb** und **master** auf dem Verleger, Verteiler und allen Abonnenten  
+-   Die Datenbanken **msdb** und **master** auf dem Verleger, Verteiler und allen Abonnenten  
   
  Bei replizierten Datenbanken gibt es besondere Aspekte im Hinblick auf das Sichern und Wiederherstellen von Daten. Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von replizierten Datenbanken](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
   
 ## <a name="script-the-replication-topology"></a>Erstellen von Skripts für die Replikationstopologie  
- Für die Replikationskomponenten in einer Topologie sollten im Rahmen des Plans zur Wiederherstellung im Notfall Skripts erstellt werden; diese können dann auch zur Automatisierung sich wiederholender Tasks verwendet werden. Ein Skript enthält die gespeicherten [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Systemprozeduren zum Implementieren der Replikationskomponenten, für die Skripts erstellt wurden, z. B. einer Veröffentlichung oder eines Abonnements. Skripts können nach dem Erstellen einer Komponente nicht mithilfe eines Assistenten (z. B. dem Assistenten für neue Veröffentlichung) oder in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] erstellt werden. Sie können das Skript mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder **sqlcmd**anzeigen, ändern oder ausführen. Skripts können mit Sicherungsdateien gespeichert und dann verwendet werden, wenn eine Replikationstopologie erneut konfiguriert werden muss. Weitere Informationen finden Sie unter [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
+ Für die Replikationskomponenten in einer Topologie sollten im Rahmen des Plans zur Wiederherstellung im Notfall Skripts erstellt werden; diese können dann auch zur Automatisierung sich wiederholender Tasks verwendet werden. Ein Skript enthält die gespeicherten [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Systemprozeduren zum Implementieren der Replikationskomponenten, für die Skripts erstellt wurden, z. B. einer Veröffentlichung oder eines Abonnements. Skripts können nach dem Erstellen einer Komponente nicht mithilfe eines Assistenten (z. B. dem Assistenten für neue Veröffentlichung) oder in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] erstellt werden. Sie können das Skript mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder **sqlcmd** anzeigen, ändern oder ausführen. Skripts können mit Sicherungsdateien gespeichert und dann verwendet werden, wenn eine Replikationstopologie erneut konfiguriert werden muss. Weitere Informationen finden Sie unter [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
  Falls Eigenschaftenänderungen vorgenommen wurden, sollten für eine Komponente neue Skripts erstellt werden. Wenn Sie bei einer Transaktionsreplikation benutzerdefinierte gespeicherte Prozeduren verwenden, sollte zusammen mit den Skripts eine Kopie aller dieser Prozeduren gespeichert werden. Nach Änderungen an der Prozedur sollte die Kopie dann aktualisiert werden (zu Prozedurupdates kommt es in der Regel nach Schemaänderungen oder wenn sich die Anwendungsanforderungen ändern). Weitere Informationen zu benutzerdefinierten Prozeduren finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   

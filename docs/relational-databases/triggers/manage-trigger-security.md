@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 73e56eb0ffcc4996ddd6903f2e79c14947b9a450
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a5225cdec356cbefc3df6abae58ae4cd512445b8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485389"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461511"
 ---
 # <a name="manage-trigger-security"></a>Verwalten der Triggersicherheit
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Standardmäßig werden sowohl DML- als auch DDL-Trigger im Kontext des Benutzers ausgeführt, der den Trigger aufruft. Genauer ist der Benutzer, der den Trigger aufruft, derjenige Benutzer, der die Anweisung ausführt, die zum Ausführen des Triggers führt. Wenn die Benutzerin **Mary** beispielsweise eine DELETE-Anweisung ausführt, die dazu führt, dass der DML-Trigger **DML_trigMary** ausgeführt wird, wird der Code in **DML_trigMary** im Kontext der Privilegien für **Mary**ausgeführt. Dieses Standardverhalten kann von Benutzern ausgenutzt werden, die bösartigen Code in die Datenbank oder Serverinstanz einschleusen möchten. Beispielsweise wird der folgende DDL-Trigger vom Benutzer **JohnDoe** erstellt:  
+Standardmäßig werden sowohl DML- als auch DDL-Trigger im Kontext des Benutzers ausgeführt, der den Trigger aufruft. Genauer ist der Benutzer, der den Trigger aufruft, derjenige Benutzer, der die Anweisung ausführt, die zum Ausführen des Triggers führt. Wenn die Benutzerin **Mary** beispielsweise eine DELETE-Anweisung ausführt, die dazu führt, dass der DML-Trigger **DML_trigMary** ausgeführt wird, wird der Code in **DML_trigMary** im Kontext der Privilegien für **Mary** ausgeführt. Dieses Standardverhalten kann von Benutzern ausgenutzt werden, die bösartigen Code in die Datenbank oder Serverinstanz einschleusen möchten. Beispielsweise wird der folgende DDL-Trigger vom Benutzer **JohnDoe** erstellt:  
 
 ```sql
 CREATE TRIGGER DDL_trigJohnDoe
@@ -50,7 +50,7 @@ Dieser Trigger bewirkt Folgendes: Sobald ein Benutzer mit der Berechtigung, `GRA
 ## <a name="trigger-security-best-practices"></a>Bewährte Methoden für die Triggersicherheit  
  Sie können folgende Maßnahmen ergreifen, um zu vermeiden, dass Triggercode mit ausgeweiteten Privilegien ausgeführt wird:  
   
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 
 -   Eruieren Sie die in der Datenbank und der Serverinstanz vorhandenen DML- und DDL-Trigger, indem Sie die Katalogsichten [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) und [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md) abfragen. Die folgende Abfrage gibt alle DML-Trigger und DDL-Trigger auf Datenbankebene der aktuellen Datenbank zurück, sowie alle DDL-Trigger auf Serverebene der Serverinstanz:  
   
@@ -65,7 +65,7 @@ Dieser Trigger bewirkt Folgendes: Sobald ein Benutzer mit der Berechtigung, `GRA
 
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 -   Beachten Sie die in der Datenbank vorhandenen DML- und DDL-Trigger, indem Sie die Katalogsicht [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) abfragen. Die folgende Abfrage gibt alle DML-Trigger und DDL-Trigger auf Datenbankebene in der aktuellen Datenbank zurück:  
   

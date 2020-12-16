@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 27776324d94176619c25acbeefb3b6bd901d8a2a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4105a3c3b0ba43d3ed142cba31b2f991f6dc5287
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418934"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461561"
 ---
 # <a name="dml-triggers"></a>DML-Trigger
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,12 +61,12 @@ ms.locfileid: "88418934"
 |Anwendbarkeit|Tabellen|Tabellen und Sichten|  
 |Anzahl pro Tabelle oder Sicht|Mehrere Trigger pro auslösende Aktion (INSERT, UPDATE oder DELETE)|Ein Trigger pro auslösende Aktion (INSERT, UPDATE oder DELETE)|  
 |Kaskadierende Verweise|Keine Einschränkungen|INSTEAD OF UPDATE- und DELETE-Trigger sind nicht für Tabellen zulässig, die Ziel von kaskadierenden Einschränkungen für die referenzielle Integrität sind.|  
-|Ausführung|Nachher:<br /><br /> Einschränkungsverarbeitung<br /><br /> Deklarativen referenziellen Aktionen<br /><br /> Erstellung der**inserted** - und **deleted** -Tabellen<br /><br /> Der auslösenden Aktion|Vorher: Einschränkungsverarbeitung<br /><br /> Anstelle: Der auslösenden Aktion<br /><br /> Nach: Erstellung der  **inserted** - und **deleted** -Tabellen|  
-|Reihenfolge der Ausführung|Der zuerst und zuletzt auszuführende Trigger kann angegeben werden.|Nicht verfügbar|  
+|Ausführung|Nachher:<br /><br /> Einschränkungsverarbeitung<br /><br /> Deklarativen referenziellen Aktionen<br /><br /> Erstellung der **inserted** - und **deleted** -Tabellen<br /><br /> Der auslösenden Aktion|Vorher: Einschränkungsverarbeitung<br /><br /> Anstelle: Der auslösenden Aktion<br /><br /> Nach: Erstellung der  **inserted** - und **deleted** -Tabellen|  
+|Reihenfolge der Ausführung|Der zuerst und zuletzt auszuführende Trigger kann angegeben werden.|Nicht zutreffend|  
 |**varchar(max)**-, **nvarchar(max)**-, und **varbinary(max)** -Spaltenverweise in **eingefügten** und **gelöschten** Tabellen|Zulässig|Zulässig|  
-|Verweise auf**text**, **ntext**- und **image** -Spalten in **inserted** - und **deleted** -Tabellen|Nicht zulässig|Zulässig|  
+|Verweise auf **text**, **ntext**- und **image** -Spalten in **inserted** - und **deleted** -Tabellen|Nicht zulässig|Zulässig|  
   
- CLR-Trigger  
+ CLR-Auslöser  
  Ein CLR-Trigger kann ein AFTER- oder ein INSTEAD OF-Trigger sein. Bei einem CLR-Trigger kann es sich auch um einen DDL-Trigger handeln. Anstatt eine gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur auszuführen, führt ein CLR-Trigger eine oder mehrere Methoden aus, die in verwaltetem Code geschrieben wurden und Elemente einer Assembly sind, die in .NET Framework erstellt und in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hochgeladen werden.  
   
 ## <a name="related-tasks"></a>Related Tasks  

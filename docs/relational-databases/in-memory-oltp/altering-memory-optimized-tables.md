@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eed3fa25e6c9378d7996260f25c611f8c4e7d025
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: da12d83efd43c7ca6113348adee8e3bde14d9472
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867403"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465471"
 ---
 # <a name="altering-memory-optimized-tables"></a>Ändern von speicheroptimierten Tabellen
 
@@ -52,7 +52,7 @@ Die folgenden Änderungen werden unterstützt:
 
  Systemintern kompilierte gespeicherte Prozeduren müssen schemagebunden sein, d. h., sie haben eine schemagebundene Abhängigkeit zu den speicheroptimierten Tabellen, auf die sie zugreifen, und zu den Spalten, auf die sie verweisen. Eine schemagebundene Abhängigkeit ist eine Beziehung zwischen zwei Entitäten, mit der verhindert wird, dass die Entität, auf die verwiesen wird, gelöscht oder in einer inkompatiblen Art geändert wird, solange die verweisende Entität vorhanden ist.  
   
- Wird beispielsweise in einer schemagebundenen systemintern kompilierten gespeicherten Prozedur auf die Spalte *c1* aus der Tabelle *mytable*verwiesen, kann die Spalte *c1* nicht gelöscht werden. Entsprechend kann, wenn es eine solche Prozedur mit einer INSERT-Anweisung ohne Spaltenliste gibt (z. B. `INSERT INTO dbo.mytable VALUES (...)`) keine Spalte aus der Tabelle gelöscht werden.  
+ Wird beispielsweise in einer schemagebundenen systemintern kompilierten gespeicherten Prozedur auf die Spalte *c1* aus der Tabelle *mytable* verwiesen, kann die Spalte *c1* nicht gelöscht werden. Entsprechend kann, wenn es eine solche Prozedur mit einer INSERT-Anweisung ohne Spaltenliste gibt (z. B. `INSERT INTO dbo.mytable VALUES (...)`) keine Spalte aus der Tabelle gelöscht werden.  
 
 ## <a name="logging-of-alter-table-on-memory-optimized-tables"></a>Protokollieren von ALTER TABLE bei speicheroptimierten Tabellen
 

@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 9dbe5a21-9335-4f8b-85fd-9da83df79946
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a433fbfe50e2a673ab29595729f7c8b83f9444ae
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4b57082f1ce4f76e191c0237e80f404199a9ac4a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538212"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462641"
 ---
 # <a name="changing-the-schema-of-a-system-versioned-temporal-table"></a>Ändern des Schemas einer temporalen Tabelle mit Systemversionsverwaltung
 
@@ -58,7 +58,7 @@ ALTER TABLE dbo.Department
 
 ### <a name="important-remarks"></a>Wichtige Hinweise
 
-- Um das Schema der temporalen Tabelle zu ändern, ist die**CONTROL** -Berechtigung für aktuelle Tabellen und Verlaufstabellen erforderlich.
+- Um das Schema der temporalen Tabelle zu ändern, ist die **CONTROL** -Berechtigung für aktuelle Tabellen und Verlaufstabellen erforderlich.
 - Während eines **ALTER TABLE** -Vorgangs richtet das System eine Schemasperre auf beide Tabellen ein.
 - Die angegebene Schemaänderung wird entsprechend an eine Verlaufstabelle weitergegeben (je nach Art der Änderung).
 - Falls Sie eine nicht nullierbare Spalte hinzufügen oder eine vorhandene Spalte dahingehend ändern, dass sie nicht nullierbar wird, müssen Sie Standardwerte für die vorhandenen Zeilen angeben. Das System generiert einen zusätzlichen Standardwert mit demselben Wert und wendet ihn auf die Verlaufstabelle an. Das Hinzufügen von **DEFAULT** zu einer nicht leeren Tabelle ist in allen Editionen außer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition (dort ist es ein Metadatenvorgang) ein Vorgang, der die Datengröße betrifft.
@@ -67,11 +67,11 @@ ALTER TABLE dbo.Department
 - Ziehen Sie das Entfernen von Standardeinschränkungen für die Verlaufstabelle in Betracht, sobald Sie eine Tabelle mit einer neuen NOT NULL-Spalte erweitert haben, da alle Spalten in dieser Tabelle automatisch durch das System befüllt werden.
 - Die Onlineoption (**WITH (ONLINE = ON**) hat keine Auswirkungen auf **ALTER TABLE ALTER COLUMN** , wenn es sich um eine temporale Tabelle mit Systemversionsverwaltung handelt. ALTER COLUMN wird nicht im Modus „online“ durchgeführt. Dies gilt unabhängig vom Wert, der für die Option ONLINE festgelegt wurde.
 - Sie können **ALTER COLUMN** verwenden, um die **IsHidden** -Eigenschaft für Zeitraumspalten zu ändern.
-- Sie können keine direkte **ALTER** -Anweisung für die folgenden Schemaänderungen verwenden. Legen Sie für diese Art von Änderungen **SYSTEM_VERSIONING = OFF**fest.
+- Sie können keine direkte **ALTER** -Anweisung für die folgenden Schemaänderungen verwenden. Legen Sie für diese Art von Änderungen **SYSTEM_VERSIONING = OFF** fest.
 
   - Hinzufügen einer berechneten Spalte
   - Hinzufügen einer **IDENTITY** -Spalte
-  - Hinzufügen einer **SPARSE** -Spalte oder Ändern einer vorhandene Spalte in **SPARSE**, wenn die Verlaufstabelle auf **DATA_COMPRESSION = PAGE** oder **DATA_COMPRESSION = ROW**festgelegt ist (dies ist standardmäßig für Verlaufstabellen der Fall)
+  - Hinzufügen einer **SPARSE** -Spalte oder Ändern einer vorhandene Spalte in **SPARSE**, wenn die Verlaufstabelle auf **DATA_COMPRESSION = PAGE** oder **DATA_COMPRESSION = ROW** festgelegt ist (dies ist standardmäßig für Verlaufstabellen der Fall)
   - Hinzufügen von **COLUMN_SET**
   - Hinzufügen einer **ROWGUIDCOL** -Spalte oder Ändern einer vorhandenen Spalte in **ROWGUIDCOL**
 

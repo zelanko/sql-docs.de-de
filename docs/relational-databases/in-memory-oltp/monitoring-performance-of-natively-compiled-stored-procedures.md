@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a4214a85d3adc673c557d99d6bc21176559a85bd
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d87657183c53568781785cf2aa2e85ade81fbb18
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868510"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460403"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Überwachen der Leistung von systemintern kompilierten gespeicherten Prozeduren
 
@@ -27,7 +27,7 @@ ms.locfileid: "91868510"
 ## <a name="using-extended-events"></a>Unter Verwendung erweiterter Ereignisse  
  Verwenden Sie das erweiterte Ereignis **sp_statement_completed** , um die Ausführung einer Abfrage zu verfolgen. Erstellen Sie eine Sitzung für erweiterte Ereignisse mit diesem Ereignis. Optional können Sie für eine bestimmte nativ kompilierte gespeicherte Prozedur nach object_id filtern. Das erweiterte Ereignis wird nach der Ausführung jeder Abfrage ausgelöst. Die vom erweiterten Ereignis angegebene CPU-Zeit und Dauer geben an, wie lange die CPU genutzt und wie lange die Abfrage ausgeführt wurde. Bei einer systemintern kompilierten gespeicherten Prozedur, die viel CPU-Zeit beansprucht, treten u. U. Leistungsprobleme auf.  
   
-Neben**line_number**kann auch **object_id** im erweiterten Ereignis verwendet werden, um die Abfrage zu untersuchen. Mithilfe der folgenden Abfrage kann die Prozedurdefinition abgerufen werden. Anhand der Zeilennummer wird die Abfrage innerhalb der Definition identifiziert:  
+Neben **line_number** kann auch **object_id** im erweiterten Ereignis verwendet werden, um die Abfrage zu untersuchen. Mithilfe der folgenden Abfrage kann die Prozedurdefinition abgerufen werden. Anhand der Zeilennummer wird die Abfrage innerhalb der Definition identifiziert:  
   
 ```sql  
 SELECT [definition]
@@ -128,7 +128,7 @@ SET SHOWPLAN_XML OFF
 GO  
 ```  
   
- Alternativ können Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]den Prozedurnamen auswählen und auf **Geschätzten Ausführungsplan anzeigen**klicken.  
+ Alternativ können Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]den Prozedurnamen auswählen und auf **Geschätzten Ausführungsplan anzeigen** klicken.  
   
  Im geschätzten Ausführungsplan für systemintern kompilierte gespeicherte Prozeduren werden die Abfrageoperatoren und Ausdrücke für die Abfragen der Prozedur angezeigt. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] unterstützt nicht alle SHOWPLAN_XML-Attribute für systemintern kompilierte gespeicherte Prozeduren. Attribute in Zusammenhang mit Kostenberechnungen des Abfrageoptimierers sind nicht Teil der SHOWPLAN_XML für die Prozedur.  
   

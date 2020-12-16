@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a29b6a050779cdf61d97833d49ad9854cac4e484
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 244a625cb41d05f0d2f7cf61e8d6631a85dc8a4e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89521617"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462561"
 ---
 # <a name="temporal-table-security"></a>Sicherheit bei temporale Tabellen
 

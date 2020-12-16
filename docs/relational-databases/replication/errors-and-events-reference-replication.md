@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 10d2073949de158c0773876adef0ba06d6e587eb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 48d6556c834fa7e8505df3a328e934985f3e77b3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482408"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464801"
 ---
 # <a name="errors-and-events-reference-replication"></a>Fehler- und Ereignisreferenz (Replikation)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88482408"
   
 |Fehler|`Message`|  
 |-----------|-------------|  
-|[MSSQL_ENG002601](../../relational-databases/replication/mssql-eng002601.md)|Eine Zeile mit doppeltem Schlüssel kann in das „%1!s!“-Objekt mit dem eindeutigen „%.\*ls“-Index nicht eingefügt werden.|  
+|[MSSQL_ENG002601](../../relational-databases/replication/mssql-eng002601.md)|Eine Zeile mit doppeltem Schlüssel kann in das „%.*ls!“-Objekt mit dem eindeutigen „%.\*ls“-Index nicht eingefügt werden.|  
 |[MSSQL_ENG002627](../../relational-databases/replication/mssql-eng002627.md)|Verletzung der %1!s!-Einschränkung '%2!s!'. Ein doppelter Schlüssel kann in das „%.\*ls“-Objekt nicht eingefügt werden.|  
 |[MSSQL_ENG003165](../../relational-databases/replication/mssql-eng003165.md)|Die %1!s!-Datenbank wurde wiederhergestellt; beim Wiederherstellen/Entfernen der Replikation wurde jedoch ein Fehler erkannt. Die Datenbank ist offline. Weitere Informationen finden Sie im Thema 'MSSQL_ENG003165' in der SQL Server-Onlinedokumentation.|  
 |[MSSQL_ENG003724](../../relational-databases/replication/mssql-eng003724.md)|Das %1!s! von '%3!s!' (%2!s!) ist nicht möglich, da das Objekt für die Replikation verwendet wird.|  

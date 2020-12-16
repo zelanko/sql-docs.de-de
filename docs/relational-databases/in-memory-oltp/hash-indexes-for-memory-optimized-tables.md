@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 13117bad78c1cfc843bbe68caeb2abb5c5f64dff
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4f6dc92d2d77f453f6838ebe990ed5426c665689
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723223"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460473"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>Behandlung von Problemen bei Hashindizes für speicheroptimierte Tabellen
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -116,7 +116,7 @@ Der folgende T-SQL-Codeblock bietet Ihnen eine einfache Möglichkeit zum Testen 
 2. Ausfüllen der Tabelle mit Tausenden von Zeilen.  
     a. Es wird ein modulo-Operator verwendet, um die Rate der duplizierten Werte in der StatusCode-Spalte zu konfigurieren.  
     b. Die Schleife fügt 262.144 Zeilen in etwa einer Minute ein.  
-3. Ausdrucken einer Meldung (PRINT), mit der Sie aufgefordert werden, die frühere SELECT-Anweisung aus **sys.dm_db_xtp_hash_index_stats**auszuführen.  
+3. Ausdrucken einer Meldung (PRINT), mit der Sie aufgefordert werden, die frühere SELECT-Anweisung aus **sys.dm_db_xtp_hash_index_stats** auszuführen.  
 
 ```sql
 DROP TABLE IF EXISTS SalesOrder_Mem;  

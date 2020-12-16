@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2bd48189958a95a54efa128a7b0a9887b4e04b4c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: eed83fcd8a8b861f102c90fbc73d28d51bd5fa56
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867412"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465481"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Anleitung zur Abfrageverarbeitung für speicheroptimierte Tabellen
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -83,7 +83,7 @@ Abfrageplan für einen Join datenträgerbasierter Tabellen.
   
 -   Daten aus der Tabelle „Order“ werden mithilfe des nicht gruppierten Indexes für die CustomerID-Spalte abgerufen. Dieser Index enthält die Spalte CustomerID, die für diesen Join verwendet wird, und die Primärschlüsselspalte OrderID, die an den Benutzer zurückgegeben wird. Das Zurückgeben zusätzlicher Spalten aus der Order-Tabelle würde Suchen im gruppierten Index für die Order-Tabelle erfordern.  
   
--   Der logische Operator **Inner Join** wird vom physischen Operator **Merge Join**implementiert. Die anderen physischen Jointypen sind **Nested Loops** und **Hash Join**. Der **Merge Join** -Operator nutzt die Tatsache, dass beide Indizes nach der Joinspalte CustomerID sortiert werden.  
+-   Der logische Operator **Inner Join** wird vom physischen Operator **Merge Join** implementiert. Die anderen physischen Jointypen sind **Nested Loops** und **Hash Join**. Der **Merge Join** -Operator nutzt die Tatsache, dass beide Indizes nach der Joinspalte CustomerID sortiert werden.  
   
  Betrachten wir eine leichte Abwandlung dieser Abfrage, die alle Zeilen aus der Order-Tabelle zurückgibt, nicht nur OrderID:  
   
@@ -96,7 +96,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
  ![Abfrageplan für einen Hashjoin datenträgerbasierter Tabellen.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.png "Abfrageplan für einen Hashjoin datenträgerbasierter Tabellen.")  
 Abfrageplan für einen Hashjoin datenträgerbasierter Tabellen.  
   
- In dieser Abfrage werden Zeilen aus der Order-Tabelle mithilfe des gruppierten Indexes abgerufen. Der physische Operator **Hash Match** wird jetzt für **Inner Join**verwendet. Der gruppierte Index für Order wird nicht nach CustomerID sortiert. Deshalb würde **Merge Join** einen Sortieroperator erfordern, der sich auf die Leistung auswirkt. Beachten Sie die relativen Kosten des **Hash Match** -Operators (75%), verglichen mit den Kosten des **Merge Join** -Operators im vorherigen Beispiel (46%). Der Optimierer hätte den **Hash Match** -Operator auch im vorherigen Beispiel in Betracht gezogen, hat aber festgestellt, dass der **Merge Join** -Operator eine bessere Leistung bietet.  
+ In dieser Abfrage werden Zeilen aus der Order-Tabelle mithilfe des gruppierten Indexes abgerufen. Der physische Operator **Hash Match** wird jetzt für **Inner Join** verwendet. Der gruppierte Index für Order wird nicht nach CustomerID sortiert. Deshalb würde **Merge Join** einen Sortieroperator erfordern, der sich auf die Leistung auswirkt. Beachten Sie die relativen Kosten des **Hash Match** -Operators (75%), verglichen mit den Kosten des **Merge Join** -Operators im vorherigen Beispiel (46%). Der Optimierer hätte den **Hash Match** -Operator auch im vorherigen Beispiel in Betracht gezogen, hat aber festgestellt, dass der **Merge Join** -Operator eine bessere Leistung bietet.  
   
 ## <a name="ssnoversion-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abfrageverarbeitung für datenträgerbasierte Tabellen  
  Das folgende Diagramm zeigt den Abfrageverarbeitungsfluss in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für Ad-hoc-Abfragen:  

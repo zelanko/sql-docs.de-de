@@ -17,31 +17,31 @@ ms.assetid: 634c327d-971b-49ba-b8a2-e243a04040db
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6279d5eae855c87e7f93cb47e3b2fb55bfcc2dba
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: de8fe4503436963094dde524c7fb65a677e91826
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89283498"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464141"
 ---
 # <a name="alter-external-resource-pool-transact-sql"></a>ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Ändert einen externen Resource Governor-Pool, in dem Ressourcen angegeben werden, die von externen Prozessen verwendet werden können. 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Für [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] in [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] kontrolliert der externe Pool `rterm.exe`, `BxlServer.exe` und andere Prozesse, die von diesen Anwendungen erzeugt wurden.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 Für [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] kontrolliert der externe Pool `rterm.exe`, `python.exe`, `BxlServer.exe` und andere Prozesse, die von diesen Anwendungen erzeugt wurden.
 ::: moniker-end
 
 ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## <a name="syntax"></a>Syntax
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 ```syntaxsql
 ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 [ WITH (
@@ -56,7 +56,7 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 { CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]
 ```  
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
  ```syntaxsql
 
 ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
@@ -87,7 +87,7 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 Der Name eines vorhandenen benutzerdefinierten externen Ressourcenpools oder der externe Standardressourcenpool, der bei der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt wird.
 "default" muss bei Verwendung mit `ALTER EXTERNAL RESOURCE POOL` in Anführungszeichen ("") oder Klammern ([]) eingeschlossen werden, um einen Konflikt mit `DEFAULT` zu vermeiden, das ein vom System reserviertes Wort darstellt.
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 MAX_CPU_PERCENT = *value*  
 Gibt die maximale durchschnittliche CPU-Bandbreite an, die allen Anforderungen im externen Ressourcenpool zugewiesen werden können, wenn CPU-Konflikte bestehen. *value* ist ein Integer. Der zulässige Bereich für *value* liegt zwischen 1 und 100.
 
@@ -98,7 +98,7 @@ MAX_PROCESSES = *value*
 Gibt die maximale Anzahl von Prozessen an, die für den externen Ressourcenpool zulässig ist. Geben Sie 0 an, um einen unbegrenzten Schwellenwert für den Pool festzulegen, der anschließend nur durch Computerressourcen gebunden ist.
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 MAX_CPU_PERCENT = *value*  
 Gibt die maximale durchschnittliche CPU-Bandbreite an, die allen Anforderungen im externen Ressourcenpool zugewiesen werden können, wenn CPU-Konflikte bestehen. *value* ist ein Integer. Der zulässige Bereich für *value* liegt zwischen 1 und 100.
 
@@ -127,7 +127,7 @@ Erfordert die `CONTROL SERVER`-Berechtigung.
 ## <a name="examples"></a>Beispiele
 
 Durch die folgende Anweisung wird ein externer Pool so geändert, dass die CPU-Auslastung auf 50 Prozent und der maximale Arbeitsspeicher auf 25 Prozent des verfügbaren Arbeitsspeichers auf dem Computer beschränkt wird.
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"  
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 ```sql
 ALTER EXTERNAL RESOURCE POOL ep_1
 WITH (
@@ -140,7 +140,7 @@ GO
 ```
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 ```sql
 ALTER EXTERNAL RESOURCE POOL ep_1
 WITH (

@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84adfac47c755bccee6603a632dfa44aa2c151b2
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7e5de0ea599650792feef01508c1eed54aed68c6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867361"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465431"
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>ATOMIC-Blöcke in nativen Prozeduren
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -132,19 +132,19 @@ GO
 ## <a name="session-settings"></a>Sitzungseinstellungen  
  Die Sitzungseinstellungen in ATOMIC-Blöcken werden bei der Kompilierung der gespeicherte Prozedur fest definiert. Einige Einstellungen können mit **BEGIN ATOMIC** angegeben werden, während andere immer denselben festen Wert aufweisen.  
   
- Die folgenden Optionen sind für **BEGIN ATOMIC**erforderlich:  
+ Die folgenden Optionen sind für **BEGIN ATOMIC** erforderlich:  
   
 |Erforderliche Einstellung|BESCHREIBUNG|  
 |----------------------|-----------------|  
-|**TRANSACTION ISOLATION LEVEL**|Unterstützte Werte sind **SNAPSHOT**, **REPEATABLEREAD**und **SERIALIZABLE**.|  
+|**TRANSACTION ISOLATION LEVEL**|Unterstützte Werte sind **SNAPSHOT**, **REPEATABLEREAD** und **SERIALIZABLE**.|  
 |**LANGUAGE**|Bestimmt Datums- und Uhrzeitformate sowie Systemmeldungen. Alle Sprachen und Aliase in [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) werden unterstützt.|  
   
  Die folgenden Einstellungen sind optional:  
   
 |Optionale Einstellung|BESCHREIBUNG|  
 |----------------------|-----------------|  
-|**DATEFORMAT**|Alle Datumsformate von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden unterstützt. Falls angegeben, überschreibt **DATEFORMAT** das Standarddatumsformat, das **LANGUAGE**zugeordnet ist.|  
-|**DATEFIRST**|Falls angegeben, überschreibt **DATEFIRST** den Standardwert, der **LANGUAGE**zugeordnet ist.|  
+|**DATEFORMAT**|Alle Datumsformate von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden unterstützt. Falls angegeben, überschreibt **DATEFORMAT** das Standarddatumsformat, das **LANGUAGE** zugeordnet ist.|  
+|**DATEFIRST**|Falls angegeben, überschreibt **DATEFIRST** den Standardwert, der **LANGUAGE** zugeordnet ist.|  
 |**DELAYED_DURABILITY**|Unterstützte Werte sind **OFF** und **ON**.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Transaktionscommits können entweder vollständig dauerhaft (Standardeinstellung) oder verzögert dauerhaft sein. Weitere Informationen finden Sie unter [Steuern der Transaktionsdauerhaftigkeit](../../relational-databases/logs/control-transaction-durability.md).|  
   
  Die folgenden SET-Optionen verfügen für alle ATOMIC-Blöcke in allen systemintern kompilierten gespeicherten Prozeduren über denselben Systemstandardwert:  

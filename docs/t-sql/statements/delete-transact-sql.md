@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e074f54cb4d31616abced2e0b555c068728ec6c
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 59637197b72232df9f5054b88ea9a111f34b58a0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384811"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464091"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 
@@ -125,10 +125,10 @@ DELETE
  Ein optionales Schlüsselwort, das zwischen dem DELETE-Schlüsselwort und den Zielen *table_or_view_name* oder *rowset_function_limited* verwendet werden kann.  
   
  *table_alias*  
- Der in der FROM- *table_source* -Klausel angegebene Alias, der die Tabelle oder Sicht darstellt, aus der die Zeilen gelöscht werden sollen.  
+ Der in der FROM-*table_source*-Klausel angegebene Alias, der die Tabelle oder Sicht darstellt, aus der die Zeilen gelöscht werden sollen.  
   
  *server_name*  
- **Gilt für** :  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Der Name des Servers (der einen Verbindungsservernamen oder die Funktion [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) als Servernamen verwendet), auf dem sich die Tabelle oder die Sicht befindet. Wenn *server_name* angegeben ist, sind *database_name* und *schema_name* erforderlich.  
   
@@ -146,11 +146,11 @@ DELETE
  Die Sicht, auf die *table_or_view_name* verweist, muss aktualisierbar sein und auf genau eine Basistabelle in der FROM-Klausel der Sichtdefinition verweisen. Weitere Informationen zu aktualisierbaren Ansichten finden Sie unter [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  
- **Gilt für** :  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Entweder die Funktion [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) oder [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md), abhängig von den Funktionen des Anbieters.  
   
- WITH **(** \<table_hint_limited> [... *n* ] **)**  
+ WITH **(** \<table_hint_limited> [... *n*] **)**  
  Gibt mindestens einen Tabellenhinweis an, der für eine Zieltabelle zulässig ist. Das WITH-Schlüsselwort und die Klammern sind erforderlich. NOLOCK und READUNCOMMITTED sind nicht zulässig. Weitere Informationen zu Tabellenhinweisen finden Sie unter [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  \<OUTPUT_Clause>  
@@ -170,7 +170,7 @@ DELETE
   
 -   Gesuchte Löschungen geben eine Suchbedingung an, um die zu löschenden Zeilen zu kennzeichnen. Zum Beispiel WHERE *column_name* = *value*.  
   
--   Positionierte Löschungen verwenden die CURRENT OF-Klausel, um einen Cursor anzugeben. Die Löschoperation wird an der aktuellen Position des Cursors ausgeführt. Dies kann genauer sein als eine gesuchte DELETE-Anweisung, die eine WHERE *search_condition* -Klausel zur Qualifizierung der zu löschenden Zeilen verwendet. Eine gesuchte DELETE-Anweisung löscht mehrere Zeilen, wenn die Suchbedingung nicht eindeutig eine einzelne Zeile identifiziert.  
+-   Positionierte Löschungen verwenden die CURRENT OF-Klausel, um einen Cursor anzugeben. Die Löschoperation wird an der aktuellen Position des Cursors ausgeführt. Dies kann genauer sein als eine gesuchte DELETE-Anweisung, die eine WHERE *search_condition*-Klausel zur Qualifizierung der zu löschenden Zeilen verwendet. Eine gesuchte DELETE-Anweisung löscht mehrere Zeilen, wenn die Suchbedingung nicht eindeutig eine einzelne Zeile identifiziert.  
   
 \<search_condition>  
  Gibt die Einschränkungsbedingungen für die zu löschenden Zeilen an. Es gibt keinen Höchstwert hinsichtlich der Anzahl von Prädikaten in einer Suchbedingung. Weitere Informationen finden Sie unter [Suchbedingung &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
@@ -187,7 +187,7 @@ DELETE
  *cursor_variable_name*  
  Der Name einer Cursorvariablen. Die Cursorvariable muss auf einen Cursor verweisen, der Updates zulässt.  
   
- OPTION **(** \<query_hint> [ **,** ... *n* ] **)**  
+ OPTION **(** \<query_hint> [ **,** ... *n*] **)**  
  Schlüsselwörter, die angeben, dass Hinweise für den Optimierer verwendet werden, um die Verarbeitung der Anweisung durch [!INCLUDE[ssDE](../../includes/ssde-md.md)] anzupassen. Weitere Informationen finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## <a name="best-practices"></a>Bewährte Methoden  
@@ -272,7 +272,7 @@ WHERE StandardCost > 1000.00;
 GO  
 ```  
   
- Im folgenden Beispiel wird eine komplexere WHERE-Klausel veranschaulicht. Die WHERE-Klausel definiert zwei Bedingungen, die erfüllt werden müssen, um die zu löschenden Zeilen zu bestimmen. Der Wert in der `StandardCost` -Spalte muss zwischen `12.00` und `14.00` liegen, und der Wert in der `SellEndDate` -Spalte muss NULL sein. Im Beispiel wird auch der Wert der **\@\@ROWCOUNT** -Funktion ausgegeben, um die Anzahl der gelöschten Zeilen zurückzugeben.  
+ Im folgenden Beispiel wird eine komplexere WHERE-Klausel veranschaulicht. Die WHERE-Klausel definiert zwei Bedingungen, die erfüllt werden müssen, um die zu löschenden Zeilen zu bestimmen. Der Wert in der `StandardCost` -Spalte muss zwischen `12.00` und `14.00` liegen, und der Wert in der `SellEndDate` -Spalte muss NULL sein. Im Beispiel wird auch der Wert der **\@\@ROWCOUNT**-Funktion ausgegeben, um die Anzahl der gelöschten Zeilen zurückzugeben.  
   
 ```sql
 DELETE Production.ProductCostHistory  
@@ -338,7 +338,7 @@ DELETE spqh
 ```  
   
 #### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>E. Verwenden von TOP, um die Anzahl der zu löschenden Zeilen einzuschränken  
- Wenn eine TOP ( *n* )-Klausel zusammen mit DELETE verwendet wird, wird der Löschvorgang für eine zufällige Auswahl von *n* Zeilen ausgeführt. Im folgenden Beispiel werden `20` zufällige Zeilen aus der Tabelle `PurchaseOrderDetail` in der Datenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] gelöscht, die ein Fälligkeitsdatum vor dem 1. Juli 2006 aufweisen.  
+ Wenn eine TOP (*n*)-Klausel zusammen mit DELETE verwendet wird, wird der Löschvorgang für eine zufällige Auswahl von *n* Zeilen ausgeführt. Im folgenden Beispiel werden `20` zufällige Zeilen aus der Tabelle `PurchaseOrderDetail` in der Datenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] gelöscht, die ein Fälligkeitsdatum vor dem 1. Juli 2006 aufweisen.  
   
 ```sql
 DELETE TOP (20)   
@@ -361,7 +361,7 @@ GO
 ###  <a name="deleting-rows-from-a-remote-table"></a><a name="RemoteTables"></a> Löschen von Zeilen aus einer Remotetabelle  
  In den Beispielen in diesem Abschnitt wird veranschaulicht, wie Zeilen mit einem [Verbindungsserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) oder einer [Rowsetfunktion](../functions/opendatasource-transact-sql.md) aus einer Remotezieltabelle gelöscht werden, um auf die Remotetabelle zu verweisen. Eine Remotetabelle ist auf einem anderen Server oder in einer anderen Instanz von SQL Server vorhanden.  
   
-**Gilt für** :  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. Löschen von Daten aus einer Remotetabelle mithilfe eines Verbindungsservers  
  Im folgenden Beispiel werden Zeilen aus einer Remotetabelle gelöscht. In diesem Beispiel wird zunächst mithilfe von [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) ein Link zur Remotedatenquelle erstellt. Der Name des Verbindungsservers (`MyLinkServer`) wird anschließend als Teil des vierteiligen Objektnamens in der Form *server.catalog.schema.object* angegeben.  

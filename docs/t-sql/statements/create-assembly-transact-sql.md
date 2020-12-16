@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: badcd52070da65122e113116be763c903b3e509a
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: 4ae266962891a52ae9e2b201f7817365e71f8a74
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300162"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460793"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -62,7 +62,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
  Der Name der Assembly. Dieser Name muss innerhalb der Datenbank eindeutig und ein gültiger [Bezeichner](../../relational-databases/databases/database-identifiers.md) sein.  
   
  AUTHORIZATION *owner_name*  
- Gibt den Namen eines Benutzers oder einer Rolle als Besitzer der Assembly an. *owner_name* muss der Name einer Rolle sein, deren Mitglied der aktuelle Benutzer ist, oder der aktuelle Benutzer benötigt die IMPERSONATE-Berechtigung für *owner_name* . Wird kein Wert angegeben, wird der aktuelle Benutzer zum Besitzer.  
+ Gibt den Namen eines Benutzers oder einer Rolle als Besitzer der Assembly an. *owner_name* muss der Name einer Rolle sein, deren Mitglied der aktuelle Benutzer ist, oder der aktuelle Benutzer benötigt die IMPERSONATE-Berechtigung für *owner_name*. Wird kein Wert angegeben, wird der aktuelle Benutzer zum Besitzer.  
   
  \<client_assembly_specifier>  
 Gibt den lokalen Pfad oder den Netzwerkspeicherort an, unter dem die Assembly gespeichert ist, die hochgeladen wird. Außerdem wird damit der Manifestdateiname angegeben, der der Assembly entspricht.  \<client_assembly_specifier> kann als feste Zeichenfolge oder als zu einer festen Zeichenfolge ausgewerteter Ausdruck mit Variablen ausgedrückt werden. Das Laden von Assemblys mit mehreren Modulen wird von CREATE ASSEMBLY nicht unterstützt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sucht auch nach abhängigen Assemblys dieser Assembly an demselben Speicherort und lädt sie mit demselben Besitzer wie die Assembly auf Stammebene hoch. Wenn keine abhängigen Assemblys gefunden werden und diese noch nicht in der aktuellen Datenbank geladen sind, wird für CREATE ASSEMBLY ein Fehler gemeldet. Wenn die abhängigen Assemblys bereits in der aktuellen Datenbank geladen sind, muss der Besitzer dieser Assemblys mit dem Besitzer der neu erstellten Assembly identisch sein.
@@ -79,10 +79,10 @@ Gibt den lokalen Pfad oder den Netzwerkspeicherort an, unter dem die Assembly ge
 >  Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.  
   
  *varbinary_literal*  
- Ist ein **varbinary** -Literal.  
+ Ist ein **varbinary**-Literal.  
   
  *varbinary_expression*  
- Ist ein Ausdruck vom Typ **varbinary** .  
+ Ist ein Ausdruck vom Typ **varbinary**.  
   
  PERMISSION_SET { **SAFE** | EXTERNAL_ACCESS | UNSAFE }  
 > [!IMPORTANT]
@@ -152,7 +152,7 @@ Beim Versuch, auf die in \<client_assembly_specifier> angegebene Assembly zuzugr
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die CREATE ASSEMBLY-Berechtigung.  
   
- Falls PERMISSION_SET = EXTERNAL_ACCESS angegeben ist, wird **EXTERNAL ACCESS ASSEMBLY** -Berechtigung auf dem Server benötigt. Falls PERMISSION_SET = UNSAFE angegeben ist, wird **UNSAFE ASSEMBLY** -Berechtigung auf dem Server benötigt.  
+ Falls PERMISSION_SET = EXTERNAL_ACCESS angegeben ist, wird **EXTERNAL ACCESS ASSEMBLY**-Berechtigung auf dem Server benötigt. Falls PERMISSION_SET = UNSAFE angegeben ist, wird **UNSAFE ASSEMBLY**-Berechtigung auf dem Server benötigt.  
   
  Der Benutzer muss der Besitzer von Assemblys sein, auf die von der Assembly verwiesen wird, die hochgeladen werden soll, falls die Assemblys bereits in der Datenbank vorhanden sind. Um eine Assembly mithilfe eines Dateipfads hochzuladen, muss der aktuelle Benutzer einen Anmeldenamen mit Windows-Authentifizierung haben oder ein Mitglied der festen Serverrolle **sysadmin** sein. Der Windows-Anmeldename des Benutzers, der CREATE ASSEMBLY ausführt, benötigt die Leseberechtigung für die Freigabe und für die Dateien, die in die Anweisung geladen werden.  
 
@@ -170,7 +170,7 @@ Die folgenden Berechtigungen werden zum Erstellen einer CLR-Assembly benötigt, 
   
 ### <a name="example-a-creating-an-assembly-from-a-dll"></a>Beispiel A: Erstellen einer Assembly aus einer dll  
   
-**Gilt für** :  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Im folgenden Beispiel wird davon ausgegangen, dass die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Beispiele im Standardspeicherort des lokalen Computers gespeichert sind und dass die Beispielanwendung HelloWorld.csproj kompiliert ist. Weitere Informationen finden Sie unter [Beispiel „Hello World“](/previous-versions/sql/sql-server-2016/ff878250(v=sql.130)).  
   
@@ -185,7 +185,7 @@ WITH PERMISSION_SET = SAFE;
   
 ### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>Beispiel B: Erstellen einer Assembly aus Assemblyteilen  
   
-**Gilt für** :  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Ersetzen Sie die Beispielteile (die nicht abgeschlossen oder gültig sind) durch Ihre Assemblyteile.  
   

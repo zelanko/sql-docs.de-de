@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: dddd707e-bfb1-44ff-937b-a84c5e5d1a94
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2686ba2c5ac8e4db03f49a1d090ed8de1066b2c7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c486e78d8cd05d4af130626586e8a9817ab779a1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550948"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464491"
 ---
 # <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>Beenden der Versionsverwaltung in einer temporalen Tabelle mit Systemversionsverwaltung
 
@@ -25,7 +25,7 @@ ms.locfileid: "89550948"
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 
-Möglicherweise möchten Sie die Versionsverwaltung Ihrer temporalen Tabelle vorübergehend oder dauerhaft beenden. Legen Sie zu diesem Zweck die **SYSTEM_VERSIONING** -Klausel, um **OFF**fest.
+Möglicherweise möchten Sie die Versionsverwaltung Ihrer temporalen Tabelle vorübergehend oder dauerhaft beenden. Legen Sie zu diesem Zweck die **SYSTEM_VERSIONING** -Klausel, um **OFF** fest.
 
 ## <a name="setting-system_versioning--off"></a>Festlegen von SYSTEM_VERSIONING = OFF
 
@@ -41,7 +41,7 @@ Beenden Sie die Systemversionsverwaltung, wenn Sie bestimmte Wartungsvorgänge f
 - Bei einer **temporären Tabelle** tritt kein Datenverlust auf, wenn Sie **SYSTEM_VERSIONING = OFF** festlegen oder den Zeitraum für **SYSTEM_TIME** löschen.
 - Wenn Sie **SYSTEM_VERSIONING = OFF** festlegen und den **SYSTEM_TIME** -Zeitraum nicht löschen, wird das System die Aktualisierung der Zeitraumspalten für jeden Einfüge- und Aktualisierungsvorgang fortsetzen. Löschungen in der aktuellen Tabelle sind endgültig.
 - Löschen Sie den **SYSTEM_TIME** -Zeitraum, um die Zeitraumspalten vollständig zu entfernen.
-- Wenn Sie **SYSTEM_VERSIONING = OFF**festlegen, können alle Benutzer, die über ausreichende Berechtigungen verfügen, das Schema und den Inhalt der Verlaufstabelle ändern oder die Verlaufstabelle sogar endgültig löschen.
+- Wenn Sie **SYSTEM_VERSIONING = OFF** festlegen, können alle Benutzer, die über ausreichende Berechtigungen verfügen, das Schema und den Inhalt der Verlaufstabelle ändern oder die Verlaufstabelle sogar endgültig löschen.
 - Sie können **SYSTEM_VERSIONING = OFF** nicht festlegen, wenn Sie mithilfe temporaler Abfrageerweiterungen andere Objekte mit SCHEMABINDING erstellt haben, z. B. durch Verweise auf **SYSTEM_TIME**. Diese Einschränkung verhindert, dass es bei diesen Objekten zu Fehlern kommt, wenn Sie **SYSTEM_VERSIONING = OFF** festlegen.
 
 ### <a name="permanently-remove-system_versioning"></a>Dauerhaftes Entfernen von SYSTEM_VERSIONING
@@ -57,7 +57,7 @@ DROP PERIOD FOR SYSTEM_TIME;
 
 ### <a name="temporarily-remove-system_versioning"></a>Vorübergehendes Entfernen von SYSTEM_VERSIONING
 
-Dies ist die Liste der Vorgänge, für die die Systemversionsverwaltung auf **OFF**festgelegt werden muss:
+Dies ist die Liste der Vorgänge, für die die Systemversionsverwaltung auf **OFF** festgelegt werden muss:
 
 - Entfernen unnötiger Daten aus dem Verlauf (**DELETE** oder **TRUNCATE**)
 - Entfernen von Daten aus der aktuellen Tabelle ohne Versionsverwaltung (**DELETE**, **TRUNCATE**)

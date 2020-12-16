@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ea1926c2e54135277dd486976dda7ebe4ae6086
-ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7fbaf22758dcf62d2159e63ee3af3c0507f3f607
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92907376"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460573"
 ---
 # <a name="set-or-change-the-database-collation"></a>Festlegen oder Ändern der Datenbanksortierung
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,23 +48,21 @@ ms.locfileid: "92907376"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
--   Nur-Unicode-Sortierungen unter Windows, können nur mit der COLLATE-Klausel verwendet werden, um auf Spalten- und Ausdrucksebene Sortierungen auf die Datentypen **nchar** , **nvarchar** und **ntext** anzuwenden. Sie können nicht mit der COLLATE-Klausel verwendet werden, um die Sortierung einer Datenbank oder Serverinstanz zu ändern.  
+-   Nur-Unicode-Sortierungen unter Windows, können nur mit der COLLATE-Klausel verwendet werden, um auf Spalten- und Ausdrucksebene Sortierungen auf die Datentypen **nchar**, **nvarchar** und **ntext** anzuwenden. Sie können nicht mit der COLLATE-Klausel verwendet werden, um die Sortierung einer Datenbank oder Serverinstanz zu ändern.  
   
 -   Wenn die angegebene Sortierung oder die Sortierung des Objekts, auf das verwiesen wird, eine Codepage verwendet, die nicht von Windows unterstützt wird, zeigt [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Fehler an.  
 
--   Sobald die Datenbank einmal in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] erstellt wurde, kann sie nicht mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mehr geändert werden. Sie kann nur mit [!INCLUDE[tsql](../../includes/tsql-md.md)] geändert werden.
-  
 ###  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
   
 Die Namen der unterstützten Sortierungen finden Sie unter [Name der Windows-Sortierung &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) und [SQL Server-Sortierungsname &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md). Alternativ können Sie die Systemfunktion [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) verwenden.  
   
 Das Ändern der Datenbanksortierung ändert Folgendes:  
   
--   Alle **char** -, **varchar** -, **text** -, **nchar** -, **nvarchar** - und **ntext** -Spalten in Systemtabellen erhalten die neue Sortierung.  
+-   Alle **char**-, **varchar**-, **text**-, **nchar**-, **nvarchar**- und **ntext** -Spalten in Systemtabellen erhalten die neue Sortierung.  
   
--   Sämtliche vorhandene **char** -, **varchar** -, **text** -, **nchar** -, **nvarchar** - und **ntext** -Parameter und skalare Rückgabewerte für gespeicherte Prozeduren und benutzerdefinierte Funktionen erhalten die neue Sortierung.  
+-   Sämtliche vorhandene **char**-, **varchar**-, **text**-, **nchar**-, **nvarchar**- und **ntext** -Parameter und skalare Rückgabewerte für gespeicherte Prozeduren und benutzerdefinierte Funktionen erhalten die neue Sortierung.  
   
--   Die Systemdatentypen **char** , **varchar** , **text** , **nchar** oder **nvarchar** oder **ntext** sowie alle benutzerdefinierten Datentypen, die auf Systemdatentypen basieren, erhalten die neue Standardsortierung.  
+-   Die Systemdatentypen **char**, **varchar**, **text**, **nchar** oder **nvarchar** oder **ntext** sowie alle benutzerdefinierten Datentypen, die auf Systemdatentypen basieren, erhalten die neue Standardsortierung.  
   
 Sie können die Sortierung neuer Objekte, die in einer Benutzerdatenbank erstellt werden, mithilfe der `COLLATE`-Klausel der [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)-Anweisung ändern. Diese Anweisung **ändert jedoch nicht** die Sortierung der Spalten in vorhandenen benutzerdefinierten Tabellen. Letztere können mithilfe der `COLLATE`-Klausel der [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)-Anweisung geändert werden.  
 

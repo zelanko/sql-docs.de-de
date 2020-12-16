@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65e1196ec8ea240f2e8a9210657a60f967e4b7c5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d29cae171cad8f0da3c53a708112167a0a17f749
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490459"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463061"
 ---
 # <a name="sequence-numbers"></a>Sequenznummern
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88490459"
   
  Im Unterschied zu Identitätsspaltenwerten, die beim Einfügen von Zeilen generiert werden, kann eine Anwendung durch Aufrufen der [NEXT VALUE FOR](../../t-sql/functions/next-value-for-transact-sql.md) -Funktion die nächste Sequenznummer abrufen, bevor die Zeile eingefügt wird. Die Sequenznummer wird beim Aufruf von NEXT VALUE FOR zugeordnet, selbst wenn die Nummer nie in eine Tabelle eingefügt wird. Die NEXT VALUE FOR-Funktion kann als Standardwert für eine Spalte in einer Tabellendefinition verwendet werden. Mit [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) können Sie einen Bereich von mehreren Sequenznummern gleichzeitig abrufen.  
   
- Eine Sequenz kann als beliebiger ganzzahliger Datentyp definiert werden. Wenn kein Datentyp nicht angegeben ist, wird eine Sequenz standardmäßig auf **bigint**festgelegt.  
+ Eine Sequenz kann als beliebiger ganzzahliger Datentyp definiert werden. Wenn kein Datentyp nicht angegeben ist, wird eine Sequenz standardmäßig auf **bigint** festgelegt.  
   
 ## <a name="using-sequences"></a>Verwenden von Sequenzen  
  Verwenden Sie in den folgenden Szenarios Sequenzen anstelle der Identitätsspalten:  
@@ -234,7 +234,7 @@ GO
   
  `7        2009-11-02 15:00:51.180  Central feed in bypass mode.`  
   
-### <a name="d-generating-repeating-sequence-numbers-in-a-result-set"></a>D: Generieren von wiederholten Sequenznummern in einem Resultset  
+### <a name="d-generating-repeating-sequence-numbers-in-a-result-set"></a>D. Generieren von wiederholten Sequenznummern in einem Resultset  
  Im folgenden Beispiel werden zwei Eigenschaften von Sequenznummern veranschaulicht: die zyklische Verwendung und das Verwenden von `NEXT VALUE FOR` in einer SELECT-Anweisung.  
   
 ```  

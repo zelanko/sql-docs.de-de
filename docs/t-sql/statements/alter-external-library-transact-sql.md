@@ -17,20 +17,20 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: d2a53c17787810aa3ebdd47c64810caab42844c2
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 15cae5bf8c97de6170c11cfc991afdb31033963d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300450"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464161"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 Ändert den Inhalt einer vorhandenen externen Paketbibliothek.
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 > [!NOTE]
 > In SQL Server 2017 werden die R-Sprache und die Windows-Plattform unterstützt. Ab SQL Server 2019 werden R, Python und externe Programmiersprachen auf Windows- und Linux-Plattformen unterstützt.
 ::: moniker-end
@@ -40,7 +40,7 @@ ms.locfileid: "92300450"
 > In Azure SQL Managed Instance können Sie eine Bibliothek ändern, indem Sie diese entfernen und dann mithilfe von **sqlmlutils** die geänderte Version installieren. Weitere Informationen zu **sqlmlutils** finden Sie unter [Installieren von Python-Paketen mit sqlmlutils](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current) und [Installieren von neuen R-Paketen mit sqlmlutils](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current).
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 ## <a name="syntax-for-sql-server-2019"></a>Syntax für SQL Server 2019
 
 ```syntaxsql
@@ -83,7 +83,7 @@ WITH ( LANGUAGE = <language> )
 }
 ```
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 ## <a name="syntax-for-sql-server-2017"></a>Syntax für SQL Server 2017
 
 ```syntaxsql
@@ -114,7 +114,7 @@ WITH ( LANGUAGE = 'R' )
 ```
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 ## <a name="syntax-for-azure-sql-managed-instance"></a>Syntax für Azure SQL Managed Instance
 
 ```syntaxsql
@@ -155,7 +155,7 @@ Der Bibliotheksname kann nicht nach dem Zufallsprinzip zugewiesen werden. D.h., 
 
 Gibt den Namen eines Benutzers oder einer Rolle an, der oder die die externe Bibliothek besitzt.
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 **file_spec**
 
 Gibt den Inhalt des Pakets für eine bestimmte Plattform an. Nur ein Dateiartefakt pro Plattform wird unterstützt.
@@ -173,47 +173,47 @@ Diese Option ist nützlich, wenn Sie die erforderliche Berechtigung zum Ändern 
 
 Stattdessen können Sie den Paketinhalt als Variable im Binärformat übergeben.
 
-::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017 <=sql-server-2017"
 **platform = WINDOWS**
 
 Gibt die Plattform für den Inhalt der Bibliothek an. Dieser Wert ist erforderlich, wenn eine vorhandene Bibliothek geändert wird, um eine andere Plattform hinzuzufügen.
 Für SQL Server 2017 ist Windows die einzige unterstützte Plattform.
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 **platform**
 
 Gibt die Plattform für den Inhalt der Bibliothek an. Dieser Wert ist erforderlich, wenn eine vorhandene Bibliothek geändert wird, um eine andere Plattform hinzuzufügen. 
 Für SQL Server 2019 werden die Plattformen Windows und Linux unterstützt.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017 <=sql-server-2017"
 **LANGUAGE = 'R'**
 
 gibt die Sprache des Pakets an. R wird in SQL Server 2017 unterstützt.
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 **language**
 
 gibt die Sprache des Pakets an. Der Wert kann **R** oder **Python** in Azure SQL Managed Instance sein.
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 **language**
 
-gibt die Sprache des Pakets an. Der Wert kann **R** , **Python** oder der Name einer externen Programmiersprache (siehe [CREATE EXTERNAL LANGUAGE](create-external-language-transact-sql.md)) sein.
+gibt die Sprache des Pakets an. Der Wert kann **R**, **Python** oder der Name einer externen Programmiersprache (siehe [CREATE EXTERNAL LANGUAGE](create-external-language-transact-sql.md)) sein.
 ::: moniker-end
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="remarks"></a>Bemerkungen
 
-::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017 <=sql-server-2017"
 Bei der R-Sprache müssen Pakete in Form von gezippten Archivdateien mit der Dateiendung .zip für Windows vorbereitet werden. Für SQL Server 2017 wird nur die Windows-Plattform unterstützt.  
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 Bei der R-Sprache müssen bei Verwendung einer Datei Pakete in Form von gezippten Archivdateien mit der Erweiterung „.ZIP“ vorbereitet werden. 
 
 Für Python muss das Paket in einer WHL- oder ZIP-Datei als ZIP-Archivdatei vorbereitet werden. Wenn das Paket bereits eine ZIP-Datei ist, muss es in eine neue ZIP-Datei eingefügt werden. Der direkte Upload einer WHL- oder ZIP-Datei wird derzeit nicht unterstützt.
@@ -225,13 +225,13 @@ In einer SQL-Instanz sind einige Pakete vorinstalliert. Diese werden als *System
 
 ## <a name="permissions"></a>Berechtigungen
 
-Standardmäßig verfügen der **dbo** -Benutzer sowie alle Mitglieder der Rolle **db_owner** über die Berechtigung zum Ausführen von ALTER EXTERNAL LIBRARY. Darüber hinaus kann der Benutzer, der die externe Bibliothek erstellt hat, diese ändern.
+Standardmäßig verfügen der **dbo**-Benutzer sowie alle Mitglieder der Rolle **db_owner** über die Berechtigung zum Ausführen von ALTER EXTERNAL LIBRARY. Darüber hinaus kann der Benutzer, der die externe Bibliothek erstellt hat, diese ändern.
 
 ## <a name="examples"></a>Beispiele
 
 Die folgenden Beispiele ändern eine externe Bibliothek namens `customPackage`.
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 ### <a name="replace-the-contents-of-a-library-using-a-file"></a>Ersetzen des Inhalts einer Bibliothek mithilfe einer Datei
 
 Im folgenden Beispiel wird eine externe Bibliothek mit dem Namen `customPackage` mithilfe einer ZIP-Datei geändert, die die aktualisierten Bits enthält.
@@ -253,7 +253,7 @@ EXEC sp_execute_external_script
 ```
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 Das Beispiel funktioniert auch für Python, wenn Sie `'R'` durch `'Python'` ersetzen.
 ::: moniker-end
 
@@ -266,7 +266,7 @@ ALTER EXTERNAL LIBRARY customLibrary
 SET (CONTENT = 0xABC123...) WITH (LANGUAGE = 'R');
 ```
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 Das Beispiel funktioniert auch für Python, wenn Sie `'R'` durch `'Python'` ersetzen.
 ::: moniker-end
 

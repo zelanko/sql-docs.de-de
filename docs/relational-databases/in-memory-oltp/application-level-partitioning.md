@@ -11,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 474f5b9f512139762140aa9c1932b6df7da96b0f
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cfa7f4c439ff886a07845605f0e07274068340f8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867390"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465421"
 ---
 # <a name="application-level-partitioning"></a>Partitionierung auf Anwendungsebene
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  Diese Anwendung verarbeitet Aufträge. Es besteht ein hoher Verarbeitungsaufwand für aktuelle Aufträge. Bei älteren Bestellungen ist der Verarbeitungsaufwand gering. Neue Aufträge befinden sich in einer speicheroptimierten Tabelle. Ältere Aufträge befinden sich in einer datenträgerbasierten Tabelle. Alle Aufträge nach dem *hotDate* sind in der speicheroptimierten Tabelle enthalten. Alle Aufträge vor dem *hotDate* sind in der datenträgerbasierten Tabelle enthalten. Angenommen, es liegt eine extreme OLTP-Arbeitsauslastung mit einer Vielzahl gleichzeitiger Transaktionen vor. Diese Geschäftsregel (neue Aufträge in einer speicheroptimierten Tabelle) muss erzwungen werden, selbst wenn einige gleichzeitige Transaktionen versuchen, das *hotDate*zu ändern.  
+  Diese Anwendung verarbeitet Aufträge. Es besteht ein hoher Verarbeitungsaufwand für aktuelle Aufträge. Bei älteren Bestellungen ist der Verarbeitungsaufwand gering. Neue Aufträge befinden sich in einer speicheroptimierten Tabelle. Ältere Aufträge befinden sich in einer datenträgerbasierten Tabelle. Alle Aufträge nach dem *hotDate* sind in der speicheroptimierten Tabelle enthalten. Alle Aufträge vor dem *hotDate* sind in der datenträgerbasierten Tabelle enthalten. Angenommen, es liegt eine extreme OLTP-Arbeitsauslastung mit einer Vielzahl gleichzeitiger Transaktionen vor. Diese Geschäftsregel (neue Aufträge in einer speicheroptimierten Tabelle) muss erzwungen werden, selbst wenn einige gleichzeitige Transaktionen versuchen, das *hotDate* zu ändern.  
   
  In diesem Beispiel wird keine partitionierte Tabelle für die datenträgerbasierte Tabelle verwendet. Allerdings wird ein expliziter Teilungspunkt zwischen den beiden Tabellen mithilfe einer dritten Tabelle nachverfolgt. Mit dem Teilungspunkt kann sichergestellt werden, dass neu eingefügte Daten basierend auf dem Datum immer der richtigen Tabelle hinzugefügt werden. Er kann auch verwendet werden, um zu bestimmen, wo Daten gesucht werden sollen. Selbst verspätet eingegangene Daten werden in die richtige Tabelle eingefügt.  
   

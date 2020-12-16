@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7641e8f5468a6e915772edf10e97cd735c934f0d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 49e3681e448e0fb262e3ea1c52650106f15687e3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010128"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465491"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>Verwenden des systemeigenen Unicode-Formats zum Importieren oder Exportieren von Daten (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +44,7 @@ Das native Unicode-Format wird durch die folgenden Befehlsoptionen unterstützt:
   
 |Get-Help|Option|BESCHREIBUNG|  
 |-------------|------------|-----------------|  
-|bcp|**-N**|Bewirkt, dass das Hilfsprogramm **bcp** das native Unicode-Format verwendet, welches das native (Datenbank-)Datentypen für alle nicht auf Zeichen basierenden Daten und das Unicode-Zeichendatenformat für alle Zeichendaten (**char**, **nchar**, **varchar**, **nvarchar**, **text**und **ntext**) verwendet.|  
+|bcp|**-N**|Bewirkt, dass das Hilfsprogramm **bcp** das native Unicode-Format verwendet, welches das native (Datenbank-)Datentypen für alle nicht auf Zeichen basierenden Daten und das Unicode-Zeichendatenformat für alle Zeichendaten (**char**, **nchar**, **varchar**, **nvarchar**, **text** und **ntext**) verwendet.|  
 |BULK INSERT|DATAFILETYPE **='widenative'**|Verwendet das native Unicode-Format beim Massenimportieren von Daten|  
 |OPENROWSET|–|Muss eine Formatdatei verwenden|
     
@@ -147,7 +147,7 @@ SELECT * FROM TestDatabase.dbo.myWidenative;
 ```
 
 ### <a name="using-bulk-insert-and-unicode-native-format-with-a-non-xml-format-file"></a>**Verwenden von BULK INSERT und des nativen Unicode-Zeichenformats mit einer Nicht-XML-Formatdatei**<a name="bulk_widenative_fmt"></a>
-Argument**FORMATFILE** .  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
+Argument **FORMATFILE** .  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidenative; -- for testing
 BULK INSERT TestDatabase.dbo.myWidenative
@@ -161,7 +161,7 @@ SELECT * FROM TestDatabase.dbo.myWidenative;
 ```
 
 ### <a name="using-openrowset-and-unicode-native-format-with-a-non-xml-format-file"></a>**Verwenden von OPENROWSET und des nativen Unicode-Zeichenformats mit einer Nicht-XML-Formatdatei**<a name="openrowset_widenative_fmt"></a>
-Argument**FORMATFILE** .  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
+Argument **FORMATFILE** .  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidenative;  -- for testing
 INSERT INTO TestDatabase.dbo.myWidenative

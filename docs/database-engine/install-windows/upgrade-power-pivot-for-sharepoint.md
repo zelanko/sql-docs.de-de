@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
 author: Minewiskan
 ms.author: owend
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+monikerRange: '>=sql-server-2016'
 manager: erikre
-ms.openlocfilehash: 6169741cf4e744aa89c17c960a83a6af18d54851
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 03041d41745e51d858f56bfcd21407ad58530dd9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670183"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460693"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Upgraden von PowerPivot für SharePoint
 

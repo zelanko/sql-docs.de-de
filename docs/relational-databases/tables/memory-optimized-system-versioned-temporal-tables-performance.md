@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 2e110984-7703-4806-a24b-b41e8c3018c6
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c4b159f41f998155d4013413e69346ab0c4a239
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6a81d2b397418a934e51a7e9e0f8491d10e0cdba
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89516897"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462591"
 ---
 # <a name="memory-optimized-system-versioned-temporal-tables-performance"></a>Systemleistung bei speicheroptimierten temporären Tabellen mit Systemversionsverwaltung
 
@@ -30,7 +30,7 @@ Dieses Thema behandelt einige Überlegungen zur Systemleistung bei der Verwendun
 - Wenn Sie einer vorhandenen, nicht-temporalen Tabelle Systemversionsverwaltung hinzufügen, ergeben sich Leistungsauswirkungen auf Aktualisierungs- und Löschvorgänge, da die Verlaufstabelle automatisch aktualisiert wird.
 - Jeder Aktualisierungs- und Löschvorgang wird in einer internen speicheroptimierten Verlaufstabelle aufgezeichnet. Sie bemerken möglicherweise also einen unerwarteten Speicherverbrauch, wenn Ihre Arbeitsauslastung diese beiden Vorgänge im hohen Maße verwendet. Aus diesem Grund empfehlen wir Ihnen Folgendes:
 
-  - Führen Sie keine massiven Löschvorgänge in der aktuellen Tabelle aus. So erhöhen Sie den verfügbaren RAM, indem Sie den Speicherplatz bereinigen. Ziehen Sie in Betracht, die Daten in mehreren Batches zu löschen und zusätzlich die Datenleerung manuell anzustoßen (mithilfe von [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md)oder wenn **SYSTEM_VERSIONING = OFF**gilt).
+  - Führen Sie keine massiven Löschvorgänge in der aktuellen Tabelle aus. So erhöhen Sie den verfügbaren RAM, indem Sie den Speicherplatz bereinigen. Ziehen Sie in Betracht, die Daten in mehreren Batches zu löschen und zusätzlich die Datenleerung manuell anzustoßen (mithilfe von [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md)oder wenn **SYSTEM_VERSIONING = OFF** gilt).
   - Führen Sie keine großen Tabellenaktualisierungen auf einmal durch, dies kann zu einem Speicherverbrauch führen, der doppelt so hoch wie für die Aktualisierung einer nicht-temporalen, speicheroptimierten Tabelle ist. Doppelter Speicherverbrauch ist temporär, da der Datenleerungstask regelmäßig ausgeführt wird, um den Speicherverbrauch interner Stagingtabellen in projizierten Grenzen in stabilen Zustand (ca. 10 % des Speicherverbrauchs der aktuellen temporalen Tabelle) zu halten. Sie sollten massive Aktualisierungen in mehreren Batches durchführen, oder während **SYSTEM_VERSIONING = OFF**, wie bei der Verwendung von Aktualisierungen zum Festlegen der Standardwerte für neu hinzugefügte Spalten.
 
 - Der Zeitraum der Aktivierung der Datenleerung ist nicht konfigurierbar, jedoch können Sie den Prozess durch den Aufruf von [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md)gilt).

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 216e497c9d0e7a9e2090ad734bdb945c42bb792e
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: eb8096edc6b4b567272bf3808e5ecaad3eca403c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869114"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464711"
 ---
 # <a name="create-a-publication"></a>Create a Publication
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -165,11 +165,11 @@ ms.locfileid: "91869114"
   
 1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> -Klasse für die Veröffentlichungsdatenbank, legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die Instanz von <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1 fest, und rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Wenn <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> den Wert **false**zurückgibt, vergewissern Sie sich, dass die Datenbank vorhanden ist.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> -Klasse für die Veröffentlichungsdatenbank, legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die Instanz von <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1 fest, und rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Wenn <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> den Wert **false** zurückgibt, vergewissern Sie sich, dass die Datenbank vorhanden ist.  
   
 3.  Hat die <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> -Eigenschaft den Wert **false**, dann legen Sie ihren Wert auf **true**.  
   
-4.  Überprüfen Sie für eine Transaktionsveröffentlichung den Wert der <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentExists%2A> -Eigenschaft. Wenn diese Eigenschaft den Wert **true**hat, ist ein Protokolllese-Agentauftrag für diese Datenbank bereits vorhanden. Hat diese Eigenschaft den Wert **false**, gehen Sie wie folgt vor:  
+4.  Überprüfen Sie für eine Transaktionsveröffentlichung den Wert der <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentExists%2A> -Eigenschaft. Wenn diese Eigenschaft den Wert **true** hat, ist ein Protokolllese-Agentauftrag für diese Datenbank bereits vorhanden. Hat diese Eigenschaft den Wert **false**, gehen Sie wie folgt vor:  
   
     -   Legen Sie die Felder <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> und <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> von <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> fest, um die Anmeldeinformationen für das [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Konto bereitzustellen, unter dem der Protokolllese-Agent auf dem Abonnenten ausgeführt wird.  
   
@@ -212,9 +212,9 @@ ms.locfileid: "91869114"
   
 1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> -Klasse für die Veröffentlichungsdatenbank, legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die Instanz von <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1 fest, und rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Wenn <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> den Wert **false**zurückgibt, vergewissern Sie sich, dass die Datenbank vorhanden ist.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> -Klasse für die Veröffentlichungsdatenbank, legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die Instanz von <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1 fest, und rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Wenn <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> den Wert **false** zurückgibt, vergewissern Sie sich, dass die Datenbank vorhanden ist.  
   
-3.  Wenn <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> Property is **false**, dann legen Sie ihren Wert auf **true**fest, und rufen Sie <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>.  
+3.  Wenn <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> Property is **false**, dann legen Sie ihren Wert auf **true** fest, und rufen Sie <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>.  
   
 4.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePublication> -Klasse, und legen Sie die folgenden Eigenschaften für dieses Objekt fest:  
   

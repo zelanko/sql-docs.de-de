@@ -10,13 +10,13 @@ ms.topic: tutorial
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 802ef2c4b7c73847e1c3de3cdc67516a9d35f2e3
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3b7295d803770d37940480606ce038129e62a01d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868539"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465511"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Verwalten von Ereignissitzungen im Objekt-Explorer
 
@@ -40,7 +40,7 @@ ms.locfileid: "91868539"
  Weitere Informationen zum Erstellen einer Sitzung für erweiterte Ereignisse finden Sie unter [Erstellen einer Sitzung für erweiterte Ereignisse](/previous-versions/sql/sql-server-2016/hh213147(v=sql.130)).  
   
 ## <a name="starting-or-stopping-an-extended-events-session"></a>Starten oder Beenden einer Sitzung für erweiterte Ereignisse  
- Sie können eine Sitzung für erweiterte Ereignisse mithilfe des **Abfrage-Editors** starten oder beenden, indem Sie die Anweisung **ALTER EVENT SESSION** oder den Knoten **Erweiterte Ereignisse** des **Objekt-Explorers**verwenden.  
+ Sie können eine Sitzung für erweiterte Ereignisse mithilfe des **Abfrage-Editors** starten oder beenden, indem Sie die Anweisung **ALTER EVENT SESSION** oder den Knoten **Erweiterte Ereignisse** des **Objekt-Explorers** verwenden.  
   
  Wenn Sie eine Ereignissitzung beenden, wird die Sitzung in der dynamischen Verwaltungssicht (dynamic management view; DMV) von „sys.dm_xe_sessions“ nicht mehr als aktive Sitzung aufgeführt. Die Sitzungsdefinition bleibt jedoch intakt, und Sie können die Sitzung neu starten. Um eine Sitzungsdefinition vollständig zu entfernen, müssen Sie die Sitzung löschen.  
   
@@ -66,25 +66,25 @@ STATE = STOP
 ```  
   
 ### <a name="start-or-stop-an-extended-events-session-in-object-explorer"></a>Starten oder Beenden einer Sitzung für erweiterte Ereignisse mittels Objekt-Explorer  
- Erweitern Sie die Knoten **Verwaltung**, **Erweiterte Ereignisse**und **Sitzungen**, klicken mit der rechten Maustaste auf eine Sitzung und klicken anschließend auf **Sitzung starten** oder **Sitzung beenden** , um im **Objekt-Explorer**eine Sitzung für erweiterte Ereignisse zu starten oder zu beenden.  
+ Erweitern Sie die Knoten **Verwaltung**, **Erweiterte Ereignisse** und **Sitzungen**, klicken mit der rechten Maustaste auf eine Sitzung und klicken anschließend auf **Sitzung starten** oder **Sitzung beenden** , um im **Objekt-Explorer** eine Sitzung für erweiterte Ereignisse zu starten oder zu beenden.  
   
 ## <a name="export-an-extended-events-session-template"></a>Exportieren einer Sitzungsvorlage für erweiterte Ereignisse  
- Sie können mit dem **Objekt-Explorer**eine Sitzung für erweiterte Ereignisse exportieren und diese als XML-Vorlage speichern. Beispielsweise können Sie eine Sitzung exportieren und anschließend mithilfe des **Assistenten für neue Sitzungen** die Vorlage auf eine **neue Ereignissitzung** anwenden.  
+ Sie können mit dem **Objekt-Explorer** eine Sitzung für erweiterte Ereignisse exportieren und diese als XML-Vorlage speichern. Beispielsweise können Sie eine Sitzung exportieren und anschließend mithilfe des **Assistenten für neue Sitzungen** die Vorlage auf eine **neue Ereignissitzung** anwenden.  
   
  Stellen Sie beim Exportieren einer Sitzung sicher, dass Sie die Vorlagendatei an einem Speicherort speichern, der das NTFS-Dateisystem verwendet. Schränken Sie zudem den Zugriff auf Benutzer ein, die zum Anzeigen der Informationen autorisiert sind.  
   
- So exportieren Sie mit dem **Objekt-Explorer**eine Sitzung für erweiterte Ereignisse:  
+ So exportieren Sie mit dem **Objekt-Explorer** eine Sitzung für erweiterte Ereignisse:  
   
-1.  Erweitern Sie die Knoten **Verwaltung**, **Erweiterte Ereignisse**und anschließend **Sitzungen** .  
+1.  Erweitern Sie die Knoten **Verwaltung**, **Erweiterte Ereignisse** und anschließend **Sitzungen** .  
   
-2.  Klicken Sie mit der rechten Maustaste auf die zu exportierende Sitzung, und wählen Sie anschließend **Sitzung exportieren**aus.  
+2.  Klicken Sie mit der rechten Maustaste auf die zu exportierende Sitzung, und wählen Sie anschließend **Sitzung exportieren** aus.  
   
 3.  Wählen Sie im Dialogfeld **Speichern unter** einen Speicherort zum Speichern der Datei aus, geben Sie den Dateinamen in das Feld **Dateiname** ein, und klicken Sie auf **Speichern**.  
   
      Wenn Sie die Datei am Standardspeicherort für [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Vorlagen speichern, wird die Vorlage in der Dropdownliste vordefinierter Vorlagen angezeigt, wenn Sie das Dialogfeld **Assistent für neue Sitzungen** und **Neue Sitzung** verwenden.  
   
 ## <a name="import-an-extended-events-session-template"></a>Importieren einer Sitzungsvorlage für erweiterte Ereignisse  
- Sie können mit dem **Objekt-Explorer**eine Vorlage für eine Sitzung für erweiterte Ereignisse importieren. Dies ist beispielsweise hilfreich, um eine Sitzung aus einer Vorlage zu erstellen, die aus einer anderen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]exportiert wurde.  
+ Sie können mit dem **Objekt-Explorer** eine Vorlage für eine Sitzung für erweiterte Ereignisse importieren. Dies ist beispielsweise hilfreich, um eine Sitzung aus einer Vorlage zu erstellen, die aus einer anderen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]exportiert wurde.  
   
  Zum Löschen einer Sitzung für erweiterte Ereignisse müssen Sie über die **ALTER ANY EVENT SESSION** -Berechtigung verfügen.  
   
@@ -92,7 +92,7 @@ STATE = STOP
   
  So importieren Sie eine Sitzung für erweiterte Ereignisse:  
   
-1.  Erweitern Sie im **Objekt-Explorer**die Knoten **Verwaltung**und **Erweiterte Ereignisse** .  
+1.  Erweitern Sie im **Objekt-Explorer** die Knoten **Verwaltung** und **Erweiterte Ereignisse** .  
   
 2.  Klicken Sie mit der rechten Maustaste auf **Sitzungen** , und wählen Sie anschließend **Neue Sitzung**.  
   
@@ -109,9 +109,9 @@ STATE = STOP
   
  So bearbeiten Sie eine Sitzung für erweiterte Ereignisse:  
   
-1.  Erweitern Sie im **Objekt-Explorer**die Knoten **Verwaltung**, **Erweiterte Ereignisse**und **Sitzungen** .  
+1.  Erweitern Sie im **Objekt-Explorer** die Knoten **Verwaltung**, **Erweiterte Ereignisse** und **Sitzungen** .  
   
-2.  Klicken Sie mit der rechten Maustaste auf eine Sitzung, und wählen Sie **Eigenschaften**aus.  
+2.  Klicken Sie mit der rechten Maustaste auf eine Sitzung, und wählen Sie **Eigenschaften** aus.  
   
 3.  Wählen Sie im Abschnitt **Seite auswählen** die Seite oder Seiten aus, die Sie bearbeiten möchten.  
   
@@ -120,7 +120,7 @@ STATE = STOP
 ## <a name="script-an-event-session-definition-using-tsql"></a>Skript für eine Ereignissitzung als Definition mit [!INCLUDE[tsql](../../includes/tsql-md.md)]  
  Sowohl der Assistent für neue Sitzungen als auch das Dialogfeld "Neue Sitzung" verfügen über eine Skriptoption, die den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code generiert, der die Sitzung für erweiterte Ereignisse definiert.  
   
- Sie können auf den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code für eine vorhandene Sitzung für erweiterte Ereignisse zugreifen, indem Sie mit der rechten Maustaste auf den Sitzungsnamen klicken, die Option **Skript für Sitzung als**und dann **Erstellen in**auswählen.  
+ Sie können auf den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code für eine vorhandene Sitzung für erweiterte Ereignisse zugreifen, indem Sie mit der rechten Maustaste auf den Sitzungsnamen klicken, die Option **Skript für Sitzung als** und dann **Erstellen in** auswählen.  
   
 ## <a name="delete-an-extended-events-session"></a>Löschen einer Sitzung für erweiterte Ereignisse  
  Sie können eine Sitzung für erweiterte Ereignisse löschen:  
@@ -138,15 +138,15 @@ STATE = STOP
   
  So löschen Sie eine Sitzung für erweiterte Ereignisse im **Objekt-Explorer**:  
   
-1.  Erweitern Sie die Knoten **Verwaltung**, **Erweiterte Ereignisse**und anschließend **Sitzungen** .  
+1.  Erweitern Sie die Knoten **Verwaltung**, **Erweiterte Ereignisse** und anschließend **Sitzungen** .  
   
-2.  Klicken Sie mit der rechten Maustaste auf eine Sitzung, und wählen Sie **Löschen**aus.  
+2.  Klicken Sie mit der rechten Maustaste auf eine Sitzung, und wählen Sie **Löschen** aus.  
   
 3.  Klicken Sie im Dialogfeld **Objekt löschen** auf **OK**.  
   
 4.  Klicken Sie nach der Überarbeitung der Ereignissitzung auf **OK**.  
   
- Geben Sie die folgenden Anweisungen ein, und ersetzen Sie dabei **Sitzungsname**durch den Namen der Sitzung für erweiterte Ereignisse, die Sie löschen möchten, um eine Sitzung für erweiterte Ereignisse im *Abfrage-Editor* zu löschen:  
+ Geben Sie die folgenden Anweisungen ein, und ersetzen Sie dabei **Sitzungsname** durch den Namen der Sitzung für erweiterte Ereignisse, die Sie löschen möchten, um eine Sitzung für erweiterte Ereignisse im *Abfrage-Editor* zu löschen:  
   
 ```  
 DROP EVENT SESSION [session_name]  

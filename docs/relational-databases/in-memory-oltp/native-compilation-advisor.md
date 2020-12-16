@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: efbd90e43c4f2bf7863106330b59f436c31b6238
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cdadcfea01226f1076e26a08316f79b1c0d7a4d1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868532"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460393"
 ---
 # <a name="native-compilation-advisor"></a>Ratgeber für native Kompilierung
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "91868532"
  Weitere Informationen zu Migrationsmethoden finden Sie unter [In-Memory OLTP - Common Workload Patterns and Migration Considerations (In-Memory-OLTP: Allgemeine Workloadmuster und Überlegungen zur Migration)](/previous-versions/dn673538(v=msdn.10)).  
   
 ## <a name="walkthrough-using-the-native-compilation-advisor"></a>Exemplarische Vorgehensweise: Ratgeber für native Kompilierung  
- Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf die gespeicherte Prozedur, die Sie konvertieren möchten, und wählen Sie **Ratgeber für native Kompilierung**aus. Daraufhin wird die Willkommensseite für **Ratgeber für die native Kompilierung gespeicherter Prozeduren**angezeigt. Klicken Sie auf zum Fortfahren auf **Weiter**.  
+ Klicken Sie im **Objekt-Explorer** mit der rechten Maustaste auf die gespeicherte Prozedur, die Sie konvertieren möchten, und wählen Sie **Ratgeber für native Kompilierung** aus. Daraufhin wird die Willkommensseite für **Ratgeber für die native Kompilierung gespeicherter Prozeduren** angezeigt. Klicken Sie auf zum Fortfahren auf **Weiter**.  
   
 ### <a name="stored-procedure-validation"></a>Überprüfung der gespeicherten Prozedur  
  Auf dieser Seite wird angezeigt, ob die gespeicherte Prozedur Konstrukte verwendet, die mit der nativen Kompilierung nicht kompatibel sind. Klicken Sie auf **Weiter** , um weitere Details anzuzeigen. Wenn Konstrukte vorhanden sind, die nicht mit der nativen Kompilierung kompatibel sind, können Sie durch Klicken auf **Weiter** zusätzliche Details abrufen.  
   
 ### <a name="stored-procedure-validation-result"></a>Überprüfungsergebnis der gespeicherten Prozedur  
- Wenn Konstrukte vorhanden sind, die nicht mit der nativen Kompilierung kompatibel sind, werden auf der Seite **Überprüfungsergebnis der gespeicherten Prozedur** detaillierte Informationen angezeigt. Sie können (durch Klicken auf **Bericht generieren**) einen Bericht generieren, den **Ratgeber für native Kompilierung**beenden und den Code aktualisieren, sodass er mit der nativen Kompilierung kompatibel ist.  
+ Wenn Konstrukte vorhanden sind, die nicht mit der nativen Kompilierung kompatibel sind, werden auf der Seite **Überprüfungsergebnis der gespeicherten Prozedur** detaillierte Informationen angezeigt. Sie können (durch Klicken auf **Bericht generieren**) einen Bericht generieren, den **Ratgeber für native Kompilierung** beenden und den Code aktualisieren, sodass er mit der nativen Kompilierung kompatibel ist.  
   
 ## <a name="code-sample"></a>Codebeispiel  
  Im folgenden Beispiel werden eine interpretierte gespeicherte Prozedur und die *äquivalente* gespeicherte Prozedur für die native Kompilierung erläutert. Das in diesem Beispiel verwendete Verzeichnis ist c:\data.  

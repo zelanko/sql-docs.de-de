@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 612b353c094a3144669e59ae415b92e862be5ea9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 439e400c4ae4298e7e7c55548ffeb7874917a573
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448126"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463171"
 ---
 # <a name="synchronize-a-pull-subscription"></a>Synchronisieren eines Pullabonnements
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "88448126"
   
 #### <a name="to-start-the-distribution-agent-from-the-command-prompt-or-from-a-batch-file"></a>So starten Sie den Verteilungs-Agent von der Eingabeaufforderung oder einer Batchdatei aus  
   
-1.  Starten Sie den [Replikationsverteilungs-Agent](../../relational-databases/replication/agents/replication-distribution-agent.md) von der Eingabeaufforderung oder einer Batchdatei aus, indem Sie **distrib.exe**ausführen. Geben Sie dazu die folgenden Befehlszeilenargumente an:  
+1.  Starten Sie den [Replikationsverteilungs-Agent](../../relational-databases/replication/agents/replication-distribution-agent.md) von der Eingabeaufforderung oder einer Batchdatei aus, indem Sie **distrib.exe** ausführen. Geben Sie dazu die folgenden Befehlszeilenargumente an:  
   
     -   **-Publisher**  
   
@@ -102,7 +102,7 @@ ms.locfileid: "88448126"
   
 #### <a name="to-start-the-merge-agent-from-the-command-prompt-or-from-a-batch-file"></a>So starten Sie den Merge-Agent von der Eingabeaufforderung oder einer Batchdatei aus  
   
-1.  Starten Sie den [Replikationsmerge-Agent](../../relational-databases/replication/agents/replication-merge-agent.md) von der Eingabeaufforderung oder einer Batchdatei aus, indem Sie **replmerg.exe**ausführen. Geben Sie dazu die folgenden Befehlszeilenargumente an:  
+1.  Starten Sie den [Replikationsmerge-Agent](../../relational-databases/replication/agents/replication-merge-agent.md) von der Eingabeaufforderung oder einer Batchdatei aus, indem Sie **replmerg.exe** ausführen. Geben Sie dazu die folgenden Befehlszeilenargumente an:  
   
     -   **-Publisher**  
   
@@ -204,7 +204,7 @@ SET Publication=AdvWorksSalesOrdersMerge
   
     -   Die in Schritt 1 erstellte Verbindung für <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die restlichen Abonnementeigenschaften abzurufen. Überprüfen Sie, ob das Abonnement vorhanden ist, wenn diese Methode **false**zurückgibt.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die restlichen Abonnementeigenschaften abzurufen. Überprüfen Sie, ob das Abonnement vorhanden ist, wenn diese Methode **false** zurückgibt.  
   
 4.  Starten Sie den Verteilungs-Agent auf eine der folgenden Arten auf dem Abonnenten:  
   
@@ -231,7 +231,7 @@ SET Publication=AdvWorksSalesOrdersMerge
   
     -   Die in Schritt 1 erstellte Verbindung für <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die restlichen Abonnementeigenschaften abzurufen. Überprüfen Sie, ob das Abonnement vorhanden ist, wenn diese Methode **false**zurückgibt.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die restlichen Abonnementeigenschaften abzurufen. Überprüfen Sie, ob das Abonnement vorhanden ist, wenn diese Methode **false** zurückgibt.  
   
 4.  Starten Sie den Merge-Agent auf eine der folgenden Arten auf dem Abonnenten:  
   
