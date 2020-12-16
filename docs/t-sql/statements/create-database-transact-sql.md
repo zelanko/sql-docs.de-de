@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft-Dokumentation
 description: Erstellen von Datenbanksyntax für SQL Server, Azure SQL-Datenbank, Azure Synapse Analytics und Analytics Platform System
 ms.custom: references_regions
-ms.date: 10/30/2020
+ms.date: 12/11/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -36,13 +36,13 @@ helpviewer_keywords:
 ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e66c5801b3a927b28f355e450be9d31c796e78dc
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016'
+ms.openlocfilehash: 0e0cf7b17061340f347af536cad762f63cc38ef3
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235397"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489140"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -54,7 +54,7 @@ Weitere Informationen zu Syntaxkonventionen finden Sie unter [Transact-SQL-Synta
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -70,7 +70,7 @@ Weitere Informationen zu Syntaxkonventionen finden Sie unter [Transact-SQL-Synta
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -182,7 +182,7 @@ Wenn der Datendateiname nicht angegeben ist, verwendet [!INCLUDE[ssNoVersion](..
 
 CONTAINMENT = { NONE | PARTIAL }
 
-**Gilt für** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher
+**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher
 
 Gibt den Kapselungsstatus der Datenbank an. NONE = nicht eigenständige Datenbank. PARTIAL = teilweise eigenständige Datenbank.
 
@@ -208,7 +208,7 @@ Weitere Informationen zu den Namen von Windows- und SQL-Sortierungen finden Sie 
 WITH \<option>
  **\<filestream_option>**
 
-NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **Gilt für** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.
+NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.
 
 Gibt die Ebene des nicht transaktionalen FILESTREAM-Zugriffs auf die Datenbank an.
 
@@ -227,25 +227,25 @@ Die folgenden Optionen sind nur zulässig, wenn CONTAINMENT auf PARTIAL festgele
 
 - **DEFAULT_FULLTEXT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**
 
-  **Gilt für** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher
+  **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher
 
   Weitere Informationen zu dieser Option finden Sie unter [Konfigurieren der Serverkonfigurationsoption Volltext-Standardsprache](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md).
 
 - **DEFAULT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**
 
-  **Gilt für** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher
+  **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher
 
   Weitere Informationen zu dieser Option finden Sie unter [Konfigurieren der Serverkonfigurationsoption Standardsprache](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md).
 
 - **NESTED_TRIGGERS = { OFF | ON}**
 
-  **Gilt für** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher
+  **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher
 
   Weitere Informationen zu dieser Option finden Sie unter [Konfigurieren der Serverkonfigurationsoption Geschachtelte Trigger](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md).
 
 - **TRANSFORM_NOISE_WORDS = { OFF | ON}**
 
-  **Gilt für** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher
+  **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher
 
   Weitere Informationen zu dieser Option finden Sie unter [Füllwörtertransformation (Serverkonfigurationsoption)](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md).
 
@@ -276,7 +276,7 @@ Die folgenden Optionen sind nur zulässig, wenn CONTAINMENT auf PARTIAL festgele
 
 - **PERSISTENT_LOG_BUFFER=ON ( DIRECTORY_NAME='' )**
 
-  Durch Festlegen dieser Option wird der Transaktionsprotokollpuffer auf einem Volume erstellt, das sich auf einem Laufwerk befindet, welches durch Speicherklassenspeicher (NVDIMM-N permanenter Speicher) gesichert ist – auch bekannt als persistenter Protokollpuffer. Weitere Informationen finden Sie unter [Transaction Commit latency acceleration using Storage Class Memory](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/) (Beschleunigung der Transaktionscommitlatenz mit Speicherklassenspeicher). **Gilt für** : [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] und neuere Versionen.
+  Durch Festlegen dieser Option wird der Transaktionsprotokollpuffer auf einem Volume erstellt, das sich auf einem Laufwerk befindet, welches durch Speicherklassenspeicher (NVDIMM-N permanenter Speicher) gesichert ist – auch bekannt als persistenter Protokollpuffer. Weitere Informationen finden Sie unter [Transaction Commit latency acceleration using Storage Class Memory](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/) (Beschleunigung der Transaktionscommitlatenz mit Speicherklassenspeicher). **Gilt für**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] und neuere Versionen.
 
 FOR ATTACH [ WITH \< attach_database_option > ] gibt an, dass die Datenbank durch [Anfügen](../../relational-databases/databases/database-detach-and-attach-sql-server.md) von vorhandenen Betriebssystemdateien erstellt wird. Es muss ein \<filespec>-Eintrag vorhanden sein, der die erste primäre Datei angibt. Darüber hinaus werden nur \<filespec>-Einträge für die Dateien benötigt, deren Pfad sich seit dem Erstellen oder letzten Anhängen der Datenbank geändert hat. Für diese Dateien muss ein \<filespec>-Eintrag angegeben werden.
 
@@ -315,7 +315,7 @@ Berücksichtigen Sie Folgendes, wenn Sie eine replizierte Datenbank anfügen, di
 - Wenn Sie die Datenbank an eine andere Serverinstanz unabhängig von der Version anfügen, müssen Sie [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) ausführen, um die Replikation zu entfernen, nachdem der Anfügevorgang abgeschlossen wurde.
 
 > [!NOTE]
-> Für das Anfügen wird das **vardecimal** -Speicherformat verwendet, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] muss jedoch mindestens auf [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2 aktualisiert werden. Sie können keine Datenbank mit "vardecimal"-Speicherformat an eine frühere Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anfügen. Informationen zum **vardecimal** -Speicherformat finden Sie unter [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md).
+> Für das Anfügen wird das **vardecimal**-Speicherformat verwendet, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] muss jedoch mindestens auf [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2 aktualisiert werden. Sie können keine Datenbank mit "vardecimal"-Speicherformat an eine frühere Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anfügen. Informationen zum **vardecimal**-Speicherformat finden Sie unter [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md).
 
 Wird eine Datenbank zum ersten Mal an eine neue Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]angefügt oder wiederhergestellt, ist noch keine Kopie des Datenbank-Hauptschlüssels (verschlüsselt vom Diensthauptschlüssel) auf dem Server gespeichert. Der Datenbank-Hauptschlüssel (Database Master Key, DMK) muss mithilfe der Anweisung **OPEN MASTER KEY** entschlüsselt werden. Nachdem der Datenbank-Hauptschlüssel entschlüsselt wurde, können Sie für die Zukunft die automatische Entschlüsselung aktivieren, indem Sie die Anweisung **ALTER MASTER KEY REGENERATE** verwenden. Auf diese Weise können Sie eine Kopie des mit dem Diensthauptschlüssel (Service Master Key, SMK) verschlüsselten Datenbank-Hauptschlüssels für den Server bereitstellen. Wenn eine Datenbank von einer früheren Version aktualisiert wurde, sollte der DMK neu generiert werden, damit er den neueren AES-Algorithmus verwendet. Weitere Informationen zum Neugenerieren des DMK finden Sie unter [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md). Die zum Neugenerieren des DMK zum Upgrade auf AES erforderliche Zeit hängt von der Anzahl der Objekte ab, die durch den DMK geschützt werden. Der DMK muss nur einmal auf AES aktualisiert und neu generiert werden. Dies hat keine Auswirkungen auf zukünftige Neugenerierungen im Rahmen einer Schlüsselrotationsstrategie. Weitere Informationen zum Upgraden einer Datenbank über Anfügevorgänge finden Sie unter [Aktualisieren einer Datenbank durch Trennen und Anfügen](../../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md).
 
@@ -411,7 +411,7 @@ CONTAINS FILESTREAM Gibt an, dass die Dateigruppe FILESTREAM-Blobs (Binary Large
 
 CONTAINS MEMORY_OPTIMIZED_DATA
 
-**Gilt für** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher
+**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher
 
 Gibt an, dass die Dateigruppe speicheroptimierte Daten im Dateisystem speichert. Weitere Informationen finden Sie unter [In-Memory OLTP – Arbeitsspeicheroptimierung](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Nur eine MEMORY_OPTIMIZED_DATA-Dateigruppe ist pro Datenbank zulässig. Codebeispiele, die Dateigruppen erstellen, um speicheroptimierte Daten zu speichern, finden Sie unter [Erstellen einer speicheroptimierten Tabelle und einer nativ kompilierten gespeicherten Prozedur](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).
 
@@ -464,7 +464,7 @@ Wir empfehlen, dass Sie ein Storage Area Network (SAN), ein Netzwerk auf iSCSI-B
 
 ## <a name="database-snapshots"></a>Datenbank-Momentaufnahmen
 
-Sie können die `CREATE DATABASE`-Anweisung verwenden, um eine schreibgeschützte statische Sicht (eine *Datenbankmomentaufnahme* ) der *Quelldatenbank* zu erstellen. Ein Datenbank-Momentaufnahme ist im Hinblick auf Transaktionen konsistent mit der Quelldatenbank zu dem Zeitpunkt, an dem die Momentaufnahme erstellt wurde. Für eine Quelldatenbank kann es mehrere Momentaufnahmen geben.
+Sie können die `CREATE DATABASE`-Anweisung verwenden, um eine schreibgeschützte statische Sicht (eine *Datenbankmomentaufnahme*) der *Quelldatenbank* zu erstellen. Ein Datenbank-Momentaufnahme ist im Hinblick auf Transaktionen konsistent mit der Quelldatenbank zu dem Zeitpunkt, an dem die Momentaufnahme erstellt wurde. Für eine Quelldatenbank kann es mehrere Momentaufnahmen geben.
 
 > [!NOTE]
 > Wenn Sie eine Datenbankmomentaufnahme erstellen, kann die `CREATE DATABASE`-Anweisung nicht auf Protokolldateien, Offlinedateien, Wiederherstellungsdateien und außer Kraft gesetzte Dateien verweisen.
@@ -859,11 +859,11 @@ GO
 - [Binary Large Object-Daten – Blob](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL-Datenbank \*_**
@@ -875,7 +875,7 @@ GO
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -997,7 +997,7 @@ MAXSIZE gibt die maximale Größe der Datenbank an. MAXSIZE muss für die angege
 |100 MB|√|√|√|√|√|
 |500 MB|√|√|√|√|√|
 |1 GB|√|√|√|√|√|
-|2 GB|√ (S)|√|√|√|√|
+|2 GB|√ (S)|√|√ (S)|√|√|
 |5 GB|–|√|√|√|√|
 |10 GB|–|√|√|√|√|
 |20 GB|–|√|√|√|√|
@@ -1007,13 +1007,13 @@ MAXSIZE gibt die maximale Größe der Datenbank an. MAXSIZE muss für die angege
 |100 GB|–|√|√|√|√|
 |150 GB|–|√|√|√|√|
 |200 GB|–|√|√|√|√|
-|250 GB|–|√ (S)|√ (S)|√|√|
+|250 GB|–|√ (S)|√ (S)|√ (S)|√ (S)|
 |300 GB|–|–|√|√|√|
 |400 GB|–|–|√|√|√|
 |500 GB|–|–|√|√ (S)|√|
 |750 GB|–|–|√|√|√|
 |1024 GB|–|–|√|√|√ (S)|
-|Von 1024 GB bis 4096 GB in Inkrementen von 256 GB* |–|–|–|–|√|√|
+|Von 1024 GB bis 4096 GB in Inkrementen von 256 GB* |–|NICHT ZUTREFFEND|–|Nicht zutreffend|√|√|
 
 \* P11 und P15 ermöglichen, dass die Größe von MAXSIZE bis zu 4 TB beträgt, wobei 1024 GB die Standardgröße darstellt. P11 und P15 können bis zu 4 TB des enthaltenen Speichers ohne Aufpreis verwenden. Im Premium-Tarif ist MAXSIZE mit einer Größe von mehr als 1 TB derzeit in den folgenden Regionen verfügbar: USA, Osten 2; USA, Westen; US Gov Virginia; Europa, Westen; Deutschland, Mitte; Asien, Südosten; Japan, Osten; Australien, Osten; Kanada, Mitte und Kanada, Osten. Zusätzliche Informationen bezüglich der Ressourcenbeschränkungen für das DTU-Modell finden Sie unter [DTU-Ressourcenlimits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
 
@@ -1140,7 +1140,7 @@ Legen Sie zum Erstellen einer neuen Datenbank in einem Pool für elastische Date
 AS COPY OF [source_server_name.]source_database_name **Gilt für:** Einzelne und in einem Pool zusammengefasste Datenbanken.
 Zum Kopieren einer Datenbank auf demselben oder einem anderen [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Server.
 
-*source_server_name* : Der Name des [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Servers, auf dem sich die Quelldatenbank befindet. Dieser Parameter ist optional, wenn sich die Quell- und die Zieldatenbank auf demselben [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Server befinden sollen.
+*source_server_name*: Der Name des [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Servers, auf dem sich die Quelldatenbank befindet. Dieser Parameter ist optional, wenn sich die Quell- und die Zieldatenbank auf demselben [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Server befinden sollen.
 
 > [!NOTE]
 > Das `AS COPY OF`-Argument unterstützt nicht die vollqualifizierten eindeutigen Domänennamen. Das heißt, wenn der vollqualifizierte Domänenname des Servers `serverName.database.windows.net` ist, verwenden Sie `serverName` nur während des Datenbankkopiervorgangs.
@@ -1288,11 +1288,11 @@ CREATE DATABASE test_zone_redundancy
 - [ALTER DATABASE - Azure SQL-Datenbank](alter-database-transact-sql.md?view=azuresqldb-currentls)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL-Datenbank](create-database-transact-sql.md?view=azuresqldb-current)
@@ -1304,7 +1304,7 @@ CREATE DATABASE test_zone_redundancy
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -1324,7 +1324,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 ```
 
 > [!IMPORTANT]
-> Verwenden Sie zum Hinzufügen von Dateien oder Festlegen der Kapselung für eine Datenbank in einer verwalteten Instanz die [ALTER DATABASE](alter-database-transact-sql.md?view=sqlallproducts-allversions&tabs=sqldbmi)-Anweisung.
+> Verwenden Sie zum Hinzufügen von Dateien oder Festlegen der Kapselung für eine Datenbank in einer verwalteten Instanz die [ALTER DATABASE](alter-database-transact-sql.md?tabs=sqldbmi)-Anweisung.
 
 ## <a name="arguments"></a>Argumente
 
@@ -1372,11 +1372,11 @@ CREATE DATABASE TestDB1;
 Siehe [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current)
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL-Datenbank](create-database-transact-sql.md?view=azuresqldb-current)
@@ -1388,7 +1388,7 @@ Siehe [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current
         **_\* Azure Synapse<br />Analytics \*_**
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -1402,7 +1402,7 @@ In Azure Synapse kann diese Anweisung mit einer Azure SQL-Datenbank-Serverinsta
 
 ## <a name="syntax"></a>Syntax
 
-### <a name="sql-pool"></a>[SQL-Pool](#tab/sqlpool)
+### <a name="dedicated-sql-pool"></a>[Dedizierter SQL-Pool](#tab/sqlpool)
 ```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 (
@@ -1423,7 +1423,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 )
 [;]
 ```
-### <a name="sql-on-demand-preview"></a>[SQL On-Demand (Vorschauversion)](#tab/sqlod)
+### <a name="serverless-sql-pool"></a>[Serverloser SQL-Pool](#tab/sqlod)
 ```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 [;] 
@@ -1504,11 +1504,11 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 - [DROP DATABASE - Transact-SQL](../../t-sql/statements/drop-database-transact-sql.md)
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL-Datenbank](create-database-transact-sql.md?view=azuresqldb-current)
@@ -1548,11 +1548,11 @@ WITH (
 
 *database_name* Der Name der neuen Datenbank. Weitere Informationen zu zulässigen Datenbanknamen finden Sie unter „Object Naming Rules“ (Regeln für die Objektbenennung) und „Reserved Database Names“ (Reservierte Datenbanknamen) in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
-AUTOGROW = ON | **OFF** Gibt an, ob die Parameter *replicated_size* , *distributed_size* und *log_size* für diese Datenbank automatisch je nach Bedarf über ihre angegebenen Größen hinweg vergrößert werden. Der Standardwert lautet **OFF**.
+AUTOGROW = ON | **OFF** Gibt an, ob die Parameter *replicated_size*, *distributed_size* und *log_size* für diese Datenbank automatisch je nach Bedarf über ihre angegebenen Größen hinweg vergrößert werden. Der Standardwert lautet **OFF**.
 
-Wenn AUTOGROW auf ON festgelegt ist, vergrößern sich *replicated_size* , *distributed_size* und *log_size* nach Bedarf (nicht in Blöcken der zuerst angegebenen Größe) bei jeder Dateneingabe, jedem Update oder anderen Aktionen, die mehr Speicherplatz als den bereits zugewiesenen erfordern.
+Wenn AUTOGROW auf ON festgelegt ist, vergrößern sich *replicated_size*, *distributed_size* und *log_size* nach Bedarf (nicht in Blöcken der zuerst angegebenen Größe) bei jeder Dateneingabe, jedem Update oder anderen Aktionen, die mehr Speicherplatz als den bereits zugewiesenen erfordern.
 
-Wenn AUTOGROW auf OFF festgelegt ist, verändern sich die Größen nicht automatisch. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] gibt einen Fehler zurück, wenn eine Aktion versucht wird, die erfordert, dass sich *replicated_size* , *distributed_size* oder *log_size* über ihren angegebenen Wert hinweg vergrößern.
+Wenn AUTOGROW auf OFF festgelegt ist, verändern sich die Größen nicht automatisch. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] gibt einen Fehler zurück, wenn eine Aktion versucht wird, die erfordert, dass sich *replicated_size*, *distributed_size* oder *log_size* über ihren angegebenen Wert hinweg vergrößern.
 
 AUTOGROW ist für alle Größen entweder auf ON oder auf OFF festgelegt. Es ist beispielsweise nicht möglich, AUTOGROW für *log_size* auf ON und für *replicated_size* auf OFF festzulegen.
 
@@ -1602,8 +1602,8 @@ Informationen zu minimalen und maximalen Einschränkungen für Datenbanken finde
 Bei der Erstellung der Datenbank muss genügend freier Speicherplatz *auf jedem Computeknoten* verfügbar sein, um den kombinierten Gesamtspeicherplatz der folgenden Größen zuzuweisen:
 
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank mit Tabellen mit einer Größe von *replicated_table_size*.
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank mit Tabellen mit einer Größe von ( *distributed_table_size* / Anzahl von Computeknoten).
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Protokolle mit einer Größe von ( *log_size* / Anzahl von Computeknoten).
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank mit Tabellen mit einer Größe von (*distributed_table_size* / Anzahl von Computeknoten).
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Protokolle mit einer Größe von (*log_size* / Anzahl von Computeknoten).
 
 ## <a name="locking"></a>Sperren
 

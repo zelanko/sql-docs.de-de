@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e484cfef4f805f1456101ad966ddf64912daca5
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5159591eeafc76ca16fde95f8a7b9789acc084e1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867183"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485312"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur zu In-Memory OLTP portiert werden soll
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "91867183"
  Der Bericht zur Transaktionsleistungsanalyse und die Migrationsratgeber werden im Rahmen von SQL Server Management Studio (SSMS) installiert, wenn Sie bei der Installation von **Verwaltungstools – Einfach** oder **Verwaltungstools – Erweitert**[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]auswählen, oder wenn Sie [SQL Server Management Studio herunterladen](../../ssms/download-sql-server-management-studio-ssms.md).    
   
 ## <a name="transaction-performance-analysis-reports"></a>Berichte zur Transaktionsleistungsanalyse  
- Sie können Berichte zur Transaktionsleistungsanalyse erstellen, indem Sie im **Objekt-Explorer** mit der rechten Maustaste auf die Datenbank klicken und nacheinander **Berichte**, **Standardberichte**und **Übersicht der Transaktionsleistungsanalyse**auswählen. Die Datenbank muss eine aktive oder eine kurz zuvor ausgeführte Arbeitsauslastung aufweisen, damit ein aussagekräftiger Analysebericht erstellt werden kann.  
+ Sie können Berichte zur Transaktionsleistungsanalyse erstellen, indem Sie im **Objekt-Explorer** mit der rechten Maustaste auf die Datenbank klicken und nacheinander **Berichte**, **Standardberichte** und **Übersicht der Transaktionsleistungsanalyse** auswählen. Die Datenbank muss eine aktive oder eine kurz zuvor ausgeführte Arbeitsauslastung aufweisen, damit ein aussagekräftiger Analysebericht erstellt werden kann.  
   
 ### <a name="tables"></a>Tabellen
   
@@ -108,7 +108,7 @@ Scan- und Konfliktstatistiken für den Tabellendetailbericht werden aus „sys.d
   
 **So generieren Sie eine Migrationsprüfliste über die Benutzeroberfläche**  
   
-1.  Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf eine Datenbank, die nicht die Systemdatenbank ist. Klicken Sie auf **Aufgaben**und anschließend auf **Prüflisten für die Migration zum In-Memory-OLTP erstellen**.  
+1.  Klicken Sie im **Objekt-Explorer** mit der rechten Maustaste auf eine Datenbank, die nicht die Systemdatenbank ist. Klicken Sie auf **Aufgaben** und anschließend auf **Prüflisten für die Migration zum In-Memory-OLTP erstellen**.  
   
 2.  Klicken Sie im Dialogfeld „Prüflisten für die Migration zum In-Memory-OLTP erstellen“ auf „Weiter“, um zur Seite **Optionen für die Prüflistenerstellung konfigurieren** zu navigieren. Führen Sie auf dieser Seite die folgenden Aktionen aus.  
   
@@ -128,7 +128,7 @@ Scan- und Konfliktstatistiken für den Tabellendetailbericht werden aus „sys.d
   
 **So generieren Sie eine Migrationsprüfliste mithilfe von SQL Server PowerShell**  
   
-1.  Klicken Sie im **Objekt-Explorer**auf eine Datenbank und anschließend auf **PowerShell starten**. Überprüfen Sie, ob die folgende Eingabeaufforderung angezeigt wird.  
+1.  Klicken Sie im **Objekt-Explorer** auf eine Datenbank und anschließend auf **PowerShell starten**. Überprüfen Sie, ob die folgende Eingabeaufforderung angezeigt wird.  
   
     ```  
     PS SQLSERVER: \SQL\{Instance Name}\DEFAULT\Databases\{two-part DB Name}>  

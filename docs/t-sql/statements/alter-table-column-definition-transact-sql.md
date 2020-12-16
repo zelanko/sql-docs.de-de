@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28472efd6747239910630388133bdfe3ca95a6a0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f4ff1708cf4c3986a90aff1b4c8048879bf0658e
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547796"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489455"
 ---
 # <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -157,7 +157,7 @@ DEFAULT
  Ein Literalwert, ein NULL-Wert oder eine Systemfunktion, der bzw. die als Standardwert für die Spalte verwendet wird. Wenn die Implementierung des Datentyps zusammen mit einer Spalte verwendet wird, die als benutzerdefinierter Datentyp von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] definiert ist, muss die Implementierung des Datentyps sie eine implizite Konvertierung von *constant_expression* in den benutzerdefinierten Datentyp unterstützen.  
   
 WITH VALUES   
- Beim Hinzufügen einer Spalte UND einer DEFAULT-Beschränkung wird, wenn die Spalte NULL-Werte mit WITH VALUES erlaubt, für bestehende Zeilen der Wert der neuen Spalte auf den in DEFAULT *constant_expression* angegebenen Wert gesetzt. Wenn die hinzugefügte Spalte NULL-Werte nicht zulässt, wird der Wert der Spalte immer auf den im DEFAULT *constant expression* angegebenen Wert gesetzt. Ab SQL Server 2012 kann dies auch ein Metadatenvorgang sein [Hinzufügen von NOT NULL-Spalten als Onlinevorgang](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation).
+ Beim Hinzufügen einer Spalte UND einer DEFAULT-Beschränkung wird, wenn die Spalte NULL-Werte mit WITH VALUES erlaubt, für bestehende Zeilen der Wert der neuen Spalte auf den in DEFAULT *constant_expression* angegebenen Wert gesetzt. Wenn die hinzugefügte Spalte NULL-Werte nicht zulässt, wird der Wert der Spalte immer auf den im DEFAULT *constant expression* angegebenen Wert gesetzt. Ab SQL Server 2012 kann dies auch ein Metadatenvorgang sein [Hinzufügen von NOT NULL-Spalten als Onlinevorgang](alter-table-transact-sql.md#adding-not-null-columns-as-an-online-operation).
 Wenn dieser verwendet wird, hat dies keine Auswirkung wenn die verknüpfte Spalte ist nicht ebenfalls hinzugefügt wird.
  
  Gibt an, dass der in DEFAULT *constant_expression* angegebene Wert in einer neuen Spalte gespeichert wird, die vorhandenen Zeilen hinzugefügt wird. Wenn die hinzugefügte Spalte NULL-Werte zulässt und WITH VALUES angegeben ist, wird der Standardwert in der neuen, zu vorhandenen Zeilen hinzugefügten Spalte gespeichert. Ist WITH VALUES für Spalten, die NULL-Werte zulassen, nicht angegeben, wird der Wert NULL in der neuen Spalte in vorhandenen Zeilen gespeichert. Wenn die neue Spalte keine NULL-Werte zulässt, wird der Standardwert in neuen Zeilen gespeichert, unabhängig davon, ob WITH VALUES angegeben ist.  
@@ -205,9 +205,9 @@ SPARSE
  Gibt Spaltenverschlüsselungsschlüssel an. Weitere Informationen finden Sie unter [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md).  
   
 ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }  
- Die**deterministische Verschlüsselung** verwendet eine Methode, die immer denselben verschlüsselten Wert für jeden angegebenen Klartextwert generiert. Die Verwendung der deterministischen Verschlüsselung ermöglicht die Suche mit einer Gleichheitsüberprüfung, das Gruppieren und das Verknüpfen von Tabellen mit Gleichheitsjoins, basierend auf verschlüsselten Werten. Jedoch erlaubt sie nicht autorisierten Benutzern möglicherweise, Informationen zu verschlüsselten Werten zu erraten, indem sie die Muster in den verschlüsselten Spalten untersuchen. Das Verknüpfen zweier Tabellen mit deterministisch verschlüsselten Spalten ist nur möglich, wenn die Spalten mit demselben Spaltenverschlüsselungsschlüssel verschlüsselt sind. Die deterministische Verschlüsselung muss eine Spaltensortierung mit einer binary2-Sortierreihenfolge für Zeichenspalten verwenden.  
+ Die **deterministische Verschlüsselung** verwendet eine Methode, die immer denselben verschlüsselten Wert für jeden angegebenen Klartextwert generiert. Die Verwendung der deterministischen Verschlüsselung ermöglicht die Suche mit einer Gleichheitsüberprüfung, das Gruppieren und das Verknüpfen von Tabellen mit Gleichheitsjoins, basierend auf verschlüsselten Werten. Jedoch erlaubt sie nicht autorisierten Benutzern möglicherweise, Informationen zu verschlüsselten Werten zu erraten, indem sie die Muster in den verschlüsselten Spalten untersuchen. Das Verknüpfen zweier Tabellen mit deterministisch verschlüsselten Spalten ist nur möglich, wenn die Spalten mit demselben Spaltenverschlüsselungsschlüssel verschlüsselt sind. Die deterministische Verschlüsselung muss eine Spaltensortierung mit einer binary2-Sortierreihenfolge für Zeichenspalten verwenden.  
   
- Die**zufällige Verschlüsselung** verwendet eine Methode, die Daten in einer weniger vorhersagbaren Weise verschlüsselt. Die Verschlüsselung nach dem Zufallsprinzip ist zwar sicherer, verhindert jedoch jegliche Berechnungen und Indizierungen in verschlüsselten Spalten, es sei denn, Ihre SQL Server-Instanz unterstützt [Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+ Die **zufällige Verschlüsselung** verwendet eine Methode, die Daten in einer weniger vorhersagbaren Weise verschlüsselt. Die Verschlüsselung nach dem Zufallsprinzip ist zwar sicherer, verhindert jedoch jegliche Berechnungen und Indizierungen in verschlüsselten Spalten, es sei denn, Ihre SQL Server-Instanz unterstützt [Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
   
  Wenn Sie Always Encrypted (ohne Secure Enclaves) verwenden, verwenden Sie die deterministische Verschlüsselung für Spalten, die mit Parametern oder Gruppierungsparametern durchsucht werden sollen (z.B. eine Behörden-ID-Nummer). Verwenden Sie die zufällige Datenverschlüsselung für Daten (z.B. Kreditkartennummern), die nicht mit anderen Datensätzen gruppiert oder in Jointabellen verwendet werden und nach denen nicht gesucht wird, wenn andere Spalten verwendet werden (z.B. Transaktionsnummern), um die Zeile zu suchen, die die betreffende verschlüsselte Spalte enthält.  
 

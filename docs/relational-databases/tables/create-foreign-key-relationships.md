@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea3a7bec04dcd7e584d541cf4fa4ccee3cf48915
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fdd110fd51d42ae13054a5d189c1180a9af623ee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645844"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484512"
 ---
 # <a name="create-foreign-key-relationships"></a>Erstellen von Fremdschlüssel-Beziehungen
 
@@ -68,7 +68,7 @@ Zum Erstellen eines Fremdschlüssels für eine vorhandene Tabelle ist die [ALTER
 6. Wählen Sie im Dialogfeld **Tabellen und Spalten** in der Dropdownliste **Primärschlüssel** die Tabelle aus, die sich auf der Primärschlüsselseite der Beziehung befinden soll.
 7. Wählen Sie im darunter angezeigten Datenblatt die Spalten aus, die für den Primärschlüssel der Tabelle verwendet werden sollen. Geben Sie in die jeweils rechts neben den einzelnen Spalten angrenzende Rasterzelle die entsprechende Fremdschlüsselspalte aus der Fremdschlüsseltabelle ein.
 
-   Der**Tabellen-Designer** schlägt einen Namen für die Beziehung vor. Wenn Sie diesen Namen ändern möchten, bearbeiten Sie den Inhalt des Textfelds **Beziehungsname** .
+   Der **Tabellen-Designer** schlägt einen Namen für die Beziehung vor. Wenn Sie diesen Namen ändern möchten, bearbeiten Sie den Inhalt des Textfelds **Beziehungsname** .
 8. Klicken Sie auf **OK** , um die Beziehung zu erstellen.
 9. Schließen Sie das Fenster mit dem Tabellen-Designer, und **speichern Sie** Ihre Änderungen, damit die Änderung der Fremdschlüsselbeziehung wirksam wird.
 

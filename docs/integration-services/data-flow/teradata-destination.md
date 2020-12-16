@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 191c89d1fdced6ad1581dadff1e4ed92f397f640
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 158184ea961aa8938bb0eb2b6f94890dd1eddbfa
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "92194712"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489870"
 ---
 # <a name="teradata-destination"></a>Teradata-Ziel
 
@@ -223,7 +223,7 @@ Auf der Seite „Fehlerausgabe“ des Dialogfelds „Teradata-Ziel-Editor“ kö
 
 Wählen Sie aus, wie das Teradata-Ziel Fehler in einem Fluss behandeln soll: Fehler ignorieren, Zeile umleiten oder Komponente mit einem Fehler abbrechen.
 
-**Verwandte Themen:** [Fehlerbehandlung in Daten](./error-handling-in-data.md?view=sql-server-2017)
+**Verwandte Themen:** [Fehlerbehandlung in Daten](./error-handling-in-data.md)
 
 **Abschneiden**
 

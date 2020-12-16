@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a1e6bcb89b8206f34c8438f6ebab2ef983210057
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 910671ecefc7a52f86a7e025492c3e5ec1371e65
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88330436"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485362"
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Sicherheitsüberwachung-Ereigniskategorie (SQL Server Profiler)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "88330436"
 |[Audit DBCC (Ereignisklasse)](../../relational-databases/event-classes/audit-dbcc-event-class.md)|Gibt an, dass ein DBCC-Befehl ausgegeben wurde.|  
 |[Überwachungsvolltextereignisklasse](../../relational-databases/event-classes/audit-fulltext-event-class.md)|Gibt an, dass ein Volltextereignis aufgetreten ist.|  
 |[Audit Login Change Password-Ereignisklasse](../../relational-databases/event-classes/audit-login-change-password-event-class.md)|Gibt an, dass ein Benutzer sein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldekennwort geändert hat.|  
-|[Audit Login Change Property (Ereignisklasse)](../../relational-databases/event-classes/audit-login-change-property-event-class.md)|Gibt an, dass **sp_defaultdb**, **sp_defaultlanguage**oder ALTER LOGIN zum Ändern einer Eigenschaft bei einer Anmeldung verwendet wurden.|  
+|[Audit Login Change Property (Ereignisklasse)](../../relational-databases/event-classes/audit-login-change-property-event-class.md)|Gibt an, dass **sp_defaultdb**, **sp_defaultlanguage** oder ALTER LOGIN zum Ändern einer Eigenschaft bei einer Anmeldung verwendet wurden.|  
 |[Audit Login (Ereignisklasse)](../../relational-databases/event-classes/audit-login-event-class.md)|Gibt an, dass ein Benutzer sich erfolgreich an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]angemeldet hat.|  
 |[Audit Login Failed (Ereignisklasse)](../../relational-databases/event-classes/audit-login-failed-event-class.md)|Gibt an, dass ein Benutzer versucht hat, sich an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzumelden, und diese Anmeldung einen Fehler erzeugt hat.|  
 |[Audit Login GDR-Ereignisklasse](../../relational-databases/event-classes/audit-login-gdr-event-class.md)|Gibt an, dass das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmelderecht hinzugefügt oder entfernt wurde.|  

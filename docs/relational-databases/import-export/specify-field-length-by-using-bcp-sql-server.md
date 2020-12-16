@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e39c277ac7fb0c09baca8bb98058c0ddc8766a55
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3a7e42033f677837cf7d4a21fadcb9ac348621b5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000381"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485342"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Angeben der Feldlänge mithilfe von bcp (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "86000381"
 -   Wenn der Dateispeichertyp Daten enthält, die nicht auf Zeichen basieren, fordert **bcp** nicht zur Eingabe einer Feldlänge auf. Die Daten werden in der nativen Datendarstellung (natives Format) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert.  
   
 ## <a name="using-default-field-lengths"></a>Verwenden der Standardfeldlängen  
- Im Allgemeinen empfiehlt [!INCLUDE[msCoName](../../includes/msconame-md.md)] , dass Sie die von **bcp**für die Feldlänge vorgeschlagenen Standardwerte übernehmen. Wenn Sie beim Erstellen einer Datendatei im Zeichenmodus die Standardfeldlänge verwenden, können Sie sicherstellen, dass die Daten nicht abgeschnitten werden und auch keine numerischen Überlauffehler auftreten.  
+ Im Allgemeinen empfiehlt [!INCLUDE[msCoName](../../includes/msconame-md.md)] , dass Sie die von **bcp** für die Feldlänge vorgeschlagenen Standardwerte übernehmen. Wenn Sie beim Erstellen einer Datendatei im Zeichenmodus die Standardfeldlänge verwenden, können Sie sicherstellen, dass die Daten nicht abgeschnitten werden und auch keine numerischen Überlauffehler auftreten.  
   
  Die Angabe falscher Feldlängen kann zu Problemen führen. Wenn Sie beispielsweise numerische Daten kopieren und eine Feldlänge angeben, die für die Daten nicht ausreicht, druckt das Hilfsprogramm **bcp** eine Überlaufmeldung und kopiert die Daten nicht. Wenn Sie **datetime** -Daten exportieren und für die Zeichenfolge eine Feldlänge von weniger als 26 Bytes angeben, werden die Daten vom Hilfsprogramm **bcp** ohne Fehlermeldung abgeschnitten.  
   

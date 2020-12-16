@@ -10,13 +10,13 @@ ms.technology: install
 ms.topic: conceptual
 author: randomnote1
 ms.author: dareist
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5a9770cd648fe804ee973878adee27b2d55080d0
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 7fb3e4847bef4b14fe7ce68b800b9cc8e95a5a64
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671063"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489564"
 ---
 # <a name="install-sql-server-with-powershell-desired-state-configuration"></a>Installieren von SQL Server mit PowerShell Desired State Configuration
 
@@ -44,7 +44,7 @@ In den meisten Fällen wird DSC verwendet, um die erforderlichen Voraussetzungen
 
 ## <a name="install-the-sqlserverdsc-dsc-resource"></a>Installieren der DSC-Ressource „SqlServerDsc“
 
-Laden Sie die DSC-Ressource [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) mithilfe des Cmdlets [Install-Module](/powershell/module/powershellget/Install-Module?view=powershell-5.1) aus dem [PowerShell-Katalog](https://www.powershellgallery.com/) herunter. 
+Laden Sie die DSC-Ressource [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) mithilfe des Cmdlets [Install-Module](/powershell/module/powershellget/Install-Module?view=powershell-5.1&preserve-view=true) aus dem [PowerShell-Katalog](https://www.powershellgallery.com/) herunter. 
 
 > [!NOTE]
 > Stellen Sie sicher, dass PowerShell **als Administrator ausgeführt** wird, wenn Sie das Modul installieren.

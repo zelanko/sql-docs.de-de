@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e58213e5098a1565dc25d702aef5f68589a55475
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dea62262cf7a9d5f8965dd4eeff6f412776fbc32
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679171"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484092"
 ---
 # <a name="declare-local_variable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -89,7 +89,7 @@ DECLARE
  Der Name einer Variablen. Variablennamen müssen mit einem at-Zeichen (@) beginnen. Die Namen lokaler Variablen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.  
   
 *data_type*  
- Ein vom System bereitgestellter, CLR-benutzerdefinierter Tabellentyp (Common Language Runtime) oder Aliasdatentyp. Eine Variable kann nicht den Datentyp **text** , **ntext** oder **image** haben.  
+ Ein vom System bereitgestellter, CLR-benutzerdefinierter Tabellentyp (Common Language Runtime) oder Aliasdatentyp. Eine Variable kann nicht den Datentyp **text**, **ntext** oder **image** haben.  
   
  Weitere Informationen zu Systemdatentypen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md). Weitere Informationen zu CLR-benutzerdefinierten Typen oder Aliasdatentypen finden Sie unter [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md).  
   
@@ -103,15 +103,15 @@ CURSOR
  Gibt an, dass die Variable eine lokale Cursorvariable ist.  
   
 @*table_variable_name*  
- Der Name einer Variablen vom Typ **table** . Variablennamen müssen mit einem at-Zeichen (@) beginnen und den Regeln für Bezeichner entsprechen.  
+ Der Name einer Variablen vom Typ **table**. Variablennamen müssen mit einem at-Zeichen (@) beginnen und den Regeln für Bezeichner entsprechen.  
   
 <table_type_definition>  
-Definiert den Datentyp **table** . Die Tabellendeklaration schließt Spaltendefinitionen, Namen, Datentypen und Einschränkungen ein. Die einzigen zulässigen Einschränkungstypen sind PRIMARY KEY, UNIQUE, NULL und CHECK. Ein Aliasdatentyp kann nicht als Skalar-Spaltendatentyp verwendet werden, wenn eine Regel oder Standarddefinition an den Typ gebunden ist.
+Definiert den Datentyp **table**. Die Tabellendeklaration schließt Spaltendefinitionen, Namen, Datentypen und Einschränkungen ein. Die einzigen zulässigen Einschränkungstypen sind PRIMARY KEY, UNIQUE, NULL und CHECK. Ein Aliasdatentyp kann nicht als Skalar-Spaltendatentyp verwendet werden, wenn eine Regel oder Standarddefinition an den Typ gebunden ist.
   
 \<table_type_definiton> Ist eine Teilmenge von Informationen, die zum Definieren einer Tabelle in CREATE TABLE verwendet werden. Darin sind Elemente und wichtige Definitionen eingeschlossen. Weitere Informationen finden Sie unter [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
  *n*  
- Ein Platzhalter, der angibt, dass mehrere Variablen angegeben und ihnen Werte zugewiesen werden können. Beim Deklarieren von **table** -Variablen muss die **table** -Variable die einzige Variable sein, die in der DECLARE-Anweisung deklariert wird.  
+ Ein Platzhalter, der angibt, dass mehrere Variablen angegeben und ihnen Werte zugewiesen werden können. Beim Deklarieren von **table**-Variablen muss die **table**-Variable die einzige Variable sein, die in der DECLARE-Anweisung deklariert wird.  
   
  *column_name*  
  Der Name der Spalte in der Tabelle.  
@@ -122,8 +122,8 @@ Definiert den Datentyp **table** . Die Tabellendeklaration schließt Spaltendefi
  *computed_column_expression*  
  Ein Ausdruck, der den Wert einer berechneten Spalte definiert. Sie wird mithilfe anderer Spalten derselben Tabelle mit einem Ausdruck berechnet. Eine berechnete Spalte kann beispielsweise die Definition **cost** AS **price \* qty** aufweisen. Der Ausdruck kann der Name einer nicht berechneten Spalte, eine Konstante, eine integrierte Funktion, eine Variable oder eine beliebige durch einen oder mehrere Operatoren verbundene Kombination der genannten Möglichkeiten sein. Der Ausdruck kann keine Unterabfrage oder benutzerdefinierte Funktion sein. Der Ausdruck kann nicht auf einen CLR-benutzerdefinierten Typ verweisen.  
   
- [ COLLATE *collation_name* ]  
- Gibt die Sortierung für die Spalte an. Als *collation_name* kann entweder der Name einer Windows-Sortierung oder ein SQL-Sortierungsname verwendet werden. Dieses Element gilt nur für Spalten der Datentypen **char** , **varchar** , **text** , **nchar** , **nvarchar** und **ntext** . Wenn collation_name nicht angegeben ist, wird der Spalte die Sortierung des benutzerdefinierten Datentyps zugewiesen, wenn es sich um eine Spalte von einem benutzerdefinierten Datentyp handelt, oder es wird die Sortierung der aktuellen Datenbank zugewiesen.  
+ [ COLLATE *collation_name*]  
+ Gibt die Sortierung für die Spalte an. Als *collation_name* kann entweder der Name einer Windows-Sortierung oder ein SQL-Sortierungsname verwendet werden. Dieses Element gilt nur für Spalten der Datentypen **char**, **varchar**, **text**, **nchar**, **nvarchar** und **ntext**. Wenn collation_name nicht angegeben ist, wird der Spalte die Sortierung des benutzerdefinierten Datentyps zugewiesen, wenn es sich um eine Spalte von einem benutzerdefinierten Datentyp handelt, oder es wird die Sortierung der aktuellen Datenbank zugewiesen.  
   
  Weitere Informationen zu den Windows- und SQL-Sortierungsnamen finden Sie unter [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
   
@@ -134,7 +134,7 @@ Definiert den Datentyp **table** . Die Tabellendeklaration schließt Spaltendefi
  Eine Konstante, ein NULL-Wert oder eine Systemfunktion, die bzw. der als Standardwert für die Spalte verwendet wird.  
   
  IDENTITY  
- Gibt an, dass es sich bei der neuen Spalte um eine Identitätsspalte handelt. Wenn der Tabelle eine neue Zeile hinzugefügt wird, stellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen eindeutigen, inkrementellen Wert für die Spalte bereit. Identitätsspalten werden in der Regel in Verbindung mit PRIMARY KEY-Einschränkungen verwendet, um als eindeutiger Zeilenbezeichner für die Tabelle zu dienen. Die IDENTITY-Eigenschaft kann folgenden Spalten zugewiesen werden: **tinyint** , **smallint** , **int** , **decimal(p,0)** oder **numeric(p,0)** . Es kann nur eine Identitätsspalte pro Tabelle erstellt werden. Gebundene Standardwerte und DEFAULT-Einschränkungen können nicht mit einer Identitätsspalte verwendet werden. Sie müssen entweder den Ausgangswert und den Schrittweitenwert oder keinen von beiden angeben. Wurden Ausgangswert und inkrementeller Wert nicht angegeben, ist der Standardwert (1,1).  
+ Gibt an, dass es sich bei der neuen Spalte um eine Identitätsspalte handelt. Wenn der Tabelle eine neue Zeile hinzugefügt wird, stellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen eindeutigen, inkrementellen Wert für die Spalte bereit. Identitätsspalten werden in der Regel in Verbindung mit PRIMARY KEY-Einschränkungen verwendet, um als eindeutiger Zeilenbezeichner für die Tabelle zu dienen. Die IDENTITY-Eigenschaft kann folgenden Spalten zugewiesen werden: **tinyint**, **smallint**, **int**, **decimal(p,0)** oder **numeric(p,0)** . Es kann nur eine Identitätsspalte pro Tabelle erstellt werden. Gebundene Standardwerte und DEFAULT-Einschränkungen können nicht mit einer Identitätsspalte verwendet werden. Sie müssen entweder den Ausgangswert und den Schrittweitenwert oder keinen von beiden angeben. Wurden Ausgangswert und inkrementeller Wert nicht angegeben, ist der Standardwert (1,1).  
   
  *seed*  
  Der Wert, der für die erste in die Tabelle geladene Zeile verwendet wird.  
@@ -143,7 +143,7 @@ Definiert den Datentyp **table** . Die Tabellendeklaration schließt Spaltendefi
  Der Schrittweitenwert, der zum Identitätswert der zuvor geladenen Zeile addiert wird.  
   
  ROWGUIDCOL  
- Gibt an, dass die neue Spalte eine Spalte mit für alle Zeilen global eindeutigen Bezeichnern ist. Nur eine **uniqueidentifier** -Spalte pro Tabelle kann als ROWGUIDCOL-Spalte gekennzeichnet werden. Die ROWGUIDCOL-Eigenschaft kann nur einer **uniqueidentifier** -Spalte zugewiesen werden.  
+ Gibt an, dass die neue Spalte eine Spalte mit für alle Zeilen global eindeutigen Bezeichnern ist. Nur eine **uniqueidentifier**-Spalte pro Tabelle kann als ROWGUIDCOL-Spalte gekennzeichnet werden. Die ROWGUIDCOL-Eigenschaft kann nur einer **uniqueidentifier**-Spalte zugewiesen werden.  
   
  NULL | NOT NULL  
  Gibt an, ob NULL in der Variablen zulässig ist. Die Standardeinstellung ist NULL.  

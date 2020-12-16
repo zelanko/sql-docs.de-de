@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ecb1710f992535ca4e6ebca3a3f825c5e1bffc9a
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4f2a00a567282eb4a2d5990360b630817d1950c6
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496976"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489473"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 
@@ -41,7 +41,7 @@ Benennt einen Datenbankbenutzer um oder ändert sein Standardschema.
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -57,7 +57,7 @@ Benennt einen Datenbankbenutzer um oder ändert sein Standardschema.
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -85,36 +85,36 @@ NAME = newUserName
 
 ## <a name="arguments"></a>Argumente
 
- *userName* : Gibt den Namen an, mit dem der Benutzer innerhalb dieser Datenbank identifiziert wird.
+ *userName*: Gibt den Namen an, mit dem der Benutzer innerhalb dieser Datenbank identifiziert wird.
 
- LOGIN **=** _loginName_ : Ordnet einen Benutzer einer anderen Anmeldung neu zu. Dazu wird die Sicherheits-ID (SID) des Benutzers in die SID der Anmeldung geändert.
+ LOGIN **=** _loginName_: Ordnet einen Benutzer einer anderen Anmeldung neu zu. Dazu wird die Sicherheits-ID (SID) des Benutzers in die SID der Anmeldung geändert.
 
- NAME **=** _newUserName_ : Gibt den neuen Namen für diesen Benutzer an. *newUserName* darf in der aktuellen Datenbank noch nicht vorhanden sein.
+ NAME **=** _newUserName_: Gibt den neuen Namen für diesen Benutzer an. *newUserName* darf in der aktuellen Datenbank noch nicht vorhanden sein.
 
  DEFAULT_SCHEMA **=** { *schemaName* | NULL }: Gibt das erste Schema an, das vom Server beim Auflösen der Namen von Objekten für diesen Benutzer durchsucht wird. Wenn das Standardschema auf NULL festgelegt wird, wird ein Standardschema aus einer Windows-Gruppe entfernt. Die NULL-Option kann nicht in Verbindung mit einem Windows-Benutzer verwendet werden.
 
- PASSWORD **=** ' *password* '  **Gilt für** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+ PASSWORD **=** '*password*'  **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
  Gibt das Kennwort für den Benutzer an, der geändert wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
 
 > [!NOTE]
 > Diese Option ist nur für enthaltene Benutzer verfügbar. Weitere Informationen finden Sie unter [Eigenständige Datenbanken](../../relational-databases/databases/contained-databases.md) und [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).
 
- OLD_PASSWORD **=** _'oldpassword'_ **Gilt für** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+ OLD_PASSWORD **=** _'oldpassword'_ **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
- Das aktuelle Benutzerkennwort, das durch ' *password* ' ersetzt wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. *OLD_PASSWORD* ist für die Änderung eines Kennworts erforderlich, wenn Sie nicht über die **ALTER ANY USER** -Berechtigung verfügen. Mit *OLD_PASSWORD* wird verhindert, dass Benutzer mit der **IMPERSONATION** -Berechtigung das Kennwort ändern.
+ Das aktuelle Benutzerkennwort, das durch '*password*' ersetzt wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. *OLD_PASSWORD* ist für die Änderung eines Kennworts erforderlich, wenn Sie nicht über die **ALTER ANY USER**-Berechtigung verfügen. Mit *OLD_PASSWORD* wird verhindert, dass Benutzer mit der **IMPERSONATION**-Berechtigung das Kennwort ändern.
 
 > [!NOTE]
 > Diese Option ist nur für enthaltene Benutzer verfügbar.
 
- DEFAULT_LANGUAGE **=** _{NONE \| \<lcid> \| \<language name> \| \<language alias>}_ **Gilt für** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher
+ DEFAULT_LANGUAGE **=** _{NONE \| \<lcid> \| \<language name> \| \<language alias>}_ **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher
 
  Gibt eine Standardsprache an, die dem Benutzer zugewiesen werden soll. Wenn diese Option auf NONE festgelegt wird, wird die aktuelle Standardsprache der Datenbank als Standardsprache festgelegt. Wenn die Standardsprache der Datenbank später geändert wird, bleibt die Standardsprache des Benutzers unverändert. *DEFAULT_LANGUAGE* kann die lokale ID (lcid), der Name der Sprache oder der Sprachalias sein.
 
 > [!NOTE]
 > Diese Option kann nur in einer eigenständigen Datenbank und nur für eigenständige Benutzer angegeben werden.
 
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **Gilt für** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
  Verhindert bei Massenkopiervorgängen kryptografische Metadatenüberprüfungen auf dem Server. Dadurch kann der Benutzer durch Massenkopiervorgänge Daten zwischen Tabellen oder Datenbanken austauschen, ohne dabei die Daten zu verschlüsseln. Der Standardwert ist OFF.
 
@@ -158,17 +158,17 @@ Der Name eines Benutzers, der einem [!INCLUDE[ssNoVersion](../../includes/ssnove
 ## <a name="security"></a>Sicherheit
 
 > [!NOTE]
-> Ein Benutzer mit **ALTER ANY USER** -Berechtigung kann das Standardschema jedes Benutzers ändern. Ein Benutzer mit einem geänderten Schema könnte dann versehentlich Daten aus der falschen Tabelle auswählen oder Code aus dem falschen Schema ausführen.
+> Ein Benutzer mit **ALTER ANY USER**-Berechtigung kann das Standardschema jedes Benutzers ändern. Ein Benutzer mit einem geänderten Schema könnte dann versehentlich Daten aus der falschen Tabelle auswählen oder Code aus dem falschen Schema ausführen.
 
 ### <a name="permissions"></a>Berechtigungen
 
- Zum Ändern des Namens eines Benutzers ist die **ALTER ANY USER** -Berechtigung erforderlich.
+ Zum Ändern des Namens eines Benutzers ist die **ALTER ANY USER**-Berechtigung erforderlich.
 
- Um die Zielanmeldung eines Benutzers zu ändern, wird die **CONTROL** -Berechtigung für die Datenbank benötigt.
+ Um die Zielanmeldung eines Benutzers zu ändern, wird die **CONTROL**-Berechtigung für die Datenbank benötigt.
 
- Um den Benutzernamen eines Benutzers zu ändern, der über die **CONTROL** -Berechtigung für die Datenbank verfügt, ist die **CONTROL** -Berechtigung für die Datenbank erforderlich.
+ Um den Benutzernamen eines Benutzers zu ändern, der über die **CONTROL**-Berechtigung für die Datenbank verfügt, ist die **CONTROL**-Berechtigung für die Datenbank erforderlich.
 
- Zum Ändern des Standardschemas oder der Sprache ist die **ALTER** -Berechtigung für den Benutzer erforderlich. Benutzer können ihr eigenes Standardschema oder ihre eigene Sprache ändern.
+ Zum Ändern des Standardschemas oder der Sprache ist die **ALTER**-Berechtigung für den Benutzer erforderlich. Benutzer können ihr eigenes Standardschema oder ihre eigene Sprache ändern.
 
 ## <a name="examples"></a>Beispiele
 
@@ -196,7 +196,7 @@ GO
 
  Im folgenden Beispiel werden mehrere Optionen für einen Benutzer einer eigenständigen Datenbank in einer Anweisung geändert.
 
-**Gilt für** :  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.
+**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.
 
 ```sql
 ALTER USER Philip
@@ -216,11 +216,11 @@ GO
 - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL-Datenbank \*_**
@@ -232,7 +232,7 @@ GO
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -278,31 +278,31 @@ ALTER USER userName
 
 ## <a name="arguments"></a>Argumente
 
- *userName* : Gibt den Namen an, mit dem der Benutzer innerhalb dieser Datenbank identifiziert wird.
+ *userName*: Gibt den Namen an, mit dem der Benutzer innerhalb dieser Datenbank identifiziert wird.
 
- LOGIN **=** _loginName_ : Ordnet einen Benutzer einer anderen Anmeldung neu zu. Dazu wird die Sicherheits-ID (SID) des Benutzers in die SID der Anmeldung geändert.
+ LOGIN **=** _loginName_: Ordnet einen Benutzer einer anderen Anmeldung neu zu. Dazu wird die Sicherheits-ID (SID) des Benutzers in die SID der Anmeldung geändert.
 
  Wenn ALTER USER die einzige Anweisung in einem SQL-Batch ist, unterstützt Azure SQL-Datenbank die WITH LOGIN-Klausel. Wenn ALTER USER nicht die einzige Anweisung in einem SQL-Batch ist oder in dynamischem SQL-Code ausgeführt wird, wird die WITH LOGIN-Klausel nicht unterstützt.
 
- NAME **=** _newUserName_ : Gibt den neuen Namen für diesen Benutzer an. *newUserName* darf in der aktuellen Datenbank noch nicht vorhanden sein.
+ NAME **=** _newUserName_: Gibt den neuen Namen für diesen Benutzer an. *newUserName* darf in der aktuellen Datenbank noch nicht vorhanden sein.
 
  DEFAULT_SCHEMA **=** { *schemaName* | NULL }: Gibt das erste Schema an, das vom Server beim Auflösen der Namen von Objekten für diesen Benutzer durchsucht wird. Wenn das Standardschema auf NULL festgelegt wird, wird ein Standardschema aus einer Windows-Gruppe entfernt. Die NULL-Option kann nicht in Verbindung mit einem Windows-Benutzer verwendet werden.
 
- PASSWORD **=** ' *password* '  **Gilt für** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+ PASSWORD **=** '*password*'  **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
  Gibt das Kennwort für den Benutzer an, der geändert wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
 
 > [!NOTE]
 > Diese Option ist nur für enthaltene Benutzer verfügbar. Weitere Informationen finden Sie unter [Eigenständige Datenbanken](../../relational-databases/databases/contained-databases.md) und [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).
 
- OLD_PASSWORD **=** _'oldpassword'_ **Gilt für** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+ OLD_PASSWORD **=** _'oldpassword'_ **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
- Das aktuelle Benutzerkennwort, das durch ' *password* ' ersetzt wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. *OLD_PASSWORD* ist für die Änderung eines Kennworts erforderlich, wenn Sie nicht über die **ALTER ANY USER** -Berechtigung verfügen. Mit *OLD_PASSWORD* wird verhindert, dass Benutzer mit der **IMPERSONATION** -Berechtigung das Kennwort ändern.
+ Das aktuelle Benutzerkennwort, das durch '*password*' ersetzt wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. *OLD_PASSWORD* ist für die Änderung eines Kennworts erforderlich, wenn Sie nicht über die **ALTER ANY USER**-Berechtigung verfügen. Mit *OLD_PASSWORD* wird verhindert, dass Benutzer mit der **IMPERSONATION**-Berechtigung das Kennwort ändern.
 
 > [!NOTE]
 > Diese Option ist nur für enthaltene Benutzer verfügbar.
 
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **Gilt für** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
  Verhindert bei Massenkopiervorgängen kryptografische Metadatenüberprüfungen auf dem Server. Dadurch kann der Benutzer durch Massenkopiervorgänge Daten zwischen Tabellen oder Datenbanken austauschen, ohne dabei die Daten zu verschlüsseln. Der Standardwert ist OFF.
 
@@ -346,17 +346,17 @@ Der Name eines Benutzers, der einem [!INCLUDE[ssNoVersion](../../includes/ssnove
 ## <a name="security"></a>Sicherheit
 
 > [!NOTE]
-> Ein Benutzer mit **ALTER ANY USER** -Berechtigung kann das Standardschema jedes Benutzers ändern. Ein Benutzer mit einem geänderten Schema könnte dann versehentlich Daten aus der falschen Tabelle auswählen oder Code aus dem falschen Schema ausführen.
+> Ein Benutzer mit **ALTER ANY USER**-Berechtigung kann das Standardschema jedes Benutzers ändern. Ein Benutzer mit einem geänderten Schema könnte dann versehentlich Daten aus der falschen Tabelle auswählen oder Code aus dem falschen Schema ausführen.
 
 ### <a name="permissions"></a>Berechtigungen
 
- Zum Ändern des Namens eines Benutzers ist die **ALTER ANY USER** -Berechtigung erforderlich.
+ Zum Ändern des Namens eines Benutzers ist die **ALTER ANY USER**-Berechtigung erforderlich.
 
- Um die Zielanmeldung eines Benutzers zu ändern, wird die **CONTROL** -Berechtigung für die Datenbank benötigt.
+ Um die Zielanmeldung eines Benutzers zu ändern, wird die **CONTROL**-Berechtigung für die Datenbank benötigt.
 
- Um den Benutzernamen eines Benutzers zu ändern, der über die **CONTROL** -Berechtigung für die Datenbank verfügt, ist die **CONTROL** -Berechtigung für die Datenbank erforderlich.
+ Um den Benutzernamen eines Benutzers zu ändern, der über die **CONTROL**-Berechtigung für die Datenbank verfügt, ist die **CONTROL**-Berechtigung für die Datenbank erforderlich.
 
- Zum Ändern des Standardschemas oder der Sprache ist die **ALTER** -Berechtigung für den Benutzer erforderlich. Benutzer können ihr eigenes Standardschema oder ihre eigene Sprache ändern.
+ Zum Ändern des Standardschemas oder der Sprache ist die **ALTER**-Berechtigung für den Benutzer erforderlich. Benutzer können ihr eigenes Standardschema oder ihre eigene Sprache ändern.
 
 ## <a name="examples"></a>Beispiele
 
@@ -401,11 +401,11 @@ GO
 - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL-Datenbank](alter-user-transact-sql.md?view=azuresqldb-current)
@@ -417,7 +417,7 @@ GO
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -466,17 +466,17 @@ ALTER USER userName
 
 ## <a name="arguments"></a>Argumente
 
- *userName* : Gibt den Namen an, mit dem der Benutzer innerhalb dieser Datenbank identifiziert wird.
+ *userName*: Gibt den Namen an, mit dem der Benutzer innerhalb dieser Datenbank identifiziert wird.
 
- LOGIN **=** _loginName_ : Ordnet einen Benutzer einer anderen Anmeldung neu zu. Dazu wird die Sicherheits-ID (SID) des Benutzers in die SID der Anmeldung geändert.
+ LOGIN **=** _loginName_: Ordnet einen Benutzer einer anderen Anmeldung neu zu. Dazu wird die Sicherheits-ID (SID) des Benutzers in die SID der Anmeldung geändert.
 
  Wenn ALTER USER die einzige Anweisung in einem SQL-Batch ist, unterstützt Azure SQL-Datenbank die WITH LOGIN-Klausel. Wenn ALTER USER nicht die einzige Anweisung in einem SQL-Batch ist oder in dynamischem SQL-Code ausgeführt wird, wird die WITH LOGIN-Klausel nicht unterstützt.
 
- NAME **=** _newUserName_ : Gibt den neuen Namen für diesen Benutzer an. *newUserName* darf in der aktuellen Datenbank noch nicht vorhanden sein.
+ NAME **=** _newUserName_: Gibt den neuen Namen für diesen Benutzer an. *newUserName* darf in der aktuellen Datenbank noch nicht vorhanden sein.
 
  DEFAULT_SCHEMA **=** { *schemaName* | NULL }: Gibt das erste Schema an, das vom Server beim Auflösen der Namen von Objekten für diesen Benutzer durchsucht wird. Wenn das Standardschema auf NULL festgelegt wird, wird ein Standardschema aus einer Windows-Gruppe entfernt. Die NULL-Option kann nicht in Verbindung mit einem Windows-Benutzer verwendet werden.
 
- PASSWORD **=** ' *password* '
+ PASSWORD **=** '*password*'
 
  Gibt das Kennwort für den Benutzer an, der geändert wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
 
@@ -485,7 +485,7 @@ ALTER USER userName
 
  OLD_PASSWORD **=** _'oldpassword'_
 
- Das aktuelle Benutzerkennwort, das durch ' *password* ' ersetzt wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. *OLD_PASSWORD* ist für die Änderung eines Kennworts erforderlich, wenn Sie nicht über die **ALTER ANY USER** -Berechtigung verfügen. Mit *OLD_PASSWORD* wird verhindert, dass Benutzer mit der **IMPERSONATION** -Berechtigung das Kennwort ändern.
+ Das aktuelle Benutzerkennwort, das durch '*password*' ersetzt wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. *OLD_PASSWORD* ist für die Änderung eines Kennworts erforderlich, wenn Sie nicht über die **ALTER ANY USER**-Berechtigung verfügen. Mit *OLD_PASSWORD* wird verhindert, dass Benutzer mit der **IMPERSONATION**-Berechtigung das Kennwort ändern.
 
 > [!NOTE]
 > Diese Option ist nur für enthaltene Benutzer verfügbar.
@@ -497,7 +497,7 @@ ALTER USER userName
 > [!NOTE]
 > Diese Option kann nur in einer eigenständigen Datenbank und nur für eigenständige Benutzer angegeben werden.
 
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ON | **OFF** ]
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ON | **OFF**]
 
  Verhindert bei Massenkopiervorgängen kryptografische Metadatenüberprüfungen auf dem Server. Dadurch kann der Benutzer durch Massenkopiervorgänge Daten zwischen Tabellen oder Datenbanken austauschen, ohne dabei die Daten zu verschlüsseln. Der Standardwert ist OFF.
 
@@ -555,15 +555,15 @@ Diese Hinweise gelten für die Authentifizierung als Windows-Benutzer, die mit A
 - Überprüfen Sie, ob der angegebene Typ des Anmeldenamens `E` oder `X` ist.
 - Die PASSWORD-Option kann nicht für Azure AD-Benutzer verwendet werden.
 - In allen Migrationsfällen werden die Rollen und Berechtigungen von Windows-Benutzern oder -Gruppen automatisch an die neuen Azure AD-Benutzer oder -Gruppen übertragen.
-- Eine neue Syntaxerweiterung ( **FROM EXTERNAL PROVIDER** ) steht zur Verfügung, um Windows-Benutzer und -Gruppen aus lokalen SQL-Instanzen in Azure AD-Benutzer und -Gruppen zu ändern. Die Windows-Domäne muss im Verbund mit Azure AD konfiguriert sein, und alle Windows-Domänenmitglieder müssen bei der Verwendung dieser Erweiterung in Azure AD vorhanden sein. Die **FROM EXTERNAL PROVIDER** -Syntax gilt für Azure SQL Managed Instance und sollte verwendet werden, wenn Windows-Benutzer keine Konten für die ursprüngliche SQL-Instanz besitzen und eigenständigen Azure AD-Datenbankbenutzern zugeordnet werden müssen.
+- Eine neue Syntaxerweiterung (**FROM EXTERNAL PROVIDER**) steht zur Verfügung, um Windows-Benutzer und -Gruppen aus lokalen SQL-Instanzen in Azure AD-Benutzer und -Gruppen zu ändern. Die Windows-Domäne muss im Verbund mit Azure AD konfiguriert sein, und alle Windows-Domänenmitglieder müssen bei der Verwendung dieser Erweiterung in Azure AD vorhanden sein. Die **FROM EXTERNAL PROVIDER**-Syntax gilt für Azure SQL Managed Instance und sollte verwendet werden, wenn Windows-Benutzer keine Konten für die ursprüngliche SQL-Instanz besitzen und eigenständigen Azure AD-Datenbankbenutzern zugeordnet werden müssen.
 - In diesem Fall kann der zulässige Benutzername wie folgt lauten:
-- Ein Widows-Benutzer ( _Domäne\Benutzer_ ).
-- Eine Windows-Gruppe ( _MeineWindows-Gruppe_ ).
-- Ein Windows-Alias ( _MeinWindows-Alias_ ).
+- Ein Widows-Benutzer (_Domäne\Benutzer_).
+- Eine Windows-Gruppe (_MeineWindows-Gruppe_).
+- Ein Windows-Alias (_MeinWindows-Alias_).
 - Das Ergebnis des ALTER-Befehls ersetzt den alten Benutzernamen durch den entsprechenden Namen, der in Azure AD basierend auf der ursprünglichen SID des alten Benutzernamens gefunden wurde. Der geänderte Name wird ersetzt und in den Metadaten der Datenbank gespeichert:
-- ( _Domäne\Benutzer_ ) wird durch „Azure AD user@domain.com„ ersetzt.
-- ( _Domäne\\MeineWindows-Gruppe_ ) wird durch „Azure AD-Gruppe“ ersetzt.
-- ( _MeinWindows-Alias_ ) bleibt unverändert, aber die SID dieses Benutzers wird in Azure AD geprüft.
+- (_Domäne\Benutzer_) wird durch „Azure AD user@domain.com„ ersetzt.
+- (_Domäne\\MeineWindows-Gruppe_) wird durch „Azure AD-Gruppe“ ersetzt.
+- (_MeinWindows-Alias_) bleibt unverändert, aber die SID dieses Benutzers wird in Azure AD geprüft.
 
 > [!NOTE]
 > Wenn die in objectID konvertierte SID des ursprünglichen Benutzers in Azure AD nicht gefunden werden kann, tritt beim ALTER USER-Befehl ein Fehler auf.
@@ -580,17 +580,17 @@ Diese Hinweise gelten für die Authentifizierung als Windows-Benutzer, die mit A
 ## <a name="security"></a>Sicherheit
 
 > [!NOTE]
-> Ein Benutzer mit **ALTER ANY USER** -Berechtigung kann das Standardschema jedes Benutzers ändern. Ein Benutzer mit einem geänderten Schema könnte dann versehentlich Daten aus der falschen Tabelle auswählen oder Code aus dem falschen Schema ausführen.
+> Ein Benutzer mit **ALTER ANY USER**-Berechtigung kann das Standardschema jedes Benutzers ändern. Ein Benutzer mit einem geänderten Schema könnte dann versehentlich Daten aus der falschen Tabelle auswählen oder Code aus dem falschen Schema ausführen.
 
 ### <a name="permissions"></a>Berechtigungen
 
- Zum Ändern des Namens eines Benutzers ist die **ALTER ANY USER** -Berechtigung erforderlich.
+ Zum Ändern des Namens eines Benutzers ist die **ALTER ANY USER**-Berechtigung erforderlich.
 
- Um die Zielanmeldung eines Benutzers zu ändern, wird die **CONTROL** -Berechtigung für die Datenbank benötigt.
+ Um die Zielanmeldung eines Benutzers zu ändern, wird die **CONTROL**-Berechtigung für die Datenbank benötigt.
 
- Um den Benutzernamen eines Benutzers zu ändern, der über die **CONTROL** -Berechtigung für die Datenbank verfügt, ist die **CONTROL** -Berechtigung für die Datenbank erforderlich.
+ Um den Benutzernamen eines Benutzers zu ändern, der über die **CONTROL**-Berechtigung für die Datenbank verfügt, ist die **CONTROL**-Berechtigung für die Datenbank erforderlich.
 
- Zum Ändern des Standardschemas oder der Sprache ist die **ALTER** -Berechtigung für den Benutzer erforderlich. Benutzer können ihr eigenes Standardschema oder ihre eigene Sprache ändern.
+ Zum Ändern des Standardschemas oder der Sprache ist die **ALTER**-Berechtigung für den Benutzer erforderlich. Benutzer können ihr eigenes Standardschema oder ihre eigene Sprache ändern.
 
 ## <a name="examples"></a>Beispiele
 
@@ -669,11 +669,11 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
 - [Tutorial: Migrieren von lokalen SQL Server-Benutzern und -Gruppen unter Windows zu SQL Managed Instance mithilfe der DDL-Syntax von T-SQL](/azure/sql-database/tutorial-managed-instance-azure-active-directory-migration)
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL-Datenbank](alter-user-transact-sql.md?view=azuresqldb-current)
@@ -685,7 +685,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
         **_\* Azure Synapse<br />Analytics \*_**
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -710,13 +710,13 @@ ALTER USER userName
 
 ## <a name="arguments"></a>Argumente
 
- *userName* : Gibt den Namen an, mit dem der Benutzer innerhalb dieser Datenbank identifiziert wird.
+ *userName*: Gibt den Namen an, mit dem der Benutzer innerhalb dieser Datenbank identifiziert wird.
 
- LOGIN **=** _loginName_ : Ordnet einen Benutzer einer anderen Anmeldung neu zu. Dazu wird die Sicherheits-ID (SID) des Benutzers in die SID der Anmeldung geändert.
+ LOGIN **=** _loginName_: Ordnet einen Benutzer einer anderen Anmeldung neu zu. Dazu wird die Sicherheits-ID (SID) des Benutzers in die SID der Anmeldung geändert.
 
  Wenn ALTER USER die einzige Anweisung in einem SQL-Batch ist, unterstützt Azure SQL-Datenbank die WITH LOGIN-Klausel. Wenn ALTER USER nicht die einzige Anweisung in einem SQL-Batch ist oder in dynamischem SQL-Code ausgeführt wird, wird die WITH LOGIN-Klausel nicht unterstützt.
 
- NAME **=** _newUserName_ : Gibt den neuen Namen für diesen Benutzer an. *newUserName* darf in der aktuellen Datenbank noch nicht vorhanden sein.
+ NAME **=** _newUserName_: Gibt den neuen Namen für diesen Benutzer an. *newUserName* darf in der aktuellen Datenbank noch nicht vorhanden sein.
 
  DEFAULT_SCHEMA **=** { *schemaName* | NULL }: Gibt das erste Schema an, das vom Server beim Auflösen der Namen von Objekten für diesen Benutzer durchsucht wird. Wenn das Standardschema auf NULL festgelegt wird, wird ein Standardschema aus einer Windows-Gruppe entfernt. Die NULL-Option kann nicht in Verbindung mit einem Windows-Benutzer verwendet werden.
 
@@ -751,17 +751,17 @@ Der Name eines Benutzers, der einem [!INCLUDE[ssNoVersion](../../includes/ssnove
 ## <a name="security"></a>Sicherheit
 
 > [!NOTE]
-> Ein Benutzer mit **ALTER ANY USER** -Berechtigung kann das Standardschema jedes Benutzers ändern. Ein Benutzer mit einem geänderten Schema könnte dann versehentlich Daten aus der falschen Tabelle auswählen oder Code aus dem falschen Schema ausführen.
+> Ein Benutzer mit **ALTER ANY USER**-Berechtigung kann das Standardschema jedes Benutzers ändern. Ein Benutzer mit einem geänderten Schema könnte dann versehentlich Daten aus der falschen Tabelle auswählen oder Code aus dem falschen Schema ausführen.
 
 ### <a name="permissions"></a>Berechtigungen
 
- Zum Ändern des Namens eines Benutzers ist die **ALTER ANY USER** -Berechtigung erforderlich.
+ Zum Ändern des Namens eines Benutzers ist die **ALTER ANY USER**-Berechtigung erforderlich.
 
- Um die Zielanmeldung eines Benutzers zu ändern, wird die **CONTROL** -Berechtigung für die Datenbank benötigt.
+ Um die Zielanmeldung eines Benutzers zu ändern, wird die **CONTROL**-Berechtigung für die Datenbank benötigt.
 
- Um den Benutzernamen eines Benutzers zu ändern, der über die **CONTROL** -Berechtigung für die Datenbank verfügt, ist die **CONTROL** -Berechtigung für die Datenbank erforderlich.
+ Um den Benutzernamen eines Benutzers zu ändern, der über die **CONTROL**-Berechtigung für die Datenbank verfügt, ist die **CONTROL**-Berechtigung für die Datenbank erforderlich.
 
- Zum Ändern des Standardschemas oder der Sprache ist die **ALTER** -Berechtigung für den Benutzer erforderlich. Benutzer können ihr eigenes Standardschema oder ihre eigene Sprache ändern.
+ Zum Ändern des Standardschemas oder der Sprache ist die **ALTER**-Berechtigung für den Benutzer erforderlich. Benutzer können ihr eigenes Standardschema oder ihre eigene Sprache ändern.
 
 ## <a name="examples"></a>Beispiele
 
@@ -794,11 +794,11 @@ GO
 - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL-Datenbank](alter-user-transact-sql.md?view=azuresqldb-current)
@@ -835,13 +835,13 @@ ALTER USER userName
 
 ## <a name="arguments"></a>Argumente
 
- *userName* : Gibt den Namen an, mit dem der Benutzer innerhalb dieser Datenbank identifiziert wird.
+ *userName*: Gibt den Namen an, mit dem der Benutzer innerhalb dieser Datenbank identifiziert wird.
 
- LOGIN **=** _loginName_ : Ordnet einen Benutzer einer anderen Anmeldung neu zu. Dazu wird die Sicherheits-ID (SID) des Benutzers in die SID der Anmeldung geändert.
+ LOGIN **=** _loginName_: Ordnet einen Benutzer einer anderen Anmeldung neu zu. Dazu wird die Sicherheits-ID (SID) des Benutzers in die SID der Anmeldung geändert.
 
  Wenn ALTER USER die einzige Anweisung in einem SQL-Batch ist, unterstützt Azure SQL-Datenbank die WITH LOGIN-Klausel. Wenn ALTER USER nicht die einzige Anweisung in einem SQL-Batch ist oder in dynamischem SQL-Code ausgeführt wird, wird die WITH LOGIN-Klausel nicht unterstützt.
 
- NAME **=** _newUserName_ : Gibt den neuen Namen für diesen Benutzer an. *newUserName* darf in der aktuellen Datenbank noch nicht vorhanden sein.
+ NAME **=** _newUserName_: Gibt den neuen Namen für diesen Benutzer an. *newUserName* darf in der aktuellen Datenbank noch nicht vorhanden sein.
 
  DEFAULT_SCHEMA **=** { *schemaName* | NULL }: Gibt das erste Schema an, das vom Server beim Auflösen der Namen von Objekten für diesen Benutzer durchsucht wird. Wenn das Standardschema auf NULL festgelegt wird, wird ein Standardschema aus einer Windows-Gruppe entfernt. Die NULL-Option kann nicht in Verbindung mit einem Windows-Benutzer verwendet werden.
 
@@ -876,17 +876,17 @@ Der Name eines Benutzers, der einem [!INCLUDE[ssNoVersion](../../includes/ssnove
 ## <a name="security"></a>Sicherheit
 
 > [!NOTE]
-> Ein Benutzer mit **ALTER ANY USER** -Berechtigung kann das Standardschema jedes Benutzers ändern. Ein Benutzer mit einem geänderten Schema könnte dann versehentlich Daten aus der falschen Tabelle auswählen oder Code aus dem falschen Schema ausführen.
+> Ein Benutzer mit **ALTER ANY USER**-Berechtigung kann das Standardschema jedes Benutzers ändern. Ein Benutzer mit einem geänderten Schema könnte dann versehentlich Daten aus der falschen Tabelle auswählen oder Code aus dem falschen Schema ausführen.
 
 ### <a name="permissions"></a>Berechtigungen
 
- Zum Ändern des Namens eines Benutzers ist die **ALTER ANY USER** -Berechtigung erforderlich.
+ Zum Ändern des Namens eines Benutzers ist die **ALTER ANY USER**-Berechtigung erforderlich.
 
- Um die Zielanmeldung eines Benutzers zu ändern, wird die **CONTROL** -Berechtigung für die Datenbank benötigt.
+ Um die Zielanmeldung eines Benutzers zu ändern, wird die **CONTROL**-Berechtigung für die Datenbank benötigt.
 
- Um den Benutzernamen eines Benutzers zu ändern, der über die **CONTROL** -Berechtigung für die Datenbank verfügt, ist die **CONTROL** -Berechtigung für die Datenbank erforderlich.
+ Um den Benutzernamen eines Benutzers zu ändern, der über die **CONTROL**-Berechtigung für die Datenbank verfügt, ist die **CONTROL**-Berechtigung für die Datenbank erforderlich.
 
- Zum Ändern des Standardschemas oder der Sprache ist die **ALTER** -Berechtigung für den Benutzer erforderlich. Benutzer können ihr eigenes Standardschema oder ihre eigene Sprache ändern.
+ Zum Ändern des Standardschemas oder der Sprache ist die **ALTER**-Berechtigung für den Benutzer erforderlich. Benutzer können ihr eigenes Standardschema oder ihre eigene Sprache ändern.
 
 ## <a name="examples"></a>Beispiele
 

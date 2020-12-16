@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa72cf50aed832d92d0351ceb699df0646debacd
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 06f465d3c4ff6086d74c155c4f810730eca50742
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809652"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484482"
 ---
 # <a name="create-unique-constraints"></a>Erstellen von Unique-Einschränkungen
 
@@ -57,7 +57,7 @@ ms.locfileid: "91809652"
   
 #### <a name="to-create-a-unique-constraint"></a>So erstellen Sie eine UNIQUE-Einschränkung  
   
-1.  Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf die Tabelle, der Sie eine UNIQUE-Einschränkung hinzufügen möchten, und klicken Sie auf **Entwerfen**.  
+1.  Klicken Sie im **Objekt-Explorer** mit der rechten Maustaste auf die Tabelle, der Sie eine UNIQUE-Einschränkung hinzufügen möchten, und klicken Sie auf **Entwerfen**.  
   
 2.  Klicken Sie im Menü **Tabellen-Designer** auf **Indizes/Schlüssel**.  
   

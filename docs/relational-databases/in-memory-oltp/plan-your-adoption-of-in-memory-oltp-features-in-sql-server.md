@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8eabca1300e3937d4b1a1f48531c9cc09b1978dd
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 078dc8fd820e5b93830964933c2641e677134f4a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867100"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485252"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Planen der Übernahme von In-Memory-OLTP-Funktionen in SQL Server
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -226,7 +226,7 @@ Hashindizes können das schnellste Format darstellen, um auf eine bestimmte Zeil
 
 #### <a name="nonclustered-columnstore-indexes"></a>Nicht gruppierte Columnstore-Indizes
 
-Speicheroptimierte Tabellen bieten einen hohen Durchsatz von typischen Geschäftstransaktionsdaten, die wir im Paradigma als *Onlinetransaktionsverarbeitung* oder *OLTP*bezeichnen. Columnstore-Indizes bieten einen hohen Durchsatz von Aggregationen und ähnlichen Verarbeitungen, die wir als *Analysen*bezeichnen. In den vergangenen Jahren bestand die bestmögliche Methode, dem Bedarf von sowohl OLTP als auch Analysen gerecht zu werden, darin, über getrennte Tabellen mit intensiver Datenverschiebung und mit einem gewissen Grad an Datenduplizierung zu verfügen. Heutzutage ist eine einfachere **Hybridlösung** verfügbar, und zwar das Verfügen über einen Columnstore-Index in einer speicheroptimierten Tabelle.
+Speicheroptimierte Tabellen bieten einen hohen Durchsatz von typischen Geschäftstransaktionsdaten, die wir im Paradigma als *Onlinetransaktionsverarbeitung* oder *OLTP* bezeichnen. Columnstore-Indizes bieten einen hohen Durchsatz von Aggregationen und ähnlichen Verarbeitungen, die wir als *Analysen* bezeichnen. In den vergangenen Jahren bestand die bestmögliche Methode, dem Bedarf von sowohl OLTP als auch Analysen gerecht zu werden, darin, über getrennte Tabellen mit intensiver Datenverschiebung und mit einem gewissen Grad an Datenduplizierung zu verfügen. Heutzutage ist eine einfachere **Hybridlösung** verfügbar, und zwar das Verfügen über einen Columnstore-Index in einer speicheroptimierten Tabelle.
 
 
 - Ein [Columnstore-Index](../../relational-databases/indexes/columnstore-indexes-overview.md) kann in einer datenträgerbasierten Tabelle erstellt werden, sogar als gruppierter Index. In einer speicheroptimierten Tabelle kann ein Columnstore-Index jedoch nicht gruppiert werden.

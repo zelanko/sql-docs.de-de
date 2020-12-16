@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: d9203e58-40ba-4712-a918-2c34a5d396d7
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64a8f8d2ed20144b5f3de5b1d24fee3adf428a06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7ac6f7773736f09368825e89a5b0b6707ad0d176
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424232"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485412"
 ---
 # <a name="lockcancel-event-class"></a>Lock:Cancel-Ereignisklasse
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "88424232"
 |**SessionLoginName**|**nvarchar**|Der Anmeldename des Benutzers, der die Sitzung gestartet hat. Wenn Sie z. B. mit Login1 eine Verbindung zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen und mit Login2 eine Anweisung ausführen, zeigt **SessionLoginName** Login1 an, und **LoginName** zeigt Login2 an. Diese Spalte zeigt sowohl den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch den Windows-Anmeldenamen an.|64|Ja|  
 |**SPID**|**int**|Die ID der Sitzung, in der das Ereignis aufgetreten ist.|12|Ja|  
 |**StartTime**|**datetime**|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar).|14|Ja|  
-|**TextData**|**ntext**|Ein Textwert, der vom eingerichteten Sperrentyp abhängt. Dieser Wert ist mit dem Wert der **resource_description** -Spalte in **sys.dm_tran_locks**identisch.|1|Ja|  
+|**TextData**|**ntext**|Ein Textwert, der vom eingerichteten Sperrentyp abhängt. Dieser Wert ist mit dem Wert der **resource_description** -Spalte in **sys.dm_tran_locks** identisch.|1|Ja|  
 |**TransactionID**|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|Ja|  
 |**Type**|**int**|1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = AUTONAMEDB<br /><br /> 13 = HOBT<br /><br /> 14 = ALLOCATION_UNIT|57|Ja|  
   

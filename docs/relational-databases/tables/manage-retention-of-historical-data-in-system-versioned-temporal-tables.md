@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d1c849a1828664fa24d8e2473dfe9c692c048cd
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f742ece496377a224a67b12223b09d198327812a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243605"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484492"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Verwalten der Beibehaltung von Verlaufsdaten in temporalen Tabellen mit Systemversionsverwaltung
 
@@ -72,7 +72,7 @@ Sie können eine temporale Verlaufstabelle für Stretch mit dem Stretch-Assisten
 
 Die einfachste Methode für Anfänger ist, den Stretch-Assistenten zu verwenden, um Stretch für die gesamte Datenbank zu aktivieren. Wählen Sie dann die temporale Verlaufstabelle im Stretch-Assistenten aus (in diesem Beispiel wird davon ausgegangen, dass Sie die Department-Tabelle als eine temporale Tabelle mit Systemversionsverwaltung in einer ansonsten leeren Datenbank konfiguriert haben). In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]können Sie nicht mit der rechten Maustaste auf die temporale Verlaufstabelle selbst klicken und dann auf „Stretch“ klicken.
 
-1. Klicken Sie mit der rechten Maustaste auf die Datenbank, und zeigen Sie auf **Aufgaben** , zeigen Sie auf **Stretch** , und klicken Sie dann auf **Aktivieren** , um den Assistenten zu starten.
+1. Klicken Sie mit der rechten Maustaste auf die Datenbank, und zeigen Sie auf **Aufgaben**, zeigen Sie auf **Stretch**, und klicken Sie dann auf **Aktivieren** , um den Assistenten zu starten.
 2. Aktivieren Sie im Fenster **Tabellen auswählen** das Kontrollkästchen für die temporale Verlaufstabelle, und klicken Sie auf „Weiter“.
 
     ![Auswählen der Verlaufstabelle auf der Seite „Tabellen auswählen“](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "Auswählen der Verlaufstabelle auf der Seite „Tabellen auswählen“")
@@ -82,7 +82,7 @@ Die einfachste Methode für Anfänger ist, den Stretch-Assistenten zu verwenden,
 4. Geben Sie im Fenster **Sichere Anmeldeinformationen** ein Kennwort für den Datenbankhauptschlüssel an, um Ihre Anmeldeinformationen für die SQL Server-Quelldatenbank zu schützen, und klicken Sie dann auf „Weiter“.
 
     ![Seite „Sichere Anmeldeinformationen“ des Stretch Database-Assistenten](../../relational-databases/tables/media/stretch-wizard-6.png "Seite „Sichere Anmeldeinformationen“ des Stretch Database-Assistenten")
-5. Geben Sie im Fenster **IP-Adresse auswählen** den IP-Adressbereich für Ihre SQL Server-Instanz an, um Ihrem Azure-Server die Kommunikation mit SQL Server zu ermöglichen (bei Auswahl eines vorhandenen Servers, für den bereits eine Firewallregel vorhanden ist, klicken Sie hier einfach auf „Weiter“, um die vorhandene Firewallregel zu verwenden). Klicken Sie zunächst auf **Weiter** und dann auf **Fertig stellen** , um Stretch Database zu aktivieren und ein Stretching für die temporale Verlaufstabelle durchzuführen.
+5. Geben Sie im Fenster **IP-Adresse auswählen** den IP-Adressbereich für Ihre SQL Server-Instanz an, um Ihrem Azure-Server die Kommunikation mit SQL Server zu ermöglichen (bei Auswahl eines vorhandenen Servers, für den bereits eine Firewallregel vorhanden ist, klicken Sie hier einfach auf „Weiter“, um die vorhandene Firewallregel zu verwenden). Klicken Sie zunächst auf **Weiter** und dann auf **Fertig stellen**, um Stretch Database zu aktivieren und ein Stretching für die temporale Verlaufstabelle durchzuführen.
 
     ![Seite „IP-Adresse auswählen“ des Stretch Database-Assistenten](../../relational-databases/tables/media/stretch-wizard-7.png "Seite „IP-Adresse auswählen“ des Stretch Database-Assistenten")
 6. Überprüfen Sie nach Abschluss des Assistenten, ob die Datenbank erfolgreich für Stretch aktiviert wurde. Beachten Sie die Symbole im Objekt-Explorer, die angeben, dass für die Datenbank ein Stretching durchgeführt wurde.

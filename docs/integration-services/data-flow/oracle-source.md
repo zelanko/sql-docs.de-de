@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5919aa313147b54e52289aa0c1d530a5f0064aab
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: fe89a97c1fb13d9446b0fe07f04c7399b42a439e
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195352"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489770"
 ---
 # <a name="oracle-source"></a>Oracle-Quelle
 
@@ -162,7 +162,7 @@ Auf der Seite **Fehlerausgabe** des Dialogfelds **Editor für Oracle-Quelle** k�
 **Fehlerverhalten**
 
 Wählen Sie aus, wie die Oracle-Quelle Fehler in einem Fluss behandeln soll: Fehler ignorieren, Zeile umleiten oder Komponente mit einem Fehler abbrechen.
-**Verwandter Abschnitt**: [Fehlerbehandlung in Daten](./error-handling-in-data.md?view=sql-server-2017)
+**Verwandter Abschnitt**: [Fehlerbehandlung in Daten](./error-handling-in-data.md)
 
 **Abschneiden**
 

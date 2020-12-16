@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: cb93c620-4be9-4362-8bf0-af3f2048bdaf
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4a39dcf3f4d9023b85d05a5368a979a8dc1ee5e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ec0ced044ba6405d36f53bed4a42f17b57e7d342
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428492"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485422"
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning-Ereignisklasse
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88428492"
 >  Die Begriffe *schrittweiser Hashjoin* und *rekursiver Hashjoin* werden ebenfalls zur Beschreibung eines Hashabbruchs verwendet.  
   
 > [!IMPORTANT]  
->  Sie sollten auch eine Showplan-Ereignisklasse in der Ablaufverfolgung sammeln, um zu bestimmen, an welcher Stelle das Hash Warning-Ereignis auftritt, wenn der Abfrageoptimierer einen Ausführungsplan generiert. Abgesehen von den Ereignisklassen Showplan Text und Showplan Text (Unencoded), die keine Knoten-ID zurückgeben, können Sie jede der Showplan-Ereignisklassen auswählen. Knoten-IDs in Showplans identifizieren jeden Vorgang, den der Abfrageoptimierer beim Generieren eines Abfrageausführungsplans ausführt. Diese Vorgänge werden als *Operatoren*bezeichnet. Jeder Operator in einem Showplan verfügt über eine Knoten-ID. Die ObjectID-Spalte für Hash Warning-Ereignisse entspricht der Knoten-ID in Showplans, sodass Sie den Operator bzw. den Vorgang ermitteln können, der den Fehler verursacht.  
+>  Sie sollten auch eine Showplan-Ereignisklasse in der Ablaufverfolgung sammeln, um zu bestimmen, an welcher Stelle das Hash Warning-Ereignis auftritt, wenn der Abfrageoptimierer einen Ausführungsplan generiert. Abgesehen von den Ereignisklassen Showplan Text und Showplan Text (Unencoded), die keine Knoten-ID zurückgeben, können Sie jede der Showplan-Ereignisklassen auswählen. Knoten-IDs in Showplans identifizieren jeden Vorgang, den der Abfrageoptimierer beim Generieren eines Abfrageausführungsplans ausführt. Diese Vorgänge werden als *Operatoren* bezeichnet. Jeder Operator in einem Showplan verfügt über eine Knoten-ID. Die ObjectID-Spalte für Hash Warning-Ereignisse entspricht der Knoten-ID in Showplans, sodass Sie den Operator bzw. den Vorgang ermitteln können, der den Fehler verursacht.  
   
 ## <a name="hash-warning-event-class-data-columns"></a>Datenspalten der Hash Warning-Ereignisklasse  
   

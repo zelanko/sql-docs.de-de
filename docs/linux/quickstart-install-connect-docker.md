@@ -11,14 +11,14 @@ ms.prod: sql
 ms.technology: linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
-moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
+monikerRange: '>= sql-server-linux-2017 || >= sql-server-2017'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 8e87ca7630fca5e72daf2a3e4eedfd38d50482fd
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 94ca368b7eaf9b9ad37107c01eb84e239d5fb3c0
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115663"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490030"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Schnellstart: Ausführen von SQL Server-Containerimages mit Docker
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
@@ -36,7 +36,7 @@ In diesem Schnellstart wird Docker verwendet, um das SQL Server 2017-Containerim
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 > [!NOTE]
 > Ab dem kumulativen Update 3 von SQL Server 2019 (CU3) wird Ubuntu 18.04 unterstützt.
@@ -44,7 +44,7 @@ In diesem Schnellstart wird Docker verwendet, um das SQL Server 2017-Containerim
 In diesem Schnellstart wird Docker verwendet, um das SQL Server 2019-Containerimage [mssql-server](https://hub.docker.com/r/microsoft/mssql-server) abzurufen und auszuführen. Stellen Sie anschließend eine Verbindung mit **sqlcmd** her, um Ihre erste Datenbank zu erstellen und Abfragen auszuführen.
 
 > [!TIP]
-> In dieser Schnellstartanleitung werden SQL Server 2019-Container erstellt. Wenn Sie lieber SQL Server 2017-Container erstellen möchten, erhalten Sie weitere Informationen in der [SQL Server 2017-Version dieses Artikels](quickstart-install-connect-docker.md?view=sql-server-linux-2017).
+> In dieser Schnellstartanleitung werden SQL Server 2019-Container erstellt. Wenn Sie lieber SQL Server 2017-Container erstellen möchten, erhalten Sie weitere Informationen in der [SQL Server 2017-Version dieses Artikels](quickstart-install-connect-docker.md?view=sql-server-linux-2017&preserve-view=true).
 
 ::: moniker-end
 
@@ -190,7 +190,7 @@ Wenn Sie für `-h` und `--name` denselben Wert festlegen, kann der Zielcontainer
 <!--End of 2017 "Pull and run" section-->
 
 <!--This is the 2019 version of the "Pull and run" section-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a name="pull-and-run-the-2019-container-image"></a><a id="pullandrun2019"></a> Pullen und Ausführen des 2019-Containerimages
 
@@ -221,7 +221,7 @@ Bevor Sie die folgenden Schritte ausführen, stellen Sie sicher, dass Sie am Anf
    ::: zone-end
 
    > [!TIP]
-   > In diesem Schnellstart wird das Docker-Image von SQL Server 2019 verwendet. Wenn Sie das Image von SQL Server 2017 ausführen möchten, lesen Sie [die Version dieses Artikels zu SQL Server 2017](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017).
+   > In diesem Schnellstart wird das Docker-Image von SQL Server 2019 verwendet. Wenn Sie das Image von SQL Server 2017 ausführen möchten, lesen Sie [die Version dieses Artikels zu SQL Server 2017](quickstart-install-connect-docker.md?view=sql-server-linux-2017&preserve-view=true#pullandrun2017).
 
    Mit dem vorherigen Befehl rufen Sie das auf Ubuntu basierende Containerimage von SQL Server 2019 ab. Informationen dazu, wie Sie stattdessen Containerimages verwenden, die auf Red Hat basieren, finden Sie unter [Run RHEL-based container images (Ausführen von RHEL-basierten Containerimages)](./sql-server-linux-docker-container-deployment.md#rhel). Informationen zu allen verfügbaren Images finden Sie auf der [Docker-Hubseite zu „mssql-server-linux“](https://hub.docker.com/_/microsoft-mssql-server).
 

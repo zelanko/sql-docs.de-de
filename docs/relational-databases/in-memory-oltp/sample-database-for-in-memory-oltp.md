@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 919b3126a47fb0f71efb41e645e0443c309f643e
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d581d8dcf038b56a6b3df5b5ecc67a9a32b4255f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867560"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485232"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Beispieldatenbank für In-Memory OLTP
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -140,7 +140,7 @@ ms.locfileid: "91867560"
   
  Sales.SalesOrderHeader_inmem  
   
--   Da*Standardeinschränkungen* bei speicheroptimierten Tabellen unterstützt werden, wurden die meisten Standardeinschränkungen unverändert migriert. Die ursprüngliche Tabelle Sales.SalesOrderHeader enthält jedoch zwei Standardeinschränkungen, durch die für die Spalten OrderDate und ModifiedDate das aktuelle Datum abgerufen wird. In einer Arbeitsauslastung für die Auftragsverarbeitung mit hohem Durchsatz und einem hohen Maß an Parallelität können globale Ressourcen zu Konflikten führen. Die Systemzeit ist beispielsweise eine solche globale Ressource und kann bei einer In-Memory OLTP-Arbeitsauslastung, durch die Verkaufsaufträge eingefügt werden, erfahrungsgemäß einen Engpass verursachen. Dies gilt insbesondere, wenn die Systemzeit für mehrere Spalten sowohl in der Auftragskopfzeile als auch in den Auftragsdetails abgerufen werden muss. In diesem Beispiel wird das Problem umgangen, indem die Systemzeit für jeden eingefügten Verkaufsauftrag nur einmal abgerufen und dieser Wert in der gespeicherten Prozedur Sales.usp_InsertSalesOrder_inmem für die datetime-Spalten in SalesOrderHeader_inmem und SalesOrderDetail_inmem verwendet wird.  
+-   Da *Standardeinschränkungen* bei speicheroptimierten Tabellen unterstützt werden, wurden die meisten Standardeinschränkungen unverändert migriert. Die ursprüngliche Tabelle Sales.SalesOrderHeader enthält jedoch zwei Standardeinschränkungen, durch die für die Spalten OrderDate und ModifiedDate das aktuelle Datum abgerufen wird. In einer Arbeitsauslastung für die Auftragsverarbeitung mit hohem Durchsatz und einem hohen Maß an Parallelität können globale Ressourcen zu Konflikten führen. Die Systemzeit ist beispielsweise eine solche globale Ressource und kann bei einer In-Memory OLTP-Arbeitsauslastung, durch die Verkaufsaufträge eingefügt werden, erfahrungsgemäß einen Engpass verursachen. Dies gilt insbesondere, wenn die Systemzeit für mehrere Spalten sowohl in der Auftragskopfzeile als auch in den Auftragsdetails abgerufen werden muss. In diesem Beispiel wird das Problem umgangen, indem die Systemzeit für jeden eingefügten Verkaufsauftrag nur einmal abgerufen und dieser Wert in der gespeicherten Prozedur Sales.usp_InsertSalesOrder_inmem für die datetime-Spalten in SalesOrderHeader_inmem und SalesOrderDetail_inmem verwendet wird.  
   
 -   *Alias-UDTs*: In der ursprünglichen Tabelle werden die beiden Alias-UDTs (User-defined Data Types, benutzerdefinierte Datentypen) „dbo.OrderNumber“ und „dbo.AccountNumber“ für die Spalten „PurchaseOrderNumber“ bzw. „AccountNumber“ verwendet. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] unterstützt keine Alias-UDTs für speicheroptimierte Tabellen, daher verwenden die neuen Tabellen die Systemdatentypen nvarchar(25) bzw. nvarchar(15).  
   

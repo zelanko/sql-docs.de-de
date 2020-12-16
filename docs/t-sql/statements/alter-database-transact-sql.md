@@ -26,13 +26,13 @@ helpviewer_keywords:
 ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: af8f519e7fec6a440fcdce44ccebbcfab2f0e0a9
-ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016'
+ms.openlocfilehash: bacad46304c0795a5401238fec32a636426e56dd
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96443197"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489920"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -44,7 +44,7 @@ Weitere Informationen zu Syntaxkonventionen finden Sie unter [Transact-SQL-Synta
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -280,7 +280,7 @@ GO
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)
@@ -296,11 +296,11 @@ GO
 - [Systemdatenbanken](../../relational-databases/databases/system-databases.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL-Datenbank \*_** &nbsp;
@@ -470,12 +470,12 @@ Gibt die maximale Größe der Datenbank an. Die maximale Größe muss dem gülti
 |20 GB|–|√|√|√|√|
 |30 GB|–|√|√|√|√|
 |40 GB|–|√|√|√|√|
-|50 GB|–|√ (S)|√|√|√|
+|50 GB|–|√|√|√|√|
 |100 GB|–|√|√|√|√|
 |150 GB|–|√|√|√|√|
-|200 GB|–|√|√ (S)|√|√|
+|200 GB|–|√|√|√|√|
 |250 GB|–|√ (S)|√ (S)|√|√|
-|300 GB|–|√|√|√ (S)|√|
+|300 GB|–|√|√|√|√|
 |400 GB|Nicht zutreffend|√|√|√|√|
 |500 GB|–|√|√|√ (S)|√|
 |750 GB|–|√|√|√|√|
@@ -775,11 +775,11 @@ ALTER DATABASE db1 MODIFY BACKUP_STORAGE_REDUNDANCY = 'ZONE'
 - [Systemdatenbanken](../../relational-databases/databases/system-databases.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL-Datenbank](alter-database-transact-sql.md?view=azuresqldb-current)
@@ -917,11 +917,11 @@ ALTER DATABASE WideWorldImporters
 - [Systemdatenbanken](../../relational-databases/databases/system-databases.md)
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL-Datenbank](alter-database-transact-sql.md?view=azuresqldb-current)
@@ -1096,11 +1096,11 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 - [Liste der Referenzartikel zu Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-reference-tsql-language-elements)
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL-Datenbank](alter-database-transact-sql.md?view=azuresqldb-current)

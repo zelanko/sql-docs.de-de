@@ -9,14 +9,14 @@ ms.date: 09/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
+moniker: '>= sql-server-linux-2017 || >= sql-server-2017'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 0a58ad0e4271833c7aef24333b14a61ef80a16c9
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+ms.openlocfilehash: 051dbe0d44cbd798653632df114beb6727f1c9af
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511587"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489820"
 ---
 # <a name="troubleshooting-sql-server-docker-containers"></a>Problembehandlung von SQL Server Docker-Containern
 
@@ -73,7 +73,7 @@ Wenn der SQL Server-Container nicht ausgeführt werden kann, versuchen Sie Folge
     ::: moniker-end
     
     <!--SQL Server 2019 on Linux-->
-    ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+    ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15"
     
     ::: zone pivot="cs1-bash"
     ```bash
@@ -142,7 +142,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "M
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ::: zone pivot="cs1-bash"
 ```bash
@@ -245,12 +245,12 @@ Nun können Sie Befehle wie über das Terminal innerhalb des Containers ausführ
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-- Der [Schnellstart](quickstart-install-connect-docker.md?view=sql-server-2017) erleichtert Ihnen den Einstieg in die Verwendung von SQL Server 2017-Containerimages in Docker.
+- Der [Schnellstart](quickstart-install-connect-docker.md?view=sql-server-2017&preserve-view=true) erleichtert Ihnen den Einstieg in die Verwendung von SQL Server 2017-Containerimages in Docker.
 
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 - Der [Schnellstart](quickstart-install-connect-docker.md?view=sql-server-ver15) erleichtert Ihnen den Einstieg in die Verwendung von SQL Server 2019-Containerimages in Docker.
 

@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
-moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
+moniker: '>= sql-server-linux-2017 || >= sql-server-2017 '
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 380fa9b4cb6941b438d0308be38956659862ce50
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 6fbf5782ff67b3406cffad808b27c47112a48d97
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115455"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489860"
 ---
 # <a name="deploy-and-connect-to-sql-server-docker-containers"></a>Bereitstellen von und Herstellen einer Verbindung mit SQL Server Docker-Containern
 
@@ -45,8 +45,8 @@ Dieses 6-minütige Video enthält eine Einführung in die Ausführung von SQL Se
 
 Wenn Sie Docker-Containerimages für SQL Server 2017 und SQL Server 2019 herunterladen und ausführen möchten, sollten Sie zunächst die im folgenden Schnellstart beschriebenen Voraussetzungen schaffen und die Schritte ausführen:
 
-- [Ausführen des SQL Server 2017-Containerimages mit Docker](quickstart-install-connect-docker.md?view=sql-server-2017)
-- [Ausführen des SQL Server 2019-Containerimages mit Docker](quickstart-install-connect-docker.md?view=sql-server-ver15)
+- [Ausführen des SQL Server 2017-Containerimages mit Docker](quickstart-install-connect-docker.md?view=sql-server-2017&preserve-view=true)
+- [Ausführen des SQL Server 2019-Containerimages mit Docker](quickstart-install-connect-docker.md?view=sql-server-ver15&preserve-view=true)
 
 In diesem Artikel zur Konfiguration werden zusätzliche Anwendungsfälle beschrieben.
 
@@ -245,7 +245,7 @@ In manchen Fällen möchten Sie nicht das neueste SQL Server-Containerimage verw
 Diese Schritte können auch zum Herabstufen eines vorhandenen Containers verwendet werden. Sie können beispielsweise einen Rollback oder ein Downgrade für einen Container ausführen, um Probleme zu beheben oder Tests durchzuführen. Zum Herabstufen eines ausgeführten Containers müssen Sie eine Persistenzmethode für den Datenordner verwenden. Führen Sie die Schritte durch, die im [Abschnitt zu Upgrades](#upgrade) beschrieben werden, aber geben Sie den Tagnamen der älteren Version an, wenn Sie den neuen Container ausführen.
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a name="run-rhel-based-container-images"></a><a id="rhel"></a> Ausführen von RHEL-basierten Containerimages
 
@@ -348,7 +348,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 Im folgenden Beispiel werden zwei SQL Server 2019-Container erstellt und den Ports **1401** und **1402** auf dem Hostcomputer zugeordnet.
 
@@ -426,12 +426,12 @@ Dadurch wird das SQL Server-Image für neu erstellte Container aktualisiert. SQL
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-- Der [Schnellstart](quickstart-install-connect-docker.md?view=sql-server-2017) erleichtert Ihnen den Einstieg in die Verwendung von SQL Server 2017-Containerimages in Docker.
+- Der [Schnellstart](quickstart-install-connect-docker.md?view=sql-server-2017&preserve-view=true) erleichtert Ihnen den Einstieg in die Verwendung von SQL Server 2017-Containerimages in Docker.
 
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 - Der [Schnellstart](quickstart-install-connect-docker.md?view=sql-server-ver15) erleichtert Ihnen den Einstieg in die Verwendung von SQL Server 2019-Containerimages in Docker.
 

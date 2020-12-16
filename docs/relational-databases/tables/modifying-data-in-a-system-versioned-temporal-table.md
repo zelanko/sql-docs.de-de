@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6c431669d89f87c49cfd96d48e6b3c53c8d866e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7acb5296f5cfcefd5c39c9ceb643a1076c11bfbd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548870"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484472"
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>Ändern von Daten in einer temporalen Tabelle mit Systemversionsverwaltung
 
@@ -29,7 +29,7 @@ Daten in temporalen Tabellen mit Systemversionsverwaltung werden mithilfe von re
 
 ## <a name="inserting-data"></a>Einfügen von Daten
 
-Wenn Sie neue Daten einfügen, müssen Sie die **PERIOD** -Spalten bedenken falls sie nicht **HIDDEN**sind. Bei temporalen Tabellen mit Systemversionsverwaltung können Sie auch Partitionsaustausch verwenden.
+Wenn Sie neue Daten einfügen, müssen Sie die **PERIOD** -Spalten bedenken falls sie nicht **HIDDEN** sind. Bei temporalen Tabellen mit Systemversionsverwaltung können Sie auch Partitionsaustausch verwenden.
 
 ### <a name="insert-new-data-with-visible-period-columns"></a>Einfügen von neuen Daten mit sichtbaren Zeitraumspalten
 
@@ -53,7 +53,7 @@ Sie können wie folgt Ihre **INSERT** -Anweisung erstellen, wenn Sie über sicht
          ) ;
    ```
 
-- Falls Sie die**PERIOD** -Spalten in der Spaltenliste in Ihrer **INSERT** -Anweisung angeben, müssen Sie **DEFAULT** als ihren Wert angeben.
+- Falls Sie die **PERIOD** -Spalten in der Spaltenliste in Ihrer **INSERT** -Anweisung angeben, müssen Sie **DEFAULT** als ihren Wert angeben.
 
   ```sql
   INSERT INTO [dbo].[Department]
@@ -191,7 +191,7 @@ AND Department.DeptID = 10 ;
 
 ## <a name="deleting-data"></a>Löschen von Daten
 
-Sie löschen Daten in der aktuellen Tabelle mit einer regulären **DELETE** -Anweisung. Die Endzeitraums-Spalte für gelöschte Zeilen wird mit der Anfangszeit der zugrundeliegenden Transaktion aufgefüllt. Sie können keine Zeilen direkt aus der Verlaufstabelle löschen während **SYSTEM_VERSIONING = ON**gilt. Legen Sie **SYSTEM_VERSIONING = OFF** fest, und löschen Sie Zeilen aus der aktuellen Tabelle und der Verlaufstabelle, aber beachten Sie dabei, dass das System bei dieser Vorgehensweise keinen Änderungsverlauf beibehält. **TRUNCATE**, **SWITCH PARTITION OUT** der aktuellen Tabelle und **SWITCH PARTITION IN** -Verlaufstabelle werden nicht unterstützt während **SYSTEM_VERSIONING = ON**gilt.
+Sie löschen Daten in der aktuellen Tabelle mit einer regulären **DELETE** -Anweisung. Die Endzeitraums-Spalte für gelöschte Zeilen wird mit der Anfangszeit der zugrundeliegenden Transaktion aufgefüllt. Sie können keine Zeilen direkt aus der Verlaufstabelle löschen während **SYSTEM_VERSIONING = ON** gilt. Legen Sie **SYSTEM_VERSIONING = OFF** fest, und löschen Sie Zeilen aus der aktuellen Tabelle und der Verlaufstabelle, aber beachten Sie dabei, dass das System bei dieser Vorgehensweise keinen Änderungsverlauf beibehält. **TRUNCATE**, **SWITCH PARTITION OUT** der aktuellen Tabelle und **SWITCH PARTITION IN** -Verlaufstabelle werden nicht unterstützt während **SYSTEM_VERSIONING = ON** gilt.
 
 ## <a name="using-merge-to-modify-data-in-temporal-table"></a>Verwenden von MERGE zum Ändern von Daten in der temporalen Tabelle
 

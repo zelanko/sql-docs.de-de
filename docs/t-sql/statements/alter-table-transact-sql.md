@@ -60,13 +60,13 @@ helpviewer_keywords:
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3cef7fd2ddbcc95789ddb8a306538b6dfdaf29c5
-ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: aff544048da8bb09a2fd488d26a7bd1f69cf8f56
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94521187"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489588"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -785,7 +785,7 @@ ALTER TABLE mit der SET FILESTREAM_ON-Klausel ist nur erfolgreich, wenn die Tabe
 
 Wenn *partition_scheme_name* angegeben wurde, gelten die Regeln für [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md). Stellen Sie sicher, dass die Tabelle bereits für Zeilendaten partitioniert ist und dass das Partitionsschema die gleiche Partitionsfunktion und die gleichen Partitionsspalten wie das FILESTREAM-Partitionsschema verwendet.
 
-*filestream_filegroup_name* gibt den Namen einer FILESTREAM-Dateigruppe an. Für die Dateigruppe muss eine Datei mit einer [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)-Anweisung oder einer [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)-Anweisung definiert worden sein. Andernfalls tritt ein Fehler auf.
+*filestream_filegroup_name* gibt den Namen einer FILESTREAM-Dateigruppe an. Für die Dateigruppe muss eine Datei mit einer [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)-Anweisung oder einer [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)-Anweisung definiert worden sein. Andernfalls tritt ein Fehler auf.
 
 **"** default **"** gibt die FILESTREAM-Dateigruppe mit dem DEFAULT-Eigenschaftensatz an. Wenn keine FILESTREAM-Dateigruppe vorhanden ist, tritt ein Fehler auf.
 

@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ddd1c896aa3a1425b6d31d33a6d113c77c9c11bf
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8684764c0386513c0890b10dee8bfa3582c1cf59
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867482"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485172"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>SQL Server Management Studio-Unterstützung für In-Memory OLTP
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "91867482"
   
 2.  Klicken Sie mit der rechten Maustaste auf **Datenbanken**, und klicken Sie dann auf **Neue Datenbank**.  
   
-3.  Klicken Sie zum Hinzufügen einer neuen speicheroptimierten Datendateigruppe auf die Seite **Dateigruppen** . Klicken Sie unter **MEMORY OPTIMIZED DATA**auf **Dateigruppe hinzufügen** , und geben Sie dann den Namen der speicheroptimierten Datendateigruppe ein.  Die Spalte mit der Bezeichnung **FILESTREAM-Dateien** stellt die Anzahl der Container in der Dateigruppe dar. Container werden auf der Seite **Allgemein** hinzugefügt.  
+3.  Klicken Sie zum Hinzufügen einer neuen speicheroptimierten Datendateigruppe auf die Seite **Dateigruppen** . Klicken Sie unter **MEMORY OPTIMIZED DATA** auf **Dateigruppe hinzufügen** , und geben Sie dann den Namen der speicheroptimierten Datendateigruppe ein.  Die Spalte mit der Bezeichnung **FILESTREAM-Dateien** stellt die Anzahl der Container in der Dateigruppe dar. Container werden auf der Seite **Allgemein** hinzugefügt.  
   
-4.  Um der Dateigruppe eine Datei (Container) hinzuzufügen, klicken Sie auf die Seite **Allgemein** . Klicken Sie unter **Datenbankdateien**auf **Hinzufügen**. Wählen Sie als **Dateityp** **FILESTREAM-Daten**aus, geben Sie den logischen Namen des Containers an, wählen Sie die speicheroptimierte Dateigruppe aus, und stellen Sie sicher, dass **Automatische Vergrößerung/Maximale Größe** auf **Unbegrenzt**festgelegt ist.  
+4.  Um der Dateigruppe eine Datei (Container) hinzuzufügen, klicken Sie auf die Seite **Allgemein** . Klicken Sie unter **Datenbankdateien** auf **Hinzufügen**. Wählen Sie als **Dateityp** **FILESTREAM-Daten** aus, geben Sie den logischen Namen des Containers an, wählen Sie die speicheroptimierte Dateigruppe aus, und stellen Sie sicher, dass **Automatische Vergrößerung/Maximale Größe** auf **Unbegrenzt** festgelegt ist.  
 
      Weitere Informationen zum Erstellen einer neuen Datenbank mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]finden Sie unter [Erstellen einer Datenbank](../../relational-databases/databases/create-a-database.md).  
   
 ### <a name="to-create-a-memory-optimized-table"></a>So erstellen Sie eine speicheroptimierte Tabelle  
   
-1.  Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf den Datenbankknoten **Tabellen** , klicken Sie auf **Neu**und dann auf **Speicheroptimierte Tabelle**.  
+1.  Klicken Sie im **Objekt-Explorer** mit der rechten Maustaste auf den Datenbankknoten **Tabellen** , klicken Sie auf **Neu** und dann auf **Speicheroptimierte Tabelle**.  
   
      Eine Vorlage zum Erstellen von speicheroptimierten Tabellen wird angezeigt.  
   
@@ -49,11 +49,11 @@ ms.locfileid: "91867482"
   
      Weitere Informationen zur Verwendung von Vorlagen finden Sie unter [Template Explorer](../../ssms/template/template-explorer.md).  
   
-3.  Im **Objekt-Explorer**werden Tabellen zuerst nach datenträgerbasierten Tabellen und dann nach speicheroptimierten Tabellen angeordnet. Verwenden Sie **Details zum Objekt-Explorer** , um alle Tabellen nach dem Namen geordnet anzuzeigen.  
+3.  Im **Objekt-Explorer** werden Tabellen zuerst nach datenträgerbasierten Tabellen und dann nach speicheroptimierten Tabellen angeordnet. Verwenden Sie **Details zum Objekt-Explorer** , um alle Tabellen nach dem Namen geordnet anzuzeigen.  
   
 ### <a name="to-create-a-natively-compiled-stored-procedure"></a>So erstellen Sie eine systemintern kompilierte gespeicherte Prozedur  
   
-1.  Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf den Datenbankknoten **Gespeicherte Prozeduren** , klicken Sie auf **Neu**und dann auf **Systemintern kompilierte gespeicherte Prozedur**.  
+1.  Klicken Sie im **Objekt-Explorer** mit der rechten Maustaste auf den Datenbankknoten **Gespeicherte Prozeduren** , klicken Sie auf **Neu** und dann auf **Systemintern kompilierte gespeicherte Prozedur**.  
   
      Eine Vorlage zum Erstellen von systemintern kompilierten gespeicherten Prozeduren wird angezeigt.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "91867482"
   
 ### <a name="to-create-a-user-defined-memory-optimized-table-type"></a>So erstellen Sie einen benutzerdefinierten speicheroptimierten Tabellentyp  
   
-1.  Erweitern Sie im **Objekt-Explorer**den Datenbankknoten **Typen** , klicken Sie mit der rechten Maustaste auf den Knoten **Benutzerdefinierte Tabellentypen,** klicken Sie auf **Neu**und anschließend auf **Benutzerdefinierter speicheroptimierter Tabellentyp**.  
+1.  Erweitern Sie im **Objekt-Explorer** den Datenbankknoten **Typen** , klicken Sie mit der rechten Maustaste auf den Knoten **Benutzerdefinierte Tabellentypen,** klicken Sie auf **Neu** und anschließend auf **Benutzerdefinierter speicheroptimierter Tabellentyp**.  
   
      Es wird eine Vorlage zum Erstellen eines benutzerdefinierten speicheroptimierten Tabellentyps angezeigt.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "91867482"
   
 #### <a name="view-memory-usage-by-memory-optimized-objects-report"></a>Anzeigen der Speicherauslastung durch den Bericht für speicheroptimierte Objekte  
   
--   Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf die Datenbank, klicken Sie auf **Berichte**, auf **Standardberichte**und dann auf **Speicherauslastung nach speicheroptimierten Objekten**.  
+-   Klicken Sie im **Objekt-Explorer** mit der rechten Maustaste auf die Datenbank, klicken Sie auf **Berichte**, auf **Standardberichte** und dann auf **Speicherauslastung nach speicheroptimierten Objekten**.  
   
      Dieser Bericht stellt detaillierte Daten zur Verwendung des Speicherplatzes durch speicheroptimierte Objekte in der Datenbank bereit.  
   
@@ -83,9 +83,9 @@ ms.locfileid: "91867482"
   
 1.  So erhalten Sie Informationen zur Speicherauslastung:  
   
-    -   Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf die speicheroptimierte Tabelle, klicken Sie auf **Eigenschaften**und dann auf die Seite **Speicher** . Der Wert für die Eigenschaft **Datenspeicher** gibt die Menge an Arbeitsspeicher an, die durch die Daten in der Tabelle verwendet wird. Der Wert für die Eigenschaft **Indexspeicher** gibt den Arbeitsspeicher an, der von Indizes in der Tabelle verwendet wird.  
+    -   Klicken Sie im **Objekt-Explorer** mit der rechten Maustaste auf die speicheroptimierte Tabelle, klicken Sie auf **Eigenschaften** und dann auf die Seite **Speicher** . Der Wert für die Eigenschaft **Datenspeicher** gibt die Menge an Arbeitsspeicher an, die durch die Daten in der Tabelle verwendet wird. Der Wert für die Eigenschaft **Indexspeicher** gibt den Arbeitsspeicher an, der von Indizes in der Tabelle verwendet wird.  
   
-    -   Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf die Datenbank, klicken Sie auf **Eigenschaften**und dann auf die Seite **Allgemein** . Der Wert für die Eigenschaft **Speicheroptimierten Objekten zugewiesener Arbeitsspeicher** gibt den Arbeitsspeicher an, der speicheroptimierten Objekten in der Datenbank zugeordnet ist. Der Wert für die Eigenschaft **Von speicheroptimierten Objekten genutzter Arbeitsspeicher** gibt den Arbeitsspeicher an, der von speicheroptimierten Objekten in der Datenbank verwendet wird.  
+    -   Klicken Sie im **Objekt-Explorer** mit der rechten Maustaste auf die Datenbank, klicken Sie auf **Eigenschaften** und dann auf die Seite **Allgemein** . Der Wert für die Eigenschaft **Speicheroptimierten Objekten zugewiesener Arbeitsspeicher** gibt den Arbeitsspeicher an, der speicheroptimierten Objekten in der Datenbank zugeordnet ist. Der Wert für die Eigenschaft **Von speicheroptimierten Objekten genutzter Arbeitsspeicher** gibt den Arbeitsspeicher an, der von speicheroptimierten Objekten in der Datenbank verwendet wird.  
   
 ## <a name="supported-features-in-ssmanstudiofull"></a>Unterstützte Funktionen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] unterstützt Funktionen und Vorgänge, die von der Datenbank-Engine in Datenbanken mit speicheroptimierten Datendateigruppen, speicheroptimierten Tabellen, Indizes und systemintern kompilierten gespeicherten Prozeduren unterstützt werden.  
@@ -129,7 +129,7 @@ ms.locfileid: "91867482"
   
         -   Generieren von Skripts.  
   
-             Im **Assistenten zum Generieren und Veröffentlichen von Skripts**lautet der Standardwert für die Skriptoption **Vorhandensein von Objekten überprüfen** FALSE. Wenn der Wert der Skriptoption **Vorhandensein von Objekten überprüfen** im Bildschirm **Skripterstellungsoptionen festlegen** des Assistenten auf TRUE festgelegt ist, würde das generierte Skript „CREATE PROCEDURE <Prozedurname> AS“ und „ALTER PROCEDURE <Prozedurname> <Prozedurdefinition>“ enthalten. Bei der Ausführung gibt das generierte Skript einen Fehler zurück, da ALTER PROCEDURE bei systemintern kompilierten gespeicherten Prozeduren nicht unterstützt wird.  
+             Im **Assistenten zum Generieren und Veröffentlichen von Skripts** lautet der Standardwert für die Skriptoption **Vorhandensein von Objekten überprüfen** FALSE. Wenn der Wert der Skriptoption **Vorhandensein von Objekten überprüfen** im Bildschirm **Skripterstellungsoptionen festlegen** des Assistenten auf TRUE festgelegt ist, würde das generierte Skript „CREATE PROCEDURE <Prozedurname> AS“ und „ALTER PROCEDURE <Prozedurname> <Prozedurdefinition>“ enthalten. Bei der Ausführung gibt das generierte Skript einen Fehler zurück, da ALTER PROCEDURE bei systemintern kompilierten gespeicherten Prozeduren nicht unterstützt wird.  
   
              So ändern Sie das generierte Skript für jede systemintern kompilierte gespeicherte Prozedur  
   
@@ -141,13 +141,13 @@ ms.locfileid: "91867482"
   
         -   Importieren und Exportieren von Daten. Verwenden Sie die Option **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import/Export-Assistent &gt; Daten aus mindestens einer Tabelle oder Sicht** kopieren. Wenn die Zieltabelle eine speicheroptimierte Tabelle ist, die nicht in der Zieldatenbank vorhanden ist:  
   
-            1.  Wählen Sie im **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import/Export-Assistent**im Bildschirm **Tabelle kopieren oder Datenbank abfragen** die Option **Daten aus mindestens einer Tabelle oder Sicht kopieren**aus. Klicken Sie dann auf **Weiter**.  
+            1.  Wählen Sie im **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import/Export-Assistent** im Bildschirm **Tabelle kopieren oder Datenbank abfragen** die Option **Daten aus mindestens einer Tabelle oder Sicht kopieren** aus. Klicken Sie dann auf **Weiter**.  
   
             2.  Klicken Sie auf **Zuordnungen bearbeiten**. Wählen Sie anschließend **Zieltabelle erstellen** aus, und klicken auf **SQL bearbeiten**. Geben Sie die CREATE TABLE-Syntax zum Erstellen einer speicheroptimierten Tabelle in der Zieldatenbank ein. Klicken Sie auf **OK** , und schließen Sie die restlichen Schritte des Assistenten ab.  
   
         -   Wartungspläne. Die Wartungsaufgaben "Index neu organisieren" und "Index neu erstellen" werden in speicheroptimierten Tabellen und deren Indizes nicht unterstützt. Wenn ein Wartungsplan zur Neuerstellung und Neuorganisation des Indexes ausgeführt wird, werden die speicheroptimierten Tabellen und deren Indizes in den ausgewählten Datenbanken daher ausgelassen.  
   
-             Der Wartungstask Statistiken aktualisieren wird für Stichprobenscans von speicheroptimierten Tabellen und deren Indizes nicht unterstützt. Wenn also ein Wartungsplan für Statistiken aktualisieren ausgeführt wird, werden die Statistiken für speicheroptimierte Tabellen und deren Indizes immer auf **WITH FULLSCAN, NORECOMPUTE**aktualisiert.  
+             Der Wartungstask Statistiken aktualisieren wird für Stichprobenscans von speicheroptimierten Tabellen und deren Indizes nicht unterstützt. Wenn also ein Wartungsplan für Statistiken aktualisieren ausgeführt wird, werden die Statistiken für speicheroptimierte Tabellen und deren Indizes immer auf **WITH FULLSCAN, NORECOMPUTE** aktualisiert.  
   
 -   Bereich mit Details zum Objekt-Explorer  
   

@@ -46,13 +46,13 @@ helpviewer_keywords:
 ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11718e97ac633b108c6cf49c27d2d47ea0d0ee94
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 99697c6bb3e3b9eb8de2f3e6c41e092539cb79b5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300250"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483922"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 
@@ -64,7 +64,7 @@ Hiermit wird eine gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)]- oder
 - Aufnehmen von Programmierungsanweisungen, die Vorgänge in der Datenbank ausführen, einschließlich des Aufrufens anderer Prozeduren.
 - Zurückgeben eines Statuswertes an eine aufrufende Prozedur oder einen aufrufenden Batch, der Erfolg oder Fehlschlagen (sowie die Ursache für das Fehlschlagen) anzeigt.
 
-Mithilfe dieser Anweisung können Sie eine dauerhafte Prozedur in der aktuellen Datenbank oder eine temporäre Prozedur in der **tempdb** -Datenbank erstellen.
+Mithilfe dieser Anweisung können Sie eine dauerhafte Prozedur in der aktuellen Datenbank oder eine temporäre Prozedur in der **tempdb**-Datenbank erstellen.
 
 > [!NOTE]
 > Die Integration der .NET Framework-CLR in SQL Server wird in diesem Thema erläutert. Die CLR-Integration gilt nicht für Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
@@ -148,7 +148,7 @@ AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
 
 OR ALTER
 
-**Gilt für** : Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1).
+**Gilt für**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1).
 
 Ändert die Prozedur, wenn sie bereits vorhanden ist.
 
@@ -158,7 +158,7 @@ OR ALTER
 
 Beim Benennen von Prozeduren sollten Sie das Präfix **_sp** vermeiden. Dieses Präfix wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, um Systemprozeduren zu bestimmen. Das Verwenden des Präfixes kann zur Beschädigung von Anwendungscode führen, falls eine Systemprozedur mit dem gleichen Namen vorhanden ist.
 
-Lokale oder globale temporäre Prozeduren können erstellt werden, indem *procedure_name* ein einzelnes Nummernzeichen (#) ( *#procedure_name* ) für lokale temporäre Prozeduren und ein doppeltes Nummernzeichen ( *##procedure_name* ) für globale temporäre Prozeduren vorangestellt wird. Eine lokale temporäre Prozedur ist nur für die Verbindung sichtbar, von der sie erstellt wurde. Die Prozedur wird automatisch gelöscht, wenn die Verbindung geschlossen wird. Eine globale temporäre Prozedur ist für alle Verbindungen verfügbar und wird am Ende der letzten Sitzung gelöscht, die die Prozedur verwendet. Für CLR-Prozeduren können keine temporären Namen angegeben werden.
+Lokale oder globale temporäre Prozeduren können erstellt werden, indem *procedure_name* ein einzelnes Nummernzeichen (#) ( *#procedure_name*) für lokale temporäre Prozeduren und ein doppeltes Nummernzeichen ( *##procedure_name*) für globale temporäre Prozeduren vorangestellt wird. Eine lokale temporäre Prozedur ist nur für die Verbindung sichtbar, von der sie erstellt wurde. Die Prozedur wird automatisch gelöscht, wenn die Verbindung geschlossen wird. Eine globale temporäre Prozedur ist für alle Verbindungen verfügbar und wird am Ende der letzten Sitzung gelöscht, die die Prozedur verwendet. Für CLR-Prozeduren können keine temporären Namen angegeben werden.
 
 Der vollständige Name einer Prozedur oder einer globalen temporären Prozedur, einschließlich ##, darf 128 Zeichen nicht überschreiten. Der vollständige Name einer lokalen temporären Prozedur, einschließlich #, darf 116 Zeichen nicht überschreiten.
 
@@ -171,7 +171,7 @@ Eine optionale ganze Zahl zum Gruppieren von Prozeduren mit dem gleichen Namen. 
 > [!NOTE]
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]
 
-Nummerierte Prozeduren können nicht den **xml** -Typ oder benutzerdefinierte CLR-Typen verwenden und können nicht in einer Planhinweisliste verwendet werden.
+Nummerierte Prozeduren können nicht den **xml**-Typ oder benutzerdefinierte CLR-Typen verwenden und können nicht in einer Planhinweisliste verwendet werden.
 
 **@** *parameter* Ein in der Prozedur deklarierter Parameter. Geben Sie einen Parameternamen an, der mit dem „at“-Zeichen ( **@** ) beginnt. Der Parametername muss den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen. Parameter gelten lokal in der jeweiligen Prozedur, d. h., dass Sie die gleichen Parameternamen in anderen Prozeduren verwenden können.
 
@@ -185,22 +185,22 @@ Parameter können nicht deklariert werden, wenn FOR REPLICATION angegeben ist.
 
 - Alle [!INCLUDE[tsql](../../includes/tsql-md.md)]-Datentypen können als Parameter verwendet werden.
 - Verwenden Sie den benutzerdefinierten Tabellentyp, um Tabellenwertparameter zu erstellen. Tabellenwertparameter können nur INPUT-Parameter sein und müssen vom READONLY-Schlüsselwort begleitet werden. Weitere Informationen finden Sie unter [Verwenden von Tabellenwertparametern &#40;Databank-Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).
-- **cursor** -Datentypen können nur OUTPUT-Parameter sein und müssen vom VARYING-Schlüsselwort begleitet werden.
+- **cursor**-Datentypen können nur OUTPUT-Parameter sein und müssen vom VARYING-Schlüsselwort begleitet werden.
 
 **Richtlinien für CLR-Prozeduren:**
 
 - Alle systemeignen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen, die über eine Entsprechung im verwalteten Code verfügen, können als Parameter verwendet werden. Weitere Informationen zu Entsprechungen zwischen CLR-Typen und zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemdatentypen finden Sie unter [Zuordnen von CLR-Parameterdaten](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md). Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemdatentypen und ihrer Syntax finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).
 
-- Tabellenwertdatentypen oder **cursor** -Datentypen können nicht als Parameter verwendet werden.
+- Tabellenwertdatentypen oder **cursor**-Datentypen können nicht als Parameter verwendet werden.
 - Wenn es sich beim Datentyp des Parameters um einen CLR-benutzerdefinierten Typ handelt, müssen Sie über die EXECUTE-Berechtigung für diesen Typ verfügen.
 
-VARYING Gibt das als Ausgabeparameter unterstützte Resultset an. Dieser Parameter wird dynamisch durch die Prozedur erstellt. Sein Inhalt kann variieren. Gilt nur für **cursor** -Parameter. Diese Option ist für CLR-Prozeduren nicht gültig.
+VARYING Gibt das als Ausgabeparameter unterstützte Resultset an. Dieser Parameter wird dynamisch durch die Prozedur erstellt. Sein Inhalt kann variieren. Gilt nur für **cursor**-Parameter. Diese Option ist für CLR-Prozeduren nicht gültig.
 
 *default* Angabe eines Standardwerts für einen Parameter. Wenn ein Standardwert für einen Parameter definiert ist, kann die Prozedur ausgeführt werden, ohne dass ein Wert für diesen Parameter angegeben wird. Der Standardwert muss eine Konstante oder NULL sein. Der konstante Wert kann ein Platzhalter sein, wodurch beim Weitergeben des Parameters an die Prozedur das LIKE-Schlüsselwort verwendet werden kann.
 
-Standardwerte werden in der **sys.parameters.default** -Spalte nur für CLR-Prozeduren erfasst. Diese Spalte hat für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedurparameter den Wert NULL.
+Standardwerte werden in der **sys.parameters.default**-Spalte nur für CLR-Prozeduren erfasst. Diese Spalte hat für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedurparameter den Wert NULL.
 
-OUT | OUTPUT Gibt an, dass es sich bei dem Parameter um einen Ausgabeparameter handelt. Verwenden Sie OUTPUT-Parameter, um Informationen an die aufrufende Prozedur zurückzugeben. **text** -, **ntext** - und **image** -Parameter können als OUTPUT-Parameter verwendet werden, es sei denn, es handelt sich bei der Prozedur um eine CLR-Prozedur. Ein Ausgabeparameter kann ein Cursorplatzhalter sein, sofern die Prozedur keine CLR-Prozedur ist. Ein Tabellenwert-Datentyp kann nicht als OUTPUT-Parameter einer Prozedur angegeben werden.
+OUT | OUTPUT Gibt an, dass es sich bei dem Parameter um einen Ausgabeparameter handelt. Verwenden Sie OUTPUT-Parameter, um Informationen an die aufrufende Prozedur zurückzugeben. **text**-, **ntext**- und **image**-Parameter können als OUTPUT-Parameter verwendet werden, es sei denn, es handelt sich bei der Prozedur um eine CLR-Prozedur. Ein Ausgabeparameter kann ein Cursorplatzhalter sein, sofern die Prozedur keine CLR-Prozedur ist. Ein Tabellenwert-Datentyp kann nicht als OUTPUT-Parameter einer Prozedur angegeben werden.
 
 READONLY Gibt an, dass der Parameter nicht aktualisiert oder innerhalb des Texts der Prozedur geändert werden kann. Wenn der Parametertyp ein Tabellenwerttyp ist, muss READONLY angegeben werden.
 
@@ -210,7 +210,7 @@ Verwenden Sie den RECOMPILE-Abfragehinweis in der Abfragedefinition, damit das [
 
 ENCRYPTION
 
-**Gilt für** : SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Gilt für**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Gibt an, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Originaltext der CREATE PROCEDURE-Anweisung in ein verborgenes Format umwandelt. Die Ausgabe der Verbergung ist nicht direkt in den Katalogsichten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sichtbar. Benutzer, die keinen Zugriff auf Systemtabellen oder Datenbankdateien haben, können den verborgenen Text nicht abrufen. Der Text ist jedoch für berechtigte Benutzer verfügbar, die entweder auf die Systemtabellen über den [DAC-Port](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) oder direkt auf die Datenbankdateien zugreifen. Des Weiteren können Benutzer, die einen Debugger an den Serverprozess anfügen können, die entschlüsselte Prozedur zur Laufzeit vom Arbeitsspeicher abrufen. Weitere Informationen zu Berechtigungen zum Zugreifen auf Systemmetadaten finden Sie unter [Konfigurieren der Sichtbarkeit von Metadaten](../../relational-databases/security/metadata-visibility-configuration.md).
 
@@ -226,13 +226,13 @@ Weitere Informationen finden Sie unter [EXECUTE AS-Klausel &#40;Transact-SQL&#41
 
 FOR REPLICATION
 
-**Gilt für** : SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Gilt für**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Gibt an, dass die Prozedur für die Replikation erstellt ist. Entsprechend kann sie nicht für den Abonnenten ausgeführt werden. Eine Prozedur, die mit der Option FOR REPLICATION erstellt wurde, wird als Filter für Prozeduren verwendet und nur während der Replikation ausgeführt. Parameter können nicht deklariert werden, wenn FOR REPLICATION angegeben ist. FOR REPLICATION kann nicht für CLR-Prozeduren angegeben werden. Die Option RECOMPILE wird bei Prozeduren ignoriert, die mit FOR REPLICATION erstellt wurden.
 
-Eine `FOR REPLICATION`-Prozedur verfügt über einen **RF** -Objekttyp in **sys.objects** und in **sys.procedures** .
+Eine `FOR REPLICATION`-Prozedur verfügt über einen **RF**-Objekttyp in **sys.objects** und in **sys.procedures**.
 
-{ [ BEGIN ] *sql_anweisung* [;] [ ... *n* ] [ END ] } Eine oder mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, die den Textkörper der Prozedur bilden. Sie können die optionalen BEGIN- und END-Schlüsselwörter zum Einschließen der Anweisungen verwenden. Informationen hierzu erhalten Sie in den folgenden Abschnitten zu bewährten Methoden, allgemeinen Hinweisen und Einschränkungen.
+{ [ BEGIN ] *sql_anweisung* [;] [ ...*n* ] [ END ] } Eine oder mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, die den Textkörper der Prozedur bilden. Sie können die optionalen BEGIN- und END-Schlüsselwörter zum Einschließen der Anweisungen verwenden. Informationen hierzu erhalten Sie in den folgenden Abschnitten zu bewährten Methoden, allgemeinen Hinweisen und Einschränkungen.
 
 EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_
 
@@ -440,7 +440,7 @@ In der folgenden Tabelle sind die Katalogsichten und dynamischen Verwaltungssich
 
 |Sicht|BESCHREIBUNG|
 |----------|-----------------|
-|[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|Gibt die Definition einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur zurück. Der Text einer mit der ENCRYPTION-Option erstellten Prozedur kann nicht mit der **sys.sql_modules** -Katalogsicht angezeigt werden.|
+|[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|Gibt die Definition einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur zurück. Der Text einer mit der ENCRYPTION-Option erstellten Prozedur kann nicht mit der **sys.sql_modules**-Katalogsicht angezeigt werden.|
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|Gibt Informationen zu einer CLR-Prozedur zurück.|
 |[sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)|Gibt Informationen über die Parameter zurück, die in einer Prozedur definiert sind.|
 |[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)|Gibt die Objekte zurück, auf die eine Prozedur verweist.|
@@ -459,9 +459,9 @@ Verwenden Sie die folgenden Leistungsindikatoren, um die Größe einer kompilier
 
 ### <a name="permissions"></a>Berechtigungen
 
-Erfordert die **CREATE PROCEDURE** -Berechtigung für die Datenbank und die **ALTER** -Berechtigung für das Schema, in dem die Prozedur erstellt wird, oder die Mitgliedschaft in der festen Datenbankrolle **db_ddladmin** .
+Erfordert die **CREATE PROCEDURE**-Berechtigung für die Datenbank und die **ALTER**-Berechtigung für das Schema, in dem die Prozedur erstellt wird, oder die Mitgliedschaft in der festen Datenbankrolle **db_ddladmin**.
 
-Bei gespeicherten CLR-Prozeduren müssen Sie der Besitzer der Assembly sein, auf die in der EXTERNAL NAME-Klausel verwiesen wird, oder über die **REFERENCES** -Berechtigung für diese Assembly verfügen.
+Bei gespeicherten CLR-Prozeduren müssen Sie der Besitzer der Assembly sein, auf die in der EXTERNAL NAME-Klausel verwiesen wird, oder über die **REFERENCES**-Berechtigung für diese Assembly verfügen.
 
 ## <a name="create-procedure-and-memory-optimized-tables"></a><a name="mot"></a> CREATE PROCEDURE und speicheroptimierte Tabellen
 
@@ -545,7 +545,7 @@ GO
 
 Im folgenden Beispiel wird die `GetPhotoFromDB`-Prozedur erstellt, die auf die `GetPhotoFromDB`-Methode der `LargeObjectBinary`-Klasse in der `HandlingLOBUsingCLR`-Assembly verweist. Bevor die Prozedur erstellt wird, wird die `HandlingLOBUsingCLR`-Assembly in der lokalen Datenbank registriert.
 
-**Gilt für** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (wenn eine aus *assembly_bits* erstellte Assembly verwendet wird).
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (wenn eine aus *assembly_bits* erstellte Assembly verwendet wird).
 
 ```sql
 CREATE ASSEMBLY HandlingLOBUsingCLR
@@ -886,7 +886,7 @@ In den Beispielen dieses Abschnitts wird gezeigt, wie die Definition der gespeic
 
 Im folgenden Beispiel wird die `HumanResources.uspEncryptThis`-Prozedur erstellt.
 
-**Gilt für** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher, SQL-Datenbank.
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher, SQL-Datenbank.
 
 ```sql
 CREATE PROCEDURE HumanResources.uspEncryptThis
