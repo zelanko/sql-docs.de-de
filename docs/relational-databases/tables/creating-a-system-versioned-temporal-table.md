@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c2be314863112cfb7d0a22e9000fc71d7991454
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2b795f2fc65cade53dac533795d41ae8013e90cb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809296"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439391"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Erstellen einer temporalen Tabelle mit Systemversionsverwaltung
 
@@ -51,7 +51,7 @@ WITH (SYSTEM_VERSIONING = ON);
 
 ### <a name="important-remarks"></a>Wichtige Hinweise
 
-- Für eine temporale Tabelle mit Systemversionsverwaltung muss ein Primärschlüssel und genau eine **PERIOD FOR SYSTEM_TIME** mit zwei „datetime2“-Spalten definiert sein, die als **GENERATED ALWAYS AS ROW START / END**deklariert sind.
+- Für eine temporale Tabelle mit Systemversionsverwaltung muss ein Primärschlüssel und genau eine **PERIOD FOR SYSTEM_TIME** mit zwei „datetime2“-Spalten definiert sein, die als **GENERATED ALWAYS AS ROW START / END** deklariert sind.
 - Die **PERIOD** -Spalten dürfen keine NULL-Werte zulassen, auch wenn keine Angabe zur NULL-Zulässigkeit gemacht wurde. Wenn für **PERIOD**-Spalten explizit angegeben ist, dass NULL-Werte zulässig sind, tritt bei der Anweisung **CREATE TABLE** ein Fehler auf.
 - Das Schema der Verlaufstabelle muss im Hinblick auf Spaltenanzahl, Spaltennamen, Sortierung und Datentypen stets an die aktuelle oder temporale Tabelle angepasst sein.
 - Eine anonyme Verlaufstabelle wird automatisch im gleichen Schema wie die aktuelle oder temporale Tabelle erstellt.

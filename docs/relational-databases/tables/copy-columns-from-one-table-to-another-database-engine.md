@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5f5e70dc-69f9-44b8-bc48-b5d51ac20d77
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1952dc72148ee9e8d0d68b375f39f5fc3bedfc3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2b8b8dd930fa6fff0b5be86ed0c83ad485326996
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488633"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439418"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>Kopieren von Spalten von einer Tabelle in eine andere Tabelle (Datenbank-Engine)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "88488633"
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>So kopieren Sie Spaltendefinitionen von einer Tabelle in eine andere  
   
-1.  Öffnen Sie die Tabelle mit den zu kopierenden Spalten und diejenige, in die Sie die Spalten kopieren möchten, indem Sie mit der rechten Maustaste auf die Tabellen und dann auf **Entwerfen**klicken.  
+1.  Öffnen Sie die Tabelle mit den zu kopierenden Spalten und diejenige, in die Sie die Spalten kopieren möchten, indem Sie mit der rechten Maustaste auf die Tabellen und dann auf **Entwerfen** klicken.  
   
 2.  Klicken Sie auf die Registerkarte für die Tabelle mit den zu kopierenden Spalten, und wählen Sie diese Spalten aus.  
   

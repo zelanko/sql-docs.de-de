@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: faece054ca8f125e8c3594eb588ffa8cf97ddc16
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e67547c75424708ca0e934175cc0183afb0bd37d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344901"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439078"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "92344901"
   
  [ [HAVING *search_condition*](../../t-sql/queries/select-having-transact-sql.md) ]  
   
- [ [ORDER BY *order_expression* [ ASC | DESC ] ](../../t-sql/queries/select-order-by-clause-transact-sql.md)]  
+ [ [ORDER BY *order_expression* [ ASC | DESC ]](../../t-sql/queries/select-order-by-clause-transact-sql.md)]  
   
  Die Operatoren [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md), [EXCEPT und INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md) können zwischen Abfragen verwendet werden, um deren Ergebnisse in einem Resultset zu kombinieren oder zu vergleichen.  
   
@@ -190,7 +190,7 @@ SELECT <select_criteria>
 > Nehmen wir als Beispiel einen gruppierten Index für eine Sicht, die manche Tabellenzeilen ausschließt und deren SELECT-Spaltenliste CONVERT verwendet, wodurch ein Datentyp von *varchar* in *integer* geändert wird. In diesem Fall kann CONVERT ausgeführt werden, bevor die WHERE-Klausel ausgeführt wird. Dies ist wirklich ein Ausnahmefall. Es gibt meistens eine Möglichkeit, die Sicht zu ändern, um die veränderte Reihenfolge zu vermeiden, falls dies in Ihrem Fall relevant ist. 
 
 ## <a name="permissions"></a>Berechtigungen  
- Die Auswahl von Daten erfordert die Berechtigung **SELECT** für die Tabelle oder Sicht, die über einen höheren Bereich, beispielsweise über die Berechtigung **SELECT** für das Schema oder die Berechtigung **CONTROL** für die Tabelle, vererbt werden kann. Oder sie erfordert die Mitgliedschaft in der festen Datenbankrolle **db_datareader** oder **db_owner** oder der festen Serverrolle **sysadmin** . Das Erstellen einer neuen Tabelle mit **SELECT INTO** erfordert auch die Berechtigungen **CREATE TABLE** und **ALTER SCHEMA** für das Schema, das die neue Tabelle besitzt.  
+ Die Auswahl von Daten erfordert die Berechtigung **SELECT** für die Tabelle oder Sicht, die über einen höheren Bereich, beispielsweise über die Berechtigung **SELECT** für das Schema oder die Berechtigung **CONTROL** für die Tabelle, vererbt werden kann. Oder sie erfordert die Mitgliedschaft in der festen Datenbankrolle **db_datareader** oder **db_owner** oder der festen Serverrolle **sysadmin**. Das Erstellen einer neuen Tabelle mit **SELECT INTO** erfordert auch die Berechtigungen **CREATE TABLE** und **ALTER SCHEMA** für das Schema, das die neue Tabelle besitzt.  
   
 ## <a name="examples"></a>Beispiele:   
 In den folgenden Beispielen wird die [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)]-Datenbank verwendet.

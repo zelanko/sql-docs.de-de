@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c5d2d1f0af5abdf24fce8be780c15a73f2a778a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 81bb8dd3acae7fda65af0ada009b065c909506b3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91864475"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460065"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Erste Schritte mit Berechtigungen für die Datenbank-Engine
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "91864475"
 ##### <a name="database-users"></a>Datenbankbenutzer  
  Anmeldungen wird Zugriff auf eine Datenbank gewährt, indem in einer Datenbank ein Datenbankbenutzer erstellt und dieser Datenbankbenutzer einer Anmeldung zugeordnet wird. Der Datenbank-Benutzername ist in der Regel identisch mit dem Anmeldenamen, obwohl dies nicht so sein muss. Jeder Datenbankbenutzer ist einer einzelnen Anmeldung zugeordnet. Eine Anmeldung kann nur einem Benutzer in einer Datenbank zugeordnet werden, kann aber als Datenbankbenutzer in mehreren unterschiedlichen Datenbanken zugeordnet werden.  
   
- Es können auch Datenbankbenutzer erstellt werden, die keine entsprechende Anmeldung haben. Diese werden als *eigenständige Datenbankbenutzer*bezeichnet. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] empfiehlt die Verwendung eigenständiger Datenbankbenutzer, da dadurch das Verschieben Ihrer Datenbank auf einen anderen Server erleichtert wird. Wie eine Anmeldung kann ein eigenständiger Datenbankbenutzer entweder die Windows- oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung verwenden. Weitere Informationen finden Sie unter [Eigenständige Datenbankbenutzer - machen Sie Ihre Datenbank portabel](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+ Es können auch Datenbankbenutzer erstellt werden, die keine entsprechende Anmeldung haben. Diese werden als *eigenständige Datenbankbenutzer* bezeichnet. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] empfiehlt die Verwendung eigenständiger Datenbankbenutzer, da dadurch das Verschieben Ihrer Datenbank auf einen anderen Server erleichtert wird. Wie eine Anmeldung kann ein eigenständiger Datenbankbenutzer entweder die Windows- oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung verwenden. Weitere Informationen finden Sie unter [Eigenständige Datenbankbenutzer - machen Sie Ihre Datenbank portabel](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
  Es gibt 12 Typen von Benutzern mit geringfügigen Unterschieden dahingehend, wie sie sich authentifizieren und wen sie darstellen. Eine Liste von Benutzern finden Sie unter [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md).  
   
@@ -81,15 +81,13 @@ ms.locfileid: "91864475"
   
 #### <a name="if-the-person-connecting-will-be-connecting-to-only-one-database"></a>Wenn die Person eine Verbindung mit nur einer Datenbank herstellen möchte  
   
-1.  Erstellen Sie für die Windows-Gruppen eine Anmeldung. (Wenn Sie die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung verwenden, überspringen Sie die Schritte für Active Directory, und erstellen Sie hier [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierungsanmeldungen.)  
+1.  Erstellen Sie in der Benutzerdatenbank für die Windows-Gruppen einen eigenständigen Datenbankbenutzer. (Wenn Sie die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung verwenden, überspringen Sie die Schritte für die Active Directory, und erstellen Sie hier die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung für den eigenständigen Datenbankbenutzer.)  
   
-2.  Erstellen Sie in der Benutzerdatenbank für die Windows-Gruppen einen eigenständigen Datenbankbenutzer. (Wenn Sie die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung verwenden, überspringen Sie die Schritte für die Active Directory, und erstellen Sie hier die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung für den eigenständigen Datenbankbenutzer.)  
+1.  Erstellen Sie in der Benutzerdatenbank eine oder mehrere benutzerdefinierte Datenbankrollen, die jeweils eine ähnliche Funktion darstellen. Beispiele: Finanzanalyst und Vertriebsanalyst.  
   
-3.  Erstellen Sie in der Benutzerdatenbank eine oder mehrere benutzerdefinierte Datenbankrollen, die jeweils eine ähnliche Funktion darstellen. Beispiele: Finanzanalyst und Vertriebsanalyst.  
+1.  Fügen Sie die Datenbankbenutzer einer oder mehreren benutzerdefinierten Datenbankrollen hinzu.  
   
-4.  Fügen Sie die Datenbankbenutzer einer oder mehreren benutzerdefinierten Datenbankrollen hinzu.  
-  
-5.  Erteilen Sie den benutzerdefinierten Datenbankrollen Berechtigungen.  
+1.  Erteilen Sie den benutzerdefinierten Datenbankrollen Berechtigungen.  
   
  Das typische Ergebnis an diesem Punkt ist, dass ein Windows-Benutzer Mitglied einer Windows-Gruppe ist. Die Windows-Gruppe verfügt in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]über eine Anmeldung. Die Anmeldung ist einer Benutzeridentität in der Benutzerdatenbank zugeordnet. Der Benutzer ist Mitglied einer Datenbankrolle. Nun müssen Sie der Rolle Berechtigungen hinzufügen.  
   
@@ -126,7 +124,7 @@ GRANT UPDATE ON OBJECT::Production.Parts TO PartsTeam;
 -   Wenn der Administrator `DENY SELECT ON OBJECT::OrderStatus TO Sales;` nicht ordnungsgemäß ausführt, wird Ted als Mitglied der Rolle „Sales“ die `SELECT` -Berechtigung verweigert, da `DENY` für die Rolle „sales“ seine individuelle  `GRANT`-Einstellung überschreibt.  
   
 > [!NOTE]  
->  Berechtigungen können mithilfe von [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]konfiguriert werden. Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf das sicherungsfähige Objekt, und wählen Sie **Eigenschaften**aus. Wählen Sie die Seite **Berechtigungen** aus. Hilfe zum Verwenden der Seite „Berechtigungen“, finden Sie unter [Seite 'Berechtigungen' oder 'Sicherungsfähige Elemente'](../../../relational-databases/security/permissions-or-securables-page.md).  
+>  Berechtigungen können mithilfe von [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]konfiguriert werden. Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf das sicherungsfähige Objekt, und wählen Sie **Eigenschaften** aus. Wählen Sie die Seite **Berechtigungen** aus. Hilfe zum Verwenden der Seite „Berechtigungen“, finden Sie unter [Seite 'Berechtigungen' oder 'Sicherungsfähige Elemente'](../../../relational-databases/security/permissions-or-securables-page.md).  
   
 ## <a name="permission-hierarchy"></a>Berechtigungshierarchie  
  Berechtigungen einer Hierarchie aus über- und untergeordneten Elementen. Wenn Sie also die Berechtigung `SELECT` für eine Datenbank erteilen, enthält diese Berechtigung die Berechtigung `SELECT` für alle (untergeordneten) Schemas in der Datenbank. Wenn Sie die Berechtigung `SELECT` für ein Schema erteilen, enthält sie die Berechtigung `SELECT` für alle (untergeordneten) Tabellen und Sichten im Schema. Die Berechtigungen sind transitiv. Das heißt, wenn Sie die Berechtigung `SELECT` für eine Datenbank erteilen, schließt dies die Berechtigung `SELECT` für alle (untergeordneten) Schemas sowie alle (zwei Ebenen untergeordneten) Tabellen und Sichten ein.  

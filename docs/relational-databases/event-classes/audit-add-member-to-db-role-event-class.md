@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: a5ac46b6-765b-4424-b6c7-4d5a1b898d65
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: deb927a3cc76cbb30c6c7e3b39562decb2c2a66a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6555e7578cc8499071f71bd2ec5fdb13b52fa337
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88384876"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440171"
 ---
 # <a name="audit-add-member-to-db-role-event-class"></a>Audit Add Member to DB Role-Ereignisklasse
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-   Die **Audit Add Member to DB Role**-Ereignisklasse tritt auf, wenn einer Datenbankrolle ein Anmeldename hinzugefügt oder aus ihr entfernt wird. Diese Ereignisklasse wird mit den gespeicherten Prozeduren **sp_addrolemember**, **sp_changegroup**und **sp_droprolemember** verwendet.  
+   Die **Audit Add Member to DB Role**-Ereignisklasse tritt auf, wenn einer Datenbankrolle ein Anmeldename hinzugefügt oder aus ihr entfernt wird. Diese Ereignisklasse wird mit den gespeicherten Prozeduren **sp_addrolemember**, **sp_changegroup** und **sp_droprolemember** verwendet.  
   
 ## <a name="audit-add-member-to-db-role-event-class-data-columns"></a>Datenspalten der Audit Add Member to DB Role-Ereignisklasse  
   

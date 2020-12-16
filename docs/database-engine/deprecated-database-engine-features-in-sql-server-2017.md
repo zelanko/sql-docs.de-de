@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5285873c9fc81849d8da8b48140dfbb71281e1aa
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017'
+ms.openlocfilehash: 16f81a4ac6265d37cb9e5d50a6500ca68740e394
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670519"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438843"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Als veraltet markierte Funktionen der Datenbank-Engine in SQL Server 2017
 
@@ -329,7 +329,7 @@ Die folgenden Features von SQL Server-Datenbank-Engine werden in der nächsten V
 | Spaltenverweise mit 3 Teilen und 4 Teilen. | Zweiteilige Namen sind das standardkonforme Verhalten.|Mehr als zweiteiliger Spaltenname |
 | Eine in Anführungszeichen eingeschlossene Zeichenfolge, die als Spaltenalias für einen Ausdruck in einer SELECT-Liste verwendet wird:<br /><br />'*Zeichenfolgenalias*' = *Ausdruck* | *Ausdruck* [AS] *Spaltenalias*<br /><br />*Ausdruck* [AS] [*Spaltenalias*]<br /><br />*Ausdruck* [AS] "*Spaltenalias*"<br /><br />*Ausdruck* [AS] '*Spaltenalias*'<br /><br />*Spaltenalias* = *Ausdruck* | Zeichenfolgenliterale als Spaltenaliase |
 | Nummerierte Prozeduren | Keine. Darf nicht verwendet werden. | ProcNums |
-| Syntax für*Tabellenname.Indexname* in DROP INDEX|Syntax für*Indexname* ON *Tabellenname* in DROP INDEX.|DROP INDEX mit zweiteiligem Namen |
+| Syntax für *Tabellenname.Indexname* in DROP INDEX|Syntax für *Indexname* ON *Tabellenname* in DROP INDEX.|DROP INDEX mit zweiteiligem Namen |
 | Nicht auf ein Semikolon endende Transact-SQL-Anweisungen|Transact-SQL-Anweisungen müssen mit einem Semikolon ( ; ) beendet werden. | Keine |
 | GROUP BY ALL|Verwenden Sie eine benutzerdefinierte einzelfallspezifische Lösung mit UNION oder abgeleiteter Tabelle. | GROUP BY ALL |
 | ROWGUIDCOL als Spaltenname in DML-Anweisungen|Verwenden Sie $rowguid.|ROWGUIDCOL |

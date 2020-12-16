@@ -11,13 +11,13 @@ dev_langs:
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 64cbc15572d8d7316d5d61cc65190960aa496357
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: fdadefa5b898a2b37c7e5a7f087c429ccc6b8d4f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300205"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438961"
 ---
 # <a name="create-table-azure-synapse-analytics"></a>CREATE TABLE (Azure Synapse Analytics)
 
@@ -122,7 +122,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  `NULL` | `NOT NULL`  
  Gibt an, ob `NULL`-Werte in der Spalte zulässig sind. Der Standardwert lautet `NULL`.  
   
- [`CONSTRAINT` *constraint_name* ] `DEFAULT` *constant_expression*  
+ [`CONSTRAINT` *constraint_name*] `DEFAULT` *constant_expression*  
  Gibt den Standardspaltenwert an.  
   
  | Argument | Erklärung |
@@ -140,8 +140,8 @@ Speichert die Tabelle als gruppierten Columnstore-Index. Der gruppierte Columnst
  
  `HEAP` Speichert die Tabelle als Heap. Dies ist das Standardverhalten für [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
- `CLUSTERED INDEX` ( *index_column_name* [ ,... *n* ] )  
- Speichert die Tabelle als gruppierten Index mit mindestens einer Schlüsselspalte. Durch dieses Verhalten werden die Daten zeilenweise gespeichert. Verwenden Sie *index_column_name* , um den Namen einer oder mehrerer Schlüsselspalten im Index anzugeben.  Weitere Informationen finden Sie im Abschnitt über Rowstore-Tabellen unter den allgemeinen Hinweisen.
+ `CLUSTERED INDEX` ( *index_column_name* [ ,...*n* ] )  
+ Speichert die Tabelle als gruppierten Index mit mindestens einer Schlüsselspalte. Durch dieses Verhalten werden die Daten zeilenweise gespeichert. Verwenden Sie *index_column_name*, um den Namen einer oder mehrerer Schlüsselspalten im Index anzugeben.  Weitere Informationen finden Sie im Abschnitt über Rowstore-Tabellen unter den allgemeinen Hinweisen.
  
  `LOCATION = USER_DB` Diese Option ist veraltet. Sie ist syntaktisch zulässig, aber nicht mehr erforderlich, und hat keine Auswirkungen auf das Verhalten.   
   
@@ -149,7 +149,7 @@ Speichert die Tabelle als gruppierten Columnstore-Index. Der gruppierte Columnst
 
 Informationen zum Auswählen der besten Verteilungsmethode und zur Verwendung von verteilten Tabellen finden Sie unter [Verteilen von Tabellen in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/).
 
-`DISTRIBUTION = HASH` ( *distribution_column_name* ) Weist jede Zeile einer Verteilung zu, indem für den in *distribution_column_name* gespeicherten Wert ein Hashvorgang durchgeführt wird. Der Algorithmus ist deterministisch. Das bedeutet, er erzeugt für gleiche Verteilungen immer die gleichen Hashwerte.  Die Verteilungsspalte muss als NOT NULL definiert sein, weil alle Zeilen, die NULL enthalten, derselben Verteilung zugewiesen werden.
+`DISTRIBUTION = HASH` (*distribution_column_name*) Weist jede Zeile einer Verteilung zu, indem für den in *distribution_column_name* gespeicherten Wert ein Hashvorgang durchgeführt wird. Der Algorithmus ist deterministisch. Das bedeutet, er erzeugt für gleiche Verteilungen immer die gleichen Hashwerte.  Die Verteilungsspalte muss als NOT NULL definiert sein, weil alle Zeilen, die NULL enthalten, derselben Verteilung zugewiesen werden.
 
 `DISTRIBUTION = ROUND_ROBIN` Verteilt die Zeilen im Roundrobinverfahren gleichmäßig auf alle Verteilungen. Dies ist das Standardverhalten für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
 
@@ -158,7 +158,7 @@ Informationen zum Auswählen der besten Verteilungsmethode und zur Verwendung vo
 ### <a name="table-partition-options"></a><a name="TablePartitionOptions"></a> Tabellenpartitionsoptionen
 Einen Leitfaden zur Verwendung von Tabellenpartitionen finden Sie unter [Partitionieren von Tabellen in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/).
 
- `PARTITION` ( *partition_column_name*`RANGE` [`LEFT` | `RIGHT`] `FOR VALUES` ([ *boundary_value* [,... *n* ]]))   
+ `PARTITION` (*partition_column_name*`RANGE` [`LEFT` | `RIGHT`] `FOR VALUES` ([*boundary_value* [,...*n*]]))   
 Erstellt eine oder mehrere Tabellenpartitionen. Diese Partitionen sind horizontale Tabellenslices, mit deren Hilfe Sie Vorgänge für Teilmengen von Zeilen ausführen können, unabhängig davon, ob die Tabelle als Heap, gruppierter Index oder gruppierter Columnstore-Index gespeichert ist. Im Gegensatz zur Verteilungsspalte bestimmen Tabellenpartitionen nicht die Verteilung für den Speicherort der einzelnen Zeilen. Vielmehr bestimmten Tabellenpartitionen, wie die Zeilen in den einzelnen Verteilungen gruppiert und gespeichert werden.  
 
 | Argument | Erklärung |
@@ -166,7 +166,7 @@ Erstellt eine oder mehrere Tabellenpartitionen. Diese Partitionen sind horizonta
 |*partition_column_name*| Gibt die Spalte an, die von [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] zum Partitionieren der Zeilen verwendet wird. Diese Spalte kann einen beliebigen Datentyp aufweisen. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] sortiert die Werte der Partitionsspalte in aufsteigender Reihenfolge. Die Sortierung vom niedrigsten zum höchsten Wert erfolgt in der `LEFT`-Spezifikation von `RIGHT` nach `RANGE`. |  
 | `RANGE LEFT` | Gibt den Begrenzungswert an, der zur Partition auf der linken Seite (niedrigere Werte) gehört. Die Standardeinstellung ist LEFT. |
 | `RANGE RIGHT` | Gibt den Begrenzungswert an, der zur Partition auf der rechten Seite (höhere Werte) gehört. | 
-| `FOR VALUES` ( *boundary_value* [,... *n* ] ) | Gibt die Begrenzungswerte für die Partition an. *boundary_value* ist ein konstanter Ausdruck. Er darf nicht NULL sein. Er muss entweder dem Datentyp *partition_column_name* entsprechen oder implizit in diesen Datentyp konvertierbar sein. Er darf bei der impliziten Konvertierung nicht abgeschnitten werden, sodass die Größe und Dezimalstellen des Werts nicht mehr dem Datentyp von *partition_column_name* entsprechen.<br></br><br></br>Wenn Sie die `PARTITION`-Klausel, aber keinen Begrenzungswert angeben, erstellt [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] eine partitionierte Tabelle mit einer Partition. Ggf. können Sie die Tabelle später in zwei Partitionen teilen.<br></br><br></br>Wenn Sie einen Begrenzungswert angeben, weist die resultierende Tabelle zwei Partitionen auf, eine für die im Vergleich zum Begrenzungswert niedrigeren Werte und eine für die im Vergleich zum Begrenzungswert höheren Werte. Wenn Sie eine Partition in eine nicht partitionierte Tabelle verschieben, empfängt die nicht partitionierte Tabelle die Daten, jedoch sind in den Metadaten keine Partitionsbegrenzungen enthalten.| 
+| `FOR VALUES` ( *boundary_value* [,...*n*] ) | Gibt die Begrenzungswerte für die Partition an. *boundary_value* ist ein konstanter Ausdruck. Er darf nicht NULL sein. Er muss entweder dem Datentyp *partition_column_name* entsprechen oder implizit in diesen Datentyp konvertierbar sein. Er darf bei der impliziten Konvertierung nicht abgeschnitten werden, sodass die Größe und Dezimalstellen des Werts nicht mehr dem Datentyp von *partition_column_name* entsprechen.<br></br><br></br>Wenn Sie die `PARTITION`-Klausel, aber keinen Begrenzungswert angeben, erstellt [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] eine partitionierte Tabelle mit einer Partition. Ggf. können Sie die Tabelle später in zwei Partitionen teilen.<br></br><br></br>Wenn Sie einen Begrenzungswert angeben, weist die resultierende Tabelle zwei Partitionen auf, eine für die im Vergleich zum Begrenzungswert niedrigeren Werte und eine für die im Vergleich zum Begrenzungswert höheren Werte. Wenn Sie eine Partition in eine nicht partitionierte Tabelle verschieben, empfängt die nicht partitionierte Tabelle die Daten, jedoch sind in den Metadaten keine Partitionsbegrenzungen enthalten.| 
 
  Informationen hierzu finden Sie unter [Erstellen einer partitionierten Tabelle](#PartitionedTable) im Abschnitt mit den Beispielen.
 
@@ -240,7 +240,7 @@ Entspricht `datetime`, jedoch mit der Ausnahme, dass die Anzahl von Sekundenbruc
  Die maximal speicherbare Gesamtzahl an Dezimalstellen, sowohl links als auch rechts vom Dezimalkomma. Die Genauigkeit muss ein Wert zwischen `1` und der maximalen Genauigkeit von `38` sein. Die Standardgenauigkeit beträgt `18`.  
   
  *scale*  
- Die maximal speicherbare Zahl an Dezimalstellen rechts vom Dezimalkomma. *Scale* muss in einem Bereich zwischen `0` und *precision* liegen. *scale* kann nur angegeben werden, wenn *precision* angegeben wird. Der Standardwert lautet `0`; daher gilt: `0` <= *scale* <= *precision* . Die maximalen Speichergrößen variieren abhängig von der Genauigkeit.  
+ Die maximal speicherbare Zahl an Dezimalstellen rechts vom Dezimalkomma. *Scale* muss in einem Bereich zwischen `0` und *precision* liegen. *scale* kann nur angegeben werden, wenn *precision* angegeben wird. Der Standardwert lautet `0`; daher gilt: `0` <= *scale* <= *precision*. Die maximalen Speichergrößen variieren abhängig von der Genauigkeit.  
   
 | Precision | Speicherplatz in Bytes  |  
 | ---------: |-------------: |  

@@ -13,13 +13,13 @@ ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 347f59a7498e34ac1b99956990507559363813c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 501be7ed93ec7be0edd55d95bf7bd0b5bce229d8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493850"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460093"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Erstellen und Verwalten von Volltextindizes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -193,13 +193,13 @@ Zum Erstellen eines Volltextindexes für eine **varbinary(max)** -Spalte benöti
   
 2.  Erweitern Sie **Tabellen**, und klicken Sie mit der rechten Maustaste auf die Tabelle, die Sie deaktivieren oder für Volltextindizierung erneut aktivieren möchten.  
   
-3.  Wählen Sie **Volltextindex**aus, und klicken Sie anschließend auf **Volltextindizierung deaktivieren** oder **Volltextindizierung aktivieren**.  
+3.  Wählen Sie **Volltextindex** aus, und klicken Sie anschließend auf **Volltextindizierung deaktivieren** oder **Volltextindizierung aktivieren**.  
   
 ##  <a name="remove-a-full-text-index-from-a-table"></a><a name="remove"></a> Entfernen eines Volltextindexes aus einer Tabelle  
   
 1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Tabelle mit dem Volltextindex, den Sie löschen möchten  
   
-2.  Wählen Sie **Volltextindex löschen**aus.  
+2.  Wählen Sie **Volltextindex löschen** aus.  
   
 3.  Klicken Sie auf **OK** , wenn Sie aufgefordert werden, das Löschen des Volltextindexes zu bestätigen.  
   

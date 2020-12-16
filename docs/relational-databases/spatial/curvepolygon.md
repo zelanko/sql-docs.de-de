@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f117b284799ba4849131254b90a018a397824e7b
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 24be57e6e964fea4ddb0f050480dbe79353ddcd2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006324"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97459980"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -77,7 +77,7 @@ Eine **CurvePolygon** -Instanz ist gültig, wenn sowohl der äußere Ring als au
 3.  Jeder Ring muss mindestens vier Punkte enthalten.  
 4.  Jeder Ring muss ein akzeptabler Kurventyp sein.  
   
-Auch**CurvePolygon** -Instanzen müssen bestimmte Kriterien erfüllen, je nachdem, ob es sich dabei um einen **geometry** -Datentyp oder einen **geography** -Datentyp handelt.  
+Auch **CurvePolygon** -Instanzen müssen bestimmte Kriterien erfüllen, je nachdem, ob es sich dabei um einen **geometry** -Datentyp oder einen **geography** -Datentyp handelt.  
   
 #### <a name="geometry-data-type"></a>geometry-Datentyp  
 Eine gültige **geometryCurvePolygon** -Instanz muss über die folgenden Attribute verfügen:  
@@ -131,7 +131,7 @@ DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'
 ```  
   
 ### <a name="c-instantiating-a-geography-instance-with-a-curvepolygon"></a>C. Instanziieren einer geography-Instanz mit einem CurvePolygon  
- In diesem Codeausschnitt wird veranschaulicht, wie eine **geography** -Instanz mit einem **CurvePolygon**deklariert und initialisiert wird:  
+ In diesem Codeausschnitt wird veranschaulicht, wie eine **geography** -Instanz mit einem **CurvePolygon** deklariert und initialisiert wird:  
   
 ```sql  
 DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  

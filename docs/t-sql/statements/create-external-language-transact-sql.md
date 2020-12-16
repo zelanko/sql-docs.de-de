@@ -9,13 +9,13 @@ ms.topic: language-reference
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e97f98a4e9080ceffdf4925c4467bfc27fc40d9
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 826265f7d04ac96c3e2c9dcdc4a144bb1ca382c8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300151"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439005"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -109,7 +109,7 @@ Dieser Parameter ist für Szenarien mit hybridem Betriebssystem erforderlich. In
 
 ## <a name="permissions"></a>Berechtigungen
 
-Erfordert die `CREATE EXTERNAL LANGUAGE`-Berechtigung. Standardmäßig verfügt jeder Benutzer mit **dbo** , der Mitglied der Rolle **db_owner** ist, über die Berechtigung zum Erstellen einer externen Sprache. Allen anderen Benutzern müssen Sie die Berechtigung mithilfe einer [GRANT](./grant-database-permissions-transact-sql.md)-Anweisung explizit gewähren, in der Sie CREATE EXTERNAL LANGUAGE als Berechtigung angeben.
+Erfordert die `CREATE EXTERNAL LANGUAGE`-Berechtigung. Standardmäßig verfügt jeder Benutzer mit **dbo**, der Mitglied der Rolle **db_owner** ist, über die Berechtigung zum Erstellen einer externen Sprache. Allen anderen Benutzern müssen Sie die Berechtigung mithilfe einer [GRANT](./grant-database-permissions-transact-sql.md)-Anweisung explizit gewähren, in der Sie CREATE EXTERNAL LANGUAGE als Berechtigung angeben.
 
 Zum Bearbeiten einer Bibliothek ist die separate Berechtigung `ALTER ANY EXTERNAL LANGUAGE` erforderlich.
 
@@ -153,7 +153,7 @@ GO
 ```
 ### <a name="c-grant-permissions-to-execute-external-script"></a>C. Gewähren der Berechtigungen zum Ausführen von externen Skripts
 
-Im folgenden Beispiel wird dem **mylogin** -Prinzipal der Zugriff zum Ausführen externer Skripts mithilfe der externen Sprache **Java** gewährt.
+Im folgenden Beispiel wird dem **mylogin**-Prinzipal der Zugriff zum Ausführen externer Skripts mithilfe der externen Sprache **Java** gewährt.
 
 ```sql
 GRANT EXECUTE EXTERNAL SCRIPT ON EXTERNAL LANGUAGE ::Java 

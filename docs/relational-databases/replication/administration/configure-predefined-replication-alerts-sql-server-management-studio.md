@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: c0414147-7ffe-4f9a-908c-71c1b5201584
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1dd36895604f81e378b37d2d711c814251ee7cd7
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: fa85c871d8fd1cc8ade0ed0a1b0a41e8e596fee7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892420"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439871"
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>Konfigurieren von vordefinierten Replikationswarnungen (SQL Server Management Studio)
 [!INCLUDE[applies-to-version/_ssnoversion.md](../../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "91892420"
   
     -   Geben Sie auf der Seite **Antwort** an, ob eine E-Mail gesendet und/oder ein Auftrag ausgeführt werden soll.  
   
-         Wenn die Warnung **Replikation: Fehler bei der Datenüberprüfung auf dem Abonnenten.** lautet, können Sie den Auftrag festlegen, den die Replikation als Antwort auf diese Warnung bereitstellt: Klicken Sie auf **Auftrag ausführen** und anschließend auf die Schaltfläche zum Durchsuchen ( **...** ). Klicken Sie im Dialogfeld **Auftrag suchen** auf **Durchsuchen**. Wählen Sie im Dialogfeld **Nach Objekten suchen** die Option **Abonnements mit Datenüberprüfungsfehlern neu initialisieren**aus. Klicken Sie in beiden geöffneten Dialogfeldern auf **OK** . Wenn der Auftrag ausgeführt wird, wird ein Remoteprozeduraufruf (Remote Procedure Call, RPC) einer gespeicherten Prozedur verwendet, mit dem das Abonnement erneut initialisiert wird. Wenn der Verleger einen Remoteverteiler verwendet, müssen Sie auf dem Verleger eine Remoteserveranmeldung definieren, damit der RPC des Verteilers an den Verleger ausgeführt werden kann.  
+         Wenn die Warnung **Replikation: Fehler bei der Datenüberprüfung auf dem Abonnenten.** lautet, können Sie den Auftrag festlegen, den die Replikation als Antwort auf diese Warnung bereitstellt: Klicken Sie auf **Auftrag ausführen** und anschließend auf die Schaltfläche zum Durchsuchen ( **...** ). Klicken Sie im Dialogfeld **Auftrag suchen** auf **Durchsuchen**. Wählen Sie im Dialogfeld **Nach Objekten suchen** die Option **Abonnements mit Datenüberprüfungsfehlern neu initialisieren** aus. Klicken Sie in beiden geöffneten Dialogfeldern auf **OK** . Wenn der Auftrag ausgeführt wird, wird ein Remoteprozeduraufruf (Remote Procedure Call, RPC) einer gespeicherten Prozedur verwendet, mit dem das Abonnement erneut initialisiert wird. Wenn der Verleger einen Remoteverteiler verwendet, müssen Sie auf dem Verleger eine Remoteserveranmeldung definieren, damit der RPC des Verteilers an den Verleger ausgeführt werden kann.  
   
     -   Passen Sie auf der Seite **Optionen** den Text der Antwort an.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "91892420"
   
     -   Geben Sie auf der Seite **Antwort** an, ob eine E-Mail gesendet und/oder ein Auftrag ausgeführt werden soll.  
   
-         Wenn die Warnung **Replikation: Fehler bei der Datenüberprüfung auf dem Abonnenten.** lautet, können Sie den Auftrag festlegen, den die Replikation als Antwort auf diese Warnung bereitstellt: Klicken Sie auf **Auftrag ausführen** und anschließend auf die Schaltfläche zum Durchsuchen ( **...** ). Klicken Sie im Dialogfeld **Auftrag suchen** auf **Durchsuchen**. Wählen Sie im Dialogfeld **Nach Objekten suchen** die Option **Abonnements mit Datenüberprüfungsfehlern neu initialisieren**aus. Klicken Sie in beiden geöffneten Dialogfeldern auf **OK** . Wenn der Auftrag ausgeführt wird, wird ein Remoteprozeduraufruf (Remote Procedure Call, RPC) einer gespeicherten Prozedur verwendet, mit dem das Abonnement erneut initialisiert wird. Wenn der Verleger einen Remoteverteiler verwendet, müssen Sie auf dem Verleger eine Remoteserveranmeldung definieren, damit der RPC des Verteilers an den Verleger ausgeführt werden kann.  
+         Wenn die Warnung **Replikation: Fehler bei der Datenüberprüfung auf dem Abonnenten.** lautet, können Sie den Auftrag festlegen, den die Replikation als Antwort auf diese Warnung bereitstellt: Klicken Sie auf **Auftrag ausführen** und anschließend auf die Schaltfläche zum Durchsuchen ( **...** ). Klicken Sie im Dialogfeld **Auftrag suchen** auf **Durchsuchen**. Wählen Sie im Dialogfeld **Nach Objekten suchen** die Option **Abonnements mit Datenüberprüfungsfehlern neu initialisieren** aus. Klicken Sie in beiden geöffneten Dialogfeldern auf **OK** . Wenn der Auftrag ausgeführt wird, wird ein Remoteprozeduraufruf (Remote Procedure Call, RPC) einer gespeicherten Prozedur verwendet, mit dem das Abonnement erneut initialisiert wird. Wenn der Verleger einen Remoteverteiler verwendet, müssen Sie auf dem Verleger eine Remoteserveranmeldung definieren, damit der RPC des Verteilers an den Verleger ausgeführt werden kann.  
   
     -   Passen Sie auf der Seite **Optionen** den Text der Antwort an.  
   
