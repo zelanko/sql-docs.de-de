@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 23803485a7734bf9f077aa70d136e8730055ccd0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 3c738370cc02b3ca36123a5e6232ec04b9a4e882
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913213"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97432983"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Festlegen von Schwellenwerten und Warnungen im Replikationsmonitor
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -34,19 +34,19 @@ ms.locfileid: "86913213"
   
 -   Bevorstehender Abonnementablauf  
   
-     Dieser Statuswert gilt für alle Arten der Replikation. Wenn der angegebene Schwellenwert erreicht oder überschritten wird, wird der Abonnementstatus als **Läuft demnächst ab/Abgelaufen**angezeigt.  
+     Dieser Statuswert gilt für alle Arten der Replikation. Wenn der angegebene Schwellenwert erreicht oder überschritten wird, wird der Abonnementstatus als **Läuft demnächst ab/Abgelaufen** angezeigt.  
   
 -   Die angegebene Latenzzeit (Zeit, die zwischen dem Start einer Transaktion auf dem Verleger und dem Start der entsprechenden Transaktion auf dem Abonnenten vergeht) wird überschritten.  
   
-     Betrifft nur Transaktionsreplikationen. Falls der angegebene Schwellenwert erreicht oder überschritten wird, wird der Abonnementstatus als **Leistungskritisch**angezeigt.  
+     Betrifft nur Transaktionsreplikationen. Falls der angegebene Schwellenwert erreicht oder überschritten wird, wird der Abonnementstatus als **Leistungskritisch** angezeigt.  
   
 -   Die angegebene Synchronisierungszeit wird überschritten.  
   
-     Betrifft nur Mergereplikationen. Wenn der angegebene Schwellenwert erreicht oder überschritten wird, wird als Status **Langer Mergevorgang**angezeigt. Sie können verschiedene Schwellenwerte für DFÜ- und Local Area Network-(LAN-)Verbindungen angeben.  
+     Betrifft nur Mergereplikationen. Wenn der angegebene Schwellenwert erreicht oder überschritten wird, wird als Status **Langer Mergevorgang** angezeigt. Sie können verschiedene Schwellenwerte für DFÜ- und Local Area Network-(LAN-)Verbindungen angeben.  
   
 -   Die angegebene Zahl von Zeilen konnte nicht innerhalb der festgelegten Zeit verarbeitet werden.  
   
-     Betrifft nur Mergereplikationen. Wenn der angegebene Schwellenwert erreicht oder überschritten wird, wird als Status **Leistungskritisch**angezeigt. Sie können verschiedene Schwellenwerte für DFÜ- und LAN-Verbindungen angeben.  
+     Betrifft nur Mergereplikationen. Wenn der angegebene Schwellenwert erreicht oder überschritten wird, wird als Status **Leistungskritisch** angezeigt. Sie können verschiedene Schwellenwerte für DFÜ- und LAN-Verbindungen angeben.  
   
  Weitere Informationen zu den Warnungen **Leistungskritisch** und **langer Mergevorgang**, finden Sie unter [Überwachen der Leistung mit dem Replikationsmonitor](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md).  
   
@@ -138,7 +138,7 @@ ms.locfileid: "86913213"
   
 2.  Klicken Sie auf die Registerkarte **Warnungen** . Wenn Sie weitere Informationen zu den Optionen auf dieser Registerkarte benötigen, klicken Sie im Menü am oberen Rand auf **Hilfe** .  
   
-3.  Aktivieren Sie die Warnung, indem Sie das Kontrollkästchen **Warnung, wenn ein Abonnement innerhalb des Schwellenwerts abläuft**aktivieren.  
+3.  Aktivieren Sie die Warnung, indem Sie das Kontrollkästchen **Warnung, wenn ein Abonnement innerhalb des Schwellenwerts abläuft** aktivieren.  
   
 4.  Legen Sie in der **Schwellenwert** -Spalte einen Schwellenwert für die Warnung fest Sie können z.B. einen Wert von **70%** in der **Schwellenwert**-Spalte auswählen.  
   

@@ -29,13 +29,13 @@ helpviewer_keywords:
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 2dfc06b78d249a0ed266315f42c066eef05b3413
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 0983d52e2b0843a8ccbb2566e9e2762e97f61a4a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920066"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97432982"
 ---
 # <a name="programmatically-monitor-replication"></a>Programmgesteuertes Überwachen der Replikation
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -127,13 +127,13 @@ ms.locfileid: "86920066"
   
     -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetLastSessionSummaryDataRow%2A> - gibt ein <xref:System.Data.DataRow> -Objekt mit Informationen zu der letzten Merge-Agentsitzung zurück. Beachten Sie den Wert der **Session_id** -Spalte für diese Sitzung.  
   
-4.  (Optional) Rufen Sie <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.RefreshSessionSummary%2A> auf, um die Daten für das <xref:Microsoft.SqlServer.Replication.MergeSessionSummary> -Objekt zu aktualisieren, das als *mss,* übergeben wurde, oder rufen Sie <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.RefreshSessionSummary%2A> auf, um die Daten im <xref:System.Data.DataRow> -Objekt zu aktualisieren, das als *drRefresh*aus.  
+4.  (Optional) Rufen Sie <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.RefreshSessionSummary%2A> auf, um die Daten für das <xref:Microsoft.SqlServer.Replication.MergeSessionSummary> -Objekt zu aktualisieren, das als *mss,* übergeben wurde, oder rufen Sie <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.RefreshSessionSummary%2A> auf, um die Daten im <xref:System.Data.DataRow> -Objekt zu aktualisieren, das als *drRefresh* aus.  
   
 5.  Rufen Sie mithilfe der in Schritt 3 abgerufenen Sitzungs-ID eine der folgenden Methoden auf, um Informationen zu den Details einer bestimmten Sitzung zurückzugeben:  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A> - gibt ein Array von <xref:Microsoft.SqlServer.Replication.MergeSessionDetail> -Objekten für die angegebene *SessionId*aus.  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A> - gibt ein Array von <xref:Microsoft.SqlServer.Replication.MergeSessionDetail> -Objekten für die angegebene *SessionId* aus.  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A> - gibt ein <xref:System.Data.DataSet> -Objekt mit Informationen für die angegebene *SessionId*aus.  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A> - gibt ein <xref:System.Data.DataSet> -Objekt mit Informationen für die angegebene *SessionId* aus.  
   
 #### <a name="to-monitor-replication-properties-for-all-publications-at-a-distributor"></a>So überwachen Sie die Replikationseigenschaften für alle Veröffentlichungen auf einem Verteiler  
   
@@ -175,7 +175,7 @@ ms.locfileid: "86920066"
   
 2.  Rufen Sie auf eine der folgenden Arten ein <xref:Microsoft.SqlServer.Replication.PublisherMonitor> -Objekt ab.  
   
-    -   Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.PublisherMonitor>-Klasse. Legen Sie die <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> -Eigenschaft für den Verleger fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte <xref:Microsoft.SqlServer.Management.Common.ServerConnection> fest. Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode **false**zurückgibt, ist der Verlegername falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
+    -   Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.PublisherMonitor>-Klasse. Legen Sie die <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> -Eigenschaft für den Verleger fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte <xref:Microsoft.SqlServer.Management.Common.ServerConnection> fest. Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode **false** zurückgibt, ist der Verlegername falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
   
     -   Aus der <xref:Microsoft.SqlServer.Replication.PublisherMonitorCollection> , auf die mittels der <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.PublisherMonitors%2A> -Eigenschaft eines vorhandenen <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> -Objekts zugegriffen wird.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "86920066"
   
 2.  Rufen Sie auf eine der folgenden Arten ein <xref:Microsoft.SqlServer.Replication.PublicationMonitor> -Objekt ab.  
   
-    -   Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.PublicationMonitor>-Klasse. Legen Sie die Eigenschaften <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>und <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> für die Veröffentlichung fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte <xref:Microsoft.SqlServer.Management.Common.ServerConnection> fest. Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode **false**zurückgibt, sind die Veröffentlichungseigenschaften falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
+    -   Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.PublicationMonitor>-Klasse. Legen Sie die Eigenschaften <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>und <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> für die Veröffentlichung fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte <xref:Microsoft.SqlServer.Management.Common.ServerConnection> fest. Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode **false** zurückgibt, sind die Veröffentlichungseigenschaften falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
   
     -   Aus der <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> , auf die mittels der <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> -Eigenschaft eines vorhandenen <xref:Microsoft.SqlServer.Replication.PublisherMonitor> -Objekts zugegriffen wird.  
   
@@ -245,7 +245,7 @@ ms.locfileid: "86920066"
   
 2.  Rufen Sie auf eine der folgenden Arten ein <xref:Microsoft.SqlServer.Replication.PublicationMonitor> -Objekt ab.  
   
-    -   Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.PublicationMonitor>-Klasse. Legen Sie die Eigenschaften <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>und <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> für die Veröffentlichung fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte <xref:Microsoft.SqlServer.Management.Common.ServerConnection> fest. Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode **false**zurückgibt, sind die Veröffentlichungseigenschaften falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
+    -   Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.PublicationMonitor>-Klasse. Legen Sie die Eigenschaften <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>und <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> für die Veröffentlichung fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte <xref:Microsoft.SqlServer.Management.Common.ServerConnection> fest. Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode **false** zurückgibt, sind die Veröffentlichungseigenschaften falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
   
     -   Aus der <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> , auf die mittels der <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> -Eigenschaft eines vorhandenen <xref:Microsoft.SqlServer.Replication.PublisherMonitor> -Objekts zugegriffen wird.  
   
@@ -259,7 +259,7 @@ ms.locfileid: "86920066"
   
 2.  Rufen Sie auf eine der folgenden Arten ein <xref:Microsoft.SqlServer.Replication.PublicationMonitor> -Objekt ab.  
   
-    -   Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.PublicationMonitor>-Klasse. Legen Sie die Eigenschaften <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>und <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> für die Veröffentlichung fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte <xref:Microsoft.SqlServer.Management.Common.ServerConnection> fest. Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode **false**zurückgibt, sind die Veröffentlichungseigenschaften falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
+    -   Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.PublicationMonitor>-Klasse. Legen Sie die Eigenschaften <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>und <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> für die Veröffentlichung fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte <xref:Microsoft.SqlServer.Management.Common.ServerConnection> fest. Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode **false** zurückgibt, sind die Veröffentlichungseigenschaften falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
   
     -   Aus der <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> , auf die mittels der <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> -Eigenschaft eines vorhandenen <xref:Microsoft.SqlServer.Replication.PublisherMonitor> -Objekts zugegriffen wird.  
   
