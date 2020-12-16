@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9da4fe7d516453b91ab5d60ec170431035146b6b
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 568b3f60205e94bd0b81ff5e80e8b3db372a4691
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496948"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480911"
 ---
 # <a name="dynamic-data-masking"></a>Dynamische Datenmaskierung
 [!INCLUDE [SQL Server 2016 ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -41,7 +41,7 @@ Die dynamische Datenmaskierung steht in [!INCLUDE[ssSQL15](../../includes/sssql1
   
 |Funktion|Beschreibung|Beispiele|  
 |--------------|-----------------|--------------|  
-|Standard|Die vollständige Maskierung gemäß der Datentypen der festgelegten Felder.<br /><br /> Verwenden Sie XXXX oder weniger X-Platzhalter für Zeichenfolge-Datentypen, wenn die Größe des Felds weniger als vier Zeichen umfasst ( **char** , **nchar** ,  **varchar** , **nvarchar** , **text** , **ntext** ).  <br /><br /> Verwenden Sie für numerische Datentypen den Wert 0 (null) ( **bigint** , **bit** , **decimal** , **int** , **money** , **numeric** , **smallint** , **smallmoney** , **tinyint** , **float** , **real** ).<br /><br /> Verwenden Sie für die Datentypen für Datum und Uhrzeit 01.01.1900 00:00:00.0000000 ( **date** , **datetime2** , **datetime** , **datetimeoffset** , **smalldatetime** , **time** ).<br /><br />Verwenden Sie für binäre Datentypen ein Einzelbyte des ASCII-Werts 0 ( **binary** , **varbinary** , **image** ).|Beispielsyntax der Spaltendefinition: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> Beispiel für die alter-Syntax: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
+|Standard|Die vollständige Maskierung gemäß der Datentypen der festgelegten Felder.<br /><br /> Verwenden Sie XXXX oder weniger X-Platzhalter für Zeichenfolge-Datentypen, wenn die Größe des Felds weniger als vier Zeichen umfasst (**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> Verwenden Sie für numerische Datentypen den Wert 0 (null) (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> Verwenden Sie für die Datentypen für Datum und Uhrzeit 01.01.1900 00:00:00.0000000 (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br /><br />Verwenden Sie für binäre Datentypen ein Einzelbyte des ASCII-Werts 0 (**binary**, **varbinary**, **image**).|Beispielsyntax der Spaltendefinition: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> Beispiel für die alter-Syntax: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
 |Email|Eine Maskierungsmethode, die den ersten Buchstaben einer E-Mail-Adresse und das konstante Suffix „.com“ in Form einer E-Mail-Adresse verfügbar macht. `aXXX@XXXX.com`.|Beispielsyntax der Definition: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> Beispiel für die alter-Syntax: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
 |Zufällig|Eine zufällige Maskierungsfunktion, die für alle numerischen Typen verwendet werden kann, um den ursprünglichen Wert mit einem zufälligen Wert innerhalb eines bestimmten Bereichs zu maskieren.|Beispielsyntax der Definition: `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> Beispiel für die alter-Syntax: `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
 |Benutzerdefinierte Zeichenfolge|Eine Maskierungsmethode, die den ersten und letzten Buchstaben verfügbar macht und in der Mitte eine benutzerdefinierte Zeichenfolge zur Auffüllung hinzufügt. `prefix,[padding],suffix`<br /><br /> Hinweis: Wenn der ursprüngliche Wert zu kurz ist, um die gesamte Maske zu vervollständigen, wird ein Teil des Präfixes oder Suffixes nicht verfügbar gemacht.|Beispielsyntax der Definition: `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> Beispiel für die alter-Syntax: `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> Weiteres Beispiel:<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`|  
@@ -61,7 +61,7 @@ Die dynamische Datenmaskierung steht in [!INCLUDE[ssSQL15](../../includes/sssql1
   
 -   Die Verwendung von `SELECT INTO` oder `INSERT INTO` zum Kopieren von Daten aus einer maskierten Spalte in eine andere Tabelle führt zu maskierten Daten in der Zieltabelle.  
   
--   Die dynamische Datenmaskierung wird beim Ausführen von Import- und Exportvorgängen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angewendet. Eine Datenbank mit maskierten Spalten führt zu einer exportierten Datendatei mit maskierten Daten (vorausgesetzt, sie wird durch einen Benutzer ohne **UNMASK** -Berechtigungen exportiert), und die importierte Datenbank enthält statisch maskierte Daten.  
+-   Die dynamische Datenmaskierung wird beim Ausführen von Import- und Exportvorgängen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angewendet. Eine Datenbank mit maskierten Spalten führt zu einer exportierten Datendatei mit maskierten Daten (vorausgesetzt, sie wird durch einen Benutzer ohne **UNMASK**-Berechtigungen exportiert), und die importierte Datenbank enthält statisch maskierte Daten.  
   
 ## <a name="querying-for-masked-columns"></a>Abfragen von maskierten Spalten  
  Verwenden Sie die **sys.masked_columns** -Ansicht zum Abfragen von Tabellenspalten, auf die eine Maskierungsfunktion angewendet wird. Diese Ansicht erbt von der **sys.columns** -Ansicht. Sie gibt alle Spalten in der **sys.columns** -Ansicht sowie die Spalten **is_masked** und **masking_function** zurück, wobei angegeben wird, ob die Spalte maskiert ist. Ist dies der Fall, gibt die Ansicht die definierte Maskierungsfunktion an. Diese Ansicht zeigt nur die Spalten an, auf die eine Maskierungsfunktion angewendet wird.  
@@ -87,7 +87,7 @@ WHERE is_masked = 1;
   
 -   Eine Spalte mit Datenmaskierung darf kein Schlüssel für einen Volltextindex sein.  
   
- Für Benutzer ohne die **UNMASK** -Berechtigung funktionieren die als veraltet markierten Anweisungen **READTEXT** , **UPDATETEXT** und **WRITETEXT** nicht ordnungsgemäß für eine Spalte, die für die dynamische Datenmaskierung konfiguriert ist. 
+ Für Benutzer ohne die **UNMASK** -Berechtigung funktionieren die als veraltet markierten Anweisungen **READTEXT**, **UPDATETEXT** und **WRITETEXT** nicht ordnungsgemäß für eine Spalte, die für die dynamische Datenmaskierung konfiguriert ist. 
  
  Das Hinzufügen einer dynamischen Datenmaske wird als Schemaänderung für die zugrunde liegende Tabelle implementiert und kann deshalb nicht für eine Spalte mit Abhängigkeiten ausgeführt werden. Um diese Einschränkung zu umgehen, können Sie zunächst die Abhängigkeiten entfernen und anschließend die dynamische Datenmaske hinzufügen. Danach erstellen Sie die Abhängigkeiten erneut. Wenn z.B. die Abhängigkeit dadurch entsteht, dass ein Indexes von dieser Spalte abhängt, können Sie den Index löschen und anschließend die Maske hinzufügen und dann den abhängigen Index wieder herstellen.
  

@@ -18,13 +18,13 @@ f1_keywords:
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a76a0aac8ff4630eb8b51835bba618303fe497cb
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f41013db7cbd871ef132c3c0a3bad8a772511022
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344056"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480781"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 
@@ -86,11 +86,11 @@ ms.locfileid: "92344056"
  Verhindert die Sperrenausweitung in den meisten Fällen. Sperren auf Tabellenebene sind jedoch nicht völlig ausgeschlossen. Wenn Sie z. B. eine Tabelle scannen, die unter der serialisierbaren Isolationsstufe keinen gruppierten Index aufweist, muss [!INCLUDE[ssDE](../../includes/ssde-md.md)] eine Tabellensperre zulassen, damit die Datenintegrität gewahrt wird.  
   
  **Die Tabelle ist repliziert**  
- Gibt an, ob die Tabelle mit der Replikationsfunktion von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in eine andere Datenbank repliziert wurde. Mögliche Werte sind **True** und **False** .  
+ Gibt an, ob die Tabelle mit der Replikationsfunktion von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in eine andere Datenbank repliziert wurde. Mögliche Werte sind **True** und **False**.  
   
 ##  <a name="change-tracking-page"></a><a name="ChangeTracking"></a> Seite "Änderungsnachverfolgung"  
  **Änderungsnachverfolgung**  
- Gibt an, ob die Änderungsnachverfolgung für die Tabelle aktiviert ist. Der Standardwert ist **False** .  
+ Gibt an, ob die Änderungsnachverfolgung für die Tabelle aktiviert ist. Der Standardwert ist **False**.  
   
  Diese Option ist nur dann verfügbar, wenn die Änderungsnachverfolgung für die Datenbank aktiviert ist.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "92344056"
  Der Stammordner für die FileTable.  
   
  **Aktivierter FileTable-Namespace**  
- Wenn **True** , gibt dieser Wert an, dass die Tabelle eine FileTable ist. Wenn Sie diesen Wert in **False** ändern, ändern Sie die FileTable in eine gewöhnliche Benutzertabelle. Wenn Sie die Tabelle später wieder in eine FileTable ändern möchten, muss die Tabelle eine FileTable-Konsistenzprüfung bestehen, damit die Konvertierung erfolgreich ist.  
+ Wenn **True**, gibt dieser Wert an, dass die Tabelle eine FileTable ist. Wenn Sie diesen Wert in **False** ändern, ändern Sie die FileTable in eine gewöhnliche Benutzertabelle. Wenn Sie die Tabelle später wieder in eine FileTable ändern möchten, muss die Tabelle eine FileTable-Konsistenzprüfung bestehen, damit die Konvertierung erfolgreich ist.  
   
 ##  <a name="storage-page"></a><a name="Storage"></a> Seite "Speicher"  
  Zeigt die speicherbezogenen Eigenschaften der ausgewählten Tabelle an.  
@@ -137,7 +137,7 @@ ms.locfileid: "92344056"
  Der Name der Dateigruppe, die die Tabelle enthält.  
   
  **Die Tabelle ist partitioniert**  
- Mögliche Werte sind **True** und **False** .  
+ Mögliche Werte sind **True** und **False**.  
   
  **FILESTREAM-Dateigruppe**  
  Geben Sie den Namen der FILESTREAM-Datendateigruppe an, wenn die Tabelle eine **varbinary(max)** -Spalte mit FILESTREAM-Attribut aufweist. Der Standardwert entspricht der standardmäßigen FILESTREAM-Datendateigruppe.  

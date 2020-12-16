@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 759fab42-66c7-4541-a7a3-bb6fb868493c
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 3117e274c146413dcf8b973f054c7d0b1865e7de
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 4a51a126cb16aed9159177b60472c4e5262eb2ad
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767609"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479711"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>Ändern der Optionen für die Initialisierung von Momentaufnahmen für die SQL-Replikation 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -110,7 +110,7 @@ Geben Sie beim [Konfigurieren von Momentaufnahmeeigenschaften &#40;Replikationsp
         > [!NOTE]  
         >  Wenn dieses Kontrollkästchen aktiviert ist, werden die im Standardordner gespeicherten Dateien nicht komprimiert. Komprimierte Dateien können nur im alternativen im vorigen Schritt angegebenen Speicherort gespeichert werden.  
   
-2.  Wählen Sie **Momentaufnahmedateien in diesem Ordner komprimieren**aus.    
+2.  Wählen Sie **Momentaufnahmedateien in diesem Ordner komprimieren** aus.    
 3.  Klicken Sie auf **OK**.   
 
 ### <a name="use-transact-sql"></a>Verwenden von Transact-SQL

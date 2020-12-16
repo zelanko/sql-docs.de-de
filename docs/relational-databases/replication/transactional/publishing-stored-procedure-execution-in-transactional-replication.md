@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ee448df6c962596b146c3c933406a23063873d96
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 0f339c2be8c7424134ba76fabbed1105d447a621
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919946"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479591"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Veröffentlichen der Ausführung von gespeicherten Prozeduren in der Transaktionsreplikation
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -58,7 +58,7 @@ EXEC give_raise
 -   Replikationsprogrammierung mit Transact-SQL: Führen Sie [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) aus, und geben Sie dabei für den Parameter `@type` die Werte „serializable proc exec“ (empfohlen) oder „proc exec“ an. Weitere Informationen zum Definieren von Artikeln finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
   
 ## <a name="modifying-the-procedure-at-the-subscriber"></a>Ändern der Prozedur auf dem Abonnenten  
- Standardmäßig wird die Definition der gespeicherten Prozedur auf dem Verleger an jeden Abonnenten weitergegeben. Sie können aber auch die gespeicherte Prozedur auf dem Abonnenten ändern. Dies ist dann sinnvoll, wenn auf dem Verleger und dem Abonnenten eine unterschiedliche Logik ausgeführt werden soll. Gehen wir als Beispiel von **sp_big_delete**aus, einer gespeicherten Prozedur auf dem Verleger mit zwei Funktionen: Zum einen löscht die Prozedur 1.000.000 Zeilen aus der replizierten **big_table1** -Tabelle, zum anderen aktualisiert sie die nicht replizierte **big_table2**-Tabelle. Um den Bedarf an Netzwerkressourcen zu reduzieren, sollten Sie das Löschen der 1 Million Zeilen als gespeicherte Prozedur weitergeben, indem Sie **sp_big_delete**veröffentlichen. Auf dem Abonnenten können Sie **sp_big_delete** so ändern, dass nur die 1 Million Zeilen gelöscht werden, ohne ein nachfolgendes Update von **big_table2**auszuführen.  
+ Standardmäßig wird die Definition der gespeicherten Prozedur auf dem Verleger an jeden Abonnenten weitergegeben. Sie können aber auch die gespeicherte Prozedur auf dem Abonnenten ändern. Dies ist dann sinnvoll, wenn auf dem Verleger und dem Abonnenten eine unterschiedliche Logik ausgeführt werden soll. Gehen wir als Beispiel von **sp_big_delete** aus, einer gespeicherten Prozedur auf dem Verleger mit zwei Funktionen: Zum einen löscht die Prozedur 1.000.000 Zeilen aus der replizierten **big_table1** -Tabelle, zum anderen aktualisiert sie die nicht replizierte **big_table2**-Tabelle. Um den Bedarf an Netzwerkressourcen zu reduzieren, sollten Sie das Löschen der 1 Million Zeilen als gespeicherte Prozedur weitergeben, indem Sie **sp_big_delete** veröffentlichen. Auf dem Abonnenten können Sie **sp_big_delete** so ändern, dass nur die 1 Million Zeilen gelöscht werden, ohne ein nachfolgendes Update von **big_table2** auszuführen.  
   
 > [!NOTE]  
 >  Standardmäßig werden alle Änderungen, die mithilfe von ALTER PROCEDURE auf dem Verleger vorgenommen werden, an den Abonnenten weitergegeben. Wenn Sie dies verhindern möchten, deaktivieren Sie die Weitergabe der Schemaänderungen, bevor Sie ALTER PROCEDURE ausführen. Weitere Informationen zu Schemaänderungen finden Sie unter [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  

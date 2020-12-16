@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b89a8841bd679b9100e43b0b8d7d79dc6bb8165
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 034142392069443993c5d987b8aed80231c229fb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868580"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481331"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>Verwenden des PowerShell-Anbieters für erweiterte Ereignisse
 
@@ -28,14 +28,14 @@ ms.locfileid: "91868580"
 
   Erweiterte Ereignisse von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -PowerShell-Anbieters verwalten. Der Unterordner XEvent ist auf dem SQLSERVER-Laufwerk verfügbar. Auf diesen Ordner können Sie mit einer der folgenden Methoden zugreifen:  
   
--   Geben Sie an einer Eingabeaufforderung **sqlps**ein, und drücken Sie anschließend die EINGABETASTE. Geben Sie **cd xevent**ein, und drücken Sie anschließend die EINGABETASTE. Von dort aus können Sie mit den Befehlen **cd** und **dir** (oder mit den Cmdlets **Set-Location** und **Get-Childitem** ) zum Servernamen und Instanznamen wechseln.  
+-   Geben Sie an einer Eingabeaufforderung **sqlps** ein, und drücken Sie anschließend die EINGABETASTE. Geben Sie **cd xevent** ein, und drücken Sie anschließend die EINGABETASTE. Von dort aus können Sie mit den Befehlen **cd** und **dir** (oder mit den Cmdlets **Set-Location** und **Get-Childitem** ) zum Servernamen und Instanznamen wechseln.  
   
 -   Erweitern Sie im Objekt-Explorer den Instanznamen, erweitern Sie **Verwaltung**, klicken Sie mit der rechten Maustaste auf **Erweiterte Ereignisse**, und klicken Sie anschließend auf **PowerShell starten**. Damit wird PowerShell unter dem folgenden Pfad gestartet:  
   
      PS SQLSERVER:\XEvent\\*Servername*\\*Instanzname*>  
   
     > [!NOTE]  
-    >  PowerShell können Sie unter **Erweiterte Ereignisse**von jedem Knoten aus starten. Sie können z.B. mit der rechten Maustaste auf **Sitzungen**klicken und anschließend auf **PowerShell starten**klicken. Damit starten Sie PowerShell eine Ebene tiefer, mit dem Ordner Sitzungen.  
+    >  PowerShell können Sie unter **Erweiterte Ereignisse** von jedem Knoten aus starten. Sie können z.B. mit der rechten Maustaste auf **Sitzungen** klicken und anschließend auf **PowerShell starten** klicken. Damit starten Sie PowerShell eine Ebene tiefer, mit dem Ordner Sitzungen.  
   
  Sie können die Struktur des Ordners "XEvent" nach vorhandenen Sitzungen für erweiterte Ereignisse und deren zugeordneten Ereignissen, Zielen und Prädikaten durchsuchen. Wenn Sie zum Beispiel unter dem Pfad PS SQLSERVER:\XEvent\\*Servername*\\*Instanzname*> den Befehl **cd sessions** eingeben, die EINGABETASTE drücken, **dir** eingeben und anschließend erneut die EINGABETASTE drücken, zeigen Sie die Liste der in dieser Instanz gespeicherten Sitzungen an. Sie können auch anzeigen, ob die Sitzung ausgeführt wird (und wenn dies der Fall ist, die bisherige Sitzungsdauer), sowie ob die Sitzung für den Start bei Instanzstart konfiguriert ist.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "91868580"
   
 -   Die Skripts müssen mit der Erweiterung .ps1 gespeichert werden.  
   
--   In der PowerShell-Ausführungsrichtlinie muss das auszuführende Skript zugelassen sein. Verwenden Sie das Cmdlet **Set-Executionpolicy** , um die Ausführungsrichtlinie festzulegen. (Weitere Informationen erhalten Sie, wenn Sie **get-help set-executionpolicy -detailed**eingeben und anschließend die EINGABETASTE drücken.)  
+-   In der PowerShell-Ausführungsrichtlinie muss das auszuführende Skript zugelassen sein. Verwenden Sie das Cmdlet **Set-Executionpolicy** , um die Ausführungsrichtlinie festzulegen. (Weitere Informationen erhalten Sie, wenn Sie **get-help set-executionpolicy -detailed** eingeben und anschließend die EINGABETASTE drücken.)  
   
  Mit dem folgenden Skript erstellen Sie die neue Sitzung "TestSession".  
   

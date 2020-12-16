@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c08fb0c0fc82d252e87847562957705e03e30512
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c9a0dfad97e37325c0990bb8c1786a63a5bf897a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867820"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479361"
 ---
 # <a name="create-and-store-column-master-keys-for-always-encrypted"></a>Erstellen und Speichern von Spaltenhauptschlüsseln für Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -30,7 +30,7 @@ Dieser Artikel bietet ausführliche Informationen zum Auswählen eines Schlüsse
 
 Always Encrypted unterstützt mehrere Schlüsselspeicher zum Speichern von Always Encrypted-Spaltenhauptschlüsseln. Die unterstützten Schlüsselspeicher richten sich danach, welchen Treiber und welche Version Sie verwenden.
 
-Es gibt zwei allgemeine Kategorien von Schlüsselspeichern: *Lokale Schlüsselspeicher*und *Zentrale Schlüsselspeicher*.
+Es gibt zwei allgemeine Kategorien von Schlüsselspeichern: *Lokale Schlüsselspeicher* und *Zentrale Schlüsselspeicher*.
 
 ###  <a name="local-or-centralized-key-store"></a>Lokaler oder zentraler Schlüsselspeicher?
 
@@ -92,7 +92,7 @@ Verwenden Sie die Cmdlets [Import-PfxCertificate](/powershell/module/pkiclient/i
 
 Um einem Benutzer die Berechtigung *Lesen* für ein im Zertifikatspeicherort des lokalen Computers gespeichertes Zertifikat zu gewähren, führen Sie die folgenden Schritte aus:
 
-1.  Öffnen Sie eine Eingabeaufforderung, und geben Sie **mmc**ein.
+1.  Öffnen Sie eine Eingabeaufforderung, und geben Sie **mmc** ein.
 2.  Klicken Sie in der MMC-Konsole im Menü **Datei** auf **Snap-In hinzufügen/entfernen**.
 3.  Klicken Sie im Dialogfeld **Snap-In hinzufügen/entfernen** auf **Hinzufügen**.
 4.  Klicken Sie im Dialogfeld **Eigenständiges Snap-In hinzufügen** auf **Zertifikate**, und klicken Sie dann auf **Hinzufügen**.
@@ -134,7 +134,7 @@ Ein Schritt-für-Schritt-Tutorial, das SSMS verwendet und Always Encrypted-Schl�
 
 Wenn Sie einen Azure Key Vault-Schlüssel als Spaltenhauptschlüssel verwenden, muss Ihre Anwendung sich in Azure authentifizieren, und die Identität Ihrer Anwendung muss über die folgenden Berechtigungen im Schlüsseltresor verfügen: *get*, *unwrapKey* und *verify*. 
 
-Um Spaltenverschlüsselungsschlüssel bereitzustellen, die mit einem in Azure Key Vault gespeicherten Spaltenhauptschlüssel geschützt sind, benötigen Sie die Berechtigungen *get*, *unwrapKey*, *wrapKey*, *sign*und *verify* . Außerdem benötigen Sie zum Erstellen eines neuen Schlüssels in einem Azure-Schlüsseltresor die Berechtigung *create* . Zum Auflisten der Schlüsseltresorinhalte benötigen Sie die Berechtigung *list* .
+Um Spaltenverschlüsselungsschlüssel bereitzustellen, die mit einem in Azure Key Vault gespeicherten Spaltenhauptschlüssel geschützt sind, benötigen Sie die Berechtigungen *get*, *unwrapKey*, *wrapKey*, *sign* und *verify* . Außerdem benötigen Sie zum Erstellen eines neuen Schlüssels in einem Azure-Schlüsseltresor die Berechtigung *create* . Zum Auflisten der Schlüsseltresorinhalte benötigen Sie die Berechtigung *list* .
 
 #### <a name="using-powershell"></a>PowerShell
 

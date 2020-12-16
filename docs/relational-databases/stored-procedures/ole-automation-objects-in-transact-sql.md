@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: a887d956-4cd0-400a-aa96-00d7abd7c44b
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c144b9e26ca8f6471bc5b07c7abfcc1f2ed41cc
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1e20fc91b1276a2a7bd8e263c18d6a9da1786ba9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332579"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482951"
 ---
 # <a name="ole-automation-objects-in-transact-sql"></a>OLE-Automatisierungsobjekte in Transact-SQL
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "87332579"
   
 -   **sp_OAGetErrorInfo** ruft die letzten Fehlerinformationen ab.  
   
- Wenn das Objekt nicht mehr benötigt wird, rufen Sie **sp_OADestroy** auf, um die Zuordnung der mit **sp_OACreate**erstellten Instanz des Objekts aufzuheben.  
+ Wenn das Objekt nicht mehr benötigt wird, rufen Sie **sp_OADestroy** auf, um die Zuordnung der mit **sp_OACreate** erstellten Instanz des Objekts aufzuheben.  
   
  OLE-Automatisierungsobjekte geben Daten durch Eigenschaftswerte und Methoden zurück. **sp_OAGetProperty** und **sp_OAMethod** geben diese Datenwerte als Resultset zurück.  
   

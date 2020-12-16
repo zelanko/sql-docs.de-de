@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+monikerRange: '>= sql-server-2016'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b51b896610ae74b5d3e30cc2a9e078611202fe17
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c42f763957fd7245bff60293b790ab11a833c3ce
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882606"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480011"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Konfigurieren von PolyBase für den Zugriff auf externe Daten in Hadoop
 
@@ -28,7 +28,7 @@ In diesem Artikel wird erläutert, wie Sie PolyBase in einer SQL Server-Instanz 
 - Wenn Sie PolyBase nicht installiert haben, finden Sie weitere Informationen unter [PolyBase installation (Installieren von PolyBase)](polybase-installation.md). Die Voraussetzungen für die Installation werden im entsprechenden Artikel erläutert.
 
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-ver15 "
 
 - Ab SQL Server 2019 müssen Sie auch [das PolyBase-Feature aktivieren](polybase-installation.md#enable).
 
@@ -226,7 +226,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 
 ## <a name="view-polybase-objects-in-ssms"></a>Anzeigen von PolyBase-Objekten in SSMS  
 
-In SSMS werden externe Tabellen in einem separaten Ordner **Externe Tabellen**angezeigt. Externe Datenquellen und externe Dateiformate befinden sich in Unterordnern unter **Externe Ressourcen**.  
+In SSMS werden externe Tabellen in einem separaten Ordner **Externe Tabellen** angezeigt. Externe Datenquellen und externe Dateiformate befinden sich in Unterordnern unter **Externe Ressourcen**.  
   
 ![PolyBase-Objekte in SSMS](media/polybase-management.png)  
 

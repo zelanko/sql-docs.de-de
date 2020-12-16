@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: decbd12174f6000a44a3cfd95b145c70de10740c
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9215ac429ff45d80a2ba1ea7d913a63ab49e34e7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92004667"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480951"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Eigenständige Datenbankbenutzer - machen Sie Ihre Datenbank portabel
 
@@ -114,7 +114,7 @@ WHERE name='Test'
   
 - In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]müssen eigenständige Datenbankbenutzer für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aktiviert werden. Weitere Informationen finden Sie unter [Serverkonfigurationsoption für die Authentifizierung der eigenständigen Datenbank](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md).  
 - Eigenständige Datenbankbenutzer und Anmeldungen mit nicht überlappenden Namen können in Ihren Anwendungen gemeinsam vorliegen.  
-- Wenn es in der Masterdatenbank eine Anmeldung unter dem Namen **name1** gibt und Sie einen eigenständigen Datenbankbenutzer namens **name1**erstellen und ein Datenbankname in der Verbindungszeichenfolge angegeben wird, wird der Kontext des Datenbankbenutzers bei der Datenbankverbindung über den Anmeldekontext gewählt. D. h. eigenständige Datenbankbenutzer haben Vorrang vor Anmeldungen mit demselben Namen.  
+- Wenn es in der Masterdatenbank eine Anmeldung unter dem Namen **name1** gibt und Sie einen eigenständigen Datenbankbenutzer namens **name1** erstellen und ein Datenbankname in der Verbindungszeichenfolge angegeben wird, wird der Kontext des Datenbankbenutzers bei der Datenbankverbindung über den Anmeldekontext gewählt. D. h. eigenständige Datenbankbenutzer haben Vorrang vor Anmeldungen mit demselben Namen.  
 - Der Name des eigenständigen Datenbankbenutzers darf in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] nicht mit dem Namen des Serveradmin-Kontos identisch sein.  
 - Das [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Server-Administratorkonto darf nie ein eigenständiger Datenbankbenutzer sein. Der Serveradministrator verfügt über ausreichende Berechtigungen zum Erstellen und Verwalten von eigenständigen Datenbankbenutzern. Der Serveradministrator kann eigenständigen Datenbankbenutzern Berechtigungen für die Benutzerdatenbanken erteilen.  
 - Da enthaltene Datenbankbenutzer Prinzipale auf Datenbankebene sind, müssen Sie eigenständige Datenbankbenutzer in jeder Datenbank erstellen, die Sie verwenden möchten. Die Identität ist auf die Datenbank beschränkt und ist in allen Aspekten von einem Benutzer mit demselben Namen und demselben Kennwort in einer anderen Datenbank auf demselben Server unabhängig.  

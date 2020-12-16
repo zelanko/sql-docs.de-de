@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee26ff95b5317d65e71fbdb91e39a2d56e9f5f95
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cc6e5734edbf7203f98d1b7fc7a685e699aaa635
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756345"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481431"
 ---
 # <a name="contained-databases"></a>Eigenständige Datenbanken
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "85756345"
 >  Das Aktivieren von teilweise eigenständigen Datenbanken delegiert die Steuerung über den Zugriff auf die Instanz der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an die Besitzer der Datenbank. Weitere Informationen finden Sie unter [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
  Datenbankbegrenzung  
- Da teilweise eigenständige Datenbanken Datenbankfunktionen von den Funktionen der Instanz trennen, besteht eine eindeutig definierte Trennlinie zwischen diesen beiden Elementen. Diese wird als *Datenbankbegrenzung*bezeichnet.  
+ Da teilweise eigenständige Datenbanken Datenbankfunktionen von den Funktionen der Instanz trennen, besteht eine eindeutig definierte Trennlinie zwischen diesen beiden Elementen. Diese wird als *Datenbankbegrenzung* bezeichnet.  
   
  Innerhalb der Datenbankbegrenzung befindet sich das *Datenbankmodell*, in dem die Datenbanken entwickelt und verwaltet werden. Beispiele für Entitäten, die sich innerhalb der Datenbank befinden, sind Systemtabellen (z.B. **sys.tables**), eigenständige Datenbankbenutzer mit Kennwörtern sowie Benutzertabellen in der aktuellen Datenbank, auf die mit einem zweiteiligen Namen verwiesen wird.  
   

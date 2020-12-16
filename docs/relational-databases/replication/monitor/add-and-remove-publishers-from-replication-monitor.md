@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 08857f964f652c5663cda32ce442cf34e201c80c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 7c6121b21be6a0a0d49581ebfcc4d637e7fd2f27
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86907276"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481021"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>Hinzufügen und Entfernen von Verlegern vom Replikationsmonitor aus
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "86907276"
   
 2.  Klicken Sie im Dialogfeld **Verleger hinzufügen** auf **Hinzufügen**, und klicken Sie dann auf **SQL Server-Verleger hinzufügen**.  
   
-3.  Geben Sie im Dialogfeld **Verbindung mit Server herstellen** einen Namen für den Verleger ein, und wählen Sie dann den Authentifizierungstyp aus. Wenn Sie **SQL Server-Authentifizierung**auswählen, geben Sie einen Anmeldenamen und ein Kennwort ein. Die von Ihnen angegebenen Anmeldeinformationen werden vom Replikationsmonitor für künftige Verbindungen mit diesem Server gespeichert. Das angegebene Windows-Konto bzw. der angegebene SQL Server-Anmeldename muss Mitglied der festen **sysadmin** -Serverrolle bzw. Mitglied der festen **replmonitor** -Datenbankrolle in der Verteilungsdatenbank sein.  
+3.  Geben Sie im Dialogfeld **Verbindung mit Server herstellen** einen Namen für den Verleger ein, und wählen Sie dann den Authentifizierungstyp aus. Wenn Sie **SQL Server-Authentifizierung** auswählen, geben Sie einen Anmeldenamen und ein Kennwort ein. Die von Ihnen angegebenen Anmeldeinformationen werden vom Replikationsmonitor für künftige Verbindungen mit diesem Server gespeichert. Das angegebene Windows-Konto bzw. der angegebene SQL Server-Anmeldename muss Mitglied der festen **sysadmin** -Serverrolle bzw. Mitglied der festen **replmonitor** -Datenbankrolle in der Verteilungsdatenbank sein.  
   
 4.  Klicken Sie auf **Verbinden**. Wenn der Verleger einen Remoteverteiler verwendet, werden Sie im Dialogfeld **Verbindung mit Server herstellen** aufgefordert, eine Verbindung mit dem Verteiler herzustellen. Die von Ihnen angegebenen Anmeldeinformationen werden vom Replikationsmonitor für künftige Verbindungen mit diesem Server gespeichert. Das angegebene Windows-Konto bzw. der angegebene SQL Server-Anmeldename muss Mitglied der festen **sysadmin** -Serverrolle bzw. Mitglied der festen **replmonitor** -Datenbankrolle in der Verteilungsdatenbank sein.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "86907276"
   
 2.  Klicken Sie im Dialogfeld **Verleger hinzufügen** auf **Hinzufügen**, und klicken Sie dann auf **Oracle-Verleger hinzufügen**.  
   
-3.  Geben Sie im Dialogfeld **Verbindung mit Server herstellen** den Namen des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Verteilers ein, der dem Oracle-Verleger zugeordnet ist, und wählen Sie dann den Authentifizierungstyp aus. Wenn Sie **SQL Server-Authentifizierung**auswählen, geben Sie einen Anmeldenamen und ein Kennwort ein. Die von Ihnen angegebenen Anmeldeinformationen werden vom Replikationsmonitor für künftige Verbindungen mit diesem Server gespeichert. Das angegebene Windows-Konto bzw. der angegebene SQL Server-Anmeldename muss Mitglied der festen **sysadmin** -Serverrolle bzw. Mitglied der festen **replmonitor** -Datenbankrolle in der Verteilungsdatenbank sein.  
+3.  Geben Sie im Dialogfeld **Verbindung mit Server herstellen** den Namen des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Verteilers ein, der dem Oracle-Verleger zugeordnet ist, und wählen Sie dann den Authentifizierungstyp aus. Wenn Sie **SQL Server-Authentifizierung** auswählen, geben Sie einen Anmeldenamen und ein Kennwort ein. Die von Ihnen angegebenen Anmeldeinformationen werden vom Replikationsmonitor für künftige Verbindungen mit diesem Server gespeichert. Das angegebene Windows-Konto bzw. der angegebene SQL Server-Anmeldename muss Mitglied der festen **sysadmin** -Serverrolle bzw. Mitglied der festen **replmonitor** -Datenbankrolle in der Verteilungsdatenbank sein.  
   
 4.  Klicken Sie auf **Verbinden**.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "86907276"
   
 2.  Klicken Sie im Dialogfeld **Verleger hinzufügen** auf **Hinzufügen**, und klicken Sie dann auf **Geben Sie einen Verteiler an, und fügen Sie seine Verleger hinzu**.  
   
-3.  Geben Sie im Dialogfeld **Verbindung mit Server herstellen** den Namen des Verlegers ein, und wählen Sie dann den Authentifizierungstyp aus. Wenn Sie **SQL Server-Authentifizierung**auswählen, geben Sie einen Anmeldenamen und ein Kennwort ein. Die von Ihnen angegebenen Anmeldeinformationen werden vom Replikationsmonitor für künftige Verbindungen mit diesem Server gespeichert. Das angegebene Windows-Konto bzw. der angegebene SQL Server-Anmeldename muss Mitglied der festen **sysadmin** -Serverrolle bzw. Mitglied der festen **replmonitor** -Datenbankrolle in der Verteilungsdatenbank sein.  
+3.  Geben Sie im Dialogfeld **Verbindung mit Server herstellen** den Namen des Verlegers ein, und wählen Sie dann den Authentifizierungstyp aus. Wenn Sie **SQL Server-Authentifizierung** auswählen, geben Sie einen Anmeldenamen und ein Kennwort ein. Die von Ihnen angegebenen Anmeldeinformationen werden vom Replikationsmonitor für künftige Verbindungen mit diesem Server gespeichert. Das angegebene Windows-Konto bzw. der angegebene SQL Server-Anmeldename muss Mitglied der festen **sysadmin** -Serverrolle bzw. Mitglied der festen **replmonitor** -Datenbankrolle in der Verteilungsdatenbank sein.  
   
 4.  Klicken Sie auf **Verbinden**.  
   

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 88321dc6030b76869c55039f04dea39728342751
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 7cd44046d1c21fc365adc0608592b5139270f97b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868120"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479531"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Anzeigen und Ändern der Verteiler- und Verlegereigenschaften
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "91868120"
   
     -   Um die Eigenschaften einer Verteilungsdatenbank anzuzeigen und zu ändern, klicken Sie auf die Schaltfläche Eigenschaften ( **...** ) für die Datenbank auf der Seite **Allgemein** des Dialogfelds.  
   
-    -   Um die mit dem Verteiler verbundenen Verlegereigenschaften anzuzeigen und zu ändern, klicken Sie auf der Seite**Verleger**des Dialogfelds auf die Schaltfläche Eigenschaften ( **...** ) des Verlegers.  
+    -   Um die mit dem Verteiler verbundenen Verlegereigenschaften anzuzeigen und zu ändern, klicken Sie auf der Seite **Verleger** des Dialogfelds auf die Schaltfläche Eigenschaften ( **...** ) des Verlegers.  
   
     -   Klicken Sie auf der Seite **Allgemein** des Dialogfelds auf **Profilstandards** , um auf die Profile der Replikations-Agents zuzugreifen. Weitere Informationen finden Sie unter [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
@@ -139,7 +139,7 @@ ms.locfileid: "91868120"
   
 5.  (Optional) Zum Ändern der Eigenschaften legen Sie einen neuen Wert für eine oder mehrere der Verteilereigenschaften fest, die im <xref:Microsoft.SqlServer.Replication.ReplicationServer> -Objekt festgelegt werden können.  
   
-6.  (Optional) Wenn die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> -Eigenschaft des <xref:Microsoft.SqlServer.Replication.ReplicationServer> -Objekts auf **true**festgelegt ist, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> -Methode auf, um Änderungen auf dem Server einzutragen.  
+6.  (Optional) Wenn die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> -Eigenschaft des <xref:Microsoft.SqlServer.Replication.ReplicationServer> -Objekts auf **true** festgelegt ist, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> -Methode auf, um Änderungen auf dem Server einzutragen.  
   
 #### <a name="to-view-and-modify-distribution-database-properties"></a>So zeigen Sie Verteilerdatenbankeigenschaften an oder ändern Sie diese Eigenschaften  
   
@@ -147,11 +147,11 @@ ms.locfileid: "91868120"
   
 2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.DistributionDatabase>-Klasse. Geben Sie die Namenseigenschaft an, und übergeben Sie das <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Objekt aus Schritt 1.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften vom Server abzurufen. Wenn diese Methode **false**zurückgibt, ist die Datenbank mit dem angegebenen Namen nicht auf dem Server vorhanden.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften vom Server abzurufen. Wenn diese Methode **false** zurückgibt, ist die Datenbank mit dem angegebenen Namen nicht auf dem Server vorhanden.  
   
 4.  (Optional) Um Eigenschaften zu ändern, legen Sie einen neuen Wert für eine der definierbaren <xref:Microsoft.SqlServer.Replication.DistributionDatabase> -Eigenschaften fest.  
   
-5.  (Optional) Wenn die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> -Eigenschaft des <xref:Microsoft.SqlServer.Replication.DistributionDatabase> -Objekts auf **true**festgelegt ist, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> -Methode auf, um Änderungen auf dem Server einzutragen.  
+5.  (Optional) Wenn die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> -Eigenschaft des <xref:Microsoft.SqlServer.Replication.DistributionDatabase> -Objekts auf **true** festgelegt ist, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> -Methode auf, um Änderungen auf dem Server einzutragen.  
   
 #### <a name="to-view-and-modify-publisher-properties"></a>So zeigen Sie die Verlegereigenschaften an oder ändern diese  
   
@@ -161,7 +161,7 @@ ms.locfileid: "91868120"
   
 3.  (Optional) Um Eigenschaften zu ändern, legen Sie einen neuen Wert für eine der definierbaren <xref:Microsoft.SqlServer.Replication.DistributionPublisher> -Eigenschaften fest.  
   
-4.  (Optional) Wenn die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> -Eigenschaft des <xref:Microsoft.SqlServer.Replication.DistributionPublisher> -Objekts auf **true**festgelegt ist, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> -Methode auf, um Änderungen auf dem Server einzutragen.  
+4.  (Optional) Wenn die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> -Eigenschaft des <xref:Microsoft.SqlServer.Replication.DistributionPublisher> -Objekts auf **true** festgelegt ist, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> -Methode auf, um Änderungen auf dem Server einzutragen.  
   
 #### <a name="to-change-the-password-for-the-administrative-connection-from-the-publisher-to-the-distributor"></a>So ändern Sie das Kennwort für die Verwaltungsverbindung zwischen dem Verleger und dem Verteiler  
   

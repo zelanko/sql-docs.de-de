@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d64eedf43ee8ef64a5a2e5e958df02ea8e20b2cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7e70793cab3740089246cc3e1f0738f559566e3f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428422"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481191"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Beschreibung von gruppierten und nicht gruppierten Indizes
 
@@ -32,7 +32,7 @@ Eine Tabelle oder Sicht kann die folgenden Indextypen enthalten:
 
 - Gruppiert
 
-  - Gruppierte Indizes sortieren und speichern die Datenzeilen in der Tabelle oder Sicht basierend auf ihren Schlüsselwerten. Dies sind die Spalten, die in der Indexdefinition enthalten sind. Pro Tabelle kann nur ein gruppierter Index vorhanden sein, da die Datenzeilen nur in einer Reihenfolge gespeichert werden können.  
+  - Gruppierte Indizes sortieren und speichern die Datenzeilen in der Tabelle oder Sicht basierend auf ihren Schlüsselwerten. Dies sind die Spalten, die in der Indexdefinition enthalten sind. Pro Tabelle kann nur ein gruppierter Index vorhanden sein, da die Datenzeilen nur in einer Reihenfolge gespeichert werden können.  
   - Datenzeilen in einer Tabelle werden nur dann in sortierter Reihenfolge gespeichert, wenn die Tabelle einen gruppierten Index enthält. Wenn eine Tabelle einen gruppierten Index besitzt, wird die Tabelle als gruppierte Tabelle bezeichnet. Wenn eine Tabelle nicht über einen gruppierten Index verfügt, werden die Datenzeilen in einer nicht geordneten Struktur gespeichert, die als Heap bezeichnet wird.
 
 - Nicht gruppiert
@@ -67,7 +67,7 @@ Wenn der Abfrageoptimierer einen Index verwendet, werden die Indexschlüsselspal
 > [!IMPORTANT]
 > Weitere Informationen zu den Richtlinien und Besonderheiten für das Entwerfen von Indizes finden Sie unter [SQL Server Index Design Guide (Handbuch zum Entwerfen von SQL Server-Indizes)](../../relational-databases/sql-server-index-design-guide.md).
 
-## <a name="related-content"></a>Verwandte Inhalte
+## <a name="related-content"></a>Verwandte Themen
 
 - [Handbuch zum SQL Server Indexentwurf](../../relational-databases/sql-server-index-design-guide.md)
 - [Erstellen gruppierter Indizes](../../relational-databases/indexes/create-clustered-indexes.md)

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 45f347cb606773ad5e568a8d443bbe010e1a3fd1
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: 116d2f34bef990cca174117238981bb7e87917b4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868777"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481341"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Ziele für erweiterte Ereignisse in SQL Server
 
@@ -82,7 +82,7 @@ Erweiterte Ereignisse von SQL Server können mit der Ereignisablaufverfolgung f�
 - [Überwachen der Systemaktivität mit erweiterten Ereignissen](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)
 
 
-Dieses ETW-Ziel verarbeitet die empfangenen Daten *synchron* , während die meisten Ziele *asynchrone*Verarbeitung aufweisen.
+Dieses ETW-Ziel verarbeitet die empfangenen Daten *synchron* , während die meisten Ziele *asynchrone* Verarbeitung aufweisen.
 
 > [!NOTE]
 > Azure SQL-Datenbank bietet keine Unterstützung für `etw_classic_sync_target target`.
@@ -104,7 +104,7 @@ Im Gegensatz zu den meisten anderen Zielen:
 
 - Im Gegensatz zu den meisten Zielen verarbeitet das event_counter-Ziel die empfangenen Daten *synchron*
     - Die synchrone Verarbeitung ist für den einfachen event_counter akzeptabel, da event_counter sehr wenig Verarbeitungsleitung beansprucht
-    - Die Datenbank-Engine bewirkt die Trennung von jedem Ziel, das zu langsam ist und dadurch die Leistung der Datenbank-Engine zu beeinträchtigen (bremsen) droht. Das ist ein Grund, warum die meisten Ziele *asynchrone*Verarbeitung aufweisen.
+    - Die Datenbank-Engine bewirkt die Trennung von jedem Ziel, das zu langsam ist und dadurch die Leistung der Datenbank-Engine zu beeinträchtigen (bremsen) droht. Das ist ein Grund, warum die meisten Ziele *asynchrone* Verarbeitung aufweisen.
 
 
 #### <a name="example-output-captured-by-event_counter"></a>Von event_counter erfasste Beispielausgabe
@@ -151,7 +151,7 @@ Das Ziel **event_file** schreibt Ereignissitzungsausgaben vom Puffer in eine Dat
 
 - Der gewählte Dateiname wird vom System als Präfix verwendet, an das eine auf Datum-/Uhrzeit basierende Ganzzahl vom Typ long integer angehängt wird, gefolgt von der XEL-Erweiterung.
 
-::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || = sqlallproducts-allversions"
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current "
 
 > [!NOTE]
 > Azure SQL-Datenbank unterstützt nur das Speichern von `xel`-Dateien in Azure-Blobspeicher. 
@@ -232,7 +232,7 @@ SELECT f.*
 ```
 
 
-Für SQL Server **2014**würde eine SELECT-Anweisung ähnlich der folgenden die Meldung der Daten übernehmen. Nach SQL Server 2014 werden keine XEM-Dateien mehr verwendet.
+Für SQL Server **2014** würde eine SELECT-Anweisung ähnlich der folgenden die Meldung der Daten übernehmen. Nach SQL Server 2014 werden keine XEM-Dateien mehr verwendet.
 
 
 ```
@@ -252,7 +252,7 @@ Natürlich können Sie die XEL-Daten auch manuell auf der SSMS-Benutzeroberfläc
 #### <a name="data-stored-in-the-event_file-target"></a>Im event_file-Ziel gespeicherte Daten
 
 
-Der nächste Punkt ist der Bericht, der sich durch den SELECT aus **sys.fn_xe_file_target_read_file**in SQL Server 2016 ergibt.
+Der nächste Punkt ist der Bericht, der sich durch den SELECT aus **sys.fn_xe_file_target_read_file** in SQL Server 2016 ergibt.
 
 
 ```
@@ -292,7 +292,7 @@ Der Standardwert des Parameters „slots“ ist 256. Wenn Sie einen anderen Wert
 ### <a name="action-example-for-histogram"></a>*Action* -Beispiel für histogram
 
 
-In der TARGET...SET-Klausel legt die folgende Transact-SQL CREATE EVENT SESSION-Anweisung die Zielparameterzuweisung als **source_type=1**fest. Die 1 bedeutet, dass das histogram-Ziel eine Aktion nachverfolgt.
+In der TARGET...SET-Klausel legt die folgende Transact-SQL CREATE EVENT SESSION-Anweisung die Zielparameterzuweisung als **source_type=1** fest. Die 1 bedeutet, dass das histogram-Ziel eine Aktion nachverfolgt.
 
 Im aktuellen Beispiel bietet die Klausel EVENT...ACTION dem Ziel zufällig nur eine Aktion zur Auswahl an, nämlich **sqlos.system_thread_id**. In der TARGET...SET-Klausel sehen wir die Zuweisung **source=N'sqlos.system_thread_id'** .
 
@@ -361,7 +361,7 @@ sqlserver      create_dump_single_thread   Create mini dump for the current thre
 ### <a name="event-field-example-for-histogram"></a>*Ereignisfeld* -Beispiel für histogram
 
 
-Im folgenden Beispiel ist **source_type=0**festgelegt. Der **source=** zugewiesene Wert ist ein Ereignisfeld (keine Aktion).
+Im folgenden Beispiel ist **source_type=0** festgelegt. Der **source=** zugewiesene Wert ist ein Ereignisfeld (keine Aktion).
 
 
 
@@ -542,7 +542,7 @@ sqlserver      lock_acquired   2016-08-05 12:45:47.9980000   InMemTest2      0  
 ```
 
 
-Die Zeilen für die nicht gepaarten lock_acquired-Ereignisse könnten den T-SQL-Text oder **sqlserver.sql_text**aus der Sperranforderung enthalten. Allerdings wollten wir die Ausgabe schlank halten.
+Die Zeilen für die nicht gepaarten lock_acquired-Ereignisse könnten den T-SQL-Text oder **sqlserver.sql_text** aus der Sperranforderung enthalten. Allerdings wollten wir die Ausgabe schlank halten.
 
 
 <a name="h2_target_ring_buffer"></a>
@@ -671,7 +671,7 @@ Wenn er mithilfe einer SELECT-Anweisung abgerufen wird, liegt der Inhalt in Form
 ```
 
 
-Um den vorstehenden XML-Code anzuzeigen, können Sie die folgende SELECT-Anweisung ausgeben, während die Ereignissitzung aktiv ist. Die aktiven XML-Daten werden aus der Systemansicht **sys.dm_xe_session_targets**abgerufen.
+Um den vorstehenden XML-Code anzuzeigen, können Sie die folgende SELECT-Anweisung ausgeben, während die Ereignissitzung aktiv ist. Die aktiven XML-Daten werden aus der Systemansicht **sys.dm_xe_session_targets** abgerufen.
 
 
 ```sql

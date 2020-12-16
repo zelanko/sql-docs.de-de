@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4b7c552fa3955818c8d9978802f950f07f8a6bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ce010e0093e234c9095c440f3283b8c7942c78bc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408266"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480051"
 ---
 # <a name="create-indexes-with-included-columns"></a>Erstellen von Indizes mit eingeschlossenen Spalten
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88408266"
  Ein Index mit Nichtschlüsselspalten kann die Abfrageleistung erheblich steigern, wenn alle Spalten in der Abfrage in den Index als Schlüssel- oder Nichtschlüsselspalten eingeschlossen werden. Leistungsvorteile werden erzielt, weil der Abfrageoptimierer alle Spaltenwerte im Index finden kann; auf Daten der Tabelle oder des gruppierten Indexes wird nicht zugegriffen, sodass als Ergebnis weniger Datenträger-E/A-Vorgänge auftreten.  
   
 > [!NOTE]  
-> Wenn ein Index alle Spalten enthält, auf die eine Abfrage verweist, wird dies normalerweise als *Abdecken der Abfrage*bezeichnet.  
+> Wenn ein Index alle Spalten enthält, auf die eine Abfrage verweist, wird dies normalerweise als *Abdecken der Abfrage* bezeichnet.  
    
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
@@ -54,11 +54,11 @@ ms.locfileid: "88408266"
   
 -   Nichtschlüsselspalten können nur für nicht gruppierte Indizes definiert werden.  
   
--   Alle Datentypen außer **text**, **ntext**und **image** können als Nichtschlüsselspalten verwendet werden.  
+-   Alle Datentypen außer **text**, **ntext** und **image** können als Nichtschlüsselspalten verwendet werden.  
   
 -   Berechnete Spalten, die deterministisch und entweder präzise oder unpräzise sind, können als Nichtschlüsselspalten verwendet werden. Weitere Informationen finden Sie unter [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md).  
   
--   Berechnete Spalten, die aus den Datentypen **image**, **ntext**und **text** abgeleitet werden, können Nichtschlüsselspalten sein, wenn der Datentyp der berechneten Spalte als Nichtschlüssel-Indexspalte zulässig ist.  
+-   Berechnete Spalten, die aus den Datentypen **image**, **ntext** und **text** abgeleitet werden, können Nichtschlüsselspalten sein, wenn der Datentyp der berechneten Spalte als Nichtschlüssel-Indexspalte zulässig ist.  
   
 -   Nichtschlüsselspalten können nur aus einer Tabelle gelöscht werden, wenn der Index der Tabelle zuvor gelöscht wird.  
   

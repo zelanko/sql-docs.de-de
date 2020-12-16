@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: af98fc70-24dd-4bd3-a0a3-f701dfa67b2c
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5a231db58bca07596f63698d5e02a07638c3b02
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 148c3fc7d46972fcd6d4769471edd16954cc449d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446485"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480861"
 ---
 # <a name="disable-check-constraints-for-replication"></a>Deaktivieren von CHECK-Einschränkungen für die Replikation
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -43,11 +43,11 @@ ms.locfileid: "88446485"
   
 #### <a name="to-disable-a-check-constraint-for-replication"></a>So deaktivieren Sie eine CHECK-Einschränkung für die Replikation  
   
-1.  Erweitern Sie im **Objekt-Explorer**die Tabelle mit der zu ändernden Einschränkung, und erweitern Sie dann den Ordner **Einschränkungen** .  
+1.  Erweitern Sie im **Objekt-Explorer** die Tabelle mit der zu ändernden Einschränkung, und erweitern Sie dann den Ordner **Einschränkungen** .  
   
 2.  Klicken Sie mit der rechten Maustaste auf die zu ändernde CHECK-Einschränkung, und klicken Sie dann auf **Ändern**.  
   
-3.  Wählen Sie im Dialogfeld **Einschränkungen überprüfen** unter **Tabellen-Designer**für die Option **Für Replikation erzwingen** den Wert **Nein**aus.  
+3.  Wählen Sie im Dialogfeld **Einschränkungen überprüfen** unter **Tabellen-Designer** für die Option **Für Replikation erzwingen** den Wert **Nein** aus.  
   
 4.  Klicken Sie auf **Schließen**.  
 
@@ -77,7 +77,7 @@ ms.locfileid: "88446485"
  Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ###  <a name="TsqlExample"></a>   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Angeben von Schemaoptionen](../../relational-databases/replication/publish/specify-schema-options.md)  
   
   

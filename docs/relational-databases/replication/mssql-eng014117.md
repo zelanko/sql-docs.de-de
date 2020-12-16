@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: e5906a76-9511-4c47-8826-8c765b58a39d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 83c9ffd0daca07588bc1b559c7fa3a16acb115e8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: b8eab851e7bde95fa0ab6aaf2ee75ae0ffc6d0a1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498716"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481011"
 ---
 # <a name="mssql_eng014117"></a>MSSQL_ENG014117
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88498716"
 ## <a name="explanation"></a>Erklärung  
  Dieser Fehler kann auftreten, wenn eine oder beide der folgenden Aussagen wahr sind:  
   
--   In **msdb..MSdistributiondbs**fehlt der Eintrag für die angegebene Verteilungsdatenbank.  
+-   In **msdb..MSdistributiondbs** fehlt der Eintrag für die angegebene Verteilungsdatenbank.  
   
 -   In der **master** -Datenbank gibt es keinen Eintrag für den lokalen Server, oder es ist zwar ein Eintrag vorhanden, dieser ist aber falsch.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "88498716"
   
      Wenn der @@SERVERNAME-Wert für eine in einem Cluster befindliche Instanz falsch ist, müssen Sie mithilfe der Clusterverwaltung den Namen ändern. Weitere Informationen finden Sie unter [ Always On-Failoverclusterinstanzen (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
- Nachdem Sie die ordnungsgemäße Registrierung der Verteilerinstanz geprüft haben, kontrollieren Sie, dass die Verteilungsdatenbank in **msdb..MSdistributiondbs**aufgeführt ist. Falls nicht, gehen Sie wie folgt vor:  
+ Nachdem Sie die ordnungsgemäße Registrierung der Verteilerinstanz geprüft haben, kontrollieren Sie, dass die Verteilungsdatenbank in **msdb..MSdistributiondbs** aufgeführt ist. Falls nicht, gehen Sie wie folgt vor:  
   
 1.  Erstellen Sie ein Skript für die Verteilungskonfiguration. Weitere Informationen finden Sie unter [Scripting Replication](../../relational-databases/replication/scripting-replication.md).  
   
