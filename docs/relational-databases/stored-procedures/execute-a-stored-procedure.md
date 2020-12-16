@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0dc360ab3faf724830f61b4572cff93425203ec4
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f7cff43378cdffd2015040d9de4d8ffb7b014291
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332613"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475301"
 ---
 # <a name="execute-a-stored-procedure"></a>Ausführen einer gespeicherten Prozedur
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -103,7 +103,7 @@ In diesem Thema wird beschrieben, wie Sie eine gespeicherte Prozedur in [!INCLUD
   
 -   Automatisches Ausführen von gespeicherten Prozeduren  
   
-     Zur automatischen Ausführung markierte Prozeduren werden bei jedem Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt, und die **master** -Datenbank wird während dieses Startprozesses wiederhergestellt. Das Einrichten von Prozeduren zur automatischen Ausführung kann für Datenbankwartungsvorgänge oder die fortlaufende Ausführung von Prozeduren als Hintergrundprozesse nützlich sein. Die automatische Ausführung kann auch verwendet werden, um System- oder Wartungstasks in **tempdb**auszuführen, z. B. das Erstellen einer globalen temporären Tabelle. Auf diese Weise wird sichergestellt, dass eine solche temporäre Tabelle immer vorhanden ist, wenn **tempdb** beim Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu erstellt wird.  
+     Zur automatischen Ausführung markierte Prozeduren werden bei jedem Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt, und die **master** -Datenbank wird während dieses Startprozesses wiederhergestellt. Das Einrichten von Prozeduren zur automatischen Ausführung kann für Datenbankwartungsvorgänge oder die fortlaufende Ausführung von Prozeduren als Hintergrundprozesse nützlich sein. Die automatische Ausführung kann auch verwendet werden, um System- oder Wartungstasks in **tempdb** auszuführen, z. B. das Erstellen einer globalen temporären Tabelle. Auf diese Weise wird sichergestellt, dass eine solche temporäre Tabelle immer vorhanden ist, wenn **tempdb** beim Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu erstellt wird.  
   
      Eine automatisch ausgeführte Prozedur wird mit den Berechtigungen ausgeführt, die den Mitgliedern der festen Serverrolle **sysadmin** zugewiesen sind. Alle Fehlermeldungen, die von der Prozedur erzeugt werden, werden in das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll geschrieben.  
   
@@ -114,7 +114,7 @@ In diesem Thema wird beschrieben, wie Sie eine gespeicherte Prozedur in [!INCLUD
   
 -   Festlegen, Löschen und Steuern der automatischen Ausführung  
   
-     Nur der Systemadministrator (**sa**) kann eine Prozedur für die automatische Ausführung markieren. Die Prozedur muss sich außerdem in der **master** -Datenbank im Besitz von **sa**befinden und darf keine Eingabe- oder Ausgabeparameter enthalten.  
+     Nur der Systemadministrator (**sa**) kann eine Prozedur für die automatische Ausführung markieren. Die Prozedur muss sich außerdem in der **master** -Datenbank im Besitz von **sa** befinden und darf keine Eingabe- oder Ausgabeparameter enthalten.  
   
      Verwenden Sie [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) für folgende Aufgaben:  
   
@@ -132,9 +132,9 @@ In diesem Thema wird beschrieben, wie Sie eine gespeicherte Prozedur in [!INCLUD
   
 #### <a name="to-execute-a-stored-procedure"></a>So führen Sie eine gespeicherte Prozedur aus  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]her, erweitern Sie diese Instanz und dann **Datenbanken**.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]her, erweitern Sie diese Instanz und dann **Datenbanken**.  
   
-2.  Erweitern Sie die gewünschte Datenbank, **Programmierbarkeit**und dann **Gespeicherte Prozeduren**.  
+2.  Erweitern Sie die gewünschte Datenbank, **Programmierbarkeit** und dann **Gespeicherte Prozeduren**.  
   
 3.  Klicken Sie mit der rechten Maustaste auf die gewünschte benutzerdefinierte gespeicherte Prozedur, und klicken Sie dann auf **Gespeicherte Prozedur ausführen**.  
   

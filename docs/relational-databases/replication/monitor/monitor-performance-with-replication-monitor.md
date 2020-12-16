@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: a881bfd928d8a8d1c84d85ea8d226bc2751126a1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 909670345c94444ba4883422f5d02f13757106c5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498738"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477861"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Überwachen der Leistung mit dem Replikationsmonitor
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,15 +47,15 @@ ms.locfileid: "88498738"
   
 -   Die angegebene Latenzzeit (Zeit, die zwischen dem Start einer Transaktion auf dem Verleger und dem Start der entsprechenden Transaktion auf dem Abonnenten vergeht) wird überschritten.  
   
-     Betrifft nur Transaktionsreplikationen. Wenn der angegebene Schwellenwert erreicht oder überschritten wird, wird als Status **Leistungskritisch**angezeigt.  
+     Betrifft nur Transaktionsreplikationen. Wenn der angegebene Schwellenwert erreicht oder überschritten wird, wird als Status **Leistungskritisch** angezeigt.  
   
 -   Die angegebene Synchronisierungszeit wird überschritten.  
   
-     Betrifft nur Mergereplikationen. Wenn der angegebene Schwellenwert erreicht oder überschritten wird, wird als Status **Langer Mergevorgang**angezeigt. Sie können für DFÜ- und LAN-Verbindungen (Local Area Network, lokales Netzwerk) unterschiedliche Schwellenwerte angeben.  
+     Betrifft nur Mergereplikationen. Wenn der angegebene Schwellenwert erreicht oder überschritten wird, wird als Status **Langer Mergevorgang** angezeigt. Sie können für DFÜ- und LAN-Verbindungen (Local Area Network, lokales Netzwerk) unterschiedliche Schwellenwerte angeben.  
   
 -   Die angegebene Zahl von Zeilen konnte nicht innerhalb der festgelegten Zeit verarbeitet werden.  
   
-     Betrifft nur Mergereplikationen. Wenn der angegebene Schwellenwert erreicht oder überschritten wird, wird als Status **Leistungskritisch**angezeigt. Sie können für DFÜ- und LAN-Verbindungen unterschiedliche Schwellenwerte angeben.  
+     Betrifft nur Mergereplikationen. Wenn der angegebene Schwellenwert erreicht oder überschritten wird, wird als Status **Leistungskritisch** angezeigt. Sie können für DFÜ- und LAN-Verbindungen unterschiedliche Schwellenwerte angeben.  
   
  Weitere Informationen finden Sie unter [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   

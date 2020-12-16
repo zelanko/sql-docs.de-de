@@ -9,13 +9,13 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 82315c744073fa5f497f0aaf78eb6dedc04126a9
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7ac5e42497a0167a0e935c116a1efd9cc466300c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679043"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477611"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>Abfragen von Spalten mithilfe von Always Encrypted mit Azure Data Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -80,7 +80,7 @@ Zum Ausführen von Abfragen für verschlüsselte Spalten, einschließlich Abfrag
 Zusätzlich zu den oben aufgeführten Berechtigungen benötigen Sie zum Entschlüsseln von Abfrageergebnissen oder Verschlüsseln von Abfrageparametern (die durch parametrisierte Transact-SQL-Anweisungen erstellt wurden) auch Zugriff auf den Spaltenhauptschlüssel, der die Zielspalten schützt:
 
 - **Zertifikatspeicher – lokaler Computer:** Sie benötigen **Lesezugriff** auf das als Spaltenhauptschlüssel verwendete Zertifikat oder Administratorrechte auf dem Computer.   
-- **Azure Key Vault:** Sie benötigen die Berechtigungen **Abrufen** , **Schlüssel entpacken** und **Überprüfen** für den Schlüsseltresor, der den Spaltenhauptschlüssel enthält.
+- **Azure Key Vault:** Sie benötigen die Berechtigungen **Abrufen**, **Schlüssel entpacken** und **Überprüfen** für den Schlüsseltresor, der den Spaltenhauptschlüssel enthält.
 
 Weitere Informationen finden Sie unter [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)).
 
@@ -99,14 +99,14 @@ Sie können Always Encrypted aktivieren oder deaktivieren, wenn Sie eine Verbind
 
 So aktivieren (oder deaktivieren) Sie Always Encrypted:
 1. Klicken Sie im Dialogfeld **Verbindung** auf **Erweitert...** .
-2. Um Always Encrypted für die Verbindung zu aktivieren, legen Sie das Feld **Always Encrypted** auf **Aktiviert** fest. Wenn Sie Always Encrypted deaktivieren möchten, lassen Sie entweder das Feld **Always Encrypted** leer, oder setzen Sie es auf **Deaktiviert** .
+2. Um Always Encrypted für die Verbindung zu aktivieren, legen Sie das Feld **Always Encrypted** auf **Aktiviert** fest. Wenn Sie Always Encrypted deaktivieren möchten, lassen Sie entweder das Feld **Always Encrypted** leer, oder setzen Sie es auf **Deaktiviert**.
 3. Wenn Sie [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] verwenden und Ihre SQL Server-Instanz mit einer Secure Enclave konfiguriert ist, können Sie ein Enclave-Protokoll und eine Enclave-Nachweis-URL angeben. Achten Sie darauf, die Felder **Nachweisprotokoll** und **Enclave-Nachweis-URL** leer zu lassen, wenn Ihre SQL Server-Instanz keine Secure Enclave verwendet. Weitere Informationen finden Sie unter [Always Encrypted mit Secure Enclaves](always-encrypted-enclaves.md).
-4. Klicken Sie auf **OK** , um **Erweiterte Eigenschaften** zu schließen.
+4. Klicken Sie auf **OK**, um **Erweiterte Eigenschaften** zu schließen.
 
 ![Dieses kurze Video zeigt die Schritte zum Aktivieren von Always Encrypted für die Verbindung.](../../../relational-databases/security/encryption/media/always-encrypted-ads-connect.gif)
 
 > [!TIP]
-> Um für ein vorhandenes Abfragefenster zwischen aktiviertem und deaktiviertem Always Encrypted zu wechseln, klicken Sie auf **Trennen** , klicken Sie dann auf **Verbinden** , und führen Sie die obigen Schritte aus, um die Verbindung mit der Datenbank mit den gewünschten Werten des Felds **Always Encrypted** wiederherzustellen. 
+> Um für ein vorhandenes Abfragefenster zwischen aktiviertem und deaktiviertem Always Encrypted zu wechseln, klicken Sie auf **Trennen**, klicken Sie dann auf **Verbinden**, und führen Sie die obigen Schritte aus, um die Verbindung mit der Datenbank mit den gewünschten Werten des Felds **Always Encrypted** wiederherzustellen. 
 
 > [!NOTE] 
 > Die Schaltfläche **Verbindung ändern** in einem Abfragefenster unterstützt derzeit nicht das Umschalten zwischen aktiviertem und deaktiviertem Always Encrypted.
@@ -129,10 +129,10 @@ WHERE [SSN] = @SSN
 
 So aktivieren bzw. deaktivieren Sie die Parametrisierung für Always Encrypted:
 
-1. Wählen Sie **Datei** > **Einstellungen** > **Einstellungen** ( **Code** > **Einstellungen** > **Einstellungen** auf dem Mac) aus.
-2. Navigieren Sie zu **Daten** > **Microsoft SQL Server** .
-3. Aktivieren bzw. deaktivieren **Parametrisierung für Always Encrypted** .
-4. Schließen Sie das Fenster **Einstellungen** .
+1. Wählen Sie **Datei** > **Einstellungen** > **Einstellungen** (**Code** > **Einstellungen** > **Einstellungen** auf dem Mac) aus.
+2. Navigieren Sie zu **Daten** > **Microsoft SQL Server**.
+3. Aktivieren bzw. deaktivieren **Parametrisierung für Always Encrypted**.
+4. Schließen Sie das Fenster **Einstellungen**.
 
 ![Dieses kurze Video zeigt, wie Sie die Parametrisierung für Always Encrypted aktivieren/deaktivieren.](../../../relational-databases/security/encryption/media/always-encrypted-ads-parameterization.gif)
 
@@ -180,7 +180,7 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 
 Azure Data Studio nutzt Intellisense, um Sie zu informieren, welche Variablen erfolgreich parametrisiert werden können und welche Parametrisierungsversuche fehlschlagen (samt Grund).   
 
-Eine Deklaration einer Variablen, die erfolgreich parametrisiert werden kann, wird im Abfragefenster mit einer Unterstreichung gekennzeichnet, die auf eine zugrunde liegende Informationsmeldung verweist. Wenn Sie mit der Maus auf eine Deklarationsanweisung zeigen, die mit einer zugrunde liegenden Informationsmeldung gekennzeichnet wurde, wird die Meldung mit den Ergebnissen des Parametrisierungsvorgangs, einschließlich der Werte der Haupteigenschaften des resultierenden [SqlParameter Class](/dotnet/api/microsoft.data.sqlclient.sqlparameter)-Objekts, angezeigt (die Variable ist zugeordnet zu: [SqlDbType](/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype), [Size](/dotnet/api/microsoft.data.sqlclient.sqlparameter.size), [Precision](/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision), [Scale](/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale) und [SqlValue](/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue)). Eine vollständige Liste aller Variablen, die erfolgreich parametrisiert wurden, finden Sie in der Ansicht **Probleme** . Um die Ansicht **Probleme** zu öffnen, wählen Sie **Ansicht** > **Probleme** aus.    
+Eine Deklaration einer Variablen, die erfolgreich parametrisiert werden kann, wird im Abfragefenster mit einer Unterstreichung gekennzeichnet, die auf eine zugrunde liegende Informationsmeldung verweist. Wenn Sie mit der Maus auf eine Deklarationsanweisung zeigen, die mit einer zugrunde liegenden Informationsmeldung gekennzeichnet wurde, wird die Meldung mit den Ergebnissen des Parametrisierungsvorgangs, einschließlich der Werte der Haupteigenschaften des resultierenden [SqlParameter Class](/dotnet/api/microsoft.data.sqlclient.sqlparameter)-Objekts, angezeigt (die Variable ist zugeordnet zu: [SqlDbType](/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype), [Size](/dotnet/api/microsoft.data.sqlclient.sqlparameter.size), [Precision](/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision), [Scale](/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale) und [SqlValue](/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue)). Eine vollständige Liste aller Variablen, die erfolgreich parametrisiert wurden, finden Sie in der Ansicht **Probleme**. Um die Ansicht **Probleme** zu öffnen, wählen Sie **Ansicht** > **Probleme** aus.    
 
 
 

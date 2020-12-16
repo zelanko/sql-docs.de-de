@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ade78fb39755026cdcc3a8f5ef6a96ffd99f9647
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: a8c24abadf09437b63c072922b665de3b44320ac
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465019"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475651"
 ---
 # <a name="secure-the-subscriber"></a>Sichern des Abonnenten
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "88465019"
 -   Ein vordefinierter Verbindungsserver oder Remoteserver.  
   
 > [!IMPORTANT]  
->  Verwenden Sie die gespeicherte Prozedur [sp_link_publication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md), um Verbindungsinformationen anzugeben. Sie können auch die Seite **Anmeldename für aktualisierbare Abonnements** des Assistenten für neue Abonnements mit **sp_link_publication**verwenden. Unter bestimmten Umständen kann diese gespeicherte Prozedur fehlerhaft sein, wenn der Abonnent [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Service Pack 1 (SP1) oder höher ausführt, und wenn der Verleger auf einer früheren Version ausgeführt wird. Wenn die gespeicherte Prozedur in diesem Szenario fehlerhaft ist, dann aktualisieren Sie den Verleger auf [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] SP1 oder höher.  
+>  Verwenden Sie die gespeicherte Prozedur [sp_link_publication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md), um Verbindungsinformationen anzugeben. Sie können auch die Seite **Anmeldename für aktualisierbare Abonnements** des Assistenten für neue Abonnements mit **sp_link_publication** verwenden. Unter bestimmten Umständen kann diese gespeicherte Prozedur fehlerhaft sein, wenn der Abonnent [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Service Pack 1 (SP1) oder höher ausführt, und wenn der Verleger auf einer früheren Version ausgeführt wird. Wenn die gespeicherte Prozedur in diesem Szenario fehlerhaft ist, dann aktualisieren Sie den Verleger auf [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] SP1 oder höher.  
   
  Weitere Informationen finden Sie unter [Erstellen von aktualisierbaren Abonnements für eine Transaktionsveröffentlichung](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md) und [Anzeigen und Ändern von Replikationssicherheitseinstellungen](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   

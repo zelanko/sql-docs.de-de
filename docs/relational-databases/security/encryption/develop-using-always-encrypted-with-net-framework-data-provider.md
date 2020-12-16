@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2bf769680bfc19180b03cf30235e6abbc8dd77b
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4e3bd7a6481f677de9355a892eb78b3b5aeaaa15
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867952"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477581"
 ---
 # <a name="using-always-encrypted-with-the-net-framework-data-provider-for-sql-server"></a>Verwenden von Always Encrypted mit dem .NET Framework-Datenanbieter für SQL Server
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -387,7 +387,7 @@ In diesem Abschnitt werden die integrierten Leistungsoptimierungen im .NET Frame
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>Kontrollieren von Roundtrips zum Abrufen von Metadaten für Abfrageparameter
 
-Wenn Always Encrypted für eine Verbindung aktiviert ist, ruft der .NET Framework-Datenanbieter für SQL Server standardmäßig [sys.sp_describe_parameter_encryption](../../system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) für jede parametrisierte Abfrage auf, wobei die Abfrageanweisung (ohne Parameterwerte) an SQL Server übergeben wird. Die Abfrageanweisung wird von**sys.sp_describe_parameter_encryption** analysiert, um zu ermitteln, ob Parameter verschlüsselt werden müssen. In diesem Fall gibt sie die verschlüsselungsbezogenen Informationen zurück, die dem .NET Framework-Datenanbieter für SQL Server das Verschlüsseln von Parameterwerten ermöglichen. Das oben beschriebene Verhalten stellt ein hohes Maß an Transparenz für die Clientanwendung sicher. Die Anwendung (und der Anwendungsentwickler) muss nicht beachten, welche Abfragen Zugriff auf verschlüsselte Spalten haben, solange die auf verschlüsselte Spalten ausgerichteten Werte in SqlParameter-Objekten an den .NET Framework-Datenanbieter für SQL Server übergeben werden.
+Wenn Always Encrypted für eine Verbindung aktiviert ist, ruft der .NET Framework-Datenanbieter für SQL Server standardmäßig [sys.sp_describe_parameter_encryption](../../system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) für jede parametrisierte Abfrage auf, wobei die Abfrageanweisung (ohne Parameterwerte) an SQL Server übergeben wird. Die Abfrageanweisung wird von **sys.sp_describe_parameter_encryption** analysiert, um zu ermitteln, ob Parameter verschlüsselt werden müssen. In diesem Fall gibt sie die verschlüsselungsbezogenen Informationen zurück, die dem .NET Framework-Datenanbieter für SQL Server das Verschlüsseln von Parameterwerten ermöglichen. Das oben beschriebene Verhalten stellt ein hohes Maß an Transparenz für die Clientanwendung sicher. Die Anwendung (und der Anwendungsentwickler) muss nicht beachten, welche Abfragen Zugriff auf verschlüsselte Spalten haben, solange die auf verschlüsselte Spalten ausgerichteten Werte in SqlParameter-Objekten an den .NET Framework-Datenanbieter für SQL Server übergeben werden.
 
 
 ### <a name="query-metadata-caching"></a>Zwischenspeichern von Abfragemetadaten
@@ -408,11 +408,11 @@ Sie können Always Encrypted für einzelne Abfragen aktivieren, anstatt es für 
 
 Sie müssen diesen Konstruktor von [SqlCommand](/dotnet/api/system.data.sqlclient.sqlcommand) und [SqlCommandColumnEncryptionSetting](/dotnet/api/system.data.sqlclient.sqlcommandcolumnencryptionsetting)verwenden, um das Verhalten von Always Encrypted für einzelne Abfragen zu steuern. Hier sind einige nützliche Richtlinien:
 - Für die meisten Abfragen greift eine Clientanwendung über eine Datenbankverbindung auf verschlüsselte Spalten zu:
-    - Legen Sie für das Verbindungszeichenfolgen-Kennwort für **Spaltenverschlüsselungseinstellung** den Wert *Aktiviert*fest.
+    - Legen Sie für das Verbindungszeichenfolgen-Kennwort für **Spaltenverschlüsselungseinstellung** den Wert *Aktiviert* fest.
     - Legen Sie **SqlCommandColumnEncryptionSetting.Disabled** für einzelne Abfragen fest, die nicht auf verschlüsselte Spalten zugreifen müssen. Dadurch werden sowohl der Aufruf von „sys.sp_describe_parameter_encryption“ als auch der Versuch deaktiviert, Werte im Resultset zu entschlüsseln.
     - Legen Sie **SqlCommandColumnEncryptionSetting.ResultSet** für einzelne Abfragen fest, die keine Parameter besitzen, für die eine Verschlüsselung erforderlich ist, die aber Daten aus verschlüsselten Spalten abrufen. Dadurch werden der Aufruf von „sys.sp_describe_parameter_encryption“ und die Parameterverschlüsselung deaktiviert. Die Abfrage ist in der Lage, die Ergebnisse von Spaltenverschlüsselungen zu entschlüsseln.
 - Für die meisten Abfragen greift eine Clientanwendung nicht über eine Datenbankverbindung auf verschlüsselte Spalten zu:
-    - Legen Sie für das Verbindungszeichenfolgen-Kennwort für **Spaltenverschlüsselungseinstellung** den Wert **Deaktiviert**fest.
+    - Legen Sie für das Verbindungszeichenfolgen-Kennwort für **Spaltenverschlüsselungseinstellung** den Wert **Deaktiviert** fest.
     - Legen Sie **SqlCommandColumnEncryptionSetting.Enabled** für einzelne Abfragen mit Parametern fest, die verschlüsselt werden müssen. Dadurch werden sowohl der Aufruf von „sys.sp_describe_parameter_encryption“ als auch die Entschlüsselung von Abfrageergebnissen aktiviert, die aus verschlüsselten Spalten abgerufen werden.
     - Legen Sie **SqlCommandColumnEncryptionSetting.ResultSet** für Abfragen fest, die keine Parameter besitzen, für die eine Verschlüsselung erforderlich ist, aber die Daten aus verschlüsselten Spalten abrufen. Dadurch werden der Aufruf von „sys.sp_describe_parameter_encryption“ und die Parameterverschlüsselung deaktiviert. Die Abfrage ist in der Lage, die Ergebnisse von Spaltenverschlüsselungen zu entschlüsseln.
 

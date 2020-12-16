@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b3cffe95dcdd41cc904aed95de0d91c97314670
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f878144b8b7ff86636ff778ec586a0382ca801cf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009921"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474061"
 ---
 # <a name="create-a-format-file-sql-server"></a>Erstellen einer Formatdatei (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "86009921"
 > [!NOTE]  
 >  Die zum Lesen der Formatdatei verwendete Version des Hilfsprogramms **bcp** (Bcp.exe) muss mit der Version, mit der die Formatdatei erstellt wurde, identisch oder eine höhere Version sein. Das [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-Hilfsprogramm **bcp** liest z. B. Formatdateien der Version 10.0, die von **bcp** in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] generiert wurden, aber das [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-Hilfsprogramm **bcp** liest keine Formatdateien der Version 11.0, die von **bcp** in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] generiert wurden.  
   
- In diesem Thema wird die Verwendung des [Hilfsprogramms bcp](../../tools/bcp-utility.md) zum Erstellen einer Formatdatei für eine bestimmte Tabelle erläutert. Die Formatdatei basiert auf der angegebenen Datentypoption ( **-n**, **-c**, **-w**oder **-N**) sowie auf den Tabellen- bzw. Sichttrennzeichen.  
+ In diesem Thema wird die Verwendung des [Hilfsprogramms bcp](../../tools/bcp-utility.md) zum Erstellen einer Formatdatei für eine bestimmte Tabelle erläutert. Die Formatdatei basiert auf der angegebenen Datentypoption ( **-n**, **-c**, **-w** oder **-N**) sowie auf den Tabellen- bzw. Sichttrennzeichen.  
   
 ## <a name="creating-a-non-xml-format-file"></a>Erstellen einer Nicht-XML-Formatdatei  
  Geben Sie bei der Ausführung eines **bcp** -Befehls zum Erstellen einer Formatdatei das **format** -Argument an, und verwenden Sie **nul** anstatt eines Datendateipfads. Die **format** -Option erfordert außerdem die **-f** -Option, z.B.:  
@@ -267,7 +267,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n.x
  Informationen zur Syntax dieser Formatdatei finden Sie unter [Nicht-XML-Formatdateien &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md). Informationen zur Verwendung nativer Daten finden Sie unter [Verwenden des nativen Formats zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md).  
   
 ## <a name="mapping-data-fields-to-table-columns"></a>Zuordnen von Datenfeldern zu Tabellenspalten  
- In einer mit **bcp**erstellten Formatdatei werden alle Tabellenspalten in ihrer Reihenfolge beschrieben. Sie können die Formatdatei ändern, um Tabellenzeilen neu anzuordnen oder auszulassen. Auf diese Weise können Sie Formatdateien an Datendateien anpassen, deren Felder nicht direkt Tabellenspalten zugeordnet werden können. Weitere Informationen finden Sie in den folgenden Themen:  
+ In einer mit **bcp** erstellten Formatdatei werden alle Tabellenspalten in ihrer Reihenfolge beschrieben. Sie können die Formatdatei ändern, um Tabellenzeilen neu anzuordnen oder auszulassen. Auf diese Weise können Sie Formatdateien an Datendateien anpassen, deren Felder nicht direkt Tabellenspalten zugeordnet werden können. Weitere Informationen finden Sie in den folgenden Themen:  
   
 -   [Überspringen einer Tabellenspalte mithilfe einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
   

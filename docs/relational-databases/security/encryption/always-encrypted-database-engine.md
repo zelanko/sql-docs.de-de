@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c13a720a9578600d80bb989ef740d3654cc4ae6
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1f097d500c1d1b0a035f2bb0e737214d65803414
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810006"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477721"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -136,7 +136,7 @@ Verwenden Sie den [Always Encrypted-Assistenten](../../../relational-databases/s
 3.  Lesen Sie die Seite **Einführung** , und klicken Sie dann auf **Weiter**.
 4.  Erweitern Sie die Tabellen auf der **Spaltenauswahl** -Seite, und wählen Sie die Spalten aus, die Sie verschlüsseln möchten.
 5.  Legen Sie für jede zu verschlüsselnde Spalte den **Verschlüsselungstyp** fest: entweder *deterministisch* oder *zufällig*.
-6.  Wählen Sie für jede zu verschlüsselnde Spalte einen **Verschlüsselungsschlüssel**aus. Falls Sie noch keinen Verschlüsselungsschlüssel für diese Datenbank erstellt haben, wählen Sie die Standardoption (neuer, automatisch generierter Schlüssel) aus, und klicken Sie anschließend auf **Weiter**.
+6.  Wählen Sie für jede zu verschlüsselnde Spalte einen **Verschlüsselungsschlüssel** aus. Falls Sie noch keinen Verschlüsselungsschlüssel für diese Datenbank erstellt haben, wählen Sie die Standardoption (neuer, automatisch generierter Schlüssel) aus, und klicken Sie anschließend auf **Weiter**.
 7.  Wählen Sie auf der Seite **Konfiguration des Hauptschlüssels** einen Speicherort für den neuen Schlüssel aus, wählen Sie eine Hauptschlüsselquelle aus, und klicken Sie anschließend auf **Weiter**.
 8.  Wählen Sie auf der Seite **Überprüfung** aus, ob das Skript sofort ausgeführt oder ob ein PowerShell-Skript erstellt werden soll, und klicken Sie dann auf **Weiter**.
 9.  Überprüfen Sie die ausgewählten Optionen auf der Seite **Zusammenfassung**, und klicken Sie dann auf **Fertig stellen**. Schließen Sie den Assistenten nach Abschluss.

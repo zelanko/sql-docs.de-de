@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 281f95c0e80b11e6295e94ef1e19b93969910790
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 92101ce00eb74e7a48a7e72b320eb536e4d60022
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465225"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477821"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Übersicht über die Benutzeroberfläche des Replikationsmonitors
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "88465225"
 ## <a name="viewing-information-and-performing-tasks-related-to-distributors"></a>Anzeigen von Informationen und Ausführen von veröffentlichungsbezogenen Aufgaben für Verteiler  
  Im Replikationsmonitor werden auf drei Registerkarten Informationen zu Verteilern angezeigt:  
   
--   Registerkarte**Veröffentlichungen**  
+-   Registerkarte **Veröffentlichungen**  
   
      Diese Registerkarte enthält Zusammenfassungsinformationen für alle Veröffentlichungen eines Verteilers.  
   
--   Registerkarte**Überwachungsliste für Abonnements**  
+-   Registerkarte **Überwachungsliste für Abonnements**  
   
      Diese Registerkarte stellt Informationen zu Abonnements für den ausgewählten Verteiler bereit. Sie können die Liste der Abonnements filtern, um Fehler, Warnungen und Abonnements mit schlechter Leistung anzuzeigen. Zudem können Sie auf der Registerkarte auf Abonnementeigenschaften zugreifen, auf detaillierte Informationen zum Agent oder Agents, die mit einem Abonnement in Zusammenhang stehen, zugreifen, Abonnements erneut initialisieren und Abonnements überprüfen.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "88465225"
   
      Diese Registerkarte ist nicht verfügbar für Verteiler mit [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] oder einer früheren Version.  
   
--   Registerkarte**Agents**  
+-   Registerkarte **Agents**  
   
      Diese Registerkarte zeigt ausführliche Informationen zu den Agents und Aufträgen an, die von allen Replikationstypen verwendet werden. Über diese Registerkarte können Sie zudem alle Agents und Aufträge starten und beenden.  
   
@@ -83,11 +83,11 @@ ms.locfileid: "88465225"
 ## <a name="viewing-information-and-performing-tasks-related-to-publishers"></a>Anzeigen von Informationen und Ausführen von verlegerbezogenen Aufgaben  
  Im Replikationsmonitor werden auf drei Registerkarten Informationen zu Verlegern angezeigt:  
   
--   Registerkarte**Veröffentlichungen**  
+-   Registerkarte **Veröffentlichungen**  
   
      Diese Registerkarte enthält Zusammenfassungsinformationen für alle Veröffentlichungen auf einem Verleger.  
   
--   Registerkarte**Überwachungsliste für Abonnements**  
+-   Registerkarte **Überwachungsliste für Abonnements**  
   
      Diese Registerkarte dient der Anzeige von Informationen zu Abonnements für alle verfügbaren Veröffentlichungen auf dem ausgewählten Verleger. Sie können die Liste der Abonnements filtern, um Fehler, Warnungen und Abonnements mit schlechter Leistung anzuzeigen. Zudem können Sie auf der Registerkarte auf Abonnementeigenschaften zugreifen, auf detaillierte Informationen zum Agent oder Agents, die mit einem Abonnement in Zusammenhang stehen, zugreifen, Abonnements erneut initialisieren und Abonnements überprüfen.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "88465225"
   
      Diese Registerkarte wird nicht für Verteiler angezeigt, auf denen niedrigere Versionen als [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]ausgeführt werden.  
   
--   Registerkarte**Agents**  
+-   Registerkarte **Agents**  
   
      Diese Registerkarte zeigt ausführliche Informationen zu den Agents und Aufträgen an, die von allen Replikationstypen verwendet werden. Über diese Registerkarte können Sie zudem alle Agents und Aufträge starten und beenden.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "88465225"
 ## <a name="viewing-information-and-performing-tasks-related-to-publications"></a>Anzeigen von Informationen und Ausführen von veröffentlichungsbezogenen Aufgaben  
  Im Replikationsmonitor werden auf drei Registerkarten und in mehreren Detailfenstern Informationen zu Veröffentlichungen angezeigt:  
   
--   Registerkarte**Alle Abonnements**  
+-   Registerkarte **Alle Abonnements**  
   
      Auf dieser Registerkarte werden Informationen zu allen Abonnements für die ausgewählte Veröffentlichung angezeigt. Diese Registerkarte wird standardmäßig nach Priorität sortiert: Zuerst werden Fehler, dann Warnungen und anschließend aufsteigend nach Leistung Abonnements mit schlechter Leistung angezeigt.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "88465225"
   
          Im Raster der Registerkarte werden Fehler- und Warnungssymbole für alle Abonnements angezeigt, die ein Eingreifen erfordern.  
   
--   Registerkarte**Agents**  
+-   Registerkarte **Agents**  
   
      Diese Registerkarte zeigt Informationen zu den Agents an, die von der Replikation verwendet werden. Diese Registerkarte enthält Informationen zu folgenden Agents:  
   
@@ -148,11 +148,11 @@ ms.locfileid: "88465225"
   
      Darüber hinaus können Sie auf der Registerkarte die folgenden Aufgaben ausführen: auf detaillierte Informationen zu den Agents zugreifen und die einzelnen Agents starten und anhalten. Informationen zu den Agents, die den Abonnements zugeordnet sind (Verteilungs-Agent und Merge-Agent), finden Sie in diesem Thema im Abschnitt zum Anzeigen von Informationen und zum Ausführen von veröffentlichungsbezogenen Aufgaben.  
   
--   Registerkarte**Warnungen**  
+-   Registerkarte **Warnungen**  
   
      Auf dieser Registerkarte können Sie Warnungen für Agents angeben. Weitere Informationen finden Sie unter [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
--   Registerkarte**Überwachungstoken** (nur für Transaktionsreplikationen)  
+-   Registerkarte **Überwachungstoken** (nur für Transaktionsreplikationen)  
   
      Über diese Registerkarte können Sie die Latenzzeit messen, d. h. die Zeitspanne zwischen dem Ausführen des Commit für eine Transaktion auf dem Verleger und dem Ausführen des Commit für die entsprechende Aktion auf dem Abonnenten.  
   
@@ -195,23 +195,23 @@ ms.locfileid: "88465225"
 ## <a name="viewing-information-and-performing-tasks-related-to-subscriptions"></a>Anzeigen von Informationen und Ausführen von abonnementbezogenen Aufgaben  
  Im Replikationsmonitor werden auf mehreren verschiedenen Registerkarten Informationen zu Abonnements angezeigt. Doppelklicken Sie im Replikationsmonitor auf ein Abonnement, um auf die entsprechenden Registerkarten in einem Detailfenster zuzugreifen. Alle Registerkarte sind hilfreich, um die Frage "Warum wird ein Agent nicht ausgeführt?" zu beantworten. In den verfügbaren Fehlermeldungen werden detaillierte Informationen dazu angegeben, warum ein Agent nicht ausgeführt wird. Sie bilden einen Ausgangspunkt für die Behebung von Problemen in Agents, die einem Abonnement zugeordnet sind.  
   
--   Registerkarten**Alle Abonnements** und **Überwachungsliste für Abonnements**.  
+-   Registerkarten **Alle Abonnements** und **Überwachungsliste für Abonnements**.  
   
      Diese Registerkarten werden weiter oben in diesem Thema beschrieben.  
   
--   Registerkarte**Verlauf Verleger zu Verteiler** (nur für Transaktionsreplikationen)  
+-   Registerkarte **Verlauf Verleger zu Verteiler** (nur für Transaktionsreplikationen)  
   
      Auf dieser Registerkarte werden Informationen zum Protokolllese-Agent für eine Veröffentlichung angezeigt (diese Registerkarte entspricht dem Detailfenster Protokolllese-Agent).  
   
--   Registerkarte**Verlauf Verteiler zu Abonnent** (Momentaufnahmereplikation und Transaktionsreplikation)  
+-   Registerkarte **Verlauf Verteiler zu Abonnent** (Momentaufnahmereplikation und Transaktionsreplikation)  
   
      Auf dieser Registerkarte werden Informationen zum Verteilungs-Agent für ein Abonnement angezeigt.  
   
--   Registerkarte**Nicht verteilte Befehle** (nur für Transaktionsreplikationen)  
+-   Registerkarte **Nicht verteilte Befehle** (nur für Transaktionsreplikationen)  
   
      Auf diese Registerkarte werden Informationen zur Anzahl der Befehle in der Verteilungsdatenbank angezeigt, die nicht an den ausgewählten Abonnenten übermittelt wurden. Zudem wird die geschätzte Zeit angegeben, die die Übermittlung dieser Befehle in Anspruch nimmt. Mithilfe dieser Registerkarte kann die Frage "Wie weit ist mein Abonnement in Verzug?" beantwortet werden. Diese Registerkarte wird nicht für Verteiler angezeigt, auf denen niedrigere Versionen als SQL Server 2005 ausgeführt werden.  
   
--   Registerkarte**Synchronisierungsverlauf** (nur für Mergereplikationen)  
+-   Registerkarte **Synchronisierungsverlauf** (nur für Mergereplikationen)  
   
      Auf dieser Registerkarte werden Informationen zum Merge-Agent für ein Abonnement angezeigt. Mithilfe dieser Registerkarte können Sie folgende Frage beantworten:  
   

@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: ddf0fe7b4f3f14963291d8ae930d7d680c374cb2
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>= sql-server-2016'
+ms.openlocfilehash: 1592632bdeca9f8c3cdceeb61b06c1bd92550f53
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892140"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477921"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Konfigurieren von PolyBase-Erweiterungsgruppen unter Windows
 
@@ -52,7 +52,7 @@ Hier erfahren Sie, wie Sie eine PolyBase-Gruppe mit den folgenden Informationen 
   
    - PQTH4A-CMP02  
   
-2. Domänenkonto: *PQTH4A\PolyBaseUse*r  
+2. Domänenkonto: *PQTH4A\PolyBaseUse* r  
 
 ## <a name="install-sql-server-with-polybase-on-all-machines"></a>Installieren von SQL Server mit PolyBase auf allen Computern
 
@@ -64,7 +64,7 @@ Hier erfahren Sie, wie Sie eine PolyBase-Gruppe mit den folgenden Informationen 
   
 4. Wählen Sie auf der PolyBase-Konfigurationsseite die Option **Use the SQL Server instance as part of a PolyBase scale-out group**(SQL Server-Instanz als Teil einer PolyBase-Erweiterungsgruppe verwenden). Dies öffnet die Firewall, um eingehende Verbindungen an die PolyBase-Dienste zuzulassen. Wenn der Hauptknoten eine benannte Instanz ist, müssen Sie den SQL Server-Port manuell zur Windows-Firewall auf dem Hauptknoten hinzufügen und den SQL-Browser auf dem Hauptknoten starten.
   
-5. Nachdem das Setup abgeschlossen ist, führen Sie **services.msc**aus. Überprüfen Sie, ob SQL Server, die PolyBase-Engine und der PolyBase-Datenverschiebungsdienst ausgeführt werden.
+5. Nachdem das Setup abgeschlossen ist, führen Sie **services.msc** aus. Überprüfen Sie, ob SQL Server, die PolyBase-Engine und der PolyBase-Datenverschiebungsdienst ausgeführt werden.
   
    ![PolyBase-Dienste](../../relational-databases/polybase/media/polybase-services.png "PolyBase-Dienste")  
   

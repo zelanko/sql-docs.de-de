@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 4ff1261ef4b1cfed1b36c8d14dde6810e6c27ef8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 558363289f212544d71eee6ad2a4d40a9d5716c8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918726"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477871"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Messen der Latenzzeit und Überprüfen der Verbindungen bei Transaktionsreplikationen
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -145,7 +145,7 @@ ms.locfileid: "86918726"
   
 3.  Legen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> -Eigenschaft und die <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> -Eigenschaft für die Veröffentlichung fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.  
   
-4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode **false**zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 3 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
+4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode **false** zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 3 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
   
 5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.TransPublication.PostTracerToken%2A> -Methode auf. Mit dieser Methode wird ein Überwachungstoken in das Transaktionsprotokoll der Veröffentlichung eingefügt.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "86918726"
   
 3.  Legen Sie die Eigenschaften <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>und <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.  
   
-4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode **false**zurückgibt, wurden entweder den in Schritt 3 genannten Eigenschaften der Klasse PublicationMonitor falsche Werte zugewiesen, oder die Veröffentlichung ist nicht vorhanden.  
+4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode **false** zurückgibt, wurden entweder den in Schritt 3 genannten Eigenschaften der Klasse PublicationMonitor falsche Werte zugewiesen, oder die Veröffentlichung ist nicht vorhanden.  
   
 5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> -Methode auf. Wandeln Sie das zurückgegebene <xref:System.Collections.ArrayList> -Objekt in ein Array von <xref:Microsoft.SqlServer.Replication.TracerToken> -Objekten um.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "86918726"
   
 3.  Legen Sie die Eigenschaften <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>und <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.  
   
-4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode **false**zurückgibt, wurden entweder den in Schritt 3 genannten Eigenschaften der Klasse PublicationMonitor falsche Werte zugewiesen, oder die Veröffentlichung ist nicht vorhanden.  
+4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode **false** zurückgibt, wurden entweder den in Schritt 3 genannten Eigenschaften der Klasse PublicationMonitor falsche Werte zugewiesen, oder die Veröffentlichung ist nicht vorhanden.  
   
 5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> -Methode auf. Wandeln Sie das zurückgegebene <xref:System.Collections.ArrayList> -Objekt in ein Array von <xref:Microsoft.SqlServer.Replication.TracerToken> -Objekten um.  
   

@@ -13,13 +13,13 @@ dev_langs:
 ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 author: juliemsft
 ms.author: jrasnick
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 47073d130f6a3881c7765d74f40fa06658b02f78
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 5d969da45ab53a82d71cea4d852a69f4bbc10999
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067381"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476621"
 ---
 # <a name="create-function-azure-synapse-analytics"></a>CREATE FUNCTION (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -106,8 +106,8 @@ RETURNS TABLE
  *parameter_data_type*  
  Der Parameterdatentyp. Für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen sind alle skalaren Datentypen zulässig, die in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] unterstützt werden. Der Datentyp timestamp (rowversion) wird nicht unterstützt.  
   
- [ = *default* ]  
- Ein Standardwert für den Parameter. Wenn ein *default* -Wert definiert ist, kann die Funktion ausgeführt werden, ohne dass ein Wert für diesen Parameter angegeben werden muss.  
+ [ =*default* ]  
+ Ein Standardwert für den Parameter. Wenn ein *default*-Wert definiert ist, kann die Funktion ausgeführt werden, ohne dass ein Wert für diesen Parameter angegeben werden muss.  
   
  Wenn ein Parameter der Funktion über einen Standardwert verfügt, muss beim Aufrufen der Funktion das DEFAULT-Schlüsselwort angegeben werden, um den Standardwert abzurufen. In diesem Punkt gibt es einen Unterschied zum Verwenden von Parametern in einer gespeicherten Prozedur. Fehlt im Aufruf einer gespeicherten Prozedur ein Parameter, der einen Standardwert hat, wird automatisch dieser Standardwert verwendet.  
   
@@ -122,11 +122,11 @@ RETURNS TABLE
  *scalar_expression*  
  Gibt den skalaren Wert an, den die Skalarfunktion zurückgibt.  
 
- *select_stmt* **GILT FÜR** : Azure Synapse Analytics  
+ *select_stmt* **GILT FÜR**: Azure Synapse Analytics  
  Einzelne SELECT-Anweisung, die den Rückgabewert einer Inline-Tabellenwertfunktion (Vorschau) definiert.
 
- TABLE **GILT FÜR** : Azure Synapse Analytics  
- Gibt an, dass der Rückgabewert der Tabellenwertfunktion eine Tabelle ist. Nur Konstanten und @ *local_variables* können an Tabellenwertfunktionen übergeben werden.
+ TABLE **GILT FÜR**: Azure Synapse Analytics  
+ Gibt an, dass der Rückgabewert der Tabellenwertfunktion eine Tabelle ist. Nur Konstanten und @*local_variables* können an Tabellenwertfunktionen übergeben werden.
 
  In Inline-Tabellenwertfunktionen (Vorschau) wird der TABLE-Rückgabewert durch eine einzige SELECT-Anweisung definiert. Inlinefunktionen haben keine zugeordneten Rückgabevariablen.
   
@@ -156,7 +156,7 @@ RETURNS TABLE
  Zum Entfernen von SCHEMABINDING verwenden Sie ALTER  
   
  RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
- Gibt das **OnNULLCall** -Attribut einer Skalarwertfunktion an. Wenn das Attribut nicht angegeben ist, wird standardmäßig CALLED ON NULL INPUT verwendet. Dies bedeutet, dass der Hauptteil der Funktion ausgeführt wird, selbst wenn NULL als ein Argument übergeben wird.  
+ Gibt das **OnNULLCall**-Attribut einer Skalarwertfunktion an. Wenn das Attribut nicht angegeben ist, wird standardmäßig CALLED ON NULL INPUT verwendet. Dies bedeutet, dass der Hauptteil der Funktion ausgeführt wird, selbst wenn NULL als ein Argument übergeben wird.  
   
 ## <a name="best-practices"></a>Bewährte Methoden  
  Wenn eine benutzerdefinierte Funktion nicht mit der SCHEMABINDING-Klausel erstellt wurde, können sich die an zugrunde liegenden Objekten vorgenommenen Änderungen auf die Definition der Funktion auswirken und bei Aufruf der Funktion zu unerwarteten Ergebnissen führen. Es wird empfohlen, eine der folgenden Methoden zu implementieren, damit die Funktion aufgrund von Änderungen an den zugrunde liegenden Objekten nicht veraltet ist:  
@@ -204,7 +204,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-using-a-scalar-valued-user-defined-function-to-change-a-data-type"></a>A. Verwenden einer benutzerdefinierten Skalarwertfunktion zum Ändern eines Datentyps  
- Diese einfache Funktion verwendet einen **int** -Datentyp als Eingabe und gibt einen **decimal(10,2)** -Datentyp als Ausgabe zurück.  
+ Diese einfache Funktion verwendet einen **int**-Datentyp als Eingabe und gibt einen **decimal(10,2)** -Datentyp als Ausgabe zurück.  
   
 ```sql  
 CREATE FUNCTION dbo.ConvertInput (@MyValueIn int)  
@@ -244,13 +244,13 @@ RETURN
 );
 GO
 ```
-Anschließend kann die Funktion aufgerufen werden, um folgendermaßen alle Ansichtsobjekte ( **V** ) zurückzugeben:
+Anschließend kann die Funktion aufgerufen werden, um folgendermaßen alle Ansichtsobjekte (**V**) zurückzugeben:
 ```sql
 select * from dbo.ModulesByType('V');
 ```
 
 ### <a name="b-combining-results-of-an-inline-table-valued-function-preview"></a>B. Kombinieren der Ergebnisse einer Inline-Tabellenwertfunktion (Vorschau)
- In diesem einfachen Beispiel wird die zuvor erstellte Tabellenwertfunktion verwendet, um zu zeigen, wie ihre Ergebnisse mithilfe von CROSS APPLY mit anderen Tabellen kombiniert werden können. Hier wählen wir alle Spalten aus beiden sys.objects und die Ergebnisse von `ModulesByType` für alle Zeilen aus, deren *type* -Spalte übereinstimmt. Weitere Details zum Verwenden von APPLY finden Sie unter [FROM-Klausel plus JOIN, APPLY, PIVOT](../../t-sql/queries/from-transact-sql.md).
+ In diesem einfachen Beispiel wird die zuvor erstellte Tabellenwertfunktion verwendet, um zu zeigen, wie ihre Ergebnisse mithilfe von CROSS APPLY mit anderen Tabellen kombiniert werden können. Hier wählen wir alle Spalten aus beiden sys.objects und die Ergebnisse von `ModulesByType` für alle Zeilen aus, deren *type*-Spalte übereinstimmt. Weitere Details zum Verwenden von APPLY finden Sie unter [FROM-Klausel plus JOIN, APPLY, PIVOT](../../t-sql/queries/from-transact-sql.md).
 
 ```sql
 SELECT * 

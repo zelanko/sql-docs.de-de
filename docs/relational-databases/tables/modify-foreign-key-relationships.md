@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c8972b0f407f7de3a4fa6f825e6a1b2b0d33953
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 871d0c7980202f32f85694adc3d20f7618b3ddb8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645910"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477171"
 ---
 # <a name="modify-foreign-key-relationships"></a>Ändern von Fremdschlüsselbeziehungen
 
@@ -65,7 +65,7 @@ ms.locfileid: "88645910"
   
 #### <a name="to-modify-a-foreign-key"></a>So ändern Sie einen Fremdschlüssel  
   
-1.  Erweitern Sie im **Objekt-Explorer**die Tabelle mit dem Fremdschlüssel, und erweitern Sie dann die Option **Schlüssel**.  
+1.  Erweitern Sie im **Objekt-Explorer** die Tabelle mit dem Fremdschlüssel, und erweitern Sie dann die Option **Schlüssel**.  
   
 2.  Klicken Sie mit der rechten Maustaste auf den zu ändernden Fremdschlüssel, und wählen Sie die Option **Ändern**.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "88645910"
      Löscht die in der Liste **ausgewählte Beziehung** ausgewählte Beziehung. Verwenden Sie diese Schaltfläche zum Entfernen der Beziehung, um das Hinzufügen einer Beziehung abzubrechen.  
   
      **Kategorie Allgemein**  
-     Wenn die Kategorie erweitert ist, werden **Vorhandene Daten bei Erstellung oder Reaktivierung überprüfen** und **Tabellen- und Spaltenspezifikation**angezeigt.  
+     Wenn die Kategorie erweitert ist, werden **Vorhandene Daten bei Erstellung oder Reaktivierung überprüfen** und **Tabellen- und Spaltenspezifikation** angezeigt.  
   
      **Vorhandene Daten bei Erstellung oder Reaktivierung überprüfen**  
      Überprüft alle Daten, die vor der Erstellung oder Reaktivierung der Einschränkung in der Tabelle vorhandenen sind, auf die Einschränkung hin.  
@@ -102,7 +102,7 @@ ms.locfileid: "88645910"
      Zeigt an, welche Spalte in der ausgewählten Beziehung als Primärschlüssel oder eindeutiger Schlüssel fungiert.  
   
      **Kategorie Identität**  
-     Wenn die Kategorie erweitert ist, werden die Eigenschaftenfelder für **Name** und **Beschreibung**angezeigt.  
+     Wenn die Kategorie erweitert ist, werden die Eigenschaftenfelder für **Name** und **Beschreibung** angezeigt.  
   
      **Name**  
      Zeigt den Namen der Beziehung an. Wenn eine neue Beziehung erstellt wird, erhält sie einen Standardnamen, der auf der Tabelle im aktiven Fenster im **Tabellen-Designer** basiert. Sie können den Namen jederzeit ändern.  
@@ -111,7 +111,7 @@ ms.locfileid: "88645910"
      Beschreibt die Beziehung. Um eine detailliertere Beschreibung zu erstellen, klicken Sie auf **Beschreibung** , und klicken Sie anschließend auf die Auslassungspunkte **(...)** rechts neben dem Eigenschaftenfeld. Dadurch wird ein größerer Bereich verfügbar, in den Sie Text eingeben können.  
   
      **Kategorie Tabellen-Designer**  
-     Wenn die Kategorie erweitert ist, werden Informationen über **Vorhandene Daten bei Erstellung oder Reaktivierung überprüfen** und **Für Replikation erzwingen**angezeigt.  
+     Wenn die Kategorie erweitert ist, werden Informationen über **Vorhandene Daten bei Erstellung oder Reaktivierung überprüfen** und **Für Replikation erzwingen** angezeigt.  
   
      **Für Replikation erzwingen**  
      Gibt an, ob die Einschränkung erzwungen wird, wenn durch den Replikations-Agent in der Tabelle eine INSERT-, ein UPDATE- oder DELETE-Anweisung ausgeführt wird.  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c9e762060e3afdc5df7802249e99075de66ef751
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: 71782c95201c224bdd40624e23f529b01d892f22
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395023"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475941"
 ---
 # <a name="replication-distribution-agent"></a>Replikationsverteilungs-Agent
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
@@ -172,7 +172,7 @@ distrib [-?]
  Der Benutzername, mit dem eine Verbindung zum FTP-Dienst hergestellt wird. Wenn kein Benutzername angegeben wird, wird **anonymous** verwendet.  
   
  **-HistoryVerboseLevel** [**0** \| **1** \| **2** \| **3**]  
- Gibt den Umfang des Verlaufs an, der während eines Verteilungsvorgangs protokolliert wird. Sie können die negativen Auswirkungen der Verlaufsprotokollierung auf die Leistung minimieren, indem Sie den Wert **1**auswählen.  
+ Gibt den Umfang des Verlaufs an, der während eines Verteilungsvorgangs protokolliert wird. Sie können die negativen Auswirkungen der Verlaufsprotokollierung auf die Leistung minimieren, indem Sie den Wert **1** auswählen.  
   
 |Wert von <legacyBold>HistoryVerboseLevel</legacyBold>|BESCHREIBUNG|  
 |-------------------------------|-----------------|  
@@ -191,7 +191,7 @@ distrib [-?]
  Die Anzahl von Sekunden, nach denen ein Timeout bei der Anmeldung eintritt. Der Standardwert ist **15** Sekunden.  
   
  **-MaxBcpThreads** _number_of_threads_  
- Gibt die Anzahl von Massenkopiervorgängen an, die parallel ausgeführt werden können. Die maximale Anzahl von Threads und gleichzeitig vorhandenen ODBC-Verbindungen entspricht entweder **MaxBcpThreads** oder der Anzahl von Massenkopieranforderungen, die in der Verteilungsdatenbank in der Synchronisierungstransaktion enthalten sind. Dabei gilt der jeweils kleinere Wert. Der Wert von**MaxBcpThreads** muss größer als **0** sein. Es ist keine hartcodierte Obergrenze vorhanden. Der Standardwert entspricht **2** multipliziert mit der Anzahl von Prozessoren. Der Maximalwert beträgt **8**. Wenn Sie eine Momentaufnahme anwenden, der auf dem Verleger mit der Option für gleichzeitige Momentaufnahmen generiert wurde, wird unabhängig von der für **MaxBcpThreads**angegebenen Anzahl nur ein Thread verwendet.  
+ Gibt die Anzahl von Massenkopiervorgängen an, die parallel ausgeführt werden können. Die maximale Anzahl von Threads und gleichzeitig vorhandenen ODBC-Verbindungen entspricht entweder **MaxBcpThreads** oder der Anzahl von Massenkopieranforderungen, die in der Verteilungsdatenbank in der Synchronisierungstransaktion enthalten sind. Dabei gilt der jeweils kleinere Wert. Der Wert von **MaxBcpThreads** muss größer als **0** sein. Es ist keine hartcodierte Obergrenze vorhanden. Der Standardwert entspricht **2** multipliziert mit der Anzahl von Prozessoren. Der Maximalwert beträgt **8**. Wenn Sie eine Momentaufnahme anwenden, der auf dem Verleger mit der Option für gleichzeitige Momentaufnahmen generiert wurde, wird unabhängig von der für **MaxBcpThreads** angegebenen Anzahl nur ein Thread verwendet.  
   
  **-MaxDeliveredTransactions** _number_of_transactions_  
  Die maximale Anzahl von Push- oder Pulltransaktionen, die in einer Synchronisierung auf Abonnenten angewendet werden. Der Wert **0** gibt an, dass das Maximum einer unendlichen Anzahl von Transaktionen entspricht. Andere Werte können von Abonnenten verwendet werden, um die Dauer einer Synchronisierung zu verkürzen, die von einem Verleger abgerufen wird.  
@@ -217,7 +217,7 @@ distrib [-?]
  Der Pfad der Agentausgabedatei. Wenn kein Dateiname angegeben ist, wird die Ausgabe an die Konsole gesendet. Wenn eine Datei mit dem angegebenen Namen vorhanden ist, wird die Ausgabe an diese Datei angefügt.  
   
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
- Gibt an, ob die Ausgabe ausführlich sein soll. Wenn die Meldungsstufe **0**beträgt, werden nur Fehlermeldungen gedruckt. Wenn die Meldungsstufe **1**beträgt, werden alle Statusberichtsmeldungen gedruckt. Wenn die Meldungsstufe **2** (Standard) beträgt, werden alle Fehlermeldungen und Statusberichtsmeldungen gedruckt, was beim Debuggen nützlich ist.  
+ Gibt an, ob die Ausgabe ausführlich sein soll. Wenn die Meldungsstufe **0** beträgt, werden nur Fehlermeldungen gedruckt. Wenn die Meldungsstufe **1** beträgt, werden alle Statusberichtsmeldungen gedruckt. Wenn die Meldungsstufe **2** (Standard) beträgt, werden alle Fehlermeldungen und Statusberichtsmeldungen gedruckt, was beim Debuggen nützlich ist.  
   
  **-PacketSize** _packet_size_  
  Die Paketgröße in Bytes. Der Standardwert ist 4096 (Bytes).  
@@ -268,7 +268,7 @@ distrib [-?]
 >  Wenn eine der Verbindungen oder ein Commit hierfür nicht ausgeführt werden kann, wird der aktuelle Batch von allen Verbindungen verworfen, und der Agent versucht mithilfe eines einzigen Datenstroms, die fehlgeschlagenen Batches zu wiederholen. Vor dem Abschluss dieser Wiederholungsphase kann es auf dem Abonnenten vorübergehend zur Transaktionsinkonsistenzen kommen. Nach dem erfolgreichen Ausführen (Commit) der fehlgeschlagenen Batches wird der Abonnent wieder in einen Zustand der Transaktionskonsistenz versetzt.  
   
 > [!IMPORTANT]  
->  Wenn Sie für **-SubscriptionStreams**einen Wert von mindestens 2 angeben, weicht die Reihenfolge, in der Transaktionen auf dem Abonnenten empfangen werden, möglicherweise von der Reihenfolge ab, in der sie auf dem Verleger erstellt wurden. Falls dieses Verhalten bei der Synchronisierung zu Einschränkungsverletzungen führt, verwenden Sie die NOT FOR REPLICATION-Option, um die Einschränkungserzwingung während der Synchronisierung zu deaktivieren. Weitere Informationen finden Sie unter [Kontrollieren des Verhaltens von Triggern und Einschränkungen während der Synchronisierung &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md).  
+>  Wenn Sie für **-SubscriptionStreams** einen Wert von mindestens 2 angeben, weicht die Reihenfolge, in der Transaktionen auf dem Abonnenten empfangen werden, möglicherweise von der Reihenfolge ab, in der sie auf dem Verleger erstellt wurden. Falls dieses Verhalten bei der Synchronisierung zu Einschränkungsverletzungen führt, verwenden Sie die NOT FOR REPLICATION-Option, um die Einschränkungserzwingung während der Synchronisierung zu deaktivieren. Weitere Informationen finden Sie unter [Kontrollieren des Verhaltens von Triggern und Einschränkungen während der Synchronisierung &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md).  
   
 > [!NOTE]  
 >  subscriptionstreams [!INCLUDE[tsql](../../../includes/tsql-md.md)]kann nicht für Artikel verwendet werden, die für die Übermittlung von  konfiguriert sind. Um subscriptionstreams zu verwenden, konfigurieren Sie Artikel stattdessen für die Übermittlung von Aufrufen gespeicherter Prozeduren.  
@@ -280,7 +280,7 @@ distrib [-?]
  Gibt den Abonnementtyp für die Verteilung an. Der Wert **0** steht für ein Pushabonnement, der Wert **1** für ein Pullabonnement und der Wert **2** für ein anonymes Abonnement.  
   
  **-TransactionsPerHistory** [ **0**| **1**|... **10000**]  
- Gibt das Transaktionsintervall für die Verlaufsprotokollierung an. Wenn die Anzahl von Transaktionen mit ausgeführtem Commit seit der letzten Instanz der Verlaufsprotokollierung den Wert dieser Option übersteigt, wird eine Verlaufsmeldung protokolliert. Der Standardwert ist 100. Der Wert **0** gibt unendliche **TransactionsPerHistory**an. See the preceding **–MessageInterval**parameter.  
+ Gibt das Transaktionsintervall für die Verlaufsprotokollierung an. Wenn die Anzahl von Transaktionen mit ausgeführtem Commit seit der letzten Instanz der Verlaufsprotokollierung den Wert dieser Option übersteigt, wird eine Verlaufsmeldung protokolliert. Der Standardwert ist 100. Der Wert **0** gibt unendliche **TransactionsPerHistory** an. See the preceding **–MessageInterval** parameter.  
   
  **-UseDTS**  
  Muss als Parameter für eine Veröffentlichung angegeben werden, die eine Datentransformation ermöglicht.  

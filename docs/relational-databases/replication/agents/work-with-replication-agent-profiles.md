@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1b40afe7f9e7e74fb70f7b08a1c7532e5a65c715
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: b21d42777d4561685e714eeb72c07bb1e6fd405b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482505"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475871"
 ---
 # <a name="work-with-replication-agent-profiles"></a>Arbeiten mit Replikations-Agent-Profilen
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -225,7 +225,7 @@ ms.locfileid: "88482505"
 3.  Wenn der Agent von der Eingabeaufforderung gestartet wird, geben Sie den in Schritt 1 ermittelten Wert **profile_name** nach dem **-ProfileName** -Befehlszeilenparameter an.  
   
 ###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Beispiel (Transact-SQL)  
- In diesem Beispiel werden ein benutzerdefiniertes Profil für den Merge-Agent mit der Bezeichnung **custom_merge**erstellt, der Wert des **-UploadReadChangesPerBatch** -Parameters geändert, ein neuer **-ExchangeType** -Parameter hinzugefügt und Informationen zu dem Profil, das erstellt wird, zurückgegeben.  
+ In diesem Beispiel werden ein benutzerdefiniertes Profil für den Merge-Agent mit der Bezeichnung **custom_merge** erstellt, der Wert des **-UploadReadChangesPerBatch** -Parameters geändert, ein neuer **-ExchangeType** -Parameter hinzugefügt und Informationen zu dem Profil, das erstellt wird, zurückgegeben.  
   
  [!code-sql[HowTo#sp_addagentprofileparam](../../../relational-databases/replication/codesnippet/tsql/work-with-replication-ag_1.sql)]  
   
@@ -261,7 +261,7 @@ ms.locfileid: "88482505"
   
 2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationServer>-Klasse. Übergeben Sie das in Schritt 1 erstellte <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Objekt.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Überprüfen Sie, ob der Verteiler vorhanden ist, wenn diese Methode **false**zurückgibt.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Überprüfen Sie, ob der Verteiler vorhanden ist, wenn diese Methode **false** zurückgibt.  
   
 4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumAgentProfiles%2A> -Methode auf. Übergeben Sie einen <xref:Microsoft.SqlServer.Replication.AgentType> -Wert, um die zurückgegebenen Profile für einen bestimmten Typ von Replikations-Agent einzugrenzen.  
   
@@ -281,7 +281,7 @@ ms.locfileid: "88482505"
   
 2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.AgentProfile>-Klasse. Legen Sie den Namen des Profils für <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> und <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1 für <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>fest.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Wenn diese Methode **false**zurückgibt, wurde ein falscher Name angegeben, oder das Profil ist auf dem Server nicht vorhanden.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Wenn diese Methode **false** zurückgibt, wurde ein falscher Name angegeben, oder das Profil ist auf dem Server nicht vorhanden.  
   
 4.  Stellen Sie sicher, dass die <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> -Eigenschaft auf <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.User>festgelegt ist, womit ein Kundenprofil angegeben wird. Entfernen Sie kein Profil, das einen Wert <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.System> für <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A>aufweist.  
   

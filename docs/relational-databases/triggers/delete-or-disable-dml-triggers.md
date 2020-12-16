@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 0f97f953-33c5-4b26-afeb-db2a26ce38b4
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec282485aec37e07684de2430c2379bf584b4b05
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1c3e022c0c284fa1c2b4ef6824c94cec609e8222
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485430"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477201"
 ---
 # <a name="delete-or-disable-dml-triggers"></a>Löschen oder Deaktivieren von DML-Triggern
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -64,9 +64,9 @@ ms.locfileid: "88485430"
   
 #### <a name="to-delete-a-dml-trigger"></a>So löschen Sie einen DML-Trigger  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und erweitern Sie dann diese Instanz.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und erweitern Sie dann diese Instanz.  
   
-2.  Erweitern Sie die gewünschte Datenbank, **Tabellen**und dann die Tabelle, die den zu löschenden Trigger enthält.  
+2.  Erweitern Sie die gewünschte Datenbank, **Tabellen** und dann die Tabelle, die den zu löschenden Trigger enthält.  
   
 3.  Erweitern Sie **Trigger**, klicken Sie mit der rechten Maustaste auf den zu löschenden Trigger, und klicken Sie anschließend auf **Löschen**.  
   
@@ -74,9 +74,9 @@ ms.locfileid: "88485430"
   
 #### <a name="to-disable-and-enable-a-dml-trigger"></a>So deaktivieren und aktivieren Sie einen DML-Trigger  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und erweitern Sie dann diese Instanz.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und erweitern Sie dann diese Instanz.  
   
-2.  Erweitern Sie die gewünschte Datenbank, **Tabellen**und dann die Tabelle, die den zu deaktivierenden Trigger enthält.  
+2.  Erweitern Sie die gewünschte Datenbank, **Tabellen** und dann die Tabelle, die den zu deaktivierenden Trigger enthält.  
   
 3.  Erweitern Sie **Trigger**, klicken Sie mit der rechten Maustaste auf den zu deaktivierenden Trigger, und klicken Sie anschließend auf **Deaktivieren**.  
   

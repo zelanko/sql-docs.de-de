@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 6a0703042862d995d8890c01fee519915b513e3a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 03b08fa667f8b0753c315a7cf66123618cb493f7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482445"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475861"
 ---
 # <a name="article-properties---ltarticlegt"></a>Artikeleigenschaften – &lt;Artikel&gt;
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -52,11 +52,11 @@ ms.locfileid: "88482445"
   
  Gehen Sie folgendermaßen vor, wenn Sie Daten auf Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]replizieren:  
   
--   Legen Sie für diese Option **False**fest, da frühere Versionen CREATE SCHEMA nicht unterstützen.  
+-   Legen Sie für diese Option **False** fest, da frühere Versionen CREATE SCHEMA nicht unterstützen.  
   
 -   Fügen Sie für jedes Schema einen Benutzer mit demselben Namen wie das Schema zur Abonnementdatenbank hinzu.  
   
- **XML in NTEXT konvertieren**, **MAX-Datentypen in NTEXT und IMAGE konvertieren**, **Neue datetime-Typen in NVARCHAR konvertieren**, **Filestream- in MAX-Datentypen konvertieren**, **Große CLR- in MAX-Datentypen konvertieren**, **HierarchyId- in MAX-Datentypen konvertieren**und **Räumliche in MAX-Datentypen konvertieren**.  
+ **XML in NTEXT konvertieren**, **MAX-Datentypen in NTEXT und IMAGE konvertieren**, **Neue datetime-Typen in NVARCHAR konvertieren**, **Filestream- in MAX-Datentypen konvertieren**, **Große CLR- in MAX-Datentypen konvertieren**, **HierarchyId- in MAX-Datentypen konvertieren** und **Räumliche in MAX-Datentypen konvertieren**.  
  Bestimmt, ob die Datentypen und Attribute wie beschrieben konvertiert werden. Geben Sie den Wert **True** an, wenn diese Datentypen für frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]repliziert werden sollen. So kann sichergestellt werden, dass sie auf dem Abonnenenten fehlerfrei verarbeitet werden können.  
   
  **Zielobjektname**  
@@ -67,7 +67,7 @@ ms.locfileid: "88482445"
   
 -   Für Artikel in Mergeveröffentlichungen mit einem Kompatibilitätsgrad von unter 90: Standardmäßig wird der Besitzer leer gelassen und während der Erstellung des Objekts auf dem Abonnenten mit **dbo** angeben.  
   
--   Für Artikel in Oracle-Veröffentlichungen: Standardmäßig wird der Besitzer mit **dbo**angegeben.  
+-   Für Artikel in Oracle-Veröffentlichungen: Standardmäßig wird der Besitzer mit **dbo** angegeben.  
   
 -   Für Artikel in Veröffentlichungen, die Zeichenmodus-Momentaufnahmen verwenden (werden für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten und [!INCLUDE[ssEW](../../includes/ssew-md.md)] -Abonnenten verwendet): Standardmäßig wird der Besitzer leer gelassen. Als Besitzer wird standardmäßig der Besitzer verwendet, der mit dem vom Verteilungs- oder Merge-Agent zum Herstellen einer Verbindung mit dem Abonnenten verwendeten Konto verknüpft ist.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "88482445"
   
 ## <a name="options-for-transactional-publications"></a>Optionen für Transaktionsveröffentlichungen  
  **Die gespeicherten Prozeduren INSERT, UPDATE und DELETE kopieren**  
- Wenn Sie im Abschnitt **Anweisungsübermittlung** dieses Dialogfelds gespeicherte Prozeduren zum Weitergeben von Änderungen an Abonnenten auswählen (Standardeinstellung), wählen Sie mithilfe dieser Option aus, ob die Prozeduren auf jeden Abonnenten kopiert werden. Wenn Sie **False**auswählen, müssen Sie die Prozeduren manuell kopieren. Andernfalls schlägt der Verteilungs-Agent beim Versuch, Änderungen zu übermitteln, fehl.  
+ Wenn Sie im Abschnitt **Anweisungsübermittlung** dieses Dialogfelds gespeicherte Prozeduren zum Weitergeben von Änderungen an Abonnenten auswählen (Standardeinstellung), wählen Sie mithilfe dieser Option aus, ob die Prozeduren auf jeden Abonnenten kopiert werden. Wenn Sie **False** auswählen, müssen Sie die Prozeduren manuell kopieren. Andernfalls schlägt der Verteilungs-Agent beim Versuch, Änderungen zu übermitteln, fehl.  
   
  **Statement delivery**  
  Die Optionen in diesem Abschnitt gelten für alle Tabellen, einschließlich indizierter Sichten, die als Tabellen repliziert werden. [!INCLUDE[msCoName](../../includes/msconame-md.md)] empfiehlt die Verwendung der Standardoptionen, sofern die Anwendung keine andere Funktionalität erfordert. Standardmäßig gibt die Transaktionsreplikation Änderungen an Abonnenten mithilfe einer Reihe gespeicherter Prozeduren weiter, die auf jedem Abonnenten gespeichert sind. Wenn für eine Tabelle auf dem Verleger ein Einfüge-, Update- oder Löschvorgang ansteht, wird der Vorgang in einen Aufruf einer gespeicherten Prozedur auf den Abonnenten übersetzt.  
@@ -111,10 +111,10 @@ ms.locfileid: "88482445"
  **Nachverfolgungsebene**  
  Bestimmt, ob Änderungen an derselben Zeile oder Spalte als Konflikt behandelt werden.  
   
- **INSERT-Berechtigung überprüfen**, **UPDATE-Berechtigung überprüfen**und **DELETE-Berechtigung überprüfen**  
+ **INSERT-Berechtigung überprüfen**, **UPDATE-Berechtigung überprüfen** und **DELETE-Berechtigung überprüfen**  
  Bestimmt, ob während der Synchronisierung überprüft wird, ob die Abonnentenanmeldung für die veröffentlichten Tabellen in der Veröffentlichungsdatenbank INSERT-, UPDATE- oder DELETE-Berechtigungen besitzt. Die Standardeinstellung ist **False** , da die Mergereplikation diese Berechtigungen nicht benötigt. Der Zugriff auf die veröffentlichten Tabellen wird über die Veröffentlichungszugriffsliste (Publication Access List, PAL) gesteuert. Weitere Informationen zur PAL finden Sie unter [Sichern des Verlegers](../../relational-databases/replication/security/secure-the-publisher.md).  
   
- Sie können die Überprüfung der Berechtigungen anfordern, wenn Sie einem oder mehreren Abonnenten gestatten möchten, nur bestimmte Änderungen an den veröffentlichten Daten hochzuladen. Sie können beispielsweise einen Abonnenten zur PAL hinzufügen, ihm jedoch keine Berechtigungen für die Tabellen in der Veröffentlichungsdatenbank erteilen. Anschließend legen Sie die Option DELETE-Berechtigung überprüfen auf **True**fest: Der Abonnent kann jetzt Einfüge- und Updatevorgänge hochladen, aber keine Löschvorgänge.  
+ Sie können die Überprüfung der Berechtigungen anfordern, wenn Sie einem oder mehreren Abonnenten gestatten möchten, nur bestimmte Änderungen an den veröffentlichten Daten hochzuladen. Sie können beispielsweise einen Abonnenten zur PAL hinzufügen, ihm jedoch keine Berechtigungen für die Tabellen in der Veröffentlichungsdatenbank erteilen. Anschließend legen Sie die Option DELETE-Berechtigung überprüfen auf **True** fest: Der Abonnent kann jetzt Einfüge- und Updatevorgänge hochladen, aber keine Löschvorgänge.  
   
  **UPDATE-Anweisung für mehrere Spalten**  
  Wenn die Mergereplikation ein Update ausführt, aktualisiert sie alle geänderten Spalten in einer UPDATE-Anweisung und setzt nicht geänderte Spalten auf ihre ursprünglichen Werte zurück. Die Alternative in diesen Fällen besteht darin, mehrere UPDATE-Anweisungen auszugeben, mit einer UPDATE-Anweisung für jede Spalte, die sich geändert hat. Die UPDATE-Anweisung für mehrere Spalten ist in der Regel effizienter. Sie sollten aber in Betracht ziehen, die Option auf **False** festzulegen, wenn Trigger für die Tabelle so festgelegt sind, dass sie auf Updates bestimmter Spalten reagieren, und sie falsch reagieren, weil diese Spalten bei Updates zurückgesetzt werden.  
@@ -142,10 +142,10 @@ ms.locfileid: "88482445"
   
 ### <a name="properties-tab"></a>Eigenschaften (Registerkarte)  
  **Die gespeicherten Prozeduren INSERT, UPDATE und DELETE kopieren**  
- Wenn der Artikel Teil einer Transaktionsveröffentlichung ist und Sie im Abschnitt **Anweisungsübermittlung** dieses Dialogfelds gespeicherte Prozeduren zum Weitergeben von Änderungen an Abonnenten auswählen (Standardeinstellung), wählen Sie mithilfe dieser Option aus, ob die Prozeduren auf jeden Abonnenten kopiert werden. Wenn Sie **False**auswählen, müssen Sie die Prozeduren manuell kopieren. Andernfalls schlägt der Verteilungs-Agent beim Versuch, Änderungen zu übermitteln, fehl.  
+ Wenn der Artikel Teil einer Transaktionsveröffentlichung ist und Sie im Abschnitt **Anweisungsübermittlung** dieses Dialogfelds gespeicherte Prozeduren zum Weitergeben von Änderungen an Abonnenten auswählen (Standardeinstellung), wählen Sie mithilfe dieser Option aus, ob die Prozeduren auf jeden Abonnenten kopiert werden. Wenn Sie **False** auswählen, müssen Sie die Prozeduren manuell kopieren. Andernfalls schlägt der Verteilungs-Agent beim Versuch, Änderungen zu übermitteln, fehl.  
   
  **Zielobjektbesitzer**  
- Beachten Sie folgende Punkte, wenn Sie einen anderen Wert als **dbo**eingeben:  
+ Beachten Sie folgende Punkte, wenn Sie einen anderen Wert als **dbo** eingeben:  
   
 -   Bei Abonnenten mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder später müssen Sie sicherstellen, dass auf den Abonnenten ein Schema mit demselben Namen wie dem von Ihnen eingegebenen Wert erstellt wird. Weitere Informationen finden Sie unter [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md).  
   
