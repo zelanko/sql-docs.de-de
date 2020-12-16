@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb5375afc7e8a115c9398f7ab567c06cb731eb62
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b9d004ce88bba442dc17ff17c3d8a26e75bffd1a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006278"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473141"
 ---
 # <a name="spatial-indexes-overview"></a>Übersicht über räumliche Indizes
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "92006278"
 ##  <a name="about-spatial-indexes"></a><a name="about"></a> Informationen zu räumlichen Indizes  
   
 ###  <a name="decomposing-indexed-space-into-a-grid-hierarchy"></a><a name="decompose"></a> Zerlegen von indiziertem Raum in eine Rasterhierarchie  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]werden räumliche Indizes mithilfe von B-Strukturen erstellt; das heißt, dass die Indizes die zweidimensionalen räumlichen Daten in der linearen Reihenfolge der B-Strukturen darstellen müssen. Bevor Daten in einen räumlichen Index eingelesen werden, implementiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] daher eine einheitliche hierarchische Zerlegung des Raums. Während der Indexerstellung wird der Raum in eine vier Ebenen umfassende *Rasterhierarchie* *zerlegt*. Diese Ebenen werden als *Ebene 1* (die oberste Ebene), *Ebene 2*, *Ebene 3*und *Ebene 4*bezeichnet.  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]werden räumliche Indizes mithilfe von B-Strukturen erstellt; das heißt, dass die Indizes die zweidimensionalen räumlichen Daten in der linearen Reihenfolge der B-Strukturen darstellen müssen. Bevor Daten in einen räumlichen Index eingelesen werden, implementiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] daher eine einheitliche hierarchische Zerlegung des Raums. Während der Indexerstellung wird der Raum in eine vier Ebenen umfassende *Rasterhierarchie* *zerlegt*. Diese Ebenen werden als *Ebene 1* (die oberste Ebene), *Ebene 2*, *Ebene 3* und *Ebene 4* bezeichnet.  
   
  Auf jeder nachfolgenden Ebene wird die ihr übergeordnete Ebene weiter zerlegt, sodass jede Zelle der übergeordneten Ebene ein vollständiges Raster der nächsten Ebene enthält. Auf einer gegebenen Ebene verfügen alle Raster an beiden Achsen über die gleiche Anzahl von Zellen (beispielweise 4&nbsp;x&nbsp;4 oder 8&nbsp;x&nbsp;8), und die Zellen sind alle gleich groß.  
   
@@ -114,9 +114,9 @@ ms.locfileid: "92006278"
  ![Tiefste-Zelle-Optimierung](../../relational-databases/spatial/media/spndx-opt-deepest-cell.gif "Tiefste-Zelle-Optimierung")  
   
 ###  <a name="tessellation-schemes"></a><a name="schemes"></a> Mosaikschemas  
- Das Verhalten eines räumlichen Indexes hängt teilweise von seinem *Mosaikschema*ab. Das Mosaikschema ist datentypspezifisch. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]werden zwei Mosaikschemas für räumliche Indizes unterstützt:  
+ Das Verhalten eines räumlichen Indexes hängt teilweise von seinem *Mosaikschema* ab. Das Mosaikschema ist datentypspezifisch. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]werden zwei Mosaikschemas für räumliche Indizes unterstützt:  
   
--   Das*Geometrieraster-Mosaikschema*, das als Schema für den **geometry** -Datentyp vorgesehen ist.  
+-   Das *Geometrieraster-Mosaikschema*, das als Schema für den **geometry** -Datentyp vorgesehen ist.  
   
 -   *Geografierastermosaik*, das für Spalten des **geography** -Datentyps gilt.  
   

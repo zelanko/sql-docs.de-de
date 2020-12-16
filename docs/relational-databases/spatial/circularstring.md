@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 759d76a49f095c9ba28a1a1a5b6503442ccaef88
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 06527821c8f3b500f0b44fac711860a74565ba6c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006375"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473271"
 ---
 # <a name="circularstring"></a>CircularString
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -113,7 +113,7 @@ SELECT 'Circumference = ' + CAST(@g.STLength() AS NVARCHAR(10));
 Circumference = 6.28319  
 ```  
   
-Vergleichen Sie die Ausgabe, wenn **LineString** anstelle von **CircularString**verwendet wird:  
+Vergleichen Sie die Ausgabe, wenn **LineString** anstelle von **CircularString** verwendet wird:  
   
 ```sql  
 DECLARE @g geometry;  
@@ -137,7 +137,7 @@ DECLARE @g geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -
 ```  
   
 ### <a name="e-instantiating-a-geography-instance-with-a-circularstring"></a>E. Instanziieren einer Geography-Instanz mit einem CircularString  
- Im folgenden Beispiel wird veranschaulicht, wie eine **geography** -Instanz mit einem **CircularString**deklariert und instanziiert wird:  
+ Im folgenden Beispiel wird veranschaulicht, wie eine **geography** -Instanz mit einem **CircularString** deklariert und instanziiert wird:  
   
 ```sql  
 DECLARE @g geography = 'CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  

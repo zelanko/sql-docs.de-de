@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb02f98fbfad4dbad81983afd09daf04ed1e0176
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 03187f310687792ebb07d4fd3d67e7a58ce83323
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006353"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473181"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Erstellen, Ändern und Löschen von räumlichen Indizes
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -45,15 +45,15 @@ ms.locfileid: "92006353"
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her, und erweitern Sie dann diese Instanz.  
   
-2.  Erweitern Sie **Datenbanken**und anschließend die Datenbank, die die Tabelle mit dem angegebenen Index enthält, und erweitern Sie anschließend **Tabellen**.  
+2.  Erweitern Sie **Datenbanken** und anschließend die Datenbank, die die Tabelle mit dem angegebenen Index enthält, und erweitern Sie anschließend **Tabellen**.  
   
 3.  Erweitern Sie die Tabelle, für die Sie den Index erstellen möchten.  
   
-4.  Klicken Sie mit der rechten Maustaste auf **Indizes** , und wählen Sie **Neuer Index**aus.  
+4.  Klicken Sie mit der rechten Maustaste auf **Indizes** , und wählen Sie **Neuer Index** aus.  
   
 5.  Geben Sie im Feld **Indexname** einen Namen für den Index ein.  
   
-6.  Wählen Sie in der Dropdownliste **Indextyp** den Eintrag **räumlich**aus.  
+6.  Wählen Sie in der Dropdownliste **Indextyp** den Eintrag **räumlich** aus.  
   
 7.  Klicken Sie auf **Hinzufügen**, um die räumliche Spalte anzugeben, die indiziert werden soll.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "92006353"
   
   
 ##  <a name="restrictions-on-spatial-indexes"></a><a name="restrictions"></a> Erstellen, Ändern und Löschen von räumlichen Indizes  
- Ein räumlicher Index kann nur für eine Spalte des Typs **Geometrie** oder **Geografie**erstellt werden.  
+ Ein räumlicher Index kann nur für eine Spalte des Typs **Geometrie** oder **Geografie** erstellt werden.  
   
 ### <a name="table-and-view-restrictions"></a>Einschränkungen für Tabellen und Sichten  
  Räumliche Indizes können nur für eine Tabelle definiert werden, die über einen Primärschlüssel verfügt. Die maximale Anzahl von Primärschlüsselspalten in einer Tabelle beträgt 15.  

@@ -8,12 +8,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 96c58159a020ba11708b12a4e5732438044b3291
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: bfc63894d7e2ada81ca230c1a66d32bd49d6d91d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115729"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471401"
 ---
 # <a name="configure-usage--diagnostic-data-collection-for-sql-server-on-linux"></a>Konfigurieren der Sammlung von Nutzungs- und Diagnosedaten für SQL Server für Linux
 
@@ -83,7 +83,7 @@ Zum Deaktivieren der Nutzungs- und Diagnosedatensammlung in Docker muss Docker [
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. Fügen Sie eine `mssql.conf`-Datei mit den Zeilen `[telemetry]` und `customerfeedback = false` im Hostverzeichnis hinzu:
 
@@ -176,7 +176,7 @@ Um die lokale Überwachung für Docker zu aktivieren, muss Docker [Ihre Daten pe
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. Das Zielverzeichnis für neue Protokolle der lokalen Überwachung befindet sich im Container. Erstellen Sie ein Zielverzeichnis für neue Protokolle der lokalen Überwachung im Hostverzeichnis auf Ihrem Computer. Im folgenden Beispiel wird ein neues Verzeichnis **/audit** erstellt:
 

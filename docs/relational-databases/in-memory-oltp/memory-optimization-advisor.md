@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d5d881ff7628c094b8d6880406650387c0cff48
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0626ff511e504a4718a426ae9b1ca85c674ab5f0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868570"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473871"
 ---
 # <a name="memory-optimization-advisor"></a>Ratgeber für die Speicheroptimierung
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "91868570"
  Weitere Informationen zu Migrationsmethoden finden Sie unter [In-Memory OLTP - Common Workload Patterns and Migration Considerations (In-Memory-OLTP: Allgemeine Workloadmuster und Überlegungen zur Migration)](/previous-versions/dn673538(v=msdn.10)).  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>Exemplarische Vorgehensweise: Ratgeber für die Speicheroptimierung  
- Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf die Tabelle, die Sie konvertieren möchten, und wählen Sie **Ratgeber für die Speicheroptimierung**aus. Daraufhin wird die Willkommensseite für **Ratgeber für die Speicheroptimierung von Tabellen**angezeigt.  
+ Klicken Sie im **Objekt-Explorer** mit der rechten Maustaste auf die Tabelle, die Sie konvertieren möchten, und wählen Sie **Ratgeber für die Speicheroptimierung** aus. Daraufhin wird die Willkommensseite für **Ratgeber für die Speicheroptimierung von Tabellen** angezeigt.  
   
 ### <a name="memory-optimization-checklist"></a>Prüfliste für die Speicheroptimierung  
- Wenn Sie auf der Willkommensseite für den **Ratgeber für die Speicheroptimierung von Tabellen** auf **Weiter**klicken, wird die Prüfliste für die Speicheroptimierung angezeigt. Nicht alle Funktionen in einer datenträgerbasierten Tabelle werden durch speicheroptimierte Tabellen unterstützt. Der Prüfliste für die Speicheroptimierung können Sie entnehmen, ob die datenträgerbasierte Tabelle Funktionen nutzt, die nicht mit einer speicheroptimierten Tabelle kompatibel sind. Die datenträgerbasierte Tabelle wird vom **Ratgeber für die Speicheroptimierung von Tabellen** nicht geändert, sodass sie zur Verwendung von In-Memory-OLTP migriert werden kann. Um die Migration fortzusetzen, müssen Sie diese Änderungen vornehmen. Bei jeder gefundenen Inkompatibilität zeigt der **Ratgeber für die Speicheroptimierung von Tabellen** einen Link zu Informationen an, die Sie beim Ändern datenträgerbasierter Tabellen unterstützen.  
+ Wenn Sie auf der Willkommensseite für den **Ratgeber für die Speicheroptimierung von Tabellen** auf **Weiter** klicken, wird die Prüfliste für die Speicheroptimierung angezeigt. Nicht alle Funktionen in einer datenträgerbasierten Tabelle werden durch speicheroptimierte Tabellen unterstützt. Der Prüfliste für die Speicheroptimierung können Sie entnehmen, ob die datenträgerbasierte Tabelle Funktionen nutzt, die nicht mit einer speicheroptimierten Tabelle kompatibel sind. Die datenträgerbasierte Tabelle wird vom **Ratgeber für die Speicheroptimierung von Tabellen** nicht geändert, sodass sie zur Verwendung von In-Memory-OLTP migriert werden kann. Um die Migration fortzusetzen, müssen Sie diese Änderungen vornehmen. Bei jeder gefundenen Inkompatibilität zeigt der **Ratgeber für die Speicheroptimierung von Tabellen** einen Link zu Informationen an, die Sie beim Ändern datenträgerbasierter Tabellen unterstützen.  
   
  Wenn Sie eine Liste dieser Inkompatibilitäten aufbewahren möchten, um die Migration zu planen, klicken Sie zum Generieren einer HTML-Liste auf **Bericht generieren** .  
   
@@ -99,7 +99,7 @@ ms.locfileid: "91868570"
   
  Wenn kein Primärschlüssel vorhanden ist und die Tabelle in eine nicht dauerhafte Tabelle migriert wird, wird dieser Bildschirm nicht angezeigt.  
   
- Bei Textspalten (mit dem Typ **char**, **nchar**, **varchar**und **nvarchar**) müssen Sie eine entsprechende Sortierung auswählen. In-Memory OLTP unterstützt BIN2-Sortierungen nur für Spalten in einer speicheroptimierten Tabelle. Sortierungen mit zusätzlichen Zeichen werden nicht unterstützt. Unter [Collations and Code Pages](./introduction-to-memory-optimized-tables.md) finden Sie Informationen zu den unterstützten Sortierungen und den möglichen Auswirkungen, die eine Änderung der Sortierung mit sich bringen kann.  
+ Bei Textspalten (mit dem Typ **char**, **nchar**, **varchar** und **nvarchar**) müssen Sie eine entsprechende Sortierung auswählen. In-Memory OLTP unterstützt BIN2-Sortierungen nur für Spalten in einer speicheroptimierten Tabelle. Sortierungen mit zusätzlichen Zeichen werden nicht unterstützt. Unter [Collations and Code Pages](./introduction-to-memory-optimized-tables.md) finden Sie Informationen zu den unterstützten Sortierungen und den möglichen Auswirkungen, die eine Änderung der Sortierung mit sich bringen kann.  
   
  Sie können die folgenden Parameter für den Primärschlüssel konfigurieren:  
   

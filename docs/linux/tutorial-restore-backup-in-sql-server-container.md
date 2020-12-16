@@ -7,13 +7,13 @@ ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 0e35acbb3bd331117170a41eb3665ddc2fb9f9ab
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+moniker: '>= sql-server-linux-2017 || >= sql-server-2017 '
+ms.openlocfilehash: b5fcfbf30028c904be96ca17be1ebb7feeb6f91d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115863"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471421"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Wiederherstellen einer SQL Server-Datenbank in einem Docker-Container in Linux
 
@@ -26,7 +26,7 @@ In diesem Tutorial erfahren Sie, wie Sie eine SQL Server-Sicherungsdatei in ein 
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 In diesem Tutorial erfahren Sie, wie Sie eine SQL Server-Sicherungsdatei in ein Linux-Containerimage von SQL Server 2019 in Docker verschieben und dort wiederherstellen.
 
@@ -108,7 +108,7 @@ In diesem Tutorial erfahren Sie, wie Sie eine SQL Server-Sicherungsdatei in ein 
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. Öffnen Sie unter Linux/Mac ein Bash-Terminal oder unter Windows eine PowerShell-Sitzung mit erhöhten Rechten.
 
@@ -465,7 +465,7 @@ Zum Schutz Ihrer Daten können Sie neben Datenbanksicherungen auch Datenvolumeco
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. Beenden Sie den Container **sql1**.
 
@@ -529,7 +529,7 @@ In diesem Tutorial haben Sie erfahren, wie Sie eine Datenbank unter Windows sich
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 In diesem Tutorial haben Sie gelernt, wie Sie eine Datenbank unter Windows sichern und auf einen Linux-Server mit SQL Server 2019 verschieben. Sie haben Folgendes gelernt:
 
