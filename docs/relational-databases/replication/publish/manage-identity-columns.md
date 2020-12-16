@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7d0a169e6b160bc865c5ba3c115803fb690cbe68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 6c7f660c4550a3bd792b2132ad0699d944b90a2e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423484"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468991"
 ---
 # <a name="manage-identity-columns"></a>Verwalten von Identitätsspalten
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -60,11 +60,11 @@ ms.locfileid: "88423484"
   
 #### <a name="to-specify-an-identity-column-management-option"></a>So geben Sie eine Verwaltungsoption für Identitätsspalten an  
   
-1.  Wenn auf dem Verleger eine Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt wird, die älter als [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]ist, wählen Sie im Assistenten für neue Veröffentlichung auf der Seite **Veröffentlichungstyp** die Option **Mergeveröffentlichung** oder **Transaktionsveröffentlichung mit aktualisierbaren Abonnements**aus.  
+1.  Wenn auf dem Verleger eine Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt wird, die älter als [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]ist, wählen Sie im Assistenten für neue Veröffentlichung auf der Seite **Veröffentlichungstyp** die Option **Mergeveröffentlichung** oder **Transaktionsveröffentlichung mit aktualisierbaren Abonnements** aus.  
   
 2.  Wählen Sie auf der Seite **Artikel** eine Tabelle mit einer Identitätsspalte aus.  
   
-3.  Klicken Sie auf **Artikeleigenschaften**und anschließend auf **Eigenschaften des hervorgehobenen Artikels festlegen**.  
+3.  Klicken Sie auf **Artikeleigenschaften** und anschließend auf **Eigenschaften des hervorgehobenen Artikels festlegen**.  
   
 4.  Legen Sie im Dialogfeld **Artikeleigenschaften - \<Article>** auf der Registerkarte **Eigenschaften** im Abschnitt **Identitätsbereichsverwaltung** die Eigenschaft **Identitätsbereiche automatisch verwalten** auf **Automatisch** oder **Manuell** (bei Verlegern, auf denen [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder höher ausgeführt wird) bzw. auf **TRUE** oder **FALSE** (bei Verlegern, auf denen eine Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt wird, die älter als [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ist) fest.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "88423484"
   
 1.  Wählen Sie auf der Seite **Artikel** im Dialogfeld **Veröffentlichungseigenschaften - \<Publication>** eine Tabelle mit einer Identitätsspalte aus.  
   
-2.  Klicken Sie auf **Artikeleigenschaften**und anschließend auf **Eigenschaften des hervorgehobenen Artikels festlegen**.  
+2.  Klicken Sie auf **Artikeleigenschaften** und anschließend auf **Eigenschaften des hervorgehobenen Artikels festlegen**.  
   
 3.  Geben Sie im Dialogfeld **Artikeleigenschaften - \<Article>** auf der Registerkarte **Eigenschaften** im Abschnitt **Identitätsbereichsverwaltung** Werte für eine oder mehrere der folgenden Eigenschaften ein: **Bereichsgröße auf dem Verleger**, **Bereichsgröße auf dem Abonnenten** und **Prozentsatz für Bereichsschwellenwert**.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "88423484"
   
 1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md) aus, und achten Sie auf den Wert von **identityrangemanagementoption** im Resultset. Ist dieser Wert **0**, ist die automatische Identitätsbereichsverwaltung nicht aktiviert.  
   
-2.  Wenn der Wert von **identityrangemanagementoption** im Resultset **1**ist, ändern Sie die Einstellungen wie folgt:  
+2.  Wenn der Wert von **identityrangemanagementoption** im Resultset **1** ist, ändern Sie die Einstellungen wie folgt:  
   
     -   Um die zugewiesenen Identitätsbereiche zu ändern, führen Sie [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben Sie für **\@property** den Wert **identity_range** oder **pub_identity_range** und für **\@value** den neuen Bereichswert an.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "88423484"
   
 1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md) aus, und achten Sie auf den Wert von **identity_support** im Resultset. Ist dieser Wert **0**, ist die automatische Identitätsbereichsverwaltung nicht aktiviert.  
   
-2.  Wenn der Wert von **identity_support** im Resultset **1**ist, ändern Sie die Einstellungen wie folgt:  
+2.  Wenn der Wert von **identity_support** im Resultset **1** ist, ändern Sie die Einstellungen wie folgt:  
   
     -   Um die zugewiesenen Identitätsbereiche zu ändern, führen Sie [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben Sie für **\@property** den Wert **identity_range** oder **pub_identity_range** und für **\@value** den neuen Bereichswert an.  
   

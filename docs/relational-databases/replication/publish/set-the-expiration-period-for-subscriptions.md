@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 542f0613-5817-42d0-b841-fb2c94010665
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 4244219c81d511dee739b7c39fbc6a469bc02707
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 677d469c12dd2f72988d469b2fc5541ad0900996
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88326976"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468921"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>Festlegen des Ablaufdatums für Abonnements
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88326976"
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
   
--   Das Abonnementablaufdatum wird auch als *Beibehaltungsdauer*bezeichnet. Der Cleanup von Mergereplikationsmetadaten wird durch diese Einstellung bestimmt:  
+-   Das Abonnementablaufdatum wird auch als *Beibehaltungsdauer* bezeichnet. Der Cleanup von Mergereplikationsmetadaten wird durch diese Einstellung bestimmt:  
   
     -   Die Replikation kann der Cleanup von Metadaten aus den Veröffentlichungs- und Abonnementdatenbanken erst ausführen, wenn das Ablaufdatum erreicht ist. Geben Sie keinen zu hohen Wert für die Beibehaltungsdauer an, da dies zu einer Beeinträchtigung der Replikationsleistung führen kann. Es wird empfohlen, eine niedrigere Einstellung zu verwenden, wenn Sie zuverlässig einschätzen können, dass alle Abonnenten innerhalb dieser Zeitspanne regelmäßig synchronisiert werden.  
   
