@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1caf51460496fa734bed5e2a88cce3abf9b138e5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: bd89afe79f1e6cf7a5745b04378c1b403142c56e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427392"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97426410"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Verwenden der Tabellen inserted und deleted
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "88427392"
 > [!NOTE]  
 >  Wenn Triggeraktionen von der Anzahl der Zeilen abhängen, die von einer Datenänderung betroffen sind, sollten Sie Tests verwenden (z.B. die Untersuchung von @@ROWCOUNT), die mehrzeilige Datenänderungen (eine INSERT-, DELETE- oder UPDATE-Anweisung, die auf einer SELECT-Anweisung basiert) überprüfen und die entsprechenden Vorgänge ausführen. Weitere Informationen finden Sie unter [Erstellen von DML-Triggern für die Verarbeitung mehrerer Datenzeilen](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] lässt keine Spaltenverweise vom Typ **text**, **ntext**oder **image** in der inserted- und deleted-Tabelle für AFTER-Trigger zu. Diese Datentypen sind jedoch nur aus Gründen der Abwärtskompatibilität eingeschlossen. Speichern Sie umfangreiche Daten bevorzugt mit den Datentypen **varchar(max)** , **nvarchar(max)** und **varbinary(max)** . Sowohl AFTER- als auch INSTEAD OF-Trigger unterstützen **varchar(max)** -, **nvarchar(max)** - und **varbinary(max)** -Daten in der inserted- und deleted-Tabelle. Weitere Informationen finden Sie unter [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] lässt keine Spaltenverweise vom Typ **text**, **ntext** oder **image** in der inserted- und deleted-Tabelle für AFTER-Trigger zu. Diese Datentypen sind jedoch nur aus Gründen der Abwärtskompatibilität eingeschlossen. Speichern Sie umfangreiche Daten bevorzugt mit den Datentypen **varchar(max)** , **nvarchar(max)** und **varbinary(max)** . Sowohl AFTER- als auch INSTEAD OF-Trigger unterstützen **varchar(max)** -, **nvarchar(max)** - und **varbinary(max)** -Daten in der inserted- und deleted-Tabelle. Weitere Informationen finden Sie unter [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
  **Beispiel für die Verwendung der inserted-Tabelle in einem Trigger zum Erzwingen einer Geschäftsregel**  
   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: c7317eec-c0e9-479e-a4a7-83b6b6c58d59
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d63f91b0442d0346abbbd79868dc42a6e7881587
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 827327524cd818d830ba10d0e93ccec6ab7743bb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427422"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97426415"
 ---
 # <a name="modify-or-rename-dml-triggers"></a>Ändern oder Umbenennen von DML-Triggern
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,9 +73,9 @@ ms.locfileid: "88427422"
   
 #### <a name="to-modify-a-dml-trigger"></a>So ändern Sie einen DML-Trigger  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und erweitern Sie dann diese Instanz.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und erweitern Sie dann diese Instanz.  
   
-2.  Erweitern Sie die gewünschte Datenbank, **Tabellen**und dann die Tabelle, die den zu ändernden Trigger enthält.  
+2.  Erweitern Sie die gewünschte Datenbank, **Tabellen** und dann die Tabelle, die den zu ändernden Trigger enthält.  
   
 3.  Erweitern Sie **Trigger**, klicken Sie mit der rechten Maustaste auf den zu ändernden Trigger, und klicken Sie anschließend auf **Ändern**.  
   

@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: ec081d42-57e4-43c7-9e1c-317ba8f23437
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8df54961057d12191e732fc4f3ec287f9bd32ef9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 31aaceb646bf735731317177f579df638da1b5c9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89523588"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97426578"
 ---
 # <a name="temporal-table-system-consistency-checks"></a>Systemkonsistenzprüfungen von temporalen Tabellen
 
@@ -29,7 +29,7 @@ Bei der Verwendung von temporaler Tabellen führt das System eine Reihe von Kons
 
 ## <a name="system-consistency-checks"></a>Systemkonsistenzprüfungen
 
-Bevor **SYSTEM_VERSIONING** auf **ON**festgelegt wird, wird eine Reihe von Überprüfungen für die Verlaufstabelle und die aktuelle Tabelle ausgeführt. Diese Überprüfungen werden in Schemaüberprüfungen und Datenüberprüfungen gruppiert (sofern die Tabelle nicht leer ist). Darüber hinaus führt das System auch eine Konsistenzprüfung der Laufzeit durch.
+Bevor **SYSTEM_VERSIONING** auf **ON** festgelegt wird, wird eine Reihe von Überprüfungen für die Verlaufstabelle und die aktuelle Tabelle ausgeführt. Diese Überprüfungen werden in Schemaüberprüfungen und Datenüberprüfungen gruppiert (sofern die Tabelle nicht leer ist). Darüber hinaus führt das System auch eine Konsistenzprüfung der Laufzeit durch.
 
 ### <a name="schema-check"></a>Schemaüberprüfung
 
@@ -37,7 +37,7 @@ Wenn eine temporale Tabelle erstellt oder eine vorhandene Tabelle dahingehend ge
 
 1. Die Namen und die Anzahl der Spalten sind in der aktuellen Tabelle und der Verlaufstabelle identisch.
 2. Die Datentypen jeder Spalte in der aktuellen Tabelle und der Verlaufstabelle entsprechen einander.
-3. Die Zeitraumspalten wurden auf **NOT NULL**festgelegt.
+3. Die Zeitraumspalten wurden auf **NOT NULL** festgelegt.
 4. Die aktuelle Tabelle besitzt eine Primärschlüsseleinschränkung, während die Verlaufstabelle keine Primärschlüsseleinschränkung aufweist.
 5. Es wurden keine **IDENTITY** -Spalten in der Verlaufstabelle definiert.
 6. Es wurden keine Trigger in der Verlaufstabelle definiert.

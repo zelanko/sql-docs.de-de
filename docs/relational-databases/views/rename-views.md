@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5eed0488-81d2-40e8-8fdf-b0a640a591d0
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 135bccd7ff94a88f7f1036b4bce4e55451eab4e6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 14936117fe2e9267a2ebb818a102d1245548e073
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463665"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97425480"
 ---
 # <a name="rename-views"></a>Umbenennen von Sichten
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "88463665"
   
 #### <a name="to-rename-a-view"></a>So benennen Sie eine Sicht um  
   
-1.  Erweitern Sie im **Objekt-Explorer**die Datenbank mit der Sicht, die Sie umbenennen möchten, und erweitern Sie dann den Ordner **Sicht** .  
+1.  Erweitern Sie im **Objekt-Explorer** die Datenbank mit der Sicht, die Sie umbenennen möchten, und erweitern Sie dann den Ordner **Sicht** .  
   
 2.  Klicken Sie mit der rechten Maustaste auf die Sicht, die Sie umbenennen möchten, und wählen Sie die Option **Umbenennen**.  
   
