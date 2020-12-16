@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8e5da6272ce3bb60852e10f3bac9cd3fa9a1435f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9597b6c0811ff2fe917a2282b43e677b74eebd4f
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426862"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490070"
 ---
 # <a name="alter-table-table_constraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -177,7 +177,7 @@ ms.locfileid: "88426862"
  Gibt die einer DEFAULT-Definition auf Tabellenebene zugeordnete Spalte an.  
   
  WITH VALUES  
- Beim Hinzufügen einer Spalte UND einer DEFAULT-Beschränkung wird, wenn die Spalte NULL-Werte mit WITH VALUES erlaubt, für bestehende Zeilen der Wert der neuen Spalte auf den in DEFAULT *constant_expression* angegebenen Wert gesetzt. Wenn die hinzugefügte Spalte NULL-Werte nicht zulässt, wird der Wert der Spalte immer auf den im DEFAULT *constant expression* angegebenen Wert gesetzt. Ab SQL Server 2012 kann dies auch ein Metadatenvorgang sein [Hinzufügen von NOT NULL-Spalten als Onlinevorgang](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation).
+ Beim Hinzufügen einer Spalte UND einer DEFAULT-Beschränkung wird, wenn die Spalte NULL-Werte mit WITH VALUES erlaubt, für bestehende Zeilen der Wert der neuen Spalte auf den in DEFAULT *constant_expression* angegebenen Wert gesetzt. Wenn die hinzugefügte Spalte NULL-Werte nicht zulässt, wird der Wert der Spalte immer auf den im DEFAULT *constant expression* angegebenen Wert gesetzt. Ab SQL Server 2012 kann dies auch ein Metadatenvorgang sein [Hinzufügen von NOT NULL-Spalten als Onlinevorgang](alter-table-transact-sql.md#adding-not-null-columns-as-an-online-operation).
 Wenn dieser verwendet wird, hat dies keine Auswirkung wenn die verknüpfte Spalte ist nicht ebenfalls hinzugefügt wird. 
   
  CHECK  

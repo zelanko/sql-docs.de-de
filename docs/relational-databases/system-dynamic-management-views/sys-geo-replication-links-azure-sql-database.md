@@ -18,12 +18,12 @@ ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: 12adf94f84fbe9c1b47093cf8ab6b106fb9d5249
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c69b375ae55f8d7a4d76c4c619f9c9afe1d50def
+ms.sourcegitcommit: 86534989f7827f1c36ed1333ad9c4557dfd77f3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440651"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97515365"
 ---
 # <a name="sysgeo_replication_links-azure-sql-database"></a>sys.geo_replication_links (Azure SQL-Datenbank)
 
@@ -31,20 +31,20 @@ ms.locfileid: "97440651"
 
   Enthält eine Zeile für jeden Replikations Link zwischen primären und sekundären Datenbanken in einer Partnerschaft für die georeplikation. Diese Sicht befindet sich in der logischen Masterdatenbank  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|ID der aktuellen Datenbank in der sys. Database-Sicht.|  
 |start_date|**datetimeoffset**|Die UTC-Zeit in einem regionalen SQL-Daten Bank Rechenzentrum, als die Daten Bank Replikation initiiert wurde.|  
-|modify_date|**datetimeoffset**|Die UTC-Zeit in einem regionalen SQL-Daten Bank Rechenzentrum, wenn die georeplikation der Datenbank abgeschlossen ist. Die neue Datenbank wird ab diesem Zeitpunkt mit der primären Datenbank synchronisiert. .|  
+|modify_date|**datetimeoffset**|Die UTC-Zeit in einem regionalen SQL-Daten Bank Rechenzentrum, wenn die georeplikation der Datenbank abgeschlossen ist. Die neue Datenbank wird ab diesem Zeitpunkt mit der primären Datenbank synchronisiert.|  
 |link_guid|**uniqueidentifier**|Eindeutige ID des Links für die georeplikation.|  
 |partner_server|**sysname**|Der Name des SQL-Datenbankservers, der die georeplizierte Datenbank enthält.|  
 |partner_database|**sysname**|Name der georeplizierten Datenbank auf dem verknüpften SQL-Datenbankserver.|  
-|replication_state|**tinyint**|Der Status der georeplikation für diese Datenbank, einer von:.<br /><br /> 0 = ausstehend. Die Erstellung der aktiven sekundären Datenbank ist geplant, aber die notwendigen Vorbereitungsschritte sind noch nicht abgeschlossen.<br /><br /> 1 = Seeding. Für das Ziel der georeplikation wird ein Seeding durchgeführt, die beiden Datenbanken sind jedoch noch nicht synchronisiert. Bis das Seeding abgeschlossen ist, können Sie keine Verbindung mit der sekundären Datenbank herstellen. Durch das Entfernen der sekundären Datenbank aus der primären Datenbank wird der Seeding Vorgang abgebrochen.<br /><br /> 2 = Catch-up. Die sekundäre Datenbank befindet sich in einem Transaktions konsistenten Zustand und wird ständig mit der primären Datenbank synchronisiert.|  
+|replication_state|**tinyint**|Der Status der georeplikation für diese Datenbank, eine der folgenden:<br /><br /> 0 = ausstehend. Die Erstellung der aktiven sekundären Datenbank ist geplant, aber die notwendigen Vorbereitungsschritte sind noch nicht abgeschlossen.<br /><br /> 1 = Seeding. Für das Ziel der georeplikation wird ein Seeding durchgeführt, die beiden Datenbanken sind jedoch noch nicht synchronisiert. Bis das Seeding abgeschlossen ist, können Sie keine Verbindung mit der sekundären Datenbank herstellen. Durch das Entfernen der sekundären Datenbank aus der primären Datenbank wird der Seeding Vorgang abgebrochen.<br /><br /> 2 = Catch-up. Die sekundäre Datenbank befindet sich in einem Transaktions konsistenten Zustand und wird ständig mit der primären Datenbank synchronisiert.|  
 |replication_state_desc|**nvarchar(256)**|PENDING (AUSSTEHEND)<br /><br /> SEEDING<br /><br /> CATCH_UP|  
 |Rolle (role)|**tinyint**|Die georeplikationsrolle ist eine der folgenden:<br /><br /> 0 = primär. Der database_id bezieht sich auf die primäre Datenbank in der georeplikationspartnerschaft.<br /><br /> 1 = sekundär.  Der database_id bezieht sich auf die primäre Datenbank in der georeplikationspartnerschaft.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|Der sekundäre Typ, einer der folgenden:<br /><br /> 0 = Nein. Der Zugriff auf die sekundäre Datenbank ist bis zum Failover nicht möglich.<br /><br /> 1 = schreibgeschützt. Auf die sekundäre Datenbank kann nur für Clientverbindungen mit applicationintent = schreibgeschützt zugegriffen werden.<br /><br /> 2 = Alle. Auf die sekundäre Datenbank kann jede Client Verbindung zugreifen.|  
-|secondary_allow_connections _DESC|**nvarchar(256)**|No<br /><br /> Alle<br /><br /> Schreibgeschützt|  
+|secondary_allow_connections _DESC|**nvarchar(256)**|Nein<br /><br /> All<br /><br /> Schreibgeschützt|  
   
 ## <a name="permissions"></a>Berechtigungen
 
