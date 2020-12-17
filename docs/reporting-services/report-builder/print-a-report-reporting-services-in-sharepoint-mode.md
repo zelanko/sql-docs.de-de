@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: eb3511714f893e4513c8a5ba1c215807003e6534
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 25d400a063d668972092a37d57b9371f74e5d980
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80290815"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409541"
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>Drucken eines Berichts (Reporting Services im SharePoint-Modus)
   Bei einem Berichtsserver, der im SharePoint-Modus ausgeführt wird, gibt es drei Möglichkeiten zum Drucken eines Berichts aus einer SharePoint-Webanwendung:  
@@ -32,7 +32,7 @@ ms.locfileid: "80290815"
 > [!NOTE]  
 >  Wenn Sie einen Bericht drucken möchten, müssen Sie über Berechtigungen zum Anzeigen des Berichts verfügen.  
   
- Verwenden Sie im Menü **Aktionen** die Option **Drucken** , um bestmögliche Ergebnisse beim Drucken eines Berichts von einer Webseite zu erzielen. Die Aktion **Drucken** ist an ein Clientdrucksteuerelement gebunden, das vom Berichtsserver heruntergeladen wird. Der Download erfolgt, wenn Sie **Drucken**zum ersten Mal auswählen.  
+ Verwenden Sie im Menü **Aktionen** die Option **Drucken** , um bestmögliche Ergebnisse beim Drucken eines Berichts von einer Webseite zu erzielen. Die Aktion **Drucken** ist an ein Clientdrucksteuerelement gebunden, das vom Berichtsserver heruntergeladen wird. Der Download erfolgt, wenn Sie **Drucken** zum ersten Mal auswählen.  
   
  Berichtsautoren können Berichte speziell für die Druckausgabe oder für ein bestimmtes Anwendungsformat entwerfen. Beachten Sie, dass aufgrund der Art, wie die Paginierung für unterschiedliche Anwendungsformate implementiert ist, u. U. nicht für jeden Bericht in jedem Anwendungsformat optimale Druckausgabeergebnisse erzielt werden können. Im Gegensatz zu Berichten, die für die Druckausgabe entworfen wurden, können für die Bildschirmausgabe entworfene Berichtsseiten unterschiedliche Mengen von Daten enthalten. Beispielsweise kann eine Seite in Berichten mit einer Matrix sowohl horizontal als auch vertikal vergrößert werden, wenn Sie die Zeilen und Spalten erweitern. Beim Drucken eines Berichts mit variabler Größe erhält ein Benutzer, der die Matrix nicht erweitert, andere Druckergebnisse als ein Benutzer, der die Matrix erweitert. Die meisten Ausdrucke von exportierten Berichten enthalten alle sichtbaren Elemente eines Berichts, die dem Benutzer auf einem Computerbildschirm angezeigt werden.  
   

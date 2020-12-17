@@ -8,13 +8,13 @@ ms.date: 08/06/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: c43c5e252c016d8d2094dc2b26d6e87fe3f05749
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: e7480b4d31685be402c98892557ddfb5f7db0ab5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869953"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470981"
 ---
 # <a name="tips-for-using-r-packages"></a>Tipps für die Verwendung von R-Paketen
 
@@ -36,11 +36,11 @@ Wenn Sie mehrere Pakete installieren müssen oder sicherstellen möchten, dass j
 
 Es gibt mehrere Quellen für R-Pakete wie [CRAN](https://cran.r-project.org/) und [Bioconductor](https://www.bioconductor.org/). Auf der offiziellen Website für die R-Sprache (<https://www.r-project.org/>) sind viele dieser Ressourcen aufgeführt. Microsoft bietet [MRAN](https://mran.microsoft.com/) für die Open-Source-Distribution von R ([MRO](https://mran.microsoft.com/open)) und weitere Pakete an. Viele Pakete werden in GitHub veröffentlicht. Dort können Entwickler auch den Quellcode erhalten.
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 R-Pakete werden auf mehreren Computerplattformen ausgeführt. Stellen Sie sicher, dass es sich bei den installierten Versionen um Windows-Binärdateien handelt.
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 R-Pakete werden auf mehreren Computerplattformen ausgeführt. Stellen Sie sicher, dass es sich bei den installierten Versionen um Linux-Binärdateien handelt.
 ::: moniker-end
 
@@ -90,9 +90,9 @@ Mithilfe der folgenden Richtlinien können Sie Fehler vom Typ „Paket nicht gef
 
 ## <a name="see-also"></a>Weitere Informationen
 
-::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="<=sql-server-2017"
 + [Installieren von Paketen mit R-Tools](install-r-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 + [Installieren von neuen R-Paketen mit sqlmlutils](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

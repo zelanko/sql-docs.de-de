@@ -14,13 +14,13 @@ ms.assetid: e6c46c6b-2d61-4571-bc8e-a831cd6e6302
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: <= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a17be8d63b2ecea316819b90ae5cc8051bd0c2a6
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: <= sql-server-2016
+ms.openlocfilehash: 5c4e73f37930c9c2bfc7458b5ec035739c67bf08
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035075"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464401"
 ---
 # <a name="create-an-activex-script-job-step"></a>Erstellen eines ActiveX-Skriptauftragsschritts
 
@@ -54,7 +54,7 @@ Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agen
   
 3.  Klicken Sie im Dialogfeld **Auftragseigenschaften** auf die Seite **Schritte** und dann auf **Neu**.  
   
-4.  Geben Sie im Dialogfeld **Neuer Auftragsschritt** unter **Schrittname**einen Schrittnamen für den Auftrag ein.  
+4.  Geben Sie im Dialogfeld **Neuer Auftragsschritt** unter **Schrittname** einen Schrittnamen für den Auftrag ein.  
   
 5.  Klicken Sie in der Liste **Typ** auf **ActiveX-Skript**.  
   

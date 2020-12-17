@@ -21,13 +21,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 69892b05d5e9d34784a06551b929fe9664e2ca4b
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5c96185636472a1bf7cc512fa4947597289f38e5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093485"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474281"
 ---
 # <a name="navigate-code-and-text"></a>Navigieren in Code und Text
 
@@ -68,7 +68,7 @@ Zum Bewegen in Text können Sie Folgendes verwenden:
 -   Verwenden Sie STRG+NACH-OBEN und STRG+NACH-UNTEN, um einen Bildlauf in der Ansicht auszuführen, ohne die Einfügemarke zu verschieben.  
   
 ## <a name="go-to-command"></a>Gehe zu (Befehl)  
- Mit dem Befehl **Gehe zu** wechseln Sie zu einer bestimmten Zeilennummer. Klicken Sie zum Anzeigen der Zeilennummern im Dialogfeld **Optionen** auf **Text-Editor**, klicken Sie auf **Alle Sprachen**, klicken Sie auf **Allgemein**, und wählen Sie dann **Zeilennummern**aus.  
+ Mit dem Befehl **Gehe zu** wechseln Sie zu einer bestimmten Zeilennummer. Klicken Sie zum Anzeigen der Zeilennummern im Dialogfeld **Optionen** auf **Text-Editor**, klicken Sie auf **Alle Sprachen**, klicken Sie auf **Allgemein**, und wählen Sie dann **Zeilennummern** aus.  
   
  **So wechseln Sie zu einer bestimmten Zeilennummer**  
   

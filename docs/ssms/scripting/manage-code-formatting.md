@@ -26,13 +26,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d85ba0589e239fc54280f3c418eaf011e69906b1
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 04adcfacb3a540a9275f445a71ee9813c1702246
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093406"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97408410"
 ---
 # <a name="manage-code-formatting"></a>Verwalten der Codeformatierung
 
@@ -74,9 +74,9 @@ Mit dem Editor können Sie Code formatieren, z. B. mit Einzug, ausgeblendetem Te
   
 4.  Klicken Sie auf **Tabstopps**.  
   
-5.  Zum Angeben von Tabulatorzeichen beim Verwenden von Tabstopps und Einzügen klicken Sie auf **Tabulatoren beibehalten**. Zum Angeben von Leerzeichen wählen Sie die Option **Leerzeichen einfügen**aus.  
+5.  Zum Angeben von Tabulatorzeichen beim Verwenden von Tabstopps und Einzügen klicken Sie auf **Tabulatoren beibehalten**. Zum Angeben von Leerzeichen wählen Sie die Option **Leerzeichen einfügen** aus.  
   
-     Wenn Sie **Leerzeichen einfügen**auswählen, geben Sie die Anzahl der Leerzeichen für die einzelnen Tabstopps oder Einzüge unter **Tabulatorgröße** bzw. **Einzugsgröße**an.  
+     Wenn Sie **Leerzeichen einfügen** auswählen, geben Sie die Anzahl der Leerzeichen für die einzelnen Tabstopps oder Einzüge unter **Tabulatorgröße** bzw. **Einzugsgröße** an.  
   
 #### <a name="to-indent-code"></a>So ziehen Sie Code ein  
   
@@ -150,6 +150,6 @@ Mit dem Editor können Sie Code formatieren, z. B. mit Einzug, ausgeblendetem Te
   
 3.  Zum Ändern der Option für nur eine Sprache klicken Sie auf den entsprechenden Sprachordner, und klicken Sie dann auf **Allgemein**. Zum Ändern der Option für alle Sprachen klicken Sie auf **Alle Sprachen** , und klicken Sie dann auf **Allgemein**.  
   
-4.  Wählen Sie die Option **Einfaches Klicken für URLs aktivieren**aus.  
+4.  Wählen Sie die Option **Einfaches Klicken für URLs aktivieren** aus.  
   
   

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b788a7f0996eaf8b6321caf9418d660deb08ac9c
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: adf3998c70af1f13a4dc12c5a1b7c9b92ced9bb9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039064"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466401"
 ---
 # <a name="find-and-replace"></a>Suchen und Ersetzen
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,22 +40,22 @@ ms.locfileid: "92039064"
  Wenn die Such-Engine die Suchzeichenfolge als regulären Ausdruck interpretieren soll, aktivieren Sie unter **Suchoptionen** das Kontrollkästchen **Mit**, und klicken Sie anschließend auf **Reguläre Ausdrücke**.  
   
  **Ausdrucks-Generator**  
- Die dreieckige Schaltfläche neben dem Feld **Suchen nach** steht zur Verfügung, nachdem das Kontrollkästchen **Mit** in den **Suchoptionen**aktiviert wurde. Klicken Sie auf diese Schaltfläche, um in Abhängigkeit von der für **Mit** gewählten Option eine Liste von Platzhaltern oder regulären Ausdrücken anzuzeigen. Ein aus dieser Liste ausgewähltes Element wird der Zeichenfolge hinzugefügt, die unter **Suchen nach** angegeben wurde.  
+ Die dreieckige Schaltfläche neben dem Feld **Suchen nach** steht zur Verfügung, nachdem das Kontrollkästchen **Mit** in den **Suchoptionen** aktiviert wurde. Klicken Sie auf diese Schaltfläche, um in Abhängigkeit von der für **Mit** gewählten Option eine Liste von Platzhaltern oder regulären Ausdrücken anzuzeigen. Ein aus dieser Liste ausgewähltes Element wird der Zeichenfolge hinzugefügt, die unter **Suchen nach** angegeben wurde.  
   
 ## <a name="replace-with"></a>Ersetzen durch  
  Mithilfe dieser Steuerelemente können Sie angeben, was anstelle der übereinstimmenden Zeichenfolge bzw. des übereinstimmenden Ausdrucks eingefügt werden soll.  
   
  **Replace with**  
- Um Instanzen der in **Suchen nach** angegebenen Zeichenfolge mit einer anderen zu ersetzen, geben Sie in diesem Feld die Zeichenfolge ein, die sie ersetzen soll. Um Instanzen des in **Suche nach**angegebenen Texts zu löschen, lassen Sie dieses Feld leer. Wählen Sie die Dropdownliste aus, um die letzten 20 Eingaben anzuzeigen. Um reguläre Ausdrücke in die im Feld **Ersetzen durch** angegebene Zeichenfolge einzubeziehen, aktivieren Sie das Kontrollkästchen **Mit** , und klicken Sie auf die Option **Reguläre Ausdrücke**. Dieses Feld wird nur angezeigt, wenn das Dialogfeld durch Klicken auf **Schnellersetzung**geöffnet wurde.  
+ Um Instanzen der in **Suchen nach** angegebenen Zeichenfolge mit einer anderen zu ersetzen, geben Sie in diesem Feld die Zeichenfolge ein, die sie ersetzen soll. Um Instanzen des in **Suche nach** angegebenen Texts zu löschen, lassen Sie dieses Feld leer. Wählen Sie die Dropdownliste aus, um die letzten 20 Eingaben anzuzeigen. Um reguläre Ausdrücke in die im Feld **Ersetzen durch** angegebene Zeichenfolge einzubeziehen, aktivieren Sie das Kontrollkästchen **Mit** , und klicken Sie auf die Option **Reguläre Ausdrücke**. Dieses Feld wird nur angezeigt, wenn das Dialogfeld durch Klicken auf **Schnellersetzung** geöffnet wurde.  
   
  **Replace with**  
  Um Instanzen der in **Suchen nach** angegebenen Zeichenfolge mit einer anderen zu ersetzen, geben Sie in diesem Feld die Zeichenfolge ein, die sie ersetzen soll. Um Instanzen der im Feld **Suche nach** angegebenen Zeichenfolge zu löschen, lassen Sie dieses Feld leer. Wählen Sie die Dropdownliste aus, um die letzten 20 Eingaben anzuzeigen. Um reguläre Ausdrücke in die im Feld **Ersetzen durch** angegebene Zeichenfolge einzubeziehen, aktivieren Sie das Kontrollkästchen **Mit** , und klicken Sie auf die Option **Reguläre Ausdrücke**.  
   
  **Ausdrucks-Generator**  
- Die dreieckige Schaltfläche neben dem Feld **Ersetzen durch** steht zur Verfügung, nachdem das Kontrollkästchen **Mit** in den **Suchoptionen**aktiviert wurde. Klicken Sie auf diese Schaltfläche, um in Abhängigkeit von der für **Mit** gewählten Option eine Liste von Platzhaltern oder regulären Ausdrücken anzuzeigen. Ein aus dieser Liste ausgewähltes Element wird der Zeichenfolge hinzugefügt, die unter **Ersetzen durch** angegeben wurde.  
+ Die dreieckige Schaltfläche neben dem Feld **Ersetzen durch** steht zur Verfügung, nachdem das Kontrollkästchen **Mit** in den **Suchoptionen** aktiviert wurde. Klicken Sie auf diese Schaltfläche, um in Abhängigkeit von der für **Mit** gewählten Option eine Liste von Platzhaltern oder regulären Ausdrücken anzuzeigen. Ein aus dieser Liste ausgewähltes Element wird der Zeichenfolge hinzugefügt, die unter **Ersetzen durch** angegeben wurde.  
   
  **Replace**  
- Klicken Sie auf diese Schaltfläche, um die aktuelle Instanz der im Feld **Suchen nach** angegebenen Zeichenfolge mit jener zu ersetzen, die im Feld **Ersetzen durch** angegeben ist, und um die nächste Instanz innerhalb des Bereichs zu suchen, der im Feld **Suchen in**angegeben ist.  
+ Klicken Sie auf diese Schaltfläche, um die aktuelle Instanz der im Feld **Suchen nach** angegebenen Zeichenfolge mit jener zu ersetzen, die im Feld **Ersetzen durch** angegeben ist, und um die nächste Instanz innerhalb des Bereichs zu suchen, der im Feld **Suchen in** angegeben ist.  
   
  **Alle ersetzen**  
  Klicken Sie auf diese Schaltfläche, um alle Instanzen der im Feld **Suchen nach** angegebenen Zeichenfolge in allen Dateien innerhalb des unter **Suchen in** angegebenen Bereichs mit jener zu ersetzen, die im Feld **Ersetzen durch** angegeben ist.  
@@ -63,14 +63,14 @@ ms.locfileid: "92039064"
 > [!CAUTION]  
 >  Stellen Sie sicher, dass der unter **Suchen in** festgelegte Bereich nur die Dateien umfasst, die Sie ändern möchten.  
   
- Es wird eine Erinnerung mit der Option **Geänderte Dateien geöffnet lassen** angezeigt. Um die Option **Rückgängig** beizubehalten, müssen Sie diese Option auswählen. Die Option**Rückgängig** ist nur in Dateien verfügbar, die nach einer Änderung geöffnet bleiben.  
+ Es wird eine Erinnerung mit der Option **Geänderte Dateien geöffnet lassen** angezeigt. Um die Option **Rückgängig** beizubehalten, müssen Sie diese Option auswählen. Die Option **Rückgängig** ist nur in Dateien verfügbar, die nach einer Änderung geöffnet bleiben.  
   
  **Datei überspringen**  
- Wird verfügbar, wenn der unter **Suchen in** angegebene Wert mehrere Dateien einschließt. Klicken Sie auf diese Schaltfläche, wenn Sie die aktuelle Datei nicht durchsuchen oder ändern möchten. Die Suche wird dann in der nächsten Datei auf der Liste unter **Suchen in**fortgesetzt.  
+ Wird verfügbar, wenn der unter **Suchen in** angegebene Wert mehrere Dateien einschließt. Klicken Sie auf diese Schaltfläche, wenn Sie die aktuelle Datei nicht durchsuchen oder ändern möchten. Die Suche wird dann in der nächsten Datei auf der Liste unter **Suchen in** fortgesetzt.  
   
 ## <a name="look-in"></a>Suchen in  
  **Look in**  
- Wählen Sie den Speicherort aus, in dem der unter **Suchen nach**angegebene Text gesucht werden soll. Mit der Option **Aktuelles Dokument**wird das Dokumentfenster durchsucht, das beim Öffnen des Dialogfelds fokussiert war, und mit der Option **Alle geöffneten Dokumentfenster**werden alle Dokumentfenster durchsucht, die aktuell in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]geöffnet sind.  
+ Wählen Sie den Speicherort aus, in dem der unter **Suchen nach** angegebene Text gesucht werden soll. Mit der Option **Aktuelles Dokument** wird das Dokumentfenster durchsucht, das beim Öffnen des Dialogfelds fokussiert war, und mit der Option **Alle geöffneten Dokumentfenster** werden alle Dokumentfenster durchsucht, die aktuell in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]geöffnet sind.  
   
 ## <a name="find-options"></a>Mit  
  Sie können den Abschnitt **Suchoptionen** reduzieren oder erweitern. Die folgenden Optionen können aktiviert oder deaktiviert werden.  
@@ -100,10 +100,10 @@ ms.locfileid: "92039064"
  Beginnt die Suche nach dem im Feld **Suchen nach** angegebenen Text.  
   
  **Replace**  
- Klicken Sie auf diese Schaltfläche, um die aktuelle Instanz der in **Suchen nach** angegebenen Zeichenfolge mit jener zu ersetzen, die im Feld **Ersetzen durch**angegeben ist, und um die nächste Instanz innerhalb des Bereichs zu suchen, der im Feld **Suchen in**angegeben ist.  
+ Klicken Sie auf diese Schaltfläche, um die aktuelle Instanz der in **Suchen nach** angegebenen Zeichenfolge mit jener zu ersetzen, die im Feld **Ersetzen durch** angegeben ist, und um die nächste Instanz innerhalb des Bereichs zu suchen, der im Feld **Suchen in** angegeben ist.  
   
  **Replace All**  
- Klicken Sie auf diese Schaltfläche, um alle Instanzen der in **Suchen nach** angegebenen Zeichenfolge in allen Dateien innerhalb des unter **Suchen in**angegebenen Bereichs mit jener zu ersetzen, die im Feld **Ersetzen durch**angegeben ist.  
+ Klicken Sie auf diese Schaltfläche, um alle Instanzen der in **Suchen nach** angegebenen Zeichenfolge in allen Dateien innerhalb des unter **Suchen in** angegebenen Bereichs mit jener zu ersetzen, die im Feld **Ersetzen durch** angegeben ist.  
   
 > [!CAUTION]  
 >  Stellen Sie sicher, dass der unter **Suchen in** festgelegte Bereich nur die Dateien umfasst, die Sie ändern möchten.  

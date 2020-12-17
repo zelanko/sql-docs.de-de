@@ -10,13 +10,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66b83e6c2a26f5fb9f8c2676dc3245d4d79e080e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d33b6442ef66a6be4d1ff600fe583947981a017f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036483"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474261"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Öffnen eines Editors (SQL Server Management Studio)
 
@@ -28,7 +28,7 @@ In diesem Thema wird beschrieben, wie die [!INCLUDE[ssDE](../../includes/ssde-md
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] unterstützt vier Editoren: [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor zum Bearbeiten von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts, DMX- und MDX-Editoren zum Bearbeiten von Skripts mit diesen Sprachen und XML/A-Editor zum Bearbeiten von XML/A-Skripts oder XML-Dateien. Diese Editoren können alle auch zum Bearbeiten von Textdateien verwendet werden.  
   
 ### <a name="limitations-and-restrictions"></a>Einschränkungen  
- Falls Sie Dateien mit Benutzern an anderen Standorten gemeinsam nutzen, an denen andere Codepages verwendet werden, sollten Sie die Datei mit der entsprechenden Unicode-Codepage speichern, um Fehler beim Lesen der Datei zu vermeiden. Auch wenn Sie Dateien für UNIX oder Macintosh speichern, sollten Sie darauf achten, die Dateien im geeigneten Dokumentformat zu speichern. Klicken Sie im Menü **Datei** auf **Speichern unter**, klicken Sie auf den Pfeil neben der Schaltfläche **Speichern** , klicken Sie auf **Mit Codierung speichern** , und wählen Sie dann unter **Zeilenenden** entweder **Unix** oder **Macintosh**aus.  
+ Falls Sie Dateien mit Benutzern an anderen Standorten gemeinsam nutzen, an denen andere Codepages verwendet werden, sollten Sie die Datei mit der entsprechenden Unicode-Codepage speichern, um Fehler beim Lesen der Datei zu vermeiden. Auch wenn Sie Dateien für UNIX oder Macintosh speichern, sollten Sie darauf achten, die Dateien im geeigneten Dokumentformat zu speichern. Klicken Sie im Menü **Datei** auf **Speichern unter**, klicken Sie auf den Pfeil neben der Schaltfläche **Speichern** , klicken Sie auf **Mit Codierung speichern** , und wählen Sie dann unter **Zeilenenden** entweder **Unix** oder **Macintosh** aus.  
   
 ### <a name="permissions"></a>Berechtigungen  
  Vorgänge, die Sie in einem Code-Editor ausführen, unterliegen den dem für die Anmeldung verwendeten Authentifizierungskonto erteilten Berechtigungen. Wenn Sie beispielsweise mit der Windows-Authentifizierung ein Fenster des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editors öffnen, können Sie keine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen ausführen, die auf Objekte verweisen, für die dem Windows-Anmeldekonto keine Zugriffsberechtigungen erteilt wurden.  
@@ -39,7 +39,7 @@ In diesem Thema wird beschrieben, wie die [!INCLUDE[ssDE](../../includes/ssde-md
 ### <a name="using-the-filenew-menu"></a>Verwenden des Menüs "Datei/Neu"  
  Klicken Sie im Menü **Datei** auf **Neu**, und wählen Sie dann eine Abfrage-Editor-Option aus:  
   
--   **Abfrage mit aktueller Verbindung**: Öffnet ein neues Editor-Fenster des Typs, der der aktuellen Verbindung in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]zugeordnet ist. Das Editor-Fenster verwendet die gleichen Authentifizierungsinformationen wie die aktuelle Verbindung. Wenn Sie z. B. im Objekt-Explorer eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auswählen und dann **Abfrage mit aktueller Verbindung**verwenden, wird von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ein [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor geöffnet, der mit der gleichen Instanz verbunden ist und die gleichen Authentifizierungsinformationen verwendet.  
+-   **Abfrage mit aktueller Verbindung**: Öffnet ein neues Editor-Fenster des Typs, der der aktuellen Verbindung in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]zugeordnet ist. Das Editor-Fenster verwendet die gleichen Authentifizierungsinformationen wie die aktuelle Verbindung. Wenn Sie z. B. im Objekt-Explorer eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auswählen und dann **Abfrage mit aktueller Verbindung** verwenden, wird von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ein [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor geöffnet, der mit der gleichen Instanz verbunden ist und die gleichen Authentifizierungsinformationen verwendet.  
   
 -   **Datenbank-Engine-Abfrage**: Öffnet einen neuen [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] erforderlichen Informationen abzurufen.  
   
@@ -70,12 +70,12 @@ In diesem Thema wird beschrieben, wie die [!INCLUDE[ssDE](../../includes/ssde-md
 ### <a name="using-object-explorer"></a>Verwenden des Objekt-Explorers  
  Im **Objekt-Explorer**:  
   
--   Klicken Sie mit der rechten Maustaste auf den mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]verbundenen Serverknoten, und wählen Sie anschließend **Neue Abfrage**aus. Dadurch wird ein mit derselben Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] verbundenes Fenster des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editors geöffnet und der Datenbankkontext des Fensters auf die Standarddatenbank für die Anmeldung festgelegt.  
+-   Klicken Sie mit der rechten Maustaste auf den mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]verbundenen Serverknoten, und wählen Sie anschließend **Neue Abfrage** aus. Dadurch wird ein mit derselben Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] verbundenes Fenster des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editors geöffnet und der Datenbankkontext des Fensters auf die Standarddatenbank für die Anmeldung festgelegt.  
   
--   Klicken Sie mit der rechten Maustaste auf einen Datenbankknoten, und wählen Sie dann **Neue Abfrage**aus. Dadurch wird ein mit derselben Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] verbundenes Fenster des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editors geöffnet und der Datenbankkontext des Fensters auf dieselbe Datenbank festgelegt.  
+-   Klicken Sie mit der rechten Maustaste auf einen Datenbankknoten, und wählen Sie dann **Neue Abfrage** aus. Dadurch wird ein mit derselben Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] verbundenes Fenster des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editors geöffnet und der Datenbankkontext des Fensters auf dieselbe Datenbank festgelegt.  
   
 ### <a name="using-solution-explorer"></a>Verwenden des Projektmappen-Explorers  
- Erweitern Sie im **Projektmappen-Explorer**einen Ordner, klicken Sie mit der rechten Maustaste auf ein Element im Ordner, und klicken Sie dann auf **Öffnen** , oder doppelklicken Sie auf das Element bzw. die Datei.  
+ Erweitern Sie im **Projektmappen-Explorer** einen Ordner, klicken Sie mit der rechten Maustaste auf ein Element im Ordner, und klicken Sie dann auf **Öffnen** , oder doppelklicken Sie auf das Element bzw. die Datei.  
   
 ### <a name="using-template-browser-to-open-the-database-engine-query-editor"></a>Verwenden des Vorlagenbrowsers zum Öffnen des Datenbank-Engine-Abfrage-Editors  
   

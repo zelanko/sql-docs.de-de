@@ -8,13 +8,13 @@ ms.topic: conceptual
 ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 689d304798da13a8c8647598ac13d9ca232c6bfc
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 307384f199cf81d051c53bd9fca8047918e12783
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934703"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472501"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Hinzufügen eines zusätzlichen Berichtsservers zu einer Farm (Horizontales Skalieren für SSRS)
 
@@ -61,7 +61,7 @@ ms.locfileid: "91934703"
 |Schritt|Beschreibung und Link|  
 |----------|--------------------------|  
 |Fügen Sie einen SharePoint-Server zu einer Farm hinzu.|Sie müssen SharePoint installieren, um eine weitere Reporting Services-Anwendung bereitzustellen.<br/><br/>Für SharePoint 2013 finden Sie Informationen dazu unter [Hinzufügen eines SharePoint-Servers zu einer Farm in SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx).<br/><br/>Für SharePoint 2016 finden Sie Informationen dazu unter [Hinzufügen eines SharePoint-Servers zu einer Farm in SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx).|  
-|Installieren und konfigurieren Sie Reporting Services im SharePoint-Modus.|Führen Sie die SQL Server-Installation aus. Weitere Informationen zur Installation des SharePoint-Modus von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] finden Sie unter [Installieren des ersten Berichtsservers im SharePoint-Modus](install-the-first-report-server-in-sharepoint-mode.md).<br /><br /> Wenn der Server nur als Anwendungsserver verwendet wird und der Server nicht als WFE verwendet wird, müssen Sie **Reporting Services-Add-In für SharePoint-Produkte**nicht auswählen.<br /><br /> 1) Wählen Sie auf der Seite **Setuprolle** die Option **SQL Server-Funktionsinstallation**aus.<br /><br /> 2) Wählen Sie auf der Seite **Funktionsauswahl** die Option **Reporting Services - SharePoint**aus.<br /><br /> 3) Überprüfen Sie auf der Seite **Reporting Services-Konfiguration**  , ob die Option **Nur installieren** für **SharePoint-Modus von Reporting Services**aktiviert ist.|  
+|Installieren und konfigurieren Sie Reporting Services im SharePoint-Modus.|Führen Sie die SQL Server-Installation aus. Weitere Informationen zur Installation des SharePoint-Modus von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] finden Sie unter [Installieren des ersten Berichtsservers im SharePoint-Modus](install-the-first-report-server-in-sharepoint-mode.md).<br /><br /> Wenn der Server nur als Anwendungsserver verwendet wird und der Server nicht als WFE verwendet wird, müssen Sie **Reporting Services-Add-In für SharePoint-Produkte** nicht auswählen.<br /><br /> 1) Wählen Sie auf der Seite **Setuprolle** die Option **SQL Server-Funktionsinstallation** aus.<br /><br /> 2) Wählen Sie auf der Seite **Funktionsauswahl** die Option **Reporting Services - SharePoint** aus.<br /><br /> 3) Überprüfen Sie auf der Seite **Reporting Services-Konfiguration**  , ob die Option **Nur installieren** für **SharePoint-Modus von Reporting Services** aktiviert ist.|  
 |Überprüfen Sie, ob der Reporting Services betriebsbereit ist.|1) Klicken Sie in der SharePoint-Zentraladministration in der Gruppe **Systemeinstellungen** auf **Server in dieser Farm verwalten** .<br /><br /> 2) Überprüfen Sie den **SQL Server Reporting Services-Dienst**.<br /><br />Weitere Informationen finden Sie unter [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md).|  
   
 ##  <a name="additional-configuration"></a><a name="bkmk_additional"></a> Zusätzliche Konfiguration  

@@ -8,13 +8,13 @@ ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0e2fb03c2b4b79db7d97a3ad66d46d79e669983c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: b57fdb3abd3482d6a395e1e6690f2e628a2a3e9e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194522"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470681"
 ---
 # <a name="troubleshoot-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Behandeln von Problemen mit dem Launchpad-Dienst und der Ausführung externer Skripts in SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -77,7 +77,7 @@ Weitere Informationen finden Sie unter [GRANT (Transact-SQL)](../../t-sql/statem
 
 In diesem Abschnitt werden die häufigsten Fehlermeldungen aufgeführt, die in Launchpad angezeigt werden.
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 ## <a name="unable-to-launch-runtime-for-r-script"></a>„Laufzeit für R-Skript kann nicht gestartet werden“
 
 Wenn sich die Windows-Gruppe für R-Benutzer (oder auch für Python) nicht bei der Instanz anmelden kann, auf der R Services ausgeführt wird, werden Ihnen möglicherweise die folgenden Fehler angezeigt:
@@ -186,12 +186,12 @@ EXEC sp_execute_external_script @language = N'R',
 
 Zur Behebung des Problems müssen Sie das Paket erneut in der Bibliothek der SQL Server-Instanz installieren.
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 >[!NOTE]
 >Wenn Sie eine Instanz von SQL Server 2016 aktualisiert haben, um die neueste Version von Microsoft R zu verwenden, ist der Standardspeicherort der Bibliothek anders. Weitere Informationen finden Sie unter [Verwenden von SqlBindR zum Aktualisieren einer Instanz von R Services](../install/upgrade-r-and-python.md).
 ::: moniker-end
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 ## <a name="launchpad-shuts-down-due-to-mismatched-dlls"></a>Launchpad wird aufgrund von nicht übereinstimmenden DLLs heruntergefahren.
 
 Wenn Sie die Datenbank-Engine mit anderen Funktionen installieren, den Server patchen und später die Machine Learning-Funktion über das ursprüngliche Medium hinzufügen, ist möglicherweise die falsche Version der Machine Learning-Komponenten installiert. Wenn Launchpad einen Versionskonflikt erkennt, wird das Programm heruntergefahren und eine Sicherungsdatei erstellt.

@@ -9,24 +9,24 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 07b2cf5a77199f64d89d8dd61f8ec89268d759c5
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: e80e3414271d520b5fd74d4a943a173a1ecdbfac
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173403"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470401"
 ---
 # <a name="python-tutorial-prepare-data-to-train-a-linear-regression-model-with-sql-machine-learning"></a>Python-Tutorial: Vorbereiten von Daten für das Training eines linearen Regressionsmodells mit SQL Machine Learning
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 Im zweiten Teil dieser vierteiligen Tutorialreihe bereiten Sie Daten aus einer Datenbank mithilfe von Python vor. Diese Daten verwenden Sie in einem späteren Teil dieser Reihe zum Trainieren und Bereitstellen eines linearen Regressionsmodells in Python mit SQL Server Machine Learning Services oder in Big Data-Clustern.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Im zweiten Teil dieser vierteiligen Tutorialreihe bereiten Sie Daten aus einer Datenbank mithilfe von Python vor. Diese Daten verwenden Sie in einem späteren Teil dieser Reihe zum Trainieren und Bereitstellen eines linearen Regressionsmodells in Python mit SQL Server-Machine Learning Services.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 Im zweiten Teil dieser vierteiligen Tutorialreihe bereiten Sie Daten aus einer Datenbank mithilfe von Python vor. Diese Daten verwenden Sie in einem späteren Teil dieser Reihe zum Trainieren und Bereitstellen eines linearen Regressionsmodells in Python mit Machine Learning Services in Azure SQL Managed Instance.
 ::: moniker-end
 

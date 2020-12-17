@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1c2094a4ee16d33c6e076440e56a55434b2347a
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 6826e09f85e001e9932e2c6f85c400f722534c2a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987186"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409346"
 ---
 # <a name="create-delete-or-modify-a-folder---reporting-services"></a>Erstellen, Löschen oder Ändern eines Ordners – Reporting Services
   Sie können Ordner erstellen, um die auf einem Berichtsserver zu veröffentlichenden Elemente zu organisieren und zu verwalten. Mit der Erstellung von Ordnern können Benutzer relevante Berichte leichter finden. Für Inhalts-Manager stellen Ordner ein Framework für die Anwendung von Berechtigungen dar. Sie können Rollenzuweisungen für bestimmte Ordner erstellen, um den Zugriff auf Berichte einzuschränken, die sich aktuell in der Entwicklung befinden oder die nur bestimmten Personen zugänglich gemacht werden sollen.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 ## <a name="to-create-a-folder"></a>So erstellen Sie einen Ordner  
   
@@ -63,13 +63,13 @@ ms.locfileid: "91987186"
   
     -   Um den Ordner in der Standardansicht auf der Seite **Inhalt** anzuzeigen, deaktivieren Sie die Option **In Listenansicht ausblenden**.  
   
-6.  Sie können den Ordner und seinen Inhalt auch entfernen, indem Sie auf **Löschen**klicken.  
+6.  Sie können den Ordner und seinen Inhalt auch entfernen, indem Sie auf **Löschen** klicken.  
   
 7.  Klicken Sie auf **Apply** (Übernehmen), um die Änderungen zu speichern.  
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
  
 ## <a name="to-create-a-folder"></a>So erstellen Sie einen Ordner  
   

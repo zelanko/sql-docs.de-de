@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f891511b5c3547dbeecf35f27b3a56682a7b6749
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 5190cc4e8525daf79354005132705ae1a27b32a3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636156"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471111"
 ---
 # <a name="offline-install-sql-server-machine-learning-services-python-and-r-on-computers-with-no-internet-access"></a>Offlineinstallation von SQL Server Machine Learning Services mit Python und R auf Computern ohne Internetzugriff
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -31,7 +31,7 @@ Die datenbankinterne Analysefunktion umfasst die Instanz der Datenbank-Engine so
 
 Auf einem isolierten Server werden Machine Learning-Funktionen und spezifische Funktionen für die R- bzw. Python-Programmiersprache über CAB-Dateien hinzugefügt. 
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15"
 ## <a name="sql-server-2019-offline-install"></a>Offlineinstallation von SQL Server 2019
 
 Um SQL Server Machine Learning Services (R und Python) auf einem isolierten Server zu installieren, laden Sie zunächst das erste Release von SQL Server und die entsprechenden CAB-Dateien für R- und Python-Unterstützung herunter. Auch wenn der Server sofort aktualisiert werden soll, damit er das neueste kumulative Update verwendet, muss zuerst ein erstes Release installiert werden.
@@ -63,7 +63,7 @@ Microsoft Python Server | [SPS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlin
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 ## <a name="sql-server-2017-offline-install"></a>Offlineinstallation von SQL Server 2017
 
 Um SQL Server Machine Learning Services (R und Python) auf einem isolierten Server zu installieren, laden Sie zunächst das erste Release von SQL Server und die entsprechenden CAB-Dateien für R- und Python-Unterstützung herunter. Auch wenn der Server sofort aktualisiert werden soll, damit er das neueste kumulative Update verwendet, muss zuerst ein erstes Release installiert werden.
@@ -92,7 +92,7 @@ Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwl
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 ## <a name="sql-server-2016-offline-install"></a>Offlineinstallation von SQL Server 2016
 
@@ -142,7 +142,7 @@ Wenn Sie das SQL Server-Setup auf einem vom Internet getrennten Computer ausfüh
 
 Es wird empfohlen, dass Sie das neueste kumulative Update sowohl auf die Datenbank-Engine als auch auf die Machine Learning-Komponenten anwenden. Kumulative Updates werden über das Setupprogramm installiert. 
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15"
 1. Beginnen Sie mit einer Baselineinstanz. Sie können kumulative Updates nur auf vorhandene Installationen des ersten Releases von SQL Server anwenden:
 
 2. Klicken Sie auf einem mit dem Internet verbundenen Gerät auf die Liste für das kumulative Update für Ihre SQL Server-Version:
@@ -150,7 +150,7 @@ Es wird empfohlen, dass Sie das neueste kumulative Update sowohl auf die Datenba
    + SQL Server 2019-Updates *(es sind noch keine Updates für 2019 verfügbar)* .
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 1. Beginnen Sie mit einer Baselineinstanz. Sie können kumulative Updates nur auf vorhandene Installationen des ersten Releases von SQL Server anwenden:
 
 2. Klicken Sie auf einem mit dem Internet verbundenen Gerät auf die Liste für das kumulative Update für Ihre SQL Server-Version:
@@ -158,7 +158,7 @@ Es wird empfohlen, dass Sie das neueste kumulative Update sowohl auf die Datenba
    + [SQL Server 2017-Updates](https://sqlserverupdates.com/sql-server-2017-updates/)
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 1. Beginnen Sie mit einer Baselineinstanz. Sie können kumulative Updates nur auf vorhandene Installationen des ersten Releases von SQL Server 2016, SQL Server 2016 SP 1 oder SQL Server 2016 SP 2 anwenden:
 
 2. Klicken Sie auf einem mit dem Internet verbundenen Gerät auf die Liste für das kumulative Update für Ihre SQL Server-Version:
@@ -193,7 +193,7 @@ Für diesen Schritt ist ein Neustart des Servers erforderlich. Wenn Sie im Begri
 
 ## <a name="post-install-configuration"></a>Konfiguration nach der Installation
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 Starten Sie nach Abschluss der Installation den Dienst neu, und konfigurieren Sie dann den Server, um die Skriptausführung zu aktivieren:
 
 + [Aktivieren der Ausführung des externen Skripts](sql-machine-learning-services-windows-install.md#bkmk_enableFeature)
@@ -204,7 +204,7 @@ Eine erste Offlineinstallation von SQL Server Machine Learning Services erforder
 + [Zusätzliche Konfiguration bei Bedarf](sql-machine-learning-services-windows-install.md#additional-configuration)
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Starten Sie nach Abschluss der Installation den Dienst neu, und konfigurieren Sie dann den Server, um die Skriptausführung zu aktivieren:
 
 + [Aktivieren der Ausführung des externen Skripts](sql-r-services-windows-install.md#bkmk_enableFeature)

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9c70b0f4-2db8-4c2e-acbf-96e2a55ddc48
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a6435b5e113d7ac79546e415479acb47e1c90b89
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 9ef302fbbcc11fa5363538092f35b65a94906b8b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87235696"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466641"
 ---
 # <a name="manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager"></a>Verwalten aller Datenwarnungen auf einer SharePoint-Website im Datenwarnungs-Manager
 
@@ -39,7 +39,7 @@ SharePoint-Warnungsadministratoren können eine Liste der von allen Benutzern de
   
 3.  Führen Sie einen Bildlauf zum Ende der Liste durch, und klicken Sie auf **Siteeinstellungen**.  
   
-4.  Klicken Sie unter **Reporting Services**auf **Datenwarnungen verwalten**.  
+4.  Klicken Sie unter **Reporting Services** auf **Datenwarnungen verwalten**.  
   
 5.  Klicken Sie neben der Liste **Warnungen anzeigen für folgenden Benutzer** auf den Pfeil nach unten, und wählen Sie den Benutzer aus, dessen Warnungen Sie anzeigen möchten.  
   

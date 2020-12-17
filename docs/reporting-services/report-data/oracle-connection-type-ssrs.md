@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f92b7e0a414cbe6b9cbdb9dcc04cc8779ff4cff6
-ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
+ms.openlocfilehash: 1df8e6c21f4aba600d36314ea224d1a77d6f2332
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93328472"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464441"
 ---
 # <a name="oracle-connection-type-ssrs--power-bi-report-server"></a>Oracle-Verbindungstyp (SSRS und Power BI-Berichtsserver)
 
@@ -156,7 +156,7 @@ Weitere Informationen finden Sie in den folgenden Artikeln:
 
 Sie können Daten auch mit einem OLE DB-Datenquellentyp aus einer Oracle-Datenbank abrufen. Weitere Informationen finden Sie unter [OLE DB-Verbindungstyp &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md).  
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions" 
+::: moniker range=">=sql-server-2017"
 
 ### <a name="report-models"></a>Berichtsmodelle
 

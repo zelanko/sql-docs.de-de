@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 166808e1-ada7-48d2-bda8-8f7c017fb3aa
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: df5e996ffdc9a307b14c8befd71c64036927b562
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 87c453d6b896a998d6a3229d57db905cf57cc0fb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891500"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472531"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>Gewähren von Berechtigungen an Benutzer und Warnungsadministratoren
 
@@ -42,13 +42,13 @@ Weitere Informationen zu SharePoint-Berechtigungen finden Sie im Thema zu [Benut
   
 3.  Klicken Sie auf **Berechtigungen erteilen**.  
   
-4.  Geben Sie unter **Benutzer/Gruppen**die Benutzernamen, Gruppennamen oder E-Mail-Adressen ein, denen Sie Berechtigungen erteilen möchten.  
+4.  Geben Sie unter **Benutzer/Gruppen** die Benutzernamen, Gruppennamen oder E-Mail-Adressen ein, denen Sie Berechtigungen erteilen möchten.  
   
 5.  Aktivieren Sie die Option **Benutzer einer SharePoint-Gruppe hinzufügen** oder **Benutzern eine Berechtigung direkt erteilen** . Abhängig davon, ob Sie **Benutzer einer SharePoint-Gruppe hinzufügen** oder **Benutzern eine Berechtigung direkt erteilen** ausgewählt haben, gehen Sie wie folgt vor:  
   
-    -   Wenn Sie **Benutzer einer SharePoint-Gruppe hinzufügen**ausgewählt haben, wählen Sie in der Dropdownliste eine Berechtigungsebene aus.  
+    -   Wenn Sie **Benutzer einer SharePoint-Gruppe hinzufügen** ausgewählt haben, wählen Sie in der Dropdownliste eine Berechtigungsebene aus.  
   
-    -   Wenn Sie **Benutzern eine Berechtigung direkt erteilen**ausgewählt haben, wählen Sie eine Berechtigungsebene aus.  
+    -   Wenn Sie **Benutzern eine Berechtigung direkt erteilen** ausgewählt haben, wählen Sie eine Berechtigungsebene aus.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
 
