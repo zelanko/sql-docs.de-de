@@ -18,13 +18,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad70e5f88163668c8b0802b6b66996e608f0ffd9
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 41ae36248cff60542b7e7fe9ab0c1663ab7820f2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036173"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480631"
 ---
 # <a name="transact-sql-debugger---information"></a>Transact-SQL-Debuggerinformationen
 
@@ -36,7 +36,7 @@ Jedes Mal, wenn der Debugger bei einer bestimmten [!INCLUDE[tsql](../../includes
 
 ## <a name="debugger-windows"></a>Debuggerfenster  
 
-Im Debuggermodus öffnet der Debugger zwei Fenster am unteren Rand des [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Fensters. Der Debugger zeigt alle seine Informationen in diesen zwei Fenstern an. Jedes Debuggerfenster enthält Registerkarten, durch deren Auswahl Sie bestimmen können, welcher Satz von Informationen im Fenster angezeigt wird. Das linke Debuggerfenster enthält die Registerkarten **Lokal**, **Überwachen 1**, **Überwachen 2**, **Überwachen 3**und **Überwachen 4** . Das rechte Debuggerfenster enthält die Registerkarten **Aufrufliste**, **Threads**, **Breakpoints**, **Befehlsfenster**und **Ausgabe** .  
+Im Debuggermodus öffnet der Debugger zwei Fenster am unteren Rand des [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Fensters. Der Debugger zeigt alle seine Informationen in diesen zwei Fenstern an. Jedes Debuggerfenster enthält Registerkarten, durch deren Auswahl Sie bestimmen können, welcher Satz von Informationen im Fenster angezeigt wird. Das linke Debuggerfenster enthält die Registerkarten **Lokal**, **Überwachen 1**, **Überwachen 2**, **Überwachen 3** und **Überwachen 4** . Das rechte Debuggerfenster enthält die Registerkarten **Aufrufliste**, **Threads**, **Breakpoints**, **Befehlsfenster** und **Ausgabe** .  
   
 > [!NOTE]  
 >  Die vorherigen Beschreibungen gelten für die Standardpositionen der Debuggerfenster. Sie können eine Registerkarte ziehen, um sie von einem Fenster in ein anderes zu verschieben, oder Sie können die Verankerung einer Registerkarte aufheben, um ein neues Fenster zu erstellen, das Sie beliebig platzieren können.  
@@ -48,7 +48,7 @@ Im Debuggermodus öffnet der Debugger zwei Fenster am unteren Rand des [!INCLUDE
 -   Klicken Sie auf der Symbolleiste **Debuggen** auf **Breakpoints**, und wählen Sie dann das gewünschte Fenster aus.  
   
 ## <a name="transact-sql-expressions"></a>Transact-SQL-Ausdrücke  
- Ausdrücke sind [!INCLUDE[tsql](../../includes/tsql-md.md)] -Klauseln, die einen einzelnen Skalarwert ergeben, z. B. Variablen oder Parameter. Im linken Debuggerfenster können die Datenwerte anzeigt werden, die derzeit Ausdrücken auf bis zu fünf dieser Registerkarten oder Fenster zugeordnet sind: **Lokal, Überwachen 1**, **Überwachen 2**, **Überwachen 3**und **Überwachen 4**.  
+ Ausdrücke sind [!INCLUDE[tsql](../../includes/tsql-md.md)] -Klauseln, die einen einzelnen Skalarwert ergeben, z. B. Variablen oder Parameter. Im linken Debuggerfenster können die Datenwerte anzeigt werden, die derzeit Ausdrücken auf bis zu fünf dieser Registerkarten oder Fenster zugeordnet sind: **Lokal, Überwachen 1**, **Überwachen 2**, **Überwachen 3** und **Überwachen 4**.  
   
  Das Fenster **Lokal** zeigt Informationen über die lokalen Variablen im aktuellen Bereich des [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debuggers an. Der Satz von Ausdrücken, die im Fenster **Lokal** aufgeführt sind, ändert sich, wenn der Debugger die verschiedenen Teile des Codes durchläuft.  
   
@@ -62,13 +62,13 @@ Im Debuggermodus öffnet der Debugger zwei Fenster am unteren Rand des [!INCLUDE
   
 -   Eine SELECT-Anweisung, die einen einzelnen Wert zurückgibt, zum Beispiel SELECT CharCol FROM MyTable WHERE PrimaryKey = 1.  
   
- Mithilfe des Fensters **Schnellüberwachung** können Sie den Wert eines [!INCLUDE[tsql](../../includes/tsql-md.md)] -Ausdrucks anzeigen und anschließend diesen Ausdruck in einem **Überwachungsfenster** speichern. Zum Auswählen eines Ausdrucks in **Schnellüberwachung**wählen Sie den Namen des Ausdrucks entweder im Feld **Ausdruck** aus oder geben ihn dort ein.  
+ Mithilfe des Fensters **Schnellüberwachung** können Sie den Wert eines [!INCLUDE[tsql](../../includes/tsql-md.md)] -Ausdrucks anzeigen und anschließend diesen Ausdruck in einem **Überwachungsfenster** speichern. Zum Auswählen eines Ausdrucks in **Schnellüberwachung** wählen Sie den Namen des Ausdrucks entweder im Feld **Ausdruck** aus oder geben ihn dort ein.  
   
  Die vier **Überwachungsfenster** zeigen Informationen über Variablen und Ausdrücke an, die Sie ausgewählt haben. Der Satz von Ausdrücken, die in den **Überwachungsfenstern** aufgeführt sind, ändert sich erst dann, wenn Sie Ausdrücke entweder der Liste hinzufügen oder aus dieser entfernen.  
   
  Zum Hinzufügen eines Ausdrucks zu einem **Überwachungsfenster** können Sie entweder im Dialogfeld **Schnellüberwachung** die Option **Überwachung hinzufügen** auswählen oder den Namen des Ausdrucks in die **Namensspalte** einer leeren Zeile in einem **Überwachungsfenster** eingeben.  
   
- Sie können die Datenwerte für Variablen in den Fenstern **Lokal**, **Überwachung**oder **Schnellüberwachung** festlegen, indem Sie mit der rechten Maustaste auf die Zeile klicken und dann **Wert bearbeiten**auswählen. Die **Wert** -Spalten im Fenster **Lokal** , im Fenster **Überwachung** und im Dialogfeld **Schnellüberwachung** unterstützen alle Text-, XML- und HTML-Datenschnellansichten. Die Schnellansichten werden durch einen Vergrößerungsglas-Datentipp ganz rechts neben der Spalte **Werte** dargestellt. Mithilfe der Schnellansichten können Sie Text-, XML- oder HTML-Datenwerte in Anzeigen für die entsprechenden Datentypen, z. B. XML-Dateien in einem Browserfenster, betrachten.  
+ Sie können die Datenwerte für Variablen in den Fenstern **Lokal**, **Überwachung** oder **Schnellüberwachung** festlegen, indem Sie mit der rechten Maustaste auf die Zeile klicken und dann **Wert bearbeiten** auswählen. Die **Wert** -Spalten im Fenster **Lokal** , im Fenster **Überwachung** und im Dialogfeld **Schnellüberwachung** unterstützen alle Text-, XML- und HTML-Datenschnellansichten. Die Schnellansichten werden durch einen Vergrößerungsglas-Datentipp ganz rechts neben der Spalte **Werte** dargestellt. Mithilfe der Schnellansichten können Sie Text-, XML- oder HTML-Datenwerte in Anzeigen für die entsprechenden Datentypen, z. B. XML-Dateien in einem Browserfenster, betrachten.  
   
  Wenn Sie im Debugmodus mit der Maus auf einen Bezeichner zeigen, werden in einem **QuickInfo** -Popupfenster der Name des Ausdrucks und sein aktueller Wert angezeigt. Weitere Informationen finden Sie unter [QuickInfo &#40;IntelliSense&#41;](./quick-info-intellisense.md).  
   
@@ -94,9 +94,9 @@ Im Debuggermodus öffnet der Debugger zwei Fenster am unteren Rand des [!INCLUDE
   
 -   Wenn der Aufruf an eine gespeicherte Prozedur oder eine Funktion mit Parametern gegangen ist, werden auch die Namen, Datentypen und Werte aller Parameter aufgelistet.  
   
- Die Ausdrücke in den Fenstern **Lokal**, **Überwachung**und **Schnellüberwachung** werden für den aktuellen Stapelrahmen ausgewertet. Standardmäßig ist der aktuelle Stapelrahmen der oberste Rahmen im Stapel, bei dem der Debugger die Ausführung unterbrochen hat. Wenn Sie einen anderen Stapelrahmen als aktuellen Stapelrahmen angeben, werden die Ausdrücke in den Fenstern **Lokal**, **Überwachung**und **Schnellüberwachung** für den neuen Stapelrahmen neu ausgewertet. Sie können den aktuellen Stapelrahmen wechseln, indem Sie entweder auf einen Rahmen doppelklicken oder auf einen Rahmen klicken und **Zu Rahmen wechseln**auswählen. Daraufhin werden die Ausdrücke in den Fenstern **Lokal**, **Überwachung**und **Schnellüberwachung** für den neuen Rahmen neu ausgewertet. Wenn der aktuelle Stapelrahmen nicht der oberste Rahmen im Stapel ist, kennzeichnet ein grüner Pfeil am linken Rand des Stapels den aktuellen Stapelrahmen.  
+ Die Ausdrücke in den Fenstern **Lokal**, **Überwachung** und **Schnellüberwachung** werden für den aktuellen Stapelrahmen ausgewertet. Standardmäßig ist der aktuelle Stapelrahmen der oberste Rahmen im Stapel, bei dem der Debugger die Ausführung unterbrochen hat. Wenn Sie einen anderen Stapelrahmen als aktuellen Stapelrahmen angeben, werden die Ausdrücke in den Fenstern **Lokal**, **Überwachung** und **Schnellüberwachung** für den neuen Stapelrahmen neu ausgewertet. Sie können den aktuellen Stapelrahmen wechseln, indem Sie entweder auf einen Rahmen doppelklicken oder auf einen Rahmen klicken und **Zu Rahmen wechseln** auswählen. Daraufhin werden die Ausdrücke in den Fenstern **Lokal**, **Überwachung** und **Schnellüberwachung** für den neuen Rahmen neu ausgewertet. Wenn der aktuelle Stapelrahmen nicht der oberste Rahmen im Stapel ist, kennzeichnet ein grüner Pfeil am linken Rand des Stapels den aktuellen Stapelrahmen.  
   
- Wenn Sie mit der rechten Maustaste auf einen Stapelrahmen klicken und **Gehe zu Quellcode**auswählen, wird der Code für diesen Rahmen in einem Abfrage-Editor-Fenster angezeigt. Dieser Rahmen wird jedoch nicht zum aktuellen Rahmen gemacht, und die Inhalte der Fenster **Lokal**, **Überwachung**und **Schnellüberwachung** werden nicht geändert.  
+ Wenn Sie mit der rechten Maustaste auf einen Stapelrahmen klicken und **Gehe zu Quellcode** auswählen, wird der Code für diesen Rahmen in einem Abfrage-Editor-Fenster angezeigt. Dieser Rahmen wird jedoch nicht zum aktuellen Rahmen gemacht, und die Inhalte der Fenster **Lokal**, **Überwachung** und **Schnellüberwachung** werden nicht geändert.  
   
 ## <a name="system-information-and-transact-sql-results"></a>Systeminformationen und Transact-SQL-Ergebnisse  
  Der Debugger listet seine Status- und Ereignismeldungen im Fenster **Ausgabe** auf. Hierzu gehören Informationen wie z. B. zum Zeitpunkt, zu dem andere Prozessen debuggt werden oder zu dem Debuggerthreads enden.  

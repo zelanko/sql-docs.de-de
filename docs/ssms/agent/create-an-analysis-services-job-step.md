@@ -15,13 +15,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1b828996ad806ad3c98694ed5065466e6b5f8c9f
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: e65aa07cff708a7112b7a0c4e0bbc0338cb40860
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344046"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477111"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Erstellen eines Analysis Services-Auftragsschritts
 
@@ -74,7 +74,7 @@ In diesem Thema wird beschrieben, wie [!INCLUDE[ssNoVersion](../../includes/ssno
   
 3.  Klicken Sie im Dialogfeld **Auftragseigenschaften** auf die Registerkarte **Schritte** , und klicken Sie dann auf **Neu**.  
   
-4.  Geben Sie im Dialogfeld **Neuer Auftragsschritt** unter **Schrittname**einen Schrittnamen für den Auftrag ein.  
+4.  Geben Sie im Dialogfeld **Neuer Auftragsschritt** unter **Schrittname** einen Schrittnamen für den Auftrag ein.  
   
 5.  Klicken Sie in der Liste **Typ** auf **SQL Server Analysis Services-Befehl**.  
   
@@ -94,7 +94,7 @@ In diesem Thema wird beschrieben, wie [!INCLUDE[ssNoVersion](../../includes/ssno
   
 3.  Klicken Sie im Dialogfeld **Auftragseigenschaften** auf die Seite **Schritte** und dann auf **Neu**.  
   
-4.  Geben Sie im Dialogfeld **Neuer Auftragsschritt** unter **Schrittname**einen Schrittnamen für den Auftrag ein.  
+4.  Geben Sie im Dialogfeld **Neuer Auftragsschritt** unter **Schrittname** einen Schrittnamen für den Auftrag ein.  
   
 5.  Klicken Sie in der Liste **Typ** auf **SQL Server Analysis Services-Abfrage**.  
   

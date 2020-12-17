@@ -8,13 +8,13 @@ ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.date: 10/19/2020
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e8bb8de8d13a9b7696bb6505363b15d38cd35994
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: ed31e889e195cffb828f5e04e131ffd2cb71fa84
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194275"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466661"
 ---
 # <a name="server-properties-advanced-page---power-bi-report-server--reporting-services"></a>Servereigenschaften – Seite „Erweitert“: Power BI-Berichtsserver und Reporting Services
 
@@ -158,13 +158,13 @@ Gibt an, ob die Funktion <legacyBold>Meine Berichte</legacyBold> aktiviert ist. 
 Nimmt externe Fehlerinformationen (beispielsweise Fehlerinformationen zu Berichtsdatenquellen) in die Fehlermeldungen auf, die für Benutzer zurückgegeben werden, die Berichte von Remotecomputern anfordern. Gültige Werte sind **true** und **false**. Der Standardwert ist **false**. Weitere Informationen finden Sie unter [Aktivieren von Remotefehlern &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md).  
 
 ### <a name="enabletestconnectiondetailederrors"></a>EnableTestConnectionDetailedErrors
-Gibt an, ob ausführliche Fehlermeldungen an den Clientcomputer gesendet werden sollen, wenn Benutzer Datenquellverbindungen mit dem Berichtsserver testen. Der Standardwert lautet **true**. Wenn die Option auf **false**festgelegt wird, werden nur generische Fehlermeldungen gesendet.
+Gibt an, ob ausführliche Fehlermeldungen an den Clientcomputer gesendet werden sollen, wenn Benutzer Datenquellverbindungen mit dem Berichtsserver testen. Der Standardwert lautet **true**. Wenn die Option auf **false** festgelegt wird, werden nur generische Fehlermeldungen gesendet.
 
 ###  <a name="executionlogdayskept"></a>ExecutionLogDaysKept  
 Die Anzahl von Tagen, in denen die Berichtsausführungsdaten im Ausführungsprotokoll verbleiben. Gültige Werte für diese Eigenschaft sind **-1** bis **2**,**147**,**483**,**647**. Wenn der Wert **–1** ist, werden Einträge nicht aus der Ausführungsprotokolltabelle gelöscht. Der Standardwert lautet **60**.  
 
 > [!NOTE]
-> Wenn Sie den Wert auf **0 (null) festlegen, werden alle Einträge aus dem Ausführungsprotokoll ** *gelöscht*. Bei einem Wert von **–1** werden die Einträge des Ausführungsprotokolls beibehalten statt gelöscht.
+> Wenn Sie den Wert auf **0 (null) festlegen, werden alle Einträge aus dem Ausführungsprotokoll** *gelöscht*. Bei einem Wert von **–1** werden die Einträge des Ausführungsprotokolls beibehalten statt gelöscht.
 
 ### <a name="executionloglevel"></a>ExecutionLogLevel
 Hiermit wird der Protokolliergrad der Ausführung festgelegt. *Der Standardwert ist „Normal“.*
@@ -194,7 +194,7 @@ Der Name der Rolle, die beim Erstellen von Sicherheitsrichtlinien für die Ordne
 (Nur Power BI-Berichtsserver) Legen Sie die Adresse Ihrer Office Online-Serverinstanz für die Anzeige von Excel-Arbeitsmappen fest.
 
 ### <a name="rdlxreporttimetout"></a>RDLXReportTimetout
-Der Timeoutwert für die Verarbeitung des RDLX-Berichts *(Power View-Berichte in einer SharePoint Server-Instanz)* in Sekunden für alle im Namespace des Berichtsservers verwalteten Berichte. Dieser Wert kann auf Berichtsebene überschrieben werden. Ist diese Eigenschaft festgelegt, versucht der Berichtsserver, die Verarbeitung eines Berichts zu beenden, sobald der angegebene Zeitraum überschritten wird. Gültige Werte sind **-1** bis **2**.**147**.**483**.**647**. Wenn der Wert **-1**ist, tritt bei Berichten im Namespace während der Verarbeitung kein Timeout auf. Der Standardwert lautet **1800**.
+Der Timeoutwert für die Verarbeitung des RDLX-Berichts *(Power View-Berichte in einer SharePoint Server-Instanz)* in Sekunden für alle im Namespace des Berichtsservers verwalteten Berichte. Dieser Wert kann auf Berichtsebene überschrieben werden. Ist diese Eigenschaft festgelegt, versucht der Berichtsserver, die Verarbeitung eines Berichts zu beenden, sobald der angegebene Zeitraum überschritten wird. Gültige Werte sind **-1** bis **2**.**147**.**483**.**647**. Wenn der Wert **-1** ist, tritt bei Berichten im Namespace während der Verarbeitung kein Timeout auf. Der Standardwert lautet **1800**.
 
 ### <a name="requireintune"></a>RequireIntune
 (Nur Power BI-Berichtsserver, Reporting Services 2017 und höher) Hiermit wird festgelegt, ob Intune über die mobile Power BI-App auf die Berichte Ihrer Organisation zugreift. *Der Standardwert ist FALSE.*
@@ -236,7 +236,7 @@ Gibt die maximale Anzahl von Parameterwerten an, die von dem Berichtsserver gesp
 (Nur Power BI-Berichtsserver, Version Januar 2019, sowie Reporting Services 2019 und höher) Legt eine durch Trennzeichen getrennte Liste mit den URI-Schemas fest, die für Hyperlinkaktionen definiert werden dürfen, für die ein Rendering zulässig ist. Durch Angabe von „&ast;“ werden alle Hyperlinkschemas erlaubt. Mit der Einstellung „http,https“ sind beispielsweise Links zu „https://www. contoso.com“ zulässig, aber Hyperlinks zu „mailto:bill@contoso.com“ oder „javascript:window.open(‘ www.contoso.com’, ‘_blank’)“ werden entfernt. Der Standardwert lautet „&ast;“.
 
 ### <a name="systemreporttimeout"></a>SystemReportTimeout
-Der Standard-Timeoutwert für die Berichtsverarbeitung in Sekunden für alle im Berichtsserver-Namespace verwalteten Berichte. Dieser Wert kann auf Berichtsebene überschrieben werden. Ist diese Eigenschaft festgelegt, versucht der Berichtsserver, die Verarbeitung eines Berichts zu beenden, sobald der angegebene Zeitraum überschritten wird. Gültige Werte sind **-1** bis **2**.**147**.**483**.**647**. Wenn der Wert **-1**ist, tritt bei Berichten im Namespace während der Verarbeitung kein Timeout auf. Der Standardwert lautet **1800**.  
+Der Standard-Timeoutwert für die Berichtsverarbeitung in Sekunden für alle im Berichtsserver-Namespace verwalteten Berichte. Dieser Wert kann auf Berichtsebene überschrieben werden. Ist diese Eigenschaft festgelegt, versucht der Berichtsserver, die Verarbeitung eines Berichts zu beenden, sobald der angegebene Zeitraum überschritten wird. Gültige Werte sind **-1** bis **2**.**147**.**483**.**647**. Wenn der Wert **-1** ist, tritt bei Berichten im Namespace während der Verarbeitung kein Timeout auf. Der Standardwert lautet **1800**.  
 
 ### <a name="systemsnapshotlimit"></a>SystemSnapshotLimit
 Die maximale Anzahl an Momentaufnahmen, die für einen Bericht gespeichert werden. Gültige Werte sind **-1** bis **2**.**147**.**483**.**647**. Lautet der Wert **-1**, so ist die Anzahl von Momentaufnahmen nicht einschränkt.  

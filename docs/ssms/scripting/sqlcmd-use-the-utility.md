@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c71685e6abf6a38827394c24fb9d2dc5e1afb8d
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dd26583a850cc3734c2201b0640da99ce971fa8b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036263"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476901"
 ---
 # <a name="sqlcmd---use-the-utility"></a>Verwenden des Hilfsprogramms „sqlcmd“
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  Das Hilfsprogramm **sqlcmd** ist ein Befehlszeilen-Hilfsprogramm für die interaktive Ad-hoc-Ausführung von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen und -Skripts und die Automatisierung von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripttasks. Damit Sie **sqlcmd** interaktiv verwenden oder Skriptdateien aufbauen können, die mithilfe von **sqlcmd**ausgeführt werden, müssen Sie mit den Grundlagen von [!INCLUDE[tsql](../../includes/tsql-md.md)]vertraut sein. Das Hilfsprogramm **sqlcmd** wird in der Regel wie folgt verwendet:  
+  Das Hilfsprogramm **sqlcmd** ist ein Befehlszeilen-Hilfsprogramm für die interaktive Ad-hoc-Ausführung von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen und -Skripts und die Automatisierung von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripttasks. Damit Sie **sqlcmd** interaktiv verwenden oder Skriptdateien aufbauen können, die mithilfe von **sqlcmd** ausgeführt werden, müssen Sie mit den Grundlagen von [!INCLUDE[tsql](../../includes/tsql-md.md)]vertraut sein. Das Hilfsprogramm **sqlcmd** wird in der Regel wie folgt verwendet:  
   
--   Der Benutzer gibt [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen ähnlich wie bei der Arbeit an der Eingabeaufforderung ein. Die Ergebnisse werden an der Eingabeaufforderung angezeigt. Um ein Eingabeaufforderungsfenster zu öffnen, geben Sie in das Windows-Suchfeld „cmd“ ein, und klicken Sie auf **Eingabeaufforderung**. Geben Sie an der Eingabeaufforderung **sqlcmd** und im Anschluss eine Liste der gewünschten Optionen ein. Eine vollständige Liste der von **sqlcmd**unterstützten Optionen finden Sie unter [sqlcmd (Hilfsprogramm)](../../tools/sqlcmd-utility.md).  
+-   Der Benutzer gibt [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen ähnlich wie bei der Arbeit an der Eingabeaufforderung ein. Die Ergebnisse werden an der Eingabeaufforderung angezeigt. Um ein Eingabeaufforderungsfenster zu öffnen, geben Sie in das Windows-Suchfeld „cmd“ ein, und klicken Sie auf **Eingabeaufforderung**. Geben Sie an der Eingabeaufforderung **sqlcmd** und im Anschluss eine Liste der gewünschten Optionen ein. Eine vollständige Liste der von **sqlcmd** unterstützten Optionen finden Sie unter [sqlcmd (Hilfsprogramm)](../../tools/sqlcmd-utility.md).  
   
 -   Der Benutzer sendet einen **sqlcmd** -Auftrag entweder durch die Angabe einer einzelnen auszuführenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, oder indem er das Hilfsprogramm an eine Textdatei verweist, in der die auszuführenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen enthalten sind. Die Ausgabe wird normalerweise in einer Textdatei gespeichert, sie kann jedoch auch an der Eingabeaufforderung angezeigt werden.  
   
@@ -104,9 +104,9 @@ ms.locfileid: "92036263"
   
  Wenn der Befehl ohne Eingabedateien oder Abfragen ausgeführt wird, wird von **sqlcmd** eine Verbindung mit der angegebenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hergestellt und anschließend eine neue Zeile mit einer `1>` gefolgt von einem blinkenden Unterstrich angezeigt. Dies wird als **sqlcmd** -Aufforderung bezeichnet. Die `1` bedeutet, dass es sich um die erste Zeile einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung handelt, und die **sqlcmd** -Aufforderung ist die Stelle, an der die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung startet, wenn Sie sie eingeben.  
   
- An der **sqlcmd** -Eingabeaufforderung können Sie sowohl [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen als auch **sqlcmd** -Befehle (z.B. **GO** und **EXIT**) eingeben. Die einzelnen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen werden in einen Puffer geladen, den sogenannten Anweisungscache. Diese Anweisungen werden an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gesendet, nachdem Sie den Befehl **GO** eingegeben und die EINGABETASTE gedrückt haben. Wenn Sie **sqlcmd**beenden möchten, geben Sie am Anfang einer neuen Zeile **EXIT** oder **QUIT** ein.  
+ An der **sqlcmd** -Eingabeaufforderung können Sie sowohl [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen als auch **sqlcmd** -Befehle (z.B. **GO** und **EXIT**) eingeben. Die einzelnen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen werden in einen Puffer geladen, den sogenannten Anweisungscache. Diese Anweisungen werden an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gesendet, nachdem Sie den Befehl **GO** eingegeben und die EINGABETASTE gedrückt haben. Wenn Sie **sqlcmd** beenden möchten, geben Sie am Anfang einer neuen Zeile **EXIT** oder **QUIT** ein.  
   
- Den Anweisungscache können Sie löschen, indem Sie **:RESET**eingeben. Die Eingabe von **^C** bewirkt, dass **sqlcmd** beendet wird. **^C** kann auch dazu verwendet werden, die Ausführung des Anweisungscaches zu beenden, nachdem der Befehl **GO** ausgegeben wurde.  
+ Den Anweisungscache können Sie löschen, indem Sie **:RESET** eingeben. Die Eingabe von **^C** bewirkt, dass **sqlcmd** beendet wird. **^C** kann auch dazu verwendet werden, die Ausführung des Anweisungscaches zu beenden, nachdem der Befehl **GO** ausgegeben wurde.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen, die in einer interaktiven Sitzung eingegeben wurden, können bearbeitet werden, indem Sie an der **sqlcmd** -Eingabeaufforderung **:ED** eingeben. Der Editor wird geöffnet. Nachdem Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung bearbeitet und den Editor geschlossen haben, wird die überarbeitete [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung im Eingabeaufforderungsfenster angezeigt. Geben Sie **GO** ein, um die überarbeitete [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung auszuführen.  
   
@@ -202,7 +202,7 @@ ms.locfileid: "92036263"
  Bei den Zeilen im Anschluss an die Zeile `3> GO` handelt es sich um die Ausgabe einer `SELECT` -Anweisung. Nach dem Generieren einer Ausgabe wird die `sqlcmd` -Eingabeaufforderung durch `sqlcmd` zurückgesetzt, und es wird `1>`angezeigt. Nach der Eingabe von `EXIT` in der Zeile `1>`wird im Eingabeaufforderungsfenster dieselbe Zeile wie beim ersten Öffnen der Eingabeaufforderung angezeigt. Dies bedeutet, dass die Sitzung von `sqlcmd` beendet ist. Sie können das Eingabeaufforderungsfenster nun schließen, indem Sie einen weiteren `EXIT` -Befehl eingeben.  
   
 ## <a name="running-transact-sql-script-files-using-sqlcmd"></a>Ausführen von Transact-SQL-Skriptdateien mithilfe von „sqlcmd“  
- Sie können **sqlcmd** zum Ausführen von Datenbankskriptdateien verwenden. Bei Skriptdateien handelt es sich um Textdateien, die eine Kombination aus [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, **sqlcmd** -Befehlen und Skriptvariablen enthalten. Weitere Informationen zum Definieren von Skriptvariablen finden Sie unter [Verwenden von sqlcmd mit Skriptvariablen](./sqlcmd-use-with-scripting-variables.md). In**sqlcmd** werden Anweisungen, Befehle und Skriptvariablen in einer Skriptdatei verwendet, ähnlich wie bei der Verwendung interaktiv eingegebener Anweisungen und Befehle. Der Hauptunterschied besteht darin, dass **sqlcmd** die Eingabedatei ohne Pause durchliest, anstatt darauf zu warten, dass ein Benutzer die Anweisungen, Befehle und Skriptvariablen eingibt.  
+ Sie können **sqlcmd** zum Ausführen von Datenbankskriptdateien verwenden. Bei Skriptdateien handelt es sich um Textdateien, die eine Kombination aus [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, **sqlcmd** -Befehlen und Skriptvariablen enthalten. Weitere Informationen zum Definieren von Skriptvariablen finden Sie unter [Verwenden von sqlcmd mit Skriptvariablen](./sqlcmd-use-with-scripting-variables.md). In **sqlcmd** werden Anweisungen, Befehle und Skriptvariablen in einer Skriptdatei verwendet, ähnlich wie bei der Verwendung interaktiv eingegebener Anweisungen und Befehle. Der Hauptunterschied besteht darin, dass **sqlcmd** die Eingabedatei ohne Pause durchliest, anstatt darauf zu warten, dass ein Benutzer die Anweisungen, Befehle und Skriptvariablen eingibt.  
   
  Es gibt verschiedene Möglichkeiten, um Datenbankskriptdateien zu erstellen:  
   
@@ -453,7 +453,7 @@ ms.locfileid: "92036263"
  `SQLCMD returned 100 to the command shell`  
   
 ### <a name="g-using-sqlcmd-to-set-encryption-on-azure-sql-database"></a>G. Verwenden von „sqlcmd“ zum Festlegen der Verschlüsselung für eine Azure SQL-Datenbank  
- Ein **sqlcmd**kann bei einer Verbindung mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Daten ausgeführt werden, um die Verschlüsselung und Zertifikatsvertrauenswürdigkeit anzugeben. Zwei **sqlcmd**``-Optionen sind verfügbar:  
+ Ein **sqlcmd** kann bei einer Verbindung mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Daten ausgeführt werden, um die Verschlüsselung und Zertifikatsvertrauenswürdigkeit anzugeben. Zwei **sqlcmd**``-Optionen sind verfügbar:  
   
 -   Der Schalter "-N" wird vom Client verwendet, um eine verschlüsselte Verbindung anzufordern. Diese Option entspricht der ADO.NET-Option `ENCRYPT = true`.  
   

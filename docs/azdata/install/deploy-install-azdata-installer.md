@@ -9,12 +9,12 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9dd953a78a992a9a5fed7135ae0aee02f88e4de9
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: c5b190c50dbbeebef94cdd15314539e5ce501160
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257493"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489640"
 ---
 # <a name="install-azure-data-cli-azdata-with-windows-installer"></a>Installieren von [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] mit dem Windows Installer
 
@@ -38,7 +38,7 @@ Wenn Sie `azdata` mit dem Windows Installer deinstallieren möchten, befolgen Si
 | Windows 10| Start > Einstellungen > Apps                                |
 | Windows 8     | Start > Systemsteuerung > Programme > Programm deinstallieren |
 
-Das zu deinstallierende Programm wird als `Azdata CLI` bezeichnet. Wählen Sie diese Anwendung aus, und klicken Sie dann auf die Schaltfläche `Uninstall`.
+Das zu deinstallierende Programm wird als `Azure Data CLI` bezeichnet. Wählen Sie diese Anwendung aus, und klicken Sie dann auf die Schaltfläche `Uninstall`.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

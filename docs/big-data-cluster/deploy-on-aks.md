@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d82ac562495e916ce34b591190f6c427e6c8413e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 27e2596894e6d36742472ad1d3ae192fc37787e6
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765939"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489670"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Konfigurieren von Azure Kubernetes Service für die Bereitstellung von Big-Data-Clustern für SQL Server
 
@@ -149,7 +149,7 @@ Wählen Sie die neuste für Ihren Cluster verfügbare Version aus. Notieren Sie 
 
 ## <a name="connect-to-the-cluster"></a>Herstellen einer Verbindung mit dem Cluster
 
-1. Führen Sie den Befehl [az aks get-credentials](/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) aus, um kubectl für die Herstellung einer Verbindung mit dem Kubernetes-Cluster zu konfigurieren. In diesem Schritt werden Anmeldeinformationen heruntergeladen, und die kubectl-CLI wird für deren Verwendung konfiguriert.
+1. Führen Sie den Befehl [az aks get-credentials](/cli/azure/aks#az-aks-get-credentials) aus, um kubectl für die Herstellung einer Verbindung mit dem Kubernetes-Cluster zu konfigurieren. In diesem Schritt werden Anmeldeinformationen heruntergeladen, und die kubectl-CLI wird für deren Verwendung konfiguriert.
 
    ```azurecli
    az aks get-credentials --resource-group=sqlbdcgroup --name kubcluster
@@ -165,7 +165,7 @@ Wählen Sie die neuste für Ihren Cluster verfügbare Version aus. Notieren Sie 
 
 Wenn Sie die oben genannten Befehle verwenden und Probleme beim Erstellen einer AKS-Instanz auftreten sollten, probieren Sie Folgendes aus:
 
-- Vergewissern Sie sich, dass Sie die [neueste Azure CLI](/cli/azure/install-azure-cli?view=azure-cli-latest) installiert haben.
+- Vergewissern Sie sich, dass Sie die [neueste Azure CLI](/cli/azure/install-azure-cli) installiert haben.
 - Führen Sie dieselben Schritte noch einmal mit einer anderen Ressourcengruppe und einem anderen Clusternamen.
 - Weitere Informationen finden Sie in der ausführlichen [Dokumentation zur Problembehandlung für AKS](/azure/aks/troubleshooting).
 

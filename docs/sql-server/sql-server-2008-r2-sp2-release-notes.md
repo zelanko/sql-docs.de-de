@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: rothja
 ms.author: jroth
-monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ebebc4ed225e131db50df4c4c0b1ee3eb6da51b7
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+monikerRange: = sql-server-2016
+ms.openlocfilehash: 33d919b5536994da040ce4cca4d4ac32a0e735c2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384623"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466681"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +58,7 @@ Bestimmen Sie mithilfe der folgenden Tabelle, welche Datei heruntergeladen und i
 ### <a name="22-setup-might-fail-if-sqagtresdll-is-locked-by-another-process"></a>2.2 Setup verursacht u. U. einen Fehler, wenn "SQAGTRES.dll" von einem anderen Prozess gesperrt wurde  
 **Problem:** Ein SQL Server-Setupvorgang kann mit diesem Fehler fehlschlagen: `Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.` Die Grundursache liegt daran, dass „C:\Windows\system32\SQAGTRES.DLL“ von einem anderen Prozess gesperrt wurde und folglich von Setup nicht aktualisiert werden konnte.  
   
-**Problemumgehung** : Benennen Sie „C:\Windows\system32\SQAGTRES.DLL“ vorübergehend beispielsweise in „C:\Windows\system32\SQAGTRES_old.DLL“ um, und wählen Sie dann für die Fehlermeldung in Setup die Option „Wiederholen“ aus. Auf diese Weise kann Setup fortgesetzt werden. Nach einem Neustart können Sie die temporäre Datei C:\Windows\system32\SQAGTRES_old.DLL löschen.  
+**Problemumgehung**: Benennen Sie „C:\Windows\system32\SQAGTRES.DLL“ vorübergehend beispielsweise in „C:\Windows\system32\SQAGTRES_old.DLL“ um, und wählen Sie dann für die Fehlermeldung in Setup die Option „Wiederholen“ aus. Auf diese Weise kann Setup fortgesetzt werden. Nach einem Neustart können Sie die temporäre Datei C:\Windows\system32\SQAGTRES_old.DLL löschen.  
   
 ## <a name="30-known-issues-fixed-in-this-service-pack"></a>3.0 Bekannte Probleme, die in diesem Service Pack behoben wurden  
 Eine vollständige Liste von Fehlern und bekannten Problemen, die in diesem Service Pack behoben wurden, finden Sie in diesem [Master KB-Artikel](https://support.microsoft.com/kb/2630455).  

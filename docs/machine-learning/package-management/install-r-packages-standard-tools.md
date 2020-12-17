@@ -7,13 +7,13 @@ ms.date: 11/20/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 55d2917d149a4c88dbfddf614971c8d4f1e60d26
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: =sql-server-2016||=sql-server-2017
+ms.openlocfilehash: 5943de8bcc6588572bc3acebed5b3ba4104b7a96
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869952"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471061"
 ---
 # <a name="install-packages-with-r-tools"></a>Installieren von Paketen mit R-Tools
 
@@ -24,7 +24,7 @@ In diesem Artikel erfahren Sie, wie Sie mit R-Standardtools neue R-Pakete in ein
 Zusätzlich zu den R-Standardtools können Sie R-Pakete installieren mit:
 
 + [RevoScaleR](install-r-packages-with-revoscaler.md)
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 + [T-SQL](install-r-packages-with-tsql.md) (CREATE EXTERNAL LIBRARY)
 ::: moniker-end
 
@@ -35,13 +35,13 @@ Das gilt auch für R-Bibliotheken, die in anderen Microsoft-Produkten installier
 
 + Die R-Paketbibliothek befindet sich im Ordner „Programme“ Ihrer SQL Server-Instanz, und für die Installation in diesem Ordner sind standardmäßig Administratorberechtigungen erforderlich. Weitere Informationen finden Sie unter [Speicherort der Paketbibliothek](../package-management/r-package-information.md#default-r-library-location).
 
-  ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+  ::: moniker range="=sql-server-2017"
   Nicht-Administratoren können Pakete mit RevoScaleR 9.0.1 und höher oder CREATE EXTERNAL LIBRARY installieren. Der Benutzer **dbo_owner** oder ein Benutzer mit der Berechtigung CREATE EXTERNAL LIBRARY kann R-Pakete in die aktuelle Datenbank installieren. Weitere Informationen finden Sie unter
   + [Verwenden von RevoScaleR zum Installieren von R-Paketen](install-r-packages-with-revoscaler.md)
   + [Verwenden von T-SQL (CREATE EXTERNAL LIBRARY) zum Installieren von R-Paketen in SQL Server](install-r-packages-with-tsql.md)
   ::: moniker-end
 
-  ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+  ::: moniker range="=sql-server-2016"
   Nicht-Administratoren können Pakete mithilfe von RevoScaleR 9.0.1 und höher installieren. Der Benutzer **dbo_owner** kann R-Pakete in die aktuelle Datenbank installieren. Weitere Informationen finden Sie unter [Verwenden von RevoScaleR zum Installieren von R-Paketen](install-r-packages-with-revoscaler.md).
   ::: moniker-end
 
@@ -56,13 +56,13 @@ Wenn die SQL Server-Instanz Zugriff auf das Internet hat, können Sie R-Pakete m
 
 1. Bestimmen Sie den Speicherort der Instanzbibliothek (weitere Informationen finden Sie unter [ Abrufen von Informationen zu R-Paketen](../package-management/r-package-information.md)), und navigieren Sie zum Ordner, in dem die R-Tools installiert sind.
 
-   ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2016"
    Der Standardpfad einer Standardinstanz von SQL Server lautet z. B. wie folgt:
 
    `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64\`
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    Der Standardpfad einer Standardinstanz von SQL Server lautet z. B. wie folgt:
 
    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
@@ -87,13 +87,13 @@ Sobald sich die ZIP-Datei in der SQL Server-Instanz befindet, können Sie sie mi
 
 1. Bestimmen Sie den Speicherort der Instanzbibliothek (weitere Informationen finden Sie unter [ Abrufen von Informationen zu R-Paketen](../package-management/r-package-information.md)), und navigieren Sie zum Ordner, in dem die R-Tools installiert sind. 
 
-   ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2016"
    Der Standardpfad einer Standardinstanz von SQL Server lautet z. B. wie folgt:
 
    `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64\`
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    Der Standardpfad einer Standardinstanz von SQL Server lautet z. B. wie folgt:
 
    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`

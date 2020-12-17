@@ -43,13 +43,13 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: edbce6b52c224bc95aad1b3a6088696dba4c4f6a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: df5c82ef6887dba2d261a1517d1d1f9b871d5ec4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039019"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478811"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistenten zum Generieren und Veröffentlichen von Skripts
 
@@ -79,7 +79,7 @@ Außerdem muss bei der Veröffentlichung mit dem Assistenten ein Benutzername mi
 
 **So erstellen und veröffentlichen Sie ein Skript**
 
-1. Erweitern Sie im **Objekt-Explorer**den Knoten für die Instanz, die die Datenbank enthält, für die ein Skript erstellt werden soll.
+1. Erweitern Sie im **Objekt-Explorer** den Knoten für die Instanz, die die Datenbank enthält, für die ein Skript erstellt werden soll.
 
 2. Zeigen Sie auf **Tasks**, und wählen Sie anschließend **Skripts generieren** aus.
 
@@ -98,7 +98,7 @@ Außerdem muss bei der Veröffentlichung mit dem Assistenten ein Benutzername mi
 
 Auf dieser Seite werden die Schritte zum Generieren oder Veröffentlichen eines Skripts beschrieben.
 
-**Diese Seite nicht mehr anzeigen** – Diese Seite wird beim nächsten Starten des **Assistenten zum Generieren und Veröffentlichen von Skripts**übersprungen.
+**Diese Seite nicht mehr anzeigen** – Diese Seite wird beim nächsten Starten des **Assistenten zum Generieren und Veröffentlichen von Skripts** übersprungen.
 
   ![Seite "Einführung"](media/generate-and-publish-scripts-wizard/intro.png)
 
@@ -124,7 +124,7 @@ Wählen Sie auf dieser Seite aus, welche Objekte in die von diesem Assistenten g
 
 Auf dieser Seite können Sie angeben, ob Skripts vom Assistenten am ausgewählten Speicherort gespeichert werden, oder ob damit Datenbankobjekte bei einem Remotewebhostinganbieter veröffentlicht werden. Für die Veröffentlichung müssen Sie Zugriff auf einen Webdienst haben, der mithilfe des Webdiensts „Datenbank-Veröffentlichungsdienste“ installiert wird.
 
-**Optionen** – Wenn der Assistent Skripts an einem Speicherort Ihrer Wahl speichern soll, wählen Sie **Skripts an einem bestimmten Speicherort speichern**aus. Sie können die Skripts später für eine Datenbank-Engine-Instanz oder für [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ausführen. Wenn der Assistent die Datenbankobjekte in einem Remote-Webhostinganbieter veröffentlichen soll, wählen Sie **In Webdienst veröffentlichen**aus.
+**Optionen** – Wenn der Assistent Skripts an einem Speicherort Ihrer Wahl speichern soll, wählen Sie **Skripts an einem bestimmten Speicherort speichern** aus. Sie können die Skripts später für eine Datenbank-Engine-Instanz oder für [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ausführen. Wenn der Assistent die Datenbankobjekte in einem Remote-Webhostinganbieter veröffentlichen soll, wählen Sie **In Webdienst veröffentlichen** aus.
 
 **Skripts an einem bestimmten Speicherort speichern:** Speichern Sie mindestens eine Transact-SQL-Skriptdatei an einem angegebenen Speicherort.
 
@@ -156,23 +156,23 @@ Verwenden Sie diese Seite, um festzulegen, wie dieser Assistent Skripts generier
 
 - **ANSI-Auffüllung** – schließt **ANSI PADDING ON** in das Skript ein. Der Standardwert ist **True**.
 
-- **An Datei anfügen** – Im Falle von **True**wird dieses Skript am Ende eines vorhandenen Skripts angefügt, angegeben auf der Seite **Skripterstellungsoptionen festlegen** . Im Falle von **False**überschreibt das neue Skript ein vorheriges Skript. Der Standardwert ist **False**.
+- **An Datei anfügen** – Im Falle von **True** wird dieses Skript am Ende eines vorhandenen Skripts angefügt, angegeben auf der Seite **Skripterstellungsoptionen festlegen** . Im Falle von **False** überschreibt das neue Skript ein vorheriges Skript. Der Standardwert ist **False**.
 
 - **Vorhandensein von Objekten überprüfen**: Wenn **True** festgelegt ist, wird für Ihre SQL-Objekte eine Überprüfung des Vorhandenseins vor dem Erstellen der CREATE-Anweisung hinzugefügt. Beispiele für solche Objekte sind Tabellen, Sichten, Funktionen oder gespeicherte Prozeduren. Die CREATE-Anweisung wird von einer IF-Anweisung umschlossen. Wenn Sie wissen, dass Ihr Ziel gut strukturiert ist, ist auch das Skript deutlich übersichtlicher. Wenn Sie NICHT verlangen, dass die Objekte im Ziel vorhanden sind, erhalten Sie eine Fehlermeldung. Der Standardwert ist **False**.
 
 - **Skripterstellung bei einem Fehler fortsetzen:** Bei **False** wird die Skripterstellung bei Auftreten eines Fehlers beendet. Bei **True** wird die Skripterstellung fortgesetzt. Der Standardwert ist **False**.
 
-- **UDDTs in Basistypen konvertieren** – Im Falle von **True**werden benutzerdefinierte Datentypen (UDDT) in die zugrunde liegenden Basisdatentypen konvertiert, die zu ihrer Erstellung verwendet wurden. Verwenden Sie **True**, wenn der UDDT in der Datenbank, in der das Skript ausgeführt wird, nicht vorhanden ist. Im Falle von **False**werden UDDTs verwendet. Der Standardwert ist **False**.
+- **UDDTs in Basistypen konvertieren** – Im Falle von **True** werden benutzerdefinierte Datentypen (UDDT) in die zugrunde liegenden Basisdatentypen konvertiert, die zu ihrer Erstellung verwendet wurden. Verwenden Sie **True**, wenn der UDDT in der Datenbank, in der das Skript ausgeführt wird, nicht vorhanden ist. Im Falle von **False** werden UDDTs verwendet. Der Standardwert ist **False**.
 
 - **Skript für abhängige Objekte generieren** – Generiert ein Skript für jedes Objekt, das vorhanden sein muss, wenn das Skript für das ausgewählte Objekt ausgeführt wird. Der Standardwert ist **True**.
 
-- **Beschreibende Header einschließen** – Im Falle von **True**werden dem Skript beschreibende Kommentare hinzugefügt, mit denen das Skript für jedes Objekt in Abschnitte unterteilt wird. Der Standardwert ist **False**.
+- **Beschreibende Header einschließen** – Im Falle von **True** werden dem Skript beschreibende Kommentare hinzugefügt, mit denen das Skript für jedes Objekt in Abschnitte unterteilt wird. Der Standardwert ist **False**.
 
-- **„IF NOT EXISTS“ einschließen** – Im Falle von **True**enthält das Skript eine Anweisung, um zu überprüfen, ob das Objekt bereits in der Datenbank vorhanden ist, und versucht nicht, ein neues Objekt zu erstellen, wenn das Objekt bereits vorhanden ist. Der Standardwert ist **False**.
+- **„IF NOT EXISTS“ einschließen** – Im Falle von **True** enthält das Skript eine Anweisung, um zu überprüfen, ob das Objekt bereits in der Datenbank vorhanden ist, und versucht nicht, ein neues Objekt zu erstellen, wenn das Objekt bereits vorhanden ist. Der Standardwert ist **False**.
 
-- **Einschränkungsnamen des Systems einschließen:** Im Fall von **FALSE**(Standardwert) werden Einschränkungen, die automatisch in der Ursprungsdatenbank benannt wurden, in der Zieldatenbank automatisch umbenannt. Im Falle von **True**haben Einschränkungen in der Ursprungs- und der Zieldatenbank den gleichen Namen.
+- **Einschränkungsnamen des Systems einschließen:** Im Fall von **FALSE**(Standardwert) werden Einschränkungen, die automatisch in der Ursprungsdatenbank benannt wurden, in der Zieldatenbank automatisch umbenannt. Im Falle von **True** haben Einschränkungen in der Ursprungs- und der Zieldatenbank den gleichen Namen.
 
-- **Nicht unterstützte Anweisungen einschließen** – Im Falle von **False**enthält das Skript keine Anweisungen für Objekte, die unter der ausgewählten Serverversion bzw. dem ausgewählten Engine-Typ nicht unterstützt werden. Bei **True**enthält das Skript nicht unterstützte Objekte. Jede Anweisung für ein nicht unterstütztes Objekt enthält einen Kommentar, dass die Anweisung bearbeitet werden muss, bevor das Skript für die ausgewählte SQL Server-Version bzw. den ausgewählten Enginetyp ausgeführt werden kann. Der Standardwert ist **False**.
+- **Nicht unterstützte Anweisungen einschließen** – Im Falle von **False** enthält das Skript keine Anweisungen für Objekte, die unter der ausgewählten Serverversion bzw. dem ausgewählten Engine-Typ nicht unterstützt werden. Bei **True** enthält das Skript nicht unterstützte Objekte. Jede Anweisung für ein nicht unterstütztes Objekt enthält einen Kommentar, dass die Anweisung bearbeitet werden muss, bevor das Skript für die ausgewählte SQL Server-Version bzw. den ausgewählten Enginetyp ausgeführt werden kann. Der Standardwert ist **False**.
 
 - **Objektnamen mit Schema qualifizieren** – Schließt den Schemanamen im Namen der erstellten Objekte ein. Der Standardwert ist **True**.
 
@@ -182,7 +182,7 @@ Verwenden Sie diese Seite, um festzulegen, wie dieser Assistent Skripts generier
 
 - **Skripterstellung für Standard** – Schließt Standardobjekte ein, die zum Festlegen von Standardwerten in Tabellenspalten verwendet wurden. Der Standardwert ist **True**. Weitere Informationen finden Sie unter [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md).
 
-- **DROP und CREATE als Skript** – Bei **Script CREATE**werden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen bei der Erstellung von Objekten eingeschlossen. Wenn **DROP als Skript**ausgewählt ist, sind [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen eingeschlossen, um Objekte zu löschen. Wenn **DROP und CREATE als Skript**ausgewählt ist, ist die [!INCLUDE[tsql](../../includes/tsql-md.md)] -DROP-Anweisung im Skript für jedes geschriebene Objekt enthalten, gefolgt von der CREATE-Anweisung. Der Standardwert ist **CREATE als Skript**.
+- **DROP und CREATE als Skript** – Bei **Script CREATE** werden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen bei der Erstellung von Objekten eingeschlossen. Wenn **DROP als Skript** ausgewählt ist, sind [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen eingeschlossen, um Objekte zu löschen. Wenn **DROP und CREATE als Skript** ausgewählt ist, ist die [!INCLUDE[tsql](../../includes/tsql-md.md)] -DROP-Anweisung im Skript für jedes geschriebene Objekt enthalten, gefolgt von der CREATE-Anweisung. Der Standardwert ist **CREATE als Skript**.
 
 - **Skripterstellung für erweiterte Eigenschaften** – Enthält erweiterte Eigenschaften im Skript, wenn das Objekt über erweiterte Eigenschaften verfügt. Der Standardwert ist **True**.
 
@@ -194,7 +194,7 @@ Verwenden Sie diese Seite, um festzulegen, wie dieser Assistent Skripts generier
 
 - **Skripterstellung für Berechtigungen auf Objektebene** – Schließt Skripts ein, um die Berechtigung für Objekte in der Datenbank festzulegen. Der Standardwert ist **False**.
 
-- **Skripterstellung für Statistiken** – Wenn **Skripterstellung für Statistiken**festgelegt ist, schließt diese Option die **CREATE STATISTICS** -Anweisung zum erneuten Erstellen der Statistiken für das Objekt ein. Mit der Option **Skripterstellung für Statistiken und Histogramme** können auch Histogramminformationen erstellt werden. Der Standardwert ist **Keine Skripterstellung für Statistiken**. Weitere Informationen finden Sie unter [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).
+- **Skripterstellung für Statistiken** – Wenn **Skripterstellung für Statistiken** festgelegt ist, schließt diese Option die **CREATE STATISTICS** -Anweisung zum erneuten Erstellen der Statistiken für das Objekt ein. Mit der Option **Skripterstellung für Statistiken und Histogramme** können auch Histogramminformationen erstellt werden. Der Standardwert ist **Keine Skripterstellung für Statistiken**. Weitere Informationen finden Sie unter [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).
 
 - **Skripterstellung für USE DATABASE** – Fügt dem Skript die **USE DATABASE** -Anweisung hinzu. Die **USE DATABASE** -Anweisung muss enthalten sein, um sicherzustellen, dass Datenbankobjekte in der richtigen Datenbank erstellt werden. Wenn das Skript in einer anderen Datenbank verwendet werden soll, wählen Sie **False** aus, um die **USE DATABASE** -Anweisung auszulassen. Der Standardwert ist **True**. Weitere Informationen finden Sie unter [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md).
 
@@ -204,7 +204,7 @@ Verwenden Sie diese Seite, um festzulegen, wie dieser Assistent Skripts generier
 
 - **Skript für Änderungsnachverfolgung erstellen** – Die Änderungsnachverfolgung für Skripts wird in der Ursprungsdatenbank oder in den Tabellen in der Ursprungsdatenbank aktiviert. Der Standardwert ist **False**. Weitere Informationen finden Sie unter [Informationen zur Änderungsnachverfolgung &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md).
 
-- **Skripterstellung für CHECK-Einschränkungen**: Fügt dem Skript **CHECK** -Einschränkungen hinzu. Der Standardwert ist **True**. Für**CHECK** -Einschränkungen ist es erforderlich, dass Daten, die in eine Tabelle eingegeben werden, eine angegebene Bedingung erfüllen. Weitere Informationen finden Sie unter [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).
+- **Skripterstellung für CHECK-Einschränkungen**: Fügt dem Skript **CHECK** -Einschränkungen hinzu. Der Standardwert ist **True**. Für **CHECK** -Einschränkungen ist es erforderlich, dass Daten, die in eine Tabelle eingegeben werden, eine angegebene Bedingung erfüllen. Weitere Informationen finden Sie unter [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).
 
 - **Skripterstellung für Datenkomprimierungsoptionen** – Schließt Datenkomprimierungsoptionen ein, wenn sie in der Ursprungsdatenbank oder den Tabellen in der Ursprungsdatenbank konfiguriert werden. Weitere Informationen finden Sie unter [Data Compression](../../relational-databases/data-compression/data-compression.md). Der Standardwert ist **False**.
 

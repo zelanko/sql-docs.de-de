@@ -11,12 +11,12 @@ ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
-ms.openlocfilehash: 44d46bd260b1f59b9d1bcffd4a7bfb6ea46c248c
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 40ce4c62a28f404ceb3295f9644a8aefb4c789f8
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88713748"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489790"
 ---
 # <a name="download-sql-server-extended-features-and-tools"></a>Download erweiterter SQL Server-Features und -Tools
 
@@ -50,7 +50,7 @@ Dieser Artikel enthält eine kurze Erläuterung der verschiedenen Downloads und 
 | [SQL Server Semantic Language Statistics](../relational-databases/search/install-and-configure-semantic-search.md) | Die Datenbank für die semantische Sprachstatistik ist eine erforderliche Komponente für die statistische semantische Suchfunktion in Microsoft SQL Server. |
 | [SQL Server Shared Management Objects](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | Bei SQL Server Management Objects (SMO) handelt es sich um ein Objektmodell von .NET Framework, mit dem Softwareentwickler clientseitige Anwendungen zur Verwaltung von SQL Server-Objekten und -Diensten erstellen können. |
 | [System-CLR-Typen](https://go.microsoft.com/fwlink/?linkid=2108808) | Das Paket mit den SQL Server-System-CLR-Typen umfasst die Komponenten zur Implementierung der neuen Geometrie-, Geografie- und Hierarchie-ID-Typen in SQL Server. **Hinweis: Für diese Komponente ist außerdem [Windows Installer 4.5](https://go.microsoft.com/fwlink/?LinkId=123373)** erforderlich. |
-| [Windows PowerShell-Erweiterungen für Microsoft SQL Server](../database-engine/install-windows/install-sql-server-powershell.md?view=sql-server-2017) | Die Microsoft Windows PowerShell-Erweiterungen umfassen einen Anbieter und verschiedene Cmdlets, mit denen Administratoren und Entwickler PowerShell-Skripts zum Verwalten von SQL Server-Instanzen erstellen können. |
+| [Windows PowerShell-Erweiterungen für Microsoft SQL Server](../database-engine/install-windows/install-sql-server-powershell.md) | Die Microsoft Windows PowerShell-Erweiterungen umfassen einen Anbieter und verschiedene Cmdlets, mit denen Administratoren und Entwickler PowerShell-Skripts zum Verwalten von SQL Server-Instanzen erstellen können. |
 |||
 
 ## <a name="database-engine"></a>Datenbank-Engine

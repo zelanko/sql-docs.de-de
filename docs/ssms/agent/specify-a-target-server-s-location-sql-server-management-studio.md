@@ -14,13 +14,13 @@ ms.assetid: 511ff311-21f5-4f2f-839f-b4deee26ec98
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ec7ed61678519716e84e74e13b9d954628a3ea45
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 3e09fbc094ddf75a56b2b4c48eac4ecb23b47b7e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035521"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482165"
 ---
 # <a name="specify-a-target-server39s-location"></a>Angeben des Speicherorts eines Zielservers
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,7 +48,7 @@ Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .
   
 2.  Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent**, zeigen Sie auf **Multiserververwaltung**, und klicken Sie auf **Zielserver verwalten**.  
   
-3.  Klicken Sie mit der rechten Maustaste auf den Zielserver, und wählen Sie **Eigenschaften**aus.  
+3.  Klicken Sie mit der rechten Maustaste auf den Zielserver, und wählen Sie **Eigenschaften** aus.  
   
 4.  Geben Sie in das Feld **Speicherort** einen Speicherort für den Server ein, und klicken Sie dann auf **OK**.  
   

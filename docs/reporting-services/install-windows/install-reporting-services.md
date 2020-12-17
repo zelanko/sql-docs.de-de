@@ -1,19 +1,19 @@
 ---
 description: Installieren von SQL Server Reporting Services
 title: Installieren von SQL Server Reporting Services | Microsoft-Dokumentation
-ms.date: 05/01/2020
+ms.date: 12/11/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 74713128e0a7e1c749bcde676d02c63ec05e3632
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>= sql-server-2016'
+ms.openlocfilehash: 35924e9e1f5a72533ef1b30d983b99493858274d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891930"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484232"
 ---
 # <a name="install-sql-server-reporting-services"></a>Installieren von SQL Server Reporting Services
 
@@ -21,12 +21,12 @@ ms.locfileid: "91891930"
 
 Die Installation von SQL Server Reporting Services umfasst Serverkomponenten zum Speichern von Berichtselementen, Rendern von Berichten und Verarbeiten von Abonnements sowie anderen Berichtsdiensten. 
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 Laden Sie [SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122) im Microsoft Download Center herunter.
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Laden Sie [SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252) im Microsoft Download Center herunter.
 
 ::: moniker-end
@@ -127,7 +127,7 @@ Sie müssen den TCP-Port öffnen, den Sie für die URLs Ihres Webdienstes und Ih
 
 Informationen zur Installation von SQL Server Reporting Services im einheitlichen Modus finden Sie unter [Install Reporting Services native mode report server (Installieren des Reporting Services-Berichtsservers im einheitlichen Modus)](install-reporting-services-native-mode-report-server.md). 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 Informationen zur Installation von SQL Server 2016 Reporting Services (und Vorgängerversionen) im SharePoint-Integrationsmodus finden Sie unter [Install the first Report Server in SharePoint mode (Installieren des ersten Berichtsservers im SharePoint-Modus)](install-the-first-report-server-in-sharepoint-mode.md).
 

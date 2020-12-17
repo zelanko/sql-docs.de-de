@@ -9,20 +9,20 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7ec47525a79738eafc2746808a669ee50df0363a
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 3b19e905d68d53764a496ab5ee7745e3529484cf
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194489"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489900"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>Airline-Demodaten für Python- und R-Tutorials in SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 In dieser Übung erstellen Sie eine SQL Server-Datenbank, um importierte Daten aus den integrierten Airline-Demodatasets von R oder Python zu speichern. Die R- und Python-Verteilungen stellen identische Daten bereit, die Sie mithilfe von Management Studio in eine SQL Server-Datenbank importieren können.
 
-Für diese Übung benötigen Sie [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md?view=sql-server-2017) oder ein anderes Tool zum Ausführen von T-SQL-Abfragen.
+Für diese Übung benötigen Sie [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) oder ein anderes Tool zum Ausführen von T-SQL-Abfragen.
 
 Dieses Dataset wird in folgenden Tutorials und Schnellstarts verwendet:
 

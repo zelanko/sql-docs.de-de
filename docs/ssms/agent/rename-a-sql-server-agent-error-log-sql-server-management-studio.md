@@ -16,13 +16,13 @@ ms.assetid: dee2b199-48af-44cb-9177-d029a5edb169
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e636d3a46feb104325e86fd53f98bbc108ce5be5
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 28f93c2923c68f2f0585eced379548a87e1275f7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034945"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472311"
 ---
 # <a name="rename-a-sql-server-agent-error-log"></a>Umbenennen eines SQL Server-Agent-Fehlerprotokolls
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,9 +61,9 @@ Weitere Informationen zu den Windows-Berechtigungen, die für das [!INCLUDE[ssNo
   
 1.  Klicken Sie im **Objekt-Explorer** auf das Pluszeichen, um den Server zu erweitern, der das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Fehlerprotokoll enthält, das Sie umbenennen möchten.  
   
-2.  Klicken Sie auf das Pluszeichen, um **SQL Server-Agent**zu erweitern.  
+2.  Klicken Sie auf das Pluszeichen, um **SQL Server-Agent** zu erweitern.  
   
-3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Fehlerprotokolle** , und wählen Sie **Konfigurieren**aus.  
+3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Fehlerprotokolle** , und wählen Sie **Konfigurieren** aus.  
   
 4.  Geben Sie im Dialogfeld **Fehlerprotokolle des SQL Server-Agents konfigurieren** im Feld **Fehlerprotokolldatei** den neuen Dateipfad und den Dateinamen für das Fehlerprotokoll an. Klicken Sie alternativ auf die Auslassungspunkte **(...)** , um das Dialogfeld **Geben Sie den Speicherort des Agent-Fehlerprotokolls an** zu öffnen.  
   

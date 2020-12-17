@@ -33,13 +33,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9601deea339bbbc8875bbb593a4efef42cdd070d
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+monikerRange: '>= sql-server-ver15'
+ms.openlocfilehash: e0a8f226602ab41422715368fb12c13809fa6b40
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92257767"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477151"
 ---
 # <a name="editions-and-supported-features-of-sssqlv15-md"></a>Editionen und unterstützte Funktionen von [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]
 
@@ -116,7 +116,7 @@ Anhand der Informationen aus den folgenden Tabellen können Sie ermitteln, welch
 |[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]|[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] bietet eine IDE zum Erstellen von Lösungen für die Business Intelligence-Komponenten: [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]und [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].<br /><br /> (Früher Business Intelligence Development Studio genannt).<br /><br /> [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] schließt auch "Datenbankprojekte" ein, die eine integrierte Umgebung für Datenbankentwickler bereitstellen, die ihre ganze Datenbankentwurfsarbeit für eine beliebige [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Plattform (sowohl vor Ort als auch remote) in Visual Studio ausführen möchten. Datenbankentwickler können den verbesserten Server-Explorer in Visual Studio verwenden, um Datenbankobjekte und Daten einfach zu erstellen oder zu bearbeiten und Abfragen auszuführen.|
 |Konnektivitätskomponenten|Installiert Komponenten für die Kommunikation zwischen Clients und Servern, einschließlich Netzwerkbibliotheken für die DB-Library, ODBC und OLE DB.|
 
-|Dokumentation|Beschreibung|
+|Dokumentation|BESCHREIBUNG|
 |-------------------|-----------------|
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation|Kerndokumentation für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|
 
@@ -133,7 +133,7 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [[!INCLUDE[ss
 |Maximaler Arbeitsspeicher für den Pufferpool pro Instanz von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Maximum des Betriebssystems|128<nobr/>GB|64<nobr/>GB|1\.410<nobr/>MB|1\.410<nobr/>MB|
 |Maximaler Arbeitsspeicher für Columnstore-Segmentcache pro Instanz von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Unbegrenzter Arbeitsspeicher| 32<nobr/>GB| 16<nobr/>GB| 352<nobr/>MB| 352<nobr/>MB|
 |Maximale speicheroptimierte Datengröße pro Datenbank in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Unbegrenzter Arbeitsspeicher| 32<nobr/>GB| 16<nobr/>GB| 352<nobr/>MB| 352<nobr/>MB|
-|Maximaler genutzter Arbeitsspeicher pro Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Maximum des Betriebssystems|16<nobr/>GB<sup>2</sup><br /><br /> 64<nobr/>GB<sup>3</sup>|N/V|N/V|N/V|
+|Maximaler genutzter Arbeitsspeicher pro Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Maximum des Betriebssystems|16<nobr/>GB<sup>2</sup><br /><br /> 64<nobr/>GB<sup>3</sup>|N/V|–|N/V|
 |Maximaler genutzter Arbeitsspeicher pro Instanz von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Maximum des Betriebssystems|64<nobr/>GB|64<nobr/>GB|4<nobr/>GB|N/V|
 |Maximale relationale Datenbankgröße|524<nobr/>PB|524<nobr/>PB|524<nobr/>PB|10<nobr/>GB|10<nobr/>GB|
 

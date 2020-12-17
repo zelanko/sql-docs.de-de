@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5df33c67466a355dd7b204dcfd6f12f146ac59bb
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 8e6c97089feee33f1bbff76f0820ea37de5ae69c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093439"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474311"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Bearbeiten von SQLCMD-Skripts mit dem Abfrage-Editor
 
@@ -86,12 +86,12 @@ Mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor in [!INCLUDE
     -   (4 Zeile(n) betroffen)  
   
 > [!IMPORTANT]  
->  Wenn das Hilfsprogramm **sqlcmd** an der Befehlszeile ausgeführt wird, ermöglicht es die vollständige Interaktion mit dem Betriebssystem. Wird der Abfrage-Editor im **SQLCMD-Modus**ausgeführt, müssen Sie darauf achten, dass Sie keine interaktiven Anweisungen ausführen. Der Abfrage-Editor kann auf keine Aufforderungen des Betriebssystems reagieren.  
+>  Wenn das Hilfsprogramm **sqlcmd** an der Befehlszeile ausgeführt wird, ermöglicht es die vollständige Interaktion mit dem Betriebssystem. Wird der Abfrage-Editor im **SQLCMD-Modus** ausgeführt, müssen Sie darauf achten, dass Sie keine interaktiven Anweisungen ausführen. Der Abfrage-Editor kann auf keine Aufforderungen des Betriebssystems reagieren.  
   
  Weitere Informationen zum Ausführen von SQLCMD finden Sie unter [sqlcmd Utility](../../tools/sqlcmd-utility.md). Sie können auch das SQLCMD-Lernprogramm ausführen.  
   
 ## <a name="enable-sqlcmd-scripting-by-default"></a>Aktivieren der SQLCMD-Skripterstellung als Standard  
- Zum Aktivieren der SQLCMD-Skripterstellung als Standard wählen Sie im Menü **Extras** die Option **Optionen**aus, erweitern Sie **Abfrageausführung**und **SQL Server**, klicken Sie auf die Seite **Allgemein** , und aktivieren Sie das Kontrollkästchen **Standardmäßig neue Abfragen im SQLCMD-Modus öffnen** .  
+ Zum Aktivieren der SQLCMD-Skripterstellung als Standard wählen Sie im Menü **Extras** die Option **Optionen** aus, erweitern Sie **Abfrageausführung** und **SQL Server**, klicken Sie auf die Seite **Allgemein** , und aktivieren Sie das Kontrollkästchen **Standardmäßig neue Abfragen im SQLCMD-Modus öffnen** .  
   
 ## <a name="writing-and-editing-sqlcmd-scripts"></a>Schreiben und Bearbeiten von SQLCMD-Skripts  
  Wenn Sie den Skriptmodus aktiviert haben, können Sie SQLCMD-Befehle und [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen schreiben. Es gelten die folgenden Regeln:  

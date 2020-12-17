@@ -17,13 +17,13 @@ ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f222f011015f4cf23cf4640b7c4bc2136d338583
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: f888cc014c5cce3280f572c8a7eeddf194704624
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037259"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482154"
 ---
 # <a name="use-tokens-in-job-steps"></a>Verwenden von Token in Auftragsschritten
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -85,7 +85,7 @@ In der folgenden Tabelle sind die vom [!INCLUDE[ssNoVersion](../../includes/ssno
 |**(TIME)**|Die aktuelle Zeit (im Format HHMMSS).|  
 |**(STRTTM)**|Uhrzeit (im Format HHMMSS), zu der die Ausführung des Auftrags begonnen hat.|  
 |**(STRTDT)**|Datum (im Format YYYYMMDD), an dem die Ausführung des Auftrags begonnen hat.|  
-|**(WMI(** _Eigenschaft_ **))**|Bei Aufträgen, die als Antwort auf WMI-Warnungen ausgeführt werden, ist dies der Wert der durch *property*angegebenen Eigenschaft. In `$(WMI(DatabaseName))` ist beispielsweise der Wert der **DatabaseName** -Eigenschaft für das WMI-Ereignis angegeben, das die Ausführung der Warnung verursacht hat.|  
+|**(WMI(** _Eigenschaft_ **))**|Bei Aufträgen, die als Antwort auf WMI-Warnungen ausgeführt werden, ist dies der Wert der durch *property* angegebenen Eigenschaft. In `$(WMI(DatabaseName))` ist beispielsweise der Wert der **DatabaseName** -Eigenschaft für das WMI-Ereignis angegeben, das die Ausführung der Warnung verursacht hat.|  
   
 ### <a name="sql-server-agent-escape-macros"></a>SQL Server-Agent-Escapemakros  
   
@@ -101,7 +101,7 @@ Die folgende Tabelle beschreibt, wie die symbolische Ersetzung von [!INCLUDE[ssN
   
 |Tokensyntax|Tokenersetzung durch Warnungen aktiviert|Tokenersetzung durch Warnungen deaktiviert|  
 |----------------|------------------------------|-------------------------------|  
-|ESCAPE-Makro verwendet|Alle Token in Auftragsschritten werden erfolgreich ersetzt.|Durch Warnungen aktivierte Token werden nicht ersetzt. Dabei handelt es sich um folgende Token: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**und **WMI(** _Eigenschaft_ **)** . Andere, statische Token werden erfolgreich ersetzt.|  
+|ESCAPE-Makro verwendet|Alle Token in Auftragsschritten werden erfolgreich ersetzt.|Durch Warnungen aktivierte Token werden nicht ersetzt. Dabei handelt es sich um folgende Token: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG** und **WMI(** _Eigenschaft_ **)** . Andere, statische Token werden erfolgreich ersetzt.|  
 |Kein ESCAPE-Makro verwendet|Alle Auftragsschritte mit Token werden nicht ausgeführt.|Alle Auftragsschritte mit Token werden nicht ausgeführt.|  
   
 ## <a name="token-syntax-update-examples"></a>Beispiele für Updates der Tokensyntax  
