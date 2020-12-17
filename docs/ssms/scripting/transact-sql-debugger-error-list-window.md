@@ -16,13 +16,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ce203349f36ecf05d934903518ec0f783d12537
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9b7df8a2ca180e2f34fbfbc87fe7c000691af1fe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901408"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476771"
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Transact-SQL-Debugger – Fenster „Fehlerliste“
 
@@ -44,7 +44,7 @@ Die **Fehlerliste** bietet die folgende Funktionalität:
   
 -   Nachdem Sie einen Fehler behoben haben, wird der Fehlereintrag aus der **Fehlerliste** entfernt.  
   
--   Wenn Sie die Registerkarte für eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skriptdatei schließen, werden die Fehler in dieser Datei aus der **Fehlerliste**entfernt.  
+-   Wenn Sie die Registerkarte für eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skriptdatei schließen, werden die Fehler in dieser Datei aus der **Fehlerliste** entfernt.  
   
 ## <a name="working-with-the-error-list"></a>Arbeiten mit der Fehlerliste  
  Führen Sie zum Anzeigen der **Fehlerliste** eine der folgenden Aktionen aus:  

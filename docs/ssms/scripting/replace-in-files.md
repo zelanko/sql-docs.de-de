@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d3ccbef48b79ef0706920ab2ff83a2daee68db9
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 89097e7ef1b21008561db783fbb907ac903928f5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036404"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466331"
 ---
 # <a name="replace-in-files"></a>In Dateien ersetzen
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  Die Registerkarte **In Dateien ersetzen** des Fensters zum Suchen und Ersetzen ermöglicht es Ihnen, den Code eines angegebenen Satzes von Dateien nach einer Zeichenfolge oder einem Ausdruck zu durchsuchen und einige oder alle der übereinstimmenden Stellen zu ändern. Die gefundenen Übereinstimmungen und ausgeführten Aktionen werden in dem unter **Ergebnisoptionen**ausgewählten Suchergebnisfenster aufgelistet.  
+  Die Registerkarte **In Dateien ersetzen** des Fensters zum Suchen und Ersetzen ermöglicht es Ihnen, den Code eines angegebenen Satzes von Dateien nach einer Zeichenfolge oder einem Ausdruck zu durchsuchen und einige oder alle der übereinstimmenden Stellen zu ändern. Die gefundenen Übereinstimmungen und ausgeführten Aktionen werden in dem unter **Ergebnisoptionen** ausgewählten Suchergebnisfenster aufgelistet.  
   
  Das Dialogfeld **Suchen und Ersetzen** kann auch über Symbolleistenschaltflächen und Tastenkombinationen geöffnet werden.  
   
@@ -39,30 +39,30 @@ ms.locfileid: "92036404"
  Wenn die Such-Engine die Suchzeichenfolge als regulären Ausdruck interpretieren soll, aktivieren Sie unter **Suchoptionen** das Kontrollkästchen **Mit**, und klicken Sie anschließend auf **Reguläre Ausdrücke**.  
   
  **Ausdrucks-Generator**  
- Die dreieckige Schaltfläche neben dem Feld **Suchen nach** steht zur Verfügung, nachdem das Kontrollkästchen **Mit** in den **Suchoptionen**aktiviert wurde. Klicken Sie auf diese Schaltfläche, um in Abhängigkeit von der für **Mit** gewählten Option eine Liste von Platzhaltern oder regulären Ausdrücken anzuzeigen. Ein aus dieser Liste ausgewähltes Element wird der Zeichenfolge hinzugefügt, die unter **Suchen nach** angegeben wurde.  
+ Die dreieckige Schaltfläche neben dem Feld **Suchen nach** steht zur Verfügung, nachdem das Kontrollkästchen **Mit** in den **Suchoptionen** aktiviert wurde. Klicken Sie auf diese Schaltfläche, um in Abhängigkeit von der für **Mit** gewählten Option eine Liste von Platzhaltern oder regulären Ausdrücken anzuzeigen. Ein aus dieser Liste ausgewähltes Element wird der Zeichenfolge hinzugefügt, die unter **Suchen nach** angegeben wurde.  
   
 ## <a name="replace-with"></a>Ersetzen durch  
  Mithilfe dieser Steuerelemente können Sie angeben, was anstelle der übereinstimmenden Zeichenfolge bzw. des übereinstimmenden Ausdrucks eingefügt werden soll.  
   
  **Replace with**  
- Um Instanzen der in **Suchen nach** angegebenen Zeichenfolge mit einer anderen zu ersetzen, geben Sie in diesem Feld die Zeichenfolge ein, die sie ersetzen soll. Um Instanzen der in **Suche nach**angegebenen Zeichenfolge zu löschen, lassen Sie dieses Feld leer. Wählen Sie die Dropdownliste aus, um die letzten 20 Eingaben anzuzeigen. Um reguläre Ausdrücke in die im Feld **Ersetzen durch** angegebene Zeichenfolge einzubeziehen, aktivieren Sie das Kontrollkästchen **Mit** , und klicken Sie auf die Option **Reguläre Ausdrücke** .  
+ Um Instanzen der in **Suchen nach** angegebenen Zeichenfolge mit einer anderen zu ersetzen, geben Sie in diesem Feld die Zeichenfolge ein, die sie ersetzen soll. Um Instanzen der in **Suche nach** angegebenen Zeichenfolge zu löschen, lassen Sie dieses Feld leer. Wählen Sie die Dropdownliste aus, um die letzten 20 Eingaben anzuzeigen. Um reguläre Ausdrücke in die im Feld **Ersetzen durch** angegebene Zeichenfolge einzubeziehen, aktivieren Sie das Kontrollkästchen **Mit** , und klicken Sie auf die Option **Reguläre Ausdrücke** .  
   
  **Ausdrucks-Generator**  
- Die dreieckige Schaltfläche neben dem Feld **Ersetzen durch** steht zur Verfügung, nachdem das Kontrollkästchen **Mit** in den **Suchoptionen**aktiviert wurde. Klicken Sie auf diese Schaltfläche, um in Abhängigkeit von der für **Mit** gewählten Option eine Liste von Platzhaltern oder regulären Ausdrücken anzuzeigen. Ein aus dieser Liste ausgewähltes Element wird der Zeichenfolge hinzugefügt, die unter **Ersetzen durch** angegeben wurde.  
+ Die dreieckige Schaltfläche neben dem Feld **Ersetzen durch** steht zur Verfügung, nachdem das Kontrollkästchen **Mit** in den **Suchoptionen** aktiviert wurde. Klicken Sie auf diese Schaltfläche, um in Abhängigkeit von der für **Mit** gewählten Option eine Liste von Platzhaltern oder regulären Ausdrücken anzuzeigen. Ein aus dieser Liste ausgewähltes Element wird der Zeichenfolge hinzugefügt, die unter **Ersetzen durch** angegeben wurde.  
   
  **Replace**  
- Klicken Sie auf diese Schaltfläche, um die aktuelle Instanz der in **Suchen nach** angegebenen Zeichenfolge mit jener zu ersetzen, die im Feld **Ersetzen durch** angegeben ist, und um die nächste Instanz innerhalb des Bereichs zu suchen, der in **Suchen in**angegeben ist.  
+ Klicken Sie auf diese Schaltfläche, um die aktuelle Instanz der in **Suchen nach** angegebenen Zeichenfolge mit jener zu ersetzen, die im Feld **Ersetzen durch** angegeben ist, und um die nächste Instanz innerhalb des Bereichs zu suchen, der in **Suchen in** angegeben ist.  
   
  **Alle ersetzen**  
- Klicken Sie auf diese Schaltfläche, um alle Instanzen der in **Suchen nach** angegebenen Zeichenfolge in allen Dateien innerhalb des unter **Suchen in** angegebenen Bereichs mit jener zu ersetzen, die im Feld **Ersetzen durch**angegeben ist.  
+ Klicken Sie auf diese Schaltfläche, um alle Instanzen der in **Suchen nach** angegebenen Zeichenfolge in allen Dateien innerhalb des unter **Suchen in** angegebenen Bereichs mit jener zu ersetzen, die im Feld **Ersetzen durch** angegeben ist.  
   
 > [!CAUTION]  
 >  Stellen Sie sicher, dass der unter **Suchen in** festgelegte Bereich nur die Dateien umfasst, die Sie ändern möchten.  
   
- Es wird eine Erinnerung mit der Option **Geänderte Dateien geöffnet lassen** angezeigt. Um die Option **Rückgängig** beizubehalten, müssen Sie diese Option auswählen. Die Option**Rückgängig** ist nur in Dateien verfügbar, die nach einer Änderung geöffnet bleiben.  
+ Es wird eine Erinnerung mit der Option **Geänderte Dateien geöffnet lassen** angezeigt. Um die Option **Rückgängig** beizubehalten, müssen Sie diese Option auswählen. Die Option **Rückgängig** ist nur in Dateien verfügbar, die nach einer Änderung geöffnet bleiben.  
   
  **Datei überspringen**  
- Wird verfügbar, wenn **Suchen in** mehrere Dateien umfasst. Klicken Sie auf diese Schaltfläche, wenn Sie die aktuelle Datei nicht durchsuchen oder ändern möchten. Die Suche wird dann in der nächsten Datei auf der Liste unter **Suchen in**fortgesetzt.  
+ Wird verfügbar, wenn **Suchen in** mehrere Dateien umfasst. Klicken Sie auf diese Schaltfläche, wenn Sie die aktuelle Datei nicht durchsuchen oder ändern möchten. Die Suche wird dann in der nächsten Datei auf der Liste unter **Suchen in** fortgesetzt.  
   
 ## <a name="look-in"></a>Suchen in  
  Über die aus der Dropdownliste **Suchen in** ausgewählte Option legen Sie fest, ob die Funktion **In Dateien ersetzen** nur die zurzeit aktiven Dateien oder alle in bestimmten Ordnern gespeicherten Dateien durchsucht. Wählen Sie einen Suchbereich aus der Liste aus, geben Sie einen Ordnerpfad ein, oder klicken Sie auf die Schaltfläche **Durchsuchen** , um das Dialogfeld **Suchordner auswählen** anzuzeigen und einen Satz zu durchsuchender Ordner auszuwählen.  
@@ -74,7 +74,7 @@ ms.locfileid: "92036404"
  Wählen Sie aus dieser Liste einen vordefinierten Suchbereich, oder geben Sie über das Dialogfeld **Suchordner auswählen** eine Gruppe von Verzeichnissen an.  
   
  **Aktuelles Dokument**  
- Diese Option steht zur Verfügung, wenn ein Dokument in einem Editor geöffnet ist. Dabei wird nur das aktive Dokument nach der unter **Suchen nach**angegebenen Zeichenfolge durchsucht.  
+ Diese Option steht zur Verfügung, wenn ein Dokument in einem Editor geöffnet ist. Dabei wird nur das aktive Dokument nach der unter **Suchen nach** angegebenen Zeichenfolge durchsucht.  
   
  **Alle offenen Dokumente**  
  Durchsucht alle zurzeit zum Bearbeiten geöffneten Dokumente.  
@@ -110,7 +110,7 @@ ms.locfileid: "92036404"
  Sonderzeichen, wie Sternchen (`*`) und Fragezeichen (`?`), stellen ein oder mehrere Zeichen dar. Eine Liste finden Sie unter [Suchen von Text mit Platzhaltern](./search-text-with-wildcards.md).  
   
  **Nach diesen Dateitypen suchen**  
- Diese Liste gibt die Dateitypen an, die in den unter **Suchen in**angegebenen Verzeichnissen durchsucht werden sollen. Wird dieses Feld leer gelassen, werden alle Dateien in den unter **Suchen in** angegebenen Verzeichnissen durchsucht.  
+ Diese Liste gibt die Dateitypen an, die in den unter **Suchen in** angegebenen Verzeichnissen durchsucht werden sollen. Wird dieses Feld leer gelassen, werden alle Dateien in den unter **Suchen in** angegebenen Verzeichnissen durchsucht.  
   
 ```  
 *.[ext]; *.[ext] (manual)  

@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 6d94fc2d85ac0012347cb55f4981a25ba107f5df
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 8a9e792f4a0878b474a459a3935b2b44ba22973d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679211"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471381"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Überwachen von SQL Server Machine Learning Services mithilfe von dynamischen Verwaltungssichten
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -168,7 +168,7 @@ WHERE object_name LIKE '%External Scripts%'
 | Leistungsindikator                   | BESCHREIBUNG |
 |---------------------------|-------------|
 | Total Executions          | Gibt die Anzahl der R-Prozesse an, die durch lokale oder Remoteaufrufe gestartet wurden. |
-| Parallel Executions       | Gibt an, wie oft ein Skript die _\@parallel_ -Spezifikation enthielt, und dass [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] einen parallelen Abfrageplan generieren und verwenden konnte. |
+| Parallel Executions       | Gibt an, wie oft ein Skript die _\@parallel_-Spezifikation enthielt, und dass [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] einen parallelen Abfrageplan generieren und verwenden konnte. |
 | Streaming Executions      | Gibt die Anzahl der Aufrufe des Streamingfeatures an. |
 | SQL CC Executions         | Gibt die Anzahl der ausgeführten externen R-Skripts an, in denen der Aufruf remote instanziiert wurde und SQL Server als Computekontext verwendet wurde. |
 | Implied Auth. Anmeldungen      | Gibt an, wie oft ein ODBC-Loopback-Aufruf mit implizierter Authentifizierung abgeschlossen wurde, d. h. dass [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] den Aufruf im Auftrag des Benutzers ausgeführt und die Skriptanforderung gesendet hat. |

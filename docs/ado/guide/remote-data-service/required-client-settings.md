@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fc3a7962855feb076faad1ffe26d21b9273354f7
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 614f8f4444ab470530cea01133b34adffc505b78
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91723161"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97638028"
 ---
 # <a name="required-client-settings"></a>Erforderliche Clienteinstellungen
 > [!IMPORTANT]
@@ -28,9 +28,9 @@ ms.locfileid: "91723161"
   
 -   Geben Sie "Provider = MS Remote" in der ADO-Eigenschaft ( [Verbindungs Objekt](../../reference/ado-api/connection-object-ado.md) -Objekt [Anbieter Eigenschaft)](../../reference/ado-api/provider-property-ado.md) oder Verbindungs Zeichenfolge "**Provider**=" Verbindungs Zeichenfolge für **Verbindungs** Objekt an.  
   
--   Legen Sie die Eigenschaft für die [Cursor Location-Eigenschaft (ADO)](../../reference/ado-api/cursorlocation-property-ado.md) auf **adUseClient**fest.  
+-   Legen Sie die Eigenschaft für die [Cursor Location-Eigenschaft (ADO)](../../reference/ado-api/cursorlocation-property-ado.md) auf **adUseClient** fest.  
   
--   Geben Sie den Namen des Handlers an, der in der **Handler** -Eigenschaft des [DataControl-Objekts (Objekt des DataControl-Objekts)](../../reference/rds-api/datacontrol-object-rds.md) oder der Verbindungs Zeichenfolge für das [Recordset-Objekt (ADO)](../../reference/ado-api/recordset-object-ado.md) -Objekt verwendet werden soll.**Handler** (Der Handler kann nicht in der Verbindungs Zeichenfolge für **Verbindungs** Objekte festgelegt werden.)  
+-   Geben Sie den Namen des Handlers an, der in der **Handler** -Eigenschaft des [DataControl-Objekts (Objekt des DataControl-Objekts)](../../reference/rds-api/datacontrol-object-rds.md) oder der Verbindungs Zeichenfolge für das [Recordset-Objekt (ADO)](../../reference/ado-api/recordset-object-ado.md) -Objekt verwendet werden soll. (Der Handler kann nicht in der Verbindungs Zeichenfolge für **Verbindungs** Objekte festgelegt werden.)  
   
  RDS stellt einen Standard Handler auf dem Server namens **msdfmap bereit. Handler**. (Die Standard Anpassungs Datei hat den Namen MSDFMAP.INI.)  
   
@@ -81,6 +81,5 @@ rs.CursorLocation = adUseClient
  [SQL-Abschnitt der Anpassungs Datei](./customization-file-sql-section.md)   
  [Benutzer Listen Abschnitt "Anpassungs Datei"](./customization-file-userlist-section.md)   
  [DataFactory-Anpassung](./datafactory-customization.md)   
- [Erforderliche Client Einstellungen]()   
  [Grundlegendes zur Anpassungs Datei](./understanding-the-customization-file.md)   
  [Schreiben Ihres eigenen benutzerdefinierten Handlers](./writing-your-own-customized-handler.md)

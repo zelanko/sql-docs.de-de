@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5585f26247ad360fa848a24109416a59c49c94a6
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 412d1501344f5cdcb64ebd08cc9d328f4b7090c2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793777"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469981"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Bereitstellen des R-Modells und Verwendung in SQL Server (exemplarische Vorgehensweise)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -29,7 +29,7 @@ In diesem Artikel werden die häufigsten Möglichkeiten vorgestellt, ein Modell 
 
 ## <a name="batch-scoring"></a>Batchbewertung
 
-Erstellen Sie die gespeicherte Prozedur *PredictTipBatchMode* , die mehrere Vorhersagen generiert und eine SQL-Abfrage oder Tabelle als Eingabe übergibt. Eine Tabelle mit Ergebnissen wird zurückgegeben. Diese können Sie direkt in eine Tabelle einfügen oder in eine Datei schreiben.
+Erstellen Sie die gespeicherte Prozedur *PredictTipBatchMode*, die mehrere Vorhersagen generiert und eine SQL-Abfrage oder Tabelle als Eingabe übergibt. Eine Tabelle mit Ergebnissen wird zurückgegeben. Diese können Sie direkt in eine Tabelle einfügen oder in eine Datei schreiben.
 
 - Ruft einen Satz von Eingabedaten als SQL-Abfrage ab
 - Ruft das trainierte logistische Regressionsmodell auf, das Sie in der vorherigen Lektion gespeichert haben
@@ -76,7 +76,7 @@ Erstellen Sie die gespeicherte Prozedur *PredictTipBatchMode* , die mehrere Vorh
 
     + Die Eingabedaten für die Bewertung werden als SQL-Abfrage bewertet und als Zeichenfolge in der SQL-Variable _\@input_ gespeichert. Wenn Daten aus der Datenbank abgerufen werden, werden sie in einem Datenrahmen namens *InputDataSet* gespeichert. Dieser Name ist die Standardbezeichnung für Eingabedaten in die Prozedur [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Sie können bei Bedarf einen anderen Variablennamen über den Parameter _\@input_data_1_name_ festlegen.
 
-    + Die gespeicherte Prozedur ruft die rxPredict-Funktion aus der **RevoScaleR** -Bibliothek auf, um die Bewertung zu generieren.
+    + Die gespeicherte Prozedur ruft die rxPredict-Funktion aus der **RevoScaleR**-Bibliothek auf, um die Bewertung zu generieren.
 
     + Der Rückgabewert *Score* entspricht der Wahrscheinlichkeit, dass der Fahrer gemäß dem Modell ein Trinkgeld bekommt. Optional können Sie einfach einen Filter auf die zurückgegebenen Werten anwenden, um die Rückgabewerte in Gruppen wie „Trinkgeld“ oder „Kein Trinkgeld“ zu kategorisieren.  Eine Wahrscheinlichkeit von weniger als 0,5 würde beispielsweise bedeuten, dass wahrscheinlich kein Trinkgeld gegeben wird.
   
@@ -108,7 +108,7 @@ Erstellen Sie die gespeicherte Prozedur *PredictTipBatchMode* , die mehrere Vorh
     q <- paste("EXEC PredictTipBatchMode @input = ", input, sep="");
     ```
 
-4. Sie können die gespeicherte Prozedur mit R ausführen, indem Sie die **sqlQuery** -Methode des **RODBC** -Pakets aufrufen und die zuvor definierte SQL-Verbindung `conn` verwenden:
+4. Sie können die gespeicherte Prozedur mit R ausführen, indem Sie die **sqlQuery**-Methode des **RODBC**-Pakets aufrufen und die zuvor definierte SQL-Verbindung `conn` verwenden:
 
     ```R
     sqlQuery (conn, q);
@@ -192,13 +192,13 @@ Dieser Ansatz wird in der gespeicherten Prozedur *PredictTipSingleMode* veransch
     END
     ```
 
-2. In SQL Server Management Studio können Sie über [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** (oder **EXECUTE** ) die gespeicherte Prozedur aufrufen und die erforderlichen Eingaben an diese übergeben. Führen Sie diese Anweisung in Management Studio aus:
+2. In SQL Server Management Studio können Sie über [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** (oder **EXECUTE**) die gespeicherte Prozedur aufrufen und die erforderlichen Eingaben an diese übergeben. Führen Sie diese Anweisung in Management Studio aus:
 
     ```sql
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-    Die hier übergebenen Werte stehen für die Variablen _passenger\_count_ , _trip_distance_ , _trip\_time\_in\_secs_ , _pickup\_latitude_ , _pickup\_longitude_ , _dropoff\_latitude_ und _dropoff\_longitude_ .
+    Die hier übergebenen Werte stehen für die Variablen _passenger\_count_, _trip_distance_, _trip\_time\_in\_secs_, _pickup\_latitude_, _pickup\_longitude_, _dropoff\_latitude_ und _dropoff\_longitude_.
 
 3. Definieren Sie einfach eine R-Variable, die den gesamten Aufruf der gespeicherten Prozedur enthält, um diesen gleichen Aufruf von R-Code ausführen zu können.
 
@@ -206,9 +206,9 @@ Dieser Ansatz wird in der gespeicherten Prozedur *PredictTipSingleMode* veransch
     q2 = "EXEC PredictTipSingleMode 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303 ";
     ```
 
-    Die hier übergebenen Werte stehen für die Variablen _passenger\_count_ , _trip\_distance_ , _trip\_time\_in\_secs_ , _pickup\_latitude_ , _pickup\_longitude_ , _dropoff\_latitude_ und _dropoff\_longitude_ .
+    Die hier übergebenen Werte stehen für die Variablen _passenger\_count_, _trip\_distance_, _trip\_time\_in\_secs_, _pickup\_latitude_, _pickup\_longitude_, _dropoff\_latitude_ und _dropoff\_longitude_.
 
-4. Rufen Sie `sqlQuery` über das **RODBC** -Paket auf, und übergeben Sie die Verbindungszeichenfolge und die Zeichenfolgenvariable mit dem Aufruf der gespeicherten Prozedur.
+4. Rufen Sie `sqlQuery` über das **RODBC**-Paket auf, und übergeben Sie die Verbindungszeichenfolge und die Zeichenfolgenvariable mit dem Aufruf der gespeicherten Prozedur.
 
     ```R
     # predict with stored procedure in single mode

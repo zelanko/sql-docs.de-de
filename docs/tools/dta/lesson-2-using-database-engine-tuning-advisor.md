@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: bd60220151fb8f389ac7c82c1bdb0f10cf46bba1
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: d261cbabe0e5bdb22db537a10ef259b9b9d39e6c
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88713808"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489910"
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>Lektion 2: Verwenden des Datenbankoptimierungsratgebers
 
@@ -32,10 +32,10 @@ Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio, 
 
 - Installieren Sie [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Installieren Sie die [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Laden Sie die [AdventureWorks 2017-Beispieldatenbank](../../samples/adventureworks-install-configure.md?view=sql-server-2017) herunter.
+- Laden Sie die [AdventureWorks 2017-Beispieldatenbank](../../samples/adventureworks-install-configure.md) herunter.
 
 
-Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Wiederherstellen einer Datenbank](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017).
+Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Wiederherstellen einer Datenbank](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).
 
   >[!NOTE]
   > Dieses Tutorial richtet sich an Benutzer, die mit der Verwendung von SQL Server Management Studio und mit grundlegenden Datenbankverwaltungsaufgaben vertraut sind. 
@@ -73,7 +73,7 @@ Der Datenbankoptimierungsratgeber dient dazu, den optimalen Entwurf für eine ph
 
    ![Suchen nach dem zuvor gespeicherten Skript](media/dta-tutorials/dta-script.png)
   
-5.  Wählen Sie in der Liste **Datenbank für Arbeitsauslastungsanalyse** den Eintrag „AdventureWorks2017“ aus, wählen Sie dann im Raster **Zu optimierende Datenbanken und Tabellen auswählen** den Eintrag „AdventureWorks2017“ aus, und belassen Sie** Optimierungsprotokoll speichern** aktiviert. **Datenbank für Arbeitsauslastungsanalyse** gibt die erste Datenbank an, mit der der Datenbankoptimierungsratgeber beim Optimieren einer Arbeitsauslastung eine Verbindung herstellt. Nach dem Beginn der Optimierung stellt der Datenbankoptimierungsratgeber Verbindungen mit den Datenbanken her, die über die `USE DATABASE` -Anweisungen in der Arbeitsauslastung angegeben sind.  
+5.  Wählen Sie in der Liste **Datenbank für Arbeitsauslastungsanalyse** den Eintrag „AdventureWorks2017“ aus, wählen Sie dann im Raster **Zu optimierende Datenbanken und Tabellen auswählen** den Eintrag „AdventureWorks2017“ aus, und belassen Sie **Optimierungsprotokoll speichern** aktiviert. **Datenbank für Arbeitsauslastungsanalyse** gibt die erste Datenbank an, mit der der Datenbankoptimierungsratgeber beim Optimieren einer Arbeitsauslastung eine Verbindung herstellt. Nach dem Beginn der Optimierung stellt der Datenbankoptimierungsratgeber Verbindungen mit den Datenbanken her, die über die `USE DATABASE` -Anweisungen in der Arbeitsauslastung angegeben sind.  
 
   ![Optionen des Datenbankoptimierungsratgebers für die Datenbank](media/dta-tutorials/dta-select-db.png)
   
@@ -88,7 +88,7 @@ Der Datenbankoptimierungsratgeber dient dazu, den optimalen Entwurf für eine ph
   ![Starten der Analyse des Datenbankoptimierungsratgebers](media/dta-tutorials/dta-start-analysis.png)
 
   
-8.  Speichern Sie die Empfehlungen nach Ende der Analyse als [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript. Klicken Sie dazu im Menü **Aktionen** auf **Empfehlungen speichern** . Navigieren Sie im Dialogfeld **Speichern unter** zu dem Verzeichnis, in dem das Skript mit Empfehlungen gespeichert werden soll, und geben Sie als Dateinamen **MyRecommendations**an.  
+8.  Speichern Sie die Empfehlungen nach Ende der Analyse als [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript. Klicken Sie dazu im Menü **Aktionen** auf **Empfehlungen speichern** . Navigieren Sie im Dialogfeld **Speichern unter** zu dem Verzeichnis, in dem das Skript mit Empfehlungen gespeichert werden soll, und geben Sie als Dateinamen **MyRecommendations** an.  
 
   ![Speichern der Empfehlungen des Datenbankoptimierungsratgebers](media/dta-tutorials/dta-save-recommendations.png)
 
@@ -104,7 +104,7 @@ Der Datenbankoptimierungsratgeber dient dazu, den optimalen Entwurf für eine ph
  
    ![Auswahlmenü für die Indexempfehlung](media/dta-tutorials/dta-index-recommendation-options.png)
   
-3.  Klicken Sie im Menü **Aktionen** auf **Empfehlungen speichern** , um alle Empfehlungen in einem [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript zu speichern. Weisen Sie dem Skript den Namen **MySessionRecommendations.sql**zu.  
+3.  Klicken Sie im Menü **Aktionen** auf **Empfehlungen speichern** , um alle Empfehlungen in einem [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript zu speichern. Weisen Sie dem Skript den Namen **MySessionRecommendations.sql** zu.  
   
     Öffnen Sie das Skript MySessionRecommendations.sql im Abfrage-Editor von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , um es anzuzeigen. Sie könnten jetzt die Empfehlungen auf die Beispieldatenbank [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] anwenden, indem Sie das Skript im Abfrage-Editor ausführen, aber tun Sie das jetzt nicht. Schließen Sie das Skript im Abfrage-Editor, ohne es auszuführen.  
   
@@ -114,7 +114,7 @@ Der Datenbankoptimierungsratgeber dient dazu, den optimalen Entwurf für eine ph
   
 5.  Klicken Sie im Menü **Aktionen** auf **Empfehlungen bewerten**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] Der Optimierungsratgeber erstellt eine neue Optimierungssitzung, in der Sie eine Untergruppe der ursprünglichen Empfehlungen aus MySession auswerten können.  
   
-6.  Geben Sie als Namen für die neue Sitzung im Feld **Sitzungsname** den Wert **EvaluateMySession**ein, und klicken Sie auf der Symbolleiste auf die Schaltfläche **Analyse starten** . Zum Anzeigen der Ergebnisse dieser neuen Optimierungssitzung können Sie die Schritte 2 und 3 wiederholen.  
+6.  Geben Sie als Namen für die neue Sitzung im Feld **Sitzungsname** den Wert **EvaluateMySession** ein, und klicken Sie auf der Symbolleiste auf die Schaltfläche **Analyse starten** . Zum Anzeigen der Ergebnisse dieser neuen Optimierungssitzung können Sie die Schritte 2 und 3 wiederholen.  
   
 ### <a name="summary"></a>Zusammenfassung  
 Das Auswerten einer Untergruppe von Optimierungsempfehlungen kann erforderlich sein, wenn Sie feststellen, dass Sie nach dem Ausführen einer Sitzung die Optimierungsoptionen noch ändern müssen. Beispiel: Sie legen im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber in den Optimierungsoptionen für eine Sitzung fest, dass indizierte Sichten berücksichtigt werden sollen. Nachdem die Empfehlung erstellt wurde, beschließen Sie jedoch, indizierte Sichten nicht zu berücksichtigen. Sie können anschließend im Menü **Aktionen** den **-Optimierungsratgeber mithilfe der Option** Empfehlungen bewerten [!INCLUDE[ssDE](../../includes/ssde-md.md)] anweisen, die Sitzung neu zu bewerten, ohne dabei indizierte Sichten zu berücksichtigen. Wenn Sie die Option **Empfehlungen auswerten** verwenden, werden für die zweite Optimierungssitzung die vorher generierten Empfehlungen hypothetisch auf den aktuellen physischen Entwurf angewendet, um den physischen Entwurf für die zweite Optimierungssitzung zu erstellen.  
@@ -126,7 +126,7 @@ Es kann nützlich sein, die Skripts anzuzeigen, die zum Implementieren der Optim
 
 
 1. Wählen Sie im Datenbankoptimierungsratgeber die Registerkarte **Berichte** aus. 
-2. Im Bereich **Optimierungszusammenfassung** können Sie Informationen zu dieser Optimierungssitzung anzeigen. Verwenden Sie die Bildlaufleiste, um den gesamten Inhalt des Bereichs anzuzeigen. Beachten Sie die Felder **Prozentsatz für die erwartete Verbesserung** und **Von der Empfehlung verwendeter Speicherplatz (MB)** . Beim Festlegen der Optionen für die Optimierung kann der Platz eingeschränkt werden, der den Empfehlungen zur Verfügung steht. Wählen Sie auf der Registerkarte **Optimierungsoptionen** die Option **Erweiterte Optionen**aus. Aktivieren Sie **Max. Speicherplatz für Empfehlungen definieren (MB)** und geben Sie den maximal zulässigen Speicherplatz für eine empfohlene Konfiguration in Megabytes ein. Mit der Schaltfläche **Zurück** kehren Sie vom Browser der Hilfe zu diesem Tutorial zurück. 
+2. Im Bereich **Optimierungszusammenfassung** können Sie Informationen zu dieser Optimierungssitzung anzeigen. Verwenden Sie die Bildlaufleiste, um den gesamten Inhalt des Bereichs anzuzeigen. Beachten Sie die Felder **Prozentsatz für die erwartete Verbesserung** und **Von der Empfehlung verwendeter Speicherplatz (MB)** . Beim Festlegen der Optionen für die Optimierung kann der Platz eingeschränkt werden, der den Empfehlungen zur Verfügung steht. Wählen Sie auf der Registerkarte **Optimierungsoptionen** die Option **Erweiterte Optionen** aus. Aktivieren Sie **Max. Speicherplatz für Empfehlungen definieren (MB)** und geben Sie den maximal zulässigen Speicherplatz für eine empfohlene Konfiguration in Megabytes ein. Mit der Schaltfläche **Zurück** kehren Sie vom Browser der Hilfe zu diesem Tutorial zurück. 
 
     ![DTA-Optimierungszusammenfassung](media/dta-tutorials/dta-tuning-summary.png)
   

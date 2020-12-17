@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 62b76b616786c593d395ee8720bba4c012390290
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6843efa430fcd43149d048c9d21c5120954ab896
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766889"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97637816"
 ---
 # <a name="instant-file-initialization-configuration"></a>Konfiguration der sofortigen Datei Initialisierung
 Die sofortige Datei Initialisierung ist ein SQL Server Feature, mit dem Datendatei Vorgänge schneller ausgeführt werden können. Wenn Sie das Kontrollkästchen aktivieren, um die sofortige Datei Initialisierung zu aktivieren, wird die Leistung von SQL Server PDW verbessert. Wenn dies jedoch ein Sicherheitsrisiko für Ihr Unternehmen darstellt, lassen Sie das Kontrollkästchen deaktiviert.  
@@ -25,7 +25,7 @@ Die sofortige Datei Initialisierung ist ein SQL Server Feature, mit dem Datendat
 Die sofortige Dateiinitialisierung ist nicht verfügbar, wenn TDE aktiviert ist.  
   
 ## <a name="add-permission-for-the-backup-account"></a>Berechtigung für das Sicherungs Konto hinzufügen  
-Der Sicherungs Vorgang erfordert Netzwerk Anmelde Informationen (Windows-Benutzerkonto), die auf den Speicherort der Sicherung zugreifen können. Sie autorisieren PDW, das Konto mithilfe des [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) Verfahrens zu verwenden. Weitere Informationen finden Sie unter [Backup Database](../t-sql/statements/backup-transact-sql.md?view=sql-server-ver15) für den gesamten Sicherungs Vorgang. Damit die sofortige Datei Initialisierung verwendet werden kann, muss dem Sicherungs Konto die Berechtigung erteilt werden `Perform volume maintenance tasks` .  
+Der Sicherungs Vorgang erfordert Netzwerk Anmelde Informationen (Windows-Benutzerkonto), die auf den Speicherort der Sicherung zugreifen können. Sie autorisieren PDW, das Konto mithilfe des [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) Verfahrens zu verwenden. Weitere Informationen finden Sie unter [Backup Database](../t-sql/statements/backup-transact-sql.md) für den gesamten Sicherungs Vorgang. Damit die sofortige Datei Initialisierung verwendet werden kann, muss dem Sicherungs Konto die Berechtigung erteilt werden `Perform volume maintenance tasks` .  
   
 1.  Öffnen Sie auf dem Sicherungs Server die Anwendung **lokale Sicherheitsrichtlinie** ( `secpol.msc` ).  
   

@@ -13,13 +13,13 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.reviewer: ''
 ms.date: 12/04/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40e30f96de60e6d6bd404ca2b00099b7ac7b01a9
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c9e8343d1743d90472d10095e18e66294b9ea99b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036307"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466251"
 ---
 # <a name="specify-a-breakpoint-condition"></a>Angeben einer Breakpointbedingung
 
@@ -45,10 +45,10 @@ Der angegebene Ausdruck muss ein gültiger Transact-SQL-Ausdruck sein, der zu ei
   
 2. Geben Sie im Dialogfeld **Haltepunktbedingung** einen gültigen booleschen Ausdruck im Feld **Bedingung** ein.  
   
-3. Wählen Sie **Ist "True"** aus, wenn die Ausführung bei der Auswertung des Ausdrucks zu **true**unterbrochen werden soll, oder wählen Sie **wurde geändert** aus, wenn die Ausführung bei einer Änderung des Ausdrucks unterbrochen werden soll.  
+3. Wählen Sie **Ist "True"** aus, wenn die Ausführung bei der Auswertung des Ausdrucks zu **true** unterbrochen werden soll, oder wählen Sie **wurde geändert** aus, wenn die Ausführung bei einer Änderung des Ausdrucks unterbrochen werden soll.  
   
     > [!NOTE]  
-    >  Der Debugger wertet den booleschen Ausdruck erst aus, wenn der Breakpoint das erste Mal erreicht wird. Wenn Sie **wurde geändert**auswählen, interpretiert der Debugger die erste Auswertung nicht als Änderung. Daher wird die Ausführung nicht bei der ersten Auswertung unterbrochen.  
+    >  Der Debugger wertet den booleschen Ausdruck erst aus, wenn der Breakpoint das erste Mal erreicht wird. Wenn Sie **wurde geändert** auswählen, interpretiert der Debugger die erste Auswertung nicht als Änderung. Daher wird die Ausführung nicht bei der ersten Auswertung unterbrochen.  
   
 ## <a name="see-also"></a>Weitere Informationen
 

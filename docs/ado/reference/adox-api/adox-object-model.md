@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 31c0781c-96c8-4460-90ea-134066154fc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2e08a73f18bfbf750ff9181591106552b4232938
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ace01fe36816e28abc7fa533b2029b31bf1afa17
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985721"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641170"
 ---
 # <a name="adox-object-model"></a>ADOX-Objektmodell
 Im folgenden Diagramm wird veranschaulicht, wie Objekte in ADOX dargestellt und verknüpft werden. Weitere Informationen zu einem bestimmten Objekt oder einer bestimmten Sammlung finden Sie im Referenz Thema oder in den [ADOX-Objekten](./adox-objects.md) und [ADOX](./adox-collections.md)-Auflistungen.  
@@ -28,7 +28,7 @@ Im folgenden Diagramm wird veranschaulicht, wie Objekte in ADOX dargestellt und 
  Jedes der [Tabellen](./table-object-adox.md)-, [Index](./index-object-adox.md)-und [Spalten](./column-object-adox.md) Objekte verfügt auch über eine standardmäßige ADO- [Eigenschaften](../ado-api/properties-collection-ado.md) Auflistung.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [ADOX-API-Referenz](?view=sql-server-ver15)   
+ [ADOX-API-Referenz]()   
  [ADOX-Code Beispiele](./adox-code-examples.md)   
  [ADOX-Sammlungen](./adox-collections.md)   
  [ADOX-Enumerationskonstanten](./adox-enumerated-constants.md)   

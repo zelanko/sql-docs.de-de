@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 98134fb195b9184bb10905b4a4f8ddec48f3cb57
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: ca0071416491700254047b43056d32fc64ed1d9d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496982"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97425129"
 ---
 # <a name="install-report-builder"></a>Installieren des Berichts-Generators
 
@@ -33,11 +33,11 @@ ms.locfileid: "92496982"
   
  Sie können den [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] von einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webportal oder von einer in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]integrierten SharePoint-Website aus starten. Informationen finden Sie unter [Starten des Berichts-Generators](../../reporting-services/report-builder/start-report-builder.md).  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 ### <a name="sharepoint-site-integrated-with-ssrsnoversion"></a>In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
   
- Wenn auf einer in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]integrierten SharePoint-Website das Menü **Neues Dokument** die Optionen **Berichts-Generator-Bericht** , **Berichts-Generator-Modell** und **Berichtsdatenquelle** nicht enthält, müssen der SharePoint-Bibliothek die entsprechenden Inhaltstypen hinzugefügt werden. Weitere Informationen finden Sie unter [Hinzufügen von Reporting Services-Inhaltstypen zu einer SharePoint-Bibliothek](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
+ Wenn auf einer in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]integrierten SharePoint-Website das Menü **Neues Dokument** die Optionen **Berichts-Generator-Bericht**, **Berichts-Generator-Modell** und **Berichtsdatenquelle** nicht enthält, müssen der SharePoint-Bibliothek die entsprechenden Inhaltstypen hinzugefügt werden. Weitere Informationen finden Sie unter [Hinzufügen von Reporting Services-Inhaltstypen zu einer SharePoint-Bibliothek](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
 
 ::: moniker-end
  
@@ -67,7 +67,7 @@ ms.locfileid: "92496982"
     > [!NOTE]  
     >  Wenn Sie den [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] mit einer Verbindung zu einem Berichtsserver verwenden möchten, geben Sie die URL zu dem Server jetzt an. Hierzu können Sie auch das Dialogfeld **Optionen** im [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] verwenden.  
   
-5.  Klicken Sie auf **Installieren** , um die Installation des [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]s abzuschließen.  
+5.  Klicken Sie auf **Installieren**, um die Installation des [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]s abzuschließen.  
   
 ## <a name="to-install-ssrbnoversion-from-a-share"></a>So installieren Sie [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] über eine Freigabe  
   
@@ -113,7 +113,7 @@ ms.locfileid: "92496982"
   
 -   Klicken Sie auf den **Berichts-Generator** .  
   
-     Wenn der Berichtsserver nicht in der Liste vorhandener Server angezeigt wird, schließen Sie das Dialogfeld **Bericht öffnen** , und klicken Sie dann unten im Berichts-Generator **auf** Verbinden [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], um eine Verbindung mit dem Server herzustellen.  
+     Wenn der Berichtsserver nicht in der Liste vorhandener Server angezeigt wird, schließen Sie das Dialogfeld **Bericht öffnen**, und klicken Sie dann unten im Berichts-Generator **auf** Verbinden [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], um eine Verbindung mit dem Server herzustellen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Starten des Berichts-Generators](../../reporting-services/report-builder/start-report-builder.md)   

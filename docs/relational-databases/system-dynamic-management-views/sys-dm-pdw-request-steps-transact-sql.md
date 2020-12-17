@@ -13,12 +13,12 @@ ms.assetid: cc563e88-0d34-436e-b914-b60d6ee0d50b
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: 8fd0bbad8ede056d1d35a9be62e82704575472bd
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 839a1d906fcd7b6a4a980a7381b4f5fcdcf10d5d
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482503"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644038"
 ---
 # <a name="sysdm_pdw_request_steps-transact-sql"></a>sys.dm_pdw_request_steps (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "97482503"
 |request_id|**nvarchar(32)**|request_id und step_index bilden den Schlüssel für diese Ansicht.<br /><br /> Eindeutige numerische ID, die der Anforderung zugeordnet ist.|Weitere Informationen finden Sie unter request_id in [sys.dm_pdw_exec_requests &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|request_id und step_index bilden den Schlüssel für diese Ansicht.<br /><br /> Die Position dieses Schritts in der Abfolge der Schritte, die die Anforderung bilden.|0 bis (n-1) für eine Anforderung mit n Schritten.|  
 |plan_node_id|**int**|Die Knoten-ID, die der Operator-ID dieses Schritts im Ausführungsplan entspricht.|Keine|  
-|operation_type|**nvarchar(35)**|Der Typ des Vorgangs, der durch diesen Schritt dargestellt wird.|**DMS-Abfrageplan Vorgänge:** "Returnoperation", "partitionmuveoperation", "muveoperation", "broadcastmuveoperation", "shufflemuveoperation", "trimmuveoperation", "copyoperation", "distributerepli-tablemuveoperation"<br /><br /> **SQL-Abfrageplan Vorgänge:** "Onoperation", "Remoteoperation"<br /><br /> **Andere Abfrageplan Vorgänge:** ' MetaDataCreateOperation ', ' randomidoperation '<br /><br /> **Externe Vorgänge für Lesevorgänge:** "Hadoopshuffleoperation", "hadooproundrobinoperation", "hadoopbroadcastoperation"<br /><br /> **Externe Vorgänge für MapReduce:** "Hadoopjoboperation", "hdfsdeleteoperation"<br /><br /> **Externe Vorgänge für Schreibvorgänge:** "Externalexportdistributedoperation", "externalexportreplialisiedoperation", "externalexportcontroloperation"<br /><br /> Weitere Informationen finden Sie unter "Grundlegendes zu Abfrage Plänen" in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] . <br /><br />  Ein Abfrageplan kann auch von den Datenbankeinstellungen beeinflusst werden.  Weitere Informationen finden Sie unter [ALTER DATABASE SET-Optionen](../../t-sql/statements/alter-database-transact-sql-set-options.md?bc=%252fazure%252fsql-data-warehouse%252fbreadcrumb%252ftoc.json&toc=%252fazure%252fsql-data-warehouse%252ftoc.json&view=azure-sqldw-latest) .|  
+|operation_type|**nvarchar(35)**|Der Typ des Vorgangs, der durch diesen Schritt dargestellt wird.|**DMS-Abfrageplan Vorgänge:** "Returnoperation", "partitionmuveoperation", "muveoperation", "broadcastmuveoperation", "shufflemuveoperation", "trimmuveoperation", "copyoperation", "distributerepli-tablemuveoperation"<br /><br /> **SQL-Abfrageplan Vorgänge:** "Onoperation", "Remoteoperation"<br /><br /> **Andere Abfrageplan Vorgänge:** ' MetaDataCreateOperation ', ' randomidoperation '<br /><br /> **Externe Vorgänge für Lesevorgänge:** "Hadoopshuffleoperation", "hadooproundrobinoperation", "hadoopbroadcastoperation"<br /><br /> **Externe Vorgänge für MapReduce:** "Hadoopjoboperation", "hdfsdeleteoperation"<br /><br /> **Externe Vorgänge für Schreibvorgänge:** "Externalexportdistributedoperation", "externalexportreplialisiedoperation", "externalexportcontroloperation"<br /><br /> Weitere Informationen finden Sie unter "Grundlegendes zu Abfrage Plänen" in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] . <br /><br />  Ein Abfrageplan kann auch von den Datenbankeinstellungen beeinflusst werden.  Weitere Informationen finden Sie unter [ALTER DATABASE SET-Optionen](../../t-sql/statements/alter-database-transact-sql-set-options.md?bc=%252fazure%252fsql-data-warehouse%252fbreadcrumb%252ftoc.json&toc=%252fazure%252fsql-data-warehouse%252ftoc.json&view=azure-sqldw-latest&preserve-view=true) .|  
 |distribution_type|**nvarchar(32)**|Verteilungstyp dieser Schritt wird durchlaufen.|"Allnodes", "alldistributionen", "allcomputenodes", "computenode", "Distribution", "subsetnodes", "subsetverteilungen", "nicht angegeben"|  
 |location_type|**nvarchar(32)**|Gibt an, wo der Schritt ausgeführt wird.|"Compute", "Control", "DMS"|  
 |status|**nvarchar(32)**|Status dieses Schritts.|Ausstehend, wird ausgeführt, abgeschlossen, Fehler, undofailed, Aktion abbrechen, abgebrochen, rückgängig gemacht, abgebrochen|  

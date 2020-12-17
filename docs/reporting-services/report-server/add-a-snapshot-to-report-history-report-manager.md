@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/26/2019
-ms.openlocfilehash: 549333b7556e3537fd8a6a628738b0c0f87a1da9
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 18d1cc11b8ab4d4501e62ac5acfbffaeab32c892
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935323"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466581"
 ---
 # <a name="add-a-snapshot-to-report-history"></a>Hinzufügen einer Momentaufnahme zum Berichtsverlauf
 
@@ -24,7 +24,7 @@ Berichtsmomentaufnahmen werden in keinem speziellen Renderingformat gespeichert.
   
 ## <a name="to-manually-add-snapshots-to-report-history"></a>So fügen Sie dem Berichtsverlauf manuell Momentaufnahmen hinzu
   
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 1. Navigieren Sie im Berichts-Manager zur Seite **Inhalt** , und zeigen Sie auf das Element, dessen Verlauf angezeigt werden soll, und klicken Sie auf den Dropdownpfeil.
   
@@ -60,9 +60,9 @@ Berichtsmomentaufnahmen werden in keinem speziellen Renderingformat gespeichert.
   
 4. Aktivieren Sie das Kontrollkästchen für **Folgenden Zeitplan verwenden, um dem Berichtsverlauf Momentaufnahmen hinzuzufügen**. Führen Sie einen der folgenden Schritte aus:  
   
-    - Wählen Sie **Berichtsspezifischer Zeitplan**aus. Geben Sie die Zeitplandetails ein, wählen Sie Start- und Enddatum für den Zeitplan aus, und klicken Sie dann auf **OK**.  
+    - Wählen Sie **Berichtsspezifischer Zeitplan** aus. Geben Sie die Zeitplandetails ein, wählen Sie Start- und Enddatum für den Zeitplan aus, und klicken Sie dann auf **OK**.  
 
-    - Wählen Sie **Freigegebener Zeitplan**aus. Wählen Sie aus der Liste den gewünschten Zeitplan aus.  
+    - Wählen Sie **Freigegebener Zeitplan** aus. Wählen Sie aus der Liste den gewünschten Zeitplan aus.  
 
 5. Klicken Sie auf **Anwenden**.  
   
@@ -75,7 +75,7 @@ Berichtsmomentaufnahmen werden in keinem speziellen Renderingformat gespeichert.
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 
 ## <a name="to-manually-add-snapshots-to-report-history"></a>So fügen Sie dem Berichtsverlauf manuell Momentaufnahmen hinzu
   
@@ -149,9 +149,9 @@ Berichtsmomentaufnahmen werden in keinem speziellen Renderingformat gespeichert.
   
 5. Aktivieren Sie das Kontrollkästchen für **Folgenden Zeitplan verwenden, um dem Berichtsverlauf Momentaufnahmen hinzuzufügen**. Führen Sie einen der folgenden Schritte aus:  
   
-    - Wählen Sie **Berichtsspezifischer Zeitplan**aus. Geben Sie die Zeitplandetails ein, wählen Sie Start- und Enddatum für den Zeitplan aus, und klicken Sie dann auf **OK**.  
+    - Wählen Sie **Berichtsspezifischer Zeitplan** aus. Geben Sie die Zeitplandetails ein, wählen Sie Start- und Enddatum für den Zeitplan aus, und klicken Sie dann auf **OK**.  
 
-    - Wählen Sie **Freigegebener Zeitplan**aus. Wählen Sie aus der Liste den gewünschten Zeitplan aus.  
+    - Wählen Sie **Freigegebener Zeitplan** aus. Wählen Sie aus der Liste den gewünschten Zeitplan aus.  
 
 5. Klicken Sie auf **Anwenden**.  
   

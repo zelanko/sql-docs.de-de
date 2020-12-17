@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 817395eca7ed1fd5f9a0ae9f01c3059c17deffef
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: fcc511680e1635563c8dac50786130fb6835d472
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036369"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466301"
 ---
 # <a name="search-documents-using-results-lists"></a>Durchsuchen von Dokumenten mithilfe von Ergebnislisten
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,14 +53,14 @@ ms.locfileid: "92036369"
   
 4.  Klicken Sie in der Liste **Suchen in** auf **Alle geöffneten Dokumente**, **Aktuelles Projekt**, **Gesamte Projektmappe**, oder geben Sie einen Verzeichnispfad ein.  
   
-5.  Klicken Sie auf **Ersetzen** , um die gefundene Suchübereinstimmung durch den Text im Feld **Ersetzen durch** zu ersetzen. Wenn Sie auf **Weitersuchen** klicken, können Sie einzelne Übereinstimmungen auslassen. Wenn Sie auf **Datei überspringen**klicken, können Sie eine Datei auslassen.  
+5.  Klicken Sie auf **Ersetzen** , um die gefundene Suchübereinstimmung durch den Text im Feld **Ersetzen durch** zu ersetzen. Wenn Sie auf **Weitersuchen** klicken, können Sie einzelne Übereinstimmungen auslassen. Wenn Sie auf **Datei überspringen** klicken, können Sie eine Datei auslassen.  
   
      \- oder –  
   
      Klicken Sie auf **Alle ersetzen** , um alle gefundenen Suchübereinstimmungen durch den Text im Feld **Ersetzen durch** zu ersetzen. Wählen Sie **Nach dem Ersetzen, geänderte Dateien geöffnet lassen** aus, wenn Sie einige der vorgenommenen Ersetzungen zu einem späteren Zeitpunkt rückgängig machen möchten.  
   
     > [!NOTE]  
-    >  Durch**Alle ersetzen** werden alle gefundenen Suchübereinstimmungen ersetzt, einschließlich jener in den Dateien, die Sie mit **Datei überspringen** oder **Weitersuchen**ausgelassen haben. Sie können die Option **Rückgängig** nur für Ersetzungen verwenden, die in Dateien vorgenommen wurden, die nach dem Ersetzungsvorgang geöffnet bleiben.  
+    >  Durch **Alle ersetzen** werden alle gefundenen Suchübereinstimmungen ersetzt, einschließlich jener in den Dateien, die Sie mit **Datei überspringen** oder **Weitersuchen** ausgelassen haben. Sie können die Option **Rückgängig** nur für Ersetzungen verwenden, die in Dateien vorgenommen wurden, die nach dem Ersetzungsvorgang geöffnet bleiben.  
   
  Standardmäßig werden die Ersetzungsinformationen im Fenster Suchergebnisse 1 angezeigt. Sie können die Ersetzungen durchsuchen, indem Sie im Fenster Suchergebnisse 1 auf die einzelnen Einträge doppelklicken.  
   

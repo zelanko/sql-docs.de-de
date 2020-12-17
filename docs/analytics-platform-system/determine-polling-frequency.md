@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: cafd18a7701ed5de5018a3e8dc23bc8d5d9640fa
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ee5c83fee1028b7e165db6dfb8015129c29e4eca
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767039"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641477"
 ---
 # <a name="determine-polling-frequency"></a>Festlegen der Abruf Häufigkeit
 In diesem Artikel wird erläutert, wie Sie die Abruf Häufigkeit für Warnungen der Analytics-Platt Form Systemgeräte ermitteln.  
@@ -32,7 +32,7 @@ Da PDW derzeit keine proaktiven Benachrichtigungen unterstützt, wenn Warnungen 
   
 Ein häufiges Intervall zum Abfragen von Warnungen, das auch von System Center verwendet wird, ist **alle 15 Minuten**.  Natürlich können Sie mehr oder weniger häufig Abfragen, aber es wird nicht empfohlen, weniger als alle sechs Stunden abzufragen.  
   
-Das Abrufen häufiger Abfragen ist akzeptabel, aber das Abrufen von zu häufig kann die [sys. dm_pdw_nodes_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md?view=sql-server-ver15) -DMV überladen.  Ein zu häufiges Abrufen kann es Benutzern erschweren, Probleme mit der Abfrageleistung zu diagnostizieren, wenn Sie sich schnell aus der Sicht auslagern.  
+Ein häufiger Abruf ist akzeptabel, aber das Abrufen von zu häufig kann die [sys.dm_pdw_nodes_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) DMV überladen.  Ein zu häufiges Abrufen kann es Benutzern erschweren, Probleme mit der Abfrageleistung zu diagnostizieren, wenn Sie sich schnell aus der Sicht auslagern.  
   
 ## <a name="see-also"></a>Weitere Informationen  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

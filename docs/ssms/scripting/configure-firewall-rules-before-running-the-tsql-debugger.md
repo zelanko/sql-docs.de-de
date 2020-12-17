@@ -22,13 +22,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.date: 10/20/2016
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 18ddcd8e2671416af4af22ee324caedd296b89bf
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b3b03ba4a8fae0114991cfb7556070b6a2266acd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039081"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474291"
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>Konfigurieren von Firewallregeln vor dem Ausführen des TSQL-Debuggers
 
@@ -50,7 +50,7 @@ Der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger umfasst sowohl servers
 
 Es gibt keine Konfigurationsvoraussetzungen für die Ausführung des [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debuggers, wenn [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] auf demselben Computer wie die Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ausgeführt wird. Um jedoch den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger auszuführen, wenn eine Verbindung mit einer Remoteinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]besteht, müssen auf beiden Computern in der Windows-Firewall Programm- und Portausnahmen aktiviert sein. Diese Regeln werden möglicherweise durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup erstellt. Wenn Ihnen beim Versuch, eine Remotedebugsitzung zu öffnen, Fehler angezeigt werden, stellen Sie sicher, dass die folgenden Firewallregeln auf dem Computer definiert sind.
 
-Verwenden Sie die Anwendung **Windows-Firewall mit erweiterter Sicherheit** , um die Firewallregeln zu verwalten. Öffnen Sie in sowohl [!INCLUDE[win7](../../includes/win7-md.md)] als auch [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]**Systemsteuerung**, öffnen Sie **Windows-Firewall**und wählen Sie **Erweiterte Einstellungen**aus. In [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] können Sie auch **Dienst-Manager**öffnen, im linken Bereich **Konfiguration** sowie **Windows-Firewall mit erweiterter Sicherheit**erweitern.
+Verwenden Sie die Anwendung **Windows-Firewall mit erweiterter Sicherheit** , um die Firewallregeln zu verwalten. Öffnen Sie in sowohl [!INCLUDE[win7](../../includes/win7-md.md)] als auch [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]**Systemsteuerung**, öffnen Sie **Windows-Firewall** und wählen Sie **Erweiterte Einstellungen** aus. In [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] können Sie auch **Dienst-Manager** öffnen, im linken Bereich **Konfiguration** sowie **Windows-Firewall mit erweiterter Sicherheit** erweitern.
 
 > [!CAUTION]
 >  Wenn Sie Regeln in der Windows-Firewall aktivieren, kann dies dazu führen, dass Ihr Computer Sicherheitsrisiken ausgesetzt ist, die von der Firewall normalerweise geblockt werden. Durch das Aktivieren von Regeln für Remotedebugging wird die Blockierung der in diesem Thema aufgeführten Ports und Programme aufgehoben.
@@ -60,13 +60,13 @@ Verwenden Sie auf dem Computer, auf dem die Instanz von [!INCLUDE[ssDE](../../in
 
 - Fügen Sie eine eingehende Programmregel für sqlservr.exe hinzu. Sie müssen eine Regel für jede Instanz besitzen, die Remotedebugsitzungen unterstützen muss.
 
-   1. Klicken Sie im linken Bereich von **Windows-Firewall**mit erweiterter Sicherheit mit der rechten Maustaste auf **Eingehende Regeln**, und wählen Sie dann im Aktionsbereich **Neue Regel** aus.
+   1. Klicken Sie im linken Bereich von **Windows-Firewall** mit erweiterter Sicherheit mit der rechten Maustaste auf **Eingehende Regeln**, und wählen Sie dann im Aktionsbereich **Neue Regel** aus.
 
-   2. Wählen Sie im Dialogfeld **Regeltyp** die Option **Programm**aus, und klicken Sie anschließend auf **Weiter**.
+   2. Wählen Sie im Dialogfeld **Regeltyp** die Option **Programm** aus, und klicken Sie anschließend auf **Weiter**.
 
    3. Wählen Sie im Dialogfeld **Programm** die Option **Dieser Programmpfad:** aus, und geben Sie den vollständigen Pfad zu sqlservr.exe für diese Instanz ein. Standardmäßig wird „sqlservr.exe“ im Verzeichnis „C:\Programme\Microsoft SQL Server\MSSQL13.*Instanzname*\MSSQL\Binn“ installiert, wobei *Instanzname* für die Standardinstanz MSSQLSERVER lautet. Für eine beliebige benannte Instanz wird der jeweilige Instanzname eingefügt.
 
-   4. Wählen Sie im Dialogfeld **Aktion** die Option **Verbindung zulassen**aus, und klicken Sie auf **Weiter**.
+   4. Wählen Sie im Dialogfeld **Aktion** die Option **Verbindung zulassen** aus, und klicken Sie auf **Weiter**.
 
    5. Wählen Sie im Dialogfeld **Profil** beliebige Profile aus, die die Verbindungsumgebung des Computers beschreiben, wenn Sie eine Debugsitzung für die Instanz öffnen möchten, und klicken Sie auf **Weiter**.
 
@@ -76,17 +76,17 @@ Verwenden Sie auf dem Computer, auf dem die Instanz von [!INCLUDE[ssDE](../../in
 
    8. Wählen Sie die Registerkarte **Protokolle und Ports** aus.
 
-   9. Wählen Sie **TCP** im Feld **Protokolltyp:** aus, wählen Sie **Dynamische RPC-Ports** im Feld **Lokaler Port:** aus, klicken Sie auf **Anwenden**und dann auf **OK**.
+   9. Wählen Sie **TCP** im Feld **Protokolltyp:** aus, wählen Sie **Dynamische RPC-Ports** im Feld **Lokaler Port:** aus, klicken Sie auf **Anwenden** und dann auf **OK**.
 
 - Fügen Sie eine eingehende Programmregel für svchost.exe hinzu, um DCOM-Kommunikation von Remotedebuggersitzungen zu ermöglichen.
 
-   1. Klicken Sie im linken Bereich von **Windows-Firewall**mit erweiterter Sicherheit mit der rechten Maustaste auf **Eingehende Regeln**, und wählen Sie dann im Aktionsbereich **Neue Regel** aus.
+   1. Klicken Sie im linken Bereich von **Windows-Firewall** mit erweiterter Sicherheit mit der rechten Maustaste auf **Eingehende Regeln**, und wählen Sie dann im Aktionsbereich **Neue Regel** aus.
 
-   2. Wählen Sie im Dialogfeld **Regeltyp** die Option **Programm**aus, und klicken Sie anschließend auf **Weiter**.
+   2. Wählen Sie im Dialogfeld **Regeltyp** die Option **Programm** aus, und klicken Sie anschließend auf **Weiter**.
 
    3. Wählen Sie im Dialogfeld **Programm** **Dieser Programmpfad:** aus, und geben Sie den vollständigen Pfad zu svchost.exe ein. Standardmäßig ist svchost.exe in %systemroot%\System32\svchost.exe. installiert.
 
-   4. Wählen Sie im Dialogfeld **Aktion** die Option **Verbindung zulassen**aus, und klicken Sie auf **Weiter**.
+   4. Wählen Sie im Dialogfeld **Aktion** die Option **Verbindung zulassen** aus, und klicken Sie auf **Weiter**.
 
    5. Wählen Sie im Dialogfeld **Profil** beliebige Profile aus, die die Verbindungsumgebung des Computers beschreiben, wenn Sie eine Debugsitzung für die Instanz öffnen möchten, und klicken Sie auf **Weiter**.
 
@@ -96,7 +96,7 @@ Verwenden Sie auf dem Computer, auf dem die Instanz von [!INCLUDE[ssDE](../../in
 
    8. Wählen Sie die Registerkarte **Protokolle und Ports** aus.
 
-   9. Wählen Sie **TCP** im Feld **Protokolltyp:** aus, wählen Sie **RPC-Endpunktzuordnung** im Feld **Lokaler Port:** aus, klicken Sie auf **Anwenden**und dann auf **OK**.
+   9. Wählen Sie **TCP** im Feld **Protokolltyp:** aus, wählen Sie **RPC-Endpunktzuordnung** im Feld **Lokaler Port:** aus, klicken Sie auf **Anwenden** und dann auf **OK**.
 
 - Wenn die Domänenrichtlinie eine Netzwerkkommunikation über IPSec erfordert, müssen Sie auch eingehende Regeln für das Öffnen von UDP-Port 4500 und den UDP-Port 500 hinzufügen.
 
@@ -108,13 +108,13 @@ Wenn Ihnen beim Versuch, eine Remotedebugsitzung zu öffnen, Fehler angezeigt we
 
 - Fügen Sie einen Programmeintrag für svchost hinzu:
 
-   1. Klicken Sie im linken Bereich von **Windows-Firewall**mit erweiterter Sicherheit mit der rechten Maustaste auf **Eingehende Regeln**, und wählen Sie dann im Aktionsbereich **Neue Regel** aus.
+   1. Klicken Sie im linken Bereich von **Windows-Firewall** mit erweiterter Sicherheit mit der rechten Maustaste auf **Eingehende Regeln**, und wählen Sie dann im Aktionsbereich **Neue Regel** aus.
 
-   2. Wählen Sie im Dialogfeld **Regeltyp** die Option **Programm**aus, und klicken Sie anschließend auf **Weiter**.
+   2. Wählen Sie im Dialogfeld **Regeltyp** die Option **Programm** aus, und klicken Sie anschließend auf **Weiter**.
 
    3. Wählen Sie im Dialogfeld **Programm** **Dieser Programmpfad:** aus, und geben Sie den vollständigen Pfad zu svchost.exe ein. Standardmäßig ist svchost.exe in %systemroot%\System32\svchost.exe. installiert.
 
-   4. Wählen Sie im Dialogfeld **Aktion** die Option **Verbindung zulassen**aus, und klicken Sie auf **Weiter**.
+   4. Wählen Sie im Dialogfeld **Aktion** die Option **Verbindung zulassen** aus, und klicken Sie auf **Weiter**.
 
    5. Wählen Sie im Dialogfeld **Profil** beliebige Profile aus, die die Verbindungsumgebung des Computers beschreiben, wenn Sie eine Debugsitzung für die Instanz öffnen möchten, und klicken Sie auf **Weiter**.
 
@@ -124,13 +124,13 @@ Wenn Ihnen beim Versuch, eine Remotedebugsitzung zu öffnen, Fehler angezeigt we
 
    8. Wählen Sie die Registerkarte **Protokolle und Ports** aus.
 
-   9. Wählen Sie **TCP** im Feld **Protokolltyp:** aus, wählen Sie **RPC-Endpunktzuordnung** im Feld **Lokaler Port:** aus, klicken Sie auf **Anwenden**und dann auf **OK**.
+   9. Wählen Sie **TCP** im Feld **Protokolltyp:** aus, wählen Sie **RPC-Endpunktzuordnung** im Feld **Lokaler Port:** aus, klicken Sie auf **Anwenden** und dann auf **OK**.
 
 - Fügen Sie einen Programmeintrag für die Anwendung hinzu, die den [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor hostet. Wenn Sie Remotedebugsitzungen von sowohl [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] als auch [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] auf dem gleichen Computer öffnen müssen, müssen Sie eine Programmregel für beide hinzufügen:
 
-   1. Klicken Sie im linken Bereich von **Windows-Firewall**mit erweiterter Sicherheit mit der rechten Maustaste auf **Eingehende Regeln**, und wählen Sie dann im Aktionsbereich **Neue Regel** aus.
+   1. Klicken Sie im linken Bereich von **Windows-Firewall** mit erweiterter Sicherheit mit der rechten Maustaste auf **Eingehende Regeln**, und wählen Sie dann im Aktionsbereich **Neue Regel** aus.
 
-   2. Wählen Sie im Dialogfeld **Regeltyp** die Option **Programm**aus, und klicken Sie anschließend auf **Weiter**.
+   2. Wählen Sie im Dialogfeld **Regeltyp** die Option **Programm** aus, und klicken Sie anschließend auf **Weiter**.
 
    3. Wählen Sie im Dialogfeld **Programm** **Dieser Programmpfad:** aus, und geben Sie einen dieser drei Werte ein.
 
@@ -142,9 +142,9 @@ Wenn Ihnen beim Versuch, eine Remotedebugsitzung zu öffnen, Fehler angezeigt we
 
             2. Standardmäßig befindet sich der devenv.exe für Visual Studio 2012 unter C:\Programme (x86)\Microsoft Visual Studio 11.0\Common7\IDE
 
-            3. Sie können den Pfad zu ssms.exe über die Verknüpfung suchen, mit der Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]starten. Sie können den Pfad zu devenv.exe über die Verknüpfung suchen, mit der Sie [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]starten. Klicken Sie mit der rechten Maustaste auf die Verknüpfung und wählen Sie **Eigenschaften**aus. Die ausführbare Datei und der Pfad sind im Feld **Ziel** aufgeführt.
+            3. Sie können den Pfad zu ssms.exe über die Verknüpfung suchen, mit der Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]starten. Sie können den Pfad zu devenv.exe über die Verknüpfung suchen, mit der Sie [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]starten. Klicken Sie mit der rechten Maustaste auf die Verknüpfung und wählen Sie **Eigenschaften** aus. Die ausführbare Datei und der Pfad sind im Feld **Ziel** aufgeführt.
 
-   4. Wählen Sie im Dialogfeld **Aktion** die Option **Verbindung zulassen**aus, und klicken Sie auf **Weiter**.
+   4. Wählen Sie im Dialogfeld **Aktion** die Option **Verbindung zulassen** aus, und klicken Sie auf **Weiter**.
 
    5. Wählen Sie im Dialogfeld **Profil** beliebige Profile aus, die die Verbindungsumgebung des Computers beschreiben, wenn Sie eine Debugsitzung für die Instanz öffnen möchten, und klicken Sie auf **Weiter**.
 
@@ -154,7 +154,7 @@ Wenn Ihnen beim Versuch, eine Remotedebugsitzung zu öffnen, Fehler angezeigt we
 
    8. Wählen Sie die Registerkarte **Protokolle und Ports** aus.
 
-   9. Wählen Sie **TCP** im Feld **Protokolltyp:** aus, wählen Sie **Dynamische RPC-Ports** im Feld **Lokaler Port:** aus, klicken Sie auf **Anwenden**und dann auf **OK**.
+   9. Wählen Sie **TCP** im Feld **Protokolltyp:** aus, wählen Sie **Dynamische RPC-Ports** im Feld **Lokaler Port:** aus, klicken Sie auf **Anwenden** und dann auf **OK**.
 
 ## <a name="requirements-for-starting-the-debugger"></a>Anforderungen zum Starten des Debuggers
 

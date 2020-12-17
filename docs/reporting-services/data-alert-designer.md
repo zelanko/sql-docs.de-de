@@ -15,13 +15,13 @@ helpviewer_keywords:
 - creating, alerts
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d0d166462c2a542d834e92da03735e6e8294290d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: e83db2f4ce3a049a6c285b36a2d6a611369ca7bb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243299"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484352"
 ---
 # <a name="data-alert-designer"></a>Datenwarnungs-Designer
 
@@ -134,15 +134,15 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen und be
   
  Je nach Datentyp des Felds stellt der Datenwarnungs-Designer andere Vergleiche bereit. Der Datenwarnungs-Designer stellt Vergleiche bereit, die auf den Datentyp des Felds zugeschnitten sind, mit dem Werte verglichen werden. Im Folgenden werden Vergleiche für verschiedene Datentypen aufgelistet. Der **Boolean** -Datentyp wird nicht in Regeln unterstützt.  
   
--   Vergleiche des Datums-/Uhrzeitdatentyps sind **ist**, **ist not**, **ist before**und **ist after**.  
+-   Vergleiche des Datums-/Uhrzeitdatentyps sind **ist**, **ist not**, **ist before** und **ist after**.  
   
 -   Vergleiche von numeristtchen Datentypen sind **ist**, **ist not**, **ist less than**, **ist less than or equal to**, **ist greater than**, **ist greater than or equal to**.  
   
--   Vergleiche des String-Datentyps sind **ist**, **ist not**und **enthält**.  
+-   Vergleiche des String-Datentyps sind **ist**, **ist not** und **enthält**.  
   
- Wenn Sie eine Regel erstellen, geben Sie an, ob ein Wert oder Feld im Vergleich zu verwenden ist. Wählen Sie dazu die Option **Werteingabemodus** oder **Feldauswahlmodus**aus. Wenn Sie **Werteingabemodus**auswählen, stellen Sie eine Liste mit zu vergleichenden Werten bereit. Ein Vergleich, der mehrere OR-Klauseln umfasst, ähnelt stark dem logischen IN-Vergleich in [!INCLUDE[tsql](../includes/tsql-md.md)], der einer Liste mit für eine Übereinstimmung zu testenden Werten entspricht. Weitere Informationen finden Sie unter [IN (Transact-SQL)](../t-sql/language-elements/in-transact-sql.md).  
+ Wenn Sie eine Regel erstellen, geben Sie an, ob ein Wert oder Feld im Vergleich zu verwenden ist. Wählen Sie dazu die Option **Werteingabemodus** oder **Feldauswahlmodus** aus. Wenn Sie **Werteingabemodus** auswählen, stellen Sie eine Liste mit zu vergleichenden Werten bereit. Ein Vergleich, der mehrere OR-Klauseln umfasst, ähnelt stark dem logischen IN-Vergleich in [!INCLUDE[tsql](../includes/tsql-md.md)], der einer Liste mit für eine Übereinstimmung zu testenden Werten entspricht. Weitere Informationen finden Sie unter [IN (Transact-SQL)](../t-sql/language-elements/in-transact-sql.md).  
   
- Wenn Sie **Feldauswahlmodus**auswählen, erfolgt der Vergleich zwischen zwei Feldern (Zeile für Zeile). Die zwei Felder müssen über kompatible Datentypen verfügen, beispielsweise zwei numerische Felder. Andernfalls ist der Vergleich nicht gültig. Eine Liste mit Feldern wird automatisch angezeigt, wenn Sie die Option **Feldauswahlmodus**auswählen.  
+ Wenn Sie **Feldauswahlmodus** auswählen, erfolgt der Vergleich zwischen zwei Feldern (Zeile für Zeile). Die zwei Felder müssen über kompatible Datentypen verfügen, beispielsweise zwei numerische Felder. Andernfalls ist der Vergleich nicht gültig. Eine Liste mit Feldern wird automatisch angezeigt, wenn Sie die Option **Feldauswahlmodus** auswählen.  
   
  Datenwarnungen ohne Regeln sind auch gültig. Dieser Warnungstyp kann sehr nützlich sein. Stellen Sie sich ein Szenario vor, in dem Sie nur benachrichtigt werden möchten, wenn der Berichtsdatenfeed Daten enthält. Der Datenfeed enthält Teilnehmerinformationen und der Feed ist leer, bis ein Teilnehmer den Vorgang abbricht. In diesem Szenario würden Sie eine Warnung empfangen und mit dem ersten Abbruch beginnen.  
   

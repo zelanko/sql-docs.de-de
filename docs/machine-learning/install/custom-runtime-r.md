@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b058fe7aa723eddcdcf97158d19a053bf2b062b
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 554c3a08cc29cfbc6addef598698c40df31f9990
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870050"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471231"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>Installieren einer benutzerdefinierten R-Laufzeit für SQL Server
 
@@ -26,7 +26,7 @@ In diesem Artikel wird beschrieben, wie Sie eine benutzerdefinierte Laufzeit zum
 
 + In einer Installation von Machine Learning Services mit SQL Server 2019. Die Spracherweiterung kann mit [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) verwendet werden, nachdem einige zusätzliche Konfigurationsschritte abgeschlossen wurden.
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > In diesem Artikel wird beschrieben, wie Sie eine benutzerdefinierte Laufzeit für R unter Windows installieren. Informationen zur Installation unter Linux finden Sie unter [Installieren einer benutzerdefinierten R-Laufzeit für SQL Server unter Linux](custom-runtime-r.md?view=sql-server-linux-ver15&preserve-view=true).
@@ -182,7 +182,7 @@ GO
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 
 Sie könne SQL Server unter Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) und Ubuntu installieren. Weitere Informationen finden Sie [im Abschnitt „Unterstützte Plattformen“ im Leitfaden für die Installation von SQL Server unter Linux](../../linux/sql-server-linux-setup.md#supportedplatforms).
 
