@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 82c949647cf670c0e335b2c4446c248fea86581d
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: e7d7b36c2c19d48fec393e38c741244f6713dcd3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196324"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470631"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Szenarios für Data Science und Lösungsvorlagen
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -22,11 +22,11 @@ ms.locfileid: "92196324"
 In diesem Artikel werden verschiedene Vorlagen für Machine Learning-Lösungen in SQL Server beschrieben. Diese Vorlagen veranschaulichen die bewährten Methoden und stellen Bausteine für die schnelle Implementierung einer Machine Learning-Lösung bereit. Jede Vorlage ist für die Lösung eines bestimmten Data-Science-Problems in einer bestimmten Branche oder einem bestimmten Nischenmarkt konzipiert.
 Die Tasks in jeder Vorlage reichen von der Datenvorbereitung und Featureentwicklung bis hin zum Modelltraining und zur Bewertung. 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Arbeiten Sie sich mithilfe dieser Vorlagen in die Funktionsweise von [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] ein. Dann können Sie die Vorlage an Ihr eigenes Szenario anpassen und so eine benutzerdefinierte Lösung erstellen.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 Mit diesen Vorlagen können Sie sich mit der Funktionsweise von SQL Server Machine Learning Services vertraut machen. Dann können Sie die Vorlage an Ihr eigenes Szenario anpassen und so eine benutzerdefinierte Lösung erstellen.
 ::: moniker-end
 

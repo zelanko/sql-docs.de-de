@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: 429933e4491a7e0f7382e5ca8faa3b6ae26f3c82
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 78d7265398cab553a9378fecc54b25a32d36e84d
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891600"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489830"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) und Reporting Services
 
@@ -31,7 +31,7 @@ Das Berichts-Viewer-Webpart kann verwendet werden, um SQL Server Reporting Servi
 
 1. Konfigurieren Sie Ihre Reporting Services-Instanz (einheitlicher Modus) für die Kerberos-Authentifizierung, indem Sie das SSRS-Dienstkonto bestimmen, einen SPN festlegen und die Datei „rsreportserver.config“ so aktualisieren, dass der Authentifizierungstyp „RSWindowsNegotiate“ verwendet wird. [Register a Service Principal Name (SPN) for a Report Server (Registrieren eines Dienstprinzipalnamens (SPON) für einen Berichtsserver)](../report-server/register-a-service-principal-name-spn-for-a-report-server.md)
 
-2. Ausführen der [grundlegenden Schritte für die C2WTS-Konfiguration](?view=sql-server-2017#steps-needed-to-configure-c2wts)
+2. Ausführen der [grundlegenden Schritte für die C2WTS-Konfiguration](#steps-needed-to-configure-c2wts)
  
 
 ## <a name="sharepoint-mode-integration"></a>Integration des SharePoint-Modus
@@ -84,7 +84,7 @@ Wenn in der Umgebung die eingeschränkte Kerberos-Delegierung verwendet wird, da
     * Klicken Sie auf **Benutzer oder Computer...&#42;** , und geben Sie das Konto ein, das den Dienst hostet. Wenn ein SQL Server beispielsweise unter einem Konto namens *sqlservice* ausgeführt wird, geben Sie `sqlservice` ein. 
       Für das **Report Viewer-Webpart** ist dies das Dienstkonto für die Reporting Services-Instanz (einheitlicher Modus).
 
-    * Wählen Sie die Darstellung des Diensts. Dadurch werden die SPNs angezeigt, die über dieses Konto verfügbar sind. Wenn der Dienst unter diesem Konto nicht angezeigt wird, fehlt er möglicherweise oder befindet auf einem anderen Konto. Sie können das SetSPN-Dienstprogramm verwenden, um die SPNs anzupassen. Für das **Report Viewer-Webpart** finden Sie den konfigurierten HTTP-SPN unter [Konfiguration des Report Viewer-Webparts](?view=sql-server-2017#report-viewer-native-mode-web-part-configuration).
+    * Wählen Sie die Darstellung des Diensts. Dadurch werden die SPNs angezeigt, die über dieses Konto verfügbar sind. Wenn der Dienst unter diesem Konto nicht angezeigt wird, fehlt er möglicherweise oder befindet auf einem anderen Konto. Sie können das SetSPN-Dienstprogramm verwenden, um die SPNs anzupassen. Für das **Report Viewer-Webpart** finden Sie den konfigurierten HTTP-SPN unter [Konfiguration des Report Viewer-Webparts](#report-viewer-native-mode-web-part-configuration).
 
     * Wählen Sie „OK“ aus, um die Dialogfelder zu verlassen.
 

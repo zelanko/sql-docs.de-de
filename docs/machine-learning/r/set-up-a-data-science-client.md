@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7d3b2da6c649c514dff31225253292642212cd41
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 7f738e20a84c82879361e999ef795825c31bf311
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195788"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470771"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>Einrichten eines Data Science-Clients für die Entwicklung in R auf SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -226,9 +226,9 @@ Wenn Sie nicht bereits über eine bevorzugte IDE für R verfügen, sollten Sie *
 
 In diesem Beispiel wird Visual Studio 2017 Community Edition verwendet, wobei die Data Science-Workload installiert ist.
 
-1. Wählen Sie im Menü **Datei** die Option **Neu**aus, und wählen Sie dann **Projekt** aus.
+1. Wählen Sie im Menü **Datei** die Option **Neu** aus, und wählen Sie dann **Projekt** aus.
 
-2. Der linke Bereich enthält eine Liste vorinstallierter Vorlagen. Klicken Sie auf **R**, und wählen Sie **R-Projekt**aus. Geben Sie im Feld **Name**`dbtest` ein, und klicken Sie auf **OK**. 
+2. Der linke Bereich enthält eine Liste vorinstallierter Vorlagen. Klicken Sie auf **R**, und wählen Sie **R-Projekt** aus. Geben Sie im Feld **Name**`dbtest` ein, und klicken Sie auf **OK**. 
 
    Visual Studio erstellt einen neuen Projektordner und eine Standardskriptdatei, `Script.R`. 
 

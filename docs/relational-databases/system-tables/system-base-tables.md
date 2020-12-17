@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 09f898ac65e48977b98b55c1f6b5e5ed9057ee49
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 35d75fe78e9631423f6dc9acc48cd89ef41d8d79
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810208"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641899"
 ---
 # <a name="system-base-tables"></a>Systembasistabellen
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "91810208"
 ## <a name="system-base-tables"></a>Systembasistabellen  
  In der folgenden Tabelle werden die Systembasistabellen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgeführt und beschrieben.  
   
-|Basistabelle|Beschreibung|  
+|Basistabelle|BESCHREIBUNG|  
 |----------------|-----------------|  
 |**sys.sysschobjs**|Ist in jeder Datenbank vorhanden. Jede Zeile stellt ein Objekt in der Datenbank dar.|  
 |**sys.sysschobjs**|Ist in jeder Datenbank vorhanden. Enthält eine Zeile für jede Service Broker-Entität in der Datenbank. Service Broker-Entitäten schließen Folgendes ein:<br /><br /> Nachrichtentyp<br /><br /> Dienstvertrag<br /><br /> Dienst<br /><br /> Die Namen und Typen verwenden binäre Sortierung, die nicht geändert wird.|  
@@ -89,7 +89,7 @@ ms.locfileid: "91810208"
 |**sys.sysguidrefs**|Ist in jeder Datenbank vorhanden. Enthält eine Zeile für jeden GUID-klassifizierten ID-Verweis.|  
   
 ## <a name="updating-system-base-tables"></a>Aktualisieren von System Basistabellen    
-Sie können die Daten in den Systemtabellen über die System Katalog Sichten anzeigen. Um die Metadaten in einer Systembasis Tabelle zu aktualisieren, verwenden Sie die entsprechende-Schnittstelle (z. b. DDL-Anweisungen). Systemtabellen können nicht manuell aktualisiert werden. SQL Server meldet die folgenden Meldungen, wenn Sie direkte Updates für Systemtabellen ausführen.
+Sie können die Daten in den Systemtabellen über die Systemkatalogsichten abrufen. Um die Metadaten in einer Systembasis Tabelle zu aktualisieren, verwenden Sie die entsprechende-Schnittstelle (z. b. DDL-Anweisungen). Systemtabellen können nicht manuell aktualisiert werden. SQL Server meldet die folgenden Meldungen, wenn Sie direkte Updates für Systemtabellen ausführen.
 
 ### <a name="a-system-table-is-manually-updated"></a>Eine Systemtabelle wird manuell aktualisiert.
 Fehlermeldung 17659: Warnung: Die Systemtabelle mit der ID <id> in der Datenbank mit der ID <id> wurde direkt aktualisiert. Die Cachekohärenz ist möglicherweise verloren gegangen. SQL Server sollte neu gestartet werden.
@@ -100,4 +100,4 @@ Meldung 3859: Warnung: der System Katalog wurde direkt in der Datenbank mit der 
 ### <a name="executing-the-dbcc_checkdb-command-after-a-system-table-is-manually-updated"></a>Ausführen des DBCC_CHECKDB Befehls nach dem manuellen Aktualisieren einer Systemtabelle
 Meldung 3859: Warnung: der System Katalog wurde direkt in der Datenbank mit der ID 17 aktualisiert, zuletzt bei date_time.
 
-Wenn Sie manuelle Updates für eine Systemtabelle ausführen und ein Problem auftritt, werden Sie möglicherweise aufgefordert, eine Wiederherstellung aus einer Sicherung durchzuführen oder die Daten aus der betroffenen Datenbank in eine neue Datenbank zu kopieren. Weitere Informationen zu [Benutzer Aktions Fehlermeldungen](../errors-events/mssqlserver-8992-database-engine-error.md?view=sql-server-ver15#user-action).
+Wenn Sie manuelle Updates für eine Systemtabelle ausführen und ein Problem auftritt, werden Sie möglicherweise aufgefordert, eine Wiederherstellung aus einer Sicherung durchzuführen oder die Daten aus der betroffenen Datenbank in eine neue Datenbank zu kopieren. Weitere Informationen zu [Benutzer Aktions Fehlermeldungen](../errors-events/mssqlserver-8992-database-engine-error.md#user-action).

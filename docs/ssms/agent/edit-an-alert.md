@@ -15,13 +15,13 @@ ms.assetid: f518e528-cc8f-446a-b37d-98505b86e430
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9ccc873742a2c2c8d547d3d0a8200e6fbf6beb90
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 50ea1739cda75e303e3f0d9f1d6ac50b8c876950
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034993"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97423558"
 ---
 # <a name="edit-an-alert"></a>Edit an Alert
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,13 +44,13 @@ Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** Infor
   
 1.  Klicken Sie im **Objekt-Explorer** auf das Pluszeichen, um den Server zu erweitern, der die Warnung enthält, die Sie bearbeiten möchten.  
   
-2.  Klicken Sie auf das Pluszeichen, um **SQL Server-Agent**zu erweitern.  
+2.  Klicken Sie auf das Pluszeichen, um **SQL Server-Agent** zu erweitern.  
   
 3.  Klicken Sie auf das Pluszeichen, um den Ordner **Warnungen** zu erweitern.  
   
-4.  Klicken Sie mit der rechten Maustaste auf die Warnung, die Sie bearbeiten möchten, und wählen Sie dann **Eigenschaften**aus.  
+4.  Klicken Sie mit der rechten Maustaste auf die Warnung, die Sie bearbeiten möchten, und wählen Sie dann **Eigenschaften** aus.  
   
-5.  Aktualisieren Sie die Warnungseigenschaften auf den Seiten **Allgemein**, **Antwort**und **Optionen** .  
+5.  Aktualisieren Sie die Warnungseigenschaften auf den Seiten **Allgemein**, **Antwort** und **Optionen** .  
   
 6.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   

@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 95b00aff6a4a42ff0bc0cc01d6e4933f8ef6ceae
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 67cdc278387de1faef999aa67543ec73c021bc41
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793797"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489740"
 ---
 # <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>Was ist eine eigenständige Machine Learning Server- oder R Server-Instanz in SQL Server?
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -59,7 +59,7 @@ Beginnen Sie mit dem Setup, fügen Sie die Binärdateien zu Ihrem bevorzugten En
 Installieren Sie eine der folgenden Versionen:
 
 + [SQL Server 2017 Machine Learning Server (eigenständig)](../install/sql-machine-learning-standalone-windows-install.md)
-+ [SQL Server 2016 R Server (Standalone) – nur R](../install/sql-machine-learning-standalone-windows-install.md?view=sql-server-2016)
++ [SQL Server 2016 R Server (Standalone) – nur R](../install/sql-machine-learning-standalone-windows-install.md?view=sql-server-2016&preserve-view=true)
 
 ### <a name="step-2-configure-a-development-tool"></a>Schritt 2: Konfigurieren eines Entwicklungstools
 

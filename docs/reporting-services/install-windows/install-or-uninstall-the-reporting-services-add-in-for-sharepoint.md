@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fc01d1323d3145b16c9a6317509e72715f5a12ce
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: b4c8232909187894df11b7b1198fdb3416fbd1e4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890864"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97425479"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-ssrs"></a>Installieren oder Deinstallieren des Reporting Services-Add-Ins für SharePoint (SSRS)
 
@@ -101,7 +101,7 @@ Rssharepoint.msi /?
   
 2.  Führen Sie die ausführbare Datei für benutzerdefinierte Aktionen aus:  
   
-    1.  Wechseln Sie zu dem Ordner, in dem die Datei **rsCustomAction.exe**enthalten ist. Diese Datei wird bei der ausschließlichen Installation von Dateien des Add-Ins auf den Computer kopiert. **rsCustomAction.exe** befindet sich im Verzeichnis **%Temp%** . Geben Sie an der Eingabeaufforderung Folgendes ein, um zur Datei zu navigieren:  
+    1.  Wechseln Sie zu dem Ordner, in dem die Datei **rsCustomAction.exe** enthalten ist. Diese Datei wird bei der ausschließlichen Installation von Dateien des Add-Ins auf den Computer kopiert. **rsCustomAction.exe** befindet sich im Verzeichnis **%Temp%** . Geben Sie an der Eingabeaufforderung Folgendes ein, um zur Datei zu navigieren:  
   
          **CD %temp%** .  
   
@@ -157,9 +157,9 @@ Rssharepoint.msi /?
 ### <a name="to-uninstall-from-windows-control-panel"></a>So deinstallieren Sie von der Windows-Systemsteuerung aus  
  So starten Sie den Assistenten von der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Systemsteuerung und entfernen das Add-In  
   
-1.  Klicken Sie in der Systemsteuerung unter **Programme**auf **Programm deinstallieren**.  
+1.  Klicken Sie in der Systemsteuerung unter **Programme** auf **Programm deinstallieren**.  
   
-2.  Wählen Sie **Microsoft SQL Server RS Add-In für SharePoint**aus. Sie können den Deinstallations-Assistenten auch starten, indem Sie **rssharepoint.msi** über die Befehlszeile ohne Schalter ausführen.  
+2.  Wählen Sie **Microsoft SQL Server RS Add-In für SharePoint** aus. Sie können den Deinstallations-Assistenten auch starten, indem Sie **rssharepoint.msi** über die Befehlszeile ohne Schalter ausführen.  
   
 3.  Klicken Sie auf **Entfernen**.  
   

@@ -9,13 +9,13 @@ ms.author: maghan
 reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 10/28/2019
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 4227c2ad60e30994287fd0fc8c2524787c19b534
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: = azuresqldb-current || = azure-sqldw-latest
+ms.openlocfilehash: 564e6ad8cc4ab7cc14d816b34e5332412f912739
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300368"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489730"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>Azure Active Directory-Unterstützung in SQL Server Data Tools (SSDT)
 
@@ -23,7 +23,7 @@ ms.locfileid: "92300368"
 
 SQL Server Data Tools (SSDT) bietet mehrere [Azure AD](/azure/active-directory/active-directory-whatis)-Authentifizierungsmethoden (Azure Active Directory).
 
-Öffnen Sie in Visual Studio den **SQL Server-Objekt-Explorer** (im Menü **Ansicht** ), und klicken Sie auf **SQL Server hinzufügen** :
+Öffnen Sie in Visual Studio den **SQL Server-Objekt-Explorer** (im Menü **Ansicht**), und klicken Sie auf **SQL Server hinzufügen**:
 
 ![SSDT-Verbindungsdialogfeld](media/azure-active-directory/interactive.png)
 
@@ -49,7 +49,7 @@ Die *integrierte Active Directory-Authentifizierung* ist ein Mechanismus zum Her
 
 ## <a name="active-directory-interactive-authentication"></a>Interaktive Active Directory-Authentifizierung
 
-Die *interaktive Active Directory-Authentifizierung* ist verfügbar, wenn Sie über SSDT eine Verbindung mit den aufgelisteten Azure SQL-Produkten herstellen, jedoch nur mit [.NET Framework 4.7.2](/dotnet/api/?view=netframework-4.7.2) oder einer höheren Version.
+Die *interaktive Active Directory-Authentifizierung* ist verfügbar, wenn Sie über SSDT eine Verbindung mit den aufgelisteten Azure SQL-Produkten herstellen, jedoch nur mit [.NET Framework 4.7.2](/dotnet/api/?view=netframework-4.7.2&preserve-view=true) oder einer höheren Version.
 
 - [Herunterladen und Installieren für eine beliebige Version von .NET Framework](https://www.microsoft.com/net/download/all)
 - [Visual Studio 2017 Version 15.6](/visualstudio/releasenotes/vs2017-relnotes) oder höher

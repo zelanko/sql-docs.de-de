@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 67b427e7d1d73b072ce2ec319bfc3cbcbbcfddf9
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+ms.openlocfilehash: e335170c97f18039767fab8bf0b8400ce9f9b45d
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636100"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643760"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Aufzeichnen einer Ablauf Verfolgung in Assistent für Datenbankexperimente
 
@@ -29,11 +29,11 @@ Das Zwischenspeichern von Abfragen in SQL Server kann sich auf Auswertungs Ergeb
 
 ## <a name="configure-a-trace-capture"></a>Konfigurieren einer Ablauf Verfolgungs Erfassung
 
-1. Wählen Sie in der linken Navigationsleiste auf der linken Seite das Kamerasymbol aus, und wählen Sie dann auf der Seite **alle** Erfassungen die Option **neue Erfassung**aus.
+1. Wählen Sie in der linken Navigationsleiste auf der linken Seite das Kamerasymbol aus, und wählen Sie dann auf der Seite **alle** Erfassungen die Option **neue Erfassung** aus.
 
     ![Erstellen einer Erfassung in der DEA](./media/database-experimentation-assistant-capture-trace/dea-initiate-capture.png)
 
-2. Geben Sie auf der Seite **neue Erfassung** unter **Aufzeichnungsdetails**die folgenden Informationen ein, oder wählen Sie Sie aus:
+2. Geben Sie auf der Seite **neue Erfassung** unter **Aufzeichnungsdetails** die folgenden Informationen ein, oder wählen Sie Sie aus:
 
     - **Erfassungs Name**: Geben Sie einen Namen für die Ablauf Verfolgungs Datei für ihre Erfassung ein.
     - **Format**: Geben Sie das Format (Trace oder xevents) für die Erfassung an.
@@ -45,11 +45,11 @@ Das Zwischenspeichern von Abfragen in SQL Server kann sich auf Auswertungs Ergeb
 
 3. Stellen Sie sicher, dass Sie eine Sicherung durchgeführt haben, indem Sie die Option **Ja, ich habe die Sicherung manuell erstellt...** .
 
-4. Geben Sie unter **Aufzeichnungsdetails**die folgenden Informationen ein, oder wählen Sie Sie aus:
+4. Geben Sie unter **Aufzeichnungsdetails** die folgenden Informationen ein, oder wählen Sie Sie aus:
 
     - **Servertyp**: Geben Sie den SQL Server-Typ an (**SQLServer**, **azuresqldb**, **azuresqlmanagedinstance**).
     - **Servername**: Geben Sie den Servernamen oder die IP-Adresse Ihres SQL Server an.
-    - **Authentifizierungstyp**: Wählen Sie als Authentifizierungstyp **Windows**aus.
+    - **Authentifizierungstyp**: Wählen Sie als Authentifizierungstyp **Windows** aus.
     - **Datenbankname**: Geben Sie einen Namen für eine Datenbank ein, mit der eine Daten Bank Ablauf Verfolgung gestartet werden soll. Wenn Sie keine Datenbank angeben, wird die Ablauf Verfolgung für alle Datenbanken auf dem Server aufgezeichnet.
 
 5. Aktivieren bzw. deaktivieren Sie die Kontrollkästchen **Verbindung verschlüsseln** und **Serverzertifikat vertrauen** entsprechend Ihrem Szenario.
@@ -62,7 +62,7 @@ Das Zwischenspeichern von Abfragen in SQL Server kann sich auf Auswertungs Ergeb
 
     Wenn die eingegebenen Informationen gültig sind, beginnt der Ablauf Verfolgungs Erfassungs Vorgang. Andernfalls werden Textfelder mit ungültigen Einträgen rot hervorgehoben. Wenn Fehler auftreten, korrigieren Sie alle erforderlichen Einträge, und wählen Sie dann erneut **starten** aus.
 
-    Während die Ablauf Verfolgungs Erfassung ausgeführt wird, werden unter **Aufzeichnungsdetails**der Status und der Fortschritt des Ablauf Verfolgungs Erfassungs Prozesses angezeigt.
+    Während die Ablauf Verfolgungs Erfassung ausgeführt wird, werden unter **Aufzeichnungsdetails** der Status und der Fortschritt des Ablauf Verfolgungs Erfassungs Prozesses angezeigt.
 
     ![Überwachen des Aufzeichnungsstatus](./media/database-experimentation-assistant-capture-trace/dea-capture-running.png)
 
@@ -133,7 +133,7 @@ Wenn beim Ausführen einer Ablauf Verfolgungs Erfassung ein Fehler angezeigt wir
 
 - Der Name des Computers, auf dem SQL Server ausgeführt wird, ist gültig. Versuchen Sie, eine Verbindung mit dem Computer herzustellen, auf dem SQL Server ausgeführt wird, indem Sie SQL Server Management Studio (SSMS) verwenden.
 - Die Firewallkonfiguration blockiert keine Verbindungen mit dem Computer, auf dem SQL Server ausgeführt wird.
-- Der Benutzer verfügt über die Berechtigungen, die in den häufig gestellten Fragen zur wieder [Gabe](./database-experimentation-assistant-replay-trace.md?view=sql-server-ver15#frequently-asked-questions-about-trace-replay)aufgeführt sind.
+- Der Benutzer verfügt über die Berechtigungen, die in den häufig gestellten Fragen zur wieder [Gabe](./database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay)aufgeführt sind.
 - Der Ablauf Verfolgungs Name folgt nicht der standardrolloverkonvention (Erfassung \_ 1). Versuchen Sie stattdessen, Namen von Ablauf Verfolgungen wie z \_ . b. Capture 1A oder Capture1
 
 Im folgenden finden Sie einige mögliche Fehler, die möglicherweise angezeigt werden, und Lösungen für deren Behebung:
@@ -145,7 +145,7 @@ Im folgenden finden Sie einige mögliche Fehler, die möglicherweise angezeigt w
 |Auf dem Zielserver wird derzeit eine DEA-Ablauf Verfolgung ausgeführt.|Eine aktive Ablauf Verfolgung wird bereits auf dem Zielserver ausgeführt. Eine neue Ablauf Verfolgung kann nicht gestartet werden, wenn bereits eine Server weite Ablauf Verfolgung ausgeführt wird.|  
 |Die angeforderte Datenbank kann nicht zum Erfassen der Ablauf Verfolgung geöffnet werden. Dieser Fehler kann durch einen falschen Datenbanknamen verursacht werden.|Die angegebene Datenbank ist nicht vorhanden, oder der aktuelle Benutzer ist nicht verfügbar. Verwenden Sie den richtigen Datenbanknamen.|  
 
-Wenn Sie andere Fehler mit der Bezeichnung *SQL-Fehler Code*sehen, finden Sie unter [Datenbank-Engine Fehler](../relational-databases/errors-events/database-engine-events-and-errors.md) ausführliche Beschreibungen.
+Wenn Sie andere Fehler mit der Bezeichnung *SQL-Fehler Code* sehen, finden Sie unter [Datenbank-Engine Fehler](../relational-databases/errors-events/database-engine-events-and-errors.md) ausführliche Beschreibungen.
 
 ## <a name="see-also"></a>Weitere Informationen
 

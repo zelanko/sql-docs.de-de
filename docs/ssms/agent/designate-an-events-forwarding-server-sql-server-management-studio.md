@@ -15,13 +15,13 @@ ms.assetid: 81dfcbe4-3000-4e77-99de-bf85fef63a12
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3c30588555fafa4922af3434271759614f19b1df
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 733e88a41fcf1d2fca045351610199cbc6375e9c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037991"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97423854"
 ---
 # <a name="designate-an-events-forwarding-server"></a>Bestimmen eines Ereignisweiterleitungsservers
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,13 +44,13 @@ Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .
   
 1.  Klicken Sie im **Objekt-Explorer** auf das Pluszeichen, um den Server zu erweitern, von dem aus Sie Ereignisse an andere Server weiterleiten möchten.  
   
-2.  Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent** , und wählen Sie **Eigenschaften**aus.  
+2.  Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent** , und wählen Sie **Eigenschaften** aus.  
   
 3.  Klicken Sie im Dialogfeld **Eigenschaften des SQL Server-Agents >**_Servername_ unter **Seite auswählen** auf **Erweitert**.  
   
-4.  Aktivieren Sie unter **SQL Server-Ereignisweiterleitung**das Kontrollkästchen **Ereignisse an anderen Server weiterleiten** .  
+4.  Aktivieren Sie unter **SQL Server-Ereignisweiterleitung** das Kontrollkästchen **Ereignisse an anderen Server weiterleiten** .  
   
-5.  Klicken Sie in der Liste **Server** auf einen Server, und wählen Sie dann unter **Ereignisse**eine der folgenden Aktionen aus:  
+5.  Klicken Sie in der Liste **Server** auf einen Server, und wählen Sie dann unter **Ereignisse** eine der folgenden Aktionen aus:  
   
     -   Klicken Sie auf **Ereignisse ohne Behandlung** , um nur Ereignisse weiterzuleiten, die noch nicht von lokalen Warnungen verarbeitet wurden.  
   

@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6986e0bf160bb5dcdb54d6ae485b3d3879a4800a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b6b0626880ee69e4a35df9bb86c3f07d9c3c0a1d
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985701"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641352"
 ---
 # <a name="adox-methods"></a>ADOX-Methoden
 
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |-|-|  
 |[Anfügen (Spalten)](./append-method-adox-columns.md)|Fügt der **Columns** -Auflistung ein neues **Spalten** Objekt hinzu.|  
 |[Anfügen (Gruppen)](./append-method-adox-groups.md)|Fügt der **Gruppen** Auflistung ein neues **Gruppen** Objekt hinzu.|  
@@ -42,5 +42,5 @@ ms.locfileid: "88985701"
 |[SetPermissions](./setpermissions-method-adox.md)|Gibt die Berechtigungen für eine Gruppe oder einen Benutzer für ein Objekt an.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [ADOX-API-Referenz](./adox-object-model.md?view=sql-server-ver15)   
+ [ADOX-API-Referenz](./adox-object-model.md)   
  [ADO-Erweiterungen für Datendefinitionssprache und Sicherheit (ADOX)](../../guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

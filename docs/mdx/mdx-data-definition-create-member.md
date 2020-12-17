@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7d2a604bd27145b839476c75ea443d680e78c464
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 878d189aba259e5b69f5c27dbbc8b80b3f7f880b
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196986"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642977"
 ---
 # <a name="mdx-data-definition---create-member"></a>MDX-Datendefinition – CREATE MEMBER
 
@@ -47,7 +47,7 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  *Property_Value*  
  Ein gültiger Skalarausdruck, der den Wert der Eigenschaft eines berechneten Elements definiert.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die CREATE MEMBER-Anweisung definiert berechnete Elemente, die während der gesamten Sitzung verfügbar sind und somit in mehreren Abfragen im Verlauf der Sitzung verwendet werden können. Weitere Informationen finden Sie unter [erstellen Session-Scoped berechneter Elemente &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members).  
   
  Sie können auch ein berechnetes Element definieren, das in einer einzelnen Abfrage verwendet wird. Wenn Sie ein berechnetes Element definieren möchten, das auf eine einzelne Abfrage beschränkt ist, verwenden Sie die WITH-Klausel in der SELECT-Anweisung. Weitere Informationen finden Sie unter [erstellen Query-Scoped berechneter Elemente &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members).  
@@ -58,7 +58,7 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
   
  Weitere Informationen zu Elementeigenschaften, die durch OLE DB definiert sind, finden Sie in der OLE DB-Dokumentation.  
   
-## <a name="scope"></a>Bereich  
+## <a name="scope"></a>`Scope`  
  Ein berechnetes Element kann in einem der Gültigkeitsbereiche auftreten, die in der folgenden Tabelle aufgeführt sind.  
   
  Abfragebereich  
@@ -115,7 +115,7 @@ WHERE ProfitRatio
 |SOLVE_ORDER|Die Reihenfolge, in der das berechnete Element in Fällen gelöst wird, in denen ein berechnetes Element auf ein anderes berechnetes Element verweist (also in Fällen, in denen berechnete Elemente sich überschneiden).|  
 |FORMAT_STRING|Eine Format Zeichenfolge im Office-Stil, die die Client Anwendung beim Anzeigen von Zellwerten verwenden kann.|  
 |VISIBLE|Ein Wert, der bestimmt, ob das berechnete Element in einem Schemarowset sichtbar ist. Sichtbare berechnete Elemente können einer Menge mit der [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) -Funktion hinzugefügt werden. Ein Wert ungleich 0 zeigt an, dass das berechnete Element sichtbar ist. Der Standardwert für diese Eigenschaft ist *sichtbar*.<br /><br /> Berechnete Elemente, die nicht sichtbar sind (für die dieser Wert auf 0 festgelegt ist), werden üblicherweise als Zwischenschritte in komplexeren berechneten Elementen verwendet. Auf diese berechneten Elemente können auch andere Arten von Elementen (z. B. Measures) verweisen.|  
-|NON_EMPTY_BEHAVIOR|Das Measure oder die Menge, mit dem oder der beim Auflösen leerer Zellen das Verhalten berechneter Elemente bestimmt wird.<br /><br /> Warnung: Diese Eigenschaft ist veraltet. ** \* \* \* \* ** Vermeiden Sie es, sie festzulegen. Weitere Informationen finden Sie [unter Veraltete Analysis Services Features in SQL Server 2014](/previous-versions/sql/2014/analysis-services/deprecated-analysis-services-features-in-sql-server-2014?view=sql-server-2014) .|  
+|NON_EMPTY_BEHAVIOR|Das Measure oder die Menge, mit dem oder der beim Auflösen leerer Zellen das Verhalten berechneter Elemente bestimmt wird.<br /><br /> Warnung: Diese Eigenschaft ist veraltet. **\* \* \* \*** Vermeiden Sie es, sie festzulegen. Weitere Informationen finden Sie [unter Veraltete Analysis Services Features in SQL Server 2014](/previous-versions/sql/2014/analysis-services/deprecated-analysis-services-features-in-sql-server-2014?view=sql-server-2014&preserve-view=true) .|  
 |CAPTION|Eine Zeichenfolge, die von der Clientanwendung als Beschriftung für das Element verwendet wird.|  
 |DISPLAY_FOLDER|Eine Zeichenfolge, die den Pfad des Anzeigeordners angibt, der von der Clientanwendung zum Anzeigen des Elements verwendet wird. Das Trennzeichen für Ordnerebenen wird von der Clientanwendung definiert. Bei den von bereitgestellten Tools und Clients [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ist der umgekehrte Schrägstrich ( \\ ) das ebenendtrennzeichen. Um mehrere Anzeigeordner für ein definiertes Element bereitzustellen, verwenden Sie ein Semikolon (;) als Trennzeichen für die Ordner.|  
 |ASSOCIATED_MEASURE_GROUP|Der Name der Measuregruppe, der dieses Element zugeordnet wird.|  

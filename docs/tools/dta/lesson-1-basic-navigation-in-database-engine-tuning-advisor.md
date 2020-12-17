@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-dt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 4f6f001aa71a5ae2fd397fae2d89bdd951956987
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 735176a4fbb92d91d446f47492b2ddaa11098b2e
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88713828"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489350"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor-dta"></a>Lektion 1: Grundlagen zur Navigation im DTA
 
@@ -32,10 +32,10 @@ Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio, 
 
 - Installieren Sie [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Installieren Sie die [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Laden Sie die [AdventureWorks 2017-Beispieldatenbank](../../samples/adventureworks-install-configure.md?view=sql-server-2017) herunter.
+- Laden Sie die [AdventureWorks 2017-Beispieldatenbank](../../samples/adventureworks-install-configure.md) herunter.
 
 
-Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Wiederherstellen einer Datenbank](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017).
+Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Wiederherstellen einer Datenbank](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).
 
   >[!NOTE]
   > Dieses Tutorial richtet sich an Benutzer, die mit der Verwendung von SQL Server Management Studio und mit grundlegenden Datenbankverwaltungsaufgaben vertraut sind. 
@@ -79,7 +79,7 @@ Beim ersten Öffnen der grafischen Benutzeroberfläche des Datenbankoptimierungs
   
     -   Klicken Sie auf **Schriftart ändern** , um die Schriftarten anzuzeigen, die Sie für die Listen von Datenbanken und Tabellen auf der Registerkarte **Allgemein** auswählen können. Die Schriftarten, die Sie in dieser Option auswählen, werden auch für die Empfehlungsraster und Berichte des Datenbankoptimierungsratgebers verwendet, die nach dem Optimieren angezeigt werden. Standardmäßig verwendet der Datenbankoptimierungsratgeber die Systemschriftarten.  
   
-    -   Für **Anzahl der Elemente in der Liste zuletzt verwendeter Objekte** kann ein Wert von **1** bis **10**festgelegt werden. Damit wird die maximale Anzahl von Elementen in der Liste festgelegt, die angezeigt wird, wenn Sie im Menü **Datei** auf **Zuletzt geöffnete Sitzungen** oder **Zuletzt geöffnete Dateien** klicken. Standardmäßig ist der Wert **4**festgelegt.  
+    -   Für **Anzahl der Elemente in der Liste zuletzt verwendeter Objekte** kann ein Wert von **1** bis **10** festgelegt werden. Damit wird die maximale Anzahl von Elementen in der Liste festgelegt, die angezeigt wird, wenn Sie im Menü **Datei** auf **Zuletzt geöffnete Sitzungen** oder **Zuletzt geöffnete Dateien** klicken. Standardmäßig ist der Wert **4** festgelegt.  
   
     -   Wenn das Kontrollkästchen **Die letzten Optimierungsoptionen speichern** aktiviert ist, verwendet der Datenbankoptimierungsratgeber standardmäßig die Optimierungsoptionen, die Sie bei der letzten Sitzung angegeben haben, auch für die nächste Optimierungssitzung. Deaktivieren Sie das Kontrollkästchen, wenn Sie die Standardeinstellungen für den Datenbankoptimierungsratgeber verwenden möchten. Standardmäßig ist diese Option ausgewählt.  
   

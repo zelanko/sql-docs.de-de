@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6260905faa886383ea41d913d1645fa47dc8ce7d
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 8c954d708a6dba6a0caad4122149cfcecdb5a182
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195092"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470511"
 ---
 # <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>Transformieren von Daten mithilfe von R (Tutorial zu SQL Server und RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -27,7 +27,7 @@ In diesem Tutorial lernen Sie die **RevoScaleR**-Funktionen zum Transformieren v
 > * Verwenden von **rxDataStep** zur Erstellung und Transformation einer Datenteilmenge
 > * Verwenden von **rxImport**, um während des Imports in der Übertragung befindliche Daten in oder aus einer XDF-Datei oder einem In-Memory-Datenrahmen zu transformieren
 
-Obwohl die Funktionen **rxSummary**, **rxCube**, **rxLinMod**und **rxLogit** nicht speziell für die Datenverschiebung vorgesehen sind, unterstützen sie jedoch alle dynamische Datentransformationen.
+Obwohl die Funktionen **rxSummary**, **rxCube**, **rxLinMod** und **rxLogit** nicht speziell für die Datenverschiebung vorgesehen sind, unterstützen sie jedoch alle dynamische Datentransformationen.
 
 ## <a name="use-rxdatastep-to-transform-variables"></a>Verwenden von rxDataStep zum Transformieren von Variablen
 
@@ -38,7 +38,7 @@ Wir verwenden eine Funktion aus einem anderen R-Paket zum Transformieren der Dat
 Verwenden Sie aus dem Paket **boot** die Funktion **inv.logit**, die die Umkehrfunktion eines Logit berechnet. Das bedeutet, dass die Funktion **inv.logit** ein Logit zurück zu einer Wahrscheinlichkeit auf der Skala [0,1] konvertiert.
 
 > [!TIP] 
-> Eine andere Möglichkeit, Vorhersagen auf dieser Skala zu erhalten, wäre den Parameter *type* auf **response** im ursprünglichen Aufruf von **rxPredict**festzulegen.
+> Eine andere Möglichkeit, Vorhersagen auf dieser Skala zu erhalten, wäre den Parameter *type* auf **response** im ursprünglichen Aufruf von **rxPredict** festzulegen.
 
 1. Erstellen Sie zunächst eine Datenquelle, die die Daten aufnimmt, die für die Tabelle `ccScoreOutput` bestimmt sind.
   

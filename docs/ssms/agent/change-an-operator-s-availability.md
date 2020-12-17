@@ -23,13 +23,13 @@ ms.assetid: 10d58b92-b67b-47e2-af9c-9f9fd6968bba
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9192b3b68c649b7e8e45f13b5b95a91aea1ff8a1
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 60ade9965f92b1c9ff5e459f1af109bd37c6a9c5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035723"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482271"
 ---
 # <a name="change-an-operator39s-availability"></a>Ändern der Verfügbarkeit eines Operators
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,13 +50,13 @@ Nur Mitglieder der festen Serverrolle **sysadmin** können Operatoren bearbeiten
   
 #### <a name="to-change-an-operators-availability"></a>So ändern Sie die Verfügbarkeit eines Operators  
   
-1.  Klicken Sie im **Objekt-Explorer**auf das Pluszeichen, um den Server zu erweitern, der den Operator enthält, auf dem Sie die Indizes aktivieren möchten.  
+1.  Klicken Sie im **Objekt-Explorer** auf das Pluszeichen, um den Server zu erweitern, der den Operator enthält, auf dem Sie die Indizes aktivieren möchten.  
   
-2.  Klicken Sie auf das Pluszeichen, um **SQL Server-Agent**zu erweitern.  
+2.  Klicken Sie auf das Pluszeichen, um **SQL Server-Agent** zu erweitern.  
   
 3.  Klicken Sie auf das Pluszeichen, um den Ordner **Operatoren** zu erweitern.  
   
-4.  Klicken Sie mit der rechten Maustaste auf den Operator, den Sie aktivieren oder deaktivieren möchten, wählen Sie **Eigenschaften**aus, und klicken Sie anschließend auf die Registerkarte **Allgemein** .  
+4.  Klicken Sie mit der rechten Maustaste auf den Operator, den Sie aktivieren oder deaktivieren möchten, wählen Sie **Eigenschaften** aus, und klicken Sie anschließend auf die Registerkarte **Allgemein** .  
   
 5.  Aktivieren oder deaktivieren Sie im Dialogfeld _operator\_name_ **-Eigenschaften** das Kontrollkästchen **Aktiviert**.  
   

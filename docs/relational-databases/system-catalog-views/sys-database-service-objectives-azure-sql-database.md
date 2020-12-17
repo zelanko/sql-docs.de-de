@@ -17,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest
-ms.openlocfilehash: ca0b8567115c2a9209efb61185aad4fa4d05fa24
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 6435440b60c7b90d78f8050d64b5b580e610f017
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97412984"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643313"
 ---
 # <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL-Datenbank)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
@@ -32,11 +32,11 @@ Gibt die Edition (Dienst Ebene), das Dienst Ziel (Tarif) und den Namen des elast
   
  Informationen zu den Preisen finden Sie unter [SQL-Daten Bankoptionen und-Leistung:](https://azure.microsoft.com/pricing/details/sql-database/) Preise für SQL-Datenbank und Preise für [Azure Synapse-Analysen](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
   
- Informationen zum Ändern der Dienst Einstellungen finden Sie unter [ALTER DATABASE (Azure SQL-Datenbank)](../../t-sql/statements/alter-database-transact-sql.md) und [ALTER DATABASE (Azure Synapse Analytics)](../../t-sql/statements/alter-database-transact-sql.md?view=azure-sqldw-latest).  
+ Informationen zum Ändern der Dienst Einstellungen finden Sie unter [ALTER DATABASE (Azure SQL-Datenbank)](../../t-sql/statements/alter-database-transact-sql.md) und [ALTER DATABASE (Azure Synapse Analytics)](../../t-sql/statements/alter-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true).  
   
  Die sys.database_service_objectives Sicht enthält die folgenden Spalten.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |database_id|INT|Die ID der Datenbank, die innerhalb einer Instanz von Azure SQL-Datenbankserver eindeutig ist. Joinfähig mit [sys.-Datenbanken &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |Edition|sysname|Die Dienst Ebene für die Datenbank oder Data Warehouse: **Basic**, **Standard**, **Premium** oder **Data Warehouse**.|  

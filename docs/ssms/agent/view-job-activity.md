@@ -16,13 +16,13 @@ ms.assetid: 5c284e5e-7775-435d-ac49-f3f12a27ddc7
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 04c42de9a98d507367cb2c2256a7c1f241baf1fc
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 1476f1e4ad5699ddfef144f33947911b6c731343
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92030615"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482137"
 ---
 # <a name="view-job-activity"></a>Auftragsaktivitäten anzeigen
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,13 +43,13 @@ Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agen
   
 #### <a name="to-view-job-activity"></a>So zeigen Sie die Auftragsaktivität an  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung zu einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]her, und erweitern Sie dann diese Instanz.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung zu einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]her, und erweitern Sie dann diese Instanz.  
   
 2.  Erweitern Sie **SQL Server-Agent**.  
   
 3.  Klicken Sie mit der rechten Maustaste auf **Auftragsaktivitätsmonitor** , und klicken Sie dann auf **Auftragsaktivitäten anzeigen**.  
   
-4.  Im **Auftragsaktivitätsmonitor**können Sie Details zu jedem Auftrag anzeigen, der für diesen Server definiert ist.  
+4.  Im **Auftragsaktivitätsmonitor** können Sie Details zu jedem Auftrag anzeigen, der für diesen Server definiert ist.  
   
 5.  Klicken Sie mit der rechten Maustaste auf einen Auftrag. Nun können Sie den Auftrag starten, beenden, aktivieren oder deaktivieren, löschen, dessen Status im Auftragsaktivitätsmonitor aktualisieren oder dessen Verlauf oder Eigenschaften anzeigen.  Um mehrere Aufträge zu starten, beenden, aktivieren, deaktivieren oder aktualisieren, wählen Sie mehrere Zeilen im Auftragsaktivitätsmonitor aus, und klicken Sie mit der rechten Maustaste auf die Auswahl.  
   
