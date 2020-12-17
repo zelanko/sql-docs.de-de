@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 954476fc-5f72-4ada-ace5-d9acb27d18f8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6bb64cb60584444ba845ef1464fb07886c5db782
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+ms.openlocfilehash: 1e0c1e163aa83eac05d22b551e94135341a37716
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098629"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97638079"
 ---
 # <a name="adox-fundamentals"></a>ADOX-Grundlagen
 Microsoft® ActiveX® Data Objects Extensions for Data Definition Language and Security (ADOX) ist eine Erweiterung der ADO-Objekte und des Programmiermodells. ADOX umfasst Objekte für das Erstellen und Ändern von Schemas sowie für die Sicherheit. Da es sich um einen objektbasierten Ansatz für die Schema Bearbeitung handelt, können Sie Code schreiben, der unabhängig von den Unterschieden in der nativen Syntax für verschiedene Datenquellen verwendet werden kann.  
@@ -44,7 +44,7 @@ Microsoft® ActiveX® Data Objects Extensions for Data Definition Language and S
 -   [ADOX-Beispiele](../../reference/adox-api/adox-code-examples.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [ADOX-API-Referenz](../../reference/adox-api/adox-object-model.md?view=sql-server-ver15)   
+ [ADOX-API-Referenz](../../reference/adox-api/adox-object-model.md)   
  [ADOX-Code Beispiele](../../reference/adox-api/adox-code-examples.md)   
  [ADOX-Sammlungen](../../reference/adox-api/adox-collections.md)   
  [ADOX-Enumerationskonstanten](../../reference/adox-api/adox-enumerated-constants.md)   

@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 9/2/2020
-ms.openlocfilehash: 1169c75eb349f4b997a434acc5f7e0e7cc2792f3
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 922445116df06017b84aa84bf8dff8f924f2aeae
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935567"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474551"
 ---
 # <a name="create-a-report-server-database-report-server-configuration-manager"></a>Erstellen einer Berichtsserver-Datenbank, Berichtsserver-Konfigurations-Manager  
 
@@ -23,11 +23,11 @@ ms.locfileid: "91935567"
 
 Im einheitlichen Modus von SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden zwei relationale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken verwendet, um Berichtsserver-Metadaten und -Objekte zu speichern. Eine Datenbank, die als primärer Speicher dient, und eine zweite Datenbank zum Speichern temporärer Daten. 
 
-Die Datenbanken werden gemeinsam erstellt und sind durch ihre Namen aneinander gebunden. Bei einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Standardinstanz werden die Datenbanken als **reportserver** und **reportservertempdb**benannt. Zusammen werden die beiden Datenbanken als die **Berichtsserver-Datenbank** oder der **Berichtsserver-Katalog** bezeichnet.
+Die Datenbanken werden gemeinsam erstellt und sind durch ihre Namen aneinander gebunden. Bei einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Standardinstanz werden die Datenbanken als **reportserver** und **reportservertempdb** benannt. Zusammen werden die beiden Datenbanken als die **Berichtsserver-Datenbank** oder der **Berichtsserver-Katalog** bezeichnet.
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
-Der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint-Modus**von SQL Server** umfasst eine dritte Datenbank, die für Datenwarnungs-Metadaten verwendet wird. Die drei Datenbanken werden für jede SSRS-Dienstanwendung erstellt. Die Datenbanknamen enthalten standardmäßig eine GUID, die der Dienstanwendung entspricht. 
+Der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint-Modus **von SQL Server** umfasst eine dritte Datenbank, die für Datenwarnungs-Metadaten verwendet wird. Die drei Datenbanken werden für jede SSRS-Dienstanwendung erstellt. Die Datenbanknamen enthalten standardmäßig eine GUID, die der Dienstanwendung entspricht. 
 
 Im Folgenden finden Sie Beispielnamen der drei Datenbanken im SharePoint-Modus:
 
@@ -53,7 +53,7 @@ Im Folgenden finden Sie Beispielnamen der drei Datenbanken im SharePoint-Modus:
   
 - **Manuell**. Verwenden Sie den SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Konfigurations-Manager. Erstellen Sie die Berichtsserver-Datenbank manuell, wenn Sie zum Hosten der Datenbank eine Remote-[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verwenden. Weitere Informationen finden Sie unter [Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 ### <a name="sharepoint-mode"></a>SharePoint-Modus 
 Die Seite **Berichtsserver-Installationsoptionen** hat nur eine Option für den SharePoint-Modus, **Nur installieren**. Diese Option installiert alle SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dateien und den gemeinsamen SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienst. Der nächste Schritt besteht darin, mindestens eine SSRS-Dienstanwendung auf eine der folgenden Arten zu erstellen:  
@@ -67,14 +67,14 @@ Die Seite **Berichtsserver-Installationsoptionen** hat nur eine Option für den 
 ## <a name="database-server-version-requirements"></a>Anforderungen hinsichtlich der Datenbankserverversion
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird zum Hosten der Berichtsserver-Datenbanken verwendet. Die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz kann eine lokale oder eine Remoteinstanz sein. Mit den folgenden unterstützten Version von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] können die Berichtsserver-Datenbanken gehostet werden:  
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 - Verwaltete Azure SQL-Instanz
 
 - SQL Server 2019
 
 ::: moniker-end
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 
 - SQL Server 2017  
 ::: moniker-end

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 2cb011f6d5140099a82a3d41587c5f7a93fac009
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: = sql-server-2017
+ms.openlocfilehash: 83829530014c83279bcde7dc8aa4be17496bdf50
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985656"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409536"
 ---
 # <a name="sql-server-2017-release-notes"></a>Versionsanmerkungen zu SQL Server 2017
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
@@ -44,7 +44,7 @@ In den folgenden Artikeln werden Einschränkungen und Probleme mit SQL Server 20
     3. Aktivieren Sie dann erneut **FILESTREAM für E/A-Streamingzugriff auf Datei aktivieren** mit dem ursprünglichen Freigabenamen, und klicken Sie auf **Anwenden**.
 
 ### <a name="master-data-services-mds"></a>Master Data Services (MDS)
-- **Problem und Kundenbeeinträchtigung:**   Auf der Benutzerberechtigungsseite wird Ihnen der folgende Fehler angezeigt, wenn sie in der Strukturansicht auf Stammebene eine Berechtigung erteilen: `"The model permission cannot be saved. The object guid is not valid"`
+- **Problem und Kundenbeeinträchtigung:**  Auf der Benutzerberechtigungsseite wird Ihnen der folgende Fehler angezeigt, wenn sie in der Strukturansicht auf Stammebene eine Berechtigung erteilen: `"The model permission cannot be saved. The object guid is not valid"`
 
 - **Problemumgehung:** 
   - Grant permission on the sub nodes in the tree view instead of the root level (Erteilen Sie Berechtigung auf den vorhandenen Knoten in der Strukturansicht anstatt auf Stammebene).

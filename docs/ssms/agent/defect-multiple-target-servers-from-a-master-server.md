@@ -18,13 +18,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0397c22a479f911ebe5e070ece2d9cdf1fe6ab07
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: f047c57adc1c9cd660b38d7c72bc5dc3a00cc9e5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036627"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477051"
 ---
 # <a name="defect-multiple-target-servers-from-a-master-server"></a>Defect Multiple Target Servers from a Master Server
 
@@ -39,13 +39,13 @@ In diesem Thema wird beschrieben, wie Sie den Austritt mehrerer Zielserver aus e
   
 #### <a name="to-defect-multiple-target-servers-from-a-master-server"></a>So tragen Sie bei einem Masterserver mehrere Zielserver aus  
   
-1.  Erweitern Sie im **Objekt-Explorer**einen Server, der als Masterserver konfiguriert ist.  
+1.  Erweitern Sie im **Objekt-Explorer** einen Server, der als Masterserver konfiguriert ist.  
   
 2.  Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent**, zeigen Sie auf **Multiserververwaltung**, und klicken Sie dann auf **Zielserver verwalten**.  
   
 3.  Klicken Sie auf **Anweisungen bereitstellen**, und klicken Sie in der Liste **Anweisungstyp** auf **Austragen**.  
   
-4.  Führen Sie unter **Empfänger**eine der folgenden Aktionen aus:  
+4.  Führen Sie unter **Empfänger** eine der folgenden Aktionen aus:  
   
     -   Klicken Sie auf **Alle Zielserver** , um alle Zielserver dieses Masterservers auszutragen. Verwenden Sie diese Option, wenn die aktuelle Multiserververwaltungskonfiguration vollständig deinstalliert werden soll.  
   

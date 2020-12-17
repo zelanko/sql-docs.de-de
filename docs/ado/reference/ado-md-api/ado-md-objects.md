@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a75672db242d5b7388eb625bc028728c8522b11c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c988c6a1bbe0d8d582af3ab8a355f1109906401c
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987431"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97639647"
 ---
 # <a name="ado-md-objects"></a>ADO MD-Objekte
 
-|Object|Beschreibung|  
+|Object|BESCHREIBUNG|  
 |-|-|  
 |[Achse](./axis-object-ado-md.md)|Stellt eine Positions-oder Filter Achse eines Cellsets dar, die ausgewählte Elemente aus einer oder mehreren Dimensionen enthält.|  
 |[Katalog](./catalog-object-ado-md.md)|Enthält mehrdimensionale Schema Informationen (d. h. Cubes und zugrunde liegende Dimensionen, Hierarchien, Ebenen und Elemente), die für einen mehrdimensionalen Datenanbieter (MDP) spezifisch sind.|  
@@ -38,16 +38,16 @@ ms.locfileid: "88987431"
   
  Außerdem ist das **catalog** -Objekt mit einem ADO- **Verbindungs** Objekt verbunden, das in der Standard-ADO-Bibliothek enthalten ist:  
   
-|Object|Beschreibung|  
+|Object|BESCHREIBUNG|  
 |------------|-----------------|  
 |[Connection](../ado-api/connection-object-ado.md)|Stellt eine offene Verbindung mit einer Datenquelle dar.|  
   
  Die Beziehungen zwischen diesen Objekten werden im [ADO MD Objektmodell](./ado-md-object-model.md)veranschaulicht.  
   
- Viele ADO MD Objekte können in einer entsprechenden Sammlung enthalten sein. Ein [CubeDef](./cubedef-object-ado-md.md) -Objekt kann z. b. in einer [CubeDefs](./cubedefs-collection-ado-md.md) -Sammlung eines **Katalogs**enthalten sein. Weitere Informationen finden Sie unter [ADO MD Collections](./ado-md-collections.md).  
+ Viele ADO MD Objekte können in einer entsprechenden Sammlung enthalten sein. Ein [CubeDef](./cubedef-object-ado-md.md) -Objekt kann z. b. in einer [CubeDefs](./cubedefs-collection-ado-md.md) -Sammlung eines **Katalogs** enthalten sein. Weitere Informationen finden Sie unter [ADO MD Collections](./ado-md-collections.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [API-Referenz für ADO MD](./ado-md-object-model.md?view=sql-server-ver15)   
+ [API-Referenz für ADO MD](./ado-md-object-model.md)   
  [ADO MD Code Beispiele](./ado-md-code-examples.md)   
  [ADO MD Sammlungen](./ado-md-collections.md)   
  [Enumerationskonstanten ADO MD](./ado-md-enumerated-constants.md)   

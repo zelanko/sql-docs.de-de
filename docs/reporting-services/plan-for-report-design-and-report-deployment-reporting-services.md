@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8921fa3e19ca9de4184af907ee1aac59bd82f824
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: cdaaaa55756860e4b62f90cb7e01c88c63ad4b61
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247539"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477061"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planen von Berichtsentwurf und -bereitstellung | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] bietet eine Reihe von Ansätzen zum Erstellen und Bereitstellen von paginierten Berichten. Erhalten Sie Informationen, wie Sie eine Umgebung für die Berichterstellung und einen Berichtsserver planen, die reibungslos zusammenarbeiten.
@@ -53,7 +53,7 @@ Dieses Thema bietet eine Übersicht über die Unterstützung der Berichtsdefinit
   
 -   **Webportal:** Laden Sie einen Bericht aus dem [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] auf einen Berichtsserver im einheitlichen Modus hoch.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 -   **SharePoint:** Laden Sie einen Bericht auf eine SharePoint-Website hoch, die mit einem Berichtsserver im SharePoint-Modus konfiguriert wurde.  
 
@@ -69,11 +69,11 @@ Dieses Thema bietet eine Übersicht über die Unterstützung der Berichtsdefinit
 |[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> oder<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> oder<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|2010 RDL<br /><br /> 2008 RDL<br /><br /> 2005 RDL<br /><br /> 2000 RDL|  
 |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|2008 RDL<br /><br /> 2005 RDL<br /><br /> 2000 RDL|  
   
- Wenn Sie eine Berichtsdefinition auf den Berichtsserver hochladen oder ein Upgrade eines Berichtsservers ausführen, auf dem Berichte vorhanden sind, wird auf dem Berichtsserver die Berichtsdefinition im ursprünglichen Format beibehalten. **Bei der ersten Verwendung**aktualisiert der Berichtsserver den Bericht in der Berichtsserver-Datenbank auf ein binäres Format, das für nachfolgende Sichten beibehalten wird. Die Berichtsdefinition (.rdl) selbst wird nicht aktualisiert.  
+ Wenn Sie eine Berichtsdefinition auf den Berichtsserver hochladen oder ein Upgrade eines Berichtsservers ausführen, auf dem Berichte vorhanden sind, wird auf dem Berichtsserver die Berichtsdefinition im ursprünglichen Format beibehalten. **Bei der ersten Verwendung** aktualisiert der Berichtsserver den Bericht in der Berichtsserver-Datenbank auf ein binäres Format, das für nachfolgende Sichten beibehalten wird. Die Berichtsdefinition (.rdl) selbst wird nicht aktualisiert.  
   
  Sie können vom Berichtsserver eine schreibgeschützte Kopie der Berichtsdefinitionsdatei (.rdl) extrahieren. Navigieren Sie auf einem Berichtsserver im einheitlichen Modus zum [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], wählen Sie den Bericht aus, und klicken auf **Herunterladen**. 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 Wechseln Sie in einer Bereitstellung im SharePoint-Modus zur Dokumentbibliothek, wählen Sie den Bericht aus, und klicken Sie auf **Kopie herunterladen**.  
 

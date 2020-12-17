@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6407ed2cd23b8fad1f63a1b670a4cce2ad54790c
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 8402ec9094b7e765764d5e650ac27a0b87b0e5d2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793747"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471121"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Installieren von vortrainierten Machine Learning-Modellen unter SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -38,13 +38,13 @@ Wenn Sie vortrainierte Modelle hinzuzufügen möchten, müssen Sie über Adminis
 
 Externe Skripts müssen aktiviert sein, und der SQL Server LaunchPad-Dienst muss ausgeführt werden. Die Schritte zum Aktivieren und Überprüfen dieser Funktionen sind in den Installationsanleitungen enthalten. 
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 Die vortrainierten Modelle sind im [MicrosoftML R-Paket](/machine-learning-server/r-reference/microsoftml/microsoftml-package) oder im [microsoftml Python-Paket](/machine-learning-server/python-reference/microsoftml/microsoftml-package) enthalten.
 
 [SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md) enthält beide Sprachversionen der Machine Learning-Bibliothek. Diese Voraussetzung ist also erfüllt, ohne dass Sie weitere Maßnahmen ergreifen müssen. Da die Bibliotheken vorhanden sind, können Sie das in diesem Artikel beschriebene PowerShell-Skript verwenden, um diesen Bibliotheken die vortrainierten Modelle hinzuzufügen.
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Die vortrainierten Modelle sind im [MicrosoftML R-Paket](/machine-learning-server/r-reference/microsoftml/microsoftml-package) enthalten.
 
 In [SQL Server R Services](sql-r-services-windows-install.md), die es nur in R gibt, ist das [MicrosoftML-Paket](/machine-learning-server/r-reference/microsoftml/microsoftml-package) nicht standardmäßig enthalten. Wenn Sie MicrosoftML hinzufügen möchten, müssen Sie ein [Komponentenupgrade](../install/upgrade-r-and-python.md) durchführen. Ein Komponentenupgrade hat unter anderem den Vorteil, dass die vortrainierten Modelle simultan hinzugefügt werden können, sodass das PowerShell-Skript nicht ausgeführt werden muss. Wenn Sie jedoch bereits ein Upgrade durchgeführt und dabei vergessen haben, die vortrainierten Modelle hinzuzufügen, können Sie das PowerShell-Skript wie in diesem Artikel beschrieben hinzufügen. Dies funktioniert bei beiden Versionen von SQL Server. Vergewissern Sie sich jedoch zuvor, dass die Bibliothek MicrosoftML unter `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library` vorhanden sind.

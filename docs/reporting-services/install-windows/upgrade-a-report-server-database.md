@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 634fc0130942aacf7ec7c32971c9efa58e0bb16a
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: b4d5b4e01abaf0643f6f121be28abe98972078a2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891170"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472431"
 ---
 # <a name="upgrade-a-report-server-database"></a>Aktualisieren der Berichtsserver-Datenbank
 
@@ -25,7 +25,7 @@ Die Berichtsserver-Datenbank ermöglicht die Speicherung für mindestens eine Be
   
  **Einheitlicher Modus:** Bei [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus besteht die Berichtsserver-Datenbank tatsächlich aus zwei Datenbanken mit dem Standardnamen „ReportServer“ und „ReportServerTempDB“.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
  **SharePoint-Modus:** Im Reporting Services SharePoint-Modus von SQL Server 2016 entspricht die Berichtsserver-Datenbank tatsächlich einer Sammlung von Datenbanken, die für die einzelnen Instanzen der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung erstellt werden.  
 

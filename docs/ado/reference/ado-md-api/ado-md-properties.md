@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e94cb9bbd873c32e17f25c00da719c11c3260162
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1ffc556d5c4138f35b1831a8aebeb15622328d4c
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987421"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97637860"
 ---
 # <a name="ado-md-properties"></a>ADO MD-Eigenschaften
 
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |-|-|  
 |[ActiveConnection](./activeconnection-property-ado-md.md)|Gibt an, zu welchem ADO- **Verbindungs** Objekt das aktuelle Cellset oder der aktuelle Katalog gehört.|  
-|[Caption](./caption-property-ado-md.md)|Gibt den Beschriftungs Text an, der beim Anzeigen einer **Ebene** **oder eines** Element Objekts verwendet werden soll.|  
+|[Beschriftung](./caption-property-ado-md.md)|Gibt den Beschriftungs Text an, der beim Anzeigen einer **Ebene** **oder eines** Element Objekts verwendet werden soll.|  
 |[ChildCount](./childcount-property-ado-md.md)|Gibt die Anzahl der Elemente an, für die **das aktuelle Element** Objekt das übergeordnete Element in einer Hierarchie ist.|  
 |[Children](./children-property-ado-md.md)|Gibt eine **Auflistung von** Membern zurück, für die **das aktuelle Element** das übergeordnete Element in der Hierarchie ist.|  
 |[Count](../ado-api/count-property-ado.md)|Gibt die Anzahl der-Objekte in einer Auflistung an.|  
@@ -46,13 +46,13 @@ ms.locfileid: "88987421"
 |[Parent](./parent-property-ado-md.md)|Gibt das Element an, das dem aktuellen Element in einer Hierarchie übergeordnet ist.|  
 |[ParentSameAsPrev](./parentsameasprev-property-ado-md.md)|Gibt an, ob das übergeordnete Element dieses Positions Elements dem übergeordneten Element des unmittelbar vorangehenden Elements entspricht.|  
 |[Quelle](./source-property-ado-md.md)|Gibt die Quelle für die Daten im Cellset an.|  
-|[State](./state-property-ado-md.md)|Gibt den aktuellen Status des Cellsets an.|  
+|[Zustand](./state-property-ado-md.md)|Gibt den aktuellen Status des Cellsets an.|  
 |[Type](./type-property-ado-md.md)|Gibt den Typ des aktuellen Elements an.|  
 |[UniqueName](./uniquename-property-ado-md.md)|Gibt einen eindeutigen Namen für das aktuelle-Objekt an.|  
 |[Wert](./value-property-ado-md.md)|Gibt den Wert der aktuellen Zelle an.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [API-Referenz für ADO MD](./ado-md-object-model.md?view=sql-server-ver15)   
+ [API-Referenz für ADO MD](./ado-md-object-model.md)   
  [ADO MD Code Beispiele](./ado-md-code-examples.md)   
  [ADO MD Sammlungen](./ado-md-collections.md)   
  [Enumerationskonstanten ADO MD](./ado-md-enumerated-constants.md)   

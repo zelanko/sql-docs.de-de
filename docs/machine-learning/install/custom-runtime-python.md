@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2a37b086804a8fabe3719db0744b49345d69e6b8
-ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 15047969fdf25727d324ae577414273cc86769cf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94674138"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471221"
 ---
 # <a name="install-a-python-custom-runtime-for-sql-server"></a>Installieren einer benutzerdefinierten Python-Laufzeit für SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -25,7 +25,7 @@ In diesem Artikel wird beschrieben, wie Sie eine benutzerdefinierte Laufzeit zum
 
 + In einer Installation von Machine Learning Services mit SQL Server 2019. Die Spracherweiterung kann mit [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) verwendet werden, nachdem einige zusätzliche Konfigurationsschritte abgeschlossen wurden.
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > In diesem Artikel wird beschrieben, wie Sie eine benutzerdefinierte Laufzeit für Python unter Windows installieren. Informationen zur Installation unter Linux finden Sie unter [Installieren einer benutzerdefinierten Python-Laufzeit für SQL Server unter Linux](custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true).
@@ -148,7 +148,7 @@ GO
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 
 Sie könne SQL Server unter Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) und Ubuntu installieren. Weitere Informationen finden Sie [im Abschnitt „Unterstützte Plattformen“ im Leitfaden für die Installation von SQL Server unter Linux](../../linux/sql-server-linux-setup.md).
 

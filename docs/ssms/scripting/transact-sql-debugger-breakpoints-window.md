@@ -13,13 +13,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/22/2020
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 966121ea88b5456b2068b87e8736685f0f064605
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= sql-server-2016'
+ms.openlocfilehash: 915ad9a9429c9200613a0bb443b42237162ea9c7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036193"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476821"
 ---
 # <a name="transact-sql-debugger---breakpoints-window"></a>Transact-SQL-Debugger – Fenster „Breakpoints“
 
@@ -54,7 +54,7 @@ Sie können die folgenden Spalten hinzufügen und entfernen, indem Sie sie in de
 Zeigt **(Keine)** an. Der Debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] unterstützt das Festlegen von Breakpointfiltern nicht.
 
 **Bei Treffer**  
-Zeigt **Unterbrechen**an.
+Zeigt **Unterbrechen** an.
 
 **Sprache**  
 Zeigt **Transact-SQL** für [!INCLUDE[tsql](../../includes/tsql-md.md)]an.  
@@ -82,10 +82,10 @@ Löscht den ausgewählten Breakpoint.
 Löscht alle Breakpoints, die im Fenster **Breakpoints** angezeigt werden.  
 
 **Alle Breakpoints deaktivieren**  
-Deaktiviert alle Breakpoints, sodass sie die Codeausführung nicht mehr anhalten; die Breakpoints werden jedoch beibehalten. Wenn alle Breakpoints deaktiviert sind, wird diese Schaltfläche als **Breakpoints aktivieren**angezeigt.
+Deaktiviert alle Breakpoints, sodass sie die Codeausführung nicht mehr anhalten; die Breakpoints werden jedoch beibehalten. Wenn alle Breakpoints deaktiviert sind, wird diese Schaltfläche als **Breakpoints aktivieren** angezeigt.
 
 **Breakpoints aktivieren**  
-Aktiviert alle Breakpoints, sodass sie die Codeausführung anhalten. Wenn alle Breakpoints aktiviert sind, wird diese Schaltfläche als **Alle Breakpoints deaktivieren**angezeigt.  
+Aktiviert alle Breakpoints, sodass sie die Codeausführung anhalten. Wenn alle Breakpoints aktiviert sind, wird diese Schaltfläche als **Alle Breakpoints deaktivieren** angezeigt.  
 
 **Gehe zu Quellcode**  
 Positioniert den Cursor im Abfrage-Editor auf der Zeile, die den ausgewählten Breakpoint enthält.

@@ -14,13 +14,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9ac8349306d78075de65e3a14989d2f68261393f
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 3c8f19565b3dd368764e1e0d2106b622663f4549
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037783"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474381"
 ---
 # <a name="set-the-sql-server-connection-for-the-sql-server-agent-service"></a>Festlegen der SQL Server-Verbindung für den SQL Server-Agent-Dienst
 
@@ -58,9 +58,9 @@ Weitere Informationen zu den Windows-Berechtigungen, die für das [!INCLUDE[ssNo
   
 #### <a name="to-set-the-sql-server-connection"></a>So legen Sie die SQL Server-Verbindung fest  
   
-1.  Klicken Sie im **Objekt-Explorer**auf das Pluszeichen, um den Server zu erweitern, für den Sie eine Verbindung mit dem SQL Server-Agent-Dienst einrichten möchten.  
+1.  Klicken Sie im **Objekt-Explorer** auf das Pluszeichen, um den Server zu erweitern, für den Sie eine Verbindung mit dem SQL Server-Agent-Dienst einrichten möchten.  
   
-2.  Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent** , und wählen Sie **Eigenschaften**aus.  
+2.  Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent** , und wählen Sie **Eigenschaften** aus.  
   
 3.  Klicken Sie im Dialogfeld **SQL Server-Agent-Eigenschaften** unter **Seite auswählen** auf **Verbindung**.  
   

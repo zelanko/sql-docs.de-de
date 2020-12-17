@@ -18,13 +18,13 @@ ms.assetid: 1359d790-5905-4927-a208-e7155e7768a2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bad9dcc1d3fad1e7f0359d7805f93cbe44cb7652
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 1c3aa127a22f45d403de94484b590a3fc5db1616
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035043"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477121"
 ---
 # <a name="create-an-operator"></a>Create an Operator
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -53,11 +53,11 @@ Nur Mitglieder der festen Serverrolle **sysadmin** können Operatoren erstellen.
   
 #### <a name="to-create-an-operator"></a>So erstellen Sie einen Operator  
   
-1.  Klicken Sie im **Objekt-Explorer**auf das Pluszeichen, um den Server zu erweitern, auf dem Sie den SQL Server-Agent-Operator erstellen möchten.  
+1.  Klicken Sie im **Objekt-Explorer** auf das Pluszeichen, um den Server zu erweitern, auf dem Sie den SQL Server-Agent-Operator erstellen möchten.  
   
-2.  Klicken Sie auf das Pluszeichen, um **SQL Server-Agent**zu erweitern.  
+2.  Klicken Sie auf das Pluszeichen, um **SQL Server-Agent** zu erweitern.  
   
-3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Operatoren** , und wählen Sie dann **Neuer Operator**aus.  
+3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Operatoren** , und wählen Sie dann **Neuer Operator** aus.  
   
     Die folgenden Optionen befinden sich im Dialogfeld **Neuer Operator** auf der Seite **Allgemein** :  
   
@@ -71,7 +71,7 @@ Nur Mitglieder der festen Serverrolle **sysadmin** können Operatoren erstellen.
     Gibt die E-Mail-Adresse des Operators an.  
   
     **NET SEND-Adresse**  
-    Gibt die für **NET SEND**zu verwendende Adresse an.  
+    Gibt die für **NET SEND** zu verwendende Adresse an.  
   
     **Pager-E-Mail-Name**  
     Gibt die E-Mail-Adresse für den Pager des Operators an.  

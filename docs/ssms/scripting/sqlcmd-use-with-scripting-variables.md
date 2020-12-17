@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca718daf11f544120db3a17aed21f73b2e467c54
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 96f2987363fd52cc92127b6b54ffcd2a98b9ae10
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036250"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476881"
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>Verwenden von „sqlcmd“ mit Skriptvariablen
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "92036250"
  Dieses Thema enthält auch Beispiele zum Definieren von Umgebungsvariablen an der Eingabeaufforderung von „Cmd.exe“ mithilfe von **SET**.  
   
 ## <a name="setting-scripting-variables-by-using-the-setvar-command"></a>Festlegen von Skriptvariablen mithilfe des setvar-Befehls  
- Der Befehl **setvar** wird zum Definieren von Skriptvariablen verwendet. Mithilfe des Befehls **setvar** definierte Variablen werden intern gespeichert. Skriptvariablen dürfen nicht mit Umgebungsvariablen verwechselt werden, die mithilfe von **SET**an der Eingabeaufforderung definiert werden. Wenn ein Skript auf eine Variable verweist, die keine Umgebungsvariable ist oder nicht mithilfe von **setvar**definiert wurde, wird eine Fehlermeldung zurückgegeben und die Ausführung des Skripts unterbrochen. Weitere Informationen finden Sie unter der Option **-b** im [Hilfsprogramm sqlcmd](../../tools/sqlcmd-utility.md).  
+ Der Befehl **setvar** wird zum Definieren von Skriptvariablen verwendet. Mithilfe des Befehls **setvar** definierte Variablen werden intern gespeichert. Skriptvariablen dürfen nicht mit Umgebungsvariablen verwechselt werden, die mithilfe von **SET** an der Eingabeaufforderung definiert werden. Wenn ein Skript auf eine Variable verweist, die keine Umgebungsvariable ist oder nicht mithilfe von **setvar** definiert wurde, wird eine Fehlermeldung zurückgegeben und die Ausführung des Skripts unterbrochen. Weitere Informationen finden Sie unter der Option **-b** im [Hilfsprogramm sqlcmd](../../tools/sqlcmd-utility.md).  
   
 ## <a name="variable-precedence-low-to-high"></a>Rangfolge der Variablen (vom niedrigsten bis zum höchsten Rang)  
  Wenn mehrere Variablentypen denselben Namen aufweisen, wird die Variable mit der höchsten Rangfolge verwendet.  
@@ -44,14 +44,14 @@ ms.locfileid: "92036250"
   
 2.  Umgebungsvariablen auf Benutzerebene  
   
-3.  Die vor dem Starten von**SET X=Y**an der Eingabeaufforderung festgelegte Befehlsshell ( **SET X=Y**)  
+3.  Die vor dem Starten von **SET X=Y** an der Eingabeaufforderung festgelegte Befehlsshell ( **SET X=Y**)  
   
 4.  **sqlcmd -v** X=Y  
   
 5.  **:Setvar** X Y  
   
 > [!NOTE]  
->  Öffnen Sie die **Systemsteuerung**, klicken Sie auf **System**und anschließend auf die Registerkarte **Erweitert** , um die Umgebungsvariablen anzuzeigen.  
+>  Öffnen Sie die **Systemsteuerung**, klicken Sie auf **System** und anschließend auf die Registerkarte **Erweitert** , um die Umgebungsvariablen anzuzeigen.  
   
 ## <a name="implicitly-setting-scripting-variables"></a>Implizites Festlegen von Skriptvariablen  
  Wenn Sie **sqlcmd** mit einer Option starten, die eine verknüpfte **sqlcmd** -Variable aufweist, wird die **sqlcmd** -Variable implizit auf den Wert festgelegt, der mithilfe der Option angegeben wurde. Im folgenden Beispiel beginnt `sqlcmd` mit der Option `-l` . Dadurch wird implizit die SQLLOGINTIMEOUT-Variable festgelegt.  
@@ -101,7 +101,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 -   Wenn Anführungszeichen Bestandteil des Variablenwerts sind, müssen sie mit Escapezeichen versehen werden. Beispiel: :`setvar MyVar "spac""e"`.  
   
 ## <a name="guidelines-for-cmdexe-set-variable-values-and-names"></a>Richtlinien für Cmd.exe SET-Variablennamen und -werte  
- Mithilfe von SET definierte Variablen sind Teil der Cmd.exe-Umgebung, und es kann mit **sqlcmd**auf sie verwiesen werden. Berücksichtigen Sie die folgenden Richtlinien:  
+ Mithilfe von SET definierte Variablen sind Teil der Cmd.exe-Umgebung, und es kann mit **sqlcmd** auf sie verwiesen werden. Berücksichtigen Sie die folgenden Richtlinien:  
   
 -   Variablennamen dürfen keine Leerzeichen oder Anführungszeichen enthalten.  
   
@@ -190,7 +190,7 @@ C:\>sqlcmd -d AdventureWorks2012
 ```
   
 ### <a name="d-using-user-level-environment-variables-within-sqlcmd"></a>D: Verwenden von Umgebungsvariablen auf Benutzerebene in "sqlcmd"  
- Im folgenden Beispiel wird die `%Temp%` -Umgebungsvariable auf Benutzerebene an der Eingabeaufforderung festgelegt und an die `sqlcmd` -Eingabedatei übergeben. Zum Abrufen der Umgebungsvariable auf Benutzerebene doppelklicken Sie unter **Systemsteuerung**auf **System**. Klicken Sie auf die Registerkarte **Erweitert** , und klicken Sie dann auf **Umgebungsvariablen**.  
+ Im folgenden Beispiel wird die `%Temp%` -Umgebungsvariable auf Benutzerebene an der Eingabeaufforderung festgelegt und an die `sqlcmd` -Eingabedatei übergeben. Zum Abrufen der Umgebungsvariable auf Benutzerebene doppelklicken Sie unter **Systemsteuerung** auf **System**. Klicken Sie auf die Registerkarte **Erweitert** , und klicken Sie dann auf **Umgebungsvariablen**.  
   
  In der Eingabedatei `c:\testscript.txt`ist der folgende Code enthalten:
 

@@ -24,13 +24,13 @@ ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5e275d0465f436e20ac590e40a001fb8c335a573
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 770f6c82bfdafb20d826ae11b52ada0a0b1a5702
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92032997"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478861"
 ---
 # <a name="operators"></a>Operatoren
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -89,7 +89,7 @@ Die Kontaktinformationen eines Operators definieren, wie der Operator benachrich
   
 -   **net sendnotification**  
   
-    Hiermit senden Sie dem Operator eine Nachricht über den Befehl **NET SEND** . Bei **NET SEND**geben Sie den Empfänger (Computer oder Benutzer) einer Netzwerknachricht an.  
+    Hiermit senden Sie dem Operator eine Nachricht über den Befehl **NET SEND** . Bei **NET SEND** geben Sie den Empfänger (Computer oder Benutzer) einer Netzwerknachricht an.  
   
     > [!NOTE]  
     > Der Befehl **NET SEND** greift auf Microsoft Windows Messenger zurück. Um Warnungen fehlerfrei senden zu können, muss dieser Service sowohl auf dem Computer ausgeführt werden, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, als auch auf dem Computer, den der Operator verwendet.  
@@ -118,7 +118,7 @@ Sie müssen mindestens eines der folgenden Elemente einrichten, um einen Operato
   
 -   Für Pagerbenachrichtigungen benötigen Sie Software für Pager-zu-E-Mail von Drittanbietern und/oder die entsprechende Hardware.  
   
--   Für den Befehl **NET SEND**muss der Bediener am angegebenen Computer angemeldet sein, und der angegebene Computer muss Nachrichten von Windows Messenger zulassen.  
+-   Für den Befehl **NET SEND** muss der Bediener am angegebenen Computer angemeldet sein, und der angegebene Computer muss Nachrichten von Windows Messenger zulassen.  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

@@ -13,13 +13,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3df3d33392751bcdc98b2c9efd2ea7b6b24ed5ab
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: bb3212755ce022e588b221d5e2da322a50c49012
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036183"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476811"
 ---
 # <a name="transact-sql-debugger---call-stack-window"></a>Transact-SQL-Debugger – Fenster „Aufrufliste“
 
@@ -33,7 +33,7 @@ Im Fenster **Aufrufliste** werden die Module in der Aufrufliste angezeigt sowie 
 
 **So greifen Sie auf das Fenster Aufrufliste zu**
 
-- Klicken Sie im Menü **Debuggen** auf **Fenster**und dann auf **Aufrufliste**.
+- Klicken Sie im Menü **Debuggen** auf **Fenster** und dann auf **Aufrufliste**.
 
 **So ändern Sie den aktuellen Aufruflistenrahmen**
 
@@ -51,7 +51,7 @@ Sie können eine der folgenden Prozeduren verwenden, um einen Stapelrahmen zum a
 
 Jede Zeile im Fenster **Aufrufliste** wird als Stapelrahmen bezeichnet und stellt entweder einen Aufruf aus einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skriptdatei zu einem Modul oder einen Aufruf von einem Modul zu einem anderen dar. Der untere Stapelrahmen im Anzeigebereich gibt die Zeile im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fenster an, die den ersten Aufruf an den Stapel ausgelöst hat. Die oberste Zeile gibt die Zeile an, an der der Debugger die Ausführung angehalten hat und die am linken Rand des Fensters durch einen gelben Pfeil gekennzeichnet ist. Jede dazwischen liegende Zeile gibt das Modul und die Zeilennummer des Quellcodes an, der den nächsthöheren Stapelrahmen aufgerufen hat.  
 
-Alle Ausdrücke in den Fenstern **Lokal**, **Überwachung**und **Schnellüberwachung** werden auf Grundlage des aktuellen Stapelrahmens ausgewertet. Im Abfrage-Editor-Fenster wird der Code für den aktuellen Rahmen angezeigt. Standardmäßig ist der aktuelle Stapelrahmen der Rahmen, in dem der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger die Ausführung angehalten hat. Wenn Sie den aktuellen Stapelrahmen zu einem anderen Rahmen ändern, werden die Ausdrücke in den Fenstern **Lokal**, **Überwachung**und **Schnellüberwachung** im Kontext des neuen Rahmens neu ausgewertet, und der Quellcode des neuen Rahmens wird im Abfrage-Editor-Fenster angezeigt.  
+Alle Ausdrücke in den Fenstern **Lokal**, **Überwachung** und **Schnellüberwachung** werden auf Grundlage des aktuellen Stapelrahmens ausgewertet. Im Abfrage-Editor-Fenster wird der Code für den aktuellen Rahmen angezeigt. Standardmäßig ist der aktuelle Stapelrahmen der Rahmen, in dem der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger die Ausführung angehalten hat. Wenn Sie den aktuellen Stapelrahmen zu einem anderen Rahmen ändern, werden die Ausdrücke in den Fenstern **Lokal**, **Überwachung** und **Schnellüberwachung** im Kontext des neuen Rahmens neu ausgewertet, und der Quellcode des neuen Rahmens wird im Abfrage-Editor-Fenster angezeigt.  
   
 ## <a name="columns"></a>Spalten
 

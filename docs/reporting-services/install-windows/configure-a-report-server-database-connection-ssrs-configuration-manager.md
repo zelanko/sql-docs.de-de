@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 01/04/2020
-ms.openlocfilehash: ee2e8a95155cd235210acecee2a5ca15b5ae79c8
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: c7739675f03e5c7d895939a286d4f262c8302586
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935274"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472511"
 ---
 # <a name="configure-a-report-server-database-connection-report-server-configuration-manager"></a>Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank (Berichtsserver-Konfigurations-Manager)
 
@@ -42,9 +42,9 @@ Die Berichtsserver-Datenbank ist eine interne Komponente, auf die nur der Berich
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet **System.Data.SqlClient** , um eine Verbindung zu [!INCLUDE[ssDE](../../includes/ssde-md.md)] herzustellen, wo die Berichtsserver-Datenbank gehostet wird. Wenn Sie eine lokale Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]verwenden, stellt der Berichtsserver die Verbindung mithilfe des gemeinsamen Arbeitsspeichers her. Wenn Sie einen Remote-Datenbankserver für die Berichtsserver-Datenbank verwenden, müssen Sie möglicherweise &ndash; je nach verwendeter Edition &ndash; Remoteverbindungen aktivieren. Wenn Sie die Enterprise Edition verwenden, sind Remoteverbindungen standardmäßig für TCP/IP aktiviert.  
 
-Um zu prüfen, ob die Instanz Remoteverbindungen akzeptiert, klicken Sie im Menü **Start**nacheinander **Alle Programme**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Konfigurationstools**und **SQL Server-Konfigurations-Manager**, und prüfen Sie dann, ob das TCP/IP-Protokoll für jeden Dienst aktiviert ist.  
+Um zu prüfen, ob die Instanz Remoteverbindungen akzeptiert, klicken Sie im Menü **Start** nacheinander **Alle Programme**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Konfigurationstools** und **SQL Server-Konfigurations-Manager**, und prüfen Sie dann, ob das TCP/IP-Protokoll für jeden Dienst aktiviert ist.  
 
-Wenn Sie Remoteverbindungen aktivieren, wird auch das Client- und Serverprotokoll aktiviert. Um zu prüfen, ob die Protokolle aktiviert sind, klicken Sie im Menü **Start**auf **Alle Programme**, zeigen Sie dann auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]und **Konfigurationstools**. Klicken Sie dann auf **SQL Server-Konfigurations-Manager**, auf **SQL Server-Netzwerkkonfiguration**und dann auf **Protokolle für MSSQLSERVER**. Weitere Informationen finden Sie unter [Aktivieren oder Deaktivieren eines Servernetzwerkprotokolls](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Wenn Sie Remoteverbindungen aktivieren, wird auch das Client- und Serverprotokoll aktiviert. Um zu prüfen, ob die Protokolle aktiviert sind, klicken Sie im Menü **Start** auf **Alle Programme**, zeigen Sie dann auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]und **Konfigurationstools**. Klicken Sie dann auf **SQL Server-Konfigurations-Manager**, auf **SQL Server-Netzwerkkonfiguration** und dann auf **Protokolle für MSSQLSERVER**. Weitere Informationen finden Sie unter [Aktivieren oder Deaktivieren eines Servernetzwerkprotokolls](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 ## <a name="defining-a-report-server-database-connection"></a>Definieren einer Berichtsserver-Datenbankverbindung
 
@@ -91,7 +91,7 @@ Es gibt drei Typen von Anmeldeinformationen, die für eine Verbindung mit einer 
   
 Wenn die Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] für die Windows-Authentifizierung konfiguriert wird und wenn diese sich in derselben Domäne wie der Berichtsserver-Computer oder einer vertrauenswürdigen Domäne befindet, können Sie die Verbindung so konfigurieren, dass das Dienstkonto oder ein Domänenbenutzerkonto verwendet wird, das Sie als Verbindungseigenschaft für das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool verwalten. Wenn sich der Datenbankserver in einer anderen Domäne befindet oder wenn Sie die Arbeitsgruppensicherheit verwenden, müssen Sie die Verbindung so konfigurieren, dass ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank-Anmeldename verwendet wird. Stellen Sie in diesem Fall sicher, dass die Verbindung verschlüsselt ist.  
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > Beim Verwenden der verwalteten Azure SQL-Datenbank-Instanz, um Berichtsserver-Datenbanken zu hosten, ist die SQL Server-Authentifizierung der einzige unterstützte Anmeldeinformationstyp. Beachten Sie zudem, dass die verwaltete Instanz keine Berichtsserverinstanz hosten kann.
@@ -118,9 +118,9 @@ Sie können einen einzelnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 
 Konten, über die eine Verbindung mit der Berichtsserver-Datenbank hergestellt wird, werden die folgenden Rollen zugewiesen:  
 
-- Die Rollen**public** und **RSExecRole** für die **ReportServer** -Datenbank.  
+- Die Rollen **public** und **RSExecRole** für die **ReportServer** -Datenbank.  
 
-- Die**RSExecRole** -Rolle für die Datenbanken **master**, **msdb**und **ReportServerTempDB** .  
+- Die **RSExecRole** -Rolle für die Datenbanken **master**, **msdb** und **ReportServerTempDB** .  
 
 Wenn Sie die Verbindung anhand des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstools erstellen oder ändern, werden diese Berechtigungen automatisch erteilt. Wenn Sie das RSCONFIG-Hilfsprogramm verwenden und ein anderes Konto für die Verbindung angeben, müssen Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamen für dieses neue Konto aktualisieren. Mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool können Sie Skriptdateien erstellen, mit deren Hilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldename für den Berichtsserver aktualisiert wird.  
 

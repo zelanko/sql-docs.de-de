@@ -8,13 +8,13 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f64ef01e248052667239f7516b0ccddc592871c7
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+monikerRange: '>= sql-server-2016'
+ms.openlocfilehash: 1b13134166c4c17bea73d2990ceaf678fe1b4b2c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935195"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478841"
 ---
 # <a name="azure-sql-connection-type-ssrs"></a>Azure SQL-Verbindungstyp (SSRS)
 
@@ -130,7 +130,7 @@ Weitere Informationen zum Aufrufen von gespeicherten Prozeduren finden Sie unter
 
 Wenn Abfragetext Abfragevariablen oder gespeicherte Prozeduren mit Eingabeparametern enthält, werden die entsprechenden Abfrageparameter für das Dataset und Berichtsparameter für den Bericht automatisch generiert. Der Abfragetext darf keine DECLARE-Anweisung für jede Abfragevariable enthalten.  
   
- Durch die folgende SQL-Abfrage wird z. B. ein Berichtsparameter mit dem Namen **EmpID**erstellt:  
+ Durch die folgende SQL-Abfrage wird z. B. ein Berichtsparameter mit dem Namen **EmpID** erstellt:  
 
 ```sql
 SELECT FirstName, LastName FROM HumanResources.Employee E INNER JOIN  
@@ -152,7 +152,7 @@ Weitere Informationen finden Sie unter [ODBC-Verbindungstyp (SSRS)](../../report
 
 Weitere Informationen zur Plattform- und Versionsunterstützung finden Sie unter [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 
 ## <a name="azure-sql-database-and-aad"></a>Azure SQL-Datenbank und AAD
 

@@ -27,13 +27,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: ff7316307676c15f96579631bdf2dd6eb9612acc
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: fcd184e195ce8c81e16ca4ceaaab03a1f156a812
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005944"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471831"
 ---
 # <a name="sqlcmd-utility"></a>SQLCMD-Hilfsprogramm
 
@@ -248,7 +248,7 @@ Diese Option wird vom Client beim Herstellen einer Verbindung mit SQL-Datenbank 
   >Bei Verwendung der Optionen `-G` und `-U` mit SQLCMD gibt es ein bekanntes Problem: Wenn die Option `-U` vor die Option `-G` gesetzt wird, kann bei der Authentifizierung ein Fehler auftreten. Verwenden Sie die Option `-G` immer vor der Option `-U`.
 
 **-H** _Arbeitsstationsname_  
- Der Name einer Arbeitsstation. Durch diese Option wird die **sqlcmd** -Skriptvariable SQLCMDWORKSTATION festgelegt. Der Name der Arbeitsstation wird in der **hostname** -Spalte der **sys.sysprocesses** -Katalogsicht aufgeführt, und der Name kann mithilfe der gespeicherten Prozedur **sp_who**zurückgegeben werden. Wenn diese Option nicht angegeben ist, wird standardmäßig der Name des aktuellen Computers angenommen. Dieser Name kann verwendet werden, um verschiedene 
+ Der Name einer Arbeitsstation. Durch diese Option wird die **sqlcmd** -Skriptvariable SQLCMDWORKSTATION festgelegt. Der Name der Arbeitsstation wird in der **hostname** -Spalte der **sys.sysprocesses** -Katalogsicht aufgeführt, und der Name kann mithilfe der gespeicherten Prozedur **sp_who** zurückgegeben werden. Wenn diese Option nicht angegeben ist, wird standardmäßig der Name des aktuellen Computers angenommen. Dieser Name kann verwendet werden, um verschiedene 
 
 **sqlcmd**-Sitzungen zu identifizieren.  
 
@@ -270,7 +270,7 @@ Diese Option wird vom Client beim Herstellen einer Verbindung mit SQL-Datenbank 
 
 Es wird empfohlen, ein sicheres Kennwort zu verwenden.
 
-#### <a name="use-a-strong-password"></a>[**Verwenden Sie ein sicheres Kennwort!** ](../relational-databases/security/strong-passwords.md)
+#### <a name="use-a-strong-password"></a>[**Verwenden Sie ein sicheres Kennwort!**](../relational-databases/security/strong-passwords.md)
 
  Die Aufforderung zur Eingabe des Kennworts wird folgendermaßen an der Konsole ausgegeben: `Password:`  
   
@@ -311,7 +311,7 @@ Es wird empfohlen, ein sicheres Kennwort zu verwenden.
 > [!NOTE]  
 >  Die OSQLUSER-Umgebungsvariable steht aus Gründen der Abwärtskompatibilität zur Verfügung. Die SQLCMDUSER-Umgebungsvariable ist bezüglich der OSQLUSER-Umgebungsvariable vorrangig. Dies bedeutet, dass **sqlcmd** und **osql** störungsfrei parallel verwendet werden können. Es bedeutet ferner, dass vorhandene **osql** -Skripts weiterhin funktionieren.  
   
- Wenn weder die Option **-U** noch die Option **-P** angegeben wird, versucht **sqlcmd**, die Verbindung im Microsoft Windows-Authentifizierungsmodus herzustellen. Die Authentifizierung basiert auf dem Windows-Konto des Benutzers, der **sqlcmd**ausführt.  
+ Wenn weder die Option **-U** noch die Option **-P** angegeben wird, versucht **sqlcmd**, die Verbindung im Microsoft Windows-Authentifizierungsmodus herzustellen. Die Authentifizierung basiert auf dem Windows-Konto des Benutzers, der **sqlcmd** ausführt.  
   
  Wird die Option **-U** zusammen mit der Option **-E** verwendet (weiter unten in diesem Artikel beschrieben), wird eine Fehlermeldung generiert. Werden nach der Option **-U** mehrere Argumente angegeben, wird eine Fehlermeldung generiert und das Programm beendet.  
   
@@ -357,7 +357,7 @@ Es wird empfohlen, ein sicheres Kennwort zu verwenden.
  Diese Option kann mehrmals verwendet werden: **-i**_Eingabedatei_ **-I**_I Eingabedatei._  
   
  **-o** _Ausgabedatei_  
- Identifiziert die Datei, die die Ausgabe von **sqlcmd**erhält.  
+ Identifiziert die Datei, die die Ausgabe von **sqlcmd** erhält.  
   
  Ist **-u** angegeben, wird die *Ausgabedatei* im Unicode-Format gespeichert. Wenn der Dateiname ungültig ist, wird eine Fehlermeldung generiert und **sqlcmd** beendet. **sqlcmd** unterstützt keine parallelen Schreibvorgänge mehrerer **sqlcmd** -Prozesse in die gleiche Datei. In diesem Fall wäre die Dateiausgabe beschädigt oder fehlerhaft. Informieren Sie sich auch über die Option **-f**, die für Dateiformate ebenfalls relevant ist. Falls sie noch nicht vorhanden ist, wird die Datei erstellt. Eine Datei mit demselben Namen aus einer früheren **sqlcmd** -Sitzung wird überschrieben. Bei der hier angegebenen Datei handelt es sich nicht um die **stdout** -Datei. Wenn eine **stdout**-Datei angegeben ist, wird diese Datei nicht verwendet.  
   
@@ -371,13 +371,13 @@ Es wird empfohlen, ein sicheres Kennwort zu verwenden.
  Dateipfade, die Leerzeichen enthalten, müssen in Anführungszeichen eingeschlossen werden.  
   
  **-r**[**0** | **1**]  
- Leitet die Ausgabe der Fehlermeldung auf den Bildschirm um (**stderr**). Wenn Sie keinen Parameter bzw. wenn Sie **0**angeben, werden nur Fehlermeldungen mit dem Schweregrad 11 oder höher umgeleitet. Wenn Sie **1**angeben, wird die gesamte Fehlermeldungsausgabe (einschließlich der Ausgabe von PRINT) umgeleitet. Dies hat keine Wirkung, wenn Sie die Option -o verwenden. Standardmäßig werden Meldungen an **stdout**gesendet.  
+ Leitet die Ausgabe der Fehlermeldung auf den Bildschirm um (**stderr**). Wenn Sie keinen Parameter bzw. wenn Sie **0** angeben, werden nur Fehlermeldungen mit dem Schweregrad 11 oder höher umgeleitet. Wenn Sie **1** angeben, wird die gesamte Fehlermeldungsausgabe (einschließlich der Ausgabe von PRINT) umgeleitet. Dies hat keine Wirkung, wenn Sie die Option -o verwenden. Standardmäßig werden Meldungen an **stdout** gesendet.  
   
  **-R**  
  Bewirkt, dass **sqlcmd** aus SQL Server abgerufene numerische Spalten sowie Währungs-, Datums- und Zeitspalten basierend auf dem Gebietsschema des Clients lokalisiert. Standardmäßig werden diese Spalten entsprechend den regionalen Einstellungen des Servers angezeigt.  
   
  **-u**  
- Gibt an, dass *Ausgabedatei* unabhängig vom Format von *Eingabedatei*im Unicode-Format gespeichert wird.  
+ Gibt an, dass *Ausgabedatei* unabhängig vom Format von *Eingabedatei* im Unicode-Format gespeichert wird.  
   
  **Abfrageausführungsoptionen**  
   **-e**  
@@ -401,7 +401,7 @@ Es wird empfohlen, ein sicheres Kennwort zu verwenden.
  Wenn **-b** zusammen mit dieser Option angegeben wird, wird **sqlcmd** beim Auftreten eines Fehlers beendet. Der Schalter **-b** wird weiter unten in diesem Artikel beschrieben.  
   
  **-Q "** _Befehlszeilenabfrage_ **"**  
- Führt eine Abfrage aus, wenn **sqlcmd** startet, und beendet **sqlcmd**unmittelbar im Anschluss. Es können mehrere durch Semikolons getrennte Abfragen ausgeführt werden.  
+ Führt eine Abfrage aus, wenn **sqlcmd** startet, und beendet **sqlcmd** unmittelbar im Anschluss. Es können mehrere durch Semikolons getrennte Abfragen ausgeführt werden.  
   
  Schließen Sie die Abfrage in Anführungszeichen ein, wie im folgenden Beispiel gezeigt wird.  
   
@@ -468,7 +468,7 @@ Es wird empfohlen, ein sicheres Kennwort zu verwenden.
 - **image**  
   
 > [!NOTE]  
->  UDTs können je nach Implementierung eine feste Länge aufweisen. Wenn die Länge eines UDT mit fester Länge den Wert für *Anzeigebreite*unterschreitet, hat dies keinen Einfluss auf den Wert des zurückgegebenen UDT. Wenn die Länge den Wert für *Anzeigebreite*jedoch überschreitet, wird die Ausgabe abgeschnitten.  
+>  UDTs können je nach Implementierung eine feste Länge aufweisen. Wenn die Länge eines UDT mit fester Länge den Wert für *Anzeigebreite* unterschreitet, hat dies keinen Einfluss auf den Wert des zurückgegebenen UDT. Wenn die Länge den Wert für *Anzeigebreite* jedoch überschreitet, wird die Ausgabe abgeschnitten.  
    
   
 > [!IMPORTANT]  
@@ -491,12 +491,12 @@ Es wird empfohlen, ein sicheres Kennwort zu verwenden.
   
  **Optionen für die Fehlerberichterstellung**  
   **-b**  
- Gibt an, dass **sqlcmd** beendet und ein DOS ERRORLEVEL-Wert zurückgegeben wird, wenn ein Fehler auftritt. Für die DOS ERRORLEVEL-Variable wird der Wert **1** zurückgegeben, wenn der Schweregrad der SQL Server-Fehlermeldung größer als 10 ist. Andernfalls wird der Wert **0** zurückgegeben. Wenn die Option **-V** zusätzlich zu **-b**festgelegt wurde, meldet **sqlcmd** keinen Fehler, wenn der Schweregrad kleiner ist als die mithilfe von **-V**festgelegten Werte. Mit Eingabeaufforderungs-Batchdateien kann der Wert von ERRORLEVEL getestet und der Fehler entsprechend behoben werden. **sqlcmd** meldet keine Fehler für Schweregrad 10 (Informationsmeldungen).  
+ Gibt an, dass **sqlcmd** beendet und ein DOS ERRORLEVEL-Wert zurückgegeben wird, wenn ein Fehler auftritt. Für die DOS ERRORLEVEL-Variable wird der Wert **1** zurückgegeben, wenn der Schweregrad der SQL Server-Fehlermeldung größer als 10 ist. Andernfalls wird der Wert **0** zurückgegeben. Wenn die Option **-V** zusätzlich zu **-b** festgelegt wurde, meldet **sqlcmd** keinen Fehler, wenn der Schweregrad kleiner ist als die mithilfe von **-V** festgelegten Werte. Mit Eingabeaufforderungs-Batchdateien kann der Wert von ERRORLEVEL getestet und der Fehler entsprechend behoben werden. **sqlcmd** meldet keine Fehler für Schweregrad 10 (Informationsmeldungen).  
   
  Wenn das **sqlcmd** -Skript einen falschen Kommentar bzw. einen Syntaxfehler enthält oder eine Skriptvariable fehlt, wird der ERRORLEVEL-Wert 1 zurückgegeben.  
   
  **-m** _Fehlerebene_  
- Steuert, welche Fehlermeldungen an **stdout**gesendet werden. Fehlermeldungen mit einem Schweregrad, der größer oder gleich diesem Wert ist, werden gesendet. Wenn dieser Wert auf **-1**festgelegt ist, werden alle Meldungen gesendet, einschließlich der Informationsmeldungen. Es sind keine Leerzeichen zwischen **-m** und **-1**zulässig. Beispielsweise ist **-m-1** gültig, **-m -1** jedoch nicht.  
+ Steuert, welche Fehlermeldungen an **stdout** gesendet werden. Fehlermeldungen mit einem Schweregrad, der größer oder gleich diesem Wert ist, werden gesendet. Wenn dieser Wert auf **-1** festgelegt ist, werden alle Meldungen gesendet, einschließlich der Informationsmeldungen. Es sind keine Leerzeichen zwischen **-m** und **-1** zulässig. Beispielsweise ist **-m-1** gültig, **-m -1** jedoch nicht.  
   
  Mit dieser Option wird außerdem die **sqlcmd** -Skriptvariable SQLCMDERRORLEVEL festgelegt. Diese Variable hat den Standardwert 0.  
   
@@ -541,7 +541,7 @@ Es wird empfohlen, ein sicheres Kennwort zu verwenden.
   
  Wird der optionale Parameter **1** angegeben, wird die Statistik im durch Doppelpunkte getrennten Format ausgegeben, das problemlos in eine Kalkulationstabelle importiert oder von einem Skript verarbeitet werden kann.  
   
- Wird für den optionalen Parameter ein anderer Wert als **1**angegeben, wird ein Fehler generiert und **sqlcmd** beendet.  
+ Wird für den optionalen Parameter ein anderer Wert als **1** angegeben, wird ein Fehler generiert und **sqlcmd** beendet.  
   
  **-X**[**1**]  
  Deaktiviert Befehle, die die Systemsicherheit gefährden können, wenn **sqlcmd** aus einer Batchdatei ausgeführt wird. Die deaktivierten Befehle werden trotzdem erkannt; **sqlcmd** gibt eine Warnmeldung aus und setzt die Ausführung fort. Wenn der optionale Parameter **1** angegeben wird, generiert **sqlcmd** eine Fehlermeldung und wird dann beendet. Die folgenden Befehle sind deaktiviert, wenn die Option **-X** verwendet wird:  
@@ -574,14 +574,14 @@ Wenn Sie **sqlcmd** interaktiv verwenden möchten, geben Sie **sqlcmd** an der E
   
 2.  Umgebungsvariablen auf Benutzerebene  
   
-3.  Vor der Ausführung von**sqlcmd** an der Eingabeaufforderung festgelegte Befehlsshell ( **SET**X=Y).  
+3.  Vor der Ausführung von **sqlcmd** an der Eingabeaufforderung festgelegte Befehlsshell ( **SET** X=Y).  
   
 4.  **sqlcmd-v** X=Y  
   
 5.  **:Setvar** X Y  
   
 > [!NOTE]  
->  Öffnen Sie die **Systemsteuerung**, klicken Sie auf **System**und anschließend auf die Registerkarte **Erweitert** , um die Umgebungsvariablen anzuzeigen.  
+>  Öffnen Sie die **Systemsteuerung**, klicken Sie auf **System** und anschließend auf die Registerkarte **Erweitert** , um die Umgebungsvariablen anzuzeigen.  
   
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd-Skriptvariablen  
   
@@ -670,7 +670,7 @@ Wenn Sie **sqlcmd** interaktiv verwenden möchten, geben Sie **sqlcmd** an der E
 - Durch die Definition einer Umgebungsvariablen vor der Ausführung von **sqlcmd**.  
   
 > [!NOTE]  
->  Die Option **X** verhindert, dass Umgebungsvariablen an **sqlcmd**übergeben werden.  
+>  Die Option **X** verhindert, dass Umgebungsvariablen an **sqlcmd** übergeben werden.  
   
  Wenn eine Variable, die mithilfe von **:Setvar** definiert wurde, denselben Namen wie eine Umgebungsvariable aufweist, ist die mit **:Setvar** definierte Variable vorrangig.  
   
@@ -684,12 +684,12 @@ Wenn Sie **sqlcmd** interaktiv verwenden möchten, geben Sie **sqlcmd** an der E
  Zeigt die Liste der zurzeit festgelegten Skriptvariablen an.  
   
 > [!NOTE]  
->  Es werden nur solche Skriptvariablen angezeigt, die von **sqlcmd**oder mithilfe des **:Setvar** -Befehls festgelegt wurden.  
+>  Es werden nur solche Skriptvariablen angezeigt, die von **sqlcmd** oder mithilfe des **:Setvar** -Befehls festgelegt wurden.  
   
  **Ausgabebefehle**  
   **:Error**   
  _**\<**_  _filename_  **_>|_ STDERR|STDOUT**  
- Leitet die gesamte Fehlerausgabe in die mit *Dateiname*angegebene Datei, in **stderr** oder in **stdout**um. Der Befehl **Error** kann mehrmals in einem Skript verwendet werden. Die Fehlerausgabe wird standardmäßig an **stderr**gesendet.  
+ Leitet die gesamte Fehlerausgabe in die mit *Dateiname* angegebene Datei, in **stderr** oder in **stdout** um. Der Befehl **Error** kann mehrmals in einem Skript verwendet werden. Die Fehlerausgabe wird standardmäßig an **stderr** gesendet.  
   
  *file name*  
  Erstellt und öffnet eine Datei, in die die Ausgabe geschrieben wird. Wenn die Datei bereits vorhanden ist, wird sie auf 0 Byte gekürzt. Wenn der Zugriff auf die Datei aufgrund unzureichender Berechtigungen oder anderer Ursachen nicht möglich ist, wird die Ausgabe nicht umgeleitet, sondern an das zuletzt angegebene Ziel oder an das Standardziel gesendet.  
@@ -701,10 +701,10 @@ Wenn Sie **sqlcmd** interaktiv verwenden möchten, geben Sie **sqlcmd** an der E
  Leitet die Fehlerausgabe in den **stdout** -Datenstrom. Wenn dieser Datenstrom umgeleitet wurde, wird die Fehlerausgabe von dem Ziel empfangen, zu dem der Datenstrom umgeleitet wurde.  
   
  **:Out \<** _filename_ **>** | **STDERR**| **STDOUT**  
- Erstellt und leitet alle Abfrageergebnisse in der bzw. an die durch *Dateiname*angegebene Datei, an **stderr** oder an **stdout**um. Standardmäßig wird die Ausgabe an **stdout**gesendet. Wenn die Datei bereits vorhanden ist, wird sie auf 0 Byte gekürzt. Der Befehl **Out** kann mehrmals in einem Skript verwendet werden.  
+ Erstellt und leitet alle Abfrageergebnisse in der bzw. an die durch *Dateiname* angegebene Datei, an **stderr** oder an **stdout** um. Standardmäßig wird die Ausgabe an **stdout** gesendet. Wenn die Datei bereits vorhanden ist, wird sie auf 0 Byte gekürzt. Der Befehl **Out** kann mehrmals in einem Skript verwendet werden.  
   
  **:Perftrace \<** _filename_ **>** | **STDERR**| **STDOUT**  
- Erstellt und leitet alle Informationen zur Leistungsnachverfolgung in der bzw. an die durch *Dateiname*angegebene Datei, an **stderr** oder **stdout**um. Standardmäßig wird die Ausgabe zur Leistungsnachverfolgung an **stdout**gesendet. Wenn die Datei bereits vorhanden ist, wird sie auf 0 Byte gekürzt. Der Befehl **Perftrace** kann mehrmals in einem Skript verwendet werden.  
+ Erstellt und leitet alle Informationen zur Leistungsnachverfolgung in der bzw. an die durch *Dateiname* angegebene Datei, an **stderr** oder **stdout** um. Standardmäßig wird die Ausgabe zur Leistungsnachverfolgung an **stdout** gesendet. Wenn die Datei bereits vorhanden ist, wird sie auf 0 Byte gekürzt. Der Befehl **Perftrace** kann mehrmals in einem Skript verwendet werden.  
   
  **Befehle zur Ausführungssteuerung**  
   **:On Error**[ **exit** | **ignore**]  
@@ -718,7 +718,7 @@ Wenn Sie **sqlcmd** interaktiv verwenden möchten, geben Sie **sqlcmd** an der E
  Bewirkt, dass **sqlcmd** beendet wird.  
   
  [ **:** ] **EXIT**[ **(** _Anweisung_ **)** ]  
- Gibt Ihnen die Möglichkeit, das Ergebnis einer SELECT-Anweisung als Rückgabewert von **sqlcmd**zu verwenden. Wenn numerisch, wird die erste Spalte der letzten Ergebniszeile in eine 4 Byte lange ganze Zahl (Long) konvertiert. MS-DOS, Linux und Mac übergeben das niedrige Byte an den übergeordneten Prozess oder an die Fehlerebene des Betriebssystems. Windows 200x übergibt die gesamte 4 Bytes lange ganze Zahl. Die Syntax ist:  
+ Gibt Ihnen die Möglichkeit, das Ergebnis einer SELECT-Anweisung als Rückgabewert von **sqlcmd** zu verwenden. Wenn numerisch, wird die erste Spalte der letzten Ergebniszeile in eine 4 Byte lange ganze Zahl (Long) konvertiert. MS-DOS, Linux und Mac übergeben das niedrige Byte an den übergeordneten Prozess oder an die Fehlerebene des Betriebssystems. Windows 200x übergibt die gesamte 4 Bytes lange ganze Zahl. Die Syntax ist:  
   
  `:EXIT(query)`  
   
@@ -774,7 +774,7 @@ Wenn Sie **sqlcmd** interaktiv verwenden möchten, geben Sie **sqlcmd** an der E
 > [!NOTE]  
 >  **\<** _filename_ **>** wird relativ zum Startverzeichnis gelesen, in dem **sqlcmd** ausgeführt wurde.  
   
- Die Datei wird gelesen und ausgeführt, nachdem ein Batchabschlusszeichen gefunden wurde. Sie können den Befehl **:r** mehrmals verwenden. Die Datei kann beliebige **sqlcmd** -Befehle enthalten. Dies schließt das Batchabschlusszeichen **GO**ein.  
+ Die Datei wird gelesen und ausgeführt, nachdem ein Batchabschlusszeichen gefunden wurde. Sie können den Befehl **:r** mehrmals verwenden. Die Datei kann beliebige **sqlcmd** -Befehle enthalten. Dies schließt das Batchabschlusszeichen **GO** ein.  
   
 > [!NOTE]  
 >  Die im interaktiven Modus angezeigte Zeilenanzahl wird für jeden gefundenen `:r`-Befehl um 1 erhöht. Der `:r`-Befehl wird in der Ausgabe des Listenbefehls angezeigt.  
