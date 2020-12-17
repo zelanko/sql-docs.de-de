@@ -13,12 +13,12 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest
-ms.openlocfilehash: 540a5632997c025a98e259e23f87780134649b75
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 65791195a30dcd23b184dbceeafdd786b64f857e
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482547"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644086"
 ---
 # <a name="dm_pdw_nodes_exec_query_statistics_xml-transact-sql"></a>dm_pdw_nodes_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -27,7 +27,7 @@ Gibt den Abfrage Ausführungsplan für in-Flight-Anforderungen zurück. Verwende
 
 ## <a name="table-returned"></a>Zurückgegebene Tabelle
 
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|
 |node_id|**int**|Eindeutige numerische ID, die dem Knoten zugeordnet ist.|
 |session_id|**smallint**|ID der Sitzung. Lässt keine NULL-Werte zu.|
@@ -37,7 +37,7 @@ Gibt den Abfrage Ausführungsplan für in-Flight-Anforderungen zurück. Verwende
 |query_plan|**xml**|Enthält die Showplan-Lauf Zeit Darstellung des Abfrage Ausführungs Plans, der mit *plan_handle* angegeben wird, die partielle Statistiken enthält. Der Showplan liegt im XML-Format vor. Für jeden Batch, der z. B. Ad-hoc- [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, Aufrufe von gespeicherten Prozeduren und benutzerdefinierten Funktionen enthält, wird jeweils ein Plan generiert. NULL-Werte sind zulässig.|
 
 ## <a name="remarks"></a>Hinweise
-Die gleichen Hinweise in [sys.dm_exec_query_statistics_xml](./sys-dm-exec-query-statistics-xml-transact-sql.md?view=sql-server-ver15) gelten.   
+Die gleichen Hinweise in [sys.dm_exec_query_statistics_xml](./sys-dm-exec-query-statistics-xml-transact-sql.md) gelten.   
 
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die `VIEW SERVER STATE`-Berechtigung auf dem Server.  

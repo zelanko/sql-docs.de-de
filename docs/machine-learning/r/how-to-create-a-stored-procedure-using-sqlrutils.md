@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 5af17aa003de878a79d6c7a5b9710851b8655d0b
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: f90c1b004dae28f98b1b7f250cf16e0ed0d2ae5b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098829"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470861"
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>Erstellen einer gespeicherten Prozedur mithilfe von sqlrutils
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -41,7 +41,7 @@ Der Objekte in dem Datenrahmen müssen, so wie alle anderen Eingabeparameter der
 - Logisch
 - raw
 
-Ist ein Eingabetyp keiner der hier genannten Typen, muss es serialisiert und als *raw*an die Funktion übergeben werden. In diesem Fall muss die Funktion auch Code enthalten, in dem die Eingabe deserialisiert wird.
+Ist ein Eingabetyp keiner der hier genannten Typen, muss es serialisiert und als *raw* an die Funktion übergeben werden. In diesem Fall muss die Funktion auch Code enthalten, in dem die Eingabe deserialisiert wird.
 
 ### <a name="outputs"></a>Ausgaben
 
@@ -228,7 +228,7 @@ myetl1function <- function() {
 
 > [!NOTE]
 > 
-> Obwohl Sie die ODBC-Verbindung nicht explizit in Ihrem Code öffnen müssen, ist weiterhin eine ODBC-Verbindung erforderlich, um **sqlrutils**zu verwenden.
+> Obwohl Sie die ODBC-Verbindung nicht explizit in Ihrem Code öffnen müssen, ist weiterhin eine ODBC-Verbindung erforderlich, um **sqlrutils** zu verwenden.
 
 ## <a name="see-also"></a>Weitere Informationen
 

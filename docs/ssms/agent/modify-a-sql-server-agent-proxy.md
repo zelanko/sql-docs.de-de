@@ -14,13 +14,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 06/03/2020
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e4be9a253767dc25f2db37941ed9d9e1c9c415f7
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 5a1abf0ec9dcfdaccdafa83c0520508e82e6eafe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035596"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482170"
 ---
 # <a name="modify-a-sql-server-agent-proxy"></a>Modify a SQL Server Agent Proxy
 
@@ -52,13 +52,13 @@ Nur Mitglieder der festen Serverrolle **sysadmin** können Proxykonten erstellen
   
 1.  Klicken Sie im **Objekt-Explorer** auf das Pluszeichen, um den Server zu erweitern, der das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxykonto enthält, das Sie ändern möchten.  
   
-2.  Klicken Sie auf das Pluszeichen, um **SQL Server-Agent**zu erweitern.  
+2.  Klicken Sie auf das Pluszeichen, um **SQL Server-Agent** zu erweitern.  
   
 3.  Klicken Sie auf das Pluszeichen, um den Ordner **Proxys** zu erweitern.  
   
 4.  Klicken Sie auf das Pluszeichen, um den Subsystemknoten für den Proxy (z. B. **ActiveX-Skript**) zu erweitern.  
   
-5.  Klicken Sie mit der rechten Maustaste auf das Proxykonto, das Sie ändern möchten, und wählen Sie **Eigenschaften**aus.  
+5.  Klicken Sie mit der rechten Maustaste auf das Proxykonto, das Sie ändern möchten, und wählen Sie **Eigenschaften** aus.  
   
 6.  Nehmen Sie im Dialogfeld **Eigenschaften von _Proxyname_-Proxykonto** die erforderlichen Änderungen am Proxykonto vor. Weitere Informationen über die Optionen in diesem Dialogfeld finden Sie unter [Erstellen eines Proxys für den SQL Server-Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
