@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: rothja
 ms.author: jroth
-monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0879c9399a21300fdbbfd735685d8a049a52b14f
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+monikerRange: = sql-server-2016
+ms.openlocfilehash: 123a1604717fdfb58f7f1e69db353995e6e0a960
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384674"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559292"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Anmerkungen zu dieser Version von SQL Server 2012 Service Pack
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ Die Service Packs sind ausschließlich online und nicht auf dem Installationsmed
 - **Verbesserte Prozedur zum Cleanup des Verteilungs-Agents:** Aufgrund einer zu großen Verteilungsdatenbank kam es zu Blockierungen und Deadlocks. Im Rahmen einer verbesserten Cleanup-Prozedur sollen einige davon beseitigt werden. 
 - **Dynamische Skalierung des Speicherobjekts:** Partitionieren Sie Speicherobjekte dynamisch auf der Grundlage der Anzahl von Knoten und Kernen, um sie auf moderner Hardware zu skalieren. Mithilfe der dynamischen Promotion sollen potentielle Engpässe vermieden und threadsichere Speicherobjekte automatisch partitioniert werden. Unpartitionierte Speicherobjekte können dynamisch höher gestuft werden, um anhand der Knoten partitioniert zu werden. Die Anzahl der Partitionen entspricht der Anzahl der NUMA-Knoten. Speicherobjekte, die anhand der Knoten partitioniert werden, können noch höher gestuft werden, um anhand der CPU partitioniert zu werden. Dabei entspricht die Anzahl der Partitionen der Anzahl der CPU.
 - **Aktivieren Sie > 8TB for Buffer Pool (> 8TB für Pufferpool):** Aktivieren Sie 128-TB virtuellen Adressraum für die Verwendung des Pufferpools.
-- **Cleanup der Änderungsnachverfolgung** : Verbesserte Leistung und Effizienz des Cleanup der Änderungsnachverfolgung für Nebentabellen bei der Änderungsnachverfolgung. 
+- **Cleanup der Änderungsnachverfolgung**: Verbesserte Leistung und Effizienz des Cleanup der Änderungsnachverfolgung für Nebentabellen bei der Änderungsnachverfolgung. 
 
 ### <a name="supportability-and-diagnostics-improvements"></a>Verbesserungen der Unterstützung und Diagnose
 - **Unterstützung von vollständigen Speicherabbildungen für Replikations-Agents:** Wenn Replikations-Agents derzeit auf Ausnahmefehler stoßen, erstellen sie standardmäßig ein Miniabbild der Ausnahmesymptome. Standardmäßig sind bei Ausnahmefehlern komplexe Problembehandlungsvorgänge erforderlich. Mit SP4 wird ein neuer Registrierungsschlüssel eingeführt, der die Erstellung eines vollständigen Speicherabbilds für Replikations-Agents unterstützt.
@@ -56,7 +56,7 @@ Die Service Packs sind ausschließlich online und nicht auf dem Installationsmed
 - **Neue DMF zum Ersetzen des DBCC INPUTBUFFER:** Eine neue dynamische Verwaltungsfunktion, sys.dm_input_buffer, die session_id als Parameter verwendet, wird eingeführt, um den DBCC INPUTBUFFER zu ersetzen.
 - **Erweiterung für XEvents zum Lesen von Routingfehlern für eine Verfügbarkeitsgruppe:** Derzeit wird read_only_rout_fail XEvent nur ausgelöst, wenn zwar eine Routingliste besteht, jedoch zu keinem der Server auf dieser Liste eine Verbindung hergestellt werden kann. Diese Verbesserung beinhaltet zusätzliche Informationen zur Unterstützung bei der Problembehandlung und Erweiterungen zu den Codepunkten, bei denen XEvent ausgelöst wird. 
 - **Verbesserte Handhabung von Service Broker mit Failover einer Verfügbarkeitsgruppe:** Wenn Service Broker für Datenbanken der Verfügbarkeitsgruppe derzeit aktiviert ist, bleiben bei einem Failover der Verfügbarkeitsgruppe alle Service Broker-Verbindungen, die dem primären Replikat entstammen, geöffnet. Mit dieser Verbesserung werden all diese offenen Verbindungen während eines Failover der Verfügbarkeitsgruppe geschlossen.
-- **Partitionierung mit der automatischen Soft-NUMA** : Mit der Version SQL 2014 SP2 wird die Partitionierung mit der automatischen [Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md) eingeführt, wenn das Ablaufverfolgungsflag 8079 auf Serverebene aktiviert ist. Wenn das Ablaufverfolgungsflag 8079 beim Starten aktiviert ist, fragt SQL Server 2014 SP2 das Hardwarelayout ab und konfiguriert soft-NUMA automatisch auf Systemen, die mindestens acht CPU pro NUMA-Knoten vermelden. Die automatische soft-NUMA ist Hyperthread-fähig (HT/logischer Prozessor). Durch die Partitionierung und Erstellung von weiteren Knoten wird die Hintergrundverarbeitung skaliert, indem die Anzahl von Listenern, Skalierungen sowie Netzwerk- und Verschlüsselungsfunktionen erhöht wird. Wir empfehlen Ihnen, die Leistung der Arbeitsauslastung mit der automatischen soft-NUMA vor der Aktivierung im Rahmen der Produktion zunächst zu testen.
+- **Partitionierung mit der automatischen Soft-NUMA**: Mit der Version SQL 2014 SP2 wird die Partitionierung mit der automatischen [Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md) eingeführt, wenn das Ablaufverfolgungsflag 8079 auf Serverebene aktiviert ist. Wenn das Ablaufverfolgungsflag 8079 beim Starten aktiviert ist, fragt SQL Server 2014 SP2 das Hardwarelayout ab und konfiguriert soft-NUMA automatisch auf Systemen, die mindestens acht CPU pro NUMA-Knoten vermelden. Die automatische soft-NUMA ist Hyperthread-fähig (HT/logischer Prozessor). Durch die Partitionierung und Erstellung von weiteren Knoten wird die Hintergrundverarbeitung skaliert, indem die Anzahl von Listenern, Skalierungen sowie Netzwerk- und Verschlüsselungsfunktionen erhöht wird. Wir empfehlen Ihnen, die Leistung der Arbeitsauslastung mit der automatischen soft-NUMA vor der Aktivierung im Rahmen der Produktion zunächst zu testen.
 
 ## <a name="service-pack-3-release-notes"></a>Versionsanmerkungen zu Service Pack 3
 
@@ -175,19 +175,19 @@ Die internen Fehlerdetails enthalten eine mit der folgenden vergleichbare Meldun
   
 -   "Der Wert 'SharePoint Principal' wird für die User Identity-Eigenschaft der Verbindungszeichenfolge nicht unterstützt."  
   
-**Problemumgehung:** Installieren Sie das Installationspaket für PowerPivot für SharePoint 2013 ( **spPowerPivot.msi** ) unter SharePoint Server 2013. Das Installationspaket ist als Teil des [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Packs verfügbar. Das Feature Pack kann vom [!INCLUDE[msCoName](../includes/msconame-md.md)] Download Center unter [SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35575)heruntergeladen werden.  
+**Problemumgehung:** Installieren Sie das Installationspaket für PowerPivot für SharePoint 2013 (**spPowerPivot.msi**) unter SharePoint Server 2013. Das Installationspaket ist als Teil des [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Packs verfügbar. Das Feature Pack kann vom [!INCLUDE[msCoName](../includes/msconame-md.md)] Download Center unter [SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35575)heruntergeladen werden.  
   
 #### <a name="power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>Power View-Blätter in einer PowerPivot-Arbeitsmappe werden nach einer geplanten Datenaktualisierung gelöscht  
 **Problem:** Wenn Sie im PowerPivot-Add-In für SharePoint **Scheduled Data Refresh** (Geplante Datenaktualisierung) für eine Power View-Arbeitsmappe verwenden, werden alle Power View-Blätter gelöscht.  
   
-**Problemumgehung** : Erstellen Sie eine PowerPivot-Arbeitsmappe, die nur das Datenmodell enthält, um **Scheduled Data Refresh** (Geplante Datenaktualisierung) mit Power View-Arbeitsmappen zu verwenden. Erstellen Sie eine separate Arbeitsmappe mit Excel-Tabellen und Power View-Blättern, die mit der PowerPivot-Arbeitsmappe verknüpft ist, in der das Datenmodell enthalten ist. Nur die PowerPivot-Arbeitsmappe mit dem Datenmodell sollte für die geplante Datenaktualisierung verwendet werden.  
+**Problemumgehung**: Erstellen Sie eine PowerPivot-Arbeitsmappe, die nur das Datenmodell enthält, um **Scheduled Data Refresh** (Geplante Datenaktualisierung) mit Power View-Arbeitsmappen zu verwenden. Erstellen Sie eine separate Arbeitsmappe mit Excel-Tabellen und Power View-Blättern, die mit der PowerPivot-Arbeitsmappe verknüpft ist, in der das Datenmodell enthalten ist. Nur die PowerPivot-Arbeitsmappe mit dem Datenmodell sollte für die geplante Datenaktualisierung verwendet werden.  
   
 ### <a name="data-quality-services"></a>Data Quality Services  
   
 #### <a name="dqs-available-in-the-incorrect-edition-of-sql-server-2012"></a>DQS ist in der falschen Edition von SQL Server 2012 verfügbar  
 **Problem:** Im [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] RTM-Release ist die Data Quality Services-Funktion (DQS) in SQL Server-Editionen verfügbar, die nicht Enterprise, Business Intelligence oder Developer sind. Nach der Installation von SQL Server 2012 SP1 ist DQS in allen Editionen außer Enterprise, Business Intelligence und Developer nicht verfügbar.  
   
-**Problemumgehung** : Wenn Sie DQS in einer nicht unterstützten Edition verwenden, führen Sie entweder ein Upgrade auf eine unterstützte Edition aus, oder entfernen Sie die Abhängigkeit von dieser Funktion aus den Anwendungen.  
+**Problemumgehung**: Wenn Sie DQS in einer nicht unterstützten Edition verwenden, führen Sie entweder ein Upgrade auf eine unterstützte Edition aus, oder entfernen Sie die Abhängigkeit von dieser Funktion aus den Anwendungen.  
   
 ### <a name="sql-server-express"></a>SQL Server Express  
   
@@ -232,7 +232,7 @@ Früher wurde der Zustand von CHECK-Einschränkungen (WITH CHECK/NOCHECK), der f
   
 -   Importieren einer BACPAC-Datei: importiert eine BACPAC-Datei, um eine neue SQL Server- oder Azure SQL-Datenbank zu erstellen bzw. eine leere Datenbank mit Daten aufzufüllen.  
   
-Eine vollständige Dokumentation zu SqlPackage.exe auf MSDN finden Sie [hier](../tools/sqlpackage.md).  
+Eine vollständige Dokumentation zu SqlPackage.exe auf MSDN finden Sie [hier](../tools/sqlpackage/sqlpackage.md).  
   
 **Paketkompatibilität**  
   

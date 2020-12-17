@@ -9,12 +9,12 @@ ms.author: drskwier
 ms.reviewer: alayu, maghan
 ms.custom: seodec18
 ms.date: 10/28/2020
-ms.openlocfilehash: 212115d87f747d1ee35bc4d9445833daee5d25e5
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: 33a7470f3b80d74201c127823db938b11df068e6
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93035936"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559032"
 ---
 # <a name="azure-data-studio-faq"></a>FAQ zu Azure Data Studio
 
@@ -58,7 +58,7 @@ Wir werden zusätzlich zur nächsten Generation der CLI für mehrere Betriebssys
 
 ## <a name="when-should-i-use-azure-data-studio-or-sql-server-management-studio"></a>Wann sollte ich Azure Data Studio und wann besser SQL Server Management Studio verwenden?
 
-*Verwenden Sie Azure Data Studio in folgenden Fällen* :
+*Verwenden Sie Azure Data Studio in folgenden Fällen*:
 
 - Sie verbringen einen Großteil Ihrer Zeit mit der Bearbeitung oder Ausführung von Abfragen.
 - Sie benötigen eine Funktion, mit der Sie Resultsets schnell visualisieren und in Diagrammen darstellen können.
@@ -67,7 +67,7 @@ Wir werden zusätzlich zur nächsten Generation der CLI für mehrere Betriebssys
 - Sie müssen keine detaillierten administrativen oder plattformbezogenen Konfigurationen vornehmen.
 - Sie verwenden macOS oder Linux.
 
-*Verwenden Sie SQL Server Management Studio in folgenden Fällen* :
+*Verwenden Sie SQL Server Management Studio in folgenden Fällen*:
 
 - Sie führen komplexe administrative Konfigurationen oder Plattformkonfigurationen durch.
 - Die Sicherheitsverwaltung, einschließlich der Benutzerverwaltung, der Sicherheitsrisikobewertung und der Konfiguration von Sicherheitsfeatures, gehört zu Ihren Aufgaben.
@@ -93,7 +93,7 @@ Die SMO-APIs stehen unter Linux und macOS noch nicht für die Nutzung durch Endb
 
 Ja.
 
-[Sqlpackage.exe](../tools/sqlpackage-download.md) ist nun in .NET Core für Windows, macOS und Linux verfügbar.  Die Funktion SQL-Projekte (SSDT) ist in Azure Data Studio in der [SQL Database-Projekteerweiterung](extensions/sql-database-project-extension.md) aktiviert.
+[Sqlpackage.exe](../tools/sqlpackage/sqlpackage-download.md) ist nun in .NET Core für Windows, macOS und Linux verfügbar.  Die Funktion SQL-Projekte (SSDT) ist in Azure Data Studio in der [SQL Database-Projekteerweiterung](extensions/sql-database-project-extension.md) aktiviert.
 
 ## <a name="will-sql-powershell-cmdlets-be-available-on-linux-and-macos"></a>Werden in Zukunft SQL PowerShell-Cmdlets unter Linux und macOS zur Verfügung stehen?
 

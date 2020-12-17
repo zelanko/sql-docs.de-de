@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67d9f59f1561ce844c3e6a1b6f3e20770e12db6b
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 12afa9794e4d48e2c7b16620ce845660f61801bc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547944"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461411"
 ---
 # <a name="monitoring-report-server-performance"></a>Überwachen der Leistung des Berichtsservers
   Überwachen Sie die Leistung des Berichtsservers mithilfe der Tools zur Leistungsüberwachung, um die Serveraktivität auszuwerten, Trends zu beobachten, Engpässe im System zu diagnostizieren oder Daten zu sammeln, mit denen Sie bestimmen können, ob die aktuelle Konfiguration ausreichend ist. Zum Optimieren der Serverleistung können Sie angeben, wie oft die Anwendungsdomäne des Berichtsservers wiederverwendet werden soll. Weitere Informationen finden Sie unter [Konfigurieren von verfügbarem Speicher für Berichtsserveranwendungen](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "84547944"
   
 -   Überprüfen, ob an der Systemkonfiguration vorgenommene Änderungen sich wie gewünscht auf die Leistung auswirken.  
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
   
 ## <a name="reporting-services-performance-objects"></a>Reporting Services-Leistungsobjekte  
 SQL Server 2016 Reporting Services (SSRS) und höher umfassen die folgenden Leistungsobjekte:  
@@ -69,7 +69,7 @@ SQL Server 2016 Reporting Services (SSRS) und höher umfassen die folgenden Leis
  Falls auf einem Computer mehrere Berichtsserverinstanzen vorhanden sind, können die Instanzen gemeinsam oder separat überwacht werden. Wählen Sie beim Hinzufügen eines Leistungsindikators die zu überwachenden Instanzen aus. Weitere Informationen zum Verwenden der Leistungskonsole (perfmon.msc) und zum Hinzufügen von Leistungsindikatoren finden Sie in der Produktdokumentation zu [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
 ## <a name="other-performance-counters"></a>Weitere Leistungsindikatoren  
- Benutzerdefinierte [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Leistungsindikatoren stehen nur für den **MSRS 2008-Webdienst**, **MSRS 2008-Windows-Dienst**und **ReportServer Service**zur Verfügung. Die folgenden Leistungsobjekte stellen zusätzliche Leistungsüberwachungsdaten für den Berichtsserver bereit.  
+ Benutzerdefinierte [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Leistungsindikatoren stehen nur für den **MSRS 2008-Webdienst**, **MSRS 2008-Windows-Dienst** und **ReportServer Service** zur Verfügung. Die folgenden Leistungsobjekte stellen zusätzliche Leistungsüberwachungsdaten für den Berichtsserver bereit.  
   
 |Leistungsobjekt|Notizen|  
 |------------------------|-----------|  

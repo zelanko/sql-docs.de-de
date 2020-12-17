@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: d0de3f1f-4887-47fb-bacf-46aaad74c4be
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 28f69b4aa47b45708832162b2b4b8429a847bc65
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 04b8fa62adfc5cb78ec52f2d87617f9136042aa7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454532"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97402560"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Bereitstellen von Abonnements und Warnungen für SSRS-Dienstanwendungen
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements und -Datenwarnungen setzt voraus, dass der SQL Server-Agent verwendet und SQL Server-Agentberechtigungen konfiguriert werden. Wenn Fehlermeldungen darauf hinweisen, dass der SQL Server-Agent erforderlich ist und Sie den SQL Server-Agent gestartet haben, können Sie die Berechtigungen aktualisieren oder überprüfen. Dieses Thema erstreckt sich auf [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus. Es werden drei Methoden beschrieben, wie Sie SQL Server-Agentberechtigungen bei Verwendung von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements aktualisieren können. Die Anmeldeinformationen, die Sie in den Schritten dieses Themas verwenden, müssen ausreichende Berechtigungen aufweisen, um RSExecRole-Ausführungsberechtigungen für Objekte in der Dienstanwendung sowie in der msdb- und Masterdatenbank zu gewähren.  
@@ -93,9 +93,9 @@ ms.locfileid: "88454532"
   
 2.  Legen Sie im Dialogfeld **Verbindung mit Server herstellen** die folgenden Optionen fest:  
   
-    -   Wählen Sie in der Liste **Servertyp** die Option **Datenbank-Engine**aus.  
+    -   Wählen Sie in der Liste **Servertyp** die Option **Datenbank-Engine** aus.  
   
-    -   Geben Sie unter **Servernamen**den Namen der SQL Server-Instanz ein, auf der Sie den SQL Server-Agent konfigurieren möchten.  
+    -   Geben Sie unter **Servernamen** den Namen der SQL Server-Instanz ein, auf der Sie den SQL Server-Agent konfigurieren möchten.  
   
     -   Wählen Sie einen Authentifizierungsmodus aus.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "88454532"
   
 1.  Klicken Sie auf der Symbolleiste von SQL Server Management Studio auf **Neue Abfrage**.  
   
-2.  Klicken Sie im Menü **Datei** auf **Öffnen**und dann auf **Datei**.  
+2.  Klicken Sie im Menü **Datei** auf **Öffnen** und dann auf **Datei**.  
   
 3.  Navigieren Sie zu dem Ordner, in dem Sie die Transact-SQL-Anweisung gespeichert haben, die Sie in der Verwaltungsshell von SharePoint 2016 oder SharePoint 2013 generiert haben.  
   

@@ -22,13 +22,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 05/04/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4bcfa24368b913258b1e5538bae6c21da7330450
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 121799da3fe6d259c92deb900fe21833cbfceef2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037815"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464371"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Auswählen eines Kontos für den SQL Server-Agent-Dienst
 
@@ -49,7 +49,7 @@ Das Dienststartkonto definiert das [!INCLUDE[msCoName](../../includes/msconame_m
 -   **Dieses Konto**. Hier können Sie das Windows-Domänenkonto angeben, unter dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst ausgeführt wird. Das von Ihnen ausgewählte Windows-Benutzerkonto sollte kein Mitglied der Windows-Gruppe **Administratoren** sein. Es bestehen jedoch Einschränkungen für die Verwendung der Multiserveradministration, wenn das Konto des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Diensts kein Mitglied der lokalen Gruppe **Administratoren** ist. Weitere Informationen finden Sie unter "Unterstützte Dienstkontotypen" weiter unten in diesem Thema.  
   
 ## <a name="windows-domain-account-permissions"></a>Berechtigungen für Windows-Domänenkonten  
-Zur Verbesserung der Sicherheit sollten Sie die Option **Dieses Konto**auswählen, um ein Windows-Domänenkonto anzugeben. Das von Ihnen angegebene Windows-Domänenkonto muss folgende Berechtigungen haben:  
+Zur Verbesserung der Sicherheit sollten Sie die Option **Dieses Konto** auswählen, um ein Windows-Domänenkonto anzugeben. Das von Ihnen angegebene Windows-Domänenkonto muss folgende Berechtigungen haben:  
   
 -   Berechtigung zum Anmelden als Dienst für alle Windows-Versionen (SeServiceLogonRight)  
   

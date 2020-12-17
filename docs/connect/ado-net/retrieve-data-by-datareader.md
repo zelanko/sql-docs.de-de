@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 06bfaa994c2b29959f44cfc554122465db9e0394
-ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
+ms.openlocfilehash: e7a618ef92a9f4a4cc969112886a4246ad25adc6
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96772229"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559202"
 ---
 # <a name="retrieve-data-by-a-datareader"></a>Abrufen von Daten durch einen DataReader
 
@@ -53,7 +53,7 @@ Wenn das **DataReader**-Objekt nicht mehr benötigt wird, sollten Sie immer die 
 > Solange ein **DataReader**-Objekt geöffnet ist, wird das **Connection**-Objekt ausschließlich von diesem **DataReader**-Objekt verwendet. Sie können erst dann Befehle für das **Connection**-Objekt ausführen, z. B. um ein anderes **DataReader**-Objekt zu erstellen, wenn das ursprüngliche **DataReader**-Objekt geschlossen wurde.  
 
 > [!NOTE]
-> Rufen Sie **Close** oder **Dispose** nicht für **Connection**- oder **DataReader**-Objekte oder andere verwaltete Objekte in der **Finalize**-Methode Ihrer Klasse auf. Geben Sie in einer Finalize-Methode nur nicht verwaltete Ressourcen frei, die der Klasse direkt gehören. Wenn Ihre Klasse keine nicht verwalteten Ressourcen aufweist, verwenden Sie in Ihrer Klassendefinition keine **Finalize**-Methode. Weitere Informationen finden Sie unter [Garbage Collection](/dotnet/standard/garbage-collection/index.md).
+> Rufen Sie **Close** oder **Dispose** nicht für **Connection**- oder **DataReader**-Objekte oder andere verwaltete Objekte in der **Finalize**-Methode Ihrer Klasse auf. Geben Sie in einer Finalize-Methode nur nicht verwaltete Ressourcen frei, die der Klasse direkt gehören. Wenn Ihre Klasse keine nicht verwalteten Ressourcen aufweist, verwenden Sie in Ihrer Klassendefinition keine **Finalize**-Methode. Weitere Informationen finden Sie unter [Garbage Collection](/dotnet/standard/garbage-collection/index).
  
 ## <a name="retrieve-multiple-result-sets-using-nextresult"></a>Abrufen mehrerer Resultsets mit NextResult
 

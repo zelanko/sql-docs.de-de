@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
 author: stevestein
 ms.author: sstein
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c93a4023ebcdb9716d7e7790ea97c8df186081f9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016'
+ms.openlocfilehash: 8f12acd87a21cca6047621abfb985906295b58c1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000424"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461441"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools-ceip"></a>Konfigurieren der Nutzungs- und Diagnosedatensammlung für SQL Server-Tools (CEIP)
 
@@ -43,7 +43,7 @@ Erfahren Sie, wie das Programm zur Verbesserung der Benutzerfreundlichkeit (Cust
   
 1.  Starten Sie Visual Studio.  
   
-2.  Wählen Sie im Hilfemenü **Feedback senden** > **Einstellungen**aus.  
+2.  Wählen Sie im Hilfemenü **Feedback senden** > **Einstellungen** aus.  
   
 3.  Um CEIP zu deaktivieren, klicken Sie auf **Nein, ich möchte nicht teilnehmen**, und klicken Sie dann auf **OK**.  
   
@@ -87,7 +87,7 @@ Wert = (DWORD)
   
 1.  Starten Sie Visual Studio.  
   
-2.  Wählen Sie im Hilfemenü **Feedback senden** > **Einstellungen**aus.  
+2.  Wählen Sie im Hilfemenü **Feedback senden** > **Einstellungen** aus.  
   
 3.  Um CEIP zu deaktivieren, klicken Sie auf **Nein, ich möchte nicht teilnehmen**, und klicken Sie dann auf **OK**.  
   
@@ -125,7 +125,7 @@ Wert = (DWORD)
   
 1.  Starten Sie das Tool, und öffnen Sie ein neues oder vorhandenes Projekt für Analysis Services oder Integration Services.  
   
-2.  Wählen Sie im Menü „Hilfe“ **Kundenfeedbackoptionen für Microsoft SQL Server**aus.  
+2.  Wählen Sie im Menü „Hilfe“ **Kundenfeedbackoptionen für Microsoft SQL Server** aus.  
   
 3.  Zum Deaktivieren des CEIP klicken Sie auf **Nein, ich möchte nicht teilnehmen**.  
   

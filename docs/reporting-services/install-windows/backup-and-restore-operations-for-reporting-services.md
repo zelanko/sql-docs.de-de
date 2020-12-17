@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
 ms.date: 05/08/2019
-ms.openlocfilehash: 31ec98b4fa474ab97b3cac37f49ae885f04d1414
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dc0463e49bf19c60cab94a12c10c4d8e8289e848
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418666"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97402826"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Sicherungs- und Wiederherstellungsvorgänge für Reporting Services
 
@@ -33,34 +33,34 @@ ms.locfileid: "88418666"
     - [Aktualisieren und Migrieren von Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
     - [Migrieren einer Reporting Services-Installation &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
 
-    ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+    ::: moniker range="=sql-server-2016"
   
     - [Migrieren einer Installation von Reporting Services &#40;SharePoint Modus&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)  
 
     ::: moniker-end
   
 ## <a name="backing-up-the-report-server-databases"></a>Sichern der Berichtsserver-Datenbanken  
- Da es sich bei einem Berichtsserver um einen statuslosen Server handelt, werden alle Anwendungsdaten in den Datenbanken **reportserver** und **reportservertempdb** gespeichert, die in einer [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Instanz ausgeführt werden. Mithilfe einer der zum Sichern von **-Datenbanken unterstützten Methoden können Sie die Datenbanken **reportserver** und **reportservertempdb[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sichern. Hier finden Sie einige Empfehlungen für die Berichtsserver-Datenbanken:  
+ Da es sich bei einem Berichtsserver um einen statuslosen Server handelt, werden alle Anwendungsdaten in den Datenbanken **reportserver** und **reportservertempdb** gespeichert, die in einer [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Instanz ausgeführt werden. Mithilfe einer der zum Sichern von **-Datenbanken unterstützten Methoden können Sie die Datenbanken** reportserver **und** reportservertempdb[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sichern. Hier finden Sie einige Empfehlungen für die Berichtsserver-Datenbanken:  
   
 -   Verwenden Sie zum Sichern der **reportserver**-Datenbank das vollständige Wiederherstellungsmodell.  
   
 -   Verwenden Sie zum Sichern der **reportservertempdb**-Datenbank das einfache Wiederherstellungsmodell.  
   
--   Die Sicherungszeitpläne für die beiden Datenbanken sollten sich voneinander unterscheiden. Der einzige Grund für das Sichern der **reportservertempdb**-Datenbank besteht darin, sie nach einem Hardwarefehler nicht erneut erstellen zu müssen. Wenn ein Hardwarefehler auftritt, ist es nicht nötig, die Daten in **reportservertempdb**wiederherzustellen, Sie benötigen jedoch die Tabellenstruktur. Wenn Sie **reportservertempdb**verlieren, können Sie sie nur zurückbekommen, indem Sie die Berichtsserver-Datenbank erneut erstellen. Wenn Sie **reportservertempdb**neu erstellen, ist es wichtig, dass sie denselben Namen wie die primäre Berichtsserver-Datenbank aufweist.  
+-   Die Sicherungszeitpläne für die beiden Datenbanken sollten sich voneinander unterscheiden. Der einzige Grund für das Sichern der **reportservertempdb**-Datenbank besteht darin, sie nach einem Hardwarefehler nicht erneut erstellen zu müssen. Wenn ein Hardwarefehler auftritt, ist es nicht nötig, die Daten in **reportservertempdb** wiederherzustellen, Sie benötigen jedoch die Tabellenstruktur. Wenn Sie **reportservertempdb** verlieren, können Sie sie nur zurückbekommen, indem Sie die Berichtsserver-Datenbank erneut erstellen. Wenn Sie **reportservertempdb** neu erstellen, ist es wichtig, dass sie denselben Namen wie die primäre Berichtsserver-Datenbank aufweist.  
   
  Weitere Informationen zur Sicherung und Wiederherstellung von relationalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken finden Sie unter [Sichern und Wiederherstellen von SQL Server-Datenbanken](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"  
+::: moniker range="=sql-server-2016"
 
 > [!IMPORTANT]  
->  Wenn sich der Berichtsserver im SharePoint-Modus befindet, muss er mit zusätzlichen Datenbanken verbunden werden, u.a. den SharePoint-Konfigurationsdatenbanken und der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Warnungsdatenbank. Im SharePoint-Modus werden drei Datenbanken für jede [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung erstellt: **reportserver**, **reportservertempdb**und **dataalerting** . Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von Reporting Services-SharePoint-Dienstanwendungen](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md).  
+>  Wenn sich der Berichtsserver im SharePoint-Modus befindet, muss er mit zusätzlichen Datenbanken verbunden werden, u.a. den SharePoint-Konfigurationsdatenbanken und der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Warnungsdatenbank. Im SharePoint-Modus werden drei Datenbanken für jede [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung erstellt: **reportserver**, **reportservertempdb** und **dataalerting** . Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von Reporting Services-SharePoint-Dienstanwendungen](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md).  
 
 ::: moniker-end
   
 ## <a name="backing-up-the-encryption-keys"></a>Sichern der Verschlüsselungsschlüssel  
  Sie sollten die Verschlüsselungsschlüssel sichern, wenn Sie eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Installation zum ersten Mal konfigurieren. Sie sollen die Schlüssel zudem jedes Mal sichern, wenn Sie die Identität der Dienstkonten ändern oder den Computer umbenennen. Weitere Informationen finden Sie unter [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md). 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 Weitere Informationen zu Berichtsservern im SharePoint-Modus finden Sie im Abschnitt „Schlüsselverwaltung“ des Artikels [Verwalten einer Reporting Services-SharePoint-Dienstanwendung](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
 

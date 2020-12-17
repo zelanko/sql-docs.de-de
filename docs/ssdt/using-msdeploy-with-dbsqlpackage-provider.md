@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: b0cf5e6c46add1ce49b4d95f6eebe1feb2fb496f
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 04b814eece5041851b932f19e9e1d4cd1b63e035
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987766"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559192"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Verwenden von MSDeploy mit dem dbSqlPackage-Anbieter
 
@@ -29,7 +29,7 @@ ms.locfileid: "91987766"
   
 -   **Script:** Erstellt ein Transact\-SQL-Skript, das dem von der Veröffentlichungsaktion ausgeführten Skript entspricht  
   
-Weitere Informationen über DACFx finden Sie in der Dokumentation zur verwalteten DACFx-API unter [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](/dotnet/api/microsoft.sqlserver.dac) oder in [SqlPackage.exe](../tools/sqlpackage.md) (DACFx-Befehlszeilentool).  
+Weitere Informationen über DACFx finden Sie in der Dokumentation zur verwalteten DACFx-API unter [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](/dotnet/api/microsoft.sqlserver.dac) oder in [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md) (DACFx-Befehlszeilentool).  
   
 > [!IMPORTANT]  
 > Die „dbSqlPackage“-Anbieterfunktion wird aus der nächsten Hauptversion von Visual Studio entfernt. Informationen zur Datenbankveröffentlichung mithilfe von Web Deploy finden Sie unter [dbDacFx-Anbieter für die inkrementelle Datenbankveröffentlichung](https://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing).  

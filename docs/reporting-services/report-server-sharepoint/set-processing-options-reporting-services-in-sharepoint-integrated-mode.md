@@ -8,13 +8,13 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7b698f7e3d566cd49a0106c0cdf834be894cb92f
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 2f06c967c894092d8d89224948ed1772c9e70ed5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764797"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461471"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>Festlegen von Verarbeitungsoptionen (Reporting Services im integrierten SharePoint-Modus)
 
@@ -41,27 +41,27 @@ ms.locfileid: "83764797"
   
 1.  Zeigen Sie auf einen Bericht in der Bibliothek.  
   
-2.  Klicken Sie auf den Pfeil nach unten, und wählen Sie **Verarbeitungsoptionen verwalten**aus.  
+2.  Klicken Sie auf den Pfeil nach unten, und wählen Sie **Verarbeitungsoptionen verwalten** aus.  
   
-3.  Klicken Sie unter **Datenaktualisierungsoptionen**auf **Momentaufnahmedaten verwenden**. Wenn die Meldung "Dieser Bericht kann nicht über eine Momentaufnahme ausgeführt werden, da mindestens eine Anmeldeinformation für die Datenquellen nicht gespeichert ist" angezeigt wird, bedeutet dies, dass der Bericht nicht für die unbeaufsichtigte Ausführung konfiguriert ist und Sie vor dem Festlegen dieser Option die Datenquellen zum Verwenden gespeicherter Anmeldeinformationen konfigurieren müssen.  
+3.  Klicken Sie unter **Datenaktualisierungsoptionen** auf **Momentaufnahmedaten verwenden**. Wenn die Meldung "Dieser Bericht kann nicht über eine Momentaufnahme ausgeführt werden, da mindestens eine Anmeldeinformation für die Datenquellen nicht gespeichert ist" angezeigt wird, bedeutet dies, dass der Bericht nicht für die unbeaufsichtigte Ausführung konfiguriert ist und Sie vor dem Festlegen dieser Option die Datenquellen zum Verwenden gespeicherter Anmeldeinformationen konfigurieren müssen.  
   
-4.  Wählen Sie unter **Optionen für Datenmomentaufnahmen**die Option **Datenverarbeitung planen**aus.  
+4.  Wählen Sie unter **Optionen für Datenmomentaufnahmen** die Option **Datenverarbeitung planen** aus.  
   
 5.  Wählen Sie **Nach einem freigegebenen Zeitplan** , wenn Sie über einen vorhandenen freigegebenen Zeitplan verfügen, den Sie verwenden möchten. Wählen Sie andernfalls **Nach einem benutzerdefinierten Zeitplan**, und klicken Sie auf **Konfigurieren**.  
   
 6.  Wählen Sie eine Häufigkeit, einen Zeitplan sowie Werte für das Start- und das Enddatum aus, und klicken Sie anschließend auf **OK**.  
   
-7.  Wählen Sie unter **Optionen für Datenmomentaufnahmen**die Option **Die Momentaufnahme beim Speichern dieser Seite erstellen oder aktualisieren** aus, wenn Sie unmittelbar Momentaufnahmedaten für die Verwendung im Bericht erstellen möchten, ohne auf die Ausführung der geplanten Datenverarbeitung zu warten.  
+7.  Wählen Sie unter **Optionen für Datenmomentaufnahmen** die Option **Die Momentaufnahme beim Speichern dieser Seite erstellen oder aktualisieren** aus, wenn Sie unmittelbar Momentaufnahmedaten für die Verwendung im Bericht erstellen möchten, ohne auf die Ausführung der geplanten Datenverarbeitung zu warten.  
   
 ## <a name="set-report-caching-options"></a>Optionen zum Zwischenspeichern von Berichten festlegen
   
 1.  Zeigen Sie auf einen Bericht in der Bibliothek.  
   
-2.  Klicken Sie auf den Pfeil nach unten, und wählen Sie **Verarbeitungsoptionen verwalten**aus.  
+2.  Klicken Sie auf den Pfeil nach unten, und wählen Sie **Verarbeitungsoptionen verwalten** aus.  
   
-3.  Klicken Sie unter **Datenaktualisierungsoptionen**auf **Zwischengespeicherte Daten verwenden**. Wenn die Meldung "Dieser Bericht kann nicht zwischengespeichert werden, da mindestens eine Anmeldeinformation für die Datenquelle nicht gespeichert ist" angezeigt wird, bedeutet dies, dass der Bericht nicht für die unbeaufsichtigte Ausführung konfiguriert ist und Sie vor dem Festlegen dieser Option die Datenquellen zum Verwenden gespeicherter Anmeldeinformationen konfigurieren müssen.  
+3.  Klicken Sie unter **Datenaktualisierungsoptionen** auf **Zwischengespeicherte Daten verwenden**. Wenn die Meldung "Dieser Bericht kann nicht zwischengespeichert werden, da mindestens eine Anmeldeinformation für die Datenquelle nicht gespeichert ist" angezeigt wird, bedeutet dies, dass der Bericht nicht für die unbeaufsichtigte Ausführung konfiguriert ist und Sie vor dem Festlegen dieser Option die Datenquellen zum Verwenden gespeicherter Anmeldeinformationen konfigurieren müssen.  
   
-4.  Geben Sie unter **Cacheoptionen**an, wie der Cache abläuft:  
+4.  Geben Sie unter **Cacheoptionen** an, wie der Cache abläuft:  
   
     -   Geben Sie an, nach wie vielen Minuten der Cache abläuft.  
   
@@ -73,19 +73,19 @@ ms.locfileid: "83764797"
   
 1.  Zeigen Sie auf einen Bericht in der Bibliothek.  
   
-2.  Klicken Sie auf den Pfeil nach unten, und wählen Sie **Verarbeitungsoptionen verwalten**aus.  
+2.  Klicken Sie auf den Pfeil nach unten, und wählen Sie **Verarbeitungsoptionen verwalten** aus.  
   
-3.  Klicken Sie unter **Verarbeitungstimeout**auf **Die Standardeinstellung für die Site verwenden** , wenn Sie den auf der Berichtsserverebene angegebenen Wert verwenden möchten. Wählen Sie andernfalls **Kein Timeout für die Berichtsverarbeitung festlegen** oder **Berichtsverarbeitungsbeschränkung (in Sekunden)** aus, wenn Sie keinen Timeoutwert angeben oder den Timeoutwert durch einen anderen Wert überschreiben möchten.  
+3.  Klicken Sie unter **Verarbeitungstimeout** auf **Die Standardeinstellung für die Site verwenden** , wenn Sie den auf der Berichtsserverebene angegebenen Wert verwenden möchten. Wählen Sie andernfalls **Kein Timeout für die Berichtsverarbeitung festlegen** oder **Berichtsverarbeitungsbeschränkung (in Sekunden)** aus, wenn Sie keinen Timeoutwert angeben oder den Timeoutwert durch einen anderen Wert überschreiben möchten.  
   
 ## <a name="set-report-history-options-and-limits"></a>Berichtsverlaufsoptionen und Grenzwerte festlegen
   
 1.  Zeigen Sie auf einen Bericht in der Bibliothek.  
   
-2.  Klicken Sie auf den Pfeil nach unten, und wählen Sie **Verarbeitungsoptionen verwalten**aus.  
+2.  Klicken Sie auf den Pfeil nach unten, und wählen Sie **Verarbeitungsoptionen verwalten** aus.  
   
-3.  Geben Sie unter **Optionen für Verlaufsmomentaufnahmen**an, wie und wann eine Datenverarbeitung ausgeführt und gespeichert wird.  
+3.  Geben Sie unter **Optionen für Verlaufsmomentaufnahmen** an, wie und wann eine Datenverarbeitung ausgeführt und gespeichert wird.  
   
-4.  Wählen Sie unter **Grenzwerte für Verlaufsmomentaufnahmen**die Option **Die Standardeinstellung für die Site verwenden** , wenn Sie den auf der Berichtsserverebene angegebenen Wert verwenden möchten. Wählen Sie andernfalls **Die Anzahl von Momentaufnahmen nicht einschränken** , oder geben Sie für **Die Anzahl der Momentaufnahmen auf folgenden Wert beschränken** einen benutzerdefinierten Wert an.  
+4.  Wählen Sie unter **Grenzwerte für Verlaufsmomentaufnahmen** die Option **Die Standardeinstellung für die Site verwenden** , wenn Sie den auf der Berichtsserverebene angegebenen Wert verwenden möchten. Wählen Sie andernfalls **Die Anzahl von Momentaufnahmen nicht einschränken** , oder geben Sie für **Die Anzahl der Momentaufnahmen auf folgenden Wert beschränken** einen benutzerdefinierten Wert an.  
   
 ## <a name="set-database-timeout"></a>Datenbank-Timeout festlegen
   
