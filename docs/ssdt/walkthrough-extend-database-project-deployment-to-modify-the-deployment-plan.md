@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e38e126274b03a53c693f9cdd904ee8301b0069b
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 52a3ee78a73e2ba3e600d7dae99019d481da73a7
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987704"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559112"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>Exemplarische Vorgehensweise: Erweitern der Bereitstellung eines Datenbankprojekts für die Bearbeitung des Bereitstellungsplans
 
@@ -627,7 +627,7 @@ Als Nächstes erstellen Sie die Klassenbibliothek.
   
 4.  Klicken Sie unter **Schlüsseldatei mit starkem Namen auswählen:** auf **<New>** .  
   
-5.  Geben Sie im Dialogfeld **Schlüssel für einen starken Namen erstellen** unter **Schlüsseldateiname** **MyRefKey**ein.  
+5.  Geben Sie im Dialogfeld **Schlüssel für einen starken Namen erstellen** unter **Schlüsseldateiname** **MyRefKey** ein.  
   
 6.  (optional) Sie können ein Kennwort für Ihre Schlüsseldatei mit starkem Namen angeben.  
   
@@ -775,7 +775,7 @@ Nach dem Durchführen einer dieser Vorgehensweisen können Sie MSBuild verwenden
         > Falls Sie ein Datenbankprojekt bereitstellen, das mit der Zieldatenbank identisch ist, ist der daraus resultierende Bericht nicht sehr aussagekräftig. Weitere aussagekräftige Ergebnisse erhalten Sie, wenn Sie Änderungen an einer Datenbank bereitstellen oder eine neue Datenbank bereitstellen.  
   
 ## <a name="command-line-deployment-using-generated-dacpac-file"></a>Befehlszeilenbereitstellung mit der generierten DACPAC-Datei  
-Sobald ein SQL-Projekt erstellt wurde, wird eine DACPAC-Datei erstellt, die zum Bereitstellen des Schemas über die Befehlszeile verwendet werden kann und die die Bereitstellung über einen anderen Computer als einen Buildcomputer aktivieren kann. SqlPackage ist ein Befehlszeilen-Hilfsprogramm, das die Bereitstellung von DACPAC-Dateien mit vollem Optionsumfang ermöglicht, mit denen Benutzer unter anderem eine DACPAC-Datei bereitstellen oder ein Bereitstellungsskript generieren können. Weitere Informationen finden Sie unter [SqlPackage.exe](../tools/sqlpackage.md).  
+Sobald ein SQL-Projekt erstellt wurde, wird eine DACPAC-Datei erstellt, die zum Bereitstellen des Schemas über die Befehlszeile verwendet werden kann und die die Bereitstellung über einen anderen Computer als einen Buildcomputer aktivieren kann. SqlPackage ist ein Befehlszeilen-Hilfsprogramm, das die Bereitstellung von DACPAC-Dateien mit vollem Optionsumfang ermöglicht, mit denen Benutzer unter anderem eine DACPAC-Datei bereitstellen oder ein Bereitstellungsskript generieren können. Weitere Informationen finden Sie unter [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md).  
   
 > [!NOTE]  
 > Zur erfolgreichen Bereitstellung von DACPAC-Dateien, die über Projekte mit definierter DeploymentContributors-Eigenschaft erstellt wurden, müssen die DLLs, die Ihre Bereitstellungs-Contributors enthalten, auf dem verwendeten Computer installiert sein. Dies ist der Fall, weil sie für eine erfolgreiche Bereitstellung als erforderlich markiert wurden.  

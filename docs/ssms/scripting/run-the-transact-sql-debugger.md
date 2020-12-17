@@ -22,13 +22,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e8a30b5c8ff29155c58f940de8d800075c84c1e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e9fe76a738bc38eafc1c778fef6a6f91d93492e2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036390"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466281"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Ausführen des Transact-SQL-Debuggers
 
@@ -95,7 +95,7 @@ Um den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger zu starten, müssen
 |**Fenster/Aufrufliste**|Nicht verfügbar|**Breakpoints/Aufrufliste**|STRG+ALT+C|Anzeigen des Fensters **Aufrufliste**|  
 |**Fenster/Threads**|Nicht verfügbar|**Breakpoints/Threads**|STRG+ALT+H|Anzeigen des Fensters **Threads**|  
 |**Fortsetzen**|Nicht verfügbar|**Fortsetzen**|ALT+F5|Den Vorgang bis zum nächsten Breakpoint ausführen **Weiter** ist erst dann aktiv, wenn der Fokus auf ein Abfrage-Editor-Fenster verschoben wird, das sich im Debugmodus befindet.|  
-|**Debuggen**|Nicht verfügbar|**Debuggen**|ALT+F5|Versetzt ein Abfrage-Editor-Fenster in den Debugmodus und führt den Vorgang bis zum ersten Breakpoint aus. Wenn sich Ihr Fokus auf ein Abfrage-Editor-Fenster richtet, das sich im Debugmodus befindet, wird **Debuggen starten** durch **Weiter**ersetzt.|  
+|**Debuggen**|Nicht verfügbar|**Debuggen**|ALT+F5|Versetzt ein Abfrage-Editor-Fenster in den Debugmodus und führt den Vorgang bis zum ersten Breakpoint aus. Wenn sich Ihr Fokus auf ein Abfrage-Editor-Fenster richtet, das sich im Debugmodus befindet, wird **Debuggen starten** durch **Weiter** ersetzt.|  
 |**Alle unterbrechen**|Nicht verfügbar|**Alle unterbrechen**|STRG+ALT+UNTBR|Diese Funktion wird vom [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger nicht verwendet.|  
 |**Debuggen beenden**|Nicht verfügbar|**Debuggen beenden**|UMSCHALT+F5|Deaktiviert den Debugmodus für ein Abfrage-Editor-Fenster und stellt den normalen Modus wieder her.|  
 |**Debuggen**|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Beendet den Debugmodus, führt jedoch die übrigen Anweisungen im Abfrage-Editor-Fenster aus.|  

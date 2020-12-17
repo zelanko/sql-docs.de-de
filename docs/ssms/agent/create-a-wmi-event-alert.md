@@ -13,13 +13,13 @@ ms.assetid: b8c46db6-408b-484e-98f0-a8af3e7ec763
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6511ea5b72a4031ec212d463b6cf8a6f7b977a9e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 1ae08f86a984f4a8bdbc73db02fb41e335250e4f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035080"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464471"
 ---
 # <a name="create-a-wmi-event-alert"></a>Erstellen einer WMI-Ereigniswarnung
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,7 +43,7 @@ Informationen zur Verwendung der WMI-Anbieter zum Überwachen von [!INCLUDE[ssNo
 ### <a name="security"></a><a name="Security"></a>Sicherheit  
   
 #### <a name="permissions"></a><a name="Permissions"></a>Berechtigungen  
-Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** die Prozedur **sp_add_alert**ausführen.  
+Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** die Prozedur **sp_add_alert** ausführen.  
   
 ## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>Verwenden von SQL Server Management Studio  
   
@@ -51,9 +51,9 @@ Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** die P
   
 1.  Klicken Sie im **Objekt-Explorer** auf das Pluszeichen, um den Server zu erweitern, auf dem Sie eine WMI-Ereigniswarnung erstellen möchten.  
   
-2.  Klicken Sie auf das Pluszeichen, um **SQL Server-Agent**zu erweitern.  
+2.  Klicken Sie auf das Pluszeichen, um **SQL Server-Agent** zu erweitern.  
   
-3.  Klicken Sie mit der rechten Maustaste auf **Warnungen** , und wählen Sie **Neue Warnung**aus.  
+3.  Klicken Sie mit der rechten Maustaste auf **Warnungen** , und wählen Sie **Neue Warnung** aus.  
   
 4.  Geben Sie im Dialogfeld **Neue Warnung** einen **Namen** für diese Warnung ein.  
   
@@ -61,7 +61,7 @@ Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** die P
   
 6.  Klicken Sie in der Liste **Typ** auf **WMI-Ereigniswarnung**.  
   
-7.  Geben Sie unter **WMI-Ereigniswarnungsdefinition**im Feld **Namespace** den WMI-Namespace für die WQL-Anweisung (WMI Query Language) an, die das WMI-Ereignis identifiziert, welches diese Warnung auslöst.  
+7.  Geben Sie unter **WMI-Ereigniswarnungsdefinition** im Feld **Namespace** den WMI-Namespace für die WQL-Anweisung (WMI Query Language) an, die das WMI-Ereignis identifiziert, welches diese Warnung auslöst.  
   
 8.  Geben Sie im Feld **Abfrage** die WQL-Anweisung an, die das Ereignis identifiziert, auf das diese Warnung reagiert.  
   

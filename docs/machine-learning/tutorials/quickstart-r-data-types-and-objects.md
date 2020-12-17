@@ -9,27 +9,27 @@ ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 58eb68b94d5e969ef4a62d5de057d2936a628bda
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: e307dcd98396d937b14ffab92a60d4ba9a7280dd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870365"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470251"
 ---
 # <a name="quickstart-data-structures-data-types-and-objects-using-r-with-sql-machine-learning"></a>Schnellstart: Datenstrukturen, Datentypen und Objekte bei Verwendung von R mit SQL Machine Learning
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 In dieser Schnellstartanleitung erfahren Sie, wie Sie Datenstrukturen und Datentypen bei Verwendung von R [in SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) oder in [Big Data-Clustern](../../big-data-cluster/machine-learning-services.md) verwenden können. Sie erhalten Informationen zum Verschieben von Daten zwischen R und SQL Server und zu Fehlern, die in diesem Zusammenhang häufig auftreten.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 In dieser Schnellstartanleitung erfahren Sie, wie Sie Datenstrukturen und Datentypen bei Verwendung von R in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) verwenden können. Sie erhalten Informationen zum Verschieben von Daten zwischen R und SQL Server und zu Fehlern, die in diesem Zusammenhang häufig auftreten.
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 In dieser Schnellstartanleitung erfahren Sie, wie Sie Datenstrukturen und Datentypen bei Verwendung von R in [SQL Server R Services](../r/sql-server-r-services.md) verwenden können. Sie erhalten Informationen zum Verschieben von Daten zwischen R und SQL Server und zu Fehlern, die in diesem Zusammenhang häufig auftreten.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 In dieser Schnellstartanleitung erfahren Sie, wie Sie Datenstrukturen und -typen mit R in [Machine Learning Services in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview) verwenden können. Außerdem erhalten Sie Informationen zum Verschieben von Daten zwischen R und SQL Managed Instance und zu Fehlern, die in diesem Zusammenhang häufig auftreten.
 ::: moniker-end
 
@@ -44,16 +44,16 @@ Diese häufig auftretenden Probleme sollten Sie im Vorfeld kennen:
 
 Zum Durchführen dieser Schnellstartanleitung benötigen Sie folgende Voraussetzungen.
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 - SQL Server Machine Learning Services. Informationen zur Installation von Machine Learning Services finden Sie im [Windows-](../install/sql-machine-learning-services-windows-install.md) oder im [Linux-Installationsleitfaden](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). Sie können auch [Machine Learning Services in Big Data-Clustern unter SQL Server aktivieren](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 - SQL Server Machine Learning Services. Informationen zur Installation von Machine Learning Services finden Sie im [Windows-Installationsleitfaden](../install/sql-machine-learning-services-windows-install.md). 
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 - SQL Server 2016 R Services. Informationen zur Installation von R Services finden Sie im [Windows-Installationsleitfaden](../install/sql-r-services-windows-install.md). 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 - Machine Learning Services in Azure SQL Managed Instance. In der Übersicht [Machine Learning Services in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview) finden Sie weitere Informationen.
 ::: moniker-end
 

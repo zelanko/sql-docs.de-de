@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: cba06a816e57189cb69f9680542452d2788b233e
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 571b49dfa3ce555aad02ffe8d6ba7c68a033bbdc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "92412531"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470121"
 ---
 # <a name="r-tutorial-explore-and-visualize-data"></a>R-Tutorial: Untersuchen und Visualisieren von Daten
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -78,7 +78,7 @@ Im ursprünglichen öffentlichen Dataset wurden die Taxi-IDs und die Fahrtendate
 
 ## <a name="create-plots-using-r-in-t-sql"></a>Erstellen von Plots mit R in T-SQL
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 > [!IMPORTANT]
 > Ab SQL Server 2019 erfordert der Isolationsmechanismus, dass Sie für das Verzeichnis, in dem die Plotdatei gespeichert ist, entsprechende Berechtigungen erteilen. Informationen zum Festlegen dieser Berechtigungen finden Sie im [Abschnitt zu Dateiberechtigungen unter „SQL Server 2019 unter Windows: Isolationsänderungen für Machine Learning Services“](../install/sql-server-machine-learning-services-2019.md#file-permissions).
 ::: moniker-end

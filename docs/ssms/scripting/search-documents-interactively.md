@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a97a33dadae8f9039a6c5a0ca935decfb1e24b4a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: bdf33a22b10a5a10dc14f0ecce870ce43fc33aee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036370"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466311"
 ---
 # <a name="search-documents-interactively"></a>Interaktives Durchsuchen von Dokumenten
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "92036370"
   
 3.  Geben Sie in das Textfeld **Suchen und Ersetzen** den Text ein, nach dem Sie suchen möchten.  
   
-4.  Wählen Sie in der Liste **Suchen in** die Option **Alle geöffneten Dokumente**aus.  
+4.  Wählen Sie in der Liste **Suchen in** die Option **Alle geöffneten Dokumente** aus.  
   
     > [!NOTE]  
     >  Bestimmte geöffnete Dateien lassen sich möglicherweise nicht durchsuchen, wenn die Option **Alle geöffneten Dokumente** ausgewählt ist. In die Suchvorgänge werden nur Dateien einbezogen, die zurzeit in einer Textansicht geöffnet sind, z. B. in der Codeansicht. Dateien in der Entwurfssicht werden nicht in Suchvorgänge einbezogen.  
@@ -53,7 +53,7 @@ ms.locfileid: "92036370"
   
 3.  Geben Sie in das Feld **Ersetzen durch** den Text ein, durch den der Suchtext ersetzt werden soll.  
   
-4.  Wählen Sie in der Liste **Suchen in** die Option **Alle geöffneten Dokumente**aus.  
+4.  Wählen Sie in der Liste **Suchen in** die Option **Alle geöffneten Dokumente** aus.  
   
 5.  Klicken Sie auf **Ersetzen**, und klicken Sie wiederholt auf **Ersetzen** , bis die letzte Übereinstimmung in der letzten Datei ersetzt wurde. Wenn Sie eine Übereinstimmung auslassen möchten, die nicht ersetzt werden soll, klicken Sie auf **Weitersuchen** .  
   
@@ -61,7 +61,7 @@ ms.locfileid: "92036370"
   
      Wählen Sie die Option **Alle ersetzen** aus, um alle Übereinstimmungen zu ersetzen. In einem Meldungsfeld wird die Gesamtanzahl der Ersetzungen angezeigt.  
   
- Mit dem Befehl **Alle ersetzen** werden alle Suchübereinstimmungen ersetzt. Dazu gehören auch die Übereinstimmungen, die Sie zuvor mit der Schaltfläche **Weitersuchen** ausgelassen haben. Um den Befehl **Alle ersetzen**abzubrechen, klicken Sie im Menü **Bearbeiten** auf **Rückgängig** , bevor Sie eine der Dateien schließen.  
+ Mit dem Befehl **Alle ersetzen** werden alle Suchübereinstimmungen ersetzt. Dazu gehören auch die Übereinstimmungen, die Sie zuvor mit der Schaltfläche **Weitersuchen** ausgelassen haben. Um den Befehl **Alle ersetzen** abzubrechen, klicken Sie im Menü **Bearbeiten** auf **Rückgängig** , bevor Sie eine der Dateien schließen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Inkrementelles Durchsuchen eines aktiven Dokuments](./search-an-active-document-incrementally.md)   

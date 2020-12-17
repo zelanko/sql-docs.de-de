@@ -10,27 +10,27 @@ ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: aee6dcfce5e07b62d53420328221999bed0f887f
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 8b9836119612aa64b941f056902e7886deb8233b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870259"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470091"
 ---
 # <a name="r-tutorials-for-sql-machine-learning"></a>R-Turorials für SQL Machine Learning
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 In diesem Artikel werden die R-Tutorials und -Schnellstarts für [Machine Learning Services in SQL Server](../sql-server-machine-learning-services.md) und in [Big Data-Clustern](../../big-data-cluster/machine-learning-services.md) beschrieben.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 In diesem Artikel werden die R-Tutorials und -Schnellstarts für [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) beschrieben.
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 In diesem Artikel werden die R-Tutorials und -Schnellstarts für [SQL Server 2016 R Services](../r/sql-server-r-services.md) beschrieben.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 In diesem Artikel werden die Python-Tutorials und -Schnellstarts für [Machine Learning Services in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview) beschrieben.
 ::: moniker-end
 
@@ -38,7 +38,7 @@ In diesem Artikel werden die Python-Tutorials und -Schnellstarts für [Machine L
 
 ## <a name="r-tutorials"></a>R-Tutorials
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 | Lernprogramm | BESCHREIBUNG |
 |------|-------------|
 | [Vorhersagen für einen Skiverleih mit Entscheidungsstruktur](r-predictive-model-introduction.md) | Verwenden Sie R und ein Entscheidungsstrukturmodell, um die Anzahl zukünftiger Skivermietungen vorherzusagen. Bereiten Sie mithilfe von Notebooks in Azure Data Studio Daten vor und trainieren Sie das Modell, und verwenden Sie T-SQL für die Modellimplementierung. |

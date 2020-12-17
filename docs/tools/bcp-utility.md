@@ -28,13 +28,13 @@ ms.author: maghan
 ms.reviewer: v-daenge
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 7f42f44987b5780c4da8e28fb6f34fcc9f41c188
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: ac37754513e5c204399e8ac4ae57141f229b4681
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384907"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465791"
 ---
 # <a name="bcp-utility"></a>Hilfsprogramms bcp
 
@@ -44,9 +44,9 @@ ms.locfileid: "94384907"
 >
 > Ausführliche Informationen zum Verwenden von bcp mit Azure Synapse Analytics finden Sie im Artikel zum [Laden von Daten mit bcp](/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
 
-Mit dem Hilfsprogramm **bcp** ( **B** ulk **C** opy **P** rogram) werden Daten per Massenvorgang zwischen einer Instanz von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und einer Datendatei in einem benutzerdefinierten Format kopiert. Das Hilfsprogramm **bcp** kann verwendet werden, um große Mengen neuer Zeilen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Tabellen zu importieren oder um Daten aus Tabellen in Datendateien zu exportieren. Außer in Verbindung mit der Option **queryout** sind für das Hilfsprogramm keine Kenntnisse von [!INCLUDE[tsql](../includes/tsql-md.md)]erforderlich. Um Daten in eine Tabelle zu importieren, müssen Sie entweder eine für diese Tabelle erstellte Formatdatei verwenden oder die Struktur der Tabelle und die Art der Daten kennen, die in den Tabellenspalten zulässig sind.  
+Mit dem Hilfsprogramm **bcp** (**B** ulk **C** opy **P** rogram) werden Daten per Massenvorgang zwischen einer Instanz von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und einer Datendatei in einem benutzerdefinierten Format kopiert. Das Hilfsprogramm **bcp** kann verwendet werden, um große Mengen neuer Zeilen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Tabellen zu importieren oder um Daten aus Tabellen in Datendateien zu exportieren. Außer in Verbindung mit der Option **queryout** sind für das Hilfsprogramm keine Kenntnisse von [!INCLUDE[tsql](../includes/tsql-md.md)]erforderlich. Um Daten in eine Tabelle zu importieren, müssen Sie entweder eine für diese Tabelle erstellte Formatdatei verwenden oder die Struktur der Tabelle und die Art der Daten kennen, die in den Tabellenspalten zulässig sind.  
 
-![Themenlink (Symbol)](../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") Informationen zu den **bcp** -Syntaxkonventionen finden Sie unter [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+![Themenlink (Symbol)](../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") Informationen zu den **bcp**-Syntaxkonventionen finden Sie unter [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
 
 > [!NOTE]
 > Wenn Sie Ihre Daten mit **bcp** sichern, müssen Sie zum Aufzeichnen des Datenformats eine Formatdatei erstellen. **bcp** -Datendateien enthalten **keine** Schema- oder Formatinformationen. Daher können Sie die Daten möglicherweise nicht mehr importieren, wenn Sie eine Tabelle löschen und keine Formatdatei vorhanden ist.
@@ -133,7 +133,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
 - **queryout**<a name="qry_out"></a> werden Daten aus einer Abfrage kopiert. Diese Option muss nur beim Massenkopieren von Daten über eine Abfrage angegeben werden.  
   
-- **format**<a name="format"></a> wird eine Formatdatei basierend auf der angegebenen Option ( **-n** , **-c** , **-w** oder **-N** ) und den Tabellen- oder Sichttrennzeichen erstellt. Beim Massenkopieren von Daten kann der Befehl **bcp** auf eine Formatdatei verweisen. Dies erspart Ihnen die wiederholte interaktive Eingabe von Formatinformationen. Für die Option **format** ist die Option **-f** erforderlich. Zum Erstellen einer XML-Formatdatei muss zudem die Option **-x** angegeben werden. Weitere Informationen finden Sie unter [Erstellen einer Formatdatei &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md). Sie müssen **nul** als Wert angeben ( **format nul** ).  
+- **format**<a name="format"></a> wird eine Formatdatei basierend auf der angegebenen Option ( **-n**, **-c**, **-w** oder **-N**) und den Tabellen- oder Sichttrennzeichen erstellt. Beim Massenkopieren von Daten kann der Befehl **bcp** auf eine Formatdatei verweisen. Dies erspart Ihnen die wiederholte interaktive Eingabe von Formatinformationen. Für die Option **format** ist die Option **-f** erforderlich. Zum Erstellen einer XML-Formatdatei muss zudem die Option **-x** angegeben werden. Weitere Informationen finden Sie unter [Erstellen einer Formatdatei &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md). Sie müssen **nul** als Wert angeben (**format nul**).  
   
  _**owner**_<a name="schema"></a>  
  Dies ist der Namen des Besitzers der Tabelle oder Sicht. *owner* ist optional, wenn der Benutzer, der den Vorgang ausführt, der Besitzer der angegebenen Tabelle oder Sicht ist. Wenn *owner* nicht angegeben wird und der Benutzer, der den Vorgang ausführt, nicht Besitzer der angegebenen Tabelle oder Sicht ist, gibt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eine Fehlermeldung zurück, und der Vorgang wird abgebrochen.  
@@ -143,10 +143,10 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  Die Abfrage kann auf eine gespeicherte Prozedur verweisen, sofern alle Tabellen, auf die innerhalb der gespeicherten Prozedur verwiesen werden, vor der Ausführung der bcp-Anweisung vorhanden sind. Wenn die gespeicherte Prozedur beispielsweise eine temporäre Tabelle generiert, tritt bei der **bcp** -Anweisung ein Fehler auf, da die temporäre Tabelle nur zur Laufzeit und nicht zum Zeitpunkt der Anweisungsausführung verfügbar ist. Ziehen Sie in diesem Fall in Erwägung, die Ergebnisse der gespeicherten Prozedur in eine Tabelle einzufügen und dann **bcp** zum Kopieren der Daten aus der Tabelle in eine Datendatei zu verwenden.  
   
  _**table\_name**_<a name="tbl_name"></a>  
- Der Name der Zieltabelle, wenn Daten in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] importiert werden ( **in** ), oder der Name der Quelltabelle, wenn Daten aus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exportiert werden ( **out** ).  
+ Der Name der Zieltabelle, wenn Daten in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] importiert werden (**in**), oder der Name der Quelltabelle, wenn Daten aus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exportiert werden (**out**).  
   
  _**view\_name**_<a name="vw_name"></a>   
- Der Name der Zielsicht, wenn Daten in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kopiert werden ( **in** ), oder der Name der Quellsicht, wenn Daten aus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kopiert werden ( **out** ). Als Zielsichten können nur Sichten verwendet werden, in denen alle Spalten auf dieselbe Tabelle verweisen. Weitere Informationen zu den Einschränkungen beim Kopieren von Daten in Sichten finden Sie unter [INSERT &#40;Transact-SQL&#41;](../t-sql/statements/insert-transact-sql.md).  
+ Der Name der Zielsicht, wenn Daten in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kopiert werden (**in**), oder der Name der Quellsicht, wenn Daten aus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kopiert werden (**out**). Als Zielsichten können nur Sichten verwendet werden, in denen alle Spalten auf dieselbe Tabelle verweisen. Weitere Informationen zu den Einschränkungen beim Kopieren von Daten in Sichten finden Sie unter [INSERT &#40;Transact-SQL&#41;](../t-sql/statements/insert-transact-sql.md).  
   
  **-a** _**Paketgröße**_<a name="a"></a>  
  Gibt an, wie viele Bytes pro Netzwerkpaket an den Server bzw. vom Server gesendet werden. Eine Serverkonfigurationsoption kann mithilfe von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (oder der gespeicherten Systemprozedur **sp_configure** ) festgelegt werden. Die Serverkonfigurationsoption kann jedoch mithilfe dieser Option einzeln überschrieben werden. *packet_size* kann einen Wert von 4.096 bis 65.535 Bytes annehmen. Der Standardwert ist 4.096.  
@@ -163,8 +163,8 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  Weitere Informationen finden Sie unter [Verwenden des Zeichenformats zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md).  
   
- **-C** { **ACP** \| **OEM** \| **RAW** \| *code_page* } <a name="C"></a>   
- Gibt die Codepage für die in der Datendatei enthaltenen Daten an. *Codepage* ist nur dann von Bedeutung, wenn die Daten **char** -, **varchar** - oder **text** -Spalten mit Zeichenwerten enthalten, die größer als 127 oder kleiner als 32 sind.  
+ **-C** { **ACP** \| **OEM** \| **RAW** \| *code_page* }<a name="C"></a>   
+ Gibt die Codepage für die in der Datendatei enthaltenen Daten an. *Codepage* ist nur dann von Bedeutung, wenn die Daten **char**-, **varchar**- oder **text** -Spalten mit Zeichenwerten enthalten, die größer als 127 oder kleiner als 32 sind.  
   
 > [!NOTE]
 > Es wird empfohlen, für jede Spalte in einer Formatdatei einen Sortierungsnamen anzugeben, außer wenn die 65001-Option Priorität vor der Angabe von Sortierung/Codepage haben soll.
@@ -205,7 +205,7 @@ Gibt an, dass der oder die Identitätswerte in der importierten Datendatei für 
 - Wird **-f** mit der Option **in** oder **out** verwendet, ist eine bereits vorhandene Formatdatei erforderlich.  
   
     > [!NOTE]
-    > Die Verwendung einer Formatdatei mit der Option **in** oder **out** ist optional. Fehlt die Option **-f** und wurde **-n** , **-c** , **-w** oder **-N** nicht angegeben, werden Sie vom Befehl zur Angabe von Formatinformationen aufgefordert, und Sie erhalten die Möglichkeit, Ihre Antworten in einer Formatdatei (mit dem Standardnamen Bcp.fmt) zu speichern.
+    > Die Verwendung einer Formatdatei mit der Option **in** oder **out** ist optional. Fehlt die Option **-f** und wurde **-n**, **-c**, **-w** oder **-N** nicht angegeben, werden Sie vom Befehl zur Angabe von Formatinformationen aufgefordert, und Sie erhalten die Möglichkeit, Ihre Antworten in einer Formatdatei (mit dem Standardnamen Bcp.fmt) zu speichern.
   
  Wenn *Fehlerdatei* mit einem Bindestrich (-) oder einem Schrägstrich (/) beginnt, darf kein Leerzeichen zwischen **-f** und dem *Fehlerdatei* -Wert enthalten sein.  
   
@@ -261,7 +261,7 @@ Gibt an, dass der oder die Identitätswerte in der importierten Datendatei für 
 
    Durch die interaktive Azure AD-Authentifizierung für Azure SQL-Datenbank und Azure Synapse Analytics können Sie eine interaktive Methode verwenden, die die mehrstufige Authentifizierung unterstützt. Weitere Informationen finden Sie unter [Interaktive Active Directory-Authentifizierung](../ssdt/azure-active-directory.md#active-directory-interactive-authentication).
 
-   Die interaktive Azure AD-Authentifizierung erfordert die **bcp** - [Version 15.0.1000.34](#download-the-latest-version-of-bcp-utility) oder höher sowie die [ODBC-Version 17.2 oder höher](https://aka.ms/downloadmsodbcsql).  
+   Die interaktive Azure AD-Authentifizierung erfordert die **bcp**-[Version 15.0.1000.34](#download-the-latest-version-of-bcp-utility) oder höher sowie die [ODBC-Version 17.2 oder höher](https://aka.ms/downloadmsodbcsql).  
 
    Geben Sie zum Aktivieren der interaktiven Authentifizierung die Option „-G“ nur mit dem Benutzernamen (-U) und ohne ein Kennwort an.
 
@@ -281,16 +281,16 @@ Gibt an, dass der oder die Identitätswerte in der importierten Datendatei für 
 
    Der Gastbenutzeralias wird verwendet, wenn Gastbenutzer in einer bestimmten Azure AD-Instanz enthalten und Teil einer Gruppe in der SQL-Datenbank sind, die über Datenbankberechtigungen zum Ausführen des bcp-Befehls verfügt (z. B. *keith0@adventureworks.com* ).
   
-**-h** _**"load hints**_ [ ,... *n* ] **"** <a name="h"></a>: Gibt die Hinweise an, die beim Massenimport von Daten in eine Tabelle oder Sicht verwendet werden sollen.  
+**-h** _**"load hints**_[ ,... *n*] **"** <a name="h"></a>: Gibt die Hinweise an, die beim Massenimport von Daten in eine Tabelle oder Sicht verwendet werden sollen.  
   
-* **ORDER** ( **_Spalte_ [ASC | DESC] [** , **... _n_ ])**  
+* **ORDER**(**_Spalte_[ASC | DESC] [** , **..._n_])**  
 Die Sortierreihenfolge der Daten in der Datendatei. Die Leistung des Massenkopierens wird verbessert, wenn die zu importierenden Daten entsprechend dem gruppierten Index der Tabelle (falls vorhanden) sortiert sind. Wenn die Datendatei in einer anderen Reihenfolge, d. h. nicht nach einem gruppierten Indexschlüssel sortiert ist, oder wenn es keinen gruppierten Index für die Tabelle gibt, wird die ORDER-Klausel ignoriert. Die angegebenen Spaltennamen müssen gültige Spaltennamen in der Zieltabelle sein. Standardmäßig geht **bcp** davon aus, dass die Datendatei nicht sortiert ist. Beim optimierten Massenimport wird in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auch überprüft, ob die importierten Daten sortiert sind.  
   
 * **ROWS_PER_BATCH** **=** _**bb**_  
-Die Anzahl von Datenzeilen pro Batch (als *bb* ). Dieser Hinweis wird verwendet, wenn **-b** nicht angegeben wird. Er bewirkt, dass die gesamte Datendatei in einer einzigen Transaktion an den Server gesendet wird. Der Server optimiert das Massenladen entsprechend dem Wert *bb*. Standardmäßig ist ROWS_PER_BATCH unbekannt.  
+Die Anzahl von Datenzeilen pro Batch (als *bb*). Dieser Hinweis wird verwendet, wenn **-b** nicht angegeben wird. Er bewirkt, dass die gesamte Datendatei in einer einzigen Transaktion an den Server gesendet wird. Der Server optimiert das Massenladen entsprechend dem Wert *bb*. Standardmäßig ist ROWS_PER_BATCH unbekannt.  
   
 * **KILOBYTES_PER_BATCH** **=** _**cc**_  
-Die ungefähre Anzahl von Kilobytes (KB) an Daten pro Batch (als *cc* ). In der Standardeinstellung ist KILOBYTES_PER_BATCH unbekannt.  
+Die ungefähre Anzahl von Kilobytes (KB) an Daten pro Batch (als *cc*). In der Standardeinstellung ist KILOBYTES_PER_BATCH unbekannt.  
   
 * **TABLOCK**  
 Gibt an, dass eine Massenupdatesperre auf Tabellenebene für die Dauer des Massenladens aktiviert wird. Andernfalls wird eine Sperre auf Zeilenebene aktiviert. Dieser Hinweis verbessert die Leistung beträchtlich, da weniger Sperrkonflikte für die Tabelle auftreten, wenn diese während des Massenkopiervorgangs gesperrt wird. Eine Tabelle kann gleichzeitig von mehreren Clients geladen werden, wenn die Tabelle keine Indizes aufweist und **TABLOCK** angegeben ist. Standardmäßig wird das Sperrverhalten durch die Tabellenoption **table lock on bulk load** (Tabellensperre bei Massenladen) bestimmt.  
@@ -315,10 +315,10 @@ Gibt an, dass eine Massenupdatesperre auf Tabellenebene für die Dauer des Masse
   > Die Option **-m** *max_Fehler* gilt nicht für die Einschränkungsüberprüfung.
   
 * **FIRE_TRIGGERS**  
-Wird mit dem **in** -Argument angegeben und bewirkt, dass jeder INSERT-Trigger, der für die Zieltabelle definiert ist, während des Massenkopiervorgangs ausgeführt wird. Wenn FIRE_TRIGGERS nicht angegeben wird, werden keine INSERT-Trigger ausgeführt. FIRE_TRIGGERS wird für die Argumente **out** , **queryout** und **format** ignoriert.  
+Wird mit dem **in** -Argument angegeben und bewirkt, dass jeder INSERT-Trigger, der für die Zieltabelle definiert ist, während des Massenkopiervorgangs ausgeführt wird. Wenn FIRE_TRIGGERS nicht angegeben wird, werden keine INSERT-Trigger ausgeführt. FIRE_TRIGGERS wird für die Argumente **out**, **queryout** und **format** ignoriert.  
   
 **-i** _**Eingabedatei**_<a name="i"></a>  
-Gibt den Namen einer Antwortdatei an, die für jedes Datenfeld die Antworten auf die Fragen der Eingabeaufforderung enthält, wenn ein Massenkopiervorgang im interaktiven Modus ausgeführt wird ( **-n** , **-c** , **-w** oder **-N** wurde nicht angegeben).  
+Gibt den Namen einer Antwortdatei an, die für jedes Datenfeld die Antworten auf die Fragen der Eingabeaufforderung enthält, wenn ein Massenkopiervorgang im interaktiven Modus ausgeführt wird ( **-n**, **-c**, **-w** oder **-N** wurde nicht angegeben).  
   
 Wenn *Eingabedatei* mit einem Bindestrich (-) oder einem Schrägstrich (/) beginnt, darf kein Leerzeichen zwischen **-i** und dem *Eingabedatei* -Wert enthalten sein.  
   
@@ -392,7 +392,7 @@ Führt den Massenkopiervorgang mithilfe der systemeigenen (Datenbank-)Datentypen
  **-R**<a name="R"></a>  
  Gibt an, dass beim Massenkopieren von Währungs-, Datums- und Zeitdaten in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] das Länderformat verwendet wird, das durch die Gebietsschemaeinstellung des Clientcomputers definiert wird. Standardmäßig werden Ländereinstellungen ignoriert.  
   
- **-S** _**Servername**_ [\\_**Instanzname**_ ] <a name="S"></a>: Gibt die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz an, mit der eine Verbindung hergestellt werden soll. Wenn kein Server angegeben wird, stellt das Hilfsprogramm **bcp** eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf dem lokalen Computer her. Diese Option ist erforderlich, wenn **bcp** von einem Remotecomputer im Netzwerk oder von einer lokalen benannten Instanz ausgeführt wird. Um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf einem Server herzustellen, geben Sie lediglich *Servername* an. Wenn Sie eine Verbindung mit der benannten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] herstellen möchten, geben Sie _server\_name_ **\\** _instance\_name_ an.  
+ **-S** _**Servername**_ [\\_**Instanzname**_]<a name="S"></a>: Gibt die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz an, mit der eine Verbindung hergestellt werden soll. Wenn kein Server angegeben wird, stellt das Hilfsprogramm **bcp** eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf dem lokalen Computer her. Diese Option ist erforderlich, wenn **bcp** von einem Remotecomputer im Netzwerk oder von einer lokalen benannten Instanz ausgeführt wird. Um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf einem Server herzustellen, geben Sie lediglich *Servername* an. Wenn Sie eine Verbindung mit der benannten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] herstellen möchten, geben Sie _server\_name_ **\\** _instance\_name_ an.  
   
  **-t** _**Feldabschluss**_<a name="t"></a>  
  Gibt das Feldabschlusszeichen an. Der Standardwert ist **\t** (Tabstoppzeichen). Mit diesem Parameter können Sie das standardmäßige Feldabschlusszeichen überschreiben. Weitere Informationen finden Sie unter [Angeben von Feld- und Zeilenabschlusszeichen &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
@@ -416,7 +416,7 @@ Führt den Massenkopiervorgang mithilfe der systemeigenen (Datenbank-)Datentypen
  **-v**<a name="v"></a>  
  Meldet die Versionsnummer und Copyrightinformationen des **bcp** -Hilfsprogramms.  
   
- **-V** ( **80** \| **90** \| **100** \| **110** \| **120** \| **130** ) <a name="V"></a>  
+ **-V** (**80** \| **90** \| **100** \| **110** \| **120** \| **130**)<a name="V"></a>  
  Führt den Massenkopiervorgang mithilfe von Datentypen aus einer früheren Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]aus. Diese Option fordert nicht für jedes Feld zu einer Eingabe auf. Es werden die Standardwerte verwendet.  
   
  **80** = [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]  
@@ -657,7 +657,7 @@ Die folgenden Beispiele veranschaulichen die Option **in** für die `WideWorldIm
   bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
-- **Expanded** Dieses Beispiel verwendet die Datendatei `StockItemTransactions_native.bcp`, die zuvor erstellt wurde.  Im Beispiel werden auch der Hinweis **TABLOCK** , die Batchgröße, die maximale Anzahl von Syntaxfehlern, eine Fehlerdatei und eine Ausgabedatei angegeben.
+- **Expanded** Dieses Beispiel verwendet die Datendatei `StockItemTransactions_native.bcp`, die zuvor erstellt wurde.  Im Beispiel werden auch der Hinweis **TABLOCK**, die Batchgröße, die maximale Anzahl von Syntaxfehlern, eine Fehlerdatei und eine Ausgabedatei angegeben.
   
 Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 
@@ -715,7 +715,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\Stoc
 ```
 
 > [!NOTE]
-> Um die Option **-x** zu verwenden, müssen Sie über einen **bcp** 9.0-Client verfügen. Informationen zum Verwenden des **bcp** 9.0-Clients finden Sie unter „ [Hinweise](#remarks)“.
+> Um die Option **-x** zu verwenden, müssen Sie über einen **bcp** 9.0-Client verfügen. Informationen zum Verwenden des **bcp** 9.0-Clients finden Sie unter „[Hinweise](#remarks)“.
   
  Weitere Informationen finden Sie unter [Nicht-XML-Formatdateien &#40;SQL Server&#41;](../relational-databases/import-export/non-xml-format-files-sql-server.md) und [XML-Formatdateien &#40;SQL Server&#41;](../relational-databases/import-export/xml-format-files-sql-server.md).
   

@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56201dec5bb9b6a66c63f6c4bca50d90b4e27c33
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ac7abdfbac2beec19e5cd53d0077dbcd0c2c8d24
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039041"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466361"
 ---
 # <a name="find-in-files"></a>In Dateien suchen
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  Die Registerkarte **In Dateien suchen** des Fensters zum Suchen und Ersetzen ermöglicht es Ihnen, den Code eines angegebenen Satzes von Dateien nach einer Zeichenfolge oder einem Ausdruck zu durchsuchen. Die gefundenen Übereinstimmungen und ausgeführten Aktionen werden in dem unter **Ergebnisoptionen**ausgewählten Suchergebnisfenster aufgelistet.  
+  Die Registerkarte **In Dateien suchen** des Fensters zum Suchen und Ersetzen ermöglicht es Ihnen, den Code eines angegebenen Satzes von Dateien nach einer Zeichenfolge oder einem Ausdruck zu durchsuchen. Die gefundenen Übereinstimmungen und ausgeführten Aktionen werden in dem unter **Ergebnisoptionen** ausgewählten Suchergebnisfenster aufgelistet.  
   
  Das Dialogfeld **Suchen und Ersetzen** kann auch über Symbolleistenschaltflächen und Tastenkombinationen geöffnet werden.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "92039041"
  Wenn die Such-Engine die Suchzeichenfolge als regulären Ausdruck interpretieren soll, aktivieren Sie unter **Suchoptionen** das Kontrollkästchen **Mit**, und klicken Sie anschließend auf **Reguläre Ausdrücke**.  
   
  **Ausdrucks-Generator**  
- Die dreieckige Schaltfläche neben dem Feld **Suchen nach** steht zur Verfügung, nachdem das Kontrollkästchen **Mit** in den **Suchoptionen**aktiviert wurde. Klicken Sie auf diese Schaltfläche, um in Abhängigkeit von der für **Mit** gewählten Option eine Liste von Platzhaltern oder regulären Ausdrücken anzuzeigen. Ein aus dieser Liste ausgewähltes Element wird zur Zeichenfolge **Suchen nach** hinzugefügt.  
+ Die dreieckige Schaltfläche neben dem Feld **Suchen nach** steht zur Verfügung, nachdem das Kontrollkästchen **Mit** in den **Suchoptionen** aktiviert wurde. Klicken Sie auf diese Schaltfläche, um in Abhängigkeit von der für **Mit** gewählten Option eine Liste von Platzhaltern oder regulären Ausdrücken anzuzeigen. Ein aus dieser Liste ausgewähltes Element wird zur Zeichenfolge **Suchen nach** hinzugefügt.  
   
 ## <a name="look-in"></a>Suchen in  
  Über die aus der Dropdownliste **Suchen in** ausgewählte Option legen Sie fest, ob die Funktion **In Dateien suchen** nur in den zurzeit aktiven Dateien oder in allen in bestimmten Ordnern gespeicherten Dateien sucht. Wählen Sie einen Suchbereich aus der Liste aus, geben Sie einen Ordnerpfad ein, oder klicken Sie auf die Schaltfläche **Durchsuchen** , um das Dialogfeld **Suchordner auswählen** anzuzeigen und einen Satz zu durchsuchender Ordner auszuwählen.  
@@ -54,7 +54,7 @@ ms.locfileid: "92039041"
  Wählen Sie aus dieser Liste einen vordefinierten Suchbereich, oder geben Sie über das Dialogfeld **Suchordner auswählen** eine Gruppe von Verzeichnissen an.  
   
  **Aktuelles Dokument**  
- Diese Option steht zur Verfügung, wenn ein Dokument in einem Editor geöffnet ist. Dabei wird nur das aktive Dokument nach der unter **Suchen nach**angegebenen Zeichenfolge durchsucht.  
+ Diese Option steht zur Verfügung, wenn ein Dokument in einem Editor geöffnet ist. Dabei wird nur das aktive Dokument nach der unter **Suchen nach** angegebenen Zeichenfolge durchsucht.  
   
  **Alle offenen Dokumente**  
  Durchsucht alle zurzeit zum Bearbeiten geöffneten Dokumente.  
@@ -90,7 +90,7 @@ ms.locfileid: "92039041"
  Sonderzeichen, wie Sternchen (`*`) und Fragezeichen (`?`), stellen ein oder mehrere Zeichen dar. Eine Liste finden Sie unter [Suchen von Text mit Platzhaltern](./search-text-with-wildcards.md).  
   
  **Nach diesen Dateitypen suchen**  
- Diese Liste gibt die Dateitypen an, die in den unter **Suchen in**angegebenen Verzeichnissen durchsucht werden sollen. Wird dieses Feld leer gelassen, werden alle Dateien in den unter **Suchen in** angegebenen Verzeichnissen durchsucht.  
+ Diese Liste gibt die Dateitypen an, die in den unter **Suchen in** angegebenen Verzeichnissen durchsucht werden sollen. Wird dieses Feld leer gelassen, werden alle Dateien in den unter **Suchen in** angegebenen Verzeichnissen durchsucht.  
   
 ```  
 *.[ext]; *.[ext] (manual)  
@@ -105,7 +105,7 @@ ms.locfileid: "92039041"
  Wählen Sie ein beliebiges Element in der Liste aus, um eine vorkonfigurierte Suchzeichenfolge einzugeben, die nach Dateien eines bestimmten Typs sucht.  
   
 ## <a name="result-options"></a>Ergebnisoptionen  
- Bestimmt den Speicherort, an dem die Ergebnisse abgelegt werden, wenn Sie auf **Alle suchen**klicken. Sie können den Abschnitt **Ergebnisoptionen** reduzieren oder erweitern. Die folgenden Optionen können aktiviert oder deaktiviert werden.  
+ Bestimmt den Speicherort, an dem die Ergebnisse abgelegt werden, wenn Sie auf **Alle suchen** klicken. Sie können den Abschnitt **Ergebnisoptionen** reduzieren oder erweitern. Die folgenden Optionen können aktiviert oder deaktiviert werden.  
   
  **Fenster "Suchergebnisse 1"**  
  Wenn dieses Kontrollkästchen aktiviert ist, werden die Ergebnisse der aktuellen Suche an den Inhalt im Fenster "Suchergebnisse 1" angehängt. Dieses Fenster wird automatisch geöffnet, um die Suchergebnisse anzuzeigen. Zum manuellen Öffnen des Fensters klicken Sie im Menü **Ansicht** auf **Weitere Fenster** und dann auf **Suchergebnisse 1**.  

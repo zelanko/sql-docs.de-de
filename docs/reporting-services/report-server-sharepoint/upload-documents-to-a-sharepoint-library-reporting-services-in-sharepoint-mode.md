@@ -8,13 +8,13 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2af61cc504fe89a4a8992397df69816f411f353f
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 0d033bdfe9ae0d2773e7c3d8622b7321ed60e02e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935493"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461421"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>Hochladen von Dokumenten in eine SharePoint-Bibliothek (Reporting Services im SharePoint-Modus)
 
@@ -36,7 +36,7 @@ Sie können Berichtsdefinitionen und Berichtsmodelle in eine SharePoint-Biblioth
   
 ## <a name="add-a-report-definition-or-report-model-to-a-library"></a>Hinzufügen einer Berichtsdefinition oder eines Berichtsmodells zu einer Bibliothek
   
-1.  Öffnen Sie die Bibliothek oder einen Ordner innerhalb einer Bibliothek. Wenn die Bibliothek nicht bereits geöffnet ist, klicken Sie auf ihren Namen auf der Schnellstartleiste. Wenn der Name der Bibliothek nicht angezeigt wird, klicken Sie auf **Alle Websiteinhalte einblenden**und anschließend auf den Namen der Bibliothek.  
+1.  Öffnen Sie die Bibliothek oder einen Ordner innerhalb einer Bibliothek. Wenn die Bibliothek nicht bereits geöffnet ist, klicken Sie auf ihren Namen auf der Schnellstartleiste. Wenn der Name der Bibliothek nicht angezeigt wird, klicken Sie auf **Alle Websiteinhalte einblenden** und anschließend auf den Namen der Bibliothek.  
   
 2.  Klicken Sie im Menü **Upload** auf **Dokumentupload**.  
   

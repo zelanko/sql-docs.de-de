@@ -7,13 +7,13 @@ ms.technology: release-landing
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d0a851a8f2374740f9a6cfe9d1ae6db5f2ee113e
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||>=sql-server-2016
+ms.openlocfilehash: 0ea96bf157c6ab781e8e0fa34dc8146e590c4b2f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987246"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461371"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>Versionierungssystem für die SQL-Dokumentation
 
@@ -115,7 +115,7 @@ Der folgende Artikel wurde neu für SQL Server 2017 hinzugefügt. In diesem Arti
 | attribute | Wert |
 | :-------- | :---- |
 | Titel | Neues in SQL Server 2017 |
-| Monikerbereich | `>= sql-server-2017 || = sqlallproducts-allversions` |
+| Monikerbereich | `=">= sql-server-2017"` |
 | `https`-Adresse | `https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2017` |
 | &nbsp; | &nbsp; |
 

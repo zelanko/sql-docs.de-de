@@ -34,13 +34,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2d0ce5b51dffbb057ad3299689f5bb400bb017d6
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: '>= sql-server-2017'
+ms.openlocfilehash: f5d591fb4ca068251cc0a4effbdd9477f80e4606
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92257731"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97402697"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Editionen und unterstützten Funktionen von SQL Server 2017
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
@@ -136,7 +136,7 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |Maximaler Arbeitsspeicher für den Pufferpool pro Instanz von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Maximum des Betriebssystems|128 GB|64 GB|1410 MB|1410 MB|
 |Maximaler Arbeitsspeicher für Columnstore-Segmentcache pro Instanz von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Unbegrenzter Arbeitsspeicher| 32 GB| 16 GB| 352 MB| 352 MB|  
 |Maximale speicheroptimierte Datengröße pro Datenbank in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Unbegrenzter Arbeitsspeicher| 32 GB| 16 GB| 352 MB| 352 MB|  
-|Maximaler genutzter Arbeitsspeicher pro Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Maximum des Betriebssystems|Tabellarisch: 16 GB<br /><br /> MOLAP: 64 GB|N/V|N/V|N/V|  
+|Maximaler genutzter Arbeitsspeicher pro Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Maximum des Betriebssystems|Tabellarisch: 16 GB<br /><br /> MOLAP: 64 GB|N/V|–|N/V|  
 |Maximaler genutzter Arbeitsspeicher pro Instanz von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Maximum des Betriebssystems|64 GB|64 GB|4 GB|N/V|
 |Maximale relationale Datenbankgröße|524 PB|524 PB|524 PB|10 GB|10 GB|  
   
@@ -302,7 +302,7 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |Grundlegende Integration von Python|Ja|Ja|Ja|Ja|Nein|
 |Erweiterte Integration von Python|Ja|Nein|Nein|Nein|Nein| 
 |Machine Learning-Server (eigenständig)|Ja|Nein|Nein|Nein|Nein|   
-|PolyBase-Computeknoten|Ja|Ja<sup>3</sup>|Ja <sup>3</sup>|Ja <sup>3</sup>|Ja <sup>3</sup> | 
+|PolyBase-Computeknoten|Ja|Ja <sup>3</sup>|Ja <sup>3</sup>|Ja <sup>3</sup>|Ja <sup>3</sup> | 
 |PolyBase-Hauptknoten|Ja|Nein|Nein|Nein|Nein| 
 |JSON|Ja|Ja|Ja|Ja|Ja|   
 |Abfragespeicher|Ja|Ja|Ja|Ja|Ja|   

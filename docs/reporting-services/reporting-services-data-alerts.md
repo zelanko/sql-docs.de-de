@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 59a25c594d45c57c7fe9a7f9baeb87c1fa49e3de
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 38b7faba88897317e1165b8938b0f6bfc69941de
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987406"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440471"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services-Datenwarnungen
 
@@ -288,7 +288,7 @@ Im Folgenden werden die wichtigsten Bereiche der [!INCLUDE[ssRSnoversion](../inc
   
      Weitere Informationen zum Verwalten aller Datenwarnungen auf einer Website finden Sie unter [Datenwarnungs-Manager für Warnungsadministratoren](../reporting-services/data-alert-manager-for-alerting-administrators.md) und [Verwalten aller Datenwarnungen auf einer SharePoint-Website im Datenwarnungs-Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
   
--   Stellen Sie**Abonnements und Datenwarnungen** bereit, mit denen Sie herausfinden, ob Reporting Services den SQL Server-Agent für Datenwarnungen verwenden und Skripts herunterladen kann, die den Zugriff auf den SQL Server-Agent ermöglichen. Weitere Informationen finden Sie unter [Bereitstellen von Abonnements und Warnungen für SSRS-Dienstanwendungen](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
+-   Stellen Sie **Abonnements und Datenwarnungen** bereit, mit denen Sie herausfinden, ob Reporting Services den SQL Server-Agent für Datenwarnungen verwenden und Skripts herunterladen kann, die den Zugriff auf den SQL Server-Agent ermöglichen. Weitere Informationen finden Sie unter [Bereitstellen von Abonnements und Warnungen für SSRS-Dienstanwendungen](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
 ##  <a name="globalization-of-data-alerts"></a><a name="Globalization"></a> Globalisierung der Datenwarnungen  
  Bestimmte Schriften wie Arabisch und Hebräisch werden von rechts nach links geschrieben. Datenwarnungen unterstützen Schriften mit Schreibrichtung von rechts nach links und umgekehrt. Datenwarnungen erkennen die Kultur und ändern die Darstellung und das Verhalten der Benutzeroberfläche und des Layouts von Datenwarnmeldungen entsprechend. Die Kultur wird von der regionalen Einstellung des Betriebssystems auf dem Computer des Benutzers abgeleitet. Der Kultur wird bei jedem Update und erneuten Speicherung der Datenwarnungsdefinition gespeichert.  

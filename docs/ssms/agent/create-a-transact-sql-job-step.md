@@ -15,13 +15,13 @@ ms.assetid: 69c571a7-debe-4063-9d38-e4b6a1e8e84c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0ee3d89dc77a92a9e5aa44f3e1b79d1cb308f5cb
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: bb8a33273c8bcc5531465ae84394f96385e52cc5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035103"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464461"
 ---
 # <a name="create-a-transact-sql-job-step"></a>Erstellen eines Transact-SQL-Auftragsschritts
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,7 +48,7 @@ Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agen
   
 3.  Klicken Sie im Dialogfeld **Auftragseigenschaften** auf die Seite **Schritte** und dann auf **Neu**.  
   
-4.  Geben Sie im Dialogfeld **Neuer Auftragsschritt** unter **Schrittname**einen Schrittnamen für den Auftrag ein.  
+4.  Geben Sie im Dialogfeld **Neuer Auftragsschritt** unter **Schrittname** einen Schrittnamen für den Auftrag ein.  
   
 5.  Klicken Sie in der Liste **Typ** auf **Transact-SQL-Skript (TSQL)**.  
   

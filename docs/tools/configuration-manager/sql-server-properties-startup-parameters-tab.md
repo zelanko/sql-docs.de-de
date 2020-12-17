@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9584b479d77efaa6c114cd160964e0fbf09c77d7
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: f8e0b03d5ea3be6473c8e00a8d62ef5900f33973
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901031"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465731"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>SQL Server-Eigenschaften (Registerkarte "Startparameter")
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "88901031"
  Weitere Informationen zum Verschieben der master-Datenbank finden Sie im Thema "Verschieben von Systemdatenbanken" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
 ## <a name="optional-parameters"></a>Optionale Parameter  
- Alle unterstützten Startparameter sind im Thema "Verwenden der Startoptionen für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation beschrieben. Der Startparameter -T*trace#* gibt an, dass beim Starten einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein angegebenes Ablaufverfolgungsflag (*trace#* ) aktiviert sein muss. Ablaufverfolgungsflags werden verwendet, um den Server mit nicht standardmäßigem Verhalten zu starten. Weitere Informationen zu Ablaufverfolgungsflags finden Sie im Thema „Ablaufverfolgungsflags ([!INCLUDE[tsql](../../includes/tsql-md.md)])“ in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
+ Alle unterstützten Startparameter sind im Thema "Verwenden der Startoptionen für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation beschrieben. Der Startparameter -T *trace#* gibt an, dass beim Starten einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein angegebenes Ablaufverfolgungsflag (*trace#* ) aktiviert sein muss. Ablaufverfolgungsflags werden verwendet, um den Server mit nicht standardmäßigem Verhalten zu starten. Weitere Informationen zu Ablaufverfolgungsflags finden Sie im Thema „Ablaufverfolgungsflags ([!INCLUDE[tsql](../../includes/tsql-md.md)])“ in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
 > [!CAUTION]  
 >  Möglicherweise treffen Sie auf zusätzliche nicht dokumentierte Startparameter und Ablaufverfolgungsflags, die im Internet beschrieben werden. Nicht dokumentierte Startparameter und Ablaufverfolgungsflags werden erstellt, um ungewöhnliche Probleme zu behandeln oder bestimmte für Tests erforderliche Bedingungen zu erzwingen. Die Verwendung von nicht dokumentierten Startparametern kann zu unerwarteten Ergebnissen führen. Verwenden Sie nicht dokumentierte Parameter nur, wenn Sie von Microsoft Support Services dazu aufgefordert werden.  

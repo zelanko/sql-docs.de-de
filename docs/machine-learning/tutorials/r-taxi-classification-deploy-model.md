@@ -9,24 +9,24 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e7657dcfe382ed87b31ca17e6c36d9019d1b84e2
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 0b32d12a694062e56611abaff18dc4f1e2f23061
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412516"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470111"
 ---
 # <a name="r-tutorial-run-predictions-in-sql-stored-procedures"></a>R-Tutorial: Ausführen von Vorhersagen in gespeicherten SQL-Prozeduren
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-Im fünften Teil dieser fünfteiligen Tutorialreihe erfahren Sie, wie Sie das Modell *operationalisieren* , das Sie im vorhergehenden Teil trainiert und gespeichert haben, indem Sie das Modell zur Vorhersage potenzieller Ergebnisse verwenden. Das Modell wird in einer gespeicherten Prozedur umschlossen, die direkt von anderen Anwendungen aufgerufen werden kann.
+Im fünften Teil dieser fünfteiligen Tutorialreihe erfahren Sie, wie Sie das Modell *operationalisieren*, das Sie im vorhergehenden Teil trainiert und gespeichert haben, indem Sie das Modell zur Vorhersage potenzieller Ergebnisse verwenden. Das Modell wird in einer gespeicherten Prozedur umschlossen, die direkt von anderen Anwendungen aufgerufen werden kann.
 
 In diesem Artikel werden zwei Möglichkeiten zur Durchführung der Bewertung aufgezeigt:
 
 + **Batchbewertungsmodell:** Verwenden Sie eine SELECT-Abfrage als Eingabe für die gespeicherte Prozedur. Die gespeicherte Prozedur gibt eine Tabelle mit Beobachtungen zurück, die mit den Eingabefällen übereinstimmen.
 
-+ **Einzelbewertungsmodus** : Übergeben Sie einen Satz von einzelnen Parameterwerten als Eingabe.  Die gespeicherte Prozedur gibt eine einzelne Zeile oder einen Wert zurück.
++ **Einzelbewertungsmodus**: Übergeben Sie einen Satz von einzelnen Parameterwerten als Eingabe.  Die gespeicherte Prozedur gibt eine einzelne Zeile oder einen Wert zurück.
 
 In diesem Artikel führen Sie Folgendes durch:
 
@@ -76,7 +76,7 @@ GO
   
   Da ein data.frame eine einzelne Zeile enthalten kann, können Sie den gleichen Code für die Batchbewertung und die Einzelbewertung verwenden.
   
-+ Der von der `PREDICT`-Funktion zurückgegebene Wert ist ein **float** -Wert, der die Wahrscheinlichkeit darstellt, dass der Fahrer ein Trinkgeld in beliebiger Höhe erhält.
++ Der von der `PREDICT`-Funktion zurückgegebene Wert ist ein **float**-Wert, der die Wahrscheinlichkeit darstellt, dass der Fahrer ein Trinkgeld in beliebiger Höhe erhält.
 
 ## <a name="batch-scoring-a-list-of-predictions"></a>Batchbewertung (Liste von Vorhersagen)
 
@@ -179,7 +179,7 @@ In diesem Abschnitt erfahren Sie, wie Sie einzelne Vorhersagen mithilfe einer ge
 
 2. Probieren Sie es einfach aus, indem Sie die Werte manuell bereitstellen.
   
-   Öffnen Sie ein neues **Abfrage** -Fenster, und rufen Sie die gespeicherte Prozedur auf, die Werte für jeden der Parameter bereitstellt. Die Parameter stellen Funktionsspalten dar, die vom Modell verwendet werden und erforderlich sind.
+   Öffnen Sie ein neues **Abfrage**-Fenster, und rufen Sie die gespeicherte Prozedur auf, die Werte für jeden der Parameter bereitstellt. Die Parameter stellen Funktionsspalten dar, die vom Modell verwendet werden und erforderlich sind.
 
    ```sql
    EXEC [dbo].[RPredictSingleRow] @model = 'RTrainLogit_model',

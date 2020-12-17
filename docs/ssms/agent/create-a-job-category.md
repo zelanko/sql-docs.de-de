@@ -15,13 +15,13 @@ ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: eca2f9ee0bfadddd91443c01089139c7b08a308c
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 24c614f6b7fa00eb566dc7d8d25a6686494cfebc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035630"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409212"
 ---
 # <a name="create-a-job-category"></a>Erstellen einer Auftragskategorie
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,9 +47,9 @@ Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agen
   
 1.  Klicken Sie im **Objekt-Explorer** auf das Pluszeichen, um den Server zu erweitern, auf dem Sie eine Auftragskategorie erstellen möchten.  
   
-2.  Klicken Sie auf das Pluszeichen, um **SQL Server-Agent**zu erweitern.  
+2.  Klicken Sie auf das Pluszeichen, um **SQL Server-Agent** zu erweitern.  
   
-3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Aufträge** , und wählen Sie **Auftragskategorien verwalten**aus.  
+3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Aufträge** , und wählen Sie **Auftragskategorien verwalten** aus.  
   
 4.  Klicken Sie im Dialogfeld **Auftragskategorien verwalten -** _Servername_ auf **Hinzufügen**.  
   
