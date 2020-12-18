@@ -34,13 +34,13 @@ helpviewer_keywords:
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1472a8d7117fb45fc7f9d4adb04f690ed9662ea2
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c54cdea7db9d713f4a82f9628f497e5b37f1d544
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412665"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484252"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST und CONVERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +66,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 Beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md).
   
 *data_type*  
-Der Zieldatentyp. Dazu gehören **xml** , **bigint** und **sql_variant** . Aliasdatentypen können nicht verwendet werden.
+Der Zieldatentyp. Dazu gehören **xml**, **bigint** und **sql_variant**. Aliasdatentypen können nicht verwendet werden.
   
 *length*  
 Eine optionale ganze Zahl, die die Länge des Zieldatentyps angibt, falls eine vom Benutzer angegebene Länge für den Datentyp zulässig ist. Der Standardwert ist 30.
@@ -85,7 +85,7 @@ Bei dem Datums- oder Uhrzeitdatentyp *expression* kann *style* einer der in der 
   
 |Ohne Jahrhundert (jj) (<sup>1</sup>)|Mit Jahrhundert (jjjj)|Standard|Eingabe/Ausgabe (<sup>3</sup>)|  
 |---|---|--|---|
-|-|**0** oder **100** ( <sup>1,</sup><sup>2</sup>)|Standard für datetime und smalldatetime|mon tt jjjj hh:miAM (oder PM)|  
+|-|**0** oder **100** (<sup>1,</sup><sup>2</sup>)|Standard für datetime und smalldatetime|mon tt jjjj hh:miAM (oder PM)|  
 |**1**|**101**|USA|  1 = mm/tt/jj<br /> 101 = mm/tt/jjjj|  
 |**2**|**102**|ANSI|  2 = jj.mm.tt<br /> 102 = jjjj.mm.tt|  
 |**3**|**103**|Britisch/Französisch|  3 = tt/mm/jj<br /> 103 = tt/mm/jjjj|  
@@ -94,39 +94,39 @@ Bei dem Datums- oder Uhrzeitdatentyp *expression* kann *style* einer der in der 
 |**6**|**106** <sup>(1)</sup>|-|  6 = tt mon jj<br /> 106 = tt mon jjjj|  
 |**7**|**107** <sup>(1)</sup>|-|  7 = Mon tt, jj<br /> 107 = Mon tt, jjjj|  
 |**8** oder **24**|**108**|-|hh:mi:ss|  
-|-|**9** oder **109** ( <sup>1,</sup><sup>2</sup>)|Standardwert + Millisekunden|mon tt jjjj hh:mi:ss:mmmAM (oder PM)|  
+|-|**9** oder **109** (<sup>1,</sup><sup>2</sup>)|Standardwert + Millisekunden|mon tt jjjj hh:mi:ss:mmmAM (oder PM)|  
 |**10**|**110**|USA| 10 = mm-tt-jj<br /> 110 = mm-tt-jjjj|  
 |**11**|**111**|JAPAN| 11 = jj/mm/tt<br /> 111 = jjjj/mm/tt|  
 |**12**|**112**|ISO| 12 = jjmmtt<br /> 112 = jjjjmmtt|  
-|-|**13** oder **113** ( <sup>1,</sup><sup>2</sup>)|Europ. Standard + Millisekunden|tt mon jjjj hh:mi:ss:mmm (24h)|  
+|-|**13** oder **113** (<sup>1,</sup><sup>2</sup>)|Europ. Standard + Millisekunden|tt mon jjjj hh:mi:ss:mmm (24h)|  
 |**14**|**114**|-|hh:mi:ss:mmm (24h)|  
-|-|**20** oder **120** ( <sup>2</sup>)|ODBC kanonisch|jjjj-mm-tt hh:mi:ss (24h)|  
-|-|**21** , **25** oder **121** ( <sup>2</sup>)|ODBC kanonisch (mit Millisekunden) Standard für time, date, datetime2 und datetimeoffset|jjjj-mm-tt hh:mi:ss.mmm (24h)|  
+|-|**20** oder **120** (<sup>2</sup>)|ODBC kanonisch|jjjj-mm-tt hh:mi:ss (24h)|  
+|-|**21**, **25** oder **121** (<sup>2</sup>)|ODBC kanonisch (mit Millisekunden) Standard für time, date, datetime2 und datetimeoffset|jjjj-mm-tt hh:mi:ss.mmm (24h)|  
 |**22**|-|USA| mm/tt/jj hh:mi:ss AM (oder PM)|
 |-|**23**|ISO8601|yyyy-mm-dd|
-|-|**126** ( <sup>4</sup>)|ISO8601|jjjj-mm-ttThh:mi:ss.mmm (keine Leerzeichen)<br /><br /> **Hinweis:** Bei einem Millisekundenwert (mmm) von 0 wird der Dezimalbruch des Millisekundenwerts nicht angezeigt. Beispielsweise wird der Wert „2012-11-07T18:26:20.000“ als „2012-11-07T18:26:20“ angezeigt.| 
-|-|**127** ( <sup>6, 7</sup>)|ISO8601 mit Zeitzone (Z).|yyyy-MM-ddThh:mm:ss.fffZ (keine Leerzeichen)<br /><br /> **Hinweis:** Bei einem Millisekundenwert (mmm) von 0 wird der dezimale Millisekundenwert nicht angezeigt. Beispielsweise wird der Wert „2012-11-07T18:26:20.000“ als „2012-11-07T18:26:20“ angezeigt.|  
-|-|**130** ( <sup>1,</sup><sup>2</sup>)|Hijri (<sup>5</sup>)|tt mon jjjj hh:mi:ss:mmmAM<br /><br /> In diesem Format entspricht **mon** dem vollständigen Monatsnamen in Form einer Hijri-Unicode-Darstellung mit mehreren Token. In einer standardmäßigen US-Installation von SSMS wird dieser Wert nicht ordnungsgemäß gerendert.|  
-|-|**131** ( <sup>2</sup>)|Hijri (<sup>5</sup>)|tt/mm/jjjj hh:mi:ss:mmmAM|  
+|-|**126** (<sup>4</sup>)|ISO8601|jjjj-mm-ttThh:mi:ss.mmm (keine Leerzeichen)<br /><br /> **Hinweis:** Bei einem Millisekundenwert (mmm) von 0 wird der Dezimalbruch des Millisekundenwerts nicht angezeigt. Beispielsweise wird der Wert „2012-11-07T18:26:20.000“ als „2012-11-07T18:26:20“ angezeigt.| 
+|-|**127**(<sup>6, 7</sup>)|ISO8601 mit Zeitzone (Z).|yyyy-MM-ddThh:mm:ss.fffZ (keine Leerzeichen)<br /><br /> **Hinweis:** Bei einem Millisekundenwert (mmm) von 0 wird der dezimale Millisekundenwert nicht angezeigt. Beispielsweise wird der Wert „2012-11-07T18:26:20.000“ als „2012-11-07T18:26:20“ angezeigt.|  
+|-|**130** (<sup>1,</sup><sup>2</sup>)|Hijri (<sup>5</sup>)|tt mon jjjj hh:mi:ss:mmmAM<br /><br /> In diesem Format entspricht **mon** dem vollständigen Monatsnamen in Form einer Hijri-Unicode-Darstellung mit mehreren Token. In einer standardmäßigen US-Installation von SSMS wird dieser Wert nicht ordnungsgemäß gerendert.|  
+|-|**131** (<sup>2</sup>)|Hijri (<sup>5</sup>)|tt/mm/jjjj hh:mi:ss:mmmAM|  
   
 <sup>1</sup> Diese Formatwerte geben nicht deterministische Ergebnisse zurück. Dazu gehören alle (jj)-Formate (ohne Jahrhundert) und eine Teilmenge der (jjjj)-Formate (mit Jahrhundert).
   
-<sup>2</sup> Die Standardwerte ( **0** oder **100** , **9** oder **109** , **13** oder **113** , **20** oder **120** , **23** und **21** oder **25** oder **121** ) geben immer das Jahrhundert (jjjj) zurück.
+<sup>2</sup> Die Standardwerte (**0** oder **100**, **9** oder **109**, **13** oder **113**, **20** oder **120**, **23** und **21** oder **25** oder **121**) geben immer das Jahrhundert (jjjj) zurück.
 
 <sup>3</sup> Eingabe, wenn in **datetime** konvertiert wird; Ausgabe, wenn in Zeichendaten konvertiert wird.
 
-<sup>4</sup> Vorgesehen für XML-Verwendung. Das Ausgabeformat für eine Konvertierung von **datetime** - oder **smalldatetime** -Daten in Zeichendaten finden Sie in der vorherigen Tabelle.
+<sup>4</sup> Vorgesehen für XML-Verwendung. Das Ausgabeformat für eine Konvertierung von **datetime**- oder **smalldatetime**-Daten in Zeichendaten finden Sie in der vorherigen Tabelle.
 
 <sup>5</sup> Hijri ist ein Kalendersystem mit mehreren Variationen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet den kuwaitischen Algorithmus.
 
 > [!IMPORTANT]
 >  Standardmäßig verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bei der Interpretation von zweistelligen Jahresangaben 2049 als Umstellungsjahr. Dies bedeutet, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die zweistellige Angabe des Jahres 49 als 2049 und die zweistellige Angabe des Jahres 50 als 1950 interpretiert. Viele Clientanwendungen, einschließlich jener auf Grundlage der Automatisierungsobjekte, verwenden als Umstellungsjahr 2030. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt die Konfigurationsoption für das Umstellungsjahr für Angaben mit zwei Ziffern zur Änderung des von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendeten Umstellungsjahrs bereit. Dies ermöglicht einen einheitlichen Umgang mit Datumsangaben. Die Verwendung von vierstelligen Jahresangaben wird empfohlen.
 
-<sup>6</sup> Wird nur bei der CAST-Umwandlung von Zeichendaten in **datetime** - oder **smalldatetime** -Werte unterstützt. Wenn Zeichendaten, die nur Zeit- oder nur Datumskomponenten darstellen, in die Datentypen **datetime** oder **smalldatetime** umgewandelt werden, wird die nicht angegebene Zeitkomponente auf 00:00:00.000 festgelegt und die nicht angegebene Datumskomponente auf 1900-01-01.
+<sup>6</sup> Wird nur bei der CAST-Umwandlung von Zeichendaten in **datetime**- oder **smalldatetime**-Werte unterstützt. Wenn Zeichendaten, die nur Zeit- oder nur Datumskomponenten darstellen, in die Datentypen **datetime** oder **smalldatetime** umgewandelt werden, wird die nicht angegebene Zeitkomponente auf 00:00:00.000 festgelegt und die nicht angegebene Datumskomponente auf 1900-01-01.
   
-<sup>7</sup> Verwenden Sie den optionalen Zeitzonenindikator **Z** , um die Zuordnung von XML- **datetime** -Werten mit Zeitzoneninformationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]- **datetime** -Werten ohne Zeitzone zu vereinfachen. „Z“ steht für die Zeitzone UTC-0. Andere Zeitzonen werden durch einen positiven (+) oder negativen (-) Offset (HH:MM) angegeben. Beispiel: `2006-12-12T23:45:12-08:00`.
+<sup>7</sup> Verwenden Sie den optionalen Zeitzonenindikator **Z**, um die Zuordnung von XML-**datetime**-Werten mit Zeitzoneninformationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-**datetime**-Werten ohne Zeitzone zu vereinfachen. „Z“ steht für die Zeitzone UTC-0. Andere Zeitzonen werden durch einen positiven (+) oder negativen (-) Offset (HH:MM) angegeben. Beispiel: `2006-12-12T23:45:12-08:00`.
   
-Bei der Konvertierung von **smalldatetime** -Daten in Zeichendaten werden bei Formaten mit Sekunden oder Millisekunden an diesen Stellen Nullen ausgegeben. Sie können bei der Konvertierung von **datetime** - oder **smalldatetime** -Werten in einen **char** - oder **varchar** -Datentyp eine entsprechende Länge angeben, damit unerwünschte Teile in Datumsangaben abgeschnitten werden.
+Bei der Konvertierung von **smalldatetime**-Daten in Zeichendaten werden bei Formaten mit Sekunden oder Millisekunden an diesen Stellen Nullen ausgegeben. Sie können bei der Konvertierung von **datetime**- oder **smalldatetime**-Werten in einen **char**- oder **varchar**-Datentyp eine entsprechende Länge angeben, damit unerwünschte Teile in Datumsangaben abgeschnitten werden.
   
 Bei der Konvertierung von Zeichendaten in **datetimeoffset** wird unter Verwendung eines Formats mit einer Zeitangabe ein Zeitzonenoffset an das Ergebnis angehängt.
   
@@ -156,7 +156,7 @@ Wenn *expression* **xml** ist, kann *style* einen der in der folgenden Tabelle a
   
 |Wert|Output|  
 |---|---|
-|**0** (Standardwert)|Standardanalyseverhalten verwenden, bei dem bedeutungslose Leerzeichen verworfen werden und interne DTD-Teilmengen nicht zulässig sind.<br /><br />**Hinweis:** Beim Konvertieren in den **XML** -Datentyp werden bedeutungslose Leerzeichen aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anders behandelt als in XML 1.0. Weitere Informationen finden Sie unter [Erstellen von Instanzen der XML-Daten](../../relational-databases/xml/create-instances-of-xml-data.md).|  
+|**0** (Standardwert)|Standardanalyseverhalten verwenden, bei dem bedeutungslose Leerzeichen verworfen werden und interne DTD-Teilmengen nicht zulässig sind.<br /><br />**Hinweis:** Beim Konvertieren in den **XML**-Datentyp werden bedeutungslose Leerzeichen aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anders behandelt als in XML 1.0. Weitere Informationen finden Sie unter [Erstellen von Instanzen der XML-Daten](../../relational-databases/xml/create-instances-of-xml-data.md).|  
 |**1**|Bedeutungslose Leerzeichen erhalten. Mit dieser Formateinstellung wird festgelegt, dass die Standardbehandlung **xml:space** dem Verhalten von **xml:space="preserve"** entspricht.|  
 |**2**|Begrenzte interne DTD-Teilmengenverarbeitung aktivieren.<br /><br /> Bei Aktivierung kann der Server die folgenden Informationen, die in einer internen DTD-Teilmenge bereitgestellt werden, zur Ausführung von Analysevorgängen ohne Überprüfungscharakter verwenden.<br /><br />   – Für Attribute werden die Standardwerte angewendet<br />   – Interne Entitätsverweise werden aufgelöst und erweitert<br />   – Das DTD-Inhaltsmodell wird auf seine syntaktische Richtigkeit überprüft<br /><br /> Der Parser ignoriert externe DTD-Teilmengen. Darüber hinaus nimmt er keine Bewertung der XML-Deklaration vor, um zu überprüfen, ob das **eigenständige** Attribut den Wert **Ja** oder **Nein** aufweist. Stattdessen analysiert er die XML-Instanz wie ein eigenständiges Dokument.|  
 |**3**|Bedeutungslose Leerzeichen erhalten und die Verarbeitung begrenzter interner DTD-Teilmengen aktivieren.|  
@@ -167,10 +167,10 @@ Wenn *expression* **binary(n)** , **char(n)** , **varbinary(n)** oder **varchar(
 |Wert|Output|  
 |---|---|
 |**0** (Standardwert)|Übersetzt ASCII-Zeichen in binäre Bytes bzw. binäre Bytes in ASCII-Zeichen. Jedes Zeichen bzw. Byte wird 1:1 konvertiert.<br /><br /> Bei einem binären *data_type* werden die Zeichen 0x links neben dem Ergebnis hinzugefügt.|  
-|**1** , **2**|Bei einem binären *data_type* muss der Ausdruck ein Zeichenausdruck sein. *expression* muss aus einer **geraden** Anzahl hexadezimaler Zeichen bestehen (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f). Wenn *style* auf 1 festgelegt wird, müssen die Zeichen 0x die ersten beiden Zeichen im Ausdruck sein. Wenn der Ausdruck eine ungerade Anzahl an Zeichen oder ein ungültiges Zeichen enthält, wird ein Fehler ausgelöst.<br /><br /> Wenn die Länge des konvertierten Ausdrucks die Länge von *data_type* übersteigt, wird das Ergebnis rechts abgeschnitten.<br /><br /> Bei *data_types* mit fester Länge, die länger sind als das konvertierte Ergebnis, wird im Ergebnis rechts die entsprechende Anzahl Nullen angehängt.<br /><br /> Für den Zeichentyp *data_type* ist ein binärer Ausdruck erforderlich. Jedes Binärzeichen wird in zwei Hexadezimalzeichen konvertiert. Wenn die Länge des konvertierten Ausdrucks die Länge von *data_type* übersteigt, wird der Ausdruck rechts abgeschnitten.<br /><br /> Bei dem Zeichentyp *data_type* mit fester Länge werden rechts neben dem konvertierten Ausdruck Leerzeichen hinzugefügt, um eine gerade Anzahl an Hexadezimalstellen zu erhalten, wenn die Länge des konvertierten Ergebnisses kleiner ist als die Länge von *data_type* .<br /><br /> Bei *style* 2 werden links neben dem konvertierten Ergebnis die Zeichen 0x hinzugefügt.|  
+|**1**, **2**|Bei einem binären *data_type* muss der Ausdruck ein Zeichenausdruck sein. *expression* muss aus einer **geraden** Anzahl hexadezimaler Zeichen bestehen (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f). Wenn *style* auf 1 festgelegt wird, müssen die Zeichen 0x die ersten beiden Zeichen im Ausdruck sein. Wenn der Ausdruck eine ungerade Anzahl an Zeichen oder ein ungültiges Zeichen enthält, wird ein Fehler ausgelöst.<br /><br /> Wenn die Länge des konvertierten Ausdrucks die Länge von *data_type* übersteigt, wird das Ergebnis rechts abgeschnitten.<br /><br /> Bei *data_types* mit fester Länge, die länger sind als das konvertierte Ergebnis, wird im Ergebnis rechts die entsprechende Anzahl an Nullen angehängt.<br /><br /> Für den Zeichentyp *data_type* ist ein binärer Ausdruck erforderlich. Jedes Binärzeichen wird in zwei Hexadezimalzeichen konvertiert. Angenommen, die Länge des konvertierten Ausdrucks überschreitet die Länge von *data_type*. In diesem Fall wird er abgeschnitten.<br /><br /> Bei dem Zeichentyp *data_type* mit fester Länge werden rechts neben dem konvertierten Ausdruck Leerzeichen hinzugefügt, um eine gerade Anzahl an Hexadezimalstellen zu erhalten, wenn die Länge des konvertierten Ergebnisses kleiner ist als die Länge von *data_type*.<br /><br /> Bei *style* 2 werden links neben dem konvertierten Ergebnis die Zeichen 0x nicht hinzugefügt.|  
   
 ## <a name="implicit-conversions"></a>Implizite Konvertierungen
-Bei impliziten Konvertierungen ist keine Spezifikation der CAST- oder CONVERT-Funktion erforderlich. Bei expliziten Konvertierungen ist eine Spezifikation der CAST- oder CONVERT-Funktion erforderlich. In der folgenden Abbildung werden alle expliziten und impliziten Datentypkonvertierungen aufgeführt, die für die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-System bereitgestellten Datentypen zulässig sind. Dazu gehören **bigint** , **sql_variant** und **xml** . Es gibt keine implizite Konvertierung bei der Zuweisung vom **sql_variant** -Datentyp, eine implizite Konvertierung zum **sql_variant** -Datentyp findet jedoch statt.
+Bei impliziten Konvertierungen ist keine Spezifikation der CAST- oder CONVERT-Funktion erforderlich. Bei expliziten Konvertierungen ist eine Spezifikation der CAST- oder CONVERT-Funktion erforderlich. In der folgenden Abbildung werden alle expliziten und impliziten Datentypkonvertierungen aufgeführt, die für die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-System bereitgestellten Datentypen zulässig sind. Dazu gehören **bigint**, **sql_variant** und **xml**. Es gibt keine implizite Konvertierung bei der Zuweisung vom **sql_variant**-Datentyp, eine implizite Konvertierung zum **sql_variant**-Datentyp findet jedoch statt.
   
 > [!TIP]  
 > Dieses Diagramm ist als herunterladbare PNG-Datei im [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=35834) verfügbar.  
@@ -186,26 +186,26 @@ Das Diagramm oben veranschaulicht zwar alle expliziten und impliziten Konvertier
 > [!TIP]
 > Ein praktisches Beispiel für die [Auswirkungen der Datentyprangfolge in Konvertierungen](#precedence-example) finden Sie weiter unten in diesem Abschnitt.
 
-Beim Konvertieren zwischen **datetimeoffset** und den Zeichentypen **char** , **nchar** , **nvarchar** und **varchar** sollte der konvertierte Zeitzonenoffset-Teil sowohl für HH als auch für MM stets zwei Stellen umfassen. Beispiel: -08:00.
+Beim Konvertieren zwischen **datetimeoffset** und den Zeichentypen **char**, **nchar**, **nvarchar** und **varchar** sollte der konvertierte Zeitzonenoffset-Teil sowohl für HH als auch für MM stets zwei Stellen umfassen. Beispiel: -08:00.
   
 > [!NOTE]   
-> Da Unicode-Daten immer eine gerade Anzahl von Bytes verwenden, muss das Konvertieren von **binary** - oder **varbinary** -Datentypen in oder von Unicode-Datentypen vorsichtig erfolgen. Die folgende Konvertierung gibt beispielsweise nicht den Hexadezimalwert 41 zurück. Sie gibt den Hexadezimalwert 4100 zurück: `SELECT CAST(CAST(0x41 AS nvarchar) AS varbinary)`. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). 
+> Da Unicode-Daten immer eine gerade Anzahl von Bytes verwenden, muss das Konvertieren von **binary**- oder **varbinary**-Datentypen in oder von Unicode-Datentypen vorsichtig erfolgen. Die folgende Konvertierung gibt beispielsweise nicht den Hexadezimalwert 41 zurück. Sie gibt den Hexadezimalwert 4100 zurück: `SELECT CAST(CAST(0x41 AS nvarchar) AS varbinary)`. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). 
   
 ## <a name="large-value-data-types"></a>Datentypen mit umfangreichen Werten
-Datentypen mit hohen Werten weisen das gleiche implizite und explizite Konvertierungsverhalten auf wie ihre Entsprechungen mit kleineren Werten, insbesondere die Datentypen **nvarchar** , **varbinary** und **varchar** . Beachten Sie jedoch folgende Richtlinien:
+Datentypen mit hohen Werten weisen das gleiche implizite und explizite Konvertierungsverhalten auf wie ihre Entsprechungen mit kleineren Werten, insbesondere die Datentypen **nvarchar**, **varbinary** und **varchar**. Beachten Sie jedoch folgende Richtlinien:
 -   Die Konvertierung von **image** in **varbinary(max)** und umgekehrt stellt ebenso wie zwischen **text** und **varchar(max)** sowie **ntext** und **nvarchar(max)** eine implizite Konvertierung dar.  
--   Die Konvertierung von Datentypen mit hohen Werten, z.B. **varchar(max)** , in einen entsprechenden kleineren Datentyp, z.B. **varchar** , ist zwar eine implizite Konvertierung, doch kommt es zu einer Abschneidung, wenn die Größe des hohen Werts die angegebene Länge des kleineren Datentyps überschreitet.  
--   Die Konvertierung von **nvarchar** , **varbinary** oder **varchar** in einen entsprechenden kleineren Datentyp erfolgt implizit.  
--   Die Konvertierung vom **sql_variant** -Datentyp in einen Datentyp mit hohen Werten ist eine explizite Konvertierung.  
--   Datentypen mit hohen Werten können nicht in den **sql_variant** -Datentyp konvertiert werden.  
+-   Die Konvertierung von Datentypen mit hohen Werten, z.B. **varchar(max)** , in einen entsprechenden kleineren Datentyp, z.B. **varchar**, ist zwar eine implizite Konvertierung, doch kommt es zu einer Abschneidung, wenn die Größe des hohen Werts die angegebene Länge des kleineren Datentyps überschreitet.  
+-   Die Konvertierung von **nvarchar**, **varbinary** oder **varchar** in einen entsprechenden kleineren Datentyp erfolgt implizit.  
+-   Die Konvertierung vom **sql_variant**-Datentyp in einen Datentyp mit hohen Werten ist eine explizite Konvertierung.  
+-   Datentypen mit hohen Werten können nicht in den **sql_variant**-Datentyp konvertiert werden.  
   
-Weitere Informationen zum Konvertieren des **xml** -Datentyps finden Sie unter [Erstellen von Instanzen der XML-Daten](../../relational-databases/xml/create-instances-of-xml-data.md).
+Weitere Informationen zum Konvertieren des **xml**-Datentyps finden Sie unter [Erstellen von Instanzen der XML-Daten](../../relational-databases/xml/create-instances-of-xml-data.md).
   
 ## <a name="xml-data-type"></a>xml-Datentyp
-Wenn Sie den **xml** -Datentyp explizit oder implizit in einen Zeichenfolgen- oder Binärdatentyp umwandeln, wird der Inhalt des **xml** -Datentyps nach einer definierten Reihe von Regeln serialisiert. Informationen zu diesen Regeln finden Sie unter [Definieren der Serialisierung von XML-Daten](../../relational-databases/xml/define-the-serialization-of-xml-data.md). Weitere Informationen zum Konvertieren anderer Datentypen in den **xml** -Datentyp finden Sie unter [Erstellen von Instanzen der XML-Daten](../../relational-databases/xml/create-instances-of-xml-data.md).
+Wenn Sie den **xml**-Datentyp explizit oder implizit in einen Zeichenfolgen- oder Binärdatentyp umwandeln, wird der Inhalt des **xml**-Datentyps nach einer definierten Reihe von Regeln serialisiert. Informationen zu diesen Regeln finden Sie unter [Definieren der Serialisierung von XML-Daten](../../relational-databases/xml/define-the-serialization-of-xml-data.md). Weitere Informationen zum Konvertieren anderer Datentypen in den **xml**-Datentyp finden Sie unter [Erstellen von Instanzen der XML-Daten](../../relational-databases/xml/create-instances-of-xml-data.md).
   
 ## <a name="text-and-image-data-types"></a>text- und image-Datentyp
-Die automatische Datentypkonvertierung wird für die Datentypen **text** und **image** nicht unterstützt. Die explizite Konvertierung von **text** -Daten in Zeichendaten und von **image** - in **binary** - oder **varbinary** -Daten ist zwar möglich, doch nur bis zu einer maximalen Länge von 8000 Bytes. Falls Sie versuchen, eine unzulässige Konvertierung vorzunehmen, wie z.B. die Konvertierung eines Zeichenausdrucks mit Buchstaben in **int** -Daten, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Fehlermeldung zurück.
+Die automatische Datentypkonvertierung wird für die Datentypen **text** und **image** nicht unterstützt. Die explizite Konvertierung von **text**-Daten in Zeichendaten und von **image**- in **binary**- oder **varbinary**-Daten ist zwar möglich, doch nur bis zu einer maximalen Länge von 8000 Bytes. Falls Sie versuchen, eine unzulässige Konvertierung vorzunehmen, wie z.B. die Konvertierung eines Zeichenausdrucks mit Buchstaben in **int**-Daten, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Fehlermeldung zurück.
   
 ## <a name="output-collation"></a>Ausgabesortierung  
 Wenn die CAST- oder die CONVERT-Funktion eine Zeichenfolge ausgeben und eine Zeichenfolgeneingabe empfangen, hat die Ausgabe dieselbe Sortierung und Sortierungsbezeichnung wie die Eingabe. Wenn die Eingabe keine Zeichenfolge ist, hat die Ausgabe die Standardsortierung der Datenbank und die Sortierungsbezeichnung coercible-default (Standard erzwingbar). Weitere Informationen finden Sie unter [Rangfolge von Sortierungen &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md).
@@ -215,15 +215,15 @@ Wenn Sie der Ausgabe eine andere Sortierung zuweisen möchten, wenden Sie die CO
 `SELECT CAST('abc' AS varchar(5)) COLLATE French_CS_AS`
   
 ## <a name="truncating-and-rounding-results"></a>Abschneiden und Runden von Ergebnissen
-Beim Konvertieren von Zeichen- oder Binärdatenausdrücken ( **binary** , **char** , **nchar** , **nvarchar** , **varbinary** oder **varchar** ) in einen Ausdruck eines anderen Datentyps könnten bei der Konvertierung die Ausgabedaten abgeschnitten oder nur teilweise angezeigt werden, oder es könnte ein Fehler zurückgegeben werden. Dies geschieht, wenn das Ergebnis zu kurz ist, um angezeigt zu werden. Konvertierungen in **binary** , **char** , **nchar** , **nvarchar** , **varbinary** oder **varchar** werden abgeschnitten, mit Ausnahme der in der folgenden Tabelle aufgelisteten Konvertierungen.
+Beim Konvertieren von Zeichen- oder Binärdatenausdrücken (**binary**, **char**, **nchar**, **nvarchar**, **varbinary** oder **varchar**) in einen Ausdruck eines anderen Datentyps könnten bei der Konvertierung die Ausgabedaten abgeschnitten oder nur teilweise angezeigt werden, oder es könnte ein Fehler zurückgegeben werden. Dies geschieht, wenn das Ergebnis zu kurz ist, um angezeigt zu werden. Konvertierungen in **binary**, **char**, **nchar**, **nvarchar**, **varbinary** oder **varchar** werden abgeschnitten, mit Ausnahme der in der folgenden Tabelle aufgelisteten Konvertierungen.
   
 |Ausgangsdatentyp|Zieldatentyp|Ergebnis|  
 |---|---|---|
-|**int** , **smallint** oder **tinyint**|**char**|*|  
+|**int**, **smallint** oder **tinyint**|**char**|*|  
 ||**varchar**|*|  
 ||**nchar**|E|  
 ||**nvarchar**|E|  
-|**money** , **smallmoney** , **numeric** , **decimal** , **float** oder **real**|**char**|E|  
+|**money**, **smallmoney**, **numeric**, **decimal**, **float** oder **real**|**char**|E|  
 ||**varchar**|E|  
 ||**nchar**|E|  
 ||**nvarchar**|E|  
@@ -241,7 +241,7 @@ SELECT CONVERT(DECIMAL(10,5), CONVERT(VARBINARY(20), @myval));
 ```  
   
 > [!WARNING]  
-> Erstellen Sie keine **binary** -Werte, um sie anschließend in einen Datentyp der numerischen Datentypkategorie zu konvertieren. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] garantiert nicht, dass das Ergebnis einer Datentypkonvertierung von **decimal** oder **numeric** in **binary** dem Ergebnis entspricht, das zwischen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erzielt wird.  
+> Erstellen Sie keine **binary**-Werte, um sie anschließend in einen Datentyp der numerischen Datentypkategorie zu konvertieren. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] garantiert nicht, dass das Ergebnis einer Datentypkonvertierung von **decimal** oder **numeric** in **binary** dem Ergebnis entspricht, das zwischen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erzielt wird.  
   
 Im folgenden Beispiel ist der resultierende Ausdruck zu klein, um angezeigt zu werden.
   
@@ -279,11 +279,11 @@ Beim Konvertieren von Datentypen mit unterschiedlichen Dezimalstellen gibt [!INC
 |**money**|**int**|Round|  
 |**money**|**numeric**|Round|  
 |**float**|**int**|Truncate|  
-|**float**|**numeric**|Round<br /><br /> Die Konvertierung der **float** -Werte, die eine wissenschaftliche Schreibweise für **decimal** oder **numeric** verwenden, ist auf Werte mit einer Genauigkeit von 17 Stellen beschränkt. Alle Werte mit einer Genauigkeit von mehr als 17 Stellen werden auf Null gerundet.|  
+|**float**|**numeric**|Round<br /><br /> Die Konvertierung der **float**-Werte, die eine wissenschaftliche Schreibweise für **decimal** oder **numeric** verwenden, ist auf Werte mit einer Genauigkeit von 17 Stellen beschränkt. Alle Werte mit einer Genauigkeit von mehr als 17 Stellen werden auf Null gerundet.|  
 |**float**|**datetime**|Round|  
 |**datetime**|**int**|Round|  
   
-Die Werte 10.6496 und -10.6496 können z.B. während der Konvertierung in **int** - oder **numeric** -Types abgeschnitten oder gerundet werden:
+Die Werte 10.6496 und -10.6496 können z.B. während der Konvertierung in **int**- oder **numeric**-Types abgeschnitten oder gerundet werden:
   
 ```sql
 SELECT  CAST(10.6496 AS INT) as trunc1,
@@ -301,7 +301,7 @@ Falls eine Konvertierung von Datentypen vorgenommen wird, bei der der Zieldatent
   
 `SELECT CAST(10.3496847 AS money);`
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt eine Fehlermeldung zurück, wenn die nicht numerischen Daten **char** , **nchar** , **varchar** oder **nvarchar** in die Typen **decimal** , **float** , **int** oder **numeric** konvertiert werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt außerdem einen Fehler zurück, wenn eine leere Zeichenfolge (" ") in **numeric** oder **decimal** konvertiert wird.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt eine Fehlermeldung zurück, wenn die nicht numerischen Daten **char**, **nchar**, **varchar** oder **nvarchar** in die Typen **decimal**, **float**, **int** oder **numeric** konvertiert werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt außerdem einen Fehler zurück, wenn eine leere Zeichenfolge (" ") in **numeric** oder **decimal** konvertiert wird.
   
 ## <a name="certain-datetime-conversions-are-nondeterministic"></a>Bestimmte datetime-Konvertierungen sind nicht deterministisch
 
@@ -319,7 +319,7 @@ Dies sind die Formate, bei denen die Konvertierung von „string“ in „dateti
 Weitere Informationen finden Sie unter [Nicht deterministische Konvertierung von Datumsliteralzeichenfolgen in DATE-Werte](../data-types/nondeterministic-convert-date-literals.md).
 
 ## <a name="supplementary-characters-surrogate-pairs"></a>Ergänzende Zeichen (Ersatzpaare)
-Wenn Sie in Versionen ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Sortierungen ergänzender Zeichen verwenden, wird ein CAST-Vorgang von **nchar** oder **nvarchar** zu einem **nchar** - oder **nvarchar** -Typ von geringerer Länge in einem Ersatzzeichenpaar nicht abgeschnitten. Stattdessen wird er vor dem ergänzenden Zeichen abgeschnitten. Im folgenden Codefragment wird `@x` z. B. weggelassen, sodass nur `'ab'` erhalten bleibt. Es ist nicht genügend Platz für das ergänzende Zeichen vorhanden.
+Wenn Sie in Versionen ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Sortierungen ergänzender Zeichen verwenden, wird ein CAST-Vorgang von **nchar** oder **nvarchar** zu einem **nchar**- oder **nvarchar**-Typ von geringerer Länge in einem Ersatzzeichenpaar nicht abgeschnitten. Stattdessen wird er vor dem ergänzenden Zeichen abgeschnitten. Im folgenden Codefragment wird `@x` z. B. weggelassen, sodass nur `'ab'` erhalten bleibt. Es ist nicht genügend Platz für das ergänzende Zeichen vorhanden.
   
 ```sql
 DECLARE @x NVARCHAR(10) = 'ab' + NCHAR(0x10000);  
@@ -767,7 +767,7 @@ In diesem Fall kann die Zeichenfolge `'1'` in den Integerwert 1 konvertiert werd
 ## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="l-using-cast-and-convert"></a>L. Verwenden von CAST und CONVERT  
-In diesem Beispiele werden die Namen der Produkte abgerufen, deren Listenpreis mit der Ziffer `3` beginnt. Der `ListPrice`-Wert dieser Produkte wird in einen **int** -Wert konvertiert. Verwendet wird die Datenbank `AdventureWorksDW2016`.
+In diesem Beispiele werden die Namen der Produkte abgerufen, deren Listenpreis mit der Ziffer `3` beginnt. Der `ListPrice`-Wert dieser Produkte wird in einen **int**-Wert konvertiert. Verwendet wird die Datenbank `AdventureWorksDW2016`.
   
 ```sql
 SELECT EnglishProductName AS ProductName, ListPrice  
@@ -834,7 +834,7 @@ UnconvertedDateTime     UsingCast                     UsingConvertTo_ISO8601
 07/20/2010 1:44:31 PM   2010-07-20 13:44:31.5879025   2010-07-20T13:44:31.5879025  
 ```  
   
-Das folgende Beispiel entspricht in etwa der Umkehrung des vorherigen Beispiels. In dem Beispiel werden ein Datum und eine Uhrzeit als Zeichendaten angezeigt. CAST wird verwendet, um die Zeichendaten in **datetime** -Datentypen zu ändern. Anschließend werden die Zeichendaten mithilfe von CONVERT in den **datetime** -Datentyp zu ändern. In diesem Beispiel wird die `AdventureWorksDW2016`-Datenbank verwendet.
+Das folgende Beispiel entspricht in etwa der Umkehrung des vorherigen Beispiels. In dem Beispiel werden ein Datum und eine Uhrzeit als Zeichendaten angezeigt. CAST wird verwendet, um die Zeichendaten in **datetime**-Datentypen zu ändern. Anschließend werden die Zeichendaten mithilfe von CONVERT in den **datetime**-Datentyp zu ändern. In diesem Beispiel wird die `AdventureWorksDW2016`-Datenbank verwendet.
   
 ```sql
 SELECT TOP(1)   

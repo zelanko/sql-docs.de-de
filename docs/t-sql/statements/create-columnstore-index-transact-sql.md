@@ -29,13 +29,13 @@ helpviewer_keywords:
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1421ba7d2f03ecdf6f8a687e4e6d662702fe464a
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f47f17c4391d548ff2e087afb12080a84660b832
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300432"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464171"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -136,7 +136,7 @@ Gibt den Namen für den neuen Index an.
   
 Wenn die Tabelle bereits einen gruppierten Columnstore-Index enthält, können Sie denselben Namen wie für den vorhandenen Index angeben oder die DROP EXISTING-Option zum Angeben eines neuen Namens verwenden.  
   
-ON [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
 
 Gibt den ein-, zwei- oder dreiteiligen Namen der Tabelle an, die als gruppierter Columnstore-Index gespeichert werden soll. Wenn die Tabelle ein Heap oder ein gruppierter Index ist, wird die Tabelle von einem Rowstore in einen Columnstore konvertiert. Wenn die Tabelle bereits ein Columnstore ist, wird mit dieser Anweisung der gruppierte Columnstore-Index neu erstellt. Zum Konvertieren in einen sortierten gruppierten Columnstore-Index muss es sich bei dem vorhandenen Index um einen gruppierten Columnstore-Index handeln.
   
@@ -219,11 +219,11 @@ Erstellt einen nicht gruppierten In-Memory-Columnstore-Index in einer als Heap o
 *index_name*  
    Gibt den Namen des Indexes an. *index_name* muss innerhalb der Tabelle eindeutig sein, kann aber innerhalb der Datenbank mehrfach vorkommen. Indexnamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.  
   
- **(** _column_  [ **,** ... *n* ] **)**  
+ **(** _column_  [ **,** ...*n* ] **)**  
     Gibt die zu speichernden Spalten an. Ein nicht gruppierter Columnstore-Index ist auf 1024 Spalten beschränkt.  
    Jede Spalte muss ein unterstützter Datentyp für columnstore-Indizes sein. Eine Liste der unterstützten Datentypen finden Sie unter [Einschränkungen](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest).  
 
-ON [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    Gibt den ein-, zwei- oder dreiteiligen Name der Tabelle an, die den Index enthält.  
 
 #### <a name="with-options"></a>WITH-Optionen
@@ -380,7 +380,7 @@ Wenn die zugrunde liegende Tabelle eine Spalte enthält, die einen Datentyp aufw
 -   Kann nicht mehr als 1024 Spalten enthalten.
 -   Kann nicht als einschränkungsbasierter Index erstellt werden. Es ist möglich, dass Tabellen mit einem Columnstore-Index UNIQUE-, PRIMARY KEY- oder FOREIGN KEY-Einschränkungen enthalten. Einschränkungen werden immer mit einem Zeilenspeicherindex durchgesetzt. Sie können nie mit einem Columnstore-Index erzwungen werden, egal ob geclustert oder nicht.
 -   Kann keine Sparsespalte enthalten.  
--   Kann nicht mithilfe der **ALTER INDEX** -Anweisung geändert werden. Um den nicht gruppierten Index zu ändern, müssen Sie stattdessen den columnstore-Index löschen und neu erstellen. Sie können einen Columnstore-Index mithilfe von **ALTER INDEX** deaktivieren und neu erstellen.  
+-   Kann nicht mithilfe der **ALTER INDEX**-Anweisung geändert werden. Um den nicht gruppierten Index zu ändern, müssen Sie stattdessen den columnstore-Index löschen und neu erstellen. Sie können einen Columnstore-Index mithilfe von **ALTER INDEX** deaktivieren und neu erstellen.  
 -   Kann nicht mit dem Schlüsselwort **INCLUDE** erstellt werden.  
 -   Darf nicht das Schlüsselwort **ASC** oder das Schlüsselwort **DESC** zum Sortieren des Index enthalten. Columnstore-Indizes werden gemäß den Komprimierungsalgorithmen sortiert. Durch die Sortierung würden viele der Leistungsvorteile entfernt werden.  
 -   Darf keine LOB-Spalten (Large Object) vom Typ nvarchar(max), varchar(max) bzw. varbinary(max) in gruppierten Columnstore-Indizes enthalten. LOB-Datentypen werden in gruppierten Columnstore-Indizes nur von Versionen ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und von der Azure SQL-Datenbank mit konfiguriertem Premium- und Standard-Tarif (S3 und höher) sowie allen Angebotstarifen unterstützt. Frühere Versionen unterstützen LOB-Datentypen in gruppierten und nicht gruppierten Columnstore-Indizes nicht.
@@ -392,7 +392,7 @@ Wenn die zugrunde liegende Tabelle eine Spalte enthält, die einen Datentyp aufw
 
  **Columnstore-Indizes können mit den folgenden Features nicht kombiniert werden:**  
 -   Berechnete Spalten. Ab SQL Server 2017 darf ein gruppierter Columnstore-Index eine nicht persistierte berechnete Spalte enthalten. In SQL Server 2017 dürfen gruppierte Columnstore-Indizes jedoch keine persistierten berechneten Spalten enthalten, und es können keine nicht gruppierten Indizes für berechnete Spalten erstellt werden. 
--   Seiten- und Zeilenkomprimierung und **vardecimal** -Speicherformat (ein Columnstore-Index ist bereits in einem anderen Format komprimiert)  
+-   Seiten- und Zeilenkomprimierung und **vardecimal**-Speicherformat (ein Columnstore-Index ist bereits in einem anderen Format komprimiert)  
 -   Replikation  
 -   Filestream
 
@@ -402,7 +402,7 @@ In einer Tabelle mit einem gruppierten Columnstore-Index können keine Cursor od
 Diese Einschränkungen gelten nur für [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Mit diesem Release wurden aktualisierbare gruppierte Columnstore-Indizes eingeführt. Nicht gruppierte Columnstore-Indizes waren noch schreibgeschützt.  
 
 -   Änderungsnachverfolgung. Für Columnstore-Indizes kann keine Änderungsnachverfolgung verwendet werden.  
--   Change Data Capture. Im Zusammenhang mit nicht gruppierten Columnstore-Indizes (NCCI) kann Change Data Capture nicht verwendet werden, weil diese Indizes schreibgeschützt sind. Für gruppierte Columnstore-Indizes (CCI) kann Change Data Capture verwendet werden.  
+-   Change Data Capture. Change Data Capture kann nicht für Tabellen mit einem gruppierten Columnstore-Index aktiviert werden. Ab SQL Server 2016 kann das Feature für Tabellen mit einem nicht gruppierten Columnstore-Index aktiviert werden.  
 -   Lesbares sekundäres Replikat. Auf einen gruppierten Columnstore-Index (CCI) kann nicht über ein lesbares sekundäres Replikat einer lesbaren Always On-Verfügbarkeitsgruppe zugegriffen werden.  Auf einen nicht gruppierten Columnstore-Index (NCCI) kann über ein lesbares sekundäres Replikat zugegriffen werden.  
 -   Mehrere aktive Resultsets (MARS). [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] verwendet MARS für schreibgeschützte Verbindungen für Tabellen mit einem Columnstore-Index. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] unterstützt MARS jedoch nicht für gleichzeitige DML-Vorgänge (Datenbearbeitungssprache) für eine Tabelle mit einem Columnstore-Index. In diesem Fall beendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Verbindung und bricht die Transaktionen ab.  
 -  Nicht gruppierte Columnstore-Indizes können nicht für eine Ansicht oder indizierte Sicht erstellt werden.

@@ -11,13 +11,13 @@ ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 897ebac1fa9d73444daf97a3642edb573a4f1c69
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2dc811a3e3217c3aa6bf2d9a006cfd1ff0c7796b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868793"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481471"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SELECT- und JOIN-Anweisungen von Systemsichten für erweiterte Ereignisse in SQL Server
 
@@ -114,7 +114,7 @@ Die Referenzdokumentation zu den Katalogsichten für erweiterte Ereignisse finde
 ### <a name="b1-ssms-ui-perspective"></a>B.1 Die Perspektive der SSMS-Benutzeroberfläche
 
 
-Im **Objekt-Explorer**von SSMS können Sie das Dialogfeld **Neue Sitzung** ausführen, indem Sie **Management** > **Extended Events**erweitern und anschließend mit der rechten Maustaste auf **Sitzungen** > **Neue Sitzung**klicken.
+Im **Objekt-Explorer** von SSMS können Sie das Dialogfeld **Neue Sitzung** ausführen, indem Sie **Management** > **Extended Events** erweitern und anschließend mit der rechten Maustaste auf **Sitzungen** > **Neue Sitzung** klicken.
 
 Im großen Dialogfeld **New Session** (Neue Sitzung) wird im ersten Abschnitt namens **General**(Allgemein) angezeigt, dass die Option **Start the event session at server startup**(Ereignissitzung beim Serverstart starten) ausgewählt wurde.
 
@@ -675,7 +675,7 @@ Anschließend wird eine Stichprobe der tatsächlichen 153 Spalten der Ausgabe de
 
 
 ```
-/***  5 sampled rows from the actual 153 rows returned.
+/**_  5 sampled rows from the actual 153 rows returned.
     NOTE:  'resource_type' under 'Column'.
 
 Package     Object          Object-Type   O--C   Column          Column-Type-Name     Column-Type   Column-Value   C--M   Map-Value        Map-Key
@@ -689,7 +689,7 @@ sqlserver   lock_deadlock   event         o--c   resource_type   lock_resource_t
 Therefore, on your CREATE EVENT SESSION statement, in its ADD EVENT WHERE clause,
 you could put:
     WHERE( ... resource_type = 6 ...)  -- Meaning:  6 = PAGE.
-***/
+_*_/
 ```
 
 
@@ -700,7 +700,7 @@ you could put:
 
 Die folgende SELECT-Anweisung gibt jeden Parameter für Ihr Ziel zurück. Jeder Parameter ist markiert, um anzuzeigen, ob er verbindlich ist, oder nicht. Die Werte, die Sie Parametern zuweisen, beeinflussen das Verhalten des Ziels.
 
-- Beachten Sie das Klauselelement WHERE: *object_type = 'customizable'* .
+- Beachten Sie das Klauselelement WHERE: _object_type = „customizable“*.
 - Darüber hinaus müssen Sie den Wert der Klausel WHERE für *o.name =* bearbeiten.
 
 
@@ -754,7 +754,7 @@ package0   event_file   lazy_create_blob     boolean              Not_mandatory 
 package0   event_file   max_file_size        uint64               Not_mandatory   Maximum file size in MB
 package0   event_file   max_rollover_files   uint32               Not_mandatory   Maximum number of files to retain
 package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory   Not used
-***/
+**_/
 ```
 
 
@@ -766,7 +766,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 Diese DMV SELECT-Anweisung gibt Datenzeilen des Ziels Ihrer aktiven Ereignissitzung zurück. Die Daten werden in XML umgewandelt. Dadurch kann die zurückgegebene Zelle zum einfachen Anzeigen in SSMS geklickt werden.
 
 - Wenn die Ereignissitzung beendet wird, gibt SELECT null Zeilen zurück.
-- Sie müssen den Wert der WHERE-Klausel für *s.name =* bearbeiten.
+- Sie müssen den Wert der WHERE-Klausel für _s.name =* bearbeiten.
 
 
 ```sql
@@ -831,7 +831,7 @@ Wenn die Zelle „XML-Cast“ (XML-Umwandlung) ausgewählt wird, erscheint folge
 ### <a name="c8-select-from-a-function-to-retrieve-event_file-data-from-disk-drive"></a>C.8 Auswählen aus einer Funktion zum Abrufen von event_file-Daten vom Laufwerk durch SELECT
 
 
-Angenommen, Ihre Ereignissitzungen haben Daten erfasst und wurden später beendet. Wenn Ihre Sitzung definiert wurde, das Ziel „event_file“ zu benutzen, können Sie die Daten immer noch abrufen, indem Sie die Funktion *sys.fn_xe_target_read_file*aufrufen.
+Angenommen, Ihre Ereignissitzungen haben Daten erfasst und wurden später beendet. Wenn Ihre Sitzung definiert wurde, das Ziel „event_file“ zu benutzen, können Sie die Daten immer noch abrufen, indem Sie die Funktion *sys.fn_xe_target_read_file* aufrufen.
 
 - Sie müssen den Pfad und Dateinamen im Parameter des Funktionsaufrufs anpassen, bevor Sie diese SELECT-Anweisung ausführen.
     - Achten Sie nicht auf die zusätzlichen Ziffern, die SQL-System jedes Mal, wenn Sie die Sitzung neu starten, in Ihre tatsächlichen. XEL-Dateinamen einbettet. Geben Sie einfach den normalen Stammnamen und die Erweiterung an.

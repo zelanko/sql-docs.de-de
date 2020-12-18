@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e6692984d0383a671ed66b9a7b36032e185aea0b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 81ac71e3e236209592087ffb0a11cde47cc6f18e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003147"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481291"
 ---
 # <a name="specify-prefix-length-in-data-files-using-bcp-sql-server"></a>Angeben der Präfixlänge in Datendateien mittels bcp (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Als kompakteste Form der Dateispeicherung beim Massenexportieren von Daten im systemeigenen Format in eine Datendatei setzt der Befehl **bcp** mindestens ein Zeichen, das auf die Länge des Felds hinweist, vor jedes Feld. Diese Zeichen werden als *Längenpräfixzeichen* bezeichnet.  
   
 ## <a name="the-bcp-prompt-for-prefix-length"></a>bcp-Eingabeaufforderung für die Präfixlänge  
- Wenn ein interaktiver **bcp** -Befehl die Option **in** oder **out** , jedoch keinen Formatdateischalter ( **-f**) bzw. keinen Datenformatschalter ( **-n**, **-c**, **-w**oder **-N**) enthält, fordert der Befehl wie folgt zur Eingabe der Präfixlänge für jedes Datenfeld auf:  
+ Wenn ein interaktiver **bcp** -Befehl die Option **in** oder **out** , jedoch keinen Formatdateischalter ( **-f**) bzw. keinen Datenformatschalter ( **-n**, **-c**, **-w** oder **-N**) enthält, fordert der Befehl wie folgt zur Eingabe der Präfixlänge für jedes Datenfeld auf:  
   
  `Enter prefix length of field <field_name> [<default>]:`  
   
@@ -59,12 +59,12 @@ ms.locfileid: "86003147"
 |**varchar**|2|2|2|2|  
 |**nchar**|2|2|2|2|  
 |**nvarchar**|2|2|2|2|  
-|**text***|4|4|4|4|  
-|**ntext***|4|4|4|4|  
-|**binary**|2|2|2|2|  
+|**text** _|4|4|4|4|  
+|_*ntext**_|4|4|4|4|  
+|_ *binary**|2|2|2|2|  
 |**varbinary**|2|2|2|2|  
-|**image***|4|4|4|4|  
-|**datetime**|0|1|0|1|  
+|**image** _|4|4|4|4|  
+|_ *datetime**|0|1|0|1|  
 |**smalldatetime**|0|1|0|1|  
 |**decimal**|1|1|1|1|  
 |**numeric**|1|1|1|1|  
@@ -85,7 +85,7 @@ ms.locfileid: "86003147"
 |**XML**|8|8|8|8|  
 |**sql_variant**|8|8|8|8|  
   
- \*Die Datentypen **ntext**, **text**und **image** werden in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Vermeiden Sie die Verwendung dieser Datentypen bei neuen Entwicklungen, und planen Sie die Änderung von Anwendungen, in denen sie aktuell verwendet werden. Verwenden Sie stattdessen **nvarchar(max)** , **varchar(max)** und **varbinary(max)** .  
+ \*Die Datentypen **ntext**, **text** und **image** werden in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Vermeiden Sie die Verwendung dieser Datentypen bei neuen Entwicklungen, und planen Sie die Änderung von Anwendungen, in denen sie aktuell verwendet werden. Verwenden Sie stattdessen **nvarchar(max)** , **varchar(max)** und **varbinary(max)** .  
   
 ##  <a name="prefix-lengths-for-bulk-import"></a><a name="PrefixLengthsImport"></a> Präfixlängen für den Massenimport  
  Wenn Daten massenimportiert werden, entspricht die Präfixlänge dem Wert, der beim ursprünglichen Erstellen der Datendatei angegeben wurde. Wenn die Datendatei nicht mit einem **bcp** -Befehl erstellt wurde, sind wahrscheinlich keine Längenpräfixzeichen vorhanden. In diesem Fall sollten Sie 0 als Präfixlänge angeben.  

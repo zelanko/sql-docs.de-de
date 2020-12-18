@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee984b5e04426cd269b7ed21f43d6b9b9dc91469
-ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: bd526468e48eddb24aacaa776af4f35164f51b32
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96328110"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478561"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
@@ -53,7 +53,7 @@ WITH IDENTITY = 'identity_name'
 
 *credential_name* Gibt den Namen für die datenbankweit gültigen Anmeldeinformationen an, die erstellt werden sollen. *credential_name* darf nicht mit dem Nummernzeichen (#) beginnen. Systemanmeldeinformationen beginnen mit zwei Nummernzeichen (##).
 
-IDENTITY **='** _identity\_name_ **'** Gibt den Namen des Kontos an, das beim Herstellen einer Verbindung außerhalb des Servers verwendet wird. Der Identitätsname muss `SHARED ACCESS SIGNATURE` entsprechen, um eine Datei aus Azure Blob Storage mithilfe eines freigegebenen Schlüssels zu importieren. Jeder gültige Wert kann für die Identität verwendet werden, um Daten in SQL Data Warehouse zu laden. Weitere Informationen zu SAS finden Sie unter [Verwenden von Shared Access Signatures (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1). Verwenden Sie den Domänennamen nicht im IDENTITY-Argument, wenn Sie Kerberos (Active Directory oder MIT KDC) verwenden. Sie sollten lediglich den Kontonamen verwenden.
+IDENTITY **='** _identity\_name_ **'** Gibt den Namen des Kontos an, das beim Herstellen einer Verbindung außerhalb des Servers verwendet wird. Der Identitätsname muss `SHARED ACCESS SIGNATURE` entsprechen, um eine Datei aus Azure Blob Storage mithilfe eines freigegebenen Schlüssels zu importieren. Jeder gültige Wert kann für die Identität verwendet werden, um Daten in Azure Synapse Analytics zu laden. Weitere Informationen zu SAS finden Sie unter [Verwenden von Shared Access Signatures (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1). Verwenden Sie nicht den Domänennamen im IDENTITY-Argument, wenn Sie Kerberos (Windows Active Directory oder MIT KDC) verwenden. Sie sollten lediglich den Kontonamen verwenden.
 
 > [!IMPORTANT]
 > Die SQL, Oracle, Teradata und MongoDB ODBC-Connectors für PolyBase unterstützen nur die einfache Authentifizierung, nicht die Kerberos-Authentifizierung.
@@ -61,7 +61,7 @@ IDENTITY **='** _identity\_name_ **'** Gibt den Namen des Kontos an, das beim He
 > [!NOTE]
 > WITH IDENTITY ist nicht erforderlich, wenn der Container in Azure Blob Storage für anonymen Zugriff aktiviert ist. Ein Beispiel für das Abfragen von Azure Blob Storage finden Sie unter [Importieren in eine Tabelle aus einer Datei, die in Azure Blob Storage](../functions/openrowset-transact-sql.md#j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage) gespeichert ist.
 
-SECRET **='** _secret_ **'** Gibt den geheimen Schlüssel an, der für die ausgehende Authentifizierung erforderlich ist. `SECRET` ist erforderlich, um eine Datei aus Azure Blob Storage zu importieren. Das Geheimnis muss der Azure-Speicherschlüssel sein, um von Azure Blob Storage in SQL DW oder Parallel Data Warehouse zu laden.
+SECRET **='** _secret_ **'** Gibt den geheimen Schlüssel an, der für die ausgehende Authentifizierung erforderlich ist. `SECRET` ist erforderlich, um eine Datei aus Azure Blob Storage zu importieren. Das Geheimnis muss der Azure-Speicherschlüssel sein, um aus Azure Blob Storage in Azure Synapse Analytics oder Parallel Data Warehouse zu laden.
 > [!WARNING]
 > Der SAS-Schlüssel beginnt mit einem Fragezeichen (?). Wenn Sie den SAS-Schlüssel verwenden, müssen Sie das vorangestellte Fragezeichen entfernen. Andernfalls funktioniert der Vorgang nicht.
 
@@ -110,7 +110,7 @@ CREATE DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'Mary5',
 
 ### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>B. Erstellen von datenbankweit gültigen Anmeldeinformationen für eine Shared Access Signature
 
-Im folgenden Beispiel werden datenbankweit gültige Anmeldeinformationen erstellt, durch die sich eine [externe Datenquelle](../../t-sql/statements/create-external-data-source-transact-sql.md) erstellen lässt. Mit dieser können Massenvorgänge wie [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) und [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) ausgeführt werden. Shared Access Signatures können nicht mit PolyBase in SQL Server, APS oder SQL Data Warehouse verwendet werden.
+Im folgenden Beispiel werden datenbankweit gültige Anmeldeinformationen erstellt, durch die sich eine [externe Datenquelle](../../t-sql/statements/create-external-data-source-transact-sql.md) erstellen lässt. Mit dieser können Massenvorgänge wie [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) und [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) ausgeführt werden. Shared Access Signatures können nicht mit PolyBase in SQL Server, APS oder Azure Synapse Analytics verwendet werden.
 
 ```sql
 -- Create a db master key if one does not already exist, using your own password.

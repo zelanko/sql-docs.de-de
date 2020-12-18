@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 00a34797c1253418230f5c40a57c2ce5e2948949
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: d92e83fd3bba6c5ee6ae6af3743de98000e05575
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866662"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97408107"
 ---
 # <a name="prepare-data-for-bulk-export-or-import"></a>Vorbereiten von Daten für den Massenexport oder -import
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "91866662"
   
 -   Zum Importieren von Daten aus Datendateien mit Feldern fester Länge oder Breite verwenden Sie eine Formatdatei. Weitere Informationen finden Sie unter [XML-Formatdateien &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).  
   
--   CSV (Comma-Separated Value)-Dateien werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Massenimportvorgängen nicht unterstützt. In manchen Fällen kann jedoch eine CSV-Datei als Datendatei für einen Massenimport von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet werden. Das Feldabschlusszeichen einer CSV-Datei muss kein Komma sein. Um als Datendatei für einen Massenimport verwendet werden zu können, muss eine CSV-Datei den folgenden Einschränkungen entsprechen:  
+-  Ab SQL Server 2017 kann eine CSV-Datei als Datendatei für einen Massenimport von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden. Das Feldabschlusszeichen einer CSV-Datei muss kein Komma sein. Um als Datendatei für einen Massenimport verwendet werden zu können, muss eine CSV-Datei den folgenden Einschränkungen entsprechen:  
   
     -   Datenfelder enthalten nie das Feldabschlusszeichen.  
   

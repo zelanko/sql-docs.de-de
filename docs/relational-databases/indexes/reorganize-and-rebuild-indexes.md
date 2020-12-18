@@ -30,13 +30,13 @@ helpviewer_keywords:
 ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba0eb3c9907acfe02939c49ea253869adbfc992b
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: eca1dbef6ff7d519200e46cff7879d7cb0a9b128
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867343"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478251"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>Auflösen der Indexfragmentierung durch Neuorganisieren oder Neuerstellen von Indizes
 
@@ -148,7 +148,7 @@ object_id   TableName    index_id    IndexName                                  
 
 Weitere Informationen finden Sie unter [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).
 
-### <a name="to-check-the-fragmentation-of-a-columnstore-index-using-tsql"></a>Überprüfen der Fragmentierung eines Columnstore-Indexes mit [!INCLUDE[tsql](../../includes/tsql-md.md)]
+### <a name="to-check-the-fragmentation-of-a-columnstore-index-using-transact-sql"></a>Überprüfen der Fragmentierung eines Columnstore-Indexes mit Transact-SQL
 
 Das folgende Beispiel ermittelt den durchschnittlichen Prozentsatz der Fragmentierung aller Indizes der Tabelle „`dbo.FactResellerSalesXL_CCI`“ in der `AdventureWorksDW2016`-Datenbank.
 
@@ -180,7 +180,7 @@ object_id   TableName                   index_id    IndexName                   
 ### <a name="check-index-fragmentation-using-sql-server-management-studio"></a>Überprüfen der Indexfragmentierung mithilfe von SQL Server Management Studio
 
 > [!NOTE]
-> [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] kann nicht zum Berechnen der Fragmentierung von Columnstore-Indizes in SQL Server und nicht zum Berechnen der Fragmentierung von Indizes in Azure SQL-Datenbank verwendet werden. Verwenden Sie das vorangehende [!INCLUDE[tsql](../../includes/tsql-md.md)]-[Beispiel](#to-check-the-fragmentation-of-a-columnstore-index-using-) für diese Szenarios.
+> [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] kann nicht zum Berechnen der Fragmentierung von Columnstore-Indizes in SQL Server und nicht zum Berechnen der Fragmentierung von Indizes in Azure SQL-Datenbank verwendet werden. Verwenden Sie das [vorherige Beispiel](#to-check-the-fragmentation-of-a-columnstore-index-using-transact-sql) für [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
 1. Erweitern Sie im Objekt-Explorer die Datenbank mit der Tabelle, in der Sie die Fragmentierung eines Indexes überprüfen möchten.
 2. Erweitern Sie den Ordner **Tabellen** .

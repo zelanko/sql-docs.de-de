@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 81e34f795391ad53728f35c8fed6e6b2363b3f7a
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: d3663fb72891f31cdd710fefebaef906c5b14762
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115673"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471671"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Schnellstart: Installieren von SQL Server und Erstellen einer Datenbank unter Red Hat
 
@@ -28,7 +28,7 @@ In diesem Schnellstart installieren Sie SQL Server 2017 oder SQL Server 2019 unt
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 In diesem Schnellstart installieren Sie SQL Server 2019 unter Red Hat Enterprise Linux 8 (RHEL) oder höher. Danach stellen Sie eine Verbindung mit **sqlcmd** her, um Ihre erste Datenbank zu erstellen und Abfragen auszuführen.
 
@@ -40,16 +40,16 @@ In diesem Schnellstart installieren Sie SQL Server 2019 unter Red Hat Enterpris
 ## <a name="prerequisites"></a>Voraussetzungen
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-Sie müssen über einen Computer mit 7.3–7.8 oder 8.0–8.2 mit **mindestens 2 GB** Arbeitsspeicher verfügen.
+Sie müssen über einen Computer mit RHEL 7.3 bis 7.8 oder 8.0 bis 8.3 mit **mindestens 2 GB** Arbeitsspeicher verfügen.
 
 ::: moniker-end
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-Sie müssen einen Computer mit RHEL 7.3, 7.4, 7.5, 7.6 oder 8.0 haben, der **mindestens 2 GB** Arbeitsspeicher aufweist.
+Sie müssen über einen Computer mit RHEL 7.3 bis 7.8 oder 8.0 bis 8.3 mit **mindestens 2 GB** Arbeitsspeicher verfügen.
 
 ::: moniker-end
 
@@ -129,7 +129,7 @@ Ab jetzt wird SQL Server auf Ihrem RHEL-Computer ausgeführt und ist einsatzbere
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a name="install-sql-server"></a><a id="install"></a>Installieren von SQL Server
 

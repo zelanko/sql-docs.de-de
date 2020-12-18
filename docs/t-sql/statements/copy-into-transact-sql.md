@@ -17,13 +17,13 @@ dev_langs:
 - TSQL
 author: kevinvngo
 ms.author: kevin
-monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: a6cb58245e4128b58e237d61e2a278ea039afe9c
-ms.sourcegitcommit: dc858552f0c9314b3411e630bbd9bbce65f85913
+monikerRange: =azure-sqldw-latest
+ms.openlocfilehash: 9b480c90337017c77a0d05afe5861e85c89637d3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96787997"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460783"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -432,6 +432,18 @@ Das Aufteilen von Parquet- und ORC-Dateien ist nicht erforderlich, da der COPY-B
 
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>Gibt es Einschränkungen hinsichtlich der Anzahl oder Größe von Dateien?
 Es gibt keine Einschränkungen in Bezug auf die Anzahl oder Größe von Dateien. Um eine optimale Leistung zu erzielen, wird jedoch eine Dateigröße von mindestens 4 MB empfohlen.
+
+### <a name="are-there-any-known-issues-with-the-copy-statement"></a>Gibt es bekannte Probleme bei der COPY-Anweisung?
+Wenn Sie über einen Synapse-Arbeitsbereich verfügen, der vor dem 7. Dezember 2020 erstellt wurde, wird bei der Authentifizierung mithilfe der verwalteten Identität möglicherweise eine ähnliche Fehlermeldung angezeigt:
+
+*com.microsoft.sqlserver.jdbc.SQLServerException: Eine verwaltete Dienstidentität wurde auf diesem Server nicht aktiviert. Aktivieren Sie die verwaltete Dienstidentität, und versuchen Sie es noch mal.*
+
+Gehen Sie wie folgt vor, um dieses Problem zu umgehen, indem Sie die verwaltete Identität des Arbeitsbereichs erneut registrieren:
+
+1. Navigieren Sie im Azure-Portal zu Ihrem Synapse-Arbeitsbereich.
+2. Navigieren Sie zum Blatt „Verwaltete Identitäten“. 
+3. Wenn die Option „Allow Pipelines“ (Pipelines zulassen) bereits aktiviert ist, müssen Sie diese Einstellung deaktivieren und speichern.
+4. Aktivieren der Option „Allow Pipelines“ (Pipelines zulassen) und Speichern
 
 
 ## <a name="see-also"></a>Weitere Informationen  

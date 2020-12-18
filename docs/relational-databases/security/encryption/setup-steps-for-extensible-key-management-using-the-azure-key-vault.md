@@ -2,7 +2,7 @@
 title: Einrichten der erweiterbaren Schlüsselverwaltung für Transparent Data Encryption (TDE) mit Azure Key Vault
 description: Installieren und Konfigurieren des SQL Server-Connectors für Azure Key Vault
 ms.custom: seo-lt-2019
-ms.date: 10/08/2020
+ms.date: 11/25/2020
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -12,15 +12,16 @@ helpviewer_keywords:
 - EKM, with key vault setup
 - SQL Server Connector, setup
 - SQL Server Connector
+- TDE, AKV, EKM
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: Rupp29
 ms.author: arupp
-ms.openlocfilehash: 4df1fb243b2e811b216b03ec453164ae1a00b1af
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 03ed7f3bca347bbb65ea0b51c807547d7bdb5656
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96130209"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489600"
 ---
 # <a name="set-up-sql-server-tde-extensible-key-management-by-using-azure-key-vault"></a>Einrichten der erweiterbaren Schlüsselverwaltung für SQL Server-TDE mit Azure Key Vault
 
@@ -258,13 +259,13 @@ Der hier erstellte Schlüsseltresor und der hier erstellte Schlüssel werden von
 1. Erstellen Sie einen asymmetrischen Schlüssel im Schlüsseltresor. Dies ist auf zwei Arten möglich: Importieren eines vorhandenen Schlüssels oder Erstellen eines neuen Schlüssels.  
 
      > [!NOTE]
-     > SQL Server unterstützt nur 2048-Bit-RSA-Schlüssel.
+     > SQL Server unterstützt nur RSA- und RSA-HSM-Schlüssel mit jeweils 2048 oder 3072 Bit.
 
 ### <a name="best-practices"></a>Bewährte Methoden
 
 Es werden die folgenden bewährten Methoden empfohlen, um die schnelle Wiederherstellung von Schlüsseln sicherzustellen und den Zugriff auf Ihre Daten außerhalb von Azure zu ermöglichen:
 
-- Erstellen Sie Ihren Verschlüsselungsschlüssel lokal auf einem lokalen HSM-Gerät (Hardware Security Module). Stellen Sie sicher, dass Sie einen asymmetrischen RSA-2048-Schlüssel verwenden, damit er von SQL Server unterstützt wird.
+- Erstellen Sie Ihren Verschlüsselungsschlüssel lokal auf einem lokalen HSM-Gerät (Hardware Security Module). Stellen Sie sicher, dass Sie einen asymmetrischen RSA-Schlüssel mit 2048 oder 3072 Bit verwenden, damit er von SQL Server unterstützt wird.
 - Importieren Sie den Verschlüsselungsschlüssel in Ihren Azure Key Vault. Dieser Prozess wird in den folgenden Abschnitten beschrieben.
 - Bevor Sie den Schlüssel zum ersten Mal in Ihrem Azure Key Vault verwenden, erstellen Sie eine Schlüsselsicherung Ihres Azure Key Vaults. Weitere Informationen finden Sie im Zusammenhang mit dem Befehl [Backup-AzureKeyVaultKey]().
 - Stellen Sie sicher, dass Sie jedes Mal eine neue Schlüsselsicherung Ihres Azure Key Vaults erstellen, wenn Sie Änderungen am Schlüssel vornehmen (z. B. wenn Sie ACLs, Tags oder Schlüsselattribute hinzufügen).
@@ -274,7 +275,7 @@ Es werden die folgenden bewährten Methoden empfohlen, um die schnelle Wiederher
 
 ### <a name="types-of-keys"></a>Schlüsseltypen
 
-In einem Azure Key Vault können zwei Typen von Schlüsseln generiert werden, die mit SQL Server kompatibel sind. Bei beiden Typen handelt es sich um asymmetrische 2048-Bit-RSA-Schlüssel.  
+In einem Azure-Schlüsseltresor können vier Typen von Schlüsseln generiert werden, die mit SQL Server kompatibel sind. asymmetrische RSA-Schlüssel und RSA-HSM-Schlüssel mit jeweils 2048 oder 3072 Bit
   
 - **Softwaregeschützt**: In Software verarbeitet und in Ruhezeiten verschlüsselt. Vorgänge für softwaregeschützte Schlüssel erfolgen auf virtuellen Azure-Computern. Dieser Typ wird für Schlüssel empfohlen, die nicht in einer Produktionsbereitstellung verwendet werden.  
 
@@ -340,7 +341,8 @@ Laden Sie den SQL Server-Connector aus dem [Microsoft Download Center](https://g
 > - Von Version 1.0.3.0 an meldet der SQL Server-Connector relevante Fehlermeldungen zur Problembehandlung an die Windows-Ereignisprotokolle.
 > - Von Version 1.0.4.0 an werden private Azure-Clouds unterstützt, darunter Azure China, Azure Deutschland und Azure Government.
 > - In Version 1.0.5.0 gibt es einen Breaking Change, die den Fingerabdruckalgorithmus betrifft. Nach dem Upgrade auf Version 1.0.5.0 treten möglicherweise Fehler bei der Datenbankwiederherstellung auf. Weitere Informationen finden Sie im [KB-Artikel 447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
-> - **Ab der Version 1.0.5.0 (Zeitstempel: September 2020) unterstützt der SQL Server-Connector das Filtern von Nachrichten und Wiederholungslogik für Netzwerkanforderungen.**
+> - Ab der Version 1.0.5.0 (Zeitstempel: September 2020) unterstützt der SQL Server-Connector das Filtern von Nachrichten und Wiederholungslogik für Netzwerkanforderungen.
+> - **Beginnend mit der aktualisierten Version 1.0.5.0 (TimeStamp: November 2020) unterstützt der SQL Server-Connector RSA- und RSA-HSM-Schlüssel mit jeweils 2048 oder 3072 Bit.**
   
   ![Screenshot des Installationsassistenten für den SQL Server-Connector](../../../relational-databases/security/encryption/media/ekm/ekm-connector-install.png)  
   

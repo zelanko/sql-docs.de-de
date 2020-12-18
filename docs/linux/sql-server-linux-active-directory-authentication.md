@@ -12,12 +12,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 003001752ee656483d7b4a1820f191aafc044f25
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: f1e526621d9ff769094830af5cf312eb8c1f17f9
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115923"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323572"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Tutorial: Verwenden der Active Directory-Authentifizierung für SQL Server für Linux
 
@@ -64,7 +64,11 @@ Verknüpfen Sie Ihren Linux-Host für SQL Server mit einem Active Directory-Dom
    ```
 
    > [!NOTE]
-   > Es hat sich als Sicherheitsmethode bewährt, ein dediziertes AD-Konto für SQL Server zu verwenden, damit die Anmeldeinformationen für SQL Server nicht für andere Dienste freigegeben werden, die dasselbe Konto verwenden. Sie können jedoch als Alternative auch ein vorhandenes AD-Konto wiederverwenden, wenn Sie das Kennwort für das Konto kennen. Sie benötigen dieses, um im nächsten Schritt eine KEYTAB-Datei zu erstellen. Außerdem sollte das Konto 128-Bit- und 256-Bit-Kerberos-AES-Verschlüsselung (Attribut **msDS-SupportedEncryptionTypes**) für das Benutzerkonto unterstützen können.
+   > Es hat sich als Sicherheitsmethode bewährt, ein dediziertes AD-Konto für SQL Server zu verwenden, damit die Anmeldeinformationen für SQL Server nicht für andere Dienste freigegeben werden, die dasselbe Konto verwenden. Sie können jedoch als Alternative auch ein vorhandenes AD-Konto wiederverwenden, wenn Sie das Kennwort für das Konto kennen. Sie benötigen dieses, um im nächsten Schritt eine KEYTAB-Datei zu erstellen. Außerdem sollte das Konto 128-Bit- und 256-Bit-Kerberos-AES-Verschlüsselung (Attribut **msDS-SupportedEncryptionTypes**) für das Benutzerkonto unterstützen können. Wenn Sie überprüfen möchten, ob das Konto für die AES-Verschlüsselung aktiviert ist, suchen Sie das Konto im Hilfsprogramm **Active Directory-Benutzer und -Computer**, und klicken Sie auf **Eigenschaften**. Suchen Sie unter **Eigenschaften** nach der Registerkarte **Konten**, und überprüfen Sie, ob die beiden folgenden Kontrollkästchen ausgewählt sind. 
+   >
+   > 1. **Dieses Konto unterstützt Kerberos-AES-128-Bit-Verschlüsselung**
+   >
+   > 2. **Dieses Konto unterstützt Kerberos-AES-256-Bit-Verschlüsselung**
 
 2. Legen Sie den Dienstprinzipalnamen (Service Principle Name, SPN) für dieses Konto mithilfe des Tools **setspn.exe** fest. Der SPN muss genau wie im folgenden Beispiel angegeben formatiert werden. Sie können den vollqualifizierten Domänennamen des Hostcomputers für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ermitteln, indem Sie `hostname --all-fqdns` auf de Host [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausführen. In der Regel wird der TCP-Port 1433 verwendet, es sei denn, Sie haben [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] so konfiguriert, dass eine andere Portnummer verwendet wird.
 
@@ -201,7 +205,7 @@ Im Gegensatz zu SQL Windows können Sie die Kerberos-Authentifizierung für loka
 
 ### <a name="ssms-on-a-domain-joined-windows-client"></a>SSMS auf einem in die Domäne eingebundenen Windows-Client
 
-Melden Sie sich mithilfe Ihrer Domänenanmeldeinformationen bei einem in die Domäne eingebundenen Windows-Client an. Vergewissern Sie sich, dass SQL Server Management Studio installiert ist, und stellen Sie dann eine Verbindung mit Ihrer SQL Server-Instanz her (z. B. `mssql-host.contoso.com`), indem Sie im Dialogfeld **Mit Server verbinden** **Windows-Authentifizierung** angeben.
+Melden Sie sich mithilfe Ihrer Domänenanmeldeinformationen bei einem in die Domäne eingebundenen Windows-Client an. Vergewissern Sie sich, dass SQL Server Management Studio installiert ist, und stellen Sie dann eine Verbindung mit Ihrer SQL Server-Instanz her (z. B. `mssql-host.contoso.com`), indem Sie im Dialogfeld **Mit Server verbinden****Windows-Authentifizierung** angeben.
 
 ### <a name="ad-authentication-using-other-client-drivers"></a>AD-Authentifizierung mit anderen Clienttreibern
 
@@ -274,4 +278,4 @@ In diesem Tutorial haben wir erläutert, wie Sie die Active Directory-Authentifi
 Lernen Sie als Nächstes weitere Sicherheitsszenarios für SQL Server für Linux kennen.
 
 > [!div class="nextstepaction"]
-> [Verschlüsseln von Verbindungen mit SQL Server](sql-server-linux-encrypted-connections.md)
+> [Verschlüsseln von Verbindungen mit SQL Server für Linux](sql-server-linux-encrypted-connections.md)

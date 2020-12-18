@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
 author: stevestein
 ms.author: sstein
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 986996ff2ec54ce6a7e43924fb94ede81593c212
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: = azuresqldb-current || >= sql-server-2016
+ms.openlocfilehash: d963a8745d83be039fa2970a24d04a2a882bf7a9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756149"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478361"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>Schätzen der Größe eines gruppierten Indexes
 
@@ -47,35 +47,35 @@ ms.locfileid: "85756149"
   
 1.  Geben Sie die Anzahl der Zeilen an, die die Tabelle enthalten wird:  
   
-     ***Num_Rows***  = Anzahl der Zeilen in der Tabelle  
+     ***Num_Rows** _ = Anzahl der Zeilen in der Tabelle  
   
 2.  Geben Sie die Anzahl der Spalten mit fester und mit variabler Länge an, und berechnen Sie den Speicherplatz, der für deren Speicherung erforderlich ist:  
   
      Berechnen Sie den Speicherplatz, der zum Speichern jeder dieser Spaltengruppen innerhalb der Datenzeile erforderlich ist. Die Größe einer Spalte hängt von der Angabe für Datentyp und -länge ab.  
   
-     ***Num_Cols***  = Gesamtanzahl der Spalten (mit fester und variabler Länge)  
+     _*_Num_Cols_*_  = Gesamtanzahl der Spalten (mit fester und variabler Länge)  
   
-     ***Fixed_Data_Size***  = Gesamtzahl der Bytes in allen Spalten fester Länge  
+     _*_Fixed_Data_Size_*_  = Gesamtzahl der Bytes in allen Spalten mit fester Länge  
   
-     ***Num_Variable_Cols***  = Anzahl der Spalten variabler Länge  
+     _*_Num_Variable_Cols_*_  = Anzahl der Spalten mit variabler Länge  
   
-     ***Max_Var_Size***  = Maximale Bytegröße aller Spalten variabler Länge  
+     _*_Max_Var_Size_*_ = Maximale Bytegröße aller Spalten mit variabler Länge  
   
-3.  Wenn der gruppierte Index nicht eindeutig ist, berücksichtigen Sie die *uniqueifier* -Spalte:  
+3.  Wenn der gruppierte Index nicht eindeutig ist, berücksichtigen Sie die _uniqueifier*-Spalte:  
   
      Die Uniqueifier-Spalte ist eine Spalte variabler Länge mit NULL-Zulässigkeit. Sie ist in Spalten Nicht-NULL und 4 Byte lang, deren Schlüsselwerte nicht eindeutig sind. Dieser Wert ist Teil des Indexschlüssels und für die Sicherstellung erforderlich, dass jede Zeile über einen eindeutigen Schlüsselwert verfügt.  
   
-     ***Num_Cols***  = ***Num_Cols*** + 1  
+     ***Num_Cols** _  = _*_Num_Cols_*_ + 1  
   
-     ***Num_Variable_Cols***  = ***Num_Variable_Cols*** + 1  
+     _*_Num_Variable_Cols_*_  = _*_Num_Variable_Cols_*_ + 1  
   
-     ***Max_Var_Size***  = ***Max_Var_Size*** + 4  
+     _*_Max_Var_Size_*_  = _*_Max_Var_Size_*_ + 4  
   
      Diese Änderungen gehen davon aus, dass alle Werte nicht eindeutig sind.  
   
 4.  Ein Teil der Zeile, der als NULL-Bitmuster (Null_Bitmap) bezeichnet wird, wird für das Verwalten der NULL-Zulässigkeit der Spalte reserviert. Berechnen Sie dessen Größe:  
   
-     ***Null_Bitmap***  = 2 + ((***Num_Cols*** + 7) / 8)  
+     _*_Null_Bitmap_*_  = 2 + ((_*_Num_Cols_*_ + 7) / 8)  
   
      Nur der ganzzahlige Teil des oben aufgeführten Ausdrucks sollte verwendet werden; verwerfen Sie den Nachkommateil.  
   
@@ -83,42 +83,42 @@ ms.locfileid: "85756149"
   
      Wenn die Tabelle Spalten variabler Länge enthält, müssen Sie den Speicherplatz ermitteln, der von den Spalten innerhalb der Zeile verwendet wird:  
   
-     ***Variable_Data_Size***  = 2 + (***Num_Variable_Cols*** x 2) + ***Max_Var_Size***  
+     _*_Variable_Data_Size_*_  = 2 + (_*_Num_Variable_Cols_*_ × 2) + _*_Max_Var_Size_*_  
   
-     Die zu ***Max_Var_Size*** hinzugefügten Bytes dienen der Nachverfolgung jeder einzelnen variablen Spalte. Bei dieser Formel wird angenommen, dass alle Spalten variabler Länge zu 100 % gefüllt sind. Wenn sich abzeichnet, dass ein niedrigerer Prozentsatz des Speicherplatzes für Spalten variabler Länge verwendet wird, können Sie den ***Max_Var_Size*** -Wert mithilfe dieses Prozentsatzes anpassen, um einen genaueren Schätzwert für die Gesamtgröße der Tabelle zu erhalten.  
+     Die zu _*_Max_Var_Size_*_ hinzugefügten Bytes dienen der Nachverfolgung jeder einzelnen variablen Spalte. Bei dieser Formel wird angenommen, dass alle Spalten variabler Länge zu 100 % gefüllt sind. Wenn sich abzeichnet, dass ein niedrigerer Prozentsatz des Speicherplatzes für Spalten mit variabler Länge verwendet wird, können Sie den Wert _*_Max_Var_Size_*_ mithilfe dieses Prozentsatzes anpassen, um einen genaueren Schätzwert für die Gesamtgröße der Tabelle zu erhalten.  
   
     > [!NOTE]  
-    >  Sie können **varchar**-, **nvarchar**-, **varbinary**- oder **sql_variant** -Spalten kombinieren, mit dem Ergebnis, dass die definierte Tabellengesamtbreite größer als 8.060 Byte ist. Die Länge jeder einzelnen Spalte unterliegt auch weiterhin der Beschränkung von 8.000 Byte für eine **varchar**-, **varbinary**- oder **sql_variant** -Spalte und von 4.000 Byte für **nvarchar** -Spalten. Die kombinierte Breite kann jedoch den Grenzwert von 8.060 Byte in einer Tabelle überschreiten.  
+    >  Sie können _*varchar**-, **nvarchar**-, **varbinary**- oder **sql_variant**-Spalten kombinieren, mit dem Ergebnis, dass die definierte Tabellengesamtbreite größer als 8060 Bytes ist. Die Länge jeder einzelnen Spalte unterliegt auch weiterhin der Beschränkung von 8.000 Byte für eine **varchar**-, **varbinary**- oder **sql_variant** -Spalte und von 4.000 Byte für **nvarchar** -Spalten. Die kombinierte Breite kann jedoch den Grenzwert von 8.060 Byte in einer Tabelle überschreiten.  
   
-     Wenn keine Spalten variabler Länge vorhanden sind, legen Sie ***Variable_Data_Size*** auf 0 fest.  
+     Wenn keine Spalten mit variabler Länge vorhanden sind, legen Sie **_Variable_Data_Size_* _ auf 0 (null) fest.  
   
 6.  Berechnen Sie die Gesamtzeilenlänge:  
   
-     ***Row_Size***  = ***Fixed_Data_Size*** + ***Variable_Data_Size*** + ***Null_Bitmap*** + 4  
+     _*_Row_Size_*_  = _*_Fixed_Data_Size_*_ + _*_Variable_Data_Size_*_ + _*_Null_Bitmap_*_ + 4  
   
      Der Wert 4 ist der Zeilenüberschriftenaufwand der Datenzeile.  
   
 7.  Berechnen Sie die Anzahl der Zeilen pro Seite (8.096 freie Byte pro Seite):  
   
-     ***Rows_Per_Page***  = 8096 / (***Row_Size*** + 2)  
+     _*_Rows_Per_Page_*_  = 8096 / (_*_Row_Size_*_ + 2)  
   
      Da sich eine Zeile nicht auf zwei Seiten erstreckt, muss die Anzahl der Zeilen pro Seite auf die nächste ganze Zeile abgerundet werden. Die Angabe 2 in der Formel bezieht sich auf den Eingang der Zeile in das Slotarray der Seite.  
   
 8.  Berechnen Sie die Anzahl der reservierten freien Zeilen pro Seite anhand des angegebenen [Füllfaktors](../../relational-databases/indexes/specify-fill-factor-for-an-index.md) :  
   
-     ***Free_Rows_Per_Page***  = 8096 x ((100 - ***Fill_Factor***) / 100) / (***Row_Size*** + 2)  
+     _*_Free_Rows_Per_Page_*_  = 8096 × ((100 – _*_Fill_Factor_*_) / 100) / (_*_Row_Size_*_ + 2)  
   
      Bei dem in der Berechnung verwendeten Füllfaktor handelt es sich nicht um einen Prozentwert, sondern um einen ganzzahligen Wert. Da sich eine Zeile nicht auf zwei Seiten erstreckt, muss die Anzahl der Zeilen pro Seite auf die nächste ganze Zeile abgerundet werden. Mit ansteigendem Füllfaktor werden mehr Daten auf jeder Seite gespeichert, und die Anzahl der Seiten nimmt ab. Die Angabe 2 in der Formel bezieht sich auf den Eingang der Zeile in das Slotarray der Seite.  
   
 9. Berechnen Sie die Anzahl der Seiten, die zum Speichern aller Zeilen benötigt werden:  
   
-     ***Num_Leaf_Pages***  = ***Num_Rows*** / (***Rows_Per_Page*** - ***Free_Rows_Per_Page***)  
+     _*_Num_Leaf_Pages_*_  = _*_Num_Rows_*_ / (_*_Rows_Per_Page_*_ - _*_Free_Rows_Per_Page_*_ )  
   
      Die geschätzte Seitenanzahl muss auf die nächste ganze Seite aufgerundet werden.  
   
 10. Berechnen Sie den Umfang des Speicherplatzes, der zum Speichern der Daten in der Blattebene erforderlich ist (insgesamt 8192 Byte pro Seite):  
   
-     ***Leaf_space_used***  = 8192 x ***Num_Leaf_Pages***  
+     _*_Leaf_space_used_*_  = 8192 × _*_Num_Leaf_Pages_*_  
   
 ## <a name="step-2-calculate-the-space-used-to-store-index-information"></a>Schritt 2: Berechnen des Speicherplatzes, der zum Speichern der Indexinformationen verwendet wird  
  Mit den folgenden Schritten können Sie den Umfang des Speicherplatzes schätzen, der zum Speichern der oberen Ebenen des Indexes erforderlich ist:  
@@ -127,23 +127,23 @@ ms.locfileid: "85756149"
   
      Die Schlüsselspalten eines Indexes können Spalten fester und variabler Länge enthalten. Um die Größe der Indexzeilen auf der inneren Ebene zu schätzen, müssen Sie den Speicherplatz berechnen, der von jeder dieser Spaltengruppen innerhalb der Indexzeile belegt wird. Die Größe einer Spalte hängt von der Angabe für Datentyp und -länge ab.  
   
-     ***Num_Key_Cols***  = Gesamtanzahl der Schlüsselspalten (fester und variabler Länge)  
+     _*_Num_Key_Cols_*_ = Gesamtanzahl der Schlüsselspalten (mit fester und variabler Länge)  
   
-     ***Fixed_Key_Size***  = Gesamtzahl der Bytes in allen Schlüsselspalten fester Länge  
+     _*_Fixed_Key_Size_*_ = Gesamtzahl der Bytes in allen Schlüsselspalten mit fester Länge  
   
-     ***Num_Variable_Key_Cols***  = Anzahl der Schlüsselspalten variabler Länge  
+     _*_Num_Variable_Key_Cols_*_ = Anzahl der Schlüsselspalten mit variabler Länge  
   
-     ***Max_Var_Key_Size***  = Maximale Bytegröße aller Schlüsselspalten variabler Länge  
+     _*_Max_Var_Key_Size_*_ = Maximale Bytegröße aller Schlüsselspalten mit variabler Länge  
   
 2.  Berücksichtigen Sie ggf. den Uniqueifier, der erforderlich ist, wenn der Index nicht eindeutig ist:  
   
      Die Uniqueifier-Spalte ist eine Spalte variabler Länge mit NULL-Zulässigkeit. Sie ist in Spalten Nicht-NULL und 4 Byte lang, deren Indexschlüsselwerte nicht eindeutig sind. Dieser Wert ist Teil des Indexschlüssels und für die Sicherstellung erforderlich, dass jede Zeile über einen eindeutigen Schlüsselwert verfügt.  
   
-     ***Num_Key_Cols***  = ***Num_Key_Cols*** + 1  
+     _*_Num_Key_Cols_*_  = _*_Num_Key_Cols_*_ + 1  
   
-     ***Num_Variable_Key_Cols***  = ***Num_Variable_Key_Cols*** + 1  
+     _*_Num_Variable_Key_Cols_*_  = _*_Num_Variable_Key_Cols_*_ + 1  
   
-     ***Max_Var_Key_Size***  = ***Max_Var_Key_Size*** + 4  
+     _*_Max_Var_Key_Size_*_  = _*_Max_Var_Key_Size_*_ + 4  
   
      Diese Änderungen gehen davon aus, dass alle Werte nicht eindeutig sind.  
   
@@ -151,58 +151,58 @@ ms.locfileid: "85756149"
   
      Wenn der Index Spalten mit NULL-Zulässigkeit enthält, ist ein Teil der Indexzeile dem NULL-Bitmuster zugeordnet. Berechnen Sie dessen Größe:  
   
-     ***Index_Null_Bitmap***  = 2 + ((Anzahl der Spalten in der Indexzeile + 7) / 8)  
+     _*_Index_Null_Bitmap_*_  = 2 + ((Anzahl der Spalten in der Indexzeile + 7) / 8)  
   
      Nur der ganzzahlige Teil des vorherigen Ausdrucks darf verwendet werden. Der Rest wird verworfen.  
   
-     Wenn keine Schlüsselspalten vorhanden sind, die NULL-Werte zulassen, legen Sie ***Index_Null_Bitmap*** auf 0 fest.  
+     Wenn keine Schlüsselspalten vorhanden sind, die NULL-Werte zulassen, legen Sie _*_Index_Null_Bitmap_*_ auf 0 (null) fest.  
   
 4.  Berechnen Sie die Größe der Daten variabler Länge:  
   
      Wenn der Index Spalten variabler Länge enthält, müssen Sie den Speicherplatz ermitteln, der von den Spalten innerhalb der Indexzeile verwendet wird:  
   
-     ***Variable_Key_Size***  = 2 + (***Num_Variable_Key_Cols*** x 2) + ***Max_Var_Key_Size***  
+     _*_Variable_Key_Size_*_  = 2 + (_*_Num_Variable_Key_Cols_*_ × 2) + _*_Max_Var_Key_Size_*_  
   
-     Die zu ***Max_Var_Key_Size*** hinzugefügten Bytes dienen der Nachverfolgung der einzelnen Spalten variabler Länge. Bei dieser Formel wird angenommen, dass alle Spalten variabler Länge zu 100 % gefüllt sind. Wenn sich abzeichnet, dass ein niedrigerer Prozentsatz des Speicherplatzes für Spalten variabler Länge verwendet wird, können Sie den ***Max_Var_Key_Size*** -Wert mithilfe dieses Prozentsatzes anpassen, um einen genaueren Schätzwert für die Gesamtgröße der Tabelle zu erhalten.  
+     Die zu _*_Max_Var_Key_Size_*_ hinzugefügten Bytes dienen der Nachverfolgung der einzelnen Spalten mit variabler Länge. Bei dieser Formel wird angenommen, dass alle Spalten variabler Länge zu 100 % gefüllt sind. Wenn sich abzeichnet, dass ein niedrigerer Prozentsatz des Speicherplatzes für Spalten mit variabler Länge verwendet wird, können Sie den _*_Max_Var_Key_Size_*_-Wert mithilfe dieses Prozentsatzes anpassen, um einen genaueren Schätzwert für die Gesamtgröße der Tabelle zu erhalten.  
   
-     Wenn keine Spalten variabler Länge vorhanden sind, legen Sie ***Variable_Key_Size*** auf 0 fest.  
+     Wenn keine Spalten mit variabler Länge vorhanden sind, legen Sie _*_Variable_Key_Size_*_ auf 0 (null) fest.  
   
 5.  Berechnen Sie die Länge der Indexzeile:  
   
-     ***Index_Row_Size***  = ***Fixed_Key_Size*** + ***Variable_Key_Size*** + ***Index_Null_Bitmap*** + 1 (für Zeilenüberschriftenaufwand einer Indexzeile) + 6 (für ID-Zeiger der untergeordneten Seite)  
+     _*_Index_Row_Size_*_  = _*_Fixed_Key_Size_*_ + _*_Variable_Key_Size_*_ + _*_Index_Null_Bitmap_*_ + 1 (für Zeilenheaderaufwand einer Indexzeile) + 6 (für ID-Zeiger der untergeordneten Seite)  
   
 6.  Berechnen Sie die Anzahl der Indexzeilen pro Seite (8096 freie Byte pro Seite):  
   
-     ***Index_Rows_Per_Page***  = 8096 / (***Index_Row_Size*** + 2)  
+     _*_Index_Rows_Per_Page_*_  = 8096 / (_*_Index_Row_Size_*_ + 2)  
   
      Da sich eine Indexzeile nicht auf zwei Seiten erstreckt, muss die Anzahl der Indexzeilen pro Seite auf die nächste ganze Zeile abgerundet werden. Die Angabe 2 in der Formel bezieht sich auf den Eingang der Zeile in das Slotarray der Seite.  
   
 7.  Berechnen Sie die Anzahl der Ebenen im Index:  
   
-     ***Non-leaf_Levels***  = 1 + log (Index_Rows_Per_Page) (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
+     _*_Non-leaf_Levels_*_  = 1 + log (Index_Rows_Per_Page) (_*_Num_Leaf_Pages_*_ / _*_Index_Rows_Per_Page_*_)  
   
      Runden Sie diese Zahl auf die nächste ganze Zahl auf. Dieser Wert schließt die Blattebene des gruppierten Index nicht mit ein.  
   
 8.  Berechnen Sie die Anzahl der inneren Knotenseiten im Index:  
   
-     ***Num_Index_Pages =*** ∑Level ***(Num_Leaf_Pages / (Index_Rows_Per_Page***^Level ***))***  
+     _*_Num_Index_Pages =_*_ ∑Level _*_ (Num_Leaf_Pages / (Index_Rows_Per_Page_ *_^Level_* _))_ *_  
   
-     wobei 1 <= Level <= ***Non-leaf_Levels***  
+     wobei 1 <= Level <= _*_Non-leaf_Levels_*_  
   
-     Runden Sie jeden Summanden auf die nächste ganze Zahl auf. Stellen Sie sich als einfaches Beispiel einen Index vor, bei dem ***Num_Leaf_Pages*** = 1000 und ***Index_Rows_Per_Page*** = 25. gilt. Die erste Indexebene über der Blattebene speichert 1.000 Indexzeilen, dies bedeutet eine Indexzeile pro Blattseite. Dabei passen 25 Indexzeilen auf eine Seite. Dies bedeutet, dass 40 Seiten zum Speichern dieser 1.000 Indexzeilen erforderlich sind. Die nächste Ebene des Indexes muss 40 Zeilen speichern. Dies bedeutet, dass 2 Seiten erforderlich sind. Die letzte Ebene des Indexes muss zwei Zeilen speichern. Dies bedeutet, dass eine Seite erforderlich ist. Daraus ergeben sich 43 innere Knotenseiten im Index. Wenn Sie diese Werte in den oben genannten Formeln verwenden, ergibt sich Folgendes:  
+     Runden Sie jeden Summanden auf die nächste ganze Zahl auf. Stellen Sie sich als einfaches Beispiel einen Index vor, bei dem _*_Num_Leaf_Pages_*_ = 1000 und _*_Index_Rows_Per_Page_*_ = 25. Die erste Indexebene über der Blattebene speichert 1.000 Indexzeilen, dies bedeutet eine Indexzeile pro Blattseite. Dabei passen 25 Indexzeilen auf eine Seite. Dies bedeutet, dass 40 Seiten zum Speichern dieser 1.000 Indexzeilen erforderlich sind. Die nächste Ebene des Indexes muss 40 Zeilen speichern. Dies bedeutet, dass 2 Seiten erforderlich sind. Die letzte Ebene des Indexes muss zwei Zeilen speichern. Dies bedeutet, dass eine Seite erforderlich ist. Daraus ergeben sich 43 innere Knotenseiten im Index. Wenn Sie diese Werte in den oben genannten Formeln verwenden, ergibt sich Folgendes:  
   
-     ***Non-leaf_Levels***  = 1 + log(25) (1000 / 25) = 3  
+     _*_Non-leaf_Levels_*_  = 1 + log(25) (1000 / 25) = 3  
   
-     ***Num_Index_Pages*** = 1000/(25^3)+ 1000/(25^2) + 1000/(25^1) = 1 + 2 + 40 = 43, was der Anzahl der Seiten im Beispiel entspricht.  
+     _*_Num_Index_Pages_*_ = 1000/(25^3)+ 1000/(25^2) + 1000/(25^1) = 1 + 2 + 40 = 43, was der Anzahl der Seiten im Beispiel entspricht.  
   
 9. Berechnen Sie die Größe des Indexes (insgesamt 8.192 Byte pro Seite):  
   
-     ***Index_Space_Used***  = 8192 x ***Num_Index_Pages***  
+     _*_Index_Space_Used_*_  = 8192 × _*_Num_Index_Pages_*_  
   
 ## <a name="step-3-total-the-calculated-values"></a>Schritt 3: Addieren der berechneten Werte  
  Addieren Sie die Werte, die in den beiden vorherigen Schritten erzielt wurden:  
   
- Größe des gruppierten Indexes (in Bytes) = ***Leaf_Space_Used*** + ***Index_Space_used***  
+ Größe des gruppierten Indexes (in Bytes) = _*_Leaf_Space_Used_*_ + _*_Index_Space_used_*_  
   
  In dieser Berechnung wird Folgendes nicht berücksichtigt:  
   
@@ -216,7 +216,7 @@ ms.locfileid: "85756149"
   
 -   LOB-Werte (Large Object)  
   
-     Der Algorithmus zum Berechnen des genauen Speicherplatzes, der zum Speichern der Werte der LOB-Datentypen **varchar(max)** , **varbinary(max)** , **nvarchar(max)** , **text**, **ntext**, **xml**, and **image** erforderlich ist, ist komplex. Es ist ausreichend, einfach die durchschnittliche Größe der erwarteten LOB-Werte zu addieren, diese mit ***Num_Rows***zu multiplizieren und das Ergebnis dann zur Gesamtgröße des gruppierten Indexes zu addieren.  
+     Der Algorithmus zum Berechnen des genauen Speicherplatzes, der zum Speichern der Werte der LOB-Datentypen _*varchar(max)**, **varbinary(max)** , **nvarchar(max)** , **text**, **ntext**, **xml** und **image** erforderlich ist, ist komplex. Es ist ausreichend, einfach die durchschnittliche Größe der erwarteten LOB-Werte zu addieren, diese mit **_Num_Rows_** zu multiplizieren und das Ergebnis dann zur Gesamtgröße des gruppierten Indexes zu addieren.  
   
 -   Komprimierung  
   

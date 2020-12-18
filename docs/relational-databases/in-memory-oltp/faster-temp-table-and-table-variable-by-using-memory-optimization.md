@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 author: kevin-farlee
 ms.author: kfarlee
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eac4d8a51dabb844ff6f3607383e676ecf0fc16a
-ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 09d3e92d2e181264965a1d4525d13f7d13b4504d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92175975"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460483"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Schnellere temporäre Tabellen und Tabellenvariablen durch Speicheroptimierung
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -210,7 +210,7 @@ DECLARE @tvTableD TABLE
   
 #### <a name="d1-convert-inline-to-explicit"></a>D.1 Konvertieren von Inline zu Explicit  
   
-Die vorherigen Syntax soll die Tabellenvariable *inline*erstellen. Die Inline-Syntax unterstützt keine Speicheroptimierung. Lassen Sie uns also die Inline-Syntax zur Explicit-Syntax für TYPE konvertieren.  
+Die vorherigen Syntax soll die Tabellenvariable *inline* erstellen. Die Inline-Syntax unterstützt keine Speicheroptimierung. Lassen Sie uns also die Inline-Syntax zur Explicit-Syntax für TYPE konvertieren.  
   
 *Bereich:* Die TYPE-Definition, die vom ersten „go“-unterteilten Batch erstellt wurde, bleibt auch nach dem Herunterfahren und Neustart des Servers bestehen. Nach dem ersten „go“-unterteilten Batch bleibt die deklarierte Tabelle @tvTableC nur bis zum nächsten „go“-unterteilten Batch bestehen und der Batch endet.  
   
@@ -265,7 +265,7 @@ Fertig.
   
 ## <a name="e-prerequisite-filegroup-for-sql-server"></a>E. FILEGROUP als Voraussetzung für SQL Server  
   
-Wenn Sie speicheroptimierte Funktionen auf Microsoft SQL Server verwenden möchten, muss Ihre Datenbank über FILEGROUP verfügen, die mit **MEMORY_OPTIMIZED_DATA**deklariert ist.  
+Wenn Sie speicheroptimierte Funktionen auf Microsoft SQL Server verwenden möchten, muss Ihre Datenbank über FILEGROUP verfügen, die mit **MEMORY_OPTIMIZED_DATA** deklariert ist.  
   
 - In der Azure SQL-Datenbank ist die Erstellung von FILEGROUP nicht nötig.  
   
@@ -411,7 +411,7 @@ Beginning execution loop
 Batch execution completed 5001 times.  
 2016-04-20 00:27:05.440  = End time, _tempdb.  
 ---- Tests done. ----  
-***/
+**_/
 ```
   
   
@@ -423,7 +423,7 @@ Sie können lernen, wie sie die Bedürfnisse des aktiven Arbeitsspeichers für I
 - [Schätzen der Arbeitsspeicheranforderungen speicheroptimierter Tabellen](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
 - [Tabellen- und Zeilengröße in speicheroptimierten Tabellen: Beispielberechnung](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
-Nicht gruppierte Indizes nutzen für größere Tabellenvariablen mehr Arbeitsspeicher als für speicheroptimierte *Tabellen*. Je größer die Anzahl der Zeilen und der Indexschlüssel, desto größer wird der Unterschied.  
+Nicht gruppierte Indizes nutzen für größere Tabellenvariablen mehr Arbeitsspeicher als für speicheroptimierte _Tabellen*. Je größer die Anzahl der Zeilen und der Indexschlüssel, desto größer wird der Unterschied.  
   
 Wenn auf die speicheroptimierten Tabellenvariablen nur mit einem exakten Schlüsselwert pro Zugriff zugegriffen wird, sollten Sie eher ein Hashindex als einen nicht gruppierten Index verwenden. Wenn Sie den erforderlichen BUCKET_COUNT-Wert nicht abschätzen können, wäre ein NONCLUSTERED-Index eine gute zweite Wahl.  
   

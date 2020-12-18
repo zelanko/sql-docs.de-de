@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fd8252fab91afb8b9a457f0c05f76bb8b77ecf78
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 040a1ac7107821de0b02f76b2f538f20c8a81ff6
+ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92255717"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96934016"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Change Data Capture Designer für Oracle von Attunity
 
@@ -35,6 +35,7 @@ ms.locfileid: "92255717"
   
  Laden Sie Microsoft Change Data Capture Designer für Oracle von Attunity für die entsprechende SQL Server-Version über die folgenden Links herunter:
 
+- [Microsoft SQL Server 2012 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=51606)
 - [Microsoft SQL Server 2016 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=55802)
 - [Microsoft SQL Server 2017 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=56610)
 - [Microsoft SQL Server 2019 Integration Services Feature Pack](https://www.microsoft.com/download/details.aspx?id=100303) 

@@ -38,23 +38,23 @@ helpviewer_keywords:
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce99d5ffe875283675e62069efed8b855ad6d43a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 268aafa5b95bed4c9e2687fef430aa4a972ea2c7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867423"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463161"
 ---
 # <a name="database-level-roles"></a>Rollen auf Datenbankebene
 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Zur einfachen Verwaltung der Berechtigungen für Ihre Datenbanken stellt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mehrere *Rollen* zur Verfügung. Dies sind Sicherheitsprinzipale, die andere Prinzipale gruppieren. Sie entsprechen den ***Gruppen*** im [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Betriebssystem. Der Geltungsbereich der Berechtigungen von Rollen auf Datenbankebene erstreckt sich auf die gesamte Datenbank.  
+  Zur einfachen Verwaltung der Berechtigungen für Ihre Datenbanken stellt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mehrere *Rollen* zur Verfügung. Dies sind Sicherheitsprinzipale, die andere Prinzipale gruppieren. Sie entsprechen den ***Gruppen** _ im [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Betriebssystem. Der Geltungsbereich der Berechtigungen von Rollen auf Datenbankebene erstreckt sich auf die gesamte Datenbank.  
 
 Zum Hinzufügen und Entfernen von Benutzern zu oder aus einer Datenbankrolle verwenden Sie die Optionen `ADD MEMBER` und `DROP MEMBER` der [ALTER ROLE](../../../t-sql/statements/alter-role-transact-sql.md) -Anweisung. [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] und Azure Synapse unterstützt diese Verwendung von `ALTER ROLE` nicht. Verwenden Sie stattdessen die älteren Prozeduren [sp_addrolemember](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) und [sp_droprolemember](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) .
   
- Es gibt zwei Typen von Rollen auf Datenbankebene: *feste Datenbankrollen* , die in der Datenbank vordefiniert sind, und *benutzerdefinierte Datenbankrollen* , die Sie erstellen können.  
+ Es gibt zwei Typen von Rollen auf Datenbankebene: _feste Datenbankrollen*, die in der Datenbank vordefiniert sind, und *benutzerdefinierte Datenbankrollen*, die Sie erstellen können.  
   
  Feste Datenbankrollen werden auf der Datenbankebene definiert und sind in jeder Datenbank vorhanden. Mitglieder der Datenbankrolle **db_owner** können die Mitgliedschaft von festen Datenbankrollen ändern. In der msdb-Datenbank gibt es auch einige Datenbankrollen für spezielle Zwecke.  
   

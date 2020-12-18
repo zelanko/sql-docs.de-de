@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d0c6f18fc92c778478066c218707fbc17c45c26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 55bb82e19a97a91dbe00b44b195e74a250ddf1dc
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463745"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900962"
 ---
 # <a name="about-change-data-capture-sql-server"></a>Über Change Data Capture (SQL Server)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88463745"
  Die Quelle der Änderungsdaten ist für Change Data Capture das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Transaktionsprotokoll. Bei Einfügungen, Aktualisierungen und Löschungen in den nachverfolgten Quelltabellen werden diesem Protokoll entsprechende Einträge hinzugefügt, die diese Änderungen beschreiben. Das Protokoll dient als Eingabe für den Erfassungsvorgang. Der Prozess liest das Protokoll und fügt der Änderungstabelle, die mit der nachverfolgten Tabelle verknüpft ist, Informationen über die Änderungen hinzu. Zur Aufzählung der Änderungen in den Änderungstabellen innerhalb eines angegebenen Bereichs werden Funktionen bereitgestellt, und die Informationen werden in Form eines gefilterten Resultsets zurückgegeben. Das gefilterte Resultset wird typischerweise von einem Anwendungsprozess verwendet, um die Darstellung der Quelle in einer externen Umgebung zu aktualisieren.  
   
 ## <a name="understanding-change-data-capture-and-the-capture-instance"></a>Change Data Capture und die Aufzeichnungsinstanz  
- Damit Änderungen an einzelnen Tabellen innerhalb einer Datenbank nachverfolgt werden können, muss Change Data Capture explizit für die Datenbank aktiviert werden. Dazu wird die gespeicherte Prozedur [sys.sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)verwendet. Wenn die Datenbank für Change Data Capture aktiviert ist, können Quelltabellen mit der gespeicherten Prozedur [sys.sp_cdc_enable_table](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)als nachverfolgte Tabellen identifiziert werden. Wenn eine Tabelle für Change Data Capture aktiviert ist, wird eine Aufzeichnungsinstanz erstellt und zugeordnet, die die Verteilung der Änderungsdaten in der Quelltabelle unterstützt. Die Aufzeichnungsinstanz besteht aus einer Änderungstabelle und bis zu zwei Abfragefunktionen. Die Metadaten, mit denen die Konfigurationsdetails der Aufzeichnungsinstanz beschrieben werden, befinden sich in den Change Data Capture-Metadatentabellen **cdc.change_tables**, **cdc.index_columns**und **cdc.captured_columns**. Diese Informationen können mit der gespeicherten Prozedur [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)abgerufen werden.  
+ Damit Änderungen an einzelnen Tabellen innerhalb einer Datenbank nachverfolgt werden können, muss Change Data Capture explizit für die Datenbank aktiviert werden. Dazu wird die gespeicherte Prozedur [sys.sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)verwendet. Wenn die Datenbank für Change Data Capture aktiviert ist, können Quelltabellen mit der gespeicherten Prozedur [sys.sp_cdc_enable_table](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)als nachverfolgte Tabellen identifiziert werden. Wenn eine Tabelle für Change Data Capture aktiviert ist, wird eine Aufzeichnungsinstanz erstellt und zugeordnet, die die Verteilung der Änderungsdaten in der Quelltabelle unterstützt. Die Aufzeichnungsinstanz besteht aus einer Änderungstabelle und bis zu zwei Abfragefunktionen. Die Metadaten, mit denen die Konfigurationsdetails der Aufzeichnungsinstanz beschrieben werden, befinden sich in den Change Data Capture-Metadatentabellen **cdc.change_tables**, **cdc.index_columns** und **cdc.captured_columns**. Diese Informationen können mit der gespeicherten Prozedur [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)abgerufen werden.  
   
  Alle einer Aufzeichnungsinstanz zugeordneten Objekte werden im Change Data Capture-Schema der aktivierten Datenbank erstellt. Der Name der Aufzeichnungsinstanz muss ein gültiger Objektname sein, der innerhalb aller Aufzeichnungsinstanzen der Datenbank eindeutig ist. Standardmäßig ist der Name der \<*schema name*\_*table name*> der Quelltabelle. Zur Benennung der zugeordneten Änderungstabelle wird dem Namen der Aufzeichnungsinstanz **_CT** angehängt. Zur Benennung der Funktion zur Abfrage aller Änderungen wird dem Namen der Aufzeichnungsinstanz **fn_cdc_get_all_changes_** vorangestellt. Wenn die Aufzeichnungsinstanz für die Unterstützung von **net changes** konfiguriert ist, wird darüber hinaus eine Abfragefunktion für **net_changes** erstellt. Diese wird benannt, indem dem Aufzeichnungsinstanznamen **fn_cdc_get_net_changes\_** vorangestellt wird.  
   
@@ -137,6 +137,10 @@ CREATE TABLE T1(
      C1 INT PRIMARY KEY, 
      C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)
 ```
+
+## <a name="columnstore-indexes"></a>Columnstore-Indizes
+
+Change Data Capture kann nicht für Tabellen mit einem gruppierten Columnstore-Index aktiviert werden. Ab SQL Server 2016 kann das Feature für Tabellen mit einem nicht gruppierten Columnstore-Index aktiviert werden.
 
 ## <a name="see-also"></a>Weitere Informationen  
  [Nachverfolgen von Datenänderungen &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   

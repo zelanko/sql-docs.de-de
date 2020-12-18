@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d36cb40971fc371022eb71dc922eb22a198bab9e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 88b25ab93d2baf680464d70b08bf6962b6aafb4c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001718"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97407562"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Angeben von Feld- und Zeilenabschlusszeichen (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  Für Zeichendatenfelder geben Ihnen optionale Abschlusszeichen die Möglichkeit, das Ende jedes Felds in einer Datendatei mit einem *Feldabschlusszeichen* und das Ende jeder Zeile mit einem *Zeilenabschlusszeichen*zu markieren. Abschlusszeichen stellen eine Möglichkeit dar, für Datendatei lesende Programmen anzugeben, wo ein Feld oder eine Zeile endet und ein anderes Feld oder eine andere Zeile beginnt.  
+  Für Zeichendatenfelder geben Ihnen optionale Abschlusszeichen die Möglichkeit, das Ende jedes Felds in einer Datendatei mit einem *Feldabschlusszeichen* und das Ende jeder Zeile mit einem *Zeilenabschlusszeichen* zu markieren. Abschlusszeichen stellen eine Möglichkeit dar, für Datendatei lesende Programmen anzugeben, wo ein Feld oder eine Zeile endet und ein anderes Feld oder eine andere Zeile beginnt.  
   
 > [!IMPORTANT]
 >  Verwenden Sie beim systemeigenen Format oder systemeigenen Unicode-Format Längenpräfixe anstelle der Feldabschlusszeichen. Bei Daten im nativen Format kann es zu Konflikten mit Abschlusszeichen kommen, weil Datendateien im nativen Format im internen Binärdatenformat von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert werden.  
@@ -75,7 +75,7 @@ ms.locfileid: "86001718"
         > [!NOTE]  
         >  Wenn Sie den Schalter **-n** (native Daten) oder den Schalter **-N** (native Unicode-Daten) angeben, werden keine Abschlusszeichen eingefügt.  
   
-    -   Wenn ein interaktiver Befehl **bcp** die Option **in** oder **out** ohne den Formatdateischalter ( **-f**) oder einen Datenformatschalter ( **-n**, **-c**, **-w**oder **-N**) enthält, und Sie keine Präfixlänge und Feldlänge angegeben haben, erfordert der Befehl die Eingabe des Feldabschlusszeichens für jedes Feld (standardmäßig kein Abschlusszeichen):  
+    -   Wenn ein interaktiver Befehl **bcp** die Option **in** oder **out** ohne den Formatdateischalter ( **-f**) oder einen Datenformatschalter ( **-n**, **-c**, **-w** oder **-N**) enthält, und Sie keine Präfixlänge und Feldlänge angegeben haben, erfordert der Befehl die Eingabe des Feldabschlusszeichens für jedes Feld (standardmäßig kein Abschlusszeichen):  
   
          `Enter field terminator [none]:`  
   
@@ -138,8 +138,8 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
     |Qualifizierer|BESCHREIBUNG|  
     |---------------|-----------------|  
-    |FIELDTERMINATOR **='***Feldabschlusszeichen***'**|Gibt das Feldabschlusszeichen an, das für Zeichen- und Unicodezeichen-Datendateien verwendet werden soll.<br /><br /> Der Standardwert ist \t (Tabstoppzeichen).|  
-    |ROWTERMINATOR **='***Zeilenabschlusszeichen***'**|Gibt das Zeilenabschlusszeichen an, das für Zeichen- und Unicodezeichen-Datendateien verwendet werden soll.<br /><br /> Der Standardwert ist \n (Neue-Zeile-Zeichen).|  
+    |FIELDTERMINATOR **=„** _field_terminator_*_“_*|Gibt das Feldabschlusszeichen an, das für Zeichen- und Unicodezeichen-Datendateien verwendet werden soll.<br /><br /> Der Standardwert ist \t (Tabstoppzeichen).|  
+    |ROWTERMINATOR **=„** _row_terminator_*_“_*|Gibt das Zeilenabschlusszeichen an, das für Zeichen- und Unicodezeichen-Datendateien verwendet werden soll.<br /><br /> Der Standardwert ist \n (Neue-Zeile-Zeichen).|  
   
      Weitere Informationen finden Sie unter [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   

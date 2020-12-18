@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6bfa965b74aada909b7e28e1429941d4a82b65a
-ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d45781583e8ac6147f5f761cebc288cc60f9bd9a
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96328030"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489053"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -39,7 +39,7 @@ Weitere Informationen zu Syntaxkonventionen finden Sie unter [Transact-SQL-Synta
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -101,6 +101,9 @@ column_name <data_type>
 ## <a name="arguments"></a>Argumente
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* : Der ein- bis dreiteilige Name der zu erstellenden Tabelle. Für eine externe Tabelle speichert SQL nur die Metadaten der Tabelle mit den grundlegenden Statistiken über die Datei oder den Ordner, auf die in Hadoop oder Azure Blob Storage verwiesen wird. Es werden keine tatsächlichen Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verschoben oder gespeichert.
+
+> [!IMPORTANT]
+> Wenn der externe Datenquellentreiber einen dreiteiligen Namen unterstützt, wird dringend empfohlen, diesen dreiteiligen Namen anzugeben, um eine optimale Leistung zu erzielen.  
 
 \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE unterstützt das Konfigurieren von Spaltenname, Datentyp, NULL-Zulässigkeit und Sortierung. Sie können DEFAULT CONSTRAINT nicht für externe Tabellen verwenden.
 
@@ -589,11 +592,11 @@ WITH
 - [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
-        [SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-external-table-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL-Datenbank \*_** &nbsp;
@@ -641,6 +644,9 @@ column_name <data_type>
 ## <a name="arguments"></a>Argumente
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* : Der ein- bis dreiteilige Name der zu erstellenden Tabelle. Für eine externe Tabelle speichert SQL nur die Metadaten der Tabelle mit den grundlegenden Statistiken über die Datei oder den Ordner, auf die in Azure SQL-Datenbank verwiesen wird. Es werden keine tatsächlichen Daten in Azure SQL-Datenbank verschoben oder gespeichert.
+
+> [!IMPORTANT]
+> Wenn der externe Datenquellentreiber einen dreiteiligen Namen unterstützt, wird dringend empfohlen, diesen dreiteiligen Namen anzugeben, um eine optimale Leistung zu erzielen.
 
 \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE unterstützt das Konfigurieren von Spaltenname, Datentyp, NULL-Zulässigkeit und Sortierung. Sie können DEFAULT CONSTRAINT nicht für externe Tabellen verwenden.
 
@@ -750,11 +756,11 @@ WITH
 - [Erste Schritte mit datenbankübergreifenden Abfragen (vertikale Partitionierung)](/azure/sql-database/sql-database-elastic-query-getting-started-vertical)
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-external-table-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL-Datenbank](create-external-table-transact-sql.md?view=azuresqldb-current)
@@ -825,6 +831,9 @@ column_name <data_type>
 ## <a name="arguments"></a>Argumente
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* : Der ein- bis dreiteilige Name der zu erstellenden Tabelle. Für eine externe Tabelle werden nur die Metadaten der Tabelle mit den grundlegenden Statistiken über die Datei oder den Ordner gespeichert, auf die in Azure Data Lake, Hadoop oder Azure Blob Storage verwiesen wird. Bei der Erstellung externer Tabellen werden keine tatsächlichen Daten verschoben oder gespeichert.
+
+> [!IMPORTANT]
+> Wenn der externe Datenquellentreiber einen dreiteiligen Namen unterstützt, wird dringend empfohlen, diesen dreiteiligen Namen anzugeben, um eine optimale Leistung zu erzielen.
 
 \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE unterstützt das Konfigurieren von Spaltenname, Datentyp, NULL-Zulässigkeit und Sortierung. Sie können DEFAULT CONSTRAINT nicht für externe Tabellen verwenden.
 
@@ -1020,11 +1029,11 @@ AS SELECT * FROM
 - [CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-external-table-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL-Datenbank](create-external-table-transact-sql.md?view=azuresqldb-current)
@@ -1078,6 +1087,9 @@ column_name <data_type>
 ## <a name="arguments"></a>Argumente
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* : Der ein- bis dreiteilige Name der zu erstellenden Tabelle. Für eine externe Tabelle speichert Analytics Platform System nur die Metadaten der Tabelle mit den grundlegenden Statistiken über die Datei oder den Ordner, auf die in Hadoop oder Azure Blob Storage verwiesen wird. Es werden keine tatsächlichen Daten verschoben oder in Analytics Platform System gespeichert.
+
+> [!IMPORTANT]
+> Wenn der externe Datenquellentreiber einen dreiteiligen Namen unterstützt, wird dringend empfohlen, diesen dreiteiligen Namen anzugeben, um eine optimale Leistung zu erzielen.
 
 \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE unterstützt das Konfigurieren von Spaltenname, Datentyp, NULL-Zulässigkeit und Sortierung. Sie können DEFAULT CONSTRAINT nicht für externe Tabellen verwenden.
 

@@ -18,18 +18,18 @@ ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 399a09695b14fa3b3f55fcae8c3d88ba16324057
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 37e3914abd99f03fa441a2b6284bd43ea570e269
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868959"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468631"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  Der Inhalt von Dokumenteigenschaften konnte zuvor nicht vom Inhalt des Dokumenttexts unterschieden werden. Dadurch waren Volltextabfragen auf generische Suchvorgänge für ganze Dokumente beschränkt. Jetzt können Sie jedoch einen Volltextindex zur Unterstützung von Suchvorgängen mit Eigenschaftenbereich für bestimmte Eigenschaften wie „Author“ und „Title“ für unterstützte Dokumenttypen in einer **varbinary**-, **varbinary(max)** -Binärdatenspalte (einschließlich **FILESTREAM**) oder **image** -Binärdatenspalte konfigurieren. Diese Form der Suche wird als *Eigenschaftensuche*bezeichnet.  
+  Der Inhalt von Dokumenteigenschaften konnte zuvor nicht vom Inhalt des Dokumenttexts unterschieden werden. Dadurch waren Volltextabfragen auf generische Suchvorgänge für ganze Dokumente beschränkt. Jetzt können Sie jedoch einen Volltextindex zur Unterstützung von Suchvorgängen mit Eigenschaftenbereich für bestimmte Eigenschaften wie „Author“ und „Title“ für unterstützte Dokumenttypen in einer **varbinary**-, **varbinary(max)** -Binärdatenspalte (einschließlich **FILESTREAM**) oder **image** -Binärdatenspalte konfigurieren. Diese Form der Suche wird als *Eigenschaftensuche* bezeichnet.  
   
  Der zugeordnete [Filter](../../relational-databases/search/configure-and-manage-filters-for-search.md) (IFilter) bestimmt, ob die Eigenschaftensuche für einen bestimmten Dokumenttyp möglich ist. Bei einigen Dokumenttypen extrahiert der zugeordnete IFilter einige oder alle für diesen Dokumenttyp definierten Eigenschaften und den Inhalt des Dokumenttextes. Sie können einen Volltextindex konfigurieren, um Eigenschaftensuchen nur für Eigenschaften zu unterstützen, die während der Volltextindizierung von einem IFilter extrahiert werden. Zu den IFilters, die Dokumenteigenschaften extrahieren, zählen die IFilters für Microsoft Office-Dokumenttypen (z. B. DOCX, XLSX und PPTX). Der XML-IFilter gibt dagegen keine Eigenschaften aus.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "91868959"
   
 3.  Erweitern Sie **Speicher**, und klicken Sie dann mit der rechten Maustaste auf **Sucheigenschaftenlisten**.  
   
-4.  Wählen Sie **Neue Sucheigenschaftenliste**aus.  
+4.  Wählen Sie **Neue Sucheigenschaftenliste** aus.  
   
 5.  Geben Sie den Namen der Eigenschaftenliste an.  
   
@@ -188,19 +188,19 @@ GO
   
 1.  Erweitern Sie im Objekt-Explorer den Server.  
   
-2.  Erweitern Sie **Datenbanken**und dann die Datenbank.  
+2.  Erweitern Sie **Datenbanken** und dann die Datenbank.  
   
 3.  Erweitern Sie **Speicher**.  
   
 4.  Erweitern Sie **Sucheigenschaftenlisten** , um die Sucheigenschaftenlisten anzuzeigen.  
   
-5.  Klicken Sie mit der rechten Maustaste auf die Eigenschaftenliste, und wählen Sie **Eigenschaften**aus.  
+5.  Klicken Sie mit der rechten Maustaste auf die Eigenschaftenliste, und wählen Sie **Eigenschaften** aus.  
   
 6.  Im Dialogfeld **Sucheigenschaftenlisten-Editor** können Sie über das Raster Eigenschaften Sucheigenschaften hinzufügen und entfernen:  
   
     1.  Klicken Sie zum Entfernen einer Dokumenteigenschaft auf den Zeilenkopf links von der Eigenschaft, und drücken Sie ENTF.  
   
-    2.  Klicken Sie zum Hinzufügen einer Dokumenteigenschaft auf die leere Zeile am unteren Rand der Liste (rechts vom **\*** ), und geben Sie die Werte für die neue Eigenschaft ein.  
+    2.  Klicken Sie zum Hinzufügen einer Dokumenteigenschaft auf die leere Zeile am unteren Rand der Liste (rechts vom * *\** _), und geben Sie die Werte für die neue Eigenschaft ein.  
   
          Weitere Informationen zu diesen Werten finden Sie unter [Sucheigenschaftenlisten-Editor](../../t-sql/statements/create-search-property-list-transact-sql.md). Wie Sie diese Werte für die von Microsoft definierte Eigenschaften erhalten, erfahren Sie unter [Suchen von Eigenschaftensatz-GUIDs und ganzzahligen Eigenschaft-IDs für Sucheigenschaften](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md). Weitere Informationen zu Eigenschaften, die von einem unabhängigen Softwareanbieter (ISV) definiert wurden, finden Sie in der Dokumentation des betreffenden Anbieters.  
   
@@ -209,7 +209,7 @@ GO
 ###  <a name="deleting-a-search-property-list"></a><a name="deleting"></a> Löschen von Sucheigenschaftenlisten  
  Eine Eigenschaftenliste kann nicht aus einer Datenbank gelöscht werden, solange sie einem Volltextindex zugeordnet ist.  
   
- **So löschen Sie eine Sucheigenschaftenliste mit Transact-SQL**  
+ _ *Löschen einer Sucheigenschaftenliste mit Transact-SQL**  
   
  Verwenden Sie die Anweisung [DROP SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-search-property-list-transact-sql.md).  
   
@@ -217,7 +217,7 @@ GO
   
 1.  Erweitern Sie im Objekt-Explorer den Server.  
   
-2.  Erweitern Sie **Datenbanken**und dann die Datenbank.  
+2.  Erweitern Sie **Datenbanken** und dann die Datenbank.  
   
 3.  Erweitern Sie **Speicher**, und erweitern Sie dann den Knoten **Sucheigenschaftenlisten** .  
   

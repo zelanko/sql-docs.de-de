@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 715ff2845d686d5cff37a66fdd26866e47c51a99
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 08bfc658b939520cb7b694d39c3c9bee557172a1
+ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257965"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96934044"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Change Data Capture Service für Oracle von Attunity
 
@@ -29,6 +29,7 @@ ms.locfileid: "92257965"
 
 Laden Sie Microsoft Change Data Capture Designer und Service für Oracle von Attunity für die entsprechende SQL Server-Version anhand der folgenden Links herunter:
 
+- [Microsoft SQL Server 2012 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=51606)
 - [Microsoft SQL Server 2016 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=55802)
 - [Microsoft SQL Server 2017 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=56610)
 - [Microsoft SQL Server 2019 Integration Services Feature Pack](https://www.microsoft.com/download/details.aspx?id=100303)
@@ -57,6 +58,8 @@ Laden Sie Microsoft Change Data Capture Designer und Service für Oracle von Att
 -   Oracle-Datenbank 10g Release 2
 -   Oracle-Datenbank 11g Release 1 und Release 2
 -   Oracle Database 12c klassische Installation (Die mehrinstanzenfähige Installation wird nicht unterstützt).  
+-   Oracle Database 18c klassische Installation (Die mehrinstanzenfähige Installation wird nicht unterstützt). 
+-   Oracle Database 19c klassische Installation (Die mehrinstanzenfähige Installation wird nicht unterstützt). 
   
 ### <a name="target-sql-server-database"></a>SQL Server-Zieldatenbank  
  Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  

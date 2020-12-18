@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3fd983ad-e206-45db-9054-417c9b5bb815
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 199177f4df8c97bfaf651b1d4ad42d5d864b757d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d5ea494a48932fac171eb4d9e8bc3e032001e55b
+ms.sourcegitcommit: 821e7039a342bf76306d66c61db247dc2caabc46
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465082"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96999233"
 ---
 # <a name="heterogeneous-database-replication"></a>Heterogene Datenbankreplikation  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "88465082"
   |Szenario|2016 oder früher |2017 oder höher |
   |-------|-------|--------|
   |Replikation von Oracle |Wird nur für Oracle 10g oder früher unterstützt |Wird nur für Oracle 10g oder früher unterstützt |
-  |Replikation zu Oracle |Bis Oracle 12c |Nicht unterstützt |
+  |Replikation zu Oracle |Alle Versionen vor Oracle 12c |Nicht unterstützt |
 
 
  Die heterogene Replikation an Nicht-SQL Server-Abonnenten ist veraltet. Das Veröffentlichen mit Oracle ist veraltet. Um Daten zu verschieben, erstellen Sie Lösungen mit Change Data Capture und [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  

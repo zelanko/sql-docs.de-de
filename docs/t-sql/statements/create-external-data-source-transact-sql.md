@@ -19,13 +19,13 @@ helpviewer_keywords:
 - PolyBase, create data source
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7888360aa4d4bdfa9b9eb782226f718d8f503ff8
-ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e85d783f9e06c5b0a7ede983f6ab4d1079ef2a5e
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96443103"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489418"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -37,7 +37,7 @@ Weitere Informationen zu Syntaxkonventionen finden Sie unter [Transact-SQL-Synta
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -124,7 +124,8 @@ Zusätzliche Hinweise und Anweisungen für das Festlegen des Speicherorts:
 
 ### <a name="connection_options--key_value_pair"></a>CONNECTION_OPTIONS = *key_value_pair*
 
-Gibt zusätzliche Optionen bei einer Verbindung über `ODBC` mit einer externen Datenquelle an.
+Gibt zusätzliche Optionen bei einer Verbindung über `ODBC` mit einer externen Datenquelle an. Wenn Sie mehrere Verbindungsoptionen verwenden möchten, trennen Sie diese durch ein Semikolon.
+
 
 Es ist mindestens der Name des Treibers erforderlich. Allerdings sind auch Optionen wie `APP='<your_application_name>'` oder `ApplicationIntent= ReadOnly|ReadWrite` bei der Problembehandlung nützlich.
 
@@ -422,11 +423,11 @@ Dies wird beim [BULK INSERT][bulk_insert_example]-Beispiel praktisch veranschaul
 [sas_token]: /azure/storage/storage-dotnet-shared-access-signature-part-1
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
-        [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL-Datenbank \*_** &nbsp;
@@ -650,11 +651,11 @@ Sie finden dieses Beispiel unter [BULK INSERT][bulk_insert_example].
 [sas_token]: /azure/storage/storage-dotnet-shared-access-signature-part-1
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL-Datenbank](create-external-data-source-transact-sql.md?view=azuresqldb-current)
@@ -920,11 +921,11 @@ WITH
 [sas_token]: /azure/storage/storage-dotnet-shared-access-signature-part-1
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL-Datenbank](create-external-data-source-transact-sql.md?view=azuresqldb-current)

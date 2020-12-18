@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c2240ad1cbc9bb8c9fd252eefd6633e81e4ab2f8
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 8574b99c65972f566817749f34d89e3f6d3ca3e5
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91115236"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900961"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +62,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Ein optionaler Skalarausdruck vom Typ **sysname**, der den Namen der sicherungsfähigen untergeordneten Entität darstellt, mit der die Berechtigung getestet wird. Die Standardeinstellung ist NULL.  
   
 > [!NOTE]  
->  In den Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und höher dürfen in untergeordneten sicherungsfähigen Elementen keine eckigen Klammern in der Form **'[**_sub name_**]'** verwendet werden. Verwenden Sie stattdessen **'** _Name des untergeordneten sicherungsfähigen Elements_ **'** .  
+>  In untergeordneten sicherungsfähigen Elementen dürfen keine Klammern in der Form **„[** _Name des untergeordneten Elements_ **]“** verwendet werden. Verwenden Sie stattdessen **'** _Name des untergeordneten sicherungsfähigen Elements_ **'** .  
   
  *sub-securable_class*  
  Ein optionaler Skalarausdruck vom Datentyp **nvarchar(60)**, der die Klasse der sicherungsfähigen untergeordneten Entität darstellt, für die die Berechtigung getestet wird. Die Standardeinstellung ist NULL.  

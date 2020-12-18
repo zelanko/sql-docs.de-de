@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4f65282964494ba1fdb160b1e755922a60ad80d8
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4053b827b51eda8f238e6cada863773d625d1f59
+ms.sourcegitcommit: 821e7039a342bf76306d66c61db247dc2caabc46
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394985"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96999227"
 ---
 # <a name="replication-merge-agent"></a>Replikationsmerge-Agent
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -223,7 +223,7 @@ replmerg [-?]
  Der Benutzername, mit dem eine Verbindung zum FTP-Dienst hergestellt wird. Wenn kein Benutzername angegeben wird, wird anonymous verwendet.  
   
  **-HistoryVerboseLevel** [**1**\|**2**\|**3**]  
- Gibt den Umfang des Verlaufs an, der während eines Mergevorgangs protokolliert wird. Sie können die negativen Auswirkungen der Verlaufsprotokollierung auf die Leistung minimieren, indem Sie den Wert **1**auswählen.  
+ Gibt den Umfang des Verlaufs an, der während eines Mergevorgangs protokolliert wird. Sie können die negativen Auswirkungen der Verlaufsprotokollierung auf die Leistung minimieren, indem Sie den Wert **1** auswählen.  
   
 |Wert von <legacyBold>HistoryVerboseLevel</legacyBold>|BESCHREIBUNG|  
 |-------------------------------|-----------------|  
@@ -245,13 +245,13 @@ replmerg [-?]
  Gibt das Kennwort an, das beim Herstellen einer Verbindung mit einer Authentifizierung erfordernden ISAPI-DLL-Datei für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikationsüberwachung verwendet wird.  
   
  **-InternetProxyLogin**  *internet_proxy_login*  
- Gibt den Anmeldenamen an, der beim Herstellen einer Verbindung mit einem Authentifizierung erfordernden Proxyserver (in *internet_proxy_server*definiert) verwendet wird.  
+ Gibt den Anmeldenamen an, der beim Herstellen einer Verbindung mit einem Authentifizierung erfordernden Proxyserver (in *internet_proxy_server* definiert) verwendet wird.  
   
  **–InternetProxyPassword** *internet_proxy_password*  
- Gibt das Kennwort an, das beim Herstellen einer Verbindung mit einem Authentifizierung erfordernden Proxyserver (in *internet_proxy_server*definiert) verwendet wird.  
+ Gibt das Kennwort an, das beim Herstellen einer Verbindung mit einem Authentifizierung erfordernden Proxyserver (in *internet_proxy_server* definiert) verwendet wird.  
   
  **-InternetProxyServer** *internet_proxy_server*  
- Gibt den Proxyserver an, der für den Zugriff auf die in *internet_url*angegebene HTTP-Ressource zu verwenden ist.  
+ Gibt den Proxyserver an, der für den Zugriff auf die in *internet_url* angegebene HTTP-Ressource zu verwenden ist.  
   
  **-InternetSecurityMode** [**0**\|**1**]  
  Gibt den IIS-Sicherheitsmodus an, der beim Herstellen einer Verbindung mit dem Webserver während der Websynchronisierung verwendet wird. Der Wert **0** steht für die Standardauthentifizierung, der Wert **1** für die integrierte Windows-Authentifizierung (Standard).  
@@ -271,10 +271,10 @@ replmerg [-?]
  **-MakeGenerationInterval** _make_generation_interval_seconds_  
  Die Anzahl der Wartezeit in Sekunden zwischen dem Erstellen von Generierungen oder Änderungsbatches zum Herunterladen auf den Client. Der Standardwert beträgt **1** Sekunde.  
   
- Makegeneration ist der Prozess, der Verlegeränderungen für das Herunterladen auf den Abonnenten vorbereitet. Während des Herunterladens kann dies ein Leistungsengpass sein. Wenn der makegeneration-Prozess bereits mit dem durch **-MakeGenerationInterval**angegebenen Intervall ausgeführt wurde, wird der Prozess für die aktuelle Synchronisierungssitzung übersprungen. Dies kann hilfreich für die Synchronisierungsparallelität sein, und zwar insbesondere dann, wenn Abonnenten nicht damit rechnen, Änderungen herunterzuladen.  
+ Makegeneration ist der Prozess, der Verlegeränderungen für das Herunterladen auf den Abonnenten vorbereitet. Während des Herunterladens kann dies ein Leistungsengpass sein. Wenn der makegeneration-Prozess bereits mit dem durch **-MakeGenerationInterval** angegebenen Intervall ausgeführt wurde, wird der Prozess für die aktuelle Synchronisierungssitzung übersprungen. Dies kann hilfreich für die Synchronisierungsparallelität sein, und zwar insbesondere dann, wenn Abonnenten nicht damit rechnen, Änderungen herunterzuladen.  
   
  **-MaxBcpThreads** _number_of_threads_  
- Gibt die Anzahl von Massenkopiervorgängen an, die parallel ausgeführt werden können. Die maximale Anzahl von Threads und gleichzeitig vorhandenen ODBC-Verbindungen entspricht entweder **MaxBcpThreads** oder der Anzahl von Massenkopieranforderungen, die in der Veröffentlichungsdatenbank in der **sysmergeschemachange** -Systemtabelle enthalten sind. Dabei gilt der jeweils kleinere Wert. Der Wert von**MaxBcpThreads** muss größer als 0 sein. Es ist keine hartcodierte Obergrenze vorhanden. Der Standardwert lautet **1**.  
+ Gibt die Anzahl von Massenkopiervorgängen an, die parallel ausgeführt werden können. Die maximale Anzahl von Threads und gleichzeitig vorhandenen ODBC-Verbindungen entspricht entweder **MaxBcpThreads** oder der Anzahl von Massenkopieranforderungen, die in der Veröffentlichungsdatenbank in der **sysmergeschemachange** -Systemtabelle enthalten sind. Dabei gilt der jeweils kleinere Wert. Der Wert von **MaxBcpThreads** muss größer als 0 sein. Es ist keine hartcodierte Obergrenze vorhanden. Der Standardwert lautet **1**.  
   
  **-MaxDownloadChanges** _number_of_download_changes_  
  Gibt die maximale Anzahl von geänderten Zeilen an, die vom Verleger auf den Abonnenten heruntergeladen werden sollen. Die tatsächliche Anzahl heruntergeladener Zeilen kann über dem angegebenen Maximalwert liegen. Dies kann daran liegen, dass vollständige Generierungen verarbeitet werden und dass parallele Zielthreads ausgeführt werden, von denen jeder beim ersten Durchlauf mindestens 100 Änderungen verarbeitet. Standardmäßig werden alle Änderungen gesendet, die zum Herunterladen bereit sind.  
@@ -289,10 +289,15 @@ replmerg [-?]
  Der Pfad der Agentausgabedatei. Wenn kein Dateiname angegeben ist, wird die Ausgabe an die Konsole gesendet. Wenn eine Datei mit dem angegebenen Namen vorhanden ist, wird die Ausgabe an diese Datei angefügt.  
   
  **-OutputVerboseLevel** [**0**\|**1**\|**2**]  
- Gibt an, ob die Ausgabe ausführlich sein soll. Wenn die Meldungsstufe **0**beträgt, werden nur Fehlermeldungen gedruckt. Wenn die Meldungsstufe **1**beträgt, werden alle Statusberichtsmeldungen gedruckt. Wenn die Meldungsstufe **2** (Standard) beträgt, werden alle Fehlermeldungen und Statusberichtsmeldungen gedruckt, was beim Debuggen nützlich ist.  
+ Gibt an, ob die Ausgabe ausführlich sein soll. Wenn die Meldungsstufe **0** beträgt, werden nur Fehlermeldungen gedruckt. Wenn die Meldungsstufe **1** beträgt, werden alle Statusberichtsmeldungen gedruckt. Wenn die Meldungsstufe **2** (Standard) beträgt, werden alle Fehlermeldungen und Statusberichtsmeldungen gedruckt, was beim Debuggen nützlich ist.  
   
  **-ParallelUploadDownload** [**0**\|**1**]  
- Gibt an, ob der Merge-Agent auf den Verleger hochgeladene Änderungen und auf den Abonnenten heruntergeladene Änderungen parallel verarbeiten soll. Dies ist in Umgebungen mit hohem Volumen und hoher Netzwerkbandbreite hilfreich. Wenn **ParallelUploadDownload** auf den Wert **1**festgelegt ist, ist die Parallelverarbeitung aktiviert.  
+ Hiermit wird angegeben, ob der Merge-Agent auf den Verleger hochgeladene Änderungen und auf den Abonnenten heruntergeladene Änderungen parallel verarbeiten soll. Dies kann in Umgebungen mit hohem Volumen und hoher Netzwerkbandbreite hilfreich sein. Beachten Sie jedoch die folgende Warnung für Fälle, in denen **ParallelUploadDownload** auf **1** festgelegt ist.
+ 
+Dieser Parameter befindet sich in der Liste für Elemente, die möglicherweise bald veraltet sind. Es wird empfohlen, den **ParallelUploadDownload**-Parameter auf 0 (null) festzulegen und die Verwendung des Profils „High Volume Server-to-Server“ (Server-zu-Server für hohes Volumen) für den Merge-Agent zu vermeiden, da **ParallelUploadDownload** in diesem Profil auf 1 festgelegt ist.
+
+> [!WARNING]
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)]
   
  **-PacketSize**  
  Die Paketgröße in Bytes. Der Standardwert ist 4096 (Bytes).  
@@ -338,7 +343,7 @@ replmerg [-?]
 |**3**|Eine neue Datenbank wird erstellt und angefügt, und alle Abonnements, die ggf. in der Datei vorhanden sind, werden aktiviert.|  
   
 > [!NOTE]  
->  Bei Verwendung der Werte **2** und **3**muss in der **SubscriberDatabasePath** -Option der Datenbankpfad für den Abonnenten angegeben werden.  
+>  Bei Verwendung der Werte **2** und **3** muss in der **SubscriberDatabasePath** -Option der Datenbankpfad für den Abonnenten angegeben werden.  
   
  **-SubscriberLogin** _subscriber_login_  
  Der Anmeldename des Abonnenten. Wenn **SubscriberSecurityMode** auf **0** festgelegt ist (für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung), muss dieser Parameter angegeben werden.  
