@@ -4,22 +4,30 @@ description: Informieren Sie sich über Änderungen an SQL Server Migration Assi
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 10/28/2020
+ms.date: 12/17/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: c563769ec4c0b15ac3009b6cbe3207896e7f7c4c
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: 1482ec079e0410fd7713ac183f6181c2a8793a11
+ms.sourcegitcommit: a16b98d3bf3eeb58f5d2aeece2464f8a96e2b4a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036058"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97665856"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Neues in SSMA für Access (Access Token SQL)
 
 In diesem Artikel wird SQL Server Migration Assistant (SSMA) für Zugriffs Änderungen in jeder Version aufgeführt.
+
+## <a name="ssma-v816"></a>SSMA v 8.16
+
+Die v 8.16-Version von SSMA für Access enthält die folgenden Änderungen:
+
+* Anzeigen von SQL-Text für Abfragen im HTML-Konvertierungs Bericht
+* Unterstützung für Legacy Parser entfernen
+* Problem mit Objekten, die nicht aus der Datenbank aktualisiert werden
 
 ## <a name="ssma-v815"></a>SSMA v 8.15
 
@@ -87,7 +95,7 @@ Das v 8.7-Release von SSMA für Access hat eine verbesserte Konvertierung für d
 
 Zusätzlich zu einem Zielsatz von Korrekturen, die zur Verbesserung der Benutzerfreundlichkeit und Leistung entwickelt wurden, wurde die Version Version 8.6 von SSMA für Access verbessert, indem eine Einstellung hinzugefügt wurde, mit der Benutzer erweiterte SSMA-Eigenschaften im konvertierten Code weglassen können.
 
-Wenn Sie diese Einstellung nutzen möchten, **Navigieren Sie in SSMA zu Extras**  >  **Projekteinstellungen**  >  **Allgemeine**  >  **Konvertierung** , und aktualisieren Sie dann unter **misc** den Wert der Einstellung **Erweiterte Eigenschaften auslassen** auf **Ja** .
+Wenn Sie diese Einstellung nutzen möchten, **Navigieren Sie in SSMA zu Extras**  >  **Projekteinstellungen**  >  **Allgemeine**  >  **Konvertierung**, und aktualisieren Sie dann unter **misc** den Wert der Einstellung **Erweiterte Eigenschaften auslassen** auf **Ja**.
 
 ![Einstellung für erweiterte Eigenschaften weglassen](../access/media/ssma-omit-extended-properties.png)
 
